@@ -3,11 +3,10 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const source = resolve(
-  projectRoot,
-  "node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs",
-);
-const destination = resolve(projectRoot, "public/maplibre-gl-worker.mjs");
+const filenames = ["maplibre-gl-worker.mjs", "maplibre-gl-shared.mjs"];
 
-await mkdir(dirname(destination), { recursive: true });
-await copyFile(source, destination);
+await mkdir(resolve(projectRoot, "public"), { recursive: true });
+await Promise.all(filenames.map((filename) => copyFile(
+  resolve(projectRoot, "node_modules/maplibre-gl/dist", filename),
+  resolve(projectRoot, "public", filename),
+)));

@@ -156,13 +156,17 @@ export function ForecastMap({
         });
         setStatus("ready");
       });
-      map.on("error", () => setStatus("error"));
+      map.on("error", (event) => {
+        console.error("maplibre_runtime_error", event.error);
+        if (!map.isStyleLoaded()) setStatus("error");
+      });
 
       return () => {
         map.remove();
         mapRef.current = null;
       };
-    } catch {
+    } catch (error) {
+      console.error("maplibre_initialization_failed", error);
       queueMicrotask(() => setStatus("error"));
     }
   }, []);

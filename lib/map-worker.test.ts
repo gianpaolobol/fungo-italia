@@ -14,4 +14,10 @@ test("MapLibre usa un worker pubblico stabile invece del chunk implicito", () =>
   assert.match(component, /setWorkerUrl\("\/maplibre-gl-worker\.mjs"\)/);
   assert.match(packageJson.scripts.build, /prepare-maplibre-worker/);
   assert.match(packageJson.scripts.dev, /prepare-maplibre-worker/);
+  assert.match(packageJson.scripts.lint, /public\/maplibre-gl-shared\.mjs/);
+  const preparation = readFileSync(
+    new URL("../scripts/prepare-maplibre-worker.mjs", import.meta.url),
+    "utf8",
+  );
+  assert.match(preparation, /maplibre-gl-shared\.mjs/);
 });
