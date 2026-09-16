@@ -1,6 +1,6 @@
 # Catalogo micologico nazionale — Specifica formale
 
-**Stato:** proposta approvata a livello concettuale, in attesa di revisione della specifica prima del piano di implementazione  
+**Stato:** approvato dall'utente il 16 settembre 2026
 **Data:** 16 settembre 2026  
 **Prodotto:** Fungo Italia — Beta  
 **Matrice campi:** `docs/catalog/catalog-field-matrix.md`
@@ -427,4 +427,3 @@ Il catalogo non può essere dichiarato completo finché tutte le righe S1-minimo
 - test automatici per schema, vocabolari, copertura, riferimenti e conflitti;
 - rilascio riproducibile dal repository;
 - avvertenza alimentare sempre visibile nelle schede interessate.
-

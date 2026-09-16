@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "maplibre-gl/dist/maplibre-gl.css";
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 @utility scrollbar-thin { scrollbar-width: thin; scrollbar-color: #9fb1a1 transparent; }
 @utility scrollbar-none { scrollbar-width: none; &::-webkit-scrollbar { display: none; } }
@@ -21,8 +22,24 @@
   --font-sans: "Aptos", "Segoe UI", Arial, sans-serif; --font-serif: Georgia, "Times New Roman", serif;
 }
 * { border-color: var(--border); }
-html { background: var(--background); }
-body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); font-size: 16px; }
+html { background: var(--background); max-width: 100%; overflow-x: hidden; }
+body { margin: 0; max-width: 100%; overflow-x: hidden; background: var(--background); color: var(--foreground); font-family: var(--font-sans); font-size: 16px; }
 button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 ::selection { background: #bad8bb; color: #102a19; }
 
+.maplibregl-map,
+.maplibregl-canvas-container,
+.maplibregl-canvas {
+  max-width: 100%;
+}
+
+.maplibregl-ctrl-attrib {
+  max-width: min(75vw, 320px);
+  font-size: 11px;
+}
+
+@media (max-width: 1023px) {
+  .maplibregl-ctrl-bottom-right {
+    bottom: 82px;
+  }
+}

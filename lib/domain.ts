@@ -1,6 +1,18 @@
 export type RecommendationLabel = "Vai ora" | "Buona" | "Attendi";
 export type VisitPressure = "nessuno" | "pochi" | "alcuni" | "molti";
-export type TaxonRank = "family" | "genus" | "section" | "group" | "species";
+export type TaxonRank =
+  | "family"
+  | "genus"
+  | "subgenus"
+  | "section"
+  | "subsection"
+  | "speciesGroup"
+  | "aggregate"
+  | "species"
+  | "subspecies"
+  | "variety"
+  | "operationalGroup"
+  | "group";
 
 export interface RegionalName {
   name: string;
@@ -20,7 +32,8 @@ export interface Taxon {
     | "sconsigliato"
     | "non-commestibile"
     | "tossico"
-    | "senza-valore";
+    | "senza-valore"
+    | "non-valutato";
   safetyNote: string;
   hosts?: string[];
   recognitionLevel?: "minimo" | "approfondito" | "auspicabile";
@@ -74,4 +87,3 @@ export function scoreArea(area: Area): Recommendation {
 export function formatTaxonLabel(taxon: Taxon) {
   return `${taxon.commonName} · ${taxon.scientificName}`;
 }
-

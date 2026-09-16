@@ -1,4 +1,5 @@
 import { ArrowLeft, Camera, ShieldCheck } from "lucide-react";
+import Link from "next/link";
 
 import { requireChatGPTUser } from "@/app/chatgpt-auth";
 import { ObservationForm } from "./observation-form";
@@ -12,7 +13,7 @@ export default async function NewObservationPage() {
   return (
     <main className="min-h-screen bg-[#f4f7f2] px-4 py-5 text-[#14261a] sm:px-6 sm:py-8">
       <div className="mx-auto max-w-5xl">
-        <a href="/" className="inline-flex items-center gap-2 rounded-lg px-1 py-2 font-bold text-[#315d3c] hover:text-[#173f25]"><ArrowLeft className="size-4" /> Torna alla mappa</a>
+        <Link href="/" className="inline-flex items-center gap-2 rounded-lg px-1 py-2 font-bold text-[#315d3c] hover:text-[#173f25]"><ArrowLeft className="size-4" /> Torna alla mappa</Link>
         <div className="mt-3 grid gap-5 lg:grid-cols-[minmax(0,1fr)_290px]">
           <section className="rounded-[26px] border border-[#dbe4d9] bg-white p-5 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-8">
             <div className="flex items-start gap-4 border-b border-[#e2e9e0] pb-6"><div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#e5efe2] text-[#205d34]"><Camera className="size-6" /></div><div><p className="text-sm font-bold text-[#607365]">Contributo alla banca dati</p><h1 className="text-3xl font-black tracking-[-0.04em]">Segnala una specie</h1><p className="mt-2 max-w-2xl leading-relaxed text-[#5c7061]">Inserisci fotografie, caratteri osservati e coordinate. Il punto esatto resta privato e la segnalazione diventa pubblica soltanto dopo verifica.</p></div></div>
@@ -27,4 +28,3 @@ export default async function NewObservationPage() {
     </main>
   );
 }
-

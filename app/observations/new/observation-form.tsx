@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { Camera, CheckCircle2, LoaderCircle, LocateFixed, Send } from "lucide-react";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,7 +40,7 @@ export function ObservationForm({ taxa }: { taxa: Taxon[] }) {
   }
 
   if (status === "success") {
-    return <div className="mt-8 rounded-2xl border border-[#a8d3ad] bg-[#edf8ec] p-7 text-center"><CheckCircle2 className="mx-auto size-11 text-[#22703a]" /><h2 className="mt-3 text-xl font-black">Segnalazione ricevuta</h2><p className="mt-2 text-[#506757]">È ora in attesa di verifica da parte di un micologo competente per territorio e gruppo tassonomico.</p><Button asChild className="mt-5 rounded-xl bg-[#174f2b]"><a href="/">Torna alla mappa</a></Button></div>;
+    return <div className="mt-8 rounded-2xl border border-[#a8d3ad] bg-[#edf8ec] p-7 text-center"><CheckCircle2 className="mx-auto size-11 text-[#22703a]" /><h2 className="mt-3 text-xl font-black">Segnalazione ricevuta</h2><p className="mt-2 text-[#506757]">È ora in attesa di verifica da parte di un micologo competente per territorio e gruppo tassonomico.</p><Button asChild className="mt-5 rounded-xl bg-[#174f2b]"><Link href="/">Torna alla mappa</Link></Button></div>;
   }
 
   return <form onSubmit={submit} className="mt-7 space-y-6">

@@ -96,3 +96,110 @@ export const reviews = sqliteTable("reviews", {
   notes: text("notes").notNull().default(""),
   ...timestamps,
 }, (table) => [index("idx_reviews_observation").on(table.observationId)]);
+
+export const catalogRoleGrants = sqliteTable("catalog_role_grants", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  role: text("role").notNull(),
+  region: text("region"),
+  taxonomicGroup: text("taxonomic_group"),
+  active: integer("active", { mode: "boolean" }).notNull().default(true),
+  grantedBy: text("granted_by").notNull(),
+  ...timestamps,
+}, (table) => [
+  index("idx_catalog_grants_user_active").on(table.userId, table.active),
+  index("idx_catalog_grants_scope").on(table.region, table.taxonomicGroup),
+]);
+
+export const catalogChangeSets = sqliteTable("catalog_change_sets", {
+  id: text("id").primaryKey(),
+  authorId: text("author_id").notNull().references(() => users.id),
+  targetTaxonId: text("target_taxon_id").references(() => taxa.id),
+  proposalKind: text("proposal_kind").notNull(),
+  status: text("status").notNull().default("submitted"),
+  criticality: text("criticality").notNull(),
+  regionScope: text("region_scope"),
+  taxonomicScope: text("taxonomic_scope"),
+  rationale: text("rationale").notNull(),
+  publishedReleaseId: text("published_release_id"),
+  ...timestamps,
+}, (table) => [
+  index("idx_catalog_changes_status").on(table.status, table.criticality),
+  index("idx_catalog_changes_scope").on(table.regionScope, table.taxonomicScope),
+  index("idx_catalog_changes_target").on(table.targetTaxonId),
+]);
+
+export const catalogFieldChanges = sqliteTable("catalog_field_changes", {
+  id: text("id").primaryKey(),
+  changeSetId: text("change_set_id").notNull().references(() => catalogChangeSets.id),
+  fieldPath: text("field_path").notNull(),
+  previousValueJson: text("previous_value_json"),
+  proposedValueJson: text("proposed_value_json").notNull(),
+  sourceCitation: text("source_citation").notNull(),
+  evidenceNote: text("evidence_note").notNull().default(""),
+  ...timestamps,
+}, (table) => [index("idx_catalog_field_changes_set").on(table.changeSetId)]);
+
+export const catalogReviewDecisions = sqliteTable("catalog_review_decisions", {
+  id: text("id").primaryKey(),
+  changeSetId: text("change_set_id").notNull().references(() => catalogChangeSets.id),
+  reviewerId: text("reviewer_id").notNull().references(() => users.id),
+  stage: text("stage").notNull(),
+  decision: text("decision").notNull(),
+  notes: text("notes").notNull().default(""),
+  ...timestamps,
+}, (table) => [
+  index("idx_catalog_review_change").on(table.changeSetId),
+  index("idx_catalog_review_reviewer").on(table.reviewerId),
+]);
+
+export const catalogReleases = sqliteTable("catalog_releases", {
+  id: text("id").primaryKey(),
+  version: text("version").notNull(),
+  publishedBy: text("published_by").notNull().references(() => users.id),
+  publishedAt: text("published_at").notNull(),
+  sourceReportJson: text("source_report_json").notNull(),
+  ...timestamps,
+}, (table) => [uniqueIndex("idx_catalog_release_version").on(table.version)]);
+
+export const forecastModelVersions = sqliteTable("forecast_model_versions", {
+  id: text("id").primaryKey(),
+  name: text("name").notNull(),
+  weightsJson: text("weights_json").notNull(),
+  active: integer("active", { mode: "boolean" }).notNull().default(false),
+  ...timestamps,
+}, (table) => [index("idx_forecast_model_active").on(table.active)]);
+
+export const environmentalSnapshots = sqliteTable("environmental_snapshots", {
+  id: text("id").primaryKey(),
+  areaId: text("area_id").notNull().references(() => areas.id),
+  provider: text("provider").notNull(),
+  observedAt: text("observed_at").notNull(),
+  expiresAt: text("expires_at").notNull(),
+  payloadJson: text("payload_json").notNull(),
+  ...timestamps,
+}, (table) => [
+  index("idx_environment_area_observed").on(table.areaId, table.observedAt),
+]);
+
+export const cellTaxonForecasts = sqliteTable("cell_taxon_forecasts", {
+  id: text("id").primaryKey(),
+  areaId: text("area_id").notNull().references(() => areas.id),
+  taxonId: text("taxon_id").notNull().references(() => taxa.id),
+  modelVersionId: text("model_version_id").notNull().references(() => forecastModelVersions.id),
+  snapshotId: text("snapshot_id").references(() => environmentalSnapshots.id),
+  ecologicalSuitability: integer("ecological_suitability").notNull(),
+  phenologyFit: integer("phenology_fit").notNull(),
+  weatherFit: integer("weather_fit").notNull(),
+  evidenceScore: integer("evidence_score").notNull(),
+  pressurePenalty: integer("pressure_penalty").notNull(),
+  score: integer("score").notNull(),
+  recommendation: text("recommendation").notNull(),
+  confidence: text("confidence").notNull(),
+  reasonsJson: text("reasons_json").notNull(),
+  calculatedAt: text("calculated_at").notNull(),
+  ...timestamps,
+}, (table) => [
+  uniqueIndex("idx_cell_taxon_forecast_unique").on(table.areaId, table.taxonId, table.modelVersionId, table.calculatedAt),
+  index("idx_cell_taxon_forecast_area_score").on(table.areaId, table.score),
+]);
