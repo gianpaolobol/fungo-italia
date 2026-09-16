@@ -1,6 +1,7 @@
 import { chatGPTSignOutPath, requireChatGPTUser } from "./chatgpt-auth";
 import { ExploreClient } from "./explore-client";
-import { betaAreas, betaTaxa } from "@/lib/seed-data";
+import { catalogTaxa } from "@/lib/objective-catalog";
+import { betaAreas } from "@/lib/seed-data";
 
 export const dynamic = "force-dynamic";
 
@@ -10,9 +11,8 @@ export default async function Home() {
   return (
     <ExploreClient
       areas={betaAreas}
-      taxa={betaTaxa}
+      taxa={catalogTaxa}
       user={{ displayName: user.displayName, signOutPath: chatGPTSignOutPath("/") }}
     />
   );
 }
-

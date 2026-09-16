@@ -12,6 +12,20 @@ test("beta areas cover northern, central, southern, and island regions", () => {
   assert.equal(regions.has("Sardegna"), true);
 });
 
+test("national beta covers every Italian region with broad search areas", () => {
+  const regions = new Set(betaAreas.map((area) => area.region));
+  const expectedRegions = [
+    "Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia-Romagna",
+    "Friuli-Venezia Giulia", "Lazio", "Liguria", "Lombardia", "Marche",
+    "Molise", "Piemonte", "Puglia", "Sardegna", "Sicilia", "Toscana",
+    "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto",
+  ];
+
+  assert.equal(betaAreas.length >= 40, true);
+  assert.deepEqual([...regions].sort(), expectedRegions.sort());
+  assert.equal(new Set(betaAreas.map((area) => area.id)).size, betaAreas.length);
+});
+
 test("seed recommendations include an immediate option and explain every area", () => {
   assert.equal(betaAreas.some((area) => scoreArea(area).label === "Vai ora"), true);
   assert.equal(betaAreas.every((area) => area.reasons.length >= 2), true);

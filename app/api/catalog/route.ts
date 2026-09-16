@@ -6,7 +6,7 @@ import {
   applyPublishedChanges,
   type PublishedFieldChange,
 } from "@/lib/catalog-publication";
-import { betaTaxa } from "@/lib/seed-data";
+import { catalogTaxa } from "@/lib/objective-catalog";
 
 export const dynamic = "force-dynamic";
 
@@ -16,7 +16,7 @@ export async function GET() {
   if (!env.DB) {
     return NextResponse.json({
       release: "beta-base",
-      taxa: betaTaxa,
+      taxa: catalogTaxa,
       status: "degraded",
     });
   }
@@ -27,7 +27,7 @@ export async function GET() {
     ).all<PublishedFieldChange>();
     return NextResponse.json({
       release: result.results.at(-1)?.publishedAt ?? "beta-base",
-      taxa: applyPublishedChanges(betaTaxa, result.results),
+      taxa: applyPublishedChanges(catalogTaxa, result.results),
       status: "live",
     }, {
       headers: { "Cache-Control": "private, max-age=60" },
@@ -36,7 +36,7 @@ export async function GET() {
     console.error("catalog_read_failed", error);
     return NextResponse.json({
       release: "beta-base",
-      taxa: betaTaxa,
+      taxa: catalogTaxa,
       status: "degraded",
     });
   }

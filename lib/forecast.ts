@@ -18,6 +18,15 @@ export type ForecastResult = {
   providerStatus: "live" | "degraded";
   calculatedAt: string;
   weatherObservedAt: string | null;
+  weather?: {
+    temperatureC: number | null;
+    relativeHumidity: number | null;
+    precipitation7dMm: number | null;
+    precipitation14dMm: number | null;
+    precipitationProbability: number | null;
+    elevationM: number | null;
+    source: WeatherSnapshot["source"];
+  } | null;
   expectedTaxa: string[];
   components: {
     ecologicalSuitability: number;
@@ -137,6 +146,15 @@ export function calculateForecast(
     providerStatus,
     calculatedAt: now.toISOString(),
     weatherObservedAt: weather?.observedAt ?? null,
+    weather: weather && weatherIsFresh ? {
+      temperatureC: weather.temperatureC,
+      relativeHumidity: weather.relativeHumidity,
+      precipitation7dMm: weather.precipitation7dMm,
+      precipitation14dMm: weather.precipitation14dMm,
+      precipitationProbability: weather.precipitationProbability,
+      elevationM: weather.elevationM,
+      source: weather.source,
+    } : null,
     expectedTaxa: [...area.expectedTaxa],
     components: {
       ecologicalSuitability,

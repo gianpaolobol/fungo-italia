@@ -1,4 +1,5 @@
 import type { Area, Taxon } from "./domain";
+import { nationalAreas } from "./national-areas.ts";
 
 export const betaTaxa: Taxon[] = [
   {
@@ -92,8 +93,8 @@ export const betaTaxa: Taxon[] = [
     rank: "species",
     aliases: ["Clitocybe gibba"],
     regionalNames: [{ name: "Imbutino", regions: ["Toscana", "Emilia-Romagna"] }],
-    edibility: "commestibile-dopo-trattamento",
-    safetyNote: "Consumabile soltanto dopo completa cottura e corretta identificazione.",
+    edibility: "commestibile",
+    safetyNote: "La valutazione alimentare richiede corretta identificazione e cottura; escludere le Clitocybe bianche tossiche.",
     hosts: ["Boschi di latifoglie e conifere"],
     recognitionLevel: "minimo",
   },
@@ -278,7 +279,7 @@ export const betaTaxa: Taxon[] = [
     rank: "family",
     aliases: ["Calvatia spp.", "Lycoperdon spp."],
     regionalNames: [{ name: "Peto di lupo", regions: ["Tutta Italia"] }],
-    edibility: "commestibile-dopo-trattamento",
+    edibility: "commestibile",
     safetyNote: "Aprire sempre l'esemplare: interno completamente bianco e omogeneo, escludendo giovani Amanita.",
     hosts: ["Prati", "Boschi"],
     recognitionLevel: "minimo",
@@ -344,14 +345,14 @@ export const betaTaxa: Taxon[] = [
     rank: "group",
     aliases: [],
     regionalNames: [{ name: "Chiodino invernale", regions: ["Italia settentrionale"] }],
-    edibility: "commestibile-dopo-trattamento",
+    edibility: "commestibile",
     safetyNote: "Possibile confusione con specie lignicole tossiche; verificare sporata e gambo vellutato.",
     hosts: ["Olmo", "Pioppo", "Salice", "Latifoglie"],
     recognitionLevel: "minimo",
   },
 ];
 
-export const betaAreas: Area[] = [
+const featuredAreas: Area[] = [
   {
     id: "lagorai-pine",
     name: "Lagorai e Piné",
@@ -473,3 +474,5 @@ export const betaAreas: Area[] = [
     reasons: ["Nessun passaggio aggregato pubblicato", "Mosaico di querceti e pascoli", "Condizioni ancora variabili"],
   },
 ];
+
+export const betaAreas: Area[] = [...featuredAreas, ...nationalAreas];

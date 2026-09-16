@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 import { aggregateCoordinates, normalizeProposedTaxonId, validateObservation } from "@/lib/observation";
-import { betaTaxa } from "@/lib/seed-data";
+import { catalogTaxa } from "@/lib/objective-catalog";
 
 const ACCEPTED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 const MAX_PHOTO_BYTES = 12 * 1024 * 1024;
@@ -19,8 +19,8 @@ export async function POST(request: Request) {
   const observedAt = String(form.get("observedAt") ?? "");
   const latitude = Number(form.get("latitude"));
   const longitude = Number(form.get("longitude"));
-  const proposedTaxonId = normalizeProposedTaxonId(String(form.get("proposedTaxonId") ?? ""), new Set(betaTaxa.map((taxon) => taxon.id)));
-  const proposedTaxon = proposedTaxonId ? betaTaxa.find((taxon) => taxon.id === proposedTaxonId) : null;
+  const proposedTaxonId = normalizeProposedTaxonId(String(form.get("proposedTaxonId") ?? ""), new Set(catalogTaxa.map((taxon) => taxon.id)));
+  const proposedTaxon = proposedTaxonId ? catalogTaxa.find((taxon) => taxon.id === proposedTaxonId) : null;
   const errors = validateObservation({ description, observedAt, latitude, longitude, photoCount: photos.length });
 
   if (photos.length > 6) errors.push("Puoi allegare al massimo 6 fotografie.");

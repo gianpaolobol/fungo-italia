@@ -1,0 +1,2730 @@
+[
+  {
+    "id": "objective-agaricus",
+    "commonName": "Agaricus",
+    "scientificName": "Agaricus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e conoscenza morfologica approfondita della sez. Xanthodermatei (tossici, sindrome gastrointestinale incostante). Determinazione dei seguenti taxa: - A. bresadolanus: tossico (sindrome gastrointestinale incostante) - sez. Arvenses: commestibili (alcuni commercializzabili) - sez. Sanguinolenti: commestibili - A. campestris, A. bitorquis, A. bisporus: commestibili e commercializzabili Per le altre specie con odore anisato/cianico: non tossiche. Altre specie non inquadrabili nei taxa riconosciuti (sopra elencati): prudenzialmente non commestibili.",
+      "desirable": "riconoscimento di altre specie localmente consumate in Italia (A. augustus, A. crocodilinus, A. litoralis) e delle specie ingiallenti di piccola taglia come sez. Minores.",
+      "advanced": "determinazione di altre specie all’interno delle sezioni sopra menzionate, in particolare le più caratterizzate e/o comuni nei vari ecosistemi."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 4
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 28
+      }
+    }
+  },
+  {
+    "id": "objective-agrocybe-cyclocybe",
+    "commonName": "Agrocybe + Cyclocybe",
+    "scientificName": "Agrocybe + Cyclocybe",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere per le specie di maggiori dimensioni (non errato Agrocybe aegerita per Cyclocybe cylindracea). Non presenti specie tossiche. Determinazione di C. cylindracea, commestibile e commercializzabile.",
+      "desirable": "determinazione del genere per le specie praticole di piccole dimensioni: possibili richieste in caso di ingestione da parte di bambini (funghi innocui, rassicurare famigliari, medici, operatori scolastici).",
+      "advanced": "determinazione di altre specie, in particolare le più caratterizzate e/o comuni nei vari ecosistemi, come A. praecox e A. molesta."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 4
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 30
+      }
+    }
+  },
+  {
+    "id": "objective-amanita",
+    "commonName": "Amanita",
+    "scientificName": "Amanita",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita delle seguenti specie: - A. phalloides, A. verna (inclusa A. vidua), A. virosa: tossiche, sindrome falloidea, potenzialmente mortali - A. proxima (tossica, sindrome nefrotossica) e A. ovoidea (consumata ma potenziale nefrotossica, da classificare non commestibile) - A. pantherina, A. muscaria: tossiche, sindrome panterinica - A. caesarea: commestibile e commercializzabile Determinazione del genere e determinazione dei seguenti taxa: - A. gemmata, non commestibile - A. citrina e A. porphyria, non commestibili - A. excelsa s.l. (incl. A. spissa, A. franchetii), non commestibili - A. strobiliformis e A. vittadinii, sconsigliate - A. rubescens, commestibile condizionata alla cottura completa - specie della sez. Vaginatae come tali: commestibili condizionate alla cottura completa.",
+      "desirable": "conoscenza di alcune delle più comuni specie di Vaginatae (es. A. crocea, A. ceciliae) e di altre specie degne di nota ma poco comuni come A. ponderosa (commestibile) e la specie esotica A. erythrocephala (= A. flavoconia), prudenzialmente non commestibile.",
+      "advanced": "determinazione di altre specie più rare o di determinazione più complessa, es. le entità simili ad A. gemmata (A. gioiosa, A. amici, A. eliae) o ad A. strobiliformis (A. boudieri, A. gracilior, A. echinocephala)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 4
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 30
+      }
+    }
+  },
+  {
+    "id": "objective-armillaria-desarmillaria",
+    "commonName": "Armillaria + Desarmillaria",
+    "scientificName": "Armillaria + Desarmillaria",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere con conoscenza morfologica approfondita (tenuto conto anche del range di variabilità fra le diverse specie). Per Desarmillaria è accettabile l’utilizzo di Armillaria come nome del genere. Tutte commestibili condizionate ai trattamenti di sgambatura (parti fibrose), prebollitura con eliminazione dell’acqua e cottura completa; commercializzabile Armillaria mellea s.l.",
+      "desirable": "determinazione di Desarmillaria tabescens, A. mellea s. str. e delle altre specie anellate come A. mellea s.l.",
+      "advanced": "determinazione come specie anche per A. ostoyae e come gruppo per A. gallica - A. cepistipes."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 5
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 35
+      }
+    }
+  },
+  {
+    "id": "objective-bolbitius",
+    "commonName": "Bolbitius",
+    "scientificName": "Bolbitius",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere: possibili richieste in caso di ingestione da parte di bambini (funghi innocui, rassicurare famigliari, medici, operatori scolastici).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 5
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 37
+      }
+    }
+  },
+  {
+    "id": "objective-calocybe",
+    "commonName": "Calocybe",
+    "scientificName": "Calocybe",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione di C. gambosa, commestibile e commercializzabile.",
+      "desirable": null,
+      "advanced": "determinazione di altre specie poco comuni o di piccole dimensioni, appartenenti ai generi Gerhardtia, Rugosomyces e Tricholomella (che possono fare capo a Calocybe)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 5
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 38
+      }
+    }
+  },
+  {
+    "id": "objective-catathelasma",
+    "commonName": "Catathelasma",
+    "scientificName": "Catathelasma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie C. imperiale, commestibile.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 5
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 39
+      }
+    }
+  },
+  {
+    "id": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+    "commonName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "scientificName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita delle seguenti specie: - C. cerussata (= C. phyllophila) e C. dealbata (= C. rivulosa), anche collettivamente come “Clitocybe bianche”: tossiche muscariniche. - C. nebularis, sconsigliata - C. geotropa: commestibile e commercializzabile Determinazione del genere (va bene come Clitocybe!) e determinazione dei seguenti taxa: - C. amoenolens, tossica acromelalgica - C. gibba s.l.: commestibili",
+      "desirable": "riconoscimento di alcune specie abbastanza comuni, es. C. odora (priva di valore alimentare), C. alexandri s.l. (commestibile) e C. clavipes (non commestibile).",
+      "advanced": "determinazione di altre specie fra le più caratterizzate e/o comuni nei vari ecosistemi, come per es. C. nivea e C. phaeophthalma (bianche non muscariniche), C. cyathiformis, C. sinopica e altre."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 5
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 41
+      }
+    }
+  },
+  {
+    "id": "objective-clitopilus",
+    "commonName": "Clitopilus",
+    "scientificName": "Clitopilus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione di Clitopilus prunulus s.l., commestibile.",
+      "desirable": "riconoscimento a livello generico di altre specie di dimensioni minori.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 5
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 44
+      }
+    }
+  },
+  {
+    "id": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+    "commonName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (ove non diversamente indicato va bene come Collybia!) e determinazione dei seguenti taxa: - C. maculata, non commestibile - C. fusipes, sconsigliata - M. oreades: commestibile (dopo cottura anche breve) e commercializzabile",
+      "desirable": "riconoscimento di M. collinus (non commestibile); riconoscimento di alcuni altri funghi abbastanza caratterizzati e comuni, es. Strobilurus spp. (commestibili), M. alliaceus e altre specie a odore di aglio (commestibili) C. butyracea e C. confluens (prive di valore alimentare) e C. peronata (non commestibile). In caso di richieste per ingestione da parte di bambini, si tratta di funghi di fatto innocui sulle piccole quantità (ragionevolmente anche per M. oreades nonostante si tratti di specie cianogenica): rassicurare famigliari, medici, operatori scolastici.",
+      "advanced": "determinazione di altre specie fra le più comuni nei vari ecosistemi, come per es. C. dryophila (a livello di gruppo, priva di valore alimentare) M. wynneae (privo di valore alimentare) o C. brassicolens (non commestibile)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 6
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 45
+      }
+    }
+  },
+  {
+    "id": "objective-conocybe",
+    "commonName": "Conocybe",
+    "scientificName": "Conocybe",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere per le specie più tipiche: possibili richieste in caso di ingestione da parte di bambini (funghi non commestibili per ragioni di confondibilità, ma di fatto innocui: rassicurare famigliari, medici, operatori scolastici). Per altre specie, difficoltà rispetto a Pholiotina e Galerina.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 6
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 46
+      }
+    }
+  },
+  {
+    "id": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+    "commonName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+    "scientificName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (va bene come Coprinus!) e determinazione dei seguenti taxa: - C. atramentarius s.l., non commestibile (potenziale sindrome coprinica) - C. comatus, commestibile",
+      "desirable": "riconoscimento di alcuni altri funghi abbastanza caratterizzati e comuni, es. C. micaceus s.l. e C. disseminatus s.l. (privi di valore alimentare) e C. picaceus (non commestibile, potenziale sindrome coprinica). Per molte di queste specie di piccole dimensioni e comuni nei giardini, possibili richieste in caso di ingestione da parte di bambini (funghi innocui! Anche nel caso delle specie copriniche, in assenza di alcool! Rassicurare famigliari, medici, operatori scolastici).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 6
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 47
+      }
+    }
+  },
+  {
+    "id": "objective-cortinarius",
+    "commonName": "Cortinarius",
+    "scientificName": "Cortinarius",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita delle seguenti specie: - C. orellanus, C. orellanoides (= C. rubellus, C. speciosissimus): tossici, sindrome orellanica, potenzialmente mortali Determinazione del genere e determinazione dei seguenti taxa: - sottogenere Dermocybe per la presenza di numerose specie con tossicità gastrointestinale e sospetta nefrotossicità (non di tipo orellanico) - C. praestans, C. cumatilis (commestibili) - C. variiformis (commestibile) - C. caperatus = Rozites caperatus (commestibile) Indicazione di possibile tossicità gastrointestinale e (per alcune specie come C. splendens e C. atrovirens) sospetta nefrotossicità non di tipo orellanico, per le specie con colorazioni rosse, aranciate, gialle, verdi. Indicazione di probabile innocuità per le specie con altre colorazioni (in particolare biancastre e violacee).",
+      "desirable": "capacità di determinazione degli altri sottogeneri di Cortinarius: Cortinarius (C. violaceus), Phlegmacium, Myxacium, Telamonia.",
+      "advanced": "determinazione di alcune specie fra le più caratterizzate nei diversi sottogeneri e/o comuni nei vari ecosistemi, o con qualche peculiarità di tipo biochimico, cromatico o olfattivo (es. C. armillatus, C. infractus, C. cinnabarinus, C. bulliardii, C. purpurascens, C. varius, C. odorifer, C. traganus, C. camphoratus, C. trivialis, C. elatior…)"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 6
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 48
+      }
+    }
+  },
+  {
+    "id": "objective-crepidotus",
+    "commonName": "Crepidotus",
+    "scientificName": "Crepidotus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (privi di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 52
+      }
+    }
+  },
+  {
+    "id": "objective-cystoderma",
+    "commonName": "Cystoderma",
+    "scientificName": "Cystoderma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere (tutti non commestibili).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 52
+      }
+    }
+  },
+  {
+    "id": "objective-entoloma",
+    "commonName": "Entoloma",
+    "scientificName": "Entoloma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "Determinazione e conoscenza morfologica approfondita di E. sinuatum, tossico, sindrome gastrointestinale costante. Determinazione del genere per il morfotipo principale a lamelle uncinate e determinazione dei seguenti taxa: - E. rhodopolium s.l. (tossico, sindrome gastrointestinale incostante) - E. hirtipes, E. vernum (specie primaverili tossiche, sindrome gastrointestinale incostante) - E. clypeatum s.l., E. saundersii (specie primaverili commestibili)",
+      "desirable": "determinazione del genere per tutti i morfotipi e anche per le specie di piccole dimensioni; riconoscimento di E. lividoalbum s.l. (sconsigliato).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 53
+      }
+    }
+  },
+  {
+    "id": "objective-faerberia",
+    "commonName": "Faerberia",
+    "scientificName": "Faerberia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (privi di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 55
+      }
+    }
+  },
+  {
+    "id": "objective-flammulina",
+    "commonName": "Flammulina",
+    "scientificName": "Flammulina",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie F. velutipes s.l., commestibile.",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 55
+      }
+    }
+  },
+  {
+    "id": "objective-floccularia",
+    "commonName": "Floccularia",
+    "scientificName": "Floccularia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie F. luteovirens (commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 56
+      }
+    }
+  },
+  {
+    "id": "objective-galerina",
+    "commonName": "Galerina",
+    "scientificName": "Galerina",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e delle specie per il gruppo facente capo a G. marginata: tossiche, sindrome falloidea, potenzialmente mortali.",
+      "desirable": null,
+      "advanced": "determinazione del genere per altre specie meno rilevanti sul piano tossicologico (difficoltà rispetto a Pholiotina e Conocybe)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 56
+      }
+    }
+  },
+  {
+    "id": "objective-gymnopilus",
+    "commonName": "Gymnopilus",
+    "scientificName": "Gymnopilus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere per le specie più rilevanti (G. spectabilis) o comuni (G. penetrans), tutte non commestibili.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 57
+      }
+    }
+  },
+  {
+    "id": "objective-hebeloma",
+    "commonName": "Hebeloma",
+    "scientificName": "Hebeloma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (tutte le specie sconsigliate o non commestibili).",
+      "desirable": "determinazione di H. radicosum e (per gruppi) delle specie di maggiori dimensioni a odore terroso: come H. sinapizans s.l. per quelle a lamelle non lacrimanti e H. crustuliniforme s.l. per quelle a lamelle lacrimanti.",
+      "advanced": "determinazione di altre specie, in particolare le più caratterizzate e/o comuni nei vari ecosistemi, per es. H. mesophaeum come esempio di specie cortinata, le specie a odore dolciastro (H. laterinum e gruppo H. sacchariolens) e H. porphyrosporum in area mediterranea."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 7
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 57
+      }
+    }
+  },
+  {
+    "id": "objective-hohenbuehelia",
+    "commonName": "Hohenbuehelia",
+    "scientificName": "Hohenbuehelia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere (commestibili tutte le specie del gruppo di H. petaloides).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 8
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 59
+      }
+    }
+  },
+  {
+    "id": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+    "commonName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+    "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e delle seguenti specie: - H. conica s.l., specie annerenti, tossiche (sindrome gastrointestinale incostante) - H. punicea, commestibile",
+      "desirable": null,
+      "advanced": "determinazione di altre specie, in particolare le più caratterizzate e/o comuni nei vari ecosistemi, anche se poco rilevanti sul piano alimentare o ispettivo"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 8
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 59
+      }
+    }
+  },
+  {
+    "id": "objective-hygrophorus-cuphophyllus",
+    "commonName": "Hygrophorus + Cuphophyllus",
+    "scientificName": "Hygrophorus + Cuphophyllus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (non errato Hygrophorus s.l. per i Cuphophyllus). Non presenti specie tossiche. Tutte le specie sono teoricamente commestibili (eventualmente non commestibili in via precauzionale quelle piccole e bianche, e prive di valore alimentare quelle più piccole e inconsistenti). Determinazione delle specie più importanti consumate in Italia: H. marzuolus, H. russula, H. penarioides.",
+      "desirable": "riconoscimento di altre specie localmente consumate in Italia: H. abieticola, gruppo H. glutinifer/limacinus, C. pratensis, C. virgineus.",
+      "advanced": "determinazione di altre specie, in particolare le più caratterizzate e/o comuni nei vari ecosistemi, anche se poco o per nulla consumate"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 8
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 60
+      }
+    }
+  },
+  {
+    "id": "objective-hypholoma",
+    "commonName": "Hypholoma",
+    "scientificName": "Hypholoma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere per le specie cespitose di maggiori dimensioni. Determinazione e conoscenza morfologica approfondita della specie H. fasciculare, tossico, sindrome gastrointestinale costante. Determinazione della specie H. lateritium (non commestibile)",
+      "desirable": "determinazione della specie H. capnoides (non commestibile - sconsigliato).",
+      "advanced": "determinazione del genere per altre specie meno comuni."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 8
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 62
+      }
+    }
+  },
+  {
+    "id": "objective-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+    "commonName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+    "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere con conoscenza morfologica approfondita (tenuto conto anche del range di variabilità, considerando le diverse specie e gli esemplari immaturi) e con indicazione, in tutti i casi, di tossicità muscarinica molto probabile.",
+      "desirable": "determinazione di alcuni dei taxa più comuni o significativi, con conoscenze relative alla variabilità tossicologica all’interno del genere: - I. rimosa s.l., I. geophylla s.l., I. erubescens e altre (tossiche muscariniche) - I. fibrosa (probabile tossica muscarinica) per le grandi dimensioni e la confondibilità con il genere Tricholoma - I. aeruginascens, I. corydalina, I. haemacta (tossiche psilocibiniche) - I. adaequata (non tossica, ma da considerare non commestibile per confondibilità) Attenzione in caso di richieste per ingestione da parte di bambini, dato che molte Inocybe crescono anche in parchi e giardini: esiste rischio di intossicazione muscarinica anche con quantità modeste!",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 8
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 63
+      }
+    }
+  },
+  {
+    "id": "objective-laccaria",
+    "commonName": "Laccaria",
+    "scientificName": "Laccaria",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Non presenti specie tossiche, tutte le specie sono teoricamente commestibili (prive di valore alimentare quelle più piccole e inconsistenti).",
+      "desirable": "riconoscimento della specie L. amethystina e di tutte le specie con colorazioni rosate come L. laccata s.l.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 8
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 64
+      }
+    }
+  },
+  {
+    "id": "objective-lentinula",
+    "commonName": "Lentinula",
+    "scientificName": "Lentinula",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e dell’unica specie L. edodes (coltivato, commestibile dopo cottura, commercializzabile).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 9
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 66
+      }
+    }
+  },
+  {
+    "id": "objective-lentinus-s-l-inclusi-lentinellus-neolentinus-panus",
+    "commonName": "Lentinus s.l. (inclusi Lentinellus, Neolentinus, Panus)",
+    "scientificName": "Lentinus s.l. (inclusi Lentinellus, Neolentinus, Panus)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie L. tigrinus (commestibile da giovane).",
+      "advanced": "determinazione di altre specie fra le più caratterizzate, in particolare L. cochleatus e N. cyathiformis (privi di valore alimentare, non commestibili quando coriacei)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 9
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 66
+      }
+    }
+  },
+  {
+    "id": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+    "commonName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "Determinazione e conoscenza morfologica approfondita delle seguenti specie: - Lepiota subincarnata (=L. josserandii), L. brunneoincarnata: tossici, sindrome falloidea, potenzialmente mortali - Lepiota cristata: probabilmente epatotossica, anche se non contiene amanitine; Differenziazione morfologica fra i generi Lepiota (numerose specie con tossicità gastrointestinale, in ogni caso tutte non commestibili) e Macrolepiota (tutte commestibili). Conoscenza della possibile presenza nei vasi da fiori della specie esotica L. elaiophylla, tossica, sindrome falloidea, potenzialmente mortale. Conoscenza dell’attuale espansione in area mediterranea della specie esotica Chlorophyllum molybdites, tossica gastrointestinale e neurotossica, e conoscenza dei caratteri morfologici distintivi rispetto a Macrolepiota. Determinazione dei seguenti taxa: - Echinoderma asperum s.l. (non commestibili, potenziale sindrome coprinica) - Leucoagaricus leucothites s.l. (sconsigliati) - Chlorophyllum rhacodes s.l. (sconsigliati) - Macrolepiota procera s.l. (commestibili e commercializzabili sub Macrolepiota procera). Massima attenzione in caso di richieste per ingestione da parte di bambini, se si tratta di lepiotoidi di piccole dimensioni: il pericolo può essere grave!",
+      "desirable": "differenziazioni all’interno del gruppo di Chlorophyllum rhacodes (C. olivieri e soprattutto C. brunneum che si può considerare tossico, con sindrome gastrointestinale incostante). Determinazione di Leucoagaricus americanus (non commestibile) e di specie “minori” di Macrolepiota, commestibili (M. excoriata, M. mastoidea). Conoscenza di Leucocoprinus birnbaumii (possibili richieste in caso di ingestione da parte di bambini: specie non commestibile che tuttavia generalmente non causa problemi per consumo accidentale di piccola quantità).",
+      "advanced": "distinzioni fra specie di piccole dimensioni di Leucoagaricus e Lepiota; determinazione di alcune specie fra le più caratterizzate (es. Lepiota clypeolaria, L. ignivolvata, L. lilacea; Leucoagaricus nympharum, L. barssii; Chamaemyces fracidus)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 9
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 67
+      }
+    }
+  },
+  {
+    "id": "objective-lepista",
+    "commonName": "Lepista",
+    "scientificName": "Lepista",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (che non comprende specie tossiche) e dei seguenti taxa, commestibili dopo cottura: - Lepista nuda s.l. - Lepista flaccida s.l.",
+      "desirable": "riconoscimento di altre specie commestibili dopo cottura, abbastanza caratterizzate ma meno comuni: Lepista panaeola s.l., L. irina.",
+      "advanced": "riconoscimento come genere Lepista delle specie di colore bianco come L. ricekii, L. densifolia (non commestibili) e di Lepista saeva (commestibile dopo cottura)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 9
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 68
+      }
+    }
+  },
+  {
+    "id": "objective-leucocortinarius",
+    "commonName": "Leucocortinarius",
+    "scientificName": "Leucocortinarius",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie L. bulbiger (commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 70
+      }
+    }
+  },
+  {
+    "id": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+    "commonName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+    "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (che non comprende specie tossiche) e dei seguenti taxa: - Leucopaxillus giganteus s.l., commestibile e commercializzabile - Leucopaxillus gentianeus, non commestibile",
+      "desirable": "riconoscimento di altre specie abbastanza caratterizzate ma meno comuni: Leucopaxillus lepistoides (commestibile dopo cottura).",
+      "advanced": "riconoscimento di specie ancora meno comuni"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 70
+      }
+    }
+  },
+  {
+    "id": "objective-limacella-inclusi-limacellopsis-zhuliangomyces",
+    "commonName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+    "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (non errato Limacella s.l. per tutte le specie). Non presenti specie tossiche. Tutte le specie sono prive di valore alimentare.",
+      "desirable": "riconoscimento della specie di maggiori dimensioni (L. guttata).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 71
+      }
+    }
+  },
+  {
+    "id": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+    "commonName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "scientificName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere per le specie cespitose di grandi dimensioni. Non presenti specie tossiche. Determinazione di L. decastes s.l. (commestibili), delle specie annerenti come tali (commestibili o prive di valore alimentare) e di L. connatum (non commestibile).",
+      "desirable": null,
+      "advanced": "determinazione di alcune delle specie annerenti più significative (es. L. rhopalopodium). Riconoscimento a livello di genere di alcune specie di piccole dimensioni e differente portamento (es. Tephrocybe spp.)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 72
+      }
+    }
+  },
+  {
+    "id": "objective-megacollybia",
+    "commonName": "Megacollybia",
+    "scientificName": "Megacollybia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie M. platyphylla (non commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 73
+      }
+    }
+  },
+  {
+    "id": "objective-melanoleuca",
+    "commonName": "Melanoleuca",
+    "scientificName": "Melanoleuca",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili o prive di valore alimentare.",
+      "desirable": null,
+      "advanced": "riconoscimento di alcune delle specie più caratterizzate e di maggiori dimensioni (M. cognata, M. grammopodia, M. strictipes…)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 74
+      }
+    }
+  },
+  {
+    "id": "objective-mucidula",
+    "commonName": "Mucidula",
+    "scientificName": "Mucidula",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere e dell’unica specie M. mucida (priva di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 74
+      }
+    }
+  },
+  {
+    "id": "objective-mycena",
+    "commonName": "Mycena",
+    "scientificName": "Mycena",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Determinazione delle specie appartenenti alla sez. Purae (M. pura, M. rosea e M. pelianthina), che presentano tossicità gastrointestinale e/o muscarinica, quest’ultima soprattutto in M. rosea. Tutte le altre specie sono prive di valore alimentare (non commestibili).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 74
+      }
+    }
+  },
+  {
+    "id": "objective-omphalina-inclusi-altri-generi-omfalinoidi",
+    "commonName": "Omphalina (inclusi altri generi omfalinoidi)",
+    "scientificName": "Omphalina (inclusi altri generi omfalinoidi)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (privi di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 10
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 75
+      }
+    }
+  },
+  {
+    "id": "objective-omphalotus",
+    "commonName": "Omphalotus",
+    "scientificName": "Omphalotus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita della specie O. olearius, tossico, sindrome gastrointestinale costante.",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 75
+      }
+    }
+  },
+  {
+    "id": "objective-panaeolus-inclusi-copelandia-panaeolina",
+    "commonName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+    "scientificName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Riconoscimento di P. cyanescens, specie bluescente che presenta tossicità psilocibinica.",
+      "desirable": "riconoscimento di P. cinctulus, specie lievemente psilocibinica (non o poco bluescente) e di P. foenisecii, specie praticola piuttosto comune (possibili richieste in caso di ingestione da parte di bambini: funghi innocui con ingestione di piccola quantità, rassicurare famigliari, medici, operatori scolastici).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 76
+      }
+    }
+  },
+  {
+    "id": "objective-phaeocollybia",
+    "commonName": "Phaeocollybia",
+    "scientificName": "Phaeocollybia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (non commestibili)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 77
+      }
+    }
+  },
+  {
+    "id": "objective-phaeolepiota",
+    "commonName": "Phaeolepiota",
+    "scientificName": "Phaeolepiota",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie P. aurea (non commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 77
+      }
+    }
+  },
+  {
+    "id": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+    "commonName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+    "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (non errato Pholiota mutabilis per Kuehneromyces mutabilis). Non presenti specie tossiche. Determinazione di P. mutabilis, commestibile e commercializzabile.",
+      "desirable": "determinazione di poche specie ben caratterizzate e/o comuni (es. P. squarrosa) e conoscenza della specie asiatica coltivata P. nameko presente in commercio (conservata).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 77
+      }
+    }
+  },
+  {
+    "id": "objective-pholiotina",
+    "commonName": "Pholiotina",
+    "scientificName": "Pholiotina",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione delle specie bluescenti (come tali, indipendentemente dal genere di appartenenza) che sono da considerare tossiche psilocibiniche.",
+      "advanced": "determinazione del genere per altre specie meno rilevanti sul piano tossicologico (difficoltà rispetto a Galerina e Conocybe)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 78
+      }
+    }
+  },
+  {
+    "id": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+    "commonName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "scientificName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione dei generi e dei seguenti taxa: - Pleurotus eryngii s.l., commestibili e commercializzabili sub Pleurotus eryngii - Pleurotus ostreatus, commestibile e commercializzabile - Pleurotus cornucopiae, commestibile e commercializzabile (incluso P. citrinopileatus)",
+      "desirable": null,
+      "advanced": "determinazione di altre specie commestibili meno comuni, come Sarcomyxa serotina e Hypsizygus ulmarius/tessellatus, della specie prudenzialmente non commestibile Pleurocybella porrigens, ed eventualmente di altre specie pleurotoidi appartenenti ai generi sopra elencati."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 78
+      }
+    }
+  },
+  {
+    "id": "objective-pluteus",
+    "commonName": "Pluteus",
+    "scientificName": "Pluteus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere per le specie di maggiori dimensioni, anche per gli esemplari immaturi. Tutte le specie sono innocue, prive di valore alimentare, con l’eccezione “teorica” di P. salicinus (bluescenza!) per il quale è segnalata tossicità psilocibinica.",
+      "desirable": null,
+      "advanced": "determinazione di P. cervinus, P. atromarginatus e altre specie meno comuni o meno caratterizzate."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 11
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 81
+      }
+    }
+  },
+  {
+    "id": "objective-porpoloma-inclusi-pseudoporpoloma-pogonoloma-p-p",
+    "commonName": "Porpoloma (inclusi Pseudoporpoloma, Pogonoloma p.p.)",
+    "scientificName": "Porpoloma (inclusi Pseudoporpoloma, Pogonoloma p.p.)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (privi di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 81
+      }
+    }
+  },
+  {
+    "id": "objective-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-la",
+    "commonName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+    "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere, per le specie più significative (va bene come Psathyrella!). Tutte le specie sono innocue, prive di valore alimentare.",
+      "desirable": "riconoscimento di alcune specie abbastanza caratterizzate o comuni, es. P. candolleana e P. lacrymabunda. Per molte di queste specie, comuni nei parchi e nei giardini, possibili richieste in caso di ingestione da parte di bambini. Rassicurare famigliari, medici, operatori scolastici).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 81
+      }
+    }
+  },
+  {
+    "id": "objective-psilocybe-s-l-incluso-deconica",
+    "commonName": "Psilocybe s.l. (incluso Deconica)",
+    "scientificName": "Psilocybe s.l. (incluso Deconica)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere per tutte le specie bluescenti (Psilocybe s. str.), che sono da considerare tossiche psilocibiniche.",
+      "desirable": null,
+      "advanced": "determinazione delle specie più comuni o caratterizzate (es. P. semilanceata, ma anche le esotiche coltivate come P. cubensis)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 82
+      }
+    }
+  },
+  {
+    "id": "objective-rhodocybe",
+    "commonName": "Rhodocybe",
+    "scientificName": "Rhodocybe",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie R. gemina (commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 83
+      }
+    }
+  },
+  {
+    "id": "objective-schizophyllum",
+    "commonName": "Schizophyllum",
+    "scientificName": "Schizophyllum",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie S. commune (commestibile, in Italia privo di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 84
+      }
+    }
+  },
+  {
+    "id": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+    "commonName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+    "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (va bene come Stropharia!). Non presenti specie tossiche, tutte da considerare non commestibili esclusa la seguente. Determinazione di S. rugosoannulata, commestibile e commercializzabile.",
+      "desirable": "determinazione delle specie più comuni nei vari ecosistemi: ambienti boschivi (S. aeruginosa, S, squamosa), specie coprofile (S. semiglobata) o praticole di piccole dimensioni (S. coronilla)",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 85
+      }
+    }
+  },
+  {
+    "id": "objective-tricholoma",
+    "commonName": "Tricholoma",
+    "scientificName": "Tricholoma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita delle seguenti specie: - T. pardinum e T. filamentosum: tossici, sindrome gastrointestinale costante - T. josserandii: tossico, sindrome gastrointestinale - T. equestre: sconsigliato e in ogni caso vietato da ordinanza ministeriale - T. portentosum: commestibile e commercializzabile - T. terreum: commestibile e commercializzabile Determinazione del genere e determinazione dei seguenti taxa: - T. saponaceum s.l.: non commestibile - T. columbetta: commestibile e commercializzabile - T. album s.l. (incl. T. stiparophyllum, T. lascivum e altri): non commestibili - altre specie del gruppo di T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre): commestibili - T. virgatum, T. sciodes e T. bresadolanum: i “Virgati” (non commestibili) - T. sejunctum: non commestibile - T. sulphureum, non commestibile - sez. Genuina (= gruppo “Albobrunnei”): tutte le specie non commestibili o sconsigliate - T. acerbum s.l. (commestibile).",
+      "desirable": "conoscenza di altre specie meno rilevanti o meno comuni rispetto alle precedenti: T. colossus (commestibile), T. caligatum e T. matsutake (commestibili). T. focale (commestibile), T. populinum (commestibile), T. inamoenum (non commestibile); T. imbricatum (commestibile e commercializzabile), T. vaccinum (commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 12
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 85
+      }
+    }
+  },
+  {
+    "id": "objective-tricholomopsis",
+    "commonName": "Tricholomopsis",
+    "scientificName": "Tricholomopsis",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e dell’unica specie di una certa rilevanza: T. rutilans (privo di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 13
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 92
+      }
+    }
+  },
+  {
+    "id": "objective-tricholosporum",
+    "commonName": "Tricholosporum",
+    "scientificName": "Tricholosporum",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie T. goniospermum (commestibile condizionato alla cottura completa).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 13
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 92
+      }
+    }
+  },
+  {
+    "id": "objective-tubaria",
+    "commonName": "Tubaria",
+    "scientificName": "Tubaria",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (non commestibili)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 13
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 92
+      }
+    }
+  },
+  {
+    "id": "objective-volvariella-volvopluteus",
+    "commonName": "Volvariella + Volvopluteus",
+    "scientificName": "Volvariella + Volvopluteus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (non errato Volvariella per Volvopluteus). Non presenti specie tossiche. Determinazione della comunissima specie V. gloiocephalus (sconsigliata) e conoscenza della specie commerciale V. volvacea commestibile e commercializzabile (soprattutto conservata).",
+      "desirable": "determinazione di altre specie di medio-grandi dimensioni, in particolare V. bombycina (commestibile).",
+      "advanced": "determinazione di altre specie, per esempio le più caratterizzate (es. V. surrecta con crescita su C. nebularis)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 13
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 92
+      }
+    }
+  },
+  {
+    "id": "objective-xerula-hymenopellis",
+    "commonName": "Xerula + Hymenopellis",
+    "scientificName": "Xerula + Hymenopellis",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere. Non presenti specie tossiche. Determinazione della comunissima specie H. radicata (commestibile). RUSSULALES (IMENOFORO A LAMELLE, CARNE CASSANTE):",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 13
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 94
+      }
+    }
+  },
+  {
+    "id": "objective-lactarius-incluso-lactifluus",
+    "commonName": "Lactarius (incluso Lactifluus)",
+    "scientificName": "Lactarius (incluso Lactifluus)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (va bene come Lactarius!) e determinazione dei seguenti taxa: - Deliciosi: commestibili e commercializzabili (sub Lactarius deliciosus); - specie commestibili a latice bianco: L. porniniae, L. volemus s.l., L. tesquorum. Tutte le altre specie a latice bianco possono essere considerate non commestibili, oppure sconsigliate ove consumate, anche tossiche gastrointestinali incostanti nel caso delle più acri e di L. helvus.",
+      "desirable": "determinazione delle principali specie della sez. Deliciosi: L. deliciosus, L. salmonicolor, L. deterrimus, L. sanguifluus, eventualmente altre. Riconoscimento di altre specie, anche per gruppi, ai fini di una migliore conoscenza dei rischi in caso di consumo: - L. helvus e L. necator: tossici gastrointestinali incostanti - gruppo di L. scrobiculatus: non commestibili - L. chrysorrheus e gruppo di L. zonarius: non commestibili o sconsigliati - L. controversus, L. piperatus, L. glaucescens, L. vellereus e L. bertillonii: sconsigliati - gruppo di L. torminosus con l’eccezione di L. tesquorum: non commestibili - altre specie molto acri solo localmente e raramente consumate in Italia: L. pallidus, L. trivialis, L. pyrogalus, L. blennius, L. rufus: non commestibili. - L. cistophilus, commestibile",
+      "advanced": "determinazione di altre specie o gruppi di specie, in genere prive di valore alimentare, fra le più caratterizzate e/o comuni nei vari ecosistemi (gruppo Plinthogali, gruppo Uvidi, L. aurantiacus, L. atlanticus, L. quietus, ecc.)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 13
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 95
+      }
+    }
+  },
+  {
+    "id": "objective-russula",
+    "commonName": "Russula",
+    "scientificName": "Russula",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e dei seguenti taxa: - Foetentinae: tossiche gastrointestinali incostanti - Compactae Nigricantinae: non commestibili - Compactae Lactarioides (= gruppo R. delica): commestibili Per tutte le rimanenti specie di Russula: quelle a carne mite o debolmente acre possono essere considerate commestibili dopo completa cottura, mentre quelle di sapore molto acre sono da classificare sconsigliate ove consumate, in altri ambiti non commestibili o anche tossiche gastrointestinali incostanti (nel caso delle più acri).",
+      "desirable": "riconoscimento di altre specie, soprattutto per gruppi, ai fini di una migliore operatività nel controllo ispettivo (evitare l’assaggio quando possibile!): - Emeticinae: non commestibili, ovvero sconsigliate (ove consumate) - Sardoninae: non commestibili, ovvero sconsigliate (ove consumate) - gruppo R. pectinata: non commestibili, ovvero sconsigliate (ove consumate) - R. badia e gruppo “Urentes”: non commestibili, ovvero sconsigliate (ove consumate) - R. fellea e altre specie molto acri: non commestibili. - R. olivacea: commestibile condizionata alla cottura completa - R. virescens: commestibile - R. aurea (quando tipica): commestibile - R. cyanoxantha, R. vesca, R. heterophylla (Heterophyllae): commestibili - Griseinae: commestibili - Xerampelinae: commestibili - R. decolorans e R. vinosa: commestibili BOLETALES (IMENOFORO A TUBULI E PORI OPPURE A LAMELLE: Gomphidiaceae, Paxillaceae, Hygrophoropsis)",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 14
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 98
+      }
+    }
+  },
+  {
+    "id": "objective-aureoboletus",
+    "commonName": "Aureoboletus",
+    "scientificName": "Aureoboletus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie A. gentilis (priva di valore alimentare); per quanto riguarda A. moravicus si ritiene accettabile anche la sua determinazione come Xerocomus s.l. Approfondimento: conoscenza della specie esotica A. projectellus (commestibile ma non commercializzabile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 14
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 103
+      }
+    }
+  },
+  {
+    "id": "objective-baorangia",
+    "commonName": "Baorangia",
+    "scientificName": "Baorangia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere e della specie B. emileorum (commestibile)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 14
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 103
+      }
+    }
+  },
+  {
+    "id": "objective-boletus-s-str",
+    "commonName": "Boletus s. str.",
+    "scientificName": "Boletus s. str.",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita del genere - eventualmente anche come Boletus edulis sensu lato o “Boletus edulis e relativo gruppo” (funghi porcini). Accettabile l’utilizzo di una diversa sistematica e nomenclatura (genere Boletus, sez. Boletus = sez. Edules).",
+      "desirable": "determinazione delle singole specie Boletus edulis, B. reticulatus, B. aereus e B. pinophilus, commestibili e commercializzabili, nel caso di esemplari tipici. Capacità di determinazione allo stato secco e conservato, incluse le specie asiatiche di Boletus presenti in commercio.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 14
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 103
+      }
+    }
+  },
+  {
+    "id": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+    "commonName": "Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "scientificName": "Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "rank": "section",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione come Boletus sez. Luridi o “ex sez. Luridi”. Determinazione delle specie seguenti: - Boletus (Rubroboletus) satanas e B. pulchrotinctus: tossici gastrointestinali incostanti. - Boletus (Neoboletus) erythropus s.l., Boletus (Suillellus) luridus, B. queletii e specie vicine o “intermedie”: commestibili condizionati al trattamento di cottura completa. Le altre specie di “boleti a pori rossi e carne virante al blu”, anche senza capacità di determinazione di generi e specie, possono essere classificate non commestibili o sconsigliate.",
+      "desirable": "capacità di determinazione come Boletus sez. Luridi anche in caso di forme xantoidi o per le specie tipicamente a pori gialli come B. torosus. Capacità di determinazione di altre specie, in particolare: - Boletus (Rubroboletus) rhodoxanthus e specie vicine: sconsigliati - Boletus (Imperator) rhodopurpureus e specie vicine: sconsigliati",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 106
+      }
+    }
+  },
+  {
+    "id": "objective-butyriboletus",
+    "commonName": "Butyriboletus",
+    "scientificName": "Butyriboletus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (tutte le specie commestibili condizionate al trattamento di cottura completa). Accettabile l’utilizzo di una diversa sistematica e nomenclatura (genere Boletus, sez. Appendiculati).",
+      "desirable": "determinazione delle specie B. regius e B. appendiculatus s.l., commercializzabili.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 109
+      }
+    }
+  },
+  {
+    "id": "objective-caloboletus",
+    "commonName": "Caloboletus",
+    "scientificName": "Caloboletus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (accettabile l’utilizzo di una diversa sistematica e nomenclatura: genere Boletus, sez. Calopodes) e delle specie seguenti: - C. radicans: tossico gastrointestinale incostante. - C. calopus: non commestibile (sconsigliato nelle aree di consumo).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 109
+      }
+    }
+  },
+  {
+    "id": "objective-chalciporus",
+    "commonName": "Chalciporus",
+    "scientificName": "Chalciporus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie C. piperatus (privo di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 110
+      }
+    }
+  },
+  {
+    "id": "objective-chroogomphus",
+    "commonName": "Chroogomphus",
+    "scientificName": "Chroogomphus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono da considerare non commestibili per la confondibilità con i Cortinarius sez. Orellani (mortali).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 110
+      }
+    }
+  },
+  {
+    "id": "objective-cyanoboletus",
+    "commonName": "Cyanoboletus",
+    "scientificName": "Cyanoboletus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere e della specie C. pulverulentus (non commestibile)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 110
+      }
+    }
+  },
+  {
+    "id": "objective-gomphidius",
+    "commonName": "Gomphidius",
+    "scientificName": "Gomphidius",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono da considerare commestibili.",
+      "desirable": null,
+      "advanced": "determinazione delle specie più caratteristiche"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 15
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 111
+      }
+    }
+  },
+  {
+    "id": "objective-gyrodon",
+    "commonName": "Gyrodon",
+    "scientificName": "Gyrodon",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie G. lividus (commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 111
+      }
+    }
+  },
+  {
+    "id": "objective-gyroporus",
+    "commonName": "Gyroporus",
+    "scientificName": "Gyroporus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e delle specie seguenti: - G. cyanescens: commestibile dopo cottura completa. - G. castaneus s.l.: sconsigliato.",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 111
+      }
+    }
+  },
+  {
+    "id": "objective-hemileccinum",
+    "commonName": "Hemileccinum",
+    "scientificName": "Hemileccinum",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (accettabile l’utilizzo di una diversa sistematica e nomenclatura: genere Boletus, sez. Fragrantes). Tutte le specie sono da considerare commestibili, eliminando il gambo.",
+      "desirable": "determinazione della specie H. impolitum, commercializzabile.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 112
+      }
+    }
+  },
+  {
+    "id": "objective-hygrophoropsis",
+    "commonName": "Hygrophoropsis",
+    "scientificName": "Hygrophoropsis",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della principale specie H. aurantiaca, per l’Italia da considerare non commestibile (o sconsigliata nelle aree di consumo).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 112
+      }
+    }
+  },
+  {
+    "id": "objective-imleria",
+    "commonName": "Imleria",
+    "scientificName": "Imleria",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie I. badia, commestibile e commercializzabile.",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 113
+      }
+    }
+  },
+  {
+    "id": "objective-lanmaoa",
+    "commonName": "Lanmaoa",
+    "scientificName": "Lanmaoa",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie L. fragrans (commestibile). Accettabile l’utilizzo di una diversa sistematica e nomenclatura: genere Boletus, sez. Fragrantes.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 113
+      }
+    }
+  },
+  {
+    "id": "objective-leccinellum",
+    "commonName": "Leccinellum",
+    "scientificName": "Leccinellum",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Accettabile l’utilizzo di una diversa sistematica e nomenclatura: genere Leccinum. Tutte le specie sono da considerare commestibili condizionate ai trattamenti di sgambatura (parti fibrose) e cottura completa, e commercializzabili (sub “Leccinum tutte le specie”).",
+      "desirable": "determinazione delle specie più comuni nei vari ecosistemi o maggiormente commercializzate, in particolare L. lepidum e L. corsicum.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 114
+      }
+    }
+  },
+  {
+    "id": "objective-leccinum",
+    "commonName": "Leccinum",
+    "scientificName": "Leccinum",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili condizionate ai trattamenti di sgambatura (parti fibrose) e cottura completa, e commercializzabili.",
+      "desirable": null,
+      "advanced": "determinazione di alcune delle specie più caratterizzate e/o comuni nei vari ecosistemi."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 114
+      }
+    }
+  },
+  {
+    "id": "objective-paxillus",
+    "commonName": "Paxillus",
+    "scientificName": "Paxillus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono da considerare tossiche (potenziale sindrome paxillica in seguito a consumo frequente e sindrome gastrointestinale costante se la cottura è insufficiente).",
+      "desirable": null,
+      "advanced": "determinazione delle specie più caratterizzate e/o comuni nei vari ecosistemi, in alcuni casi a livello di specie collettive, per esempio P. involutus s.l. e P. rubicundulus s.l."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 114
+      }
+    }
+  },
+  {
+    "id": "objective-phylloporus",
+    "commonName": "Phylloporus",
+    "scientificName": "Phylloporus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere e della specie P. pelletieri (privo di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 16
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 115
+      }
+    }
+  },
+  {
+    "id": "objective-porphyrellus",
+    "commonName": "Porphyrellus",
+    "scientificName": "Porphyrellus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie P. porphyrosporus (privo di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 116
+      }
+    }
+  },
+  {
+    "id": "objective-strobilomyces",
+    "commonName": "Strobilomyces",
+    "scientificName": "Strobilomyces",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie S. strobilaceus (privo di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 116
+      }
+    }
+  },
+  {
+    "id": "objective-suillus-incluso-boletinus",
+    "commonName": "Suillus (incluso Boletinus)",
+    "scientificName": "Suillus (incluso Boletinus)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili, preferibilmente dopo eliminazione delle parti fibrose dei gambi e della cuticola del cappello, e trattamento di cottura completa. Determinazione delle specie S. luteus e S. granulatus, commercializzabili.",
+      "desirable": "determinazione di altre specie, fra le più caratterizzate e/o comuni nei vari ecosistemi, in particolare S. cavipes, S. grevillei, S. bovinus, S. variegatus, S. collinitus.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 116
+      }
+    }
+  },
+  {
+    "id": "objective-tapinella",
+    "commonName": "Tapinella",
+    "scientificName": "Tapinella",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie T. atrotomentosa (non commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 118
+      }
+    }
+  },
+  {
+    "id": "objective-tylopilus",
+    "commonName": "Tylopilus",
+    "scientificName": "Tylopilus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie T. felleus, non commestibile.",
+      "desirable": null,
+      "advanced": "capacità di determinazione allo stato secco, per quanto riguarda alcune specie asiatiche di Tylopilus presenti come estranee nei porcini secchi."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 118
+      }
+    }
+  },
+  {
+    "id": "objective-xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbaribo",
+    "commonName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+    "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere (va bene come Xerocomus!). Tutte le specie sono commestibili, preferibilmente dopo eliminazione delle parti fibrose dei gambi e trattamento di cottura completa. AFILLOFOROIDI (IMENOFORO A PORI, ACULEI, VENATURE, LISCIO)",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 118
+      }
+    }
+  },
+  {
+    "id": "objective-cantharellus",
+    "commonName": "Cantharellus",
+    "scientificName": "Cantharellus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione e conoscenza morfologica approfondita del genere e del complesso di specie facenti capo a C. cibarius, commestibili e commercializzabili.",
+      "desirable": null,
+      "advanced": "determinazione delle singole specie del gruppo di C. cibarius"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 120
+      }
+    }
+  },
+  {
+    "id": "objective-clavariadelphus",
+    "commonName": "Clavariadelphus",
+    "scientificName": "Clavariadelphus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere. Tutte le specie sono innocue e prive di valore alimentare.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 121
+      }
+    }
+  },
+  {
+    "id": "objective-clavulina",
+    "commonName": "Clavulina",
+    "scientificName": "Clavulina",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere (tutte le specie possono essere considerate innocue prive di valore alimentare) e della specie C. cinerea, localmente consumata (commestibile, ovvero innocua priva di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 17
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 121
+      }
+    }
+  },
+  {
+    "id": "objective-craterellus",
+    "commonName": "Craterellus",
+    "scientificName": "Craterellus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili. Determinazione delle specie C. lutescens, C. tubaeformis e C. cornucopioides, anche commercializzabili.",
+      "desirable": "determinazione delle specie C. cinereus e C. undulatus.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 18
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 121
+      }
+    }
+  },
+  {
+    "id": "objective-gomphus",
+    "commonName": "Gomphus",
+    "scientificName": "Gomphus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie G. clavatus, commestibile.",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 18
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 122
+      }
+    }
+  },
+  {
+    "id": "objective-hydnaceae-s-l",
+    "commonName": "Hydnaceae s.l.",
+    "scientificName": "Hydnaceae s.l.",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "non sono presenti specie tossiche. Determinazione dei seguenti taxa: - Hydnum spp. (H. repandum s.l. incluso gruppo di H rufescens), commestibili e commercializzabili sub Hydnum repandum - Hericium spp., tutti commestibili - Sarcodon imbricatus, s.l. (incluso S. squamosus), commestibili",
+      "desirable": "conoscenza di singole specie del genere Hericium, e di alcune specie amare a cappello liscio del genere Sarcodon (prive di valore alimentare al di fuori di pochi territori ove sono consumate dopo trattamenti).",
+      "advanced": "determinazione di altre specie appartenenti ai generi Auriscalpium, Hydnellum e Phellodon (non commestibili)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 18
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 122
+      }
+    }
+  },
+  {
+    "id": "objective-polyporaceae-s-l",
+    "commonName": "Polyporaceae s.l.",
+    "scientificName": "Polyporaceae s.l.",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione come “Polyporaceae” o “funghi polyporoidi” per tutte le specie a pori, con tubuli non separabili dalla carne e consistenza (perlomeno negli esemplari maturi) da più o meno fibroso-elastica oppure coriacea e fino a legnosa. Determinazione dei seguenti taxa: - Hapalopilus rutilans, tossico, sindrome da acido poliporico - Laetiporus sulphureus s.l., commestibile dopo completa cottura - Albatrellus (Albatrellopsis) confluens, Albatrellus ovinus s.l. (inclusi A. subrubescens e A. citrinus): commestibili - Scutiger pes-caprae, commestibile - Fistulina hepatica, commestibile - Grifola frondosa, Polyporus (Cladomeris) umbellatus, Meripilus giganteus, commestibili - Polyporus (Cerioporus) squamosus, commestibile La commestibilità delle specie sopra elencate si riferisce, in linea di principio, ai soli esemplari giovani.",
+      "desirable": "determinazione di altre specie meno rilevanti, fra le più quali Polyporus (Cerioporus) corylinus, Polyporus tuberaster, Inonotus hispidus (commestibile) e Albatrellus (Laeticutis) cristatus (non commestibile), Fomitopsis (Piptoporus) betulina (non commestibile), Ganoderma lucidum s.l. (non commestibile tal quale ma noto per l’impiego negli integratori alimentari).",
+      "advanced": "determinazione di altre specie non collegate all’uso alimentare (non commestibili) ma spesso più o meno rilevanti a livello di ecosistema forestale"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 18
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 123
+      }
+    }
+  },
+  {
+    "id": "objective-ramaria",
+    "commonName": "Ramaria",
+    "scientificName": "Ramaria",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e delle seguenti specie: - R. formosa e R. pallida, tossiche gastrointestinali incostanti - R. botrytis s.l., commestibile In generale le Ramaria colorate di giallo o giallo aranciato possono essere considerate commestibili condizionate ai trattamenti di veloce prebollitura con eliminazione dell’acqua e cottura completa. Per tutte le specie di Ramaria definite commestibili il riferimento è, in linea di principio, ai soli esemplari giovani (con rami corti).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 129
+      }
+    }
+  },
+  {
+    "id": "objective-sparassis",
+    "commonName": "Sparassis",
+    "scientificName": "Sparassis",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e delle specie S. crispa e S. brevipes (= S. laminosa) (commestibili).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 130
+      }
+    }
+  },
+  {
+    "id": "objective-thelephora",
+    "commonName": "Thelephora",
+    "scientificName": "Thelephora",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere. In Europa tutte le specie sono prive di valore alimentare. GASTEROMICETOIDI"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 130
+      }
+    }
+  },
+  {
+    "id": "objective-clathraceae-e-phallaceae",
+    "commonName": "Clathraceae e Phallaceae",
+    "scientificName": "Clathraceae e Phallaceae",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "non sono presenti specie tossiche. Determinazione come famiglia Phallaceae per gli esemplari immaturi ancora chiusi; determinazione dei generi Phallus, Clathrus e Mutinus per gli esemplari maturi. Tutte le specie, sebbene innocue, in ambito italiano sono prive di valore alimentare.",
+      "desirable": null,
+      "advanced": "determinazione di singole specie appartenenti ai generi sopra citati."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 131
+      }
+    }
+  },
+  {
+    "id": "objective-geastraceae-astraeus",
+    "commonName": "Geastraceae + Astraeus",
+    "scientificName": "Geastraceae + Astraeus",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "non sono presenti specie tossiche. Tutte le specie, sebbene innocue, in ambito italiano sono prive di valore alimentare.",
+      "desirable": "determinazione dei generi Geastrum e Astraeus",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 131
+      }
+    }
+  },
+  {
+    "id": "objective-lycoperdaceae",
+    "commonName": "Lycoperdaceae",
+    "scientificName": "Lycoperdaceae",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "non sono presenti specie tossiche. Determinazione come famiglia Lycoperdaceae, tutte commestibili per quanto riguarda gli esemplari immaturi ancora bianchi all’interno.",
+      "desirable": null,
+      "advanced": "determinazione dei principali generi (Lycoperdon, Apioperdon, Calvatia, Bovista, Bovistella e Vascellum) e di singole specie ad essi appartenenti, fra le più caratterizzate e/o comuni nei vari ecosistemi."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 71
+      }
+    }
+  },
+  {
+    "id": "objective-nidulariaceae",
+    "commonName": "Nidulariaceae",
+    "scientificName": "Nidulariaceae",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione dei generi (funghi privi di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 133
+      }
+    }
+  },
+  {
+    "id": "objective-pisolithus",
+    "commonName": "Pisolithus",
+    "scientificName": "Pisolithus",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili da giovani, la più conosciuta è P. arhizus.",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 133
+      }
+    }
+  },
+  {
+    "id": "objective-rhizopogon",
+    "commonName": "Rhizopogon",
+    "scientificName": "Rhizopogon",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere. Tutte le specie sono commestibili, anche se in ambito italiano quasi sempre prive di valore alimentare.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 19
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 133
+      }
+    }
+  },
+  {
+    "id": "objective-scleroderma",
+    "commonName": "Scleroderma",
+    "scientificName": "Scleroderma",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono da considerare tossiche gastrointestinali incostanti, con possibile comparsa di quadri clinici complessi (inclusi sintomi neurologici e cardiovascolari).",
+      "desirable": null,
+      "advanced": "determinazione delle principali specie europee (S. citrinum, S. verrucosum, S. areolatum, S. cepa)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 134
+      }
+    }
+  },
+  {
+    "id": "objective-tulostomataceae",
+    "commonName": "Tulostomataceae",
+    "scientificName": "Tulostomataceae",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione dei generi (funghi privi di valore alimentare). ETEROBASIDIOIDI"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 92
+      }
+    }
+  },
+  {
+    "id": "objective-auricularia",
+    "commonName": "Auricularia",
+    "scientificName": "Auricularia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie A. auricula-judae (commestibile e commercializzabile). Approfondimento: determinazione di altre specie di Auricularia (per l’Italia tutte prive di valore alimentare).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 136
+      }
+    }
+  },
+  {
+    "id": "objective-calocera",
+    "commonName": "Calocera",
+    "scientificName": "Calocera",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie C. viscosa (non commestibile).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 136
+      }
+    }
+  },
+  {
+    "id": "objective-exidia-tremella",
+    "commonName": "Exidia + Tremella",
+    "scientificName": "Exidia + Tremella",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione dei generi (per l’Italia tutte le specie sono prive di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 137
+      }
+    }
+  },
+  {
+    "id": "objective-guepinia",
+    "commonName": "Guepinia",
+    "scientificName": "Guepinia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie G. helvelloides (per l’Italia priva di valore alimentare).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 137
+      }
+    }
+  },
+  {
+    "id": "objective-pseudohydnum",
+    "commonName": "Pseudohydnum",
+    "scientificName": "Pseudohydnum",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere e della specie P. gelatinosum (per l’Italia privo di valore alimentare). ASCOMICETI",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 137
+      }
+    }
+  },
+  {
+    "id": "objective-bulgaria",
+    "commonName": "Bulgaria",
+    "scientificName": "Bulgaria",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione del genere (non commestibili)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 139
+      }
+    }
+  },
+  {
+    "id": "objective-cudonia",
+    "commonName": "Cudonia",
+    "scientificName": "Cudonia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere (non commestibili).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 140
+      }
+    }
+  },
+  {
+    "id": "objective-cordyceps",
+    "commonName": "Cordyceps",
+    "scientificName": "Cordyceps",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere. Tutte le specie sono innocue e in ambito italiano sono prive di valore alimentare. Alcune sono consumate in altri paesi e anche coltivate (C. militaris), altre utilizzate negli integratori alimentari.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 140
+      }
+    }
+  },
+  {
+    "id": "objective-geoglossaceae",
+    "commonName": "Geoglossaceae",
+    "scientificName": "Geoglossaceae",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": null,
+      "advanced": "determinazione dei generi (privi di valore alimentare)."
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 20
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 141
+      }
+    }
+  },
+  {
+    "id": "objective-gyromitra-incluso-discina",
+    "commonName": "Gyromitra (incluso Discina)",
+    "scientificName": "Gyromitra (incluso Discina)",
+    "rank": "operationalGroup",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie G. esculenta, tossica, per rischio di sindrome giromitrica, potenzialmente mortale. Tutte le rimanenti specie sono da considerare non commestibili.",
+      "desirable": "determinazione di altre specie, in particolare G. (Paragyromitra) infula e gruppo di G. (Discina) gigas.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 142
+      }
+    }
+  },
+  {
+    "id": "objective-helvella",
+    "commonName": "Helvella",
+    "scientificName": "Helvella",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie possono essere considerate commestibili condizionate al trattamento di cottura completa (eventuale veloce prebollitura con eliminazione dell’acqua).",
+      "desirable": "determinazione di alcune delle principali specie, in particolare H. crispa, H. lacunosa s.l. e H. monachella (= H. leucopus).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 144
+      }
+    }
+  },
+  {
+    "id": "objective-leotia",
+    "commonName": "Leotia",
+    "scientificName": "Leotia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere (non commestibili).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 145
+      }
+    }
+  },
+  {
+    "id": "objective-morchella",
+    "commonName": "Morchella",
+    "scientificName": "Morchella",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili condizionate al trattamento di cottura completa e raccomandando il consumo di quantità moderate. Tutte le specie sono commercializzabili.",
+      "desirable": "determinazione di due principali gruppi di specie: M. elata s.l. (comprendente anche tutte le specie saprotrofe oggetto di coltivazione) e M. esculenta s.l.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 145
+      }
+    }
+  },
+  {
+    "id": "objective-pezizaceae-s-l-funghi-epigei-a-coppa-o-disco",
+    "commonName": "Pezizaceae s.l. (funghi epigei a coppa o disco)",
+    "scientificName": "Pezizaceae s.l. (funghi epigei a coppa o disco)",
+    "rank": "family",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "tutte le specie possono essere considerate commestibili condizionate al trattamento di cottura completa; per alcune specie si tratta di una procedura soltanto precauzionale, per altre è necessaria.",
+      "desirable": "determinazione di alcuni taxa abbastanza caratterizzati o comuni: Aleuria aurantia, Otidea spp., Disciotis venosa, Helvella leucomelaena (e altre astipitate, gruppo di H. acetabulum), Sarcoscypha coccinea s.l., Caloscypha fulgens, Geopora arenicola e G. sumneriana.",
+      "advanced": "determinazione di altri taxa meno caratterizzati"
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 150
+      }
+    }
+  },
+  {
+    "id": "objective-sarcosphaera",
+    "commonName": "Sarcosphaera",
+    "scientificName": "Sarcosphaera",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere e della specie S. coronaria s.l., non commestibile (sconsigliata ove consumata).",
+      "desirable": null,
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 150
+      }
+    }
+  },
+  {
+    "id": "objective-spathularia",
+    "commonName": "Spathularia",
+    "scientificName": "Spathularia",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": null,
+      "desirable": "determinazione del genere (non commestibili).",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 151
+      }
+    }
+  },
+  {
+    "id": "objective-verpa",
+    "commonName": "Verpa",
+    "scientificName": "Verpa",
+    "rank": "genus",
+    "edibility": "mixed",
+    "objectives": {
+      "minimum": "determinazione del genere. Tutte le specie sono commestibili condizionate al trattamento di cottura completa e raccomandando il consumo di quantità moderate.",
+      "desirable": "determinazione delle due principali specie: V. bohemica e V. conica.",
+      "advanced": null
+    },
+    "sources": {
+      "minimumObjectives": {
+        "title": "Obiettivi tassonomici nella formazione dei micologi",
+        "page": 21
+      },
+      "edibilityGuide": {
+        "title": "Guida ragionata alla commestibilità dei funghi",
+        "page": 152
+      }
+    }
+  }
+]

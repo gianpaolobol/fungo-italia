@@ -45,3 +45,6 @@ next-env.d.ts
 /outputs/
 /work/
 /.worktrees/
+/tmp/
+/tsconfig.tsbuildinfo
+/public/maplibre-gl-worker.mjs

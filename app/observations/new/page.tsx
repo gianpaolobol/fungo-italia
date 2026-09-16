@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { requireChatGPTUser } from "@/app/chatgpt-auth";
 import { ObservationForm } from "./observation-form";
-import { betaTaxa } from "@/lib/seed-data";
+import { catalogTaxa } from "@/lib/objective-catalog";
 
 export const dynamic = "force-dynamic";
 
@@ -17,7 +17,7 @@ export default async function NewObservationPage() {
         <div className="mt-3 grid gap-5 lg:grid-cols-[minmax(0,1fr)_290px]">
           <section className="rounded-[26px] border border-[#dbe4d9] bg-white p-5 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-8">
             <div className="flex items-start gap-4 border-b border-[#e2e9e0] pb-6"><div className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#e5efe2] text-[#205d34]"><Camera className="size-6" /></div><div><p className="text-sm font-bold text-[#607365]">Contributo alla banca dati</p><h1 className="text-3xl font-black tracking-[-0.04em]">Segnala una specie</h1><p className="mt-2 max-w-2xl leading-relaxed text-[#5c7061]">Inserisci fotografie, caratteri osservati e coordinate. Il punto esatto resta privato e la segnalazione diventa pubblica soltanto dopo verifica.</p></div></div>
-            <ObservationForm taxa={betaTaxa} />
+            <ObservationForm taxa={catalogTaxa} />
           </section>
           <aside className="space-y-4">
             <div className="rounded-[22px] border border-[#dbe4d9] bg-[#eaf2e7] p-5"><ShieldCheck className="size-7 text-[#255f37]" /><h2 className="mt-3 text-lg font-black">Coordinate protette</h2><p className="mt-2 text-sm leading-relaxed text-[#546b59]">Conserviamo il punto preciso soltanto per la verifica. Sulla mappa pubblica apparirà una cella geografica ampia.</p></div>

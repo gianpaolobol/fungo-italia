@@ -61,6 +61,7 @@ const edibilityLabels: Record<Taxon["edibility"], string> = {
   "non-commestibile": "Non commestibile",
   tossico: "Tossico",
   "senza-valore": "Privo di valore alimentare",
+  mixed: "Stati diversi nel gruppo",
   "non-valutato": "Non valutato nella guida",
 };
 
@@ -129,17 +130,22 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
         .filter((taxon): taxon is Taxon => Boolean(taxon))
     : [];
   const regions = ["Tutta Italia", ...new Set(areas.map((area) => area.region))];
-  const visibleTaxa = catalogTaxa.filter((taxon) =>
-    [
+  const normalizedAtlasQuery = atlasQuery.toLocaleLowerCase("it").trim();
+  const abbreviatedAtlasQuery = normalizedAtlasQuery.match(/^([a-zà-ÿ])[a-zà-ÿ-]+\s+([a-zà-ÿ-]+)$/)?.slice(1).join(". ");
+  const visibleTaxa = catalogTaxa.filter((taxon) => {
+    const haystack = [
       taxon.commonName,
       taxon.scientificName,
       ...taxon.aliases,
       ...taxon.regionalNames.map((entry) => entry.name),
+      taxon.objectiveSummary?.minimum ?? "",
+      taxon.objectiveSummary?.desirable ?? "",
+      taxon.objectiveSummary?.advanced ?? "",
     ]
       .join(" ")
-      .toLocaleLowerCase("it")
-      .includes(atlasQuery.toLocaleLowerCase("it")),
-  );
+      .toLocaleLowerCase("it");
+    return haystack.includes(normalizedAtlasQuery) || Boolean(abbreviatedAtlasQuery && haystack.includes(abbreviatedAtlasQuery));
+  });
 
   const selectArea = useCallback(
     (id: string) => {
@@ -339,6 +345,7 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
                 </p>
               </div>
               <div className="flex w-full shrink-0 flex-col gap-2 md:w-80">
+                <div className="text-sm font-bold text-[#5d7362]">{visibleTaxa.length} di {catalogTaxa.length} schede</div>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f8173]" />
                   <Input
@@ -560,6 +567,21 @@ function AreaDetails({
         <Metric icon={Users} label="Pressione" value={getVisitPressure(area.delayedVisitors)} />
       </div>
 
+      {forecast.weather && (
+        <div className="mt-3 min-w-0 rounded-xl border border-[#dce7d9] bg-[#f8fbf7] p-3">
+          <div className="text-xs font-black uppercase tracking-[0.08em] text-[#597160]">Dati Open-Meteo usati</div>
+          <div className="mt-2 grid min-w-0 grid-cols-2 gap-2 text-sm">
+            <span><strong>{forecast.weather.temperatureC ?? "–"} °C</strong><br /><small>temperatura</small></span>
+            <span><strong>{forecast.weather.relativeHumidity ?? "–"}%</strong><br /><small>umidità relativa</small></span>
+            <span><strong>{forecast.weather.precipitation7dMm ?? "–"} mm</strong><br /><small>pioggia 7 giorni osservati</small></span>
+            <span><strong>{forecast.weather.precipitation14dMm ?? "–"} mm</strong><br /><small>pioggia 14 giorni osservati</small></span>
+          </div>
+          <p className="mt-2 break-words text-xs text-[#708076]">
+            Rilevazione {forecast.weatherObservedAt ? new Date(forecast.weatherObservedAt).toLocaleString("it-IT") : "non disponibile"}; probabilità pioggia odierna {forecast.weather.precipitationProbability ?? "–"}%.
+          </p>
+        </div>
+      )}
+
       <div className="mt-5">
         <h3 className="text-sm font-black uppercase tracking-[0.08em] text-[#597160]">Perché</h3>
         <ul className="mt-2 space-y-2">
@@ -634,6 +656,21 @@ function TaxonCard({ taxon }: { taxon: Taxon }) {
         <CircleAlert className="mt-0.5 size-3.5 shrink-0 text-[#b27c16]" />
         <span className="min-w-0 break-words">{taxon.safetyNote}</span>
       </p>
+      {taxon.objectiveSummary && (
+        <details className="mt-3 min-w-0 rounded-xl border border-[#dfe7dc] bg-white p-3 text-sm">
+          <summary className="cursor-pointer font-bold text-[#315d3c]">Obiettivi e fonti</summary>
+          <div className="mt-2 space-y-2 break-words leading-relaxed text-[#52675a]">
+            {taxon.objectiveSummary.minimum && <p><strong>Minimo:</strong> {taxon.objectiveSummary.minimum}</p>}
+            {taxon.objectiveSummary.desirable && <p><strong>Auspicabile:</strong> {taxon.objectiveSummary.desirable}</p>}
+            {taxon.objectiveSummary.advanced && <p><strong>Approfondimento:</strong> {taxon.objectiveSummary.advanced}</p>}
+            {taxon.sources && (
+              <p className="text-xs text-[#708076]">
+                Fonti: {taxon.sources.map((source) => `${source.title}, p. ${source.page}`).join("; ")}.
+              </p>
+            )}
+          </div>
+        </details>
+      )}
       <Button asChild variant="outline" className="mt-4 h-11 w-full rounded-xl border-[#b9cbb8] text-[#315d3c]">
         <Link href="/catalog/proposals/new">Proponi una correzione</Link>
       </Button>

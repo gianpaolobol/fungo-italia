@@ -66,6 +66,15 @@ test("batch forecast degrades a failed area without exposing coordinates", async
   assert.equal(batch.providerStatus, "partial");
   assert.equal(batch.forecasts.length, 2);
   assert.equal(batch.forecasts[1].providerStatus, "degraded");
+  assert.deepEqual(batch.forecasts[0].weather, {
+    temperatureC: 15,
+    relativeHumidity: 80,
+    precipitation7dMm: 30,
+    precipitation14dMm: 60,
+    precipitationProbability: 55,
+    elevationM: 800,
+    source: "open-meteo",
+  });
   assert.equal("center" in batch.forecasts[0], false);
   assert.equal(JSON.stringify(batch).includes("44.2"), false);
 });

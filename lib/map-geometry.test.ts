@@ -41,9 +41,9 @@ const forecast: ForecastResult = {
   reasons: [],
 };
 
-test("public feature uses H3 resolution 6 and a closed GeoJSON ring", () => {
+test("public feature uses broad H3 resolution 5 and a closed GeoJSON ring", () => {
   const feature = areaToPublicFeature(area, forecast);
-  assert.equal(getResolution(feature.properties.h3Index), 6);
+  assert.equal(getResolution(feature.properties.h3Index), 5);
   assert.deepEqual(
     feature.geometry.coordinates[0][0],
     feature.geometry.coordinates[0].at(-1),

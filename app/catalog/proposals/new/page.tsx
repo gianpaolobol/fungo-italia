@@ -2,7 +2,7 @@ import { ArrowLeft, BookPlus, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 import { requireChatGPTUser } from "@/app/chatgpt-auth";
-import { betaTaxa } from "@/lib/seed-data";
+import { catalogTaxa } from "@/lib/objective-catalog";
 
 import { ProposalForm } from "./proposal-form";
 
@@ -32,7 +32,7 @@ export default async function NewCatalogProposalPage() {
                 </p>
               </div>
             </div>
-            <ProposalForm taxa={betaTaxa} />
+            <ProposalForm taxa={catalogTaxa} />
           </section>
           <aside className="min-w-0 space-y-4">
             <div className="rounded-[22px] border border-[#dbe4d9] bg-[#eaf2e7] p-5">

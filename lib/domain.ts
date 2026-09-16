@@ -33,10 +33,21 @@ export interface Taxon {
     | "non-commestibile"
     | "tossico"
     | "senza-valore"
+    | "mixed"
     | "non-valutato";
   safetyNote: string;
   hosts?: string[];
-  recognitionLevel?: "minimo" | "approfondito" | "auspicabile";
+  recognitionLevel?: "minimo" | "approfondito" | "auspicabile" | "approfondimento";
+  objectiveSummary?: {
+    minimum: string | null;
+    desirable: string | null;
+    advanced: string | null;
+  };
+  sources?: Array<{
+    title: string;
+    page: number;
+    kind: "obiettivi-minimi" | "guida-commestibilita";
+  }>;
 }
 
 export interface Area {

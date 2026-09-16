@@ -5,6 +5,7 @@ import {
   AttributionControl,
   Map as MapLibreMap,
   NavigationControl,
+  setWorkerUrl,
   type GeoJSONSource,
   type StyleSpecification,
 } from "maplibre-gl";
@@ -17,6 +18,8 @@ import { areasToFeatureCollection } from "@/lib/map-geometry";
 const OSM_TILE_URL =
   process.env.NEXT_PUBLIC_OSM_TILE_URL ??
   "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+
+setWorkerUrl("/maplibre-gl-worker.mjs");
 
 const mapStyle: StyleSpecification = {
   version: 8,
@@ -214,7 +217,7 @@ export function ForecastMap({
       <div className="pointer-events-none absolute left-3 top-3 rounded-xl border border-white/80 bg-white/92 px-3 py-2 shadow-md backdrop-blur">
         <div className="flex items-center gap-2 text-sm font-black">
           <MapPinned className="size-4 text-[#27683a]" />
-          Aree vaste · H3 livello 6
+          Aree vaste · celle H3 aggregate
         </div>
         <div className="mt-0.5 text-xs text-[#617266]">
           Nessun punto personale visibile

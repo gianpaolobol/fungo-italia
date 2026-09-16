@@ -34,7 +34,7 @@ export function areaToPublicFeature(
   area: Area,
   forecast: ForecastResult,
 ): PublicAreaFeature {
-  const h3Index = latLngToCell(area.center[0], area.center[1], 6);
+  const h3Index = latLngToCell(area.center[0], area.center[1], 5);
   const boundary = cellToBoundary(h3Index).map(([latitude, longitude]) => [
     longitude,
     latitude,

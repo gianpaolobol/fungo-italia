@@ -8,7 +8,7 @@ import {
   resolveBootstrapRole,
   type ReviewerGrant,
 } from "@/lib/catalog-permissions";
-import { betaTaxa } from "@/lib/seed-data";
+import { catalogTaxa } from "@/lib/objective-catalog";
 
 export async function POST(request: Request) {
   const user = await getChatGPTUser();
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
   }
   const proposal = validation.data;
   const targetTaxon = proposal.targetTaxonId
-    ? betaTaxa.find((taxon) => taxon.id === proposal.targetTaxonId)
+    ? catalogTaxa.find((taxon) => taxon.id === proposal.targetTaxonId)
     : null;
   if (proposal.proposalKind === "update" && !targetTaxon) {
     return NextResponse.json({ errors: ["La scheda selezionata non è disponibile."] }, { status: 400 });
