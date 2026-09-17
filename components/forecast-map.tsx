@@ -7,44 +7,17 @@ import {
   NavigationControl,
   setWorkerUrl,
   type GeoJSONSource,
-  type StyleSpecification,
 } from "maplibre-gl";
-import { LoaderCircle, MapPinned, TriangleAlert } from "lucide-react";
+import { LoaderCircle, MapPinned } from "lucide-react";
 
 import type { Area } from "@/lib/domain";
 import type { ForecastResult } from "@/lib/forecast";
 import { areasToFeatureCollection } from "@/lib/map-geometry";
+import { ForecastMapFallback } from "@/components/forecast-map-fallback";
 
-const OSM_TILE_URL =
-  process.env.NEXT_PUBLIC_OSM_TILE_URL ??
-  "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+const MAP_STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? "https://tiles.openfreemap.org/styles/liberty";
 
 setWorkerUrl("/maplibre-gl-worker.mjs");
-
-const mapStyle: StyleSpecification = {
-  version: 8,
-  sources: {
-    osm: {
-      type: "raster",
-      tiles: [OSM_TILE_URL],
-      tileSize: 256,
-      attribution:
-        '© <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
-    },
-  },
-  layers: [
-    {
-      id: "osm",
-      type: "raster",
-      source: "osm",
-      paint: {
-        "raster-saturation": -0.28,
-        "raster-contrast": -0.08,
-        "raster-brightness-max": 0.94,
-      },
-    },
-  ],
-};
 
 export function ForecastMap({
   areas,
@@ -77,7 +50,7 @@ export function ForecastMap({
     try {
       const map = new MapLibreMap({
         container: containerRef.current,
-        style: mapStyle,
+        style: MAP_STYLE_URL,
         center: [12.55, 42.4],
         zoom: 4.55,
         minZoom: 4,
@@ -158,10 +131,13 @@ export function ForecastMap({
       });
       map.on("error", (event) => {
         console.error("maplibre_runtime_error", event.error);
-        if (!map.isStyleLoaded()) setStatus("error");
       });
+      const timeout = window.setTimeout(() => {
+        if (!map.isStyleLoaded()) setStatus("error");
+      }, 8000);
 
       return () => {
+        window.clearTimeout(timeout);
         map.remove();
         mapRef.current = null;
       };
@@ -208,15 +184,7 @@ export function ForecastMap({
         </div>
       )}
       {status === "error" && (
-        <div className="absolute inset-0 grid place-items-center bg-[#f2f5f0] p-6 text-center">
-          <div className="max-w-sm rounded-2xl border border-[#e1c98c] bg-[#fff8dc] p-5 text-[#654f14]">
-            <TriangleAlert className="mx-auto size-7" />
-            <p className="mt-2 font-black">Mappa temporaneamente non disponibile</p>
-            <p className="mt-1 text-sm">
-              L’elenco delle aree e le motivazioni restano consultabili.
-            </p>
-          </div>
-        </div>
+        <ForecastMapFallback areas={areas} forecasts={forecasts} selectedId={selectedId} onSelect={onSelect} />
       )}
       <div className="pointer-events-none absolute left-3 top-3 rounded-xl border border-white/80 bg-white/92 px-3 py-2 shadow-md backdrop-blur">
         <div className="flex items-center gap-2 text-sm font-black">

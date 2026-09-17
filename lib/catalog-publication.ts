@@ -105,14 +105,22 @@ export function applyPublishedChanges(
       if (!existing) taxon.regionalNames.push({ name: value, regions });
     }
     if (change.fieldPath === "taxonomy.acceptedScientificName") {
+      if (!taxon.aliases.includes(taxon.scientificName)) taxon.aliases.push(taxon.scientificName);
       taxon.scientificName = value;
+      if ("acceptedName" in taxon) (taxon as Taxon & { acceptedName: string }).acceptedName = value;
     }
     if (change.fieldPath === "taxonomy.rank" && ranks.has(value as TaxonRank)) {
       taxon.rank = value as TaxonRank;
     }
     if (change.fieldPath === "ecology.association") {
       taxon.hosts = [...new Set([...(taxon.hosts ?? []), value])];
+      if ("ecology" in taxon) {
+        const extended = taxon as Taxon & { ecology: string[] };
+        extended.ecology = [...new Set([...(extended.ecology ?? []), value])];
+      }
     }
+    if (change.fieldPath === "edibility.safetyNote") taxon.safetyNote = value;
+    if (change.fieldPath === "diagnostics.odor" && "odor" in taxon) (taxon as Taxon & { odor: string | null }).odor = value;
   }
 
   return catalog;

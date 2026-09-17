@@ -35,6 +35,45 @@ export const taxonNames = sqliteTable("taxon_names", {
   language: text("language").notNull().default("it"),
 }, (table) => [index("idx_taxon_names_taxon_region").on(table.taxonId, table.region)]);
 
+export const taxonPlacements = sqliteTable("taxon_placements", {
+  id: text("id").primaryKey(),
+  taxonId: text("taxon_id").notNull().references(() => taxa.id),
+  acceptedScientificName: text("accepted_scientific_name").notNull(),
+  authorship: text("authorship"),
+  family: text("family"),
+  orderName: text("order_name").notNull(),
+  parentScientificName: text("parent_scientific_name").notNull(),
+  validFrom: text("valid_from").notNull(),
+  validTo: text("valid_to"),
+  sourceCitation: text("source_citation").notNull(),
+  ...timestamps,
+}, (table) => [index("idx_taxon_placements_current").on(table.taxonId, table.validTo)]);
+
+export const taxonProfiles = sqliteTable("taxon_profiles", {
+  id: text("id").primaryKey(),
+  taxonId: text("taxon_id").notNull().references(() => taxa.id),
+  diagnosticCharactersJson: text("diagnostic_characters_json").notNull().default("[]"),
+  odor: text("odor"),
+  ecologyJson: text("ecology_json").notNull().default("[]"),
+  sourceCitation: text("source_citation").notNull(),
+  ...timestamps,
+}, (table) => [uniqueIndex("idx_taxon_profiles_taxon").on(table.taxonId)]);
+
+export const taxonMediaAssets = sqliteTable("taxon_media_assets", {
+  id: text("id").primaryKey(),
+  taxonId: text("taxon_id").notNull().references(() => taxa.id),
+  imageUrl: text("image_url").notNull(),
+  sourceUrl: text("source_url").notNull(),
+  author: text("author").notNull(),
+  license: text("license").notNull(),
+  licenseUrl: text("license_url").notNull(),
+  caption: text("caption").notNull().default(""),
+  verified: integer("verified", { mode: "boolean" }).notNull().default(false),
+  hidden: integer("hidden", { mode: "boolean" }).notNull().default(false),
+  sortOrder: integer("sort_order").notNull().default(0),
+  ...timestamps,
+}, (table) => [index("idx_taxon_media_visible").on(table.taxonId, table.hidden, table.sortOrder)]);
+
 export const areas = sqliteTable("areas", {
   id: text("id").primaryKey(),
   name: text("name").notNull(),

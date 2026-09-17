@@ -19,6 +19,29 @@ export interface RegionalName {
   regions: string[];
 }
 
+export interface TaxonSource {
+  title: string;
+  page: number;
+  kind:
+    | "obiettivi-minimi"
+    | "guida-commestibilita"
+    | "species-fungorum"
+    | "index-fungorum"
+    | "mycobank";
+}
+
+export interface TaxonMedia {
+  id: string;
+  imageUrl: string;
+  sourceUrl: string;
+  author: string;
+  license: string;
+  licenseUrl: string;
+  caption: string;
+  verified: boolean;
+  hidden: boolean;
+}
+
 export interface Taxon {
   id: string;
   commonName: string;
@@ -43,11 +66,31 @@ export interface Taxon {
     desirable: string | null;
     advanced: string | null;
   };
-  sources?: Array<{
-    title: string;
-    page: number;
-    kind: "obiettivi-minimi" | "guida-commestibilita";
-  }>;
+  sources?: TaxonSource[];
+}
+
+export interface AtlasTaxon extends Taxon {
+  acceptedName: string;
+  sourceName: string;
+  authorship: string | null;
+  kingdom: "Fungi";
+  division: "Basidiomycota" | "Ascomycota";
+  className: string;
+  order: string;
+  family: string | null;
+  parentScientificName: string;
+  diagnosticCharacters: string[];
+  odor: string | null;
+  ecology: string[];
+  mediaStatus: "ready" | "preparing";
+  media?: TaxonMedia[];
+  sources: TaxonSource[];
+  objectiveLevels: Array<"minimo" | "auspicabile" | "approfondimento">;
+  externalIds: {
+    speciesFungorum: string | null;
+    indexFungorum: string | null;
+    mycoBank: string | null;
+  };
 }
 
 export interface Area {

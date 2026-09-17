@@ -4,6 +4,7 @@ import Link from "next/link";
 import { requireChatGPTUser } from "@/app/chatgpt-auth";
 
 import { ReviewClient } from "./review-client";
+import { FounderEditor } from "./founder-editor";
 
 export const dynamic = "force-dynamic";
 
@@ -31,6 +32,7 @@ export default async function CatalogReviewPage() {
             </div>
           </div>
         </header>
+        <FounderEditor />
         <ReviewClient />
       </div>
     </main>

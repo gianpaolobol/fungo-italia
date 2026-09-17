@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import objectives from "../data/taxonomic-objectives.json" with { type: "json" };
-import { catalogTaxa } from "./objective-catalog.ts";
+import { catalogTaxa, objectiveRecords } from "./objective-catalog.ts";
 
 test("the national catalog contains the complete minimum-objective headings", () => {
   assert.equal(objectives.length >= 100, true);
@@ -29,10 +29,10 @@ test("the national catalog contains the complete minimum-objective headings", ()
   );
 });
 
-test("objective records are exposed by the editable application catalog", () => {
-  assert.equal(catalogTaxa.length >= objectives.length, true);
-  const agaricus = catalogTaxa.find((entry) => entry.id === "objective-agaricus");
-  assert.equal(agaricus?.edibility, "mixed");
-  assert.match(agaricus?.objectiveSummary?.minimum ?? "", /Xanthodermatei/);
-  assert.equal(agaricus?.sources?.some((source) => source.page === 28), true);
+test("objective records are exposed separately from the editable atlas", () => {
+  assert.equal(catalogTaxa.length > objectives.length, true);
+  assert.equal(catalogTaxa.some((entry) => entry.id === "objective-agaricus"), false);
+  const agaricus = objectiveRecords.find((entry) => entry.id === "objective-agaricus");
+  assert.match(agaricus?.objectives.minimum ?? "", /Xanthodermatei/);
+  assert.equal(agaricus?.sources.edibilityGuide.page, 28);
 });

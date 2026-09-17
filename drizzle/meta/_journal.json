@@ -15,6 +15,13 @@
       "when": 1789573992294,
       "tag": "0001_white_supernaut",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789632159710,
+      "tag": "0002_broken_electro",
+      "breakpoints": true
     }
   ]
 }

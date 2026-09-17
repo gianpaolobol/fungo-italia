@@ -35,7 +35,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { getVisitPressure, type Area, type Taxon } from "@/lib/domain";
+import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
 import { cn } from "@/lib/utils";
@@ -44,7 +44,8 @@ import { WebMcpBridge } from "./webmcp";
 
 type ExploreClientProps = {
   areas: Area[];
-  taxa: Taxon[];
+  taxa: AtlasTaxon[];
+  objectives: Array<{ id: string; commonName: string; scientificName: string; objectives: { minimum: string | null; desirable: string | null; advanced: string | null }; sources: { minimumObjectives: { title: string; page: number }; edibilityGuide: { title: string; page: number } } }>;
   user: { displayName: string; signOutPath: string };
 };
 
@@ -65,14 +66,14 @@ const edibilityLabels: Record<Taxon["edibility"], string> = {
   "non-valutato": "Non valutato nella guida",
 };
 
-export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
+export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientProps) {
   const isMobile = useIsMobile();
   const initialForecasts = useMemo(
     () => areas.map((area) => calculateForecast(area, null)),
     [areas],
   );
   const [forecasts, setForecasts] = useState<ForecastResult[]>(initialForecasts);
-  const [catalogTaxa, setCatalogTaxa] = useState<Taxon[]>(taxa);
+  const [catalogTaxa, setCatalogTaxa] = useState<AtlasTaxon[]>(taxa);
   const [forecastStatus, setForecastStatus] = useState<"loading" | "live" | "partial" | "degraded">("loading");
   const [selectedId, setSelectedId] = useState(areas[0]?.id ?? "");
   const [query, setQuery] = useState("");
@@ -107,7 +108,7 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
     fetch("/api/catalog", { signal: controller.signal })
       .then(async (response) => {
         if (!response.ok) throw new Error("catalog unavailable");
-        return response.json() as Promise<{ taxa: Taxon[] }>;
+        return response.json() as Promise<{ taxa: AtlasTaxon[] }>;
       })
       .then((payload) => setCatalogTaxa(payload.taxa))
       .catch((error: unknown) => {
@@ -127,7 +128,7 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
   const selectedTaxa = selectedForecast
     ? selectedForecast.expectedTaxa
         .map((id) => catalogTaxa.find((taxon) => taxon.id === id))
-        .filter((taxon): taxon is Taxon => Boolean(taxon))
+        .filter((taxon): taxon is AtlasTaxon => Boolean(taxon))
     : [];
   const regions = ["Tutta Italia", ...new Set(areas.map((area) => area.region))];
   const normalizedAtlasQuery = atlasQuery.toLocaleLowerCase("it").trim();
@@ -197,7 +198,7 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
 
       <Tabs defaultValue="cerca" className="mx-auto max-w-[1600px] gap-0 px-3 pb-28 sm:px-6">
         <div className="flex min-w-0 items-center justify-between gap-2 py-3 sm:py-4">
-          <TabsList className="h-11 min-w-0 max-w-full rounded-2xl bg-[#e8eee6] p-1">
+          <TabsList className="h-11 min-w-0 max-w-full overflow-x-auto rounded-2xl bg-[#e8eee6] p-1 scrollbar-none">
             <TabsTrigger value="cerca" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <Compass />
               <span>Cerca</span>
@@ -205,6 +206,10 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
             <TabsTrigger value="atlante" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <BookOpenText />
               <span>Atlante</span>
+            </TabsTrigger>
+            <TabsTrigger value="obiettivi" className="min-w-0 rounded-xl px-2.5 sm:px-5">
+              <Binoculars />
+              <span>Obiettivi</span>
             </TabsTrigger>
             <TabsTrigger value="metodo" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <ShieldCheck />
@@ -330,6 +335,24 @@ export function ExploreClient({ areas, taxa, user }: ExploreClientProps) {
               <AreaDetails area={selectedArea} forecast={selectedForecast} taxa={selectedTaxa} compact />
             )}
           </div>
+        </TabsContent>
+
+        <TabsContent value="obiettivi" className="mt-0 min-w-0">
+          <section className="min-w-0 rounded-[24px] border border-[#dce5da] bg-white p-4 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-6">
+            <p className="text-sm font-bold text-[#5d7362]">Formazione micologica nazionale</p>
+            <h1 className="break-words text-2xl font-black tracking-[-0.04em] sm:text-3xl">Obiettivi tassonomici per genere e gruppo</h1>
+            <p className="mt-2 max-w-3xl text-[#5f7064]">Qui sono raccolti gli obiettivi minimi, auspicabili e di approfondimento. I singoli taxa citati sono consultabili separatamente nell’Atlante.</p>
+            <div className="mt-5 grid min-w-0 gap-3 lg:grid-cols-2">
+              {objectives.map((objective) => <article key={objective.id} className="min-w-0 rounded-2xl border border-[#dde6db] bg-[#fbfcfa] p-4">
+                <h2 className="break-words text-lg font-black">{objective.commonName}</h2>
+                <p className="font-serif italic text-[#31553b]">{objective.scientificName}</p>
+                <details className="mt-3 rounded-xl bg-white p-3" open><summary className="cursor-pointer font-bold text-[#315d3c]">Obiettivo minimo</summary><p className="mt-2 break-words text-sm leading-relaxed">{objective.objectives.minimum}</p></details>
+                {objective.objectives.desirable && <details className="mt-2 rounded-xl bg-white p-3"><summary className="cursor-pointer font-bold text-[#315d3c]">Auspicabile</summary><p className="mt-2 break-words text-sm leading-relaxed">{objective.objectives.desirable}</p></details>}
+                {objective.objectives.advanced && <details className="mt-2 rounded-xl bg-white p-3"><summary className="cursor-pointer font-bold text-[#315d3c]">Approfondimento</summary><p className="mt-2 break-words text-sm leading-relaxed">{objective.objectives.advanced}</p></details>}
+                <p className="mt-3 text-xs text-[#708076]">Fonti: {objective.sources.minimumObjectives.title}, p. {objective.sources.minimumObjectives.page}; {objective.sources.edibilityGuide.title}, p. {objective.sources.edibilityGuide.page}.</p>
+              </article>)}
+            </div>
+          </section>
         </TabsContent>
 
         <TabsContent value="atlante" className="mt-0 min-w-0">
@@ -623,7 +646,18 @@ function AreaDetails({
   );
 }
 
-function TaxonCard({ taxon }: { taxon: Taxon }) {
+function TaxonCard({ taxon }: { taxon: AtlasTaxon }) {
+  const [images, setImages] = useState<Array<{ id: string; imageUrl: string; sourceUrl: string; author: string; license: string; licenseUrl: string; caption: string }> | null>(null);
+  const [galleryLoading, setGalleryLoading] = useState(false);
+  const loadGallery = () => {
+    if (images !== null || galleryLoading) return;
+    setGalleryLoading(true);
+    fetch(`/api/media?taxon=${encodeURIComponent(taxon.acceptedName)}`)
+      .then((response) => response.json() as Promise<{ images?: typeof images }>)
+      .then((payload) => setImages(payload.images ?? []))
+      .catch(() => setImages([]))
+      .finally(() => setGalleryLoading(false));
+  };
   return (
     <article className="min-w-0 rounded-2xl border border-[#dde6db] bg-[#fbfcfa] p-4 transition hover:border-[#9fb6a2] hover:shadow-md">
       <div className="flex min-w-0 items-start justify-between gap-3">
@@ -656,6 +690,21 @@ function TaxonCard({ taxon }: { taxon: Taxon }) {
         <CircleAlert className="mt-0.5 size-3.5 shrink-0 text-[#b27c16]" />
         <span className="min-w-0 break-words">{taxon.safetyNote}</span>
       </p>
+      <details className="mt-3 min-w-0 rounded-xl border border-[#dfe7dc] bg-white p-3 text-sm">
+        <summary className="cursor-pointer font-bold text-[#315d3c]">Caratteri, ecologia e galleria</summary>
+        <div className="mt-3 space-y-2 break-words leading-relaxed text-[#52675a]">
+          <p><strong>Ordine:</strong> {taxon.order}{taxon.family ? ` · ${taxon.family}` : ""}</p>
+          <p><strong>Caratteri:</strong> {taxon.diagnosticCharacters.length ? taxon.diagnosticCharacters.join("; ") : "Scheda diagnostica in revisione editoriale."}</p>
+          <p><strong>Odore:</strong> {taxon.odor ?? "Non documentato come carattere distintivo nelle fonti di base."}</p>
+          <p><strong>Habitat e associazioni:</strong> {taxon.ecology.length ? taxon.ecology.join("; ") : "Da integrare con fonte micologica verificata."}</p>
+          <Button type="button" variant="outline" className="h-10 w-full rounded-xl" onClick={loadGallery}>{galleryLoading ? "Ricerca immagini…" : "Apri galleria con licenze"}</Button>
+          {images !== null && images.length === 0 && <p className="rounded-xl bg-[#f2f6f0] p-3 text-center font-bold">Galleria in preparazione</p>}
+          {images && images.length > 0 && <div className="grid grid-cols-2 gap-2">{images.map((image) => <a key={image.id} href={image.sourceUrl} target="_blank" rel="noreferrer" className="min-w-0 overflow-hidden rounded-xl border bg-white">
+            {/* eslint-disable-next-line @next/next/no-img-element */}<img src={image.imageUrl} alt={image.caption} className="aspect-square w-full object-cover" loading="lazy" />
+            <span className="block break-words p-2 text-[11px]">{image.author} · {image.license}</span>
+          </a>)}</div>}
+        </div>
+      </details>
       {taxon.objectiveSummary && (
         <details className="mt-3 min-w-0 rounded-xl border border-[#dfe7dc] bg-white p-3 text-sm">
           <summary className="cursor-pointer font-bold text-[#315d3c]">Obiettivi e fonti</summary>
