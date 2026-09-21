@@ -7,9 +7,11 @@ L'inventario sorgente del livello **Minimo** e ora modellato separatamente dal c
 - Unita didattiche minime: **148**
 - Intestazioni sorgente coinvolte: **47**
 - Etichette sorgente duplicate: **0**
-- Target di riferimenti nomenclaturali correnti: **141**
-- Stato mapping nomenclaturale: **in revisione**
-- Pubblicazione: **bloccata** finche il mapping e la revisione non sono completi
+- Vecchio target progettuale di riferimenti correnti: **141** — conservato solo per tracciabilita, non come invariante
+- Mapping nomenclaturale: **148/148**
+- Stato mapping: **completo, senza record unresolved o conflict**
+- Casi multi-taxon correnti: **3 definedSet**
+- Pubblicabilita del mapping nomenclaturale: **abilitata dal gate automatico**
 
 Il file sorgente eseguibile e `lib/minimum-learning-source.ts`. Le invarianti e il gate sono in `lib/learning-taxonomy.ts`.
 
@@ -35,11 +37,23 @@ Il rango richiesto dalla fonte e vincolante. In particolare:
 
 La fonte del corso specifica che il livello minimo puo richiedere specie singole o collettive, sezioni e gruppi: il modello dati deve quindi poter rappresentare tutte queste risoluzioni senza forzare una determinazione a specie.
 
-## Separazione 148 -> 141
+## Separazione fra inventario didattico e nomenclatura corrente
 
-Le **148 unita didattiche** sono il contratto didattico e non possono essere eliminate per far coincidere il catalogo con la nomenclatura corrente.
+Le **148 unita didattiche** sono il contratto sorgente e non possono essere eliminate per far coincidere il catalogo con un conteggio nomenclaturale atteso.
 
-Il target dei **141 riferimenti correnti** appartiene invece al livello nomenclaturale. Ogni unita deve essere collegata a un riferimento corrente verificato oppure mantenuta esplicitamente come concetto di gruppo/sezione non riducibile a una singola specie. Il mapping viene pubblicato solo dopo controllo delle sinonimie, dei trasferimenti di genere e delle ambiguita.
+Il precedente numero **141** era un obiettivo progettuale provvisorio non accompagnato da una riconciliazione riproducibile. La verifica completa ha mostrato che non puo essere usato come criterio di accettazione. Il sistema conserva quindi:
+- tutte le 148 unita S1;
+- un mapping esplicito per ciascuna unita;
+- i nomi correnti verificati quando applicabili;
+- i concetti S1 di gruppo/sezione quando non riducibili a una specie;
+- gli insiemi definiti quando una singola formulazione S1 comprende oggi piu taxa distinti.
+
+Tre casi sono modellati come `definedSet`, non come sinonimie:
+- `Amanita verna (inclusa A. vidua)` -> `Amanita verna` + `Amanita vidua`;
+- `Clitocybe dealbata (= C. rivulosa)` -> `Clitocybe dealbata` + `Collybia rivulosa`;
+- `Pleurotus cornucopiae (incluso P. citrinopileatus)` -> `Pleurotus cornucopiae` + `Pleurotus citrinopileatus`.
+
+In questo modo il testo didattico S1 resta intatto, mentre la tassonomia corrente non viene falsificata.
 
 ## Difetti del generatore storico
 
@@ -59,10 +73,24 @@ Per chiudere il Lotto 2 devono essere vere contemporaneamente tutte le condizion
 1. 148/148 unita sorgente presenti.
 2. Nessun artefatto di parsing.
 3. Rango didattico conservato per ogni unita.
-4. Mapping nomenclaturale completato e verificato.
-5. Cardinalita corrente coerente con il target approvato di 141 riferimenti.
-6. Nessuna unita in stato `reviewNeeded`.
-7. Test di inventario verdi.
-8. Nessuna release pubblica generata dal catalogo incompleto.
+4. Mapping nomenclaturale 148/148 completato e verificato.
+5. Nessun mapping `unresolved` o `conflict`; gli scostamenti S1/tassonomia corrente devono essere rappresentati come `definedSet` o concetti sorgente espliciti.
+6. Nessuna unita in stato `reviewNeeded` quando si chiude la revisione scientifica del contenuto.
+7. Test di inventario e nomenclatura verdi.
+8. Verifica live delle asserzioni Index Fungorum verde.
+9. Nessuna release pubblica generata da un catalogo che violi questi gate.
 
 Solo dopo questo gate si passa in modo massivo alla compilazione delle schede Minimo.
+
+
+## Chiusura Lotto 2B
+
+La riconciliazione nomenclaturale del livello Minimo e considerata completa quando la CI conferma contemporaneamente:
+- 148 mapping per 148 unita sorgente;
+- 0 `unresolved`;
+- 0 `conflict`;
+- 3 `definedSet` documentati;
+- verifica remota delle asserzioni di nome corrente;
+- test, lint e build verdi.
+
+Il numero dei nomi correnti unici viene riportato come metrica di copertura e non come obiettivo da forzare.
