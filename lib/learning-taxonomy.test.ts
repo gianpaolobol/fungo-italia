@@ -131,32 +131,28 @@ test("every source learning unit has exactly one explicit nomenclature mapping",
   assert.equal(unresolvedNomenclatureMappings.length, 0);
 });
 
-test("known S1/current-taxonomy disagreements remain explicit conflicts", () => {
-  assert.equal(nomenclatureConflicts.length, 3);
+test("legacy S1 groupings that span distinct current taxa become explicit defined sets", () => {
+  assert.equal(nomenclatureConflicts.length, 0);
 
-  assert.deepEqual(
-    bySourceLabel("Amanita verna (inclusa A. vidua)").currentAcceptedNames,
-    ["Amanita verna", "Amanita vidua"],
-  );
-  assert.deepEqual(
-    bySourceLabel("Clitocybe dealbata (= C. rivulosa)").currentAcceptedNames,
-    ["Clitocybe dealbata", "Collybia rivulosa"],
-  );
-  assert.deepEqual(
-    bySourceLabel("Pleurotus cornucopiae (incluso P. citrinopileatus)").currentAcceptedNames,
-    ["Pleurotus cornucopiae", "Pleurotus citrinopileatus"],
-  );
+  for (const [label, expected] of [
+    ["Amanita verna (inclusa A. vidua)", ["Amanita verna", "Amanita vidua"]],
+    ["Clitocybe dealbata (= C. rivulosa)", ["Clitocybe dealbata", "Collybia rivulosa"]],
+    ["Pleurotus cornucopiae (incluso P. citrinopileatus)", ["Pleurotus cornucopiae", "Pleurotus citrinopileatus"]],
+  ] as const) {
+    const entry = bySourceLabel(label);
+    assert.equal(entry.status, "definedSet", label);
+    assert.deepEqual(entry.currentAcceptedNames, expected, label);
+  }
 
   const publication = validateMinimumNomenclatureMappings(
     sourceMinimumLearningUnits,
     minimumNomenclatureMappings,
     { requirePublishable: true },
   );
-  assert.equal(publication.ok, false);
-  assert.equal(
-    publication.errors.filter((error) => error.includes("blocks publication")).length,
-    3,
-  );
+  assert.equal(publication.ok, true, publication.errors.join("\n"));
+  assert.equal(publication.definedSetCount, 3);
+  assert.equal(publication.conflictCount, 0);
+  assert.equal(publication.unresolvedCount, 0);
 });
 
 test("verified modern combinations are retained without rewriting the source label", () => {
