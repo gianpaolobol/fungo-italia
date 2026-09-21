@@ -72,14 +72,14 @@ function sourceConcept(
   };
 }
 
-function conflict(
+function definedSet(
   preferredDisplayName: string,
   currentAcceptedNames: string[],
   evidence: NomenclatureEvidence[],
   notes: string,
 ): Override {
   return {
-    status: "conflict",
+    status: "definedSet",
     currentAcceptedNames,
     preferredDisplayName,
     evidence,
@@ -90,7 +90,7 @@ function conflict(
 const overrides = new Map<string, Override>([
   [
     "Amanita verna (inclusa A. vidua)",
-    conflict(
+    definedSet(
       "Amanita verna / Amanita vidua",
       ["Amanita verna", "Amanita vidua"],
       [
@@ -103,7 +103,7 @@ const overrides = new Map<string, Override>([
           note: "Alvarado et al. (2022) riconoscono A. verna e A. vidua come specie distinte.",
         },
       ],
-      "S1 include A. vidua in A. verna, mentre la revisione moderna separa i due taxa. Il conflitto resta esplicito e blocca una falsa equivalenza.",
+      "S1 tratta A. vidua entro la voce di A. verna; la revisione moderna separa i due taxa. L'unita didattica viene quindi conservata come insieme definito di due specie correnti, senza dichiararle sinonimi.",
     ),
   ],
   [
@@ -126,14 +126,14 @@ const overrides = new Map<string, Override>([
   ],
   [
     "Clitocybe dealbata (= C. rivulosa)",
-    conflict(
+    definedSet(
       "Clitocybe dealbata / Collybia rivulosa",
       ["Clitocybe dealbata", "Collybia rivulosa"],
       [
         indexEvidence("Clitocybe dealbata", "Clitocybe dealbata", "216184"),
         indexEvidence("Clitocybe rivulosa", "Collybia rivulosa", "198283"),
       ],
-      "La sinonimia letterale usata da S1 non coincide con il trattamento corrente di Index Fungorum: i due nomi conducono a taxa correnti distinti.",
+      "La sinonimia letterale usata da S1 non coincide con il trattamento corrente di Index Fungorum: i due nomi conducono a taxa correnti distinti. La voce S1 viene conservata come insieme didattico definito.",
     ),
   ],
   [
@@ -330,14 +330,14 @@ const overrides = new Map<string, Override>([
   ],
   [
     "Pleurotus cornucopiae (incluso P. citrinopileatus)",
-    conflict(
+    definedSet(
       "Pleurotus cornucopiae / Pleurotus citrinopileatus",
       ["Pleurotus cornucopiae", "Pleurotus citrinopileatus"],
       [
         indexEvidence("Pleurotus cornucopiae", "Pleurotus cornucopiae", "355897"),
         indexEvidence("Pleurotus citrinopileatus", "Pleurotus citrinopileatus", "303973"),
       ],
-      "S1 include P. citrinopileatus nella voce di P. cornucopiae, ma Index Fungorum mantiene entrambi come specie correnti distinte.",
+      "S1 include P. citrinopileatus nella voce di P. cornucopiae, mentre Index Fungorum mantiene entrambi come specie correnti distinte. La voce S1 viene conservata come insieme didattico definito di due specie.",
     ),
   ],
   [
