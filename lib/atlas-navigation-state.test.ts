@@ -6,6 +6,7 @@ import {
   closeAtlasCard,
   defaultAtlasNavigationState,
   parseAtlasNavigationState,
+  returnToAtlasParent,
   selectAtlasCard,
   serializeAtlasNavigationState,
   setAtlasDepth,
@@ -117,4 +118,65 @@ test("href preserves filters and selection without empty query noise", () => {
   assert.equal(params.get("selectedId"), "card-1");
   assert.equal(params.get("depth"), "deepening");
   assert.equal(params.has("rank"), false);
+});
+
+
+test("parent return context round-trips through URL and restores prior card depth", () => {
+  const parent = selectAtlasCard(
+    {
+      ...defaultAtlasNavigationState,
+      query: "amanita",
+      genus: "Amanita",
+    },
+    {
+      kind: "teachingGroup",
+      id: "group-amanita",
+      depth: "specialist",
+    },
+  );
+
+  const child = selectAtlasCard(parent, {
+    kind: "minimumTaxon",
+    id: "minimum-amanita-phalloides",
+    returnToCurrent: true,
+  });
+
+  assert.equal(child.returnKind, "teachingGroup");
+  assert.equal(child.returnId, "group-amanita");
+  assert.equal(child.returnDepth, "specialist");
+
+  const parsed = parseAtlasNavigationState(
+    serializeAtlasNavigationState(child),
+  );
+  assert.deepEqual(parsed, child);
+
+  const restored = returnToAtlasParent(parsed);
+  assert.equal(restored.query, "amanita");
+  assert.equal(restored.genus, "Amanita");
+  assert.equal(restored.selectedKind, "teachingGroup");
+  assert.equal(restored.selectedId, "group-amanita");
+  assert.equal(restored.depth, "specialist");
+  assert.equal(restored.returnKind, null);
+  assert.equal(restored.returnId, null);
+  assert.equal(restored.returnDepth, "essential");
+});
+
+test("return without parent context closes the card but preserves filters", () => {
+  const opened = selectAtlasCard(
+    {
+      ...defaultAtlasNavigationState,
+      query: "boletus",
+      genus: "Rubroboletus",
+    },
+    {
+      kind: "minimumTaxon",
+      id: "card-1",
+    },
+  );
+
+  const restored = returnToAtlasParent(opened);
+  assert.equal(restored.query, "boletus");
+  assert.equal(restored.genus, "Rubroboletus");
+  assert.equal(restored.selectedKind, null);
+  assert.equal(restored.selectedId, null);
 });
