@@ -7,6 +7,7 @@ import {
 import { minimumNomenclatureMappings } from "./minimum-nomenclature.ts";
 import type { EdibilityCategory } from "./minimum-card.ts";
 import type { EvidenceReviewStatus } from "./catalog-evidence.ts";
+import { publicEdibilityCategory } from "./public-scientific-policy.ts";
 
 export type CatalogSearchKind = "minimumTaxon" | "teachingGroup";
 
@@ -122,7 +123,7 @@ const minimumDocuments: CatalogSearchDocument[] = minimumCards.map((card) => {
     currentNames,
     sourceNames,
     genera,
-    edibilityCategory: card.edibilityCategory,
+    edibilityCategory: publicEdibilityCategory(card),
     reviewStatus: card.reviewStatus,
     parentTeachingCardId: navigation.teachingCardId,
     searchText: makeSearchText([
