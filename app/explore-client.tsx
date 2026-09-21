@@ -107,12 +107,15 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     const parsed = parseAtlasNavigationState(
       new URLSearchParams(window.location.search),
     );
-    setAtlasQuery(parsed.query);
-    setAtlasKind(parsed.kind);
-    setAtlasRank(parsed.rank);
-    setAtlasEdibility(parsed.edibility);
-    setAtlasNavigation(parsed);
-    setAtlasUrlReady(true);
+    const timeout = window.setTimeout(() => {
+      setAtlasQuery(parsed.query);
+      setAtlasKind(parsed.kind);
+      setAtlasRank(parsed.rank);
+      setAtlasEdibility(parsed.edibility);
+      setAtlasNavigation(parsed);
+      setAtlasUrlReady(true);
+    }, 0);
+    return () => window.clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
