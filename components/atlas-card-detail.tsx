@@ -13,6 +13,11 @@ import type {
 } from "@/lib/atlas-navigation-state";
 import { minimumCards } from "@/lib/minimum-cards";
 import { minimumGenusCards } from "@/lib/minimum-genus-cards";
+import {
+  publicConfusionWarnings,
+  publicDescriptiveCardContent,
+  publicSafetySummary,
+} from "@/lib/public-scientific-policy";
 import { cn } from "@/lib/utils";
 
 type AtlasCardDetailProps = {
@@ -140,6 +145,9 @@ export function AtlasCardDetail({
 
   const card = minimumCards.find((entry) => entry.cardId === selectedId);
   if (!card) return <MissingCard onBack={onBack} />;
+  const descriptive = publicDescriptiveCardContent(card);
+  const publicConfusions = publicConfusionWarnings(card);
+  const safetySummary = publicSafetySummary(card);
 
   return (
     <article className="min-w-0 rounded-[22px] border border-[#dce5da] bg-white p-4 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-5">
@@ -154,30 +162,38 @@ export function AtlasCardDetail({
       )}
       <div className="mt-4 rounded-2xl bg-[#f5f8f3] p-4">
         <h3 className="font-black">Caratteri essenziali</h3>
-        <div className="mt-2 flex flex-wrap gap-1.5">
-          {card.terminology.map((item) => (
-            <span key={item} className="rounded-full bg-white px-2 py-1 text-xs font-semibold ring-1 ring-[#dce5da]">
-              {item}
-            </span>
-          ))}
-        </div>
-        <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#52675a]">
-          {card.essentialMorphology.map((item) => <li key={item}>• {item}</li>)}
-        </ul>
-        {card.ecologySummary && (
-          <p className="mt-3 text-sm leading-relaxed text-[#52675a]">
-            <strong>Ecologia:</strong> {card.ecologySummary}
+        {descriptive.pending ? (
+          <p className="mt-2 text-sm leading-relaxed text-[#52675a]">
+            Contenuti morfologici ed ecologici in revisione scientifica: non vengono pubblicati come fatti finché non raggiungono almeno lo stato reviewed.
           </p>
+        ) : (
+          <>
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              {descriptive.terminology.map((item) => (
+                <span key={item} className="rounded-full bg-white px-2 py-1 text-xs font-semibold ring-1 ring-[#dce5da]">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#52675a]">
+              {descriptive.essentialMorphology.map((item) => <li key={item}>• {item}</li>)}
+            </ul>
+            {descriptive.ecologySummary && (
+              <p className="mt-3 text-sm leading-relaxed text-[#52675a]">
+                <strong>Ecologia:</strong> {descriptive.ecologySummary}
+              </p>
+            )}
+          </>
         )}
       </div>
       <div className="mt-4 rounded-xl border border-[#ead58c] bg-[#fff8dc] p-3 text-sm text-[#67541f]">
-        <strong>Sicurezza:</strong> {card.safetySummary}
+        <strong>Sicurezza:</strong> {safetySummary}
       </div>
-      {card.confusionWarnings.length > 0 && (
+      {publicConfusions.length > 0 && (
         <div className="mt-4">
           <h3 className="font-black">Confusioni prioritarie</h3>
           <div className="mt-2 space-y-2">
-            {card.confusionWarnings.map((confusion) => (
+            {publicConfusions.map((confusion) => (
               <div key={confusion.with} className="rounded-xl border border-[#e0e7de] p-3 text-sm">
                 <p className="font-bold">{confusion.with} · rischio {confusion.risk}</p>
                 <p className="mt-1 text-[#52675a]">{confusion.context}</p>
@@ -185,6 +201,11 @@ export function AtlasCardDetail({
             ))}
           </div>
         </div>
+      )}
+      {card.confusionWarnings.length > 0 && publicConfusions.length === 0 && (
+        <p className="mt-4 text-sm text-[#67541f]">
+          Avvisi di confusione in revisione: verranno pubblicati dopo approvazione micologica.
+        </p>
       )}
       <p className="mt-4 text-xs text-[#708076]">Stato: {card.reviewStatus}.</p>
     </article>
