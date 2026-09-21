@@ -1,0 +1,102 @@
+[
+  {
+    "sourceId": "source-s1-taxonomic-objectives-v4-2026-06-09",
+    "authorityRole": "training",
+    "sourceType": "courseDocument",
+    "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+    "authors": [
+      "Nicola Sitta"
+    ],
+    "contributors": [
+      "Roberto Cavina",
+      "Alberto Ferretti",
+      "Marco Floriani",
+      "Fabio Girolami",
+      "Federico Morimando",
+      "Davide Palumbo",
+      "Virginia Marcacci Serantoni",
+      "Edoardo Suriano"
+    ],
+    "publisher": "Regione Basilicata — Corso di formazione per il conseguimento dell'attestato di Micologo",
+    "publicationYear": 2026,
+    "version": "V4 - 09.06.2026",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": null,
+    "licenseNote": "Documento didattico fornito al progetto. Il catalogo conserva dati strutturati, riferimenti di pagina e sintesi originali senza ripubblicare estesamente il testo.",
+    "fileHashSha256": null,
+    "assetStatus": "userLibrary",
+    "reviewStatus": "approved"
+  },
+  {
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "authorityRole": "edibility",
+    "sourceType": "book",
+    "title": "Guida ragionata alla commestibilità dei funghi",
+    "authors": [
+      "Nicola Sitta",
+      "Paolo Davoli",
+      "Marco Floriani",
+      "Edoardo Suriano"
+    ],
+    "contributors": [],
+    "publisher": "Regione Piemonte",
+    "publicationYear": 2021,
+    "version": "Prima edizione, 1 settembre 2021",
+    "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+    "isbnOrDoi": "ISBN 979-12-200-9297-5",
+    "accessedAt": "2026-09-21",
+    "licenseNote": "PDF ufficiale liberamente consultabile e scaricabile dalla Regione Piemonte. Il catalogo usa dati strutturati e sintesi originali, non riproduzioni estese.",
+    "fileHashSha256": null,
+    "assetStatus": "officialRemote",
+    "reviewStatus": "approved"
+  },
+  {
+    "sourceId": "source-nomenclature-index-fungorum",
+    "authorityRole": "nomenclature",
+    "sourceType": "database",
+    "title": "Index Fungorum",
+    "authors": [],
+    "contributors": [],
+    "publisher": "Index Fungorum Partnership",
+    "publicationYear": null,
+    "version": null,
+    "url": "https://www.indexfungorum.org/ixfwebservice/fungus.asmx/NameSearch",
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-21",
+    "licenseNote": "Servizio nomenclaturale interrogato per verificare i nomi correnti; nel repository sono conservati solo identificatori, nomi e metadati necessari alla verifica.",
+    "fileHashSha256": null,
+    "assetStatus": "officialRemote",
+    "reviewStatus": "approved"
+  },
+  {
+    "sourceId": "source-taxonomy-alvarado-2022-phalloideae",
+    "authorityRole": "nomenclature",
+    "sourceType": "article",
+    "title": "Amanita Section Phalloideae Species in the Mediterranean Basin: Destroying Angels Reviewed",
+    "authors": [
+      "Pablo Alvarado",
+      "Antonia Gasch-Illescas",
+      "Sylvie Morel",
+      "Magda Bou Dagher-Kharrat",
+      "Gabriel Moreno",
+      "José Luis Manjón",
+      "Xavier Carteret",
+      "Jean-Michel Bellanger",
+      "Sylvie Rapior",
+      "Matteo Gelardi",
+      "Pierre-Arthur Moreau"
+    ],
+    "contributors": [],
+    "publisher": "Biology",
+    "publicationYear": 2022,
+    "version": "11(5):770",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9138314/",
+    "isbnOrDoi": "DOI 10.3390/biology11050770",
+    "accessedAt": "2026-09-21",
+    "licenseNote": "Articolo open access CC BY 4.0; il catalogo conserva una sintesi tassonomica e il riferimento bibliografico.",
+    "fileHashSha256": null,
+    "assetStatus": "officialRemote",
+    "reviewStatus": "approved"
+  }
+]
