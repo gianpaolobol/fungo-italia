@@ -13,7 +13,8 @@
     "test": "node --experimental-strip-types --test lib/*.test.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern public/maplibre-gl-worker.mjs --ignore-pattern public/maplibre-gl-shared.mjs",
     "db:generate": "drizzle-kit generate",
-    "catalog:evidence:check": "node --experimental-strip-types scripts/check-catalog-evidence.mjs"
+    "catalog:evidence:check": "node --experimental-strip-types scripts/check-catalog-evidence.mjs",
+    "catalog:edibility:check": "node --experimental-strip-types scripts/check-minimum-edibility.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
