@@ -522,7 +522,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   <NativeSelect
                     value={atlasKind}
                     onChange={(event) => setAtlasKind(event.target.value as "all" | "minimumTaxon" | "teachingGroup")}
-                    className="h-10 w-full rounded-xl"
+                    className="h-11 w-full rounded-xl"
                     aria-label="Tipo di scheda"
                   >
                     <NativeSelectOption value="all">Tutte le schede</NativeSelectOption>
@@ -532,7 +532,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   <NativeSelect
                     value={atlasRank}
                     onChange={(event) => setAtlasRank(event.target.value)}
-                    className="h-10 w-full rounded-xl"
+                    className="h-11 w-full rounded-xl"
                     aria-label="Rango tassonomico"
                   >
                     <NativeSelectOption value="">Tutti i ranghi</NativeSelectOption>
@@ -547,7 +547,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   <NativeSelect
                     value={atlasEdibility}
                     onChange={(event) => setAtlasEdibility(event.target.value)}
-                    className="h-10 w-full rounded-xl"
+                    className="h-11 w-full rounded-xl"
                     aria-label="Categoria alimentare"
                   >
                     <NativeSelectOption value="">Tutte le categorie</NativeSelectOption>
@@ -986,7 +986,7 @@ function TaxonCard({ taxon }: { taxon: AtlasTaxon }) {
           <p><strong>Caratteri:</strong> {taxon.diagnosticCharacters.length ? taxon.diagnosticCharacters.join("; ") : "Scheda diagnostica in revisione editoriale."}</p>
           <p><strong>Odore:</strong> {taxon.odor ?? "Non documentato come carattere distintivo nelle fonti di base."}</p>
           <p><strong>Habitat e associazioni:</strong> {taxon.ecology.length ? taxon.ecology.join("; ") : "Da integrare con fonte micologica verificata."}</p>
-          <Button type="button" variant="outline" className="h-10 w-full rounded-xl" onClick={loadGallery}>{galleryLoading ? "Ricerca immagini…" : "Apri galleria con licenze"}</Button>
+          <Button type="button" variant="outline" className="h-11 w-full rounded-xl" onClick={loadGallery}>{galleryLoading ? "Ricerca immagini…" : "Apri galleria con licenze"}</Button>
           {images !== null && images.length === 0 && <p className="rounded-xl bg-[#f2f6f0] p-3 text-center font-bold">Galleria in preparazione</p>}
           {images && images.length > 0 && <div className="grid grid-cols-2 gap-2">{images.map((image) => <div key={image.id} className="min-w-0 overflow-hidden rounded-xl border bg-white">
             <a href={image.sourceUrl} target="_blank" rel="noreferrer" className="block">
