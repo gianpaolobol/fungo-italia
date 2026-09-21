@@ -38,6 +38,13 @@ export interface LearningInventoryValidation {
   errors: string[];
 }
 
+export interface LearningInventoryValidationOptions {
+  expectedUnits?: number;
+  expectedConcepts?: number;
+  requireApproved?: boolean;
+  requireCompleteMapping?: boolean;
+}
+
 const forbiddenParserArtifacts = new Set([
   "Armillaria come",
   "Boletus sez",
@@ -57,15 +64,12 @@ function normalizedLabel(value: string) {
 export function validateMinimumLearningInventory(
   units: readonly LearningUnit[],
   concepts: readonly LearningTaxonConcept[],
-  options: {
-    expectedUnits?: number;
-    expectedConcepts?: number;
-    requireApproved?: boolean;
-  } = {},
+  options: LearningInventoryValidationOptions = {},
 ): LearningInventoryValidation {
   const expectedUnits = options.expectedUnits ?? COMPLETE_MINIMUM_UNIT_TARGET;
   const expectedConcepts = options.expectedConcepts ?? CURRENT_MINIMUM_CONCEPT_TARGET;
-  const requireApproved = options.requireApproved ?? false;\n  const requireCompleteMapping = options.requireCompleteMapping ?? true;
+  const requireApproved = options.requireApproved ?? false;
+  const requireCompleteMapping = options.requireCompleteMapping ?? true;
   const errors: string[] = [];
 
   if (units.length !== expectedUnits) {
@@ -150,11 +154,7 @@ export function validateMinimumLearningInventory(
 export function assertMinimumLearningInventory(
   units: readonly LearningUnit[],
   concepts: readonly LearningTaxonConcept[],
-  options: {
-    expectedUnits?: number;
-    expectedConcepts?: number;
-    requireApproved?: boolean;
-  } = {},
+  options: LearningInventoryValidationOptions = {},
 ) {
   const result = validateMinimumLearningInventory(units, concepts, options);
   if (!result.ok) {
