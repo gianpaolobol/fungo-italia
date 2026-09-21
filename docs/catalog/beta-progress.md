@@ -76,7 +76,7 @@ Audit riproducibile:
 Task:
 - [x] 6.1A auditare la cardinalita storica 67 contro il mapping verificato;
 - [x] 6.1B congelare le 66 unita didattiche S1 di genere/gruppo;
-- [ ] 6.2 costruire il mapping unita didattica -> generi correnti + alias storici;
+- [x] 6.2 costruire il mapping unita didattica -> generi correnti dei taxa figli, mantenendo separati i generi sorgente;
 - [ ] 6.3 definire contratto della scheda di genere con profondita progressiva;
 - [ ] 6.4 generare le schede didattiche senza segnaposto;
 - [ ] 6.5 collegare specie/gruppi Minimo e indice dei generi correnti;
@@ -125,6 +125,8 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**6.2 — Mapping delle 66 unita didattiche di genere/gruppo verso i generi correnti e gli alias storici.**
+**6.3 — Contratto della scheda di genere/gruppo a profondita progressiva.**
 
-Il mapping deve conservare la risoluzione didattica S1. I generi correnti servono come indice professionale e destinazione di navigazione, ma non devono frammentare automaticamente un gruppo S1 quando la fonte consente una determinazione piu ampia.
+Checkpoint 6.2: le 66 unita S1 sono ora collegate ai generi correnti effettivamente presenti nei taxa figli verificati, mentre gli obiettivi esclusivamente generici restano `sourceOnly` fino alla verifica nomenclaturale di genere. Il mapping non confonde nomi sorgente e nomi correnti.
+
+Il prossimo contratto deve distinguere chiaramente contenuto Essenziale, Approfondimento e Specialistico e deve consentire la navigazione ai taxa Minimo senza duplicare le 148 schede.
