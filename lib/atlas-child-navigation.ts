@@ -55,6 +55,7 @@ export function selectMinimumChildFromTeachingGroup(
       kind: "minimumTaxon",
       id: minimumChildCardId,
       depth: "essential",
+      returnToCurrent: true,
     }),
     error: null,
   };
