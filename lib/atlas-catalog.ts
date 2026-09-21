@@ -2,6 +2,7 @@ import generatedTaxa from "../data/atlas-taxa.json" with { type: "json" };
 import objectives from "../data/taxonomic-objectives.json" with { type: "json" };
 
 import type { AtlasTaxon, Taxon } from "./domain.ts";
+import { guardTaxonSensitiveFields } from "./catalog-evidence.ts";
 import { betaTaxa } from "./seed-data.ts";
 
 export type TrainingObjectiveRecord = (typeof objectives)[number];
@@ -45,7 +46,9 @@ function detailedOverlay(taxon: AtlasTaxon): AtlasTaxon {
   };
 }
 
-export const atlasTaxa: AtlasTaxon[] = (generatedTaxa as AtlasTaxon[]).map(detailedOverlay);
+export const atlasTaxa: AtlasTaxon[] = (generatedTaxa as AtlasTaxon[])
+  .map(detailedOverlay)
+  .map((taxon) => guardTaxonSensitiveFields(taxon));
 
 export function sortAtlasTaxa(taxa: readonly AtlasTaxon[]): AtlasTaxon[] {
   return [...taxa].sort((left, right) => {
