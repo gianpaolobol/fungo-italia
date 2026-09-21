@@ -69,6 +69,7 @@ export interface EvidenceRecord {
 
 export type ClaimSubjectType =
   | "learningUnit"
+  | "genusTeachingUnit"
   | "taxon"
   | "taxonName"
   | "edibilityAssessment"
