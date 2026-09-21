@@ -5,6 +5,7 @@ import { minimumCards } from "./minimum-cards.ts";
 import { minimumGenusCards } from "./minimum-genus-cards.ts";
 import {
   currentGenusIndex,
+  genusNameIndex,
   minimumCardNavigation,
   sourceHeadingIndex,
 } from "./minimum-navigation.ts";
@@ -113,4 +114,87 @@ test("teaching priority is preserved even when a current genus differs from the 
     kind: "teachingCard",
     target: phyllophila.teachingCardId,
   });
+});
+
+
+test("unified genus-name index is unique case-insensitively", () => {
+  const keys = genusNameIndex.map((entry) => entry.name.toLocaleLowerCase("it"));
+  assert.equal(new Set(keys).size, keys.length);
+  assert.equal(genusNameIndex.every((entry) => entry.kinds.length > 0), true);
+});
+
+test("every source genus from the 66 teaching cards is searchable through the unified index", () => {
+  const indexByName = new Map(
+    genusNameIndex.map((entry) => [entry.name.toLocaleLowerCase("it"), entry]),
+  );
+
+  for (const card of minimumGenusCards) {
+    for (const genus of card.sourceGenera) {
+      const entry = indexByName.get(genus.toLocaleLowerCase("it"));
+      assert.ok(entry, `missing source genus ${genus}`);
+      assert.ok(entry.kinds.includes("sourceGenus"), genus);
+      assert.ok(entry.teachingCardIds.includes(card.cardId), `${genus}: ${card.cardId}`);
+    }
+  }
+});
+
+test("all 73 verified current genera are searchable and retain their minimum-card links", () => {
+  const indexByName = new Map(
+    genusNameIndex.map((entry) => [entry.name.toLocaleLowerCase("it"), entry]),
+  );
+
+  assert.equal(currentGenusIndex.length, 73);
+  for (const current of currentGenusIndex) {
+    const entry = indexByName.get(current.genus.toLocaleLowerCase("it"));
+    assert.ok(entry, `missing current genus ${current.genus}`);
+    assert.ok(entry.kinds.includes("currentGenus"), current.genus);
+    assert.deepEqual(
+      new Set(entry.minimumCardIds),
+      new Set(current.minimumCardIds),
+      current.genus,
+    );
+  }
+});
+
+test("historical and current genus identities can coexist without collapsing their roles", () => {
+  const byName = new Map(
+    genusNameIndex.map((entry) => [entry.name.toLocaleLowerCase("it"), entry]),
+  );
+
+  for (const genus of ["Amanita", "Clitocybe", "Cortinarius", "Lactarius", "Pleurotus"]) {
+    const entry = byName.get(genus.toLocaleLowerCase("it"));
+    assert.ok(entry, genus);
+    assert.ok(entry.kinds.includes("sourceGenus"), `${genus}: missing source role`);
+    assert.ok(entry.kinds.includes("currentGenus"), `${genus}: missing current role`);
+  }
+
+  for (const transferred of ["Saproamanita", "Phlegmacium", "Infundibulicybe", "Lactifluus"]) {
+    const entry = byName.get(transferred.toLocaleLowerCase("it"));
+    assert.ok(entry, transferred);
+    assert.ok(entry.kinds.includes("currentGenus"), transferred);
+  }
+});
+
+test("all 148 minimum cards remain reachable after merging source and current genus indexes", () => {
+  const reachable = new Set(
+    genusNameIndex.flatMap((entry) => entry.minimumCardIds),
+  );
+
+  for (const entry of minimumCardNavigation) {
+    if (entry.currentGenera.length > 0 || entry.teachingCardId !== null) {
+      assert.ok(
+        reachable.has(entry.cardId),
+        `unreachable card through genus index: ${entry.sourceLabel}`,
+      );
+    }
+  }
+
+  const structuralOnly = minimumCardNavigation.filter(
+    (entry) =>
+      entry.currentGenera.length === 0 &&
+      entry.teachingCardId === null,
+  );
+  for (const entry of structuralOnly) {
+    assert.ok(sourceHeadingIds.has(entry.sourceHeadingId), entry.sourceLabel);
+  }
 });
