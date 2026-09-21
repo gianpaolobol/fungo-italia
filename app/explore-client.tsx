@@ -132,12 +132,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     atlasEdibility.length > 0;
 
   useEffect(() => {
-    if (!atlasServerSearchActive) {
-      setAtlasServerItems(null);
-      setAtlasServerTotal(0);
-      setAtlasServerStatus("idle");
-      return;
-    }
+    if (!atlasServerSearchActive) return;
 
     const controller = new AbortController();
     const timeout = window.setTimeout(() => {
