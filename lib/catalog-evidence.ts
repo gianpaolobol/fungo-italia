@@ -1,5 +1,6 @@
 import sourcesJson from "../data/catalog/sources.json" with { type: "json" };
 import trainingEvidenceJson from "../data/catalog/evidence.json" with { type: "json" };
+import edibilityEvidenceJson from "../data/catalog/edibility-evidence.json" with { type: "json" };
 import sourcePageIndexJson from "../data/catalog/source-page-index.json" with { type: "json" };
 import objectives from "../data/taxonomic-objectives.json" with { type: "json" };
 
@@ -105,6 +106,7 @@ export interface EvidenceValidationResult {
 
 export const catalogSources = sourcesJson as CatalogSource[];
 export const trainingEvidence = trainingEvidenceJson as CatalogEvidence[];
+export const edibilityEvidence = edibilityEvidenceJson as CatalogEvidence[];
 export const sourcePageIndex = sourcePageIndexJson as SourcePageIndexRow[];
 
 const sourceIdForNomenclatureEvidence = {
@@ -164,6 +166,7 @@ export const nomenclatureEvidence: CatalogEvidence[] = minimumNomenclatureMappin
 export const allCatalogEvidence: CatalogEvidence[] = [
   ...trainingEvidence,
   ...nomenclatureEvidence,
+  ...edibilityEvidence,
 ];
 
 function validDate(value: string | null) {
