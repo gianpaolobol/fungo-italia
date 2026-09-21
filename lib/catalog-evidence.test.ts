@@ -7,6 +7,7 @@ import {
   nomenclatureEvidence,
   sourcePageIndex,
   trainingEvidence,
+  guardTaxonSensitiveFields,
   validateCatalogEvidence,
   validateSourcePageIndex,
   type CatalogEvidence,
@@ -174,4 +175,43 @@ test("combined evidence IDs are unique and claim summaries stay compact", () => 
   const ids = allCatalogEvidence.map((evidence) => evidence.evidenceId);
   assert.equal(new Set(ids).size, ids.length);
   assert.equal(allCatalogEvidence.every((evidence) => evidence.claimSummary.length <= 500), true);
+});
+
+
+test("taxon edibility stays hidden until an approved S2 claim exists", () => {
+  const taxon = {
+    id: "amanita-caesarea",
+    commonName: "Ovolo buono",
+    scientificName: "Amanita caesarea",
+    rank: "species" as const,
+    aliases: [],
+    regionalNames: [],
+    edibility: "commestibile" as const,
+    safetyNote: "Legacy note",
+  };
+
+  const guarded = guardTaxonSensitiveFields(taxon, []);
+  assert.equal(guarded.edibility, "non-valutato");
+  assert.match(guarded.safetyNote, /evidenza S2 approvata/);
+
+  const evidence: CatalogEvidence = {
+    evidenceId: "approved-s2",
+    subjectType: "taxon",
+    subjectId: taxon.id,
+    sourceId: "source-s2-guida-commestibilita-2021",
+    sourceLocation: "p. 30",
+    claimType: "edibility",
+    claimSummary: "Categoria alimentare verificata nella fonte S2.",
+    evidenceStrength: "primaryExplicit",
+    extractedBy: "test",
+    extractedAt: "2026-09-21T00:00:00Z",
+    reviewedBy: "reviewer-1",
+    reviewedAt: "2026-09-21T00:00:00Z",
+    reviewStatus: "approved",
+    notes: null,
+  };
+
+  const released = guardTaxonSensitiveFields(taxon, [evidence]);
+  assert.equal(released.edibility, "commestibile");
+  assert.equal(released.safetyNote, "Legacy note");
 });
