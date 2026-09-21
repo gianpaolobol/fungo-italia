@@ -65,7 +65,7 @@ Checkpoint precedente verificato: `7033a3849b886c0052905504cffc9b7a3e4d0620`.
 ## Lotti ancora da completare
 
 ### Lotto 6 — Schede di genere/gruppo e indice dei generi correnti
-Stato: **IN CORSO**
+Stato: **CHIUSO**
 
 Audit riproducibile:
 - 66 obiettivi S1-Minimo di rango `genus` o `operationalGroup` (46 + 20);
@@ -81,9 +81,9 @@ Task:
 - [x] 6.4A assemblare le 66 schede didattiche;
 - [x] 6.4B collegare claim/evidence ai tre livelli;
 - [x] 6.4C gate completo senza segnaposto e con 66/66 schede;
-- [ ] 6.5 collegare specie/gruppi Minimo e indice dei generi correnti;
-- [ ] 6.6 test di cardinalita, unicita, alias e copertura;
-- [ ] 6.7 CI verde.
+- [x] 6.5 collegare specie/gruppi Minimo e indice dei generi correnti;
+- [x] 6.6 test di cardinalita, unicita, alias e copertura;
+- [x] 6.7 CI verde.
 
 ### Lotto 7 — Filtri server e ricerca
 Stato: **NON AVVIATO**
@@ -127,13 +127,16 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**6.5 — Collegamento gerarchico fra 66 schede didattiche, 148 schede Minimo e indice dei generi correnti.**
+**7.1 — Contratto server-side di ricerca e filtri.**
 
-Checkpoint 6.4 chiuso:
-- 66/66 schede progressive assemblate;
-- claim/evidence collegati a ogni livello presente;
-- contenuti editoriali ancora `reviewNeeded`;
-- gate completo verde;
-- CI: 120 test, 120 pass, 0 fail, lint senza errori, build riuscita.
+Checkpoint Lotto 6 chiuso:
+- 66 schede progressive genere/gruppo;
+- 148/148 schede Minimo collegate alla gerarchia;
+- 129 target sotto le 66 schede didattiche;
+- 19 target di famiglia/sezione mantenuti in nodi strutturali, senza orfani;
+- indice professionale di 73 generi correnti;
+- indice unificato nome sorgente + nome corrente senza collisioni di ruolo;
+- nomenclatura: 134/134 asserzioni verificate;
+- CI finale: 132 test, 132 pass, 0 fail; lint 0 errori; build riuscita.
 
-Il task 6.5 deve rendere navigabili anche i target Minimo nati sotto obiettivi di famiglia/sezione, che non appartengono direttamente alle 66 pagine di genere/gruppo.
+Il task 7.1 deve definire query normalizzate e filtri server-side senza duplicare la logica nella UI. La ricerca deve poter trovare almeno nome corrente, nome sorgente/storico, alias di genere e testo delle unita didattiche.
