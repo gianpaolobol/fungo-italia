@@ -1,0 +1,106 @@
+{
+  "status": "in-review",
+  "source": {
+    "title": "Obiettivi tassonomici nella formazione dei micologi",
+    "edition": "V4 - 09.06.2026",
+    "scope": "livello minimo"
+  },
+  "betaTargets": {
+    "learningUnits": 148,
+    "currentConcepts": 141,
+    "currentGenera": 67
+  },
+  "legacyGenerator": {
+    "generatedMinimumSpeciesRecords": 157,
+    "problem": "Il parser storico estrae binomi con regex e forza ogni risultato al rango species. Non e una base pubblicabile per l'inventario minimo."
+  },
+  "confirmedParserArtifacts": [
+    "Armillaria come",
+    "Boletus sez",
+    "Cortinarius sez",
+    "Hydnaceae repandum",
+    "Leccinum tutte",
+    "Phallaceae per",
+    "Ramaria colorate",
+    "Ramaria definite",
+    "Volvariella per"
+  ],
+  "confirmedMissedMinimumTargets": [
+    {
+      "sourceLabel": "Boletus (Rubroboletus) satanas",
+      "normalizedLabel": "Rubroboletus satanas",
+      "reason": "Il genere moderno tra parentesi interrompe la regex binomiale."
+    },
+    {
+      "sourceLabel": "Boletus (Neoboletus) erythropus s.l.",
+      "normalizedLabel": "Neoboletus erythropus s.l.",
+      "reason": "Il genere moderno tra parentesi interrompe la regex binomiale; il qualificatore s.l. va conservato."
+    },
+    {
+      "sourceLabel": "Boletus (Suillellus) luridus",
+      "normalizedLabel": "Suillellus luridus",
+      "reason": "Il genere moderno tra parentesi interrompe la regex binomiale."
+    }
+  ],
+  "confirmedNonSpeciesResolutions": [
+    {
+      "sourceLabel": "sez. Xanthodermatei",
+      "requiredResolution": "section"
+    },
+    {
+      "sourceLabel": "sez. Arvenses",
+      "requiredResolution": "section"
+    },
+    {
+      "sourceLabel": "sez. Sanguinolenti",
+      "requiredResolution": "section"
+    },
+    {
+      "sourceLabel": "sez. Vaginatae",
+      "requiredResolution": "section"
+    },
+    {
+      "sourceLabel": "sottogenere Dermocybe",
+      "requiredResolution": "subgenus"
+    },
+    {
+      "sourceLabel": "sez. Purae",
+      "requiredResolution": "section"
+    },
+    {
+      "sourceLabel": "Boletus sez. Luridi",
+      "requiredResolution": "section"
+    },
+    {
+      "sourceLabel": "Amanita excelsa s.l.",
+      "requiredResolution": "speciesGroup"
+    },
+    {
+      "sourceLabel": "Clitocybe gibba s.l.",
+      "requiredResolution": "speciesGroup"
+    },
+    {
+      "sourceLabel": "Entoloma rhodopolium s.l.",
+      "requiredResolution": "speciesGroup"
+    },
+    {
+      "sourceLabel": "Tricholoma album s.l.",
+      "requiredResolution": "speciesGroup"
+    },
+    {
+      "sourceLabel": "Tricholoma saponaceum s.l.",
+      "requiredResolution": "speciesGroup"
+    },
+    {
+      "sourceLabel": "Ramaria botrytis s.l.",
+      "requiredResolution": "speciesGroup"
+    }
+  ],
+  "rules": [
+    "Le 148 unita didattiche non vengono sostituite dai 141 concetti correnti.",
+    "Piu unita sorgente possono convergere sullo stesso concetto corrente.",
+    "Il rango richiesto dalla fonte deve essere conservato.",
+    "I nomi storici e le combinazioni precedenti sono alias, non schede duplicate.",
+    "Il catalogo minimo non e pubblicabile finche tutte le unita non sono risolte e revisionate."
+  ]
+}
