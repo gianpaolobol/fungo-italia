@@ -95,15 +95,23 @@ Stato: **CHIUSO**
 Il motore 7.1 indicizza 214 documenti: 66 schede genere/gruppo + 148 schede Minimo. Cerca nomi sorgente e correnti, supporta abbreviazioni, filtri per tipo, rango, genere, commestibilita e stato di revisione.
 
 ### Lotto 8 — Navigazione Genere -> specie/gruppi
-Stato: **IN CORSO**
-- [ ] 8.1 contratto di navigazione e stato URL;
+Stato: **CHIUSO**
+- [x] 8.1 contratto di navigazione e stato URL;
 - [x] 8.2 vista scheda genere/gruppo con livelli progressivi;
 - [x] 8.3 navigazione ai taxa Minimo figli;
 - [x] 8.4 ritorno stabile a ricerca/filtri;
-- [ ] 8.5 integrazione UI reale + test integrazione e gate CI.
+- [x] 8.5 integrazione UI reale + test integrazione e gate CI.
+
+Gate finale Lotto 8:
+- Atlante strutturato come superficie primaria anche senza filtri;
+- 214/214 documenti di ricerca aprono una scheda reale;
+- navigazione gruppo -> figlio -> gruppo -> risultati preserva query, filtri e profondita;
+- apertura diretta di un taxon Minimo funziona senza parent artificiale;
+- stato URL riproducibile;
+- CI: 168 test, 168 pass, 0 fail; Index Fungorum 134/134; lint 0 errori; build riuscita.
 
 ### Lotto 9 — QA mobile, mappa e accessibilita
-Stato: **NON AVVIATO**
+Stato: **IN AVVIO**
 - 320, 375, 768 e desktop;
 - overflow, touch target, tastiera, focus, loading/error/empty;
 - regressioni mappa.
@@ -168,3 +176,8 @@ Il Lotto 8 deve rendere apribili le schede senza perdere query e filtri quando l
 - ritorno al gruppo ripristina la profondita;
 - in assenza di parent il ritorno chiude la scheda senza perdere i filtri;
 - CI verde.
+
+
+### Chiusura Lotto 8
+Checkpoint finale: `95c9d5339ca3f6dec3230f52af30ab557f43030a`.
+Il catalogo legacy resta soltanto come fallback degradato se l'API strutturata non e disponibile.
