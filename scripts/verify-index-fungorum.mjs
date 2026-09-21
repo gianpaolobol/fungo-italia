@@ -100,11 +100,16 @@ const statusCounts = Object.fromEntries(
 const uniqueCurrentNames = new Set(
   minimumNomenclatureMappings.flatMap((mapping) => mapping.currentAcceptedNames),
 );
+const uniqueCurrentGenera = new Set(
+  [...uniqueCurrentNames]
+    .map((name) => name.match(/^([A-Z][A-Za-z-]+)/)?.[1] ?? null)
+    .filter(Boolean),
+);
 console.log(
   `Nomenclature mapping: ${minimumNomenclatureMappings.length} records; ` +
   `accepted=${statusCounts.accepted}; sourceConcept=${statusCounts.sourceConcept}; ` +
   `definedSet=${statusCounts.definedSet}; conflict=${statusCounts.conflict}; ` +
-  `unresolved=${statusCounts.unresolved}; unique current names=${uniqueCurrentNames.size}.`,
+  `unresolved=${statusCounts.unresolved}; unique current names=${uniqueCurrentNames.size}; unique current genera=${uniqueCurrentGenera.size}.`,
 );
 
 async function verify(job) {
