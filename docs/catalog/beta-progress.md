@@ -77,8 +77,10 @@ Task:
 - [x] 6.1A auditare la cardinalita storica 67 contro il mapping verificato;
 - [x] 6.1B congelare le 66 unita didattiche S1 di genere/gruppo;
 - [x] 6.2 costruire il mapping unita didattica -> generi correnti dei taxa figli, mantenendo separati i generi sorgente;
-- [ ] 6.3 definire contratto della scheda di genere con profondita progressiva;
-- [ ] 6.4 generare le schede didattiche senza segnaposto;
+- [x] 6.3 definire contratto della scheda di genere con profondita progressiva;
+- [ ] 6.4A assemblare le 66 schede didattiche;
+- [ ] 6.4B collegare claim/evidence ai tre livelli;
+- [ ] 6.4C gate completo senza segnaposto e con 66/66 schede;
 - [ ] 6.5 collegare specie/gruppi Minimo e indice dei generi correnti;
 - [ ] 6.6 test di cardinalita, unicita, alias e copertura;
 - [ ] 6.7 CI verde.
@@ -125,8 +127,8 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**6.3 — Contratto della scheda di genere/gruppo a profondita progressiva.**
+**6.4A — Assemblaggio delle 66 schede didattiche di genere/gruppo.**
 
-Checkpoint 6.2: le 66 unita S1 sono ora collegate ai generi correnti effettivamente presenti nei taxa figli verificati, mentre gli obiettivi esclusivamente generici restano `sourceOnly` fino alla verifica nomenclaturale di genere. Il mapping non confonde nomi sorgente e nomi correnti.
+Checkpoint 6.3 chiuso: il contratto distingue Essenziale, Approfondimento e Specialistico; richiede provenance per ogni livello presente; mantiene separati generi sorgente e correnti; impedisce duplicazioni delle schede Minimo figlie.
 
-Il prossimo contratto deve distinguere chiaramente contenuto Essenziale, Approfondimento e Specialistico e deve consentire la navigazione ai taxa Minimo senza duplicare le 148 schede.
+Il task 6.4 viene eseguito in tre checkpoint indipendenti per evitare perdita di lavoro.
