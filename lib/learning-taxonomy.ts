@@ -25,7 +25,7 @@ export interface LearningUnit {
   sourcePage: number;
   level: LearningLevel;
   requiredResolution: TaxonRank;
-  currentConceptId: string;
+  currentConceptId: string | null;
   deepMorphologyRequired: boolean;
   reviewStatus: LearningReviewStatus;
   notes?: string;
@@ -65,7 +65,7 @@ export function validateMinimumLearningInventory(
 ): LearningInventoryValidation {
   const expectedUnits = options.expectedUnits ?? COMPLETE_MINIMUM_UNIT_TARGET;
   const expectedConcepts = options.expectedConcepts ?? CURRENT_MINIMUM_CONCEPT_TARGET;
-  const requireApproved = options.requireApproved ?? false;
+  const requireApproved = options.requireApproved ?? false;\n  const requireCompleteMapping = options.requireCompleteMapping ?? true;
   const errors: string[] = [];
 
   if (units.length !== expectedUnits) {
@@ -98,7 +98,11 @@ export function validateMinimumLearningInventory(
       errors.push(`${unit.id}: parser prose artifact leaked into inventory: ${label}`);
     }
 
-    if (!conceptIds.has(unit.currentConceptId)) {
+    if (!unit.currentConceptId) {
+      if (requireCompleteMapping) {
+        errors.push(`${unit.id}: current concept mapping is unresolved`);
+      }
+    } else if (!conceptIds.has(unit.currentConceptId)) {
       errors.push(`${unit.id}: missing current concept ${unit.currentConceptId}`);
     } else {
       referencedConceptIds.add(unit.currentConceptId);
@@ -129,7 +133,7 @@ export function validateMinimumLearningInventory(
     conceptIdsSeen.add(concept.id);
   }
 
-  if (referencedConceptIds.size !== expectedConcepts) {
+  if (requireCompleteMapping && referencedConceptIds.size !== expectedConcepts) {
     errors.push(
       `current concept count ${referencedConceptIds.size}; expected ${expectedConcepts}`,
     );
