@@ -37,7 +37,7 @@ test("explicit species from every learning level become atlas records", () => {
   }
 });
 
-test("atlas entries retain rank, order, source page and conservative edibility", () => {
+test("atlas keeps taxonomy and source pages but suppresses legacy edibility without approved S2 evidence", () => {
   const deadlyAmanita = atlasTaxa.find(
     (taxon) => taxon.scientificName === "Amanita phalloides",
   );
@@ -50,10 +50,12 @@ test("atlas entries retain rank, order, source page and conservative edibility",
 
   assert.equal(deadlyAmanita?.rank, "species");
   assert.equal(deadlyAmanita?.order, "Agaricales");
-  assert.equal(deadlyAmanita?.edibility, "tossico");
   assert.equal(deadlyAmanita?.sources[0].page, 4);
-  assert.equal(caesarea?.edibility, "commestibile");
-  assert.equal(rubescens?.edibility, "commestibile-dopo-trattamento");
+
+  for (const taxon of [deadlyAmanita, caesarea, rubescens]) {
+    assert.equal(taxon?.edibility, "non-valutato");
+    assert.match(taxon?.safetyNote ?? "", /evidenza S2 approvata/);
+  }
 });
 
 test("systematic sorting starts with Agaricales and excludes prose fragments", () => {
