@@ -34,6 +34,16 @@ export interface CurrentGenusIndexEntry {
   sourceLabels: string[];
 }
 
+
+export type GenusNameIndexKind = "sourceGenus" | "currentGenus";
+
+export interface GenusNameIndexEntry {
+  name: string;
+  kinds: GenusNameIndexKind[];
+  teachingCardIds: string[];
+  minimumCardIds: string[];
+}
+
 export interface SourceHeadingIndexEntry {
   sourceHeadingId: string;
   sourceHeadingLabel: string;
@@ -171,4 +181,63 @@ export const sourceHeadingIndex: SourceHeadingIndexEntry[] = (() => {
       minimumCardIds: [...entry.minimumCardIds].sort(),
     }))
     .sort((a, b) => a.sourceHeadingLabel.localeCompare(b.sourceHeadingLabel, "it"));
+})();
+
+
+export const genusNameIndex: GenusNameIndexEntry[] = (() => {
+  const buckets = new Map<string, {
+    displayName: string;
+    kinds: Set<GenusNameIndexKind>;
+    teachingCardIds: Set<string>;
+    minimumCardIds: Set<string>;
+  }>();
+
+  function add(
+    name: string,
+    kind: GenusNameIndexKind,
+    teachingCardIds: readonly string[],
+    minimumCardIds: readonly string[],
+  ) {
+    const key = name.toLocaleLowerCase("it").trim();
+    if (!key) return;
+    const bucket = buckets.get(key) ?? {
+      displayName: name,
+      kinds: new Set<GenusNameIndexKind>(),
+      teachingCardIds: new Set<string>(),
+      minimumCardIds: new Set<string>(),
+    };
+    bucket.kinds.add(kind);
+    for (const id of teachingCardIds) bucket.teachingCardIds.add(id);
+    for (const id of minimumCardIds) bucket.minimumCardIds.add(id);
+    buckets.set(key, bucket);
+  }
+
+  for (const card of minimumGenusCards) {
+    for (const sourceGenus of card.sourceGenera) {
+      add(
+        sourceGenus,
+        "sourceGenus",
+        [card.cardId],
+        card.minimumChildCardIds,
+      );
+    }
+  }
+
+  for (const current of currentGenusIndex) {
+    add(
+      current.genus,
+      "currentGenus",
+      current.teachingCardIds,
+      current.minimumCardIds,
+    );
+  }
+
+  return [...buckets.values()]
+    .map((bucket) => ({
+      name: bucket.displayName,
+      kinds: [...bucket.kinds].sort(),
+      teachingCardIds: [...bucket.teachingCardIds].sort(),
+      minimumCardIds: [...bucket.minimumCardIds].sort(),
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, "it"));
 })();
