@@ -181,9 +181,10 @@ function sourceRoleRequiredForClaim(claimType: EvidenceClaimType): SourceAuthori
 export function validateCatalogEvidence(
   sources: readonly CatalogSource[] = catalogSources,
   evidence: readonly CatalogEvidence[] = allCatalogEvidence,
-  options: { requirePublishable?: boolean } = {},
+  options: { requirePublishable?: boolean; requireCoreCoverage?: boolean } = {},
 ): EvidenceValidationResult {
   const requirePublishable = options.requirePublishable ?? false;
+  const requireCoreCoverage = options.requireCoreCoverage ?? true;
   const errors: string[] = [];
   const sourcesById = new Map<string, CatalogSource>();
   const evidenceIds = new Set<string>();
@@ -239,6 +240,7 @@ export function validateCatalogEvidence(
     evidenceBySubject.set(key, values);
   }
 
+  if (requireCoreCoverage) {
   for (const unit of sourceMinimumLearningUnits) {
     const records = evidenceBySubject.get(`learningUnit:${unit.id}`) ?? [];
     const training = records.filter((item) => item.claimType === "training");
@@ -265,6 +267,7 @@ export function validateCatalogEvidence(
     if (mapping.evidence.length === 0) {
       errors.push(`${mapping.sourceUnitId}: nomenclature mapping has no evidence`);
     }
+  }
   }
 
   return {
