@@ -25,6 +25,7 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: node --experimental-strip-types scripts/verify-index-fungorum.mjs
+      - run: node --experimental-strip-types scripts/report-minimum-genera.mjs
       - run: pnpm test
       - run: pnpm lint
       - run: pnpm build
