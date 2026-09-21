@@ -41,6 +41,8 @@ export interface NomenclatureEvidence {
   sourceUrl: string;
   checkedAt: string;
   recordId?: string;
+  queryName?: string;
+  expectedCurrentName?: string;
   note?: string;
 }
 
