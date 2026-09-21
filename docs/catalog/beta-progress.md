@@ -111,13 +111,23 @@ Gate finale Lotto 8:
 - CI: 168 test, 168 pass, 0 fail; Index Fungorum 134/134; lint 0 errori; build riuscita.
 
 ### Lotto 9 — QA mobile, mappa e accessibilita
-Stato: **IN AVVIO**
-- 320, 375, 768 e desktop;
-- overflow, touch target, tastiera, focus, loading/error/empty;
-- regressioni mappa.
+Stato: **GATE AUTOMATIZZATO CHIUSO; SMOKE VISUALE LIVE DEFERITO AL LOTTO 12**
+- [x] overflow orizzontale bloccato a livello globale;
+- [x] touch target principali >=44 px;
+- [x] safe-area per drawer e CTA mobile;
+- [x] focus visibile globale;
+- [x] preferenza reduced-motion rispettata anche dalla mappa;
+- [x] stato selezione esposto con aria-pressed;
+- [x] mappa con regione accessibile, loading annunciato e fallback selezionabile;
+- [x] stati loading/error/empty/forbidden coperti;
+- [x] contratti responsive mobile/tablet/desktop testati;
+- [x] regressioni worker e geometria mappa testate;
+- [ ] smoke visuale reale a 320, 375, 768 e 1440 px sul deployment finale.
+
+Gate automatizzato: 184 test, 184 pass, 0 fail; lint 0 errori; build riuscita.
 
 ### Lotto 10 — Revisione micologica
-Stato: **NON AVVIATO**
+Stato: **IN AVVIO**
 - revisione sistematica dei claim `reviewNeeded`;
 - priorita a tossicita, confusioni mortali, commestibilita e morfologia discriminante;
 - nessuna promozione automatica ad `approved`.
@@ -181,3 +191,11 @@ Il Lotto 8 deve rendere apribili le schede senza perdere query e filtri quando l
 ### Chiusura Lotto 8
 Checkpoint finale: `95c9d5339ca3f6dec3230f52af30ab557f43030a`.
 Il catalogo legacy resta soltanto come fallback degradato se l'API strutturata non e disponibile.
+
+
+### Checkpoint Lotto 9 automatizzato
+- commit QA: `ef614acdc0244fa72ef754d9f66d2c712acda751`;
+- 184 test / 184 pass / 0 fail;
+- Index Fungorum 134/134;
+- build verde.
+La verifica visuale reale dei quattro viewport resta bloccante prima della pubblicazione, non viene considerata implicitamente eseguita.
