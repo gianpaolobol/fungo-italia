@@ -1,0 +1,31 @@
+name: Catalog Evidence CI
+
+on:
+  push:
+    branches:
+      - feat/evidence-claims-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm catalog:evidence:check
+      - run: node --experimental-strip-types scripts/verify-index-fungorum.mjs
+      - run: pnpm test
+      - run: pnpm lint
+      - run: pnpm build
