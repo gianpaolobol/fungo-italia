@@ -99,8 +99,8 @@ Stato: **IN CORSO**
 - [ ] 8.1 contratto di navigazione e stato URL;
 - [x] 8.2 vista scheda genere/gruppo con livelli progressivi;
 - [x] 8.3 navigazione ai taxa Minimo figli;
-- [ ] 8.4 ritorno stabile a ricerca/filtri;
-- [ ] 8.5 test integrazione e gate CI.
+- [x] 8.4 ritorno stabile a ricerca/filtri;
+- [ ] 8.5 integrazione UI reale + test integrazione e gate CI.
 
 ### Lotto 9 — QA mobile, mappa e accessibilita
 Stato: **NON AVVIATO**
@@ -132,7 +132,7 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**8.4 — Ritorno stabile a ricerca/filtri e contesto precedente.**
+**8.5 — Integrazione UI reale della navigazione progressiva e gate finale Lotto 8.**
 
 Checkpoint Lotto 7:
 - indice ricerca: 214 documenti (66 + 148);
@@ -159,4 +159,12 @@ Il Lotto 8 deve rendere apribili le schede senza perdere query e filtri quando l
 - query e filtri invariati durante la transizione;
 - lookup delle schede figlie dal corpus persistito;
 - errori sicuri per gruppo o figlio sconosciuti;
+- CI verde.
+
+
+### Checkpoint 8.4
+- contesto di ritorno parent salvato nello stato URL;
+- apertura figlio conserva gruppo padre e profondita precedente;
+- ritorno al gruppo ripristina la profondita;
+- in assenza di parent il ritorno chiude la scheda senza perdere i filtri;
 - CI verde.
