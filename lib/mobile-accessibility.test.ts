@@ -46,6 +46,18 @@ test("map has accessible region semantics, loading announcement and fallback con
   assert.match(map, /aria-live="polite"/);
   assert.match(fallback, /aria-label="Mappa accessibile delle aree"/);
   assert.match(fallback, /type="button"/);
+  assert.match(fallback, /aria-pressed=\{selectedId === area\.id\}/);
+});
+
+test("interactive view and depth toggles expose their selected state", () => {
+  assert.match(explore, /aria-pressed=\{mobileView === "map"\}/);
+  assert.match(explore, /aria-pressed=\{mobileView === "list"\}/);
+  assert.match(detail, /aria-pressed=\{depth === entry\}/);
+});
+
+test("map selection motion follows the reduced-motion user preference", () => {
+  assert.match(map, /prefers-reduced-motion: reduce/);
+  assert.match(map, /duration: reduceMotion \? 0 : 500/);
 });
 
 test("MapLibre attribution is kept visible and moved above mobile bottom controls", () => {
