@@ -257,7 +257,6 @@ export const sourceMinimumLearningUnits: LearningUnit[] = groups.flatMap((group)
       sourcePage: objective.sources.minimumObjectives.page,
       level: "minimum" as const,
       requiredResolution: item.rank,
-      currentConceptId: null,
       deepMorphologyRequired: item.deepMorphologyRequired,
       reviewStatus: "normalized" as const,
     };
