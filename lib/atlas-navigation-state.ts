@@ -15,6 +15,9 @@ export interface AtlasNavigationState {
   selectedKind: AtlasSelectionKind | null;
   selectedId: string | null;
   depth: AtlasDepth;
+  returnKind: AtlasSelectionKind | null;
+  returnId: string | null;
+  returnDepth: AtlasDepth;
 }
 
 export const defaultAtlasNavigationState: AtlasNavigationState = {
@@ -27,6 +30,9 @@ export const defaultAtlasNavigationState: AtlasNavigationState = {
   selectedKind: null,
   selectedId: null,
   depth: "essential",
+  returnKind: null,
+  returnId: null,
+  returnDepth: "essential",
 };
 
 const kinds = new Set(["all", "minimumTaxon", "teachingGroup"]);
@@ -66,6 +72,12 @@ export function parseAtlasNavigationState(params: URLSearchParams): AtlasNavigat
     "",
   );
   const selectedId = params.get("selectedId")?.trim() || null;
+  const returnKind = enumValue<AtlasSelectionKind | "">(
+    params.get("returnKind"),
+    selectionKinds,
+    "",
+  );
+  const returnId = params.get("returnId")?.trim() || null;
 
   return {
     query: params.get("q") ?? "",
@@ -85,6 +97,9 @@ export function parseAtlasNavigationState(params: URLSearchParams): AtlasNavigat
     selectedKind: selectedKind || null,
     selectedId: selectedKind && selectedId ? selectedId : null,
     depth: enumValue(params.get("depth"), depths, "essential"),
+    returnKind: returnKind || null,
+    returnId: returnKind && returnId ? returnId : null,
+    returnDepth: enumValue(params.get("returnDepth"), depths, "essential"),
   };
 }
 
@@ -106,6 +121,12 @@ export function serializeAtlasNavigationState(
     if (state.depth !== "essential") params.set("depth", state.depth);
   }
 
+  if (state.returnKind && state.returnId) {
+    params.set("returnKind", state.returnKind);
+    params.set("returnId", state.returnId);
+    if (state.returnDepth !== "essential") params.set("returnDepth", state.returnDepth);
+  }
+
   return params;
 }
 
@@ -115,13 +136,22 @@ export function selectAtlasCard(
     kind: AtlasSelectionKind;
     id: string;
     depth?: AtlasDepth;
+    returnToCurrent?: boolean;
   },
 ): AtlasNavigationState {
+  const captureReturn =
+    selection.returnToCurrent &&
+    state.selectedKind !== null &&
+    state.selectedId !== null;
+
   return {
     ...state,
     selectedKind: selection.kind,
     selectedId: selection.id,
     depth: selection.depth ?? "essential",
+    returnKind: captureReturn ? state.selectedKind : null,
+    returnId: captureReturn ? state.selectedId : null,
+    returnDepth: captureReturn ? state.depth : "essential",
   };
 }
 
@@ -131,6 +161,9 @@ export function closeAtlasCard(state: AtlasNavigationState): AtlasNavigationStat
     selectedKind: null,
     selectedId: null,
     depth: "essential",
+    returnKind: null,
+    returnId: null,
+    returnDepth: "essential",
   };
 }
 
@@ -150,4 +183,23 @@ export function atlasStateHref(
 ) {
   const query = serializeAtlasNavigationState(state).toString();
   return query ? `${pathname}?${query}` : pathname;
+}
+
+
+export function returnToAtlasParent(
+  state: AtlasNavigationState,
+): AtlasNavigationState {
+  if (!state.returnKind || !state.returnId) {
+    return closeAtlasCard(state);
+  }
+
+  return {
+    ...state,
+    selectedKind: state.returnKind,
+    selectedId: state.returnId,
+    depth: state.returnDepth,
+    returnKind: null,
+    returnId: null,
+    returnDepth: "essential",
+  };
 }
