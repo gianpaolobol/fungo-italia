@@ -1,5 +1,5 @@
 {
-  "status": "in-review",
+  "status": "nomenclature-reconciled",
   "source": {
     "title": "Obiettivi tassonomici nella formazione dei micologi",
     "edition": "V4 - 09.06.2026",
@@ -7,7 +7,7 @@
   },
   "betaTargets": {
     "learningUnits": 148,
-    "currentConcepts": 141,
+    "legacyProvisionalCurrentConcepts": 141,
     "currentGenera": 67
   },
   "legacyGenerator": {
@@ -97,10 +97,48 @@
     }
   ],
   "rules": [
-    "Le 148 unita didattiche non vengono sostituite dai 141 concetti correnti.",
+    "Le 148 unita didattiche non vengono sostituite da un conteggio di nomi correnti.",
+    "Il precedente target 141 e storico/provvisorio e non e un invariante di release.",
     "Piu unita sorgente possono convergere sullo stesso concetto corrente.",
+    "Una singola unita sorgente puo mappare a un definedSet di piu taxa correnti quando la tassonomia moderna separa entita aggregate da S1.",
     "Il rango richiesto dalla fonte deve essere conservato.",
     "I nomi storici e le combinazioni precedenti sono alias, non schede duplicate.",
-    "Il catalogo minimo non e pubblicabile finche tutte le unita non sono risolte e revisionate."
-  ]
+    "Il mapping nomenclaturale e pubblicabile solo con zero unresolved e zero conflict."
+  ],
+  "nomenclatureReconciliation": {
+    "mappingCount": 148,
+    "accepted": 96,
+    "sourceConcept": 49,
+    "definedSet": 3,
+    "conflict": 0,
+    "unresolved": 0,
+    "uniqueCurrentNames": 134,
+    "legacyTargetPolicy": "The historical 141 figure is retained for audit only and is not a release invariant.",
+    "definedSets": [
+      {
+        "sourceLabel": "Amanita verna (inclusa A. vidua)",
+        "currentTaxa": [
+          "Amanita verna",
+          "Amanita vidua"
+        ],
+        "rationale": "Modern Mediterranean revision recognizes A. vidua as distinct from A. verna."
+      },
+      {
+        "sourceLabel": "Clitocybe dealbata (= C. rivulosa)",
+        "currentTaxa": [
+          "Clitocybe dealbata",
+          "Collybia rivulosa"
+        ],
+        "rationale": "Index Fungorum treats C. dealbata and C. rivulosa as distinct current taxa."
+      },
+      {
+        "sourceLabel": "Pleurotus cornucopiae (incluso P. citrinopileatus)",
+        "currentTaxa": [
+          "Pleurotus cornucopiae",
+          "Pleurotus citrinopileatus"
+        ],
+        "rationale": "Species Fungorum/Index Fungorum retain both as distinct current species."
+      }
+    ]
+  }
 }
