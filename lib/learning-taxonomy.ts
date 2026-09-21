@@ -1,7 +1,13 @@
 import type { TaxonRank } from "./domain.ts";
 
 export const COMPLETE_MINIMUM_UNIT_TARGET = 148;
-export const CURRENT_MINIMUM_CONCEPT_TARGET = 141;
+
+/**
+ * Historical planning number retained only for audit traceability.
+ * It was not backed by a reproducible 148 -> 141 reconciliation and therefore
+ * MUST NOT be used as a release invariant.
+ */
+export const LEGACY_PROVISIONAL_CURRENT_CONCEPT_TARGET = 141;
 
 export type LearningLevel = "minimum" | "desirable" | "advanced";
 export type LearningReviewStatus =
@@ -11,13 +17,6 @@ export type LearningReviewStatus =
   | "reviewed"
   | "approved";
 
-export interface LearningTaxonConcept {
-  id: string;
-  acceptedScientificName: string;
-  rank: TaxonRank;
-  aliases: string[];
-}
-
 export interface LearningUnit {
   id: string;
   sourceHeadingId: string;
@@ -25,24 +24,61 @@ export interface LearningUnit {
   sourcePage: number;
   level: LearningLevel;
   requiredResolution: TaxonRank;
-  currentConceptId: string | null;
   deepMorphologyRequired: boolean;
   reviewStatus: LearningReviewStatus;
+  notes?: string;
+}
+
+export type NomenclatureMappingStatus =
+  | "accepted"
+  | "sourceConcept"
+  | "definedSet"
+  | "conflict"
+  | "unresolved";
+
+export interface NomenclatureEvidence {
+  source: "index-fungorum" | "species-fungorum" | "peer-reviewed" | "source-s1";
+  sourceUrl: string;
+  checkedAt: string;
+  recordId?: string;
+  note?: string;
+}
+
+export interface LearningNomenclatureMapping {
+  sourceUnitId: string;
+  sourceLabel: string;
+  status: NomenclatureMappingStatus;
+  /**
+   * Current accepted formal taxa when the source unit can be reconciled.
+   * A source concept (section/group/s.l.) may intentionally have none.
+   */
+  currentAcceptedNames: string[];
+  preferredDisplayName: string;
+  evidence: NomenclatureEvidence[];
   notes?: string;
 }
 
 export interface LearningInventoryValidation {
   ok: boolean;
   unitCount: number;
-  conceptCount: number;
   errors: string[];
 }
 
 export interface LearningInventoryValidationOptions {
   expectedUnits?: number;
-  expectedConcepts?: number;
   requireApproved?: boolean;
-  requireCompleteMapping?: boolean;
+}
+
+export interface NomenclatureValidation {
+  ok: boolean;
+  sourceUnitCount: number;
+  mappingCount: number;
+  acceptedCount: number;
+  sourceConceptCount: number;
+  definedSetCount: number;
+  conflictCount: number;
+  unresolvedCount: number;
+  errors: string[];
 }
 
 const forbiddenParserArtifacts = new Set([
@@ -63,13 +99,10 @@ function normalizedLabel(value: string) {
 
 export function validateMinimumLearningInventory(
   units: readonly LearningUnit[],
-  concepts: readonly LearningTaxonConcept[],
   options: LearningInventoryValidationOptions = {},
 ): LearningInventoryValidation {
   const expectedUnits = options.expectedUnits ?? COMPLETE_MINIMUM_UNIT_TARGET;
-  const expectedConcepts = options.expectedConcepts ?? CURRENT_MINIMUM_CONCEPT_TARGET;
   const requireApproved = options.requireApproved ?? false;
-  const requireCompleteMapping = options.requireCompleteMapping ?? true;
   const errors: string[] = [];
 
   if (units.length !== expectedUnits) {
@@ -77,9 +110,6 @@ export function validateMinimumLearningInventory(
   }
 
   const unitIds = new Set<string>();
-  const conceptIds = new Set(concepts.map((concept) => concept.id));
-  const referencedConceptIds = new Set<string>();
-
   for (const unit of units) {
     if (unitIds.has(unit.id)) errors.push(`duplicate learning unit id: ${unit.id}`);
     unitIds.add(unit.id);
@@ -102,16 +132,6 @@ export function validateMinimumLearningInventory(
       errors.push(`${unit.id}: parser prose artifact leaked into inventory: ${label}`);
     }
 
-    if (!unit.currentConceptId) {
-      if (requireCompleteMapping) {
-        errors.push(`${unit.id}: current concept mapping is unresolved`);
-      }
-    } else if (!conceptIds.has(unit.currentConceptId)) {
-      errors.push(`${unit.id}: missing current concept ${unit.currentConceptId}`);
-    } else {
-      referencedConceptIds.add(unit.currentConceptId);
-    }
-
     if (requireApproved && unit.reviewStatus !== "approved") {
       errors.push(`${unit.id}: minimum unit is not approved`);
     }
@@ -127,38 +147,115 @@ export function validateMinimumLearningInventory(
     }
   }
 
-  const conceptIdsSeen = new Set<string>();
-  for (const concept of concepts) {
-    if (!concept.id.trim()) errors.push("concept with empty id");
-    if (!concept.acceptedScientificName.trim()) {
-      errors.push(`${concept.id || "<empty>"}: missing accepted scientific name`);
-    }
-    if (conceptIdsSeen.has(concept.id)) errors.push(`duplicate concept id: ${concept.id}`);
-    conceptIdsSeen.add(concept.id);
-  }
-
-  if (requireCompleteMapping && referencedConceptIds.size !== expectedConcepts) {
-    errors.push(
-      `current concept count ${referencedConceptIds.size}; expected ${expectedConcepts}`,
-    );
-  }
-
   return {
     ok: errors.length === 0,
     unitCount: units.length,
-    conceptCount: referencedConceptIds.size,
+    errors,
+  };
+}
+
+export function validateMinimumNomenclatureMappings(
+  units: readonly LearningUnit[],
+  mappings: readonly LearningNomenclatureMapping[],
+  options: { requirePublishable?: boolean } = {},
+): NomenclatureValidation {
+  const requirePublishable = options.requirePublishable ?? false;
+  const errors: string[] = [];
+  const sourceIds = new Set(units.map((unit) => unit.id));
+  const mappingIds = new Set<string>();
+
+  for (const mapping of mappings) {
+    if (mappingIds.has(mapping.sourceUnitId)) {
+      errors.push(`duplicate mapping for ${mapping.sourceUnitId}`);
+    }
+    mappingIds.add(mapping.sourceUnitId);
+
+    if (!sourceIds.has(mapping.sourceUnitId)) {
+      errors.push(`mapping references unknown source unit ${mapping.sourceUnitId}`);
+    }
+    const sourceUnit = units.find((unit) => unit.id === mapping.sourceUnitId);
+    if (sourceUnit && normalizedLabel(sourceUnit.sourceLabel) !== normalizedLabel(mapping.sourceLabel)) {
+      errors.push(`${mapping.sourceUnitId}: source label drift`);
+    }
+    if (!mapping.preferredDisplayName.trim()) {
+      errors.push(`${mapping.sourceUnitId}: missing preferred display name`);
+    }
+    if (mapping.evidence.length === 0) {
+      errors.push(`${mapping.sourceUnitId}: nomenclature mapping has no evidence`);
+    }
+
+    const acceptedNames = new Set(mapping.currentAcceptedNames.map(normalizedLabel));
+    if (acceptedNames.size !== mapping.currentAcceptedNames.length) {
+      errors.push(`${mapping.sourceUnitId}: duplicate current accepted name`);
+    }
+
+    if (mapping.status === "accepted" && mapping.currentAcceptedNames.length !== 1) {
+      errors.push(`${mapping.sourceUnitId}: accepted mapping must resolve to exactly one current taxon`);
+    }
+    if (mapping.status === "definedSet" && mapping.currentAcceptedNames.length < 2) {
+      errors.push(`${mapping.sourceUnitId}: defined set must contain at least two current taxa`);
+    }
+    if (mapping.status === "conflict" && mapping.currentAcceptedNames.length < 2) {
+      errors.push(`${mapping.sourceUnitId}: conflict must expose the competing current taxa`);
+    }
+    if (
+      mapping.status === "sourceConcept" &&
+      sourceUnit?.requiredResolution === "species" &&
+      mapping.currentAcceptedNames.length <= 1
+    ) {
+      errors.push(`${mapping.sourceUnitId}: a species source unit cannot silently become a source-only concept`);
+    }
+
+    if (
+      requirePublishable &&
+      (mapping.status === "unresolved" || mapping.status === "conflict")
+    ) {
+      errors.push(`${mapping.sourceUnitId}: ${mapping.status} mapping blocks publication`);
+    }
+  }
+
+  for (const unit of units) {
+    if (!mappingIds.has(unit.id)) {
+      errors.push(`${unit.id}: missing nomenclature mapping`);
+    }
+  }
+
+  const counts = {
+    acceptedCount: mappings.filter((mapping) => mapping.status === "accepted").length,
+    sourceConceptCount: mappings.filter((mapping) => mapping.status === "sourceConcept").length,
+    definedSetCount: mappings.filter((mapping) => mapping.status === "definedSet").length,
+    conflictCount: mappings.filter((mapping) => mapping.status === "conflict").length,
+    unresolvedCount: mappings.filter((mapping) => mapping.status === "unresolved").length,
+  };
+
+  return {
+    ok: errors.length === 0,
+    sourceUnitCount: units.length,
+    mappingCount: mappings.length,
+    ...counts,
     errors,
   };
 }
 
 export function assertMinimumLearningInventory(
   units: readonly LearningUnit[],
-  concepts: readonly LearningTaxonConcept[],
   options: LearningInventoryValidationOptions = {},
 ) {
-  const result = validateMinimumLearningInventory(units, concepts, options);
+  const result = validateMinimumLearningInventory(units, options);
   if (!result.ok) {
     throw new Error(`Invalid minimum learning inventory:\n- ${result.errors.join("\n- ")}`);
+  }
+  return result;
+}
+
+export function assertMinimumNomenclatureMappings(
+  units: readonly LearningUnit[],
+  mappings: readonly LearningNomenclatureMapping[],
+  options: { requirePublishable?: boolean } = {},
+) {
+  const result = validateMinimumNomenclatureMappings(units, mappings, options);
+  if (!result.ok) {
+    throw new Error(`Invalid minimum nomenclature mapping:\n- ${result.errors.join("\n- ")}`);
   }
   return result;
 }
