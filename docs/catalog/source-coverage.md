@@ -25,19 +25,28 @@ I file principali sono:
 - `data/catalog/sources.json`
 - `data/catalog/evidence.json`
 - `data/catalog/source-page-index.json`
+- `data/catalog/edibility-assessments.json`
+- `data/catalog/edibility-evidence.json`
 - `lib/catalog-evidence.ts`
+- `lib/minimum-edibility.ts`
 - `lib/minimum-learning-source.ts`
 - `lib/minimum-nomenclature.ts`
 
 ## Stato S2
 
-Il raccordo di pagina verso S2 è completo per le 124 intestazioni, ma l'estrazione strutturata delle singole valutazioni alimentari e dei trattamenti appartiene al lotto successivo.
+Il raccordo di pagina verso S2 è completo per le 124 intestazioni e il Lotto 4 ha completato l'estrazione strutturata per il perimetro Minimo:
 
-Fino a quando una scheda non possiede una evidenza S2 `edibility` approvata:
+- **148/148** unità con assessment alimentare S2;
+- **160** evidenze S2 collegate (148 edibility + 12 treatment);
+- categorie: 64 EDIBLE, 12 EDIBLE_AFTER_TREATMENT, 13 DISCOURAGED, 18 NOT_EDIBLE, 39 POISONOUS, 2 NOT_ASSESSED;
+- i due NOT_ASSESSED sono contenitori didattici eterogenei per i quali propagare una singola categoria sarebbe scientificamente scorretto;
+- gli assessment sono nello stato `normalized`: la revisione/approvazione scientifica è deliberatamente separata.
+
+Fino a quando una scheda non possiede una evidenza S2 `edibility` **approvata**:
 
 - la categoria pubblicabile è forzata a `non-valutato`;
 - le vecchie categorie provenienti dal seed o dal parser storico non sono mostrate come valutazioni autorevoli;
-- le istruzioni alimentari storiche non sbloccano il gate di pubblicazione.
+- un assessment S2 estratto ma non ancora approvato non sblocca il gate di pubblicazione.
 
 ## Regola di modellazione
 
@@ -51,6 +60,7 @@ I controlli bloccanti sono eseguibili con:
 
 ```sh
 pnpm catalog:evidence:check
+pnpm catalog:edibility:check
 node --experimental-strip-types scripts/verify-index-fungorum.mjs
 pnpm test
 pnpm lint
