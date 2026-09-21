@@ -114,7 +114,7 @@ test("edibility and treatment claims are rejected when sourced to S1", () => {
     notes: null,
   };
 
-  const result = validateCatalogEvidence(catalogSources, [bad]);
+  const result = validateCatalogEvidence(catalogSources, [bad], { requireCoreCoverage: false });
   assert.equal(result.ok, false);
   assert.match(result.errors.join("\n"), /edibility claim must use edibility authority/);
 });
@@ -138,12 +138,13 @@ test("S2 edibility evidence can pass authority validation but public sensitive c
   };
 
   assert.equal(
-    validateCatalogEvidence(catalogSources, [base]).ok,
+    validateCatalogEvidence(catalogSources, [base], { requireCoreCoverage: false }).ok,
     true,
   );
 
   const blocked = validateCatalogEvidence(catalogSources, [base], {
     requirePublishable: true,
+    requireCoreCoverage: false,
   });
   assert.equal(blocked.ok, false);
   assert.match(blocked.errors.join("\n"), /sensitive claim is not approved/);
@@ -151,7 +152,7 @@ test("S2 edibility evidence can pass authority validation but public sensitive c
   const approved = validateCatalogEvidence(
     catalogSources,
     [{ ...base, reviewStatus: "approved", reviewedBy: "reviewer-1", reviewedAt: "2026-09-21T00:00:00Z" }],
-    { requirePublishable: true },
+    { requirePublishable: true, requireCoreCoverage: false },
   );
   assert.equal(approved.ok, true, approved.errors.join("\n"));
 });
@@ -165,7 +166,7 @@ test("remote sources require URL and access date", () => {
     url: null,
     accessedAt: null,
   };
-  const result = validateCatalogEvidence([source], []);
+  const result = validateCatalogEvidence([source], [], { requireCoreCoverage: false });
   assert.equal(result.ok, false);
   assert.match(result.errors.join("\n"), /requires https URL/);
   assert.match(result.errors.join("\n"), /requires accessedAt/);
