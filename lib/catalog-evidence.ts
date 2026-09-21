@@ -65,6 +65,35 @@ export interface EvidenceRecord {
   notes: string | null;
 }
 
+
+export type ClaimSubjectType =
+  | "learningUnit"
+  | "taxon"
+  | "taxonName"
+  | "edibilityAssessment"
+  | "ecologyProfile"
+  | "organismAssociation"
+  | "phenologyProfile"
+  | "geographicProfile"
+  | "confusionRelation";
+
+export interface CatalogClaimRecord {
+  claimId: string;
+  subjectType: ClaimSubjectType;
+  subjectId: string;
+  fieldPath: string;
+  claimType: ClaimType;
+  valueJson: string;
+  evidenceIds: string[];
+  reviewStatus: EvidenceReviewStatus;
+}
+
+export interface ClaimValidationResult {
+  ok: boolean;
+  claimCount: number;
+  errors: string[];
+}
+
 export interface EvidenceValidationResult {
   ok: boolean;
   sourceCount: number;
@@ -186,4 +215,56 @@ export function assertEvidenceIds(
     }
   }
   return errors;
+}
+
+export function validateCatalogClaims(
+  claims: readonly CatalogClaimRecord[],
+  evidenceRecords: readonly EvidenceRecord[],
+): ClaimValidationResult {
+  const errors: string[] = [];
+  const claimIds = new Set<string>();
+  const evidence = evidenceById(evidenceRecords);
+
+  for (const claim of claims) {
+    if (!claim.claimId.trim()) errors.push("claim with empty id");
+    if (claimIds.has(claim.claimId)) errors.push(`duplicate claim id: ${claim.claimId}`);
+    claimIds.add(claim.claimId);
+
+    if (!claim.subjectId.trim()) errors.push(`${claim.claimId}: missing subjectId`);
+    if (!claim.fieldPath.trim()) errors.push(`${claim.claimId}: missing fieldPath`);
+    if (claim.evidenceIds.length === 0) {
+      errors.push(`${claim.claimId}: claim requires at least one evidence id`);
+    }
+
+    try {
+      JSON.parse(claim.valueJson);
+    } catch {
+      errors.push(`${claim.claimId}: valueJson is not valid JSON`);
+    }
+
+    errors.push(
+      ...assertEvidenceIds(claim.claimId, claim.evidenceIds, evidence, {
+        allowedClaimTypes: [claim.claimType],
+        minimumStatus:
+          claim.reviewStatus === "approved"
+            ? "approved"
+            : claim.reviewStatus === "reviewed"
+              ? "reviewed"
+              : "normalized",
+      }),
+    );
+
+    if (
+      claim.reviewStatus === "approved" &&
+      claim.evidenceIds.some((id) => evidence.get(id)?.reviewStatus !== "approved")
+    ) {
+      errors.push(`${claim.claimId}: approved claim requires approved evidence`);
+    }
+  }
+
+  return {
+    ok: errors.length === 0,
+    claimCount: claims.length,
+    errors,
+  };
 }
