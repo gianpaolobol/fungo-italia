@@ -64,15 +64,22 @@ Checkpoint precedente verificato: `7033a3849b886c0052905504cffc9b7a3e4d0620`.
 
 ## Lotti ancora da completare
 
-### Lotto 6 — 67 schede di genere correnti
-Stato: **IN AVVIO**
+### Lotto 6 — Schede di genere/gruppo e indice dei generi correnti
+Stato: **IN CORSO**
+
+Audit riproducibile:
+- 66 obiettivi S1-Minimo di rango `genus` o `operationalGroup` (46 + 20);
+- 61 generi nominali presenti direttamente nelle 148 unita specifiche;
+- 73 generi correnti distinti nei 134 nomi correnti verificati;
+- il vecchio target 55 -> 67 non e riproducibile e non viene forzato.
 
 Task:
-- [ ] 6.1 derivare e congelare l'inventario dei 67 generi correnti dal mapping delle 148 unita;
-- [ ] 6.2 conservare alias e nomi storici provenienti dai generi nominali S1;
+- [x] 6.1A auditare la cardinalita storica 67 contro il mapping verificato;
+- [x] 6.1B congelare le 66 unita didattiche S1 di genere/gruppo;
+- [ ] 6.2 costruire il mapping unita didattica -> generi correnti + alias storici;
 - [ ] 6.3 definire contratto della scheda di genere con profondita progressiva;
-- [ ] 6.4 generare 67 schede senza segnaposto;
-- [ ] 6.5 collegare specie/gruppi Minimo alle schede di genere;
+- [ ] 6.4 generare le schede didattiche senza segnaposto;
+- [ ] 6.5 collegare specie/gruppi Minimo e indice dei generi correnti;
 - [ ] 6.6 test di cardinalita, unicita, alias e copertura;
 - [ ] 6.7 CI verde.
 
@@ -118,6 +125,6 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**6.1 — Inventario riproducibile dei 67 generi correnti.**
+**6.2 — Mapping delle 66 unita didattiche di genere/gruppo verso i generi correnti e gli alias storici.**
 
-Il task deve derivare i generi dal mapping nomenclaturale gia verificato, non da una lista manuale non tracciabile. Se il conteggio derivato non coincide con 67, il task deve fermarsi e produrre un audit delle differenze invece di forzare il numero.
+Il mapping deve conservare la risoluzione didattica S1. I generi correnti servono come indice professionale e destinazione di navigazione, ma non devono frammentare automaticamente un gruppo S1 quando la fonte consente una determinazione piu ampia.
