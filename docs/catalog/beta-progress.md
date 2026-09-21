@@ -98,7 +98,7 @@ Il motore 7.1 indicizza 214 documenti: 66 schede genere/gruppo + 148 schede Mini
 Stato: **IN CORSO**
 - [ ] 8.1 contratto di navigazione e stato URL;
 - [x] 8.2 vista scheda genere/gruppo con livelli progressivi;
-- [ ] 8.3 navigazione ai taxa Minimo figli;
+- [x] 8.3 navigazione ai taxa Minimo figli;
 - [ ] 8.4 ritorno stabile a ricerca/filtri;
 - [ ] 8.5 test integrazione e gate CI.
 
@@ -132,7 +132,7 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**8.3 — Navigazione dai gruppi/genere alle schede Minimo figlie.**
+**8.4 — Ritorno stabile a ricerca/filtri e contesto precedente.**
 
 Checkpoint Lotto 7:
 - indice ricerca: 214 documenti (66 + 148);
@@ -151,3 +151,12 @@ Il Lotto 8 deve rendere apribili le schede senza perdere query e filtri quando l
 - livelli disponibili derivati dagli obiettivi S1 realmente presenti;
 - lookup stabile tramite cardId URL;
 - CI: 157 test, 157 pass, 0 fail; lint 0 errori; build riuscita.
+
+
+### Checkpoint 8.3
+- validazione che un taxon figlio appartenga realmente al gruppo aperto;
+- apertura del figlio come `minimumTaxon` a profondita Essenziale;
+- query e filtri invariati durante la transizione;
+- lookup delle schede figlie dal corpus persistito;
+- errori sicuri per gruppo o figlio sconosciuti;
+- CI verde.
