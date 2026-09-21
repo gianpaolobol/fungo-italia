@@ -86,10 +86,13 @@ Task:
 - [x] 6.7 CI verde.
 
 ### Lotto 7 — Filtri server e ricerca
-Stato: **NON AVVIATO**
-- filtri tassonomici e didattici server-side;
-- ricerca per nome corrente, storico, sinonimo e regionale;
-- test di query e prestazioni di base.
+Stato: **IN CORSO**
+- [x] 7.1 motore puro server-side di ricerca e filtri;
+- [ ] 7.2 integrazione API paginata mantenendo compatibilita con il catalogo esistente;
+- [ ] 7.3 collegamento UI ai filtri server-side;
+- [ ] 7.4 test integrazione e gate CI.
+
+Il motore 7.1 indicizza 214 documenti: 66 schede genere/gruppo + 148 schede Minimo. Cerca nomi sorgente e correnti, supporta abbreviazioni, filtri per tipo, rango, genere, commestibilita e stato di revisione.
 
 ### Lotto 8 — Navigazione Genere -> specie/gruppi
 Stato: **NON AVVIATO**
@@ -127,16 +130,6 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**7.1 — Contratto server-side di ricerca e filtri.**
+**7.2 — Integrare ricerca e filtri nell'API catalogo.**
 
-Checkpoint Lotto 6 chiuso:
-- 66 schede progressive genere/gruppo;
-- 148/148 schede Minimo collegate alla gerarchia;
-- 129 target sotto le 66 schede didattiche;
-- 19 target di famiglia/sezione mantenuti in nodi strutturali, senza orfani;
-- indice professionale di 73 generi correnti;
-- indice unificato nome sorgente + nome corrente senza collisioni di ruolo;
-- nomenclatura: 134/134 asserzioni verificate;
-- CI finale: 132 test, 132 pass, 0 fail; lint 0 errori; build riuscita.
-
-Il task 7.1 deve definire query normalizzate e filtri server-side senza duplicare la logica nella UI. La ricerca deve poter trovare almeno nome corrente, nome sorgente/storico, alias di genere e testo delle unita didattiche.
+La route deve restare retrocompatibile: senza parametri restituisce il catalogo legacy usato dalla UI corrente; con parametri di ricerca restituisce una risposta paginata dal nuovo indice server-side.
