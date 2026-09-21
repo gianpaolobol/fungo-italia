@@ -176,7 +176,11 @@ export function ForecastMap({
     >
       <div ref={containerRef} className="absolute inset-0" />
       {status === "loading" && (
-        <div className="absolute inset-0 grid place-items-center bg-[#edf3eb]">
+        <div
+          className="absolute inset-0 grid place-items-center bg-[#edf3eb]"
+          role="status"
+          aria-live="polite"
+        >
           <div className="flex items-center gap-2 rounded-xl bg-white px-4 py-3 font-bold text-[#315d3c] shadow">
             <LoaderCircle className="size-5 animate-spin" />
             Caricamento mappa
