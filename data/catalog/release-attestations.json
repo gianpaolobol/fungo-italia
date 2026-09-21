@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "visualViewportSmoke": {
+    "status": "pending",
+    "requiredViewports": [
+      "320x568",
+      "375x812",
+      "768x1024",
+      "1440x900"
+    ],
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "commitSha": null
+  },
+  "independentMycologicalReview": {
+    "status": "pending",
+    "verifiedBy": null,
+    "verifiedAt": null,
+    "scope": "All public reviewNeeded scientific claims, with safety-critical claims requiring approval."
+  }
+}
