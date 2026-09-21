@@ -91,6 +91,22 @@ const jobs = [...jobsByKey.values()];
 const failures = [];
 const resolved = [];
 
+const statusCounts = Object.fromEntries(
+  ["accepted", "sourceConcept", "definedSet", "conflict", "unresolved"].map((status) => [
+    status,
+    minimumNomenclatureMappings.filter((mapping) => mapping.status === status).length,
+  ]),
+);
+const uniqueCurrentNames = new Set(
+  minimumNomenclatureMappings.flatMap((mapping) => mapping.currentAcceptedNames),
+);
+console.log(
+  `Nomenclature mapping: ${minimumNomenclatureMappings.length} records; ` +
+  `accepted=${statusCounts.accepted}; sourceConcept=${statusCounts.sourceConcept}; ` +
+  `definedSet=${statusCounts.definedSet}; conflict=${statusCounts.conflict}; ` +
+  `unresolved=${statusCounts.unresolved}; unique current names=${uniqueCurrentNames.size}.`,
+);
+
 async function verify(job) {
   const records = await fetchName(job.queryName);
   const exact = records.filter(
