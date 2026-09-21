@@ -86,19 +86,21 @@ Task:
 - [x] 6.7 CI verde.
 
 ### Lotto 7 — Filtri server e ricerca
-Stato: **IN CORSO**
+Stato: **CHIUSO**
 - [x] 7.1 motore puro server-side di ricerca e filtri;
 - [x] 7.2 integrazione API paginata mantenendo compatibilita con il catalogo esistente;
-- [ ] 7.3 collegamento UI ai filtri server-side;
-- [ ] 7.4 test integrazione e gate CI.
+- [x] 7.3 collegamento UI ai filtri server-side con fallback legacy;
+- [x] 7.4 test integrazione e gate CI.
 
 Il motore 7.1 indicizza 214 documenti: 66 schede genere/gruppo + 148 schede Minimo. Cerca nomi sorgente e correnti, supporta abbreviazioni, filtri per tipo, rango, genere, commestibilita e stato di revisione.
 
 ### Lotto 8 — Navigazione Genere -> specie/gruppi
-Stato: **NON AVVIATO**
-- gerarchia navigabile;
-- profondita informativa progressiva;
-- ritorno stabile alla lista e mantenimento filtri.
+Stato: **IN CORSO**
+- [ ] 8.1 contratto di navigazione e stato URL;
+- [ ] 8.2 vista scheda genere/gruppo con livelli progressivi;
+- [ ] 8.3 navigazione ai taxa Minimo figli;
+- [ ] 8.4 ritorno stabile a ricerca/filtri;
+- [ ] 8.5 test integrazione e gate CI.
 
 ### Lotto 9 — QA mobile, mappa e accessibilita
 Stato: **NON AVVIATO**
@@ -130,12 +132,14 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**7.3 — Collegare la UI Atlante al nuovo endpoint server-side.**
+**8.1 — Contratto di navigazione e stato URL.**
 
-Checkpoint 7.2:
-- route `/api/catalog` retrocompatibile senza parametri;
-- modalita ricerca attivata solo dai parametri riconosciuti;
-- paginazione e filtri elaborati server-side;
-- CI verde.
+Checkpoint Lotto 7:
+- indice ricerca: 214 documenti (66 + 148);
+- ricerca nome sorgente/corrente e abbreviazioni;
+- filtri server per tipo, rango, genere, commestibilita, revisione;
+- API retrocompatibile;
+- UI con fallback locale in caso di errore;
+- CI finale: 145 test, 145 pass, 0 fail; lint 0 errori; build riuscita.
 
-La migrazione UI deve mantenere un fallback sicuro: in caso di errore del nuovo endpoint la vista Atlante esistente continua a funzionare.
+Il Lotto 8 deve rendere apribili le schede senza perdere query e filtri quando l'utente torna all'elenco.
