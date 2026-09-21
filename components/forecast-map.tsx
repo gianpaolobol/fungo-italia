@@ -160,10 +160,11 @@ export function ForecastMap({
     map.setFilter("forecast-area-selected", ["==", ["get", "id"], selectedId]);
     const area = areas.find((entry) => entry.id === selectedId);
     if (area) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       map.easeTo({
         center: [area.center[1], area.center[0]],
         zoom: Math.max(map.getZoom(), 7),
-        duration: 500,
+        duration: reduceMotion ? 0 : 500,
       });
     }
   }, [areas, selectedId]);
