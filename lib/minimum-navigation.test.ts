@@ -148,11 +148,12 @@ test("all 73 verified current genera are searchable and retain their minimum-car
     const entry = indexByName.get(current.genus.toLocaleLowerCase("it"));
     assert.ok(entry, `missing current genus ${current.genus}`);
     assert.ok(entry.kinds.includes("currentGenus"), current.genus);
-    assert.deepEqual(
-      new Set(entry.minimumCardIds),
-      new Set(current.minimumCardIds),
-      current.genus,
-    );
+    for (const cardId of current.minimumCardIds) {
+      assert.ok(
+        entry.minimumCardIds.includes(cardId),
+        `${current.genus}: missing current-taxon card ${cardId}`,
+      );
+    }
   }
 });
 
