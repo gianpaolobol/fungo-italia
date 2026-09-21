@@ -3,6 +3,7 @@ import trainingEvidenceJson from "../data/catalog/evidence.json" with { type: "j
 import sourcePageIndexJson from "../data/catalog/source-page-index.json" with { type: "json" };
 import objectives from "../data/taxonomic-objectives.json" with { type: "json" };
 
+import type { Taxon } from "./domain.ts";
 import { sourceMinimumLearningUnits } from "./minimum-learning-source.ts";
 import { minimumNomenclatureMappings } from "./minimum-nomenclature.ts";
 
@@ -312,6 +313,41 @@ export function validateSourcePageIndex(
   }
 
   return { ok: errors.length === 0, errors, rowCount: rows.length };
+}
+
+export const UNVERIFIED_EDIBILITY_NOTE =
+  "Valutazione alimentare non ancora pubblicabile: manca un'evidenza S2 approvata collegata a questo taxon.";
+
+export function hasApprovedClaimEvidence(
+  subjectId: string,
+  claimTypes: readonly EvidenceClaimType[],
+  evidence: readonly CatalogEvidence[] = allCatalogEvidence,
+) {
+  return evidence.some(
+    (item) =>
+      item.subjectType === "taxon" &&
+      item.subjectId === subjectId &&
+      claimTypes.includes(item.claimType) &&
+      item.reviewStatus === "approved",
+  );
+}
+
+export function guardTaxonSensitiveFields<T extends Taxon>(
+  taxon: T,
+  evidence: readonly CatalogEvidence[] = allCatalogEvidence,
+): T {
+  const hasEdibility = hasApprovedClaimEvidence(
+    taxon.id,
+    ["edibility"],
+    evidence,
+  );
+  if (hasEdibility) return taxon;
+
+  return {
+    ...taxon,
+    edibility: "non-valutato",
+    safetyNote: UNVERIFIED_EDIBILITY_NOTE,
+  };
 }
 
 export function assertCatalogEvidencePublishable() {
