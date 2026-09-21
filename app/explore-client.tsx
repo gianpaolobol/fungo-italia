@@ -647,7 +647,7 @@ function AreaDetails({
 }
 
 function TaxonCard({ taxon }: { taxon: AtlasTaxon }) {
-  const [images, setImages] = useState<Array<{ id: string; imageUrl: string; sourceUrl: string; author: string; license: string; licenseUrl: string; caption: string }> | null>(null);
+  const [images, setImages] = useState<Array<{ id: string; imageUrl: string; sourceUrl: string; author: string; license: string; licenseUrl: string; caption: string; verified: boolean }> | null>(null);
   const [galleryLoading, setGalleryLoading] = useState(false);
   const loadGallery = () => {
     if (images !== null || galleryLoading) return;
@@ -699,10 +699,16 @@ function TaxonCard({ taxon }: { taxon: AtlasTaxon }) {
           <p><strong>Habitat e associazioni:</strong> {taxon.ecology.length ? taxon.ecology.join("; ") : "Da integrare con fonte micologica verificata."}</p>
           <Button type="button" variant="outline" className="h-10 w-full rounded-xl" onClick={loadGallery}>{galleryLoading ? "Ricerca immagini…" : "Apri galleria con licenze"}</Button>
           {images !== null && images.length === 0 && <p className="rounded-xl bg-[#f2f6f0] p-3 text-center font-bold">Galleria in preparazione</p>}
-          {images && images.length > 0 && <div className="grid grid-cols-2 gap-2">{images.map((image) => <a key={image.id} href={image.sourceUrl} target="_blank" rel="noreferrer" className="min-w-0 overflow-hidden rounded-xl border bg-white">
-            {/* eslint-disable-next-line @next/next/no-img-element */}<img src={image.imageUrl} alt={image.caption} className="aspect-square w-full object-cover" loading="lazy" />
-            <span className="block break-words p-2 text-[11px]">{image.author} · {image.license}</span>
-          </a>)}</div>}
+          {images && images.length > 0 && <div className="grid grid-cols-2 gap-2">{images.map((image) => <div key={image.id} className="min-w-0 overflow-hidden rounded-xl border bg-white">
+            <a href={image.sourceUrl} target="_blank" rel="noreferrer" className="block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}<img src={image.imageUrl} alt={image.caption} className="aspect-square w-full object-cover" loading="lazy" />
+            </a>
+            <div className="break-words p-2 text-[11px]">
+              <p>{image.author}</p>
+              <a href={image.licenseUrl} target="_blank" rel="noreferrer" className="font-bold underline underline-offset-2">{image.license}</a>
+              {image.verified && <span className="ml-1 text-[#315d3c]">· verificata</span>}
+            </div>
+          </div>)}</div>}
         </div>
       </details>
       {taxon.objectiveSummary && (
