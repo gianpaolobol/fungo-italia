@@ -97,7 +97,7 @@ Il motore 7.1 indicizza 214 documenti: 66 schede genere/gruppo + 148 schede Mini
 ### Lotto 8 — Navigazione Genere -> specie/gruppi
 Stato: **IN CORSO**
 - [ ] 8.1 contratto di navigazione e stato URL;
-- [ ] 8.2 vista scheda genere/gruppo con livelli progressivi;
+- [x] 8.2 vista scheda genere/gruppo con livelli progressivi;
 - [ ] 8.3 navigazione ai taxa Minimo figli;
 - [ ] 8.4 ritorno stabile a ricerca/filtri;
 - [ ] 8.5 test integrazione e gate CI.
@@ -132,7 +132,7 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**8.1 — Contratto di navigazione e stato URL.**
+**8.3 — Navigazione dai gruppi/genere alle schede Minimo figlie.**
 
 Checkpoint Lotto 7:
 - indice ricerca: 214 documenti (66 + 148);
@@ -143,3 +143,11 @@ Checkpoint Lotto 7:
 - CI finale: 145 test, 145 pass, 0 fail; lint 0 errori; build riuscita.
 
 Il Lotto 8 deve rendere apribili le schede senza perdere query e filtri quando l'utente torna all'elenco.
+
+
+### Checkpoint 8.2
+- view model progressivo separato per Essenziale / Approfondimento / Specialistico;
+- identita e lista figli preservate durante il cambio di profondita;
+- livelli disponibili derivati dagli obiettivi S1 realmente presenti;
+- lookup stabile tramite cardId URL;
+- CI: 157 test, 157 pass, 0 fail; lint 0 errori; build riuscita.
