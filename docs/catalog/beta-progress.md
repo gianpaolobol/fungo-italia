@@ -88,7 +88,7 @@ Task:
 ### Lotto 7 — Filtri server e ricerca
 Stato: **IN CORSO**
 - [x] 7.1 motore puro server-side di ricerca e filtri;
-- [ ] 7.2 integrazione API paginata mantenendo compatibilita con il catalogo esistente;
+- [x] 7.2 integrazione API paginata mantenendo compatibilita con il catalogo esistente;
 - [ ] 7.3 collegamento UI ai filtri server-side;
 - [ ] 7.4 test integrazione e gate CI.
 
@@ -130,6 +130,12 @@ Stato: **NON AVVIATO**
 
 ## Prossimo task eseguibile
 
-**7.2 — Integrare ricerca e filtri nell'API catalogo.**
+**7.3 — Collegare la UI Atlante al nuovo endpoint server-side.**
 
-La route deve restare retrocompatibile: senza parametri restituisce il catalogo legacy usato dalla UI corrente; con parametri di ricerca restituisce una risposta paginata dal nuovo indice server-side.
+Checkpoint 7.2:
+- route `/api/catalog` retrocompatibile senza parametri;
+- modalita ricerca attivata solo dai parametri riconosciuti;
+- paginazione e filtri elaborati server-side;
+- CI verde.
+
+La migrazione UI deve mantenere un fallback sicuro: in caso di errore del nuovo endpoint la vista Atlante esistente continua a funzionare.
