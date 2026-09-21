@@ -13,7 +13,7 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
         {areas.map((area) => {
           const forecast = forecasts.find((item) => item.areaId === area.id);
           return <button key={area.id} type="button" onClick={() => onSelect(area.id)} className={cn(
-            "min-w-0 rounded-2xl border-2 bg-white/90 p-3 text-left shadow-sm",
+            "min-h-11 min-w-0 rounded-2xl border-2 bg-white/90 p-3 text-left shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174f2b]",
             selectedId === area.id ? "border-[#174f2b] ring-4 ring-white/70" : "border-white",
           )}>
             <span className="block break-words text-sm font-black">{area.name}</span>
