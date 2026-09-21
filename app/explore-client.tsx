@@ -370,6 +370,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
               variant={mobileView === "map" ? "default" : "outline"}
               className={cn("h-11 rounded-xl", mobileView === "map" && "bg-[#174f2b]")}
               onClick={() => setMobileView("map")}
+              aria-pressed={mobileView === "map"}
             >
               <MapIcon />
               Mappa
@@ -379,6 +380,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
               variant={mobileView === "list" ? "default" : "outline"}
               className={cn("h-11 rounded-xl", mobileView === "list" && "bg-[#174f2b]")}
               onClick={() => setMobileView("list")}
+              aria-pressed={mobileView === "list"}
             >
               <List />
               Elenco
