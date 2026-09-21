@@ -178,11 +178,9 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     return () => controller.abort();
   }, []);
 
-  const atlasServerSearchActive =
-    atlasQuery.trim().length > 0 ||
-    atlasKind !== "all" ||
-    atlasRank.length > 0 ||
-    atlasEdibility.length > 0;
+  // The structured atlas is the primary surface even with no active filters.
+  // The legacy catalog remains only as a degraded fallback if the search API fails.
+  const atlasServerSearchActive = true;
 
   useEffect(() => {
     if (!atlasServerSearchActive) return;
