@@ -139,8 +139,10 @@ export const nomenclatureEvidence: CatalogEvidence[] = minimumNomenclatureMappin
       sourceLocation: evidence.recordId
         ? `record ${evidence.recordId}`
         : evidence.sourceUrl,
-      claimType: "taxonomy",
-      claimSummary: taxonomySummary(mapping),
+      claimType: evidence.source === "source-s1" ? "training" : "taxonomy",
+      claimSummary: evidence.source === "source-s1"
+        ? `S1 conserva ${mapping.sourceLabel} come concetto didattico alla risoluzione prevista dalla fonte.`
+        : taxonomySummary(mapping),
       evidenceStrength: evidence.source === "source-s1"
         ? "primaryExplicit"
         : evidence.source === "peer-reviewed"
@@ -249,6 +251,18 @@ export function validateCatalogEvidence(
       if (!item.sourceLocation.startsWith(`p. ${unit.sourcePage} `)) {
         errors.push(`${unit.id}: training evidence page drift`);
       }
+    }
+  }
+
+  for (const mapping of minimumNomenclatureMappings) {
+    const records = evidenceBySubject.get(`nomenclatureMapping:${mapping.sourceUnitId}`) ?? [];
+    if (records.length !== mapping.evidence.length) {
+      errors.push(
+        `${mapping.sourceUnitId}: nomenclature evidence count ${records.length}; expected ${mapping.evidence.length}`,
+      );
+    }
+    if (mapping.evidence.length === 0) {
+      errors.push(`${mapping.sourceUnitId}: nomenclature mapping has no evidence`);
     }
   }
 
