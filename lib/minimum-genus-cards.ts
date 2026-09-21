@@ -133,7 +133,10 @@ export const minimumGenusCards: MinimumGenusCard[] =
         terminology: [...profile.terminology],
         macroCharacters: [...profile.morphology],
         safetyFocus: safetyFocusForObjective(source.minimumObjective),
-        claimIds: [`claim-genus-essential-${source.id}`],
+        claimIds: [
+          `claim-genus-training-minimum-${source.id}`,
+          `claim-genus-morphology-${source.id}`,
+        ],
       },
       deepening: {
         objectiveSummary: deepeningSummary(source.sourceLabel, hasDesirable),
@@ -144,7 +147,15 @@ export const minimumGenusCards: MinimumGenusCard[] =
             ]
           : [],
         taxonomyNotes: taxonomyNotes(mapping.sourceGenera, mapping.currentChildGenera),
-        claimIds: hasDesirable ? [`claim-genus-deepening-${source.id}`] : [],
+        claimIds: [
+          `claim-genus-taxonomy-${source.id}`,
+          ...(hasDesirable
+            ? [
+                `claim-genus-training-desirable-${source.id}`,
+                `claim-genus-deepening-editorial-${source.id}`,
+              ]
+            : []),
+        ],
       },
       specialist: {
         objectiveSummary: specialistSummary(source.sourceLabel, hasAdvanced),
@@ -154,7 +165,12 @@ export const minimumGenusCards: MinimumGenusCard[] =
               "Variabilita, delimitazione dei taxa e aggiornamenti nomenclaturali pertinenti al gruppo.",
             ]
           : [],
-        claimIds: hasAdvanced ? [`claim-genus-specialist-${source.id}`] : [],
+        claimIds: hasAdvanced
+          ? [
+              `claim-genus-training-advanced-${source.id}`,
+              `claim-genus-specialist-editorial-${source.id}`,
+            ]
+          : [],
       },
       reviewStatus: "reviewNeeded",
     };
