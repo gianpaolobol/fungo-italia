@@ -175,7 +175,7 @@
 | `evidenceId` | string | R | univoco |
 | `sourceId` | string | R | FK Source |
 | `sourceLocation` | string | R | pagina, tabella, voce o sezione |
-| `claimType` | enum | R | `taxonomy`, `training`, `edibility`, `treatment`, `ecology`, `association`, `phenology`, `geography`, `confusion`, `vernacularName` |
+| `claimType` | enum | R | `taxonomy`, `training`, `morphology`, `edibility`, `treatment`, `ecology`, `association`, `phenology`, `geography`, `confusion`, `vernacularName` |
 | `claimSummary` | string | R | sintesi originale dell'affermazione |
 | `evidenceStrength` | enum | R | `primaryExplicit`, `primaryInferred`, `secondaryCorroborated`, `expertAssessment`, `traditional`, `uncertain` |
 | `extractedBy` | string | R | curatore o processo |
