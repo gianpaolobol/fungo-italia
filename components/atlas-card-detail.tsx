@@ -65,7 +65,7 @@ export function AtlasCardDetail({
               type="button"
               onClick={() => onDepthChange(entry)}
               className={cn(
-                "min-h-10 shrink-0 rounded-full border px-3 py-1.5 text-sm font-bold",
+                "min-h-11 shrink-0 rounded-full border px-3 py-1.5 text-sm font-bold",
                 depth === entry
                   ? "border-[#174f2b] bg-[#174f2b] text-white"
                   : "border-[#cfdccc] bg-white text-[#315d3c]",
@@ -203,7 +203,7 @@ function Header({
 }) {
   return (
     <div className="min-w-0">
-      <Button type="button" variant="ghost" onClick={onBack} className="-ml-2 h-10 rounded-xl px-2 text-[#315d3c]">
+      <Button type="button" variant="ghost" onClick={onBack} className="-ml-2 h-11 rounded-xl px-2 text-[#315d3c]">
         <ChevronLeft />
         {backLabel}
       </Button>
