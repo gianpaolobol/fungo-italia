@@ -46,6 +46,9 @@ test("child navigation preserves search filters and opens the child at essential
   assert.equal(result.state.selectedKind, "minimumTaxon");
   assert.equal(result.state.selectedId, child);
   assert.equal(result.state.depth, "essential");
+  assert.equal(result.state.returnKind, "teachingGroup");
+  assert.equal(result.state.returnId, parent.cardId);
+  assert.equal(result.state.returnDepth, "specialist");
 });
 
 test("a child cannot be opened through an unrelated teaching group", () => {
