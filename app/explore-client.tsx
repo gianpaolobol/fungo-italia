@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { AtlasCardDetail } from "@/components/atlas-card-detail";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,6 +40,16 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
 import type { CatalogSearchDocument } from "@/lib/catalog-search";
+import {
+  defaultAtlasNavigationState,
+  parseAtlasNavigationState,
+  returnToAtlasParent,
+  selectAtlasCard,
+  serializeAtlasNavigationState,
+  setAtlasDepth,
+  type AtlasNavigationState,
+} from "@/lib/atlas-navigation-state";
+import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
 import { cn } from "@/lib/utils";
 
@@ -83,12 +94,51 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const [atlasQuery, setAtlasQuery] = useState("");
   const [atlasKind, setAtlasKind] = useState<"all" | "minimumTaxon" | "teachingGroup">("all");
   const [atlasRank, setAtlasRank] = useState("");
-  const [atlasEdibility, setAtlasEdibility] = useState("");
+  const [atlasEdibility, setAtlasEdibility] = useState<AtlasNavigationState["edibility"]>("");
+  const [atlasNavigation, setAtlasNavigation] = useState(defaultAtlasNavigationState);
+  const [atlasUrlReady, setAtlasUrlReady] = useState(false);
   const [atlasServerItems, setAtlasServerItems] = useState<CatalogSearchDocument[] | null>(null);
   const [atlasServerTotal, setAtlasServerTotal] = useState(0);
   const [atlasServerStatus, setAtlasServerStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    const parsed = parseAtlasNavigationState(
+      new URLSearchParams(window.location.search),
+    );
+    setAtlasQuery(parsed.query);
+    setAtlasKind(parsed.kind);
+    setAtlasRank(parsed.rank);
+    setAtlasEdibility(parsed.edibility);
+    setAtlasNavigation(parsed);
+    setAtlasUrlReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!atlasUrlReady) return;
+
+    const state: AtlasNavigationState = {
+      ...atlasNavigation,
+      query: atlasQuery,
+      kind: atlasKind,
+      rank: atlasRank,
+      edibility: atlasEdibility,
+    };
+    const queryString = serializeAtlasNavigationState(state).toString();
+    const href =
+      window.location.pathname +
+      (queryString ? `?${queryString}` : "") +
+      window.location.hash;
+    window.history.replaceState(window.history.state, "", href);
+  }, [
+    atlasEdibility,
+    atlasKind,
+    atlasNavigation,
+    atlasQuery,
+    atlasRank,
+    atlasUrlReady,
+  ]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -211,6 +261,34 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     },
     [isMobile],
   );
+
+  const openAtlasSearchItem = useCallback((item: CatalogSearchDocument) => {
+    setAtlasNavigation((current) =>
+      selectAtlasCard(current, {
+        kind: item.kind,
+        id: item.id,
+      }),
+    );
+  }, []);
+
+  const changeAtlasDepth = useCallback((depth: AtlasNavigationState["depth"]) => {
+    setAtlasNavigation((current) => setAtlasDepth(current, depth));
+  }, []);
+
+  const openAtlasChild = useCallback((parentCardId: string, childCardId: string) => {
+    setAtlasNavigation((current) => {
+      const result = selectMinimumChildFromTeachingGroup(
+        current,
+        parentCardId,
+        childCardId,
+      );
+      return result.ok ? result.state : current;
+    });
+  }, []);
+
+  const backFromAtlasCard = useCallback(() => {
+    setAtlasNavigation((current) => returnToAtlasParent(current));
+  }, []);
 
   return (
     <main className="min-h-screen max-w-full overflow-x-hidden bg-[#f4f7f2] text-[#14261a]">
@@ -485,7 +563,19 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 </Button>
               </div>
             </div>
-            {atlasServerSearchActive ? (
+            {atlasNavigation.selectedKind && atlasNavigation.selectedId ? (
+              <div className="mt-5 min-w-0">
+                <AtlasCardDetail
+                  selectedKind={atlasNavigation.selectedKind}
+                  selectedId={atlasNavigation.selectedId}
+                  depth={atlasNavigation.depth}
+                  hasReturnContext={Boolean(atlasNavigation.returnKind && atlasNavigation.returnId)}
+                  onDepthChange={changeAtlasDepth}
+                  onChildOpen={openAtlasChild}
+                  onBack={backFromAtlasCard}
+                />
+              </div>
+            ) : atlasServerSearchActive ? (
               <div className="mt-5 min-w-0">
                 {atlasServerStatus === "error" && (
                   <div className="mb-3 rounded-2xl border border-[#e3a6a0] bg-[#fff1ef] p-4 text-sm text-[#842d26]">
@@ -494,7 +584,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 )}
                 <div className="grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {atlasServerStatus !== "error" && atlasServerItems?.map((item) => (
-                    <CatalogSearchResultCard key={item.id} item={item} />
+                    <CatalogSearchResultCard key={item.id} item={item} onOpen={openAtlasSearchItem} />
                   ))}
                   {atlasServerStatus === "error" && visibleTaxa.map((taxon) => (
                     <TaxonCard key={taxon.id} taxon={taxon} />
@@ -567,7 +657,13 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   );
 }
 
-function CatalogSearchResultCard({ item }: { item: CatalogSearchDocument }) {
+function CatalogSearchResultCard({
+  item,
+  onOpen,
+}: {
+  item: CatalogSearchDocument;
+  onOpen: (item: CatalogSearchDocument) => void;
+}) {
   const edibility = item.edibilityCategory
     ? {
         EDIBLE: "Commestibile",
@@ -617,6 +713,14 @@ function CatalogSearchResultCard({ item }: { item: CatalogSearchDocument }) {
         <span>{edibility ?? "Valutazione riferita al gruppo"}</span>
         <span>{item.reviewStatus === "reviewNeeded" ? "In revisione" : item.reviewStatus}</span>
       </div>
+      <Button
+        type="button"
+        variant="outline"
+        onClick={() => onOpen(item)}
+        className="mt-4 h-11 w-full rounded-xl border-[#b9cbb8] text-[#315d3c]"
+      >
+        Apri scheda
+      </Button>
     </article>
   );
 }
