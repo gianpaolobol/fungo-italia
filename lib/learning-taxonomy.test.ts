@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import type { LearningTaxonConcept, LearningUnit } from "./learning-taxonomy.ts";
+import { sourceMinimumLearningUnits } from "./minimum-learning-source.ts";
 import {
   COMPLETE_MINIMUM_UNIT_TARGET,
   CURRENT_MINIMUM_CONCEPT_TARGET,
@@ -39,6 +40,19 @@ function unit(
 test("beta cardinality invariants stay explicit", () => {
   assert.equal(COMPLETE_MINIMUM_UNIT_TARGET, 148);
   assert.equal(CURRENT_MINIMUM_CONCEPT_TARGET, 141);
+});
+
+test("the curated source inventory contains exactly the 148 minimum learning units", () => {
+  assert.equal(sourceMinimumLearningUnits.length, COMPLETE_MINIMUM_UNIT_TARGET);
+
+  const result = validateMinimumLearningInventory(sourceMinimumLearningUnits, [], {
+    expectedUnits: COMPLETE_MINIMUM_UNIT_TARGET,
+    requireCompleteMapping: false,
+  });
+
+  assert.equal(result.ok, true, result.errors.join("\\n"));
+  assert.equal(result.unitCount, 148);
+  assert.equal(result.conceptCount, 0);
 });
 
 test("learning units can converge on one current taxon without being discarded", () => {
