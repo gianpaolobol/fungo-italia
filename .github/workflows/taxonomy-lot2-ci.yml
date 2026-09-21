@@ -12,7 +12,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -24,6 +24,7 @@ jobs:
           node-version: "22.16.0"
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: node scripts/audit-index-fungorum.mjs "Amanita proxima" "Cortinarius variiformis"
+      - run: node --experimental-strip-types scripts/verify-index-fungorum.mjs
       - run: pnpm test
       - run: pnpm lint
+      - run: pnpm build
