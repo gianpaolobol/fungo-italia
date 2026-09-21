@@ -33,10 +33,12 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
+import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
+import type { CatalogSearchDocument } from "@/lib/catalog-search";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
 import { cn } from "@/lib/utils";
 
@@ -79,6 +81,12 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState("Tutta Italia");
   const [atlasQuery, setAtlasQuery] = useState("");
+  const [atlasKind, setAtlasKind] = useState<"all" | "minimumTaxon" | "teachingGroup">("all");
+  const [atlasRank, setAtlasRank] = useState("");
+  const [atlasEdibility, setAtlasEdibility] = useState("");
+  const [atlasServerItems, setAtlasServerItems] = useState<CatalogSearchDocument[] | null>(null);
+  const [atlasServerTotal, setAtlasServerTotal] = useState(0);
+  const [atlasServerStatus, setAtlasServerStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -116,6 +124,56 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
       });
     return () => controller.abort();
   }, []);
+
+  const atlasServerSearchActive =
+    atlasQuery.trim().length > 0 ||
+    atlasKind !== "all" ||
+    atlasRank.length > 0 ||
+    atlasEdibility.length > 0;
+
+  useEffect(() => {
+    if (!atlasServerSearchActive) {
+      setAtlasServerItems(null);
+      setAtlasServerTotal(0);
+      setAtlasServerStatus("idle");
+      return;
+    }
+
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => {
+      const params = new URLSearchParams();
+      if (atlasQuery.trim()) params.set("q", atlasQuery.trim());
+      if (atlasKind !== "all") params.set("kind", atlasKind);
+      if (atlasRank) params.set("rank", atlasRank);
+      if (atlasEdibility) params.set("edibility", atlasEdibility);
+      params.set("limit", "100");
+
+      setAtlasServerStatus("loading");
+      fetch(`/api/catalog?${params.toString()}`, { signal: controller.signal })
+        .then(async (response) => {
+          if (!response.ok) throw new Error("catalog search unavailable");
+          return response.json() as Promise<{
+            mode: "search";
+            total: number;
+            items: CatalogSearchDocument[];
+          }>;
+        })
+        .then((payload) => {
+          setAtlasServerItems(payload.items);
+          setAtlasServerTotal(payload.total);
+          setAtlasServerStatus("ready");
+        })
+        .catch((error: unknown) => {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+          setAtlasServerStatus("error");
+        });
+    }, 220);
+
+    return () => {
+      window.clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [atlasEdibility, atlasKind, atlasQuery, atlasRank, atlasServerSearchActive]);
 
   const ranked = useMemo(
     () => rankAreas(areas, forecasts, { query, region }),
@@ -368,7 +426,15 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 </p>
               </div>
               <div className="flex w-full shrink-0 flex-col gap-2 md:w-80">
-                <div className="text-sm font-bold text-[#5d7362]">{visibleTaxa.length} di {catalogTaxa.length} schede</div>
+                <div className="text-sm font-bold text-[#5d7362]">
+                  {atlasServerSearchActive
+                    ? atlasServerStatus === "loading"
+                      ? "Ricerca in corso…"
+                      : atlasServerStatus === "error"
+                        ? "Ricerca server non disponibile"
+                        : `${atlasServerTotal} risultati verificati`
+                    : `${visibleTaxa.length} di ${catalogTaxa.length} schede legacy`}
+                </div>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f8173]" />
                   <Input
@@ -378,16 +444,85 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                     className="h-11 rounded-xl pl-10 text-base"
                   />
                 </div>
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 md:grid-cols-1">
+                  <NativeSelect
+                    value={atlasKind}
+                    onChange={(event) => setAtlasKind(event.target.value as "all" | "minimumTaxon" | "teachingGroup")}
+                    className="h-10 w-full rounded-xl"
+                    aria-label="Tipo di scheda"
+                  >
+                    <NativeSelectOption value="all">Tutte le schede</NativeSelectOption>
+                    <NativeSelectOption value="minimumTaxon">Taxa Minimo</NativeSelectOption>
+                    <NativeSelectOption value="teachingGroup">Generi e gruppi</NativeSelectOption>
+                  </NativeSelect>
+                  <NativeSelect
+                    value={atlasRank}
+                    onChange={(event) => setAtlasRank(event.target.value)}
+                    className="h-10 w-full rounded-xl"
+                    aria-label="Rango tassonomico"
+                  >
+                    <NativeSelectOption value="">Tutti i ranghi</NativeSelectOption>
+                    <NativeSelectOption value="species">Specie</NativeSelectOption>
+                    <NativeSelectOption value="speciesGroup">Gruppo di specie</NativeSelectOption>
+                    <NativeSelectOption value="section">Sezione</NativeSelectOption>
+                    <NativeSelectOption value="subsection">Sottosezione</NativeSelectOption>
+                    <NativeSelectOption value="subgenus">Sottogenere</NativeSelectOption>
+                    <NativeSelectOption value="genus">Genere</NativeSelectOption>
+                    <NativeSelectOption value="operationalGroup">Gruppo didattico</NativeSelectOption>
+                  </NativeSelect>
+                  <NativeSelect
+                    value={atlasEdibility}
+                    onChange={(event) => setAtlasEdibility(event.target.value)}
+                    className="h-10 w-full rounded-xl"
+                    aria-label="Categoria alimentare"
+                  >
+                    <NativeSelectOption value="">Tutte le categorie</NativeSelectOption>
+                    <NativeSelectOption value="EDIBLE">Commestibile</NativeSelectOption>
+                    <NativeSelectOption value="EDIBLE_AFTER_TREATMENT">Dopo trattamento</NativeSelectOption>
+                    <NativeSelectOption value="DISCOURAGED">Sconsigliato</NativeSelectOption>
+                    <NativeSelectOption value="NOT_EDIBLE">Non commestibile</NativeSelectOption>
+                    <NativeSelectOption value="POISONOUS">Tossico</NativeSelectOption>
+                    <NativeSelectOption value="NOT_ASSESSED">Non valutato</NativeSelectOption>
+                  </NativeSelect>
+                </div>
                 <Button asChild variant="outline" className="h-11 rounded-xl border-[#9fb6a2] text-[#315d3c]">
                   <Link href="/catalog/proposals/new">Proponi taxon o modifica</Link>
                 </Button>
               </div>
             </div>
-            <div className="mt-5 grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
-              {visibleTaxa.map((taxon) => (
-                <TaxonCard key={taxon.id} taxon={taxon} />
-              ))}
-            </div>
+            {atlasServerSearchActive ? (
+              <div className="mt-5 min-w-0">
+                {atlasServerStatus === "error" && (
+                  <div className="mb-3 rounded-2xl border border-[#e3a6a0] bg-[#fff1ef] p-4 text-sm text-[#842d26]">
+                    La ricerca server non è disponibile: mostro il catalogo locale come fallback.
+                  </div>
+                )}
+                <div className="grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {atlasServerStatus !== "error" && atlasServerItems?.map((item) => (
+                    <CatalogSearchResultCard key={item.id} item={item} />
+                  ))}
+                  {atlasServerStatus === "error" && visibleTaxa.map((taxon) => (
+                    <TaxonCard key={taxon.id} taxon={taxon} />
+                  ))}
+                </div>
+                {atlasServerStatus === "ready" && atlasServerItems?.length === 0 && (
+                  <div className="mt-4 rounded-2xl border border-dashed border-[#cbd8c9] p-7 text-center text-[#617266]">
+                    Nessun risultato per i filtri selezionati.
+                  </div>
+                )}
+                {atlasServerStatus === "ready" && atlasServerTotal > (atlasServerItems?.length ?? 0) && (
+                  <p className="mt-3 text-sm font-semibold text-[#617266]">
+                    Mostrati i primi {atlasServerItems?.length ?? 0} risultati su {atlasServerTotal}.
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className="mt-5 grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
+                {visibleTaxa.map((taxon) => (
+                  <TaxonCard key={taxon.id} taxon={taxon} />
+                ))}
+              </div>
+            )}
           </section>
         </TabsContent>
 
@@ -434,6 +569,60 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         </Button>
       </div>
     </main>
+  );
+}
+
+function CatalogSearchResultCard({ item }: { item: CatalogSearchDocument }) {
+  const edibility = item.edibilityCategory
+    ? {
+        EDIBLE: "Commestibile",
+        EDIBLE_AFTER_TREATMENT: "Dopo trattamento",
+        DISCOURAGED: "Sconsigliato",
+        NO_FOOD_VALUE: "Privo di valore alimentare",
+        NOT_EDIBLE: "Non commestibile",
+        POISONOUS: "Tossico",
+        NOT_ASSESSED: "Non valutato",
+      }[item.edibilityCategory]
+    : null;
+
+  return (
+    <article className="min-w-0 rounded-2xl border border-[#dde6db] bg-[#fbfcfa] p-4">
+      <div className="flex min-w-0 items-start justify-between gap-2">
+        <div className="min-w-0">
+          <p className="text-xs font-black uppercase tracking-wide text-[#66806d]">
+            {item.kind === "teachingGroup" ? "Genere / gruppo didattico" : "Taxon Minimo"}
+          </p>
+          <h2 className="mt-1 break-words text-lg font-black">{item.title}</h2>
+          {item.sourceLabel !== item.title && (
+            <p className="mt-1 break-words text-sm text-[#5f7064]">
+              S1: {item.sourceLabel}
+            </p>
+          )}
+        </div>
+        <span className="shrink-0 rounded-full bg-[#eaf1e8] px-2.5 py-1 text-xs font-bold text-[#315d3c]">
+          {item.rank}
+        </span>
+      </div>
+      {item.currentNames.length > 0 && (
+        <div className="mt-3">
+          <p className="text-xs font-black uppercase tracking-wide text-[#6d7e72]">Nomi correnti</p>
+          <p className="mt-1 break-words font-serif italic text-[#31553b]">
+            {item.currentNames.join(" · ")}
+          </p>
+        </div>
+      )}
+      <div className="mt-3 flex flex-wrap gap-1.5">
+        {item.genera.slice(0, 5).map((genus) => (
+          <span key={genus} className="rounded-full bg-white px-2 py-1 text-xs font-semibold text-[#4e6655] ring-1 ring-[#dce5da]">
+            {genus}
+          </span>
+        ))}
+      </div>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-[#617266]">
+        <span>{edibility ?? "Valutazione riferita al gruppo"}</span>
+        <span>{item.reviewStatus === "reviewNeeded" ? "In revisione" : item.reviewStatus}</span>
+      </div>
+    </article>
   );
 }
 
