@@ -64,6 +64,7 @@ export function AtlasCardDetail({
               key={entry}
               type="button"
               onClick={() => onDepthChange(entry)}
+              aria-pressed={depth === entry}
               className={cn(
                 "min-h-11 shrink-0 rounded-full border px-3 py-1.5 text-sm font-bold",
                 depth === entry
