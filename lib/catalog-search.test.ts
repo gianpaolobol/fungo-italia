@@ -86,25 +86,28 @@ test("source genus aliases remain searchable through genus filtering", () => {
   );
 });
 
-test("edibility and review-state filters compose server-side", () => {
-  const result = searchCatalog({
+test("unapproved edibility is excluded from the public search index", () => {
+  const reviewNeeded = searchCatalog({
     filters: {
       kind: "minimumTaxon",
-      edibilityCategory: "POISONOUS",
       reviewStatus: "reviewNeeded",
     },
     limit: 100,
   });
-
-  assert.ok(result.total > 0);
+  assert.ok(reviewNeeded.total > 0);
   assert.equal(
-    result.items.every((entry) =>
-      entry.kind === "minimumTaxon" &&
-      entry.edibilityCategory === "POISONOUS" &&
-      entry.reviewStatus === "reviewNeeded"
-    ),
+    reviewNeeded.items.every((entry) => entry.edibilityCategory === null),
     true,
   );
+
+  const poisonous = searchCatalog({
+    filters: {
+      kind: "minimumTaxon",
+      edibilityCategory: "POISONOUS",
+    },
+    limit: 100,
+  });
+  assert.equal(poisonous.total, 0);
 });
 
 test("rank filtering distinguishes teaching groups from species cards", () => {
