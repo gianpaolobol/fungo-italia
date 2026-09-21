@@ -12,6 +12,7 @@ import type {
   AtlasSelectionKind,
 } from "@/lib/atlas-navigation-state";
 import { minimumCards } from "@/lib/minimum-cards";
+import { minimumGenusCards } from "@/lib/minimum-genus-cards";
 import { cn } from "@/lib/utils";
 
 type AtlasCardDetailProps = {
@@ -43,38 +44,9 @@ export function AtlasCardDetail({
     const view = findGenusCardViewModel(selectedId, depth);
     if (!view) return <MissingCard onBack={onBack} />;
 
-    const genusCard = findGenusCardViewModel(selectedId, "essential");
+    const genusCard = minimumGenusCards.find((entry) => entry.cardId === selectedId);
     const available = genusCard
-      ? availableGenusDepths({
-          cardId: genusCard.cardId,
-          teachingUnitId: genusCard.teachingUnitId,
-          sourceLabel: genusCard.sourceLabel,
-          sourceRank: genusCard.sourceRank,
-          sourcePage: genusCard.sourcePage,
-          displayTitle: genusCard.displayTitle,
-          sourceGenera: genusCard.sourceGenera,
-          currentGenera: genusCard.currentGenera,
-          minimumChildCardIds: genusCard.minimumChildCardIds,
-          essential: {
-            objectiveSummary: genusCard.objectiveSummary ?? "",
-            terminology: [],
-            macroCharacters: [],
-            safetyFocus: genusCard.safetyFocus,
-            claimIds: genusCard.claimIds,
-          },
-          deepening: {
-            objectiveSummary: findGenusCardViewModel(selectedId, "deepening")?.objectiveSummary ?? null,
-            discriminatingCharacters: [],
-            taxonomyNotes: [],
-            claimIds: [],
-          },
-          specialist: {
-            objectiveSummary: findGenusCardViewModel(selectedId, "specialist")?.objectiveSummary ?? null,
-            specialistTopics: [],
-            claimIds: [],
-          },
-          reviewStatus: genusCard.reviewStatus,
-        })
+      ? availableGenusDepths(genusCard)
       : ["essential" as const];
 
     return (
