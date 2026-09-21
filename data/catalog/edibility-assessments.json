@@ -1,0 +1,2998 @@
+[
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--01--agaricus-sez-xanthodermatei",
+    "sourceUnitId": "objective-agaricus--01--agaricus-sez-xanthodermatei",
+    "sourceLabel": "Agaricus sez. Xanthodermatei",
+    "category": "POISONOUS",
+    "assessmentScope": "section",
+    "scopeDefinition": "Agaricus sez. Xanthodermatei",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--01--agaricus-sez-xanthodermatei"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--02--agaricus-bresadolanus",
+    "sourceUnitId": "objective-agaricus--02--agaricus-bresadolanus",
+    "sourceLabel": "Agaricus bresadolanus",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--02--agaricus-bresadolanus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--03--agaricus-sez-arvenses",
+    "sourceUnitId": "objective-agaricus--03--agaricus-sez-arvenses",
+    "sourceLabel": "Agaricus sez. Arvenses",
+    "category": "EDIBLE",
+    "assessmentScope": "section",
+    "scopeDefinition": "Agaricus sez. Arvenses",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--03--agaricus-sez-arvenses"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--04--agaricus-sez-sanguinolenti",
+    "sourceUnitId": "objective-agaricus--04--agaricus-sez-sanguinolenti",
+    "sourceLabel": "Agaricus sez. Sanguinolenti",
+    "category": "EDIBLE",
+    "assessmentScope": "section",
+    "scopeDefinition": "Agaricus sez. Sanguinolenti",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--04--agaricus-sez-sanguinolenti"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--05--agaricus-campestris",
+    "sourceUnitId": "objective-agaricus--05--agaricus-campestris",
+    "sourceLabel": "Agaricus campestris",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--05--agaricus-campestris"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--06--agaricus-bitorquis",
+    "sourceUnitId": "objective-agaricus--06--agaricus-bitorquis",
+    "sourceLabel": "Agaricus bitorquis",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--06--agaricus-bitorquis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agaricus--07--agaricus-bisporus",
+    "sourceUnitId": "objective-agaricus--07--agaricus-bisporus",
+    "sourceLabel": "Agaricus bisporus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 28 — Agaricus",
+    "evidenceIds": [
+      "evidence-edibility-objective-agaricus--07--agaricus-bisporus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+    "sourceUnitId": "objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+    "sourceLabel": "Cyclocybe cylindracea",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Agrocybe + Cyclocybe",
+    "evidenceIds": [
+      "evidence-edibility-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--01--amanita-phalloides",
+    "sourceUnitId": "objective-amanita--01--amanita-phalloides",
+    "sourceLabel": "Amanita phalloides",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--01--amanita-phalloides"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+    "sourceUnitId": "objective-amanita--02--amanita-verna-inclusa-a-vidua",
+    "sourceLabel": "Amanita verna (inclusa A. vidua)",
+    "category": "POISONOUS",
+    "assessmentScope": "definedSet",
+    "scopeDefinition": "Amanita verna (inclusa A. vidua)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--02--amanita-verna-inclusa-a-vidua"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--03--amanita-virosa",
+    "sourceUnitId": "objective-amanita--03--amanita-virosa",
+    "sourceLabel": "Amanita virosa",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--03--amanita-virosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--04--amanita-proxima",
+    "sourceUnitId": "objective-amanita--04--amanita-proxima",
+    "sourceLabel": "Amanita proxima",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--04--amanita-proxima"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--05--amanita-ovoidea",
+    "sourceUnitId": "objective-amanita--05--amanita-ovoidea",
+    "sourceLabel": "Amanita ovoidea",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--05--amanita-ovoidea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--06--amanita-pantherina",
+    "sourceUnitId": "objective-amanita--06--amanita-pantherina",
+    "sourceLabel": "Amanita pantherina",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--06--amanita-pantherina"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--07--amanita-muscaria",
+    "sourceUnitId": "objective-amanita--07--amanita-muscaria",
+    "sourceLabel": "Amanita muscaria",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--07--amanita-muscaria"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--08--amanita-caesarea",
+    "sourceUnitId": "objective-amanita--08--amanita-caesarea",
+    "sourceLabel": "Amanita caesarea",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--08--amanita-caesarea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--09--amanita-gemmata",
+    "sourceUnitId": "objective-amanita--09--amanita-gemmata",
+    "sourceLabel": "Amanita gemmata",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--09--amanita-gemmata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--10--amanita-citrina",
+    "sourceUnitId": "objective-amanita--10--amanita-citrina",
+    "sourceLabel": "Amanita citrina",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--10--amanita-citrina"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--11--amanita-porphyria",
+    "sourceUnitId": "objective-amanita--11--amanita-porphyria",
+    "sourceLabel": "Amanita porphyria",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--11--amanita-porphyria"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+    "sourceUnitId": "objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+    "sourceLabel": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--13--amanita-strobiliformis",
+    "sourceUnitId": "objective-amanita--13--amanita-strobiliformis",
+    "sourceLabel": "Amanita strobiliformis",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--13--amanita-strobiliformis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--14--amanita-vittadinii",
+    "sourceUnitId": "objective-amanita--14--amanita-vittadinii",
+    "sourceLabel": "Amanita vittadinii",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--14--amanita-vittadinii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--15--amanita-rubescens",
+    "sourceUnitId": "objective-amanita--15--amanita-rubescens",
+    "sourceLabel": "Amanita rubescens",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--15--amanita-rubescens",
+      "evidence-treatment-objective-amanita--15--amanita-rubescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-amanita--16--amanita-sez-vaginatae",
+    "sourceUnitId": "objective-amanita--16--amanita-sez-vaginatae",
+    "sourceLabel": "Amanita sez. Vaginatae",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "section",
+    "scopeDefinition": "Amanita sez. Vaginatae",
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 30 — Amanita",
+    "evidenceIds": [
+      "evidence-edibility-objective-amanita--16--amanita-sez-vaginatae",
+      "evidence-treatment-objective-amanita--16--amanita-sez-vaginatae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-calocybe--01--calocybe-gambosa",
+    "sourceUnitId": "objective-calocybe--01--calocybe-gambosa",
+    "sourceLabel": "Calocybe gambosa",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 38 — Calocybe",
+    "evidenceIds": [
+      "evidence-edibility-objective-calocybe--01--calocybe-gambosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+    "sourceUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+    "sourceLabel": "Clitocybe cerussata (= C. phyllophila)",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 41 — Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+    "sourceUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+    "sourceLabel": "Clitocybe dealbata (= C. rivulosa)",
+    "category": "POISONOUS",
+    "assessmentScope": "definedSet",
+    "scopeDefinition": "Clitocybe dealbata (= C. rivulosa)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 41 — Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+    "sourceUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+    "sourceLabel": "Clitocybe nebularis",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Specie tradizionalmente consumata in alcune aree ma classificata da S2 come sconsigliata per la casistica gastrointestinale.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 41 — Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+    "sourceUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+    "sourceLabel": "Clitocybe geotropa",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 41 — Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+    "sourceUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+    "sourceLabel": "Clitocybe amoenolens",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 41 — Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+    "sourceUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+    "sourceLabel": "Clitocybe gibba s.l.",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Clitocybe gibba s.l.",
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 41 — Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "evidence-treatment-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-clitopilus--01--clitopilus-prunulus-s-l",
+    "sourceUnitId": "objective-clitopilus--01--clitopilus-prunulus-s-l",
+    "sourceLabel": "Clitopilus prunulus s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Clitopilus prunulus s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 44 — Clitopilus",
+    "evidenceIds": [
+      "evidence-edibility-objective-clitopilus--01--clitopilus-prunulus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+    "sourceUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+    "sourceLabel": "Collybia maculata",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 45 — Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "evidenceIds": [
+      "evidence-edibility-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+    "sourceUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+    "sourceLabel": "Collybia fusipes",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 45 — Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "evidenceIds": [
+      "evidence-edibility-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+    "sourceUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+    "sourceLabel": "Marasmius oreades",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 45 — Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "evidenceIds": [
+      "evidence-edibility-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+    "sourceUnitId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+    "sourceLabel": "Coprinus atramentarius s.l.",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Coprinus atramentarius s.l.",
+    "conditionsSummary": "Non commestibile; la fonte segnala il rischio di sindrome coprinica in associazione con alcol.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 47 — Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+    "sourceUnitId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+    "sourceLabel": "Coprinus comatus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Ammesso al consumo negli esemplari giovani, prima dell'annerimento/deliquescenza delle lamelle.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 47 — Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--01--cortinarius-orellanus",
+    "sourceUnitId": "objective-cortinarius--01--cortinarius-orellanus",
+    "sourceLabel": "Cortinarius orellanus",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--01--cortinarius-orellanus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+    "sourceUnitId": "objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+    "sourceLabel": "Cortinarius orellanoides (= C. rubellus, C. speciosissimus)",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+    "sourceUnitId": "objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+    "sourceLabel": "Cortinarius sottogenere Dermocybe",
+    "category": "POISONOUS",
+    "assessmentScope": "group",
+    "scopeDefinition": "Cortinarius sottogenere Dermocybe",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--03--cortinarius-sottogenere-dermocybe"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--04--cortinarius-praestans",
+    "sourceUnitId": "objective-cortinarius--04--cortinarius-praestans",
+    "sourceLabel": "Cortinarius praestans",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--04--cortinarius-praestans"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--05--cortinarius-cumatilis",
+    "sourceUnitId": "objective-cortinarius--05--cortinarius-cumatilis",
+    "sourceLabel": "Cortinarius cumatilis",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--05--cortinarius-cumatilis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--06--cortinarius-variiformis",
+    "sourceUnitId": "objective-cortinarius--06--cortinarius-variiformis",
+    "sourceLabel": "Cortinarius variiformis",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--06--cortinarius-variiformis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+    "sourceUnitId": "objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+    "sourceLabel": "Cortinarius caperatus (= Rozites caperatus)",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 48 — Cortinarius",
+    "evidenceIds": [
+      "evidence-edibility-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-entoloma--01--entoloma-sinuatum",
+    "sourceUnitId": "objective-entoloma--01--entoloma-sinuatum",
+    "sourceLabel": "Entoloma sinuatum",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 53 — Entoloma",
+    "evidenceIds": [
+      "evidence-edibility-objective-entoloma--01--entoloma-sinuatum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-entoloma--02--entoloma-rhodopolium-s-l",
+    "sourceUnitId": "objective-entoloma--02--entoloma-rhodopolium-s-l",
+    "sourceLabel": "Entoloma rhodopolium s.l.",
+    "category": "POISONOUS",
+    "assessmentScope": "group",
+    "scopeDefinition": "Entoloma rhodopolium s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 53 — Entoloma",
+    "evidenceIds": [
+      "evidence-edibility-objective-entoloma--02--entoloma-rhodopolium-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-entoloma--03--entoloma-hirtipes",
+    "sourceUnitId": "objective-entoloma--03--entoloma-hirtipes",
+    "sourceLabel": "Entoloma hirtipes",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 53 — Entoloma",
+    "evidenceIds": [
+      "evidence-edibility-objective-entoloma--03--entoloma-hirtipes"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-entoloma--04--entoloma-vernum",
+    "sourceUnitId": "objective-entoloma--04--entoloma-vernum",
+    "sourceLabel": "Entoloma vernum",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 53 — Entoloma",
+    "evidenceIds": [
+      "evidence-edibility-objective-entoloma--04--entoloma-vernum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-entoloma--05--entoloma-clypeatum-s-l",
+    "sourceUnitId": "objective-entoloma--05--entoloma-clypeatum-s-l",
+    "sourceLabel": "Entoloma clypeatum s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Entoloma clypeatum s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 53 — Entoloma",
+    "evidenceIds": [
+      "evidence-edibility-objective-entoloma--05--entoloma-clypeatum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-entoloma--06--entoloma-saundersii",
+    "sourceUnitId": "objective-entoloma--06--entoloma-saundersii",
+    "sourceLabel": "Entoloma saundersii",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 53 — Entoloma",
+    "evidenceIds": [
+      "evidence-edibility-objective-entoloma--06--entoloma-saundersii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-flammulina--01--flammulina-velutipes-s-l",
+    "sourceUnitId": "objective-flammulina--01--flammulina-velutipes-s-l",
+    "sourceLabel": "Flammulina velutipes s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Flammulina velutipes s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 55 — Flammulina",
+    "evidenceIds": [
+      "evidence-edibility-objective-flammulina--01--flammulina-velutipes-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-galerina--01--galerina-marginata-group",
+    "sourceUnitId": "objective-galerina--01--galerina-marginata-group",
+    "sourceLabel": "Galerina marginata group",
+    "category": "POISONOUS",
+    "assessmentScope": "group",
+    "scopeDefinition": "Galerina marginata group",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 56 — Galerina",
+    "evidenceIds": [
+      "evidence-edibility-objective-galerina--01--galerina-marginata-group"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+    "sourceUnitId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+    "sourceLabel": "Hygrocybe conica s.l.",
+    "category": "POISONOUS",
+    "assessmentScope": "group",
+    "scopeDefinition": "Hygrocybe conica s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 59 — Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+    "evidenceIds": [
+      "evidence-edibility-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+    "sourceUnitId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+    "sourceLabel": "Hygrocybe punicea",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 59 — Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+    "evidenceIds": [
+      "evidence-edibility-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+    "sourceUnitId": "objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+    "sourceLabel": "Hygrophorus marzuolus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 60 — Hygrophorus + Cuphophyllus",
+    "evidenceIds": [
+      "evidence-edibility-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+    "sourceUnitId": "objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+    "sourceLabel": "Hygrophorus russula",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 60 — Hygrophorus + Cuphophyllus",
+    "evidenceIds": [
+      "evidence-edibility-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+    "sourceUnitId": "objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+    "sourceLabel": "Hygrophorus penarioides",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 60 — Hygrophorus + Cuphophyllus",
+    "evidenceIds": [
+      "evidence-edibility-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hypholoma--01--hypholoma-fasciculare",
+    "sourceUnitId": "objective-hypholoma--01--hypholoma-fasciculare",
+    "sourceLabel": "Hypholoma fasciculare",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 62 — Hypholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-hypholoma--01--hypholoma-fasciculare"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hypholoma--02--hypholoma-lateritium",
+    "sourceUnitId": "objective-hypholoma--02--hypholoma-lateritium",
+    "sourceLabel": "Hypholoma lateritium",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 62 — Hypholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-hypholoma--02--hypholoma-lateritium"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lentinula--01--lentinula-edodes",
+    "sourceUnitId": "objective-lentinula--01--lentinula-edodes",
+    "sourceLabel": "Lentinula edodes",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Cottura completa necessaria per ridurre il rischio di tossidermia da shiitake associata al consumo crudo o insufficientemente cotto.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 66 — Lentinula",
+    "evidenceIds": [
+      "evidence-edibility-objective-lentinula--01--lentinula-edodes",
+      "evidence-treatment-objective-lentinula--01--lentinula-edodes"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+    "sourceLabel": "Lepiota subincarnata (= L. josserandii)",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+    "sourceLabel": "Lepiota brunneoincarnata",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+    "sourceLabel": "Lepiota cristata",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "S2 non documenta amanitine in L. cristata ma, per l'incertezza tossicologica e la difficoltà di determinazione del genere, la considera non idonea al consumo.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+    "sourceLabel": "Lepiota elaiophylla",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+    "sourceLabel": "Chlorophyllum molybdites",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+    "sourceLabel": "Echinoderma asperum s.l.",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Echinoderma asperum s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+    "sourceLabel": "Leucoagaricus leucothites s.l.",
+    "category": "DISCOURAGED",
+    "assessmentScope": "group",
+    "scopeDefinition": "Leucoagaricus leucothites s.l.",
+    "conditionsSummary": "Specie/gruppo sconsigliato per criticità e confondibilità con Amanita bianche.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+    "sourceLabel": "Chlorophyllum rhacodes s.l.",
+    "category": "DISCOURAGED",
+    "assessmentScope": "group",
+    "scopeDefinition": "Chlorophyllum rhacodes s.l.",
+    "conditionsSummary": "Specie/gruppo sconsigliato per casistica gastrointestinale e criticità di sicurezza.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+    "sourceUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+    "sourceLabel": "Macrolepiota procera s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Macrolepiota procera s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 67 — Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepista--01--lepista-nuda-s-l",
+    "sourceUnitId": "objective-lepista--01--lepista-nuda-s-l",
+    "sourceLabel": "Lepista nuda s.l.",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Lepista nuda s.l.",
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 68 — Lepista",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepista--01--lepista-nuda-s-l",
+      "evidence-treatment-objective-lepista--01--lepista-nuda-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lepista--02--lepista-flaccida-s-l",
+    "sourceUnitId": "objective-lepista--02--lepista-flaccida-s-l",
+    "sourceLabel": "Lepista flaccida s.l.",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Lepista flaccida s.l.",
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 68 — Lepista",
+    "evidenceIds": [
+      "evidence-edibility-objective-lepista--02--lepista-flaccida-s-l",
+      "evidence-treatment-objective-lepista--02--lepista-flaccida-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+    "sourceUnitId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+    "sourceLabel": "Leucopaxillus giganteus s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Leucopaxillus giganteus s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 70 — Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+    "evidenceIds": [
+      "evidence-edibility-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+    "sourceUnitId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+    "sourceLabel": "Leucopaxillus gentianeus",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 70 — Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+    "evidenceIds": [
+      "evidence-edibility-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+    "sourceUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+    "sourceLabel": "Lyophyllum decastes s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Lyophyllum decastes s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 72 — Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+    "sourceUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+    "sourceLabel": "Lyophyllum specie annerenti",
+    "category": "NOT_ASSESSED",
+    "assessmentScope": "group",
+    "scopeDefinition": "Lyophyllum specie annerenti",
+    "conditionsSummary": "Unità didattica eterogenea: S2 distingue specie commestibili da specie prive di valore alimentare; nessuna categoria unica viene propagata al gruppo.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 72 — Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+    "sourceUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+    "sourceLabel": "Lyophyllum connatum",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 72 — Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-mycena--01--mycena-sez-purae",
+    "sourceUnitId": "objective-mycena--01--mycena-sez-purae",
+    "sourceLabel": "Mycena sez. Purae",
+    "category": "POISONOUS",
+    "assessmentScope": "section",
+    "scopeDefinition": "Mycena sez. Purae",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 74 — Mycena",
+    "evidenceIds": [
+      "evidence-edibility-objective-mycena--01--mycena-sez-purae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-omphalotus--01--omphalotus-olearius",
+    "sourceUnitId": "objective-omphalotus--01--omphalotus-olearius",
+    "sourceLabel": "Omphalotus olearius",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 75 — Omphalotus",
+    "evidenceIds": [
+      "evidence-edibility-objective-omphalotus--01--omphalotus-olearius"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+    "sourceUnitId": "objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+    "sourceLabel": "Panaeolus cyanescens",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 76 — Panaeolus (inclusi Copelandia, Panaeolina)",
+    "evidenceIds": [
+      "evidence-edibility-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+    "sourceUnitId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+    "sourceLabel": "Kuehneromyces mutabilis",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 77 — Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+    "evidenceIds": [
+      "evidence-edibility-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+    "sourceUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+    "sourceLabel": "Pleurotus eryngii s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Pleurotus eryngii s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 78 — Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "evidenceIds": [
+      "evidence-edibility-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+    "sourceUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+    "sourceLabel": "Pleurotus ostreatus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 78 — Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "evidenceIds": [
+      "evidence-edibility-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+    "sourceUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+    "sourceLabel": "Pleurotus cornucopiae (incluso P. citrinopileatus)",
+    "category": "EDIBLE",
+    "assessmentScope": "definedSet",
+    "scopeDefinition": "Pleurotus cornucopiae (incluso P. citrinopileatus)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 78 — Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "evidenceIds": [
+      "evidence-edibility-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+    "sourceUnitId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+    "sourceLabel": "Stropharia rugosoannulata",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+    "evidenceIds": [
+      "evidence-edibility-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--01--tricholoma-pardinum",
+    "sourceUnitId": "objective-tricholoma--01--tricholoma-pardinum",
+    "sourceLabel": "Tricholoma pardinum",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--01--tricholoma-pardinum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--02--tricholoma-filamentosum",
+    "sourceUnitId": "objective-tricholoma--02--tricholoma-filamentosum",
+    "sourceLabel": "Tricholoma filamentosum",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--02--tricholoma-filamentosum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--03--tricholoma-josserandii",
+    "sourceUnitId": "objective-tricholoma--03--tricholoma-josserandii",
+    "sourceLabel": "Tricholoma josserandii",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--03--tricholoma-josserandii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--04--tricholoma-equestre",
+    "sourceUnitId": "objective-tricholoma--04--tricholoma-equestre",
+    "sourceLabel": "Tricholoma equestre",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Consumo sconsigliato; la fonte richiama anche il divieto ministeriale italiano.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--04--tricholoma-equestre"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--05--tricholoma-portentosum",
+    "sourceUnitId": "objective-tricholoma--05--tricholoma-portentosum",
+    "sourceLabel": "Tricholoma portentosum",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--05--tricholoma-portentosum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--06--tricholoma-terreum",
+    "sourceUnitId": "objective-tricholoma--06--tricholoma-terreum",
+    "sourceLabel": "Tricholoma terreum",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--06--tricholoma-terreum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+    "sourceUnitId": "objective-tricholoma--07--tricholoma-saponaceum-s-l",
+    "sourceLabel": "Tricholoma saponaceum s.l.",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Tricholoma saponaceum s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--07--tricholoma-saponaceum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--08--tricholoma-columbetta",
+    "sourceUnitId": "objective-tricholoma--08--tricholoma-columbetta",
+    "sourceLabel": "Tricholoma columbetta",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--08--tricholoma-columbetta"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+    "sourceUnitId": "objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+    "sourceLabel": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+    "sourceUnitId": "objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+    "sourceLabel": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+    "sourceUnitId": "objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+    "sourceLabel": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--12--tricholoma-sejunctum",
+    "sourceUnitId": "objective-tricholoma--12--tricholoma-sejunctum",
+    "sourceLabel": "Tricholoma sejunctum",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--12--tricholoma-sejunctum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--13--tricholoma-sulphureum",
+    "sourceUnitId": "objective-tricholoma--13--tricholoma-sulphureum",
+    "sourceLabel": "Tricholoma sulphureum",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--13--tricholoma-sulphureum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+    "sourceUnitId": "objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+    "sourceLabel": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+    "category": "DISCOURAGED",
+    "assessmentScope": "section",
+    "scopeDefinition": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tricholoma--15--tricholoma-acerbum-s-l",
+    "sourceUnitId": "objective-tricholoma--15--tricholoma-acerbum-s-l",
+    "sourceLabel": "Tricholoma acerbum s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Tricholoma acerbum s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 85 — Tricholoma",
+    "evidenceIds": [
+      "evidence-edibility-objective-tricholoma--15--tricholoma-acerbum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+    "sourceUnitId": "objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+    "sourceLabel": "Volvopluteus gloiocephalus",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 92 — Volvariella + Volvopluteus",
+    "evidenceIds": [
+      "evidence-edibility-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-volvariella-volvopluteus--02--volvariella-volvacea",
+    "sourceUnitId": "objective-volvariella-volvopluteus--02--volvariella-volvacea",
+    "sourceLabel": "Volvariella volvacea",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 92 — Volvariella + Volvopluteus",
+    "evidenceIds": [
+      "evidence-edibility-objective-volvariella-volvopluteus--02--volvariella-volvacea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+    "sourceUnitId": "objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+    "sourceLabel": "Lactarius sez. Deliciosi",
+    "category": "EDIBLE",
+    "assessmentScope": "section",
+    "scopeDefinition": "Lactarius sez. Deliciosi",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 95 — Lactarius (incluso Lactifluus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+    "sourceUnitId": "objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+    "sourceLabel": "Lactarius porniniae",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 95 — Lactarius (incluso Lactifluus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+    "sourceUnitId": "objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+    "sourceLabel": "Lactarius volemus s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Lactarius volemus s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 95 — Lactarius (incluso Lactifluus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+    "sourceUnitId": "objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+    "sourceLabel": "Lactarius tesquorum",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 95 — Lactarius (incluso Lactifluus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-russula--01--russula-foetentinae",
+    "sourceUnitId": "objective-russula--01--russula-foetentinae",
+    "sourceLabel": "Russula Foetentinae",
+    "category": "POISONOUS",
+    "assessmentScope": "section",
+    "scopeDefinition": "Russula Foetentinae",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 98 — Russula",
+    "evidenceIds": [
+      "evidence-edibility-objective-russula--01--russula-foetentinae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-russula--02--russula-compactae-nigricantinae",
+    "sourceUnitId": "objective-russula--02--russula-compactae-nigricantinae",
+    "sourceLabel": "Russula Compactae Nigricantinae",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "section",
+    "scopeDefinition": "Russula Compactae Nigricantinae",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 98 — Russula",
+    "evidenceIds": [
+      "evidence-edibility-objective-russula--02--russula-compactae-nigricantinae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+    "sourceUnitId": "objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+    "sourceLabel": "Russula Compactae Lactarioides (= gruppo R. delica)",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Russula Compactae Lactarioides (= gruppo R. delica)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 98 — Russula",
+    "evidenceIds": [
+      "evidence-edibility-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-s-str--01--boletus-edulis-s-l",
+    "sourceUnitId": "objective-boletus-s-str--01--boletus-edulis-s-l",
+    "sourceLabel": "Boletus edulis s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Boletus edulis s.l.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 103 — Boletus s. str.",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-s-str--01--boletus-edulis-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+    "sourceUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+    "sourceLabel": "Boletus sez. Luridi",
+    "category": "NOT_ASSESSED",
+    "assessmentScope": "section",
+    "scopeDefinition": "Boletus sez. Luridi",
+    "conditionsSummary": "Sezione didattica con stati S2 differenti, comprendente taxa velenosi e taxa commestibili solo dopo cottura completa; usare le valutazioni delle sottounità.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 106 — Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+    "sourceUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+    "sourceLabel": "Boletus (Rubroboletus) satanas",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 106 — Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+    "sourceUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+    "sourceLabel": "Boletus pulchrotinctus",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 106 — Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+    "sourceUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+    "sourceLabel": "Boletus (Neoboletus) erythropus s.l.",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Boletus (Neoboletus) erythropus s.l.",
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 106 — Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "evidence-treatment-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+    "sourceUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+    "sourceLabel": "Boletus (Suillellus) luridus",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 106 — Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "evidence-treatment-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+    "sourceUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+    "sourceLabel": "Boletus queletii e specie vicine/intermedie",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Boletus queletii e specie vicine/intermedie",
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 106 — Boletus ex sez. Luridi (inclusi Cupreoboletus, Exsudoporus, Imperator, Neoboletus, Rubroboletus, Suillellus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "evidence-treatment-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-caloboletus--01--caloboletus-radicans",
+    "sourceUnitId": "objective-caloboletus--01--caloboletus-radicans",
+    "sourceLabel": "Caloboletus radicans",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 109 — Caloboletus",
+    "evidenceIds": [
+      "evidence-edibility-objective-caloboletus--01--caloboletus-radicans"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-caloboletus--02--caloboletus-calopus",
+    "sourceUnitId": "objective-caloboletus--02--caloboletus-calopus",
+    "sourceLabel": "Caloboletus calopus",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Non commestibile; nelle aree con tradizione di consumo la fonte ne sconsiglia comunque l'uso.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 109 — Caloboletus",
+    "evidenceIds": [
+      "evidence-edibility-objective-caloboletus--02--caloboletus-calopus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-gyroporus--01--gyroporus-cyanescens",
+    "sourceUnitId": "objective-gyroporus--01--gyroporus-cyanescens",
+    "sourceLabel": "Gyroporus cyanescens",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Consumo subordinato a cottura completa secondo S2.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 111 — Gyroporus",
+    "evidenceIds": [
+      "evidence-edibility-objective-gyroporus--01--gyroporus-cyanescens",
+      "evidence-treatment-objective-gyroporus--01--gyroporus-cyanescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-gyroporus--02--gyroporus-castaneus-s-l",
+    "sourceUnitId": "objective-gyroporus--02--gyroporus-castaneus-s-l",
+    "sourceLabel": "Gyroporus castaneus s.l.",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Gyroporus castaneus s.l.",
+    "conditionsSummary": "S2 ammette il consumo solo dopo completa cottura, con particolare attenzione alla freschezza e allo stato di conservazione.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 111 — Gyroporus",
+    "evidenceIds": [
+      "evidence-edibility-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "evidence-treatment-objective-gyroporus--02--gyroporus-castaneus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+    "sourceUnitId": "objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+    "sourceLabel": "Hygrophoropsis aurantiaca",
+    "category": "DISCOURAGED",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "S2 la colloca tra le specie sconsigliate in Italia, tenendo conto della casistica gastrointestinale e dell'incertezza delle segnalazioni storiche.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 112 — Hygrophoropsis",
+    "evidenceIds": [
+      "evidence-edibility-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-imleria--01--imleria-badia",
+    "sourceUnitId": "objective-imleria--01--imleria-badia",
+    "sourceLabel": "Imleria badia",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 113 — Imleria",
+    "evidenceIds": [
+      "evidence-edibility-objective-imleria--01--imleria-badia"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-suillus-incluso-boletinus--01--suillus-luteus",
+    "sourceUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus",
+    "sourceLabel": "Suillus luteus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Commestibile; S2 raccomanda moderazione, buona cottura e attenzione allo stadio di maturazione. La rimozione della cuticola non è considerata trattamento obbligatorio.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 116 — Suillus (incluso Boletinus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-suillus-incluso-boletinus--01--suillus-luteus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+    "sourceUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus",
+    "sourceLabel": "Suillus granulatus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": "Commestibile; S2 raccomanda moderazione, buona cottura e attenzione allo stadio di maturazione. La rimozione della cuticola non è considerata trattamento obbligatorio.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 116 — Suillus (incluso Boletinus)",
+    "evidenceIds": [
+      "evidence-edibility-objective-suillus-incluso-boletinus--02--suillus-granulatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-tylopilus--01--tylopilus-felleus",
+    "sourceUnitId": "objective-tylopilus--01--tylopilus-felleus",
+    "sourceLabel": "Tylopilus felleus",
+    "category": "NOT_EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 118 — Tylopilus",
+    "evidenceIds": [
+      "evidence-edibility-objective-tylopilus--01--tylopilus-felleus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-cantharellus--01--cantharellus-cibarius-complex",
+    "sourceUnitId": "objective-cantharellus--01--cantharellus-cibarius-complex",
+    "sourceLabel": "Cantharellus cibarius complex",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Cantharellus cibarius complex",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 120 — Cantharellus",
+    "evidenceIds": [
+      "evidence-edibility-objective-cantharellus--01--cantharellus-cibarius-complex"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-craterellus--01--craterellus-lutescens",
+    "sourceUnitId": "objective-craterellus--01--craterellus-lutescens",
+    "sourceLabel": "Craterellus lutescens",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 121 — Craterellus",
+    "evidenceIds": [
+      "evidence-edibility-objective-craterellus--01--craterellus-lutescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-craterellus--02--craterellus-tubaeformis",
+    "sourceUnitId": "objective-craterellus--02--craterellus-tubaeformis",
+    "sourceLabel": "Craterellus tubaeformis",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 121 — Craterellus",
+    "evidenceIds": [
+      "evidence-edibility-objective-craterellus--02--craterellus-tubaeformis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-craterellus--03--craterellus-cornucopioides",
+    "sourceUnitId": "objective-craterellus--03--craterellus-cornucopioides",
+    "sourceLabel": "Craterellus cornucopioides",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 121 — Craterellus",
+    "evidenceIds": [
+      "evidence-edibility-objective-craterellus--03--craterellus-cornucopioides"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-gomphus--01--gomphus-clavatus",
+    "sourceUnitId": "objective-gomphus--01--gomphus-clavatus",
+    "sourceLabel": "Gomphus clavatus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 122 — Gomphus",
+    "evidenceIds": [
+      "evidence-edibility-objective-gomphus--01--gomphus-clavatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+    "sourceUnitId": "objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+    "sourceLabel": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 122 — Hydnaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hydnaceae-s-l--02--hericium-spp",
+    "sourceUnitId": "objective-hydnaceae-s-l--02--hericium-spp",
+    "sourceLabel": "Hericium spp.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Hericium spp.",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 122 — Hydnaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-hydnaceae-s-l--02--hericium-spp"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+    "sourceUnitId": "objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+    "sourceLabel": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 122 — Hydnaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+    "sourceUnitId": "objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+    "sourceLabel": "Hapalopilus rutilans",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--01--hapalopilus-rutilans"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+    "sourceUnitId": "objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+    "sourceLabel": "Laetiporus sulphureus s.l.",
+    "category": "EDIBLE_AFTER_TREATMENT",
+    "assessmentScope": "group",
+    "scopeDefinition": "Laetiporus sulphureus s.l.",
+    "conditionsSummary": "Commestibile solo dopo completa cottura e riferito a esemplari giovani.",
+    "treatmentCodes": [
+      "completeCooking"
+    ],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "evidence-treatment-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--03--albatrellus-confluens",
+    "sourceUnitId": "objective-polyporaceae-s-l--03--albatrellus-confluens",
+    "sourceLabel": "Albatrellus confluens",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--03--albatrellus-confluens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+    "sourceUnitId": "objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+    "sourceLabel": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+    "sourceUnitId": "objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+    "sourceLabel": "Scutiger pes-caprae",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--05--scutiger-pes-caprae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--06--fistulina-hepatica",
+    "sourceUnitId": "objective-polyporaceae-s-l--06--fistulina-hepatica",
+    "sourceLabel": "Fistulina hepatica",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--06--fistulina-hepatica"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--07--grifola-frondosa",
+    "sourceUnitId": "objective-polyporaceae-s-l--07--grifola-frondosa",
+    "sourceLabel": "Grifola frondosa",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--07--grifola-frondosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--08--polyporus-umbellatus",
+    "sourceUnitId": "objective-polyporaceae-s-l--08--polyporus-umbellatus",
+    "sourceLabel": "Polyporus umbellatus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--08--polyporus-umbellatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--09--meripilus-giganteus",
+    "sourceUnitId": "objective-polyporaceae-s-l--09--meripilus-giganteus",
+    "sourceLabel": "Meripilus giganteus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--09--meripilus-giganteus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-polyporaceae-s-l--10--polyporus-squamosus",
+    "sourceUnitId": "objective-polyporaceae-s-l--10--polyporus-squamosus",
+    "sourceLabel": "Polyporus squamosus",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 123 — Polyporaceae s.l.",
+    "evidenceIds": [
+      "evidence-edibility-objective-polyporaceae-s-l--10--polyporus-squamosus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-ramaria--01--ramaria-formosa",
+    "sourceUnitId": "objective-ramaria--01--ramaria-formosa",
+    "sourceLabel": "Ramaria formosa",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 129 — Ramaria",
+    "evidenceIds": [
+      "evidence-edibility-objective-ramaria--01--ramaria-formosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-ramaria--02--ramaria-pallida",
+    "sourceUnitId": "objective-ramaria--02--ramaria-pallida",
+    "sourceLabel": "Ramaria pallida",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 129 — Ramaria",
+    "evidenceIds": [
+      "evidence-edibility-objective-ramaria--02--ramaria-pallida"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-ramaria--03--ramaria-botrytis-s-l",
+    "sourceUnitId": "objective-ramaria--03--ramaria-botrytis-s-l",
+    "sourceLabel": "Ramaria botrytis s.l.",
+    "category": "EDIBLE",
+    "assessmentScope": "group",
+    "scopeDefinition": "Ramaria botrytis s.l.",
+    "conditionsSummary": "Commestibile; la valutazione si riferisce in linea di principio agli esemplari giovani.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "youngOnly",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 129 — Ramaria",
+    "evidenceIds": [
+      "evidence-edibility-objective-ramaria--03--ramaria-botrytis-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-auricularia--01--auricularia-auricula-judae",
+    "sourceUnitId": "objective-auricularia--01--auricularia-auricula-judae",
+    "sourceLabel": "Auricularia auricula-judae",
+    "category": "EDIBLE",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 136 — Auricularia",
+    "evidenceIds": [
+      "evidence-edibility-objective-auricularia--01--auricularia-auricula-judae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+    "sourceUnitId": "objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+    "sourceLabel": "Gyromitra esculenta",
+    "category": "POISONOUS",
+    "assessmentScope": "exactTaxon",
+    "scopeDefinition": null,
+    "conditionsSummary": null,
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 142 — Gyromitra (incluso Discina)",
+    "evidenceIds": [
+      "evidence-edibility-objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "assessmentId": "assessment-s2-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+    "sourceUnitId": "objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+    "sourceLabel": "Sarcosphaera coronaria s.l.",
+    "category": "DISCOURAGED",
+    "assessmentScope": "group",
+    "scopeDefinition": "Sarcosphaera coronaria s.l.",
+    "conditionsSummary": "S2 ne sconsiglia il consumo per criticità di sicurezza, inclusa la capacità di iperaccumulare arsenico.",
+    "treatmentCodes": [],
+    "partsAllowed": [],
+    "partsExcluded": [],
+    "specimenStage": "notSpecified",
+    "specialWarnings": [],
+    "sourceId": "source-s2-guida-commestibilita-2021",
+    "sourceLocation": "p. 150 — Sarcosphaera",
+    "evidenceIds": [
+      "evidence-edibility-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l"
+    ],
+    "reviewStatus": "normalized"
+  }
+]
