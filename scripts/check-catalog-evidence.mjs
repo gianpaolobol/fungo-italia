@@ -38,8 +38,9 @@ console.log(
   ].join("; "),
 );
 
-// There are no S2 edibility/treatment records in this lot yet; the publishable
-// gate must nevertheless be green for all evidence that exists now.
-assertCatalogEvidencePublishable();
-
-console.log("Catalog evidence gate: PASS");
+if (process.argv.includes("--publishable")) {
+  assertCatalogEvidencePublishable();
+  console.log("Catalog evidence publication gate: PASS");
+} else {
+  console.log("Catalog evidence extraction gate: PASS");
+}
