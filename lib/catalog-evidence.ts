@@ -9,6 +9,7 @@ export type CatalogSourceType =
 export type ClaimType =
   | "taxonomy"
   | "training"
+  | "morphology"
   | "edibility"
   | "treatment"
   | "ecology"
