@@ -3,6 +3,7 @@ name: Taxonomy Lotto 2 CI
 on:
   push:
     branches:
+      - main
       - feat/stable-learning-taxonomy-v1
   workflow_dispatch:
 
