@@ -4,9 +4,9 @@ import test from "node:test";
 import attestations from "../data/catalog/release-attestations.json" with { type: "json" };
 import { evaluateBetaReleaseGate } from "./beta-release-gate.ts";
 
-test("private beta gate blocks unsafe exposure and missing visual smoke, not hidden review backlog", () => {
+test("current private beta gate is ready while scientific completion remains open", () => {
   const gate = evaluateBetaReleaseGate();
-  assert.equal(gate.ready, false);
+  assert.equal(gate.ready, true, gate.blockers.join("\n"));
   assert.equal(gate.scientificReady, false);
   assert.equal(gate.checks.minimumCards, 148);
   assert.equal(gate.checks.genusCards, 66);
@@ -16,25 +16,34 @@ test("private beta gate blocks unsafe exposure and missing visual smoke, not hid
   assert.ok(gate.checks.reviewNeededClaims > 0);
   assert.equal(gate.checks.minimumPublicScientificLeaks, 0);
   assert.equal(gate.checks.genusPublicScientificLeaks, 0);
+  assert.equal(gate.checks.visualViewportSmoke, "verified");
   assert.equal(
     gate.blockers.some((item) => item.includes("Scientific review queue")),
     false,
   );
-  assert.match(gate.blockers.join("\n"), /visual viewport smoke test has not been verified/i);
   assert.match(gate.scientificBlockers.join("\n"), /Scientific review queue is not empty/);
   assert.match(gate.scientificBlockers.join("\n"), /Independent mycological review has not been verified/);
 });
 
-test("verified visual smoke can make private beta ready while scientific completion stays blocked", () => {
-  const pretendVerified = {
+test("pending visual smoke still blocks the private beta", () => {
+  const pending = {
     ...attestations,
     visualViewportSmoke: {
       ...attestations.visualViewportSmoke,
-      status: "verified" as const,
-      verifiedBy: "qa",
-      verifiedAt: "2026-09-22T00:00:00Z",
-      commitSha: "test",
+      status: "pending" as const,
+      verifiedBy: null,
+      verifiedAt: null,
+      commitSha: null,
     },
+  };
+  const gate = evaluateBetaReleaseGate(pending);
+  assert.equal(gate.ready, false);
+  assert.match(gate.blockers.join("\n"), /visual viewport smoke test has not been verified/i);
+});
+
+test("scientific completion cannot be inferred from private-beta readiness", () => {
+  const pretendIndependentReview = {
+    ...attestations,
     independentMycologicalReview: {
       ...attestations.independentMycologicalReview,
       status: "verified" as const,
@@ -42,7 +51,7 @@ test("verified visual smoke can make private beta ready while scientific complet
       verifiedAt: "2026-09-22T00:00:00Z",
     },
   };
-  const gate = evaluateBetaReleaseGate(pretendVerified);
+  const gate = evaluateBetaReleaseGate(pretendIndependentReview);
   assert.equal(gate.ready, true, gate.blockers.join("\n"));
   assert.equal(gate.scientificReady, false);
   assert.equal(
