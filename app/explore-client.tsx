@@ -39,7 +39,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
-import type { CatalogSearchDocument } from "@/lib/catalog-search";
+import type { PublicPublicCatalogSearchDocument } from "@/lib/catalog-search";
 import {
   defaultAtlasNavigationState,
   parseAtlasNavigationState,
@@ -97,7 +97,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const [atlasEdibility, setAtlasEdibility] = useState<AtlasNavigationState["edibility"]>("");
   const [atlasNavigation, setAtlasNavigation] = useState(defaultAtlasNavigationState);
   const [atlasUrlReady, setAtlasUrlReady] = useState(false);
-  const [atlasServerItems, setAtlasServerItems] = useState<CatalogSearchDocument[] | null>(null);
+  const [atlasServerItems, setAtlasServerItems] = useState<PublicPublicCatalogSearchDocument[] | null>(null);
   const [atlasServerTotal, setAtlasServerTotal] = useState(0);
   const [atlasServerStatus, setAtlasServerStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
@@ -201,7 +201,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
           return response.json() as Promise<{
             mode: "search";
             total: number;
-            items: CatalogSearchDocument[];
+            items: PublicPublicCatalogSearchDocument[];
           }>;
         })
         .then((payload) => {
@@ -263,7 +263,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     [isMobile],
   );
 
-  const openAtlasSearchItem = useCallback((item: CatalogSearchDocument) => {
+  const openAtlasSearchItem = useCallback((item: PublicCatalogSearchDocument) => {
     setAtlasNavigation((current) =>
       selectAtlasCard(current, {
         kind: item.kind,
@@ -664,8 +664,8 @@ function CatalogSearchResultCard({
   item,
   onOpen,
 }: {
-  item: CatalogSearchDocument;
-  onOpen: (item: CatalogSearchDocument) => void;
+  item: PublicCatalogSearchDocument;
+  onOpen: (item: PublicCatalogSearchDocument) => void;
 }) {
   const edibility = item.edibilityCategory
     ? {
