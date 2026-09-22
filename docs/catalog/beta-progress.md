@@ -139,24 +139,33 @@ Stato: **CODA SCIENTIFICA APERTA; BETA PRIVATA RESA SICURA**
 La revisione indipendente resta necessaria per rendere pubblici i contenuti scientifici nascosti, ma non blocca una beta privata che non li espone.
 
 ### Lotto 11 — Gate indipendente finale
-Stato: **IN CORSO**
+Stato: **CHIUSO PER BETA PRIVATA**
 - [x] copertura 148 + 66 + 214;
 - [x] nomenclatura: 0 conflict, 0 unresolved;
-- [x] policy pubblica: 0 leak scientifici non revisionati attesi;
+- [x] policy pubblica: 0 leak scientifici non revisionati;
 - [x] gate beta privata separato dal gate di completamento scientifico;
 - [x] comandi `pnpm beta:check` e `pnpm science:check`;
-- [ ] smoke reale Chromium sui 4 viewport;
-- [ ] gate beta privata verde sul commit esatto da pubblicare.
+- [x] smoke reale Chromium sui 4 viewport;
+- [x] gate beta privata verde sul release candidate.
 
-### Lotto 12 — Beta completa
-Stato: **PREPARAZIONE RELEASE**
-- merge soltanto dopo gate finale verde;
-- build esatta del commit verificato;
-- pubblicazione e controllo finale.
+La revisione micologica indipendente resta un percorso separato: blocca la pubblicazione dei claim scientifici nascosti, non la disponibilita della beta privata sicura.
+
+### Lotto 12 — Beta privata completa
+Stato: **COMPLETATO E MERGIATO SU MAIN**
+- [x] PR #1 aperta e verificata;
+- [x] CI completa verde;
+- [x] Visual Smoke verde a 320x568, 375x812, 768x1024 e 1440x900;
+- [x] merge su `main`;
+- [x] commit di merge: `d32884f0a964c2f27eb0cacac118eaf296937504`;
+- [x] CI e Visual Smoke configurati anche su `main`.
+
+Il catalogo scientificamente completo resta intenzionalmente distinto dalla beta privata: 616 claim `reviewNeeded` restano nel workflow editoriale e non sono esposti come fatti pubblici.
 
 ## Prossimo task eseguibile
 
-**8.5 — Integrazione UI reale della navigazione progressiva e gate finale Lotto 8.**
+**Track scientifico post-beta — revisione indipendente dei 295 batch deduplicati.**
+
+La beta privata non richiede ulteriori implementazioni strutturali. Il lavoro successivo riguarda la promozione controllata dei claim nascosti da `reviewNeeded` a `reviewed/approved` dopo verifica micologica indipendente.
 
 Checkpoint Lotto 7:
 - indice ricerca: 214 documenti (66 + 148);
@@ -219,3 +228,11 @@ La verifica visuale reale dei quattro viewport resta bloccante prima della pubbl
 Workflow `.github/workflows/visual-smoke.yml` usa Chromium reale con autenticazione QA ai viewport:
 `320x568`, `375x812`, `768x1024`, `1440x900`.
 Controlla overflow orizzontale, apertura Atlante e apertura scheda e produce screenshot artifact.
+
+
+### Release privata completata
+- PR: #1
+- merge commit: `d32884f0a964c2f27eb0cacac118eaf296937504`
+- ultimo release candidate verificato prima del merge: `54be658bd610420c7854778526626d75eed3ddc0`
+- gate privato: READY
+- completamento scientifico indipendente: ancora aperto e separato
