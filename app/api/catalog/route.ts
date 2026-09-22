@@ -7,12 +7,32 @@ import {
   type PublishedFieldChange,
 } from "@/lib/catalog-publication";
 import { catalogTaxa } from "@/lib/objective-catalog";
+import {
+  parseCatalogSearchParams,
+  searchCatalog,
+  toPublicCatalogSearchDocument,
+} from "@/lib/catalog-search";
+import { shouldUseCatalogServerSearch } from "@/lib/catalog-search-request";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request: Request) {
   const user = await getChatGPTUser();
   if (!user) return NextResponse.json({ error: "Registrazione richiesta." }, { status: 401 });
+
+  const params = new URL(request.url).searchParams;
+  if (shouldUseCatalogServerSearch(params)) {
+    const result = searchCatalog(parseCatalogSearchParams(params));
+    return NextResponse.json({
+      mode: "search",
+      status: "live",
+      ...result,
+      items: result.items.map(toPublicCatalogSearchDocument),
+    }, {
+      headers: { "Cache-Control": "private, max-age=60" },
+    });
+  }
+
   if (!env.DB) {
     return NextResponse.json({
       release: "beta-base",

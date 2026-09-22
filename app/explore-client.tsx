@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { AtlasCardDetail } from "@/components/atlas-card-detail";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,10 +34,22 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
+import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
+import type { PublicPublicCatalogSearchDocument } from "@/lib/catalog-search";
+import {
+  defaultAtlasNavigationState,
+  parseAtlasNavigationState,
+  returnToAtlasParent,
+  selectAtlasCard,
+  serializeAtlasNavigationState,
+  setAtlasDepth,
+  type AtlasNavigationState,
+} from "@/lib/atlas-navigation-state";
+import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
 import { cn } from "@/lib/utils";
 
@@ -79,8 +92,56 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState("Tutta Italia");
   const [atlasQuery, setAtlasQuery] = useState("");
+  const [atlasKind, setAtlasKind] = useState<"all" | "minimumTaxon" | "teachingGroup">("all");
+  const [atlasRank, setAtlasRank] = useState("");
+  const [atlasEdibility, setAtlasEdibility] = useState<AtlasNavigationState["edibility"]>("");
+  const [atlasNavigation, setAtlasNavigation] = useState(defaultAtlasNavigationState);
+  const [atlasUrlReady, setAtlasUrlReady] = useState(false);
+  const [atlasServerItems, setAtlasServerItems] = useState<PublicPublicCatalogSearchDocument[] | null>(null);
+  const [atlasServerTotal, setAtlasServerTotal] = useState(0);
+  const [atlasServerStatus, setAtlasServerStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    const parsed = parseAtlasNavigationState(
+      new URLSearchParams(window.location.search),
+    );
+    const timeout = window.setTimeout(() => {
+      setAtlasQuery(parsed.query);
+      setAtlasKind(parsed.kind);
+      setAtlasRank(parsed.rank);
+      setAtlasEdibility(parsed.edibility);
+      setAtlasNavigation(parsed);
+      setAtlasUrlReady(true);
+    }, 0);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (!atlasUrlReady) return;
+
+    const state: AtlasNavigationState = {
+      ...atlasNavigation,
+      query: atlasQuery,
+      kind: atlasKind,
+      rank: atlasRank,
+      edibility: atlasEdibility,
+    };
+    const queryString = serializeAtlasNavigationState(state).toString();
+    const href =
+      window.location.pathname +
+      (queryString ? `?${queryString}` : "") +
+      window.location.hash;
+    window.history.replaceState(window.history.state, "", href);
+  }, [
+    atlasEdibility,
+    atlasKind,
+    atlasNavigation,
+    atlasQuery,
+    atlasRank,
+    atlasUrlReady,
+  ]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -116,6 +177,49 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
       });
     return () => controller.abort();
   }, []);
+
+  // The structured atlas is the primary surface even with no active filters.
+  // The legacy catalog remains only as a degraded fallback if the search API fails.
+  const atlasServerSearchActive = true;
+
+  useEffect(() => {
+    if (!atlasServerSearchActive) return;
+
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => {
+      const params = new URLSearchParams();
+      if (atlasQuery.trim()) params.set("q", atlasQuery.trim());
+      if (atlasKind !== "all") params.set("kind", atlasKind);
+      if (atlasRank) params.set("rank", atlasRank);
+      if (atlasEdibility) params.set("edibility", atlasEdibility);
+      params.set("limit", "100");
+
+      setAtlasServerStatus("loading");
+      fetch(`/api/catalog?${params.toString()}`, { signal: controller.signal })
+        .then(async (response) => {
+          if (!response.ok) throw new Error("catalog search unavailable");
+          return response.json() as Promise<{
+            mode: "search";
+            total: number;
+            items: PublicPublicCatalogSearchDocument[];
+          }>;
+        })
+        .then((payload) => {
+          setAtlasServerItems(payload.items);
+          setAtlasServerTotal(payload.total);
+          setAtlasServerStatus("ready");
+        })
+        .catch((error: unknown) => {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+          setAtlasServerStatus("error");
+        });
+    }, 220);
+
+    return () => {
+      window.clearTimeout(timeout);
+      controller.abort();
+    };
+  }, [atlasEdibility, atlasKind, atlasQuery, atlasRank, atlasServerSearchActive]);
 
   const ranked = useMemo(
     () => rankAreas(areas, forecasts, { query, region }),
@@ -158,6 +262,34 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     },
     [isMobile],
   );
+
+  const openAtlasSearchItem = useCallback((item: PublicCatalogSearchDocument) => {
+    setAtlasNavigation((current) =>
+      selectAtlasCard(current, {
+        kind: item.kind,
+        id: item.id,
+      }),
+    );
+  }, []);
+
+  const changeAtlasDepth = useCallback((depth: AtlasNavigationState["depth"]) => {
+    setAtlasNavigation((current) => setAtlasDepth(current, depth));
+  }, []);
+
+  const openAtlasChild = useCallback((parentCardId: string, childCardId: string) => {
+    setAtlasNavigation((current) => {
+      const result = selectMinimumChildFromTeachingGroup(
+        current,
+        parentCardId,
+        childCardId,
+      );
+      return result.ok ? result.state : current;
+    });
+  }, []);
+
+  const backFromAtlasCard = useCallback(() => {
+    setAtlasNavigation((current) => returnToAtlasParent(current));
+  }, []);
 
   return (
     <main className="min-h-screen max-w-full overflow-x-hidden bg-[#f4f7f2] text-[#14261a]">
@@ -238,6 +370,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
               variant={mobileView === "map" ? "default" : "outline"}
               className={cn("h-11 rounded-xl", mobileView === "map" && "bg-[#174f2b]")}
               onClick={() => setMobileView("map")}
+              aria-pressed={mobileView === "map"}
             >
               <MapIcon />
               Mappa
@@ -247,6 +380,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
               variant={mobileView === "list" ? "default" : "outline"}
               className={cn("h-11 rounded-xl", mobileView === "list" && "bg-[#174f2b]")}
               onClick={() => setMobileView("list")}
+              aria-pressed={mobileView === "list"}
             >
               <List />
               Elenco
@@ -368,7 +502,15 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 </p>
               </div>
               <div className="flex w-full shrink-0 flex-col gap-2 md:w-80">
-                <div className="text-sm font-bold text-[#5d7362]">{visibleTaxa.length} di {catalogTaxa.length} schede</div>
+                <div className="text-sm font-bold text-[#5d7362]">
+                  {atlasServerSearchActive
+                    ? atlasServerStatus === "loading"
+                      ? "Ricerca in corso…"
+                      : atlasServerStatus === "error"
+                        ? "Ricerca server non disponibile"
+                        : `${atlasServerTotal} risultati verificati`
+                    : `${visibleTaxa.length} di ${catalogTaxa.length} schede legacy`}
+                </div>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f8173]" />
                   <Input
@@ -378,16 +520,97 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                     className="h-11 rounded-xl pl-10 text-base"
                   />
                 </div>
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-3 md:grid-cols-1">
+                  <NativeSelect
+                    value={atlasKind}
+                    onChange={(event) => setAtlasKind(event.target.value as "all" | "minimumTaxon" | "teachingGroup")}
+                    className="h-11 w-full rounded-xl"
+                    aria-label="Tipo di scheda"
+                  >
+                    <NativeSelectOption value="all">Tutte le schede</NativeSelectOption>
+                    <NativeSelectOption value="minimumTaxon">Taxa Minimo</NativeSelectOption>
+                    <NativeSelectOption value="teachingGroup">Generi e gruppi</NativeSelectOption>
+                  </NativeSelect>
+                  <NativeSelect
+                    value={atlasRank}
+                    onChange={(event) => setAtlasRank(event.target.value)}
+                    className="h-11 w-full rounded-xl"
+                    aria-label="Rango tassonomico"
+                  >
+                    <NativeSelectOption value="">Tutti i ranghi</NativeSelectOption>
+                    <NativeSelectOption value="species">Specie</NativeSelectOption>
+                    <NativeSelectOption value="speciesGroup">Gruppo di specie</NativeSelectOption>
+                    <NativeSelectOption value="section">Sezione</NativeSelectOption>
+                    <NativeSelectOption value="subsection">Sottosezione</NativeSelectOption>
+                    <NativeSelectOption value="subgenus">Sottogenere</NativeSelectOption>
+                    <NativeSelectOption value="genus">Genere</NativeSelectOption>
+                    <NativeSelectOption value="operationalGroup">Gruppo didattico</NativeSelectOption>
+                  </NativeSelect>
+                  <NativeSelect
+                    value={atlasEdibility}
+                    onChange={(event) => setAtlasEdibility(event.target.value)}
+                    className="h-11 w-full rounded-xl"
+                    aria-label="Categoria alimentare"
+                  >
+                    <NativeSelectOption value="">Tutte le categorie</NativeSelectOption>
+                    <NativeSelectOption value="EDIBLE">Commestibile</NativeSelectOption>
+                    <NativeSelectOption value="EDIBLE_AFTER_TREATMENT">Dopo trattamento</NativeSelectOption>
+                    <NativeSelectOption value="DISCOURAGED">Sconsigliato</NativeSelectOption>
+                    <NativeSelectOption value="NOT_EDIBLE">Non commestibile</NativeSelectOption>
+                    <NativeSelectOption value="POISONOUS">Tossico</NativeSelectOption>
+                    <NativeSelectOption value="NOT_ASSESSED">Non valutato</NativeSelectOption>
+                  </NativeSelect>
+                </div>
                 <Button asChild variant="outline" className="h-11 rounded-xl border-[#9fb6a2] text-[#315d3c]">
                   <Link href="/catalog/proposals/new">Proponi taxon o modifica</Link>
                 </Button>
               </div>
             </div>
-            <div className="mt-5 grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
-              {visibleTaxa.map((taxon) => (
-                <TaxonCard key={taxon.id} taxon={taxon} />
-              ))}
-            </div>
+            {atlasNavigation.selectedKind && atlasNavigation.selectedId ? (
+              <div className="mt-5 min-w-0">
+                <AtlasCardDetail
+                  selectedKind={atlasNavigation.selectedKind}
+                  selectedId={atlasNavigation.selectedId}
+                  depth={atlasNavigation.depth}
+                  hasReturnContext={Boolean(atlasNavigation.returnKind && atlasNavigation.returnId)}
+                  onDepthChange={changeAtlasDepth}
+                  onChildOpen={openAtlasChild}
+                  onBack={backFromAtlasCard}
+                />
+              </div>
+            ) : atlasServerSearchActive ? (
+              <div className="mt-5 min-w-0">
+                {atlasServerStatus === "error" && (
+                  <div className="mb-3 rounded-2xl border border-[#e3a6a0] bg-[#fff1ef] p-4 text-sm text-[#842d26]">
+                    La ricerca server non è disponibile: mostro il catalogo locale come fallback.
+                  </div>
+                )}
+                <div className="grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {atlasServerStatus !== "error" && atlasServerItems?.map((item) => (
+                    <CatalogSearchResultCard key={item.id} item={item} onOpen={openAtlasSearchItem} />
+                  ))}
+                  {atlasServerStatus === "error" && visibleTaxa.map((taxon) => (
+                    <TaxonCard key={taxon.id} taxon={taxon} />
+                  ))}
+                </div>
+                {atlasServerStatus === "ready" && atlasServerItems?.length === 0 && (
+                  <div className="mt-4 rounded-2xl border border-dashed border-[#cbd8c9] p-7 text-center text-[#617266]">
+                    Nessun risultato per i filtri selezionati.
+                  </div>
+                )}
+                {atlasServerStatus === "ready" && atlasServerTotal > (atlasServerItems?.length ?? 0) && (
+                  <p className="mt-3 text-sm font-semibold text-[#617266]">
+                    Mostrati i primi {atlasServerItems?.length ?? 0} risultati su {atlasServerTotal}.
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className="mt-5 grid min-w-0 gap-3 md:grid-cols-2 xl:grid-cols-3">
+                {visibleTaxa.map((taxon) => (
+                  <TaxonCard key={taxon.id} taxon={taxon} />
+                ))}
+              </div>
+            )}
           </section>
         </TabsContent>
 
@@ -434,6 +657,74 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         </Button>
       </div>
     </main>
+  );
+}
+
+function CatalogSearchResultCard({
+  item,
+  onOpen,
+}: {
+  item: PublicCatalogSearchDocument;
+  onOpen: (item: PublicCatalogSearchDocument) => void;
+}) {
+  const edibility = item.edibilityCategory
+    ? {
+        EDIBLE: "Commestibile",
+        EDIBLE_AFTER_TREATMENT: "Dopo trattamento",
+        DISCOURAGED: "Sconsigliato",
+        NO_FOOD_VALUE: "Privo di valore alimentare",
+        NOT_EDIBLE: "Non commestibile",
+        POISONOUS: "Tossico",
+        NOT_ASSESSED: "Non valutato",
+      }[item.edibilityCategory]
+    : null;
+
+  return (
+    <article className="min-w-0 rounded-2xl border border-[#dde6db] bg-[#fbfcfa] p-4">
+      <div className="flex min-w-0 items-start justify-between gap-2">
+        <div className="min-w-0">
+          <p className="text-xs font-black uppercase tracking-wide text-[#66806d]">
+            {item.kind === "teachingGroup" ? "Genere / gruppo didattico" : "Taxon Minimo"}
+          </p>
+          <h2 className="mt-1 break-words text-lg font-black">{item.title}</h2>
+          {item.sourceLabel !== item.title && (
+            <p className="mt-1 break-words text-sm text-[#5f7064]">
+              S1: {item.sourceLabel}
+            </p>
+          )}
+        </div>
+        <span className="shrink-0 rounded-full bg-[#eaf1e8] px-2.5 py-1 text-xs font-bold text-[#315d3c]">
+          {item.rank}
+        </span>
+      </div>
+      {item.currentNames.length > 0 && (
+        <div className="mt-3">
+          <p className="text-xs font-black uppercase tracking-wide text-[#6d7e72]">Nomi correnti</p>
+          <p className="mt-1 break-words font-serif italic text-[#31553b]">
+            {item.currentNames.join(" · ")}
+          </p>
+        </div>
+      )}
+      <div className="mt-3 flex flex-wrap gap-1.5">
+        {item.genera.slice(0, 5).map((genus) => (
+          <span key={genus} className="rounded-full bg-white px-2 py-1 text-xs font-semibold text-[#4e6655] ring-1 ring-[#dce5da]">
+            {genus}
+          </span>
+        ))}
+      </div>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-[#617266]">
+        <span>{edibility ?? "Valutazione riferita al gruppo"}</span>
+        <span>{item.reviewStatus === "reviewNeeded" ? "In revisione" : item.reviewStatus}</span>
+      </div>
+      <Button
+        type="button"
+        variant="outline"
+        onClick={() => onOpen(item)}
+        className="mt-4 h-11 w-full rounded-xl border-[#b9cbb8] text-[#315d3c]"
+      >
+        Apri scheda
+      </Button>
+    </article>
   );
 }
 
@@ -647,7 +938,7 @@ function AreaDetails({
 }
 
 function TaxonCard({ taxon }: { taxon: AtlasTaxon }) {
-  const [images, setImages] = useState<Array<{ id: string; imageUrl: string; sourceUrl: string; author: string; license: string; licenseUrl: string; caption: string }> | null>(null);
+  const [images, setImages] = useState<Array<{ id: string; imageUrl: string; sourceUrl: string; author: string; license: string; licenseUrl: string; caption: string; verified: boolean }> | null>(null);
   const [galleryLoading, setGalleryLoading] = useState(false);
   const loadGallery = () => {
     if (images !== null || galleryLoading) return;
@@ -697,12 +988,18 @@ function TaxonCard({ taxon }: { taxon: AtlasTaxon }) {
           <p><strong>Caratteri:</strong> {taxon.diagnosticCharacters.length ? taxon.diagnosticCharacters.join("; ") : "Scheda diagnostica in revisione editoriale."}</p>
           <p><strong>Odore:</strong> {taxon.odor ?? "Non documentato come carattere distintivo nelle fonti di base."}</p>
           <p><strong>Habitat e associazioni:</strong> {taxon.ecology.length ? taxon.ecology.join("; ") : "Da integrare con fonte micologica verificata."}</p>
-          <Button type="button" variant="outline" className="h-10 w-full rounded-xl" onClick={loadGallery}>{galleryLoading ? "Ricerca immagini…" : "Apri galleria con licenze"}</Button>
+          <Button type="button" variant="outline" className="h-11 w-full rounded-xl" onClick={loadGallery}>{galleryLoading ? "Ricerca immagini…" : "Apri galleria con licenze"}</Button>
           {images !== null && images.length === 0 && <p className="rounded-xl bg-[#f2f6f0] p-3 text-center font-bold">Galleria in preparazione</p>}
-          {images && images.length > 0 && <div className="grid grid-cols-2 gap-2">{images.map((image) => <a key={image.id} href={image.sourceUrl} target="_blank" rel="noreferrer" className="min-w-0 overflow-hidden rounded-xl border bg-white">
-            {/* eslint-disable-next-line @next/next/no-img-element */}<img src={image.imageUrl} alt={image.caption} className="aspect-square w-full object-cover" loading="lazy" />
-            <span className="block break-words p-2 text-[11px]">{image.author} · {image.license}</span>
-          </a>)}</div>}
+          {images && images.length > 0 && <div className="grid grid-cols-2 gap-2">{images.map((image) => <div key={image.id} className="min-w-0 overflow-hidden rounded-xl border bg-white">
+            <a href={image.sourceUrl} target="_blank" rel="noreferrer" className="block">
+              {/* eslint-disable-next-line @next/next/no-img-element */}<img src={image.imageUrl} alt={image.caption} className="aspect-square w-full object-cover" loading="lazy" />
+            </a>
+            <div className="break-words p-2 text-[11px]">
+              <p>{image.author}</p>
+              <a href={image.licenseUrl} target="_blank" rel="noreferrer" className="font-bold underline underline-offset-2">{image.license}</a>
+              {image.verified && <span className="ml-1 text-[#315d3c]">· verificata</span>}
+            </div>
+          </div>)}</div>}
         </div>
       </details>
       {taxon.objectiveSummary && (

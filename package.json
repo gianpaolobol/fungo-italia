@@ -12,7 +12,9 @@
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "test": "node --experimental-strip-types --test lib/*.test.ts",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern public/maplibre-gl-worker.mjs --ignore-pattern public/maplibre-gl-shared.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "beta:check": "node --experimental-strip-types scripts/check-beta-release.mjs --enforce",
+    "science:check": "node --experimental-strip-types scripts/check-beta-release.mjs --enforce-scientific"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

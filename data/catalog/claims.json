@@ -1,0 +1,1778 @@
+[
+  {
+    "claimId": "claim-training-objective-agaricus--01--agaricus-sez-xanthodermatei",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--01--agaricus-sez-xanthodermatei",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus sez. Xanthodermatei\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--01--agaricus-sez-xanthodermatei"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agaricus--02--agaricus-bresadolanus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--02--agaricus-bresadolanus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus bresadolanus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--02--agaricus-bresadolanus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agaricus--03--agaricus-sez-arvenses",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--03--agaricus-sez-arvenses",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus sez. Arvenses\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--03--agaricus-sez-arvenses"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agaricus--04--agaricus-sez-sanguinolenti",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--04--agaricus-sez-sanguinolenti",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus sez. Sanguinolenti\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--04--agaricus-sez-sanguinolenti"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agaricus--05--agaricus-campestris",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--05--agaricus-campestris",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus campestris\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--05--agaricus-campestris"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agaricus--06--agaricus-bitorquis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--06--agaricus-bitorquis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus bitorquis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--06--agaricus-bitorquis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agaricus--07--agaricus-bisporus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agaricus--07--agaricus-bisporus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Agaricus bisporus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agaricus--07--agaricus-bisporus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cyclocybe cylindracea\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--01--amanita-phalloides",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--01--amanita-phalloides",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita phalloides\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--01--amanita-phalloides"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--02--amanita-verna-inclusa-a-vidua",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita verna (inclusa A. vidua)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--02--amanita-verna-inclusa-a-vidua"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--03--amanita-virosa",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--03--amanita-virosa",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita virosa\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--03--amanita-virosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--04--amanita-proxima",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--04--amanita-proxima",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita proxima\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--04--amanita-proxima"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--05--amanita-ovoidea",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--05--amanita-ovoidea",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita ovoidea\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--05--amanita-ovoidea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--06--amanita-pantherina",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--06--amanita-pantherina",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita pantherina\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--06--amanita-pantherina"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--07--amanita-muscaria",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--07--amanita-muscaria",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita muscaria\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--07--amanita-muscaria"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--08--amanita-caesarea",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--08--amanita-caesarea",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita caesarea\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--08--amanita-caesarea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--09--amanita-gemmata",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--09--amanita-gemmata",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita gemmata\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--09--amanita-gemmata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--10--amanita-citrina",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--10--amanita-citrina",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita citrina\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--10--amanita-citrina"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--11--amanita-porphyria",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--11--amanita-porphyria",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita porphyria\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--11--amanita-porphyria"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita excelsa s.l. (incl. A. spissa, A. franchetii)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--13--amanita-strobiliformis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--13--amanita-strobiliformis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita strobiliformis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--13--amanita-strobiliformis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--14--amanita-vittadinii",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--14--amanita-vittadinii",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita vittadinii\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--14--amanita-vittadinii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--15--amanita-rubescens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--15--amanita-rubescens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita rubescens\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--15--amanita-rubescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-amanita--16--amanita-sez-vaginatae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-amanita--16--amanita-sez-vaginatae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Amanita sez. Vaginatae\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-amanita--16--amanita-sez-vaginatae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-calocybe--01--calocybe-gambosa",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-calocybe--01--calocybe-gambosa",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Calocybe gambosa\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-calocybe--01--calocybe-gambosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitocybe cerussata (= C. phyllophila)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitocybe dealbata (= C. rivulosa)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitocybe nebularis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitocybe geotropa\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitocybe amoenolens\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitocybe gibba s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-clitopilus--01--clitopilus-prunulus-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-clitopilus--01--clitopilus-prunulus-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Clitopilus prunulus s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-clitopilus--01--clitopilus-prunulus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Collybia maculata\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Collybia fusipes\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Marasmius oreades\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Coprinus atramentarius s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Coprinus comatus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--01--cortinarius-orellanus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--01--cortinarius-orellanus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius orellanus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--01--cortinarius-orellanus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius orellanoides (= C. rubellus, C. speciosissimus)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius sottogenere Dermocybe\",\"requiredResolution\":\"subgenus\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--03--cortinarius-sottogenere-dermocybe"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--04--cortinarius-praestans",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--04--cortinarius-praestans",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius praestans\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--04--cortinarius-praestans"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--05--cortinarius-cumatilis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--05--cortinarius-cumatilis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius cumatilis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--05--cortinarius-cumatilis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--06--cortinarius-variiformis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--06--cortinarius-variiformis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius variiformis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--06--cortinarius-variiformis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cortinarius caperatus (= Rozites caperatus)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-entoloma--01--entoloma-sinuatum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-entoloma--01--entoloma-sinuatum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Entoloma sinuatum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-entoloma--01--entoloma-sinuatum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-entoloma--02--entoloma-rhodopolium-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-entoloma--02--entoloma-rhodopolium-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Entoloma rhodopolium s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-entoloma--02--entoloma-rhodopolium-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-entoloma--03--entoloma-hirtipes",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-entoloma--03--entoloma-hirtipes",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Entoloma hirtipes\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-entoloma--03--entoloma-hirtipes"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-entoloma--04--entoloma-vernum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-entoloma--04--entoloma-vernum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Entoloma vernum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-entoloma--04--entoloma-vernum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-entoloma--05--entoloma-clypeatum-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-entoloma--05--entoloma-clypeatum-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Entoloma clypeatum s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-entoloma--05--entoloma-clypeatum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-entoloma--06--entoloma-saundersii",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-entoloma--06--entoloma-saundersii",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Entoloma saundersii\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-entoloma--06--entoloma-saundersii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-flammulina--01--flammulina-velutipes-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-flammulina--01--flammulina-velutipes-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Flammulina velutipes s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-flammulina--01--flammulina-velutipes-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-galerina--01--galerina-marginata-group",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-galerina--01--galerina-marginata-group",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Galerina marginata group\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-galerina--01--galerina-marginata-group"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hygrocybe conica s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hygrocybe punicea\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hygrophorus marzuolus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hygrophorus russula\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hygrophorus penarioides\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hypholoma--01--hypholoma-fasciculare",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hypholoma--01--hypholoma-fasciculare",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hypholoma fasciculare\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-hypholoma--01--hypholoma-fasciculare"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hypholoma--02--hypholoma-lateritium",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hypholoma--02--hypholoma-lateritium",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hypholoma lateritium\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hypholoma--02--hypholoma-lateritium"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lentinula--01--lentinula-edodes",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lentinula--01--lentinula-edodes",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lentinula edodes\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lentinula--01--lentinula-edodes"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lepiota subincarnata (= L. josserandii)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lepiota brunneoincarnata\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lepiota cristata\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lepiota elaiophylla\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Chlorophyllum molybdites\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Echinoderma asperum s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Leucoagaricus leucothites s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Chlorophyllum rhacodes s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Macrolepiota procera s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepista--01--lepista-nuda-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepista--01--lepista-nuda-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lepista nuda s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepista--01--lepista-nuda-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lepista--02--lepista-flaccida-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lepista--02--lepista-flaccida-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lepista flaccida s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lepista--02--lepista-flaccida-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Leucopaxillus giganteus s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Leucopaxillus gentianeus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lyophyllum decastes s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lyophyllum specie annerenti\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lyophyllum connatum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-mycena--01--mycena-sez-purae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-mycena--01--mycena-sez-purae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Mycena sez. Purae\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-mycena--01--mycena-sez-purae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-omphalotus--01--omphalotus-olearius",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-omphalotus--01--omphalotus-olearius",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Omphalotus olearius\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-omphalotus--01--omphalotus-olearius"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Panaeolus cyanescens\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Kuehneromyces mutabilis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Pleurotus eryngii s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Pleurotus ostreatus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Pleurotus cornucopiae (incluso P. citrinopileatus)\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Stropharia rugosoannulata\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--01--tricholoma-pardinum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--01--tricholoma-pardinum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma pardinum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--01--tricholoma-pardinum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--02--tricholoma-filamentosum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--02--tricholoma-filamentosum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma filamentosum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--02--tricholoma-filamentosum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--03--tricholoma-josserandii",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--03--tricholoma-josserandii",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma josserandii\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--03--tricholoma-josserandii"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--04--tricholoma-equestre",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--04--tricholoma-equestre",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma equestre\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--04--tricholoma-equestre"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--05--tricholoma-portentosum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--05--tricholoma-portentosum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma portentosum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--05--tricholoma-portentosum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--06--tricholoma-terreum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--06--tricholoma-terreum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma terreum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--06--tricholoma-terreum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--07--tricholoma-saponaceum-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma saponaceum s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--07--tricholoma-saponaceum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--08--tricholoma-columbetta",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--08--tricholoma-columbetta",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma columbetta\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--08--tricholoma-columbetta"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--12--tricholoma-sejunctum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--12--tricholoma-sejunctum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma sejunctum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--12--tricholoma-sejunctum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--13--tricholoma-sulphureum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--13--tricholoma-sulphureum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma sulphureum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--13--tricholoma-sulphureum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma sez. Genuina (= gruppo Albobrunnei)\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tricholoma--15--tricholoma-acerbum-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tricholoma--15--tricholoma-acerbum-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tricholoma acerbum s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tricholoma--15--tricholoma-acerbum-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Volvopluteus gloiocephalus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-volvariella-volvopluteus--02--volvariella-volvacea",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-volvariella-volvopluteus--02--volvariella-volvacea",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Volvariella volvacea\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-volvariella-volvopluteus--02--volvariella-volvacea"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lactarius sez. Deliciosi\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lactarius porniniae\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lactarius volemus s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Lactarius tesquorum\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-russula--01--russula-foetentinae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-russula--01--russula-foetentinae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Russula Foetentinae\",\"requiredResolution\":\"subsection\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-russula--01--russula-foetentinae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-russula--02--russula-compactae-nigricantinae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-russula--02--russula-compactae-nigricantinae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Russula Compactae Nigricantinae\",\"requiredResolution\":\"subsection\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-russula--02--russula-compactae-nigricantinae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Russula Compactae Lactarioides (= gruppo R. delica)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-s-str--01--boletus-edulis-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-s-str--01--boletus-edulis-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus edulis s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-s-str--01--boletus-edulis-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus sez. Luridi\",\"requiredResolution\":\"section\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus (Rubroboletus) satanas\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus pulchrotinctus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus (Neoboletus) erythropus s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus (Suillellus) luridus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Boletus queletii e specie vicine/intermedie\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-caloboletus--01--caloboletus-radicans",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-caloboletus--01--caloboletus-radicans",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Caloboletus radicans\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-caloboletus--01--caloboletus-radicans"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-caloboletus--02--caloboletus-calopus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-caloboletus--02--caloboletus-calopus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Caloboletus calopus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-caloboletus--02--caloboletus-calopus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-gyroporus--01--gyroporus-cyanescens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-gyroporus--01--gyroporus-cyanescens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Gyroporus cyanescens\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-gyroporus--01--gyroporus-cyanescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-gyroporus--02--gyroporus-castaneus-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-gyroporus--02--gyroporus-castaneus-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Gyroporus castaneus s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-gyroporus--02--gyroporus-castaneus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hygrophoropsis aurantiaca\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-imleria--01--imleria-badia",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-imleria--01--imleria-badia",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Imleria badia\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-imleria--01--imleria-badia"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-suillus-incluso-boletinus--01--suillus-luteus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-suillus-incluso-boletinus--01--suillus-luteus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Suillus luteus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-suillus-incluso-boletinus--01--suillus-luteus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-suillus-incluso-boletinus--02--suillus-granulatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Suillus granulatus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-suillus-incluso-boletinus--02--suillus-granulatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-tylopilus--01--tylopilus-felleus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-tylopilus--01--tylopilus-felleus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Tylopilus felleus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-tylopilus--01--tylopilus-felleus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-cantharellus--01--cantharellus-cibarius-complex",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-cantharellus--01--cantharellus-cibarius-complex",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Cantharellus cibarius complex\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":true}",
+    "evidenceIds": [
+      "evidence-training-objective-cantharellus--01--cantharellus-cibarius-complex"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-craterellus--01--craterellus-lutescens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-craterellus--01--craterellus-lutescens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Craterellus lutescens\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-craterellus--01--craterellus-lutescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-craterellus--02--craterellus-tubaeformis",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-craterellus--02--craterellus-tubaeformis",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Craterellus tubaeformis\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-craterellus--02--craterellus-tubaeformis"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-craterellus--03--craterellus-cornucopioides",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-craterellus--03--craterellus-cornucopioides",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Craterellus cornucopioides\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-craterellus--03--craterellus-cornucopioides"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-gomphus--01--gomphus-clavatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-gomphus--01--gomphus-clavatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Gomphus clavatus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-gomphus--01--gomphus-clavatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hydnaceae-s-l--02--hericium-spp",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hydnaceae-s-l--02--hericium-spp",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hericium spp.\",\"requiredResolution\":\"genus\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hydnaceae-s-l--02--hericium-spp"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Sarcodon imbricatus s.l. (incl. S. squamosus)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Hapalopilus rutilans\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--01--hapalopilus-rutilans"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Laetiporus sulphureus s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--03--albatrellus-confluens",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--03--albatrellus-confluens",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Albatrellus confluens\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--03--albatrellus-confluens"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Scutiger pes-caprae\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--05--scutiger-pes-caprae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--06--fistulina-hepatica",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--06--fistulina-hepatica",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Fistulina hepatica\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--06--fistulina-hepatica"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--07--grifola-frondosa",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--07--grifola-frondosa",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Grifola frondosa\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--07--grifola-frondosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--08--polyporus-umbellatus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--08--polyporus-umbellatus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Polyporus umbellatus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--08--polyporus-umbellatus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--09--meripilus-giganteus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--09--meripilus-giganteus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Meripilus giganteus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--09--meripilus-giganteus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-polyporaceae-s-l--10--polyporus-squamosus",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-polyporaceae-s-l--10--polyporus-squamosus",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Polyporus squamosus\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-polyporaceae-s-l--10--polyporus-squamosus"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-ramaria--01--ramaria-formosa",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-ramaria--01--ramaria-formosa",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Ramaria formosa\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-ramaria--01--ramaria-formosa"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-ramaria--02--ramaria-pallida",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-ramaria--02--ramaria-pallida",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Ramaria pallida\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-ramaria--02--ramaria-pallida"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-ramaria--03--ramaria-botrytis-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-ramaria--03--ramaria-botrytis-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Ramaria botrytis s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-ramaria--03--ramaria-botrytis-s-l"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-auricularia--01--auricularia-auricula-judae",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-auricularia--01--auricularia-auricula-judae",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Auricularia auricula-judae\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-auricularia--01--auricularia-auricula-judae"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Gyromitra esculenta\",\"requiredResolution\":\"species\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
+    ],
+    "reviewStatus": "normalized"
+  },
+  {
+    "claimId": "claim-training-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+    "subjectType": "learningUnit",
+    "subjectId": "objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+    "fieldPath": "training.minimum",
+    "claimType": "training",
+    "valueJson": "{\"level\":\"minimum\",\"sourceLabel\":\"Sarcosphaera coronaria s.l.\",\"requiredResolution\":\"speciesGroup\",\"deepMorphologyRequired\":false}",
+    "evidenceIds": [
+      "evidence-training-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l"
+    ],
+    "reviewStatus": "normalized"
+  }
+]

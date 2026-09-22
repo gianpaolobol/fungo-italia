@@ -160,10 +160,11 @@ export function ForecastMap({
     map.setFilter("forecast-area-selected", ["==", ["get", "id"], selectedId]);
     const area = areas.find((entry) => entry.id === selectedId);
     if (area) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       map.easeTo({
         center: [area.center[1], area.center[0]],
         zoom: Math.max(map.getZoom(), 7),
-        duration: 500,
+        duration: reduceMotion ? 0 : 500,
       });
     }
   }, [areas, selectedId]);
@@ -176,7 +177,11 @@ export function ForecastMap({
     >
       <div ref={containerRef} className="absolute inset-0" />
       {status === "loading" && (
-        <div className="absolute inset-0 grid place-items-center bg-[#edf3eb]">
+        <div
+          className="absolute inset-0 grid place-items-center bg-[#edf3eb]"
+          role="status"
+          aria-live="polite"
+        >
           <div className="flex items-center gap-2 rounded-xl bg-white px-4 py-3 font-bold text-[#315d3c] shadow">
             <LoaderCircle className="size-5 animate-spin" />
             Caricamento mappa

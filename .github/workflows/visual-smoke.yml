@@ -1,0 +1,58 @@
+name: Visual Smoke
+
+on:
+  push:
+    branches:
+      - feat/stable-learning-taxonomy-v1
+    paths:
+      - ".github/workflows/visual-smoke.yml"
+      - "scripts/visual-smoke.spec.mjs"
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm add -D --lockfile=false @playwright/test@1.55.0
+      - run: pnpm exec playwright install --with-deps chromium
+      - run: pnpm build
+      - name: Start built beta
+        run: |
+          pnpm start > /tmp/fungo-beta.log 2>&1 &
+          echo $! > /tmp/fungo-beta.pid
+          for i in $(seq 1 60); do
+            if curl -sS -o /dev/null http://127.0.0.1:8787/; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/fungo-beta.log
+          exit 1
+      - run: pnpm exec playwright test scripts/visual-smoke.spec.mjs --reporter=line
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-smoke-${{ github.sha }}
+          path: |
+            artifacts/visual-smoke/
+            test-results/
+          if-no-files-found: ignore
+      - if: failure()
+        run: cat /tmp/fungo-beta.log || true
