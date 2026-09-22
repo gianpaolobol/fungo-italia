@@ -1,16 +1,16 @@
 {
   "version": 1,
   "visualViewportSmoke": {
-    "status": "pending",
+    "status": "verified",
     "requiredViewports": [
       "320x568",
       "375x812",
       "768x1024",
       "1440x900"
     ],
-    "verifiedBy": null,
-    "verifiedAt": null,
-    "commitSha": null
+    "verifiedBy": "GitHub Actions / Playwright",
+    "verifiedAt": "2026-09-22T00:17:13Z",
+    "commitSha": "48808e98a73a7c87b14015e31d6e32c8004617fb"
   },
   "independentMycologicalReview": {
     "status": "pending",
