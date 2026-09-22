@@ -127,23 +127,29 @@ Stato: **GATE AUTOMATIZZATO CHIUSO; SMOKE VISUALE LIVE DEFERITO AL LOTTO 12**
 Gate automatizzato: 184 test, 184 pass, 0 fail; lint 0 errori; build riuscita.
 
 ### Lotto 10 — Revisione micologica
-Stato: **IN AVVIO**
-- revisione sistematica dei claim `reviewNeeded`;
-- priorita a tossicita, confusioni mortali, commestibilita e morfologia discriminante;
-- nessuna promozione automatica ad `approved`.
+Stato: **CODA SCIENTIFICA APERTA; BETA PRIVATA RESA SICURA**
+- coda: 616 claim `reviewNeeded`, deduplicati in 295 batch;
+- 98 batch critici, 137 high, 60 normal;
+- nessuna promozione automatica ad `approved`;
+- commestibilita, confusioni e descrizioni non revisionate sono escluse dalla proiezione pubblica;
+- anche le sintesi genere/gruppo `reviewNeeded` sono ora nascoste;
+- l'indice di ricerca pubblico non usa piu morfologia/ecologia non revisionata;
+- il campo interno `searchText` non viene piu restituito dall'API.
+
+La revisione indipendente resta necessaria per rendere pubblici i contenuti scientifici nascosti, ma non blocca una beta privata che non li espone.
 
 ### Lotto 11 — Gate indipendente finale
-Stato: **NON AVVIATO**
-- copertura;
-- fonti;
-- licenze;
-- nomenclatura;
-- contenuti;
-- test/lint/build;
-- audit dei conflitti.
+Stato: **IN CORSO**
+- [x] copertura 148 + 66 + 214;
+- [x] nomenclatura: 0 conflict, 0 unresolved;
+- [x] policy pubblica: 0 leak scientifici non revisionati attesi;
+- [x] gate beta privata separato dal gate di completamento scientifico;
+- [x] comandi `pnpm beta:check` e `pnpm science:check`;
+- [ ] smoke reale Chromium sui 4 viewport;
+- [ ] gate beta privata verde sul commit esatto da pubblicare.
 
 ### Lotto 12 — Beta completa
-Stato: **NON AVVIATO**
+Stato: **PREPARAZIONE RELEASE**
 - merge soltanto dopo gate finale verde;
 - build esatta del commit verificato;
 - pubblicazione e controllo finale.
@@ -199,3 +205,17 @@ Il catalogo legacy resta soltanto come fallback degradato se l'API strutturata n
 - Index Fungorum 134/134;
 - build verde.
 La verifica visuale reale dei quattro viewport resta bloccante prima della pubblicazione, non viene considerata implicitamente eseguita.
+
+
+### Checkpoint sicurezza scientifica beta privata
+- claim ancora in revisione: mantenuti nel repository ma non pubblicati come fatti;
+- schede Minimo: morfologia/ecologia visibili solo da `reviewed`, sicurezza solo da `approved`;
+- schede genere/gruppo: contenuto editoriale nascosto finche non `reviewed`;
+- API search: nessun `searchText` interno esposto;
+- ricerca pubblica: non indicizza descrizioni scientifiche `reviewNeeded`;
+- gate finale distingue `ready` (beta privata sicura) da `scientificReady` (catalogo scientificamente revisionato).
+
+### Smoke visuale automatizzato
+Workflow `.github/workflows/visual-smoke.yml` usa Chromium reale con autenticazione QA ai viewport:
+`320x568`, `375x812`, `768x1024`, `1440x900`.
+Controlla overflow orizzontale, apertura Atlante e apertura scheda e produce screenshot artifact.
