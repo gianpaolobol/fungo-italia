@@ -7,7 +7,11 @@ import {
 import { minimumNomenclatureMappings } from "./minimum-nomenclature.ts";
 import type { EdibilityCategory } from "./minimum-card.ts";
 import type { EvidenceReviewStatus } from "./catalog-evidence.ts";
-import { publicEdibilityCategory } from "./public-scientific-policy.ts";
+import {
+  publicDescriptiveCardContent,
+  publicEdibilityCategory,
+} from "./public-scientific-policy.ts";
+import { publicGenusLayer } from "./public-genus-policy.ts";
 
 export type CatalogSearchKind = "minimumTaxon" | "teachingGroup";
 
@@ -25,6 +29,8 @@ export interface CatalogSearchDocument {
   parentTeachingCardId: string | null;
   searchText: string;
 }
+
+export type PublicCatalogSearchDocument = Omit<CatalogSearchDocument, "searchText">;
 
 export interface CatalogSearchFilters {
   kind?: CatalogSearchKind | "all";
@@ -113,6 +119,7 @@ const minimumDocuments: CatalogSearchDocument[] = minimumCards.map((card) => {
 
   const currentNames = [...mapping.currentAcceptedNames];
   const sourceNames = [card.sourceLabel, mapping.preferredDisplayName];
+  const descriptive = publicDescriptiveCardContent(card);
 
   return {
     id: card.cardId,
@@ -132,39 +139,48 @@ const minimumDocuments: CatalogSearchDocument[] = minimumCards.map((card) => {
       ...currentNames,
       ...sourceNames,
       ...genera,
-      ...card.terminology,
-      ...card.essentialMorphology,
-      card.ecologySummary ?? "",
+      ...descriptive.terminology,
+      ...descriptive.essentialMorphology,
+      descriptive.ecologySummary ?? "",
     ]),
   };
 });
 
-const genusDocuments: CatalogSearchDocument[] = minimumGenusCards.map((card) => ({
-  id: card.cardId,
-  kind: "teachingGroup",
-  title: card.displayTitle,
-  sourceLabel: card.sourceLabel,
-  rank: card.sourceRank,
-  currentNames: [],
-  sourceNames: [...card.sourceGenera],
-  genera: [...new Set([...card.sourceGenera, ...card.currentGenera])].sort(
-    (a, b) => a.localeCompare(b, "it"),
-  ),
-  edibilityCategory: null,
-  reviewStatus: card.reviewStatus,
-  parentTeachingCardId: null,
-  searchText: makeSearchText([
-    card.displayTitle,
-    card.sourceLabel,
-    ...card.sourceGenera,
-    ...card.currentGenera,
-    card.essential.objectiveSummary,
-    ...card.essential.terminology,
-    ...card.essential.macroCharacters,
-    card.deepening.objectiveSummary ?? "",
-    card.specialist.objectiveSummary ?? "",
-  ]),
-}));
+const genusDocuments: CatalogSearchDocument[] = minimumGenusCards.map((card) => {
+  const essential = publicGenusLayer(card, "essential");
+  const deepening = publicGenusLayer(card, "deepening");
+  const specialist = publicGenusLayer(card, "specialist");
+
+  return {
+    id: card.cardId,
+    kind: "teachingGroup",
+    title: card.displayTitle,
+    sourceLabel: card.sourceLabel,
+    rank: card.sourceRank,
+    currentNames: [],
+    sourceNames: [...card.sourceGenera],
+    genera: [...new Set([...card.sourceGenera, ...card.currentGenera])].sort(
+      (a, b) => a.localeCompare(b, "it"),
+    ),
+    edibilityCategory: null,
+    reviewStatus: card.reviewStatus,
+    parentTeachingCardId: null,
+    searchText: makeSearchText([
+      card.displayTitle,
+      card.sourceLabel,
+      ...card.sourceGenera,
+      ...card.currentGenera,
+      essential.objectiveSummary ?? "",
+      ...essential.bullets,
+      ...essential.taxonomyNotes,
+      deepening.objectiveSummary ?? "",
+      ...deepening.bullets,
+      ...deepening.taxonomyNotes,
+      specialist.objectiveSummary ?? "",
+      ...specialist.bullets,
+    ]),
+  };
+});
 
 export const catalogSearchDocuments: CatalogSearchDocument[] = [
   ...genusDocuments,
@@ -251,4 +267,11 @@ export function parseCatalogSearchParams(params: URLSearchParams): CatalogSearch
       edibilityCategory: edibility as EdibilityCategory | null,
     },
   };
+}
+
+export function toPublicCatalogSearchDocument(
+  document: CatalogSearchDocument,
+): PublicCatalogSearchDocument {
+  const { searchText: _searchText, ...publicDocument } = document;
+  return publicDocument;
 }
