@@ -5,6 +5,7 @@ import {
   catalogSearchDocuments,
   parseCatalogSearchParams,
   searchCatalog,
+  toPublicCatalogSearchDocument,
 } from "./catalog-search.ts";
 
 test("search corpus contains 66 teaching cards plus 148 minimum cards", () => {
@@ -159,4 +160,23 @@ test("URL query parsing is server-compatible and tolerant of bad pagination", ()
   const bad = parseCatalogSearchParams(new URLSearchParams("limit=nope&offset=nope"));
   assert.equal(bad.limit, 30);
   assert.equal(bad.offset, 0);
+});
+
+
+test("public search payload strips the internal search index text", () => {
+  const internal = catalogSearchDocuments[0];
+  assert.ok(internal.searchText.length > 0);
+  const publicItem = toPublicCatalogSearchDocument(internal);
+  assert.equal("searchText" in publicItem, false);
+});
+
+test("unreviewed descriptive terms do not become public search signals", () => {
+  const result = searchCatalog({
+    query: "velo universale residui volvari",
+    limit: 100,
+  });
+  assert.equal(
+    result.items.some((entry) => entry.sourceLabel === "Amanita phalloides"),
+    false,
+  );
 });
