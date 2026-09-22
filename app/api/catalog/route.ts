@@ -10,6 +10,7 @@ import { catalogTaxa } from "@/lib/objective-catalog";
 import {
   parseCatalogSearchParams,
   searchCatalog,
+  toPublicCatalogSearchDocument,
 } from "@/lib/catalog-search";
 import { shouldUseCatalogServerSearch } from "@/lib/catalog-search-request";
 
@@ -26,6 +27,7 @@ export async function GET(request: Request) {
       mode: "search",
       status: "live",
       ...result,
+      items: result.items.map(toPublicCatalogSearchDocument),
     }, {
       headers: { "Cache-Control": "private, max-age=60" },
     });
