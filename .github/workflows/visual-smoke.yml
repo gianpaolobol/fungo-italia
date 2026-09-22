@@ -3,6 +3,7 @@ name: Visual Smoke
 on:
   push:
     branches:
+      - main
       - feat/stable-learning-taxonomy-v1
     paths:
       - ".github/workflows/visual-smoke.yml"
