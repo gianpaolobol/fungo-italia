@@ -18,6 +18,7 @@ import {
   publicDescriptiveCardContent,
   publicSafetySummary,
 } from "@/lib/public-scientific-policy";
+import { publicGenusLayer } from "@/lib/public-genus-policy";
 import { cn } from "@/lib/utils";
 
 type AtlasCardDetailProps = {
@@ -53,6 +54,15 @@ export function AtlasCardDetail({
     const available = genusCard
       ? availableGenusDepths(genusCard)
       : ["essential" as const];
+    const publicLayer = genusCard
+      ? publicGenusLayer(genusCard, depth)
+      : {
+          objectiveSummary: view.objectiveSummary,
+          bullets: [] as string[],
+          taxonomyNotes: [] as string[],
+          safetyFocus: [] as string[],
+          pendingScientificContent: true,
+        };
 
     return (
       <article className="min-w-0 rounded-[22px] border border-[#dce5da] bg-white p-4 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-5">
@@ -86,24 +96,29 @@ export function AtlasCardDetail({
           <p className="text-xs font-black uppercase tracking-wide text-[#67806c]">
             {view.sectionTitle}
           </p>
-          {view.objectiveSummary && (
+          {publicLayer.objectiveSummary && (
             <p className="mt-2 break-words leading-relaxed text-[#314d38]">
-              {view.objectiveSummary}
+              {publicLayer.objectiveSummary}
             </p>
           )}
-          {view.bullets.length > 0 && (
+          {publicLayer.pendingScientificContent && (
+            <p className="mt-3 rounded-xl border border-[#dce5da] bg-white p-3 text-sm leading-relaxed text-[#52675a]">
+              I caratteri descrittivi e le note tassonomiche di questo livello sono in revisione scientifica e restano nascosti nella beta finché non raggiungono lo stato reviewed.
+            </p>
+          )}
+          {publicLayer.bullets.length > 0 && (
             <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[#52675a]">
-              {view.bullets.map((item) => <li key={item}>• {item}</li>)}
+              {publicLayer.bullets.map((item) => <li key={item}>• {item}</li>)}
             </ul>
           )}
-          {view.taxonomyNotes.length > 0 && (
+          {publicLayer.taxonomyNotes.length > 0 && (
             <div className="mt-4 rounded-xl border border-[#dce5da] bg-white p-3 text-sm text-[#52675a]">
-              {view.taxonomyNotes.map((item) => <p key={item} className="mt-1 first:mt-0">{item}</p>)}
+              {publicLayer.taxonomyNotes.map((item) => <p key={item} className="mt-1 first:mt-0">{item}</p>)}
             </div>
           )}
-          {view.safetyFocus.length > 0 && (
+          {publicLayer.safetyFocus.length > 0 && (
             <div className="mt-4 rounded-xl border border-[#ead58c] bg-[#fff8dc] p-3 text-sm text-[#67541f]">
-              {view.safetyFocus.map((item) => (
+              {publicLayer.safetyFocus.map((item) => (
                 <p key={item} className="mt-1 flex gap-2 first:mt-0">
                   <CircleAlert className="mt-0.5 size-4 shrink-0" />
                   <span>{item}</span>
