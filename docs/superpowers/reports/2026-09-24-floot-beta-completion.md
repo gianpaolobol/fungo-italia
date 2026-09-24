@@ -47,7 +47,7 @@
    - one-time curator bootstrap code
    - server-side role assignment for registered users
    - optional regional and taxonomic scopes
-10. Responsive navigation and dedicated pages for Atlas, Observations and Proposals.
+10. Rapid field-recognition layer (`Colpo d’occhio`) for taxa, genera and teaching groups:\n   - 2–4 Commons reference images\n   - exactly 3 key characters\n   - optional fourth differentiating character\n   - habitat and ecological role\n   - up to 3 principal lookalikes\n   - public visibility only after the scientific workflow publishes the quick-recognition proposal\n11. Responsive navigation and dedicated pages for Atlas, Observations and Proposals.
 
 ## Verification
 
