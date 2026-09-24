@@ -14,7 +14,11 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern public/maplibre-gl-worker.mjs --ignore-pattern public/maplibre-gl-shared.mjs",
     "db:generate": "drizzle-kit generate",
     "beta:check": "node --experimental-strip-types scripts/check-beta-release.mjs --enforce",
-    "science:check": "node --experimental-strip-types scripts/check-beta-release.mjs --enforce-scientific"
+    "science:check": "node --experimental-strip-types scripts/check-beta-release.mjs --enforce-scientific",
+    "dev:cloudflare": "vinext dev --port 5173",
+    "build:cloudflare": "vinext build",
+    "deploy:cloudflare": "pnpx @vinext/cloudflare deploy",
+    "cf:whoami": "wrangler whoami"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
