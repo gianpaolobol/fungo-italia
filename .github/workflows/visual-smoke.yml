@@ -35,6 +35,8 @@ jobs:
       - run: pnpm add -D --lockfile=false @playwright/test@1.55.0
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm build
+      - name: Apply local D1 migrations
+        run: pnpm exec wrangler d1 migrations apply DB --local --persist-to .wrangler/state --config dist/server/wrangler.json --yes
       - name: Start built beta
         run: |
           pnpm start > /tmp/fungo-beta.log 2>&1 &
