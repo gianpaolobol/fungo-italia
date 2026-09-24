@@ -12,7 +12,24 @@ export const users = sqliteTable("users", {
   displayName: text("display_name"),
   role: text("role").notNull().default("collector"),
   ...timestamps,
+}, (table) => [uniqueIndex("idx_users_email").on(table.email)]);
+
+export const userPasswords = sqliteTable("user_passwords", {
+  userId: text("user_id").primaryKey().references(() => users.id),
+  passwordHash: text("password_hash").notNull(),
+  ...timestamps,
 });
+
+export const sessions = sqliteTable("sessions", {
+  id: text("id").primaryKey(),
+  userId: text("user_id").notNull().references(() => users.id),
+  expiresAt: text("expires_at").notNull(),
+  lastAccessed: text("last_accessed").notNull().default(sql`CURRENT_TIMESTAMP`),
+  ...timestamps,
+}, (table) => [
+  index("idx_sessions_user").on(table.userId),
+  index("idx_sessions_expiry").on(table.expiresAt),
+]);
 
 export const taxa = sqliteTable("taxa", {
   id: text("id").primaryKey(),
