@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - feat/stable-learning-taxonomy-v1
+      - feat/cloudflare-production
   workflow_dispatch:
 
 permissions:
