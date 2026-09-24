@@ -41,14 +41,19 @@
    - author cannot review own proposal
    - normal/high changes require a qualified independent reviewer
    - critical changes require independent mycologist then scientific curator
+   - active regional/taxonomic grants are enforced server-side
    - versioned beta release registry
-9. Responsive navigation and dedicated pages for Atlas, Observations and Proposals.
+9. Scientific administration:
+   - one-time curator bootstrap code
+   - server-side role assignment for registered users
+   - optional regional and taxonomic scopes
+10. Responsive navigation and dedicated pages for Atlas, Observations and Proposals.
 
 ## Verification
 
 - Jasmine helper suite: 10 spec files passed, 0 failed.
 - TypeScript typecheck: clean.
-- Anonymous endpoint smoke test: catalog, forecast, media, proposals and all write endpoints return 401 and do not expose private/editorial data.
+- Anonymous endpoint smoke test: catalog, forecast, media, proposals, curator bootstrap, role grant and write endpoints return 401 and do not expose private/editorial data.
 - Production publish completed successfully according to Floot publish status.
 - Automated screenshot capture could not run because no Floot preview/editor window was open during QA; this does not block the production deployment.
 
@@ -56,6 +61,11 @@
 
 The Floot public migration is intentionally stricter than the original private-beta source: review-needed descriptive and safety prose is omitted from the public bundle rather than merely hidden at render time. Identity, training resolution, nomenclature, source links and approved workflow data remain available. This prevents accidental scientific leakage during the migration.
 
-## Remaining operational step
+## First-use procedure
 
-The first real beta users must register through Floot Auth. Scientific reviewer/curator roles are stored server-side and are not trusted from client input. Role assignment/bootstrap remains an operational administration step; critical scientific proposals cannot self-approve or bypass the independent-review sequence.
+1. Register the first real beta account through Floot Auth.
+2. Open the Proposals page and use the one-time curator bootstrap code supplied privately to the project owner.
+3. Register additional reviewer accounts and assign `mycologist` / `scientific_curator` roles with optional scopes.
+4. Critical proposals remain blocked until the independent mycologist and curator stages are both satisfied.
+
+No client-provided role is trusted by the server.
