@@ -1,5 +1,10 @@
 import type { EvidenceReviewStatus } from "./catalog-evidence.ts";
 import type { MinimumAtlasCard, MinimumCardConfusion } from "./minimum-card.ts";
+import {
+  AUDITED_MINIMUM_FIELD_PROFILE_DATE,
+  AUDITED_MINIMUM_FIELD_PROFILE_REVIEW_STATUS,
+  AUDITED_MINIMUM_FIELD_PROFILE_VERSION,
+} from "./minimum-field-profiles.ts";
 
 export function canPublishDescriptiveScientificContent(
   status: EvidenceReviewStatus,
@@ -47,5 +52,16 @@ export function publicDescriptiveCardContent(card: MinimumAtlasCard) {
     essentialMorphology: [...card.essentialMorphology],
     ecologySummary: card.ecologySummary,
     pending: false,
+  };
+}
+
+
+export function publicAuditedFieldProfile(card: MinimumAtlasCard) {
+  return {
+    ...card.fieldProfile,
+    characters: [...card.fieldProfile.characters] as [string, string, string],
+    version: AUDITED_MINIMUM_FIELD_PROFILE_VERSION,
+    auditedAt: AUDITED_MINIMUM_FIELD_PROFILE_DATE,
+    reviewStatus: AUDITED_MINIMUM_FIELD_PROFILE_REVIEW_STATUS,
   };
 }
