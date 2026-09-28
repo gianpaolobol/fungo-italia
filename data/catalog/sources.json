@@ -75,5 +75,19 @@
     "accessedAt": null,
     "licenseNote": "Sintesi originale interna. Non e una fonte scientifica primaria e resta reviewNeeded fino alla revisione di un micologo.",
     "fileHashSha256": null
+  },
+  {
+    "sourceId": "AUDIT-minimum-3plus1-baseline-1.0",
+    "sourceType": "expertReview",
+    "title": "Scientific Baseline 1.0 — audit trasversale 3+1 dei 148 profili Minimo",
+    "authors": [],
+    "publisher": "Fungo Italia",
+    "publicationYear": 2026,
+    "version": "1.0 - 28.09.2026",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": null,
+    "licenseNote": "Sintesi scientifica originale derivata dall'audit taxon-per-taxon delle fonti del progetto e dalle verifiche specialistiche documentate. Stato reviewed interno; non sostituisce la revisione micologica indipendente richiesta dal gate finale.",
+    "fileHashSha256": null
   }
 ]
