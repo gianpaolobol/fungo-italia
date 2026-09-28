@@ -69,8 +69,9 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
   ),
   "Agaricus bisporus": p(
     ["Cappello carnoso bianco-crema o bruno, spesso con squame brune verso il centro.", "Lamelle libere da rosa pallido a bruno-cioccolato.", "Anello mediano persistente, semplice o pseudo-doppio, con lieve arrossamento della carne e assenza di odore fenolico."],
-    "In natura o in esemplari atipici la specie fine va confermata microscopicamente; il carattere bisporico non è visibile sul campo.",
+    "Portamento robusto e basso, frequente in terreni ricchi e coltivazioni; nessun forte ingiallimento fenolico.",
     "field_confirmatory",
+    { diagnosticNote: "In raccolte spontanee o atipiche la determinazione specifica fine va confermata con caratteri microscopici." },
   ),
   "Cyclocybe cylindracea": p(
     ["Crescita lignicola in cespi compatti su tronchi, ceppaie o radici di latifoglie.", "Cappello bruno-miele, più chiaro verso il margine, spesso screpolato con il secco.", "Gambo fibroso con anello ampio; lamelle chiare poi bruno-tabacco."],
