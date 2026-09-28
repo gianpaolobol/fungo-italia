@@ -88,3 +88,57 @@ Il Lotto 4 fallisce se:
 - `lib/minimum-card-editorial.ts` — evidence e claim delle sintesi;
 - `lib/minimum-cards.ts` — assemblaggio delle 148 schede;
 - `lib/minimum-card.test.ts` — gate completo sul corpus.
+
+
+## Scientific Baseline 1.0 — 28.09.2026
+
+L'audit trasversale dei **148/148 profili Minimo** e concluso e materializzato in
+`lib/minimum-field-profiles.ts`.
+
+Per ogni unita S1 la baseline espone:
+
+- **3 caratteri principali di campo**, obbligatoriamente osservabili senza reagenti;
+- **+1 carattere differenziante/supportivo** di campo;
+- stato diagnostico esplicito, evitando il generico `macro_limit`;
+- eventuale nota di conferma specialistica separata dal 3+1;
+- eventuale `safetyCheck`, indipendente dalla confidenza tassonomica.
+
+Regole automatiche della baseline:
+
+- 148 profili per 148 unita S1, senza mancanti o orfani;
+- esattamente 3 caratteri primari + 1 per ogni profilo;
+- zero `source_gap`, zero `pending`, zero `macro_limit` generici;
+- nessun KOH/Schaffer/reagente, microscopia, DNA o assaggio nel livello base 3+1;
+- 3 safety check espliciti: `Kuehneromyces mutabilis`,
+  `Leucoagaricus leucothites s.l.`, `Volvariella volvacea`.
+
+La baseline e marcata **reviewed** come audit scientifico interno cross-source, ma non
+viene confusa con la revisione micologica indipendente: quest'ultima resta un gate
+separato per l'approvazione finale dei claim di sicurezza e commestibilita.
+
+### UI
+
+Ogni scheda Minimo mostra prima del contenuto esteso una **Scheda rapida scientifica**
+con:
+
+1. carattere principale 1;
+2. carattere principale 2;
+3. carattere principale 3;
+4. +1 differenziante;
+5. stato diagnostico;
+6. eventuale limite di risoluzione;
+7. eventuale safety check.
+
+Il contenuto editoriale generico preesistente resta soggetto alle precedenti policy
+`reviewNeeded`; la nuova scheda 3+1 usa invece la baseline auditata e revisionata.
+
+### Gate
+
+I test di completezza sono in `lib/minimum-field-profiles.test.ts`.
+Il release gate verifica inoltre:
+
+- 148 profili;
+- 0 errori di validazione;
+- 148 claim 3+1;
+- 148 evidenze 3+1;
+- esattamente 3 safety check.
