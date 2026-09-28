@@ -9,6 +9,15 @@ import {
 } from "./minimum-nomenclature.ts";
 import { scientificReviewQueue } from "./scientific-review-queue.ts";
 import {
+  auditedMinimumFieldProfiles,
+  validateAuditedMinimumFieldProfiles,
+} from "./minimum-field-profiles.ts";
+import {
+  auditedFieldProfileClaims,
+  auditedFieldProfileEvidence,
+} from "./minimum-field-profile-evidence.ts";
+import { sourceMinimumLearningUnits } from "./minimum-learning-source.ts";
+import {
   publicConfusionWarnings,
   publicDescriptiveCardContent,
   publicEdibilityCategory,
@@ -29,6 +38,11 @@ export interface BetaReleaseGate {
     nomenclatureConflicts: number;
     nomenclatureUnresolved: number;
     reviewNeededClaims: number;
+    auditedFieldProfiles: number;
+    auditedFieldProfileErrors: number;
+    auditedFieldProfileClaims: number;
+    auditedFieldProfileEvidence: number;
+    auditedFieldSafetyChecks: number;
     minimumPublicScientificLeaks: number;
     genusPublicScientificLeaks: number;
     visualViewportSmoke: string;
@@ -41,6 +55,12 @@ export function evaluateBetaReleaseGate(
 ): BetaReleaseGate {
   const blockers: string[] = [];
   const scientificBlockers: string[] = [];
+
+  const fieldProfileValidation = validateAuditedMinimumFieldProfiles(
+    sourceMinimumLearningUnits.map((unit) => unit.sourceLabel),
+  );
+  const auditedFieldSafetyChecks = Object.values(auditedMinimumFieldProfiles)
+    .filter((profile) => Boolean(profile.safetyCheck?.trim())).length;
 
   const minimumPublicScientificLeaks = minimumCards.filter((card) => {
     if (card.reviewStatus === "reviewed" || card.reviewStatus === "approved") return false;
@@ -60,6 +80,20 @@ export function evaluateBetaReleaseGate(
 
   if (minimumCards.length !== 148) {
     blockers.push(`Expected 148 minimum cards, found ${minimumCards.length}`);
+  }
+  if (!fieldProfileValidation.ok) {
+    blockers.push(
+      `Audited 3+1 field-profile baseline is invalid: ${fieldProfileValidation.errors.join("; ")}`,
+    );
+  }
+  if (auditedFieldProfileClaims.length !== 148) {
+    blockers.push(`Expected 148 audited field-profile claims, found ${auditedFieldProfileClaims.length}`);
+  }
+  if (auditedFieldProfileEvidence.length !== 148) {
+    blockers.push(`Expected 148 audited field-profile evidence records, found ${auditedFieldProfileEvidence.length}`);
+  }
+  if (auditedFieldSafetyChecks !== 3) {
+    blockers.push(`Expected 3 explicit audited safety checks, found ${auditedFieldSafetyChecks}`);
   }
   if (minimumGenusCards.length !== 66) {
     blockers.push(`Expected 66 genus/group cards, found ${minimumGenusCards.length}`);
@@ -101,6 +135,11 @@ export function evaluateBetaReleaseGate(
       nomenclatureConflicts: nomenclatureConflicts.length,
       nomenclatureUnresolved: unresolvedNomenclatureMappings.length,
       reviewNeededClaims: scientificReviewQueue.length,
+      auditedFieldProfiles: fieldProfileValidation.profileCount,
+      auditedFieldProfileErrors: fieldProfileValidation.errors.length,
+      auditedFieldProfileClaims: auditedFieldProfileClaims.length,
+      auditedFieldProfileEvidence: auditedFieldProfileEvidence.length,
+      auditedFieldSafetyChecks,
       minimumPublicScientificLeaks,
       genusPublicScientificLeaks,
       visualViewportSmoke: attestations.visualViewportSmoke.status,
