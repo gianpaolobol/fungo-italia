@@ -33,6 +33,15 @@ function card(overrides: Partial<MinimumAtlasCard> = {}): MinimumAtlasCard {
       "Lamelle bianche e libere",
       "Volva membranosa alla base del gambo",
     ],
+    fieldProfile: {
+      characters: [
+        "Lamelle bianche e libere.",
+        "Volva membranosa e sacciforme alla base.",
+        "Anello membranoso sul gambo.",
+      ],
+      plusOne: "Cappello spesso olivastro con fibrille radiali.",
+      diagnosticStatus: "field_high_confidence",
+    },
     ecologySummary: "Specie ectomicorrizica di boschi di latifoglie e misti.",
     confusionWarnings: [],
     edibilityCategory: "POISONOUS",
