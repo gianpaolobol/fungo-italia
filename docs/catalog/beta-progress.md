@@ -138,6 +138,22 @@ Stato: **CODA SCIENTIFICA APERTA; BETA PRIVATA RESA SICURA**
 
 La revisione indipendente resta necessaria per rendere pubblici i contenuti scientifici nascosti, ma non blocca una beta privata che non li espone.
 
+### Scientific Baseline 1.0 — audit 3+1 dei 148 profili
+Stato: **IMPLEMENTATO SUL BRANCH DI PUBBLICAZIONE SCIENTIFICA**
+- 148/148 profili taxon-per-taxon;
+- esattamente 3 caratteri principali + 1 differenziante per ogni unita;
+- caratteri base esclusivamente di campo: nessun reagente, microscopia, DNA o assaggio;
+- zero `source_gap`, zero `pending`, zero `macro_limit` generici;
+- limiti reali espressi con stati diagnostici precisi e note di conferma specialistica;
+- 3 safety check espliciti mantenuti indipendenti dalla confidenza diagnostica;
+- claim/evidence dedicati 148/148, stato `reviewed` interno cross-source;
+- UI scheda Minimo aggiornata con "Scheda rapida scientifica — 3 caratteri principali + 1 differenziante";
+- ricerca aggiornata per indicizzare i caratteri auditati;
+- gate di completezza dedicato integrato nel release gate.
+
+La revisione micologica indipendente e l'approvazione dei claim di commestibilita/sicurezza
+restano percorsi separati e non vengono implicitamente dichiarati conclusi.
+
 ### Lotto 11 — Gate indipendente finale
 Stato: **CHIUSO PER BETA PRIVATA**
 - [x] copertura 148 + 66 + 214;
