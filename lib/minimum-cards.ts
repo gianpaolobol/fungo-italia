@@ -33,6 +33,7 @@ export const minimumCards: MinimumAtlasCard[] = sourceMinimumLearningUnits.map((
 
   const claimIds = [
     `claim-training-${unit.id}`,
+    `claim-field-profile-${unit.id}`,
     `claim-morphology-${unit.id}`,
     `claim-ecology-${unit.id}`,
     `claim-edibility-draft-${unit.id}`,
