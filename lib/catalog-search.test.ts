@@ -170,13 +170,13 @@ test("public search payload strips the internal search index text", () => {
   assert.equal("searchText" in publicItem, false);
 });
 
-test("unreviewed descriptive terms do not become public search signals", () => {
+test("reviewed audited 3+1 characters become public search signals", () => {
   const result = searchCatalog({
-    query: "velo universale residui volvari",
+    query: "zebrature olivastre",
     limit: 100,
   });
   assert.equal(
     result.items.some((entry) => entry.sourceLabel === "Amanita phalloides"),
-    false,
+    true,
   );
 });
