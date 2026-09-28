@@ -1,5 +1,6 @@
 import type { TaxonRank } from "./domain.ts";
 import type { EvidenceReviewStatus } from "./catalog-evidence.ts";
+import type { MinimumFieldProfile } from "./minimum-field-profiles.ts";
 
 export type CardDepth = "minimum";
 export type EdibilityCategory =
@@ -31,6 +32,7 @@ export interface MinimumAtlasCard {
   currentAcceptedNames: string[];
   terminology: string[];
   essentialMorphology: string[];
+  fieldProfile: MinimumFieldProfile;
   ecologySummary: string | null;
   confusionWarnings: MinimumCardConfusion[];
   edibilityCategory: EdibilityCategory;
@@ -103,6 +105,15 @@ export function validateMinimumCards(
       }
       if (!nonPlaceholder(card.safetySummary)) {
         errors.push(`${card.cardId}: safety summary is incomplete`);
+      }
+      if (card.fieldProfile.characters.length !== 3) {
+        errors.push(`${card.cardId}: audited field profile must contain exactly 3 primary characters`);
+      }
+      if (card.fieldProfile.characters.some((value) => !nonPlaceholder(value))) {
+        errors.push(`${card.cardId}: audited field profile contains an invalid primary character`);
+      }
+      if (!nonPlaceholder(card.fieldProfile.plusOne)) {
+        errors.push(`${card.cardId}: audited field profile is missing +1 character`);
       }
     }
 
