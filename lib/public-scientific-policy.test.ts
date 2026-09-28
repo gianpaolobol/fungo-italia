@@ -5,6 +5,7 @@ import { minimumCards } from "./minimum-cards.ts";
 import {
   canPublishDescriptiveScientificContent,
   canPublishSafetyContent,
+  publicAuditedFieldProfile,
   publicConfusionWarnings,
   publicDescriptiveCardContent,
   publicEdibilityCategory,
@@ -51,4 +52,15 @@ test("approved card projection restores reviewed scientific content", () => {
   assert.deepEqual(projected.terminology, approved.terminology);
   assert.deepEqual(projected.essentialMorphology, approved.essentialMorphology);
   assert.equal(projected.ecologySummary, approved.ecologySummary);
+});
+
+
+test("audited 3+1 field profile is public even while provisional safety remains gated", () => {
+  const profile = publicAuditedFieldProfile(draft);
+  assert.equal(profile.characters.length, 3);
+  assert.ok(profile.plusOne.length > 0);
+  assert.equal(profile.reviewStatus, "reviewed");
+  assert.equal(profile.version, "scientific-baseline-1.0");
+  assert.equal(profile.auditedAt, "2026-09-28");
+  assert.equal(publicEdibilityCategory(draft), null);
 });
