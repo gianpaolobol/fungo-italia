@@ -140,5 +140,26 @@
         "rationale": "Species Fungorum/Index Fungorum retain both as distinct current species."
       }
     ]
+  },
+  "scientificBaseline": {
+    "version": "scientific-baseline-1.0",
+    "auditedAt": "2026-09-28",
+    "learningUnits": 148,
+    "fieldProfiles": 148,
+    "primaryCharactersPerProfile": 3,
+    "differentiatingCharactersPerProfile": 1,
+    "sourceGap": 0,
+    "pending": 0,
+    "genericMacroLimit": 0,
+    "explicitSafetyChecks": 3,
+    "baseFieldRules": {
+      "reagents": false,
+      "microscopy": false,
+      "dna": false,
+      "taste": false
+    },
+    "reviewStatus": "reviewed-internal-cross-source-audit",
+    "independentMycologicalApproval": false,
+    "note": "I 148 profili 3+1 sono pubblicabili come baseline scientifica revisionata interna. La revisione micologica indipendente resta un gate separato per l'approvazione finale di sicurezza/commestibilita."
   }
 }
