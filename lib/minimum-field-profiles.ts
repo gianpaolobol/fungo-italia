@@ -610,7 +610,7 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
   ),
   "Tylopilus felleus": p(
     ["Pori inizialmente bianchi che con la maturazione diventano chiaramente rosa.", "Gambo robusto con reticolo bruno grossolano e molto evidente.", "Carne bianca sostanzialmente non virante al blu."],
-    "Cappello bruno-ocraceo dall'aspetto porcinoide; il profilo non richiede assaggio.",
+    "Cappello bruno-ocraceo dall'aspetto porcinoide; contrasto netto con i pori rosati maturi.",
   ),
   "Cantharellus cibarius complex": p(
     ["Imenoforo formato da pliche ottuse, carnose, forcate e decorrenti, non vere lamelle.", "Basidioma generalmente giallo o giallo-arancio, con cappello e gambo continui.", "Gambo pieno e carne compatta."],
@@ -726,6 +726,9 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
 };
 
 export const AUDITED_MINIMUM_FIELD_PROFILE_TARGET = 148;
+export const AUDITED_MINIMUM_FIELD_PROFILE_VERSION = "scientific-baseline-1.0";
+export const AUDITED_MINIMUM_FIELD_PROFILE_DATE = "2026-09-28";
+export const AUDITED_MINIMUM_FIELD_PROFILE_REVIEW_STATUS = "reviewed" as const;
 
 export function fieldProfileForSourceLabel(sourceLabel: string) {
   return auditedMinimumFieldProfiles[sourceLabel] ?? null;
