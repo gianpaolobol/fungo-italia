@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - feat/stable-learning-taxonomy-v1
+      - feat/complete-minimum-3plus1-web-evidence-v1
     paths:
       - ".github/workflows/visual-smoke.yml"
       - "scripts/visual-smoke.spec.mjs"
