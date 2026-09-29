@@ -35,6 +35,7 @@ const forecast = (areaId: string, score: number): ForecastResult => ({
     phenologyFit: score,
     weatherFit: score,
     fruitingTriggerFit: score,
+    rainHistoryFit: score,
     speciesPhenologyFit: score,
     altitudeSeasonFit: score,
     evidenceScore: score,

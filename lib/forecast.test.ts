@@ -46,6 +46,8 @@ test("forecast is bounded, explainable, and keeps supported taxon identifiers", 
   assert.ok(result.reasons.length >= 3);
   assert.equal(result.components.weatherFit !== null, true);
   assert.equal(result.components.fruitingTriggerFit !== null, true);
+  assert.equal(result.components.rainHistoryFit !== null, true);
+  assert.ok(result.components.rainHistoryFit! >= 0 && result.components.rainHistoryFit! <= 100);
   assert.ok(result.components.speciesPhenologyFit > 60);
   assert.ok(result.components.altitudeSeasonFit > 0);
   assert.equal(result.confidence, "high");

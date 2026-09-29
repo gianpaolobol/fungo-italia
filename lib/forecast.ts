@@ -36,6 +36,7 @@ export type ForecastResult = {
     phenologyFit: number;
     weatherFit: number | null;
     fruitingTriggerFit: number | null;
+    rainHistoryFit: number | null;
     speciesPhenologyFit: number;
     altitudeSeasonFit: number;
     evidenceScore: number;
@@ -120,6 +121,22 @@ function calculateWeatherFit(weather: WeatherSnapshot) {
   return clamp(components.reduce((sum, value) => sum + value, 0) / components.length);
 }
 
+function calculateRainHistoryFit(weather: WeatherSnapshot) {
+  const rain7 = weather.precipitation7dMm;
+  const rain14 = weather.precipitation14dMm;
+  const rain26 = weather.precipitation26dMm;
+  if (rain7 === null || rain14 === null || rain26 === null) return null;
+
+  const previous7 = Math.max(0, rain14 - rain7);
+  const earlier12 = Math.max(0, rain26 - rain14);
+  // This is an intentionally broad heuristic: it rewards moisture built over
+  // multiple weeks instead of a single storm and caps extreme rainfall.
+  const recent = clamp(Math.min(rain7, 45) * 1.55 + 24);
+  const prior = clamp(Math.min(previous7, 45) * 1.15 + 28);
+  const background = clamp(Math.min(earlier12, 70) * 0.72 + 24);
+  return clamp(recent * 0.42 + prior * 0.34 + background * 0.24);
+}
+
 function calculateFruitingTriggerFit(area: Area, weather: WeatherSnapshot) {
   const temperature =
     weather.meanTemperature20dC ??
@@ -166,16 +183,18 @@ export function calculateForecast(
   const weatherIsFresh = Boolean(weather && new Date(weather.expiresAt).getTime() >= now.getTime());
   const weatherFit = weather && weatherIsFresh ? calculateWeatherFit(weather) : null;
   const fruitingTriggerFit = weather && weatherIsFresh ? calculateFruitingTriggerFit(area, weather) : null;
+  const rainHistoryFit = weather && weatherIsFresh ? calculateRainHistoryFit(weather) : null;
   const altitudeSeasonFit = calculateAltitudeSeasonFit(area, weather && weatherIsFresh ? weather : null, now);
 
   const weighted: Array<[number, number]> = [
     [ecologicalSuitability, 0.23],
     [speciesPhenologyFit, 0.18],
     [altitudeSeasonFit, 0.09],
-    [evidenceScore, 0.15],
+    [evidenceScore, 0.14],
   ];
-  if (weatherFit !== null) weighted.push([weatherFit, 0.08]);
-  if (fruitingTriggerFit !== null) weighted.push([fruitingTriggerFit, 0.27]);
+  if (weatherFit !== null) weighted.push([weatherFit, 0.07]);
+  if (rainHistoryFit !== null) weighted.push([rainHistoryFit, 0.08]);
+  if (fruitingTriggerFit !== null) weighted.push([fruitingTriggerFit, 0.20]);
   const totalWeight = weighted.reduce((sum, [, weight]) => sum + weight, 0);
   const baseScore = weighted.reduce((sum, [value, weight]) => sum + value * weight, 0) / totalWeight;
   const score = clamp(baseScore - penalty);
@@ -205,6 +224,13 @@ export function calculateForecast(
     },
   ];
 
+  if (rainHistoryFit !== null) {
+    reasons.push({
+      code: "rain-history",
+      label: `Andamento piogge 7/14/26 giorni: ${rainHistoryFit}/100`,
+      tone: rainHistoryFit >= 68 ? "positive" : rainHistoryFit < 38 ? "warning" : "neutral",
+    });
+  }
   if (fruitingTriggerFit !== null) {
     reasons.push({
       code: "fruiting-trigger",
@@ -270,6 +296,7 @@ export function calculateForecast(
       phenologyFit,
       weatherFit,
       fruitingTriggerFit,
+      rainHistoryFit,
       speciesPhenologyFit,
       altitudeSeasonFit,
       evidenceScore,

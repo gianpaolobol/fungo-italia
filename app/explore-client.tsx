@@ -878,6 +878,7 @@ function AreaDetails({
         <Metric icon={Trees} label="Ecologia" value={String(forecast.components.ecologicalSuitability) + "/100"} />
         <Metric icon={CloudRain} label="Meteo" value={forecast.components.weatherFit === null ? "non disponibile" : String(forecast.components.weatherFit) + "/100"} />
         <Metric icon={Sparkles} label="Crescita" value={forecast.components.fruitingTriggerFit === null ? "non disponibile" : String(forecast.components.fruitingTriggerFit) + "/100"} />
+        <Metric icon={CloudRain} label="Piogge 7/14/26g" value={forecast.components.rainHistoryFit === null ? "non disponibile" : String(forecast.components.rainHistoryFit) + "/100"} />
         <Metric icon={Leaf} label="Fenologia" value={String(forecast.components.speciesPhenologyFit) + "/100"} />
         <Metric icon={MapPin} label="Quota" value={String(forecast.components.altitudeSeasonFit) + "/100"} />
         <Metric icon={Users} label="Pressione" value={getVisitPressure(area.delayedVisitors)} />
