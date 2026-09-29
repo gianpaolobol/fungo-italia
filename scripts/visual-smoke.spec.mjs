@@ -47,6 +47,9 @@ for (const viewport of viewports) {
     await expect(openButton).toBeVisible({ timeout: 15000 });
     await openButton.click();
     await expect(page.getByRole("button", { name: /Torna ai risultati|Torna al genere|Torna al gruppo/ })).toBeVisible();
+    await expect(page.getByText("Scheda rapida scientifica", { exact: true })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "3 caratteri principali + 1 differenziante" })).toBeVisible();
+    await expect(page.getByText(/scientific-baseline-1\.0/)).toBeVisible();
     expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);
 
     await page.screenshot({ path: `artifacts/visual-smoke/${viewport.name}.png`, fullPage: true });

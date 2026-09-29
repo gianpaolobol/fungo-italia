@@ -3,6 +3,7 @@ import {
   profileForSourceLabel,
 } from "./minimum-card-content.ts";
 import { provisionalSafetyForSourceLabel } from "./minimum-card-safety.ts";
+import { fieldProfileForSourceLabel } from "./minimum-field-profiles.ts";
 import { sourceMinimumLearningUnits } from "./minimum-learning-source.ts";
 import { minimumNomenclatureMappings } from "./minimum-nomenclature.ts";
 import type { MinimumAtlasCard } from "./minimum-card.ts";
@@ -19,6 +20,10 @@ export const minimumCards: MinimumAtlasCard[] = sourceMinimumLearningUnits.map((
 
   const profile = profileForSourceLabel(unit.sourceLabel);
   const safety = provisionalSafetyForSourceLabel(unit.sourceLabel);
+  const fieldProfile = fieldProfileForSourceLabel(unit.sourceLabel);
+  if (!fieldProfile) {
+    throw new Error(`Missing audited field profile for ${unit.sourceLabel}`);
+  }
   const draftConfusions = draftConfusionsForSourceLabel(unit.sourceLabel);
 
   const confusionWarnings = draftConfusions.map((confusion, index) => ({
@@ -28,6 +33,7 @@ export const minimumCards: MinimumAtlasCard[] = sourceMinimumLearningUnits.map((
 
   const claimIds = [
     `claim-training-${unit.id}`,
+    `claim-field-profile-${unit.id}`,
     `claim-morphology-${unit.id}`,
     `claim-ecology-${unit.id}`,
     `claim-edibility-draft-${unit.id}`,
@@ -44,6 +50,7 @@ export const minimumCards: MinimumAtlasCard[] = sourceMinimumLearningUnits.map((
     currentAcceptedNames: mapping.currentAcceptedNames,
     terminology: profile.terminology,
     essentialMorphology: profile.morphology,
+    fieldProfile,
     ecologySummary: profile.ecology,
     confusionWarnings,
     edibilityCategory: safety.category,

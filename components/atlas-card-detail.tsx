@@ -14,6 +14,7 @@ import type {
 import { minimumCards } from "@/lib/minimum-cards";
 import { minimumGenusCards } from "@/lib/minimum-genus-cards";
 import {
+  publicAuditedFieldProfile,
   publicConfusionWarnings,
   publicDescriptiveCardContent,
   publicSafetySummary,
@@ -35,6 +36,19 @@ const depthLabels: Record<AtlasDepth, string> = {
   essential: "Essenziale",
   deepening: "Approfondimento",
   specialist: "Specialistico",
+};
+
+const diagnosticStatusLabels: Record<string, string> = {
+  field_high_confidence: "Alta confidenza di campo",
+  field_high_confidence_when_typical: "Alta confidenza negli esemplari tipici",
+  field_high_confidence_when_host_known: "Alta confidenza con ospite/ecologia noti",
+  field_high_confidence_when_young: "Alta confidenza negli esemplari giovani",
+  field_high_confidence_at_source_rank: "Alta confidenza al rango S1",
+  field_confirmatory: "Campo + conferma fine nei casi dubbi",
+  microscopy_required_for_fine_id: "Microscopia per la specie fine",
+  dna_confirmatory: "Conferma molecolare per la risoluzione fine",
+  defined_morphogroup_s1: "Morfogruppo didattico S1",
+  defined_set_s1: "Insieme didattico definito S1",
 };
 
 export function AtlasCardDetail({
@@ -160,6 +174,7 @@ export function AtlasCardDetail({
 
   const card = minimumCards.find((entry) => entry.cardId === selectedId);
   if (!card) return <MissingCard onBack={onBack} />;
+  const fieldProfile = publicAuditedFieldProfile(card);
   const descriptive = publicDescriptiveCardContent(card);
   const publicConfusions = publicConfusionWarnings(card);
   const safetySummary = publicSafetySummary(card);
@@ -175,8 +190,46 @@ export function AtlasCardDetail({
       {card.sourceLabel !== card.displayName && (
         <p className="mt-3 text-sm text-[#5f7064]">S1: {card.sourceLabel}</p>
       )}
+      <div className="mt-4 rounded-2xl border border-[#cfe0cc] bg-[#f4f9f2] p-4">
+        <div className="flex flex-wrap items-start justify-between gap-2">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.08em] text-[#54725a]">Scheda rapida scientifica</p>
+            <h3 className="mt-1 text-lg font-black">3 caratteri principali + 1 differenziante</h3>
+          </div>
+          <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-[#315d3c] ring-1 ring-[#c8d9c5]">
+            {diagnosticStatusLabels[fieldProfile.diagnosticStatus] ?? fieldProfile.diagnosticStatus}
+          </span>
+        </div>
+        <ol className="mt-4 space-y-2">
+          {fieldProfile.characters.map((item, index) => (
+            <li key={item} className="flex gap-3 rounded-xl bg-white p-3 text-sm leading-relaxed text-[#314d38] ring-1 ring-[#dce7d9]">
+              <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#174f2b] text-xs font-black text-white">{index + 1}</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-2 flex gap-3 rounded-xl border border-[#d8e3d6] bg-white p-3 text-sm leading-relaxed text-[#314d38]">
+          <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#e9f2e6] text-xs font-black text-[#174f2b]">+1</span>
+          <span>{fieldProfile.plusOne}</span>
+        </div>
+        {fieldProfile.diagnosticNote && (
+          <p className="mt-3 text-xs leading-relaxed text-[#607465]">
+            <strong>Limite di risoluzione:</strong> {fieldProfile.diagnosticNote}
+          </p>
+        )}
+        {fieldProfile.safetyCheck && (
+          <p className="mt-3 flex gap-2 rounded-xl border border-[#e3a6a0] bg-[#fff1ef] p-3 text-sm leading-relaxed text-[#842d26]">
+            <CircleAlert className="mt-0.5 size-4 shrink-0" />
+            <span><strong>Safety check:</strong> {fieldProfile.safetyCheck}</span>
+          </p>
+        )}
+        <p className="mt-3 text-[11px] font-semibold text-[#718277]">
+          {fieldProfile.version} · audit {fieldProfile.auditedAt} · stato {fieldProfile.reviewStatus}
+        </p>
+      </div>
+
       <div className="mt-4 rounded-2xl bg-[#f5f8f3] p-4">
-        <h3 className="font-black">Caratteri essenziali</h3>
+        <h3 className="font-black">Contenuto scientifico esteso</h3>
         {descriptive.pending ? (
           <p className="mt-2 text-sm leading-relaxed text-[#52675a]">
             Contenuti morfologici ed ecologici in revisione scientifica: non vengono pubblicati come fatti finché non raggiungono almeno lo stato reviewed.

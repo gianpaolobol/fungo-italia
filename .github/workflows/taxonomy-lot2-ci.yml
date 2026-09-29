@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - feat/stable-learning-taxonomy-v1
+      - feat/scientific-review-workbench-v1
+      - feat/complete-minimum-3plus1-web-evidence-v1
   workflow_dispatch:
 
 permissions:
@@ -30,7 +32,13 @@ jobs:
       - run: node --experimental-strip-types scripts/verify-index-fungorum.mjs
       - run: node --experimental-strip-types scripts/report-minimum-genera.mjs
       - run: node --experimental-strip-types scripts/report-scientific-review.mjs
+      - run: node --experimental-strip-types scripts/export-scientific-review-packets.mjs
       - run: node --experimental-strip-types scripts/check-beta-release.mjs
       - run: pnpm test
       - run: pnpm lint
       - run: pnpm build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scientific-review-packets-${{ github.sha }}
+          path: artifacts/scientific-review/
+          if-no-files-found: error

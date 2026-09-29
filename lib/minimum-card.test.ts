@@ -16,6 +16,10 @@ import {
   minimumCardDraftClaims,
   minimumCardDraftEvidence,
 } from "./minimum-card-editorial.ts";
+import {
+  auditedFieldProfileClaims,
+  auditedFieldProfileEvidence,
+} from "./minimum-field-profile-evidence.ts";
 import { minimumCards } from "./minimum-cards.ts";
 import { validateMinimumCards, type MinimumAtlasCard } from "./minimum-card.ts";
 
@@ -33,6 +37,15 @@ function card(overrides: Partial<MinimumAtlasCard> = {}): MinimumAtlasCard {
       "Lamelle bianche e libere",
       "Volva membranosa alla base del gambo",
     ],
+    fieldProfile: {
+      characters: [
+        "Lamelle bianche e libere.",
+        "Volva membranosa e sacciforme alla base.",
+        "Anello membranoso sul gambo.",
+      ],
+      plusOne: "Cappello spesso olivastro con fibrille radiali.",
+      diagnosticStatus: "field_high_confidence",
+    },
     ecologySummary: "Specie ectomicorrizica di boschi di latifoglie e misti.",
     confusionWarnings: [],
     edibilityCategory: "POISONOUS",
@@ -114,8 +127,16 @@ test("all minimum-card draft evidence and claims pass provenance validation", ()
   const sources = sourcesJson as CatalogSourceRecord[];
   const baseEvidence = evidenceJson as EvidenceRecord[];
   const baseClaims = claimsJson as CatalogClaimRecord[];
-  const allEvidence = [...baseEvidence, ...minimumCardDraftEvidence];
-  const allClaims = [...baseClaims, ...minimumCardDraftClaims];
+  const allEvidence = [
+    ...baseEvidence,
+    ...minimumCardDraftEvidence,
+    ...auditedFieldProfileEvidence,
+  ];
+  const allClaims = [
+    ...baseClaims,
+    ...minimumCardDraftClaims,
+    ...auditedFieldProfileClaims,
+  ];
 
   const evidenceResult = validateCatalogEvidence(sources, allEvidence);
   assert.equal(evidenceResult.ok, true, evidenceResult.errors.join("\n"));
@@ -127,7 +148,11 @@ test("all minimum-card draft evidence and claims pass provenance validation", ()
 test("every card claim id resolves to the canonical or draft claim registry", () => {
   const baseClaims = claimsJson as CatalogClaimRecord[];
   const ids = new Set(
-    [...baseClaims, ...minimumCardDraftClaims].map((claim) => claim.claimId),
+    [
+      ...baseClaims,
+      ...minimumCardDraftClaims,
+      ...auditedFieldProfileClaims,
+    ].map((claim) => claim.claimId),
   );
 
   for (const card of minimumCards) {
@@ -141,6 +166,19 @@ test("every card claim id resolves to the canonical or draft claim registry", ()
       }
     }
   }
+});
+
+test("all 148 audited field-profile claims and evidence are reviewed, not approved", () => {
+  assert.equal(auditedFieldProfileClaims.length, 148);
+  assert.equal(auditedFieldProfileEvidence.length, 148);
+  assert.equal(
+    auditedFieldProfileClaims.every((claim) => claim.reviewStatus === "reviewed"),
+    true,
+  );
+  assert.equal(
+    auditedFieldProfileEvidence.every((item) => item.reviewStatus === "reviewed"),
+    true,
+  );
 });
 
 test("draft cards are explicitly review-needed rather than silently approved", () => {

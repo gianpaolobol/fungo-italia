@@ -22,7 +22,10 @@ const claims = claimsJson as CatalogClaimRecord[];
 test("catalog sources and minimum evidence pass the provenance contract", () => {
   const result = validateCatalogEvidence(sources, evidence);
   assert.equal(result.ok, true, result.errors.join("\n"));
-  assert.equal(result.sourceCount, 5);
+  assert.equal(result.sourceCount, 6);
+  assert.ok(
+    sources.some((source) => source.sourceId === "AUDIT-minimum-3plus1-baseline-1.0"),
+  );
   assert.equal(result.evidenceCount, 148);
 });
 

@@ -8,6 +8,7 @@ import { minimumNomenclatureMappings } from "./minimum-nomenclature.ts";
 import type { EdibilityCategory } from "./minimum-card.ts";
 import type { EvidenceReviewStatus } from "./catalog-evidence.ts";
 import {
+  publicAuditedFieldProfile,
   publicDescriptiveCardContent,
   publicEdibilityCategory,
 } from "./public-scientific-policy.ts";
@@ -120,6 +121,7 @@ const minimumDocuments: CatalogSearchDocument[] = minimumCards.map((card) => {
   const currentNames = [...mapping.currentAcceptedNames];
   const sourceNames = [card.sourceLabel, mapping.preferredDisplayName];
   const descriptive = publicDescriptiveCardContent(card);
+  const fieldProfile = publicAuditedFieldProfile(card);
 
   return {
     id: card.cardId,
@@ -141,6 +143,10 @@ const minimumDocuments: CatalogSearchDocument[] = minimumCards.map((card) => {
       ...genera,
       ...descriptive.terminology,
       ...descriptive.essentialMorphology,
+      ...fieldProfile.characters,
+      fieldProfile.plusOne,
+      fieldProfile.diagnosticNote ?? "",
+      fieldProfile.safetyCheck ?? "",
       descriptive.ecologySummary ?? "",
     ]),
   };

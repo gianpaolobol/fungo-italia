@@ -14,6 +14,11 @@ test("current private beta gate is ready while scientific completion remains ope
   assert.equal(gate.checks.nomenclatureConflicts, 0);
   assert.equal(gate.checks.nomenclatureUnresolved, 0);
   assert.ok(gate.checks.reviewNeededClaims > 0);
+  assert.equal(gate.checks.auditedFieldProfiles, 148);
+  assert.equal(gate.checks.auditedFieldProfileErrors, 0);
+  assert.equal(gate.checks.auditedFieldProfileClaims, 148);
+  assert.equal(gate.checks.auditedFieldProfileEvidence, 148);
+  assert.equal(gate.checks.auditedFieldSafetyChecks, 3);
   assert.equal(gate.checks.minimumPublicScientificLeaks, 0);
   assert.equal(gate.checks.genusPublicScientificLeaks, 0);
   assert.equal(gate.checks.visualViewportSmoke, "verified");
