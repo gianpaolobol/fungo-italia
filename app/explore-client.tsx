@@ -192,7 +192,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
       if (atlasKind !== "all") params.set("kind", atlasKind);
       if (atlasRank) params.set("rank", atlasRank);
       if (atlasEdibility) params.set("edibility", atlasEdibility);
-      params.set("limit", "100");
+      params.set("limit", "500");
 
       setAtlasServerStatus("loading");
       fetch(`/api/catalog?${params.toString()}`, { signal: controller.signal })
@@ -874,10 +874,12 @@ function AreaDetails({
         </div>
       </div>
 
-      <div className={cn("mt-4 grid gap-2", compact ? "grid-cols-2 sm:grid-cols-4" : "grid-cols-2")}>
+      <div className={cn("mt-4 grid gap-2", compact ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6" : "grid-cols-2")}>
         <Metric icon={Trees} label="Ecologia" value={String(forecast.components.ecologicalSuitability) + "/100"} />
         <Metric icon={CloudRain} label="Meteo" value={forecast.components.weatherFit === null ? "non disponibile" : String(forecast.components.weatherFit) + "/100"} />
-        <Metric icon={Leaf} label="Stagione" value={String(forecast.components.phenologyFit) + "/100"} />
+        <Metric icon={Sparkles} label="Crescita" value={forecast.components.fruitingTriggerFit === null ? "non disponibile" : String(forecast.components.fruitingTriggerFit) + "/100"} />
+        <Metric icon={Leaf} label="Fenologia" value={String(forecast.components.speciesPhenologyFit) + "/100"} />
+        <Metric icon={MapPin} label="Quota" value={String(forecast.components.altitudeSeasonFit) + "/100"} />
         <Metric icon={Users} label="Pressione" value={getVisitPressure(area.delayedVisitors)} />
       </div>
 
@@ -889,6 +891,10 @@ function AreaDetails({
             <span><strong>{forecast.weather.relativeHumidity ?? "–"}%</strong><br /><small>umidità relativa</small></span>
             <span><strong>{forecast.weather.precipitation7dMm ?? "–"} mm</strong><br /><small>pioggia 7 giorni osservati</small></span>
             <span><strong>{forecast.weather.precipitation14dMm ?? "–"} mm</strong><br /><small>pioggia 14 giorni osservati</small></span>
+            <span><strong>{forecast.weather.precipitation26dMm ?? "–"} mm</strong><br /><small>pioggia 26 giorni osservati</small></span>
+            <span><strong>{forecast.weather.meanTemperature20dC ?? "–"} °C</strong><br /><small>temperatura media 20 giorni</small></span>
+            <span><strong>{forecast.weather.waterBalance14dMm ?? "–"} mm</strong><br /><small>bilancio idrico 14 giorni</small></span>
+            <span><strong>{forecast.weather.elevationM ?? "–"} m</strong><br /><small>quota modello meteo</small></span>
           </div>
           <p className="mt-2 break-words text-xs text-[#708076]">
             Rilevazione {forecast.weatherObservedAt ? new Date(forecast.weatherObservedAt).toLocaleString("it-IT") : "non disponibile"}; probabilità pioggia odierna {forecast.weather.precipitationProbability ?? "–"}%.
@@ -907,6 +913,25 @@ function AreaDetails({
           ))}
         </ul>
       </div>
+
+      {area.evidenceSources && area.evidenceSources.length > 0 && (
+        <div className="mt-5">
+          <h3 className="text-sm font-black uppercase tracking-[0.08em] text-[#597160]">Fonti territoriali</h3>
+          <div className="mt-2 space-y-2">
+            {area.evidenceSources.map((source) => (
+              <a
+                key={source.url}
+                href={source.url}
+                target="_blank"
+                rel="noreferrer"
+                className="block rounded-xl border border-[#dfe7dc] bg-white p-3 text-sm font-semibold text-[#315d3c] underline-offset-2 hover:underline"
+              >
+                {source.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mt-5">
         <h3 className="text-sm font-black uppercase tracking-[0.08em] text-[#597160]">Taxa compatibili</h3>
