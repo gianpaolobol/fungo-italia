@@ -5,6 +5,9 @@ export type WeatherSnapshot = {
   relativeHumidity: number | null;
   precipitation7dMm: number | null;
   precipitation14dMm: number | null;
+  precipitation26dMm: number | null;
+  meanTemperature20dC: number | null;
+  waterBalance14dMm: number | null;
   precipitationProbability: number | null;
   et0Mm: number | null;
   latitude: number | null;
@@ -40,6 +43,35 @@ function sumObserved(
   return Number(window.reduce<number>((sum, value) => sum + (finiteNumber(value) ?? 0), 0).toFixed(1));
 }
 
+function meanObservedTemperature(
+  times: unknown,
+  mins: unknown,
+  maxs: unknown,
+  count: number,
+  now: Date,
+): number | null {
+  if (!Array.isArray(times) || !Array.isArray(mins) || !Array.isArray(maxs)) return null;
+  const today = now.toISOString().slice(0, 10);
+  const dailyMeans = times.flatMap((date, index) => {
+    if (typeof date !== "string" || date >= today) return [];
+    const min = finiteNumber(mins[index]);
+    const max = finiteNumber(maxs[index]);
+    return min === null || max === null ? [] : [(min + max) / 2];
+  });
+  const window = dailyMeans.slice(-count);
+  if (window.length < Math.min(5, count)) return null;
+  return Number((window.reduce((sum, value) => sum + value, 0) / window.length).toFixed(1));
+}
+
+function sumObservedEvapotranspiration(
+  times: unknown,
+  values: unknown,
+  count: number,
+  now: Date,
+): number | null {
+  return sumObserved(times, values, count, now);
+}
+
 function valueForToday(times: unknown, values: unknown, now: Date): number | null {
   if (!Array.isArray(times) || !Array.isArray(values)) return null;
   const today = now.toISOString().slice(0, 10);
@@ -67,6 +99,19 @@ export function normalizeOpenMeteo(payload: unknown, now = new Date()): WeatherS
     relativeHumidity: finiteNumber(current.relative_humidity_2m),
     precipitation7dMm: sumObserved(daily.time, daily.precipitation_sum, 7, now),
     precipitation14dMm: sumObserved(daily.time, daily.precipitation_sum, 14, now),
+    precipitation26dMm: sumObserved(daily.time, daily.precipitation_sum, 26, now),
+    meanTemperature20dC: meanObservedTemperature(
+      daily.time,
+      daily.temperature_2m_min,
+      daily.temperature_2m_max,
+      20,
+      now,
+    ),
+    waterBalance14dMm: (() => {
+      const rain = sumObserved(daily.time, daily.precipitation_sum, 14, now);
+      const et0 = sumObservedEvapotranspiration(daily.time, daily.et0_fao_evapotranspiration, 14, now);
+      return rain === null || et0 === null ? null : Number((rain - et0).toFixed(1));
+    })(),
     precipitationProbability: valueForToday(daily.time, daily.precipitation_probability_max, now),
     et0Mm: valueForToday(daily.time, daily.et0_fao_evapotranspiration, now),
     latitude: finiteNumber(payload.latitude),
@@ -90,7 +135,7 @@ export async function fetchOpenMeteoSnapshots(
     "daily",
     "temperature_2m_min,temperature_2m_max,precipitation_sum,precipitation_probability_max,et0_fao_evapotranspiration",
   );
-  url.searchParams.set("past_days", "14");
+  url.searchParams.set("past_days", "30");
   url.searchParams.set("forecast_days", "7");
   url.searchParams.set("timezone", "auto");
 
@@ -116,7 +161,7 @@ export async function fetchOpenMeteoSnapshot(
     "daily",
     "temperature_2m_min,temperature_2m_max,precipitation_sum,precipitation_probability_max,et0_fao_evapotranspiration",
   );
-  url.searchParams.set("past_days", "14");
+  url.searchParams.set("past_days", "30");
   url.searchParams.set("forecast_days", "7");
   url.searchParams.set("timezone", "auto");
 
