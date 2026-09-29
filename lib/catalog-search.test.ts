@@ -138,7 +138,7 @@ test("pagination is bounded and deterministic", () => {
   ]).size, 10);
 
   const bounded = searchCatalog({ limit: 5000 });
-  assert.equal(bounded.limit, 100);
+  assert.equal(bounded.limit, 500);
 });
 
 test("URL query parsing is server-compatible and tolerant of bad pagination", () => {

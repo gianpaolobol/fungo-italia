@@ -23,6 +23,9 @@ export type ForecastResult = {
     relativeHumidity: number | null;
     precipitation7dMm: number | null;
     precipitation14dMm: number | null;
+    precipitation26dMm: number | null;
+    meanTemperature20dC: number | null;
+    waterBalance14dMm: number | null;
     precipitationProbability: number | null;
     elevationM: number | null;
     source: WeatherSnapshot["source"];
@@ -32,6 +35,9 @@ export type ForecastResult = {
     ecologicalSuitability: number;
     phenologyFit: number;
     weatherFit: number | null;
+    fruitingTriggerFit: number | null;
+    speciesPhenologyFit: number;
+    altitudeSeasonFit: number;
     evidenceScore: number;
     pressurePenalty: number;
   };
@@ -50,19 +56,101 @@ function pressurePenalty(count: number) {
   return 0;
 }
 
+const taxonActiveMonths: Readonly<Record<string, readonly number[]>> = {
+  "boletus-edulis": [6, 7, 8, 9, 10, 11],
+  "russula-cyanoxantha": [6, 7, 8, 9, 10],
+  "russula-vesca": [6, 7, 8, 9, 10],
+  "russula-virescens": [6, 7, 8, 9, 10],
+  "craterellus-cornucopioides": [8, 9, 10, 11],
+  "hygrophorus-marzuolus": [1, 2, 3, 4],
+  "lactarius-deliciosi": [8, 9, 10, 11],
+  "tricholoma-terreum-group": [9, 10, 11, 12],
+  "pleurotus-eryngii": [1, 2, 3, 4, 10, 11, 12],
+  "agaricus-campestris-group": [4, 5, 6, 7, 8, 9, 10, 11],
+  "marasmius-oreades": [4, 5, 6, 7, 8, 9, 10],
+  "amanita-vaginatae": [6, 7, 8, 9, 10],
+  "morchella": [3, 4, 5],
+  "verpa": [3, 4, 5],
+  "pleurotus-ostreatus": [10, 11, 12, 1, 2],
+  "flammulina-velutipes": [11, 12, 1, 2],
+};
+
+function circularMonthDistance(month: number, activeMonth: number) {
+  const delta = Math.abs(month - activeMonth);
+  return Math.min(delta, 12 - delta);
+}
+
+function calculateSpeciesPhenologyFit(area: Area, now: Date) {
+  const month = now.getUTCMonth() + 1;
+  const scores = area.expectedTaxa.flatMap((taxonId) => {
+    const months = taxonActiveMonths[taxonId];
+    if (!months?.length) return [];
+    const distance = Math.min(...months.map((activeMonth) => circularMonthDistance(month, activeMonth)));
+    return [distance === 0 ? 100 : distance === 1 ? 64 : distance === 2 ? 28 : 8];
+  });
+  if (scores.length === 0) return clamp(area.seasonFit);
+  const dynamic = scores.reduce((sum, value) => sum + value, 0) / scores.length;
+  return clamp(dynamic * 0.78 + area.seasonFit * 0.22);
+}
+
+function calculateAltitudeSeasonFit(area: Area, weather: WeatherSnapshot | null, now: Date) {
+  const elevation =
+    weather?.elevationM ??
+    (area.elevationRangeM ? (area.elevationRangeM[0] + area.elevationRangeM[1]) / 2 : null);
+  if (elevation === null) return 70;
+  const month = now.getUTCMonth() + 1;
+  const target =
+    month >= 6 && month <= 8 ? 1250 :
+    month >= 9 && month <= 11 ? 850 :
+    month >= 3 && month <= 5 ? 650 :
+    400;
+  const tolerance = month >= 6 && month <= 8 ? 1200 : 1050;
+  return clamp(100 - (Math.abs(elevation - target) / tolerance) * 55);
+}
+
 function calculateWeatherFit(weather: WeatherSnapshot) {
   const components: number[] = [];
-  if (weather.temperatureC !== null) {
-    components.push(clamp(100 - Math.abs(weather.temperatureC - 15) * 5));
-  }
   if (weather.relativeHumidity !== null) components.push(clamp(weather.relativeHumidity));
   if (weather.precipitation14dMm !== null) {
     const rain = weather.precipitation14dMm;
-    components.push(clamp(rain <= 60 ? 35 + rain : 95 - (rain - 60) * 0.45));
+    components.push(clamp(25 + rain * 1.15));
   }
   if (weather.et0Mm !== null) components.push(clamp(100 - weather.et0Mm * 12));
   if (components.length < 2) return null;
   return clamp(components.reduce((sum, value) => sum + value, 0) / components.length);
+}
+
+function calculateFruitingTriggerFit(area: Area, weather: WeatherSnapshot) {
+  const temperature =
+    weather.meanTemperature20dC ??
+    weather.temperatureC;
+  const rainfall = weather.precipitation26dMm ?? weather.precipitation14dMm;
+  if (temperature === null || rainfall === null) return null;
+
+  // B. edulis is the best-supported species-specific case in the current model:
+  // recent monitoring associates peak fruiting with ~13 C over ~20 days and
+  // increasing precipitation accumulated over ~26 days. Other taxa use a
+  // deliberately broader generic temperature response until species-specific
+  // Italian calibrations are available.
+  const hasPorcini = area.expectedTaxa.includes("boletus-edulis");
+  const targetTemperature = hasPorcini ? 13 : 14;
+  const temperatureTolerance = hasPorcini ? 9 : 12;
+  const temperatureScore = clamp(
+    100 - (Math.abs(temperature - targetTemperature) / temperatureTolerance) * 100,
+  );
+  const rainScore = clamp(28 + rainfall * (hasPorcini ? 0.9 : 0.72));
+  const waterBalanceScore =
+    weather.waterBalance14dMm === null
+      ? null
+      : clamp(55 + weather.waterBalance14dMm * 1.6);
+
+  const weighted: Array<[number, number]> = [
+    [temperatureScore, 0.38],
+    [rainScore, 0.47],
+  ];
+  if (waterBalanceScore !== null) weighted.push([waterBalanceScore, 0.15]);
+  const totalWeight = weighted.reduce((sum, [, weight]) => sum + weight, 0);
+  return clamp(weighted.reduce((sum, [value, weight]) => sum + value * weight, 0) / totalWeight);
 }
 
 export function calculateForecast(
@@ -71,18 +159,23 @@ export function calculateForecast(
   now = new Date(),
 ): ForecastResult {
   const ecologicalSuitability = clamp((area.moisture + area.temperatureFit) / 2);
-  const phenologyFit = clamp(area.seasonFit);
+  const speciesPhenologyFit = calculateSpeciesPhenologyFit(area, now);
+  const phenologyFit = speciesPhenologyFit;
   const evidenceScore = clamp(area.verifiedSignals);
   const penalty = pressurePenalty(area.delayedVisitors);
   const weatherIsFresh = Boolean(weather && new Date(weather.expiresAt).getTime() >= now.getTime());
   const weatherFit = weather && weatherIsFresh ? calculateWeatherFit(weather) : null;
+  const fruitingTriggerFit = weather && weatherIsFresh ? calculateFruitingTriggerFit(area, weather) : null;
+  const altitudeSeasonFit = calculateAltitudeSeasonFit(area, weather && weatherIsFresh ? weather : null, now);
 
   const weighted: Array<[number, number]> = [
-    [ecologicalSuitability, 0.35],
-    [phenologyFit, 0.2],
-    [evidenceScore, 0.2],
+    [ecologicalSuitability, 0.23],
+    [speciesPhenologyFit, 0.18],
+    [altitudeSeasonFit, 0.09],
+    [evidenceScore, 0.15],
   ];
-  if (weatherFit !== null) weighted.push([weatherFit, 0.25]);
+  if (weatherFit !== null) weighted.push([weatherFit, 0.08]);
+  if (fruitingTriggerFit !== null) weighted.push([fruitingTriggerFit, 0.27]);
   const totalWeight = weighted.reduce((sum, [, weight]) => sum + weight, 0);
   const baseScore = weighted.reduce((sum, [value, weight]) => sum + value * weight, 0) / totalWeight;
   const score = clamp(baseScore - penalty);
@@ -102,7 +195,7 @@ export function calculateForecast(
     },
     {
       code: "phenology-fit",
-      label: `Compatibilità stagionale ${phenologyFit}/100`,
+      label: `Fenologia delle specie attese ${phenologyFit}/100`,
       tone: phenologyFit >= 65 ? "positive" : "neutral",
     },
     {
@@ -111,6 +204,19 @@ export function calculateForecast(
       tone: penalty >= 12 ? "warning" : "neutral",
     },
   ];
+
+  if (fruitingTriggerFit !== null) {
+    reasons.push({
+      code: "fruiting-trigger",
+      label: `Segnale di fruttificazione pioggia/temperatura: ${fruitingTriggerFit}/100`,
+      tone: fruitingTriggerFit >= 68 ? "positive" : fruitingTriggerFit < 40 ? "warning" : "neutral",
+    });
+  }
+  reasons.push({
+    code: "altitude-season",
+    label: `Compatibilità quota/stagione: ${altitudeSeasonFit}/100`,
+    tone: altitudeSeasonFit >= 65 ? "positive" : altitudeSeasonFit < 35 ? "warning" : "neutral",
+  });
 
   if (!weather) {
     reasons.push({
@@ -151,6 +257,9 @@ export function calculateForecast(
       relativeHumidity: weather.relativeHumidity,
       precipitation7dMm: weather.precipitation7dMm,
       precipitation14dMm: weather.precipitation14dMm,
+      precipitation26dMm: weather.precipitation26dMm,
+      meanTemperature20dC: weather.meanTemperature20dC,
+      waterBalance14dMm: weather.waterBalance14dMm,
       precipitationProbability: weather.precipitationProbability,
       elevationM: weather.elevationM,
       source: weather.source,
@@ -160,6 +269,9 @@ export function calculateForecast(
       ecologicalSuitability,
       phenologyFit,
       weatherFit,
+      fruitingTriggerFit,
+      speciesPhenologyFit,
+      altitudeSeasonFit,
       evidenceScore,
       pressurePenalty: penalty,
     },

@@ -28,6 +28,9 @@ const freshWeather: WeatherSnapshot = {
   relativeHumidity: 82,
   precipitation7dMm: 42,
   precipitation14dMm: 67,
+  precipitation26dMm: 96,
+  meanTemperature20dC: 13.2,
+  waterBalance14dMm: 34,
   precipitationProbability: 70,
   et0Mm: 2.2,
   latitude: 44.3,
@@ -42,6 +45,9 @@ test("forecast is bounded, explainable, and keeps supported taxon identifiers", 
   assert.deepEqual(result.expectedTaxa, ["boletus-edulis"]);
   assert.ok(result.reasons.length >= 3);
   assert.equal(result.components.weatherFit !== null, true);
+  assert.equal(result.components.fruitingTriggerFit !== null, true);
+  assert.ok(result.components.speciesPhenologyFit > 60);
+  assert.ok(result.components.altitudeSeasonFit > 0);
   assert.equal(result.confidence, "high");
 });
 

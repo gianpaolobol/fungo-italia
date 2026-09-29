@@ -13,6 +13,7 @@ import { LoaderCircle, MapPinned } from "lucide-react";
 import type { Area } from "@/lib/domain";
 import type { ForecastResult } from "@/lib/forecast";
 import { areasToFeatureCollection } from "@/lib/map-geometry";
+import { italyOutline } from "@/lib/italy-outline";
 import { ForecastMapFallback } from "@/components/forecast-map-fallback";
 
 const MAP_STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? "https://tiles.openfreemap.org/styles/liberty";
@@ -68,6 +69,29 @@ export function ForecastMap({
       );
 
       map.on("load", () => {
+        map.addSource("italy-outline", {
+          type: "geojson",
+          data: JSON.parse(JSON.stringify(italyOutline)),
+        });
+        map.addLayer({
+          id: "italy-outline-fill",
+          type: "fill",
+          source: "italy-outline",
+          paint: {
+            "fill-color": "#f4f7f2",
+            "fill-opacity": 0.62,
+          },
+        });
+        map.addLayer({
+          id: "italy-outline-line",
+          type: "line",
+          source: "italy-outline",
+          paint: {
+            "line-color": "#315d3c",
+            "line-width": 2.2,
+            "line-opacity": 0.88,
+          },
+        });
         map.addSource("forecast-areas", {
           type: "geojson",
           data: initialFeaturesRef.current,
@@ -126,6 +150,10 @@ export function ForecastMap({
         });
         map.on("mouseleave", "forecast-area-fill", () => {
           map.getCanvas().style.cursor = "";
+        });
+        map.fitBounds([[6.25, 35.2], [19.25, 47.4]], {
+          padding: 26,
+          duration: 0,
         });
         setStatus("ready");
       });
