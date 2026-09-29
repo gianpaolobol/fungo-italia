@@ -89,11 +89,11 @@ export function evaluateBetaReleaseGate(
   if (auditedFieldProfileClaims.length !== 148) {
     blockers.push(`Expected 148 audited field-profile claims, found ${auditedFieldProfileClaims.length}`);
   }
-  if (auditedFieldProfileEvidence.length !== 148) {
-    blockers.push(`Expected 148 audited field-profile evidence records, found ${auditedFieldProfileEvidence.length}`);
+  if (auditedFieldProfileEvidence.length !== 156) {
+    blockers.push(`Expected 156 audited/source-enriched field-profile evidence records, found ${auditedFieldProfileEvidence.length}`);
   }
-  if (auditedFieldSafetyChecks !== 3) {
-    blockers.push(`Expected 3 explicit audited safety checks, found ${auditedFieldSafetyChecks}`);
+  if (auditedFieldSafetyChecks !== 4) {
+    blockers.push(`Expected 4 explicit audited safety checks after source enrichment, found ${auditedFieldSafetyChecks}`);
   }
   if (minimumGenusCards.length !== 66) {
     blockers.push(`Expected 66 genus/group cards, found ${minimumGenusCards.length}`);
