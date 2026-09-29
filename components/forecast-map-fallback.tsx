@@ -75,7 +75,7 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
           </p>
         </div>
 
-        <div className="grid content-start grid-cols-1 gap-2 sm:grid-cols-2" aria-label="Elenco accessibile delle aree">
+        <div className="grid content-start grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-2" aria-label="Mappa accessibile delle aree">
           {areas.map((area) => {
             const forecast = byArea.get(area.id);
             return (
