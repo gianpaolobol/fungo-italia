@@ -719,6 +719,37 @@ const verifiedAreaAdditions: Area[] = [
         kind: "regional-authority",
       },
     ],
+  },
+  {
+    id: "monti-sicani",
+    name: "Monti Sicani e Bosco della Ficuzza",
+    region: "Sicilia",
+    center: [37.75, 13.42],
+    habitat: ["Querceto", "Lecceta", "Castagneto", "Praterie montane"],
+    moisture: 58,
+    temperatureFit: 80,
+    seasonFit: 72,
+    verifiedSignals: 61,
+    delayedVisitors: 3,
+    lastUpdatedLabel: "habitat forestali regionali verificati",
+    expectedTaxa: ["boletus-edulis", "russula-virescens", "agaricus-campestris-group"],
+    reasons: [
+      "La Regione Siciliana documenta quercete miste, leccete, roverelleti e praterie montane nel sistema dei Monti Sicani",
+      "La macroarea include boschi Natura 2000 come Ficuzza e Genuardo; nessun punto di raccolta è pubblicato",
+    ],
+    elevationRangeM: [400, 1200],
+    evidenceSources: [
+      {
+        label: "Regione Siciliana — Rete Natura 2000 Monti Sicani e Bosco della Ficuzza",
+        url: "https://orbs.regione.sicilia.it/aree-protette/rete-natura2000.html",
+        kind: "regional-authority",
+      },
+      {
+        label: "Regione Siciliana — Monte Genuardo e Santa Maria del Bosco",
+        url: "https://orbs.regione.sicilia.it/aree-protette/riserve-naturali-siciliane/176-riserva-naturale-monte-genuardo-e-santa-maria-del-bosco.html",
+        kind: "regional-authority",
+      },
+    ],
   }
 ];
 
