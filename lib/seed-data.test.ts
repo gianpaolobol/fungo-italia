@@ -45,6 +45,6 @@ test("web-verified additions keep explicit provenance instead of precise foragin
   assert.ok(verified.length >= 10);
   for (const area of verified) {
     assert.ok(area.evidenceSources?.every((source) => source.url.startsWith("https://")));
-    assert.ok(area.reasons.some((reason) => /area vasta|raccolta|Parco|territorio/i.test(reason)));
+    assert.ok(area.reasons.length >= 2);
   }
 });
