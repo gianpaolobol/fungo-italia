@@ -21,7 +21,7 @@ test("national beta covers every Italian region with broad search areas", () => 
     "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto",
   ];
 
-  assert.equal(betaAreas.length >= 40, true);
+  assert.equal(betaAreas.length >= 50, true);
   assert.deepEqual([...regions].sort(), expectedRegions.sort());
   assert.equal(new Set(betaAreas.map((area) => area.id)).size, betaAreas.length);
 });
@@ -37,4 +37,14 @@ test("beta taxa keep regional names scoped to geography", () => {
     { name: "Piopparello", regions: ["Toscana", "Umbria"] },
     { name: "Fungo del pioppo", regions: ["Emilia-Romagna", "Veneto"] },
   ]);
+});
+
+
+test("web-verified additions keep explicit provenance instead of precise foraging coordinates", () => {
+  const verified = betaAreas.filter((area) => area.evidenceSources?.length);
+  assert.ok(verified.length >= 10);
+  for (const area of verified) {
+    assert.ok(area.evidenceSources?.every((source) => source.url.startsWith("https://")));
+    assert.ok(area.reasons.some((reason) => /area vasta|raccolta|Parco|territorio/i.test(reason)));
+  }
 });
