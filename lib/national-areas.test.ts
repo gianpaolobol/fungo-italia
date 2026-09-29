@@ -20,7 +20,7 @@ test("aggregate areas cover all Italian regions without point-scale claims", () 
     assert.ok(area.name.trim().length > 0, area.id);
     assert.ok(area.center[0] >= 35 && area.center[0] <= 48, area.id);
     assert.ok(area.center[1] >= 6 && area.center[1] <= 20, area.id);
-    assert.ok(area.reasons.every((reason) => !/fungaia|coordinate precise/i.test(reason)), area.id);
+    assert.ok(area.reasons.every((reason) => !/\b\d{1,2}\.\d{4,}\s*[,;]\s*\d{1,2}\.\d{4,}\b/.test(reason)), area.id);
   }
 });
 
