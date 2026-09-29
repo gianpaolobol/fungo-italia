@@ -326,7 +326,7 @@ const verifiedAreaAdditions: Area[] = [
         kind: "mycological-association",
       },
     ],
-  },,
+  },
   {
     id: "canal-ferro-val-canale",
     name: "Canal del Ferro e Val Canale",
