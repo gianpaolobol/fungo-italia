@@ -93,6 +93,12 @@ export interface AtlasTaxon extends Taxon {
   };
 }
 
+export interface AreaEvidenceSource {
+  label: string;
+  url: string;
+  kind: "official-park" | "regional-authority" | "mycological-association" | "scientific-study";
+}
+
 export interface Area {
   id: string;
   name: string;
@@ -107,6 +113,8 @@ export interface Area {
   lastUpdatedLabel: string;
   expectedTaxa: string[];
   reasons: string[];
+  elevationRangeM?: [number, number];
+  evidenceSources?: AreaEvidenceSource[];
 }
 
 export interface Recommendation {
