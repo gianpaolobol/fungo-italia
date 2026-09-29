@@ -11,6 +11,7 @@ import {
 } from "./minimum-field-profiles.ts";
 import { sourceMinimumLearningUnits } from "./minimum-learning-source.ts";
 import { minimumCards } from "./minimum-cards.ts";
+import { publicAuditedFieldProfile } from "./public-scientific-policy.ts";
 
 const labels = sourceMinimumLearningUnits.map((unit) => unit.sourceLabel);
 
@@ -68,5 +69,22 @@ test("all 148 assembled minimum cards carry the audited field profile", () => {
     const expected = auditedMinimumFieldProfiles[card.sourceLabel];
     assert.ok(expected, card.sourceLabel);
     assert.deepEqual(card.fieldProfile, expected, card.cardId);
+  }
+});
+
+test("all 148 public card projections expose the reviewed baseline metadata and intact 3+1 payload", () => {
+  assert.equal(minimumCards.length, AUDITED_MINIMUM_FIELD_PROFILE_TARGET);
+
+  for (const card of minimumCards) {
+    const projected = publicAuditedFieldProfile(card);
+    const expected = auditedMinimumFieldProfiles[card.sourceLabel];
+
+    assert.ok(expected, card.sourceLabel);
+    assert.deepEqual(projected.characters, [...expected.characters], card.cardId);
+    assert.equal(projected.plusOne, expected.plusOne, card.cardId);
+    assert.equal(projected.diagnosticStatus, expected.diagnosticStatus, card.cardId);
+    assert.equal(projected.version, AUDITED_MINIMUM_FIELD_PROFILE_VERSION, card.cardId);
+    assert.equal(projected.auditedAt, AUDITED_MINIMUM_FIELD_PROFILE_DATE, card.cardId);
+    assert.equal(projected.reviewStatus, AUDITED_MINIMUM_FIELD_PROFILE_REVIEW_STATUS, card.cardId);
   }
 });
