@@ -540,7 +540,7 @@ const verifiedAreaAdditions: Area[] = [
     verifiedSignals: 72,
     delayedVisitors: 7,
     lastUpdatedLabel: "raccolta funghi pubblicamente documentata",
-    expectedTaxa: ["boletus-edulis", "calocybe-gambosa", "agaricus-campestris-group"],
+    expectedTaxa: ["boletus-edulis", "marasmius-oreades", "agaricus-campestris-group"],
     reasons: [
       "La documentazione pubblica sul nuovo Parco nazionale conferma la continuità della raccolta di funghi secondo le norme vigenti",
       "La Regione Campania documenta inoltre il Calocybe gambosa tradizionale nelle aree montane del Matese",
