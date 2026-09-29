@@ -168,9 +168,9 @@ test("every card claim id resolves to the canonical or draft claim registry", ()
   }
 });
 
-test("all 148 audited field-profile claims and evidence are reviewed, not approved", () => {
+test("all 148 audited field-profile claims and source-enriched evidence are reviewed, not approved", () => {
   assert.equal(auditedFieldProfileClaims.length, 148);
-  assert.equal(auditedFieldProfileEvidence.length, 148);
+  assert.equal(auditedFieldProfileEvidence.length, 156);
   assert.equal(
     auditedFieldProfileClaims.every((claim) => claim.reviewStatus === "reviewed"),
     true,
