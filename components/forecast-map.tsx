@@ -203,21 +203,24 @@ export function ForecastMap({
       role="region"
       aria-label="Mappa delle condizioni favorevoli per i funghi"
     >
-      <div ref={containerRef} className="absolute inset-0" />
+      {(status === "loading" || status === "error") && (
+        <ForecastMapFallback areas={areas} forecasts={forecasts} selectedId={selectedId} onSelect={onSelect} />
+      )}
+      <div
+        ref={containerRef}
+        className={status === "ready" ? "absolute inset-0" : "pointer-events-none absolute inset-0 opacity-0"}
+      />
       {status === "loading" && (
         <div
-          className="absolute inset-0 grid place-items-center bg-[#edf3eb]"
+          className="pointer-events-none absolute inset-x-0 top-4 z-20 flex justify-center"
           role="status"
           aria-live="polite"
         >
-          <div className="flex items-center gap-2 rounded-xl bg-white px-4 py-3 font-bold text-[#315d3c] shadow">
+          <div className="flex items-center gap-2 rounded-xl border border-white/80 bg-white/95 px-4 py-3 font-bold text-[#315d3c] shadow">
             <LoaderCircle className="size-5 animate-spin" />
-            Caricamento mappa
+            Caricamento cartografia interattiva
           </div>
         </div>
-      )}
-      {status === "error" && (
-        <ForecastMapFallback areas={areas} forecasts={forecasts} selectedId={selectedId} onSelect={onSelect} />
       )}
       <div className="pointer-events-none absolute left-3 top-3 rounded-xl border border-white/80 bg-white/92 px-3 py-2 shadow-md backdrop-blur">
         <div className="flex items-center gap-2 text-sm font-black">
