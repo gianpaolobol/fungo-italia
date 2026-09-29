@@ -38,8 +38,10 @@ for (const viewport of viewports) {
     await expect(page.getByRole("tab", { name: "Atlante" })).toBeVisible();
     expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);
 
-    await page.getByRole("tab", { name: "Atlante" }).click();
-    await expect(page.getByRole("heading", { name: "Nomi comprensibili, rigore scientifico" })).toBeVisible();
+    const atlasTab = page.getByRole("tab", { name: "Atlante" });
+    await atlasTab.click();
+    await expect(atlasTab).toHaveAttribute("data-state", "active", { timeout: 10000 });
+    await expect(page.getByRole("heading", { name: "Nomi comprensibili, rigore scientifico" })).toBeVisible({ timeout: 10000 });
     await page.waitForTimeout(800);
     expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);
 
