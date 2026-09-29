@@ -32,6 +32,9 @@ test("Open-Meteo payload separates observed rain from future forecast", () => {
 
   assert.equal(snapshot.precipitation7dMm, 77);
   assert.equal(snapshot.precipitation14dMm, 105);
+  assert.equal(snapshot.precipitation26dMm, 105);
+  assert.equal(snapshot.meanTemperature20dC, 13.5);
+  assert.equal(snapshot.waterBalance14dMm, 77);
   assert.equal(snapshot.temperatureC, 14.5);
   assert.equal(snapshot.relativeHumidity, 81);
   assert.equal(snapshot.source, "open-meteo");
@@ -51,6 +54,8 @@ test("future rain never contributes to observed 7 and 14 day totals", () => {
 
   assert.equal(snapshot.precipitation7dMm, 5);
   assert.equal(snapshot.precipitation14dMm, 5);
+  assert.equal(snapshot.precipitation26dMm, 5);
+  assert.equal(snapshot.waterBalance14dMm, 3);
   assert.equal(snapshot.precipitationProbability, 70);
 });
 
@@ -63,6 +68,9 @@ test("missing optional weather values stay null instead of becoming zero", () =>
   assert.equal(snapshot.temperatureC, null);
   assert.equal(snapshot.relativeHumidity, null);
   assert.equal(snapshot.precipitation7dMm, null);
+  assert.equal(snapshot.precipitation26dMm, null);
+  assert.equal(snapshot.meanTemperature20dC, null);
+  assert.equal(snapshot.waterBalance14dMm, null);
   assert.equal(snapshot.et0Mm, null);
 });
 
