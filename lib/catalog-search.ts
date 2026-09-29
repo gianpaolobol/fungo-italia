@@ -234,7 +234,7 @@ export function searchCatalog(
   const query = request.query ?? "";
   const filters = request.filters ?? {};
   const offset = Math.max(0, Math.trunc(request.offset ?? 0));
-  const limit = Math.min(100, Math.max(1, Math.trunc(request.limit ?? 30)));
+  const limit = Math.min(500, Math.max(1, Math.trunc(request.limit ?? 30)));
 
   const matched = catalogSearchDocuments
     .filter((document) => matchesFilters(document, filters))
