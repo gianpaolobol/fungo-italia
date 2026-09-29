@@ -68,14 +68,14 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
     "Frequente su terreni compatti e disturbati, bordi stradali e aree calpestate.",
   ),
   "Agaricus bisporus": p(
-    ["Cappello carnoso bianco-crema o bruno, spesso con squame brune verso il centro.", "Lamelle libere da rosa pallido a bruno-cioccolato.", "Anello mediano persistente, semplice o pseudo-doppio, con lieve arrossamento della carne e assenza di odore fenolico."],
-    "Portamento robusto e basso, frequente in terreni ricchi e coltivazioni; nessun forte ingiallimento fenolico.",
+    ["Cappello carnoso da bianco a bruno-grigiastro/beige, asciutto, tardivamente dissociato in squame ampie e piatte.", "Lamelle strette e fitte, libere, inizialmente rosa-carnicino e poi bruno-nerastre a maturità.", "Gambo piuttosto corto e tozzo con anello infero, stretto e persistente; carne bianca leggermente vinosa al taglio."],
+    "Saprotrofo di terreni molto ricchi e concimati, anche su cumuli di letame; tipico portamento robusto dello champignon.",
     "field_confirmatory",
     { diagnosticNote: "In raccolte spontanee o atipiche la determinazione specifica fine va confermata con caratteri microscopici." },
   ),
   "Cyclocybe cylindracea": p(
-    ["Crescita lignicola in cespi compatti su tronchi, ceppaie o radici di latifoglie.", "Cappello bruno-miele, più chiaro verso il margine, spesso screpolato con il secco.", "Gambo fibroso con anello ampio; lamelle chiare poi bruno-tabacco."],
-    "Carne soda con odore fungino gradevole; tipica su pioppi, salici e altre latifoglie.",
+    ["Cappello da bruno-fulvo nel giovane a beige/biancastro a maturità, spesso con disco più scuro e superficie corrugata o screpolata.", "Lamelle fitte, annesse al gambo con un dentino, da biancastre a bruno-tabacco con la maturazione.", "Gambo bianco poi ocraceo, fibroso e tenace, con ampio anello membranoso persistente."],
+    "Crescita lignicola dalla primavera all’autunno inoltrato, soprattutto su vecchi pioppi ma anche olmi, salici, querce e fichi.",
   ),
   "Amanita phalloides": p(
     ["Cappello verde-oliva, giallo-oliva o talvolta quasi bianco, percorso da fibrille radiali più scure.", "Lamelle bianche libere e grande anello membranoso alto sul gambo.", "Base del gambo con volva bianca ampia, membranosa e sacciforme."],
@@ -113,8 +113,8 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
     "Nello stadio chiuso la sezione longitudinale mostra già strutture interne gialle.",
   ),
   "Amanita gemmata": p(
-    ["Cappello giallo-ocra con margine striato e placche bianche appiattite del velo.", "Base bulbosa con residui volvari aderenti e margine superiore netto o canalicolato.", "Anello molto fragile, spesso scomparso negli esemplari adulti."],
-    "Frequente con conifere, soprattutto Pinus, su suoli sabbiosi o acidi.",
+    ["Cappello ceroso da crema a giallo-ocra/giallo dorato, con margine striato e verruche o lembi bianchi facilmente detersili, talvolta quasi assenti.", "Gambo bianco con base bulbosa; volva circoncisa, spesso dissociata in piccoli cercini sopra il bulbo.", "Anello alto membranoso ma fragile e spesso fugace fino a scomparire negli esemplari maturi."],
+    "Fruttifica soprattutto in primavera, ma anche in autunno, in boschi di latifoglie e conifere; possibile anche in pinete litoranee su suolo sabbioso.",
     "field_high_confidence_when_typical",
     { diagnosticNote: "Forme atipiche vanno confrontate con A. gioiosa, A. eliae e taxa affini." },
   ),
@@ -269,8 +269,8 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
     "field_high_confidence_at_source_rank",
   ),
   "Galerina marginata group": p(
-    ["Piccolo cappello ambra-bruno o bruno-rossastro, fortemente igrofano e spesso striato per trasparenza al margine.", "Lamelle ocra poi bruno-ruggine.", "Gambo esile con piccolo anello o zona anulare fugace, sotto prevalentemente fibrilloso."],
-    "Lignicola su conifere e latifoglie; profilo riferito al gruppo G. marginata.",
+    ["Piccolo cappello fortemente igrofano, da ocra chiaro a giallo-ambra o bruno-rossastro, spesso bicolore e con margine striato per trasparenza.", "Lamelle adnate o appena decorrenti, non molto fitte, da bruno-ocra a bruno-rossastro/ruggine.", "Gambo sottile e slanciato, più scuro verso la base, con residui biancastri di velo e anello membranoso poco consistente."],
+    "Cespitoso su ceppaie e tronchi morti, particolarmente frequente su conifere; profilo riferito al gruppo G. marginata.",
     "field_high_confidence_at_source_rank",
     { diagnosticNote: "In caso di dubbio con Kuehneromyces la determinazione professionale richiede conferma fine." },
   ),
@@ -306,8 +306,8 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
     "Cespitoso su legno marcescente, soprattutto di latifoglie.",
   ),
   "Lentinula edodes": p(
-    ["Cappello bruno-ocraceo o bruno scuro, carnoso, spesso con squamule o verruche biancastre.", "Lamelle bianche-crema non decorrenti, fitte, che possono macchiarsi di bruno se lesionate.", "Gambo centrale o eccentrico, corto e fibroso-tenace, con residui di velo o anello fugace."],
-    "Lignicolo su latifoglie e molto frequentemente coltivato.",
+    ["Cappello molto carnoso, bruno, di taglia media, con margine inizialmente involuto e piccole squame biancastre.", "Lamelle bianche, molto fitte e basse, da adnate a uncinate.", "Carne bianca e soda nel cappello; gambo particolarmente coriaceo e tenace."],
+    "Fungo lignicolo spontaneo in Asia e diffusamente coltivato; in Italia è soprattutto presente sul mercato come prodotto coltivato/conservato.",
   ),
   "Lepiota subincarnata (= L. josserandii)": p(
     ["Piccolo cappello bianco-carnicino con squamule rosa-incarnato o rosa-brunastre più unite al centro.", "Lamelle libere, fitte, biancastre-crema.", "Gambo sottile rosato/carnicino con residui velari fibrilloso-fioccosi e base bruno-rossastro-vinosa."],
@@ -429,6 +429,8 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
   "Stropharia rugosoannulata": p(
     ["Grande cappello inizialmente rosso-vinoso o bordeaux, poi scolorente al bruno-beige.", "Grande anello pendulo con faccia inferiore rugosa o radialmente scanalata.", "Lamelle grigie nel giovane poi porpora-brune a maturità."],
     "Tipica di cippato, pacciamature e residui legnosi, con robusti rizomorfi bianchi alla base.",
+    "field_high_confidence",
+    { safetyCheck: "Nelle raccolte spontanee su compost, pacciamature urbane o siti potenzialmente contaminati, separare l'identificazione dalla valutazione di sicurezza alimentare e considerare sempre il sito di crescita." },
   ),
   "Tricholoma pardinum": p(
     ["Grande cappello grigio con grosse squame scure concentriche fortemente contrastanti su fondo biancastro.", "Lamelle bianche-paglierine, spesse e smarginate.", "Gambo robusto biancastro, spesso molto ingrossato alla base."],
@@ -505,8 +507,8 @@ export const auditedMinimumFieldProfiles: Readonly<Record<string, MinimumFieldPr
     "Frequente su terreni disturbati, campi, compost e prati ricchi.",
   ),
   "Volvariella volvacea": p(
-    ["Cappello grigio o grigio-bruno, ovale-campanulato nel giovane e poi espanso, sericeo-fibrilloso.", "Lamelle completamente libere, pallide nel giovane e rosa/rosa-brunastre a maturità.", "Grande volva membranosa sacciforme alla base e completa assenza di anello."],
-    "Saprotrofa termofila su paglia e residui vegetali in decomposizione; largamente coltivata.",
+    ["Cappello inizialmente conico-campanulato, poi più espanso, grigio argenteo-verdastro/fuligginoso con fibrille radiali più scure; viscido e brillante con umidità.", "Lamelle libere, fitte e sottili, bianche da giovani e rosa a maturità.", "Gambo bianco senza anello, con volva basale molto ampia e membranosa, esternamente feltrata."],
+    "Saprotrofa termofila di terreni molto concimati, paglia/residui vegetali e legno marcescente; largamente coltivata.",
     "field_high_confidence_when_typical",
     { safetyCheck: "Allo stadio chiuso non attribuire la specie dalla sola superficie esterna: escludere obbligatoriamente Amanita volvate con esame esperto dell'esemplare integro." },
   ),
