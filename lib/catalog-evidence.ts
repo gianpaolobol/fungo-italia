@@ -4,6 +4,12 @@ export type CatalogSourceType =
   | "article"
   | "database"
   | "institutionalWeb"
+  | "institutionalManual"
+  | "manual"
+  | "manualExtract"
+  | "teachingManual"
+  | "teachingCards"
+  | "atlas"
   | "expertReview";
 
 export type ClaimType =
