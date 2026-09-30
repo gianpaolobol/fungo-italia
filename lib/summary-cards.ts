@@ -10,6 +10,7 @@ export type SporePrintToken =
   | "salmon"
   | "rust"
   | "brown"
+  | "olive-brown"
   | "purple-brown"
   | "black"
   | "variable"
