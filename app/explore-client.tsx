@@ -53,7 +53,7 @@ import {
 } from "@/lib/atlas-navigation-state";
 import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
-import { buildSummaryCardIndex, isSummaryCardReady } from "@/lib/summary-cards";
+import { buildSummaryCardIndex, isSummaryCardContentReady, isSummaryCardReady } from "@/lib/summary-cards";
 import { cn } from "@/lib/utils";
 
 import { WebMcpBridge } from "./webmcp";
@@ -245,7 +245,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const readySummaryCards = useMemo(() => {
     const normalized = schedeQuery.toLocaleLowerCase("it").trim();
     return summaryCardShells
-      .filter(isSummaryCardReady)
+      .filter(isSummaryCardContentReady)
       .filter((card) => {
         if (!normalized) return true;
         return [
@@ -743,13 +743,13 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Pronte S1</p>
-                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter(isSummaryCardReady).length}</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">prime Schede revisionate</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter(isSummaryCardContentReady).length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">Schede scientifiche revisionate</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Copertura strutturale</p>
-                    <p className="mt-1 text-3xl font-black">{summaryCardShells.length}</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">voci Atlante predisposte</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter(isSummaryCardReady).length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">complete anche di immagine</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Regola</p>
