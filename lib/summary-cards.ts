@@ -138,3 +138,15 @@ export function isSummaryCardReady(card: SummaryCard): boolean {
     p.sporePrint !== "unknown"
   );
 }
+
+export function isSummaryCardContentReady(card: SummaryCard): boolean {
+  const p = card.presentation;
+  return (
+    card.reviewStatus === "ready" &&
+    Boolean(p.habitatSummary) &&
+    Boolean(p.seasonSummary) &&
+    Boolean(p.diagnosticCharacters) &&
+    Boolean(p.differentiatingCharacter) &&
+    p.sporePrint !== "unknown"
+  );
+}
