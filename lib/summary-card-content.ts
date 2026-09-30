@@ -123,4 +123,109 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
+
+  "atlas-auricularia-auricula-judae": {
+    displayCommonName: "Orecchio di Giuda",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/auricularia-auricula-judae.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Lignicolo su rami, tronchi e legno marcescente di latifoglie, soprattutto in ambienti umidi.",
+      seasonSummary: "Durante tutto l’anno nei periodi umidi.",
+      diagnosticCharacters: [
+        "Basidioma a forma di orecchio o coppa, irregolarmente ripiegato.",
+        "Consistenza gelatinosa-elastica da fresco e reviviscente dopo reidratazione.",
+        "Colore bruno-rossastro o bruno-grigiastro, con faccia fertile più liscia.",
+      ],
+      differentiatingCharacter:
+        "Lignicola su latifoglie, frequentemente su sambuco.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-clitocybe-geotropa": {
+    displayCommonName: "Geotropa",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/clitocybe-geotropa.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Terricola in boschi di latifoglie e conifere, prati e pascoli; spesso in grandi file o cerchi.",
+      seasonSummary: "Soprattutto in autunno inoltrato.",
+      diagnosticCharacters: [
+        "Grande cappello crema-beige, depresso fino a imbutiforme.",
+        "Umbone centrale persistente anche nel fondo dell’imbuto.",
+        "Lamelle bianche-crema fortemente decorrenti.",
+      ],
+      differentiatingCharacter:
+        "Gambo alto e robusto; spesso forma grandi archi o cerchi.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-coprinus-comatus": {
+    displayCommonName: "Coprino chiomato",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/coprinus-comatus.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Prati, margini di strade e sentieri e terreni disturbati o concimati; isolato o in gruppi.",
+      seasonSummary: "Dalla primavera all’autunno.",
+      diagnosticCharacters: [
+        "Cappello lungo cilindrico-ovoidale, bianco e fortemente squamoso-lanoso.",
+        "Lamelle libere da bianche a rosa e infine nere, con deliquescenza.",
+        "Gambo lungo, bianco e cavo con piccolo anello mobile o fugace.",
+      ],
+      differentiatingCharacter:
+        "Commestibile solo quando le lamelle sono ancora completamente bianche.",
+      sporePrint: "black",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-marasmius-oreades": {
+    displayCommonName: "Gambesecche",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/marasmius-oreades.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Luoghi aperti ed erbosi, prati e margini; cresce in file, archi e caratteristici cerchi.",
+      seasonSummary: "Dalla primavera all’autunno.",
+      diagnosticCharacters: [
+        "Cappello ocra-beige con piccolo umbone, marcatamente igrofano.",
+        "Lamelle molto distanti, pallide e non decorrenti.",
+        "Gambo sottile ma eccezionalmente tenace, elastico e flessibile.",
+      ],
+      differentiatingCharacter:
+        "Crescita tipica nei prati in file, archi e cerchi delle streghe.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-pleurotus-ostreatus": {
+    displayCommonName: "Orecchione",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/pleurotus-ostreatus.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Lignicolo su tronchi, ceppi e legno di latifoglie; spesso in gruppi sovrapposti.",
+      seasonSummary: "Soprattutto nel tardo autunno e in inverno.",
+      diagnosticCharacters: [
+        "Cappello a conchiglia o ventaglio, grigio, grigio-blu o bruno-grigiastro.",
+        "Lamelle chiare, fitte e fortemente decorrenti.",
+        "Gambo laterale o eccentrico molto corto, talvolta quasi assente.",
+      ],
+      differentiatingCharacter:
+        "Carpofori tipicamente sovrapposti in gruppi su legno.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
 };
