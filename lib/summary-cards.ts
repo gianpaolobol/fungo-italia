@@ -1,4 +1,5 @@
 import type { AtlasTaxon, TaxonRank } from "./domain.ts";
+import { reviewedSummaryCardContent } from "./summary-card-content.ts";
 
 export type SporePrintToken =
   | "white"
@@ -36,6 +37,7 @@ export interface SummaryCard {
     rank: TaxonRank;
   };
   commonName: string;
+  displayCommonName: string;
   scientificName: string;
   acceptedName: string;
   rank: TaxonRank;
@@ -69,6 +71,7 @@ export function projectAtlasTaxonToSummaryCard(taxon: AtlasTaxon): SummaryCard {
       rank: taxon.rank,
     },
     commonName: taxon.commonName,
+    displayCommonName: taxon.commonName,
     scientificName: taxon.scientificName,
     acceptedName: taxon.acceptedName,
     rank: taxon.rank,
@@ -99,7 +102,21 @@ export function projectAtlasTaxonToSummaryCard(taxon: AtlasTaxon): SummaryCard {
 export function buildSummaryCardIndex(
   taxa: readonly AtlasTaxon[],
 ): SummaryCard[] {
-  return taxa.map(projectAtlasTaxonToSummaryCard);
+  return taxa.map((taxon) => {
+    const base = projectAtlasTaxonToSummaryCard(taxon);
+    const reviewed = reviewedSummaryCardContent[taxon.id];
+    if (!reviewed) return base;
+
+    return {
+      ...base,
+      displayCommonName: reviewed.displayCommonName,
+      reviewStatus: "ready",
+      presentation: {
+        ...base.presentation,
+        ...reviewed.presentation,
+      },
+    };
+  });
 }
 
 export function findSummaryCardByAtlasId(
