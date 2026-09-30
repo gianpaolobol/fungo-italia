@@ -5,6 +5,7 @@ import { atlasTaxa } from "./atlas-catalog.ts";
 import {
   buildSummaryCardIndex,
   findSummaryCardByAtlasId,
+  isSummaryCardContentReady,
   isSummaryCardReady,
   projectAtlasTaxonToSummaryCard,
 } from "./summary-cards.ts";
@@ -84,7 +85,9 @@ test("S1 exposes the reviewed edible summary-card set", () => {
   for (const card of ready) {
     assert.equal(card.reviewStatus, "ready");
     assert.equal(card.edibility, "commestibile");
-    assert.match(card.presentation.primaryImageUrl ?? "", /^\/schede\/s1\/.+\.webp$/);
+    if (imageCompleteIds.has(card.atlasId)) {
+      assert.match(card.presentation.primaryImageUrl ?? "", /^\/schede\/s1\/.+\.webp$/);
+    }
     assert.ok(card.presentation.habitatSummary?.trim());
     assert.ok(card.presentation.seasonSummary?.trim());
     assert.equal(card.presentation.diagnosticCharacters?.length, 3);
@@ -98,7 +101,7 @@ test("S1 presentation overlay never overrides Atlas scientific identity, rank or
   const cards = buildSummaryCardIndex(atlasTaxa);
   const atlasById = new Map(atlasTaxa.map((taxon) => [taxon.id, taxon]));
 
-  for (const card of cards.filter(isSummaryCardReady)) {
+  for (const card of cards.filter(isSummaryCardContentReady)) {
     const taxon = atlasById.get(card.atlasId);
     assert.ok(taxon, card.atlasId);
     assert.equal(card.scientificName, taxon.scientificName);
