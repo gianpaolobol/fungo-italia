@@ -333,4 +333,251 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
+
+  "atlas-russula-virescens": {
+    displayCommonName: "Verdone",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Boschi di latifoglie, soprattutto querce e castagni; presente anche in altri boschi misti.",
+      seasonSummary: "Dalla tarda primavera all’autunno.",
+      diagnosticCharacters: [
+        "Cappello verde o verde-grigiastro con tipica superficie screpolata in areole o tessere.",
+        "Lamelle fitte, crema, fragili come tipico del genere Russula.",
+        "Gambo bianco, pieno da giovane, poi più spugnoso.",
+      ],
+      differentiatingCharacter: "La caratteristica tesselatura verde del cappello è il tratto macroscopico più distintivo.",
+      sporePrint: "cream",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-coprinus-comatus": {
+    displayCommonName: "Coprino chiomato",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Prati concimati, margini erbosi, terreni disturbati e bordi di strade campestri.",
+      seasonSummary: "Dalla primavera all’autunno, soprattutto nei periodi umidi.",
+      diagnosticCharacters: [
+        "Cappello lungo cilindrico-ovoidale, bianco e fortemente squamoso-lanoso.",
+        "Lamelle libere da bianche a rosa e infine nere, con deliquescenza.",
+        "Gambo lungo, bianco e cavo con piccolo anello mobile o fugace.",
+      ],
+      differentiatingCharacter: "Per uso alimentare la fonte considera gli esemplari finché le lamelle sono completamente bianche.",
+      sporePrint: "black",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-russula-cyanoxantha": {
+    displayCommonName: "Colombina maggiore",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Boschi di latifoglie e conifere; specie ubiquitaria e comune.",
+      seasonSummary: "Da maggio all’autunno.",
+      diagnosticCharacters: [
+        "Cappello molto variabile: violetto, lilla, grigio-bluastro, grigio-verde fino a tonalità più scure.",
+        "Lamelle bianche-crema tipicamente lardacee e poco fragili alla pressione.",
+        "Gambo bianco, talvolta sfumato di lilla o macchiato di bruno.",
+      ],
+      differentiatingCharacter: "La consistenza lardacea delle lamelle è il carattere macroscopico più peculiare.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-pleurotus-ostreatus": {
+    displayCommonName: "Orecchione",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Lignicolo soprattutto su latifoglie, su tronchi e ceppaie, spesso in gruppi sovrapposti.",
+      seasonSummary: "Soprattutto nel tardo autunno e in inverno.",
+      diagnosticCharacters: [
+        "Cappello a conchiglia o ventaglio, grigio, grigio-blu o bruno-grigiastro.",
+        "Lamelle chiare, fitte e fortemente decorrenti.",
+        "Gambo laterale o eccentrico molto corto, talvolta quasi assente, con carpofori sovrapposti.",
+      ],
+      differentiatingCharacter: "Tipica crescita lignicola in cespi sovrapposti nella stagione fredda.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-agaricus-campestris": {
+    displayCommonName: "Prataiolo campestre",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Prati, pascoli e aree erbose, spesso in gruppi o cerchi.",
+      seasonSummary: "Dalla primavera all’autunno.",
+      diagnosticCharacters: [
+        "Cappello bianco, liscio o finemente fibrilloso-squamuloso, spesso appiattito a maturità.",
+        "Lamelle libere rosa vivo nel giovane, poi bruno-cioccolato.",
+        "Gambo relativamente corto con anello sottile e fragile, senza volva.",
+      ],
+      differentiatingCharacter: "Carne bianca con lieve rosatura, soprattutto presso le lamelle; specie tipica di prati e pascoli.",
+      sporePrint: "purple-brown",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-russula-aurea": {
+    displayCommonName: "Colombina dorata",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Specie ubiquitaria, in boschi di latifoglie e conifere, isolata o in piccoli gruppi.",
+      seasonSummary: "Dall’inizio dell’estate all’autunno.",
+      diagnosticCharacters: [
+        "Cappello arancio, rosso cinabro o rosso fuoco, spesso con zone giallo-dorate.",
+        "Lamelle da biancastro-crema a giallastre, con filo tipicamente giallo.",
+        "Gambo biancastro con possibili sfumature giallastre.",
+      ],
+      differentiatingCharacter: "Carne bianca che diventa giallo-oro immediatamente sotto la cuticola.",
+      sporePrint: "ochre",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-boletus-aereus": {
+    displayCommonName: "Porcino nero",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Boschi termofili di latifoglie, soprattutto querce e castagni; tipico delle aree mediterranee.",
+      seasonSummary: "Dall’estate all’autunno.",
+      diagnosticCharacters: [
+        "Cappello asciutto e vellutato da bruno scuro fino a nerastro, talvolta chiazzato di ocra.",
+        "Tubuli e pori inizialmente bianchi, poi giallo-verdognoli, immutabili al tocco.",
+        "Gambo più chiaro del cappello con sottile reticolo soprattutto nella parte superiore.",
+      ],
+      differentiatingCharacter: "Carne bianca e immutabile, non colorata sotto la cuticola del cappello.",
+      sporePrint: "brown",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-boletus-reticulatus": {
+    displayCommonName: "Porcino estivo",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Boschi caldi di latifoglie, soprattutto querce, castagni, noccioli e faggi; possibile anche con conifere.",
+      seasonSummary: "Da maggio a novembre.",
+      diagnosticCharacters: [
+        "Cappello bruno-ocra, asciutto e finemente vellutato, spesso screpolato con tempo secco.",
+        "Imenoforo inizialmente biancastro, poi giallo-verde oliva.",
+        "Gambo nocciola con reticolo evidente e diffuso.",
+      ],
+      differentiatingCharacter: "Carne bianca immutabile e cappello frequentemente screpolato nella stagione calda.",
+      sporePrint: "brown",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-boletus-pinophilus": {
+    displayCommonName: "Porcino dei pini",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Boschi di conifere e latifoglie; associato a Pinus, Abies, Picea, Castanea e Fagus.",
+      seasonSummary: "Dalla fine della primavera all’autunno inoltrato; può ricomparire con i primi freddi.",
+      diagnosticCharacters: [
+        "Cappello bruno-vinoso, rosso-granata o ramato, spesso pruinoso da giovane.",
+        "Tubuli e pori bianchi da giovani, poi giallastri e verde-olivastri, immutabili.",
+        "Gambo robusto con fine reticolo, da biancastro a bruno-rossastro.",
+      ],
+      differentiatingCharacter: "Carne bianca immutabile, appena rosata sotto la cuticola.",
+      sporePrint: "brown",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-marasmius-oreades": {
+    displayCommonName: "Gambesecche",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Prati e pascoli, spesso in file, archi e tipici cerchi delle streghe.",
+      seasonSummary: "Dalla primavera all’autunno.",
+      diagnosticCharacters: [
+        "Cappello ocra-beige con piccolo umbone, igrofano.",
+        "Lamelle molto distanti, pallide e non decorrenti.",
+        "Gambo sottile ma eccezionalmente tenace, elastico e flessibile.",
+      ],
+      differentiatingCharacter: "Crescita caratteristica in prati in file, archi o cerchi.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-russula-vesca": {
+    displayCommonName: "Colombina rosa",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Boschi di latifoglie e conifere; specie molto comune.",
+      seasonSummary: "Dalla fine della primavera all’autunno.",
+      diagnosticCharacters: [
+        "Cappello rosato fino a bruno-vinoso, con minute rugosità radiali.",
+        "Cuticola spesso più corta del raggio, lasciando visibili le estremità delle lamelle al margine.",
+        "Lamelle fitte, biancastre poi ocracee, con anastomosi e biforcazioni.",
+      ],
+      differentiatingCharacter: "Gambo biancastro con frequenti macule rugginose verso la base.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-lepista-nuda": {
+    displayCommonName: "Lepista viola",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Su lettiera e residui organici in boschi, parchi e margini, spesso gregaria.",
+      seasonSummary: "Tardo autunno e inverno.",
+      diagnosticCharacters: [
+        "Giovane basidioma con cappello, lamelle e gambo lilla-violetti, colori che sbiadiscono con l’età.",
+        "Lamelle fitte da adnate a sinuate, senza cortina.",
+        "Gambo solido e fibroso, spesso clavato alla base, senza anello.",
+      ],
+      differentiatingCharacter: "Fruttificazione tipicamente tardo-autunnale/invernale su lettiera e residui organici.",
+      sporePrint: "pink",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-clitocybe-geotropa": {
+    displayCommonName: "Geotropa",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: null,
+      detailImageUrls: [],
+      habitatSummary: "Prati, radure, margini di boschi di latifoglie e roveti; spesso in grandi archi o cerchi.",
+      seasonSummary: "In autunno, anche inoltrato.",
+      diagnosticCharacters: [
+        "Grande cappello crema-beige imbutiforme.",
+        "Umbone centrale persistente anche nel fondo dell’imbuto.",
+        "Lamelle bianche-crema fortemente decorrenti.",
+      ],
+      differentiatingCharacter: "Gambo alto e robusto; spesso forma grandi archi o cerchi.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
 };
