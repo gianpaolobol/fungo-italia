@@ -15,6 +15,11 @@ const s1ReadyIds = new Set([
   "atlas-amanita-caesarea",
   "atlas-calocybe-gambosa",
   "atlas-pleurotus-eryngii",
+  "atlas-auricularia-auricula-judae",
+  "atlas-clitocybe-geotropa",
+  "atlas-coprinus-comatus",
+  "atlas-marasmius-oreades",
+  "atlas-pleurotus-ostreatus",
 ]);
 
 test("S0 creates exactly one synthetic Scheda shell for every Atlas taxon", () => {
@@ -64,7 +69,7 @@ test("every Scheda shell resolves back to a valid Atlas target", () => {
   }
 });
 
-test("S1 exposes exactly the five approved edible summary cards", () => {
+test("S1 exposes the reviewed edible summary-card set", () => {
   const cards = buildSummaryCardIndex(atlasTaxa);
   const ready = cards.filter(isSummaryCardReady);
 
