@@ -20,6 +20,11 @@ const s1ReadyIds = new Set([
   "atlas-coprinus-comatus",
   "atlas-marasmius-oreades",
   "atlas-pleurotus-ostreatus",
+  "atlas-imleria-badia",
+  "atlas-craterellus-lutescens",
+  "atlas-craterellus-tubaeformis",
+  "atlas-lyophyllum-decastes",
+  "atlas-tricholoma-columbetta",
 ]);
 
 test("S0 creates exactly one synthetic Scheda shell for every Atlas taxon", () => {
