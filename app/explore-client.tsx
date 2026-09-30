@@ -24,6 +24,7 @@ import {
 import Link from "next/link";
 
 import { AtlasCardDetail } from "@/components/atlas-card-detail";
+import { SporePrint } from "@/components/spore-print";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
 import {
@@ -51,6 +52,7 @@ import {
 } from "@/lib/atlas-navigation-state";
 import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
+import { buildSummaryCardIndex } from "@/lib/summary-cards";
 import { cn } from "@/lib/utils";
 
 import { WebMcpBridge } from "./webmcp";
@@ -87,6 +89,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   );
   const [forecasts, setForecasts] = useState<ForecastResult[]>(initialForecasts);
   const [catalogTaxa, setCatalogTaxa] = useState<AtlasTaxon[]>(taxa);
+  const summaryCardShells = useMemo(() => buildSummaryCardIndex(catalogTaxa), [catalogTaxa]);
   const [forecastStatus, setForecastStatus] = useState<"loading" | "live" | "partial" | "degraded">("loading");
   const [selectedId, setSelectedId] = useState(areas[0]?.id ?? "");
   const [query, setQuery] = useState("");
@@ -338,6 +341,10 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
             <TabsTrigger value="atlante" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <BookOpenText />
               <span>Atlante</span>
+            </TabsTrigger>
+            <TabsTrigger value="schede" className="min-w-0 rounded-xl px-2.5 sm:px-5">
+              <Leaf />
+              <span>Schede</span>
             </TabsTrigger>
             <TabsTrigger value="obiettivi" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <Binoculars />
@@ -611,6 +618,52 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 ))}
               </div>
             )}
+          </section>
+        </TabsContent>
+
+        <TabsContent value="schede" className="mt-0 min-w-0">
+          <section className="min-w-0 rounded-[24px] border border-[#dce5da] bg-white p-4 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-6">
+            <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_330px]">
+              <div className="min-w-0">
+                <p className="text-sm font-bold text-[#5d7362]">Lotto S0 · infrastruttura</p>
+                <h1 className="mt-1 break-words text-2xl font-black tracking-[-0.04em] sm:text-3xl">
+                  Schede sintetiche coordinate con l’Atlante
+                </h1>
+                <p className="mt-2 max-w-3xl leading-relaxed text-[#5f7064]">
+                  Ogni voce dell’Atlante dispone ora di un involucro Scheda collegato alla stessa identità tassonomica. Immagini,
+                  habitat sintetico, stagione, sporata e 3+1 verranno pubblicati solo quando il relativo contenuto sarà revisionato.
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Copertura strutturale</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">voci Atlante predisposte</p>
+                  </div>
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Collegamento</p>
+                    <p className="mt-1 text-lg font-black">1 Scheda ↔ 1 target Atlante</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">nessun catalogo scientifico duplicato</p>
+                  </div>
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Stato contenuti</p>
+                    <p className="mt-1 text-lg font-black">In preparazione</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">nessun dato visuale inventato</p>
+                  </div>
+                </div>
+              </div>
+              <aside className="rounded-[22px] border border-[#d8e0d5] bg-[#fbfaf4] p-5">
+                <p className="text-xs font-black uppercase tracking-[0.14em] text-[#65786a]">Componente Sporata</p>
+                <div className="mt-4 flex items-center gap-4">
+                  <SporePrint token="variable" size="md" />
+                  <p className="text-sm leading-relaxed text-[#5f7064]">
+                    La Scheda userà una rappresentazione grafica standardizzata. Per gruppi con colore non univoco verrà mostrata una gamma, non un colore falsamente preciso.
+                  </p>
+                </div>
+              </aside>
+            </div>
+            <div className="mt-5 rounded-2xl border border-[#ead58c] bg-[#fff8dc] p-4 text-sm leading-relaxed text-[#67541f]">
+              L’Atlante non viene modificato da questa sezione: nomenclatura, rango, classificazione, commestibilità, fonti e stato di revisione restano governati dal catalogo scientifico esistente.
+            </div>
           </section>
         </TabsContent>
 
