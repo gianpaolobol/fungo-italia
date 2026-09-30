@@ -228,4 +228,109 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
+
+  "atlas-imleria-badia": {
+    displayCommonName: "Boleto baio",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/imleria-badia.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Boschi di conifere e, più raramente, misti o di latifoglie; predilige terreni acidi.",
+      seasonSummary: "Dall’estate all’autunno.",
+      diagnosticCharacters: [
+        "Cappello liscio bruno-baio, spesso viscido con umidità.",
+        "Pori gialli poi olivastri, relativamente grandi o angolosi, che azzurrano alla pressione.",
+        "Gambo giallo-brunastro con fibrille brune, senza reticolo.",
+      ],
+      differentiatingCharacter:
+        "Carne biancastra-giallastra con azzurramento soprattutto sopra i tubuli.",
+      sporePrint: "olive-brown",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-craterellus-lutescens": {
+    displayCommonName: "Finferle",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/craterellus-lutescens.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Boschi umidi di conifere e latifoglie, spesso tra muschi; può comparire in gruppi numerosi.",
+      seasonSummary: "Soprattutto in autunno.",
+      diagnosticCharacters: [
+        "Cappello sottile bruno-arancio, presto imbutiforme e perforato.",
+        "Gambo cavo, giallo vivo o arancio-giallo.",
+        "Imenoforo quasi liscio o appena rugoso, giallo-aranciato o rosato.",
+      ],
+      differentiatingCharacter:
+        "Carne molto sottile ed elastica; pliche molto meno sviluppate che in Craterellus tubaeformis.",
+      sporePrint: "cream",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-craterellus-tubaeformis": {
+    displayCommonName: "Finferlo imbutiforme",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/craterellus-tubaeformis.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Boschi di conifere e latifoglie, frequentemente tra muschi e lettiera.",
+      seasonSummary: "Dall’estate all’autunno.",
+      diagnosticCharacters: [
+        "Cappello grigio-bruno o bruno, imbutiforme e perforato.",
+        "Gambo giallo-ocraceo e cavo.",
+        "Imenoforo con pieghe grigio-giallastre ben rilevate, forcate e anastomizzate, decorrenti.",
+      ],
+      differentiatingCharacter:
+        "Pliche nettamente più sviluppate rispetto a Craterellus lutescens.",
+      sporePrint: "cream",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-lyophyllum-decastes": {
+    displayCommonName: "Lyophyllum aggregato",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/lyophyllum-decastes.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Terreni disturbati, margini, sentieri, radure e aree erbose presso boschi di latifoglie o misti.",
+      seasonSummary: "Dall’estate all’autunno avanzato.",
+      diagnosticCharacters: [
+        "Crescita in grandi cespi compatti con numerosi gambi confluenti alla base.",
+        "Cappelli lisci, irregolari o lobati, da grigi a grigio-bruni.",
+        "Lamelle chiare e fitte che non anneriscono vistosamente alla pressione.",
+      ],
+      differentiatingCharacter:
+        "Frequente su terreni disturbati, sentieri, margini e aree erbose.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
+
+  "atlas-tricholoma-columbetta": {
+    displayCommonName: "Colombetta",
+    reviewedAt: "2026-09-30",
+    presentation: {
+      primaryImageUrl: "/schede/s1/tricholoma-columbetta.webp",
+      detailImageUrls: [],
+      habitatSummary:
+        "Boschi di latifoglie, in gruppi, soprattutto su terreni silicei.",
+      seasonSummary: "Dall’estate all’autunno.",
+      diagnosticCharacters: [
+        "Cappello completamente bianco-crema, radialmente sericeo-fibrilloso e lucente.",
+        "Lamelle bianche-crema smarginate.",
+        "Gambo bianco spesso con macchie verde-bluastre, brunastre o rosate verso la base.",
+      ],
+      differentiatingCharacter:
+        "Tipico di boschi di latifoglie; le sfumature blu-verdastre alla base del gambo sono molto utili.",
+      sporePrint: "white",
+      representativeTaxon: null,
+    },
+  },
 };
