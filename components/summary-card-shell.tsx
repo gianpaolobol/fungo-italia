@@ -46,7 +46,7 @@ export function SummaryCardShell({
             {rankLabels[card.rank] ?? card.rank}
           </p>
           <h2 className="mt-1 break-words font-serif text-3xl font-bold tracking-[-0.04em] sm:text-4xl">
-            {card.commonName}
+            {card.displayCommonName}
           </h2>
           <p className="mt-1 break-words font-serif text-xl italic text-[#31553b]">
             {card.scientificName}
@@ -64,7 +64,7 @@ export function SummaryCardShell({
           {p.primaryImageUrl ? (
             <img
               src={p.primaryImageUrl}
-              alt={`${card.commonName} — ${card.scientificName}`}
+              alt={`${card.displayCommonName} — ${card.scientificName}`}
               className="h-full min-h-72 w-full object-cover"
             />
           ) : (
@@ -84,7 +84,7 @@ export function SummaryCardShell({
               <img
                 key={src}
                 src={src}
-                alt={`Dettaglio diagnostico ${index + 1} di ${card.commonName}`}
+                alt={`Dettaglio diagnostico ${index + 1} di ${card.displayCommonName}`}
                 className="aspect-square w-full rounded-full border border-[#cbd6c8] object-cover"
               />
             ))
