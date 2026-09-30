@@ -25,6 +25,7 @@ import Link from "next/link";
 
 import { AtlasCardDetail } from "@/components/atlas-card-detail";
 import { SporePrint } from "@/components/spore-print";
+import { SummaryCardShell } from "@/components/summary-card-shell";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,7 +41,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
-import type { PublicPublicCatalogSearchDocument } from "@/lib/catalog-search";
+import type { PublicCatalogSearchDocument } from "@/lib/catalog-search";
 import {
   defaultAtlasNavigationState,
   parseAtlasNavigationState,
@@ -52,7 +53,7 @@ import {
 } from "@/lib/atlas-navigation-state";
 import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
-import { buildSummaryCardIndex } from "@/lib/summary-cards";
+import { buildSummaryCardIndex, isSummaryCardReady } from "@/lib/summary-cards";
 import { cn } from "@/lib/utils";
 
 import { WebMcpBridge } from "./webmcp";
@@ -90,6 +91,9 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const [forecasts, setForecasts] = useState<ForecastResult[]>(initialForecasts);
   const [catalogTaxa, setCatalogTaxa] = useState<AtlasTaxon[]>(taxa);
   const summaryCardShells = useMemo(() => buildSummaryCardIndex(catalogTaxa), [catalogTaxa]);
+  const [activeTab, setActiveTab] = useState("cerca");
+  const [schedeQuery, setSchedeQuery] = useState("");
+  const [selectedSummaryId, setSelectedSummaryId] = useState<string | null>(null);
   const [forecastStatus, setForecastStatus] = useState<"loading" | "live" | "partial" | "degraded">("loading");
   const [selectedId, setSelectedId] = useState(areas[0]?.id ?? "");
   const [query, setQuery] = useState("");
@@ -238,6 +242,40 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         .filter((taxon): taxon is AtlasTaxon => Boolean(taxon))
     : [];
   const regions = ["Tutta Italia", ...new Set(areas.map((area) => area.region))];
+  const readySummaryCards = useMemo(() => {
+    const normalized = schedeQuery.toLocaleLowerCase("it").trim();
+    return summaryCardShells
+      .filter(isSummaryCardReady)
+      .filter((card) => {
+        if (!normalized) return true;
+        return [
+          card.displayCommonName,
+          card.commonName,
+          card.scientificName,
+          card.acceptedName,
+        ]
+          .join(" ")
+          .toLocaleLowerCase("it")
+          .includes(normalized);
+      })
+      .sort((a, b) => a.displayCommonName.localeCompare(b.displayCommonName, "it"));
+  }, [schedeQuery, summaryCardShells]);
+
+  const selectedSummaryCard =
+    readySummaryCards.find((card) => card.atlasId === selectedSummaryId) ??
+    summaryCardShells.find((card) => card.atlasId === selectedSummaryId) ??
+    null;
+
+  const openSummaryInAtlas = useCallback((atlasId: string) => {
+    const card = summaryCardShells.find((entry) => entry.atlasId === atlasId);
+    if (!card) return;
+    setAtlasNavigation(defaultAtlasNavigationState);
+    setAtlasQuery(card.scientificName);
+    setAtlasKind("all");
+    setAtlasRank("");
+    setAtlasEdibility("");
+    setActiveTab("atlante");
+  }, [summaryCardShells]);
   const normalizedAtlasQuery = atlasQuery.toLocaleLowerCase("it").trim();
   const abbreviatedAtlasQuery = normalizedAtlasQuery.match(/^([a-zà-ÿ])[a-zà-ÿ-]+\s+([a-zà-ÿ-]+)$/)?.slice(1).join(". ");
   const visibleTaxa = catalogTaxa.filter((taxon) => {
@@ -331,7 +369,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         </div>
       </header>
 
-      <Tabs defaultValue="cerca" className="mx-auto max-w-[1600px] gap-0 px-3 pb-28 sm:px-6">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="mx-auto max-w-[1600px] gap-0 px-3 pb-28 sm:px-6">
         <div className="flex min-w-0 items-center justify-between gap-2 py-3 sm:py-4">
           <TabsList className="h-11 min-w-0 max-w-full overflow-x-auto rounded-2xl bg-[#e8eee6] p-1 scrollbar-none">
             <TabsTrigger value="cerca" className="min-w-0 rounded-xl px-2.5 sm:px-5">
@@ -623,47 +661,104 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
 
         <TabsContent value="schede" className="mt-0 min-w-0">
           <section className="min-w-0 rounded-[24px] border border-[#dce5da] bg-white p-4 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-6">
-            <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_330px]">
-              <div className="min-w-0">
-                <p className="text-sm font-bold text-[#5d7362]">Lotto S0 · infrastruttura</p>
-                <h1 className="mt-1 break-words text-2xl font-black tracking-[-0.04em] sm:text-3xl">
-                  Schede sintetiche coordinate con l’Atlante
-                </h1>
-                <p className="mt-2 max-w-3xl leading-relaxed text-[#5f7064]">
-                  Ogni voce dell’Atlante dispone ora di un involucro Scheda collegato alla stessa identità tassonomica. Immagini,
-                  habitat sintetico, stagione, sporata e 3+1 verranno pubblicati solo quando il relativo contenuto sarà revisionato.
-                </p>
+            {selectedSummaryCard ? (
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedSummaryId(null)}
+                  className="mb-4 min-h-11 rounded-xl px-2 font-bold text-[#315d3c]"
+                >
+                  ← Torna alle Schede
+                </button>
+                <SummaryCardShell
+                  card={selectedSummaryCard}
+                  onOpenAtlas={openSummaryInAtlas}
+                />
+              </div>
+            ) : (
+              <>
+                <div className="flex min-w-0 flex-col gap-4 border-b border-[#e0e8de] pb-5 md:flex-row md:items-end md:justify-between">
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold text-[#5d7362]">Lotto S1 · primi contenuti revisionati</p>
+                    <h1 className="break-words text-2xl font-black tracking-[-0.04em] sm:text-3xl">
+                      Schede rapide dei principali commestibili
+                    </h1>
+                    <p className="mt-2 max-w-3xl leading-relaxed text-[#5f7064]">
+                      Sintesi visuale coordinata con l’Atlante: immagine approvata, habitat, stagione,
+                      sporata grafica e 3 caratteri principali + 1 differenziante.
+                    </p>
+                  </div>
+                  <div className="w-full shrink-0 md:w-80">
+                    <label className="text-xs font-black uppercase tracking-wide text-[#6b7d70]" htmlFor="schede-search">
+                      Cerca nelle Schede pronte
+                    </label>
+                    <div className="relative mt-1.5">
+                      <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f8173]" />
+                      <Input
+                        id="schede-search"
+                        value={schedeQuery}
+                        onChange={(event) => setSchedeQuery(event.target.value)}
+                        placeholder="Nome comune o scientifico"
+                        className="h-11 rounded-xl pl-10 text-base"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {readySummaryCards.map((card) => (
+                    <button
+                      type="button"
+                      key={card.atlasId}
+                      onClick={() => setSelectedSummaryId(card.atlasId)}
+                      className="group overflow-hidden rounded-[22px] border border-[#d8e0d5] bg-[#fbfaf4] text-left transition hover:border-[#92ad96] hover:shadow-[0_14px_35px_rgba(23,79,43,0.10)]"
+                    >
+                      <div className="aspect-[4/3] overflow-hidden bg-[#f1eee4]">
+                        <img
+                          src={card.presentation.primaryImageUrl ?? ""}
+                          alt={`${card.displayCommonName} — ${card.scientificName}`}
+                          className="h-full w-full object-contain p-2 transition duration-300 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                      <div className="grid grid-cols-[1fr_auto] gap-3 border-t border-[#dfe5dc] p-4">
+                        <div className="min-w-0">
+                          <h2 className="break-words text-lg font-black">{card.displayCommonName}</h2>
+                          <p className="mt-0.5 break-words font-serif italic text-[#31553b]">{card.scientificName}</p>
+                          <p className="mt-2 text-xs font-bold uppercase tracking-wide text-[#66786b]">
+                            {card.rank}
+                          </p>
+                        </div>
+                        <SporePrint token={card.presentation.sporePrint} size="sm" />
+                      </div>
+                    </button>
+                  ))}
+                </div>
+
+                {readySummaryCards.length === 0 && (
+                  <div className="mt-5 rounded-2xl border border-dashed border-[#cbd8c9] p-7 text-center text-[#617266]">
+                    Nessuna Scheda pronta corrisponde alla ricerca.
+                  </div>
+                )}
+
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Pronte S1</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter(isSummaryCardReady).length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">prime Schede revisionate</p>
+                  </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Copertura strutturale</p>
                     <p className="mt-1 text-3xl font-black">{summaryCardShells.length}</p>
                     <p className="mt-1 text-sm text-[#5f7064]">voci Atlante predisposte</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
-                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Collegamento</p>
-                    <p className="mt-1 text-lg font-black">1 Scheda ↔ 1 target Atlante</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">nessun catalogo scientifico duplicato</p>
-                  </div>
-                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
-                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Stato contenuti</p>
-                    <p className="mt-1 text-lg font-black">In preparazione</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">nessun dato visuale inventato</p>
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Regola</p>
+                    <p className="mt-1 text-lg font-black">Atlante → Schede</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">nessuna identità scientifica duplicata</p>
                   </div>
                 </div>
-              </div>
-              <aside className="rounded-[22px] border border-[#d8e0d5] bg-[#fbfaf4] p-5">
-                <p className="text-xs font-black uppercase tracking-[0.14em] text-[#65786a]">Componente Sporata</p>
-                <div className="mt-4 flex items-center gap-4">
-                  <SporePrint token="variable" size="md" />
-                  <p className="text-sm leading-relaxed text-[#5f7064]">
-                    La Scheda userà una rappresentazione grafica standardizzata. Per gruppi con colore non univoco verrà mostrata una gamma, non un colore falsamente preciso.
-                  </p>
-                </div>
-              </aside>
-            </div>
-            <div className="mt-5 rounded-2xl border border-[#ead58c] bg-[#fff8dc] p-4 text-sm leading-relaxed text-[#67541f]">
-              L’Atlante non viene modificato da questa sezione: nomenclatura, rango, classificazione, commestibilità, fonti e stato di revisione restano governati dal catalogo scientifico esistente.
-            </div>
+              </>
+            )}
           </section>
         </TabsContent>
 
