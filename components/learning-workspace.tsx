@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { TrainingObjectiveRecord } from "@/lib/atlas-catalog";
 import { emptyLearningProgress, learningStorageKey, parseLearningProgress, recordLearningAttempt, type LearningProgress } from "@/lib/learning-progress";
@@ -46,8 +47,8 @@ export function LearningWorkspace({ userId, objectives }: { userId: string; obje
     <section aria-labelledby="study-phases" className="rounded-2xl border p-4">
       <h2 id="study-phases" className="text-xl font-bold">Tre fasi del tuo percorso</h2>
       <ol className="mt-3 list-decimal space-y-3 pl-5">
-        <li><strong>Amiata · studio con docente.</strong> Seleziona gli obiettivi affrontati, osserva l’esemplare completo e annota i dubbi da discutere. <a className="underline" href="/?tab=cerca&amp;area=amiata">Consulta Monte Amiata</a>. Gli obiettivi nazionali non attestano la presenza locale.</li>
-        <li><strong>Durante Tenerife · fino al rientro del 20 ottobre.</strong> Ripassa gli argomenti segnati; le osservazioni locali richiedono fonti e regole territoriali proprie. Per consultare le schede senza rete <a className="underline" href="/?tab=schede">scarica il pacchetto pubblico</a> prima della partenza. Questo percorso di obiettivi richiede ancora connessione.</li>
+        <li><strong>Amiata · studio con docente.</strong> Seleziona gli obiettivi affrontati, osserva l’esemplare completo e annota i dubbi da discutere. <a className="underline" href="/?tab=cerca&amp;area=amiata">Consulta Monte Amiata</Link>. Gli obiettivi nazionali non attestano la presenza locale.</li>
+        <li><strong>Durante Tenerife · fino al rientro del 20 ottobre.</strong> Ripassa gli argomenti segnati; le osservazioni locali richiedono fonti e regole territoriali proprie. Per consultare le schede senza rete <a className="underline" href="/?tab=schede">scarica il pacchetto pubblico</Link> prima della partenza. Questo percorso di obiettivi richiede ancora connessione.</li>
         <li><strong>Settimana dopo il rientro.</strong> Parti dagli argomenti “Da ripassare”, confronta gli appunti con le fonti e discuti gli errori con il docente.</li>
       </ol>
     </section>

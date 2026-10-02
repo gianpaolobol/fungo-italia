@@ -14,10 +14,12 @@ on:
       - "app/**"
       - "components/**"
       - "lib/**"
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
-  group: browser-readiness-${{ github.ref }}
+  group: browser-readiness-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 permissions:

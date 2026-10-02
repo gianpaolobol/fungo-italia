@@ -28,6 +28,7 @@ import { SporePrint } from "@/components/spore-print";
 import { SummaryCardShell } from "@/components/summary-card-shell";
 import { StudyNavigation } from "@/components/study-navigation";
 import { OfflineLibrary, OfflineTaxonActions } from "@/components/offline-library";
+import { PublishedCatalogUpdates, type PublishedCatalogUpdate } from "@/components/published-catalog-updates";
 import { studyAtlasTaxa } from "@/lib/study-atlas-catalog";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
@@ -46,6 +47,7 @@ import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/
 import { rankAreas } from "@/lib/explore-view";
 import type { PublicCatalogSearchDocument } from "@/lib/catalog-search";
 import {
+  closeAtlasCard,
   defaultAtlasNavigationState,
   parseAtlasNavigationState,
   returnToAtlasParent,
@@ -93,6 +95,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   );
   const [forecasts, setForecasts] = useState<ForecastResult[]>(initialForecasts);
   const [catalogTaxa, setCatalogTaxa] = useState<AtlasTaxon[]>(taxa);
+  const [publishedUpdates, setPublishedUpdates] = useState<PublishedCatalogUpdate[]>([]);
   const [studyTaxa, setStudyTaxa] = useState<AtlasTaxon[]>(studyAtlasTaxa);
   const summaryCardShells = useMemo(() => buildSummaryCardIndex(studyTaxa), [studyTaxa]);
   const [studyView, setStudyView] = useState<"cards" | "scroll">("cards");
@@ -194,9 +197,9 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     fetch("/api/catalog", { signal: controller.signal })
       .then(async (response) => {
         if (!response.ok) throw new Error("catalog unavailable");
-        return response.json() as Promise<{ taxa: AtlasTaxon[]; studyTaxa?: AtlasTaxon[] }>;
+        return response.json() as Promise<{ taxa: AtlasTaxon[]; studyTaxa?: AtlasTaxon[]; publishedUpdates?: PublishedCatalogUpdate[] }>;
       })
-      .then((payload) => { setCatalogTaxa(payload.taxa); if (Array.isArray(payload.studyTaxa)) setStudyTaxa(payload.studyTaxa); })
+      .then((payload) => { setCatalogTaxa(payload.taxa); if (Array.isArray(payload.studyTaxa)) setStudyTaxa(payload.studyTaxa); if(Array.isArray(payload.publishedUpdates)) setPublishedUpdates(payload.publishedUpdates); })
       .catch((error: unknown) => {
         if (error instanceof DOMException && error.name === "AbortError") return;
       });
@@ -258,6 +261,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     ? selectedForecast.expectedTaxa
         .map((id) => catalogTaxa.find((taxon) => taxon.id === id))
         .filter((taxon): taxon is AtlasTaxon => Boolean(taxon))
+        .map(taxon => ({...taxon, edibility: "non-valutato" as const, safetyNote: "Suggerimento del modello: presenza e determinazione da verificare. Non autorizza la raccolta per consumo."}))
     : [];
   const regions = ["Tutta Italia", ...new Set(areas.map((area) => area.region))];
   const visibleSummaryCards = useMemo(() => {
@@ -297,16 +301,12 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const openSummaryInAtlas = useCallback((atlasId: string) => {
     const card = summaryCardShells.find((entry) => entry.atlasId === atlasId);
     if (!card) return;
-    setAtlasNavigation(defaultAtlasNavigationState);
-    setAtlasQuery(card.scientificName);
-    setAtlasKind("all");
-    setAtlasRank("");
-    setAtlasEdibility("");
+    setAtlasNavigation(current => selectAtlasCard(current, {kind:"minimumTaxon",id:atlasId}));
     setActiveTab("atlante");
   }, [summaryCardShells]);
   const normalizedAtlasQuery = atlasQuery.toLocaleLowerCase("it").trim();
   const abbreviatedAtlasQuery = normalizedAtlasQuery.match(/^([a-zà-ÿ])[a-zà-ÿ-]+\s+([a-zà-ÿ-]+)$/)?.slice(1).join(". ");
-  const visibleTaxa = catalogTaxa.filter((taxon) => {
+  const visibleTaxa = studyTaxa.filter((taxon) => {
     const haystack = [
       taxon.commonName,
       taxon.scientificName,
@@ -374,14 +374,14 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 Fungo Italia
               </div>
               <div className="hidden text-xs font-semibold uppercase tracking-[0.12em] text-[#65806b] sm:block">
-                Beta nazionale
+                Atlante e studio
               </div>
             </div>
           </div>
           <div className="ml-auto flex min-w-0 items-center gap-2">
             <div className="hidden min-w-0 text-right md:block">
               <div className="max-w-48 truncate text-sm font-semibold">{user.displayName}</div>
-              <div className="text-xs text-[#66816d]">Profilo raccoglitore</div>
+              <div className="text-xs text-[#66816d]">Profilo personale</div>
             </div>
             <Button asChild variant="outline" size="icon" className="size-11 shrink-0 rounded-xl border-[#d5dfd3]" title="Revisioni micologiche">
               <Link href="/admin/catalog" aria-label="Revisioni micologiche">
@@ -642,6 +642,8 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
             </div>
             {atlasNavigation.selectedKind && atlasNavigation.selectedId ? (
               <div className="mt-5 min-w-0">
+                <StudyNavigation ids={(atlasServerItems ?? []).map(item => item.kind + ":" + item.id)} selectedId={atlasNavigation.selectedKind + ":" + atlasNavigation.selectedId} onSelect={key => {const item=(atlasServerItems ?? []).find(entry=>entry.kind + ":" + entry.id===key);if(item)setAtlasNavigation(current=>selectAtlasCard(current,{kind:item.kind,id:item.id}));}} onClose={() => setAtlasNavigation(current => closeAtlasCard(current))} />
+                <PublishedCatalogUpdates updates={publishedUpdates.filter(update => update.targetIds.includes(atlasNavigation.selectedId ?? ""))} />
                 <AtlasCardDetail
                   selectedKind={atlasNavigation.selectedKind}
                   selectedId={atlasNavigation.selectedId}
@@ -700,6 +702,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   ← Torna alle Schede
                 </button>
                 <StudyNavigation ids={visibleSummaryCards.map((card) => card.atlasId)} selectedId={selectedSummaryCard.atlasId} onSelect={setSelectedSummaryId} onClose={() => setSelectedSummaryId(null)} />
+                <PublishedCatalogUpdates updates={publishedUpdates.filter(update => update.targetIds.includes(selectedSummaryCard.atlasId))} />
                 <OfflineTaxonActions taxonId={selectedSummaryCard.atlasId} />
                 <SummaryCardShell card={selectedSummaryCard} onOpenAtlas={openSummaryInAtlas} />
               </div>
@@ -733,13 +736,14 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 </div>
 
                 <Link href="/studio" className="my-4 inline-flex min-h-11 items-center font-bold text-green-900 underline">Apri il percorso di studio e ripasso</Link>
-                <div className="mt-4 flex flex-wrap gap-2" aria-label="Modalità di studio">
+                <Link href="/catalog/updates" className="inline-flex min-h-11 items-center font-bold underline">Contributi pubblicati</Link>
+              <div className="mt-4 flex flex-wrap gap-2" aria-label="Modalità di studio">
                   <Button type="button" variant={studyView === "cards" ? "default" : "outline"} aria-pressed={studyView === "cards"} onClick={() => setStudyView("cards")} className="min-h-11">Schede con tap</Button>
                   <Button type="button" variant={studyView === "scroll" ? "default" : "outline"} aria-pressed={studyView === "scroll"} onClick={() => setStudyView("scroll")} className="min-h-11">Studio con scrolling</Button>
                 </div>
                 <OfflineLibrary taxa={studyTaxa} />
                 {studyView === "scroll" ? <div className="mt-5 space-y-6">
-                  {visibleSummaryCards.slice(0, studyFeedLimit).map((card) => <article key={card.atlasId} className="scroll-mt-24 rounded-2xl border border-[#dce5da] p-3 sm:p-5"><OfflineTaxonActions taxonId={card.atlasId} /><SummaryCardShell card={card} onOpenAtlas={openSummaryInAtlas} /></article>)}
+                  {visibleSummaryCards.slice(0, studyFeedLimit).map((card) => <article key={card.atlasId} className="scroll-mt-24 rounded-2xl border border-[#dce5da] p-3 sm:p-5"><PublishedCatalogUpdates updates={publishedUpdates.filter(update => update.targetIds.includes(card.atlasId))} /><OfflineTaxonActions taxonId={card.atlasId} /><SummaryCardShell card={card} onOpenAtlas={openSummaryInAtlas} /></article>)}
                   {studyFeedLimit < visibleSummaryCards.length && <Button type="button" variant="outline" className="min-h-11 w-full" onClick={() => setStudyFeedLimit((count) => count + 12)}>Continua lo studio · altre 12 schede</Button>}
                 </div> : <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {visibleSummaryCards.map((card) => (
@@ -822,7 +826,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         <TabsContent value="metodo" className="mt-0 min-w-0">
           <section className="grid min-w-0 gap-4 lg:grid-cols-3">
             <MethodCard icon={Binoculars} number="01" title="Guarda l’area, non il punto" text="Le indicazioni riguardano celle ampie. Percorsi, coordinate precise e fungaie personali non vengono pubblicati." />
-            <MethodCard icon={Users} number="02" title="Pressione anonima e ritardata" text="Mostriamo soltanto fasce di passaggio dopo un ritardo. Nessuna identità, traccia o orario esatto è ricostruibile." />
+            <MethodCard icon={Users} number="02" title="Passaggi non monitorati" text="La versione attuale non dispone di conteggi territoriali misurati. L’assenza di dati non significa assenza di altri cercatori." />
             <MethodCard icon={ShieldCheck} number="03" title="Verifica micologica" text="Segnalazioni e modifiche del catalogo entrano in revisione e sono assegnabili per regione e gruppo tassonomico." />
             <div className="min-w-0 rounded-[24px] border border-[#ead58c] bg-[#fff8dc] p-5 lg:col-span-3 sm:p-6">
               <div className="flex items-start gap-4">
@@ -1095,15 +1099,15 @@ function AreaDetails({
           <div className="mt-2 grid min-w-0 grid-cols-2 gap-2 text-sm">
             <span><strong>{forecast.weather.temperatureC ?? "–"} °C</strong><br /><small>temperatura</small></span>
             <span><strong>{forecast.weather.relativeHumidity ?? "–"}%</strong><br /><small>umidità relativa</small></span>
-            <span><strong>{forecast.weather.precipitation7dMm ?? "–"} mm</strong><br /><small>pioggia 7 giorni osservati</small></span>
-            <span><strong>{forecast.weather.precipitation14dMm ?? "–"} mm</strong><br /><small>pioggia 14 giorni osservati</small></span>
-            <span><strong>{forecast.weather.precipitation26dMm ?? "–"} mm</strong><br /><small>pioggia 26 giorni osservati</small></span>
+            <span><strong>{forecast.weather.precipitation7dMm ?? "–"} mm</strong><br /><small>pioggia 7 giorni precedenti · dati provider</small></span>
+            <span><strong>{forecast.weather.precipitation14dMm ?? "–"} mm</strong><br /><small>pioggia 14 giorni precedenti · dati provider</small></span>
+            <span><strong>{forecast.weather.precipitation26dMm ?? "–"} mm</strong><br /><small>pioggia 26 giorni precedenti · dati provider</small></span>
             <span><strong>{forecast.weather.meanTemperature20dC ?? "–"} °C</strong><br /><small>temperatura media 20 giorni</small></span>
             <span><strong>{forecast.weather.waterBalance14dMm ?? "–"} mm</strong><br /><small>bilancio idrico 14 giorni</small></span>
             <span><strong>{forecast.weather.elevationM ?? "–"} m</strong><br /><small>quota modello meteo</small></span>
           </div>
           <p className="mt-2 break-words text-xs text-[#708076]">
-            Rilevazione {forecast.weatherObservedAt ? new Date(forecast.weatherObservedAt).toLocaleString("it-IT") : "non disponibile"}; probabilità pioggia odierna {forecast.weather.precipitationProbability ?? "–"}%.
+            Aggiornamento provider {forecast.weatherObservedAt ? new Date(forecast.weatherObservedAt).toLocaleString("it-IT") : "non disponibile"}; probabilità pioggia odierna {forecast.weather.precipitationProbability ?? "–"}%.
           </p>
         </div>
       )}

@@ -46,8 +46,8 @@ export function ObservationReviewClient() {
   }, []);
   useEffect(() => {
     const controller = new AbortController();
-    void refresh(controller.signal);
-    return () => controller.abort();
+    const timer = window.setTimeout(() => void refresh(controller.signal), 0);
+    return () => {window.clearTimeout(timer);controller.abort();};
   }, [refresh]);
   return (
     <section aria-label="Coda di revisione osservazioni" className="space-y-4">
