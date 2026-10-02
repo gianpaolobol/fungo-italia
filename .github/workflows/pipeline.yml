@@ -42,6 +42,9 @@ jobs:
         run: npx expo prebuild --platform android --no-install
         env:
           CI: '1'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
       - name: Build installable preview APK locally
         working-directory: android
         run: ./gradlew :app:assembleRelease --no-daemon --max-workers=2
@@ -56,24 +59,82 @@ jobs:
           name: Fungo-Italia-native-bundles
           path: dist/
           retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fungo-Italia-build-inputs
+          path: |
+            package-lock.json
+            src/data
+            assets/icon.png
+          if-no-files-found: error
+          retention-days: 30
       - name: Preserve generated catalog and dependency lock
         if: github.ref == 'refs/heads/feat/expo-migration'
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add package-lock.json src/data
+          git add package-lock.json src/data assets/icon.png
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Lock Expo dependencies and canonical offline data [skip ci]"
           git push origin HEAD:feat/expo-migration
-  expo-update:
+  android-smoke:
     needs: android
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Fungo-Italia-Android-APK
+          path: artifacts/android
+      - name: Enable hardware acceleration
+        run: sudo chmod 666 /dev/kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disable-animations: true
+          script: python3 scripts/android-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Fungo-Italia-Android-smoke-evidence
+          path: artifacts/smoke
+          retention-days: 30
+  android-release:
+    needs: [android, android-smoke]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Fungo-Italia-Android-APK
+          path: artifacts/android
+      - name: Publish verified preview APK
+        run: |
+          cp artifacts/android/app-release.apk artifacts/android/Fungo-Italia.apk
+          if gh release view native-preview >/dev/null 2>&1; then
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/native-preview" -f sha="$GITHUB_SHA" -F force=true
+            gh release edit native-preview --title "Fungo Italia — anteprima Android" --notes-file docs/ANDROID-PREVIEW.md --prerelease
+            gh release upload native-preview artifacts/android/Fungo-Italia.apk --clobber
+          else
+            gh release create native-preview artifacts/android/Fungo-Italia.apk --target "$GITHUB_SHA" --title "Fungo Italia — anteprima Android" --notes-file docs/ANDROID-PREVIEW.md --prerelease
+          fi
+  expo-update:
+    needs: [android, android-smoke]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
     steps:
-      - name: Verify Expo account linkage
+      - name: Check Expo configuration presence
         id: account
         run: |
           if test -n "$EXPO_TOKEN" && test -n "$EXPO_PROJECT_ID"; then
@@ -88,11 +149,22 @@ jobs:
         if: steps.account.outputs.available == 'true'
         with:
           node-version: '24'
-      - name: Install and prepare data
+      - uses: actions/download-artifact@v4
+        if: steps.account.outputs.available == 'true'
+        with:
+          name: Fungo-Italia-build-inputs
+          path: .
+      - name: Install identical build dependencies
+        if: steps.account.outputs.available == 'true'
+        run: npm ci
+      - name: Verify Expo account and preview channel
         if: steps.account.outputs.available == 'true'
         run: |
-          if test -f package-lock.json; then npm ci; else npm install; fi
-          npm run prepare:data
+          npx eas-cli@24.8.0 whoami
+          npx eas-cli@24.8.0 project:info --json
+          if ! npx eas-cli@24.8.0 channel:view preview --non-interactive --json >/dev/null 2>&1; then
+            npx eas-cli@24.8.0 channel:create preview --non-interactive --json
+          fi
       - name: Publish authenticated native update
         if: steps.account.outputs.available == 'true'
-        run: npx eas-cli@latest update --branch preview --environment preview --platform all --non-interactive --json
+        run: npx eas-cli@24.8.0 update --channel preview --environment preview --platform all --non-interactive --json

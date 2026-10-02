@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const catalog=JSON.parse(await readFile('src/data/catalog.json','utf8'));
+const groups=JSON.parse(await readFile('src/data/groups.json','utf8'));
+assert.equal(groups.length,66);
+assert.equal(new Set([...catalog,...groups].map(t=>t.id)).size,214);
 const areas=JSON.parse(await readFile('src/data/areas.json','utf8'));
 assert.equal(catalog.length,148);
 assert.equal(new Set(catalog.map(t=>t.id)).size,148);

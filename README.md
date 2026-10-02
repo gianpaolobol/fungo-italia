@@ -1,5 +1,5 @@
 # Fungo Italia — Expo
-React Native/Expo per Android e iOS, con catalogo didattico locale e macroaree nazionali.
+React Native/Expo per Android e iOS, con 148 unità minime, 66 schede di generi/gruppi e 71 macroaree nazionali incluse offline.
 Il progetto precedente era Next/React, non Flutter. È conservato integralmente in legacy/web e nei branch backup/pre-migration-flutter e backup/verified-web-readiness.
 
 ## Stato e limiti verificabili
@@ -7,7 +7,7 @@ Il catalogo conserva 148 unità minime, gruppi didattici e riferimenti della bas
 Studio con tap/scrolling, ricerca, preferiti e ripresa; aree offline e mappa online OpenStreetMap; bozze private locali esportabili. Le bozze non sono contributi pubblicati e non si collegano automaticamente agli account del precedente servizio.
 
 ## Compilazione
-La pipeline installa le dipendenze, genera i dati dal catalogo conservato, verifica TypeScript, esporta i bundle iOS/Android e genera un APK Android locale con Gradle. L'APK di anteprima usa la firma debug del template; la distribuzione definitiva richiede una chiave privata gestita come secret.
+La pipeline installa le dipendenze, genera i dati dal catalogo conservato, verifica TypeScript e l’integrità dei dati, esporta i bundle iOS/Android e genera un APK Android locale con Gradle e verifica su emulatore avvio senza rete, ricerca, dettaglio, preferiti dopo riavvio e filtro Amiata. L'APK di anteprima usa la firma debug del template; la distribuzione definitiva richiede una chiave privata gestita come secret.
 Il servizio Sites precedente risulta attivo: https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site (versioni6). Questa migrazione non chiama alcun deploy Sites e non cancella database D1, bucket R2 o il servizio Floot. Il codice web resta in legacy/web per la manutenzione separata.
 
 ## iOS / Expo

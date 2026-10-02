@@ -12,7 +12,8 @@
     "ios": "expo run:ios",
     "prepare:data": "node scripts/prepare-data.mjs",
     "typecheck": "tsc --noEmit",
-    "export": "expo export --platform all"
+    "export": "expo export --platform all",
+    "eas-build-post-install": "npm run prepare:data"
   },
   "dependencies": {
     "expo": "58.0.2",

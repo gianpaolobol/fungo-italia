@@ -13,13 +13,15 @@
       },
       "ios": {
         "simulator": true
-      }
+      },
+      "node": "24.3.0"
     },
     "production": {
       "channel": "production",
       "android": {
         "buildType": "app-bundle"
-      }
+      },
+      "node": "24.3.0"
     }
   }
 }

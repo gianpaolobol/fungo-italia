@@ -9,18 +9,20 @@ import Drafts from './components/Drafts';
 import Community from './components/Community';
 import catalog from './src/data/catalog.json';
 import areas from './src/data/areas.json';
+import groups from './src/data/groups.json';
+const allTaxa=[...catalog,...groups] as unknown as StudyTaxon[];
 type State={version:1;favoriteIds:string[];resumeId:string|null};
 const key='fungo-italia:study:v1';
 export default function App(){
  const [tab,setTab]=useState('Studio'),[state,setState]=useState<State>({version:1,favoriteIds:[],resumeId:null}),[ready,setReady]=useState(false),[error,setError]=useState('');
  const queue=useRef<Promise<void>>(Promise.resolve()),canSave=useRef(false);
- const allowed=new Set(catalog.map(t=>t.id));
+ const allowed=new Set(allTaxa.map(t=>t.id));
  useEffect(()=>{let active=true;AsyncStorage.getItem(key).then(raw=>{if(!active)return;if(raw){const value=JSON.parse(raw);if(value.version!==1||!Array.isArray(value.favoriteIds)||!value.favoriteIds.every((id:unknown)=>typeof id==='string')||(value.resumeId!==null&&typeof value.resumeId!=='string'))throw Error('Formato');setState({version:1,favoriteIds:[...new Set(value.favoriteIds as string[])].filter(id=>allowed.has(id)),resumeId:allowed.has(value.resumeId)?value.resumeId:null});}canSave.current=true;setReady(true);}).catch(()=>{if(active){setError('Preferiti non leggibili. La consultazione resta disponibile; i dati memorizzati non verranno sovrascritti.');setReady(true);}});return()=>{active=false;};},[]);
  useEffect(()=>{if(!ready||error||!canSave.current)return;const payload=JSON.stringify(state);queue.current=queue.current.catch(()=>{}).then(()=>AsyncStorage.setItem(key,payload)).catch(()=>setError('Salvataggio dei preferiti non riuscito. Riprova per conservare le modifiche.'));},[state,ready,error]);
  function update(patch:Partial<State>){setState(previous=>({...previous,...patch}));}
 
  return <SafeAreaProvider><SafeAreaView style={s.page}><StatusBar style="dark"/><View style={s.brand}><Text style={s.title}>Fungo Italia</Text><Text style={s.subtitle}>Studio · territorio · osservazioni</Text></View>{!!error&&<View><Text accessibilityRole="alert" style={s.error}>{error}</Text>{canSave.current&&<Pressable accessibilityRole="button" onPress={()=>setError('')} style={s.tab}><Text style={s.label}>Riprova salvataggio</Text></Pressable>}</View>}<View style={s.body}>{!ready?<ActivityIndicator accessibilityLabel="Caricamento"/>:<>
-<View style={[s.body,tab!=='Studio'&&s.hidden]} accessibilityElementsHidden={tab!=='Studio'} importantForAccessibility={tab!=='Studio'?'no-hide-descendants':'auto'}><Studio taxa={catalog as unknown as StudyTaxon[]} favoriteIds={state.favoriteIds} onFavoriteIdsChange={favoriteIds=>update({favoriteIds})} resumeId={state.resumeId} onResumeChange={resumeId=>update({resumeId})} catalogVersion="audit interno · 2 ottobre 2026"/></View>
+<View style={[s.body,tab!=='Studio'&&s.hidden]} accessibilityElementsHidden={tab!=='Studio'} importantForAccessibility={tab!=='Studio'?'no-hide-descendants':'auto'}><Studio taxa={allTaxa} favoriteIds={state.favoriteIds} onFavoriteIdsChange={favoriteIds=>update({favoriteIds})} resumeId={state.resumeId} onResumeChange={resumeId=>update({resumeId})} catalogVersion="audit interno · 2 ottobre 2026"/></View>
 <View style={[s.body,tab!=='Aree'&&s.hidden]} accessibilityElementsHidden={tab!=='Aree'} importantForAccessibility={tab!=='Aree'?'no-hide-descendants':'auto'}><Areas areas={areas as unknown as Area[]}/></View>
 <View style={[s.body,tab!=='Note'&&s.hidden]} accessibilityElementsHidden={tab!=='Note'} importantForAccessibility={tab!=='Note'?'no-hide-descendants':'auto'}><Drafts/></View>
 <View style={[s.body,tab!=='Contributi'&&s.hidden]} accessibilityElementsHidden={tab!=='Contributi'} importantForAccessibility={tab!=='Contributi'?'no-hide-descendants':'auto'}><Community/></View>
