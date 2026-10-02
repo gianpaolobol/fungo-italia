@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { atlasTaxa } from "./atlas-catalog.ts";
+import { reviewedSummaryCardContent } from "./summary-card-content.ts";
 import {
   buildSummaryCardIndex,
   findSummaryCardByAtlasId,
@@ -10,7 +11,7 @@ import {
   projectAtlasTaxonToSummaryCard,
 } from "./summary-cards.ts";
 
-const s1ReadyIds = new Set([
+const imageCompleteIds = new Set([
   "atlas-cantharellus-cibarius",
   "atlas-lactarius-deliciosus",
   "atlas-amanita-caesarea",
@@ -27,6 +28,8 @@ const s1ReadyIds = new Set([
   "atlas-lyophyllum-decastes",
   "atlas-tricholoma-columbetta",
 ]);
+
+const reviewedIds = new Set(Object.keys(reviewedSummaryCardContent));
 
 test("S0 creates exactly one synthetic Scheda shell for every Atlas taxon", () => {
   const cards = buildSummaryCardIndex(atlasTaxa);
@@ -75,19 +78,14 @@ test("every Scheda shell resolves back to a valid Atlas target", () => {
   }
 });
 
-test("S1 exposes the reviewed edible summary-card set", () => {
+test("reviewed Schede are exposed without hard-coded count drift", () => {
   const cards = buildSummaryCardIndex(atlasTaxa);
-  const ready = cards.filter(isSummaryCardReady);
+  const scienceReady = cards.filter(isSummaryCardContentReady);
+  assert.equal(scienceReady.length, reviewedIds.size);
+  assert.deepEqual(new Set(scienceReady.map((card) => card.atlasId)), reviewedIds);
 
-  assert.equal(ready.length, s1ReadyIds.size);
-  assert.deepEqual(new Set(ready.map((card) => card.atlasId)), s1ReadyIds);
-
-  for (const card of ready) {
+  for (const card of scienceReady) {
     assert.equal(card.reviewStatus, "ready");
-    assert.equal(card.edibility, "commestibile");
-    if (imageCompleteIds.has(card.atlasId)) {
-      assert.match(card.presentation.primaryImageUrl ?? "", /^\/schede\/s1\/.+\.webp$/);
-    }
     assert.ok(card.presentation.habitatSummary?.trim());
     assert.ok(card.presentation.seasonSummary?.trim());
     assert.equal(card.presentation.diagnosticCharacters?.length, 3);
@@ -97,7 +95,16 @@ test("S1 exposes the reviewed edible summary-card set", () => {
   }
 });
 
-test("S1 presentation overlay never overrides Atlas scientific identity, rank or edibility", () => {
+test("image-complete S1 Schede retain a repository image asset", () => {
+  const cards = buildSummaryCardIndex(atlasTaxa);
+  const complete = cards.filter(isSummaryCardReady);
+  assert.deepEqual(new Set(complete.map((card) => card.atlasId)), imageCompleteIds);
+  for (const card of complete) {
+    assert.match(card.presentation.primaryImageUrl ?? "", /^\/schede\/s1\/.+\.webp$/);
+  }
+});
+
+test("presentation overlays never override Atlas scientific identity, rank or edibility", () => {
   const cards = buildSummaryCardIndex(atlasTaxa);
   const atlasById = new Map(atlasTaxa.map((taxon) => [taxon.id, taxon]));
 
