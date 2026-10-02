@@ -1,0 +1,2333 @@
+[
+  {
+    "id": "minimum-genus-card-agaricus",
+    "scientificName": "Agaricus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Agaricus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Agaricus con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Agaricus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Agaricus"
+    ],
+    "sourceGenera": [
+      "Agaricus"
+    ],
+    "sourceLabel": "Agaricus",
+    "relatedIds": [
+      "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "minimum-card-objective-agaricus--02--agaricus-bresadolanus",
+      "minimum-card-objective-agaricus--03--agaricus-sez-arvenses",
+      "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "minimum-card-objective-agaricus--05--agaricus-campestris",
+      "minimum-card-objective-agaricus--06--agaricus-bitorquis",
+      "minimum-card-objective-agaricus--07--agaricus-bisporus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 4",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-agrocybe-cyclocybe",
+    "scientificName": "Agrocybe + Cyclocybe",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Agrocybe + Cyclocybe al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Agrocybe + Cyclocybe con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Agrocybe + Cyclocybe agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Cyclocybe"
+    ],
+    "sourceGenera": [
+      "Agrocybe",
+      "Cyclocybe"
+    ],
+    "sourceLabel": "Agrocybe + Cyclocybe",
+    "relatedIds": [
+      "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 4",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-amanita",
+    "scientificName": "Amanita",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Amanita al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Amanita con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Amanita agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Amanita",
+      "Saproamanita"
+    ],
+    "sourceGenera": [
+      "Amanita"
+    ],
+    "sourceLabel": "Amanita",
+    "relatedIds": [
+      "minimum-card-objective-amanita--01--amanita-phalloides",
+      "minimum-card-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+      "minimum-card-objective-amanita--03--amanita-virosa",
+      "minimum-card-objective-amanita--04--amanita-proxima",
+      "minimum-card-objective-amanita--05--amanita-ovoidea",
+      "minimum-card-objective-amanita--06--amanita-pantherina",
+      "minimum-card-objective-amanita--07--amanita-muscaria",
+      "minimum-card-objective-amanita--08--amanita-caesarea",
+      "minimum-card-objective-amanita--09--amanita-gemmata",
+      "minimum-card-objective-amanita--10--amanita-citrina",
+      "minimum-card-objective-amanita--11--amanita-porphyria",
+      "minimum-card-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+      "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "minimum-card-objective-amanita--14--amanita-vittadinii",
+      "minimum-card-objective-amanita--15--amanita-rubescens",
+      "minimum-card-objective-amanita--16--amanita-sez-vaginatae"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 4",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-armillaria-desarmillaria",
+    "scientificName": "Armillaria + Desarmillaria",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Armillaria + Desarmillaria al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Armillaria + Desarmillaria con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Armillaria + Desarmillaria agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Armillaria",
+      "Desarmillaria"
+    ],
+    "sourceLabel": "Armillaria + Desarmillaria",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 5",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-calocybe",
+    "scientificName": "Calocybe",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Calocybe al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Calocybe agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Calocybe"
+    ],
+    "sourceGenera": [
+      "Calocybe"
+    ],
+    "sourceLabel": "Calocybe",
+    "relatedIds": [
+      "minimum-card-objective-calocybe--01--calocybe-gambosa"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 5",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+    "scientificName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Clitocybe",
+      "Collybia",
+      "Infundibulicybe",
+      "Paralepistopsis"
+    ],
+    "sourceGenera": [
+      "Clitocybe"
+    ],
+    "sourceLabel": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+    "relatedIds": [
+      "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+      "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+      "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+      "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 5",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-clitopilus",
+    "scientificName": "Clitopilus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Clitopilus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Clitopilus con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Clitopilus"
+    ],
+    "sourceGenera": [
+      "Clitopilus"
+    ],
+    "sourceLabel": "Clitopilus",
+    "relatedIds": [
+      "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 5",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+    "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius). al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius). con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius). agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Gymnopus",
+      "Marasmius",
+      "Rhodocollybia"
+    ],
+    "sourceGenera": [
+      "Collybia",
+      "Marasmius"
+    ],
+    "sourceLabel": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+    "relatedIds": [
+      "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 6",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+    "scientificName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Coprinopsis",
+      "Coprinus"
+    ],
+    "sourceGenera": [
+      "Coprinus"
+    ],
+    "sourceLabel": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+    "relatedIds": [
+      "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 6",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-cortinarius",
+    "scientificName": "Cortinarius",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Cortinarius al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Cortinarius con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Cortinarius agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Cortinarius",
+      "Phlegmacium"
+    ],
+    "sourceGenera": [
+      "Cortinarius"
+    ],
+    "sourceLabel": "Cortinarius",
+    "relatedIds": [
+      "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+      "minimum-card-objective-cortinarius--04--cortinarius-praestans",
+      "minimum-card-objective-cortinarius--05--cortinarius-cumatilis",
+      "minimum-card-objective-cortinarius--06--cortinarius-variiformis",
+      "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 6",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-entoloma",
+    "scientificName": "Entoloma",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Entoloma al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Entoloma con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Entoloma"
+    ],
+    "sourceGenera": [
+      "Entoloma"
+    ],
+    "sourceLabel": "Entoloma",
+    "relatedIds": [
+      "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "minimum-card-objective-entoloma--03--entoloma-hirtipes",
+      "minimum-card-objective-entoloma--04--entoloma-vernum",
+      "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "minimum-card-objective-entoloma--06--entoloma-saundersii"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 7",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-flammulina",
+    "scientificName": "Flammulina",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Flammulina al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Flammulina"
+    ],
+    "sourceGenera": [
+      "Flammulina"
+    ],
+    "sourceLabel": "Flammulina",
+    "relatedIds": [
+      "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 7",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-galerina",
+    "scientificName": "Galerina",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Galerina al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Galerina agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Galerina"
+    ],
+    "sourceGenera": [
+      "Galerina"
+    ],
+    "sourceLabel": "Galerina",
+    "relatedIds": [
+      "minimum-card-objective-galerina--01--galerina-marginata-group"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 7",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-hebeloma",
+    "scientificName": "Hebeloma",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Hebeloma al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Hebeloma con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Hebeloma agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Hebeloma"
+    ],
+    "sourceLabel": "Hebeloma",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 7",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+    "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Hygrocybe"
+    ],
+    "sourceGenera": [
+      "Hygrocybe"
+    ],
+    "sourceLabel": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+    "relatedIds": [
+      "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 8",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-hygrophorus-cuphophyllus",
+    "scientificName": "Hygrophorus + Cuphophyllus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Hygrophorus + Cuphophyllus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Hygrophorus + Cuphophyllus con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Hygrophorus + Cuphophyllus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Hygrophorus"
+    ],
+    "sourceGenera": [
+      "Hygrophorus",
+      "Cuphophyllus"
+    ],
+    "sourceLabel": "Hygrophorus + Cuphophyllus",
+    "relatedIds": [
+      "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 8",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-hypholoma",
+    "scientificName": "Hypholoma",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Hypholoma al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Hypholoma con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Hypholoma agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Hypholoma"
+    ],
+    "sourceGenera": [
+      "Hypholoma"
+    ],
+    "sourceLabel": "Hypholoma",
+    "relatedIds": [
+      "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "minimum-card-objective-hypholoma--02--hypholoma-lateritium"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 8",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+    "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Inocybe"
+    ],
+    "sourceLabel": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 8",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-laccaria",
+    "scientificName": "Laccaria",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Laccaria al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Laccaria con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Laccaria"
+    ],
+    "sourceLabel": "Laccaria",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 8",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-lentinula",
+    "scientificName": "Lentinula",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Lentinula al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Lentinula"
+    ],
+    "sourceGenera": [
+      "Lentinula"
+    ],
+    "sourceLabel": "Lentinula",
+    "relatedIds": [
+      "minimum-card-objective-lentinula--01--lentinula-edodes"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 9",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+    "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus. al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus. con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus. agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Chlorophyllum",
+      "Echinoderma",
+      "Lepiota",
+      "Leucocoprinus",
+      "Macrolepiota"
+    ],
+    "sourceGenera": [
+      "Lepiota",
+      "Echinoderma",
+      "Leucoagaricus",
+      "Macrolepiota",
+      "Chlorophyllum",
+      "Leucocoprinus"
+    ],
+    "sourceLabel": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+    "relatedIds": [
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 9",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-lepista",
+    "scientificName": "Lepista",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Lepista al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Lepista con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Lepista agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Collybia",
+      "Paralepista"
+    ],
+    "sourceGenera": [
+      "Lepista"
+    ],
+    "sourceLabel": "Lepista",
+    "relatedIds": [
+      "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "minimum-card-objective-lepista--02--lepista-flaccida-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 9",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+    "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Aspropaxillus",
+      "Leucopaxillus"
+    ],
+    "sourceGenera": [
+      "Leucopaxillus"
+    ],
+    "sourceLabel": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+    "relatedIds": [
+      "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 10",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-limacella-inclusi-limacellopsis-zhuliangomyces",
+    "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Limacella (inclusi Limacellopsis, Zhuliangomyces) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Limacella (inclusi Limacellopsis, Zhuliangomyces) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Limacella"
+    ],
+    "sourceLabel": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 10",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+    "scientificName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Leucocybe",
+      "Lyophyllum"
+    ],
+    "sourceGenera": [
+      "Lyophyllum"
+    ],
+    "sourceLabel": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+    "relatedIds": [
+      "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+      "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 10",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-melanoleuca",
+    "scientificName": "Melanoleuca",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Melanoleuca al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Melanoleuca agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Melanoleuca"
+    ],
+    "sourceLabel": "Melanoleuca",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 10",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-mycena",
+    "scientificName": "Mycena",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Mycena al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Mycena"
+    ],
+    "sourceLabel": "Mycena",
+    "relatedIds": [
+      "minimum-card-objective-mycena--01--mycena-sez-purae"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 10",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-omphalotus",
+    "scientificName": "Omphalotus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Omphalotus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Omphalotus"
+    ],
+    "sourceGenera": [
+      "Omphalotus"
+    ],
+    "sourceLabel": "Omphalotus",
+    "relatedIds": [
+      "minimum-card-objective-omphalotus--01--omphalotus-olearius"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 11",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+    "scientificName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Panaeolus (inclusi Copelandia, Panaeolina) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Panaeolus (inclusi Copelandia, Panaeolina) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Panaeolus"
+    ],
+    "sourceGenera": [
+      "Panaeolus"
+    ],
+    "sourceLabel": "Panaeolus (inclusi Copelandia, Panaeolina)",
+    "relatedIds": [
+      "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 11",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+    "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Kuehneromyces"
+    ],
+    "sourceGenera": [
+      "Pholiota",
+      "Kuehneromyces"
+    ],
+    "sourceLabel": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+    "relatedIds": [
+      "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 11",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+    "scientificName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Pleurotus"
+    ],
+    "sourceGenera": [
+      "Pleurotus"
+    ],
+    "sourceLabel": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+    "relatedIds": [
+      "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+      "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 11",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-pluteus",
+    "scientificName": "Pluteus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Pluteus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Pluteus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Pluteus"
+    ],
+    "sourceLabel": "Pluteus",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 11",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-la",
+    "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Psathyrella"
+    ],
+    "sourceLabel": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 12",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-psilocybe-s-l-incluso-deconica",
+    "scientificName": "Psilocybe s.l. (incluso Deconica)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Psilocybe s.l. (incluso Deconica) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Psilocybe s.l. (incluso Deconica) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Psilocybe"
+    ],
+    "sourceLabel": "Psilocybe s.l. (incluso Deconica)",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 12",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+    "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Stropharia"
+    ],
+    "sourceGenera": [
+      "Stropharia"
+    ],
+    "sourceLabel": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+    "relatedIds": [
+      "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 12",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-tricholoma",
+    "scientificName": "Tricholoma",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Tricholoma al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Tricholoma con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Tricholoma"
+    ],
+    "sourceGenera": [
+      "Tricholoma"
+    ],
+    "sourceLabel": "Tricholoma",
+    "relatedIds": [
+      "minimum-card-objective-tricholoma--01--tricholoma-pardinum",
+      "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "minimum-card-objective-tricholoma--03--tricholoma-josserandii",
+      "minimum-card-objective-tricholoma--04--tricholoma-equestre",
+      "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
+      "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
+      "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "minimum-card-objective-tricholoma--12--tricholoma-sejunctum",
+      "minimum-card-objective-tricholoma--13--tricholoma-sulphureum",
+      "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 12",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-volvariella-volvopluteus",
+    "scientificName": "Volvariella + Volvopluteus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Volvariella + Volvopluteus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Volvariella + Volvopluteus con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Volvariella + Volvopluteus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Volvariella",
+      "Volvopluteus"
+    ],
+    "sourceGenera": [
+      "Volvariella",
+      "Volvopluteus"
+    ],
+    "sourceLabel": "Volvariella + Volvopluteus",
+    "relatedIds": [
+      "minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+      "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 13",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-lactarius-incluso-lactifluus",
+    "scientificName": "Lactarius (incluso Lactifluus)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Lactarius (incluso Lactifluus) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Lactarius (incluso Lactifluus) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale. Estendere lo studio di Lactarius (incluso Lactifluus) agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Lactarius",
+      "Lactifluus"
+    ],
+    "sourceGenera": [
+      "Lactarius"
+    ],
+    "sourceLabel": "Lactarius (incluso Lactifluus)",
+    "relatedIds": [
+      "minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+      "minimum-card-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+      "minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+      "minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 13",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-russula",
+    "scientificName": "Russula",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Russula al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Russula con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Russula"
+    ],
+    "sourceLabel": "Russula",
+    "relatedIds": [
+      "minimum-card-objective-russula--01--russula-foetentinae",
+      "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
+      "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 14",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-boletus-s-str",
+    "scientificName": "Boletus s. str.",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Boletus s. str. al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Boletus s. str. con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Boletus"
+    ],
+    "sourceGenera": [
+      "Boletus"
+    ],
+    "sourceLabel": "Boletus s. str.",
+    "relatedIds": [
+      "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 14",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-butyriboletus",
+    "scientificName": "Butyriboletus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Butyriboletus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Butyriboletus con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Butyriboletus"
+    ],
+    "sourceLabel": "Butyriboletus",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 15",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-caloboletus",
+    "scientificName": "Caloboletus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Caloboletus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Caloboletus"
+    ],
+    "sourceGenera": [
+      "Caloboletus"
+    ],
+    "sourceLabel": "Caloboletus",
+    "relatedIds": [
+      "minimum-card-objective-caloboletus--01--caloboletus-radicans",
+      "minimum-card-objective-caloboletus--02--caloboletus-calopus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 15",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-chroogomphus",
+    "scientificName": "Chroogomphus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Chroogomphus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Chroogomphus"
+    ],
+    "sourceLabel": "Chroogomphus",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 15",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-gomphidius",
+    "scientificName": "Gomphidius",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Gomphidius al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Gomphidius agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Gomphidius"
+    ],
+    "sourceLabel": "Gomphidius",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 15",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-gyroporus",
+    "scientificName": "Gyroporus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Gyroporus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Gyroporus"
+    ],
+    "sourceGenera": [
+      "Gyroporus"
+    ],
+    "sourceLabel": "Gyroporus",
+    "relatedIds": [
+      "minimum-card-objective-gyroporus--01--gyroporus-cyanescens",
+      "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-hemileccinum",
+    "scientificName": "Hemileccinum",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Hemileccinum al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Hemileccinum con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Hemileccinum"
+    ],
+    "sourceLabel": "Hemileccinum",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-hygrophoropsis",
+    "scientificName": "Hygrophoropsis",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Hygrophoropsis al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Hygrophoropsis"
+    ],
+    "sourceGenera": [
+      "Hygrophoropsis"
+    ],
+    "sourceLabel": "Hygrophoropsis",
+    "relatedIds": [
+      "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-imleria",
+    "scientificName": "Imleria",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Imleria al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Imleria"
+    ],
+    "sourceGenera": [
+      "Imleria"
+    ],
+    "sourceLabel": "Imleria",
+    "relatedIds": [
+      "minimum-card-objective-imleria--01--imleria-badia"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-leccinellum",
+    "scientificName": "Leccinellum",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Leccinellum al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Leccinellum con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Leccinellum"
+    ],
+    "sourceLabel": "Leccinellum",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-leccinum",
+    "scientificName": "Leccinum",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Leccinum al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Leccinum agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Leccinum"
+    ],
+    "sourceLabel": "Leccinum",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-paxillus",
+    "scientificName": "Paxillus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Paxillus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Paxillus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Paxillus"
+    ],
+    "sourceLabel": "Paxillus",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 16",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-suillus-incluso-boletinus",
+    "scientificName": "Suillus (incluso Boletinus)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Suillus (incluso Boletinus) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Suillus (incluso Boletinus) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Suillus"
+    ],
+    "sourceGenera": [
+      "Suillus"
+    ],
+    "sourceLabel": "Suillus (incluso Boletinus)",
+    "relatedIds": [
+      "minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus",
+      "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 17",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-tylopilus",
+    "scientificName": "Tylopilus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Tylopilus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Tylopilus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Tylopilus"
+    ],
+    "sourceGenera": [
+      "Tylopilus"
+    ],
+    "sourceLabel": "Tylopilus",
+    "relatedIds": [
+      "minimum-card-objective-tylopilus--01--tylopilus-felleus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 17",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbaribo",
+    "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Xerocomus"
+    ],
+    "sourceLabel": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 17",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-cantharellus",
+    "scientificName": "Cantharellus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Cantharellus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Cantharellus agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Cantharellus"
+    ],
+    "sourceGenera": [
+      "Cantharellus"
+    ],
+    "sourceLabel": "Cantharellus",
+    "relatedIds": [
+      "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 17",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-craterellus",
+    "scientificName": "Craterellus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Craterellus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Craterellus con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Craterellus"
+    ],
+    "sourceGenera": [
+      "Craterellus"
+    ],
+    "sourceLabel": "Craterellus",
+    "relatedIds": [
+      "minimum-card-objective-craterellus--01--craterellus-lutescens",
+      "minimum-card-objective-craterellus--02--craterellus-tubaeformis",
+      "minimum-card-objective-craterellus--03--craterellus-cornucopioides"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 18",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-gomphus",
+    "scientificName": "Gomphus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Gomphus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Gomphus"
+    ],
+    "sourceGenera": [
+      "Gomphus"
+    ],
+    "sourceLabel": "Gomphus",
+    "relatedIds": [
+      "minimum-card-objective-gomphus--01--gomphus-clavatus"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 18",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-ramaria",
+    "scientificName": "Ramaria",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Ramaria al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Ramaria"
+    ],
+    "sourceGenera": [
+      "Ramaria"
+    ],
+    "sourceLabel": "Ramaria",
+    "relatedIds": [
+      "minimum-card-objective-ramaria--01--ramaria-formosa",
+      "minimum-card-objective-ramaria--02--ramaria-pallida",
+      "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 19",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-pisolithus",
+    "scientificName": "Pisolithus",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Pisolithus al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Pisolithus"
+    ],
+    "sourceLabel": "Pisolithus",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 19",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-scleroderma",
+    "scientificName": "Scleroderma",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Scleroderma al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Estendere lo studio di Scleroderma agli approfondimenti specialistici previsti da S1, inclusi i caratteri fini necessari nei casi complessi.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Scleroderma"
+    ],
+    "sourceLabel": "Scleroderma",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 20",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-auricularia",
+    "scientificName": "Auricularia",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Auricularia al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Auricularia"
+    ],
+    "sourceGenera": [
+      "Auricularia"
+    ],
+    "sourceLabel": "Auricularia",
+    "relatedIds": [
+      "minimum-card-objective-auricularia--01--auricularia-auricula-judae"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 20",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-gyromitra-incluso-discina",
+    "scientificName": "Gyromitra (incluso Discina)",
+    "commonNames": [],
+    "rank": "operationalGroup",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Gyromitra (incluso Discina) al livello Essenziale, mantenendo la risoluzione operationalGroup prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Gyromitra (incluso Discina) con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Gyromitra"
+    ],
+    "sourceGenera": [
+      "Gyromitra"
+    ],
+    "sourceLabel": "Gyromitra (incluso Discina)",
+    "relatedIds": [
+      "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 21",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-helvella",
+    "scientificName": "Helvella",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Helvella al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Helvella con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Helvella"
+    ],
+    "sourceLabel": "Helvella",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 21",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-morchella",
+    "scientificName": "Morchella",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Morchella al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Morchella con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Morchella"
+    ],
+    "sourceLabel": "Morchella",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 21",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-sarcosphaera",
+    "scientificName": "Sarcosphaera",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Sarcosphaera al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [
+      "Sarcosphaera"
+    ],
+    "sourceGenera": [
+      "Sarcosphaera"
+    ],
+    "sourceLabel": "Sarcosphaera",
+    "relatedIds": [
+      "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l"
+    ],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 21",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  },
+  {
+    "id": "minimum-genus-card-verpa",
+    "scientificName": "Verpa",
+    "commonNames": [],
+    "rank": "genus",
+    "kind": "teaching-group",
+    "summary": "Obiettivo didattico di genere o gruppo. I caratteri della scheda richiedono revisione; le unità minime collegate sono concetti distinti. Riconoscere Verpa al livello Essenziale, mantenendo la risoluzione genus prevista da S1 e collegando i taxa specifici richiesti alle relative schede Minimo. Approfondire Verpa con i taxa e i caratteri indicati da S1 nel livello Auspicabile, senza sovraccaricare la vista Essenziale.",
+    "characters": [],
+    "lookalikes": [],
+    "lookalikesStatus": "not-exported",
+    "habitat": [],
+    "aliases": [],
+    "currentAcceptedNames": [],
+    "currentGenera": [],
+    "sourceGenera": [
+      "Verpa"
+    ],
+    "sourceLabel": "Verpa",
+    "relatedIds": [],
+    "sources": [
+      {
+        "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+        "reviewScope": "course-objective",
+        "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+        "location": "p. 21",
+        "supportedClaim": "Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità."
+      }
+    ],
+    "reviewScope": "internal",
+    "independentReviewStatus": "not-attested"
+  }
+]
