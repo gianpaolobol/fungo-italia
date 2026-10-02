@@ -19,7 +19,6 @@ export function SummaryCardMedia({
   useEffect(() => {
     if (localImageUrl) return;
     const controller = new AbortController();
-    setStatus("loading");
     fetch(`/api/media?taxon=${encodeURIComponent(taxon)}`, {
       signal: controller.signal,
     })
@@ -68,7 +67,7 @@ export function SummaryCardMedia({
     <div className="grid min-h-72 place-items-center p-8 text-center text-[#6d7d70]">
       <div>
         <p className="font-black">
-          {status === "loading"
+          {status === "idle" || status === "loading"
             ? "Cerco un’immagine verificata…"
             : "Immagine in preparazione"}
         </p>
