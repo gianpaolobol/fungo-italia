@@ -53,7 +53,7 @@ import {
 } from "@/lib/atlas-navigation-state";
 import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
-import { buildSummaryCardIndex, isSummaryCardContentReady, isSummaryCardReady } from "@/lib/summary-cards";
+import { buildSummaryCardIndex } from "@/lib/summary-cards";
 import { cn } from "@/lib/utils";
 
 import { WebMcpBridge } from "./webmcp";
