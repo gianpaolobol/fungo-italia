@@ -125,3 +125,26 @@ export function applyPublishedChanges(
 
   return catalog;
 }
+
+export function canMaterializeCatalogField(fieldPath:string):boolean {
+ return new Set(["taxonomy.create","taxonomy.acceptedScientificName","taxonomy.rank","names.common","names.regional","ecology.association","edibility.safetyNote","diagnostics.odor"]).has(fieldPath);
+}
+export function validateMaterializableChange(change: { proposalKind:string; fieldPath:string; targetTaxonId:string|null; proposedValueJson:string }, baseTaxa: readonly Taxon[]): string | null {
+ if(!canMaterializeCatalogField(change.fieldPath))return "Campo approvabile ma non ancora integrabile nel catalogo pubblico.";
+ let proposed:unknown;try{proposed=JSON.parse(change.proposedValueJson);}catch{return "Valore della proposta non valido.";}
+ if(!proposed||typeof proposed!=="object"||Array.isArray(proposed))return "Valore della proposta non valido.";
+ const input=proposed as Record<string,unknown>;
+ const value=typeof input.value==="string"?input.value.trim():"";
+ if(change.proposalKind==="create") {
+  if(change.fieldPath!=="taxonomy.create"||change.targetTaxonId!==null)return "Creazione tassonomica incoerente.";
+  const name=typeof input.scientificName==="string"?input.scientificName.trim():value;
+  if(!name||typeof input.rank!=="string"||!ranks.has(input.rank as TaxonRank))return "Nome o rango non validi.";
+  if(baseTaxa.some(taxon=>taxon.scientificName===name&&taxon.rank===input.rank))return "Taxon già presente: proporre una modifica della scheda.";
+  return null;
+ }
+ if(change.proposalKind!=="update"||change.fieldPath==="taxonomy.create"||!change.targetTaxonId||!baseTaxa.some(taxon=>taxon.id===change.targetTaxonId))return "Scheda destinataria assente o proposta incoerente.";
+ if(!value)return "Valore proposto vuoto.";
+ if(change.fieldPath==="taxonomy.rank"&&!ranks.has(value as TaxonRank))return "Rango proposto non supportato.";
+ if(change.fieldPath==="diagnostics.odor"&&!("odor" in baseTaxa.find(taxon=>taxon.id===change.targetTaxonId)!))return "Il catalogo destinatario non espone questo campo.";
+ return null;
+}

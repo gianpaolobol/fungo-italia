@@ -86,7 +86,7 @@ export function ForecastMap({ areas, forecasts, selectedId, onSelect }: { areas:
     <div className="relative h-full min-h-[360px] w-full overflow-hidden bg-[#dce8d9]" role="region" aria-label="Mappa delle condizioni favorevoli per i funghi">
       {(accessibleView || status === "loading" || status === "error") && <ForecastMapFallback areas={areas} forecasts={forecasts} selectedId={selectedId} onSelect={onSelect} />}
       <div ref={containerRef} inert={status !== "ready" || accessibleView} aria-hidden={status !== "ready" || accessibleView} className={status === "ready" && !accessibleView ? "absolute inset-0" : "pointer-events-none absolute inset-0 opacity-0"} />
-      <div className="absolute inset-x-3 bottom-3 z-20 flex flex-wrap justify-center gap-2">
+      <div className="absolute inset-x-3 bottom-24 z-20 flex flex-wrap justify-center gap-2 lg:bottom-3">
         <button type="button" aria-pressed={accessibleView} onClick={() => setAccessibleView((value) => !value)} className="min-h-11 rounded-xl bg-white px-4 py-2 text-sm font-bold shadow focus-visible:ring-2 focus-visible:ring-[#174f2b]">{accessibleView ? "Mostra cartografia" : "Elenco accessibile"}</button>
         {status === "error" && <button type="button" onClick={() => { setStatus("loading"); setAttempt((value) => value + 1); }} className="min-h-11 rounded-xl bg-white px-4 py-2 text-sm font-bold shadow">Riprova cartografia</button>}
       </div>

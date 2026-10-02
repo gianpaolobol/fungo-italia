@@ -24,11 +24,13 @@ test("aggregate areas cover all Italian regions without point-scale claims", () 
   }
 });
 
-test("web-verified areas retain provenance and calibrated evidence scores", () => {
+test("territorial references retain provenance without invented observation counts", () => {
   const sourced = betaAreas.filter((area) => area.evidenceSources?.length);
   assert.ok(sourced.length >= 20);
   for (const area of sourced) {
-    assert.ok(area.verifiedSignals >= 50 && area.verifiedSignals <= 100, area.id);
+    assert.equal(area.verifiedSignals, 0, area.id);
+    assert.equal(area.delayedVisitors, 0, area.id);
+    assert.equal(area.signalProvenance, "heuristic", area.id);
     for (const source of area.evidenceSources ?? []) {
       assert.match(source.url, /^https:\/\//, area.id);
       assert.ok(source.label.trim().length > 0, area.id);

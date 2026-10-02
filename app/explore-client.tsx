@@ -26,6 +26,9 @@ import Link from "next/link";
 import { AtlasCardDetail } from "@/components/atlas-card-detail";
 import { SporePrint } from "@/components/spore-print";
 import { SummaryCardShell } from "@/components/summary-card-shell";
+import { StudyNavigation } from "@/components/study-navigation";
+import { OfflineLibrary, OfflineTaxonActions } from "@/components/offline-library";
+import { studyAtlasTaxa } from "@/lib/study-atlas-catalog";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
 import {
@@ -90,7 +93,10 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   );
   const [forecasts, setForecasts] = useState<ForecastResult[]>(initialForecasts);
   const [catalogTaxa, setCatalogTaxa] = useState<AtlasTaxon[]>(taxa);
-  const summaryCardShells = useMemo(() => buildSummaryCardIndex(catalogTaxa), [catalogTaxa]);
+  const [studyTaxa, setStudyTaxa] = useState<AtlasTaxon[]>(studyAtlasTaxa);
+  const summaryCardShells = useMemo(() => buildSummaryCardIndex(studyTaxa), [studyTaxa]);
+  const [studyView, setStudyView] = useState<"cards" | "scroll">("cards");
+  const [studyFeedLimit, setStudyFeedLimit] = useState(12);
   const [activeTab, setActiveTab] = useState("cerca");
   const [schedeQuery, setSchedeQuery] = useState("");
   const [selectedSummaryId, setSelectedSummaryId] = useState<string | null>(null);
@@ -104,26 +110,29 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   const [atlasEdibility, setAtlasEdibility] = useState<AtlasNavigationState["edibility"]>("");
   const [atlasNavigation, setAtlasNavigation] = useState(defaultAtlasNavigationState);
   const [atlasUrlReady, setAtlasUrlReady] = useState(false);
-  const [atlasServerItems, setAtlasServerItems] = useState<PublicPublicCatalogSearchDocument[] | null>(null);
+  const [atlasServerItems, setAtlasServerItems] = useState<PublicCatalogSearchDocument[] | null>(null);
   const [atlasServerTotal, setAtlasServerTotal] = useState(0);
   const [atlasServerStatus, setAtlasServerStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [mobileView, setMobileView] = useState<"list" | "map">("map");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
-    const parsed = parseAtlasNavigationState(
-      new URLSearchParams(window.location.search),
-    );
-    const timeout = window.setTimeout(() => {
-      setAtlasQuery(parsed.query);
-      setAtlasKind(parsed.kind);
-      setAtlasRank(parsed.rank);
-      setAtlasEdibility(parsed.edibility);
-      setAtlasNavigation(parsed);
-      setAtlasUrlReady(true);
-    }, 0);
-    return () => window.clearTimeout(timeout);
-  }, []);
+    const restoreUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      const parsed = parseAtlasNavigationState(params);
+      setAtlasQuery(parsed.query);setAtlasKind(parsed.kind);setAtlasRank(parsed.rank);setAtlasEdibility(parsed.edibility);setAtlasNavigation(parsed);
+      const area = areas.find((entry) => entry.id === params.get("area"));
+      setSelectedId(area?.id ?? areas[0]?.id ?? "");setRegion("Tutta Italia");setQuery("");
+      const tab = params.get("tab");
+      setActiveTab(tab && ["cerca","atlante","schede","obiettivi","metodo"].includes(tab) ? tab : parsed.selectedId ? "atlante" : "cerca");
+      setSelectedSummaryId(params.get("study"));setSchedeQuery(params.get("studyQ") ?? "");
+      setStudyView(params.get("studyView") === "scroll" ? "scroll" : "cards");
+      setDrawerOpen(false);setAtlasUrlReady(true);
+    };
+    const timeout = window.setTimeout(restoreUrl,0);
+    window.addEventListener("popstate",restoreUrl);
+    return () => { window.clearTimeout(timeout);window.removeEventListener("popstate",restoreUrl); };
+  }, [areas]);
 
   useEffect(() => {
     if (!atlasUrlReady) return;
@@ -135,7 +144,15 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
       rank: atlasRank,
       edibility: atlasEdibility,
     };
-    const queryString = serializeAtlasNavigationState(state).toString();
+    const params = new URLSearchParams(window.location.search);
+    for(const key of ["q","kind","rank","genus","edibility","reviewStatus","selectedKind","selectedId","depth","returnKind","returnId","returnDepth"])params.delete(key);
+    serializeAtlasNavigationState(state).forEach((value,key)=>params.set(key,value));
+    if(selectedId)params.set("area",selectedId);else params.delete("area");
+    params.set("tab",activeTab);
+    if(selectedSummaryId)params.set("study",selectedSummaryId);else params.delete("study");
+    if(schedeQuery)params.set("studyQ",schedeQuery);else params.delete("studyQ");
+    if(studyView==="scroll")params.set("studyView","scroll");else params.delete("studyView");
+    const queryString = params.toString();
     const href =
       window.location.pathname +
       (queryString ? `?${queryString}` : "") +
@@ -148,6 +165,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     atlasQuery,
     atlasRank,
     atlasUrlReady,
+    selectedId,activeTab,selectedSummaryId,schedeQuery,studyView,
   ]);
 
   useEffect(() => {
@@ -176,9 +194,9 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
     fetch("/api/catalog", { signal: controller.signal })
       .then(async (response) => {
         if (!response.ok) throw new Error("catalog unavailable");
-        return response.json() as Promise<{ taxa: AtlasTaxon[] }>;
+        return response.json() as Promise<{ taxa: AtlasTaxon[]; studyTaxa?: AtlasTaxon[] }>;
       })
-      .then((payload) => setCatalogTaxa(payload.taxa))
+      .then((payload) => { setCatalogTaxa(payload.taxa); if (Array.isArray(payload.studyTaxa)) setStudyTaxa(payload.studyTaxa); })
       .catch((error: unknown) => {
         if (error instanceof DOMException && error.name === "AbortError") return;
       });
@@ -208,7 +226,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
           return response.json() as Promise<{
             mode: "search";
             total: number;
-            items: PublicPublicCatalogSearchDocument[];
+            items: PublicCatalogSearchDocument[];
           }>;
         })
         .then((payload) => {
@@ -442,6 +460,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
             </Button>
           </div>
 
+          {mobileView === "map" && <div className="mb-3 overflow-hidden rounded-2xl border border-[#dce5da] bg-white lg:hidden"><AreaFilters query={query} setQuery={setQuery} region={region} setRegion={setRegion} regions={regions} /></div>}
           <section className="grid min-w-0 gap-3 lg:grid-cols-[360px_minmax(0,1fr)] xl:grid-cols-[360px_minmax(0,1fr)_340px]">
             <aside className={cn(
               "min-w-0 overflow-hidden rounded-[22px] border border-[#dce5da] bg-white shadow-[0_18px_60px_rgba(23,79,43,0.08)]",
@@ -480,7 +499,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
               "h-[calc(100dvh-250px)] min-h-[430px] lg:block lg:h-[calc(100dvh-190px)] lg:min-h-[620px]",
             )}>
               <ForecastMap
-                areas={areas}
+                areas={ranked.map((item) => item.area)}
                 forecasts={forecasts}
                 selectedId={selectedArea?.id ?? ""}
                 onSelect={selectArea}
@@ -498,7 +517,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                     <span className="min-w-0 flex-1">
                       <span className="block break-words font-black leading-tight">{selectedArea.name}</span>
                       <span className="mt-1 block text-xs text-[#617266]">
-                        Tocca per motivazioni e specie possibili
+                        Tocca per condizioni e limiti dell’indice
                       </span>
                     </span>
                     <ChevronRight className="size-5 shrink-0 text-[#315d3c]" />
@@ -563,7 +582,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                       ? "Ricerca in corso…"
                       : atlasServerStatus === "error"
                         ? "Ricerca server non disponibile"
-                        : `${atlasServerTotal} risultati verificati`
+                        : `${atlasServerTotal} risultati nel catalogo`
                     : `${visibleTaxa.length} di ${catalogTaxa.length} schede legacy`}
                 </div>
                 <div className="relative">
@@ -603,7 +622,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   </NativeSelect>
                   <NativeSelect
                     value={atlasEdibility}
-                    onChange={(event) => setAtlasEdibility(event.target.value)}
+                    onChange={(event) => setAtlasEdibility(event.target.value as AtlasNavigationState["edibility"])}
                     className="h-11 w-full rounded-xl"
                     aria-label="Categoria alimentare"
                   >
@@ -680,34 +699,32 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 >
                   ← Torna alle Schede
                 </button>
-                <SummaryCardShell
-                  card={selectedSummaryCard}
-                  onOpenAtlas={openSummaryInAtlas}
-                />
+                <StudyNavigation ids={visibleSummaryCards.map((card) => card.atlasId)} selectedId={selectedSummaryCard.atlasId} onSelect={setSelectedSummaryId} onClose={() => setSelectedSummaryId(null)} />
+                <OfflineTaxonActions taxonId={selectedSummaryCard.atlasId} />
+                <SummaryCardShell card={selectedSummaryCard} onOpenAtlas={openSummaryInAtlas} />
               </div>
             ) : (
               <>
                 <div className="flex min-w-0 flex-col gap-4 border-b border-[#e0e8de] pb-5 md:flex-row md:items-end md:justify-between">
                   <div className="min-w-0">
-                    <p className="text-sm font-bold text-[#5d7362]">Lotto S1 · primi contenuti revisionati</p>
+                    <p className="text-sm font-bold text-[#5d7362]">Percorso di studio · contenuti e limiti documentati</p>
                     <h1 className="break-words text-2xl font-black tracking-[-0.04em] sm:text-3xl">
-                      Schede rapide dei principali commestibili
+                      Schede per studio e confronto
                     </h1>
                     <p className="mt-2 max-w-3xl leading-relaxed text-[#5f7064]">
-                      Sintesi visuale coordinata con l’Atlante: immagine approvata, habitat, stagione,
-                      sporata grafica e 3 caratteri principali + 1 differenziante.
+                      Sintesi di studio delle 148 unità del Minimo: caratteri e limiti documentati. Le fonti didattiche non sostituiscono la verifica micologica indipendente.
                     </p>
                   </div>
                   <div className="w-full shrink-0 md:w-80">
                     <label className="text-xs font-black uppercase tracking-wide text-[#6b7d70]" htmlFor="schede-search">
-                      Cerca nelle Schede pronte
+                      Cerca nelle schede di studio
                     </label>
                     <div className="relative mt-1.5">
                       <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f8173]" />
                       <Input
                         id="schede-search"
                         value={schedeQuery}
-                        onChange={(event) => setSchedeQuery(event.target.value)}
+                        onChange={(event) => { setSchedeQuery(event.target.value); setStudyFeedLimit(12); }}
                         placeholder="Nome comune o scientifico"
                         className="h-11 rounded-xl pl-10 text-base"
                       />
@@ -715,7 +732,16 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   </div>
                 </div>
 
-                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                <Link href="/studio" className="my-4 inline-flex min-h-11 items-center font-bold text-green-900 underline">Apri il percorso di studio e ripasso</Link>
+                <div className="mt-4 flex flex-wrap gap-2" aria-label="Modalità di studio">
+                  <Button type="button" variant={studyView === "cards" ? "default" : "outline"} aria-pressed={studyView === "cards"} onClick={() => setStudyView("cards")} className="min-h-11">Schede con tap</Button>
+                  <Button type="button" variant={studyView === "scroll" ? "default" : "outline"} aria-pressed={studyView === "scroll"} onClick={() => setStudyView("scroll")} className="min-h-11">Studio con scrolling</Button>
+                </div>
+                <OfflineLibrary taxa={studyTaxa} />
+                {studyView === "scroll" ? <div className="mt-5 space-y-6">
+                  {visibleSummaryCards.slice(0, studyFeedLimit).map((card) => <article key={card.atlasId} className="scroll-mt-24 rounded-2xl border border-[#dce5da] p-3 sm:p-5"><OfflineTaxonActions taxonId={card.atlasId} /><SummaryCardShell card={card} onOpenAtlas={openSummaryInAtlas} /></article>)}
+                  {studyFeedLimit < visibleSummaryCards.length && <Button type="button" variant="outline" className="min-h-11 w-full" onClick={() => setStudyFeedLimit((count) => count + 12)}>Continua lo studio · altre 12 schede</Button>}
+                </div> : <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {visibleSummaryCards.map((card) => (
                     <button
                       type="button"
@@ -763,24 +789,24 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                       </div>
                     </button>
                   ))}
-                </div>
+                </div>}
 
                 {visibleSummaryCards.length === 0 && (
                   <div className="mt-5 rounded-2xl border border-dashed border-[#cbd8c9] p-7 text-center text-[#617266]">
-                    Nessuna Scheda pronta corrisponde alla ricerca.
+                    Nessuna scheda corrisponde alla ricerca.
                   </div>
                 )}
 
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
-                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Pronte S1</p>
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Unità di studio</p>
                     <p className="mt-1 text-3xl font-black">{summaryCardShells.length}</p>
                     <p className="mt-1 text-sm text-[#5f7064]">Schede disponibili nell’Atlante</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Copertura strutturale</p>
                     <p className="mt-1 text-3xl font-black">{summaryCardShells.filter((card) => card.basis === "minimum-baseline" || card.basis === "reviewed-taxon").length}</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">con 3+1 specifico o revisionato</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">con sintesi specifica o baseline didattica</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Regola</p>
@@ -924,8 +950,8 @@ function AreaFilters({
     <div className="border-b border-[#e1e8df] p-4">
       <div className="mb-4 flex min-w-0 items-end justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-sm font-semibold text-[#58705e]">Aree consigliate</p>
-          <h1 className="break-words text-2xl font-black tracking-[-0.04em]">Dove vale la pena cercare</h1>
+          <p className="text-sm font-semibold text-[#58705e]">Macroaree e condizioni indicative</p>
+          <h1 className="break-words text-2xl font-black tracking-[-0.04em]">Esplora habitat e meteo</h1>
         </div>
         <span className="shrink-0 rounded-full bg-[#eff5ed] px-3 py-1 text-xs font-bold text-[#386047]">Italia</span>
       </div>
@@ -1010,7 +1036,7 @@ function AreaButton({
           <div className="mt-3 flex min-w-0 items-center justify-between gap-2 text-xs font-semibold text-[#627268]">
             <span className="flex min-w-0 items-center gap-1">
               <Users className="size-3.5 shrink-0" />
-              <span>{getVisitPressure(area.delayedVisitors)} passaggi</span>
+              <span>{area.signalProvenance === "measured" ? getVisitPressure(area.delayedVisitors) + " passaggi" : "Passaggi non monitorati"}</span>
             </span>
             <span className="flex shrink-0 items-center gap-1 text-[#1f6333]">
               Dettagli <ChevronRight className="size-3.5" />
@@ -1060,7 +1086,7 @@ function AreaDetails({
         <Metric icon={CloudRain} label="Piogge 7/14/26g" value={forecast.components.rainHistoryFit === null ? "non disponibile" : String(forecast.components.rainHistoryFit) + "/100"} />
         <Metric icon={Leaf} label="Fenologia" value={String(forecast.components.speciesPhenologyFit) + "/100"} />
         <Metric icon={MapPin} label="Quota" value={String(forecast.components.altitudeSeasonFit) + "/100"} />
-        <Metric icon={Users} label="Pressione" value={getVisitPressure(area.delayedVisitors)} />
+        <Metric icon={Users} label="Pressione" value={area.signalProvenance === "measured" ? getVisitPressure(area.delayedVisitors) : "non monitorata"} />
       </div>
 
       {forecast.weather && (

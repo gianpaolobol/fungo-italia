@@ -26,8 +26,9 @@ test("national beta covers every Italian region with broad search areas", () => 
   assert.equal(new Set(betaAreas.map((area) => area.id)).size, betaAreas.length);
 });
 
-test("seed recommendations include an immediate option and explain every area", () => {
-  assert.equal(betaAreas.some((area) => scoreArea(area).label === "Vai ora"), true);
+test("seed recommendations explain areas without guaranteeing immediate finds", () => {
+  assert.equal(betaAreas.every((area) => area.signalProvenance === "heuristic" && area.verifiedSignals === 0 && area.delayedVisitors === 0), true);
+  assert.equal(betaAreas.some((area) => scoreArea(area).label === "Vai ora"), false);
   assert.equal(betaAreas.every((area) => area.reasons.length >= 2), true);
 });
 
