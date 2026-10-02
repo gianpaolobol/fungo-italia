@@ -14,6 +14,7 @@ const area: Area = {
   moisture: 82,
   temperatureFit: 86,
   seasonFit: 80,
+  signalProvenance: "measured",
   verifiedSignals: 74,
   delayedVisitors: 2,
   lastUpdatedLabel: "dataset beta",
@@ -73,4 +74,12 @@ test("high anonymous pressure reduces the recommendation", () => {
   const highPressure = calculateForecast({ ...area, delayedVisitors: 40 }, freshWeather, new Date("2026-09-16T12:00:00.000Z"));
   assert.ok(highPressure.score < lowPressure.score);
   assert.ok(highPressure.components.pressurePenalty > lowPressure.components.pressurePenalty);
+});
+
+test("unmeasured catalogue cannot imply verified signals or visitor counts", () => {
+  const result = calculateForecast({ ...area, signalProvenance: "heuristic", verifiedSignals: 100, delayedVisitors: 40 }, freshWeather, new Date("2026-09-16T12:00:00.000Z"));
+  assert.equal(result.confidence, "low"); assert.equal(result.components.evidenceScore, 0);
+  assert.equal(result.components.pressurePenalty, 0); assert.notEqual(result.recommendation, "Vai ora");
+  assert.ok(result.reasons.some((reason) => reason.code === "heuristic-model"));
+  assert.ok(result.reasons.some((reason) => reason.code === "visitor-pressure" && reason.label.includes("non monitorata")));
 });

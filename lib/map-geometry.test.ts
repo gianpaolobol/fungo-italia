@@ -15,6 +15,7 @@ const area: Area = {
   moisture: 80,
   temperatureFit: 80,
   seasonFit: 80,
+  signalProvenance: "measured",
   verifiedSignals: 70,
   delayedVisitors: 2,
   lastUpdatedLabel: "beta",
@@ -35,6 +36,7 @@ const forecast: ForecastResult = {
     ecologicalSuitability: 80,
     phenologyFit: 80,
     weatherFit: 75,
+    rainHistoryFit: 75,
     fruitingTriggerFit: 82,
     speciesPhenologyFit: 88,
     altitudeSeasonFit: 80,
@@ -63,4 +65,9 @@ test("public feature properties cannot expose raw coordinates or visitor counts"
   assert.equal(serialized.includes("delayedVisitors"), false);
   assert.equal(serialized.includes("private"), false);
   assert.equal(feature.properties.pressureBand, "pochi");
+});
+
+test("unmeasured area pressure remains explicitly unknown", () => {
+  const feature = areaToPublicFeature({ ...area, signalProvenance: "heuristic", delayedVisitors: 0 }, forecast);
+  assert.equal(feature.properties.pressureBand, "non-monitorata");
 });

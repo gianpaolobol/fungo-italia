@@ -178,8 +178,9 @@ export function calculateForecast(
   const ecologicalSuitability = clamp((area.moisture + area.temperatureFit) / 2);
   const speciesPhenologyFit = calculateSpeciesPhenologyFit(area, now);
   const phenologyFit = speciesPhenologyFit;
-  const evidenceScore = clamp(area.verifiedSignals);
-  const penalty = pressurePenalty(area.delayedVisitors);
+  const measuredSignals = area.signalProvenance === "measured";
+  const evidenceScore = measuredSignals ? clamp(area.verifiedSignals) : 0;
+  const penalty = measuredSignals ? pressurePenalty(area.delayedVisitors) : 0;
   const weatherIsFresh = Boolean(weather && new Date(weather.expiresAt).getTime() >= now.getTime());
   const weatherFit = weather && weatherIsFresh ? calculateWeatherFit(weather) : null;
   const fruitingTriggerFit = weather && weatherIsFresh ? calculateFruitingTriggerFit(area, weather) : null;
@@ -190,7 +191,7 @@ export function calculateForecast(
     [ecologicalSuitability, 0.23],
     [speciesPhenologyFit, 0.18],
     [altitudeSeasonFit, 0.09],
-    [evidenceScore, 0.14],
+    ...(measuredSignals ? [[evidenceScore, 0.14] as [number, number]] : []),
   ];
   if (weatherFit !== null) weighted.push([weatherFit, 0.07]);
   if (rainHistoryFit !== null) weighted.push([rainHistoryFit, 0.08]);
@@ -203,13 +204,13 @@ export function calculateForecast(
     weatherFit !== null && evidenceScore >= 70
       ? "high"
       : weatherFit !== null
-        ? "medium"
+        ? measuredSignals ? "medium" : "low"
         : "low";
 
   const reasons: ForecastReason[] = [
     {
       code: "habitat-fit",
-      label: `${area.habitat.slice(0, 3).join(", ")}: habitat compatibili nella scheda beta`,
+      label: `${area.habitat.slice(0, 3).join(", ")}: compatibilità ambientale indicativa`,
       tone: "positive",
     },
     {
@@ -219,10 +220,12 @@ export function calculateForecast(
     },
     {
       code: "visitor-pressure",
-      label: `Pressione di ricerca: ${getVisitPressure(area.delayedVisitors)} passaggi aggregati`,
+      label: measuredSignals ? `Pressione di ricerca: ${getVisitPressure(area.delayedVisitors)} passaggi aggregati` : "Pressione di ricerca non monitorata: nessun conteggio disponibile",
       tone: penalty >= 12 ? "warning" : "neutral",
     },
   ];
+
+  if (!measuredSignals) reasons.push({ code: "heuristic-model", label: "Indice euristico non validato sul campo: meteo e habitat non confermano presenza o abbondanza di funghi", tone: "warning" });
 
   if (rainHistoryFit !== null) {
     reasons.push({
@@ -234,7 +237,7 @@ export function calculateForecast(
   if (fruitingTriggerFit !== null) {
     reasons.push({
       code: "fruiting-trigger",
-      label: `Segnale di fruttificazione pioggia/temperatura: ${fruitingTriggerFit}/100`,
+      label: `Compatibilità euristica pioggia/temperatura: ${fruitingTriggerFit}/100`,
       tone: fruitingTriggerFit >= 68 ? "positive" : fruitingTriggerFit < 40 ? "warning" : "neutral",
     });
   }
@@ -273,7 +276,7 @@ export function calculateForecast(
   return {
     areaId: area.id,
     score,
-    recommendation: score >= 75 ? "Vai ora" : score >= 52 ? "Possibile" : "Attendi",
+    recommendation: score >= 75 && measuredSignals && weatherFit !== null ? "Vai ora" : score >= 52 ? "Possibile" : "Attendi",
     confidence,
     providerStatus,
     calculatedAt: now.toISOString(),

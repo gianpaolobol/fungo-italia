@@ -11,7 +11,7 @@ export type PublicAreaProperties = {
   score: number;
   recommendation: ForecastRecommendation;
   confidence: ForecastConfidence;
-  pressureBand: VisitPressure;
+  pressureBand: VisitPressure | "non-monitorata";
   habitat: string[];
 };
 
@@ -52,7 +52,7 @@ export function areaToPublicFeature(
       score: forecast.score,
       recommendation: forecast.recommendation,
       confidence: forecast.confidence,
-      pressureBand: getVisitPressure(area.delayedVisitors),
+      pressureBand: area.signalProvenance === "measured" ? getVisitPressure(area.delayedVisitors) : "non-monitorata",
       habitat: [...area.habitat],
     },
     geometry: {

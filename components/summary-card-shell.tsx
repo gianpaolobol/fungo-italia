@@ -2,7 +2,7 @@ import { CircleAlert, ExternalLink, Utensils } from "lucide-react";
 
 import { SporePrint } from "@/components/spore-print";
 import { SummaryCardMedia } from "@/components/summary-card-media";
-import type { SummaryCard } from "@/lib/summary-cards";
+import { summaryCardScientificReviewNote, type SummaryCard } from "@/lib/summary-cards";
 
 const rankLabels: Record<string, string> = {
   species: "Specie",
@@ -85,7 +85,7 @@ export function SummaryCardShell({
           )}
           {p.representativeTaxon && (
             <div className="rounded-2xl border border-[#d8e3d6] bg-white p-3 text-sm leading-relaxed">
-              <strong>Specie rappresentativa:</strong> {p.representativeTaxon}
+              <strong>Ambito del profilo:</strong> {p.representativeTaxon}
             </div>
           )}
         </aside>
@@ -105,7 +105,7 @@ export function SummaryCardShell({
         <InfoBox title="Sporata">
           <SporePrint token={p.sporePrint} size="sm" className="mx-auto" />
         </InfoBox>
-        <InfoBox title="Caratteri chiave">
+        <InfoBox title={card.basis === "genus-context" ? "Guida all’osservazione" : "Caratteri chiave"}>
           {p.diagnosticCharacters ? (
             <ol className="space-y-1.5">
               {p.diagnosticCharacters.map((item, index) => (
@@ -127,6 +127,15 @@ export function SummaryCardShell({
         </InfoBox>
       </div>
 
+      <section aria-label="Provenienza e stato scientifico" className="mx-4 mb-4 rounded-2xl border border-[#d8e0d5] bg-white p-3 text-sm leading-relaxed sm:mx-6 sm:mb-6">
+        <h3 className="mb-1 font-black text-[#315d3c]">Provenienza e stato scientifico</h3>
+        <p>{summaryCardScientificReviewNote(card)}</p>
+      </section>
+      <section aria-label="Indicazioni alimentari" className="mx-4 mb-4 rounded-2xl border border-[#ead58c] bg-[#fff8dc] p-3 text-sm leading-relaxed text-[#67541f] sm:mx-6 sm:mb-6">
+        <h3 className="mb-1 font-black">Indicazioni alimentari</h3>
+        {card.safetyNote && <p>{card.safetyNote}</p>}
+        <p className="mt-1">La categoria alimentare descrive il taxon della scheda. Per consumare un esemplare raccolto serve il controllo dell’ispettorato micologico.</p>
+      </section>
       {card.reviewStatus !== "ready" && (
         <div className="mx-4 mb-4 flex gap-2 rounded-2xl border border-[#ead58c] bg-[#fff8dc] p-3 text-sm text-[#67541f] sm:mx-6 sm:mb-6">
           <CircleAlert className="mt-0.5 size-4 shrink-0" />

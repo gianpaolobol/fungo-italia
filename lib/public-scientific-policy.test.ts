@@ -60,6 +60,8 @@ test("audited 3+1 field profile is public even while provisional safety remains 
   assert.equal(profile.characters.length, 3);
   assert.ok(profile.plusOne.length > 0);
   assert.equal(profile.reviewStatus, "reviewed");
+  assert.equal(profile.reviewScope, "internal");
+  assert.equal(profile.independentReviewStatus, "not-attested");
   assert.equal(profile.version, "scientific-baseline-1.0");
   assert.equal(profile.auditedAt, "2026-09-28");
   assert.equal(publicEdibilityCategory(draft), null);

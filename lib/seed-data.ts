@@ -475,4 +475,12 @@ const featuredAreas: Area[] = [
   },
 ];
 
-export const betaAreas: Area[] = [...featuredAreas, ...nationalAreas];
+export const betaAreas: Area[] = [
+  ...featuredAreas.map((area): Area => ({
+    ...area, signalProvenance: "heuristic",
+    moisture: 50, temperatureFit: 50, seasonFit: 50, verifiedSignals: 0, delayedVisitors: 0,
+    lastUpdatedLabel: "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    reasons: ["Mosaico ambientale: " + area.habitat.slice(0, 3).join(", "), "Macroarea indicativa: presenza e produttività dei funghi da verificare"],
+  })),
+  ...nationalAreas,
+];

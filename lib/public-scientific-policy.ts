@@ -63,5 +63,7 @@ export function publicAuditedFieldProfile(card: MinimumAtlasCard) {
     version: AUDITED_MINIMUM_FIELD_PROFILE_VERSION,
     auditedAt: AUDITED_MINIMUM_FIELD_PROFILE_DATE,
     reviewStatus: AUDITED_MINIMUM_FIELD_PROFILE_REVIEW_STATUS,
+    reviewScope: "internal" as const,
+    independentReviewStatus: "not-attested" as const,
   };
 }

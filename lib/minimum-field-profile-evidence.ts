@@ -97,7 +97,7 @@ const internalAuditedFieldProfileEvidence: EvidenceRecord[] =
       reviewedAt: REVIEWED_AT,
       reviewStatus: AUDITED_MINIMUM_FIELD_PROFILE_REVIEW_STATUS,
       notes:
-        "Audit scientifico interno cross-source completato nel progetto. Non equivale alla revisione micologica indipendente richiesta per l'approvazione finale dei claim di sicurezza/commestibilità.",
+        "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
     };
   });
 
@@ -107,7 +107,7 @@ const sourceEnrichmentEvidence: EvidenceRecord[] = sourceMinimumLearningUnits.fl
     sourceId: source.sourceId,
     sourceLocation: source.sourceLocation,
     claimType: "morphology" as const,
-    claimSummary: `Rafforzamento del profilo 3+1 di ${unit.sourceLabel}: ${source.summary}`,
+    claimSummary: `Riscontro bibliografico dei caratteri indicati per ${unit.sourceLabel}: ${source.summary}`,
     evidenceStrength: "primaryExplicit" as const,
     extractedBy: SOURCE_ENRICHMENT_REVIEWED_BY,
     extractedAt: SOURCE_ENRICHMENT_REVIEWED_AT,
@@ -115,7 +115,7 @@ const sourceEnrichmentEvidence: EvidenceRecord[] = sourceMinimumLearningUnits.fl
     reviewedAt: SOURCE_ENRICHMENT_REVIEWED_AT,
     reviewStatus: "reviewed" as const,
     notes:
-      "Nuova fonte utente integrata il 2026-09-29. La fonte supporta il contenuto morfologico/ecologico indicato; non sovrascrive autonomamente i gate separati di commestibilità o tossicità.",
+      "Nuova fonte utente integrata il 2026-09-29. La fonte supporta esclusivamente il contenuto indicato nel claimSummary, non implica verifica di tutti i caratteri 3+1 né revisione indipendente; non sovrascrive autonomamente i gate separati di commestibilità o tossicità.",
   })),
 );
 

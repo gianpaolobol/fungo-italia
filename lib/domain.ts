@@ -108,6 +108,7 @@ export interface Area {
   moisture: number;
   temperatureFit: number;
   seasonFit: number;
+  signalProvenance?: "heuristic" | "measured";
   verifiedSignals: number;
   delayedVisitors: number;
   lastUpdatedLabel: string;

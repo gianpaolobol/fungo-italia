@@ -39,13 +39,13 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
   const byArea = new Map(forecasts.map((item) => [item.areaId, item]));
 
   return (
-    <div className="absolute inset-0 overflow-auto bg-[radial-gradient(circle_at_40%_20%,#eaf3e4,#c9dcc7)] p-3 pt-20 sm:p-4 sm:pt-20">
+    <div className="absolute inset-0 overflow-auto bg-[radial-gradient(circle_at_40%_20%,#eaf3e4,#c9dcc7)] p-3 pb-20 pt-20 sm:p-4 sm:pb-20 sm:pt-20">
       <div className="mx-auto grid max-w-5xl gap-4 lg:grid-cols-[minmax(300px,430px)_minmax(0,1fr)]">
         <div className="relative overflow-hidden rounded-3xl border border-white/80 bg-white/75 p-3 shadow-sm">
           <svg
             viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
             className="mx-auto block h-auto w-full max-w-[410px]"
-            role="img"
+            role="group"
             aria-label="Sagoma dell'Italia con aree aggregate selezionabili"
           >
             <g fill="#edf4ea" stroke="#315d3c" strokeWidth="1.5" strokeLinejoin="round">
@@ -61,10 +61,10 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
                   : "#89948a";
               const selected = selectedId === area.id;
               return (
-                <g key={area.id} onClick={() => onSelect(area.id)} className="cursor-pointer">
+                <g key={area.id} role="button" tabIndex={0} aria-label={area.name + ", " + area.region + ": " + (forecast?.recommendation ?? "Dati non disponibili")} aria-pressed={selected} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onSelect(area.id); } }} onClick={() => onSelect(area.id)} className="cursor-pointer focus-visible:outline focus-visible:outline-2"><circle cx={x} cy={y} r={12} fill="transparent" />
                   <circle cx={x} cy={y} r={selected ? 7.2 : 5.4} fill="white" opacity={selected ? 1 : 0.75} />
                   <circle cx={x} cy={y} r={selected ? 4.8 : 3.6} fill={fill} stroke="#123d23" strokeWidth={selected ? 1.5 : 0.8}>
-                    <title>{area.name}: {forecast?.recommendation ?? "Attendi"}, indice {forecast?.score ?? "—"}/100</title>
+                    <title>{area.name}: {forecast?.recommendation ?? "Dati non disponibili"}, indice {forecast?.score ?? "—"}/100</title>
                   </circle>
                 </g>
               );
@@ -75,6 +75,7 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
           </p>
         </div>
 
+        {areas.length === 0 && <p role="status" className="rounded-xl bg-white p-4">Nessuna area corrisponde ai filtri. Modifica la ricerca.</p>}
         <div className="mx-auto grid max-w-xl content-start grid-cols-2 gap-2 sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-2" aria-label="Mappa accessibile delle aree">
           {areas.map((area) => {
             const forecast = byArea.get(area.id);
@@ -99,7 +100,7 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
                       ? "bg-[#fff0c7] text-[#805300]"
                       : "bg-[#eef0ec] text-[#536057]",
                 )}>
-                  {forecast?.recommendation ?? "Attendi"}
+                  {forecast?.recommendation ?? "Dati non disponibili"}
                 </span>
               </button>
             );

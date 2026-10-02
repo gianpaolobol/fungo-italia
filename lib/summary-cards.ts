@@ -1,6 +1,7 @@
 import type { AtlasTaxon, TaxonRank } from "./domain.ts";
 import { reviewedSummaryCardContent } from "./summary-card-content.ts";
 import { autoSummaryForAtlasTaxon } from "./summary-card-auto.ts";
+import { minimumCards } from "./minimum-cards.ts";
 
 export type SporePrintToken =
   | "white"
@@ -105,6 +106,7 @@ export function projectAtlasTaxonToSummaryCard(taxon: AtlasTaxon): SummaryCard {
 }
 
 function reviewedContentForTaxon(taxon: AtlasTaxon) {
+  if (minimumCards.some((card) => card.cardId === taxon.id)) return null;
   const direct = reviewedSummaryCardContent[taxon.id];
   if (direct) return direct;
   const canonicalAtlasId =
@@ -180,4 +182,18 @@ export function isSummaryCardContentReady(card: SummaryCard): boolean {
     Boolean(p.differentiatingCharacter) &&
     p.sporePrint !== "unknown"
   );
+}
+
+/** Editorial readiness is separate from independent scientific approval. */
+export function summaryCardScientificReviewNote(card: SummaryCard): string {
+  switch (card.basis) {
+    case "minimum-baseline":
+      return "Profilo 3+1 dalla baseline con audit interno. La revisione micologica indipendente non è attestata da questo stato; ecologia e sicurezza seguono verifiche separate.";
+    case "genus-context":
+      return "Guida per documentare l’esemplare: queste istruzioni non sono una diagnosi verificata della voce. Habitat, sporata e stagione specifiche restano da documentare.";
+    case "reviewed-taxon":
+      return "Sintesi con revisione editoriale registrata nel progetto. Lo stato di completezza della scheda non attesta da solo revisione micologica indipendente o approvazione alimentare.";
+    default:
+      return "Scheda di consultazione dell’Atlante: contenuti diagnostici ancora da documentare.";
+  }
 }

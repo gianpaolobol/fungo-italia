@@ -753,7 +753,7 @@ const verifiedAreaAdditions: Area[] = [
   }
 ];
 
-export const nationalAreas: Area[] = seeds.map((seed, index) => {
+export const nationalAreas: Area[] = seeds.map((seed): Area => {
   const [id, name, region, latitude, longitude, habitat, expectedTaxa] = seed;
   return {
     id,
@@ -761,16 +761,20 @@ export const nationalAreas: Area[] = seeds.map((seed, index) => {
     region,
     center: [latitude, longitude],
     habitat,
-    moisture: 62 + ((index * 7) % 25),
-    temperatureFit: 66 + ((index * 5) % 23),
-    seasonFit: 60 + ((index * 9) % 29),
-    verifiedSignals: 35 + ((index * 4) % 31),
-    delayedVisitors: (index * 3) % 17,
-    lastUpdatedLabel: "dati territoriali aggregati e ritardati",
+    moisture: 50,
+    temperatureFit: 50,
+    seasonFit: 50,
+    verifiedSignals: 0,
+    delayedVisitors: 0,
+    lastUpdatedLabel: "catalogo habitat; parametri euristici, non osservazioni sul campo",
     expectedTaxa,
     reasons: [
       `Mosaico ambientale: ${habitat.slice(0, 3).join(", ")}`,
       "Valutazione su area vasta, non su punti di raccolta",
     ],
   };
-}).concat(verifiedAreaAdditions);
+}).concat(verifiedAreaAdditions).map((area): Area => ({
+  ...area, signalProvenance: "heuristic",
+  moisture: 50, temperatureFit: 50, seasonFit: 50, verifiedSignals: 0, delayedVisitors: 0,
+  lastUpdatedLabel: "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+}));

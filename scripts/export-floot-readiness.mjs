@@ -8,7 +8,7 @@ import { catalogSearchDocuments, toPublicCatalogSearchDocument } from "../lib/ca
 import { publicAuditedFieldProfile } from "../lib/public-scientific-policy.ts";
 import { publicGenusLayer } from "../lib/public-genus-policy.ts";
 import { studyAtlasTaxa } from "../lib/study-atlas-catalog.ts";
-import { nationalAreas } from "../lib/national-areas.ts";
+import { betaAreas } from "../lib/seed-data.ts";
 import { auditedFieldProfileEvidence } from "../lib/minimum-field-profile-evidence.ts";
 import { scientificReviewQueue } from "../lib/scientific-review-queue.ts";
 import attestations from "../data/catalog/release-attestations.json" with { type:"json" };
@@ -39,7 +39,7 @@ files.set("catalog-data.json",{
  searchDocuments:catalogSearchDocuments.map(toPublicCatalogSearchDocument),
 });
 files.set("study-atlas-taxa.json",studyAtlasTaxa.map(taxon=>({...taxon,regionalNames:taxon.regionalNames.map(entry=>entry.name),sources:taxon.sources})));
-files.set("areas.json",nationalAreas);
+files.set("areas.json",betaAreas);
 files.set("scientific-baseline.json",{
  schemaVersion:1,reviewScope:"internal-audit",independentReviewComplete:false,total:minimumCards.length,
  profiles:Object.fromEntries(minimumCards.map(card=>[card.sourceLabel,{name:card.displayName,...publicAuditedFieldProfile(card)}])),
@@ -54,7 +54,7 @@ for(const [name,value] of files){
 }
 const report={
  schemaVersion:1,commit:process.env.GITHUB_SHA ?? null,generatedAt:new Date().toISOString(),
- counts:{minimum:minimumCards.length,groups:minimumGenusCards.length,searchDocuments:catalogSearchDocuments.length,areas:nationalAreas.length},
+ counts:{minimum:minimumCards.length,groups:minimumGenusCards.length,searchDocuments:catalogSearchDocuments.length,areas:betaAreas.length},
  scientificReady:scientificReviewQueue.length===0 && attestations.independentMycologicalReview.status==="verified",pendingScientificClaims:scientificReviewQueue.length,
  independentReviewStatus:attestations.independentMycologicalReview.status,
  independentReviewRequired:true,files:manifest,

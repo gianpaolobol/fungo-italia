@@ -1,41 +1,28 @@
 import type { AtlasTaxon } from "./domain.ts";
 import { minimumCards } from "./minimum-cards.ts";
-import { profileForSourceLabel } from "./minimum-card-content.ts";
 import type { SporePrintToken, SummaryCardPresentation } from "./summary-cards.ts";
+import { publicDescriptiveCardContent } from "./public-scientific-policy.ts";
 
 export type AutoSummaryBasis = "minimum-baseline" | "genus-context";
-
-type AutoSummary = {
-  basis: AutoSummaryBasis;
-  presentation: SummaryCardPresentation;
-};
-
+type AutoSummary = { basis: AutoSummaryBasis; presentation: SummaryCardPresentation; };
 function normalizeName(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLocaleLowerCase("it")
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("it").replace(/[^a-z0-9]+/g, " ").trim();
 }
-
 function sourceBinomial(label: string) {
   const match = label.match(/^([A-Z][A-Za-z-]+)\s+([a-z][A-Za-z-]+)/);
-  return match ? `${match[1]} ${match[2]}` : null;
+  return match ? match[1] + " " + match[2] : null;
 }
-
 const minimumByCurrentName = new Map<string, (typeof minimumCards)[number]>();
 for (const card of minimumCards) {
-  for (const name of card.currentAcceptedNames) {
-    minimumByCurrentName.set(normalizeName(name), card);
-  }
+  minimumByCurrentName.set(normalizeName(card.sourceLabel), card);
+  if (card.rank !== "species" || card.currentAcceptedNames.length !== 1) continue;
+  minimumByCurrentName.set(normalizeName(card.currentAcceptedNames[0]), card);
   const sourceName = sourceBinomial(card.sourceLabel);
   if (sourceName) {
     const key = normalizeName(sourceName);
     if (!minimumByCurrentName.has(key)) minimumByCurrentName.set(key, card);
   }
 }
-
 function sporePrintFromTerminology(terms: readonly string[]): SporePrintToken {
   const text = terms.join(" ").toLocaleLowerCase("it");
   if (/sporata\s+nera|spore?\s+nere|melanospore/.test(text)) return "black";
@@ -44,61 +31,43 @@ function sporePrintFromTerminology(terms: readonly string[]): SporePrintToken {
   if (/sporata\s+(rosa|rosata)/.test(text)) return "pink";
   if (/sporata\s+(bruna|bruno|tabacco)/.test(text)) return "brown";
   if (/sporata\s+(crema|rosato-crema)/.test(text)) return "cream";
-  if (/sporata\s+(bianca|chiara)|spore?\s+bianche|leucospore/.test(text)) return "white";
+  if (/sporata\s+bianca|spore?\s+bianche|leucospore/.test(text)) return "white";
   return "unknown";
 }
-
-function genericCharacters(taxon: AtlasTaxon, morphology: readonly string[], terms: readonly string[]) {
-  const first = morphology[0] ?? `Inquadrare il portamento e l’imenoforo tipici di ${taxon.parentScientificName || taxon.scientificName}.`;
-  const second = morphology[1] ?? "Verificare gambo, veli, colori, consistenza e reazioni macroscopiche pertinenti al gruppo.";
-  const third = terms.length
-    ? `Contesto di genere: ${terms.slice(0, 3).join(" · ")}.`
-    : "Confrontare i caratteri macroscopici con il gruppo tassonomico di appartenenza.";
-  return [first, second, third] as [string, string, string];
+function genericCharacters() {
+  return [
+    "Osservare e documentare cappello e imenoforo dell’esemplare.",
+    "Osservare gambo e base completa, registrando eventuali veli e anello.",
+    "Confrontare l’insieme dei caratteri con una descrizione documentata; questa voce non dispone di diagnosi taxon-specifica verificata.",
+  ] as [string, string, string];
 }
-
-/**
- * Popola tutte le voci Atlante senza inventare dettagli specie-specifici.
- *
- * - Se il taxon corrisponde a una unità Minimo, usa il 3+1 auditato.
- * - Altrimenti usa solo contesto di genere chiaramente dichiarato.
- * - La stagionalità non viene generalizzata dal genere: rimane esplicitamente
- *   da verificare finché una fonte specie-specifica non viene revisionata.
- */
 export function autoSummaryForAtlasTaxon(taxon: AtlasTaxon): AutoSummary {
-  const minimum = minimumByCurrentName.get(normalizeName(taxon.scientificName));
-  if (minimum) {
-    const profile = profileForSourceLabel(minimum.sourceLabel);
+  const minimum = minimumCards.find((card) => card.cardId === taxon.id)
+    ?? minimumByCurrentName.get(normalizeName(taxon.scientificName));
+  if (minimum && minimum.rank === taxon.rank) {
+    const descriptive = publicDescriptiveCardContent(minimum);
     return {
       basis: "minimum-baseline",
       presentation: {
-        primaryImageUrl: null,
-        detailImageUrls: [],
-        habitatSummary: minimum.ecologySummary || profile.ecology,
+        primaryImageUrl: null, detailImageUrls: [],
+        habitatSummary: descriptive.ecologySummary ?? "Ecologia della voce in attesa di revisione; il profilo 3+1 non ne certifica la verifica.",
         seasonSummary: "Stagionalità specifica da verificare nella fonte della voce; non generalizzata dal genere.",
         diagnosticCharacters: [...minimum.fieldProfile.characters] as [string, string, string],
         differentiatingCharacter: minimum.fieldProfile.plusOne,
-        sporePrint: sporePrintFromTerminology(profile.terminology),
-        representativeTaxon:
-          minimum.rank === "species"
-            ? null
-            : `Profilo Minimo al rango ${minimum.rank}: ${minimum.sourceLabel}`,
+        sporePrint: sporePrintFromTerminology(descriptive.terminology),
+        representativeTaxon: minimum.rank === "species" ? null : "Profilo Minimo al rango " + minimum.rank + ": " + minimum.sourceLabel,
       },
     };
   }
-
-  const profile = profileForSourceLabel(taxon.scientificName);
   return {
     basis: "genus-context",
     presentation: {
-      primaryImageUrl: null,
-      detailImageUrls: [],
-      habitatSummary: profile.ecology,
+      primaryImageUrl: null, detailImageUrls: [],
+      habitatSummary: "Habitat non verificato per questa voce; non viene dedotto dal genere.",
       seasonSummary: "Stagionalità specifica non ancora verificata per questo taxon.",
-      diagnosticCharacters: genericCharacters(taxon, profile.morphology, profile.terminology),
-      differentiatingCharacter: null,
-      sporePrint: sporePrintFromTerminology(profile.terminology),
-      representativeTaxon: `Contesto generale del genere/gruppo ${taxon.parentScientificName || taxon.scientificName}; non sostituisce la diagnosi della specie.`,
+      diagnosticCharacters: genericCharacters(), differentiatingCharacter: null,
+      sporePrint: "unknown",
+      representativeTaxon: "Contesto generale del genere/gruppo " + (taxon.parentScientificName || taxon.scientificName) + "; non sostituisce la diagnosi della specie.",
     },
   };
 }
