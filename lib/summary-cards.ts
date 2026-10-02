@@ -1,5 +1,6 @@
 import type { AtlasTaxon, TaxonRank } from "./domain.ts";
 import { reviewedSummaryCardContent } from "./summary-card-content.ts";
+import { autoSummaryForAtlasTaxon } from "./summary-card-auto.ts";
 
 export type SporePrintToken =
   | "white"
@@ -18,6 +19,7 @@ export type SporePrintToken =
   | "not-applicable";
 
 export type SummaryCardStatus = "ready" | "preparing" | "source-gap";
+export type SummaryCardBasis = "atlas-only" | "reviewed-taxon" | "minimum-baseline" | "genus-context";
 
 export interface SummaryCardPresentation {
   primaryImageUrl: string | null;
@@ -53,6 +55,7 @@ export interface SummaryCard {
   edibility: AtlasTaxon["edibility"];
   safetyNote: string;
   reviewStatus: SummaryCardStatus;
+  basis: SummaryCardBasis;
   presentation: SummaryCardPresentation;
 }
 
@@ -87,6 +90,7 @@ export function projectAtlasTaxonToSummaryCard(taxon: AtlasTaxon): SummaryCard {
     edibility: taxon.edibility,
     safetyNote: taxon.safetyNote,
     reviewStatus: "preparing",
+    basis: "atlas-only",
     presentation: {
       primaryImageUrl: null,
       detailImageUrls: [],
@@ -105,16 +109,29 @@ export function buildSummaryCardIndex(
 ): SummaryCard[] {
   return taxa.map((taxon) => {
     const base = projectAtlasTaxonToSummaryCard(taxon);
+    const automatic = autoSummaryForAtlasTaxon(taxon);
     const reviewed = reviewedSummaryCardContent[taxon.id];
-    if (!reviewed) return base;
+
+    if (reviewed) {
+      return {
+        ...base,
+        displayCommonName: reviewed.displayCommonName,
+        reviewStatus: "ready",
+        basis: "reviewed-taxon",
+        presentation: {
+          ...automatic.presentation,
+          ...reviewed.presentation,
+        },
+      };
+    }
 
     return {
       ...base,
-      displayCommonName: reviewed.displayCommonName,
-      reviewStatus: "ready",
+      reviewStatus: automatic.basis === "minimum-baseline" ? "preparing" : "source-gap",
+      basis: automatic.basis,
       presentation: {
         ...base.presentation,
-        ...reviewed.presentation,
+        ...automatic.presentation,
       },
     };
   });
