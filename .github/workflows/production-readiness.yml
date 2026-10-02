@@ -1,0 +1,36 @@
+name: Production Readiness
+on:
+  push:
+    branches: [feat/production-readiness-20261002]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm exec tsc --noEmit
+      - run: pnpm lint
+      - run: pnpm build
+      - run: node --experimental-strip-types scripts/check-beta-release.mjs
+      - run: node --experimental-strip-types scripts/export-floot-readiness.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: floot-readiness-${{ github.sha }}
+          path: artifacts/floot-readiness/
+          if-no-files-found: error
