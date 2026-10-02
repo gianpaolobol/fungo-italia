@@ -46,6 +46,10 @@ jobs:
           for migration in drizzle/*.sql; do
             pnpm exec wrangler d1 execute DB --config dist/server/wrangler.json --local --persist-to .wrangler/state --file "$migration"
           done
+      - name: Seed independent local test reviewers
+        run: >
+          pnpm exec wrangler d1 execute DB --config dist/server/wrangler.json --local --persist-to .wrangler/state
+          --command "INSERT INTO users (id,email,display_name,role) VALUES ('ci-review-author','review-author@example.test','CI Author','mycologist'), ('ci-review-assigned','review-assigned@example.test','CI Reviewer','mycologist'), ('ci-review-outside','review-outside@example.test','CI Scoped Reviewer','mycologist'); INSERT INTO catalog_role_grants (id,user_id,role,region,taxonomic_group,active,granted_by) VALUES ('ci-grant-author','ci-review-author','mycologist',NULL,NULL,1,'ci-review-assigned'), ('ci-grant-assigned','ci-review-assigned','mycologist',NULL,NULL,1,'ci-review-assigned'), ('ci-grant-outside','ci-review-outside','mycologist','Piemonte','Russula',1,'ci-review-assigned');"
       - name: Start built beta
         run: |
           pnpm start > /tmp/fungo-beta.log 2>&1 &

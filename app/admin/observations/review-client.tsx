@@ -14,8 +14,20 @@ type QueuePayload = {
   taxa: Array<{ id: string; scientificName: string; rank: string }>;
   totalInScope: number;
 };
-function responseError(payload: { error?: string; errors?: string[] }) {
-  return payload.errors?.join(" ") || payload.error || "Operazione non riuscita.";
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value && typeof value === "object" && !Array.isArray(value));
+}
+function responseError(payload: unknown) {
+  if (!isRecord(payload)) return "Operazione non riuscita.";
+  if (Array.isArray(payload.errors)) return payload.errors.filter((value: unknown) => typeof value === "string").join(" ") || "Operazione non riuscita.";
+  return typeof payload.error === "string" ? payload.error : "Operazione non riuscita.";
+}
+function isQueuePayload(value: unknown): value is QueuePayload {
+  if (!isRecord(value) || !Array.isArray(value.observations) || !Array.isArray(value.taxa) || typeof value.totalInScope !== "number") return false;
+  return value.observations.every((row: unknown) => {
+    if (!isRecord(row) || typeof row.id !== "string" || typeof row.description !== "string" || typeof row.observedAt !== "string" || typeof row.status !== "string" || !Number.isInteger(row.reviewVersion) || typeof row.publicLatitude !== "number" || typeof row.publicLongitude !== "number" || !Array.isArray(row.photos)) return false;
+    return (row.region === null || typeof row.region === "string") && (row.scientificName === null || typeof row.scientificName === "string") && row.photos.every((photo: unknown) => isRecord(photo) && typeof photo.id === "string" && typeof photo.url === "string" && photo.url.startsWith("/api/admin/observations/photos/"));
+  }) && value.taxa.every((taxon: unknown) => isRecord(taxon) && typeof taxon.id === "string" && typeof taxon.scientificName === "string" && typeof taxon.rank === "string");
 }
 export function ObservationReviewClient() {
   const [payload, setPayload] = useState<QueuePayload | null>(null);
@@ -26,6 +38,7 @@ export function ObservationReviewClient() {
       const response = await fetch("/api/admin/observations", { cache: "no-store", credentials: "same-origin", signal });
       const data = await response.json();
       if (!response.ok) throw new Error(responseError(data));
+      if (!isQueuePayload(data)) throw new Error("Risposta della coda non valida.");
       if (!signal?.aborted) { setPayload(data); setError(""); }
     } catch (failure) {
       if (!signal?.aborted) { setPayload(null); setError(failure instanceof Error ? failure.message : "Coda non disponibile."); }
