@@ -78,18 +78,27 @@ test("every Scheda shell resolves back to a valid Atlas target", () => {
   }
 });
 
+test("every Atlas taxon receives a populated Scheda study shell", () => {
+  const cards = buildSummaryCardIndex(atlasTaxa);
+  assert.equal(cards.length, atlasTaxa.length);
+
+  for (const card of cards) {
+    assert.ok(card.presentation.habitatSummary?.trim(), card.atlasId);
+    assert.ok(card.presentation.seasonSummary?.trim(), card.atlasId);
+    assert.equal(card.presentation.diagnosticCharacters?.length, 3, card.atlasId);
+    assert.ok(card.presentation.diagnosticCharacters?.every((item) => item.trim().length > 0), card.atlasId);
+    assert.notEqual(card.basis, "atlas-only", card.atlasId);
+  }
+});
+
 test("reviewed Schede are exposed without hard-coded count drift", () => {
   const cards = buildSummaryCardIndex(atlasTaxa);
-  const scienceReady = cards.filter(isSummaryCardContentReady);
-  assert.equal(scienceReady.length, reviewedIds.size);
-  assert.deepEqual(new Set(scienceReady.map((card) => card.atlasId)), reviewedIds);
+  const reviewed = cards.filter((card) => card.basis === "reviewed-taxon");
+  assert.equal(reviewed.length, reviewedIds.size);
+  assert.deepEqual(new Set(reviewed.map((card) => card.atlasId)), reviewedIds);
 
-  for (const card of scienceReady) {
+  for (const card of reviewed) {
     assert.equal(card.reviewStatus, "ready");
-    assert.ok(card.presentation.habitatSummary?.trim());
-    assert.ok(card.presentation.seasonSummary?.trim());
-    assert.equal(card.presentation.diagnosticCharacters?.length, 3);
-    assert.ok(card.presentation.diagnosticCharacters?.every((item) => item.trim().length > 0));
     assert.ok(card.presentation.differentiatingCharacter?.trim());
     assert.notEqual(card.presentation.sporePrint, "unknown");
   }
