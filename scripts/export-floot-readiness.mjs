@@ -11,6 +11,7 @@ import { studyAtlasTaxa } from "../lib/study-atlas-catalog.ts";
 import { nationalAreas } from "../lib/national-areas.ts";
 import { auditedFieldProfileEvidence } from "../lib/minimum-field-profile-evidence.ts";
 import { scientificReviewQueue } from "../lib/scientific-review-queue.ts";
+import attestations from "../data/catalog/release-attestations.json" with { type:"json" };
 import sources from "../data/catalog/sources.json" with { type:"json" };
 
 const output="artifacts/floot-readiness";
@@ -54,7 +55,8 @@ for(const [name,value] of files){
 const report={
  schemaVersion:1,commit:process.env.GITHUB_SHA ?? null,generatedAt:new Date().toISOString(),
  counts:{minimum:minimumCards.length,groups:minimumGenusCards.length,searchDocuments:catalogSearchDocuments.length,areas:nationalAreas.length},
- scientificReady:scientificReviewQueue.length===0,pendingScientificClaims:scientificReviewQueue.length,
+ scientificReady:scientificReviewQueue.length===0 && attestations.independentMycologicalReview.status==="verified",pendingScientificClaims:scientificReviewQueue.length,
+ independentReviewStatus:attestations.independentMycologicalReview.status,
  independentReviewRequired:true,files:manifest,
  transferWarnings:[
   "GitHub app is Next/vinext; Floot is React Router with typed GET/POST endpoints. These assets are a reviewed transfer package, not an automatic deployment.",
