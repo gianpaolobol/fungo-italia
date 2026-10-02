@@ -30,6 +30,7 @@ const imageCompleteIds = new Set([
 ]);
 
 const reviewedIds = new Set(Object.keys(reviewedSummaryCardContent));
+const expectedImageCompleteCount = Object.values(reviewedSummaryCardContent).filter((entry) => Boolean(entry.presentation.primaryImageUrl)).length;
 
 test("S0 creates exactly one synthetic Scheda shell for every Atlas taxon", () => {
   const cards = buildSummaryCardIndex(atlasTaxa);
