@@ -16,6 +16,10 @@ on:
       - "lib/**"
   workflow_dispatch:
 
+concurrency:
+  group: browser-readiness-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -37,6 +41,11 @@ jobs:
       - run: pnpm add -D --lockfile=false @playwright/test@1.55.0
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm build
+      - name: Initialize local test database
+        run: |
+          for migration in drizzle/*.sql; do
+            pnpm exec wrangler d1 execute DB --config dist/server/wrangler.json --local --persist-to .wrangler/state --file "$migration"
+          done
       - name: Start built beta
         run: |
           pnpm start > /tmp/fungo-beta.log 2>&1 &
