@@ -242,10 +242,15 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         .filter((taxon): taxon is AtlasTaxon => Boolean(taxon))
     : [];
   const regions = ["Tutta Italia", ...new Set(areas.map((area) => area.region))];
-  const readySummaryCards = useMemo(() => {
+  const visibleSummaryCards = useMemo(() => {
     const normalized = schedeQuery.toLocaleLowerCase("it").trim();
+    const basisPriority = {
+      "reviewed-taxon": 0,
+      "minimum-baseline": 1,
+      "genus-context": 2,
+      "atlas-only": 3,
+    } as const;
     return summaryCardShells
-      .filter(isSummaryCardContentReady)
       .filter((card) => {
         if (!normalized) return true;
         return [
@@ -253,16 +258,21 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
           card.commonName,
           card.scientificName,
           card.acceptedName,
+          card.parentScientificName,
         ]
           .join(" ")
           .toLocaleLowerCase("it")
           .includes(normalized);
       })
-      .sort((a, b) => a.displayCommonName.localeCompare(b.displayCommonName, "it"));
+      .sort((left, right) => {
+        const priority = basisPriority[left.basis] - basisPriority[right.basis];
+        if (priority !== 0) return priority;
+        return left.displayCommonName.localeCompare(right.displayCommonName, "it");
+      });
   }, [schedeQuery, summaryCardShells]);
 
   const selectedSummaryCard =
-    readySummaryCards.find((card) => card.atlasId === selectedSummaryId) ??
+    visibleSummaryCards.find((card) => card.atlasId === selectedSummaryId) ??
     summaryCardShells.find((card) => card.atlasId === selectedSummaryId) ??
     null;
 
@@ -706,7 +716,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 </div>
 
                 <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-                  {readySummaryCards.map((card) => (
+                  {visibleSummaryCards.map((card) => (
                     <button
                       type="button"
                       key={card.atlasId}
@@ -714,19 +724,40 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                       className="group overflow-hidden rounded-[22px] border border-[#d8e0d5] bg-[#fbfaf4] text-left transition hover:border-[#92ad96] hover:shadow-[0_14px_35px_rgba(23,79,43,0.10)]"
                     >
                       <div className="aspect-[4/3] overflow-hidden bg-[#f1eee4]">
-                        <img
-                          src={card.presentation.primaryImageUrl ?? ""}
-                          alt={`${card.displayCommonName} — ${card.scientificName}`}
-                          className="h-full w-full object-contain p-2 transition duration-300 group-hover:scale-[1.02]"
-                        />
+                        {card.presentation.primaryImageUrl ? (
+                          <img
+                            src={card.presentation.primaryImageUrl}
+                            alt={`${card.displayCommonName} — ${card.scientificName}`}
+                            className="h-full w-full object-contain p-2 transition duration-300 group-hover:scale-[1.02]"
+                          />
+                        ) : (
+                          <div className="grid h-full min-h-44 place-items-center p-5 text-center text-[#6d7d70]">
+                            <div>
+                              <Leaf className="mx-auto size-8" />
+                              <p className="mt-2 text-sm font-bold">
+                                {card.basis === "minimum-baseline" ? "Profilo Minimo 3+1 disponibile" : "Contesto di genere disponibile"}
+                              </p>
+                              <p className="mt-1 text-xs">Immagine in preparazione</p>
+                            </div>
+                          </div>
+                        )}
                       </div>
                       <div className="grid grid-cols-[1fr_auto] gap-3 border-t border-[#dfe5dc] p-4">
                         <div className="min-w-0">
                           <h2 className="break-words text-lg font-black">{card.displayCommonName}</h2>
                           <p className="mt-0.5 break-words font-serif italic text-[#31553b]">{card.scientificName}</p>
-                          <p className="mt-2 text-xs font-bold uppercase tracking-wide text-[#66786b]">
-                            {card.rank}
-                          </p>
+                          <div className="mt-2 flex flex-wrap gap-1.5">
+                            <span className="rounded-full bg-white px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-[#66786b] ring-1 ring-[#dce5da]">
+                              {card.rank}
+                            </span>
+                            <span className="rounded-full bg-[#eaf1e8] px-2 py-1 text-[11px] font-bold text-[#315d3c]">
+                              {card.basis === "reviewed-taxon"
+                                ? "Revisionata"
+                                : card.basis === "minimum-baseline"
+                                  ? "Baseline Minimo"
+                                  : "Contesto di genere"}
+                            </span>
+                          </div>
                         </div>
                         <SporePrint token={card.presentation.sporePrint} size="sm" />
                       </div>
@@ -734,7 +765,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   ))}
                 </div>
 
-                {readySummaryCards.length === 0 && (
+                {visibleSummaryCards.length === 0 && (
                   <div className="mt-5 rounded-2xl border border-dashed border-[#cbd8c9] p-7 text-center text-[#617266]">
                     Nessuna Scheda pronta corrisponde alla ricerca.
                   </div>
@@ -743,13 +774,13 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Pronte S1</p>
-                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter(isSummaryCardContentReady).length}</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">Schede scientifiche revisionate</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">Schede disponibili nell’Atlante</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Copertura strutturale</p>
-                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter(isSummaryCardReady).length}</p>
-                    <p className="mt-1 text-sm text-[#5f7064]">complete anche di immagine</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter((card) => card.basis === "minimum-baseline" || card.basis === "reviewed-taxon").length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">con 3+1 specifico o revisionato</p>
                   </div>
                   <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
                     <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Regola</p>
