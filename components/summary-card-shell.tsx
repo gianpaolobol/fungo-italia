@@ -1,6 +1,7 @@
-import { CircleAlert, ExternalLink, Leaf, Utensils } from "lucide-react";
+import { CircleAlert, ExternalLink, Utensils } from "lucide-react";
 
 import { SporePrint } from "@/components/spore-print";
+import { SummaryCardMedia } from "@/components/summary-card-media";
 import type { SummaryCard } from "@/lib/summary-cards";
 
 const rankLabels: Record<string, string> = {
@@ -61,21 +62,10 @@ export function SummaryCardShell({
 
       <div className="grid gap-4 p-4 sm:p-6 lg:grid-cols-[minmax(0,1fr)_220px]">
         <section className="min-h-72 overflow-hidden rounded-[22px] border border-[#dde4da] bg-[#f4f1e8]">
-          {p.primaryImageUrl ? (
-            <img
-              src={p.primaryImageUrl}
-              alt={`${card.displayCommonName} — ${card.scientificName}`}
-              className="h-full min-h-72 w-full object-cover"
-            />
-          ) : (
-            <div className="grid min-h-72 place-items-center p-8 text-center text-[#6d7d70]">
-              <div>
-                <Leaf className="mx-auto size-10" />
-                <p className="mt-3 font-black">Immagine in preparazione</p>
-                <p className="mt-1 text-sm">La Scheda resta collegata all’Atlante senza inventare contenuti visuali.</p>
-              </div>
-            </div>
-          )}
+          <SummaryCardMedia
+            taxon={card.scientificName}
+            localImageUrl={p.primaryImageUrl}
+          />
         </section>
 
         <aside className="space-y-3">
