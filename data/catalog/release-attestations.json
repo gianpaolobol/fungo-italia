@@ -9,8 +9,10 @@
       "1440x900"
     ],
     "verifiedBy": "GitHub Actions / Playwright",
-    "verifiedAt": "2026-09-28T20:11:45Z",
-    "commitSha": "98c11c25c4c9422153668d81e8d66f6637e669cf"
+    "verifiedAt": "2026-10-02T11:32:41Z",
+    "commitSha": "9fce0d7324dfc012e2a21290f0dd44dc662f20cc",
+    "workflowRunUrl": "https://github.com/gianpaolobol/fungo-italia/actions/runs/37001341133",
+    "testCount": 12
   },
   "independentMycologicalReview": {
     "status": "pending",

@@ -52,3 +52,15 @@ Restano 616 claim nella coda scientifica e manca la revisione micologica indipen
 Per chiudere questa parte serve un revisore competente che documenti la verifica della pubblicazione realmente consultata e approvi claim/versione. Fotografie, classificazione e dati alimentari senza questa provenienza rimangono dichiarati mancanti o non valutati. La mappa è uno strumento per esplorare condizioni ambientali, non una previsione validata di raccolta.
 
 Il deploy Floot e i test del suo runtime restano successivi. Nessun risultato GitHub prova che il sito Floot attuale contenga già questa versione.
+
+## Evidenze di verifica
+
+Runtime verificato: commit 9fce0d7324dfc012e2a21290f0dd44dc662f20cc (test PR sulla relativa integrazione con main). Le modifiche successive a questa sezione, all’attestazione e al comando del gate sono metadati, non modifiche del runtime.
+
+- [Production Readiness](https://github.com/gianpaolobol/fungo-italia/actions/runs/37001341197): 270 test unitari, TypeScript, lint, build ed esportazione completati.
+- [Visual Smoke](https://github.com/gianpaolobol/fungo-italia/actions/runs/37001341133): 12 test Playwright superati; quattro viewport, navigazione 148 schede, progressi per account, storage negato, download e riapertura offline, assenza di cache private, mappa con cartografia bloccata, osservazioni/fotografie protette, quorum critico, pubblicazione ricercabile e storico personale delle proposte.
+- [Screenshot browser](https://github.com/gianpaolobol/fungo-italia/actions/runs/37001341133/artifacts/11223838532): artifact con schermate a 320, 375, 768 e 1440 pixel.
+
+I dati e le foto nei test di revisione sono fixture locali simulate, non determinazioni scientifiche. La CI usa database D1 e bucket R2 locali e non pubblica né modifica Floot.
+
+Il gate beta ora viene imposto in CI con --enforce. Il gate scientifico conserva i 616 claim pendenti e l’assenza di attestazione indipendente; il successo tecnico non lo chiude.

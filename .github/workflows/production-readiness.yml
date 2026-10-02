@@ -31,7 +31,7 @@ jobs:
       - run: pnpm exec tsc --noEmit
       - run: pnpm lint
       - run: pnpm build
-      - run: node --experimental-strip-types scripts/check-beta-release.mjs
+      - run: node --experimental-strip-types scripts/check-beta-release.mjs --enforce
       - run: node --experimental-strip-types scripts/export-floot-readiness.mjs
       - uses: actions/upload-artifact@v4
         with:
