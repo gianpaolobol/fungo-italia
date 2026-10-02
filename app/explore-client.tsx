@@ -24,6 +24,8 @@ import {
 import Link from "next/link";
 
 import { AtlasCardDetail } from "@/components/atlas-card-detail";
+import { SporePrint } from "@/components/spore-print";
+import { SummaryCardShell } from "@/components/summary-card-shell";
 import { ForecastMap } from "@/components/forecast-map";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,7 +41,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { getVisitPressure, type Area, type AtlasTaxon, type Taxon } from "@/lib/domain";
 import { rankAreas } from "@/lib/explore-view";
-import type { PublicPublicCatalogSearchDocument } from "@/lib/catalog-search";
+import type { PublicCatalogSearchDocument } from "@/lib/catalog-search";
 import {
   defaultAtlasNavigationState,
   parseAtlasNavigationState,
@@ -51,6 +53,7 @@ import {
 } from "@/lib/atlas-navigation-state";
 import { selectMinimumChildFromTeachingGroup } from "@/lib/atlas-child-navigation";
 import { calculateForecast, type ForecastResult } from "@/lib/forecast";
+import { buildSummaryCardIndex } from "@/lib/summary-cards";
 import { cn } from "@/lib/utils";
 
 import { WebMcpBridge } from "./webmcp";
@@ -87,6 +90,10 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
   );
   const [forecasts, setForecasts] = useState<ForecastResult[]>(initialForecasts);
   const [catalogTaxa, setCatalogTaxa] = useState<AtlasTaxon[]>(taxa);
+  const summaryCardShells = useMemo(() => buildSummaryCardIndex(catalogTaxa), [catalogTaxa]);
+  const [activeTab, setActiveTab] = useState("cerca");
+  const [schedeQuery, setSchedeQuery] = useState("");
+  const [selectedSummaryId, setSelectedSummaryId] = useState<string | null>(null);
   const [forecastStatus, setForecastStatus] = useState<"loading" | "live" | "partial" | "degraded">("loading");
   const [selectedId, setSelectedId] = useState(areas[0]?.id ?? "");
   const [query, setQuery] = useState("");
@@ -235,6 +242,50 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         .filter((taxon): taxon is AtlasTaxon => Boolean(taxon))
     : [];
   const regions = ["Tutta Italia", ...new Set(areas.map((area) => area.region))];
+  const visibleSummaryCards = useMemo(() => {
+    const normalized = schedeQuery.toLocaleLowerCase("it").trim();
+    const basisPriority = {
+      "reviewed-taxon": 0,
+      "minimum-baseline": 1,
+      "genus-context": 2,
+      "atlas-only": 3,
+    } as const;
+    return summaryCardShells
+      .filter((card) => {
+        if (!normalized) return true;
+        return [
+          card.displayCommonName,
+          card.commonName,
+          card.scientificName,
+          card.acceptedName,
+          card.parentScientificName,
+        ]
+          .join(" ")
+          .toLocaleLowerCase("it")
+          .includes(normalized);
+      })
+      .sort((left, right) => {
+        const priority = basisPriority[left.basis] - basisPriority[right.basis];
+        if (priority !== 0) return priority;
+        return left.displayCommonName.localeCompare(right.displayCommonName, "it");
+      });
+  }, [schedeQuery, summaryCardShells]);
+
+  const selectedSummaryCard =
+    visibleSummaryCards.find((card) => card.atlasId === selectedSummaryId) ??
+    summaryCardShells.find((card) => card.atlasId === selectedSummaryId) ??
+    null;
+
+  const openSummaryInAtlas = useCallback((atlasId: string) => {
+    const card = summaryCardShells.find((entry) => entry.atlasId === atlasId);
+    if (!card) return;
+    setAtlasNavigation(defaultAtlasNavigationState);
+    setAtlasQuery(card.scientificName);
+    setAtlasKind("all");
+    setAtlasRank("");
+    setAtlasEdibility("");
+    setActiveTab("atlante");
+  }, [summaryCardShells]);
   const normalizedAtlasQuery = atlasQuery.toLocaleLowerCase("it").trim();
   const abbreviatedAtlasQuery = normalizedAtlasQuery.match(/^([a-zà-ÿ])[a-zà-ÿ-]+\s+([a-zà-ÿ-]+)$/)?.slice(1).join(". ");
   const visibleTaxa = catalogTaxa.filter((taxon) => {
@@ -328,7 +379,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
         </div>
       </header>
 
-      <Tabs defaultValue="cerca" className="mx-auto max-w-[1600px] gap-0 px-3 pb-28 sm:px-6">
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="mx-auto max-w-[1600px] gap-0 px-3 pb-28 sm:px-6">
         <div className="flex min-w-0 items-center justify-between gap-2 py-3 sm:py-4">
           <TabsList className="h-11 min-w-0 max-w-full overflow-x-auto rounded-2xl bg-[#e8eee6] p-1 scrollbar-none">
             <TabsTrigger value="cerca" className="min-w-0 rounded-xl px-2.5 sm:px-5">
@@ -338,6 +389,10 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
             <TabsTrigger value="atlante" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <BookOpenText />
               <span>Atlante</span>
+            </TabsTrigger>
+            <TabsTrigger value="schede" className="min-w-0 rounded-xl px-2.5 sm:px-5">
+              <Leaf />
+              <span>Schede</span>
             </TabsTrigger>
             <TabsTrigger value="obiettivi" className="min-w-0 rounded-xl px-2.5 sm:px-5">
               <Binoculars />
@@ -610,6 +665,130 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                   <TaxonCard key={taxon.id} taxon={taxon} />
                 ))}
               </div>
+            )}
+          </section>
+        </TabsContent>
+
+        <TabsContent value="schede" className="mt-0 min-w-0">
+          <section className="min-w-0 rounded-[24px] border border-[#dce5da] bg-white p-4 shadow-[0_18px_60px_rgba(23,79,43,0.08)] sm:p-6">
+            {selectedSummaryCard ? (
+              <div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedSummaryId(null)}
+                  className="mb-4 min-h-11 rounded-xl px-2 font-bold text-[#315d3c]"
+                >
+                  ← Torna alle Schede
+                </button>
+                <SummaryCardShell
+                  card={selectedSummaryCard}
+                  onOpenAtlas={openSummaryInAtlas}
+                />
+              </div>
+            ) : (
+              <>
+                <div className="flex min-w-0 flex-col gap-4 border-b border-[#e0e8de] pb-5 md:flex-row md:items-end md:justify-between">
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold text-[#5d7362]">Lotto S1 · primi contenuti revisionati</p>
+                    <h1 className="break-words text-2xl font-black tracking-[-0.04em] sm:text-3xl">
+                      Schede rapide dei principali commestibili
+                    </h1>
+                    <p className="mt-2 max-w-3xl leading-relaxed text-[#5f7064]">
+                      Sintesi visuale coordinata con l’Atlante: immagine approvata, habitat, stagione,
+                      sporata grafica e 3 caratteri principali + 1 differenziante.
+                    </p>
+                  </div>
+                  <div className="w-full shrink-0 md:w-80">
+                    <label className="text-xs font-black uppercase tracking-wide text-[#6b7d70]" htmlFor="schede-search">
+                      Cerca nelle Schede pronte
+                    </label>
+                    <div className="relative mt-1.5">
+                      <Search className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-[#6f8173]" />
+                      <Input
+                        id="schede-search"
+                        value={schedeQuery}
+                        onChange={(event) => setSchedeQuery(event.target.value)}
+                        placeholder="Nome comune o scientifico"
+                        className="h-11 rounded-xl pl-10 text-base"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {visibleSummaryCards.map((card) => (
+                    <button
+                      type="button"
+                      key={card.atlasId}
+                      onClick={() => setSelectedSummaryId(card.atlasId)}
+                      className="group overflow-hidden rounded-[22px] border border-[#d8e0d5] bg-[#fbfaf4] text-left transition hover:border-[#92ad96] hover:shadow-[0_14px_35px_rgba(23,79,43,0.10)]"
+                    >
+                      <div className="aspect-[4/3] overflow-hidden bg-[#f1eee4]">
+                        {card.presentation.primaryImageUrl ? (
+                          <img
+                            src={card.presentation.primaryImageUrl}
+                            alt={`${card.displayCommonName} — ${card.scientificName}`}
+                            className="h-full w-full object-contain p-2 transition duration-300 group-hover:scale-[1.02]"
+                          />
+                        ) : (
+                          <div className="grid h-full min-h-44 place-items-center p-5 text-center text-[#6d7d70]">
+                            <div>
+                              <Leaf className="mx-auto size-8" />
+                              <p className="mt-2 text-sm font-bold">
+                                {card.basis === "minimum-baseline" ? "Profilo Minimo 3+1 disponibile" : "Contesto di genere disponibile"}
+                              </p>
+                              <p className="mt-1 text-xs">Immagine in preparazione</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <div className="grid grid-cols-[1fr_auto] gap-3 border-t border-[#dfe5dc] p-4">
+                        <div className="min-w-0">
+                          <h2 className="break-words text-lg font-black">{card.displayCommonName}</h2>
+                          <p className="mt-0.5 break-words font-serif italic text-[#31553b]">{card.scientificName}</p>
+                          <div className="mt-2 flex flex-wrap gap-1.5">
+                            <span className="rounded-full bg-white px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-[#66786b] ring-1 ring-[#dce5da]">
+                              {card.rank}
+                            </span>
+                            <span className="rounded-full bg-[#eaf1e8] px-2 py-1 text-[11px] font-bold text-[#315d3c]">
+                              {card.basis === "reviewed-taxon"
+                                ? "Revisionata"
+                                : card.basis === "minimum-baseline"
+                                  ? "Baseline Minimo"
+                                  : "Contesto di genere"}
+                            </span>
+                          </div>
+                        </div>
+                        <SporePrint token={card.presentation.sporePrint} size="sm" />
+                      </div>
+                    </button>
+                  ))}
+                </div>
+
+                {visibleSummaryCards.length === 0 && (
+                  <div className="mt-5 rounded-2xl border border-dashed border-[#cbd8c9] p-7 text-center text-[#617266]">
+                    Nessuna Scheda pronta corrisponde alla ricerca.
+                  </div>
+                )}
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Pronte S1</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">Schede disponibili nell’Atlante</p>
+                  </div>
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Copertura strutturale</p>
+                    <p className="mt-1 text-3xl font-black">{summaryCardShells.filter((card) => card.basis === "minimum-baseline" || card.basis === "reviewed-taxon").length}</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">con 3+1 specifico o revisionato</p>
+                  </div>
+                  <div className="rounded-2xl border border-[#dce5da] bg-[#f8faf7] p-4">
+                    <p className="text-xs font-black uppercase tracking-wide text-[#6b7d70]">Regola</p>
+                    <p className="mt-1 text-lg font-black">Atlante → Schede</p>
+                    <p className="mt-1 text-sm text-[#5f7064]">nessuna identità scientifica duplicata</p>
+                  </div>
+                </div>
+              </>
             )}
           </section>
         </TabsContent>
