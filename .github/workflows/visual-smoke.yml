@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feat/production-readiness-20261002
       - feat/stable-learning-taxonomy-v1
       - feat/complete-minimum-3plus1-web-evidence-v1
       - feat/schede-summary-design
