@@ -22,3 +22,12 @@ export async function POST(request:Request){
  env.DB.prepare('INSERT INTO catalog_field_changes(id,change_set_id,field_path,previous_value_json,proposed_value_json,source_citation,evidence_note) VALUES(?,?,?,NULL,?,?,?)').bind(fieldId,id,proposal.fieldPath,valueJson,proposal.sourceCitation,proposal.rationale),
  ]);return NextResponse.json({id,status:'submitted',criticality:proposal.proposalKind==='create'?'critical':proposal.criticality},{status:201});}catch(error){console.error('catalog_proposal_failed',error);return NextResponse.json({error:'Invio non riuscito. Riprova.'},{status:500});}
 }
+
+export async function GET(){
+ const user=await getChatGPTUser();if(!user)return NextResponse.json({error:"Registrazione richiesta."},{status:401});
+ if(!env.DB)return NextResponse.json({error:"Archivio non disponibile."},{status:503});
+ try{
+ const rows=await env.DB.prepare("SELECT cs.id,cs.status,cs.criticality,cs.proposal_kind AS proposalKind,cs.target_taxon_id AS targetTaxonId,cs.rationale,cs.created_at AS createdAt,fc.id AS fieldId,fc.field_path AS fieldPath,fc.proposed_value_json AS proposedValueJson,fc.source_citation AS sourceCitation,(SELECT rd.notes FROM catalog_review_decisions rd WHERE rd.change_set_id=cs.id ORDER BY rd.rowid DESC LIMIT 1) AS reviewNotes FROM catalog_change_sets cs JOIN catalog_field_changes fc ON fc.change_set_id=cs.id WHERE cs.author_id=? ORDER BY cs.created_at DESC,cs.rowid DESC LIMIT 200").bind(user.userId).all();
+ return NextResponse.json({proposals:rows.results,limit:200},{headers:{"Cache-Control":"private, no-store"}});
+ }catch(error){console.error("own_catalog_proposals_failed",error);return NextResponse.json({error:"Storico delle proposte non disponibile. Riprova."},{status:503});}
+}

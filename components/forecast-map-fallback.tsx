@@ -39,7 +39,7 @@ export function ForecastMapFallback({ areas, forecasts, selectedId, onSelect }: 
   const byArea = new Map(forecasts.map((item) => [item.areaId, item]));
 
   return (
-    <div className="absolute inset-0 overflow-auto bg-[radial-gradient(circle_at_40%_20%,#eaf3e4,#c9dcc7)] p-3 pb-20 pt-20 sm:p-4 sm:pb-20 sm:pt-20">
+    <div className="absolute inset-0 overflow-auto bg-[radial-gradient(circle_at_40%_20%,#eaf3e4,#c9dcc7)] p-3 pb-40 pt-20 sm:p-4 sm:pb-40 sm:pt-20 lg:pb-20">
       <div className="mx-auto grid max-w-5xl gap-4 lg:grid-cols-[minmax(300px,430px)_minmax(0,1fr)]">
         <div className="relative overflow-hidden rounded-3xl border border-white/80 bg-white/75 p-3 shadow-sm">
           <svg

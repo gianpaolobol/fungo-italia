@@ -429,10 +429,11 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
           </Button>
         </div>
 
+        <nav aria-label="Strumenti personali" className="mb-3 flex flex-wrap gap-2 text-sm font-bold text-green-900"><Link href="/studio" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-3">Studio e ripasso</Link><Link href="/observations" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-3">Le mie osservazioni</Link><Link href="/catalog/proposals" className="inline-flex min-h-11 items-center rounded-xl border bg-white px-3">Le mie proposte</Link></nav>
         <div className="mb-3 flex min-w-0 items-start gap-3 rounded-2xl border border-[#ead58c] bg-[#fff8dc] px-3 py-3 text-sm text-[#654f14] sm:mb-4 sm:px-4">
           <CircleAlert className="mt-0.5 size-5 shrink-0" />
           <p className="min-w-0 leading-relaxed">
-            <strong>Beta previsionale.</strong> Il meteo viene aggiornato; habitat, fenologia e segnali territoriali sono ancora in validazione. Il punteggio non certifica un ritrovamento né la commestibilità.
+            <strong>Indice euristico.</strong> I dati meteo provengono dal provider; produttività e passaggi non sono misurati. Il punteggio non conferma la presenza di funghi né identifica un esemplare.
           </p>
         </div>
 

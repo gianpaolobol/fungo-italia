@@ -243,6 +243,9 @@ test("catalog publication requires independent scoped decisions and updates publ
  expect((await contexts.outside.request.post(base+"/api/admin/catalog/reviews",{data:decision})).status()).toBe(403);
  const approved=await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:decision});expect(approved.status(),await approved.text()).toBe(200);expect((await approved.json()).status).toBe("published");
  expect((await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:decision})).status()).toBe(409);
+ const history=await contexts.author.request.get(base+"/api/catalog/proposals");expect(history.status(),await history.text()).toBe(200);expect(history.headers()["cache-control"]).toContain("no-store");expect((await history.json()).proposals.some(row=>row.id===id&&row.status==="published")).toBeTruthy();
+ expect(await(await contexts.outside.request.get(base+"/api/catalog/proposals")).text()).not.toContain(id);
+ const historyPage=await contexts.author.newPage();await historyPage.goto(base+"/catalog/proposals");await expect(historyPage.getByRole("heading",{name:"Le mie proposte",exact:true})).toBeVisible();await expect(historyPage.getByText("Pubblicata",{exact:true})).toBeVisible();
  const updated=await(await contexts.author.request.get(base+"/api/catalog")).json();
  expect(updated.studyTaxa.find(item=>item.id===taxon.id).commonName).toBe(proposal.proposedValue);
  expect(updated.publishedUpdates.some(item=>item.changeSetId===id&&item.sourceCitation===proposal.sourceCitation)).toBeTruthy();
@@ -255,6 +258,10 @@ test("catalog publication requires independent scoped decisions and updates publ
  const secondResponse=await contexts.curator.request.post(base+"/api/admin/catalog/reviews",{data:{...first,expectedReviewVersion:1}});expect(secondResponse.status(),await secondResponse.text()).toBe(200);expect((await secondResponse.json()).status).toBe("published");
  const unsupported=await contexts.author.request.post(base+"/api/catalog/proposals",{data:{...proposal,fieldPath:"ecology.habitat",proposedValue:"Campo non ancora integrato"}});expect(unsupported.status(),await unsupported.text()).toBe(201);
  const unsupportedReview=await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:{...decision,changeSetId:(await unsupported.json()).id}});expect(unsupportedReview.status(),await unsupportedReview.text()).toBe(200);expect((await unsupportedReview.json()).status).toBe("approved");
+ const corrections=await contexts.author.request.post(base+"/api/catalog/proposals",{data:{...proposal,proposedValue:"Proposta CI da correggere"}});expect(corrections.status()).toBe(201);
+ const correctionId=(await corrections.json()).id;
+ const requested=await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:{...decision,changeSetId:correctionId,decision:"requestChanges",notes:"Integrare il riferimento bibliografico prima della nuova proposta."}});expect(requested.status(),await requested.text()).toBe(200);
+ const own=await(await contexts.author.request.get(base+"/api/catalog/proposals")).json();expect(own.proposals.find(row=>row.id===correctionId).reviewNotes).toContain("riferimento bibliografico");expect(own.proposals.find(row=>row.id===correctionId).status).toBe("changesRequested");
  }finally{for(const context of Object.values(contexts))await context.close();}
 });
 
@@ -274,6 +281,6 @@ test("novice can select Amiata and filter the accessible map without map tiles",
  await search.fill("Amiata");
  await expect(map.locator('[aria-label="Mappa accessibile delle aree"] button')).toHaveCount(1);
  await search.fill("nessuna-area-ci");
- await expect(map.getByRole("status")).toContainText("Nessuna area");
+ await expect(map.getByRole("status").filter({hasText:"Nessuna area"})).toContainText("Nessuna area");
  expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);await context.close();
 });

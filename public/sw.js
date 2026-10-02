@@ -1,5 +1,5 @@
 /* global self, caches, fetch, URL, Response */
-const SHELL_CACHE="fungo-public-reader-v2";
+const SHELL_CACHE="fungo-public-reader-v3";
 const IMAGE_CACHE="fungo-study-images-v1";
 const SHELL=["/offline-reader.html","/offline-reader","/offline-reader.js","/offline-reader.css"];
 const INSTALL=["/offline-reader.html","/offline-reader.js","/offline-reader.css"];
@@ -12,6 +12,7 @@ function publicShellResponse(response,path){
  const type=response.headers.get("content-type")||"";
  return path.endsWith(".js")?/javascript/.test(type):path.endsWith(".css")?/text\/css/.test(type):/text\/html/.test(type);
 }
+function readerResponse(response){return new Response(response.body,{status:response.status,statusText:response.statusText,headers:response.headers});}
 async function saveShell(cache,path,response){
  await cache.put(path,response.clone());
  if(path==="/offline-reader.html"||path==="/offline-reader"){
@@ -24,7 +25,7 @@ self.addEventListener("install",event=>{event.waitUntil((async()=>{
  for(const path of INSTALL){
   const response=await fetch(path,{credentials:"omit",cache:"reload"});
   if(!publicShellResponse(response,path))throw new Error("Public offline reader unavailable");
-  await saveShell(cache,path,response);
+  await saveShell(cache,path,readerResponse(response));
  }
 })());});
 self.addEventListener("activate",event=>{event.waitUntil((async()=>{
@@ -51,7 +52,7 @@ self.addEventListener("fetch",event=>{
  if(SHELL.includes(url.pathname)){
   event.respondWith((async()=>{
    try{const response=await fetch(request.url,{credentials:"omit"});
-    if(publicShellResponse(response,url.pathname)){const cache=await caches.open(SHELL_CACHE);await saveShell(cache,url.pathname,response);return response;}
+    if(publicShellResponse(response,url.pathname)){const clean=readerResponse(response);const cache=await caches.open(SHELL_CACHE);await saveShell(cache,url.pathname,clean);return clean;}
    }catch{/* Public shell only; authenticated redirects are refused. */}
    return(await caches.match(url.pathname))||new Response("Lettore offline non ancora scaricato.",{status:503});
   })());return;
