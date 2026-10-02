@@ -25,6 +25,8 @@ jobs:
           distribution: temurin
           java-version: '17'
       - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools'
       - name: Install and lock dependencies
         run: |
           if test -f package-lock.json; then npm ci; else npm install; fi
