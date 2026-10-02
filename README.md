@@ -1,38 +1,16 @@
-# Fungo Italia
+# Fungo Italia — Expo
+React Native/Expo per Android e iOS, con catalogo didattico locale e macroaree nazionali.
+Il progetto precedente era Next/React, non Flutter. È conservato integralmente in legacy/web e nei branch backup/pre-migration-flutter e backup/verified-web-readiness.
 
-Beta web nazionale per orientare la ricerca micologica senza pubblicare fungaie personali o coordinate precise.
+## Stato e limiti verificabili
+Il catalogo conserva 148 unità minime, gruppi didattici e riferimenti della baseline. La revisione scientifica indipendente è ancora pendente: le schede non autorizzano consumo o raccolta.
+Studio con tap/scrolling, ricerca, preferiti e ripresa; aree offline e mappa online OpenStreetMap; bozze private locali esportabili. Le bozze non sono contributi pubblicati e non si collegano automaticamente agli account del precedente servizio.
 
-## Funzioni disponibili
+## Compilazione
+La pipeline installa le dipendenze, genera i dati dal catalogo conservato, verifica TypeScript, esporta i bundle iOS/Android e genera un APK Android locale con Gradle. L'APK di anteprima usa la firma debug del template; la distribuzione definitiva richiede una chiave privata gestita come secret.
+Il servizio Sites precedente risulta attivo: https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site (versioni6). Questa migrazione non chiama alcun deploy Sites e non cancella database D1, bucket R2 o il servizio Floot. Il codice web resta in legacy/web per la manutenzione separata.
 
-- mappa OpenStreetMap con aree aggregate H3 e indicazione sintetica `Vai ora`, `Possibile` o `Attendi`;
-- motivazioni leggibili basate su habitat, fenologia, meteo disponibile e pressione di visita anonima e ritardata;
-- catalogo con nome volgare, nome scientifico e nomi regionali separati;
-- segnalazioni degli utenti con foto, descrizione e coordinate private;
-- proposte di nuovi taxa o modifiche alle schede;
-- revisione per competenza regionale e tassonomica;
-- doppia verifica indipendente per tassonomia, commestibilità, tossicità e confusioni ad alto rischio;
-- pubblicazione versionata delle revisioni approvate.
-
-La beta è gratuita e richiede la registrazione. Le previsioni indicano condizioni favorevoli: non attestano la presenza di una specie e non autorizzano mai il consumo.
-
-## Sviluppo locale
-
-Richiede Node.js `>=22.13.0` e pnpm.
-
-```sh
-pnpm install
-pnpm test
-pnpm lint
-pnpm build
-```
-
-Il progetto è basato su Next.js/Vinext, Cloudflare D1, MapLibre GL JS, OpenStreetMap e H3. Le migrazioni sono in `drizzle/` e lo schema applicativo in `db/schema.ts`.
-
-## Configurazione
-
-- `CATALOG_CURATOR_EMAILS`: elenco separato da virgole degli indirizzi dei curatori scientifici iniziali;
-- `NEXT_PUBLIC_OSM_TILE_URL`: endpoint opzionale per i tile raster compatibili con OpenStreetMap.
-
-## Limiti dichiarati della beta
-
-La copertura tassonomica e territoriale viene estesa solo attraverso fonti citate e revisioni tracciabili. Se una fonte lavora a livello di genere, sezione o gruppo, il catalogo conserva quel livello e non inventa una precisione di specie. I dati meteorologici mancanti o obsoleti sono dichiarati come non disponibili e riducono la confidenza del risultato.
+## iOS / Expo
+Expo Go richiede una versione compatibile con il SDK usato. EAS Update richiede account/progetto Expo e token; i permessi GitHub non conferiscono questi accessi. Il workflow pubblica soltanto se EXPO_TOKEN e EXPO_PROJECT_ID sono realmente configurati. EAS Update in Expo Go non prova il comportamento degli aggiornamenti di una build nativa dedicata.
+Compilare/distribuire una app iOS firmata richiede macOS e le credenziali Apple appropriate; Expo Go permette anteprima senza acquistare un account sviluppatore.
+GitHub Actions privato ed EAS hanno quote: nessuna gratuità illimitata è garantita.

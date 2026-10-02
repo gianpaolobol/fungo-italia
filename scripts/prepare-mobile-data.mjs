@@ -1,0 +1,26 @@
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {join} from 'node:path';
+const input='legacy/web/artifacts/floot-readiness',output='src/data';
+const manifest=JSON.parse(await readFile(join(input,'manifest.json'),'utf8'));
+async function read(name){const expected=manifest.files.find(f=>f.name===name);if(!expected)throw Error('Missing manifest entry '+name);const bytes=await readFile(join(input,name));if(bytes.length!==expected.bytes||createHash('sha256').update(bytes).digest('hex')!==expected.sha256)throw Error('Checksum mismatch '+name);return JSON.parse(bytes.toString('utf8'));}
+const [taxa,meta,baseline,evidence,sourceRecords,areas]=await Promise.all(['study-atlas-taxa.json','catalog-data.json','scientific-baseline.json','field-profile-evidence.json','catalog-sources.json','areas.json'].map(read));
+if(taxa.length!==148||meta.minimumCards.length!==148||baseline.independentReviewComplete!==false)throw Error('Invalid canonical baseline');
+const units=new Map(meta.minimumCards.map(u=>[u.cardId,u])),sources=new Map(sourceRecords.map(s=>[s.sourceId,s]));
+const unique=v=>[...new Set(v.filter(x=>typeof x==='string'&&x.trim()))];
+const catalog=taxa.map(t=>{
+ const unit=units.get(t.id),p=baseline.profiles[t.sourceName];
+ if(!unit||unit.rank!==t.rank||t.scientificName!==unit.displayName||!p||p.characters.length!==3||!p.plusOne||p.reviewScope!=='internal'||p.independentReviewStatus!=='not-attested')throw Error('Invalid concept/provenance '+t.id);
+ if(JSON.stringify(t.diagnosticCharacters)!==JSON.stringify(p.characters))throw Error('Character mismatch '+t.id);
+ const internalId='evidence-field-profile-'+unit.learningUnitId;
+ const linked=evidence.filter(e=>e.evidenceId===internalId||e.evidenceId.startsWith('evidence-field-profile-source-'+unit.learningUnitId+'-'));
+ if(!linked.some(e=>e.evidenceId===internalId))throw Error('Missing internal evidence '+t.id);
+ const s1=sources.get('S1-obiettivi-tassonomici-v4-2026-06-09');if(!s1)throw Error('Missing curriculum source');
+ const refs=[{title:s1.title,location:'p. '+unit.sourcePage,url:s1.url,supportedClaim:'Inclusione e rango dell’obiettivo didattico; non prova di morfologia o commestibilità.'},...linked.map(e=>{const s=sources.get(e.sourceId);if(!s||!e.sourceLocation)throw Error('Missing registered evidence '+e.evidenceId);return {sourceId:s.sourceId,evidenceId:e.evidenceId,title:s.title,authors:s.authors,location:e.sourceLocation,url:s.url,supportedClaim:e.claimSummary,notes:e.notes,reviewStatus:e.reviewStatus};})];
+ return {id:t.id,scientificName:t.scientificName,commonNames:unique([t.commonName,...(t.regionalNames??[]).map(r=>typeof r==='string'?r:r.name)]).filter(n=>n!==t.scientificName),summary:['Unità didattica al rango '+unit.rank+'. Audit interno; revisione micologica indipendente non attestata.','Carattere differenziante: '+p.plusOne,p.diagnosticNote?'Limite diagnostico: '+p.diagnosticNote:'',p.safetyCheck?'Controllo di sicurezza: '+p.safetyCheck:'',t.safetyNote??''].filter(Boolean).join(' '),characters:p.characters,lookalikes:[],lookalikesStatus:'not-exported',habitat:t.ecology??[],sources:refs,rank:unit.rank,aliases:t.aliases??[],sourceLabel:unit.sourceLabel,learningUnitId:unit.learningUnitId,differentiatingCharacter:p.plusOne,reviewScope:'internal',independentReviewStatus:'not-attested',edibility:t.edibility,publishedDatabaseChangesIncluded:false};
+});
+if(new Set(catalog.map(t=>t.id)).size!==148)throw Error('Duplicate canonical IDs');
+const mobileAreas=areas.map(a=>{if(!Array.isArray(a.center)||a.center.length!==2||!a.center.every(Number.isFinite)||Math.abs(a.center[0])>90||Math.abs(a.center[1])>180)throw Error('Invalid [latitude,longitude] '+a.id);return {...a,coordinateOrder:'latitude-longitude',signalProvenance:a.signalProvenance??'heuristic',verifiedSignals:a.signalProvenance==='measured'?a.verifiedSignals:0,delayedVisitors:a.signalProvenance==='measured'?a.delayedVisitors:0};});
+await mkdir(output,{recursive:true});
+await Promise.all([writeFile(join(output,'catalog.json'),JSON.stringify(catalog,null,2)+'\n'),writeFile(join(output,'areas.json'),JSON.stringify(mobileAreas,null,2)+'\n'),writeFile(join(output,'provenance.json'),JSON.stringify({schemaVersion:1,legacyCommit:'e3b9ca01bd43ec87d3630ab954c45229b2ba15e1',canonicalUnits:148,areas:mobileAreas.length,independentReviewComplete:false,pendingScientificClaims:manifest.pendingScientificClaims,sourceFileChecksums:manifest.files},null,2)+'\n')]);
+console.log(JSON.stringify({canonicalUnits:catalog.length,areas:mobileAreas.length,independentReviewComplete:false}));
