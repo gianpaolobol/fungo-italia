@@ -39,7 +39,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-lactarius-deliciosus": {
     displayCommonName: "Sanguinelli",
     reviewedAt: "2026-09-30",
@@ -60,7 +59,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-amanita-caesarea": {
     displayCommonName: "Ovuli buoni",
     reviewedAt: "2026-09-30",
@@ -81,7 +79,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-calocybe-gambosa": {
     displayCommonName: "Prugnoli",
     reviewedAt: "2026-09-30",
@@ -102,7 +99,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-pleurotus-eryngii": {
     displayCommonName: "Cardoncelli",
     reviewedAt: "2026-09-30",
@@ -123,7 +119,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-auricularia-auricula-judae": {
     displayCommonName: "Orecchio di Giuda",
     reviewedAt: "2026-09-30",
@@ -144,7 +139,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-clitocybe-geotropa": {
     displayCommonName: "Geotropa",
     reviewedAt: "2026-09-30",
@@ -165,7 +159,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-coprinus-comatus": {
     displayCommonName: "Coprino chiomato",
     reviewedAt: "2026-09-30",
@@ -186,7 +179,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-marasmius-oreades": {
     displayCommonName: "Gambesecche",
     reviewedAt: "2026-09-30",
@@ -207,7 +199,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-pleurotus-ostreatus": {
     displayCommonName: "Orecchione",
     reviewedAt: "2026-09-30",
@@ -228,7 +219,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-imleria-badia": {
     displayCommonName: "Boleto baio",
     reviewedAt: "2026-09-30",
@@ -249,7 +239,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-craterellus-lutescens": {
     displayCommonName: "Finferle",
     reviewedAt: "2026-09-30",
@@ -270,7 +259,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-craterellus-tubaeformis": {
     displayCommonName: "Finferlo imbutiforme",
     reviewedAt: "2026-09-30",
@@ -291,7 +279,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-lyophyllum-decastes": {
     displayCommonName: "Lyophyllum aggregato",
     reviewedAt: "2026-09-30",
@@ -312,7 +299,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-tricholoma-columbetta": {
     displayCommonName: "Colombetta",
     reviewedAt: "2026-09-30",
@@ -333,7 +319,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-russula-virescens": {
     displayCommonName: "Verdone",
     reviewedAt: "2026-09-30",
@@ -352,26 +337,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
-  "atlas-coprinus-comatus": {
-    displayCommonName: "Coprino chiomato",
-    reviewedAt: "2026-09-30",
-    presentation: {
-      primaryImageUrl: null,
-      detailImageUrls: [],
-      habitatSummary: "Prati concimati, margini erbosi, terreni disturbati e bordi di strade campestri.",
-      seasonSummary: "Dalla primavera all’autunno, soprattutto nei periodi umidi.",
-      diagnosticCharacters: [
-        "Cappello lungo cilindrico-ovoidale, bianco e fortemente squamoso-lanoso.",
-        "Lamelle libere da bianche a rosa e infine nere, con deliquescenza.",
-        "Gambo lungo, bianco e cavo con piccolo anello mobile o fugace.",
-      ],
-      differentiatingCharacter: "Per uso alimentare la fonte considera gli esemplari finché le lamelle sono completamente bianche.",
-      sporePrint: "black",
-      representativeTaxon: null,
-    },
-  },
-
   "atlas-russula-cyanoxantha": {
     displayCommonName: "Colombina maggiore",
     reviewedAt: "2026-09-30",
@@ -390,26 +355,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
-  "atlas-pleurotus-ostreatus": {
-    displayCommonName: "Orecchione",
-    reviewedAt: "2026-09-30",
-    presentation: {
-      primaryImageUrl: null,
-      detailImageUrls: [],
-      habitatSummary: "Lignicolo soprattutto su latifoglie, su tronchi e ceppaie, spesso in gruppi sovrapposti.",
-      seasonSummary: "Soprattutto nel tardo autunno e in inverno.",
-      diagnosticCharacters: [
-        "Cappello a conchiglia o ventaglio, grigio, grigio-blu o bruno-grigiastro.",
-        "Lamelle chiare, fitte e fortemente decorrenti.",
-        "Gambo laterale o eccentrico molto corto, talvolta quasi assente, con carpofori sovrapposti.",
-      ],
-      differentiatingCharacter: "Tipica crescita lignicola in cespi sovrapposti nella stagione fredda.",
-      sporePrint: "white",
-      representativeTaxon: null,
-    },
-  },
-
   "atlas-agaricus-campestris": {
     displayCommonName: "Prataiolo campestre",
     reviewedAt: "2026-09-30",
@@ -428,7 +373,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-russula-aurea": {
     displayCommonName: "Colombina dorata",
     reviewedAt: "2026-09-30",
@@ -447,7 +391,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-boletus-aereus": {
     displayCommonName: "Porcino nero",
     reviewedAt: "2026-09-30",
@@ -466,7 +409,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-boletus-reticulatus": {
     displayCommonName: "Porcino estivo",
     reviewedAt: "2026-09-30",
@@ -485,7 +427,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-boletus-pinophilus": {
     displayCommonName: "Porcino dei pini",
     reviewedAt: "2026-09-30",
@@ -504,26 +445,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
-  "atlas-marasmius-oreades": {
-    displayCommonName: "Gambesecche",
-    reviewedAt: "2026-09-30",
-    presentation: {
-      primaryImageUrl: null,
-      detailImageUrls: [],
-      habitatSummary: "Prati e pascoli, spesso in file, archi e tipici cerchi delle streghe.",
-      seasonSummary: "Dalla primavera all’autunno.",
-      diagnosticCharacters: [
-        "Cappello ocra-beige con piccolo umbone, igrofano.",
-        "Lamelle molto distanti, pallide e non decorrenti.",
-        "Gambo sottile ma eccezionalmente tenace, elastico e flessibile.",
-      ],
-      differentiatingCharacter: "Crescita caratteristica in prati in file, archi o cerchi.",
-      sporePrint: "white",
-      representativeTaxon: null,
-    },
-  },
-
   "atlas-russula-vesca": {
     displayCommonName: "Colombina rosa",
     reviewedAt: "2026-09-30",
@@ -542,7 +463,6 @@ export const reviewedSummaryCardContent: Readonly<
       representativeTaxon: null,
     },
   },
-
   "atlas-lepista-nuda": {
     displayCommonName: "Lepista viola",
     reviewedAt: "2026-09-30",
@@ -558,25 +478,6 @@ export const reviewedSummaryCardContent: Readonly<
       ],
       differentiatingCharacter: "Fruttificazione tipicamente tardo-autunnale/invernale su lettiera e residui organici.",
       sporePrint: "pink",
-      representativeTaxon: null,
-    },
-  },
-
-  "atlas-clitocybe-geotropa": {
-    displayCommonName: "Geotropa",
-    reviewedAt: "2026-09-30",
-    presentation: {
-      primaryImageUrl: null,
-      detailImageUrls: [],
-      habitatSummary: "Prati, radure, margini di boschi di latifoglie e roveti; spesso in grandi archi o cerchi.",
-      seasonSummary: "In autunno, anche inoltrato.",
-      diagnosticCharacters: [
-        "Grande cappello crema-beige imbutiforme.",
-        "Umbone centrale persistente anche nel fondo dell’imbuto.",
-        "Lamelle bianche-crema fortemente decorrenti.",
-      ],
-      differentiatingCharacter: "Gambo alto e robusto; spesso forma grandi archi o cerchi.",
-      sporePrint: "white",
       representativeTaxon: null,
     },
   },
