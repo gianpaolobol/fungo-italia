@@ -32,8 +32,8 @@ test("Open-Meteo payload separates observed rain from future forecast", () => {
 
   assert.equal(snapshot.precipitation7dMm, 77);
   assert.equal(snapshot.precipitation14dMm, 105);
-  assert.equal(snapshot.precipitation26dMm, 105);
-  assert.equal(snapshot.meanTemperature20dC, 13.5);
+  assert.equal(snapshot.precipitation26dMm, null);
+  assert.equal(snapshot.meanTemperature20dC, null);
   assert.equal(snapshot.waterBalance14dMm, 77);
   assert.equal(snapshot.temperatureC, 14.5);
   assert.equal(snapshot.relativeHumidity, 81);
@@ -52,10 +52,10 @@ test("future rain never contributes to observed 7 and 14 day totals", () => {
     },
   }, now);
 
-  assert.equal(snapshot.precipitation7dMm, 5);
-  assert.equal(snapshot.precipitation14dMm, 5);
-  assert.equal(snapshot.precipitation26dMm, 5);
-  assert.equal(snapshot.waterBalance14dMm, 3);
+  assert.equal(snapshot.precipitation7dMm, null);
+  assert.equal(snapshot.precipitation14dMm, null);
+  assert.equal(snapshot.precipitation26dMm, null);
+  assert.equal(snapshot.waterBalance14dMm, null);
   assert.equal(snapshot.precipitationProbability, 70);
 });
 
@@ -76,4 +76,15 @@ test("missing optional weather values stay null instead of becoming zero", () =>
 
 test("invalid provider payload is rejected", () => {
   assert.throws(() => normalizeOpenMeteo(null, now), /meteo non valida/i);
+});
+
+test("complete UTC windows calculate totals while missing days and temperatures stay unavailable",()=>{
+ const time=Array.from({length:26},(_,i)=>{const date=new Date(now);date.setUTCDate(date.getUTCDate()-26+i);return date.toISOString().slice(0,10);});
+ const daily={time,precipitation_sum:time.map(()=>2),temperature_2m_min:time.map(()=>8),temperature_2m_max:time.map(()=>18),et0_fao_evapotranspiration:time.map(()=>1)};
+ const complete=normalizeOpenMeteo({daily},now);
+ assert.equal(complete.precipitation7dMm,14);assert.equal(complete.precipitation14dMm,28);assert.equal(complete.precipitation26dMm,52);assert.equal(complete.meanTemperature20dC,13);assert.equal(complete.waterBalance14dMm,14);
+ const missing=normalizeOpenMeteo({daily:{...daily,time:time.filter((_,i)=>i!==24)}},now);
+ assert.equal(missing.precipitation7dMm,null);assert.equal(missing.precipitation14dMm,null);assert.equal(missing.precipitation26dMm,null);assert.equal(missing.meanTemperature20dC,null);
+ const gap=normalizeOpenMeteo({daily:{...daily,temperature_2m_min:daily.temperature_2m_min.map((value,i)=>i===25?null:value)}},now);
+ assert.equal(gap.meanTemperature20dC,null);
 });

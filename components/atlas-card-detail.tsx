@@ -224,7 +224,7 @@ export function AtlasCardDetail({
           </p>
         )}
         <p className="mt-3 text-[11px] font-semibold text-[#718277]">
-          {fieldProfile.version} · audit {fieldProfile.auditedAt} · stato {fieldProfile.reviewStatus}
+          {fieldProfile.version} · audit interno {fieldProfile.auditedAt} · revisione micologica indipendente non attestata
         </p>
       </div>
 

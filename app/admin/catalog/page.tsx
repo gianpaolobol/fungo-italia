@@ -33,6 +33,7 @@ export default async function CatalogReviewPage() {
           </div>
         </header>
         <FounderEditor />
+        <Link href="/admin/observations" className="mt-5 inline-flex min-h-11 items-center rounded-xl border px-4 font-bold text-green-900">Revisiona le osservazioni e le fotografie</Link>
         <ReviewClient />
       </div>
     </main>

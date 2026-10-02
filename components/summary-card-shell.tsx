@@ -1,5 +1,7 @@
 import { CircleAlert, ExternalLink, Utensils } from "lucide-react";
 
+import { minimumCards } from "@/lib/minimum-cards";
+import { publicAuditedFieldProfile } from "@/lib/public-scientific-policy";
 import { SporePrint } from "@/components/spore-print";
 import { SummaryCardMedia } from "@/components/summary-card-media";
 import { summaryCardScientificReviewNote, type SummaryCard } from "@/lib/summary-cards";
@@ -38,6 +40,8 @@ export function SummaryCardShell({
   onOpenAtlas?: (atlasId: string) => void;
 }) {
   const p = card.presentation;
+  const sourceCard = minimumCards.find(entry => entry.cardId === card.atlasId);
+  const profile = sourceCard ? publicAuditedFieldProfile(sourceCard) : null;
 
   return (
     <article className="overflow-hidden rounded-[26px] border border-[#cfd9cd] bg-[#fbfaf4] text-[#17251b] shadow-[0_18px_55px_rgba(27,55,34,0.08)]">
@@ -127,6 +131,7 @@ export function SummaryCardShell({
         </InfoBox>
       </div>
 
+      {profile && <section aria-label="Limiti del riconoscimento" className="mx-4 mb-4 rounded-2xl border border-[#ead58c] bg-[#fff8dc] p-3 text-sm sm:mx-6 sm:mb-6"><h3 className="font-black">Limiti del riconoscimento</h3>{profile.diagnosticNote && <p>{profile.diagnosticNote}</p>}{profile.safetyCheck && <p className="mt-2"><strong>Controllo di sicurezza:</strong> {profile.safetyCheck}</p>}<p className="mt-2">Audit interno: {profile.auditedAt}. La confidenza descrive il riconoscimento al rango della scheda e non autorizza il consumo.</p></section>}
       <section aria-label="Provenienza e stato scientifico" className="mx-4 mb-4 rounded-2xl border border-[#d8e0d5] bg-white p-3 text-sm leading-relaxed sm:mx-6 sm:mb-6">
         <h3 className="mb-1 font-black text-[#315d3c]">Provenienza e stato scientifico</h3>
         <p>{summaryCardScientificReviewNote(card)}</p>

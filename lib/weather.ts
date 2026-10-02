@@ -26,43 +26,26 @@ function finiteNumber(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
-function sumObserved(
-  times: unknown,
-  values: unknown,
-  count: number,
-  now: Date,
-): number | null {
-  if (!Array.isArray(times) || !Array.isArray(values)) return null;
-  const today = now.toISOString().slice(0, 10);
-  const observed = values.filter((_, index) => {
-    const date = times[index];
-    return typeof date === "string" && date < today;
-  });
-  const window = observed.slice(-count);
-  if (window.length === 0 || window.some((value) => finiteNumber(value) === null)) return null;
-  return Number(window.reduce<number>((sum, value) => sum + (finiteNumber(value) ?? 0), 0).toFixed(1));
+function pastWindow(times:unknown,count:number,now:Date):number[]|null {
+ if(!Array.isArray(times))return null;
+ const expected=Array.from({length:count},(_,index)=>{const date=new Date(now);date.setUTCDate(date.getUTCDate()-count+index);return date.toISOString().slice(0,10);});
+ const indices=expected.map(date=>times.indexOf(date));
+ return indices.some(index=>index<0)||expected.some(date=>times.filter(value=>value===date).length!==1)?null:indices;
 }
-
-function meanObservedTemperature(
-  times: unknown,
-  mins: unknown,
-  maxs: unknown,
-  count: number,
-  now: Date,
-): number | null {
-  if (!Array.isArray(times) || !Array.isArray(mins) || !Array.isArray(maxs)) return null;
-  const today = now.toISOString().slice(0, 10);
-  const dailyMeans = times.flatMap((date, index) => {
-    if (typeof date !== "string" || date >= today) return [];
-    const min = finiteNumber(mins[index]);
-    const max = finiteNumber(maxs[index]);
-    return min === null || max === null ? [] : [(min + max) / 2];
-  });
-  const window = dailyMeans.slice(-count);
-  if (window.length < Math.min(5, count)) return null;
-  return Number((window.reduce((sum, value) => sum + value, 0) / window.length).toFixed(1));
+function sumObserved(times:unknown,values:unknown,count:number,now:Date):number|null {
+ if(!Array.isArray(values))return null;
+ const indices=pastWindow(times,count,now);if(!indices)return null;
+ const window=indices.map(index=>finiteNumber(values[index]));
+ if(window.some(value=>value===null))return null;
+ return Number(window.reduce<number>((sum,value)=>sum+(value??0),0).toFixed(1));
 }
-
+function meanObservedTemperature(times:unknown,mins:unknown,maxs:unknown,count:number,now:Date):number|null {
+ if(!Array.isArray(mins)||!Array.isArray(maxs))return null;
+ const indices=pastWindow(times,count,now);if(!indices)return null;
+ const window=indices.map(index=>{const min=finiteNumber(mins[index]),max=finiteNumber(maxs[index]);return min===null||max===null?null:(min+max)/2;});
+ if(window.some(value=>value===null))return null;
+ return Number((window.reduce<number>((sum,value)=>sum+(value??0),0)/count).toFixed(1));
+}
 function sumObservedEvapotranspiration(
   times: unknown,
   values: unknown,
@@ -137,7 +120,7 @@ export async function fetchOpenMeteoSnapshots(
   );
   url.searchParams.set("past_days", "30");
   url.searchParams.set("forecast_days", "7");
-  url.searchParams.set("timezone", "auto");
+  url.searchParams.set("timezone", "UTC");
 
   const response = await fetch(url, { signal, headers: { Accept: "application/json" } });
   if (!response.ok) throw new Error(`Provider meteo non disponibile (${response.status}).`);
@@ -163,7 +146,7 @@ export async function fetchOpenMeteoSnapshot(
   );
   url.searchParams.set("past_days", "30");
   url.searchParams.set("forecast_days", "7");
-  url.searchParams.set("timezone", "auto");
+  url.searchParams.set("timezone", "UTC");
 
   const response = await fetch(url, {
     signal,

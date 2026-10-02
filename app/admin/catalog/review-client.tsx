@@ -20,6 +20,7 @@ type ChangeRow = {
   proposedValueJson: string;
   sourceCitation: string;
   createdAt: string;
+  reviewVersion: number;
 };
 
 export function ReviewClient() {
@@ -32,7 +33,7 @@ export function ReviewClient() {
   const load = useCallback(async () => {
     setStatus("loading");
     try {
-      const response = await fetch("/api/admin/catalog/reviews");
+      const response = await fetch("/api/admin/catalog/reviews", {cache:"no-store"});
       const payload = await response.json() as { changes?: ChangeRow[]; role?: string };
       if (response.status === 403) {
         setStatus("forbidden");
@@ -82,7 +83,7 @@ export function ReviewClient() {
       const response = await fetch("/api/admin/catalog/reviews", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ changeSetId, decision, notes: notes[changeSetId] ?? "" }),
+        body: JSON.stringify({ changeSetId, decision, notes: notes[changeSetId] ?? "", expectedReviewVersion: changes.find(change => change.id === changeSetId)?.reviewVersion }),
       });
       if (!response.ok) throw new Error("decision failed");
       await load();
@@ -130,11 +131,13 @@ export function ReviewClient() {
                 <ReviewValue label="Ambito" value={[change.regionScope, change.taxonomicScope].filter(Boolean).join(" · ") || "Nazionale / non specificato"} />
                 <ReviewValue label="Autore" value={change.authorName || "Utente registrato"} />
               </dl>
+              {change.status === "approved" && <p className="mt-3 text-sm font-bold">Approvata: integrazione del campo pubblico ancora da completare.</p>}
+              {change.status === "changesRequested" && <p className="mt-3 text-sm font-bold">Correzioni richieste: invia una nuova proposta con i riscontri del revisore.</p>}
               <Textarea value={notes[change.id] ?? ""} onChange={(event) => setNotes((current) => ({ ...current, [change.id]: event.target.value }))} className="mt-4 min-h-20 rounded-xl text-base" placeholder="Nota della revisione" />
               <div className="mt-3 grid grid-cols-3 gap-2">
-                <Button type="button" disabled={busyId === change.id} onClick={() => void decide(change.id, "approve")} className="min-h-11 rounded-xl bg-[#174f2b] px-2"><Check /> <span className="hidden sm:inline">Approva</span></Button>
-                <Button type="button" disabled={busyId === change.id} onClick={() => void decide(change.id, "requestChanges")} variant="outline" className="min-h-11 rounded-xl px-2"><RotateCcw /> <span className="hidden sm:inline">Correggi</span></Button>
-                <Button type="button" disabled={busyId === change.id} onClick={() => void decide(change.id, "reject")} variant="outline" className="min-h-11 rounded-xl border-[#dfaaa6] px-2 text-[#8a312b]"><X /> <span className="hidden sm:inline">Respingi</span></Button>
+                <Button type="button" disabled={busyId === change.id || !["submitted","inReview"].includes(change.status)} onClick={() => void decide(change.id, "approve")} className="min-h-11 rounded-xl bg-[#174f2b] px-2"><Check /> <span className="text-xs sm:text-sm">Approva</span></Button>
+                <Button type="button" disabled={busyId === change.id || !["submitted","inReview"].includes(change.status)} onClick={() => void decide(change.id, "requestChanges")} variant="outline" className="min-h-11 rounded-xl px-2"><RotateCcw /> <span className="text-xs sm:text-sm">Correggi</span></Button>
+                <Button type="button" disabled={busyId === change.id || !["submitted","inReview"].includes(change.status)} onClick={() => void decide(change.id, "reject")} variant="outline" className="min-h-11 rounded-xl border-[#dfaaa6] px-2 text-[#8a312b]"><X /> <span className="text-xs sm:text-sm">Respingi</span></Button>
               </div>
             </article>
           );
