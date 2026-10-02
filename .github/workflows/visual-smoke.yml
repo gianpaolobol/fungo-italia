@@ -51,7 +51,7 @@ jobs:
       - name: Seed independent local test reviewers
         run: >
           pnpm exec wrangler d1 execute DB --config dist/server/wrangler.json --local --persist-to .wrangler/state
-          --command "INSERT INTO users (id,email,display_name,role) VALUES ('ci-review-author','review-author@example.test','CI Author','mycologist'), ('ci-review-assigned','review-assigned@example.test','CI Reviewer','mycologist'), ('ci-review-outside','review-outside@example.test','CI Scoped Reviewer','mycologist'); INSERT INTO catalog_role_grants (id,user_id,role,region,taxonomic_group,active,granted_by) VALUES ('ci-grant-author','ci-review-author','mycologist',NULL,NULL,1,'ci-review-assigned'), ('ci-grant-assigned','ci-review-assigned','mycologist',NULL,NULL,1,'ci-review-assigned'), ('ci-grant-outside','ci-review-outside','mycologist','Piemonte','Russula',1,'ci-review-assigned');"
+          --command "INSERT INTO users (id,email,display_name,role) VALUES ('ci-review-author','review-author@example.test','CI Author','mycologist'), ('ci-review-assigned','review-assigned@example.test','CI Reviewer','mycologist'), ('ci-review-outside','review-outside@example.test','CI Scoped Reviewer','mycologist'), ('ci-review-curator','review-curator@example.test','CI Curator','scientificCurator'); INSERT INTO catalog_role_grants (id,user_id,role,region,taxonomic_group,active,granted_by) VALUES ('ci-grant-author','ci-review-author','mycologist',NULL,NULL,1,'ci-review-assigned'), ('ci-grant-assigned','ci-review-assigned','mycologist',NULL,NULL,1,'ci-review-assigned'), ('ci-grant-outside','ci-review-outside','mycologist','Piemonte','Russula',1,'ci-review-assigned'), ('ci-grant-curator','ci-review-curator','scientificCurator',NULL,NULL,1,'ci-review-assigned');"
       - name: Start built beta
         run: |
           pnpm start > /tmp/fungo-beta.log 2>&1 &
@@ -64,7 +64,7 @@ jobs:
           done
           cat /tmp/fungo-beta.log
           exit 1
-      - run: pnpm exec playwright test scripts/visual-smoke.spec.mjs --reporter=line
+      - run: pnpm exec playwright test scripts/visual-smoke.spec.mjs --reporter=line --trace=retain-on-failure
       - if: always()
         uses: actions/upload-artifact@v4
         with:

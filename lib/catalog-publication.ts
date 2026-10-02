@@ -145,6 +145,6 @@ export function validateMaterializableChange(change: { proposalKind:string; fiel
  if(change.proposalKind!=="update"||change.fieldPath==="taxonomy.create"||!change.targetTaxonId||!baseTaxa.some(taxon=>taxon.id===change.targetTaxonId))return "Scheda destinataria assente o proposta incoerente.";
  if(!value)return "Valore proposto vuoto.";
  if(change.fieldPath==="taxonomy.rank"&&!ranks.has(value as TaxonRank))return "Rango proposto non supportato.";
- if(change.fieldPath==="diagnostics.odor"&&!("odor" in baseTaxa.find(taxon=>taxon.id===change.targetTaxonId)!))return "Il catalogo destinatario non espone questo campo.";
+ if(change.fieldPath==="diagnostics.odor") {const target=baseTaxa.find(taxon=>taxon.id===change.targetTaxonId)!;if(!baseTaxa.some(taxon=>taxon.scientificName===target.scientificName&&taxon.rank===target.rank&&"odor" in taxon))return "Il catalogo destinatario non espone questo campo.";}
  return null;
 }

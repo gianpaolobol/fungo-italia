@@ -743,7 +743,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                 </div>
                 <OfflineLibrary taxa={studyTaxa} />
                 {studyView === "scroll" ? <div className="mt-5 space-y-6">
-                  {visibleSummaryCards.slice(0, studyFeedLimit).map((card) => <article key={card.atlasId} className="scroll-mt-24 rounded-2xl border border-[#dce5da] p-3 sm:p-5"><PublishedCatalogUpdates updates={publishedUpdates.filter(update => update.targetIds.includes(card.atlasId))} /><OfflineTaxonActions taxonId={card.atlasId} /><SummaryCardShell card={card} onOpenAtlas={openSummaryInAtlas} /></article>)}
+                  {visibleSummaryCards.slice(0, studyFeedLimit).map((card) => <article key={card.atlasId} className="scroll-mt-24 rounded-2xl border border-[#dce5da] p-3 sm:p-5"><PublishedCatalogUpdates updates={publishedUpdates.filter(update => update.targetIds.includes(card.atlasId))} /><OfflineTaxonActions taxonId={card.atlasId} rememberOnMount={false} /><SummaryCardShell card={card} onOpenAtlas={openSummaryInAtlas} /></article>)}
                   {studyFeedLimit < visibleSummaryCards.length && <Button type="button" variant="outline" className="min-h-11 w-full" onClick={() => setStudyFeedLimit((count) => count + 12)}>Continua lo studio · altre 12 schede</Button>}
                 </div> : <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {visibleSummaryCards.map((card) => (
@@ -782,7 +782,7 @@ export function ExploreClient({ areas, taxa, objectives, user }: ExploreClientPr
                             </span>
                             <span className="rounded-full bg-[#eaf1e8] px-2 py-1 text-[11px] font-bold text-[#315d3c]">
                               {card.basis === "reviewed-taxon"
-                                ? "Revisionata"
+                                ? "Sintesi editoriale"
                                 : card.basis === "minimum-baseline"
                                   ? "Baseline Minimo"
                                   : "Contesto di genere"}

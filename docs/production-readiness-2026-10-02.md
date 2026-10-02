@@ -33,3 +33,22 @@ Prima di chiamare il prodotto scientificamente definitivo occorre chiudere la co
 5. Eseguire typecheck, test e percorsi reali in Floot, quindi pubblicare soltanto quando autorizzato e verificato.
 
 Il pacchetto statico non è un backup delle modifiche database pubblicate; queste richiedono migrazione separata e controllata.
+
+## Versione preparata su GitHub
+
+- 148 unità canoniche del Minimo, 66 schede di genere/gruppo e 214 documenti di ricerca; il parser storico esteso resta una compatibilità delle API, non il catalogo di studio.
+- 71 macroaree in tutte le 20 regioni. I centri rappresentativi non indicano fungaie; riferimenti territoriali non dimostrano avvistamenti. Conteggi visitatori e segnali verificati restano assenti finché non vengono misurati.
+- Consultazione Schede con tap precedente/successiva oppure feed progressivo; URL ripristinabili, filtri coerenti fra mappa/elenco e collegamento diretto Amiata.
+- Studio con obiettivi citati per pagina, glossario editoriale, autovalutazione e ripasso locale per account. Il percorso nazionale non documenta taxa o permessi di Tenerife.
+- Lettore pubblico offline riapribile con ricerca, preferiti e ripresa. Pacchetto testuale, zero fotografie certificate: documentazione fotografica/licenze da completare. Non salva osservazioni o coordinate.
+- Osservazioni personali, fotografie autorizzate, storico delle determinazioni, coda riservata e decisioni concorrenti protette. Il taxon proposto è un’ipotesi e l’esito documentale non autorizza il consumo.
+- Proposte con citazione e motivazione; autore escluso dalla propria revisione. Campi critici richiedono un secondo curatore diverso dal primo revisore; anche il fondatore non pubblica direttamente tassonomia o sicurezza.
+- Contributi pubblicati ricercabili e mostrati con fonte/data, separati dalla baseline didattica. Campi non materializzabili restano approvati in attesa di integrazione e non vengono dichiarati pubblicati.
+
+## Limiti che impediscono la qualifica “scientificamente definitivo”
+
+Restano 616 claim nella coda scientifica e manca la revisione micologica indipendente attestata. Le simulazioni dei sei profili trovano difetti d’uso e incoerenze del software, non approvano le pubblicazioni. Le fonti didattiche attestano il percorso e il rango richiesto; non sono automaticamente prove di ogni diagnosi.
+
+Per chiudere questa parte serve un revisore competente che documenti la verifica della pubblicazione realmente consultata e approvi claim/versione. Fotografie, classificazione e dati alimentari senza questa provenienza rimangono dichiarati mancanti o non valutati. La mappa è uno strumento per esplorare condizioni ambientali, non una previsione validata di raccolta.
+
+Il deploy Floot e i test del suo runtime restano successivi. Nessun risultato GitHub prova che il sito Floot attuale contenga già questa versione.

@@ -229,3 +229,51 @@ test("study remains usable when local storage is denied",async({browser})=>{
  await expect(page.getByTestId("learning-counts")).toHaveText("0 argomenti studiati · 1 da ripassare");
  await page.getByRole("button",{name:"Argomento successivo",exact:true}).click();await expect(page.getByTestId("learning-source")).toBeVisible();await context.close();
 });
+
+test("catalog publication requires independent scoped decisions and updates public search",async({browser})=>{
+ const base="http://127.0.0.1:8787",contexts={};
+ for(const name of ["author","assigned","outside","curator"])contexts[name]=await browser.newContext({extraHTTPHeaders:{...headers,"oai-authenticated-user-id":"ci-review-"+name,"oai-authenticated-user-email":"review-"+name+"@example.test"}});
+ try{
+ const catalog=await(await contexts.author.request.get(base+"/api/catalog")).json();
+ const taxon=catalog.studyTaxa.find(taxon=>taxon.rank==="species");expect(taxon).toBeTruthy();
+ const proposal={proposalKind:"update",targetTaxonId:taxon.id,fieldPath:"names.common",proposedValue:"Nome CI pubblicato indipendentemente",rationale:"CI: verifica tecnica del flusso editoriale; non è una proposta micologica reale.",sourceCitation:"Fonte simulata solo per CI locale",regionScope:"",taxonomicScope:""};
+ const submitted=await contexts.author.request.post(base+"/api/catalog/proposals",{data:proposal});expect(submitted.status(),await submitted.text()).toBe(201);
+ const {id}=await submitted.json(),decision={changeSetId:id,decision:"approve",notes:"Prova tecnica di revisione",expectedReviewVersion:0};
+ expect((await contexts.author.request.post(base+"/api/admin/catalog/reviews",{data:decision})).status()).toBe(403);
+ expect((await contexts.outside.request.post(base+"/api/admin/catalog/reviews",{data:decision})).status()).toBe(403);
+ const approved=await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:decision});expect(approved.status(),await approved.text()).toBe(200);expect((await approved.json()).status).toBe("published");
+ expect((await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:decision})).status()).toBe(409);
+ const updated=await(await contexts.author.request.get(base+"/api/catalog")).json();
+ expect(updated.studyTaxa.find(item=>item.id===taxon.id).commonName).toBe(proposal.proposedValue);
+ expect(updated.publishedUpdates.some(item=>item.changeSetId===id&&item.sourceCitation===proposal.sourceCitation)).toBeTruthy();
+ const search=await(await contexts.author.request.get(base+"/api/catalog?mode=search&q="+encodeURIComponent(proposal.proposedValue))).json();
+ expect(search.items.some(item=>item.id===taxon.id)).toBeTruthy();
+ const critical=await contexts.author.request.post(base+"/api/catalog/proposals",{data:{...proposal,fieldPath:"taxonomy.acceptedScientificName",proposedValue:"Testomyces verificatus"}});expect(critical.status(),await critical.text()).toBe(201);
+ const criticalId=(await critical.json()).id,first={...decision,changeSetId:criticalId};
+ const firstResponse=await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:first});expect(firstResponse.status(),await firstResponse.text()).toBe(200);expect((await firstResponse.json()).status).toBe("inReview");
+ expect((await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:{...first,expectedReviewVersion:1}})).status()).toBe(403);
+ const secondResponse=await contexts.curator.request.post(base+"/api/admin/catalog/reviews",{data:{...first,expectedReviewVersion:1}});expect(secondResponse.status(),await secondResponse.text()).toBe(200);expect((await secondResponse.json()).status).toBe("published");
+ const unsupported=await contexts.author.request.post(base+"/api/catalog/proposals",{data:{...proposal,fieldPath:"ecology.habitat",proposedValue:"Campo non ancora integrato"}});expect(unsupported.status(),await unsupported.text()).toBe(201);
+ const unsupportedReview=await contexts.assigned.request.post(base+"/api/admin/catalog/reviews",{data:{...decision,changeSetId:(await unsupported.json()).id}});expect(unsupportedReview.status(),await unsupportedReview.text()).toBe(200);expect((await unsupportedReview.json()).status).toBe("approved");
+ }finally{for(const context of Object.values(contexts))await context.close();}
+});
+
+
+test("novice can select Amiata and filter the accessible map without map tiles",async({browser})=>{
+ const context=await readinessContext(browser,"readiness-map-user"),page=await context.newPage();
+ await page.route("**/maplibre-gl-worker.mjs",route=>route.abort());
+ await page.route("https://tiles.openfreemap.org/**",route=>route.abort());
+ await page.goto(readinessOrigin+"/?tab=cerca&area=amiata",{waitUntil:"domcontentloaded"});
+ await page.getByRole("button",{name:"Mappa",exact:true}).click();
+ const map=page.getByRole("region",{name:"Mappa delle condizioni favorevoli per i funghi"});
+ await expect(map).toBeVisible();
+ await expect(map.locator('[aria-label="Mappa accessibile delle aree"] button')).toHaveCount(71);
+ const selected=map.locator('[aria-label="Mappa accessibile delle aree"] button[aria-pressed="true"]');
+ await expect(selected).toContainText("Amiata");
+ const search=page.getByPlaceholder("Zona, regione o bosco").filter({visible:true});
+ await search.fill("Amiata");
+ await expect(map.locator('[aria-label="Mappa accessibile delle aree"] button')).toHaveCount(1);
+ await search.fill("nessuna-area-ci");
+ await expect(map.getByRole("status")).toContainText("Nessuna area");
+ expect(await horizontalOverflow(page)).toBeLessThanOrEqual(1);await context.close();
+});
