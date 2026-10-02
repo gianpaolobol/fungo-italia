@@ -74,7 +74,7 @@ export interface AtlasTaxon extends Taxon {
   sourceName: string;
   authorship: string | null;
   kingdom: "Fungi";
-  division: "Basidiomycota" | "Ascomycota";
+  division: "Basidiomycota" | "Ascomycota" | "Non documentata";
   className: string;
   order: string;
   family: string | null;
