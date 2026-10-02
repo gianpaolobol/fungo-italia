@@ -104,13 +104,27 @@ export function projectAtlasTaxonToSummaryCard(taxon: AtlasTaxon): SummaryCard {
   };
 }
 
+function reviewedContentForTaxon(taxon: AtlasTaxon) {
+  const direct = reviewedSummaryCardContent[taxon.id];
+  if (direct) return direct;
+  const canonicalAtlasId =
+    "atlas-" +
+    taxon.scientificName
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLocaleLowerCase("it")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  return reviewedSummaryCardContent[canonicalAtlasId];
+}
+
 export function buildSummaryCardIndex(
   taxa: readonly AtlasTaxon[],
 ): SummaryCard[] {
   return taxa.map((taxon) => {
     const base = projectAtlasTaxonToSummaryCard(taxon);
     const automatic = autoSummaryForAtlasTaxon(taxon);
-    const reviewed = reviewedSummaryCardContent[taxon.id];
+    const reviewed = reviewedContentForTaxon(taxon);
 
     if (reviewed) {
       return {
