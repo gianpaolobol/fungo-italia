@@ -4,6 +4,7 @@ import test from "node:test";
 import { catalogSearchDocuments } from "./catalog-search.ts";
 import { findGenusCardViewModel } from "./atlas-genus-view.ts";
 import {
+  type AtlasNavigationState,
   defaultAtlasNavigationState,
   parseAtlasNavigationState,
   returnToAtlasParent,
@@ -51,7 +52,7 @@ test("search result -> group -> child -> group -> results preserves filters thro
   );
   assert.ok(amanita);
 
-  let state = {
+  let state: AtlasNavigationState = {
     ...defaultAtlasNavigationState,
     query: "amanita",
     kind: "teachingGroup" as const,

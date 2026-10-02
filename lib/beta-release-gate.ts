@@ -24,7 +24,19 @@ import {
 } from "./public-scientific-policy.ts";
 import { genusCardHasPublicScientificLeak } from "./public-genus-policy.ts";
 
-type Attestations = typeof attestationsJson;
+interface ReleaseAttestation {
+  status: string;
+  verifiedBy: string | null;
+  verifiedAt: string | null;
+}
+export interface Attestations {
+  version: number;
+  visualViewportSmoke: ReleaseAttestation & {
+    requiredViewports: string[];
+    commitSha: string | null;
+  };
+  independentMycologicalReview: ReleaseAttestation & { scope: string };
+}
 
 export interface BetaReleaseGate {
   ready: boolean;
