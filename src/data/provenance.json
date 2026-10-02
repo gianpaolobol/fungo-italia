@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "legacySnapshotCommit": "e3b9ca01bd43ec87d3630ab954c45229b2ba15e1",
+  "sourceExportCommit": "0d01cc17da6e38723bf0f39d7ab7ab8188424ff2",
+  "canonicalUnits": 148,
+  "areas": 71,
+  "independentReviewComplete": false,
+  "pendingScientificClaims": 616,
+  "sourceFileChecksums": [
+    {
+      "name": "catalog-data.json",
+      "bytes": 309396,
+      "sha256": "0d4afdb2c1694a3ebca3f9c391f16814fb73fc66e66051ef423d3efc1f377858"
+    },
+    {
+      "name": "study-atlas-taxa.json",
+      "bytes": 219480,
+      "sha256": "41b382001e6f20511abaf1eb10c8cf2bf6eebb702f6f582f71e383229d0c64c7"
+    },
+    {
+      "name": "areas.json",
+      "bytes": 63939,
+      "sha256": "f9191d550b9c15e5fe692f99bb539910df520d565670bdcf0135bfd0cc5fa647"
+    },
+    {
+      "name": "scientific-baseline.json",
+      "bytes": 105840,
+      "sha256": "da56c3052ffb08213813b4ae2567215f928c26641164f9f22460c186be9f0fba"
+    },
+    {
+      "name": "field-profile-evidence.json",
+      "bytes": 180082,
+      "sha256": "864100706e1399b42c5b5f598320d85cbed2031276b9249bab6aee63fe75588d"
+    },
+    {
+      "name": "catalog-sources.json",
+      "bytes": 10348,
+      "sha256": "18f254464ed78857c7acc2285f88191cb89a0a715408b73b1d41214f1ec06a19"
+    }
+  ]
+}

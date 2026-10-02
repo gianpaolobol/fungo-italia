@@ -1,0 +1,2506 @@
+[
+  {
+    "id": "lagorai-pine",
+    "name": "Lagorai e Piné",
+    "region": "Trentino-Alto Adige",
+    "center": [
+      46.16,
+      11.26
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Abete bianco",
+      "Faggeta",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus",
+      "amanita-vaginatae"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Abete bianco, Faggeta",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "appennino-modenese",
+    "name": "Appennino modenese",
+    "region": "Emilia-Romagna",
+    "center": [
+      44.28,
+      10.83
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Abete bianco",
+      "Prati"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Abete bianco",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "foreste-casentinesi",
+    "name": "Foreste Casentinesi",
+    "region": "Toscana",
+    "center": [
+      43.82,
+      11.8
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Querceto",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-russula",
+      "ramaria-botrytis"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Abete bianco, Querceto",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monti-cimini",
+    "name": "Monti Cimini",
+    "region": "Lazio",
+    "center": [
+      42.4,
+      12.17
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "russula-virescens",
+      "hygrophorus-russula",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Querceto",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "lagonegro-pollino",
+    "name": "Lagonegrese e Pollino",
+    "region": "Basilicata",
+    "center": [
+      40.08,
+      15.89
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Pineta",
+      "Pascoli"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "pleurotus-eryngii",
+      "lactarius-deliciosi",
+      "boletus-edulis"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Pineta",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "sila-grande",
+    "name": "Sila Grande",
+    "region": "Calabria",
+    "center": [
+      39.36,
+      16.51
+    ],
+    "habitat": [
+      "Pino laricio",
+      "Faggeta",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "lactarius-deliciosi",
+      "tricholoma-terreum-group",
+      "boletus-edulis"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Pino laricio, Faggeta, Prati montani",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "madonie",
+    "name": "Madonie",
+    "region": "Sicilia",
+    "center": [
+      37.89,
+      14.02
+    ],
+    "habitat": [
+      "Querceto",
+      "Faggeta mediterranea",
+      "Pascoli"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "pleurotus-eryngii",
+      "agaricus-campestris-group",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Querceto, Faggeta mediterranea, Pascoli",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "gennargentu",
+    "name": "Gennargentu",
+    "region": "Sardegna",
+    "center": [
+      40.02,
+      9.31
+    ],
+    "habitat": [
+      "Querceto",
+      "Castagneto",
+      "Macchia",
+      "Pascoli"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo habitat; parametri euristici, non osservazioni sul campo",
+    "expectedTaxa": [
+      "pleurotus-eryngii",
+      "russula-virescens",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Querceto, Castagneto, Macchia",
+      "Macroarea indicativa: presenza e produttività dei funghi da verificare"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "gran-paradiso-vda",
+    "name": "Gran Paradiso valdostano",
+    "region": "Valle d'Aosta",
+    "center": [
+      45.61,
+      7.3
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Larice",
+      "Prati alpini"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Larice, Prati alpini",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "val-dayas",
+    "name": "Val d'Ayas e Monte Rosa",
+    "region": "Valle d'Aosta",
+    "center": [
+      45.82,
+      7.73
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Larice",
+      "Prati alpini"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "amanita-vaginatae"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Larice, Prati alpini",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "valli-cuneesi",
+    "name": "Valli cuneesi",
+    "region": "Piemonte",
+    "center": [
+      44.36,
+      7.36
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Abete bianco, Castagneto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monferrato",
+    "name": "Monferrato boschivo",
+    "region": "Piemonte",
+    "center": [
+      44.98,
+      8.35
+    ],
+    "habitat": [
+      "Querceto",
+      "Castagneto",
+      "Pioppeto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-virescens",
+      "cyclocybe-cylindracea"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Querceto, Castagneto, Pioppeto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "valsesia",
+    "name": "Valsesia e Biellese",
+    "region": "Piemonte",
+    "center": [
+      45.68,
+      8.06
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Abete rosso"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Abete rosso",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "beigua",
+    "name": "Beigua e Appennino ligure",
+    "region": "Liguria",
+    "center": [
+      44.43,
+      8.56
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Pineta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "lactarius-deliciosi"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Pineta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "val-di-vara",
+    "name": "Val di Vara",
+    "region": "Liguria",
+    "center": [
+      44.28,
+      9.63
+    ],
+    "habitat": [
+      "Castagneto",
+      "Querceto",
+      "Faggeta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-vesca"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Castagneto, Querceto, Faggeta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "valtellina",
+    "name": "Valtellina e Orobie",
+    "region": "Lombardia",
+    "center": [
+      46.08,
+      9.76
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Abete bianco",
+      "Faggeta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Abete bianco, Faggeta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "prealpi-bergamasche",
+    "name": "Prealpi bergamasche",
+    "region": "Lombardia",
+    "center": [
+      45.88,
+      9.86
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Abete rosso"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Abete rosso",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "oltrepo-pavese",
+    "name": "Oltrepò pavese",
+    "region": "Lombardia",
+    "center": [
+      44.91,
+      9.18
+    ],
+    "habitat": [
+      "Querceto",
+      "Castagneto",
+      "Prati"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-virescens",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Querceto, Castagneto, Prati",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "fiemme-fassa",
+    "name": "Fiemme e Fassa",
+    "region": "Trentino-Alto Adige",
+    "center": [
+      46.31,
+      11.55
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Larice",
+      "Abete bianco"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "tricholoma-terreum-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Larice, Abete bianco",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "cansiglio",
+    "name": "Cansiglio e Alpago",
+    "region": "Veneto",
+    "center": [
+      46.08,
+      12.42
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Abete rosso"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Abete bianco, Abete rosso",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "lessinia",
+    "name": "Lessinia",
+    "region": "Veneto",
+    "center": [
+      45.61,
+      11.1
+    ],
+    "habitat": [
+      "Faggeta",
+      "Prati montani",
+      "Carpino"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-cyanoxantha",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Prati montani, Carpino",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "cadore",
+    "name": "Cadore e Comelico",
+    "region": "Veneto",
+    "center": [
+      46.55,
+      12.43
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Larice",
+      "Faggeta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "amanita-vaginatae"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Larice, Faggeta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "carnia",
+    "name": "Carnia e Tarvisiano",
+    "region": "Friuli-Venezia Giulia",
+    "center": [
+      46.48,
+      13.03
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Abete bianco",
+      "Faggeta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete rosso, Abete bianco, Faggeta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "carso",
+    "name": "Carso e Valli del Natisone",
+    "region": "Friuli-Venezia Giulia",
+    "center": [
+      45.95,
+      13.52
+    ],
+    "habitat": [
+      "Querceto",
+      "Carpino nero",
+      "Prati carsici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-vesca",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Querceto, Carpino nero, Prati carsici",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "appennino-parmense",
+    "name": "Appennino parmense",
+    "region": "Emilia-Romagna",
+    "center": [
+      44.49,
+      10.02
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Abete bianco"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Abete bianco",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "amiata",
+    "name": "Monte Amiata",
+    "region": "Toscana",
+    "center": [
+      42.89,
+      11.63
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-russula"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Querceto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "valnerina",
+    "name": "Valnerina e Monti Martani",
+    "region": "Umbria",
+    "center": [
+      42.82,
+      12.91
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati montani",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monte-cucco",
+    "name": "Monte Cucco",
+    "region": "Umbria",
+    "center": [
+      43.37,
+      12.74
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-cyanoxantha",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "sibillini-marche",
+    "name": "Sibillini marchigiani",
+    "region": "Marche",
+    "center": [
+      42.91,
+      13.21
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati montani",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "montefeltro",
+    "name": "Montefeltro e Catria",
+    "region": "Marche",
+    "center": [
+      43.62,
+      12.55
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-vesca"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Castagneto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "simbruini",
+    "name": "Monti Simbruini",
+    "region": "Lazio",
+    "center": [
+      41.95,
+      13.13
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati montani",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "gran-sasso",
+    "name": "Gran Sasso e Laga",
+    "region": "Abruzzo",
+    "center": [
+      42.47,
+      13.47
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati montani",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "maiella",
+    "name": "Maiella",
+    "region": "Abruzzo",
+    "center": [
+      42.06,
+      14.05
+    ],
+    "habitat": [
+      "Faggeta",
+      "Pino nero",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "lactarius-deliciosi"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Pino nero, Prati montani",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "matese-molise",
+    "name": "Matese molisano",
+    "region": "Molise",
+    "center": [
+      41.48,
+      14.4
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "alto-molise",
+    "name": "Alto Molise",
+    "region": "Molise",
+    "center": [
+      41.79,
+      14.25
+    ],
+    "habitat": [
+      "Abete bianco",
+      "Faggeta",
+      "Querceto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Abete bianco, Faggeta, Querceto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "matese-campano",
+    "name": "Matese campano",
+    "region": "Campania",
+    "center": [
+      41.36,
+      14.38
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Prati",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monti-picentini",
+    "name": "Monti Picentini",
+    "region": "Campania",
+    "center": [
+      40.78,
+      15.03
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-virescens"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Querceto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "cilento-interno",
+    "name": "Cilento interno",
+    "region": "Campania",
+    "center": [
+      40.29,
+      15.37
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-vesca"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Castagneto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "gargano",
+    "name": "Foresta Umbra e Gargano",
+    "region": "Puglia",
+    "center": [
+      41.82,
+      15.99
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Pineta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "lactarius-deliciosi"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Pineta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "murgia",
+    "name": "Alta Murgia",
+    "region": "Puglia",
+    "center": [
+      40.96,
+      16.39
+    ],
+    "habitat": [
+      "Pascoli",
+      "Querceto",
+      "Pineta"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "pleurotus-eryngii",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Pascoli, Querceto, Pineta",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "vulture",
+    "name": "Vulture e Alto Bradano",
+    "region": "Basilicata",
+    "center": [
+      40.95,
+      15.62
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-virescens"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Castagneto, Querceto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "aspromonte",
+    "name": "Aspromonte",
+    "region": "Calabria",
+    "center": [
+      38.16,
+      15.9
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Pino laricio"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "lactarius-deliciosi"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Abete bianco, Pino laricio",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "nebrodi",
+    "name": "Nebrodi",
+    "region": "Sicilia",
+    "center": [
+      37.94,
+      14.69
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Pascoli"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "pleurotus-eryngii"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Faggeta, Querceto, Pascoli",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "etna",
+    "name": "Etna e versanti boschivi",
+    "region": "Sicilia",
+    "center": [
+      37.73,
+      15
+    ],
+    "habitat": [
+      "Pineta",
+      "Querceto",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "lactarius-deliciosi",
+      "russula-virescens"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Pineta, Querceto, Castagneto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "limbara",
+    "name": "Limbara e Gallura interna",
+    "region": "Sardegna",
+    "center": [
+      40.86,
+      9.12
+    ],
+    "habitat": [
+      "Querceto",
+      "Sughereta",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-virescens",
+      "amanita-vaginatae"
+    ],
+    "reasons": [
+      "Mosaico ambientale: Querceto, Sughereta, Castagneto",
+      "Valutazione su area vasta, non su punti di raccolta"
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "parco-aveto",
+    "name": "Val d'Aveto e valli del Parco",
+    "region": "Liguria",
+    "center": [
+      44.53,
+      9.39
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Cerreta",
+      "Boschi montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Il Parco indica il porcino come prodotto naturale diffuso in tutte le valli",
+      "Raccolta documentata in boschi di castagno, cerro, faggio, carpino e frassino"
+    ],
+    "elevationRangeM": [
+      350,
+      1800
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco Aveto — Funghi porcini",
+        "url": "https://www.parks.it/parco.aveto/dettaglio_prodotto.php?id_prodotti=3175",
+        "kind": "official-park"
+      },
+      {
+        "label": "Parco Aveto — Per funghi nel Parco",
+        "url": "https://www.parks.it/parco.aveto/page.php?id=209",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "cerreto-reggiano",
+    "name": "Cerreto e Appennino reggiano",
+    "region": "Emilia-Romagna",
+    "center": [
+      44.31,
+      10.22
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Boschi appenninici",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "hygrophorus-marzuolus"
+    ],
+    "reasons": [
+      "Sede del Campionato Mondiale del Fungo dedicato alla ricerca del porcino",
+      "Il Parco documenta la stagione micologica nei boschi di faggi e abeti intorno a Cerreto"
+    ],
+    "elevationRangeM": [
+      750,
+      1900
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco Appennino — Campionato Mondiale del Fungo 2026",
+        "url": "https://www.parcoappennino.it/campionato.mondiale.fungo/pagina.php?id=297",
+        "kind": "official-park"
+      },
+      {
+        "label": "Parco Appennino — nascita dei funghi a Cerreto",
+        "url": "https://www.parcoappennino.it/newsdettaglio.php?id=88073",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "corno-scale",
+    "name": "Corno alle Scale e Alto Reno",
+    "region": "Emilia-Romagna",
+    "center": [
+      44.13,
+      10.84
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Boschi montani",
+      "Prati"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "Il Parco dispone di regolamento specifico per la raccolta dei prodotti del sottobosco",
+      "Sono organizzate escursioni micologiche nei boschi del Parco"
+    ],
+    "elevationRangeM": [
+      650,
+      1945
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regolamento sottobosco Corno alle Scale",
+        "url": "https://www.parks.it/riserva.contrafforte.pliocenico/dettaglio.php?id=87507",
+        "kind": "official-park"
+      },
+      {
+        "label": "Corno alle Scale — escursione micologica",
+        "url": "https://www.parks.it/parco.corno.scale/man_dettaglio.php?id=142727",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "garfagnana",
+    "name": "Garfagnana e Appennino lucchese",
+    "region": "Toscana",
+    "center": [
+      44.05,
+      10.42
+    ],
+    "habitat": [
+      "Castagneto",
+      "Faggeta",
+      "Querceto",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-virescens",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "La Regione Toscana adotta limitazioni specifiche alla raccolta in comuni della Garfagnana",
+      "L'area presenta continuità di castagneti e faggete montane"
+    ],
+    "elevationRangeM": [
+      300,
+      1800
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Toscana — limitazioni raccolta funghi Garfagnana",
+        "url": "https://www301.regione.toscana.it/bancadati/atti/Contenuto.xml?id=5416823&nomeFile=Delibera_n.471_del_22-04-2024",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "adamello-valcamonica",
+    "name": "Adamello e alta Val Camonica",
+    "region": "Lombardia",
+    "center": [
+      46.05,
+      10.42
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Larice",
+      "Faggeta",
+      "Boschi subalpini"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "amanita-vaginatae",
+      "tricholoma-terreum-group"
+    ],
+    "reasons": [
+      "Il Parco dell'Adamello dispone di un regolamento specifico per la raccolta dei funghi",
+      "Area montana con forte gradiente altitudinale e vasti boschi alpini"
+    ],
+    "elevationRangeM": [
+      700,
+      2200
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco Adamello — regolamento raccolta funghi",
+        "url": "https://www.parcoadamello.it/ente-gestore/regolamenti-e-normative/piani-di-settore-e-regolamenti",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "asiago-sette-comuni",
+    "name": "Altopiano di Asiago e Sette Comuni",
+    "region": "Veneto",
+    "center": [
+      45.88,
+      11.51
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Faggeta",
+      "Prati montani",
+      "Boschi misti"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "tricholoma-terreum-group",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Il Comune di Asiago disciplina esplicitamente le zone di raccolta dei funghi",
+      "Mosaico di boschi montani e prati dell'altopiano"
+    ],
+    "elevationRangeM": [
+      900,
+      1800
+    ],
+    "evidenceSources": [
+      {
+        "label": "Comune di Asiago — regolamento raccolta funghi",
+        "url": "https://www.comune.asiago.vi.it/wp-content/uploads/2023/09/74-regolamenti-regolamento-comunale-di-polizia-rurale.pdf",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "prealpi-giulie",
+    "name": "Prealpi Giulie e Val Resia",
+    "region": "Friuli-Venezia Giulia",
+    "center": [
+      46.33,
+      13.3
+    ],
+    "habitat": [
+      "Faggeta",
+      "Pino nero",
+      "Mugheta",
+      "Praterie alpine"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "amanita-vaginatae",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "Il Parco documenta faggete miste, pinete e forte gradiente altitudinale",
+      "Area vasta e poco urbanizzata: segnale ecologico, non fungaia puntuale"
+    ],
+    "elevationRangeM": [
+      350,
+      2587
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco Prealpi Giulie — territorio e habitat",
+        "url": "https://www.parks.it/parco.prealpi.giulie/index.html",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "pnalm-marsica",
+    "name": "Marsica e Parco d'Abruzzo-Lazio-Molise",
+    "region": "Abruzzo",
+    "center": [
+      41.86,
+      13.79
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Grande area protetta appenninica con continuità forestale e forte gradiente altitudinale",
+      "La valutazione rimane aggregata e subordinata ai regolamenti del Parco"
+    ],
+    "elevationRangeM": [
+      700,
+      2200
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco d'Abruzzo Lazio Molise — Piano del Parco",
+        "url": "https://www.parcoabruzzo.it/pagina.php?id=424",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "sasso-simone",
+    "name": "Sasso Simone, Simoncello e Carpegna",
+    "region": "Marche",
+    "center": [
+      43.8,
+      12.32
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-vesca",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "Il Parco gestisce un'autorizzazione specifica per ricerca e raccolta dei funghi",
+      "Macroarea interregionale Marche-Emilia-Romagna, senza punti di raccolta pubblicati"
+    ],
+    "elevationRangeM": [
+      500,
+      1415
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco Sasso Simone e Simoncello — raccolta funghi",
+        "url": "https://parcosimone.it/notizie/3486482/norme-raccolta-funghi",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "reventino",
+    "name": "Reventino e Presila catanzarese",
+    "region": "Calabria",
+    "center": [
+      39.06,
+      16.31
+    ],
+    "habitat": [
+      "Castagneto",
+      "Faggeta",
+      "Querceto",
+      "Boschi montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-virescens",
+      "lactarius-deliciosi"
+    ],
+    "reasons": [
+      "Presenza di un gruppo micologico UMI specificamente radicato nel Reventino",
+      "Segnale associativo usato solo per priorità territoriale, non come prova di produttività puntuale"
+    ],
+    "elevationRangeM": [
+      500,
+      1450
+    ],
+    "evidenceSources": [
+      {
+        "label": "UMI — Gruppo Micologico Reventino",
+        "url": "https://www.unionemicologicaitaliana-aps.it/gruppi-micologici/",
+        "kind": "mycological-association"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "canal-ferro-val-canale",
+    "name": "Canal del Ferro e Val Canale",
+    "region": "Friuli-Venezia Giulia",
+    "center": [
+      46.45,
+      13.18
+    ],
+    "habitat": [
+      "Abete rosso",
+      "Abete bianco",
+      "Faggeta",
+      "Boschi alpini"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus",
+      "amanita-vaginatae"
+    ],
+    "reasons": [
+      "La Regione FVG gestisce permessi specifici di raccolta per Canal del Ferro e Val Canale",
+      "Ampia continuità di foreste montane e forte gradiente altitudinale"
+    ],
+    "elevationRangeM": [
+      450,
+      1900
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione FVG — raccolta funghi, Canal del Ferro e Val Canale",
+        "url": "https://www.regione.fvg.it/rafvg/cms/RAFVG/economia-imprese/agricoltura-foreste/raccolta-funghi/",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "dolomiti-friulane-cavallo",
+    "name": "Dolomiti Friulane, Cavallo e Cansiglio friulano",
+    "region": "Friuli-Venezia Giulia",
+    "center": [
+      46.2,
+      12.56
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Abete rosso",
+      "Boschi montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "hygrophorus-marzuolus",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "La Regione FVG individua una specifica area autorizzativa Dolomiti Friulane, Cavallo e Cansiglio",
+      "Macroarea forestale ampia, usata solo come indicatore territoriale aggregato"
+    ],
+    "elevationRangeM": [
+      300,
+      2100
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione FVG — raccolta funghi nelle Comunità di montagna",
+        "url": "https://www.regione.fvg.it/rafvg/cms/RAFVG/economia-imprese/agricoltura-foreste/raccolta-funghi/",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "pasubio-piccole-dolomiti",
+    "name": "Pasubio e Piccole Dolomiti",
+    "region": "Veneto",
+    "center": [
+      45.73,
+      11.2
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete rosso",
+      "Prati montani",
+      "Boschi misti"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "La Regione Veneto elenca l'Unione Montana Pasubio-Piccole Dolomiti fra gli enti competenti per la raccolta",
+      "Boschi montani e praterie con forte variabilità altitudinale"
+    ],
+    "elevationRangeM": [
+      500,
+      2000
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Veneto — raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monte-baldo",
+    "name": "Monte Baldo e alta Val d'Adige",
+    "region": "Veneto",
+    "center": [
+      45.62,
+      10.84
+    ],
+    "habitat": [
+      "Faggeta",
+      "Prati montani",
+      "Boschi misti",
+      "Querceto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "marasmius-oreades"
+    ],
+    "reasons": [
+      "La Regione Veneto include la Foresta del Monte Baldo nel demanio forestale regionale",
+      "L'area è mantenuta come macroarea ecologica, non come localizzazione di raccolta"
+    ],
+    "elevationRangeM": [
+      500,
+      2000
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Veneto — raccolta funghi e foreste demaniali",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "lunigiana-appennino",
+    "name": "Lunigiana e Appennino tosco-ligure",
+    "region": "Toscana",
+    "center": [
+      44.27,
+      9.93
+    ],
+    "habitat": [
+      "Castagneto",
+      "Faggeta",
+      "Querceto",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "craterellus-cornucopioides",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "La raccolta dei funghi è regolamentata a scala regionale con limitazioni territoriali aggiornate",
+      "Continuità di castagneti e faggete dell'Appennino tosco-ligure"
+    ],
+    "elevationRangeM": [
+      250,
+      1700
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Toscana — raccolta funghi e limitazioni territoriali",
+        "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "mugello-alto-mugello",
+    "name": "Mugello e Alto Mugello",
+    "region": "Toscana",
+    "center": [
+      44.02,
+      11.39
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "craterellus-cornucopioides",
+      "russula-vesca"
+    ],
+    "reasons": [
+      "Territorio appenninico inserito nel sistema regionale di raccolta e limitazioni",
+      "Mosaico di faggete, castagneti e querceti"
+    ],
+    "elevationRangeM": [
+      300,
+      1300
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Toscana — raccolta funghi",
+        "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "pratomagno",
+    "name": "Pratomagno e Casentino orientale",
+    "region": "Toscana",
+    "center": [
+      43.65,
+      11.65
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-cyanoxantha",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "Area forestale contigua al Casentino, con forte presenza di faggete e castagneti",
+      "Raccolta soggetta alla disciplina regionale toscana"
+    ],
+    "elevationRangeM": [
+      350,
+      1590
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Toscana — raccolta funghi",
+        "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "terminillo-monti-reatini",
+    "name": "Terminillo e Monti Reatini",
+    "region": "Lazio",
+    "center": [
+      42.47,
+      12.99
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "marasmius-oreades",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "Macroarea montana distinta dai Simbruini per quota e fenologia",
+      "Peso di evidenza mantenuto prudenziale in attesa di fonti micologiche territoriali più specifiche"
+    ],
+    "elevationRangeM": [
+      600,
+      2200
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "matese-nazionale",
+    "name": "Matese centrale",
+    "region": "Campania",
+    "center": [
+      41.39,
+      14.38
+    ],
+    "habitat": [
+      "Faggeta",
+      "Querceto",
+      "Prati montani",
+      "Boschi appenninici"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "marasmius-oreades",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "La documentazione pubblica sul nuovo Parco nazionale conferma la continuità della raccolta di funghi secondo le norme vigenti",
+      "La Regione Campania documenta inoltre il Calocybe gambosa tradizionale nelle aree montane del Matese"
+    ],
+    "elevationRangeM": [
+      500,
+      1900
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parks.it — raccolta funghi nel Parco nazionale del Matese",
+        "url": "https://www.parks.it/news/dettaglio.php?id=82286",
+        "kind": "official-park"
+      },
+      {
+        "label": "Regione Campania — Virni (Calocybe gambosa) del Matese",
+        "url": "https://agricoltura.regione.campania.it/Tipici/tradizionali/virni.html",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "irpinia-terminio-partenio",
+    "name": "Irpinia, Terminio-Cervialto e Partenio",
+    "region": "Campania",
+    "center": [
+      40.94,
+      14.93
+    ],
+    "habitat": [
+      "Faggeta",
+      "Castagneto",
+      "Querceto",
+      "Boschi montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-virescens",
+      "craterellus-cornucopioides"
+    ],
+    "reasons": [
+      "La Regione Campania individua Partenio e Terminio-Cervialto come ambiti montani di raccolta di prodotti fungini ipogei",
+      "Il segnale viene usato come evidenza di habitat forestale e tradizione micologica, non come fungaia puntuale"
+    ],
+    "elevationRangeM": [
+      400,
+      1800
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Campania — ambiti montani Partenio e Terminio-Cervialto",
+        "url": "https://funghietartufi.regione.campania.it/zonecomuni.php",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monti-dauni",
+    "name": "Monti Dauni e Subappennino",
+    "region": "Puglia",
+    "center": [
+      41.32,
+      15.12
+    ],
+    "habitat": [
+      "Cerreta",
+      "Faggeta",
+      "Querceto",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "agaricus-campestris-group",
+      "russula-virescens"
+    ],
+    "reasons": [
+      "Il PPTR regionale documenta boschi caducifogli, cerrete e nuclei di faggeta nel Subappennino Dauno",
+      "Indicatore ecologico di macroarea; nessuna localizzazione di raccolta puntuale"
+    ],
+    "elevationRangeM": [
+      400,
+      1150
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Puglia — PPTR Monti Dauni",
+        "url": "https://pugliacon.regione.puglia.it/web/sit-puglia-paesaggio/monti-dauni",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "sila-occidentale",
+    "name": "Sila occidentale e altopiano silano",
+    "region": "Calabria",
+    "center": [
+      39.38,
+      16.35
+    ],
+    "habitat": [
+      "Pino laricio",
+      "Faggeta",
+      "Abetina",
+      "Prati montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "lactarius-deliciosi",
+      "tricholoma-terreum-group"
+    ],
+    "reasons": [
+      "Il Parco della Sila indica Boletus edulis tra i funghi più diffusi e ricercati",
+      "Lactarius deliciosus è documentato come molto diffuso nelle giovani pinete di laricio e nelle abetine"
+    ],
+    "elevationRangeM": [
+      900,
+      1900
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parco Nazionale della Sila — Funghi",
+        "url": "https://parcosila.it/il-parco/la-flora/funghi/",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "aspromonte-occidentale",
+    "name": "Aspromonte occidentale e Gambarie",
+    "region": "Calabria",
+    "center": [
+      38.17,
+      15.84
+    ],
+    "habitat": [
+      "Faggeta",
+      "Abete bianco",
+      "Pino nero",
+      "Castagneto"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "lactarius-deliciosi",
+      "russula-cyanoxantha"
+    ],
+    "reasons": [
+      "Il Parco dispone di regolamento specifico per la raccolta dei funghi epigei",
+      "Il Parco documenta vasti boschi di faggio, abete bianco, pino nero e castagno"
+    ],
+    "elevationRangeM": [
+      700,
+      1950
+    ],
+    "evidenceSources": [
+      {
+        "label": "Parks.it — regolamento raccolta funghi Aspromonte",
+        "url": "https://www.parks.it/dbdoc/dettaglio.php?id=198",
+        "kind": "official-park"
+      },
+      {
+        "label": "Parco Nazionale dell'Aspromonte — habitat forestali",
+        "url": "https://www.parks.it/parco.nazionale.aspromonte/index.html",
+        "kind": "official-park"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "sette-fratelli-sarrabus",
+    "name": "Sette Fratelli e Sarrabus",
+    "region": "Sardegna",
+    "center": [
+      39.3,
+      9.39
+    ],
+    "habitat": [
+      "Lecceta",
+      "Sughereta",
+      "Macchia mediterranea",
+      "Boschi demaniali"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "hygrophorus-russula",
+      "amanita-vaginatae",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "La foresta demaniale di Sette Fratelli è documentata da Forestas",
+      "Profilo mediterraneo distinto dalle macroaree montane del Gennargentu"
+    ],
+    "elevationRangeM": [
+      200,
+      1000
+    ],
+    "evidenceSources": [
+      {
+        "label": "SardegnaForeste — Foresta Sette Fratelli",
+        "url": "https://www.sardegnaforeste.it/foresta/settefratelli-sinnai",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "goceano-marghine",
+    "name": "Goceano e Marghine",
+    "region": "Sardegna",
+    "center": [
+      40.45,
+      8.88
+    ],
+    "habitat": [
+      "Querceto",
+      "Sughereta",
+      "Castagneto",
+      "Boschi montani"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "russula-virescens",
+      "amanita-vaginatae",
+      "boletus-edulis"
+    ],
+    "reasons": [
+      "La pianificazione regionale individua Marghine-Goceano come grande macroarea naturale",
+      "Segnale ecologico mantenuto prudenziale in assenza di dati pubblici di produttività fungina"
+    ],
+    "elevationRangeM": [
+      300,
+      1250
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Sardegna — aree del Piano dei Parchi",
+        "url": "https://www.regione.sardegna.it/documenti/1_18_20050214120002.pdf",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  },
+  {
+    "id": "monti-sicani",
+    "name": "Monti Sicani e Bosco della Ficuzza",
+    "region": "Sicilia",
+    "center": [
+      37.75,
+      13.42
+    ],
+    "habitat": [
+      "Querceto",
+      "Lecceta",
+      "Castagneto",
+      "Praterie montane"
+    ],
+    "moisture": 50,
+    "temperatureFit": 50,
+    "seasonFit": 50,
+    "verifiedSignals": 0,
+    "delayedVisitors": 0,
+    "lastUpdatedLabel": "Catalogo territoriale; eventuali fonti documentano habitat o regole, non produttività attuale",
+    "expectedTaxa": [
+      "boletus-edulis",
+      "russula-virescens",
+      "agaricus-campestris-group"
+    ],
+    "reasons": [
+      "La Regione Siciliana documenta quercete miste, leccete, roverelleti e praterie montane nel sistema dei Monti Sicani",
+      "La macroarea include boschi Natura 2000 come Ficuzza e Genuardo; nessun punto di raccolta è pubblicato"
+    ],
+    "elevationRangeM": [
+      400,
+      1200
+    ],
+    "evidenceSources": [
+      {
+        "label": "Regione Siciliana — Rete Natura 2000 Monti Sicani e Bosco della Ficuzza",
+        "url": "https://orbs.regione.sicilia.it/aree-protette/rete-natura2000.html",
+        "kind": "regional-authority"
+      },
+      {
+        "label": "Regione Siciliana — Monte Genuardo e Santa Maria del Bosco",
+        "url": "https://orbs.regione.sicilia.it/aree-protette/riserve-naturali-siciliane/176-riserva-naturale-monte-genuardo-e-santa-maria-del-bosco.html",
+        "kind": "regional-authority"
+      }
+    ],
+    "signalProvenance": "heuristic",
+    "coordinateOrder": "latitude-longitude"
+  }
+]
