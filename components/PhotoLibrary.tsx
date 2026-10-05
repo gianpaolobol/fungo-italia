@@ -1,10 +1,13 @@
 import React,{useState} from 'react';
 import {Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {clusterByTime,makeObservationId,PrivateObservation} from '../src/photoObservations';
 
-type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;message:string};
+type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;observations:number;message:string};
+const privateKey='fungo-italia:private-observations:v1';
 
 export default function PhotoLibrary(){
- const [state,setState]=useState<ScanState>({permission:'unknown',count:0,message:'Nessuna scansione avviata.'});
+ const [state,setState]=useState<ScanState>({permission:'unknown',count:0,observations:0,message:'Nessuna scansione avviata.'});
  async function scan(){
   if(Platform.OS!=='ios'&&Platform.OS!=='android'){
    setState(s=>({...s,message:'La scansione della libreria Foto richiede Fungo Italia installato su iPhone o Android. La PWA resta dedicata alla consultazione.'}));
@@ -18,21 +21,25 @@ export default function PhotoLibrary(){
     return;
    }
    const {Query,AssetField,MediaType}=MediaLibrary;
-   let offset=0,total=0,pages=0;
+   let offset=0,total=0,pages=0;const metadata:{id:string;creationTime:number|null}[]=[];
    for(;;){
     const assets=await new Query()
      .eq(AssetField.MEDIA_TYPE,MediaType.IMAGE)
      .limit(250)
      .offset(offset)
      .orderBy({key:AssetField.CREATION_TIME,ascending:false})
-     .exe();
+     .exeForMetadata();
+    metadata.push(...assets.map(a=>({id:a.id,creationTime:a.creationTime})));
     total+=assets.length;pages++;
-    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
+    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:0,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
     if(assets.length<250)break;
     offset+=assets.length;
     if(pages>2000)throw new Error('Limite di sicurezza scansione');
    }
-   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indice completato: ${total} foto accessibili. Prossimo passo: selezione locale dei candidati fungo e raggruppamento per osservazione.`});
+   const groups=clusterByTime(metadata);
+   const observations:PrivateObservation[]=groups.map(group=>({id:makeObservationId(group.map(a=>a.id),group[0]?.creationTime??null),assetIds:group.map(a=>a.id),capturedAt:group[0]?.creationTime??null,preciseLocation:null,appleCandidate:null,verificationStatus:'unreviewed'}));
+   await AsyncStorage.setItem(privateKey,JSON.stringify({version:1,observations}));
+   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} osservazioni temporali. GPS preciso e riconoscimento vengono letti solo per i candidati, non per l'intera libreria.`});
   }catch(e){
    setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
   }
@@ -42,7 +49,7 @@ export default function PhotoLibrary(){
   <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
   <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>1. Indicizza le foto · 2. individua candidati fungo · 3. raggruppa gli scatti dello stesso esemplare · 4. propone cappello, imenoforo, gambo/base e carattere di conferma.</Text></View>
   <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
-  <View style={s.card}><Text style={s.head}>Stato</Text><Text style={s.body}>{state.message}</Text>{state.count>0&&<Text style={s.count}>{state.count} foto indicizzate</Text>}</View>
+  <View style={s.card}><Text style={s.head}>Stato</Text><Text style={s.body}>{state.message}</Text>{state.count>0&&<Text style={s.count}>{state.count} foto indicizzate</Text>}{state.observations>0&&<Text style={s.count}>{state.observations} gruppi temporali</Text>}</View>
   <Text style={s.note}>Privacy: l'autorizzazione può essere completa o limitata. Questa prima fase legge soltanto l'indice della libreria; non invia automaticamente fotografie né coordinate.</Text>
  </ScrollView>;
 }
