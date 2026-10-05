@@ -90,30 +90,9 @@ jobs:
           path: iphone-preview/
           if-no-files-found: error
           retention-days: 30
-  hosting-check:
+  publish:
     if: github.ref == 'refs/heads/main'
     needs: build-test
-    permissions:
-      contents: read
-      pages: read
-    runs-on: ubuntu-latest
-    outputs:
-      available: ${{ steps.pages.outputs.available }}
-    steps:
-      - name: Check configured hosting without changing repository visibility
-        id: pages
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if gh api "repos/$GITHUB_REPOSITORY/pages" >/dev/null 2>&1; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::PWA tested; Pages is not configured or accessible. Enabling Pages requires repository administration access outside this integration."
-          fi
-  publish:
-    if: needs.hosting-check.outputs.available == 'true'
-    needs: [build-test, hosting-check]
     permissions:
       pages: write
       id-token: write
