@@ -189,7 +189,7 @@ $('#install').onclick=async()=>{
 };
 async function setupOffline(){
  if(!('serviceWorker'in navigator)){status('Modalità offline non disponibile in questo browser.');return;}
- try{registration=await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;
+ try{registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});await navigator.serviceWorker.ready;
  const checkCache=async()=>{const controller=navigator.serviceWorker.controller;if(!controller)return;const channel=new MessageChannel();const ready=await new Promise(resolve=>{const timer=setTimeout(()=>resolve(false),4000);channel.port1.onmessage=event=>{clearTimeout(timer);resolve(event.data?.ready===true);};controller.postMessage({type:'CACHE_STATUS'},[channel.port2]);});offlineReady=ready;networkStatus();status(ready?'Catalogo pronto offline.':'Pacchetto offline non verificato: riapri con connessione o aggiorna l’app.');};
  if(navigator.serviceWorker.controller)void checkCache();
  else navigator.serviceWorker.addEventListener('controllerchange',()=>void checkCache(),{once:true});

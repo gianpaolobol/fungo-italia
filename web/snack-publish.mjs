@@ -15,7 +15,7 @@ const used=['expo-status-bar','react-native-safe-area-context','react-native-web
 const dependencies=Object.fromEntries(used.map(name=>{if(!preloaded[name])throw Error('Module unavailable in Expo Go: '+name);return [name,{version:preloaded[name]}];}));
 const files={};
 const paths=['App.tsx','components/Studio.tsx','components/Areas.tsx','components/Drafts.tsx','components/Community.tsx','src/data/catalog.json','src/data/groups.json','src/data/areas.json'];
-for(const path of paths)files[path]={type:'CODE',contents:await readFile(new URL('../'+path,import.meta.url),'utf8')};
+for(const path of paths)files[path]={type:'CODE',contents:path.endsWith('.json')?JSON.stringify(JSON.parse(await readFile(new URL('../'+path,import.meta.url),'utf8'))):await readFile(new URL('../'+path,import.meta.url),'utf8')};
 files['README.md']={type:'CODE',contents:'Fungo Italia: anteprima nativa in Expo Go. 148 unità minime, 66 schede di gruppi/generi, 71 macroaree. Revisione indipendente pendente; non autorizza il consumo. Note locali non pubblicate. Il runtime Snack è compatibile con Expo Go e distinto dal build Android principale. Prima apertura richiede rete; riavvio offline di Expo Go da verificare.'};
 const snack=new Snack({name:'Fungo Italia — studio e atlante',description:'Catalogo e macroaree micologiche; fonti e revisione indipendente pendente. Anteprima iPhone, non App Store.',sdkVersion:sdk,files,dependencies,online:false});
 try{
