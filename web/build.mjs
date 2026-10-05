@@ -13,7 +13,7 @@ assert(catalog.every(t=>t.characters.length===3&&t.sources.length>=2&&t.independ
 assert(areas.every(a=>Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180),'Invalid centroid');
 const amiata=areas.find(a=>a.name.includes('Amiata'));
 assert(amiata&&amiata.center[0]>42&&amiata.center[0]<44&&amiata.center[1]>10&&amiata.center[1]<13,'Amiata latitude/longitude inverted');
-const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family'];
+const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
 const data={version:1,scientificReview:'pending-independent-review',publishedDatabaseChangesIncluded:false,catalog:catalog.map(t=>pick(t,taxonKeys)),groups:groups.map(t=>pick(t,taxonKeys)),areas:areas.map(a=>pick(a,['id','name','region','center','habitat','evidenceSources']))};
 await rm(output,{recursive:true,force:true});await mkdir(output,{recursive:true});await cp(path.join(web,'public'),output,{recursive:true});

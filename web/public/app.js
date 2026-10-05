@@ -4,8 +4,11 @@ const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&
 const norm=value=>String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('it').trim();
 const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
 const ranks={species:'Specie',genus:'Genere',section:'Sezione',group:'Gruppo',speciesGroup:'Gruppo di specie',aggregate:'Aggregato',operationalGroup:'Gruppo operativo',family:'Famiglia',subgenus:'Sottogenere',subsection:'Sottosezione',subspecies:'Sottospecie',variety:'Varietà'};
+const diagnosticLimits={field_high_confidence:'Caratteri di campo; determinazione da verificare',field_high_confidence_when_typical:'Condizione: esemplari tipici',field_high_confidence_when_host_known:'Ospite ed ecologia devono essere noti',field_high_confidence_when_young:'Condizione: esemplari giovani',field_high_confidence_at_source_rank:'Risoluzione limitata al rango didattico S1',field_confirmatory:'Conferma specialistica nei casi dubbi',defined_morphogroup_s1:'Morfogruppo didattico S1',defined_set_s1:'Insieme didattico definito S1',microscopy_required_for_fine_id:'Microscopia necessaria per la specie fine',dna_confirmatory:'Conferma molecolare per la risoluzione fine'};
 let data,taxa=[],byId=new Map(),favoriteIds=[],resumeId=null,studyWritable=true,notesWritable=true,drafts=[],selectedDraft=null;
-let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapOn=false,registration=null,installPrompt=null,toastTimer,observer=null,offlineReady=false;
+let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapOn=false,registration=null,installPrompt=null,toastTimer,observer=null,offlineReady=false,renderedCount=0;
+const scrollPositions={studio:0,areas:0,notes:0,community:0};
+let notesSaveError='',studySaveError='';
 const notice='<p class="notice">Studio: revisione scientifica indipendente pendente. Le schede non autorizzano il consumo.</p>';
 const button=(label,action,id='',className='')=>'<button class="'+escape(className)+'" data-action="'+action+'"'+(id?' data-id="'+escape(id)+'"':'')+'>'+escape(label)+'</button>';
 function status(message){$('#status').textContent=message;$('#status').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#status').hidden=true,4500);}
@@ -17,13 +20,14 @@ function restore(){
  try{const raw=storageGet(notesKey);if(raw){const value=JSON.parse(raw);if(value.version!==1||!Array.isArray(value.drafts)||!value.drafts.every(d=>d&&typeof d.id==='string'&&typeof d.updatedAt==='string'&&fields.every(field=>typeof d[field]==='string'))||new Set(value.drafts.map(d=>d.id)).size!==value.drafts.length)throw Error('Formato');drafts=value.drafts;selectedDraft=drafts[0]?.id??null;}}
  catch{notesWritable=false;}
 }
-function persistStudy(){if(!studyWritable)return;try{localStorage.setItem(studyKey,JSON.stringify({version:1,favoriteIds,resumeId}));}catch{status('Preferiti non salvati: memoria locale non disponibile.');}}
-function persistDrafts(){if(!notesWritable)return false;try{localStorage.setItem(notesKey,JSON.stringify({version:1,drafts}));const saved=$('#saved');if(saved)saved.textContent='Salvato su questo dispositivo.';return true;}catch{const saved=$('#saved');if(saved)saved.textContent='Salvataggio non riuscito. Esporta la bozza prima di chiudere.';status('Salvataggio della bozza non riuscito.');return false;}}
-function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&norm([t.scientificName,...t.commonNames,...(t.aliases||[]),...(t.currentGenera||[])].join(' ')).includes(norm(query)));}
+function persistStudy(){if(!studyWritable)return;try{localStorage.setItem(studyKey,JSON.stringify({version:1,favoriteIds,resumeId}));studySaveError='';}catch{studySaveError='Preferiti non salvati: memoria locale non disponibile.';status(studySaveError);}}
+function persistDrafts(){if(!notesWritable)return false;try{localStorage.setItem(notesKey,JSON.stringify({version:1,drafts}));notesSaveError='';const saved=$('#saved');if(saved)saved.textContent='Salvato su questo dispositivo.';const warning=$('#save-warning');if(warning)warning.hidden=true;return true;}catch{notesSaveError='Salvataggio non riuscito. Le modifiche restano in memoria: esporta la bozza o il backup prima di chiudere.';const saved=$('#saved');if(saved)saved.textContent=notesSaveError;const warning=$('#save-warning');if(warning){warning.textContent=notesSaveError;warning.hidden=false;}status('Salvataggio della bozza non riuscito.');return false;}}
+function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&norm([t.scientificName,...t.commonNames,...(t.aliases||[]),...(t.currentAcceptedNames||[]),...(t.currentGenera||[])].join(' ')).includes(norm(query)));}
 function favoriteButton(t){return button(favoriteIds.includes(t.id)?'Rimuovi preferito':'Salva preferito','favorite',t.id);}
 function safeLink(url,label){return typeof url==='string'&&/^https:\/\//i.test(url)?'<a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(label||url)+'</a>':escape(label||url);}
 function content(t){
  return '<h2>'+escape(t.scientificName)+'</h2>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':'')+'<p class="small">Rango: '+escape(ranks[t.rank]||t.rank||'da documentare')+'</p>'+
+ (t.diagnosticStatus?'<p class="notice">Ambito didattico dei caratteri: '+escape(diagnosticLimits[t.diagnosticStatus]||'Condizioni da documentare')+'. Audit interno; revisione indipendente pendente.</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(t.diagnosticNote)+'</p>':'')+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi nel concetto didattico: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
  (t.deepMorphologyRequired?'<p class="notice">L’obiettivo richiede morfologia approfondita: questi caratteri di campo possono essere insufficienti per la determinazione.</p>':'')+
@@ -35,34 +39,38 @@ function content(t){
  (t.relatedIds?.length?'<h3>Unità minime collegate</h3><div class="drafts">'+t.relatedIds.filter(id=>byId.has(id)).map(id=>button('Studia '+byId.get(id).scientificName,'related',id)).join('')+'</div>':'');
 }
 function renderStudio(){
+ renderedCount=0;
  $('#main').innerHTML='<section><h1>Studio e atlante</h1>'+notice+
  (!studyWritable?'<p class="error">Preferiti non leggibili. La consultazione resta disponibile; il salvataggio è sospeso per conservare i dati esistenti.</p>':'')+
  '<input type="search" id="taxon-search" aria-label="Cerca nome scientifico, comune o sinonimo" placeholder="Nome scientifico, comune o sinonimo" value="'+escape(query)+'">'+
  '<div class="controls"><select id="layer" aria-label="Catalogo"><option value="minimum">Minimo · 148</option><option value="groups">Generi e gruppi · 66</option><option value="all">Tutte · 214</option></select>'+
  '<button id="feed" aria-pressed="'+feed+'">'+(feed?'Scorri':'Tap')+'</button><button id="favorites" aria-pressed="'+onlyFavorites+'">Preferiti</button></div>'+
- '<div id="resume">'+(resumeId?button('Riprendi '+byId.get(resumeId).scientificName,'open',resumeId,'full'):'')+'</div><p id="catalog-count" class="counter"></p><div id="cards"></div><div id="sentinel"></div><button id="more" class="full">Altre schede</button></section>';
+ '<div id="resume">'+(resumeId?button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full'):'')+'</div><p id="catalog-count" class="counter"></p><div id="cards"></div><div id="sentinel"></div><button id="more" class="full">Altre schede</button></section>';
  $('#layer').value=layer;
- $('#taxon-search').addEventListener('input',event=>{query=event.target.value;limit=24;renderCards();});
- $('#layer').addEventListener('change',event=>{layer=event.target.value;limit=24;renderCards();});
+ $('#taxon-search').addEventListener('input',event=>{query=event.target.value;limit=24;renderCards();$('#main').scrollTop=0;});
+ $('#layer').addEventListener('change',event=>{layer=event.target.value;limit=24;renderCards();$('#main').scrollTop=0;});
  $('#feed').onclick=()=>{feed=!feed;$('#feed').textContent=feed?'Scorri':'Tap';$('#feed').setAttribute('aria-pressed',String(feed));$('#main').classList.toggle('feed',feed);limit=24;renderCards();};
- $('#favorites').onclick=()=>{onlyFavorites=!onlyFavorites;$('#favorites').setAttribute('aria-pressed',String(onlyFavorites));limit=24;renderCards();};
- $('#more').onclick=()=>{limit+=24;renderCards();};
+ $('#favorites').onclick=()=>{onlyFavorites=!onlyFavorites;$('#favorites').setAttribute('aria-pressed',String(onlyFavorites));limit=24;renderCards();$('#main').scrollTop=0;};
+ $('#more').onclick=()=>{limit+=24;renderCards(false);};
  $('#main').classList.toggle('feed',feed);renderCards();
 }
-function renderCards(){
- const rows=filtered();
- $('#catalog-count').textContent=rows.length+' '+(rows.length===1?'scheda':'schede')+' · '+favoriteIds.length+' '+(favoriteIds.length===1?'preferito':'preferiti');
- $('#cards').innerHTML=rows.slice(0,limit).map(t=>'<article class="card"><button class="heading" data-action="open" data-id="'+escape(t.id)+'" aria-label="Apri '+escape(t.scientificName)+'"><strong>'+escape(t.scientificName)+'</strong><span>'+escape(t.commonNames.join(' · ')||(ranks[t.rank]||t.rank||'Unità didattica'))+'</span></button>'+(feed?notice+favoriteButton(t)+content(t):'<p class="small">Fonti e caratteri nella scheda. Revisione indipendente pendente.</p>')+'</article>').join('')||'<p class="empty">Nessuna scheda corrisponde ai filtri.</p>';
- $('#more').hidden=rows.length<=limit;
+function cardHTML(t){return '<article class="card"><button class="heading" data-action="open" data-id="'+escape(t.id)+'" aria-label="Apri '+escape(t.scientificName)+'"><strong>'+escape(t.scientificName)+'</strong><span>'+escape(t.commonNames.join(' · ')||(ranks[t.rank]||t.rank||'Unità didattica'))+'</span></button>'+(feed?notice+favoriteButton(t)+content(t):'<p class="small">Fonti e caratteri nella scheda. Revisione indipendente pendente.</p>')+'</article>';}
+function updateCatalogCount(rows=filtered()){if($('#catalog-count'))$('#catalog-count').textContent=rows.length+' '+(rows.length===1?'scheda':'schede')+' · '+favoriteIds.length+' '+(favoriteIds.length===1?'preferito':'preferiti');}
+function updateResume(){const element=$('#resume');if(element&&resumeId)element.innerHTML=button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full');}
+function renderCards(reset=true){
+ const rows=filtered(),savedScroll=$('#main').scrollTop;updateCatalogCount(rows);
+ if(reset){$('#cards').innerHTML=rows.slice(0,limit).map(cardHTML).join('')||'<p class="empty">Nessuna scheda corrisponde ai filtri.</p>';}
+ else $('#cards').insertAdjacentHTML('beforeend',rows.slice(renderedCount,limit).map(cardHTML).join(''));
+ renderedCount=Math.min(rows.length,limit);$('#more').hidden=rows.length<=limit;$('#main').scrollTop=savedScroll;
  if(observer)observer.disconnect();
- if('IntersectionObserver'in window&&rows.length>limit){observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){limit+=24;renderCards();}},{root:$('#main'),rootMargin:'100px'});observer.observe($('#sentinel'));}
+ if('IntersectionObserver'in window&&rows.length>limit){observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){limit+=24;renderCards(false);}},{root:$('#main'),rootMargin:'100px'});observer.observe($('#sentinel'));}
 }
 function showDialog(title,body,paged=false){
  $('#detail-title').textContent=title;$('#detail-body').innerHTML=body;$('#pager').hidden=!paged;
  if(!$('#detail').open)$('#detail').showModal();$('#detail-body').scrollTop=0;
 }
 function openTaxon(id){
- const t=byId.get(id);if(!t)return;currentTaxon=id;resumeId=id;persistStudy();
+ const t=byId.get(id);if(!t)return;currentTaxon=id;resumeId=id;persistStudy();updateResume();
  const rows=filtered(),index=rows.findIndex(t=>t.id===id);
  $('#position').textContent=index<0?'Fuori filtri':(index+1)+' / '+rows.length;
  $('#previous').disabled=index<=0;$('#next').disabled=index<0||index===rows.length-1;
@@ -71,11 +79,12 @@ function openTaxon(id){
 function toggleFavorite(id){
  if(!studyWritable){status('Salvataggio sospeso: i dati esistenti non sono leggibili.');return;}
  favoriteIds=favoriteIds.includes(id)?favoriteIds.filter(value=>value!==id):[...favoriteIds,id];persistStudy();
- if(tab==='studio')renderCards();
+ if(tab==='studio'){if(onlyFavorites)renderCards();else{updateCatalogCount();document.querySelectorAll('#cards button[data-action="favorite"]').forEach(b=>{if(b.dataset.id===id)b.textContent=favoriteIds.includes(id)?'Rimuovi preferito':'Salva preferito';});}}
  if($('#detail').open&&currentTaxon===id){const savedScroll=$('#detail-body').scrollTop;openTaxon(id);$('#detail-body').scrollTop=savedScroll;}
 }
 function visibleAreas(){return data.areas.filter(a=>(areaRegion==='Tutte'||a.region===areaRegion)&&norm([a.name,a.region,...a.habitat].join(' ')).includes(norm(areaQuery)));}
 function renderAreas(){
+ destroyMap();
  $('#main').classList.remove('feed');
  $('#main').innerHTML='<section><h1>Aree e habitat</h1><p class="small">71 macroaree in 20 regioni. Centri territoriali rappresentativi: non sono fungaie o percorsi di accesso verificati.</p><input type="search" id="area-search" aria-label="Cerca area o habitat" placeholder="Area, regione o habitat" value="'+escape(areaQuery)+'"><div class="controls"><select id="region" aria-label="Regione">'+['Tutte',...new Set(data.areas.map(a=>a.region).sort())].map(region=>'<option>'+escape(region)+'</option>').join('')+'</select>'+button('Monte Amiata','amiata')+button(mapOn?'Chiudi mappa':'Mappa','map')+'</div><p id="map-status" class="map-status"></p><div id="map" class="map" hidden></div><p id="area-count" class="counter"></p><div id="area-cards"></div></section>';
  $('#region').value=areaRegion;
@@ -111,7 +120,7 @@ function renderNotes(){
  $('#main').classList.remove('feed');const draft=drafts.find(d=>d.id===selectedDraft);
  $('#main').innerHTML='<section><h1>Osservazioni offline</h1><p>Bozze personali su questo dispositivo, senza invio o pubblicazione. Il taxon è un’ipotesi: documenta caratteri mancanti e fonti prima della revisione.</p><p class="notice">Le bozze non autorizzano il consumo. Il salvataggio locale non è cifrato né un backup. Safari può rimuovere i dati: esporta le note e proteggi il dispositivo.</p>'+
  (!notesWritable?'<p class="error">Bozze non leggibili. I dati esistenti non saranno sovrascritti.</p>':button('Nuova bozza','new-draft','', 'full'))+
- '<div class="drafts">'+drafts.map(d=>button((d.id===selectedDraft?'✓ ':'')+(d.taxon||'Taxon non determinato')+' · '+d.date,'select-draft',d.id)).join('')+'</div>'+
+ '<p id="save-warning" class="error" role="alert"'+(notesSaveError?'':' hidden')+'>'+escape(notesSaveError)+'</p><div class="drafts">'+drafts.map(d=>button((d.id===selectedDraft?'✓ ':'')+(d.taxon||'Taxon non determinato')+' · '+d.date,'select-draft',d.id)).join('')+'</div>'+
  (draft?'<form id="draft-form">'+fields.map(field=>'<label for="draft-'+field+'">'+labels[field]+'</label>'+(['date','taxon','latitude','longitude'].includes(field)?'<input type="text" '+(['latitude','longitude'].includes(field)?'inputmode="decimal" ':'')+'id="draft-'+field+'" name="'+field+'" value="'+escape(draft[field])+'">':'<textarea id="draft-'+field+'" name="'+field+'">'+escape(draft[field])+'</textarea>')).join('')+'</form><p id="saved" class="saved" role="status"></p><label class="check"><input type="checkbox" id="include-coordinates">Includi le coordinate strutturate nell’esportazione. Sono escluse per impostazione predefinita; eventuali coordinate scritte nelle note non vengono rimosse.</label><div class="row">'+button('Scarica JSON','download-draft')+button('Condividi JSON','share-draft')+'</div><p id="draft-error" class="error" role="alert" hidden></p><div class="controls">'+button('Salva di nuovo','save-draft')+button('Elimina bozza','delete-draft','','danger')+'</div><p class="small">Le fotografie non sono allegate: indica riferimenti e caratteri visibili. Nessun accesso GPS richiesto.</p>':'<p>Nessuna bozza. Registra il prossimo ritrovamento.</p>')+
  '<h3>Backup personale</h3><p class="small">Il backup completo contiene anche eventuali coordinate private. Conservalo in un luogo protetto.</p>'+button('Scarica backup locale','backup','', 'full')+'</section>';
  const form=$('#draft-form');if(form)form.addEventListener('input',event=>{const field=event.target.name;if(!fields.includes(field))return;const current=drafts.find(d=>d.id===selectedDraft);if(current){current[field]=event.target.value;current.updatedAt=new Date().toISOString();persistDrafts();}});
@@ -144,11 +153,12 @@ function renderCommunity(){
 function renderTab(){
  destroyMap();if(observer)observer.disconnect();currentTaxon=null;
  document.querySelectorAll('[data-tab]').forEach(b=>b.getAttribute('data-tab')===tab?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
- if(tab==='studio')renderStudio();else if(tab==='areas')renderAreas();else if(tab==='notes')renderNotes();else renderCommunity();$('#main').scrollTop=0;
+ if(tab==='studio')renderStudio();else if(tab==='areas')renderAreas();else if(tab==='notes')renderNotes();else renderCommunity();$('#main').scrollTop=scrollPositions[tab]||0;
 }
 document.addEventListener('click',event=>{
  const target=event.target.closest('button[data-action]');if(!target)return;const action=target.dataset.action,id=target.dataset.id;
  if(action==='open')openTaxon(id);
+ else if(action==='resume'){const taxon=byId.get(id);if(taxon){layer=taxon.kind==='teaching-group'?'groups':'minimum';query='';onlyFavorites=false;limit=24;renderStudio();$('#main').scrollTop=0;openTaxon(id);}}
  else if(action==='favorite')toggleFavorite(id);
  else if(action==='related'){layer='minimum';query='';onlyFavorites=false;if(tab==='studio')renderStudio();openTaxon(id);}
  else if(action==='area')openArea(id);
@@ -160,9 +170,12 @@ document.addEventListener('click',event=>{
  else if(action==='delete-draft'){if(confirm('Eliminare questa bozza dal dispositivo?')){drafts=drafts.filter(d=>d.id!==selectedDraft);selectedDraft=drafts[0]?.id??null;persistDrafts();renderNotes();}}
  else if(action==='download-draft')void exportDraft(false);
  else if(action==='share-draft')void exportDraft(true);
- else if(action==='backup'){try{download('fungo-italia-backup-privato.json',JSON.stringify({format:'fungo-italia-private-backup',createdAt:new Date().toISOString(),notice:'Contiene dati personali e possibili coordinate precise. Non pubblicare.',studyRaw:storageGet(studyKey),notesRaw:storageGet(notesKey)},null,2));}catch{status('Backup non disponibile: accesso alla memoria locale negato.');}}
+ else if(action==='backup'){
+ const storageErrors=[];const read=key=>{try{return storageGet(key);}catch{storageErrors.push('Accesso memoria locale negato: '+key);return null;}};
+ download('fungo-italia-backup-privato.json',JSON.stringify({format:'fungo-italia-private-backup',createdAt:new Date().toISOString(),notice:'Contiene dati personali e possibili coordinate precise. Non pubblicare.',studySnapshot:studyWritable?{version:1,favoriteIds,resumeId}:null,notesSnapshot:notesWritable?{version:1,drafts}:null,studyRaw:read(studyKey),notesRaw:read(notesKey),unsavedChanges:{study:!!studySaveError,notes:!!notesSaveError},storageErrors},null,2));
+}
 });
-document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{if(!data)return;tab=b.dataset.tab;renderTab();});
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{if(!data||tab===b.dataset.tab)return;scrollPositions[tab]=$('#main').scrollTop;tab=b.dataset.tab;renderTab();});
 $('#close').onclick=()=>$('#detail').close();
 $('#detail').addEventListener('close',()=>currentTaxon=null);
 $('#previous').onclick=()=>{const rows=filtered(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>0)openTaxon(rows[index-1].id);};
@@ -177,8 +190,9 @@ $('#install').onclick=async()=>{
 async function setupOffline(){
  if(!('serviceWorker'in navigator)){status('Modalità offline non disponibile in questo browser.');return;}
  try{registration=await navigator.serviceWorker.register('./sw.js',{scope:'./'});await navigator.serviceWorker.ready;
- if(navigator.serviceWorker.controller){offlineReady=true;networkStatus();status('Catalogo pronto offline.');}
- else navigator.serviceWorker.addEventListener('controllerchange',()=>{offlineReady=true;networkStatus();status('Catalogo pronto offline.');},{once:true});
+ const checkCache=async()=>{const controller=navigator.serviceWorker.controller;if(!controller)return;const channel=new MessageChannel();const ready=await new Promise(resolve=>{const timer=setTimeout(()=>resolve(false),4000);channel.port1.onmessage=event=>{clearTimeout(timer);resolve(event.data?.ready===true);};controller.postMessage({type:'CACHE_STATUS'},[channel.port2]);});offlineReady=ready;networkStatus();status(ready?'Catalogo pronto offline.':'Pacchetto offline non verificato: riapri con connessione o aggiorna l’app.');};
+ if(navigator.serviceWorker.controller)void checkCache();
+ else navigator.serviceWorker.addEventListener('controllerchange',()=>void checkCache(),{once:true});
  const offer=()=>{$('#update').hidden=false;};
  if(registration.waiting)offer();
  registration.addEventListener('updatefound',()=>{const installing=registration.installing;installing?.addEventListener('statechange',()=>{if(installing.state==='installed'&&navigator.serviceWorker.controller)offer();});});

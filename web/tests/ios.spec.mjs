@@ -56,3 +56,40 @@ test('malformed storage is preserved; scrolling catalog and group sources remain
  await page.getByRole('button',{name:'Note',exact:true}).click();await expect(page.getByText('Bozze non leggibili.',{exact:false})).toBeVisible();
  expect(await page.evaluate(key=>localStorage.getItem(key),notesKey)).toBe('{broken-notes');
 });
+
+test('current concept names find canonical learning units and diagnostic conditions are preserved',async({page})=>{
+ await ready(page);
+ for(const name of ['Coprinopsis atramentaria','Infundibulicybe gibba','Leucocoprinus leucothites']){
+  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(name);
+  await expect(page.locator('#cards .heading')).not.toHaveCount(0);
+ }
+ const catalog=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8'));
+ const hostKnown=catalog.find(t=>t.diagnosticStatus==='field_high_confidence_when_host_known');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(hostKnown.scientificName);
+ await page.getByRole('button',{name:'Apri '+hostKnown.scientificName,exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Ospite ed ecologia devono essere noti');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Riprendi '+hostKnown.scientificName,exact:true})).toBeVisible();
+ await page.locator('#layer').selectOption('groups');
+ await page.getByRole('button',{name:'Apri Agaricus',exact:true}).click();await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await page.reload();await expect(page.locator('#catalog-count')).toContainText('148 schede');
+ await page.getByRole('button',{name:'Riprendi Agaricus',exact:true}).click();
+ await expect(page.locator('#position')).toContainText('1 / 66');
+ await expect(page.getByRole('button',{name:'Successiva →',exact:true})).toBeEnabled();
+});
+test('failed storage keeps unsaved draft visible and private backup includes in-memory changes',async({page})=>{
+ await ready(page);
+ await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('Quota full','QuotaExceededError');};});
+ await page.getByRole('button',{name:'Note',exact:true}).click();await page.getByRole('button',{name:'Nuova bozza',exact:true}).click();
+ await page.getByLabel('Ipotesi tassonomica',{exact:true}).fill('Bozza non salvata');
+ await page.getByRole('button',{name:'Studio',exact:true}).click();await page.getByRole('button',{name:'Note',exact:true}).click();
+ await expect(page.locator('#save-warning')).toContainText('modifiche restano in memoria');
+ const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Scarica backup locale',exact:true}).click();
+ const download=await downloadPromise,payload=JSON.parse(await readFile(await download.path(),'utf8'));
+ expect(payload.notesSnapshot.drafts[0].taxon).toBe('Bozza non salvata');expect(payload.unsavedChanges.notes).toBe(true);expect(payload.notesRaw).toBeNull();
+});
+test('server 503 falls back to installed offline package',async({page,request})=>{
+ await ready(page);await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ try{await request.get('http://127.0.0.1:4173/fungo-italia/__test/fault?status=503');await page.reload();await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');}
+ finally{await request.get('http://127.0.0.1:4173/fungo-italia/__test/fault?status=0');}
+});
