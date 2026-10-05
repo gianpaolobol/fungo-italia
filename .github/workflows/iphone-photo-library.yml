@@ -1,4 +1,5 @@
 name: iPhone Photo Library Build
+# Expo project linked; EXPO_PROJECT_ID is supplied by GitHub Actions variable.
 on:
   workflow_dispatch:
   push:
