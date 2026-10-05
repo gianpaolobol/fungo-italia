@@ -32,7 +32,9 @@ jobs:
         run: |
           if test -n "$EXPO_TOKEN" && test -n "$EXPO_PROJECT_ID"; then echo "available=true" >> "$GITHUB_OUTPUT"; else echo "available=false" >> "$GITHUB_OUTPUT"; echo "::warning::Expo credentials missing; source validation will still run."; fi
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm install --package-lock-only
+          npm ci
       - name: Validate source
         run: |
           npm run prepare:data
