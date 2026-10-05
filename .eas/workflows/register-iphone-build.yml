@@ -1,5 +1,9 @@
 name: Register iPhone and build Fungo Italia
 
+on:
+  push:
+    branches: ['main']
+
 jobs:
   register_device:
     name: Registra questo iPhone
