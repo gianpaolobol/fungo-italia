@@ -1,0 +1,58 @@
+import {test,expect} from '@playwright/test';
+import {readFile} from 'node:fs/promises';
+const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
+async function ready(page){await page.goto('./');await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);}
+test('iPhone 320: search, detail paging, favorite after offline restart and Amiata vector map',async({page,context},testInfo)=>{
+ const errors=[];page.on('pageerror',error=>errors.push(error.message));
+ await ready(page);await expect(page.locator('#catalog-count')).toContainText('148 schede');
+ await expect(page.locator('body')).toHaveJSProperty('scrollWidth',320);
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
+ await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
+ await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();
+ await page.getByRole('button',{name:'Salva preferito',exact:true}).click();
+ await expect(page.getByRole('button',{name:'Rimuovi preferito',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
+ await page.getByRole('button',{name:'← Precedente',exact:true}).click();
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await context.setOffline(true);await page.reload();
+ await expect(page.locator('#catalog-count')).toContainText('148 schede · 1 preferito');
+ await page.getByRole('button',{name:'Preferiti',exact:true}).click();await expect(page.locator('#catalog-count')).toContainText('1 scheda');
+ await page.getByRole('button',{name:'Aree',exact:true}).click();
+ await expect(page.getByText('71 macroaree in 20 regioni.',{exact:false})).toBeVisible();
+ await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await expect(page.locator('#area-count')).toHaveText('1 area corrispondente');
+ await page.getByRole('button',{name:'Mappa',exact:true}).click();
+ await expect(page.locator('#map')).toBeVisible();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
+ await expect(page.locator('#map-status')).toContainText('Senza rete');
+ await page.getByRole('button',{name:/^Consulta .*Amiata/}).click();
+ await expect(page.locator('#detail-body')).toContainText('42.89');await expect(page.locator('#detail-body')).toContainText('11.63');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await page.screenshot({path:testInfo.outputPath('iphone-320-offline-amiata.png'),fullPage:true});
+ expect(errors).toEqual([]);
+});
+test('private draft survives reload; JSON excludes coordinates unless opted in; invalid date is rejected',async({page},testInfo)=>{
+ await ready(page);await page.getByRole('button',{name:'Note',exact:true}).click();await page.getByRole('button',{name:'Nuova bozza',exact:true}).click();
+ await page.getByLabel('Ipotesi tassonomica',{exact:true}).fill('Ipotesi Amanita');
+ await page.getByLabel('Caratteri osservati',{exact:true}).fill('Gambo intero osservato. Determinazione da verificare.');
+ await page.getByLabel('Latitudine facoltativa',{exact:true}).fill('42,89');await page.getByLabel('Longitudine facoltativa',{exact:true}).fill('11,63');
+ await page.reload();await page.getByRole('button',{name:'Note',exact:true}).click();
+ await expect(page.getByLabel('Ipotesi tassonomica',{exact:true})).toHaveValue('Ipotesi Amanita');
+ let downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Scarica JSON',exact:true}).click();
+ let download=await downloadPromise,payload=JSON.parse(await readFile(await download.path(),'utf8'));
+ expect(payload.status).toBe('local-unreviewed-draft');expect(payload.privateCoordinates).toBeUndefined();expect(payload.observation.latitude).toBeUndefined();expect(payload.observation.characters).toContain('Gambo intero');
+ await page.locator('#include-coordinates').check();
+ downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Scarica JSON',exact:true}).click();download=await downloadPromise;payload=JSON.parse(await readFile(await download.path(),'utf8'));
+ expect(payload.privateCoordinates).toEqual({latitude:42.89,longitude:11.63});
+ await page.getByLabel('Data (AAAA-MM-GG)',{exact:true}).fill('2026-02-31');await page.getByRole('button',{name:'Scarica JSON',exact:true}).click();
+ await expect(page.locator('#draft-error')).toContainText('data reale');
+ await page.screenshot({path:testInfo.outputPath('iphone-320-draft-validation.png'),fullPage:true});
+});
+test('malformed storage is preserved; scrolling catalog and group sources remain reachable',async({page})=>{
+ await page.addInitScript(({studyKey,notesKey})=>{localStorage.setItem(studyKey,'{broken-study');localStorage.setItem(notesKey,'{broken-notes');},{studyKey,notesKey});
+ await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
+ await page.getByRole('button',{name:'Tap',exact:true}).click();await expect(page.getByRole('button',{name:'Scorri',exact:true})).toBeVisible();
+ await page.getByRole('heading',{name:'Fonti e limiti'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Fonti e limiti'}).first()).toBeInViewport();
+ await page.getByRole('button',{name:'Salva preferito',exact:true}).first().click();
+ expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe('{broken-study');
+ await page.getByRole('button',{name:'Note',exact:true}).click();await expect(page.getByText('Bozze non leggibili.',{exact:false})).toBeVisible();
+ expect(await page.evaluate(key=>localStorage.getItem(key),notesKey)).toBe('{broken-notes');
+});
