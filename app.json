@@ -12,7 +12,10 @@
     "scheme": "fungoitalia",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "it.fungoitalia.app"
+      "bundleIdentifier": "it.fungoitalia.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Fungo Italia usa la tua libreria Foto, solo con il tuo consenso, per individuare e organizzare fotografie di funghi da proporre per la classificazione 3+1."
+      }
     },
     "android": {
       "package": "it.fungoitalia.app",
@@ -29,6 +32,16 @@
       "scientificReview": "pending-independent-review"
     },
     "icon": "./assets/icon.png",
-    "backgroundColor": "#174f2b"
+    "backgroundColor": "#174f2b",
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Consenti a Fungo Italia di analizzare la libreria Foto per individuare e organizzare le tue fotografie di funghi.",
+          "savePhotosPermission": "Consenti a Fungo Italia di salvare immagini approvate nella libreria.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ]
+    ]
   }
 }
