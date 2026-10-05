@@ -6,6 +6,7 @@ import {suggestionsFromAtlas} from '../src/threePlusOneSuggestions';
 import catalog from '../src/data/catalog.json';
 import groups from '../src/data/groups.json';
 import {StudyTaxon} from './Studio';
+import ObservationPhotos from './ObservationPhotos';
 const taxa=[...catalog,...groups] as unknown as StudyTaxon[];
 
 const reviewKey='fungo-italia:private-3plus1-queue:v1';
@@ -18,7 +19,7 @@ export default function ThreePlusOneReview(){
  if(!item)return <View style={s.page}><Text style={s.title}>Revisione 3+1</Text><Text style={s.body}>{message||'Nessuna osservazione in coda. Preparala dalla sezione Foto.'}</Text></View>;
  const done=isThreePlusOneComplete(item);
  return <ScrollView contentContainerStyle={s.page}>
-  <Text style={s.title}>Revisione 3+1</Text><Text style={s.body}>Osservazione {index+1} di {queue.length} · {item.assetIds.length} scatti selezionati</Text>
+  <Text style={s.title}>Revisione 3+1</Text><Text style={s.body}>Osservazione {index+1} di {queue.length} · {item.assetIds.length} scatti selezionati</Text><ObservationPhotos item={item}/>
   <Text style={s.label}>Taxon candidato</Text><TextInput value={item.taxonCandidate||''} onChangeText={taxonCandidate=>patch({taxonCandidate})} style={s.input} placeholder="es. Boletus edulis"/>{suggestions.map(x=><Pressable key={x.taxonId} style={s.suggestion} onPress={()=>patch({taxonCandidate:x.scientificName,characters:x.characters,confirmation:x.confirmation,notes:[...item.notes,'3+1 proposto dalla scheda canonica '+x.taxonId]})}><Text style={s.suggestionTitle}>{x.scientificName}</Text><Text style={s.body}>Usa il 3+1 della scheda Atlante</Text></Pressable>)}
   {item.characters.map((v,i)=><View key={i}><Text style={s.label}>Carattere diagnostico {i+1}</Text><TextInput value={v||''} onChangeText={value=>{const chars=[...item.characters] as [string|null,string|null,string|null];chars[i]=value;patch({characters:chars});}} style={s.input}/></View>)}
   <Text style={s.label}>+1 · carattere di conferma</Text><TextInput value={item.confirmation||''} onChangeText={confirmation=>patch({confirmation})} style={s.input}/>
