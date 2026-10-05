@@ -130,6 +130,7 @@ jobs:
     needs: [build-test, expo-go-preview]
     permissions:
       contents: write
+      actions: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -138,6 +139,7 @@ jobs:
       - name: Promote verified source without overwriting newer changes
         env:
           TESTED_SHA: ${{ github.sha }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git fetch origin main feat/ios-pwa
           candidate=$(git rev-parse origin/feat/ios-pwa)
@@ -151,3 +153,5 @@ jobs:
           fi
           git merge-base --is-ancestor origin/main "$candidate"
           git push origin "$candidate:refs/heads/main"
+          gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/pipeline.yml/dispatches" -f ref=main
+          gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/ios-pwa.yml/dispatches" -f ref=main
