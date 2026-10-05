@@ -19,7 +19,7 @@ export default function PhotoLibrary(){
    const MediaLibrary=await import('expo-media-library');
    const permission=await MediaLibrary.requestPermissionsAsync(false,['photo']);
    if(!permission.granted){
-    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'denied',count:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
+    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'denied',count:0,observations:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
     return;
    }
    const {Query,AssetField,MediaType}=MediaLibrary;
