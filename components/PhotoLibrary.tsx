@@ -17,19 +17,21 @@ export default function PhotoLibrary(){
     setState({permission:permission.accessPrivileges==='limited'?'limited':'denied',count:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
     return;
    }
-   // Use the legacy query surface only as a compatibility bridge while Expo SDK 58
-   // completes the class-based MediaLibrary migration. No originals are uploaded here.
-   const Legacy=await import('expo-media-library/legacy');
-   let after:string|undefined=undefined,total=0,pages=0;
-   do{
-    const page=await Legacy.getAssetsAsync({mediaType:['photo'],first:250,after,sortBy:[['creationTime',false]]});
-    total+=page.assets.length;pages++;
-    after=page.hasNextPage?page.endCursor:undefined;
+   const {Query,AssetField,MediaType}=MediaLibrary;
+   let offset=0,total=0,pages=0;
+   for(;;){
+    const assets=await new Query()
+     .eq(AssetField.MEDIA_TYPE,MediaType.IMAGE)
+     .limit(250)
+     .offset(offset)
+     .orderBy({key:AssetField.CREATION_TIME,ascending:false})
+     .exe();
+    total+=assets.length;pages++;
     setState({permission:permission.accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
-    if(!page.hasNextPage)break;
-    // Guard against an unexpected cursor loop on very large libraries.
+    if(assets.length<250)break;
+    offset+=assets.length;
     if(pages>2000)throw new Error('Limite di sicurezza scansione');
-   }while(after);
+   }
    setState({permission:permission.accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indice completato: ${total} foto accessibili. Prossimo passo: selezione locale dei candidati fungo e raggruppamento per osservazione.`});
   }catch(e){
    setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
