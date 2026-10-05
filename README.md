@@ -16,3 +16,7 @@ Compilare/distribuire una app iOS firmata richiede macOS e le credenziali Apple 
 GitHub Actions privato ed EAS hanno quote: nessuna gratuità illimitata è garantita.
 
 La matrice ufficiale Expo58.0.2 abbina React19.3.0 e ReactNative0.88.0-rc.3. Il pin override ReactNative rende esplicito questo abbinamento anche per i peer delle librerie che escludono semanticamente versioni prerelease. Non vengono disabilitati globalmente i controlli peer.
+
+## iPhone
+La PWA e il publisher Expo Snack sono in web/. Il workflow iPhone PWA verifica WebKit a 320 punti, costruisce il pacchetto offline e tenta un’anteprima Expo Go anonima soltanto con un runtime compatibile. Il publisher salva URL e QR effettivi nell’artefatto di preview, senza inventare credenziali Expo.
+La pubblicazione PWA richiede Pages già configurato: l’integrazione ha ricevuto Resource not accessible by integration tentando l’attivazione. Non viene resa pubblica la repository privata. Stato, limiti e installazione in docs/IPHONE.md.

@@ -4,6 +4,8 @@ on:
     branches: [main, feat/ios-pwa]
     paths:
       - 'web/**'
+      - 'components/**'
+      - 'App.tsx'
       - 'src/data/**'
       - 'assets/icon.png'
       - '.github/workflows/ios-pwa.yml'
