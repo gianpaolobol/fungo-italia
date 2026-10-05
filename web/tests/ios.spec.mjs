@@ -15,7 +15,7 @@ test('iPhone 320: fresh navigation with unreachable origin preserves search, fav
  await page.getByRole('button',{name:'← Precedente',exact:true}).click();
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
- await context.route('https://tile.openstreetmap.org/**',route=>route.abort());
+ await context.route('https://tile.openstreetmap.org/**',route=>route.fulfill({status:503,contentType:'text/plain',body:'Cartographic background unavailable'}));
  await page.evaluate(()=>{window.__oldDocument=true;});
  await request.get('http://127.0.0.1:4174/?state=stop');
  try{
@@ -30,7 +30,7 @@ test('iPhone 320: fresh navigation with unreachable origin preserves search, fav
  await expect(page.getByText('71 macroaree in 20 regioni.',{exact:false})).toBeVisible();
  await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await expect(page.locator('#area-count')).toHaveText('1 area corrispondente');
  await page.getByRole('button',{name:'Mappa',exact:true}).click();
- await expect(page.locator('#map')).toBeVisible();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
+ await page.locator('#map').scrollIntoViewIfNeeded();await expect(page.locator('#map')).toBeVisible();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
  await expect(page.locator('#map-status')).toContainText('Sfondo cartografico non disponibile');
  await page.getByRole('button',{name:/^Consulta .*Amiata/}).click();
  await expect(page.locator('#detail-body')).toContainText('42.89');await expect(page.locator('#detail-body')).toContainText('11.63');

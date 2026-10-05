@@ -103,7 +103,7 @@ function renderMap(rows){
  $('#map-status').textContent=navigator.onLine?'Sfondo cartografico online OpenStreetMap. I punti rappresentano macroaree, non ritrovamenti.':'Senza rete: i punti delle macroaree restano disponibili; lo sfondo cartografico richiede connessione.';
  if(!window.L){$('#map-status').textContent='Mappa non caricata. L’elenco delle aree resta consultabile.';return;}
  map=L.map('map',{scrollWheelZoom:false}).setView([42.4,12.5],5);
- if(navigator.onLine)L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:16,attribution:'© OpenStreetMap contributors'}).addTo(map).on('tileerror',()=>{if($('#map-status'))$('#map-status').textContent='Sfondo cartografico non disponibile. I punti e l’elenco delle macroaree restano consultabili.';});
+ if(navigator.onLine)L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:16,attribution:'© OpenStreetMap contributors'}).on('tileerror',()=>{if($('#map-status'))$('#map-status').textContent='Sfondo cartografico non disponibile. I punti e l’elenco delle macroaree restano consultabili.';}).addTo(map);
  rows.forEach(a=>{const label=document.createElement('span');label.textContent=a.name+' · '+a.region;L.circleMarker(a.center,{radius:8,color:'#174f2b',fillOpacity:.7}).addTo(map).bindTooltip(label).on('click',()=>openArea(a.id));});
  if(rows.length===1)map.setView(rows[0].center,9);else if(rows.length)map.fitBounds(L.latLngBounds(rows.map(a=>a.center)),{padding:[18,18],maxZoom:8});
  requestAnimationFrame(()=>map?.invalidateSize());
