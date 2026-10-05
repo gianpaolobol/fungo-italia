@@ -37,7 +37,7 @@ jobs:
           node web/build.mjs
       - name: Install WebKit
         working-directory: web
-        run: npx playwright install --with-deps webkit
+        run: npx playwright install --with-deps webkit chromium
       - name: Verify iPhone workflows at 320 points
         working-directory: web
         run: npm test
@@ -84,6 +84,7 @@ jobs:
         working-directory: web
         run: node snack-publish.mjs
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: Fungo-Italia-iPhone-Expo-Go
           path: iphone-preview/

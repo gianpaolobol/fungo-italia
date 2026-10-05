@@ -10,3 +10,5 @@ Il tentativo di attivare Pages è stato rifiutato con Resource not accessible by
 ## Verifiche
 La pipeline usa WebKit a 320×568 sotto /fungo-italia/, con ricerca, schede in sequenza, cache offline, preferiti dopo riavvio, marker Amiata, bozze, coordinate opt-in, dati malformati, backup in caso di quota esaurita e fallback su errore server. L'esecuzione automatica non equivale a un test sull'iPhone fisico.
 La revisione micologica indipendente rimane pendente; il catalogo non certifica determinazioni, raccolta o commestibilità.
+
+La verifica WebKit arresta realmente il server di origine, naviga in un documento nuovo restituito dal service worker e verifica che un contesto senza cache fallisca. Il flag offline Playwright/WebKit ha un difetto noto (microsoft/playwright#42775); non viene ignorato alcun errore di navigazione. Un settimo test Chromium usa il vero flag offline. Queste prove non attestano una modalità aereo su iPhone fisico.

@@ -1,8 +1,8 @@
-import {test,expect} from '@playwright/test';
+import {test,expect,chromium} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
 const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
 async function ready(page){await page.goto('./');await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);}
-test('iPhone 320: search, detail paging, favorite after offline restart and Amiata vector map',async({page,context},testInfo)=>{
+test('iPhone 320: fresh navigation with unreachable origin preserves search, favorites and Amiata vector map',async({page,context,browser,request},testInfo)=>{
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
  await ready(page);await expect(page.locator('#catalog-count')).toContainText('148 schede');
  await expect(page.locator('body')).toHaveJSProperty('scrollWidth',320);
@@ -14,7 +14,16 @@ test('iPhone 320: search, detail paging, favorite after offline restart and Amia
  await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
  await page.getByRole('button',{name:'← Precedente',exact:true}).click();
  await page.getByRole('button',{name:'Torna',exact:true}).click();
- await context.setOffline(true);await page.reload();
+ await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ await context.route('https://tile.openstreetmap.org/**',route=>route.abort());
+ await page.evaluate(()=>{window.__oldDocument=true;});
+ await request.get('http://127.0.0.1:4174/?state=stop');
+ try{
+ // Playwright WebKit offline emulation breaks service workers (#42775). Stop the real origin instead; do not ignore navigation errors.
+ const response=await page.goto('./?cold='+Date.now());
+ expect(response.status()).toBe(200);expect(response.fromServiceWorker()).toBe(true);
+ expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();
+ const clean=await browser.newContext();try{const probe=await clean.newPage();await expect(probe.goto('http://127.0.0.1:4173/fungo-italia/')).rejects.toThrow();}finally{await clean.close();}
  await expect(page.locator('#catalog-count')).toContainText('148 schede · 1 preferito');
  await page.getByRole('button',{name:'Preferiti',exact:true}).click();await expect(page.locator('#catalog-count')).toContainText('1 scheda');
  await page.getByRole('button',{name:'Aree',exact:true}).click();
@@ -22,12 +31,13 @@ test('iPhone 320: search, detail paging, favorite after offline restart and Amia
  await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await expect(page.locator('#area-count')).toHaveText('1 area corrispondente');
  await page.getByRole('button',{name:'Mappa',exact:true}).click();
  await expect(page.locator('#map')).toBeVisible();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
- await expect(page.locator('#map-status')).toContainText('Senza rete');
+ await expect(page.locator('#map-status')).toContainText('Sfondo cartografico non disponibile');
  await page.getByRole('button',{name:/^Consulta .*Amiata/}).click();
  await expect(page.locator('#detail-body')).toContainText('42.89');await expect(page.locator('#detail-body')).toContainText('11.63');
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  await page.screenshot({path:testInfo.outputPath('iphone-320-offline-amiata.png'),fullPage:true});
  expect(errors).toEqual([]);
+ }finally{await request.get('http://127.0.0.1:4174/?state=start');}
 });
 test('private draft survives reload; JSON excludes coordinates unless opted in; invalid date is rejected',async({page},testInfo)=>{
  await ready(page);await page.getByRole('button',{name:'Note',exact:true}).click();await page.getByRole('button',{name:'Nuova bozza',exact:true}).click();
@@ -92,4 +102,8 @@ test('server 503 falls back to installed offline package',async({page,request})=
  await ready(page);await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
  try{await request.get('http://127.0.0.1:4173/fungo-italia/__test/fault?status=503');await page.reload();await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');}
  finally{await request.get('http://127.0.0.1:4173/fungo-italia/__test/fault?status=0');}
+});
+
+test('Chromium: true offline flag and new document restore the installed catalog',async()=>{
+ const browser=await chromium.launch();try{const context=await browser.newContext({viewport:{width:320,height:568}});const page=await context.newPage();await page.goto('http://127.0.0.1:4173/fungo-italia/');await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));await page.evaluate(()=>{window.__oldDocument=true;});await context.setOffline(true);const response=await page.reload();expect(response.fromServiceWorker()).toBe(true);expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');await page.getByRole('button',{name:/^Apri Amanita/}).first().click();await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();}finally{await browser.close();}
 });

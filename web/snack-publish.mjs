@@ -29,12 +29,23 @@ try{
  const saved=await Promise.race([snack.saveAsync({ignoreUser:true,isDraft:false}),new Promise((_,reject)=>setTimeout(()=>reject(Error('Snack publication timed out')),45000))]);
  if(!saved.id||!saved.url)throw Error('Snack did not return a saved app URL');
  const manifestURL=saved.url.replace(/^exp:\/\//,'https://').replace(/^exps:\/\//,'https://');
- const manifest=await fetch(manifestURL,{headers:{'Expo-Platform':'ios','Expo-Protocol-Version':'1','Accept':'multipart/mixed,application/expo+json,application/json'},signal:AbortSignal.timeout(45000)});
- if(!manifest.ok)throw Error('Saved native manifest not accessible: '+manifest.status);
- const result={id:saved.id,expoGoURL:saved.url,snackURL:'https://snack.expo.dev/'+saved.id+'?platform=mydevice',sdkVersion:sdk,requiredIOSClient:versions.sdkVersions[sdk].iosClientVersion,advertisedIOSClient:advertisedClient,installedClientVerified:false,sourceCommit:process.env.GITHUB_SHA||null,manifestStatus:manifest.status,physicalIPhoneTested:false,expoGoOfflineRestartTested:false};
+ const result={id:saved.id,expoGoURL:saved.url,snackURL:'https://snack.expo.dev/'+saved.id+'?platform=mydevice',sdkVersion:sdk,requiredIOSClient:versions.sdkVersions[sdk].iosClientVersion,advertisedIOSClient:advertisedClient,installedClientVerified:false,sourceCommit:process.env.GITHUB_SHA||null,manifestStatus:null,manifestVerified:false,physicalIPhoneTested:false,expoGoOfflineRestartTested:false};
+ console.log('PUBLISHED_IPHONE_PREVIEW '+JSON.stringify(result));
+ await writeFile(new URL('preview.json',output),JSON.stringify(result,null,2));
+ await QRCode.toFile(new URL('iphone-qr.png',output).pathname,saved.url,{width:512,margin:2});
+ let manifest;
+ for(let attempt=0;attempt<4;attempt++){
+  manifest=await fetch(manifestURL,{headers:{'Expo-Platform':'ios','Expo-Protocol-Version':'1','Accept':'multipart/mixed,application/expo+json,application/json'},signal:AbortSignal.timeout(45000)});
+  result.manifestStatus=manifest.status;
+  if(manifest.ok){result.manifestVerified=true;break;}
+  console.log('MANIFEST_CHECK '+JSON.stringify({attempt,status:manifest.status}));
+  if(![429,502,503,504].includes(manifest.status)||attempt===3)break;
+  await new Promise(resolve=>setTimeout(resolve,Math.min(45000,10000*2**attempt)));
+ }
  await writeFile(new URL('preview.json',output),JSON.stringify(result,null,2));
  await QRCode.toFile(new URL('iphone-qr.png',output).pathname,saved.url,{width:512,margin:2});
  await writeFile(new URL('README.md',output),'# Fungo Italia — anteprima iPhone\n'+result.snackURL+'\n\nExpo Go: '+saved.url+'\n\nRuntime SDK '+sdk+'. Prima apertura con connessione. Il test fisico su iPhone e il riavvio offline in Expo Go restano da verificare. Nessun account Apple Developer necessario.\n');
  console.log('SAVED_IPHONE_PREVIEW '+JSON.stringify(result));
+ if(!result.manifestVerified)throw Error('Preview published but native manifest verification failed: '+result.manifestStatus);
 }finally{snack.setOnline(false);}
 process.exit(0);
