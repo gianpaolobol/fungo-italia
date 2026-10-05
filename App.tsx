@@ -8,6 +8,7 @@ import Areas,{Area} from './components/Areas';
 import Drafts from './components/Drafts';
 import Community from './components/Community';
 import PhotoLibrary from './components/PhotoLibrary';
+import ThreePlusOneReview from './components/ThreePlusOneReview';
 import catalog from './src/data/catalog.json';
 import areas from './src/data/areas.json';
 import groups from './src/data/groups.json';
@@ -28,6 +29,7 @@ export default function App(){
 <View style={[s.body,tab!=='Note'&&s.hidden]} accessibilityElementsHidden={tab!=='Note'} importantForAccessibility={tab!=='Note'?'no-hide-descendants':'auto'}><Drafts/></View>
 <View style={[s.body,tab!=='Contributi'&&s.hidden]} accessibilityElementsHidden={tab!=='Contributi'} importantForAccessibility={tab!=='Contributi'?'no-hide-descendants':'auto'}><Community/></View>
 <View style={[s.body,tab!=='Foto'&&s.hidden]} accessibilityElementsHidden={tab!=='Foto'} importantForAccessibility={tab!=='Foto'?'no-hide-descendants':'auto'}><PhotoLibrary/></View>
-</>}</View><View accessibilityRole="tablist" style={s.tabs}>{['Studio','Aree','Note','Contributi','Foto'].map(name=><Pressable key={name} accessibilityRole="tab" accessibilityState={{selected:tab===name}} onPress={()=>setTab(name)} style={[s.tab,tab===name&&s.active]}><Text style={tab===name?s.selected:s.label}>{name}</Text></Pressable>)}</View></SafeAreaView></SafeAreaProvider>;
+<View style={[s.body,tab!=='3+1'&&s.hidden]} accessibilityElementsHidden={tab!=='3+1'} importantForAccessibility={tab!=='3+1'?'no-hide-descendants':'auto'}><ThreePlusOneReview/></View>
+</>}</View><View accessibilityRole="tablist" style={s.tabs}>{['Studio','Aree','Note','Contributi','Foto','3+1'].map(name=><Pressable key={name} accessibilityRole="tab" accessibilityState={{selected:tab===name}} onPress={()=>setTab(name)} style={[s.tab,tab===name&&s.active]}><Text style={tab===name?s.selected:s.label}>{name}</Text></Pressable>)}</View></SafeAreaView></SafeAreaProvider>;
 }
 const s=StyleSheet.create({page:{flex:1,backgroundColor:'#f4f7f2'},brand:{padding:12,borderBottomWidth:1,borderBottomColor:'#d5dfd3'},title:{fontSize:23,fontWeight:'800',color:'#174f2b'},subtitle:{fontSize:13,color:'#506757'},body:{flex:1},hidden:{display:'none'},tabs:{flexDirection:'row',padding:8,gap:6,borderTopWidth:1,borderTopColor:'#d5dfd3'},tab:{flex:1,minHeight:52,alignItems:'center',justifyContent:'center',borderRadius:12},active:{backgroundColor:'#174f2b'},selected:{color:'white',fontWeight:'700'},label:{color:'#174f2b',fontWeight:'700'},error:{padding:10,color:'#842d26'}});
