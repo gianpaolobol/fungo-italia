@@ -125,3 +125,29 @@ jobs:
       - name: Publish verified iPhone PWA
         id: deployment
         uses: actions/deploy-pages@v4
+  promote-tested-version:
+    if: github.ref == 'refs/heads/feat/ios-pwa'
+    needs: [build-test, expo-go-preview]
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Promote verified source without overwriting newer changes
+        env:
+          TESTED_SHA: ${{ github.sha }}
+        run: |
+          git fetch origin main feat/ios-pwa
+          candidate=$(git rev-parse origin/feat/ios-pwa)
+          if test "$candidate" != "$TESTED_SHA"; then
+            parent=$(git rev-parse "$candidate^")
+            changed=$(git diff --name-only "$TESTED_SHA" "$candidate")
+            if test "$parent" != "$TESTED_SHA" || test "$changed" != "web/package-lock.json"; then
+              echo "::error::Branch changed after validation. Refusing to promote untested source."
+              exit 1
+            fi
+          fi
+          git merge-base --is-ancestor origin/main "$candidate"
+          git push origin "$candidate:refs/heads/main"
