@@ -1,0 +1,47 @@
+import React,{useState} from 'react';
+import {Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
+
+type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;message:string};
+
+export default function PhotoLibrary(){
+ const [state,setState]=useState<ScanState>({permission:'unknown',count:0,message:'Nessuna scansione avviata.'});
+ async function scan(){
+  if(Platform.OS!=='ios'&&Platform.OS!=='android'){
+   setState(s=>({...s,message:'La scansione della libreria Foto richiede Fungo Italia installato su iPhone o Android. La PWA resta dedicata alla consultazione.'}));
+   return;
+  }
+  try{
+   const MediaLibrary=await import('expo-media-library');
+   const permission=await MediaLibrary.requestPermissionsAsync(false,['photo']);
+   if(!permission.granted){
+    setState({permission:permission.accessPrivileges==='limited'?'limited':'denied',count:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
+    return;
+   }
+   // Use the legacy query surface only as a compatibility bridge while Expo SDK 58
+   // completes the class-based MediaLibrary migration. No originals are uploaded here.
+   const Legacy=await import('expo-media-library/legacy');
+   let after:string|undefined=undefined,total=0,pages=0;
+   do{
+    const page=await Legacy.getAssetsAsync({mediaType:['photo'],first:250,after,sortBy:[['creationTime',false]]});
+    total+=page.assets.length;pages++;
+    after=page.hasNextPage?page.endCursor:undefined;
+    setState({permission:permission.accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
+    if(!page.hasNextPage)break;
+    // Guard against an unexpected cursor loop on very large libraries.
+    if(pages>2000)throw new Error('Limite di sicurezza scansione');
+   }while(after);
+   setState({permission:permission.accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indice completato: ${total} foto accessibili. Prossimo passo: selezione locale dei candidati fungo e raggruppamento per osservazione.`});
+  }catch(e){
+   setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
+  }
+ }
+ return <ScrollView contentContainerStyle={s.page}>
+  <Text style={s.title}>La mia raccolta fotografica</Text>
+  <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
+  <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>1. Indicizza le foto · 2. individua candidati fungo · 3. raggruppa gli scatti dello stesso esemplare · 4. propone cappello, imenoforo, gambo/base e carattere di conferma.</Text></View>
+  <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
+  <View style={s.card}><Text style={s.head}>Stato</Text><Text style={s.body}>{state.message}</Text>{state.count>0&&<Text style={s.count}>{state.count} foto indicizzate</Text>}</View>
+  <Text style={s.note}>Privacy: l'autorizzazione può essere completa o limitata. Questa prima fase legge soltanto l'indice della libreria; non invia automaticamente fotografie né coordinate.</Text>
+ </ScrollView>;
+}
+const s=StyleSheet.create({page:{padding:16,gap:14},title:{fontSize:22,fontWeight:'800',color:'#174f2b'},body:{fontSize:15,lineHeight:21,color:'#304c39'},card:{padding:14,borderRadius:14,backgroundColor:'#fff',borderWidth:1,borderColor:'#d5dfd3',gap:6},head:{fontSize:16,fontWeight:'800',color:'#174f2b'},button:{padding:15,borderRadius:14,backgroundColor:'#174f2b',alignItems:'center'},buttonText:{color:'#fff',fontWeight:'800'},count:{fontSize:18,fontWeight:'800',color:'#174f2b'},note:{fontSize:12,lineHeight:17,color:'#607268'}});
