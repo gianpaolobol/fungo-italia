@@ -22,6 +22,14 @@
         "buildType": "app-bundle"
       },
       "node": "24.3.0"
+    },
+    "iphone-library": {
+      "distribution": "internal",
+      "channel": "preview",
+      "node": "24.3.0",
+      "ios": {
+        "simulator": false
+      }
     }
   }
 }
