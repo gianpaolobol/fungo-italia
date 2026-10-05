@@ -6,7 +6,7 @@ const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
 const ranks={species:'Specie',genus:'Genere',section:'Sezione',group:'Gruppo',speciesGroup:'Gruppo di specie',aggregate:'Aggregato',operationalGroup:'Gruppo operativo',family:'Famiglia',subgenus:'Sottogenere',subsection:'Sottosezione',subspecies:'Sottospecie',variety:'Varietà'};
 const diagnosticLimits={field_high_confidence:'Caratteri di campo; determinazione da verificare',field_high_confidence_when_typical:'Condizione: esemplari tipici',field_high_confidence_when_host_known:'Ospite ed ecologia devono essere noti',field_high_confidence_when_young:'Condizione: esemplari giovani',field_high_confidence_at_source_rank:'Risoluzione limitata al rango didattico S1',field_confirmatory:'Conferma specialistica nei casi dubbi',defined_morphogroup_s1:'Morfogruppo didattico S1',defined_set_s1:'Insieme didattico definito S1',microscopy_required_for_fine_id:'Microscopia necessaria per la specie fine',dna_confirmatory:'Conferma molecolare per la risoluzione fine'};
 let data,taxa=[],byId=new Map(),favoriteIds=[],resumeId=null,studyWritable=true,notesWritable=true,drafts=[],selectedDraft=null;
-let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapOn=false,registration=null,installPrompt=null,toastTimer,observer=null,offlineReady=false,renderedCount=0;
+let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapTimer=null,mapOn=false,registration=null,installPrompt=null,toastTimer,observer=null,offlineReady=false,renderedCount=0;
 const scrollPositions={studio:0,areas:0,notes:0,community:0};
 let notesSaveError='',studySaveError='';
 const notice='<p class="notice">Studio: revisione scientifica indipendente pendente. Le schede non autorizzano il consumo.</p>';
@@ -97,13 +97,13 @@ function renderAreaCards(){
  $('#area-cards').innerHTML=rows.map(a=>'<article class="card"><button class="heading" data-action="area" data-id="'+escape(a.id)+'" aria-label="Consulta '+escape(a.name)+'"><strong>'+escape(a.name)+'</strong><span>'+escape(a.region)+'</span></button><p class="small">'+escape(a.habitat.join(' · '))+'</p></article>').join('')||'<p class="empty">Nessuna area corrisponde ai filtri.</p>';
  if(mapOn)renderMap(rows);
 }
-function destroyMap(){if(map){map.remove();map=null;}}
+function destroyMap(){if(mapTimer){clearTimeout(mapTimer);mapTimer=null;}if(map){map.remove();map=null;}}
 function renderMap(rows){
  destroyMap();$('#map').hidden=false;
- $('#map-status').textContent=navigator.onLine?'Sfondo cartografico online OpenStreetMap. I punti rappresentano macroaree, non ritrovamenti.':'Senza rete: i punti delle macroaree restano disponibili; lo sfondo cartografico richiede connessione.';
+ $('#map-status').textContent=navigator.onLine?'Caricamento dello sfondo OpenStreetMap. I punti rappresentano macroaree, non ritrovamenti.':'Senza rete: i punti delle macroaree restano disponibili; lo sfondo cartografico richiede connessione.';
  if(!window.L){$('#map-status').textContent='Mappa non caricata. L’elenco delle aree resta consultabile.';return;}
  map=L.map('map',{scrollWheelZoom:false}).setView([42.4,12.5],5);
- if(navigator.onLine)L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:16,attribution:'© OpenStreetMap contributors'}).on('tileerror',()=>{if($('#map-status'))$('#map-status').textContent='Sfondo cartografico non disponibile. I punti e l’elenco delle macroaree restano consultabili.';}).addTo(map);
+ if(navigator.onLine){const instance=map;let loaded=false,failed=false;const fallback=()=>{if(map===instance&&$('#map-status'))$('#map-status').textContent='Sfondo cartografico non disponibile. I punti e l’elenco delle macroaree restano consultabili.';};L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:16,attribution:'© OpenStreetMap contributors'}).on('tileerror',()=>{failed=true;fallback();}).on('tileload',()=>{loaded=true;if(!failed&&map===instance&&$('#map-status'))$('#map-status').textContent='Sfondo cartografico online OpenStreetMap. I punti rappresentano macroaree, non ritrovamenti.';}).addTo(map);mapTimer=setTimeout(()=>{if(!loaded)fallback();},4000);}
  rows.forEach(a=>{const label=document.createElement('span');label.textContent=a.name+' · '+a.region;L.circleMarker(a.center,{radius:8,color:'#174f2b',fillOpacity:.7}).addTo(map).bindTooltip(label).on('click',()=>openArea(a.id));});
  if(rows.length===1)map.setView(rows[0].center,9);else if(rows.length)map.fitBounds(L.latLngBounds(rows.map(a=>a.center)),{padding:[18,18],maxZoom:8});
  requestAnimationFrame(()=>map?.invalidateSize());

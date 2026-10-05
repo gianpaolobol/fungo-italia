@@ -38,7 +38,9 @@ try{
   manifest=await fetch(manifestURL,{headers:{'Expo-Platform':'ios','Expo-Client-Environment':'EXPO_GO','Expo-Protocol-Version':'1','Accept':'multipart/mixed,application/expo+json,application/json'},signal:AbortSignal.timeout(45000)});
   result.manifestStatus=manifest.status;
   if(manifest.ok){result.manifestVerified=true;break;}
-  console.log('MANIFEST_CHECK '+JSON.stringify({attempt,status:manifest.status,retryAfter:manifest.headers.get('retry-after'),body:(await manifest.text()).slice(0,1500)}));
+  const failureBody=(await manifest.text()).slice(0,1500);
+  console.log('MANIFEST_CHECK '+JSON.stringify({attempt,status:manifest.status,retryAfter:manifest.headers.get('retry-after'),body:failureBody}));
+  if(/exceeded.*quota|quota.*exceeded/i.test(failureBody))break;
   if(![429,502,503,504].includes(manifest.status)||attempt===3)break;
   await new Promise(resolve=>setTimeout(resolve,Math.min(45000,10000*2**attempt)));
  }
