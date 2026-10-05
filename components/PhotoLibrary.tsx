@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {clusterByTime,makeObservationId,PrivateObservation} from '../src/photoObservations';
 import {enrichCandidates} from '../src/photoCandidatePipeline';
 import {buildVisualReviewQueue} from '../src/visualReviewQueue';
+import {rankObservationPhotos,PhotoMeta} from '../src/photoSelection';
 
 type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;observations:number;message:string};
 const privateKey='fungo-italia:private-observations:v1';
@@ -25,7 +26,7 @@ export default function PhotoLibrary(){
     return;
    }
    const {Query,AssetField,MediaType}=MediaLibrary;
-   let offset=0,total=0,pages=0;const metadata:{id:string;creationTime:number|null}[]=[];
+   let offset=0,total=0,pages=0;const metadata:PhotoMeta[]=[];
    for(;;){
     const assets=await new Query()
      .eq(AssetField.MEDIA_TYPE,MediaType.IMAGE)
@@ -33,7 +34,7 @@ export default function PhotoLibrary(){
      .offset(offset)
      .orderBy({key:AssetField.CREATION_TIME,ascending:false})
      .exeForMetadata();
-    metadata.push(...assets.map(a=>({id:a.id,creationTime:a.creationTime})));
+    metadata.push(...assets.map(a=>({id:a.id,creationTime:a.creationTime,width:a.width,height:a.height,isFavorite:a.isFavorite})));
     total+=assets.length;pages++;
     setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:0,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
     if(assets.length<250)break;
@@ -41,7 +42,7 @@ export default function PhotoLibrary(){
     if(pages>2000)throw new Error('Limite di sicurezza scansione');
    }
    const groups=clusterByTime(metadata);
-   const observations:PrivateObservation[]=groups.map(group=>({id:makeObservationId(group.map(a=>a.id),group[0]?.creationTime??null),assetIds:group.map(a=>a.id),capturedAt:group[0]?.creationTime??null,preciseLocation:null,appleCandidate:null,verificationStatus:'unreviewed'}));
+   const observations:PrivateObservation[]=groups.map(group=>({id:makeObservationId(group.map(a=>a.id),group[0]?.creationTime??null),assetIds:rankObservationPhotos(group,8).map(a=>a.assetId),capturedAt:group[0]?.creationTime??null,preciseLocation:null,appleCandidate:null,verificationStatus:'unreviewed'}));
    await AsyncStorage.setItem(privateKey,JSON.stringify({version:1,observations}));
    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} osservazioni temporali. GPS preciso e riconoscimento vengono letti solo per i candidati, non per l'intera libreria.`});
   }catch(e){
