@@ -70,7 +70,7 @@ test('current concept names find canonical learning units and diagnostic conditi
  await expect(page.locator('#detail-body')).toContainText('Ospite ed ecologia devono essere noti');
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  await expect(page.getByRole('button',{name:'Riprendi '+hostKnown.scientificName,exact:true})).toBeVisible();
- await page.locator('#layer').selectOption('groups');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('');await page.locator('#layer').selectOption('groups');
  await page.getByRole('button',{name:'Apri Agaricus',exact:true}).click();await page.getByRole('button',{name:'Torna',exact:true}).click();
  await page.reload();await expect(page.locator('#catalog-count')).toContainText('148 schede');
  await page.getByRole('button',{name:'Riprendi Agaricus',exact:true}).click();

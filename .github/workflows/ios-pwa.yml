@@ -65,6 +65,28 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Lock tested iPhone PWA dependencies [skip ci]"
           git push origin HEAD:feat/ios-pwa
+  expo-go-preview:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install preview tooling
+        working-directory: web
+        run: npm install
+      - name: Publish compatible anonymous Expo Go preview
+        working-directory: web
+        run: node snack-publish.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fungo-Italia-iPhone-Expo-Go
+          path: iphone-preview/
+          if-no-files-found: error
+          retention-days: 30
   hosting-check:
     if: github.ref == 'refs/heads/main'
     needs: build-test

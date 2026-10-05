@@ -1,0 +1,36 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {Snack,getPreloadedModules,getSupportedSDKVersions} from 'snack-sdk';
+import QRCode from 'qrcode';
+const output=new URL('../iphone-preview/',import.meta.url);await mkdir(output,{recursive:true});
+const supported=getSupportedSDKVersions().sort((a,b)=>Number(b.split('.')[0])-Number(a.split('.')[0]));
+const versionResponse=await fetch('https://api.expo.dev/v2/versions',{signal:AbortSignal.timeout(30000)});
+if(!versionResponse.ok)throw Error('Expo version metadata unavailable');
+const versionPayload=await versionResponse.json(),versions=versionPayload.data||versionPayload;
+console.log(JSON.stringify({snackSupported:supported,expoIOSVersion:versions.iosVersion||null}));
+const iosMajor=Number(String(versions.iosVersion||'').split('.')[0]);
+const sdk=supported.find(v=>Number(v.split('.')[0])===iosMajor)||supported[0];
+if(iosMajor&&Number(sdk.split('.')[0])!==iosMajor)throw Error('Snack does not support the current iOS Expo Go SDK. Publication deliberately stopped.');
+const preloaded=getPreloadedModules(sdk);
+const used=['expo-status-bar','react-native-safe-area-context','react-native-webview','@react-native-async-storage/async-storage'];
+const dependencies=Object.fromEntries(used.map(name=>{if(!preloaded[name])throw Error('Module unavailable in Expo Go: '+name);return [name,{version:preloaded[name]}];}));
+const files={};
+const paths=['App.tsx','components/Studio.tsx','components/Areas.tsx','components/Drafts.tsx','components/Community.tsx','src/data/catalog.json','src/data/groups.json','src/data/areas.json'];
+for(const path of paths)files[path]={type:'CODE',contents:await readFile(new URL('../'+path,import.meta.url),'utf8')};
+files['README.md']={type:'CODE',contents:'Fungo Italia: anteprima nativa in Expo Go. 148 unità minime, 66 schede di gruppi/generi, 71 macroaree. Revisione indipendente pendente; non autorizza il consumo. Note locali non pubblicate. Il runtime Snack è compatibile con Expo Go e distinto dal build Android principale. Prima apertura richiede rete; riavvio offline di Expo Go da verificare.'};
+const snack=new Snack({name:'Fungo Italia — studio e atlante',description:'Catalogo e macroaree micologiche; fonti e revisione indipendente pendente. Anteprima iPhone, non App Store.',sdkVersion:sdk,files,dependencies,online:false});
+try{
+ const state=await Promise.race([snack.getStateAsync(),new Promise((_,reject)=>setTimeout(()=>reject(Error('Snack dependency resolution timed out')),90000))]);
+ const errors=Object.entries(state.dependencies).filter(([,dependency])=>dependency.error).map(([name,dependency])=>({name,message:dependency.error.message}));
+ if(errors.length||Object.keys(state.missingDependencies).length)throw Error('Snack dependencies unresolved: '+JSON.stringify({errors,missing:state.missingDependencies}));
+ const saved=await Promise.race([snack.saveAsync({ignoreUser:true,isDraft:false}),new Promise((_,reject)=>setTimeout(()=>reject(Error('Snack publication timed out')),45000))]);
+ if(!saved.id||!saved.url)throw Error('Snack did not return a saved app URL');
+ const manifestURL=saved.url.replace(/^exp:\/\//,'https://').replace(/^exps:\/\//,'https://');
+ const manifest=await fetch(manifestURL,{headers:{'Expo-Platform':'ios','Expo-Protocol-Version':'1','Accept':'multipart/mixed,application/expo+json,application/json'},signal:AbortSignal.timeout(45000)});
+ if(!manifest.ok)throw Error('Saved native manifest not accessible: '+manifest.status);
+ const result={id:saved.id,expoGoURL:saved.url,snackURL:'https://snack.expo.dev/'+saved.id+'?platform=mydevice',sdkVersion:sdk,sourceCommit:process.env.GITHUB_SHA||null,manifestStatus:manifest.status,physicalIPhoneTested:false,expoGoOfflineRestartTested:false};
+ await writeFile(new URL('preview.json',output),JSON.stringify(result,null,2));
+ await QRCode.toFile(new URL('iphone-qr.png',output).pathname,saved.url,{width:512,margin:2});
+ await writeFile(new URL('README.md',output),'# Fungo Italia — anteprima iPhone\n'+result.snackURL+'\n\nExpo Go: '+saved.url+'\n\nRuntime SDK '+sdk+'. Prima apertura con connessione. Il test fisico su iPhone e il riavvio offline in Expo Go restano da verificare. Nessun account Apple Developer necessario.\n');
+ console.log('SAVED_IPHONE_PREVIEW '+JSON.stringify(result));
+}finally{snack.setOnline(false);}
+process.exit(0);

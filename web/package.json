@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",
-    "leaflet": "1.9.4"
+    "leaflet": "1.9.4",
+    "snack-sdk": "7.1.0",
+    "qrcode": "1.5.4"
   }
 }
