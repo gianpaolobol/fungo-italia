@@ -14,7 +14,8 @@
       "supportsTablet": true,
       "bundleIdentifier": "it.fungoitalia.app",
       "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "Fungo Italia usa la tua libreria Foto, solo con il tuo consenso, per individuare e organizzare fotografie di funghi da proporre per la classificazione 3+1."
+        "NSPhotoLibraryUsageDescription": "Fungo Italia usa la tua libreria Foto, solo con il tuo consenso, per individuare e organizzare fotografie di funghi da proporre per la classificazione 3+1.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
