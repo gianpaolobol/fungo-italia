@@ -1,4 +1,4 @@
-name: iPhone PWA
+name: iPhone PWA and Expo Go
 on:
   push:
     branches: [main, feat/ios-pwa]

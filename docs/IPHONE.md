@@ -12,3 +12,13 @@ La pipeline usa WebKit a 320×568 sotto /fungo-italia/, con ricerca, schede in s
 La revisione micologica indipendente rimane pendente; il catalogo non certifica determinazioni, raccolta o commestibilità.
 
 La verifica WebKit arresta realmente il server di origine, naviga in un documento nuovo restituito dal service worker e verifica che un contesto senza cache fallisca. Il flag offline Playwright/WebKit ha un difetto noto (microsoft/playwright#42775); non viene ignorato alcun errore di navigazione. Un settimo test Chromium usa il vero flag offline. Queste prove non attestano una modalità aereo su iPhone fisico.
+
+## Stato verificato — 5 ottobre 2026
+
+Sette test superati: https://github.com/gianpaolobol/fungo-italia/actions/runs/37377030908 . Pacchetto PWA pronto nell’artefatto Fungo-Italia-iPhone-PWA. I test WebKit e Chromium non sostituiscono il collaudo su iPhone fisico.
+
+La snapshot Snack è stata pubblicata, ma il manifest iOS risponde HTTP 429 con: “The number of Monthly Updating Users has exceeded the Free tier’s quota for this account.” Il progetto condiviso restituito da Snack non consente quindi di attestare una distribuzione funzionante in Expo Go. Nessuna sottoscrizione acquistata. URL e QR sono conservati come evidenza, non come app verificata.
+
+Per pubblicare la PWA, un amministratore deve aprire https://github.com/gianpaolobol/fungo-italia/settings/pages e impostare Build and deployment → Source → GitHub Actions. Il tentativo di abilitazione tramite integrazione ha restituito HTTP 403. Su repository privati, la disponibilità di Pages dipende dal piano GitHub; non è garantita una soluzione gratuita senza verificare tale disponibilità. La pipeline controlla se Pages è configurato e distribuisce il pacchetto solo dopo i test.
+
+Il codice è salvato su main. La versione web precedente rimane online. Revisione scientifica indipendente e prova in modalità aereo su iPhone restano pendenti.
