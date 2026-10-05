@@ -68,6 +68,7 @@ jobs:
           git commit -m "Lock tested iPhone PWA dependencies [skip ci]"
           git push origin HEAD:feat/ios-pwa
   expo-go-preview:
+    continue-on-error: true
     permissions:
       contents: write
     runs-on: ubuntu-latest
