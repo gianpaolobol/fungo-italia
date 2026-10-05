@@ -1,0 +1,2 @@
+export type ReviewDecision={taxonId:string|null;characters:[string,string,string];confirmation:string;confidence:'low'|'medium'|'high';reviewer:'owner'|'micologist'|'system';reviewedAt:string};
+export function validateReview(d:ReviewDecision){const errors:string[]=[];if(!d.taxonId)errors.push('taxon mancante');d.characters.forEach((c,i)=>{if(c.trim().length<3)errors.push('carattere '+(i+1)+' insufficiente');});if(d.confirmation.trim().length<3)errors.push('conferma insufficiente');return {valid:errors.length===0,errors};}
