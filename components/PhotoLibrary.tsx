@@ -2,9 +2,11 @@ import React,{useState} from 'react';
 import {Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {clusterByTime,makeObservationId,PrivateObservation} from '../src/photoObservations';
+import {enrichCandidates} from '../src/photoCandidatePipeline';
 
 type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;observations:number;message:string};
 const privateKey='fungo-italia:private-observations:v1';
+const evidenceKey='fungo-italia:private-candidate-evidence:v1';
 
 export default function PhotoLibrary(){
  const [state,setState]=useState<ScanState>({permission:'unknown',count:0,observations:0,message:'Nessuna scansione avviata.'});
@@ -44,13 +46,25 @@ export default function PhotoLibrary(){
    setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
   }
  }
+
+ async function enrich(){
+  try{
+   const raw=await AsyncStorage.getItem(privateKey);if(!raw){setState(s=>({...s,message:'Prima esegui l’indicizzazione della libreria.'}));return;}
+   const parsed=JSON.parse(raw) as {version:1;observations:PrivateObservation[]};
+   const evidence=await enrichCandidates(parsed.observations,100);
+   await AsyncStorage.setItem(privateKey,JSON.stringify(parsed));
+   await AsyncStorage.setItem(evidenceKey,JSON.stringify({version:1,evidence}));
+   setState(s=>({...s,message:`Arricchiti privatamente ${evidence.length} gruppi con GPS/EXIF. Le coordinate precise restano sul dispositivo. Prossimo stadio: revisione visuale 3+1.`}));
+  }catch{setState(s=>({...s,message:'Arricchimento GPS/EXIF non riuscito. Riprova dopo aver verificato il permesso Foto.'}));}
+ }
  return <ScrollView contentContainerStyle={s.page}>
   <Text style={s.title}>La mia raccolta fotografica</Text>
   <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
   <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>1. Indicizza le foto · 2. individua candidati fungo · 3. raggruppa gli scatti dello stesso esemplare · 4. propone cappello, imenoforo, gambo/base e carattere di conferma.</Text></View>
   <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
+  <Pressable accessibilityRole="button" onPress={enrich} style={s.secondary}><Text style={s.secondaryText}>Analizza GPS/EXIF dei primi 100 gruppi</Text></Pressable>
   <View style={s.card}><Text style={s.head}>Stato</Text><Text style={s.body}>{state.message}</Text>{state.count>0&&<Text style={s.count}>{state.count} foto indicizzate</Text>}{state.observations>0&&<Text style={s.count}>{state.observations} gruppi temporali</Text>}</View>
   <Text style={s.note}>Privacy: l'autorizzazione può essere completa o limitata. Questa prima fase legge soltanto l'indice della libreria; non invia automaticamente fotografie né coordinate.</Text>
  </ScrollView>;
 }
-const s=StyleSheet.create({page:{padding:16,gap:14},title:{fontSize:22,fontWeight:'800',color:'#174f2b'},body:{fontSize:15,lineHeight:21,color:'#304c39'},card:{padding:14,borderRadius:14,backgroundColor:'#fff',borderWidth:1,borderColor:'#d5dfd3',gap:6},head:{fontSize:16,fontWeight:'800',color:'#174f2b'},button:{padding:15,borderRadius:14,backgroundColor:'#174f2b',alignItems:'center'},buttonText:{color:'#fff',fontWeight:'800'},count:{fontSize:18,fontWeight:'800',color:'#174f2b'},note:{fontSize:12,lineHeight:17,color:'#607268'}});
+const s=StyleSheet.create({page:{padding:16,gap:14},title:{fontSize:22,fontWeight:'800',color:'#174f2b'},body:{fontSize:15,lineHeight:21,color:'#304c39'},card:{padding:14,borderRadius:14,backgroundColor:'#fff',borderWidth:1,borderColor:'#d5dfd3',gap:6},head:{fontSize:16,fontWeight:'800',color:'#174f2b'},button:{padding:15,borderRadius:14,backgroundColor:'#174f2b',alignItems:'center'},buttonText:{color:'#fff',fontWeight:'800'},count:{fontSize:18,fontWeight:'800',color:'#174f2b'},note:{fontSize:12,lineHeight:17,color:'#607268'},secondary:{padding:14,borderRadius:14,borderWidth:1,borderColor:'#174f2b',alignItems:'center'},secondaryText:{color:'#174f2b',fontWeight:'800'}});
