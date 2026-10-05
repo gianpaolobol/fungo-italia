@@ -32,7 +32,7 @@ jobs:
           packages: 'platform-tools'
       - name: Install and lock dependencies
         run: |
-          if test -f package-lock.json; then npm ci; else npm install; fi
+          npm install --package-lock-only && npm ci
       - name: Prepare canonical offline content
         run: |
           npm run prepare:data
