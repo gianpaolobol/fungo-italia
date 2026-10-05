@@ -3,10 +3,12 @@ import {Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {clusterByTime,makeObservationId,PrivateObservation} from '../src/photoObservations';
 import {enrichCandidates} from '../src/photoCandidatePipeline';
+import {buildVisualReviewQueue} from '../src/visualReviewQueue';
 
 type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;observations:number;message:string};
 const privateKey='fungo-italia:private-observations:v1';
 const evidenceKey='fungo-italia:private-candidate-evidence:v1';
+const reviewKey='fungo-italia:private-3plus1-queue:v1';
 
 export default function PhotoLibrary(){
  const [state,setState]=useState<ScanState>({permission:'unknown',count:0,observations:0,message:'Nessuna scansione avviata.'});
@@ -57,12 +59,23 @@ export default function PhotoLibrary(){
    setState(s=>({...s,message:`Arricchiti privatamente ${evidence.length} gruppi con GPS/EXIF. Le coordinate precise restano sul dispositivo. Prossimo stadio: revisione visuale 3+1.`}));
   }catch{setState(s=>({...s,message:'Arricchimento GPS/EXIF non riuscito. Riprova dopo aver verificato il permesso Foto.'}));}
  }
+
+ async function prepareReview(){
+  try{
+   const raw=await AsyncStorage.getItem(privateKey);if(!raw){setState(s=>({...s,message:'Prima indicizza la libreria.'}));return;}
+   const parsed=JSON.parse(raw) as {version:1;observations:PrivateObservation[]};
+   const queue=buildVisualReviewQueue(parsed.observations,100);
+   await AsyncStorage.setItem(reviewKey,JSON.stringify({version:1,queue}));
+   setState(s=>({...s,message:`Coda 3+1 pronta: ${queue.length} osservazioni. Ogni gruppo mantiene al massimo 8 scatti e richiede 3 caratteri diagnostici + 1 conferma prima di essere considerato completo.`}));
+  }catch{setState(s=>({...s,message:'Preparazione della coda 3+1 non riuscita.'}));}
+ }
  return <ScrollView contentContainerStyle={s.page}>
   <Text style={s.title}>La mia raccolta fotografica</Text>
   <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
   <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>1. Indicizza le foto · 2. individua candidati fungo · 3. raggruppa gli scatti dello stesso esemplare · 4. propone cappello, imenoforo, gambo/base e carattere di conferma.</Text></View>
   <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
   <Pressable accessibilityRole="button" onPress={enrich} style={s.secondary}><Text style={s.secondaryText}>Analizza GPS/EXIF dei primi 100 gruppi</Text></Pressable>
+  <Pressable accessibilityRole="button" onPress={prepareReview} style={s.secondary}><Text style={s.secondaryText}>Prepara coda visuale 3+1</Text></Pressable>
   <View style={s.card}><Text style={s.head}>Stato</Text><Text style={s.body}>{state.message}</Text>{state.count>0&&<Text style={s.count}>{state.count} foto indicizzate</Text>}{state.observations>0&&<Text style={s.count}>{state.observations} gruppi temporali</Text>}</View>
   <Text style={s.note}>Privacy: l'autorizzazione può essere completa o limitata. Questa prima fase legge soltanto l'indice della libreria; non invia automaticamente fotografie né coordinate.</Text>
  </ScrollView>;
