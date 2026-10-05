@@ -15,7 +15,6 @@ test('iPhone 320: fresh navigation with unreachable origin preserves search, fav
  await page.getByRole('button',{name:'← Precedente',exact:true}).click();
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
- await context.route('https://tile.openstreetmap.org/**',route=>route.fulfill({status:503,contentType:'text/plain',body:'Cartographic background unavailable'}));
  await page.evaluate(()=>{window.__oldDocument=true;});
  await request.get('http://127.0.0.1:4174/?state=stop');
  try{
@@ -31,7 +30,7 @@ test('iPhone 320: fresh navigation with unreachable origin preserves search, fav
  await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await expect(page.locator('#area-count')).toHaveText('1 area corrispondente');
  await page.getByRole('button',{name:'Mappa',exact:true}).click();
  await page.locator('#map').scrollIntoViewIfNeeded();await expect(page.locator('#map')).toBeVisible();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
- await expect(page.locator('#map-status')).toContainText('Sfondo cartografico non disponibile');
+ await expect(page.locator('#map-status')).toContainText('I punti');
  await page.getByRole('button',{name:/^Consulta .*Amiata/}).click();
  await expect(page.locator('#detail-body')).toContainText('42.89');await expect(page.locator('#detail-body')).toContainText('11.63');
  await page.getByRole('button',{name:'Torna',exact:true}).click();
@@ -105,5 +104,5 @@ test('server 503 falls back to installed offline package',async({page,request})=
 });
 
 test('Chromium: true offline flag and new document restore the installed catalog',async()=>{
- const browser=await chromium.launch();try{const context=await browser.newContext({viewport:{width:320,height:568}});const page=await context.newPage();await page.goto('http://127.0.0.1:4173/fungo-italia/');await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));await page.evaluate(()=>{window.__oldDocument=true;});await context.setOffline(true);const response=await page.reload();expect(response.fromServiceWorker()).toBe(true);expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');await page.getByRole('button',{name:/^Apri Amanita/}).first().click();await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();}finally{await browser.close();}
+ const browser=await chromium.launch();try{const context=await browser.newContext({viewport:{width:320,height:568}});const page=await context.newPage();await page.goto('http://127.0.0.1:4173/fungo-italia/');await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));await page.evaluate(()=>{window.__oldDocument=true;});await context.setOffline(true);const response=await page.reload();expect(response.fromServiceWorker()).toBe(true);expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');await page.getByRole('button',{name:/^Apri Amanita/}).first().click();await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();await page.getByRole('button',{name:'Torna',exact:true}).click();await page.getByRole('button',{name:'Aree',exact:true}).click();await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await page.getByRole('button',{name:'Mappa',exact:true}).click();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);await expect(page.locator('#map-status')).toContainText('Senza rete');}finally{await browser.close();}
 });
