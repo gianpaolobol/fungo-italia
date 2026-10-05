@@ -14,7 +14,7 @@ export default function PhotoLibrary(){
    const MediaLibrary=await import('expo-media-library');
    const permission=await MediaLibrary.requestPermissionsAsync(false,['photo']);
    if(!permission.granted){
-    setState({permission:permission.accessPrivileges==='limited'?'limited':'denied',count:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
+    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'denied',count:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
     return;
    }
    const {Query,AssetField,MediaType}=MediaLibrary;
@@ -27,12 +27,12 @@ export default function PhotoLibrary(){
      .orderBy({key:AssetField.CREATION_TIME,ascending:false})
      .exe();
     total+=assets.length;pages++;
-    setState({permission:permission.accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
+    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
     if(assets.length<250)break;
     offset+=assets.length;
     if(pages>2000)throw new Error('Limite di sicurezza scansione');
    }
-   setState({permission:permission.accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indice completato: ${total} foto accessibili. Prossimo passo: selezione locale dei candidati fungo e raggruppamento per osservazione.`});
+   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,message:`Indice completato: ${total} foto accessibili. Prossimo passo: selezione locale dei candidati fungo e raggruppamento per osservazione.`});
   }catch(e){
    setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
   }
