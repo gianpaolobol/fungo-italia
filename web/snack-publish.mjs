@@ -7,9 +7,10 @@ const versionResponse=await fetch('https://api.expo.dev/v2/versions',{signal:Abo
 if(!versionResponse.ok)throw Error('Expo version metadata unavailable');
 const versionPayload=await versionResponse.json(),versions=versionPayload.data||versionPayload;
 console.log(JSON.stringify({snackSupported:supported,expoIOSVersion:versions.iosVersion||null}));
-const iosMajor=Number(String(versions.iosVersion||'').split('.')[0]);
-const sdk=supported.find(v=>Number(v.split('.')[0])===iosMajor)||supported[0];
-if(iosMajor&&Number(sdk.split('.')[0])!==iosMajor)throw Error('Snack does not support the current iOS Expo Go SDK. Publication deliberately stopped.');
+const advertisedClient=versions.iosVersion;
+const sdk=supported.find(v=>{const info=versions.sdkVersions?.[v];return info&&!info.beta&&info.iosClientVersion&&info.iosClientVersion===advertisedClient;});
+console.log(JSON.stringify({iosSDKClients:supported.map(v=>({sdk:v,client:versions.sdkVersions?.[v]?.iosClientVersion||null}))}));
+if(!sdk)throw Error('No Snack SDK matches the currently advertised iOS Expo Go client. Publication stopped until compatibility is established.');
 const preloaded=getPreloadedModules(sdk);
 const used=['expo-status-bar','react-native-safe-area-context','react-native-webview','@react-native-async-storage/async-storage'];
 const dependencies=Object.fromEntries(used.map(name=>{if(!preloaded[name])throw Error('Module unavailable in Expo Go: '+name);return [name,{version:preloaded[name]}];}));
