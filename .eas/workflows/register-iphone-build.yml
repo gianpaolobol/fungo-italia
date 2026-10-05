@@ -1,0 +1,15 @@
+name: Register iPhone and build Fungo Italia
+
+jobs:
+  register_device:
+    name: Registra questo iPhone
+    type: apple-device-registration-request
+
+  build_ios:
+    name: Build iPhone con libreria Foto
+    needs: [register_device]
+    type: build
+    params:
+      platform: ios
+      profile: iphone-library
+      refresh_ad_hoc_provisioning_profile: true
