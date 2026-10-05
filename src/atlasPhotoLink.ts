@@ -1,0 +1,2 @@
+export type AtlasPhotoLink={taxonId:string;observationId:string;assetId:string;role:'overview'|'cap'|'hymenophore'|'stipe-base'|'section-habitat';reviewStatus:'candidate'|'approved'|'rejected';attribution:string};
+export function canPublishPhoto(link:AtlasPhotoLink,reviewComplete:boolean){return reviewComplete&&link.reviewStatus==='approved'&&Boolean(link.taxonId&&link.assetId&&link.attribution);}
