@@ -60,7 +60,7 @@ function renderReview(){
  const answer=session.revealed?'<section id="review-answer"><h2>'+escape(t.scientificName)+'</h2><p class="small">Rango: '+escape(ranks[t.rank]||t.rank)+'</p><div class="row">'+button('Da ripassare','review-rate','again')+button('Ricordata','review-rate','remembered')+'</div><details><summary>Confronta la scheda e le fonti</summary>'+notice+content(t)+'</details></section>':button('Mostra risposta','review-reveal','','full');
  showDialog('Ripasso attivo',question+answer);focusReviewHeading();
 }
-function focusReviewHeading(){const heading=$('#review-answer h2')||$('#detail-body h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}}
+function focusReviewHeading(){const heading=$('#review-answer > h2')||$('#detail-body h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}}
 
 function rateReview(rating){
  if(!reviewSession?.revealed||!['again','remembered'].includes(rating))return;

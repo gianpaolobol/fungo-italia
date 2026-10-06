@@ -247,7 +247,7 @@ test('keyboard recall keeps focus on each new question, answer and summary',asyn
  await ready(page);await page.getByRole('button',{name:'Preferiti',exact:true}).click();
  const start=page.getByRole('button',{name:'Ripasso attivo',exact:true});await start.focus();await page.keyboard.press('Enter');
  await expect(page.getByRole('heading',{name:'Quale unità tassonomica?',exact:true})).toBeFocused();
- await page.getByRole('button',{name:'Mostra risposta',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.locator('#review-answer h2')).toBeFocused();
+ await page.getByRole('button',{name:'Mostra risposta',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.locator('#review-answer > h2')).toBeFocused();
  await page.getByRole('button',{name:'Ricordata',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.getByRole('heading',{name:'Sessione conclusa',exact:true})).toBeFocused();
  await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(start).toBeFocused();
 });
