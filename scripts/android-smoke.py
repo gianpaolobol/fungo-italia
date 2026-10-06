@@ -1,4 +1,4 @@
-import os,re,subprocess,time,xml.etree.ElementTree as ET
+import os,re,subprocess,time,struct,zlib,xml.etree.ElementTree as ET
 def adb(*args):
     return subprocess.check_output(['adb',*args],text=True,stderr=subprocess.STDOUT)
 def dump():
@@ -40,6 +40,58 @@ def launch():
     adb('shell','am','force-stop','it.fungoitalia.app')
     adb('shell','monkey','-p','it.fungoitalia.app','-c','android.intent.category.LAUNCHER','1')
     wait_text('Studio e atlante')
+
+def scroll_top():
+    size=adb('shell','wm','size')
+    width,height=map(int,re.findall(r'(\d+)x(\d+)',size)[-1])
+    for _ in range(3):
+        adb('shell','input','swipe',str(width//2),str(height//3),str(width//2),str(height*3//4),'250')
+        time.sleep(.3)
+def seed_photos():
+    os.makedirs('artifacts/smoke/fixtures',exist_ok=True)
+    adb('shell','mkdir','-p','/sdcard/Pictures/FungoItaliaTest')
+    def chunk(kind,data):
+        return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data)&0xffffffff)
+    for i,color in enumerate([(80,130,70),(160,100,70)],1):
+        path='artifacts/smoke/fixtures/scatto'+str(i)+'.png'
+        pixels=b''.join(b'\x00'+bytes(color)*180 for _ in range(180))
+        png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',180,180,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(pixels))+chunk(b'IEND',b'')
+        with open(path,'wb') as f: f.write(png)
+        remote='/sdcard/Pictures/FungoItaliaTest/scatto'+str(i)+'.png'
+        adb('push',path,remote)
+        adb('shell','am','broadcast','-a','android.intent.action.MEDIA_SCANNER_SCAN_FILE','-d','file://'+remote)
+    for _ in range(20):
+        rows=adb('shell','content','query','--uri','content://media/external/images/media','--projection','_display_name')
+        if 'scatto1.png' in rows and 'scatto2.png' in rows: break
+        time.sleep(1)
+    else: raise AssertionError('Gallery fixtures not indexed')
+    adb('shell','pm','grant','it.fungoitalia.app','android.permission.READ_MEDIA_IMAGES')
+def check_photo_review():
+    seed_photos()
+    tap('Foto')
+    tap('Autorizza e indicizza Foto')
+    wait_text('2 foto indicizzate')
+    scroll_top()
+    tap('Prepara coda visuale 3+1')
+    wait_text('Coda 3+1 pronta:')
+    tap('3+1')
+    wait_text('2 scatti selezionati')
+    wait_text('Fotografia 1')
+    time.sleep(3)
+    ui=text_of(dump())
+    assert 'Fotografia non disponibile' not in ui and 'Fotografia non visualizzabile' not in ui,'Native thumbnail failed'
+    with open('artifacts/smoke/android-native-photos.png','wb') as f:
+        f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
+    tap('Rimuovi scatto 2 dalla bozza')
+    wait_text('1 scatti selezionati')
+    time.sleep(2)
+    launch()
+    tap('3+1')
+    wait_text('1 scatti selezionati')
+    wait_text('Fotografia 1')
+    with open('artifacts/smoke/android-photo-review-persisted.png','wb') as f:
+        f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
+
 def main():
     adb('install','-r','artifacts/android/app-release.apk')
     adb('shell','wm','size','720x1280')
@@ -71,6 +123,8 @@ def main():
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
     with open('artifacts/smoke/ui.xml','w') as f:
         f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
+    check_photo_review()
+    print('PASS: seeded native gallery, image rendering, manual removal and review persistence.');
     print('PASS: native APK cold-start offline, catalog search, detail, favorite persistence after process restart and Amiata macroarea.')
 try:
     main()
