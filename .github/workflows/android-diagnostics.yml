@@ -18,7 +18,7 @@ jobs:
           name: Fungo-Italia-Android-APK
           path: artifacts/android
           github-token: ${{ github.token }}
-          run-id: '37422007664'
+          run-id: '37423897690'
       - run: sudo chmod 666 /dev/kvm
       - uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -27,4 +27,4 @@ jobs:
           target: google_apis
           profile: pixel_6
           disable-animations: true
-          script: python3 scripts/android-diagnostics.py
+          script: python3 scripts/android-smoke.py
