@@ -137,3 +137,31 @@ jobs:
           git push origin "$candidate:refs/heads/main"
           gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/pipeline.yml/dispatches" -f ref=main
           gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/ios-pwa.yml/dispatches" -f ref=main
+
+  published-smoke:
+    if: github.ref == 'refs/heads/main'
+    needs: publish
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install verification tools
+        working-directory: web
+        run: npm ci
+      - name: Install browsers
+        working-directory: web
+        run: npx playwright install --with-deps chromium webkit
+      - name: Verify published Pages revision, smartphone navigation and offline map
+        working-directory: web
+        run: node smoke-published.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Fungo-Italia-published-site-evidence
+          path: web/published-evidence/
+          retention-days: 30

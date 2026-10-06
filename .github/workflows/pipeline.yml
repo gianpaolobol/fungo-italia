@@ -39,6 +39,8 @@ jobs:
           node scripts/validate-mobile-data.mjs
       - name: Check TypeScript
         run: npm run typecheck
+      - name: Verify draft integrity and review boundaries
+        run: node scripts/test-review-readiness.mjs
       - name: Export both native bundles
         run: npx expo export --platform ios --platform android --output-dir dist
       - name: Generate Android native project

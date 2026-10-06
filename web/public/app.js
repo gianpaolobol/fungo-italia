@@ -191,7 +191,7 @@ function renderCommunity(){
 }
 function renderTab(){
  destroyMap();if(observer)observer.disconnect();currentTaxon=null;
- $('#main').addEventListener('scroll',()=>{clearTimeout(readingTimer);if(tab!=='studio'||!feed)return;readingTimer=setTimeout(()=>{if(tab!=='studio'||!feed||$('#detail').open)return;const root=$('#main').getBoundingClientRect(),line=root.top+Math.min(120,root.height*.3);const card=[...document.querySelectorAll('#cards article')].find(element=>{const box=element.getBoundingClientRect();return box.top<=line&&box.bottom>line;});const id=card?.querySelector('[data-action="open"]')?.dataset.id;if(id&&byId.has(id)&&id!==resumeId){resumeId=id;persistStudy();updateResume();}},350);});
+
 document.querySelectorAll('[data-tab]').forEach(b=>b.getAttribute('data-tab')===tab?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(tab==='studio')renderStudio();else if(tab==='areas')renderAreas();else if(tab==='notes')renderNotes();else renderCommunity();$('#main').scrollTop=scrollPositions[tab]||0;
 }
@@ -216,6 +216,7 @@ document.addEventListener('click',event=>{
  download('fungo-italia-backup-privato.json',JSON.stringify({format:'fungo-italia-private-backup',version:1,createdAt:new Date().toISOString(),notice:'Contiene dati personali e possibili coordinate precise. Non pubblicare.',studySnapshot:studyWritable?{version:1,favoriteIds,resumeId}:null,notesSnapshot:notesWritable?{version:1,drafts}:null,studyRaw:read(studyKey),notesRaw:read(notesKey),unsavedChanges:{study:!!studySaveError,notes:!!notesSaveError},storageErrors},null,2));
 }
 });
+$('#main').addEventListener('scroll',()=>{clearTimeout(readingTimer);if(tab!=='studio'||!feed)return;readingTimer=setTimeout(()=>{if(tab!=='studio'||!feed||$('#detail').open)return;const root=$('#main').getBoundingClientRect(),line=root.top+Math.min(120,root.height*.3);const card=[...document.querySelectorAll('#cards article')].find(element=>{const box=element.getBoundingClientRect();return box.top<=line&&box.bottom>line;});const id=card?.querySelector('[data-action="open"]')?.dataset.id;if(id&&byId.has(id)&&id!==resumeId){resumeId=id;persistStudy();updateResume();}},350);});
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{if(!data||tab===b.dataset.tab)return;scrollPositions[tab]=$('#main').scrollTop;tab=b.dataset.tab;renderTab();});
 $('#close').onclick=()=>$('#detail').close();
 $('#detail').addEventListener('close',()=>currentTaxon=null);

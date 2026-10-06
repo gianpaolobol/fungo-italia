@@ -1,0 +1,34 @@
+import {chromium,webkit,expect} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+const url='https://gianpaolobol.github.io/fungo-italia/';
+await mkdir('published-evidence',{recursive:true});
+const metadata=await (await fetch(url+'build.json?verify='+Date.now())).json();
+if(metadata.sourceCommit!==process.env.GITHUB_SHA)throw Error('Published revision mismatch: '+metadata.sourceCommit);
+const results=[];
+for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
+ const browser=await engine.launch();const context=await browser.newContext({viewport:{width:320,height:740}});
+ const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ try{
+ await page.goto(url);await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();
+ await expect(page.locator('#catalog-count')).toContainText('148 schede');
+ await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
+ await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
+ await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ if(name==='chromium'){
+ await page.evaluate(()=>window.__oldDocument=true);await context.setOffline(true);
+ const response=await page.goto(url+'?offline='+Date.now());expect(response.fromServiceWorker()).toBe(true);
+ expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();
+ await expect(page.locator('#catalog-count')).toContainText('148 schede');
+ }
+ await page.getByRole('button',{name:'Aree',exact:true}).click();
+ await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();
+ await expect(page.locator('#area-count')).toHaveText('1 area corrispondente');
+ await page.getByRole('button',{name:'Mappa',exact:true}).click();
+ await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
+ await page.screenshot({path:'published-evidence/'+name+'-amiata.png',fullPage:true});
+ expect(errors).toEqual([]);results.push({browser:name,status:'passed',offline:name==='chromium'});
+ }finally{await browser.close();}
+}
+await writeFile('published-evidence/results.json',JSON.stringify({url,metadata,results},null,2));
