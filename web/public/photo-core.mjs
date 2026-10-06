@@ -3,6 +3,8 @@ export const BRANCH='photo-library';
 export const FOLDER='photo-library';
 export const MAX_BYTES=2*1024*1024;
 export const MAX_BATCH=20;
+export const MAX_METADATA_BYTES=8*1024*1024;
+export const MAX_ATTRIBUTION=160;
 const LICENSES=['rights-reserved','CC-BY-4.0','CC-BY-SA-4.0','CC0-1.0'];
 export function toBase64(bytes){let text='';for(let i=0;i<bytes.length;i+=32768)text+=String.fromCharCode(...bytes.subarray(i,i+32768));return btoa(text);}
 export function fromBase64(text){return Uint8Array.from(atob(text.replace(/\s/g,'')),c=>c.charCodeAt(0));}
@@ -10,7 +12,7 @@ export async function digest(bytes){return Array.from(new Uint8Array(await crypt
 export function sanitizeJpeg(input){
  const bytes=input instanceof Uint8Array?input:new Uint8Array(input);
  if(bytes[0]!==255||bytes[1]!==216)throw Error('La conversione non ha prodotto un JPEG valido.');
- const parts=[bytes.subarray(0,2)];let offset=2,ended=false;
+ const parts=[bytes.subarray(0,2)];let offset=2,ended=false,hasFrame=false,hasScan=false;
  while(offset<bytes.length){
   const start=offset;if(bytes[offset++]!==255)throw Error('Struttura JPEG non valida.');
   while(bytes[offset]===255)offset++;
@@ -20,7 +22,10 @@ export function sanitizeJpeg(input){
   if(offset+2>bytes.length)throw Error('JPEG incompleto.');
   const length=(bytes[offset]<<8)|bytes[offset+1],end=offset+length;
   if(length<2||end>bytes.length)throw Error('JPEG incompleto.');
+  if([192,193,194].includes(marker)){jpegDimensions(bytes.subarray(0,end));hasFrame=true;}
   if(marker===218){
+   if(!hasFrame||length<6||bytes[offset+2]<1||length!==6+2*bytes[offset+2])throw Error('Scansione JPEG non valida.');
+   hasScan=true;
    parts.push(bytes.subarray(start,end));let scan=end;
    while(scan<bytes.length){
     if(bytes[scan]!==255){scan++;continue;}
@@ -35,19 +40,29 @@ export function sanitizeJpeg(input){
   if(!((marker>=225&&marker<=239)||marker===254))parts.push(bytes.subarray(start,end));
   offset=end;
  }
- if(!ended)throw Error('JPEG incompleto.');
+ if(!ended||!hasFrame||!hasScan)throw Error('JPEG incompleto.');
  const result=new Uint8Array(parts.reduce((sum,p)=>sum+p.length,0));let at=0;for(const part of parts){result.set(part,at);at+=part.length;}
  return result;
 }
 export function jpegDimensions(bytes){
+ if(!(bytes instanceof Uint8Array)||bytes[0]!==255||bytes[1]!==216)throw Error('JPEG non valido.');
  let at=2;
- while(at+4<bytes.length){
+ while(at<bytes.length){
   if(bytes[at++]!==255)throw Error('JPEG non valido.');
-  while(bytes[at]===255)at++;const marker=bytes[at++];
+  while(at<bytes.length&&bytes[at]===255)at++;
+  if(at>=bytes.length)throw Error('JPEG incompleto.');
+  const marker=bytes[at++];
   if(marker===218||marker===217)break;
-  const length=(bytes[at]<<8)|bytes[at+1];
-  if([192,193,194].includes(marker)){return {height:(bytes[at+3]<<8)|bytes[at+4],width:(bytes[at+5]<<8)|bytes[at+6]};}
-  at+=length;
+  if(marker===0||marker===216||marker===1||(marker>=208&&marker<=215)||at+2>bytes.length)throw Error('JPEG non valido.');
+  const length=(bytes[at]<<8)|bytes[at+1],end=at+length;
+  if(length<2||end>bytes.length)throw Error('JPEG incompleto.');
+  if([192,193,194].includes(marker)){
+   if(length<11)throw Error('Frame JPEG incompleto.');
+   const components=bytes[at+7],height=(bytes[at+3]<<8)|bytes[at+4],width=(bytes[at+5]<<8)|bytes[at+6];
+   if(!components||length!==8+3*components||!width||!height)throw Error('Dimensioni JPEG non valide.');
+   return {height,width};
+  }
+  at=end;
  }
  throw Error('Dimensioni JPEG non documentabili.');
 }
@@ -58,11 +73,29 @@ export function makeRecord({sha,width,height,attribution,authorizedAt}){
  metadataPolicy:'gps-and-exif-removed',
  identification:{status:'unresolved',proposedGenus:null,proposedSpecies:null,visibleCharacters:[],missingCharacters:[],alternatives:[],references:[]}};
 }
+const nonempty=v=>typeof v==='string'&&v.trim().length>0;
+const nullableName=v=>v===null||nonempty(v);
+const stringList=v=>Array.isArray(v)&&v.every(nonempty);
+const validDate=v=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(v)&&Number.isFinite(Date.parse(v));
 export function validateMetadata(value){
  if(!value||value.version!==1||!Array.isArray(value.photos)||value.photos.length>10000)throw Error('Indice fotografico non leggibile: nessun dato esistente sarà sovrascritto.');
  const ids=new Set();
  for(const p of value.photos){
-  if(!p||!/^[a-f0-9]{64}$/.test(p.sha256)||p.id!=='photo-'+p.sha256||p.file!=='images/'+p.sha256+'.jpg'||ids.has(p.id)||p.metadataPolicy!=='gps-and-exif-removed'||!p.rights||!LICENSES.includes(p.rights.license)||typeof p.rights.attribution!=='string'||!p.rights.attribution.trim()||p.rights.publicationScope!=='fungo-italia-authorized'||!p.identification||!['unresolved','proposed','reviewed'].includes(p.identification.status))throw Error('Indice fotografico non valido: ripristino richiesto al curatore.');
+  const d=p?.dimensions,r=p?.rights,i=p?.identification,s=p?.source,a=r?.authorization;
+  if(!p||!/^[a-f0-9]{64}$/.test(p.sha256)||p.id!=='photo-'+p.sha256||p.file!=='images/'+p.sha256+'.jpg'||ids.has(p.id)||p.metadataPolicy!=='gps-and-exif-removed'||
+   !d||![d.width,d.height].every(n=>Number.isInteger(n)&&n>0&&n<=1600)||!validDate(p.importedAt)||
+   !s||s.kind!=='user-provided'||!nonempty(s.publicName)||s.publicName.length>160||
+   !r||!LICENSES.includes(r.license)||!nonempty(r.attribution)||r.attribution.length>MAX_ATTRIBUTION||r.publicationScope!=='fungo-italia-authorized'||
+   !a||a.method!=='uploader-declaration'||!validDate(a.recordedAt)||
+   !i||!['unresolved','proposed','reviewed'].includes(i.status)||!nullableName(i.proposedGenus)||!nullableName(i.proposedSpecies)||
+   ![i.visibleCharacters,i.missingCharacters,i.alternatives].every(stringList)||
+   !Array.isArray(i.references)||!i.references.every(ref=>ref&&nonempty(ref.title)&&nonempty(ref.location)&&(ref.url===undefined||ref.url===null||nonempty(ref.url)))||
+   (i.status==='unresolved'&&(i.proposedGenus!==null||i.proposedSpecies!==null))||
+   (i.status!=='unresolved'&&!nonempty(i.proposedGenus))||
+   (i.status!=='reviewed'&&i.review!==undefined)||
+   (i.status==='reviewed'&&(!i.review||![i.review.reviewer,i.review.method,i.review.evidence].every(nonempty)||!/^\d{4}-\d{2}-\d{2}$/.test(i.review.date||'')))||
+   (i.proposal!==undefined&&(!i.proposal||!['image-analysis-assistant','human-proposal'].includes(i.proposal.method)||!nonempty(i.proposal.author)||!validDate(i.proposal.recordedAt))))
+   throw Error('Indice fotografico non valido: ripristino richiesto al curatore.');
   ids.add(p.id);
  }
  return value;
@@ -71,7 +104,12 @@ export function mergeMetadata(value,incoming){
  validateMetadata(value);validateMetadata({version:1,photos:incoming});
  const photos=[...value.photos],ids=new Set(photos.map(p=>p.id));
  for(const p of incoming)if(!ids.has(p.id)){photos.push(p);ids.add(p.id);}
- return {...value,photos};
+ const merged={...value,photos};encodeMetadata(merged);return merged;
+}
+function encodeMetadata(value){
+ validateMetadata(value);const text=JSON.stringify(value,null,2)+'\n';
+ if(new TextEncoder().encode(text).length>MAX_METADATA_BYTES)throw Error('Indice troppo grande: occorre dividere la libreria in raccolte.');
+ return text;
 }
 export class GitHubError extends Error{constructor(status){super(status===401?'Autorizzazione GitHub scaduta o non valida.':status===403?'GitHub non consente la scrittura: verifica Contents read/write per questo repository.':status===429?'GitHub richiede una pausa: riprova tra poco.':status===0?'Connessione interrotta. Le copie restano in questa pagina; riprova senza chiuderla.':'Operazione GitHub non riuscita (HTTP '+status+').');this.status=status;}}
 export function createGitHubClient(token,{fetcher=globalThis.fetch,wait=ms=>new Promise(resolve=>setTimeout(resolve,ms))}={}){
@@ -99,12 +137,13 @@ export function createGitHubClient(token,{fetcher=globalThis.fetch,wait=ms=>new 
   const head=ref?.object?.sha;if(!/^[a-f0-9]{40}$/.test(head||''))throw Error('Ramo GitHub non leggibile.');
   const commit=await api('/git/commits/'+head,{signal});
   if(!/^[a-f0-9]{40}$/.test(commit?.tree?.sha||''))throw Error('Albero GitHub non leggibile.');
-  const file=await api('/contents/'+FOLDER+'/metadata.json?ref='+encodeURIComponent(exists?BRANCH:'main'),{allow404:true,signal});
+  const file=await api('/contents/'+FOLDER+'/metadata.json?ref='+encodeURIComponent(head),{allow404:true,signal});
   let metadata={version:1,photos:[]};
   if(file){
-   if(file.size>8*1024*1024)throw Error('Indice troppo grande: occorre dividere la libreria in raccolte.');
+   if(file.size>MAX_METADATA_BYTES)throw Error('Indice troppo grande: occorre dividere la libreria in raccolte.');
    const blob=file.encoding==='base64'?file:await api('/git/blobs/'+file.sha,{signal});
    if(blob.encoding!=='base64'||typeof blob.content!=='string')throw Error('Indice fotografico non leggibile.');
+   if(fromBase64(blob.content).length>MAX_METADATA_BYTES)throw Error('Indice troppo grande: occorre dividere la libreria in raccolte.');
    try{metadata=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(fromBase64(blob.content)));}catch{throw Error('Indice fotografico corrotto: nessun dato sarà cancellato.');}
   }
   validateMetadata(metadata);return {exists,head,tree:commit.tree.sha,metadata};
@@ -122,11 +161,11 @@ export function createGitHubClient(token,{fetcher=globalThis.fetch,wait=ms=>new 
   for(let attempt=0;attempt<4;attempt++){
    const known=new Set(current.metadata.photos.map(p=>p.id)),missing=[...unique.values()].filter(item=>!known.has(item.record.id));
    if(!missing.length)return {commitSha:current.head,added:0,alreadyPresent:unique.size,url:'https://github.com/'+REPOSITORY+'/tree/'+BRANCH+'/'+FOLDER};
+   const metadata=mergeMetadata(current.metadata,missing.map(item=>item.record)),metadataText=encodeMetadata(metadata);
    let done=0;
    for(const item of missing){onStage('Caricamento '+(++done)+' di '+missing.length+' copie…');if(!blobs.has(item.record.id)){const blob=await api('/git/blobs',{method:'POST',body:{content:toBase64(item.bytes),encoding:'base64'},signal});if(!/^[a-f0-9]{40}$/.test(blob.sha||''))throw Error('Copia GitHub non verificabile.');blobs.set(item.record.id,blob.sha);}}
-   const metadata=mergeMetadata(current.metadata,missing.map(item=>item.record));
    onStage('Registrazione del lotto nella libreria…');
-   const tree=await api('/git/trees',{method:'POST',body:{base_tree:current.tree,tree:[...missing.map(item=>({path:FOLDER+'/'+item.record.file,mode:'100644',type:'blob',sha:blobs.get(item.record.id)})),{path:FOLDER+'/metadata.json',mode:'100644',type:'blob',content:JSON.stringify(metadata,null,2)+'\n'}]},signal});
+   const tree=await api('/git/trees',{method:'POST',body:{base_tree:current.tree,tree:[...missing.map(item=>({path:FOLDER+'/'+item.record.file,mode:'100644',type:'blob',sha:blobs.get(item.record.id)})),{path:FOLDER+'/metadata.json',mode:'100644',type:'blob',content:metadataText}]},signal});
    if(!/^[a-f0-9]{40}$/.test(tree.sha||''))throw Error('Albero GitHub non verificabile.');
    const commit=await api('/git/commits',{method:'POST',body:{message:'Importa '+missing.length+' fotografie personali — identificazione pendente',tree:tree.sha,parents:[current.head]},signal});
    if(!/^[a-f0-9]{40}$/.test(commit.sha||''))throw Error('Registrazione GitHub non verificabile.');
