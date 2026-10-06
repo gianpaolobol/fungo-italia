@@ -11,12 +11,25 @@ def swipe_up():
     width,height=map(int,re.findall(r'(\d+)x(\d+)',size)[-1])
     adb('shell','input','swipe',str(width//2),str(height*3//4),str(width//2),str(height//3),'350')
     time.sleep(1)
+def dismiss_launcher_anr(root):
+    # A system launcher ANR can cover a running app on fresh CI emulators.
+    # Never dismiss a Fungo Italia ANR or treat it as a successful app launch.
+    if "Pixel Launcher isn't responding" not in text_of(root): return False
+    for node in root.iter():
+        if node.attrib.get('resource-id')=='android:id/aerr_close':
+            nums=list(map(int,re.findall(r'\d+',node.attrib.get('bounds',''))))
+            adb('shell','input','tap',str((nums[0]+nums[2])//2),str((nums[1]+nums[3])//2))
+            adb('shell','am','start','-W','-n','it.fungoitalia.app/.MainActivity')
+            time.sleep(1)
+            return True
+    return False
 def wait_text(value,seconds=40):
     until=time.time()+seconds
     tries=0
     while time.time()<until:
         try:
             root=dump()
+            if dismiss_launcher_anr(root): continue
             if value in text_of(root): return root
             if tries>=2: swipe_up()
         except (subprocess.CalledProcessError,ET.ParseError): pass
@@ -38,8 +51,8 @@ def tap(label,prefix=False):
     raise AssertionError('Control unavailable: '+label)
 def launch():
     adb('shell','am','force-stop','it.fungoitalia.app')
-    adb('shell','monkey','-p','it.fungoitalia.app','-c','android.intent.category.LAUNCHER','1')
-    wait_text('Studio e atlante')
+    adb('shell','am','start','-W','-n','it.fungoitalia.app/.MainActivity')
+    wait_text('Studio e atlante',90)
 
 def scroll_top():
     size=adb('shell','wm','size')
@@ -131,6 +144,8 @@ try:
 finally:
     os.makedirs('artifacts/smoke',exist_ok=True)
     try:
+        print('Final native UI:',text_of(dump()))
+        print(adb('logcat','-d','-s','ReactNativeJS:E','AndroidRuntime:E'))
         with open('artifacts/smoke/android-final.png','wb') as f:
             f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
         with open('artifacts/smoke/final-ui.xml','w') as f:
