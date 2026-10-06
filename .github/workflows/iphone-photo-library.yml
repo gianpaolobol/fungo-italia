@@ -41,6 +41,15 @@ jobs:
         run: |
           npm run prepare:data
           npm run typecheck
+      - name: Diagnose EAS Apple device registration
+        if: steps.expo.outputs.available == 'true'
+        continue-on-error: true
+        run: |
+          echo "=== EAS project ==="
+          npx eas-cli@24.8.0 project:info
+          echo "=== Registered Apple devices / teams ==="
+          npx eas-cli@24.8.0 device:list --json --non-interactive
+
       - name: Build installable iPhone app
         if: steps.expo.outputs.available == 'true'
         run: npx eas-cli@24.8.0 build --platform ios --profile iphone-library --non-interactive --no-wait
