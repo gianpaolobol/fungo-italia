@@ -13,7 +13,7 @@ Mancano fotografie tassonomiche di riferimento validate e revisione micologica i
 
 ## Android e sorgenti Expo
 [APK di anteprima verificato](https://github.com/gianpaolobol/fungo-italia/releases/download/native-preview/Fungo-Italia.apk). React Native/Expo per Android e iOS. La funzione Foto nativa indicizza i metadati autorizzati, raggruppa le immagini per data e conserva separatamente quelle senza data; permette la rimozione dalla bozza, senza cancellare originali. Non riconosce automaticamente specie o anatomia.
-La pipeline verifica catalogo, TypeScript, bozze e bundle iOS/Android; compila l'APK con Gradle e lo aggiorna solo dopo i test su emulatore. Il collaudo del6ottobre include foto datate EXIF, visualizzazione, rimozione manuale e conservazione dopo riavvio. La firma è quella debug del template Expo, non una chiave privata di produzione. [Limiti della preview](docs/ANDROID-PREVIEW.md).
+La pipeline verifica catalogo, TypeScript, bozze e bundle iOS/Android; compila l'APK con Gradle e lo aggiorna solo dopo i test su emulatore. Il collaudo del 6 ottobre include foto datate EXIF, visualizzazione, rimozione manuale e conservazione dopo riavvio. La firma è quella debug del template Expo, non una chiave privata di produzione. [Limiti della preview](docs/ANDROID-PREVIEW.md).
 
 ## Verifiche e distribuzione
 19 test web Chromium/WebKit, interfaccia a 320 punti, backup, navigazione, mappe e consultazione offline. Dopo il deploy, un controllo apre il vero sito Pages e verifica la revisione pubblicata. Questi test non attestano una prova su iPhone fisico.

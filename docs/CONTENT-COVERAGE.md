@@ -1,18 +1,18 @@
 # Inventario delle lacune — 6 ottobre 2026
-Snapshot dei JSON pubblicati: codice dati della revisione19472838e327c8591ffc0e735e5f4e86e969d3a6, identico nella revisioneapp e6a36d545a2798e72dcd1e2bc1ab141dc55a3415. Questo inventario descrive la presenza dei campi, non approva scientificamente i contenuti.
+Snapshot dei JSON pubblicati: codice dati della revisione 19472838e327c8591ffc0e735e5f4e86e969d3a6, identico nella revisione app e6a36d545a2798e72dcd1e2bc1ab141dc55a3415. Questo inventario descrive la presenza dei campi, non approva scientificamente i contenuti.
 
 ## Copertura
-148 unità Minimo:23 con nomi comuni,3 con habitat,14 con confronti bibliografici,7 con almeno un riscontro esterno puntuale sui caratteri. I riscontri dei7 profili possono riguardare solo parte del3+1. Nessuna revisione micologica indipendente attestata. Non sono incluse fotografie tassonomiche di riferimento validate.
-I66 gruppi didattici sono un livello diverso e non vengono contati come specie con diagnosi completa.
-71 macroaree:25 con fonti territoriali associate e46 senza. Una fonte territoriale può documentare habitat o regole e non prova presenza o produttività attuale dei funghi.
+148 unità Minimo: 23 con nomi comuni, 3 con habitat, 14 con confronti bibliografici, 7 con almeno un riscontro esterno puntuale sui caratteri. I riscontri dei 7 profili possono riguardare solo parte del 3+1. Nessuna revisione micologica indipendente attestata. Non sono incluse fotografie tassonomiche di riferimento validate.
+I 66 gruppi didattici sono un livello diverso e non vengono contati come specie con diagnosi completa.
+71 macroaree: 25 con fonti territoriali associate e 46 senza. Una fonte territoriale può documentare habitat o regole e non prova presenza o produttività attuale dei funghi.
 
 ## Priorità di completamento
-Per ogni unità: documentare ciascun carattere e il confronto differenziale con una fonte precisa; ampliare habitat e nomenclatura dove non documentati; verificare fotografie, autore e licenza; ottenere revisione qualificata. Il3+1 e il nome comune non garantiscono determinazione o commestibilità.
+Per ogni unità: documentare ciascun carattere e il confronto differenziale con una fonte precisa; ampliare habitat e nomenclatura dove non documentati; verificare fotografie, autore e licenza; ottenere revisione qualificata. Il 3+1 e il nome comune non garantiscono determinazione o commestibilità.
 Per ogni macroarea: fonti locali su habitat, accesso e regole aggiornate, evitando di attribuire validità legale a un centro cartografico. I valori ambientali euristici non sono misure meteorologiche attuali.
 Il modulo dei contributi accetta proposte documentate; una proposta non aggiorna né approva automaticamente il catalogo.
 
 ## Schede Minimo
-Numeri: elementi presenti nel campo.0 significa dato assente nell'export. La colonna Riscontri caratteri esclude audit interno, obiettivo didattico e riferimenti supplementari ai nomi/habitat/confronti. Anche un valore positivo non attesta una chiave diagnostica completa.
+Numeri: elementi presenti nel campo. 0 significa dato assente nell'export. La colonna Riscontri caratteri esclude audit interno, obiettivo didattico e riferimenti supplementari ai nomi/habitat/confronti. Anche un valore positivo non attesta una chiave diagnostica completa.
 
 |Unità|Rango|Nomi comuni|Habitat|Confronti|Riscontri caratteri|
 |---|---|---:|---:|---:|---:|
