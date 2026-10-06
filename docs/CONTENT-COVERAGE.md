@@ -1,5 +1,5 @@
 # Inventario delle lacune — 6 ottobre 2026
-Snapshot dei JSON pubblicati: codice dati della revisione 19472838e327c8591ffc0e735e5f4e86e969d3a6, identico nella revisione app e6a36d545a2798e72dcd1e2bc1ab141dc55a3415. Questo inventario descrive la presenza dei campi, non approva scientificamente i contenuti.
+Inventario dei JSON del repository aggiornato con i riferimenti regionali per Amiata e Foreste Casentinesi. I conteggi descrivono la presenza dei campi, non approvano scientificamente i contenuti.
 
 ## Copertura
 148 unità Minimo: 23 con nomi comuni, 3 con habitat, 14 con confronti bibliografici, 7 con almeno un riscontro esterno puntuale sui caratteri. I riscontri dei 7 profili possono riguardare solo parte del 3+1. Nessuna revisione micologica indipendente attestata. Non sono incluse fotografie tassonomiche di riferimento validate.

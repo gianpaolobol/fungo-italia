@@ -53,13 +53,15 @@ function renderReview(){
  const total=session.ids.length;
  if(session.index>=total){
   showDialog('Ripasso attivo','<h2>Sessione conclusa</h2><p>'+session.remembered+' schede ricordate · '+session.missed.length+' da ripassare.</p><p class="small">Autovalutazione della memoria sui contenuti del catalogo, senza attestazione di competenza o determinazione sul campo. La sessione non viene salvata.</p>'+(session.missed.length?button('Ripassa le schede da rivedere','review-retry','','full'):'')+button('Nuova sessione dai filtri','review-start','','full'));
-  return;
+  focusReviewHeading();return;
  }
  const t=byId.get(session.ids[session.index]);
  const question='<p class="counter">Scheda '+(session.index+1)+' di '+total+'</p><h2>Quale unità tassonomica?</h2><p class="small">Può essere una specie, una sezione o un gruppo di specie. Il ripasso usa profili didattici: revisione indipendente pendente.</p><h3>Tre caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol><h3>Carattere differenziante (+1)</h3><p>'+escape(t.differentiatingCharacter)+'</p>';
  const answer=session.revealed?'<section id="review-answer"><h2>'+escape(t.scientificName)+'</h2><p class="small">Rango: '+escape(ranks[t.rank]||t.rank)+'</p><div class="row">'+button('Da ripassare','review-rate','again')+button('Ricordata','review-rate','remembered')+'</div><details><summary>Confronta la scheda e le fonti</summary>'+notice+content(t)+'</details></section>':button('Mostra risposta','review-reveal','','full');
- showDialog('Ripasso attivo',question+answer);
+ showDialog('Ripasso attivo',question+answer);focusReviewHeading();
 }
+function focusReviewHeading(){const heading=$('#review-answer h2')||$('#detail-body h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
+
 function rateReview(rating){
  if(!reviewSession?.revealed||!['again','remembered'].includes(rating))return;
  const id=reviewSession.ids[reviewSession.index];

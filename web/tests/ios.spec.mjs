@@ -240,3 +240,14 @@ test('malformed optional taxon fields fail without erasing local notes',async({p
  await page.goto('./');await expect(page.getByRole('heading',{name:'Catalogo non disponibile',exact:true})).toBeVisible();
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).drafts[0].taxon,notesKey)).toBe('Conserva bozza');
 });
+
+test('keyboard recall keeps focus on each new question, answer and summary',async({page})=>{
+ const catalog=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8'));
+ await page.addInitScript(({studyKey,id})=>localStorage.setItem(studyKey,JSON.stringify({version:1,favoriteIds:[id],resumeId:null})),{studyKey,id:catalog[0].id});
+ await ready(page);await page.getByRole('button',{name:'Preferiti',exact:true}).click();
+ const start=page.getByRole('button',{name:'Ripasso attivo',exact:true});await start.focus();await page.keyboard.press('Enter');
+ await expect(page.getByRole('heading',{name:'Quale unità tassonomica?',exact:true})).toBeFocused();
+ await page.getByRole('button',{name:'Mostra risposta',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.locator('#review-answer h2')).toBeFocused();
+ await page.getByRole('button',{name:'Ricordata',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.getByRole('heading',{name:'Sessione conclusa',exact:true})).toBeFocused();
+ await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(start).toBeFocused();
+});
