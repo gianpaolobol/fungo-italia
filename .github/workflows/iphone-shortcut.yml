@@ -1,4 +1,4 @@
-name: Verify installable iPhone shortcut
+name: Verify iPhone export source
 on:
   push:
     branches: [feat/iphone-shortcut-export]
@@ -7,19 +7,16 @@ on:
 permissions:
   contents: read
 jobs:
-  sign:
-    runs-on: macos-15
-    timeout-minutes: 10
+  validate:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate installation probe
-        run: python3 automation/shortcuts/signing-probe.py
-      - name: Sign with Apple's command line tool
-        run: |
-          shortcuts sign --mode anyone --input shortcut-output/Signing-Probe.unsigned.shortcut --output shortcut-output/Signing-Probe.shortcut
-          test -s shortcut-output/Signing-Probe.shortcut
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python automation/shortcuts/build.py
+      - run: python -m unittest discover -s automation/shortcuts -p 'test_*.py'
       - uses: actions/upload-artifact@v4
         with:
-          name: Shortcut-signing-proof
-          path: shortcut-output/Signing-Probe.shortcut
-          if-no-files-found: error
+          name: UNINSTALLABLE-unsigned-shortcut-review
+          path: shortcut-output/

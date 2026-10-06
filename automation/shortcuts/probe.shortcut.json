@@ -1,0 +1,418 @@
+{
+  "WFWorkflowName": "Fungo Italia — prova 10 foto",
+  "WFWorkflowClientVersion": "1137.4",
+  "WFWorkflowMinimumClientVersion": 900,
+  "WFWorkflowMinimumClientVersionString": "900",
+  "WFWorkflowActions": [
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.comment",
+      "WFWorkflowActionParameters": {
+        "WFCommentActionText": "Esportazione locale di copie fotografiche. Nessuna azione web, cancellazione o modifica degli originali. La conversione richiede rimozione dei metadati; l’assenza effettiva di EXIF verrà controllata sulle copie ricevute. Non identifica i funghi.",
+        "UUID": "00000000-0000-4000-8000-000000000001"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.alert",
+      "WFWorkflowActionParameters": {
+        "WFAlertActionTitle": "Fungo Italia — copie locali",
+        "WFAlertActionMessage": "Prima prova: esporta fino a 10 foto. Scegli Sul mio iPhone quando viene chiesto dove salvare. Nessuna foto verrà inviata automaticamente.",
+        "WFAlertActionCancelButtonShown": true,
+        "UUID": "00000000-0000-4000-8000-000000000002"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.nothing",
+      "WFWorkflowActionParameters": {
+        "UUID": "00000000-0000-4000-8000-000000000003"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.setvariable",
+      "WFWorkflowActionParameters": {
+        "WFVariableName": "Lotto",
+        "UUID": "00000000-0000-4000-8000-000000000004"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.formatdate",
+      "WFWorkflowActionParameters": {
+        "WFDate": {
+          "Value": {
+            "Type": "CurrentDate"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "WFDateFormatStyle": "Custom",
+        "WFDateFormat": "yyyyMMdd-HHmmss",
+        "UUID": "00000000-0000-4000-8000-000000000005"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.setvariable",
+      "WFWorkflowActionParameters": {
+        "WFVariableName": "Sessione",
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-000000000005",
+            "OutputName": "Formatted Date"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-000000000006"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.filter.photos",
+      "WFWorkflowActionParameters": {
+        "WFContentItemLimitEnabled": true,
+        "WFContentItemLimitNumber": 10,
+        "WFContentItemSortProperty": "Date Taken",
+        "WFContentItemSortOrder": "Oldest First",
+        "WFContentItemFilter": {
+          "Value": {
+            "WFActionParameterFilterPrefix": 1,
+            "WFContentPredicateBoundedDate": false,
+            "WFActionParameterFilterTemplates": [
+              {
+                "Operator": 5,
+                "Property": "Media Type",
+                "Removable": true,
+                "Values": {
+                  "Unit": 4,
+                  "Enumeration": {
+                    "Value": "Video",
+                    "WFSerializationType": "WFStringSubstitutableState"
+                  }
+                }
+              }
+            ]
+          },
+          "WFSerializationType": "WFContentPredicateTableTemplate"
+        },
+        "UUID": "00000000-0000-4000-8000-000000000007"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.repeat.each",
+      "WFWorkflowActionParameters": {
+        "GroupingIdentifier": "00000000-0000-4000-8000-000000000008",
+        "WFControlFlowMode": 0,
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-000000000007",
+            "OutputName": "Photos"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-000000000009"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.image.resize",
+      "WFWorkflowActionParameters": {
+        "WFImageResizeWidth": 1200,
+        "WFImage": {
+          "Value": {
+            "Type": "Variable",
+            "VariableName": "Repeat Item"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-00000000000A"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.image.convert",
+      "WFWorkflowActionParameters": {
+        "WFImageFormat": "JPEG",
+        "WFImageCompressionQuality": 0.7,
+        "WFImagePreserveMetadata": false,
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-00000000000A",
+            "OutputName": "Resized Image"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-00000000000B"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.setitemname",
+      "WFWorkflowActionParameters": {
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-00000000000B",
+            "OutputName": "Converted Image"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "WFName": {
+          "Value": {
+            "string": "Foto_￼.jpg",
+            "attachmentsByRange": {
+              "{5, 1}": {
+                "Type": "Variable",
+                "VariableName": "Repeat Index"
+              }
+            }
+          },
+          "WFSerializationType": "WFTextTokenString"
+        },
+        "WFDontIncludeFileExtension": false,
+        "UUID": "00000000-0000-4000-8000-00000000000C"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.appendvariable",
+      "WFWorkflowActionParameters": {
+        "WFVariableName": "Lotto",
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-00000000000C",
+            "OutputName": "Renamed Item"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-00000000000D"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.count",
+      "WFWorkflowActionParameters": {
+        "WFCountType": "Items",
+        "WFInput": {
+          "Value": {
+            "Type": "Variable",
+            "VariableName": "Lotto"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-00000000000E"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+      "WFWorkflowActionParameters": {
+        "GroupingIdentifier": "00000000-0000-4000-8000-00000000000F",
+        "WFControlFlowMode": 0,
+        "WFCondition": 3,
+        "WFNumberValue": "20",
+        "WFInput": {
+          "Type": "Variable",
+          "Variable": {
+            "Value": {
+              "Type": "ActionOutput",
+              "OutputUUID": "00000000-0000-4000-8000-00000000000E",
+              "OutputName": "Count"
+            },
+            "WFSerializationType": "WFTextTokenAttachment"
+          }
+        },
+        "UUID": "00000000-0000-4000-8000-000000000010"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.makezip",
+      "WFWorkflowActionParameters": {
+        "WFZIPName": {
+          "Value": {
+            "string": "FungoItalia_￼_lotto_￼",
+            "attachmentsByRange": {
+              "{12, 1}": {
+                "Type": "Variable",
+                "VariableName": "Sessione"
+              },
+              "{20, 1}": {
+                "Type": "Variable",
+                "VariableName": "Repeat Index"
+              }
+            }
+          },
+          "WFSerializationType": "WFTextTokenString"
+        },
+        "WFArchiveFormat": "zip",
+        "WFInput": {
+          "Value": {
+            "Type": "Variable",
+            "VariableName": "Lotto"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-000000000011"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.documentpicker.save",
+      "WFWorkflowActionParameters": {
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-000000000011",
+            "OutputName": "Archive"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "WFAskWhereToSave": true,
+        "WFSaveFileOverwrite": false,
+        "UUID": "00000000-0000-4000-8000-000000000012"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.nothing",
+      "WFWorkflowActionParameters": {
+        "UUID": "00000000-0000-4000-8000-000000000013"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.setvariable",
+      "WFWorkflowActionParameters": {
+        "WFVariableName": "Lotto",
+        "UUID": "00000000-0000-4000-8000-000000000014"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+      "WFWorkflowActionParameters": {
+        "GroupingIdentifier": "00000000-0000-4000-8000-00000000000F",
+        "WFControlFlowMode": 2,
+        "UUID": "00000000-0000-4000-8000-000000000015"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.nothing",
+      "WFWorkflowActionParameters": {
+        "UUID": "00000000-0000-4000-8000-000000000016"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.repeat.each",
+      "WFWorkflowActionParameters": {
+        "GroupingIdentifier": "00000000-0000-4000-8000-000000000008",
+        "WFControlFlowMode": 2,
+        "UUID": "00000000-0000-4000-8000-000000000017"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.count",
+      "WFWorkflowActionParameters": {
+        "WFCountType": "Items",
+        "WFInput": {
+          "Value": {
+            "Type": "Variable",
+            "VariableName": "Lotto"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-000000000018"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+      "WFWorkflowActionParameters": {
+        "GroupingIdentifier": "00000000-0000-4000-8000-000000000019",
+        "WFControlFlowMode": 0,
+        "WFCondition": 2,
+        "WFNumberValue": "0",
+        "WFInput": {
+          "Type": "Variable",
+          "Variable": {
+            "Value": {
+              "Type": "ActionOutput",
+              "OutputUUID": "00000000-0000-4000-8000-000000000018",
+              "OutputName": "Count"
+            },
+            "WFSerializationType": "WFTextTokenAttachment"
+          }
+        },
+        "UUID": "00000000-0000-4000-8000-00000000001A"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.makezip",
+      "WFWorkflowActionParameters": {
+        "WFZIPName": {
+          "Value": {
+            "string": "FungoItalia_￼_finale",
+            "attachmentsByRange": {
+              "{12, 1}": {
+                "Type": "Variable",
+                "VariableName": "Sessione"
+              }
+            }
+          },
+          "WFSerializationType": "WFTextTokenString"
+        },
+        "WFArchiveFormat": "zip",
+        "WFInput": {
+          "Value": {
+            "Type": "Variable",
+            "VariableName": "Lotto"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "UUID": "00000000-0000-4000-8000-00000000001B"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.documentpicker.save",
+      "WFWorkflowActionParameters": {
+        "WFInput": {
+          "Value": {
+            "Type": "ActionOutput",
+            "OutputUUID": "00000000-0000-4000-8000-00000000001B",
+            "OutputName": "Archive"
+          },
+          "WFSerializationType": "WFTextTokenAttachment"
+        },
+        "WFAskWhereToSave": true,
+        "WFSaveFileOverwrite": false,
+        "UUID": "00000000-0000-4000-8000-00000000001C"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.nothing",
+      "WFWorkflowActionParameters": {
+        "UUID": "00000000-0000-4000-8000-00000000001D"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.setvariable",
+      "WFWorkflowActionParameters": {
+        "WFVariableName": "Lotto",
+        "UUID": "00000000-0000-4000-8000-00000000001E"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.conditional",
+      "WFWorkflowActionParameters": {
+        "GroupingIdentifier": "00000000-0000-4000-8000-000000000019",
+        "WFControlFlowMode": 2,
+        "UUID": "00000000-0000-4000-8000-00000000001F"
+      }
+    },
+    {
+      "WFWorkflowActionIdentifier": "is.workflow.actions.alert",
+      "WFWorkflowActionParameters": {
+        "WFAlertActionTitle": "Esportazione conclusa",
+        "WFAlertActionMessage": "Gli archivi salvati sono copie. Gli originali restano in Foto. Verifica in File che ogni ZIP sia sotto 32 MB prima di allegarlo in chat. Nessun genere o specie è stato determinato.",
+        "WFAlertActionCancelButtonShown": false,
+        "UUID": "00000000-0000-4000-8000-000000000020"
+      }
+    }
+  ],
+  "WFWorkflowIcon": {
+    "WFWorkflowIconGlyphNumber": 59511,
+    "WFWorkflowIconStartColor": 4282601983
+  },
+  "WFWorkflowInputContentItemClasses": [],
+  "WFWorkflowOutputContentItemClasses": [],
+  "WFWorkflowTypes": [],
+  "WFWorkflowImportQuestions": [],
+  "WFWorkflowHasOutputFallback": false
+}
