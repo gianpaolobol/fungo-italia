@@ -83,6 +83,7 @@ jobs:
       - run: node scripts/validate-mobile-data.mjs
       - run: npm run typecheck
       - run: node scripts/test-review-readiness.mjs
+      - run: python3 -m py_compile scripts/android-smoke.py
   expo-go-preview:
     if: github.event_name == 'workflow_dispatch' && vars.ENABLE_SNACK_PREVIEW == 'true'
     continue-on-error: true

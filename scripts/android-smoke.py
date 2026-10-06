@@ -6,10 +6,10 @@ def dump():
     return ET.fromstring(adb('shell','cat','/sdcard/fungo-ui.xml'))
 def text_of(root):
     return ' '.join((n.attrib.get('text','')+' '+n.attrib.get('content-desc','')) for n in root.iter())
-def swipe_up():
+def swipe_up(gentle=False):
     size=adb('shell','wm','size')
     width,height=map(int,re.findall(r'(\d+)x(\d+)',size)[-1])
-    adb('shell','input','swipe',str(width//2),str(height*3//4),str(width//2),str(height//3),'350')
+    adb('shell','input','swipe',str(width//2),str(height*3//4),str(width//2),str(height*3//5 if gentle else height//3),'350')
     time.sleep(1)
 def dismiss_launcher_anr(root):
     # A system launcher ANR can cover a running app on fresh CI emulators.
@@ -31,7 +31,7 @@ def wait_text(value,seconds=40):
             root=dump()
             if dismiss_launcher_anr(root): continue
             if value in text_of(root): return root
-            if tries>=2: swipe_up()
+            if tries>=2: swipe_up(gentle=True)
         except (subprocess.CalledProcessError,ET.ParseError): pass
         tries+=1
         time.sleep(1)
@@ -132,6 +132,7 @@ def main():
     adb('shell','input','keyevent','KEYCODE_BACK')
     time.sleep(2)
     tap('Apri Amanita',prefix=True)
+    scroll_top()
     wait_text('Rango:')
     tap('Salva preferito')
     wait_text('Rimuovi preferito')
