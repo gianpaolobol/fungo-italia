@@ -23,7 +23,7 @@ await cp(path.join(root,'assets/icon.png'),path.join(output,'icon.png'));
 const vendor=path.join(output,'vendor');await mkdir(vendor,{recursive:true});
 for(const name of ['leaflet.js','leaflet.css','images'])await cp(path.join(web,'node_modules/leaflet/dist',name),path.join(vendor,name),{recursive:true});
 await cp(path.join(web,'node_modules/leaflet/LICENSE'),path.join(vendor,'LEAFLET-LICENSE.txt'));
-const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.mjs','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
+const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
 const hash=createHash('sha256');for(const file of files)hash.update(await readFile(path.join(output,file)));
 const version=hash.digest('hex').slice(0,20),sw=await readFile(path.join(output,'sw.js'),'utf8');
 await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version));

@@ -1,4 +1,4 @@
-import {MAX_BATCH,MAX_BYTES,BRANCH,REPOSITORY,digest,sanitizeJpeg,jpegDimensions,makeRecord,createGitHubClient} from './photo-core.mjs';
+import {MAX_BATCH,MAX_BYTES,BRANCH,REPOSITORY,digest,sanitizeJpeg,jpegDimensions,makeRecord,createGitHubClient} from './photo-core.js';
 const $=id=>document.getElementById(id);
 let queue=[],busy=false,client=null,connected=false,active=null,sequence=0;
 const allowed=['image/jpeg','image/png','image/webp','image/heic','image/heif','image/avif','image/gif'];

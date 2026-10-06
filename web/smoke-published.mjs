@@ -30,6 +30,7 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  await page.screenshot({path:'published-evidence/'+name+'-amiata.png',fullPage:true});
  await page.goto(url+'importa-foto.html');
  await expect(page.getByRole('heading',{name:'Foto dal telefono a GitHub'})).toBeVisible();
+ await page.waitForFunction(()=>typeof document.getElementById('photos').onchange==='function');
  await expect(page.locator('#choose')).toBeEnabled();
  await expect(page.locator('#upload')).toBeDisabled();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);

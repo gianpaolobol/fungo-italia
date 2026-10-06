@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test';
 import {createHash} from 'node:crypto';
-import {jpegDimensions,sanitizeJpeg,mergeMetadata,validateMetadata} from '../public/photo-core.mjs';
+import {jpegDimensions,sanitizeJpeg,mergeMetadata,validateMetadata} from '../public/photo-core.js';
 const TOKEN='github_pat_'+ 'T'.repeat(40);
 const REPO='https://api.github.com/repos/gianpaolobol/fungo-italia';
 const sha=n=>n.toString(16).padStart(40,'0');
@@ -41,6 +41,7 @@ async function fixture(page,width=2400,height=1200,color='#357c46'){
  return Buffer.from(await page.evaluate(({width,height,color})=>{const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;const ctx=canvas.getContext('2d');ctx.fillStyle=color;ctx.fillRect(0,0,width,height);return canvas.toDataURL('image/png').split(',')[1];},{width,height,color}),'base64');
 }
 async function choose(page,buffer,name='private-original-location.png'){
+ await page.waitForFunction(()=>typeof document.getElementById('photos').onchange==='function');
  await page.locator('#photos').setInputFiles({name,mimeType:'image/png',buffer});
  await expect(page.locator('#queue-count')).toContainText('1 copie pronte');
  await expect(page.locator('#choose')).toBeEnabled();
