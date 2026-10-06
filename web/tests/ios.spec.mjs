@@ -58,7 +58,7 @@ test('private draft survives reload; JSON excludes coordinates unless opted in; 
 test('malformed storage is preserved; scrolling catalog and group sources remain reachable',async({page})=>{
  await page.addInitScript(({studyKey,notesKey})=>{localStorage.setItem(studyKey,'{broken-study');localStorage.setItem(notesKey,'{broken-notes');},{studyKey,notesKey});
  await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
- await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Scorri',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Lettura continua',exact:true})).toBeVisible();
  await page.getByRole('heading',{name:'Fonti e limiti'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Fonti e limiti'}).first()).toBeInViewport();
  await page.getByRole('button',{name:'Salva preferito',exact:true}).first().click();
  expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe('{broken-study');
@@ -232,4 +232,11 @@ test('catalog growth loads with dynamic counts',async({page,context})=>{
   await route.fulfill({response,json:data});
  });
  await ready(page);await expect(page.locator('#catalog-count')).toContainText('149 schede');await expect(page.locator('#layer option[value="all"]')).toHaveText('Tutte · 215');
+});
+
+test('malformed optional taxon fields fail without erasing local notes',async({page})=>{
+ await page.addInitScript(({notesKey,draft})=>localStorage.setItem(notesKey,JSON.stringify({version:1,drafts:[draft]})),{notesKey,draft:importDraft('keep-this','Conserva bozza')});
+ await page.route('**/data.json',async route=>{const response=await route.fetch(),data=await response.json();data.catalog[0].aliases={broken:true};await route.fulfill({response,json:data});});
+ await page.goto('./');await expect(page.getByRole('heading',{name:'Catalogo non disponibile',exact:true})).toBeVisible();
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).drafts[0].taxon,notesKey)).toBe('Conserva bozza');
 });

@@ -9,7 +9,7 @@ function assert(condition,message){if(!condition)throw Error(message);}
 assert(catalog.length>=148&&groups.length>=66&&areas.length>=71,'Baseline content removed');
 assert(new Set([...catalog,...groups].map(t=>t.id)).size===catalog.length+groups.length,'Duplicate taxon IDs');
 assert(new Set(areas.map(a=>a.region)).size===20,'Region count changed');
-assert(catalog.every(t=>t.characters.length===3&&t.sources.length>=2&&t.independentReviewStatus==='not-attested'),'Scientific provenance missing');
+assert(catalog.every(t=>t.characters.length===3&&typeof t.differentiatingCharacter==='string'&&t.differentiatingCharacter.trim()&&t.sources.length>=2&&t.independentReviewStatus==='not-attested'),'Scientific provenance missing');
 assert(areas.every(a=>Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180),'Invalid centroid');
 const amiata=areas.find(a=>a.name.includes('Amiata'));
 assert(amiata&&amiata.center[0]>42&&amiata.center[0]<44&&amiata.center[1]>10&&amiata.center[1]<13,'Amiata latitude/longitude inverted');
