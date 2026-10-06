@@ -1,0 +1,31 @@
+name: Start EAS iPhone Registration
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.eas/workflows/register-iphone-build.yml'
+      - '.github/workflows/start-eas-iphone-registration.yml'
+permissions:
+  contents: read
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify Expo connection
+        run: |
+          test -n "$EXPO_TOKEN"
+          test -n "$EXPO_PROJECT_ID"
+          npx eas-cli@24.8.0 whoami
+      - name: Validate EAS workflow
+        run: npx eas-cli@24.8.0 workflow:validate .eas/workflows/register-iphone-build.yml
+      - name: Start device registration workflow
+        run: npx eas-cli@24.8.0 workflow:run .eas/workflows/register-iphone-build.yml --non-interactive
