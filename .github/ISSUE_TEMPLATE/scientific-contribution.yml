@@ -1,0 +1,69 @@
+name: Proposta scientifica documentata
+description: Proponi una correzione o una fonte per Fungo Italia; è necessaria revisione.
+title: "[Proposta scientifica] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Questa proposta sarà pubblica. Non inserire coordinate precise, informazioni personali o fotografie con GPS nei metadati.
+        Una proposta non è una determinazione, un'approvazione scientifica o un'autorizzazione al consumo. Non aggiorna automaticamente il catalogo.
+  - type: input
+    id: taxon
+    attributes:
+      label: Taxon o unità didattica
+      description: Riporta il nome scientifico e, se disponibile, l'identificatore della scheda.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Tipo di proposta
+      options:
+        - Correzione di un carattere o di un confronto
+        - Fonte bibliografica puntuale
+        - Habitat o nomenclatura
+        - Fotografia di riferimento con diritti verificabili
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Contenuto attuale da correggere
+      description: Cita il campo o il passaggio preciso e il rango tassonomico interessato.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Modifica proposta
+      description: Descrivi il testo proposto e separa osservazioni personali da dati pubblicati.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Fonti verificabili
+      description: Indica autore, titolo, anno e pagina o figura, con DOI o URL della fonte che sostiene il singolo punto.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limiti e ambito del dato
+      description: Indica esemplari, area generale, condizioni, rango, metodi e ciò che la fonte non permette di concludere.
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: Diritti delle eventuali immagini
+      description: Se proponi fotografie, indica autore, provenienza e licenza o autorizzazione esplicita. Evita metadati GPS.
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Pubblicazione consapevole
+      options:
+        - label: Comprendo che la proposta è pubblica e non contiene coordinate precise o dati personali.
+          required: true
+        - label: La proposta richiede revisione e non certifica identificazione o commestibilità.
+          required: true

@@ -174,3 +174,13 @@ test('supplementary habitat and comparisons keep their field-specific sources vi
  await expect(page.locator('#detail-body')).toContainText('Questo riferimento riguarda soltanto habitat');
  await expect(page.locator('#detail-body')).toContainText('Non valida i tre caratteri di campo né la commestibilità');
 });
+
+test('scientific contribution opens the real public repository form without sending local drafts',async({page})=>{
+ await ready(page);await page.getByRole('button',{name:'Contributi',exact:true}).click();
+ const link=page.getByRole('link',{name:/Proponi una correzione scientifica su GitHub/});
+ await expect(link).toHaveAttribute('href','https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml');
+ await expect(link).toHaveAttribute('rel','noopener noreferrer');
+ await expect(page.locator('#main')).toContainText('La proposta sarà pubblica');
+ await expect(page.locator('#main')).toContainText('non aggiorna automaticamente il catalogo');
+ await expect(page.locator('#main details')).not.toHaveAttribute('open');
+});
