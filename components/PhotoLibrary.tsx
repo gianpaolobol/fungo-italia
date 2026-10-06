@@ -3,7 +3,7 @@ import {Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {clusterByTime,makeObservationId,PrivateObservation} from '../src/photoObservations';
 import {enrichCandidates} from '../src/photoCandidatePipeline';
-import {buildVisualReviewQueue} from '../src/visualReviewQueue';
+import {buildVisualReviewQueue,VisualReviewItem,decodeVisualReviewQueue} from '../src/visualReviewQueue';
 import {rankObservationPhotos,PhotoMeta} from '../src/photoSelection';
 
 type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;observations:number;message:string};
@@ -66,10 +66,10 @@ export default function PhotoLibrary(){
    const raw=await AsyncStorage.getItem(privateKey);if(!raw){setState(s=>({...s,message:'Prima indicizza la libreria.'}));return;}
    const parsed=JSON.parse(raw) as {version:1;observations:PrivateObservation[]};
    const queue=buildVisualReviewQueue(parsed.observations,100);
-   const previousRaw=await AsyncStorage.getItem(reviewKey);const previous=previousRaw?JSON.parse(previousRaw):{version:1,queue:[]};if(previous.version!==1||!Array.isArray(previous.queue)||!previous.queue.every((x:VisualReviewItem)=>x&&typeof x.observationId==='string'))throw Error('Coda esistente non leggibile');
+   const previousRaw=await AsyncStorage.getItem(reviewKey);const previous=decodeVisualReviewQueue(previousRaw);
    const combined=[...previous.queue,...queue.filter(x=>!previous.queue.some((old:VisualReviewItem)=>old.observationId===x.observationId))];
    await AsyncStorage.setItem(reviewKey,JSON.stringify({version:1,queue:combined}));
-   setState(s=>({...s,message:`Coda 3+1 pronta: ${queue.length} osservazioni. Ogni gruppo mantiene al massimo 8 scatti e richiede 3 caratteri diagnostici + 1 conferma prima di essere considerato completo.`}));
+   setState(s=>({...s,message:`Coda 3+1 pronta: ${combined.length} osservazioni. Ogni gruppo mantiene al massimo 8 scatti e richiede 3 caratteri diagnostici + 1 conferma prima di essere considerato completo.`}));
   }catch{setState(s=>({...s,message:'Preparazione della coda 3+1 non riuscita.'}));}
  }
  return <ScrollView contentContainerStyle={s.page}>

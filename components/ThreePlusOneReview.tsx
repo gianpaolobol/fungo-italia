@@ -1,7 +1,7 @@
 import React,{useEffect,useRef,useState} from 'react';
 import {Pressable,ScrollView,StyleSheet,Text,TextInput,View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {VisualReviewItem,isThreePlusOneComplete} from '../src/visualReviewQueue';
+import {VisualReviewItem,isThreePlusOneComplete,decodeVisualReviewQueue} from '../src/visualReviewQueue';
 import {suggestionsFromAtlas} from '../src/threePlusOneSuggestions';
 import catalog from '../src/data/catalog.json';
 import groups from '../src/data/groups.json';
@@ -13,7 +13,7 @@ const reviewKey='fungo-italia:private-3plus1-queue:v1';
 export default function ThreePlusOneReview({active=true}:{active?:boolean}){
  const [queue,setQueue]=useState<VisualReviewItem[]>([]),[index,setIndex]=useState(0),[message,setMessage]=useState('');
  const canWrite=useRef(false),saveQueue=useRef<Promise<void>>(Promise.resolve());
- useEffect(()=>{if(!active)return;let alive=true;canWrite.current=false;void saveQueue.current.catch(()=>{}).then(()=>AsyncStorage.getItem(reviewKey)).then(raw=>{if(!alive)return;const value=raw?JSON.parse(raw):{version:1,queue:[]};if(value.version!==1||!Array.isArray(value.queue)||!value.queue.every((x:VisualReviewItem)=>x&&typeof x.observationId==='string'&&Array.isArray(x.assetIds)&&x.assetIds.every(id=>typeof id==='string')&&Array.isArray(x.characters)&&x.characters.length===3&&x.characters.every(v=>v===null||typeof v==='string')&&Array.isArray(x.notes)&&x.notes.every(n=>typeof n==='string')&&(x.confirmation===null||typeof x.confirmation==='string')&&(x.taxonCandidate===null||typeof x.taxonCandidate==='string')))throw Error('Formato coda');setQueue(value.queue);setIndex(i=>Math.max(0,Math.min(i,value.queue.length-1)));setMessage('');canWrite.current=true;}).catch(()=>{if(alive){setMessage('Coda non leggibile: i dati esistenti non verranno sovrascritti.');setQueue([]);}});return()=>{alive=false;};},[active]);
+ useEffect(()=>{if(!active)return;let alive=true;canWrite.current=false;void saveQueue.current.catch(()=>{}).then(()=>AsyncStorage.getItem(reviewKey)).then(raw=>{if(!alive)return;const value=decodeVisualReviewQueue(raw);setQueue(value.queue);setIndex(i=>Math.max(0,Math.min(i,value.queue.length-1)));setMessage('');canWrite.current=true;}).catch(()=>{if(alive){setMessage('Coda non leggibile: i dati esistenti non verranno sovrascritti.');setQueue([]);}});return()=>{alive=false;};},[active]);
  const item=queue[index];
  const suggestions=item?suggestionsFromAtlas(taxa,item.taxonCandidate||''):[];
  function patch(p:Partial<VisualReviewItem>){if(!canWrite.current)return;const next=queue.map((x,i)=>i===index?{...x,...p,confidence:'unknown' as const}:x);setQueue(next);const payload=JSON.stringify({version:1,queue:next});saveQueue.current=saveQueue.current.catch(()=>{}).then(()=>AsyncStorage.setItem(reviewKey,payload)).catch(()=>setMessage('Salvataggio non riuscito. La bozza resta in memoria: riprova prima di uscire.'));}

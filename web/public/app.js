@@ -6,7 +6,7 @@ const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
 const ranks={species:'Specie',genus:'Genere',section:'Sezione',group:'Gruppo',speciesGroup:'Gruppo di specie',aggregate:'Aggregato',operationalGroup:'Gruppo operativo',family:'Famiglia',subgenus:'Sottogenere',subsection:'Sottosezione',subspecies:'Sottospecie',variety:'Varietà'};
 const diagnosticLimits={field_high_confidence:'Caratteri di campo; determinazione da verificare',field_high_confidence_when_typical:'Condizione: esemplari tipici',field_high_confidence_when_host_known:'Ospite ed ecologia devono essere noti',field_high_confidence_when_young:'Condizione: esemplari giovani',field_high_confidence_at_source_rank:'Risoluzione limitata al rango didattico S1',field_confirmatory:'Conferma specialistica nei casi dubbi',defined_morphogroup_s1:'Morfogruppo didattico S1',defined_set_s1:'Insieme didattico definito S1',microscopy_required_for_fine_id:'Microscopia necessaria per la specie fine',dna_confirmatory:'Conferma molecolare per la risoluzione fine'};
 let data,taxa=[],byId=new Map(),favoriteIds=[],resumeId=null,studyWritable=true,notesWritable=true,drafts=[],selectedDraft=null;
-let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapTimer=null,mapOn=false,registration=null,installPrompt=null,toastTimer,observer=null,offlineReady=false,renderedCount=0;
+let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapTimer=null,mapOn=false,registration=null,installPrompt=null,toastTimer,observer=null,readingTimer=null,offlineReady=false,renderedCount=0;
 const scrollPositions={studio:0,areas:0,notes:0,community:0};
 let notesSaveError='',studySaveError='';
 const notice='<p class="notice">Studio: revisione scientifica indipendente pendente. Le schede non autorizzano il consumo.</p>';
@@ -159,7 +159,7 @@ function backupSnapshots(value){
 }
 function backupMerge({study,notes}){
  const nextDrafts=drafts.map(d=>({...d})),used=new Set(nextDrafts.map(d=>d.id));let added=0,renamed=0;
- for(const source of notes?.drafts||[]){const existing=nextDrafts.find(d=>d.id===source.id);if(existing&&fields.every(field=>existing[field]===source[field]))continue;const incoming={...source};if(existing){do{incoming.id=freshDraft().id;}while(used.has(incoming.id));renamed++;}used.add(incoming.id);nextDrafts.push(incoming);added++;}
+ for(const source of notes?.drafts||[]){const identical=nextDrafts.find(d=>(d.id===source.id||d.importedFromId===source.id)&&fields.every(field=>d[field]===source[field]));if(identical)continue;const existing=nextDrafts.find(d=>d.id===source.id);const incoming={...source};if(existing){incoming.importedFromId=source.id;do{incoming.id=freshDraft().id;}while(used.has(incoming.id));renamed++;}used.add(incoming.id);nextDrafts.push(incoming);added++;}
  const nextFavorites=[...new Set([...favoriteIds,...(study?.favoriteIds||[])])];
  return {drafts:nextDrafts,favoriteIds:nextFavorites,resumeId:resumeId||study?.resumeId||null,added,renamed,favoritesAdded:nextFavorites.length-favoriteIds.length};
 }
@@ -191,7 +191,8 @@ function renderCommunity(){
 }
 function renderTab(){
  destroyMap();if(observer)observer.disconnect();currentTaxon=null;
- document.querySelectorAll('[data-tab]').forEach(b=>b.getAttribute('data-tab')===tab?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ $('#main').addEventListener('scroll',()=>{clearTimeout(readingTimer);if(tab!=='studio'||!feed)return;readingTimer=setTimeout(()=>{if(tab!=='studio'||!feed||$('#detail').open)return;const root=$('#main').getBoundingClientRect(),line=root.top+Math.min(120,root.height*.3);const card=[...document.querySelectorAll('#cards article')].find(element=>{const box=element.getBoundingClientRect();return box.top<=line&&box.bottom>line;});const id=card?.querySelector('[data-action="open"]')?.dataset.id;if(id&&byId.has(id)&&id!==resumeId){resumeId=id;persistStudy();updateResume();}},350);});
+document.querySelectorAll('[data-tab]').forEach(b=>b.getAttribute('data-tab')===tab?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
  if(tab==='studio')renderStudio();else if(tab==='areas')renderAreas();else if(tab==='notes')renderNotes();else renderCommunity();$('#main').scrollTop=scrollPositions[tab]||0;
 }
 document.addEventListener('click',event=>{
