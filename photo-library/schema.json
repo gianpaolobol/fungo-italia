@@ -15,7 +15,8 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/photo"
-      }
+      },
+      "maxItems": 10000
     }
   },
   "$defs": {
@@ -76,12 +77,14 @@
           "required": [
             "attribution",
             "license",
-            "publicationScope"
+            "publicationScope",
+            "authorization"
           ],
           "properties": {
             "attribution": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "maxLength": 160
             },
             "license": {
               "type": "string",
