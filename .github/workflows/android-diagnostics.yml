@@ -1,4 +1,4 @@
-name: Verify native gallery EXIF and cold-start
+name: Verify photographic grouping and cold-start
 on:
   push:
     branches: [feat/profile-readiness-oct06]

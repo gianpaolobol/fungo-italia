@@ -82,7 +82,7 @@ def seed_photos():
         dates=[]
         for name in ['scatto1.jpg','scatto2.jpg']:
             row=next((line for line in rows.splitlines() if name in line),'')
-            value=re.search(r'datetaken=(\\d+)',row)
+            value=re.search(r'datetaken=([0-9]+)',row)
             if value and int(value.group(1))>0: dates.append(int(value.group(1)))
         if len(dates)==2 and abs(dates[0]-dates[1])<=2000:
             print('Gallery fixture timestamps verified:',dates)
