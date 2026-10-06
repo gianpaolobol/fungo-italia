@@ -61,26 +61,32 @@ def scroll_top():
         adb('shell','input','swipe',str(width//2),str(height//3),str(width//2),str(height*3//4),'250')
         time.sleep(.3)
 def seed_photos():
+    from PIL import Image
     os.makedirs('artifacts/smoke/fixtures',exist_ok=True)
     adb('shell','mkdir','-p','/sdcard/Pictures/FungoItaliaTest')
-    def chunk(kind,data):
-        return struct.pack('>I',len(data))+kind+data+struct.pack('>I',zlib.crc32(kind+data)&0xffffffff)
     for i,color in enumerate([(80,130,70),(160,100,70)],1):
-        path='artifacts/smoke/fixtures/scatto'+str(i)+'.png'
-        pixels=b''.join(b'\x00'+bytes(color)*180 for _ in range(180))
-        png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',180,180,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(pixels))+chunk(b'IEND',b'')
-        with open(path,'wb') as f: f.write(png)
-        remote='/sdcard/Pictures/FungoItaliaTest/scatto'+str(i)+'.png'
+        path='artifacts/smoke/fixtures/scatto'+str(i)+'.jpg'
+        # EXIF is in the file, so MediaScanner can safely regenerate DATE_TAKEN.
+        exif=Image.Exif()
+        exif[306]='2023:11:14 22:13:'+str(19+i).zfill(2)
+        exif[36867]=exif[306]
+        exif[36881]='+00:00'
+        Image.new('RGB',(180,180),color).save(path,format='JPEG',exif=exif)
+        remote='/sdcard/Pictures/FungoItaliaTest/scatto'+str(i)+'.jpg'
         adb('push',path,remote)
         adb('shell','am','broadcast','-a','android.intent.action.MEDIA_SCANNER_SCAN_FILE','-d','file://'+remote)
-    for _ in range(20):
-        rows=adb('shell','content','query','--uri','content://media/external/images/media','--projection','_display_name')
-        if 'scatto1.png' in rows and 'scatto2.png' in rows: break
+    for _ in range(40):
+        rows=adb('shell','content','query','--uri','content://media/external/images/media','--projection','_id:_display_name:datetaken')
+        dates=[]
+        for name in ['scatto1.jpg','scatto2.jpg']:
+            row=next((line for line in rows.splitlines() if name in line),'')
+            value=re.search(r'datetaken=(\\d+)',row)
+            if value and int(value.group(1))>0: dates.append(int(value.group(1)))
+        if len(dates)==2 and abs(dates[0]-dates[1])<=2000:
+            print('Gallery fixture timestamps verified:',dates)
+            break
         time.sleep(1)
-    else: raise AssertionError('Gallery fixtures not indexed')
-    # Synthetic PNG files have no EXIF capture time; explicitly seed metadata
-    # for the dated two-shot observation. Undated assets are covered separately.
-    adb('shell','content update --uri content://media/external/images/media --where "_display_name LIKE \'scatto%.png\'" --bind datetaken:l:1700000000000')
+    else: raise AssertionError('Gallery fixtures missing verified EXIF capture dates: '+rows)
     adb('shell','pm','grant','it.fungoitalia.app','android.permission.READ_MEDIA_IMAGES')
 def check_photo_review():
     seed_photos()

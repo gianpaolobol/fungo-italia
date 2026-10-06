@@ -97,6 +97,8 @@ jobs:
         with:
           name: Fungo-Italia-Android-APK
           path: artifacts/android
+      - name: Install gallery fixture tooling
+        run: python3 -m pip install Pillow==11.3.0
       - name: Enable hardware acceleration
         run: sudo chmod 666 /dev/kvm
       - uses: reactivecircus/android-emulator-runner@v2

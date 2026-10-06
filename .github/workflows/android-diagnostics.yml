@@ -18,7 +18,9 @@ jobs:
           name: Fungo-Italia-Android-APK
           path: artifacts/android
           github-token: ${{ github.token }}
-          run-id: '37423897690'
+          run-id: '37426632106'
+      - name: Install gallery fixture tooling
+        run: python3 -m pip install Pillow==11.3.0
       - run: sudo chmod 666 /dev/kvm
       - uses: reactivecircus/android-emulator-runner@v2
         with:
