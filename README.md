@@ -1,22 +1,25 @@
-# Fungo Italia — Expo
-React Native/Expo per Android e iOS, con 148 unità minime, 66 schede di generi/gruppi e 71 macroaree nazionali incluse offline.
-Il progetto precedente era Next/React, non Flutter. È conservato integralmente in legacy/web e nei branch backup/pre-migration-flutter e backup/verified-web-readiness.
+# Fungo Italia
+Apri l'app: https://gianpaolobol.github.io/fungo-italia/
+GitHub Pages è il percorso pubblico operativo per smartphone e computer. Su iPhone: Safari → Condividi → Aggiungi alla schermata Home. Istruzioni: [docs/IPHONE.md](docs/IPHONE.md).
 
-## Stato e limiti verificabili
-Il catalogo conserva 148 unità minime, gruppi didattici e riferimenti della baseline. La revisione scientifica indipendente è ancora pendente: le schede non autorizzano consumo o raccolta.
-Studio con tap/scrolling, ricerca, preferiti e ripresa; aree offline e mappa online OpenStreetMap; bozze private locali esportabili. Le bozze non sono contributi pubblicati e non si collegano automaticamente agli account del precedente servizio.
+## Funzioni disponibili
+148 unità minime e 66 schede di generi/gruppi; consultazione con tap e scrolling, ricerca per nome scientifico/comune/sinonimo, preferiti e ripresa dello studio. 71 macroaree in 20 regioni, filtro Amiata e mappa vettoriale nella PWA. Lo sfondo cartografico richiede rete; le macroaree sono centri indicativi, non fungaie o autorizzazioni.
+La PWA conserva sul dispositivo note e bozze, con backup e ripristino con anteprima. Dopo la preparazione della cache, catalogo e punti vettoriali sono consultabili offline. I dati locali possono essere rimossi dal browser: esportare il backup prima del viaggio.
+I contributori possono aprire il [modulo di proposta scientifica](https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml), indicando taxon, correzione e fonte precisa. Richiede account GitHub gratuito; le proposte sono pubbliche e non vengono approvate automaticamente. Nessuna bozza locale viene inviata senza azione dell'utente.
 
-## Compilazione
-La pipeline installa le dipendenze, genera i dati dal catalogo conservato, verifica TypeScript e l’integrità dei dati, esporta i bundle iOS/Android e genera un APK Android locale con Gradle e verifica su emulatore avvio senza rete, ricerca, dettaglio, preferiti dopo riavvio e filtro Amiata. L'APK di anteprima usa la firma debug del template; la distribuzione definitiva richiede una chiave privata gestita come secret.
-Il servizio Sites precedente risulta attivo: https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site (versioni6). Questa migrazione non chiama alcun deploy Sites e non cancella database D1, bucket R2 o il servizio Floot. Il codice web resta in legacy/web per la manutenzione separata.
+## Copertura scientifica
+Nomi comuni documentati: 23/148 unità; habitat strutturati: 3/148; confronti bibliografici: 14/148. Solo 7/148 profili riportano riscontri esterni puntuali sui caratteri di campo. I riferimenti supplementari attestano il campo citato, non l'intero profilo.
+Mancano fotografie tassonomiche di riferimento validate e revisione micologica indipendente. Il catalogo non certifica determinazioni o commestibilità. Dettaglio: [audit del 6 ottobre](docs/AUDIT-2026-10-06.md).
 
-## iOS / Expo
-Expo Go richiede una versione compatibile con il SDK usato. EAS Update richiede account/progetto Expo e token; i permessi GitHub non conferiscono questi accessi. Il workflow pubblica soltanto se EXPO_TOKEN e EXPO_PROJECT_ID sono realmente configurati. EAS Update in Expo Go non prova il comportamento degli aggiornamenti di una build nativa dedicata.
-Compilare/distribuire una app iOS firmata richiede macOS e le credenziali Apple appropriate; Expo Go permette anteprima senza acquistare un account sviluppatore.
-GitHub Actions privato ed EAS hanno quote: nessuna gratuità illimitata è garantita.
+## Android e sorgenti Expo
+[APK di anteprima verificato](https://github.com/gianpaolobol/fungo-italia/releases/download/native-preview/Fungo-Italia.apk). React Native/Expo per Android e iOS. La funzione Foto nativa indicizza i metadati autorizzati, raggruppa le immagini per data e conserva separatamente quelle senza data; permette la rimozione dalla bozza, senza cancellare originali. Non riconosce automaticamente specie o anatomia.
+La pipeline verifica catalogo, TypeScript, bozze e bundle iOS/Android; compila l'APK con Gradle e lo aggiorna solo dopo i test su emulatore. La firma è quella debug del template Expo, non una chiave privata di produzione. [Limiti della preview](docs/ANDROID-PREVIEW.md).
 
-La matrice ufficiale Expo58.0.2 abbina React19.3.0 e ReactNative0.88.0-rc.3. Il pin override ReactNative rende esplicito questo abbinamento anche per i peer delle librerie che escludono semanticamente versioni prerelease. Non vengono disabilitati globalmente i controlli peer.
+## Verifiche e distribuzione
+19 test web Chromium/WebKit, interfaccia a 320 punti, backup, navigazione, mappe e consultazione offline. Dopo il deploy, un controllo apre il vero sito Pages e verifica la revisione pubblicata. Questi test non attestano una prova su iPhone fisico.
+Il repository è pubblico e Pages è configurato. Actions ed EAS possono applicare quote; nessuna gratuità illimitata è promessa. EAS Update richiede progetto/token Expo e compatibilità del runtime. Snack anonimo è solo una prova manuale opzionale, non un percorso verificato: il servizio ha risposto con un errore di quota.
+La distribuzione nativa iOS è bloccata dalle credenziali/team Apple; la PWA funziona senza account sviluppatore. Nessun QR Expo Go funzionante viene attestato.
 
-## iPhone
-La PWA e il publisher Expo Snack sono in web/. Il workflow iPhone PWA verifica WebKit a 320 punti, costruisce il pacchetto offline e tenta un’anteprima Expo Go anonima soltanto con un runtime compatibile. Il publisher salva URL e QR effettivi nell’artefatto di preview, senza inventare credenziali Expo.
-La pubblicazione PWA richiede Pages già configurato: l’integrazione ha ricevuto Resource not accessible by integration tentando l’attivazione. Non viene resa pubblica la repository privata. Stato, limiti e installazione in docs/IPHONE.md.
+## Conservazione del progetto precedente
+Il progetto precedente era Next/React, non Flutter. È conservato in legacy/web e nei branch backup/pre-migration-flutter e backup/verified-web-readiness. Il servizio storico rimane facoltativo per gli account esistenti: https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site .
+La matrice ufficiale Expo58.0.2 abbina React19.3.0 e ReactNative0.88.0-rc.3; il pin override rende esplicito l'abbinamento per i peer delle librerie che escludono versioni prerelease.

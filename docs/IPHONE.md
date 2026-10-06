@@ -1,24 +1,20 @@
 # Fungo Italia su iPhone
-## Due percorsi
-La PWA usa lo stesso catalogo dell'app Expo: 148 unità minime, 66 schede di generi/gruppi e 71 macroaree. Preferiti e bozze sono locali; i contributi pubblicati restano nel servizio web autenticato. Nessun account Apple Developer o Expo è richiesto per una PWA.
-L'anteprima nativa usa Expo Snack solo se supporta il runtime dell'Expo Go iOS corrente. Il workflow verifica la compatibilità e le dipendenze prima di pubblicare anonimamente; salva URL e QR nell'artefatto Fungo-Italia-iPhone-Expo-Go. Non è una build App Store/TestFlight. Il riavvio offline di Expo Go e una prova fisica su iPhone restano verifiche separate.
-## Installazione della PWA
-Dopo la pubblicazione HTTPS: aprire l'URL in Safari, scegliere Condividi > Aggiungi alla schermata Home, poi aprire l'icona. Attendendo Catalogo pronto offline l'app verifica il pacchetto in cache, non soltanto la registrazione del service worker. Prima di partire senza rete, verificare riapertura in modalità aereo. I marker delle macroaree restano disponibili; lo sfondo OpenStreetMap e i contributi web richiedono connessione.
-Safari può rimuovere i dati locali: esportare note e backup privato. Il backup comprende sia la memoria persistita sia le modifiche in RAM, con indicazione dei salvataggi falliti. Le coordinate strutturate sono escluse dal JSON della singola osservazione salvo scelta esplicita; il backup completo le conserva.
-## Hosting
-Il tentativo di attivare Pages è stato rifiutato con Resource not accessible by integration. Il workflow non modifica la visibilità del repository e pubblica soltanto dopo i test, quando Pages risulta configurato. Un repository privato non garantisce Pages gratuito: dipende dal piano GitHub. Account, ruoli o configurazioni amministrative non vengono simulati.
+## Installazione
+Aprire https://gianpaolobol.github.io/fungo-italia/ in Safari. Scegliere Condividi → Aggiungi alla schermata Home, poi aprire l'icona. GitHub Pages è già attivo: non occorre modificare permessi o impostazioni del repository.
+Attendere “Catalogo pronto offline”, che verifica il pacchetto in cache. Prima di partire senza rete, provare la riapertura in modalità aereo. Il catalogo e i marker delle macroaree restano disponibili dopo la preparazione; lo sfondo OpenStreetMap e il modulo dei contributi richiedono rete.
+Per una versione già installata, usare il comando di aggiornamento nell'app quando disponibile e riaprirla. Prima di cancellare dati del sito o reinstallare, esportare il backup.
+
+## Dati e contributi
+La PWA include 148 unità minime, 66 schede di generi/gruppi e 71 macroaree. Preferiti, note e bozze sono locali. Il backup completo conserva anche coordinate eventualmente inserite: tenerlo privato. L'importazione propone un'anteprima e unisce i dati senza cancellare le bozze esistenti. Safari può rimuovere dati locali; esportare il backup prima del viaggio.
+La sezione Comunità apre il modulo pubblico GitHub per proposte scientifiche con taxon, correzione e fonte. Serve un account GitHub gratuito. Le bozze locali non vengono inviate automaticamente. Una proposta non costituisce approvazione scientifica. Il servizio storico è facoltativo per gli account esistenti.
+
 ## Verifiche
-La pipeline usa WebKit a 320×568 sotto /fungo-italia/, con ricerca, schede in sequenza, cache offline, preferiti dopo riavvio, marker Amiata, bozze, coordinate opt-in, dati malformati, backup in caso di quota esaurita e fallback su errore server. L'esecuzione automatica non equivale a un test sull'iPhone fisico.
-La revisione micologica indipendente rimane pendente; il catalogo non certifica determinazioni, raccolta o commestibilità.
+Il 6 ottobre 2026 la versione pubblicata ha superato 19 test web: ricerca, schede consecutive, preferiti, ripresa, marker Amiata, bozze, backup, tastiera, dati malformati, fonti e contributi. Il deploy e il controllo sul sito pubblico sono riusciti: https://github.com/gianpaolobol/fungo-italia/actions/runs/37426632130 .
+Chromium verifica la reale navigazione offline con il flag di rete disabilitata. Per WebKit, i test offline arrestano il server origin e aprono un documento nuovo dalla cache; il difetto noto del flag offline Playwright/WebKit non viene considerato una prova riuscita. I controlli automatici non equivalgono a un test fisico in modalità aereo su iPhone.
 
-La verifica WebKit arresta realmente il server di origine, naviga in un documento nuovo restituito dal service worker e verifica che un contesto senza cache fallisca. Il flag offline Playwright/WebKit ha un difetto noto (microsoft/playwright#42775); non viene ignorato alcun errore di navigazione. Un settimo test Chromium usa il vero flag offline. Queste prove non attestano una modalità aereo su iPhone fisico.
+## Expo Go e iOS nativo
+La PWA non richiede account Apple Developer o Expo. Una build iOS firmata richiede credenziali e team Apple appropriati: il tentativo attuale segnala “No Apple teams found” e non fornisce un'app nativa installabile.
+Snack è una prova manuale opzionale. Il manifest della precedente preview ha risposto HTTP429 per quota gratuita esaurita; il QR precedente non è attestato funzionante. EAS Update richiede account, progetto, token e runtime compatibile: non garantisce automaticamente l'apertura in Expo Go.
 
-## Stato verificato — 5 ottobre 2026
-
-Sette test superati: https://github.com/gianpaolobol/fungo-italia/actions/runs/37377030908 . Pacchetto PWA pronto nell’artefatto Fungo-Italia-iPhone-PWA. I test WebKit e Chromium non sostituiscono il collaudo su iPhone fisico.
-
-La snapshot Snack è stata pubblicata, ma il manifest iOS risponde HTTP 429 con: “The number of Monthly Updating Users has exceeded the Free tier’s quota for this account.” Il progetto condiviso restituito da Snack non consente quindi di attestare una distribuzione funzionante in Expo Go. Nessuna sottoscrizione acquistata. URL e QR sono conservati come evidenza, non come app verificata.
-
-Per pubblicare la PWA, un amministratore deve aprire https://github.com/gianpaolobol/fungo-italia/settings/pages e impostare Build and deployment → Source → GitHub Actions. Il tentativo di abilitazione tramite integrazione ha restituito HTTP 403. Su repository privati, la disponibilità di Pages dipende dal piano GitHub; non è garantita una soluzione gratuita senza verificare tale disponibilità. La pipeline controlla se Pages è configurato e distribuisce il pacchetto solo dopo i test.
-
-Il codice è salvato su main. La versione web precedente rimane online. Revisione scientifica indipendente e prova in modalità aereo su iPhone restano pendenti.
+## Limiti del catalogo
+23/148 unità con nomi comuni documentati, 3/148 con habitat e 14/148 con confronti bibliografici; solo 7/148 profili con riscontri esterni sui caratteri di campo. Mancano fotografie tassonomiche di riferimento validate e revisione micologica indipendente. Non certifica identificazione o commestibilità. [Audit dettagliato](AUDIT-2026-10-06.md).
