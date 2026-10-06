@@ -2,7 +2,7 @@
 import json, plistlib, pathlib, hashlib, re
 ROOT = pathlib.Path(__file__).resolve().parent
 OUT = pathlib.Path("shortcut-output")
-ALLOWED = {"comment","alert","nothing","setvariable","format.date","filter.photos","repeat.each","image.resize","image.convert","setitemname","appendvariable","count","conditional","makezip","documentpicker.save"}
+ALLOWED = {"comment","alert","nothing","setvariable","formatdate","filter.photos","repeat.each","image.resize","image.convert","setitemname","appendvariable","count","conditional","makezip","documentpicker.save"}
 def validate(data):
     seen = set()
     stack = []
