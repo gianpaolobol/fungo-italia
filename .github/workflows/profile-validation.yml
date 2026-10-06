@@ -20,6 +20,7 @@ jobs:
       - name: Verify reproducible dependency installation
         run: npm ci
       - run: npm run prepare:data
+      - run: node scripts/validate-mobile-data.mjs
       - run: npm run typecheck
       - run: python3 -m py_compile scripts/android-smoke.py
       - run: node scripts/test-review-readiness.mjs

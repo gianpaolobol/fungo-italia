@@ -41,10 +41,10 @@ export default function PhotoLibrary(){
     offset+=assets.length;
     if(pages>2000)throw new Error('Limite di sicurezza scansione');
    }
-   const groups=clusterByTime(metadata);
+   const groups=clusterByTime(metadata).sort((a,b)=>(b[0]?.creationTime??0)-(a[0]?.creationTime??0));
    const observations:PrivateObservation[]=groups.map(group=>({id:makeObservationId(group.map(a=>a.id),group[0]?.creationTime??null),assetIds:rankObservationPhotos(group,8).map(a=>a.assetId),capturedAt:group[0]?.creationTime??null,preciseLocation:null,appleCandidate:null,verificationStatus:'unreviewed'}));
    await AsyncStorage.setItem(privateKey,JSON.stringify({version:1,observations}));
-   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} osservazioni temporali. GPS/EXIF vengono letti solo quando richiedi l’analisi dei gruppi. Nessun riconoscimento automatico è eseguito.`});
+   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} gruppi per data; le foto senza data restano separate. GPS/EXIF vengono letti solo quando richiedi l’analisi dei gruppi. Nessun riconoscimento automatico è eseguito.`});
   }catch(e){
    setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
   }
@@ -73,7 +73,7 @@ export default function PhotoLibrary(){
  return <ScrollView contentContainerStyle={s.page}>
   <Text style={s.title}>La mia raccolta fotografica</Text>
   <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
-  <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>Indicizza le foto autorizzate, forma gruppi temporali e preseleziona fino a 8 scatti per ciascuno dei primi 100 gruppi. In 3+1 puoi rimuovere gli scatti non pertinenti e compilare la bozza. Non riconosce automaticamente funghi, esemplari o parti anatomiche.</Text></View>
+  <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>Indicizza le foto autorizzate, forma gruppi per data (foto senza data separate), ordina prima i più recenti e preseleziona fino a 8 scatti per ciascuno dei primi 100 gruppi. In 3+1 puoi rimuovere gli scatti non pertinenti e compilare la bozza. Non riconosce automaticamente funghi, esemplari o parti anatomiche.</Text></View>
   <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
   <Pressable accessibilityRole="button" onPress={enrich} style={s.secondary}><Text style={s.secondaryText}>Analizza GPS/EXIF dei primi 100 gruppi</Text></Pressable>
   <Pressable accessibilityRole="button" onPress={prepareReview} style={s.secondary}><Text style={s.secondaryText}>Prepara coda visuale 3+1</Text></Pressable>

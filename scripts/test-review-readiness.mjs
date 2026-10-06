@@ -1,3 +1,4 @@
+import {clusterByTime} from '../src/photoObservations.ts';
 import assert from 'node:assert/strict';
 import {buildVisualReviewQueue,isThreePlusOneComplete,decodeVisualReviewQueue,createVisualReviewStore,retryPendingVisualReviews} from '../src/visualReviewQueue.ts';
 const item=buildVisualReviewQueue([{id:'specimen',assetIds:['photo1','photo2']}])[0];
@@ -32,3 +33,8 @@ const pending=new Map([[filled.observationId,filled],[added.observationId,added]
 await retryPendingVisualReviews(pending,async snapshot=>{retried.push(snapshot);if(snapshot.observationId===filled.observationId)pending.set(added.observationId,newer);});
 assert.equal(retried[1].taxonCandidate,newer.taxonCandidate);
 console.log('Retry reads each pending draft at execution time and cannot overwrite a newer edit with a stale snapshot.');
+
+const grouped=clusterByTime([{id:'dated-1',creationTime:1700000000000},{id:'dated-2',creationTime:1700000001000},{id:'undated-1',creationTime:null},{id:'undated-2',creationTime:null}]);
+assert.deepEqual(grouped.map(group=>group.map(asset=>asset.id)),[['dated-1','dated-2'],['undated-1'],['undated-2']]);
+assert.equal(grouped.flat().length,4,'No authorized asset may be discarded solely because capture time is missing');
+console.log('Undated gallery assets remain separate observations instead of disappearing from the review queue.');

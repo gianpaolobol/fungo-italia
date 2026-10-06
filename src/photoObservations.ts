@@ -15,14 +15,15 @@ export type PublicObservation={
 };
 const DAY=86400000;
 export function clusterByTime<T extends {id:string;creationTime:number|null}>(assets:T[],gapMs=3*60*1000){
- const ordered=[...assets].filter(a=>a.creationTime!==null).sort((a,b)=>(a.creationTime||0)-(b.creationTime||0));
+ const undated=assets.filter(a=>a.creationTime===null||!Number.isFinite(a.creationTime));
+ const ordered=[...assets].filter(a=>a.creationTime!==null&&Number.isFinite(a.creationTime)).sort((a,b)=>(a.creationTime||0)-(b.creationTime||0));
  const groups:T[][]=[];
  for(const asset of ordered){
   const last=groups.at(-1),previous=last?.at(-1);
   if(!last||!previous||!previous.creationTime||!asset.creationTime||asset.creationTime-previous.creationTime>gapMs)groups.push([asset]);
   else last.push(asset);
  }
- return groups;
+ return [...groups,...undated.map(asset=>[asset])];
 }
 export function generalizeLocation(location:{latitude:number;longitude:number}|null){
  if(!location)return null;

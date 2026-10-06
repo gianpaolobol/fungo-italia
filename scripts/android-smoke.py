@@ -78,6 +78,9 @@ def seed_photos():
         if 'scatto1.png' in rows and 'scatto2.png' in rows: break
         time.sleep(1)
     else: raise AssertionError('Gallery fixtures not indexed')
+    # Synthetic PNG files have no EXIF capture time; explicitly seed metadata
+    # for the dated two-shot observation. Undated assets are covered separately.
+    adb('shell','content update --uri content://media/external/images/media --where "_display_name LIKE \'scatto%.png\'" --bind datetaken:l:1700000000000')
     adb('shell','pm','grant','it.fungoitalia.app','android.permission.READ_MEDIA_IMAGES')
 def check_photo_review():
     seed_photos()
