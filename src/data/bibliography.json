@@ -1,0 +1,251 @@
+[
+  {
+    "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+    "sourceType": "courseDocument",
+    "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+    "authors": [],
+    "publisher": null,
+    "publicationYear": 2026,
+    "version": "V4 - 09.06.2026",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": null,
+    "licenseNote": "Fonte didattica usata per dati strutturati e sintesi originali; nessuna riproduzione estesa del testo.",
+    "fileHashSha256": null
+  },
+  {
+    "sourceId": "S2-guida-ragionata-commestibilita-2021",
+    "sourceType": "book",
+    "title": "Guida ragionata alla commestibilità dei funghi. Revisione critica della letteratura micotossicologica e biochimica e analisi della casistica del Centro Antiveleni di Milano",
+    "authors": [
+      "Sitta N.",
+      "Davoli P.",
+      "Floriani M.",
+      "Suriano E."
+    ],
+    "publisher": "Regione Piemonte",
+    "publicationYear": 2021,
+    "version": null,
+    "url": "https://www.regione.piemonte.it/web/media/24510/download",
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-21",
+    "licenseNote": "Fonte primaria per categorie alimentari e trattamenti; il catalogo conserva dati strutturati, riferimenti puntuali e sintesi originali.",
+    "fileHashSha256": null
+  },
+  {
+    "sourceId": "NOM-index-fungorum",
+    "sourceType": "database",
+    "title": "Index Fungorum",
+    "authors": [],
+    "publisher": "Index Fungorum Partnership",
+    "publicationYear": null,
+    "version": null,
+    "url": "https://www.indexfungorum.org/",
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-21",
+    "licenseNote": "Consultazione nomenclaturale; vengono memorizzati nome, record e collegamento, non contenuti estesi.",
+    "fileHashSha256": null
+  },
+  {
+    "sourceId": "NOM-alvarado-amanita-phalloideae-2022",
+    "sourceType": "article",
+    "title": "Phylogenetic studies on Amanita section Phalloideae in the Mediterranean area",
+    "authors": [
+      "Alvarado P. et al."
+    ],
+    "publisher": null,
+    "publicationYear": 2022,
+    "version": null,
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9138314/",
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-21",
+    "licenseNote": "Fonte peer-reviewed usata per la riconciliazione del concetto Amanita verna/A. vidua.",
+    "fileHashSha256": null
+  },
+  {
+    "sourceId": "EDITORIAL-minimum-card-synthesis-v1",
+    "sourceType": "expertReview",
+    "title": "Sintesi editoriale schede Minimo v1 - contenuto da revisione micologica",
+    "authors": [],
+    "publisher": "Fungo Italia",
+    "publicationYear": 2026,
+    "version": "v1",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": null,
+    "licenseNote": "Sintesi originale interna. Non e una fonte scientifica primaria e resta reviewNeeded fino alla revisione di un micologo.",
+    "fileHashSha256": null
+  },
+  {
+    "sourceId": "AUDIT-minimum-3plus1-baseline-1.0",
+    "sourceType": "expertReview",
+    "title": "Scientific Baseline 1.0 — audit trasversale 3+1 dei 148 profili Minimo",
+    "authors": [],
+    "publisher": "Fungo Italia",
+    "publicationYear": 2026,
+    "version": "1.0 - 28.09.2026",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": null,
+    "licenseNote": "Sintesi scientifica originale derivata dall'audit taxon-per-taxon delle fonti del progetto e dalle verifiche specialistiche documentate. Stato reviewed interno; non sostituisce la revisione micologica indipendente richiesta dal gate finale.",
+    "fileHashSha256": null
+  },
+  {
+    "sourceId": "S3-campania-funghi-2007",
+    "sourceType": "book",
+    "title": "I funghi della Campania",
+    "authors": [
+      "Emmanuele Roca",
+      "Lello Capano",
+      "Fabrizio Marziano"
+    ],
+    "publisher": "Regione Campania / Università degli Studi di Napoli Federico II",
+    "publicationYear": 2007,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte regionale ad alta utilità morfologica/ecologica. Usare sintesi originali e riferimenti puntuali; non riprodurre estesamente testo o immagini.",
+    "fileHashSha256": "42efe28aac49d252de0d09ae458a3f8ffd6e91222ba5624decb7cebb267af604"
+  },
+  {
+    "sourceId": "S4-veneto-funghi-spontanei-2012",
+    "sourceType": "manual",
+    "title": "Funghi spontanei del Veneto – Riconoscimento e commercializzazione",
+    "authors": [
+      "Nicola Sitta"
+    ],
+    "publisher": "Regione Veneto / Veneto Agricoltura",
+    "publicationYear": 2012,
+    "version": "Seconda edizione",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte istituzionale ad alta utilità per riconoscimento pratico, confondibilità e nomenclatura commerciale; la normativa va sempre verificata per attualità.",
+    "fileHashSha256": "64e44c91f670842ebf8dd1f2458e830dba9e57093879ea01ffa3244f4f94b12a"
+  },
+  {
+    "sourceId": "S4-veneto-guida-parte1-copy",
+    "sourceType": "manualExtract",
+    "title": "Guida ai funghi – 1ª parte (estratto/copia del manuale Veneto)",
+    "authors": [
+      "Nicola Sitta"
+    ],
+    "publisher": "Regione Veneto / Veneto Agricoltura",
+    "publicationYear": 2012,
+    "version": "Estratto",
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Copia/estratto sovrapposto a S4: registrata come file fornito dall'utente ma non conteggiata come evidenza scientifica indipendente.",
+    "fileHashSha256": "d8763b2aa588dbeef8050692fd606b42b17aaf3e30096b7e58a7425e37613d5e"
+  },
+  {
+    "sourceId": "S5-amint-laconi-sardegna-2009",
+    "sourceType": "teachingCards",
+    "title": "Mostra Micologica Laconi 2009 – schede A.M.I.N.T. di specie fungine",
+    "authors": [
+      "Pietro Curti"
+    ],
+    "publisher": "Agenzia Laore Sardegna / Comune di Laconi / A.M.I.N.T.",
+    "publicationYear": 2009,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Buona fonte descrittiva per macrocaratteri e confronti; nomenclatura e giudizi di commestibilità/tossicità storici vanno subordinati alle fonti scientifiche e normative più aggiornate.",
+    "fileHashSha256": "bf3645bd65906c3becd5b758e8fc0a244b9f171c8c0a6237cb25d19c23458cc6"
+  },
+  {
+    "sourceId": "S6-tieri-mondo-funghi",
+    "sourceType": "teachingManual",
+    "title": "Il mondo dei funghi – appunti di micologia",
+    "authors": [
+      "Maria Rosaria Tieri",
+      "Nino Tieri"
+    ],
+    "publisher": null,
+    "publicationYear": null,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte didattica generale; utile soprattutto per ecologia e morfologia di base. Non usata da sola per tassonomia corrente, safety o commestibilità.",
+    "fileHashSha256": "fc401a3578c5dfddd08109fb9de57e18c922b5e9611f78afac6c019df5f7eac2"
+  },
+  {
+    "sourceId": "S7-casentinesi-atlante-2009-copy",
+    "sourceType": "atlas",
+    "title": "Atlante illustrato dei Funghi del Parco – 845 specie di funghi nel Parco Nazionale delle Foreste Casentinesi",
+    "authors": [
+      "Fabio Padovan",
+      "Davide Ubaldi"
+    ],
+    "publisher": "Ente Parco Nazionale delle Foreste Casentinesi, Monte Falterona e Campigna",
+    "publicationYear": 2009,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": "ISBN 978 88 95719 00 9",
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte ad alta utilità per distribuzione, habitat e riscontri morfologici. Il file è una copia di una fonte già presente nel corpus: non costituisce evidenza indipendente aggiuntiva.",
+    "fileHashSha256": "8e6ed5ec549212728a2e8b91bc02debfea8263169dbb344482f4fd550a3c21da"
+  },
+  {
+    "sourceId": "S8-lombardia-manuale-cercatore-2015",
+    "sourceType": "institutionalManual",
+    "title": "Manuale del cercatore di funghi",
+    "authors": [
+      "Antonio Granata",
+      "Giuseppe Maina"
+    ],
+    "publisher": "Regione Lombardia / Comunità Montana Valli del Verbano",
+    "publicationYear": 2015,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte istituzionale utile per sicurezza, ecologia, raccolta e riconoscimento di base. Le norme territoriali riportate sono storiche e non vengono trattate come normativa vigente senza verifica.",
+    "fileHashSha256": "153a1157241a68a5d52d0e65ed65094fe815d92959ee313058915565f6ea1ee7"
+  },
+  {
+    "sourceId": "S9-calabria-manuale-formativo",
+    "sourceType": "institutionalManual",
+    "title": "Manuale base per corso formativo di micologia propedeutico al rilascio della tessera professionale per la raccolta dei funghi epigei spontanei destinati alla commercializzazione",
+    "authors": [
+      "Confederazione Micologica Calabrese"
+    ],
+    "publisher": "Regione Calabria – Dipartimento Agricoltura e Risorse Agroalimentari",
+    "publicationYear": null,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": null,
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte istituzionale/formativa utile per morfologia, habitat mediterranei, specie commercializzabili e principali tossici; nomenclatura e normativa da verificare quando usate come dato corrente.",
+    "fileHashSha256": "de01a8376a4970f94c25f06e282dbfa6c6cda7d544134fe715cd5d4914342f6a"
+  },
+  {
+    "sourceId": "S10-campania-raccolta-sicurezza",
+    "sourceType": "institutionalManual",
+    "title": "La raccolta dei funghi tra passione, rispetto per l’ambiente e sicurezza",
+    "authors": [
+      "Emmanuele Roca",
+      "Fiorentino Bevilacqua",
+      "Angelo Bucci",
+      "Biagio Buonanno",
+      "Ada Giuliano",
+      "Annamaria Mastrobuoni",
+      "Emilia De Monaco",
+      "Giampasquale Russi",
+      "Giuseppe Scialdone",
+      "Clelia Zucchini"
+    ],
+    "publisher": "Regione Campania – Assessorato Agricoltura / Gruppo Micologico Campano",
+    "publicationYear": null,
+    "version": null,
+    "url": null,
+    "isbnOrDoi": "ISBN 978-88-95230-08-5",
+    "accessedAt": "2026-09-29",
+    "licenseNote": "Fonte regionale/formativa utile per morfologia, ecologia, tossicologia e riconoscimento di generi/specie comuni; priorità inferiore alle monografie specialistiche per determinazioni fini.",
+    "fileHashSha256": "8e466969b1ce1bf511a4b7b0a9b3f245ebcf5fa3b640399e3d83bb20416db625"
+  }
+]

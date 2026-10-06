@@ -1,7 +1,7 @@
 name: iPhone PWA and Expo Go
 on:
   push:
-    branches: [main, feat/ios-pwa]
+    branches: [main, feat/ios-pwa, feat/profile-readiness-oct06]
     paths:
       - 'web/**'
       - 'components/**'
@@ -68,6 +68,7 @@ jobs:
           git commit -m "Lock tested iPhone PWA dependencies [skip ci]"
           git push origin HEAD:feat/ios-pwa
   expo-go-preview:
+    if: github.event_name == 'workflow_dispatch' && vars.ENABLE_SNACK_PREVIEW == 'true'
     continue-on-error: true
     permissions:
       contents: write

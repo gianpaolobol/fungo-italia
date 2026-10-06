@@ -1,0 +1,20 @@
+name: Profile readiness native validation
+on:
+  push:
+    branches: [feat/profile-readiness-oct06]
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm run prepare:data
+      - run: npm run typecheck
+      - run: node scripts/test-review-readiness.mjs
+      - run: npx expo export --platform ios --platform android --output-dir dist

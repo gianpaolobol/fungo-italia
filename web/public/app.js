@@ -22,7 +22,8 @@ function restore(){
 }
 function persistStudy(){if(!studyWritable)return;try{localStorage.setItem(studyKey,JSON.stringify({version:1,favoriteIds,resumeId}));studySaveError='';}catch{studySaveError='Preferiti non salvati: memoria locale non disponibile.';status(studySaveError);}}
 function persistDrafts(){if(!notesWritable)return false;try{localStorage.setItem(notesKey,JSON.stringify({version:1,drafts}));notesSaveError='';const saved=$('#saved');if(saved)saved.textContent='Salvato su questo dispositivo.';const warning=$('#save-warning');if(warning)warning.hidden=true;return true;}catch{notesSaveError='Salvataggio non riuscito. Le modifiche restano in memoria: esporta la bozza o il backup prima di chiudere.';const saved=$('#saved');if(saved)saved.textContent=notesSaveError;const warning=$('#save-warning');if(warning){warning.textContent=notesSaveError;warning.hidden=false;}status('Salvataggio della bozza non riuscito.');return false;}}
-function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&norm([t.scientificName,...t.commonNames,...(t.aliases||[]),...(t.currentAcceptedNames||[]),...(t.currentGenera||[])].join(' ')).includes(norm(query)));}
+function matchesQuery(t){return norm([t.scientificName,...t.commonNames,...(t.aliases||[]),...(t.currentAcceptedNames||[]),...(t.currentGenera||[])].join(' ')).includes(norm(query));}
+function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&matchesQuery(t));}
 function favoriteButton(t){return button(favoriteIds.includes(t.id)?'Rimuovi preferito':'Salva preferito','favorite',t.id);}
 function safeLink(url,label){return typeof url==='string'&&/^https:\/\//i.test(url)?'<a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(label||url)+'</a>':escape(label||url);}
 function content(t){
@@ -40,7 +41,7 @@ function content(t){
 }
 function renderStudio(){
  renderedCount=0;
- $('#main').innerHTML='<section><h1>Studio e atlante</h1>'+notice+
+ $('#main').innerHTML='<section><h1>Studio e atlante</h1>'+notice+scientificCoverage()+
  (!studyWritable?'<p class="error">Preferiti non leggibili. La consultazione resta disponibile; il salvataggio è sospeso per conservare i dati esistenti.</p>':'')+
  '<input type="search" id="taxon-search" aria-label="Cerca nome scientifico, comune o sinonimo" placeholder="Nome scientifico, comune o sinonimo" value="'+escape(query)+'">'+
  '<div class="controls"><select id="layer" aria-label="Catalogo"><option value="minimum">Minimo · 148</option><option value="groups">Generi e gruppi · 66</option><option value="all">Tutte · 214</option></select>'+
@@ -59,7 +60,7 @@ function updateCatalogCount(rows=filtered()){if($('#catalog-count'))$('#catalog-
 function updateResume(){const element=$('#resume');if(element&&resumeId)element.innerHTML=button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full');}
 function renderCards(reset=true){
  const rows=filtered(),savedScroll=$('#main').scrollTop;updateCatalogCount(rows);
- if(reset){$('#cards').innerHTML=rows.slice(0,limit).map(cardHTML).join('')||'<p class="empty">Nessuna scheda corrisponde ai filtri.</p>';}
+ if(reset){const alternatives=rows.length===0&&(layer!=='all'||onlyFavorites)?taxa.filter(matchesQuery).length:0;const empty='<p class="empty">Nessuna scheda corrisponde ai filtri.</p>'+(alternatives?'<p class="small">'+alternatives+' schede corrispondono nel catalogo completo. La ricerca resta invariata; vengono rimossi i filtri di catalogo e preferiti.</p>'+button('Cerca in tutto il catalogo','search-all','','full'):'');$('#cards').innerHTML=rows.slice(0,limit).map(cardHTML).join('')||empty;}
  else $('#cards').insertAdjacentHTML('beforeend',rows.slice(renderedCount,limit).map(cardHTML).join(''));
  renderedCount=Math.min(rows.length,limit);$('#more').hidden=rows.length<=limit;$('#main').scrollTop=savedScroll;
  if(observer)observer.disconnect();
@@ -78,8 +79,11 @@ function openTaxon(id){
 }
 function toggleFavorite(id){
  if(!studyWritable){status('Salvataggio sospeso: i dati esistenti non sono leggibili.');return;}
- favoriteIds=favoriteIds.includes(id)?favoriteIds.filter(value=>value!==id):[...favoriteIds,id];persistStudy();
+ const removing=favoriteIds.includes(id),moveDetail=removing&&onlyFavorites&&$('#detail').open&&currentTaxon===id;
+ const oldIndex=moveDetail?filtered().findIndex(t=>t.id===id):-1;
+ favoriteIds=removing?favoriteIds.filter(value=>value!==id):[...favoriteIds,id];persistStudy();
  if(tab==='studio'){if(onlyFavorites)renderCards();else{updateCatalogCount();document.querySelectorAll('#cards button[data-action="favorite"]').forEach(b=>{if(b.dataset.id===id)b.textContent=favoriteIds.includes(id)?'Rimuovi preferito':'Salva preferito';});}}
+ if(moveDetail){const rows=filtered(),next=rows[Math.min(Math.max(oldIndex,0),rows.length-1)];if(next){openTaxon(next.id);status('Preferito rimosso. Aperta la scheda disponibile successiva.');}else{currentTaxon=null;$('#detail').close();status('Nessuna scheda corrisponde ai filtri: modifica la ricerca o disattiva Preferiti.');}return;}
  if($('#detail').open&&currentTaxon===id){const savedScroll=$('#detail-body').scrollTop;openTaxon(id);$('#detail-body').scrollTop=savedScroll;}
 }
 function visibleAreas(){return data.areas.filter(a=>(areaRegion==='Tutte'||a.region===areaRegion)&&norm([a.name,a.region,...a.habitat].join(' ')).includes(norm(areaQuery)));}
@@ -122,8 +126,9 @@ function renderNotes(){
  (!notesWritable?'<p class="error">Bozze non leggibili. I dati esistenti non saranno sovrascritti.</p>':button('Nuova bozza','new-draft','', 'full'))+
  '<p id="save-warning" class="error" role="alert"'+(notesSaveError?'':' hidden')+'>'+escape(notesSaveError)+'</p><div class="drafts">'+drafts.map(d=>button((d.id===selectedDraft?'✓ ':'')+(d.taxon||'Taxon non determinato')+' · '+d.date,'select-draft',d.id)).join('')+'</div>'+
  (draft?'<form id="draft-form">'+fields.map(field=>'<label for="draft-'+field+'">'+labels[field]+'</label>'+(['date','taxon','latitude','longitude'].includes(field)?'<input type="text" '+(['latitude','longitude'].includes(field)?'inputmode="decimal" ':'')+'id="draft-'+field+'" name="'+field+'" value="'+escape(draft[field])+'">':'<textarea id="draft-'+field+'" name="'+field+'">'+escape(draft[field])+'</textarea>')).join('')+'</form><p id="saved" class="saved" role="status"></p><label class="check"><input type="checkbox" id="include-coordinates">Includi le coordinate strutturate nell’esportazione. Sono escluse per impostazione predefinita; eventuali coordinate scritte nelle note non vengono rimosse.</label><div class="row">'+button('Scarica JSON','download-draft')+button('Condividi JSON','share-draft')+'</div><p id="draft-error" class="error" role="alert" hidden></p><div class="controls">'+button('Salva di nuovo','save-draft')+button('Elimina bozza','delete-draft','','danger')+'</div><p class="small">Le fotografie non sono allegate: indica riferimenti e caratteri visibili. Nessun accesso GPS richiesto.</p>':'<p>Nessuna bozza. Registra il prossimo ritrovamento.</p>')+
- '<h3>Backup personale</h3><p class="small">Il backup completo contiene anche eventuali coordinate private. Conservalo in un luogo protetto.</p>'+button('Scarica backup locale','backup','', 'full')+'</section>';
+ '<h3>Backup personale</h3><p class="small">Il backup completo contiene anche eventuali coordinate private. Conservalo in un luogo protetto.</p>'+button('Scarica backup locale','backup','', 'full')+'<label for="restore-backup">Ripristina backup JSON</label><input id="restore-backup" type="file" accept="application/json,.json"><p class="small">Unisce preferiti e bozze senza cancellare i dati attuali. Le coordinate private vengono conservate.</p></section>';
  const form=$('#draft-form');if(form)form.addEventListener('input',event=>{const field=event.target.name;if(!fields.includes(field))return;const current=drafts.find(d=>d.id===selectedDraft);if(current){current[field]=event.target.value;current.updatedAt=new Date().toISOString();persistDrafts();}});
+ const restoreInput=$('#restore-backup');if(restoreInput)restoreInput.onchange=event=>{const file=event.target.files?.[0];event.target.value='';void restoreBackup(file);};
 }
 function draftPayload(){
  const draft=drafts.find(d=>d.id===selectedDraft);if(!draft)return null;
@@ -143,6 +148,40 @@ async function exportDraft(share){
  download(name,text);
  }catch(e){error.textContent=e.message||'Esportazione non riuscita. La bozza resta sul dispositivo.';error.hidden=false;error.scrollIntoView({block:'nearest'});}
 }
+function backupSnapshots(value){
+ if(!value||typeof value!=='object'||value.format!=='fungo-italia-private-backup'||(value.version!==undefined&&value.version!==1))throw Error('Formato o versione del backup non supportati.');
+ const decode=(snapshot,raw)=>snapshot??(typeof raw==='string'&&raw?JSON.parse(raw):null);
+ const study=decode(value.studySnapshot,value.studyRaw),notes=decode(value.notesSnapshot,value.notesRaw);
+ if(!study&&!notes)throw Error('Il backup non contiene dati ripristinabili.');
+ if(study!==null&&(study.version!==1||!Array.isArray(study.favoriteIds)||!study.favoriteIds.every(id=>typeof id==='string'&&byId.has(id))||(study.resumeId!==null&&(typeof study.resumeId!=='string'||!byId.has(study.resumeId)))))throw Error('Preferiti o scheda di ripresa non validi per questo catalogo.');
+ if(notes!==null&&(notes.version!==1||!Array.isArray(notes.drafts)||!notes.drafts.every(d=>d&&typeof d.id==='string'&&d.id.length>0&&typeof d.updatedAt==='string'&&fields.every(field=>typeof d[field]==='string'))||new Set(notes.drafts.map(d=>d.id)).size!==notes.drafts.length))throw Error('Bozze del backup non valide.');
+ return {study,notes};
+}
+function backupMerge({study,notes}){
+ const nextDrafts=drafts.map(d=>({...d})),used=new Set(nextDrafts.map(d=>d.id));let added=0,renamed=0;
+ for(const source of notes?.drafts||[]){const existing=nextDrafts.find(d=>d.id===source.id);if(existing&&fields.every(field=>existing[field]===source[field]))continue;const incoming={...source};if(existing){do{incoming.id=freshDraft().id;}while(used.has(incoming.id));renamed++;}used.add(incoming.id);nextDrafts.push(incoming);added++;}
+ const nextFavorites=[...new Set([...favoriteIds,...(study?.favoriteIds||[])])];
+ return {drafts:nextDrafts,favoriteIds:nextFavorites,resumeId:resumeId||study?.resumeId||null,added,renamed,favoritesAdded:nextFavorites.length-favoriteIds.length};
+}
+async function restoreBackup(file){
+ if(!file)return;
+ try{
+  if(!notesWritable||!studyWritable)throw Error('Ripristino sospeso: i dati locali non sono leggibili. Esporta il backup originale; non saranno sovrascritti.');
+  if(file.size>5*1024*1024)throw Error('Backup troppo grande: limite 5 MB.');
+  const snapshots=backupSnapshots(JSON.parse(await file.text()));
+  if(!notesWritable||!studyWritable)throw Error('Ripristino sospeso: dati locali non leggibili.');
+  const merged=backupMerge(snapshots);
+  if(!confirm('Ripristina backup: '+merged.favoritesAdded+' nuovi preferiti e '+merged.added+' nuove bozze. '+merged.renamed+' bozze con ID coincidente saranno conservate con un nuovo ID. Nessun dato attuale verrà eliminato. Il backup può contenere coordinate private. Confermi?'))return;
+  drafts=merged.drafts;favoriteIds=merged.favoriteIds;resumeId=merged.resumeId;selectedDraft=selectedDraft||drafts[0]?.id||null;
+  persistStudy();const saved=persistDrafts();if(tab==='notes')renderNotes();status(saved&&!studySaveError?'Backup unito ai dati locali.':'Backup unito in memoria: salvataggio incompleto. Esporta prima di chiudere.');
+ }catch(error){status(error.message||'Backup non leggibile. Nessun dato importato.');}
+}
+function scientificCoverage(){
+ const internal=new Set(['S1-obiettivi-tassonomici-v4-2026-06-09','AUDIT-minimum-3plus1-baseline-1.0','EDITORIAL-minimum-card-synthesis-v1']);
+ const external=data.catalog.filter(t=>(t.sources||[]).some(s=>s.sourceId&&!internal.has(s.sourceId)&&typeof s.supportedClaim==='string'&&s.supportedClaim.trim())).length;
+ const habitats=data.catalog.filter(t=>t.habitat?.length).length,comparisons=data.catalog.filter(t=>t.lookalikes?.length).length;
+ return '<details id="scientific-coverage"><summary>Copertura dei contenuti e biblioteca scientifica</summary><p>'+external+'/'+data.catalog.length+' schede Minimo con riscontri bibliografici esterni puntuali. Habitat strutturati: '+habitats+'/'+data.catalog.length+'. Confronti strutturati: '+comparisons+'/'+data.catalog.length+'.</p><p>La revisione micologica indipendente non è attestata. La bibliografia generale non valida automaticamente i caratteri delle singole schede.</p><h2>Biblioteca generale</h2>'+(data.bibliography||[]).map(s=>'<div class="source"><p>'+escape(s.title)+'</p><p class="small">'+escape([...(s.authors||[]),s.publisher,s.publicationYear].filter(Boolean).join(' · '))+'</p>'+(s.url?'<p>'+safeLink(s.url,'Apri riferimento esterno')+'</p>':'')+(s.licenseNote?'<p class="small">'+escape(s.licenseNote)+'</p>':'')+'</div>').join('')+'</details>';
+}
 function renderCommunity(){
  $('#main').classList.remove('feed');$('#main').innerHTML='<section><h1>Contributi scientifici</h1><p>Le bozze di questa app restano sul dispositivo. Per proporre modifiche, inviare osservazioni con fotografie o accedere alla revisione, apri il servizio web autenticato.</p><div class="link-list">'+[
  ['/catalog/proposals/new','Proponi una modifica','Documenta diagnosi, fonti e limiti della proposta.'],
@@ -158,6 +197,7 @@ function renderTab(){
 document.addEventListener('click',event=>{
  const target=event.target.closest('button[data-action]');if(!target)return;const action=target.dataset.action,id=target.dataset.id;
  if(action==='open')openTaxon(id);
+ else if(action==='search-all'){layer='all';onlyFavorites=false;limit=24;renderStudio();$('#main').scrollTop=0;}
  else if(action==='resume'){const taxon=byId.get(id);if(taxon){layer=taxon.kind==='teaching-group'?'groups':'minimum';query='';onlyFavorites=false;limit=24;renderStudio();$('#main').scrollTop=0;openTaxon(id);}}
  else if(action==='favorite')toggleFavorite(id);
  else if(action==='related'){layer='minimum';query='';onlyFavorites=false;if(tab==='studio')renderStudio();openTaxon(id);}
@@ -172,7 +212,7 @@ document.addEventListener('click',event=>{
  else if(action==='share-draft')void exportDraft(true);
  else if(action==='backup'){
  const storageErrors=[];const read=key=>{try{return storageGet(key);}catch{storageErrors.push('Accesso memoria locale negato: '+key);return null;}};
- download('fungo-italia-backup-privato.json',JSON.stringify({format:'fungo-italia-private-backup',createdAt:new Date().toISOString(),notice:'Contiene dati personali e possibili coordinate precise. Non pubblicare.',studySnapshot:studyWritable?{version:1,favoriteIds,resumeId}:null,notesSnapshot:notesWritable?{version:1,drafts}:null,studyRaw:read(studyKey),notesRaw:read(notesKey),unsavedChanges:{study:!!studySaveError,notes:!!notesSaveError},storageErrors},null,2));
+ download('fungo-italia-backup-privato.json',JSON.stringify({format:'fungo-italia-private-backup',version:1,createdAt:new Date().toISOString(),notice:'Contiene dati personali e possibili coordinate precise. Non pubblicare.',studySnapshot:studyWritable?{version:1,favoriteIds,resumeId}:null,notesSnapshot:notesWritable?{version:1,drafts}:null,studyRaw:read(studyKey),notesRaw:read(notesKey),unsavedChanges:{study:!!studySaveError,notes:!!notesSaveError},storageErrors},null,2));
 }
 });
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{if(!data||tab===b.dataset.tab)return;scrollPositions[tab]=$('#main').scrollTop;tab=b.dataset.tab;renderTab();});

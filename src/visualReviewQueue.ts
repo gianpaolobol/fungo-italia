@@ -24,5 +24,5 @@ export function buildVisualReviewQueue(observations:{id:string;assetIds:string[]
  }));
 }
 export function isThreePlusOneComplete(item:VisualReviewItem){
- return item.characters.every(Boolean)&&Boolean(item.confirmation)&&Boolean(item.taxonCandidate);
+ return item.characters.length===3&&item.characters.every(v=>typeof v==='string'&&v.trim().length>0)&&typeof item.confirmation==='string'&&item.confirmation.trim().length>0&&typeof item.taxonCandidate==='string'&&item.taxonCandidate.trim().length>0;
 }

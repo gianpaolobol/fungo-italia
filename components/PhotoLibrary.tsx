@@ -44,7 +44,7 @@ export default function PhotoLibrary(){
    const groups=clusterByTime(metadata);
    const observations:PrivateObservation[]=groups.map(group=>({id:makeObservationId(group.map(a=>a.id),group[0]?.creationTime??null),assetIds:rankObservationPhotos(group,8).map(a=>a.assetId),capturedAt:group[0]?.creationTime??null,preciseLocation:null,appleCandidate:null,verificationStatus:'unreviewed'}));
    await AsyncStorage.setItem(privateKey,JSON.stringify({version:1,observations}));
-   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} osservazioni temporali. GPS preciso e riconoscimento vengono letti solo per i candidati, non per l'intera libreria.`});
+   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} osservazioni temporali. GPS/EXIF vengono letti solo quando richiedi l’analisi dei gruppi. Nessun riconoscimento automatico è eseguito.`});
   }catch(e){
    setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
   }
@@ -66,14 +66,16 @@ export default function PhotoLibrary(){
    const raw=await AsyncStorage.getItem(privateKey);if(!raw){setState(s=>({...s,message:'Prima indicizza la libreria.'}));return;}
    const parsed=JSON.parse(raw) as {version:1;observations:PrivateObservation[]};
    const queue=buildVisualReviewQueue(parsed.observations,100);
-   await AsyncStorage.setItem(reviewKey,JSON.stringify({version:1,queue}));
+   const previousRaw=await AsyncStorage.getItem(reviewKey);const previous=previousRaw?JSON.parse(previousRaw):{version:1,queue:[]};if(previous.version!==1||!Array.isArray(previous.queue)||!previous.queue.every((x:VisualReviewItem)=>x&&typeof x.observationId==='string'))throw Error('Coda esistente non leggibile');
+   const combined=[...previous.queue,...queue.filter(x=>!previous.queue.some((old:VisualReviewItem)=>old.observationId===x.observationId))];
+   await AsyncStorage.setItem(reviewKey,JSON.stringify({version:1,queue:combined}));
    setState(s=>({...s,message:`Coda 3+1 pronta: ${queue.length} osservazioni. Ogni gruppo mantiene al massimo 8 scatti e richiede 3 caratteri diagnostici + 1 conferma prima di essere considerato completo.`}));
   }catch{setState(s=>({...s,message:'Preparazione della coda 3+1 non riuscita.'}));}
  }
  return <ScrollView contentContainerStyle={s.page}>
   <Text style={s.title}>La mia raccolta fotografica</Text>
   <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
-  <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>1. Indicizza le foto · 2. individua candidati fungo · 3. raggruppa gli scatti dello stesso esemplare · 4. propone cappello, imenoforo, gambo/base e carattere di conferma.</Text></View>
+  <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>Indicizza le foto autorizzate, forma gruppi temporali e prepara bozze da selezionare manualmente. Non riconosce automaticamente funghi, esemplari o parti anatomiche.</Text></View>
   <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
   <Pressable accessibilityRole="button" onPress={enrich} style={s.secondary}><Text style={s.secondaryText}>Analizza GPS/EXIF dei primi 100 gruppi</Text></Pressable>
   <Pressable accessibilityRole="button" onPress={prepareReview} style={s.secondary}><Text style={s.secondaryText}>Prepara coda visuale 3+1</Text></Pressable>
