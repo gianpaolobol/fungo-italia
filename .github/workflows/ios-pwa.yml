@@ -33,6 +33,8 @@ jobs:
       - name: Validate browser code and build offline package
         run: |
           node --check web/public/app.js
+          node --check web/public/importa-foto.js
+          node --check web/public/photo-core.mjs
           node --check web/public/sw.js
           node web/build.mjs
       - name: Install WebKit

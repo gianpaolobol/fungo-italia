@@ -29,7 +29,9 @@
         "source",
         "rights",
         "identification",
-        "metadataPolicy"
+        "metadataPolicy",
+        "dimensions",
+        "importedAt"
       ],
       "properties": {
         "id": {
@@ -49,21 +51,22 @@
           "additionalProperties": false,
           "required": [
             "kind",
-            "originalName"
+            "publicName"
           ],
           "properties": {
             "kind": {
               "const": "user-provided"
-            },
-            "originalName": {
-              "type": "string",
-              "minLength": 1
             },
             "observationId": {
               "type": [
                 "string",
                 "null"
               ]
+            },
+            "publicName": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
             }
           }
         },
@@ -91,6 +94,23 @@
             },
             "publicationScope": {
               "const": "fungo-italia-authorized"
+            },
+            "authorization": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "method",
+                "recordedAt"
+              ],
+              "properties": {
+                "method": {
+                  "const": "uploader-declaration"
+                },
+                "recordedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
             }
           }
         },
@@ -204,6 +224,37 @@
                   "minLength": 1
                 }
               }
+            },
+            "proposal": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "method",
+                "author",
+                "recordedAt"
+              ],
+              "properties": {
+                "method": {
+                  "enum": [
+                    "image-analysis-assistant",
+                    "human-proposal"
+                  ]
+                },
+                "author": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "modelVersion": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "recordedAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
             }
           },
           "allOf": [
@@ -239,8 +290,88 @@
                   ]
                 }
               }
+            },
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "proposed",
+                      "reviewed"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "proposedGenus": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "proposedSpecies": {
+                    "type": "string"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "proposedGenus": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "unresolved"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "proposedGenus": {
+                    "type": "null"
+                  },
+                  "proposedSpecies": {
+                    "type": "null"
+                  }
+                }
+              }
             }
           ]
+        },
+        "dimensions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "width",
+            "height"
+          ],
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1600
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1600
+            }
+          }
+        },
+        "importedAt": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     }
