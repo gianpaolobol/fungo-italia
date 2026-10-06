@@ -14,6 +14,7 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
  await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
+ await expect(page.getByRole('heading',{name:'Carattere differenziante (+1)',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  if(name==='chromium'){
@@ -22,6 +23,11 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();
  await expect(page.locator('#catalog-count')).toContainText('148 schede');
  }
+ await page.getByRole('button',{name:'Ripasso attivo',exact:true}).click();
+ await expect(page.locator('#review-answer')).toHaveCount(0);
+ await page.getByRole('button',{name:'Mostra risposta',exact:true}).click();
+ await expect(page.locator('#review-answer')).toBeVisible();
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
  await page.getByRole('button',{name:'Aree',exact:true}).click();
  await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();
  await expect(page.locator('#area-count')).toHaveText('1 area corrispondente');
