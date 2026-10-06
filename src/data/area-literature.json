@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-06",
+  "scope": "regional-rules-links-not-habitat-or-presence-verification",
+  "records": [
+    {
+      "id": "amiata",
+      "evidenceSources": [
+        {
+          "label": "Regione Toscana — disposizioni e limitazioni alla raccolta (fonte normativa regionale, non verifica della macroarea)",
+          "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+          "kind": "regional-authority"
+        }
+      ]
+    },
+    {
+      "id": "foreste-casentinesi",
+      "evidenceSources": [
+        {
+          "label": "Regione Toscana — disposizioni e limitazioni alla raccolta (fonte normativa regionale, non verifica della macroarea)",
+          "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+          "kind": "regional-authority"
+        }
+      ]
+    }
+  ]
+}
