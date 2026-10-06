@@ -69,9 +69,11 @@ def seed_photos():
         # EXIF is in the file, so MediaScanner can safely regenerate DATE_TAKEN.
         exif=Image.Exif()
         exif[306]='2023:11:14 22:13:'+str(19+i).zfill(2)
-        exif[36867]=exif[306]
-        exif[36881]='+00:00'
+        exif[34665]={36867:exif[306],36881:'+00:00'}
         Image.new('RGB',(180,180),color).save(path,format='JPEG',exif=exif)
+        with Image.open(path) as fixture:
+            tags=fixture.getexif().get_ifd(34665)
+            assert tags[36867]==exif[306] and tags[36881]=='+00:00','EXIF fixture sub-IFD invalid'
         remote='/sdcard/Pictures/FungoItaliaTest/scatto'+str(i)+'.jpg'
         adb('push',path,remote)
         adb('shell','am','broadcast','-a','android.intent.action.MEDIA_SCANNER_SCAN_FILE','-d','file://'+remote)
