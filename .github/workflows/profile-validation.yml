@@ -21,6 +21,7 @@ jobs:
         run: npm ci
       - run: npm run prepare:data
       - run: npm run typecheck
+      - run: python3 -m py_compile scripts/android-smoke.py
       - run: node scripts/test-review-readiness.mjs
       - run: npx expo export --platform ios --platform android --output-dir dist
       - name: Preserve verified dependency lock

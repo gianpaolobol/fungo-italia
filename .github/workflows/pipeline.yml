@@ -40,7 +40,9 @@ jobs:
       - name: Check TypeScript
         run: npm run typecheck
       - name: Verify draft integrity and review boundaries
-        run: node scripts/test-review-readiness.mjs
+        run: |
+          node scripts/test-review-readiness.mjs
+          python3 -m py_compile scripts/android-smoke.py
       - name: Export both native bundles
         run: npx expo export --platform ios --platform android --output-dir dist
       - name: Generate Android native project
