@@ -1,13 +1,19 @@
 # Libreria fotografica personale di Fungo Italia
-## Stato
-La fonte indicata dall'utente è Foto iPhone/iCloud. In questa sessione non è disponibile un connettore iCloud e l'autorizzazione GitHub non concede accesso alla libreria del telefono. Nessuna fotografia personale è stata letta, identificata o pubblicata. Lo schema è pronto; non viene creato un catalogo di immagini fittizie.
 
-## Rendere accessibili le immagini senza codice
-Percorso privato supportato: creare una cartella Google Drive, caricare dall'app Drive le fotografie selezionate tramite + → Carica → Foto e video e fornire il link della cartella nella conversazione. Il collegamento Drive deve poterla leggere; non occorre rendere pubblici gli originali. In alternativa, inviare fotografie come allegati normali della chat, se disponibili nell'interfaccia. Il questionario testuale della chat non accetta allegati.
-Non fornire password Apple o codici di autenticazione. La semplice autorizzazione Foto su iPhone resta locale al dispositivo e non concede accesso remoto a questa sessione.
+Apri [Importa foto dal telefono](https://gianpaolobol.github.io/fungo-italia/importa-foto.html) in Safari. Seleziona fino a 20 fotografie per lotto da Foto/iCloud o File, collega GitHub seguendo la guida nella pagina, indica il credito e autorizza la pubblicazione delle copie selezionate. Non serve Google Drive né eseguire comandi.
 
-## Risultato previsto quando la fonte sarà accessibile
-La libreria curata contiene copie di fotografie pertinenti ai funghi e un indice conforme a [schema.json](schema.json), con hash del file, provenienza, attribuzione, diritti e classificazione. Gli originali restano nella fonte privata.
-Prima della pubblicazione si rimuovono GPS ed EXIF dalle copie. La presenza di una fotografia nella libreria personale non dimostra che l'utente ne possieda tutti i diritti: l'attribuzione e il diritto di riuso vanno documentati. Non viene assegnata automaticamente una licenza Creative Commons.
-L'identificazione riporta genere e specie proposti solo quando sostenuti dai caratteri visibili, insieme a caratteri mancanti, alternative e riferimenti precisi. Le immagini insufficienti restano non determinate. Non vengono inventati caratteri nascosti, microscopia, odori o risultati molecolari.
-Una proposta del modello non diventa una revisione micologica indipendente: lo stato reviewed richiede una revisione documentata. Lo schema registra tale documentazione, ma non certifica da solo competenza o identità del revisore. La libreria non autorizza il consumo.
+Il browser accede solo alle immagini selezionate; la chat non può leggere autonomamente tutta la libreria del telefono. Non inviare password Apple o token GitHub nella chat. L’autorizzazione fine-grained, limitata al repository e a Contents read/write, resta nella memoria della pagina ed è eliminata dopo il caricamento.
+
+## Destinazione e integrità
+
+Ramo `photo-library`, cartella `photo-library/images`, indice `photo-library/metadata.json` conforme a [schema.json](schema.json). Le copie JPEG arrivano a 1600 pixel, senza GPS/EXIF o nomi originali. Il contenuto visibile nei pixel rimane. Gli originali non vengono cancellati. Repository pubblico: le copie sono visibili a tutti. Nessuna licenza Creative Commons è assegnata automaticamente.
+
+L’hash SHA-256 evita copie identiche duplicate. Immagini e indice sono pubblicati insieme in un commit; aggiornamenti concorrenti vengono riletti senza sovrascrivere le annotazioni del curatore. Le copie in attesa sono locali alla pagina: se Safari viene chiuso vanno selezionate nuovamente.
+
+## Identificazione
+
+Il caricamento assegna lo stato `unresolved`: non implementa un riconoscimento automatico. Una successiva analisi delle immagini accessibili può registrare genere/specie proposti, caratteri visibili, caratteri mancanti, alternative e riferimenti. Le foto insufficienti restano non determinate. Non si inventano microscopia, odore o caratteri nascosti.
+
+Una proposta del modello non equivale a revisione micologica indipendente. Lo stato `reviewed` richiede documentazione del revisore; lo schema non ne certifica da solo competenza o identità. La libreria non autorizza il consumo.
+
+Al momento della creazione dell’importer nessuna fotografia personale è stata acquisita o identificata: occorre la selezione sul dispositivo.
