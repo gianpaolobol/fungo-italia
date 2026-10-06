@@ -58,7 +58,7 @@ test('private draft survives reload; JSON excludes coordinates unless opted in; 
 test('malformed storage is preserved; scrolling catalog and group sources remain reachable',async({page})=>{
  await page.addInitScript(({studyKey,notesKey})=>{localStorage.setItem(studyKey,'{broken-study');localStorage.setItem(notesKey,'{broken-notes');},{studyKey,notesKey});
  await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
- await page.getByRole('button',{name:'Tap',exact:true}).click();await expect(page.getByRole('button',{name:'Scorri',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Scorri',exact:true})).toBeVisible();
  await page.getByRole('heading',{name:'Fonti e limiti'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Fonti e limiti'}).first()).toBeInViewport();
  await page.getByRole('button',{name:'Salva preferito',exact:true}).first().click();
  expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe('{broken-study');
@@ -146,7 +146,7 @@ test('backup import rejects unknown catalog IDs without modifying storage',async
  await page.locator('#restore-backup').setInputFiles(backupUpload({format:'fungo-italia-private-backup',version:1,studySnapshot:{version:1,favoriteIds:['invalid-taxon'],resumeId:null},notesSnapshot:{version:1,drafts:[]}}));await expect(page.locator('#status')).toContainText('Preferiti o scheda di ripresa non validi');expect(dialogs).toBe(0);expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe(before);
 });
 test('scrolling study saves the visible learning unit for resume',async({page})=>{
- const catalog=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8'));await ready(page);await page.getByRole('button',{name:'Tap',exact:true}).click();
+ const catalog=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8'));await ready(page);await page.getByRole('button',{name:'Elenco',exact:true}).click();
  await page.evaluate(()=>{const root=document.querySelector('#main'),card=document.querySelectorAll('#cards article')[1];root.scrollTop+=card.getBoundingClientRect().top-root.getBoundingClientRect().top+20;});
  await expect.poll(()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)||'{}').resumeId,studyKey)).toBe(catalog[1].id);await page.reload();await expect(page.getByRole('button',{name:'Riprendi '+catalog[1].scientificName,exact:true})).toBeVisible();
 });
@@ -183,4 +183,53 @@ test('scientific contribution opens the real public repository form without send
  await expect(page.locator('#main')).toContainText('La proposta sarà pubblica');
  await expect(page.locator('#main')).toContainText('non aggiorna automaticamente il catalogo');
  await expect(page.locator('#main details')).not.toHaveAttribute('open');
+});
+
+test('complete 3+1 appears in detail and continuous reading',async({page})=>{
+ const catalog=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8')),taxon=catalog[0];
+ await ready(page);await page.getByRole('button',{name:'Apri '+taxon.scientificName,exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText(taxon.differentiatingCharacter);
+ await expect(page.getByRole('heading',{name:'Carattere differenziante (+1)',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await page.locator('#feed').click();
+ await expect(page.locator('#cards article').first()).toContainText(taxon.differentiatingCharacter);
+});
+test('active recall hides answer, respects favorite filters and retries missed cards',async({page})=>{
+ const catalog=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8')),taxon=catalog[0];
+ await page.addInitScript(({studyKey,id})=>localStorage.setItem(studyKey,JSON.stringify({version:1,favoriteIds:[id],resumeId:null})),{studyKey,id:taxon.id});
+ await ready(page);await page.getByRole('button',{name:'Preferiti',exact:true}).click();await page.getByRole('button',{name:'Ripasso attivo',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Scheda 1 di 1');
+ await expect(page.locator('#detail-body')).toContainText(taxon.differentiatingCharacter);
+ await expect(page.locator('#review-answer')).toHaveCount(0);
+ await page.getByRole('button',{name:'Mostra risposta',exact:true}).click();
+ await expect(page.locator('#review-answer')).toContainText(taxon.scientificName);
+ await page.getByRole('button',{name:'Da ripassare',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('0 schede ricordate · 1 da ripassare');
+ await page.getByRole('button',{name:'Ripassa le schede da rivedere',exact:true}).click();
+ await expect(page.locator('#review-answer')).toHaveCount(0);await page.getByRole('button',{name:'Mostra risposta',exact:true}).click();
+ await page.getByRole('button',{name:'Ricordata',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('1 schede ricordate · 0 da ripassare');
+ await expect(page.getByRole('button',{name:'Ripassa le schede da rivedere',exact:true})).toHaveCount(0);
+});
+test('teaching groups without profiles do not fabricate a recall question',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');await page.getByRole('button',{name:'Ripasso attivo',exact:true}).click();
+ await expect(page.locator('#status')).toContainText('Nessuna scheda 3+1');await expect(page.locator('#detail')).not.toBeVisible();
+});
+test('Amiata shows regional source and Tenerife creates a private observation',async({page})=>{
+ await ready(page);await page.getByRole('button',{name:'Aree',exact:true}).click();await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();
+ await page.getByRole('button',{name:'Consulta Monte Amiata',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Prima dell’uscita');await expect(page.locator('#detail-body a[href*="regione.toscana"]')).toHaveCount(1);
+ await expect(page.locator('#detail-body')).toContainText('fonte normativa regionale, non verifica della macroarea');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await page.getByRole('button',{name:'Tenerife · preparazione',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Un permesso per un sentiero non equivale a un permesso di raccolta.');
+ await expect(page.locator('#detail-body a[href="https://www.tenerifeon.es/"]')).toHaveCount(1);
+ await page.getByRole('button',{name:'Crea osservazione per Tenerife',exact:true}).click();
+ await expect(page.getByRole('heading',{name:'Osservazioni offline',exact:true})).toBeVisible();await expect(page.getByLabel('Note',{exact:true})).toHaveValue('Tenerife — località generale: ');
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).drafts.length,notesKey)).toBe(1);
+});
+test('catalog growth loads with dynamic counts',async({page,context})=>{
+ await page.route('**/data.json',async route=>{
+  const response=await route.fetch(),data=await response.json();
+  data.catalog.push({...data.catalog[0],id:'future-learning-unit',scientificName:'Future learning unit'});
+  await route.fulfill({response,json:data});
+ });
+ await ready(page);await expect(page.locator('#catalog-count')).toContainText('149 schede');await expect(page.locator('#layer option[value="all"]')).toHaveText('Tutte · 215');
 });

@@ -4,7 +4,7 @@ Snapshot dei JSON pubblicati: codice dati della revisione 19472838e327c8591ffc0e
 ## Copertura
 148 unità Minimo: 23 con nomi comuni, 3 con habitat, 14 con confronti bibliografici, 7 con almeno un riscontro esterno puntuale sui caratteri. I riscontri dei 7 profili possono riguardare solo parte del 3+1. Nessuna revisione micologica indipendente attestata. Non sono incluse fotografie tassonomiche di riferimento validate.
 I 66 gruppi didattici sono un livello diverso e non vengono contati come specie con diagnosi completa.
-71 macroaree: 25 con fonti territoriali associate e 46 senza. Una fonte territoriale può documentare habitat o regole e non prova presenza o produttività attuale dei funghi.
+71 macroaree: 27 con fonti territoriali associate e 44 senza. Una fonte territoriale può documentare habitat o regole e non prova presenza o produttività attuale dei funghi.
 
 ## Priorità di completamento
 Per ogni unità: documentare ciascun carattere e il confronto differenziale con una fonte precisa; ampliare habitat e nomenclatura dove non documentati; verificare fotografie, autore e licenza; ottenere revisione qualificata. Il 3+1 e il nome comune non garantiscono determinazione o commestibilità.
@@ -172,7 +172,7 @@ La presenza di fonti non trasforma le macroaree in fungaie verificate. Consultar
 |---|---|---:|
 |Lagorai e Piné|Trentino-Alto Adige|0|
 |Appennino modenese|Emilia-Romagna|0|
-|Foreste Casentinesi|Toscana|0|
+|Foreste Casentinesi|Toscana|1|
 |Monti Cimini|Lazio|0|
 |Lagonegrese e Pollino|Basilicata|0|
 |Sila Grande|Calabria|0|
@@ -195,7 +195,7 @@ La presenza di fonti non trasforma le macroaree in fungaie verificate. Consultar
 |Carnia e Tarvisiano|Friuli-Venezia Giulia|0|
 |Carso e Valli del Natisone|Friuli-Venezia Giulia|0|
 |Appennino parmense|Emilia-Romagna|0|
-|Monte Amiata|Toscana|0|
+|Monte Amiata|Toscana|1|
 |Valnerina e Monti Martani|Umbria|0|
 |Monte Cucco|Umbria|0|
 |Sibillini marchigiani|Marche|0|

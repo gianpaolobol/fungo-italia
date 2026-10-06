@@ -93,7 +93,14 @@
       "Macroarea indicativa: presenza e produttività dei funghi da verificare"
     ],
     "signalProvenance": "heuristic",
-    "coordinateOrder": "latitude-longitude"
+    "coordinateOrder": "latitude-longitude",
+    "evidenceSources": [
+      {
+        "label": "Regione Toscana — disposizioni e limitazioni alla raccolta (fonte normativa regionale, non verifica della macroarea)",
+        "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+        "kind": "regional-authority"
+      }
+    ]
   },
   {
     "id": "monti-cimini",
@@ -790,7 +797,14 @@
       "Valutazione su area vasta, non su punti di raccolta"
     ],
     "signalProvenance": "heuristic",
-    "coordinateOrder": "latitude-longitude"
+    "coordinateOrder": "latitude-longitude",
+    "evidenceSources": [
+      {
+        "label": "Regione Toscana — disposizioni e limitazioni alla raccolta (fonte normativa regionale, non verifica della macroarea)",
+        "url": "https://www.regione.toscana.it/it/-/raccolta-funghi-ecco-le-disposizioni",
+        "kind": "regional-authority"
+      }
+    ]
   },
   {
     "id": "valnerina",
