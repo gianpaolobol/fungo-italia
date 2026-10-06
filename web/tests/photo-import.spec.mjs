@@ -66,6 +66,8 @@ function jpegMetadataMarkers(bytes){
  while(at<bytes.length){expect(bytes[at++]).toBe(255);while(bytes[at]===255)at++;const marker=bytes[at++];if(marker===218||marker===217)break;const length=bytes.readUInt16BE(at);markers.push(marker);at+=length;}
  return markers;
 }
+test.describe('GitHub API simulation',()=>{
+ test.use({serviceWorkers:'block'});
 test('photo picker converts locally; one atomic unresolved batch deduplicates repeated imports',async({page})=>{
  const git=await fakeGitHub(page);await page.goto('./importa-foto.html');
  await expect(page.locator('#photos')).toHaveAttribute('multiple','');
@@ -109,6 +111,7 @@ test('temporary blob failures retry without extra commits or duplicate records',
  await choose(page,await fixture(page));await connect(page);await publish(page);
  expect(git.requests.filter(r=>r.path.endsWith('/git/blobs'))).toHaveLength(3);
  expect(git.moves).toBe(1);expect(git.metadata.photos).toHaveLength(1);await tokenAbsent(page);
+});
 });
 test('warm service worker opens the importer without the origin and prepares images offline',async({page,request})=>{
  await page.goto('./');await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
