@@ -1,0 +1,25 @@
+name: Verify installable iPhone shortcut
+on:
+  push:
+    branches: [feat/iphone-shortcut-export]
+    paths: ['automation/shortcuts/**', '.github/workflows/iphone-shortcut.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sign:
+    runs-on: macos-15
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate installation probe
+        run: python3 automation/shortcuts/signing-probe.py
+      - name: Sign with Apple's command line tool
+        run: |
+          shortcuts sign --mode anyone --input shortcut-output/Signing-Probe.unsigned.shortcut --output shortcut-output/Signing-Probe.shortcut
+          test -s shortcut-output/Signing-Probe.shortcut
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Shortcut-signing-proof
+          path: shortcut-output/Signing-Probe.shortcut
+          if-no-files-found: error
