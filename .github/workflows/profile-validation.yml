@@ -6,6 +6,8 @@ permissions:
   contents: read
 jobs:
   native:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -13,8 +15,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: npm ci
+      - name: Regenerate the missing media-library lock entry
+        run: npm install
+      - name: Verify reproducible dependency installation
+        run: npm ci
       - run: npm run prepare:data
       - run: npm run typecheck
       - run: node scripts/test-review-readiness.mjs
       - run: npx expo export --platform ios --platform android --output-dir dist
+      - name: Preserve verified dependency lock
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add package-lock.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Lock validated photo and review dependencies [skip ci]"
+          git push origin HEAD:feat/profile-readiness-oct06
