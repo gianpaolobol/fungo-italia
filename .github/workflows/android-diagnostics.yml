@@ -1,4 +1,4 @@
-name: Verify photographic grouping and cold-start
+name: Verify photographic review persistence
 on:
   push:
     branches: [feat/profile-readiness-oct06]
@@ -30,3 +30,9 @@ jobs:
           profile: pixel_6
           disable-animations: true
           script: python3 scripts/android-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Fungo-Italia-gallery-diagnostic-evidence
+          path: artifacts/smoke
+          retention-days: 30

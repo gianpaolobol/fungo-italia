@@ -106,8 +106,11 @@ def check_photo_review():
     assert 'Fotografia non disponibile' not in ui and 'Fotografia non visualizzabile' not in ui,'Native thumbnail failed'
     with open('artifacts/smoke/android-native-photos.png','wb') as f:
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
+    print('PASS: native gallery grouping and both images rendered.')
     tap('Rimuovi scatto 2 dalla bozza')
+    scroll_top()
     wait_text('1 scatti selezionati')
+    print('PASS: manual removal persisted in the visible review header.')
     time.sleep(2)
     launch()
     tap('3+1')
