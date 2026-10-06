@@ -1,0 +1,13 @@
+import subprocess,time,xml.etree.ElementTree as ET
+def adb(*args):return subprocess.check_output(['adb',*args],text=True,stderr=subprocess.STDOUT)
+print(adb('install','-r','artifacts/android/app-release.apk'))
+adb('logcat','-c')
+adb('shell','svc','wifi','disable')
+adb('shell','svc','data','disable')
+print(adb('shell','monkey','-p','it.fungoitalia.app','-c','android.intent.category.LAUNCHER','1'))
+time.sleep(15)
+adb('shell','uiautomator','dump','/sdcard/diag.xml')
+print('NATIVE_UI_XML')
+print(adb('shell','cat','/sdcard/diag.xml'))
+print('NATIVE_LOGCAT_ERRORS')
+print(adb('logcat','-d','-s','ReactNativeJS:V','AndroidRuntime:E','Expo:E','ExpoUpdates:E'))
