@@ -49,3 +49,7 @@ export function createVisualReviewStore(storage:ReviewStorage,key='fungo-italia:
   save:(item:VisualReviewItem)=>run(async()=>{const existing=await read();const saved={...item,confidence:'unknown' as const};const found=existing.queue.some(x=>x.observationId===item.observationId);return write(found?existing.queue.map(x=>x.observationId===item.observationId?saved:x):[...existing.queue,saved]);})
  };
 }
+
+export async function retryPendingVisualReviews(pending:Map<string,VisualReviewItem>,save:(item:VisualReviewItem)=>Promise<void>){
+ for(const id of [...pending.keys()]){const current=pending.get(id);if(current)await save(current);}
+}

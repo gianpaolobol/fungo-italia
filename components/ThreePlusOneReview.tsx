@@ -1,7 +1,7 @@
 import React,{useEffect,useRef,useState} from 'react';
 import {Pressable,ScrollView,StyleSheet,Text,TextInput,View} from 'react-native';
 import {visualReviewStore} from '../src/reviewStorage';
-import {VisualReviewItem,isThreePlusOneComplete,decodeVisualReviewQueue} from '../src/visualReviewQueue';
+import {VisualReviewItem,isThreePlusOneComplete,decodeVisualReviewQueue,retryPendingVisualReviews} from '../src/visualReviewQueue';
 import {suggestionsFromAtlas} from '../src/threePlusOneSuggestions';
 import catalog from '../src/data/catalog.json';
 import groups from '../src/data/groups.json';
@@ -21,7 +21,7 @@ export default function ThreePlusOneReview({active=true}:{active?:boolean}){
   try{await visualReviewStore.save(snapshot);if(pending.current.get(snapshot.observationId)===snapshot)pending.current.delete(snapshot.observationId);setUnsaved(pending.current.size);if(!pending.current.size)setMessage('');}
   catch{setMessage('Salvataggio non riuscito. Le bozze restano in memoria: riprova prima di chiudere l’app.');}
  }
- async function retry(){for(const snapshot of [...pending.current.values()])await persist(snapshot);}
+ async function retry(){await retryPendingVisualReviews(pending.current,persist);}
  const item=queue[index];
  const suggestions=item?suggestionsFromAtlas(taxa,item.taxonCandidate||''):[];
  function patch(p:Partial<VisualReviewItem>){if(!canWrite.current||!item)return;const snapshot={...item,...p,confidence:'unknown' as const};const next=queue.map((x,i)=>i===index?snapshot:x);setQueue(next);pending.current.set(snapshot.observationId,snapshot);setUnsaved(pending.current.size);void persist(snapshot);}

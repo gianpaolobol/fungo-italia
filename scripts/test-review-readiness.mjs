@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {buildVisualReviewQueue,isThreePlusOneComplete,decodeVisualReviewQueue,createVisualReviewStore} from '../src/visualReviewQueue.ts';
+import {buildVisualReviewQueue,isThreePlusOneComplete,decodeVisualReviewQueue,createVisualReviewStore,retryPendingVisualReviews} from '../src/visualReviewQueue.ts';
 const item=buildVisualReviewQueue([{id:'specimen',assetIds:['photo1','photo2']}])[0];
 assert.equal(item.confidence,'unknown');assert.equal(isThreePlusOneComplete(item),false);
 const filled={...item,taxonCandidate:'Amanita sp.',characters:['Lamelle libere','Volva osservata','Anello osservato'],confirmation:'Sporata documentata'};
@@ -26,3 +26,9 @@ fail=true;await assert.rejects(store.save({...filled,taxonCandidate:'Bozza in me
 fail=false;await store.save({...filled,taxonCandidate:'Bozza recuperata'});assert.equal((await store.read()).queue[0].taxonCandidate,'Bozza recuperata');
 raw='{corrupt-original';await assert.rejects(store.merge([added]));assert.equal(raw,'{corrupt-original');
 console.log('Shared photo/review transactions preserve additions and edits, recover after failures and never overwrite corrupt storage.');
+
+const newer={...added,taxonCandidate:'Nuova modifica durante il recupero'};
+const pending=new Map([[filled.observationId,filled],[added.observationId,added]]),retried=[];
+await retryPendingVisualReviews(pending,async snapshot=>{retried.push(snapshot);if(snapshot.observationId===filled.observationId)pending.set(added.observationId,newer);});
+assert.equal(retried[1].taxonCandidate,newer.taxonCandidate);
+console.log('Retry reads each pending draft at execution time and cannot overwrite a newer edit with a stale snapshot.');
