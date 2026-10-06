@@ -256,16 +256,23 @@
   {
     "id": "minimum-card-objective-agaricus--05--agaricus-campestris",
     "scientificName": "Agaricus campestris",
-    "commonNames": [],
+    "commonNames": [
+      "Prataiolo",
+      "Prataioli"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Carne bianca con lieve rosatura, soprattutto presso le lamelle; specie tipica di prati e pascoli. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello bianco, liscio o finemente fibrilloso-squamuloso, spesso appiattito a maturità.",
       "Lamelle libere rosa vivo nel giovane, poi bruno-cioccolato.",
       "Gambo relativamente corto con anello sottile e fragile, senza volva."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
-    "habitat": [],
+    "lookalikes": [
+      "Amanita verna e Amanita virosa: confronto da approfondire, segnalato nelle Osservazioni della fonte."
+    ],
+    "lookalikesStatus": "literature-pointers",
+    "habitat": [
+      "Suoli ricchi di sostanza organica, anche concimati; la fonte cita orti, parchi e giardini, dalla primavera all'autunno."
+    ],
     "sources": [
       {
         "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
@@ -285,6 +292,36 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Agaricus campestris: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Agaricus campestris",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/agaricus-campestris/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-habitat-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Agaricus campestris",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/agaricus-campestris/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Indicazione ecologica del solo campo Habitat.",
+        "notes": "Questo riferimento riguarda soltanto habitat. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-2",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Agaricus campestris",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/agaricus-campestris/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -550,15 +587,19 @@
   {
     "id": "minimum-card-objective-amanita--01--amanita-phalloides",
     "scientificName": "Amanita phalloides",
-    "commonNames": [],
+    "commonNames": [
+      "Tignosa verdognola"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Gambo spesso con zebrature o marezzature olivastre; base sempre da estrarre integra. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello verde-oliva, giallo-oliva o talvolta quasi bianco, percorso da fibrille radiali più scure.",
       "Lamelle bianche libere e grande anello membranoso alto sul gambo.",
       "Base del gambo con volva bianca ampia, membranosa e sacciforme."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Amanita caesarea: confronto bibliografico riferito allo stadio di uovo."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -579,6 +620,26 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Amanita phalloides: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-8-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "AUSL Bologna — Occhio al Fungo (2018)",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/ouscoli/occhio-al-fungo-1/occhio-al-fungo/files/opuscolo-funghi-2018-ok-1.pdf",
+        "location": "Pagina PDF 36: intestazione Amanita phalloides.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Amanita caesarea",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -757,8 +818,10 @@
       "Anello bianco membranoso, spesso persistente.",
       "Volva alla base nettamente arancio-rossastra o fulvastra, in forte contrasto con il gambo chiaro."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Amanita ovoidea: confronto segnalato nella tabella dei sosia."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -779,6 +842,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Amanita proxima: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-19-lookalikes-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -822,8 +895,10 @@
       "Gambo massiccio con anello fragile, cremoso-farinoso, spesso lacerato.",
       "Volva bianca sacciforme, talvolta con minute granulazioni giallastre, mai arancio-rossa come in A. proxima."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Amanita proxima: confronto segnalato nella tabella dei sosia."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -844,6 +919,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Amanita ovoidea: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-20-lookalikes-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -887,8 +972,10 @@
       "Anello bianco non striato nella pagina superiore.",
       "Bulbo basale con volva aderente a più cercini o collaretti concentrici."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Macrolepiota procera: confronto segnalato nella tabella dei sosia."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -909,6 +996,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Amanita pantherina: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-15-lookalikes-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -945,16 +1042,23 @@
   {
     "id": "minimum-card-objective-amanita--07--amanita-muscaria",
     "scientificName": "Amanita muscaria",
-    "commonNames": [],
+    "commonNames": [
+      "Ovolo malefico",
+      "Ovoli malefici"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Gambo e lamelle restano bianchi; margine del cappello spesso striato negli adulti. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello rosso o rosso-arancio con verruche bianche, talvolta dilavate.",
       "Lamelle bianche e anello ampio pendulo.",
       "Base bulbosa con residui volvari bianchi disposti in verruche o cercini."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
-    "habitat": [],
+    "lookalikes": [
+      "Amanita caesarea: il confronto della fonte riguarda la varietà/forma aureola."
+    ],
+    "lookalikesStatus": "literature-pointers",
+    "habitat": [
+      "Boschi di latifoglie e di conifere, anche montani; estate e autunno secondo la fonte."
+    ],
     "sources": [
       {
         "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
@@ -974,6 +1078,36 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Amanita muscaria: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-7-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Amanita muscaria",
+        "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/amanita-muscaria/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-habitat-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Amanita muscaria",
+        "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/amanita-muscaria/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Indicazione ecologica del solo campo Habitat.",
+        "notes": "Questo riferimento riguarda soltanto habitat. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-2",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -1010,16 +1144,26 @@
   {
     "id": "minimum-card-objective-amanita--08--amanita-caesarea",
     "scientificName": "Amanita caesarea",
-    "commonNames": [],
+    "commonNames": [
+      "Ovolo buono",
+      "Ovolo",
+      "Ovoli",
+      "Fungo reale"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Nello stadio chiuso la sezione longitudinale mostra già strutture interne gialle. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello arancio-rosso, liscio, con margine fortemente striato.",
       "Lamelle, gambo e anello di colore giallo vivo.",
       "Grande volva bianca membranosa e sacciforme alla base."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
-    "habitat": [],
+    "lookalikes": [
+      "Amanita phalloides e altre Amanite mortali: confronto riferito agli esemplari allo stadio di uovo.",
+      "Amanita muscaria var. aureola: confronto segnalato nella tabella dei sosia."
+    ],
+    "lookalikesStatus": "literature-pointers",
+    "habitat": [
+      "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte."
+    ],
     "sources": [
       {
         "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
@@ -1039,6 +1183,46 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Amanita caesarea: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-3-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Amanita caesarea",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-habitat-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Amanita caesarea",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Indicazione ecologica del solo campo Habitat.",
+        "notes": "Questo riferimento riguarda soltanto habitat. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-2",
+        "reviewScope": "supplementary-literature",
+        "title": "Provincia di Cuneo — Amanita caesarea",
+        "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+        "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-3",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -1606,7 +1790,11 @@
   {
     "id": "minimum-card-objective-calocybe--01--calocybe-gambosa",
     "scientificName": "Calocybe gambosa",
-    "commonNames": [],
+    "commonNames": [
+      "Prugnolo",
+      "Prugnoli",
+      "Fungo di San Giorgio"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Fruttificazione tipicamente primaverile in prati, siepi, margini e cerchi. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Basidioma robusto bianco-crema con cappello carnoso.",
@@ -1635,6 +1823,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Calocybe gambosa: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-6-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Prugnolo non è un nome univoco: viene usato anche per Clitopilus prunulus.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -2072,7 +2270,10 @@
   {
     "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
     "scientificName": "Clitopilus prunulus s.l.",
-    "commonNames": [],
+    "commonNames": [
+      "Prugnolo",
+      "Prugnoli"
+    ],
     "summary": "Unità didattica al rango speciesGroup. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Odore molto forte di farina fresca o pasta. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello biancastro-grigiastro opaco o finemente vellutato, spesso irregolare.",
@@ -2101,6 +2302,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Clitopilus prunulus s.l.: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-10-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Clitopilus prunulus. Nome volgare non univoco, condiviso con Calocybe gambosa.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "speciesGroup",
@@ -2281,8 +2492,10 @@
       "Lamelle molto distanti, pallide e non decorrenti.",
       "Gambo sottile ma eccezionalmente tenace, elastico e flessibile."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Clitocybe bianche, Inocybe spp. e Lepiota helveola e affini: confronti da approfondire indicati dalla fonte."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -2303,6 +2516,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Marasmius oreades: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-18-lookalikes-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -4524,15 +4747,20 @@
   {
     "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
     "scientificName": "Macrolepiota procera s.l.",
-    "commonNames": [],
+    "commonNames": [
+      "Mazza di tamburo",
+      "Mazze di tamburo"
+    ],
     "summary": "Unità didattica al rango speciesGroup. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Carne sostanzialmente bianca, senza rapido viraggio arancio-rosso del gruppo rhacodes. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Basidioma molto grande e slanciato, cappello pallido con grandi squame brune e umbone centrale scuro.",
       "Gambo alto con evidente disegno bruno a pelle di serpente.",
       "Grande anello doppio, spesso e mobile sul gambo."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Amanita pantherina: confronto segnalato nella tabella dei sosia; la fonte usa Macrolepiota procera."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -4553,6 +4781,26 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Macrolepiota procera s.l.: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-4-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte dice Macrolepiota procera e simili: non delimita tassonomicamente il concetto moderno.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "speciesGroup",
@@ -5114,8 +5362,10 @@
       "Vere lamelle sottili, fitte e fortemente decorrenti, non pliche ottuse.",
       "Crescita lignicola e spesso fortemente cespitosa alla base di olivi o altre latifoglie."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Cantharellus cibarius: confronto segnalato nella tabella dei sosia."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -5136,6 +5386,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Omphalotus olearius: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-16-lookalikes-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -5909,7 +6169,10 @@
   {
     "id": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
     "scientificName": "Tricholoma terreum",
-    "commonNames": [],
+    "commonNames": [
+      "Moretta",
+      "Morette"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Frequente con Pinus, spesso su terreni sabbiosi, limosi o disturbati. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello grigio-cenere fino a grigio-nerastro, asciutto e densamente feltrato/tomentoso.",
@@ -5938,6 +6201,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Tricholoma terreum: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-12-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Il nome riguarda il gruppo terreum nella fonte e non identifica da solo la specie.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -6169,7 +6442,10 @@
   {
     "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
     "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
-    "commonNames": [],
+    "commonNames": [
+      "Moretta",
+      "Morette"
+    ],
     "summary": "Unità didattica al rango speciesGroup. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Viraggi orientano: scalpturatum tende al giallo; orirubens può arrossare e ha micelio basale giallo; squarrulosum ha squamule nerastre anche sul gambo. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappelli grigi, grigio-bruni o nerastri, fibrillosi o squamulosi.",
@@ -6198,6 +6474,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre): tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-13-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Tricholoma gruppo terreum, senza delimitare tutte le specie incluse nell'unità S1.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "speciesGroup",
@@ -6711,15 +6997,20 @@
   {
     "id": "minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
     "scientificName": "Lactarius sez. Deliciosi",
-    "commonNames": [],
+    "commonNames": [
+      "Sanguinello",
+      "Sanguinelli"
+    ],
     "summary": "Unità didattica al rango section. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Forte specificità ecologica con conifere come Pinus, Picea o Abies. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Latice arancio, rosso o vinoso.",
       "Frequenti inverdimenti di latice e superfici con lesione o invecchiamento.",
       "Cappello spesso zonato e gambo frequentemente scrobicolato."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Lactarius torminosus: confronto della fonte con Lactarius gruppo deliciosus a lattice rosso."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -6740,6 +7031,26 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Lactarius sez. Deliciosi: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-5-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Lactarius gruppo deliciosus a lattice rosso; non certifica l'equivalenza formale con la sezione e non estende il nome all'intero genere.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-18-lookalikes-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Non estendere il confronto a una regola universale sul colore del lattice.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "section",
@@ -7158,15 +7469,20 @@
   {
     "id": "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l",
     "scientificName": "Boletus edulis s.l.",
-    "commonNames": [],
+    "commonNames": [
+      "Porcino",
+      "Porcini"
+    ],
     "summary": "Unità didattica al rango speciesGroup. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Assenza di pori rossi e di viraggi azzurri; profilo riferito al gruppo dei porcini. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Pori inizialmente bianchi, poi gialli e infine verde-oliva.",
       "Carne bianca e sostanzialmente immutabile, senza viraggio blu.",
       "Gambo almeno in parte reticolato."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Rubroboletus satanas (Boletus satanas nella fonte): confronto con il gruppo edulis."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -7187,6 +7503,26 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Boletus edulis s.l.: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-1-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Boletus gruppo edulis.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-16-lookalikes-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "speciesGroup",
@@ -7293,8 +7629,10 @@
       "Pori presto arancio-rossi fino a rosso carminio, bluescenti alla pressione.",
       "Gambo eccezionalmente tozzo o obeso, giallo in alto e rosa-rosso/porpora inferiormente, con reticolo."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Boletus gruppo edulis: confronto della fonte, che usa il nome Boletus satanas."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -7315,6 +7653,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Boletus (Rubroboletus) satanas: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-17-lookalikes-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -8202,15 +8550,22 @@
   {
     "id": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
     "scientificName": "Cantharellus cibarius complex",
-    "commonNames": [],
+    "commonNames": [
+      "Finferlo",
+      "Finferli",
+      "Gallinaccio",
+      "Gallinacci"
+    ],
     "summary": "Unità didattica al rango speciesGroup. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Odore frequentemente fruttato o di albicocca; profilo riferito al complesso. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Imenoforo formato da pliche ottuse, carnose, forcate e decorrenti, non vere lamelle.",
       "Basidioma generalmente giallo o giallo-arancio, con cappello e gambo continui.",
       "Gambo pieno e carne compatta."
     ],
-    "lookalikes": [],
-    "lookalikesStatus": "not-exported",
+    "lookalikes": [
+      "Omphalotus olearius: confronto della fonte con Cantharellus cibarius; non risolve il complex moderno."
+    ],
+    "lookalikesStatus": "literature-pointers",
     "habitat": [],
     "sources": [
       {
@@ -8231,6 +8586,26 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Cantharellus cibarius complex: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-2-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Cantharellus cibarius; non delimita il complex moderno.",
+        "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-15-lookalikes-1",
+        "reviewScope": "supplementary-literature",
+        "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+        "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+        "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+        "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+        "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "speciesGroup",
@@ -8267,7 +8642,10 @@
   {
     "id": "minimum-card-objective-craterellus--01--craterellus-lutescens",
     "scientificName": "Craterellus lutescens",
-    "commonNames": [],
+    "commonNames": [
+      "Finferla",
+      "Finferle"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Carne molto sottile ed elastica; pliche molto meno sviluppate che in C. tubaeformis. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Cappello sottile bruno-arancio, presto imbutiforme e perforato.",
@@ -8296,6 +8674,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Craterellus lutescens: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-11-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione del Veneto — Raccolta funghi",
+        "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+        "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa la combinazione Cantharellus lutescens.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",
@@ -9118,7 +9506,12 @@
   {
     "id": "minimum-card-objective-polyporaceae-s-l--07--grifola-frondosa",
     "scientificName": "Grifola frondosa",
-    "commonNames": [],
+    "commonNames": [
+      "Grifola",
+      "Griffone",
+      "Griffone selvatico",
+      "Maitake"
+    ],
     "summary": "Unità didattica al rango species. Audit interno; revisione micologica indipendente non attestata. Carattere differenziante: Non annerisce vistosamente alla contusione, a differenza di Meripilus giganteus. Valutazione alimentare non pubblicata: in attesa di approvazione micologica indipendente.",
     "characters": [
       "Grande rosetta composta da moltissime piccole fronde o cappelli grigio-bruni.",
@@ -9147,6 +9540,16 @@
         "supportedClaim": "Profilo 3+1 di campo auditato per Grifola frondosa: tre caratteri principali e un carattere differenziante, senza reagenti, microscopia, DNA o assaggio nel livello base.",
         "notes": "Audit scientifico interno cross-source completato nel progetto. Non equivale a revisione micologica indipendente del profilo né all’approvazione finale dei claim di sicurezza/commestibilità. Le fonti esterne puntuali collegate supportano solo i caratteri esplicitamente descritti nella rispettiva evidenza.",
         "reviewStatus": "reviewed"
+      },
+      {
+        "sourceId": "SUPPLEMENT-2026-10-06-9-commonNames-0",
+        "reviewScope": "supplementary-literature",
+        "title": "Regione Emilia-Romagna — atto ispettivo n. 1321, legislatura XII",
+        "url": "https://demetra.regione.emilia-romagna.it/al/articolo?urn=er%3Aassemblealegislativa%3Aattoispettivo%3A12%3B1321",
+        "location": "Oggetto e primo punto di Premesso che.",
+        "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+        "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Fonte lessicale amministrativa, non pubblicazione micologica; nessun claim medico o alimentare viene importato.",
+        "reviewStatus": "source-consulted-pending-independent-review"
       }
     ],
     "rank": "species",

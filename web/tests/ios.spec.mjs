@@ -154,5 +154,23 @@ test('keyboard detail navigation restores focus to the opener',async({page})=>{
  await ready(page);const opener=page.getByRole('button',{name:/^Apri /}).first();await opener.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Torna',exact:true})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(opener).toBeFocused();
 });
 test('scientific coverage and general bibliography remain distinct',async({page})=>{
- await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage')).toContainText('7/148 schede Minimo con riscontri bibliografici esterni puntuali');await expect(page.locator('#scientific-coverage')).toContainText('Habitat strutturati: 0/148');await expect(page.locator('#scientific-coverage')).toContainText('Confronti strutturati: 0/148');await expect(page.locator('#scientific-coverage a')).toHaveCount(3);
+ await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage')).toContainText('7/148 schede Minimo con riscontri bibliografici esterni puntuali');await expect(page.locator('#scientific-coverage')).toContainText('Habitat strutturati: 3/148');await expect(page.locator('#scientific-coverage')).toContainText('Confronti strutturati: 14/148');await expect(page.locator('#scientific-coverage a')).toHaveCount(3);
+});
+
+test('common-name search reaches porcini and preserves the non-unique prugnolo mapping',async({page})=>{
+ await ready(page);const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
+ await search.fill('porcini');await expect(page.getByRole('button',{name:'Apri Boletus edulis s.l.',exact:true})).toBeVisible();
+ await page.getByRole('button',{name:'Apri Boletus edulis s.l.',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Regione del Veneto');await expect(page.locator('#detail-body')).toContainText('Non valida i tre caratteri di campo');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await search.fill('prugnolo');
+ await expect(page.getByRole('button',{name:'Apri Calocybe gambosa',exact:true})).toBeVisible();
+ await expect(page.getByRole('button',{name:'Apri Clitopilus prunulus s.l.',exact:true})).toBeVisible();
+});
+test('supplementary habitat and comparisons keep their field-specific sources visible',async({page})=>{
+ await ready(page);await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita caesarea');
+ await page.getByRole('button',{name:'Apri Amanita caesarea',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Boschi luminosi di latifoglie');
+ await expect(page.locator('#detail-body')).toContainText('Amanita phalloides');
+ await expect(page.locator('#detail-body')).toContainText('Questo riferimento riguarda soltanto habitat');
+ await expect(page.locator('#detail-body')).toContainText('Non valida i tre caratteri di campo né la commestibilità');
 });

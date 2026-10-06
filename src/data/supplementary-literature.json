@@ -1,0 +1,570 @@
+{
+  "version": 1,
+  "reviewStatus": "source-consulted-independent-review-not-attested",
+  "consultedAt": "2026-10-06",
+  "records": [
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "commonNames": [
+        "Porcino",
+        "Porcini"
+      ],
+      "habitat": [],
+      "lookalikes": [
+        "Rubroboletus satanas (Boletus satanas nella fonte): confronto con il gruppo edulis."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-1-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Boletus gruppo edulis.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-16-lookalikes-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "commonNames": [
+        "Finferlo",
+        "Finferli",
+        "Gallinaccio",
+        "Gallinacci"
+      ],
+      "habitat": [],
+      "lookalikes": [
+        "Omphalotus olearius: confronto della fonte con Cantharellus cibarius; non risolve il complex moderno."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-2-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Cantharellus cibarius; non delimita il complex moderno.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-15-lookalikes-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "commonNames": [
+        "Ovolo buono",
+        "Ovolo",
+        "Ovoli",
+        "Fungo reale"
+      ],
+      "habitat": [
+        "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte."
+      ],
+      "lookalikes": [
+        "Amanita phalloides e altre Amanite mortali: confronto riferito agli esemplari allo stadio di uovo.",
+        "Amanita muscaria var. aureola: confronto segnalato nella tabella dei sosia."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-3-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Amanita caesarea",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-habitat-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Amanita caesarea",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Indicazione ecologica del solo campo Habitat.",
+          "notes": "Questo riferimento riguarda soltanto habitat. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-2",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Amanita caesarea",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-3",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "commonNames": [
+        "Mazza di tamburo",
+        "Mazze di tamburo"
+      ],
+      "habitat": [],
+      "lookalikes": [
+        "Amanita pantherina: confronto segnalato nella tabella dei sosia; la fonte usa Macrolepiota procera."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-4-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte dice Macrolepiota procera e simili: non delimita tassonomicamente il concetto moderno.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "commonNames": [
+        "Sanguinello",
+        "Sanguinelli"
+      ],
+      "habitat": [],
+      "lookalikes": [
+        "Lactarius torminosus: confronto della fonte con Lactarius gruppo deliciosus a lattice rosso."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-5-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Lactarius gruppo deliciosus a lattice rosso; non certifica l'equivalenza formale con la sezione e non estende il nome all'intero genere.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-18-lookalikes-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Non estendere il confronto a una regola universale sul colore del lattice.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "commonNames": [
+        "Prugnolo",
+        "Prugnoli",
+        "Fungo di San Giorgio"
+      ],
+      "habitat": [],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-6-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Prugnolo non è un nome univoco: viene usato anche per Clitopilus prunulus.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "commonNames": [
+        "Ovolo malefico",
+        "Ovoli malefici"
+      ],
+      "habitat": [
+        "Boschi di latifoglie e di conifere, anche montani; estate e autunno secondo la fonte."
+      ],
+      "lookalikes": [
+        "Amanita caesarea: il confronto della fonte riguarda la varietà/forma aureola."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-7-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Amanita muscaria",
+          "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/amanita-muscaria/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-habitat-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Amanita muscaria",
+          "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/amanita-muscaria/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Indicazione ecologica del solo campo Habitat.",
+          "notes": "Questo riferimento riguarda soltanto habitat. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-2",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "commonNames": [
+        "Tignosa verdognola"
+      ],
+      "habitat": [],
+      "lookalikes": [
+        "Amanita caesarea: confronto bibliografico riferito allo stadio di uovo."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-8-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "AUSL Bologna — Occhio al Fungo (2018)",
+          "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/ouscoli/occhio-al-fungo-1/occhio-al-fungo/files/opuscolo-funghi-2018-ok-1.pdf",
+          "location": "Pagina PDF 36: intestazione Amanita phalloides.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Amanita caesarea",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/amanita-caesarea/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "commonNames": [
+        "Grifola",
+        "Griffone",
+        "Griffone selvatico",
+        "Maitake"
+      ],
+      "habitat": [],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-9-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione Emilia-Romagna — atto ispettivo n. 1321, legislatura XII",
+          "url": "https://demetra.regione.emilia-romagna.it/al/articolo?urn=er%3Aassemblealegislativa%3Aattoispettivo%3A12%3B1321",
+          "location": "Oggetto e primo punto di Premesso che.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Fonte lessicale amministrativa, non pubblicazione micologica; nessun claim medico o alimentare viene importato.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "commonNames": [
+        "Prugnolo",
+        "Prugnoli"
+      ],
+      "habitat": [],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-10-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Clitopilus prunulus. Nome volgare non univoco, condiviso con Calocybe gambosa.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "commonNames": [
+        "Finferla",
+        "Finferle"
+      ],
+      "habitat": [],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-11-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa la combinazione Cantharellus lutescens.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "commonNames": [
+        "Moretta",
+        "Morette"
+      ],
+      "habitat": [],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-12-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Il nome riguarda il gruppo terreum nella fonte e non identifica da solo la specie.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "commonNames": [
+        "Moretta",
+        "Morette"
+      ],
+      "habitat": [],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-13-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Regione del Veneto — Raccolta funghi",
+          "url": "https://www.regione.veneto.it/web/enti-locali/raccolta-funghi",
+          "location": "Limiti di raccolta: elenco dei nomi scientifici e volgari.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. La fonte usa Tricholoma gruppo terreum, senza delimitare tutte le specie incluse nell'unità S1.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus campestris",
+      "commonNames": [
+        "Prataiolo",
+        "Prataioli"
+      ],
+      "habitat": [
+        "Suoli ricchi di sostanza organica, anche concimati; la fonte cita orti, parchi e giardini, dalla primavera all'autunno."
+      ],
+      "lookalikes": [
+        "Amanita verna e Amanita virosa: confronto da approfondire, segnalato nelle Osservazioni della fonte."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-commonNames-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Agaricus campestris",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/agaricus-campestris/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
+          "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-habitat-1",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Agaricus campestris",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/agaricus-campestris/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Indicazione ecologica del solo campo Habitat.",
+          "notes": "Questo riferimento riguarda soltanto habitat. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-14-lookalikes-2",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Agaricus campestris",
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/agaricus-campestris/",
+          "location": "Campi Nomi Volgari, Habitat e Osservazioni della scheda.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Macrolepiota procera: confronto segnalato nella tabella dei sosia."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-15-lookalikes-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Cantharellus cibarius: confronto segnalato nella tabella dei sosia."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-16-lookalikes-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Boletus gruppo edulis: confronto della fonte, che usa il nome Boletus satanas."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-17-lookalikes-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Clitocybe bianche, Inocybe spp. e Lepiota helveola e affini: confronti da approfondire indicati dalla fonte."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-18-lookalikes-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Amanita ovoidea: confronto segnalato nella tabella dei sosia."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-19-lookalikes-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Amanita proxima: confronto segnalato nella tabella dei sosia."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-2026-10-06-20-lookalikes-0",
+          "reviewScope": "supplementary-literature",
+          "title": "Assisi, 2016 — guida istituzionale alle tossine naturali",
+          "url": "https://www.aslto4.piemonte.it/sites/default/files/2024-10/468_Le%20intossicazioni%20alimentari%20da%20tossine%20naturali%20guida%20al%20riconoscimento%20e%20alla%20prevenzione%20%28a%20cura%20Dr.ssa%20F.%20Assisi%29.pdf#page=48",
+          "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
+          "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
+          "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    }
+  ]
+}
