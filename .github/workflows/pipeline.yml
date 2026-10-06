@@ -183,4 +183,4 @@ jobs:
           fi
       - name: Publish authenticated native update
         if: steps.account.outputs.available == 'true'
-        run: npx eas-cli@24.8.0 update --channel preview --environment preview --platform all --non-interactive --json
+        run: npx eas-cli@24.8.0 update --channel preview --environment preview --platform all --non-interactive --message "GitHub revision $GITHUB_SHA" --json
