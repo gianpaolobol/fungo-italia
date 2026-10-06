@@ -1,0 +1,248 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fungo Italia — fotografie personali",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "photos"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/photo"
+      }
+    }
+  },
+  "$defs": {
+    "photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "sha256",
+        "source",
+        "rights",
+        "identification",
+        "metadataPolicy"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{3,100}$"
+        },
+        "file": {
+          "type": "string",
+          "pattern": "^images/[a-z0-9][a-z0-9._-]*[.]jpg$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "originalName"
+          ],
+          "properties": {
+            "kind": {
+              "const": "user-provided"
+            },
+            "originalName": {
+              "type": "string",
+              "minLength": 1
+            },
+            "observationId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "rights": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "attribution",
+            "license",
+            "publicationScope"
+          ],
+          "properties": {
+            "attribution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "license": {
+              "type": "string",
+              "enum": [
+                "rights-reserved",
+                "CC-BY-4.0",
+                "CC-BY-SA-4.0",
+                "CC0-1.0"
+              ]
+            },
+            "publicationScope": {
+              "const": "fungo-italia-authorized"
+            }
+          }
+        },
+        "metadataPolicy": {
+          "const": "gps-and-exif-removed"
+        },
+        "identification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "proposedGenus",
+            "proposedSpecies",
+            "visibleCharacters",
+            "missingCharacters",
+            "alternatives",
+            "references"
+          ],
+          "properties": {
+            "status": {
+              "enum": [
+                "unresolved",
+                "proposed",
+                "reviewed"
+              ]
+            },
+            "proposedGenus": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "proposedSpecies": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "visibleCharacters": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "missingCharacters": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "alternatives": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "location"
+                ],
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "location": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                }
+              }
+            },
+            "review": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "reviewer",
+                "date",
+                "method",
+                "evidence"
+              ],
+              "properties": {
+                "reviewer": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "date": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "method": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "reviewed"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "review"
+                ]
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unresolved",
+                      "proposed"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "required": [
+                    "review"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
