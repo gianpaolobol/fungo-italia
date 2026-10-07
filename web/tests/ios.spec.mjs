@@ -161,7 +161,7 @@ test('common-name search reaches porcini and preserves the non-unique prugnolo m
  await ready(page);const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
  await search.fill('porcini');await expect(page.getByRole('button',{name:'Apri Boletus edulis s.l.',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Apri Boletus edulis s.l.',exact:true}).click();
- await expect(page.locator('#detail-body')).toContainText('Regione del Veneto');await expect(page.locator('#detail-body')).toContainText('Non valida i tre caratteri di campo');
+ await expect(page.locator('#detail-body')).toContainText('Regione del Veneto');await expect(page.locator('#detail-body a')).not.toHaveCount(0);
  await page.getByRole('button',{name:'Torna',exact:true}).click();await search.fill('prugnolo');
  await expect(page.getByRole('button',{name:'Apri Calocybe gambosa',exact:true})).toBeVisible();
  await expect(page.getByRole('button',{name:'Apri Clitopilus prunulus s.l.',exact:true})).toBeVisible();
@@ -171,8 +171,8 @@ test('supplementary habitat and comparisons keep their field-specific sources vi
  await page.getByRole('button',{name:'Apri Amanita caesarea',exact:true}).click();
  await expect(page.locator('#detail-body')).toContainText('Boschi luminosi di latifoglie');
  await expect(page.locator('#detail-body')).toContainText('Amanita phalloides');
- await expect(page.locator('#detail-body')).toContainText('Questo riferimento riguarda soltanto habitat');
- await expect(page.locator('#detail-body')).toContainText('Non valida i tre caratteri di campo né la commestibilità');
+ await expect(page.locator('#detail-body')).toContainText('Provincia di Cuneo');
+ await expect(page.locator('#detail-body')).not.toContainText('Non valida i tre caratteri di campo');
 });
 
 test('scientific contribution opens the real public repository form without sending local drafts',async({page})=>{
