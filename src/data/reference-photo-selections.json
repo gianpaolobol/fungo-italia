@@ -2241,13 +2241,13 @@
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
       "page": 36,
-      "xref": 135,
+      "xref": 134,
       "view": "lateral",
-      "filename": "russula-nigricantinae-lateral-135.jpg",
-      "alt": "Russula adusta — vista laterale di cappello e gambo",
+      "filename": "russula-nigricantinae-lateral-134.jpg",
+      "alt": "Russula adusta — profilo esterno laterale obliquo nella composizione originale",
       "credit": "Fonte: Marco Floriani, Il genere Russula, p. 36. Fotografia: M. Donini.",
       "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "reviewNotes": "Rivisto da secondo controllo visivo: sostituita la sezione longitudinale x135 con la fotografia x134 che mostra il profilo esterno obliquo.",
       "crop": [
         0,
         0,
@@ -2301,26 +2301,6 @@
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
       "page": 41,
-      "xref": 153,
-      "view": "lateral",
-      "filename": "russula-lactarioides-lateral-153.jpg",
-      "alt": "Russula delica — vista laterale di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
-      "crop": [
-        0,
-        0,
-        1,
-        1
-      ]
-    },
-    {
-      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
-      "subjectTaxon": "Russula delica",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "page": 41,
       "xref": 152,
       "view": "top",
       "filename": "russula-lactarioides-top-152.jpg",
@@ -2361,26 +2341,6 @@
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
       "page": 41,
-      "xref": 153,
-      "view": "lateral",
-      "filename": "russula-genere-lateral-153.jpg",
-      "alt": "Russula delica — vista laterale di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
-      "crop": [
-        0,
-        0,
-        1,
-        1
-      ]
-    },
-    {
-      "scientificName": "Russula",
-      "subjectTaxon": "Russula delica",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "page": 41,
       "xref": 152,
       "view": "top",
       "filename": "russula-genere-top-152.jpg",
@@ -2410,26 +2370,6 @@
       "reviewNotes": "Russula chloroides è raffigurata con didascalia specifica; rappresentante del gruppo R. delica nella scheda di gruppo, non una fotografia attribuita a R. delica.",
       "crop": [
         0.35,
-        0,
-        1,
-        1
-      ]
-    },
-    {
-      "scientificName": "Russula Foetentinae",
-      "subjectTaxon": "Russula foetens",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "page": 51,
-      "xref": 183,
-      "view": "lateral",
-      "filename": "russula-foetentinae-lateral-183.jpg",
-      "alt": "Russula foetens — vista laterale di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 51. Autore della singola fotografia non specificato.",
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
-      "crop": [
-        0,
         0,
         1,
         1
@@ -5274,6 +5214,60 @@
       "credit": "Fonte: Claudia Perini, Perini Classificazione bis.pdf, p. 15; fotografo non specificato nella pagina della fonte.",
       "visualReview": "verified",
       "reviewNotes": "Fonte e orientamento controllati visivamente; eventuali ritagli sono esplicitamente della stessa composizione fotografica originale. Nessuna attribuzione di commestibilità dalla fotografia."
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "subjectTaxon": "Rubroboletus satanas",
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "sourceSha256": "7f9b952b0c871783be0bbf6dcc5cee369dd285b7db204d9520ccf1063ccb6335",
+      "page": 59,
+      "xref": 305,
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "filename": "rubroboletus-satanas-lateral-305.jpg",
+      "alt": "Rubroboletus satanas — vista laterale di cappello e gambo",
+      "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica Rubroboletus satanas e fotografia verificate. Vista inferiore assente, non sostituita con la sezione longitudinale presente nella stessa fotografia."
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "subjectTaxon": "Rubroboletus satanas",
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "sourceSha256": "7f9b952b0c871783be0bbf6dcc5cee369dd285b7db204d9520ccf1063ccb6335",
+      "page": 59,
+      "xref": 305,
+      "view": "top",
+      "crop": [
+        0.42,
+        0,
+        1,
+        0.75
+      ],
+      "filename": "rubroboletus-satanas-top-305.jpg",
+      "alt": "Rubroboletus satanas — vista superiore di cappello e gambo",
+      "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica Rubroboletus satanas e fotografia verificate. Vista inferiore assente, non sostituita con la sezione longitudinale presente nella stessa fotografia."
+    },
+    {
+      "scientificName": "Scleroderma",
+      "subjectTaxon": "Scleroderma spp.",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 36,
+      "xref": 142,
+      "view": "top",
+      "filename": "scleroderma-top-142.jpg",
+      "alt": "Scleroderma spp. — peridio e gleba visibili nella composizione",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 36. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia generica Scleroderma spp. verificata. Nessuna determinazione di specie inferita; non si presenta la gleba sezionata come una vista inferiore."
     }
   ]
 }
