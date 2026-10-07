@@ -98,7 +98,7 @@ test('wrong identity and read-only owner token never unlock editing',async({page
  await page.unroute('https://api.github.com/**');api=await fakeGitHub(page,{write:false});
  await page.locator('#admin-login-key').fill(token);await page.locator('#admin-login-submit').click();
  await expect.poll(()=>api.calls.some(x=>x.method==='POST'&&x.path.endsWith('/git/blobs'))).toBe(true);
- await expect(page.locator('#admin-login-error')).not.toBeEmpty();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);expect(publicationCalls(api)).toEqual([]);
+ await expect(page.locator('#admin-login-error')).toContainText(/Accesso non riuscito|Password o accesso GitHub non validi/);await expect(page.locator('#admin-login-submit')).toBeEnabled();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);expect(publicationCalls(api)).toEqual([]);
 });
 test('cancelled selection and failed upload do not confirm publication',async({page})=>{
  const api=await fakeGitHub(page);await ready(page);await login(page);await openTaxon(page);await choosePhoto(page);
@@ -116,11 +116,11 @@ test('encrypted device password requires renewed owner validation',async({page})
  for(const value of await storedValues(page)){expect(value).not.toContain(token);expect(value).not.toContain(password);}
  await page.locator('#admin-edit').click();await page.reload();await page.locator('#admin-edit').click();
  await page.locator('#admin-password-unlock').fill('wrong-password');await page.locator('#admin-login-submit').click();
- await expect(page.locator('#admin-login-error')).not.toBeEmpty();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);
+ await expect(page.locator('#admin-login-error')).toContainText(/Accesso non riuscito|Password o accesso GitHub non validi/);await expect(page.locator('#admin-login-submit')).toBeEnabled();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);
  await page.unroute('https://api.github.com/**');api=await fakeGitHub(page,{login:'revoked-owner'});
  await page.locator('#admin-password-unlock').fill(password);await page.locator('#admin-login-submit').click();
  await expect.poll(()=>api.calls.some(x=>x.path==='/user')).toBe(true);
- await expect(page.locator('#admin-login-error')).not.toBeEmpty();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);expect(publicationCalls(api)).toEqual([]);
+ await expect(page.locator('#admin-login-error')).toContainText(/Accesso non riuscito|Password o accesso GitHub non validi/);await expect(page.locator('#admin-login-submit')).toBeEnabled();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);expect(publicationCalls(api)).toEqual([]);
 });
 test('cancelled pending preflight cannot publish after logout',async({page})=>{
  const api=await fakeGitHub(page);await ready(page);await login(page);await openTaxon(page);await choosePhoto(page);await page.locator('#admin-photo-rights').check();
