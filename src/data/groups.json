@@ -475,6 +475,24 @@
         "alt": "Coprinopsis atramentaria — vista laterale di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 86. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
         "subjectTaxon": "Coprinopsis atramentaria"
+      },
+      {
+        "src": "images/reference/external-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe-underside.jpg",
+        "view": "underside",
+        "alt": "Coprinopsis atramentaria — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Coprinopsis atramentaria",
+        "sourceUrl": "https://www.inaturalist.org/observations/61764425",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe-top.jpg",
+        "view": "top",
+        "alt": "Coprinopsis atramentaria — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Coprinopsis atramentaria",
+        "sourceUrl": "https://www.inaturalist.org/observations/94217625",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1022,6 +1040,15 @@
         "alt": "Lentinula edodes — vista superiore di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 43. Autore della singola fotografia non specificato.",
         "subjectTaxon": "Lentinula edodes"
+      },
+      {
+        "src": "images/reference/external-lentinula-underside.jpg",
+        "view": "underside",
+        "alt": "Lentinula edodes — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Lentinula edodes",
+        "sourceUrl": "https://www.inaturalist.org/observations/93884598",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1456,6 +1483,35 @@
       "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-top.jpg",
+        "view": "top",
+        "alt": "Panaeolus cyanescens — vista superiore",
+        "credit": "Alan Rockefeller, CC BY 4.0",
+        "subjectTaxon": "Panaeolus cyanescens",
+        "sourceUrl": "https://www.inaturalist.org/observations/18585344",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-lateral.jpg",
+        "view": "lateral",
+        "alt": "Panaeolus cyanescens — vista laterale",
+        "credit": "Alan Rockefeller, CC BY 4.0",
+        "subjectTaxon": "Panaeolus cyanescens",
+        "sourceUrl": "https://www.inaturalist.org/observations/18585344",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-underside.jpg",
+        "view": "underside",
+        "alt": "Panaeolus cyanescens — imenoforo",
+        "credit": "Alan Rockefeller, CC BY 4.0",
+        "subjectTaxon": "Panaeolus cyanescens",
+        "sourceUrl": "https://www.inaturalist.org/observations/18585344",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 11
@@ -1498,6 +1554,15 @@
         "credit": "Nina Filippova, CC BY 4.0",
         "subjectTaxon": "Kuehneromyces mutabilis",
         "sourceUrl": "https://www.inaturalist.org/observations/86452505",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces-underside.jpg",
+        "view": "underside",
+        "alt": "Kuehneromyces mutabilis — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Kuehneromyces mutabilis",
+        "sourceUrl": "https://www.inaturalist.org/observations/83961884",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -1589,6 +1654,15 @@
         "subjectTaxon": "Pluteus conformis",
         "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/figure/jof-09-00584-f004/",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pluteus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Pluteus cervinus — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Pluteus cervinus",
+        "sourceUrl": "https://www.inaturalist.org/observations/14511336",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1631,6 +1705,15 @@
         "subjectTaxon": "Psathyrella candolleana",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-lateral.jpg",
+        "view": "lateral",
+        "alt": "Psathyrella squarrosa — vista laterale",
+        "credit": "Pilankatta Kumbala Nayana; Chittethu Kunjan Pradeep (2022), Fig.2d, CC BY 4.0",
+        "subjectTaxon": "Psathyrella squarrosa",
+        "sourceUrl": "https://doi.org/10.48130/SIF-2022-0003",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -2223,6 +2306,15 @@
         "subjectTaxon": "Chroogomphus pakistanicus",
         "sourceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-chroogomphus-top.jpg",
+        "view": "top",
+        "alt": "Chroogomphus rutilus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Chroogomphus rutilus",
+        "sourceUrl": "https://www.inaturalist.org/observations/91509612",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -2264,6 +2356,15 @@
         "credit": "Eugene Popov, CC BY 4.0",
         "subjectTaxon": "Gomphidius glutinosus",
         "sourceUrl": "https://www.inaturalist.org/observations/34117478",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-gomphidius-lateral.jpg",
+        "view": "lateral",
+        "alt": "Gomphidius glutinosus — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Gomphidius glutinosus",
+        "sourceUrl": "https://www.inaturalist.org/observations/41776380",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -2494,6 +2595,15 @@
         "subjectTaxon": "Hygrophoropsis aurantiaca",
         "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
         "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+      },
+      {
+        "src": "images/reference/external-hygrophoropsis-underside.jpg",
+        "view": "underside",
+        "alt": "Hygrophoropsis aurantiaca — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Hygrophoropsis aurantiaca",
+        "sourceUrl": "https://www.inaturalist.org/observations/244111771",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3113,6 +3223,15 @@
         "alt": "Ramaria formosa — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Ramaria formosa"
+      },
+      {
+        "src": "images/reference/external-ramaria-top.jpg",
+        "view": "top",
+        "alt": "Ramaria luteoliparva — vista superiore obliqua delle ramificazioni",
+        "credit": "Zhong et al. (2026), Fig.13c, CC BY 4.0",
+        "subjectTaxon": "Ramaria luteoliparva",
+        "sourceUrl": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136008",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3204,6 +3323,15 @@
         "subjectTaxon": "Scleroderma verrucosum",
         "sourceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-scleroderma-underside.jpg",
+        "view": "underside",
+        "alt": "Scleroderma citrinum — base esterna",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Scleroderma citrinum",
+        "sourceUrl": "https://www.inaturalist.org/observations/247791606",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3286,6 +3414,24 @@
         "alt": "Gyromitra esculenta — fianco, cappello e gambo",
         "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 60; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Gyromitra esculenta"
+      },
+      {
+        "src": "images/reference/external-gyromitra-incluso-discina-top.jpg",
+        "view": "top",
+        "alt": "Gyromitra esculenta — vista superiore",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Gyromitra esculenta",
+        "sourceUrl": "https://www.inaturalist.org/observations/269149079",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-gyromitra-incluso-discina-underside.jpg",
+        "view": "underside",
+        "alt": "Gyromitra esculenta — superficie sterile inferiore, vista obliqua parziale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Gyromitra esculenta",
+        "sourceUrl": "https://www.inaturalist.org/observations/269149079",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3416,6 +3562,15 @@
         "subjectTaxon": "Sarcosphaera coronaria",
         "sourceUrl": "https://www.inaturalist.org/observations/10726841",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-sarcosphaera-lateral.jpg",
+        "view": "lateral",
+        "alt": "Sarcosphaera coronaria — vista laterale",
+        "credit": "Matteo Piccinini, CC BY 4.0",
+        "subjectTaxon": "Sarcosphaera coronaria",
+        "sourceUrl": "https://www.inaturalist.org/observations/637711",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3447,6 +3602,15 @@
         "alt": "Verpa conica — cappello e gambo",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Verpa conica"
+      },
+      {
+        "src": "images/reference/external-verpa-top.jpg",
+        "view": "top",
+        "alt": "Verpa bohemica — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Verpa bohemica",
+        "sourceUrl": "https://www.inaturalist.org/observations/17094188",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
