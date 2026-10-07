@@ -56,3 +56,26 @@ PROBLEMA CONFERMATO DALL'UTENTE: nella vista scheda alcune fotografie mostrano b
 - Gestire loading/error con placeholder progettato, ma mai spazi bianchi residui a immagine caricata.
 - Test visuali automatici su immagini verticali, orizzontali, quadrate, panoramiche e con bordo, su iPhone 13 mini/320pt, desktop, PWA, Android; verificare anche foto sostituite e cache invalidation. Non pubblicare finché non sono verificati allineamento, assenza di bande vuote e visibilità dei caratteri diagnostici.
 - Evitare crop irreversibili o automatici che eliminino caratteri necessari per identificazione; se il soggetto non può essere inquadrato correttamente nel box, usare un ritaglio editoriale dedicato e mantenere la vista integrale accessibile.
+
+
+## AGGIORNAMENTO STATO GITHUB — 2026-10-08 (verificato su main)
+Questa sezione prevale sulle indicazioni di baseline precedenti quando più recenti. Ultimo HEAD osservato prima di questa modifica: `a22e01772c9fd6d5c0f3319aa55938e4e1cfabac` (documentazione crop/focal point). Non interpretare questo come ultimo commit di codice: il più recente commit di codice osservato è `0b0a47237f863422383255b678440ab562024191` (gallery cleanup stylesheet incluso nell'hash della build web, 2026-10-07 23:23 UTC). Rileggere HEAD all'avvio.
+
+### Sviluppi nuovi già presenti in main (non duplicarli)
+- PR #31, squash commit `2d2c9662c5cf222688b30e007dfb7c03695cb209`: release readiness gate. File `scripts/release-readiness.mjs`, relativi test e `docs/RELEASE-READINESS-GATE.md`; package.json ora contiene `npm run test:release-readiness`, `npm run validate:release`, `npm run export:release-readiness`. Il gate verifica ID/nome/rango, 3+1, habitat, sosia, fonti ed evidenza puntuale, tre viste lateral/top/underside con src/alt/credit, attestazione di revisione indipendente. Il gate in modalità strict deve FALLIRE se mancano requisiti; non aggirarlo con placeholder o false attestazioni.
+- PR #32, commit `20a4176a7643170ad6778d047046bbf771c80c96`: fix cache Safari, pagina amministrativa foto dedicata e link admin nell'header pubblico, nuova cache service worker. Verificare la pagina sul sito pubblicato e l'autenticazione, non assumere che l'accesso end-to-end sia riuscito.
+- Commit `fadfcf5d`, `f19acf01`, `00f07347`, `3f1c8114`, `0b0a4723`: introdotto e collegato stylesheet di pulizia delle gallerie fotografiche, anche per admin, con aggiornamento cache e hash web. ATTENZIONE: questo NON dimostra che il requisito cover/crop/focal point sia interamente soddisfatto. Verificare con screenshot e immagini di diverse proporzioni.
+- Commit `1386cf74`: ripristinato smoke test viewport iPhone nel deploy Pages dopo tentativi di renderlo non bloccante o saltarlo. Verificare effettivo esito della CI.
+- PR #20 e revisioni fotografiche precedenti riportano 630 viste di riferimento e 206 triadi complete. Questi numeri derivano dal titolo della PR, non sono stati ricontati qui e NON equivalgono a licenze, revisione scientifica e release readiness certificate. Controllare i dati effettivi e il gate.
+
+### Stato di verifica e prossimi controlli obbligatori
+- I file `docs/RELEASE-READINESS-GATE.md`, `scripts/release-readiness.mjs` e i nuovi script package.json sono stati letti sul main. `docs/RELEASE-READINESS.md` NON risultava presente al momento del controllo: generarlo con `npm run export:release-readiness` e conservarne le evidenze.
+- Non sono stati eseguiti test runtime in questa attività di aggiornamento handoff. Non dichiarare PASS CI, anteprima Safari, foto corrette, editor operativo o 100% schede complete senza prove.
+- Il README e l'audit 6 ottobre riportano statistiche scientifiche precedenti; ricontare dataset e riscontri aggiornati, distinguendo metadata, asset e validazione indipendente.
+- Priorità immediata: aprire preview pubblica e pagina admin, verificare foto con bande vuote, applicare correzioni reali di cover/focal point e workflow admin, eseguire test visivi 320pt/iPhone e desktop, poi eseguire release gate e correggere i blocker veri. Conservare originali e licenze.
+
+### Riferimenti diretti
+- https://github.com/gianpaolobol/fungo-italia/pull/31
+- https://github.com/gianpaolobol/fungo-italia/pull/32
+- https://github.com/gianpaolobol/fungo-italia/blob/main/docs/RELEASE-READINESS-GATE.md
+- https://github.com/gianpaolobol/fungo-italia/commit/0b0a47237f863422383255b678440ab562024191
