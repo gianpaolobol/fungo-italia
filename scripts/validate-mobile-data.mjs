@@ -71,3 +71,12 @@ applyStudyProfiles(expected,studyProfiles,courseRegistry);
 applyReferenceImages(expected,referenceImages);
 for(const t of [...catalog,...groups]){const e=expected.find(row=>row.id===t.id);assert.deepEqual(t.studyProfile,e.studyProfile);assert.deepEqual(t.referenceImages,e.referenceImages);}
 console.log('Pointwise study profiles and authorized reference galleries survive canonical regeneration.');
+
+const {applyCommercialization}=await import('./commercialization.mjs');
+const commercialization=JSON.parse(await readFile('src/data/commercialization.json','utf8'));
+const legalExpected=structuredClone([...catalog,...groups]);
+applyCommercialization(legalExpected,commercialization);
+for(const t of [...catalog,...groups])assert.deepEqual(t.commercialization,legalExpected.find(e=>e.id===t.id).commercialization,'Commercial status lost on regeneration');
+assert.equal(catalog.find(t=>t.scientificName==='Tricholoma equestre').commercialization.members[0].status,'banned');
+assert.equal(catalog.find(t=>t.scientificName==='Amanita phalloides').commercialization,undefined);
+console.log('Species-scoped fresh commercial status, regional limits and equestre ban survive native regeneration.');

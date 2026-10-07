@@ -1,3 +1,4 @@
+import {applyCommercialization} from './commercialization.mjs';
 import {applyStudyProfiles,applyReferenceImages} from './study-profiles.mjs';
 import {applyCourseLiterature} from './course-literature.mjs';
 import {cleanAtlasRecord,internalFoundations} from './atlas-content.mjs';
@@ -39,6 +40,7 @@ const studyProfiles=JSON.parse(await readFile(join(output,'study-profiles.json')
 const referenceImages=JSON.parse(await readFile(join(output,'reference-images.json'),'utf8'));
 applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
 applyReferenceImages([...catalog,...teachingGroups],referenceImages);
+applyCommercialization([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'commercialization.json'),'utf8')));
 const mobileAreas=areas.map(a=>{if(!Array.isArray(a.center)||a.center.length!==2||!a.center.every(Number.isFinite)||Math.abs(a.center[0])>90||Math.abs(a.center[1])>180)throw Error('Invalid [latitude,longitude] '+a.id);return {...a,coordinateOrder:'latitude-longitude',signalProvenance:a.signalProvenance??'heuristic',verifiedSignals:a.signalProvenance==='measured'?a.verifiedSignals:0,delayedVisitors:a.signalProvenance==='measured'?a.delayedVisitors:0};});
 
 const areaLiterature=JSON.parse(await readFile(join(output,'area-literature.json'),'utf8'));

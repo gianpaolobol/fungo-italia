@@ -1,3 +1,4 @@
+import {applyCommercialization} from '../scripts/commercialization.mjs';
 import {applyStudyProfiles,applyReferenceImages} from '../scripts/study-profiles.mjs';
 import {mkdir,readFile,writeFile,cp,rm} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -19,8 +20,9 @@ const referenceImages=await readJSON('reference-images');
 const sourceRegistry=await readJSON('course-sources');
 applyStudyProfiles([...catalog,...groups],studyProfiles,sourceRegistry);
 applyReferenceImages([...catalog,...groups],referenceImages);
+applyCommercialization([...catalog,...groups],await readJSON('commercialization'));
 for(const asset of referenceImages.images){await readFile(path.join(web,'public',asset.src));}
-const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages'];
+const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages','commercialization'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
 const bibliography=await readJSON('bibliography');
 const foundations=await readJSON('internal-foundations');
