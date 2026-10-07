@@ -356,7 +356,7 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{if(!data||tab=
 $('#close').onclick=()=>$('#detail').close();
 $('#detail').addEventListener('close',()=>{currentTaxon=null;detailIds=null;});
 $('#previous').onclick=()=>{const rows=detailRows(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>0)openTaxon(rows[index-1].id);};
-$('#next').onclick=()=>{const rows=filtered(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>=0&&index<rows.length-1)openTaxon(rows[index+1].id);};
+$('#next').onclick=()=>{const rows=detailRows(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>=0&&index<rows.length-1)openTaxon(rows[index+1].id);};
 function networkStatus(){const installed=matchMedia('(display-mode: standalone)').matches||navigator.standalone;$('#network').textContent=(installed?'App sulla Home · ':'')+(navigator.onLine?'Rete disponibile':'Senza rete')+(offlineReady?' · Catalogo offline':'');if(tab==='areas'&&mapOn&&data)renderMap(visibleAreas());}
 window.addEventListener('online',networkStatus);window.addEventListener('offline',networkStatus);networkStatus();
 window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;});
