@@ -5,10 +5,10 @@ Documento interno: non compare nell’interfaccia dell’atlante.
 ## Copertura effettiva
 
 - 214 schede: 148 obiettivi minimi e 66 generi/gruppi.
-- 444 viste pubblicate: 379 dai materiali didattici e 65 aggiunte a 28 schede da fonti esterne.
-- 206 fotografie/tavole originali utilizzate: 173 didattiche e 33 esterne. I ritagli di una composizione non sono fotografie originali distinte.
-- 117 schede con fianco, sopra e sotto; 61 con una o due viste; 36 senza immagini verificate.
-- 198 viste ancora mancanti; 134720395 byte di immagini.
+- 612 viste: 379 dai materiali didattici e 233 da fonti esterne.
+- 323 fotografie/tavole originali utilizzate; i ritagli non sono fotografie originali distinte.
+- 189 schede con fianco, sopra e sotto; 23 con una o due viste; 2 senza immagini verificate.
+- 30 viste ancora mancanti; 162133128 byte di immagini.
 
 ## Fonti, attribuzioni e limiti
 
@@ -38,99 +38,27 @@ Guida ragionata alla commestibilità e obiettivi minimi restano i riferimenti fo
 | Scheda | Viste mancanti |
 |---|---|
 | Agaricus bresadolanus | fianco |
-| Agaricus bitorquis | sopra, sotto |
-| Agaricus bisporus | fianco, sotto |
-| Cyclocybe cylindracea | sotto |
-| Amanita ovoidea | sopra, sotto |
+| Amanita ovoidea | sopra |
 | Amanita pantherina | sotto |
-| Amanita muscaria | sopra, sotto |
-| Amanita caesarea | sotto |
-| Amanita porphyria | fianco |
-| Saproamanita vittadinii | fianco |
-| Collybia phyllophila | fianco, sopra, sotto |
-| Infundibulicybe geotropa | sotto |
-| Clitocybe gibba s.l. | fianco |
-| Clitopilus prunulus s.l. | fianco, sopra, sotto |
-| Coprinus atramentarius s.l. | sopra, sotto |
-| Coprinus comatus | sopra, sotto |
-| Cortinarius praestans | sopra, sotto |
+| Collybia phyllophila | fianco |
+| Coprinus comatus | sotto |
 | Phlegmacium variiforme | fianco, sopra, sotto |
-| Entoloma sinuatum | fianco, sopra, sotto |
-| Entoloma rhodopolium s.l. | fianco, sopra, sotto |
-| Entoloma vernum | fianco, sopra, sotto |
-| Entoloma clypeatum s.l. | fianco, sopra, sotto |
 | Entoloma saundersii | fianco, sopra, sotto |
-| Galerina marginata group | fianco |
-| Hygrocybe conica s.l. | fianco, sopra, sotto |
-| Hygrocybe punicea | fianco, sopra, sotto |
-| Hygrophorus penarioides | fianco |
-| Hypholoma fasciculare | fianco, sopra, sotto |
-| Lentinula edodes | sotto |
-| Lepiota cristata | fianco, sopra, sotto |
-| Lepiota elaiophylla | fianco, sopra, sotto |
-| Echinoderma asperum s.l. | fianco, sopra, sotto |
-| Leucoagaricus leucothites s.l. | fianco, sopra, sotto |
-| Macrolepiota procera s.l. | sopra, sotto |
-| Panaeolus cyanescens | fianco, sopra, sotto |
-| Kuehneromyces mutabilis | sopra, sotto |
-| Pleurotus eryngii s.l. | sotto |
-| Stropharia rugosoannulata | fianco, sopra, sotto |
-| Tricholoma filamentosum | fianco, sopra, sotto |
+| Lepiota cristata | sotto |
+| Tricholoma filamentosum | fianco |
 | Tricholoma equestre | fianco |
-| Tricholoma terreum | fianco |
-| Tricholoma sejunctum | fianco |
 | Tricholoma sez. Genuina (= gruppo Albobrunnei) | fianco |
-| Volvopluteus gloiocephalus | fianco, sopra, sotto |
-| Volvariella volvacea | fianco, sopra, sotto |
-| Lactarius volemus s.l. | fianco, sopra, sotto |
-| Lactarius tesquorum | fianco, sopra |
+| Volvopluteus gloiocephalus | sotto |
+| Volvariella volvacea | sotto |
+| Lactarius tesquorum | sopra |
 | Russula Compactae Lactarioides (= gruppo R. delica) | fianco |
-| Rubroboletus satanas | sotto |
-| Rubroboletus pulchrotinctus | sopra, sotto |
-| Caloboletus radicans | fianco, sotto |
-| Caloboletus calopus | sopra, sotto |
-| Gyroporus cyanescens | fianco |
-| Hygrophoropsis aurantiaca | sotto |
-| Craterellus tubaeformis | fianco, sotto |
-| Craterellus cornucopioides | fianco, sopra, sotto |
-| Gomphus clavatus | fianco, sopra, sotto |
-| Hericium spp. | fianco, sopra, sotto |
-| Hapalopilus rutilans | fianco, sotto |
-| Laetiporus sulphureus s.l. | sotto |
-| Scutiger pes-caprae | fianco, sopra, sotto |
-| Grifola frondosa | sotto |
-| Polyporus umbellatus | fianco, sopra, sotto |
-| Meripilus giganteus | sotto |
+| Hericium spp. | sotto |
+| Scutiger pes-caprae | fianco |
 | Ramaria formosa | sopra, sotto |
 | Ramaria pallida | sotto |
 | Ramaria botrytis s.l. | sotto |
-| Auricularia auricula-judae | sopra, sotto |
-| Gyromitra esculenta | sopra, sotto |
-| Sarcosphaera coronaria s.l. | fianco, sotto |
-| Agrocybe + Cyclocybe | sotto |
-| Clitopilus | fianco, sopra, sotto |
-| Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe) | sopra, sotto |
-| Galerina | fianco |
 | Hebeloma | sopra |
-| Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis) | fianco, sopra, sotto |
-| Lentinula | sotto |
-| Panaeolus (inclusi Copelandia, Panaeolina) | fianco, sopra, sotto |
-| Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces) | sopra, sotto |
-| Pluteus | fianco |
-| Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina) | fianco, sopra, sotto |
-| Psilocybe s.l. (incluso Deconica) | fianco, sopra, sotto |
-| Volvariella + Volvopluteus | fianco, sopra, sotto |
-| Caloboletus | sotto |
-| Chroogomphus | fianco, sopra, sotto |
-| Gomphidius | fianco, sopra, sotto |
-| Hygrophoropsis | sotto |
-| Gomphus | fianco, sopra, sotto |
-| Ramaria | sopra, sotto |
-| Pisolithus | fianco, sopra, sotto |
-| Scleroderma | fianco, sotto |
-| Auricularia | sopra, sotto |
-| Gyromitra (incluso Discina) | sopra, sotto |
-| Helvella | sopra, sotto |
-| Morchella | sopra, sotto |
-| Sarcosphaera | fianco, sotto |
-| Verpa | sopra, sotto |
+| Volvariella + Volvopluteus | sotto |
+| Ramaria | sotto |
+| Morchella | sotto |
+| Verpa | sotto |
