@@ -1,6 +1,6 @@
 const PREFIX='fungo-italia-pwa:'+self.registration.scope+':';
-const CACHE=PREFIX+'2026-10-08-safari-admin-cache-v2';
-const FILES=['./','./index.html','./admin-photos.html','./admin-photos-entry.js','./app.js','./app.css','./importa-foto.html','./importa-foto.js','./importa-foto.css','./photo-core.js','./admin-photo-core.js','./admin-photos.js','./admin-photos.css','./data.json','./manifest.webmanifest','./icon.png','./vendor/leaflet.js','./vendor/leaflet.css','./vendor/images/layers.png','./vendor/images/layers-2x.png','./vendor/images/marker-icon.png','./vendor/images/marker-icon-2x.png','./vendor/images/marker-shadow.png'];
+const CACHE=PREFIX+'2026-10-08-gallery-cleanup-v1';
+const FILES=['./','./index.html','./admin-photos.html','./admin-photos-entry.js','./app.js','./app.css','./gallery-cleanup.css','./importa-foto.html','./importa-foto.js','./importa-foto.css','./photo-core.js','./admin-photo-core.js','./admin-photos.js','./admin-photos.css','./data.json','./manifest.webmanifest','./icon.png','./vendor/leaflet.js','./vendor/leaflet.css','./vendor/images/layers.png','./vendor/images/layers-2x.png','./vendor/images/marker-icon.png','./vendor/images/marker-icon-2x.png','./vendor/images/marker-shadow.png'];
 function pageFor(url,scope){
  const path=url.pathname;
  if(path===new URL('./admin-photos.html',scope).pathname)return './admin-photos.html';
