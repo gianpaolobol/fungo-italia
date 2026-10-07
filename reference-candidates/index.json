@@ -1808,593 +1808,751 @@
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-UKR2023",
+      "subjectTaxon": "Pisolithus arhizus",
+      "sourceUrl": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "assetUrl": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "author": "Islomiddinov et al. (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "taxonomicEvidence": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        3
+      ],
+      "candidateId": "EXT-OA-PISOLITHUS-UKR2023-x35",
+      "candidatePath": "reference-candidates/ext-oa-pisolithus-ukr2023-x35.jpg",
+      "sourceSha256": "9c61d38d32360bb8451364546c6529b8c59346545f122d35be082b0611cfdcfb",
+      "extractedImageSha256": "a3378a54105cfefc9430b8589fed2ed1576375a5a4108306c62820ffd3450e2e",
+      "candidateSha256": "debbcd1281c683ed59b7a555fab18870e55053465027145c88355ac90677d8fc",
+      "width": 1600,
+      "height": 1424,
+      "page": 3,
+      "xref": 35,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "subjectTaxon": "Pisolithus albus",
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "assetUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "author": "Abdel-Aziz & Bakhit (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "taxonomicEvidence": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        5
+      ],
+      "candidateId": "EXT-OA-PISOLITHUS-ALBUS2023-x150",
+      "candidatePath": "reference-candidates/ext-oa-pisolithus-albus2023-x150.jpg",
+      "sourceSha256": "649c7a5f18c204f21540255d7d92ad77d9580910e79dded404ae160c96e4dd32",
+      "extractedImageSha256": "cfc56a35fed767e45bd05bf20b7d62629f2a0e9e6b59742047f2f6177bc160a5",
+      "candidateSha256": "b897db51203777aa32f8d933552faaf77e335ca54154049146bd73b7883e1b3d",
+      "width": 1600,
+      "height": 1364,
+      "page": 5,
+      "xref": 150,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-SIF2021",
+      "subjectTaxon": "Pisolithus collections",
+      "sourceUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "assetUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "author": "Reenu Chouhan; Charu Panwar",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "taxonomicEvidence": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        6,
+        7
+      ],
+      "candidateId": "EXT-OA-PISOLITHUS-SIF2021-x45",
+      "candidatePath": "reference-candidates/ext-oa-pisolithus-sif2021-x45.jpg",
+      "sourceSha256": "96e33dc9779bc9c27f89a6356ec51f78ebad052410fce8378166df9351ad0887",
+      "extractedImageSha256": "9078ac36786db7198f315416e511dfa7bd44e38cf352fdec82fb85c474e93f14",
+      "candidateSha256": "4731a773211b41c1d0c4941dfa7fd7879009cb974649ad8a3bc5a3b76ffbbe2b",
+      "width": 559,
+      "height": 236,
+      "page": 6,
+      "xref": 45,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-SIF2021",
+      "subjectTaxon": "Pisolithus collections",
+      "sourceUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "assetUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "author": "Reenu Chouhan; Charu Panwar",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "taxonomicEvidence": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        6,
+        7
+      ],
+      "candidateId": "EXT-OA-PISOLITHUS-SIF2021-x48",
+      "candidatePath": "reference-candidates/ext-oa-pisolithus-sif2021-x48.jpg",
+      "sourceSha256": "96e33dc9779bc9c27f89a6356ec51f78ebad052410fce8378166df9351ad0887",
+      "extractedImageSha256": "d3eecdfd670cbb57e2407e722677dd29a9c3230bf9d39f876c6c663e99f42a21",
+      "candidateSha256": "1a262b829c43c2d9efb207eae2566c7cc0c6521c2d3541ab749a72bb1794d11a",
+      "width": 567,
+      "height": 214,
+      "page": 7,
+      "xref": 48,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-OA-SCLERODERMA-2022",
+      "subjectTaxon": "Scleroderma verrucosum",
+      "sourceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "assetUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "author": "Namera Chinnappa Karun; Shivannegowda Mahadevakumar; Kandikere Ramaiah Sridhar",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "taxonomicEvidence": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        13
+      ],
+      "candidateId": "EXT-OA-SCLERODERMA-2022-x81",
+      "candidatePath": "reference-candidates/ext-oa-scleroderma-2022-x81.jpg",
+      "sourceSha256": "765894af89693f06cc8d995abc81134cffc460eeb41ab38f4a3d987caf990e3f",
+      "extractedImageSha256": "2f3f79ebc6e53adaf11401b829643adac32a4028ff3f1c9440a436f8abbeaecb",
+      "candidateSha256": "2a06fe59aee162e5bd84d99acb97146d78d7a0c8b4eec053640629d7a41e87ca",
+      "width": 808,
+      "height": 936,
+      "page": 13,
+      "xref": 81,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-OA-CHROOGOMPHUS-KIRAN2020",
+      "subjectTaxon": "Chroogomphus collections",
+      "sourceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "assetUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "author": "Kiran et al. (2020)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "taxonomicEvidence": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        5
+      ],
+      "candidateId": "EXT-OA-CHROOGOMPHUS-KIRAN2020-x12",
+      "candidatePath": "reference-candidates/ext-oa-chroogomphus-kiran2020-x12.jpg",
+      "sourceSha256": "5db938a732e79d60380b52a467ff2b93332b213049716216ca7b2fe045f5ede1",
+      "extractedImageSha256": "5abf448432401d0dc448c9a0f4a0d9f2d0ce2a30391ef7a7033e090532f45d08",
+      "candidateSha256": "167a5d6d979937f851316d38dd1bf7ed328ab6526d188e3193b91c5d9d4d839a",
+      "width": 819,
+      "height": 1600,
+      "page": 5,
+      "xref": 12,
+      "reviewStatus": "pending-visual-review"
     }
   ],
   "failures": [
     {
       "sourceId": "EXT-COMP-PHYLL-WB",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CRISTATA-W",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-ELAI-607806",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GOMPHUS-HYM",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CONICA-KUNZE",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GALERINA-582666",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CONICA-ROCK",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-LEUCOTHITES",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PUNICEA-1789",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-BITORQUIS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-BRESADOLANUS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GEOTROPA",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PRUNULUS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VERPA-FREE",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VERPA-RON",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VERPA-135307",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-TESQ-399417",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-TESQ-399418",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PSILO-MESC",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PSILO-SEM",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PSILO-ALL",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PSATH-CAND",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-KUEHN-G28",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-STROPH-183479",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-ASPERUM-WA",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CRISTATA-G5",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PSATH-1410",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VOLEM-90024",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VOLEM-90022",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VOLEM-90023",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VOLEM-90060",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SEJUNCT-494602",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-VERNUM-138013",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SAUND-515187",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PLUTEUS-AMER",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HYPHO-W",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PANA-599341",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PANA-GROUP",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HYGROPHOR-241718",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SATANAS-60561",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CALOPUS-LIND",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-OVOIDEA-G",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-DELICA",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SHIITAKE-KRISP",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SHIITAKE-USDA",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HEBE-MESO",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HEBE-HIEMALE",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CORNUCOP-1",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CAESAREA-NIS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-POLY-66485199",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-POLY-CAPS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-MERIP-UNDER",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SCUT-31566",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SCUT-37540",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SCUT-NIS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HERIC-920867",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-FORM-ROCK",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-FORM-TOP",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-PALL-LIP",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-PALL-870",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-PALL-873",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-BOTR-702590",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GRIF-02",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GRIF-03",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HAP-9135124",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-LAET-HORTUS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-KUEHN-B",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-KUEHN-C",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-LEUCO-WB",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-LEUCO-WC",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PANA-80603457",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PANA-80603453",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-STROPH-UNDER4",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HYPHO-119885",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-STROPH-183478",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-ASPERUM-6632",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PROCERA-HELD",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GYROP-KUNZE",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GOMPHIDIUS-421",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CORNUCOP-2",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CLYPEAT-362786",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RHODOP-1",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RHODOP-2",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CAESAREA-NIS2",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CAESAREA-NIS3",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GIBBA",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-BISPORUS-G4",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-ATRAMENT-G3",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-ATRAMENT-G31",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-COMATUS-G3",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-OVOIDEA-ARCH",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-OVOIDEA-PERE3",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-OVOIDEA-RAN",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PANTH-TS4",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HELVELLA-2008",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SARCO-302962",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SARCO-302963",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CALO-RAD-304",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-MORCH-5B",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CHROOG-FIG2",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PRUN-130",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PHYLL-1130296",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-BITOR-1419454",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HERIC-284",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HERIC-FAGUS",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-HERIC-64176",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-FORM2",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-FORM8",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-RAM-BOTR4",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PULCHRO1",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-PULCHRO2",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-CALOPUS-LIND1",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-GOMPHIDIUS-57130",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SIN-54291818",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-SCL-MONSTER",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-COMATUS-WILD",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+      "errorType": "PublisherRateLimit",
+      "message": "Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."
     },
     {
       "sourceId": "EXT-COMP-IMA-TRICHO2020",
       "errorType": "UnidentifiedImageError",
-      "message": "cannot identify image file <_io.BytesIO object at 0x7f9e46a27470>"
+      "message": "cannot identify image file <_io.BytesIO object at 0x7fdd3cd356c0>"
     }
   ]
 }
