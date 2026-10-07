@@ -47,3 +47,6 @@ for label,file_id,expected_size in ARCHIVES:
  results.append(result)
  print(json.dumps(result,ensure_ascii=False))
 pathlib.Path("archive-inventory.json").write_text(json.dumps({"version":1,"archives":results},ensure_ascii=False,indent=2),encoding="utf-8")
+
+if any(result['status']!='downloaded-and-inspected' for result in results):
+ raise SystemExit('One or more course archives could not be inspected; see inventory.')

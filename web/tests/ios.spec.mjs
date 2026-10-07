@@ -213,9 +213,24 @@ test('active recall hides answer, respects favorite filters and retries missed c
  await page.getByRole('button',{name:'Ricordata',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('1 schede ricordate · 0 da ripassare');
  await expect(page.getByRole('button',{name:'Ripassa le schede da rivedere',exact:true})).toHaveCount(0);
 });
-test('teaching groups without profiles do not fabricate a recall question',async({page})=>{
- await ready(page);await page.locator('#layer').selectOption('groups');await page.getByRole('button',{name:'Ripasso attivo',exact:true}).click();
- await expect(page.locator('#status')).toContainText('Nessuna scheda 3+1');await expect(page.locator('#detail')).not.toBeVisible();
+test('teaching groups with absent or partial profiles do not fabricate recall questions',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
+ for(const name of ['Agaricus','Suillus']){
+  await search.fill(name);await page.getByRole('button',{name:'Ripasso attivo',exact:true}).click();
+  await expect(page.locator('#status')).toContainText('Nessuna scheda 3+1');
+  await expect(page.locator('#detail')).not.toBeVisible();
+ }
+});
+test('a sourced complete Boletus teaching profile is available for recall',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Boletus s. str.');
+ await page.getByRole('button',{name:'Ripasso attivo',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Scheda 1 di 1');
+ await expect(page.locator('#detail-body')).toContainText('patina bianca');
+ await expect(page.locator('#review-answer')).toHaveCount(0);
+ await page.getByRole('button',{name:'Mostra risposta',exact:true}).click();
+ await expect(page.locator('#review-answer')).toContainText('Boletus s. str.');
 });
 test('Amiata shows regional source and Tenerife creates a private observation',async({page})=>{
  await ready(page);await page.getByRole('button',{name:'Aree',exact:true}).click();await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();
