@@ -9,7 +9,7 @@ async function fakeGitHub(page,{login=owner,write=true,unreachable=false}={}){
  const state={calls:[],blobs:new Map(),head:originalHead,tree:null,commit:null,manifest:null};
  await page.route('https://api.github.com/**',async route=>{
   const req=route.request(),url=new URL(req.url()),path=url.pathname,method=req.method(),body=req.postDataJSON();
-  state.calls.push({method,path,body,authorization:req.headers().authorization});
+  state.calls.push({method,path,body,authorization:req.headers().authorization});console.log('MOCK GITHUB',method,path);
   if(unreachable){await route.abort('failed');return;}
   const respond=(status,data)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(data)});
   if(path==='/user')return respond(200,{login});
@@ -40,10 +40,12 @@ async function fakeGitHub(page,{login=owner,write=true,unreachable=false}={}){
  });
  return state;
 }
+test.beforeEach(async({page})=>{page.on('pageerror',error=>console.log('ADMIN PAGE ERROR',error.message));});
+test.afterEach(async({page},info)=>{if(info.status!==info.expectedStatus)console.log('ADMIN FAILURE UI',await page.evaluate(()=>document.body.innerText.slice(-5000)).catch(()=>''));});
 function publicationCalls(state){return state.calls.filter(x=>x.method==='PATCH'||x.path.endsWith('/git/trees')||x.path.endsWith('/git/commits')&&x.method==='POST');}
-async function ready(page){await page.goto('./');await expect(page.locator('#admin-edit')).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');}
-async function openTaxon(page,name='Amanita caesarea'){
- await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(name);
+async function ready(page){await page.goto('./');await expect(page.locator('#admin-edit')).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);}
+async function openTaxon(page,name='Amanita caesarea',query=name){
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(query);
  await page.getByRole('button',{name:'Apri '+name,exact:true}).click();
 }
 async function login(page,password=null){
@@ -62,7 +64,7 @@ async function storedValues(page){return page.evaluate(()=>[...Object.values(loc
 test('public atlas is read-only and owner logout removes every edit control',async({page})=>{
  const api=await fakeGitHub(page);await ready(page);await openTaxon(page);
  await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);
- await page.getByRole('button',{name:'Torna',exact:true}).click();await login(page);await openTaxon(page);
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await login(page);await openTaxon(page,'Amanita caesarea','Amanita');
  await expect(page.locator('#detail [data-action="admin-photo-edit"]')).toHaveCount(3);
  await page.getByRole('button',{name:'Successiva →',exact:true}).click();
  await expect(page.locator('#detail [data-action="admin-photo-edit"]')).toHaveCount(3);
