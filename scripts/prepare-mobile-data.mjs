@@ -1,3 +1,4 @@
+import {applyAdminReferenceImages} from './admin-reference-images.mjs';
 import {applyCommercialization} from './commercialization.mjs';
 import {applyStudyProfiles,applyReferenceImages} from './study-profiles.mjs';
 import {applyCourseLiterature} from './course-literature.mjs';
@@ -40,6 +41,8 @@ const studyProfiles=JSON.parse(await readFile(join(output,'study-profiles.json')
 const referenceImages=JSON.parse(await readFile(join(output,'reference-images.json'),'utf8'));
 applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
 applyReferenceImages([...catalog,...teachingGroups],referenceImages);
+const adminImages=JSON.parse(await readFile(join(output,'admin-reference-images.json'),'utf8'));
+applyAdminReferenceImages([...catalog,...teachingGroups],adminImages);
 applyCommercialization([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'commercialization.json'),'utf8')));
 const mobileAreas=areas.map(a=>{if(!Array.isArray(a.center)||a.center.length!==2||!a.center.every(Number.isFinite)||Math.abs(a.center[0])>90||Math.abs(a.center[1])>180)throw Error('Invalid [latitude,longitude] '+a.id);return {...a,coordinateOrder:'latitude-longitude',signalProvenance:a.signalProvenance??'heuristic',verifiedSignals:a.signalProvenance==='measured'?a.verifiedSignals:0,delayedVisitors:a.signalProvenance==='measured'?a.delayedVisitors:0};});
 
@@ -56,5 +59,5 @@ await mkdir(output,{recursive:true});
 await Promise.all([writeFile(join(output,'internal-foundations.json'),JSON.stringify(internalFoundations(sourceRecords),null,2)+'\n'),writeFile(join(output,'groups.json'),JSON.stringify(teachingGroups.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'catalog.json'),JSON.stringify(catalog.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'areas.json'),JSON.stringify(mobileAreas,null,2)+'\n'),writeFile(join(output,'provenance.json'),JSON.stringify({schemaVersion:1,legacySnapshotCommit:'e3b9ca01bd43ec87d3630ab954c45229b2ba15e1',sourceExportCommit:manifest.commit??null,canonicalUnits:148,areas:mobileAreas.length,independentReviewComplete:false,pendingScientificClaims:manifest.pendingScientificClaims,supplementaryLiterature:{file:'supplementary-literature.json',sha256:createHash('sha256').update(supplementaryBytes).digest('hex'),reviewStatus:supplementary.reviewStatus},sourceFileChecksums:manifest.files},null,2)+'\n')]);
 console.log(JSON.stringify({canonicalUnits:catalog.length,areas:mobileAreas.length,independentReviewComplete:false}));
 
-const imageAssetModule="import type {ImageSourcePropType} from 'react-native';\nexport const referenceImageAssets:Record<string,ImageSourcePropType>={\n"+[...new Set(referenceImages.images.map(image=>image.src))].map(src=>JSON.stringify(src)+':require('+JSON.stringify('../../web/public/'+src)+'),').join('\n')+'\n};\n';
+const imageAssetModule="import type {ImageSourcePropType} from 'react-native';\nexport const referenceImageAssets:Record<string,ImageSourcePropType>={\n"+[...new Set([...referenceImages.images,...adminImages.images].map(image=>image.src))].map(src=>JSON.stringify(src)+':require('+JSON.stringify('../../web/public/'+src)+'),').join('\n')+'\n};\n';
 await writeFile(join(output,'reference-image-assets.ts'),imageAssetModule);

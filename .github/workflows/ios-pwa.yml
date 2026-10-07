@@ -1,7 +1,7 @@
 name: iPhone PWA and Expo Go
 on:
   push:
-    branches: [main, feat/commercialization-labels, feat/complete-reference-triplets, feat/external-reference-photos, feat/study-layout-oct07, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
+    branches: [main, feat/admin-photo-editor, feat/commercialization-labels, feat/complete-reference-triplets, feat/external-reference-photos, feat/study-layout-oct07, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
     paths:
       - 'web/**'
       - 'components/**'
@@ -10,6 +10,10 @@ on:
       - 'docs/reference-image-delivery.md'
       - 'scripts/course-literature.mjs'
       - 'scripts/validate-reference-images.mjs'
+      - 'scripts/admin-reference-images.mjs'
+      - 'scripts/admin-reference-images.test.mjs'
+      - 'scripts/admin-photo-core.test.mjs'
+      - 'scripts/validate-admin-reference-images.mjs'
       - 'scripts/commercialization.mjs'
       - 'scripts/commercialization.test.mjs'
       - 'scripts/study-profiles.mjs'
@@ -43,12 +47,15 @@ jobs:
       - name: Validate browser code and build offline package
         run: |
           node --check web/public/app.js
-          node --test scripts/study-profiles.test.mjs scripts/commercialization.test.mjs
+          node --check web/public/admin-photos.js
+          node --check web/public/admin-photo-core.js
+          node --test scripts/study-profiles.test.mjs scripts/commercialization.test.mjs scripts/admin-reference-images.test.mjs scripts/admin-photo-core.test.mjs
           node --check web/public/importa-foto.js
           node --check web/public/photo-core.js
           node --check web/public/sw.js
           python -m py_compile tools/validate-photo-library.py
           node scripts/validate-reference-images.mjs
+          node scripts/validate-admin-reference-images.mjs
           node web/build.mjs
       - name: Install WebKit
         working-directory: web
