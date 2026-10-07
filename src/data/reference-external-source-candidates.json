@@ -417,6 +417,48 @@
       "taxonomicEvidence": "https://doi.org/10.1186/s43008-023-00138-1",
       "verificationBasis": "peer-reviewed-morphology-and-multilocus-phylogeny-panel-identification",
       "kind": "image"
+    },
+    {
+      "sourceId": "EXT-ADB-PALLIDA-1",
+      "subjectTaxon": "Ramaria pallida",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/214148/IMG_4071Ramaria_pallida_SRada_1.JPG",
+      "author": "Egil Bendiksen / Norsk institutt for naturforskning",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "taxonomicEvidence": "https://artsdatabanken.no/arter/takson/88451/beskrivelse",
+      "verificationBasis": "institutional-expert-editorial",
+      "kind": "image"
+    },
+    {
+      "sourceId": "EXT-ADB-PALLIDA-2",
+      "subjectTaxon": "Ramaria pallida",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/189712/92.png",
+      "author": "Katriina Bendiksen / Naturhistorisk museum, Universitetet i Oslo",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "taxonomicEvidence": "https://artsdatabanken.no/arter/takson/88451/beskrivelse",
+      "verificationBasis": "institutional-expert-editorial",
+      "kind": "image"
+    },
+    {
+      "sourceId": "EXT-SILVA-CONICA-2019",
+      "subjectTaxon": "Hygrocybe conica var. conica",
+      "sourceUrl": "https://www.scielo.br/j/hoehnea/a/kb4jNy3gRNrYpBgDWtZCBXH/?lang=en",
+      "assetUrl": "https://www.scielo.br/j/hoehnea/a/kb4jNy3gRNrYpBgDWtZCBXH/?format=pdf&ilang=en&lang=en",
+      "author": "Alexandre G.S. Silva-Filho; Silva-Filho et al. (2019)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.scielo.br/j/hoehnea/a/kb4jNy3gRNrYpBgDWtZCBXH/?lang=en",
+      "taxonomicEvidence": "https://doi.org/10.1590/2236-8906-01/2019",
+      "verificationBasis": "published-macro-microscopic-taxonomy-voucher-Silva-Filho728-Brazil",
+      "kind": "pdf",
+      "pages": [
+        3
+      ]
     }
   ]
 }
