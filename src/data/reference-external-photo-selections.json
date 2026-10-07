@@ -4672,6 +4672,90 @@
       "sourceUrl": "https://www.inaturalist.org/observations/19154361",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "alt": "Entoloma clypeatum — vista laterale obliqua, gambo parzialmente nascosto"
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "subjectTaxon": "Amanita ovoidea",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-INAT-329076323-596438680",
+      "sourcePath": "source-photo-assets/external/ext-inat-329076323-596438680-original.jpg",
+      "candidateSha256": "226a08e05b601952afe9efe12c9fc50bfb7ecb66f86caca5f2f57e2cd0989025",
+      "sourceSha256": "305174706d9cff7359145f919bc6d2a3c528ef913d21c962a763e7518334d1a9",
+      "sourcePage": null,
+      "credit": "Lucian Clanet, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/329076323",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Amanita ovoidea — vista superiore obliqua"
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "view": "underside",
+      "crop": [
+        0,
+        0.3,
+        0.51,
+        1
+      ],
+      "sourceId": "EXT-INAT-245238974-437582452",
+      "sourcePath": "source-photo-assets/external/ext-inat-245238974-437582452-original.jpg",
+      "candidateSha256": "4d5005ae82527eca062eff539475557dd1e51478d9aee8dbdcb7b1631ab73c47",
+      "sourceSha256": "aada478bb0248f11a8d26e5d544614130fd9f988a2c49f0f224d149b32f1544f",
+      "sourcePage": null,
+      "credit": "Lucian Clanet, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/245238974",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Amanita pantherina — vista inferiore obliqua, lamelle parzialmente visibili"
+    },
+    {
+      "scientificName": "Hebeloma",
+      "subjectTaxon": "Hebeloma mesophaeum",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-INAT-41997316-66652685",
+      "sourcePath": "source-photo-assets/external/ext-inat-41997316-66652685-original.jpg",
+      "candidateSha256": "9b97fff945bac798c82a2b5166c782bb6eec60b17c1d53c5f6207c23a7bc9309",
+      "sourceSha256": "0f55858e8ba13661d59a98c5f8e649ba9ae1bbf6e7abf23e7fa107ce89abe6b8",
+      "sourcePage": null,
+      "credit": "Nina Filippova, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/41997316",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Hebeloma mesophaeum — vista superiore obliqua"
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "subjectTaxon": "Lactarius tesquorum",
+      "view": "top",
+      "crop": [
+        0.425,
+        0.505,
+        0.61,
+        0.735
+      ],
+      "sourceId": "EXT-INAT-9367882-12719631",
+      "sourcePath": "source-photo-assets/external/ext-inat-9367882-12719631-original.jpg",
+      "candidateSha256": "bca3a8e3f510a288da965b845b12f339068842d2f1e067abb4688345d7fad595",
+      "sourceSha256": "59098c3024450d8fd9fd578ef4b7c0035fb100acd402eed857e2f6534136bd0a",
+      "sourcePage": null,
+      "credit": "Davide Puddu, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. Young central specimen, approximately 296 × 245 pixels, no upscaling.",
+      "sourceUrl": "https://www.inaturalist.org/observations/9367882",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Lactarius tesquorum — vista superiore obliqua di esemplare giovane"
     }
   ]
 }

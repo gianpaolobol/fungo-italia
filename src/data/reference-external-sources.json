@@ -2443,6 +2443,57 @@
       "primaryPhotoId": 6993507,
       "qualityGrade": "research",
       "sourceSha256": "6cd616daf0f94948f6599a5aedab67599e1de7b4b5ef5120f4edad96630418db"
+    },
+    {
+      "sourceId": "EXT-INAT-329076323-596438680",
+      "subjectTaxon": "Amanita ovoidea",
+      "sourceUrl": "https://www.inaturalist.org/observations/329076323",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/596438680/original.jpg",
+      "author": "Lucian Clanet",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/329076323",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/329076323",
+      "verificationBasis": "Named contributor account, primary observation consensus and photo-specific license verified through the provider API; independent visual and taxonomic limitations reviewed separately.",
+      "kind": "image",
+      "primaryObservationId": 329076323,
+      "primaryPhotoId": 596438680,
+      "qualityGrade": "research",
+      "sourceSha256": "305174706d9cff7359145f919bc6d2a3c528ef913d21c962a763e7518334d1a9"
+    },
+    {
+      "sourceId": "EXT-INAT-245238974-437582452",
+      "subjectTaxon": "Amanita pantherina",
+      "sourceUrl": "https://www.inaturalist.org/observations/245238974",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/437582452/original.jpeg",
+      "author": "Lucian Clanet",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/245238974",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/245238974",
+      "verificationBasis": "Named contributor account, primary observation consensus and photo-specific license verified through the provider API; independent visual and taxonomic limitations reviewed separately.",
+      "kind": "image",
+      "primaryObservationId": 245238974,
+      "primaryPhotoId": 437582452,
+      "qualityGrade": "research",
+      "sourceSha256": "aada478bb0248f11a8d26e5d544614130fd9f988a2c49f0f224d149b32f1544f"
+    },
+    {
+      "sourceId": "EXT-INAT-41997316-66652685",
+      "subjectTaxon": "Hebeloma mesophaeum",
+      "sourceUrl": "https://www.inaturalist.org/observations/41997316",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66652685/original.jpeg",
+      "author": "Nina Filippova",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/41997316",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/41997316",
+      "verificationBasis": "Named contributor account, primary observation consensus and photo-specific license verified through the provider API; independent visual and taxonomic limitations reviewed separately.",
+      "kind": "image",
+      "primaryObservationId": 41997316,
+      "primaryPhotoId": 66652685,
+      "qualityGrade": "research",
+      "sourceSha256": "0f55858e8ba13661d59a98c5f8e649ba9ae1bbf6e7abf23e7fa107ce89abe6b8"
     }
   ]
 }
