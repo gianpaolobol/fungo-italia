@@ -45,27 +45,90 @@ function studySources(t){
  }
  return [...grouped.values()].map(({source,locations})=>({...source,location:[...locations].join('; ')}));
 }
+
+const referenceViews=[['lateral','Laterale'],['top','Sopra'],['underside','Sotto']];
+const referencePath=/^images\/reference\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.(jpg|jpeg|png|webp)$/;
+function studyFacts(t){
+ const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
+ const color=print?.color&&/^#[0-9a-f]{6}$/i.test(print.color)?'<span class="spore-swatch" style="background:'+print.color+'" aria-hidden="true"></span>':'';
+ return '<dl class="study-facts"><dt>Odore</dt><dd>'+escape(p.odor||'Non documentato')+'</dd><dt>Sporata</dt><dd>'+color+escape(print?.label||'Non documentata')+(print?.scale?' · '+escape(print.scale):'')+'</dd><dt>Commestibilità</dt><dd>'+escape(t.kind==='teaching-group'?'Consulta le singole specie':food?.label||'Non documentata')+'</dd></dl>'+
+ (food?.precautions?.length?'<div class="food-precautions"><strong>Accorgimenti</strong><ul>'+food.precautions.map(value=>'<li>'+escape(value)+'</li>').join('')+'</ul></div>':'')+
+ (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
+}
+function referenceGallery(t){
+ const images=t.referenceImages||[];
+ if(!images.length)return '<p class="small photo-pending">Immagini di riferimento non ancora disponibili.</p>';
+ return '<div class="photo-triptych">'+referenceViews.map(([view,label])=>{
+  const photo=images.find(p=>p.view===view&&referencePath.test(p.src));
+  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+label.toLowerCase()+' di '+escape(t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+label+'</figcaption></figure>';
+ }).join('')+'</div>';
+}
+let photoOpener=null,photoScale=1,detailIds=null;
+function detailRows(){return detailIds?detailIds.map(id=>byId.get(id)).filter(Boolean):filtered();}
+function zoomReference(id,view,opener){
+ const taxon=byId.get(id),photo=taxon?.referenceImages?.find(p=>p.view===view&&referencePath.test(p.src));
+ if(!photo)return;
+ let viewer=$('#photo-viewer');
+ if(!viewer){
+  viewer=document.createElement('dialog');viewer.id='photo-viewer';viewer.setAttribute('aria-labelledby','photo-title');
+  viewer.innerHTML='<div class="dialog-top"><button id="photo-close">Chiudi immagine</button><strong id="photo-title"></strong></div><div class="photo-controls"><button id="photo-minus">Riduci</button><span id="photo-scale"></span><button id="photo-plus">Ingrandisci</button></div><div class="photo-stage"><img id="photo-full" alt=""></div><p id="photo-credit" class="small"></p>';
+  document.body.append(viewer);
+  $('#photo-close').onclick=()=>viewer.close();
+  viewer.addEventListener('close',()=>{photoOpener?.focus({preventScroll:true});photoOpener=null;});
+  $('#photo-minus').onclick=()=>resizeReference(-.5);$('#photo-plus').onclick=()=>resizeReference(.5);
+ }
+ photoOpener=opener;photoScale=1;
+ $('#photo-title').textContent=taxon.scientificName+' · '+(referenceViews.find(v=>v[0]===view)?.[1]||'');
+ $('#photo-full').src=photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
+ resizeReference(0);viewer.showModal();$('#photo-close').focus();
+}
+function resizeReference(delta){
+ photoScale=Math.max(1,Math.min(4,photoScale+delta));
+ $('#photo-full').style.width=(photoScale*100)+'%';$('#photo-scale').textContent=Math.round(photoScale*100)+'%';
+ $('#photo-minus').disabled=photoScale===1;$('#photo-plus').disabled=photoScale===4;
+}
+function genusRevision(t){
+ if(t.kind!=='teaching-group')return '';
+ const units=(t.relatedIds||[]).map(id=>byId.get(id)).filter(row=>row&&row.kind!=='teaching-group');
+ return '<section class="genus-revision"><h3>Ripasso del genere</h3><ol class="revision-prompts"><li>Forma complessiva e strutture dell’imenoforo.</li><li>Consistenza, veli e reazioni alle lesioni.</li><li>Odore, sporata, substrato e ospite.</li><li>Differenze fra specie e limiti dei caratteri.</li></ol>'+
+ (units.length?button('Ripassa specie collegate','genus-review',t.id,'full')+'<details class="compact-details"><summary>Confronta '+units.length+' schede</summary>'+units.map(row=>'<details class="compact-details"><summary>'+escape(row.scientificName)+'</summary><ol>'+row.characters.map(value=>'<li>'+escape(studyText(value))+'</li>').join('')+'</ol>'+(row.differentiatingCharacter?'<p><strong>+1</strong> '+escape(studyText(row.differentiatingCharacter))+'</p>':'')+button('Apri '+row.scientificName,'related',row.id)+'</details>').join('')+'</details>':'<p class="small">Le specie di questo genere non sono ancora incluse nel catalogo.</p>')+'</section>';
+}
+function validStudyFields(t){
+ const text=value=>typeof value==='string'&&value.trim().length>0;
+ const p=t.studyProfile;
+ if(p!==undefined){
+  if(!p||typeof p!=='object'||Array.isArray(p)||Object.keys(p).some(key=>!['odor','sporePrint','edibility'].includes(key)))return false;
+  if(p.odor!==undefined&&!text(p.odor))return false;
+  if(p.sporePrint!==undefined){const print=p.sporePrint;if(!print||!text(print.label)||(print.color!==undefined&&!/^#[0-9a-f]{6}$/i.test(print.color))||(print.scale!==undefined&&!['I','II','III','IV','I–II','I–III','I–IV','II–III','II–IV','III–IV'].includes(print.scale)))return false;}
+  if(p.edibility!==undefined&&(!p.edibility||!text(p.edibility.label)||!Array.isArray(p.edibility.precautions)||!p.edibility.precautions.every(text)))return false;
+ }
+ if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit))))return false;
+ return true;
+}
+
 function content(t,showIdentity=true){
  const sources=studySources(t),summary=studySummary(t);
  const diagnostic=['field_high_confidence_when_typical','field_high_confidence_when_host_known','field_high_confidence_when_young','microscopy_required_for_fine_id','dna_confirmatory'].includes(t.diagnosticStatus)?diagnosticLimits[t.diagnosticStatus]:'';
  return (showIdentity?'<div class="taxon-title"><h2>'+escape(t.scientificName)+'</h2>'+favoriteButton(t)+'</div><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
+ referenceGallery(t)+studyFacts(t)+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
  (t.safetyCheck?'<h3>Controlli sul campo</h3><p>'+escape(t.safetyCheck)+'</p>':'')+(diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
  (summary?'<p>'+escape(summary)+'</p>':'')+
  (t.characters.length?'<h3>Caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(studyText(c))+'</li>').join('')+'</ol>':'<p>Per studiare i caratteri, apri le schede collegate.</p>')+
  (t.differentiatingCharacter?'<h3>Carattere differenziante (+1)</h3><p>'+escape(studyText(t.differentiatingCharacter))+'</p>':'')+
- (t.lookalikes.length?'<h3>Specie simili</h3><p>'+escape(t.lookalikes.join(' · '))+'</p>':'')+
- (t.habitat.length?'<h3>Habitat</h3><p>'+escape(t.habitat.join(' · '))+'</p>':'')+
- (sources.length?'<h3>Fonti</h3>'+sources.map(source=>'<div class="source"><p>'+escape(source.title)+(source.location?' · '+escape(source.location):'')+'</p>'+(source.url?'<p class="small">'+safeLink(source.url,'Consulta la fonte')+'</p>':'')+'</div>').join(''):'')+
+ (t.lookalikes.length?'<details class="compact-details"><summary>Specie simili</summary><p>'+escape(t.lookalikes.join(' · '))+'</p></details>':'')+
+ (t.habitat.length?'<details class="compact-details"><summary>Habitat</summary><p>'+escape(t.habitat.join(' · '))+'</p></details>':'')+
+ (sources.length?'<details class="compact-details"><summary>Fonti</summary>'+sources.map(source=>'<div class="source"><p>'+escape(source.title)+(source.location?' · '+escape(source.location):'')+'</p>'+(source.url?'<p class="small">'+safeLink(source.url,'Consulta la fonte')+'</p>':'')+'</div>').join('')+'</details>':'')+
+ genusRevision(t)+
  (t.relatedIds?.length?'<h3>Schede collegate</h3><div class="drafts">'+t.relatedIds.filter(id=>byId.has(id)).map(id=>button('Studia '+byId.get(id).scientificName,'related',id)).join('')+'</div>':'');
 }
 
-function beginReview(retry=false){
- const rows=retry&&reviewSession?reviewSession.missed.map(id=>byId.get(id)).filter(Boolean):filtered().filter(t=>t.characters.length===3&&t.differentiatingCharacter);
+function beginReview(retry=false,ids=null){
+ const rows=ids?ids.map(id=>byId.get(id)).filter(t=>t?.characters.length===3&&t.differentiatingCharacter):retry&&reviewSession?reviewSession.missed.map(id=>byId.get(id)).filter(Boolean):filtered().filter(t=>t.characters.length===3&&t.differentiatingCharacter);
  if(!rows.length){status('Nessuna scheda 3+1 nei filtri: scegli Minimo o Tutte, oppure modifica ricerca e Preferiti.');return;}
  const shuffled=[...rows];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
- reviewSession={ids:shuffled.slice(0,10).map(t=>t.id),index:0,revealed:false,remembered:0,missed:[]};
+ reviewSession={ids:(ids?shuffled:shuffled.slice(0,10)).map(t=>t.id),index:0,revealed:false,remembered:0,missed:[]};
  currentTaxon=null;renderReview();
 }
 function renderReview(){
@@ -92,7 +155,7 @@ function validCatalog(value){
  if(!value||value.version!==1||!Array.isArray(value.catalog)||!value.catalog.length||!Array.isArray(value.groups)||!Array.isArray(value.areas)||!value.areas.length||!Array.isArray(value.bibliography))return false;
  const rows=[...value.catalog,...value.groups];
  const textList=items=>Array.isArray(items)&&items.every(item=>typeof item==='string');
- return new Set(rows.map(t=>t?.id)).size===rows.length&&rows.every(t=>t&&typeof t.id==='string'&&t.id.length&&typeof t.scientificName==='string'&&(t.summary===undefined||typeof t.summary==='string')&&['commonNames','characters','lookalikes','habitat'].every(key=>textList(t[key]))&&['aliases','currentAcceptedNames','currentGenera','relatedIds'].every(key=>t[key]===undefined||textList(t[key]))&&(t.differentiatingCharacter===undefined||typeof t.differentiatingCharacter==='string')&&Array.isArray(t.sources)&&t.sources.every(source=>source&&typeof source.title==='string'))&&
+ return new Set(rows.map(t=>t?.id)).size===rows.length&&rows.every(t=>t&&validStudyFields(t)&&typeof t.id==='string'&&t.id.length&&typeof t.scientificName==='string'&&(t.summary===undefined||typeof t.summary==='string')&&['commonNames','characters','lookalikes','habitat'].every(key=>textList(t[key]))&&['aliases','currentAcceptedNames','currentGenera','relatedIds'].every(key=>t[key]===undefined||textList(t[key]))&&(t.differentiatingCharacter===undefined||typeof t.differentiatingCharacter==='string')&&Array.isArray(t.sources)&&t.sources.every(source=>source&&typeof source.title==='string'))&&
  value.bibliography.every(source=>source&&typeof source.title==='string'&&(source.authors===undefined||textList(source.authors)))&&new Set(value.areas.map(a=>a?.id)).size===value.areas.length&&value.areas.every(a=>a&&typeof a.id==='string'&&typeof a.name==='string'&&typeof a.region==='string'&&textList(a.habitat)&&Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180&&(!a.elevationRangeM||(Array.isArray(a.elevationRangeM)&&a.elevationRangeM.length===2&&a.elevationRangeM.every(Number.isFinite))));
 }
 
@@ -130,14 +193,14 @@ function showDialog(title,body,paged=false){
 }
 function openTaxon(id){
  const t=byId.get(id);if(!t)return;currentTaxon=id;resumeId=id;persistStudy();updateResume();
- const rows=filtered(),index=rows.findIndex(t=>t.id===id);
+ const rows=detailRows(),index=rows.findIndex(t=>t.id===id);
  $('#position').textContent=index<0?'Fuori filtri':(index+1)+' / '+rows.length;
  $('#previous').disabled=index<=0;$('#next').disabled=index<0||index===rows.length-1;
  showDialog('Scheda di studio',content(t),true);
 }
 function toggleFavorite(id){
  if(!studyWritable){status('Salvataggio sospeso: i dati esistenti non sono leggibili.');return;}
- const removing=favoriteIds.includes(id),moveDetail=removing&&onlyFavorites&&$('#detail').open&&currentTaxon===id;
+ const removing=favoriteIds.includes(id),moveDetail=removing&&onlyFavorites&&!detailIds&&$('#detail').open&&currentTaxon===id;
  const oldIndex=moveDetail?filtered().findIndex(t=>t.id===id):-1;
  favoriteIds=removing?favoriteIds.filter(value=>value!==id):[...favoriteIds,id];persistStudy();
  if(tab==='studio'){if(onlyFavorites)renderCards();else updateCatalogCount();}
@@ -261,15 +324,17 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.getAttribute('data-tab')===
 }
 document.addEventListener('click',event=>{
  const target=event.target.closest('button[data-action]');if(!target)return;const action=target.dataset.action,id=target.dataset.id;
- if(action==='review-start')beginReview();
+ if(action==='photo-zoom')zoomReference(id,target.dataset.view,target);
+ else if(action==='genus-review'){const group=byId.get(id);if(group)beginReview(false,group.relatedIds||[]);}
+ else if(action==='review-start')beginReview();
  else if(action==='review-retry')beginReview(true);
  else if(action==='review-reveal'){if(reviewSession){reviewSession.revealed=true;renderReview();}}
  else if(action==='review-rate')rateReview(id);
- else if(action==='open')openTaxon(id);
+ else if(action==='open'){detailIds=null;openTaxon(id);}
  else if(action==='search-all'){layer='all';onlyFavorites=false;limit=24;renderStudio();$('#main').scrollTop=0;}
  else if(action==='resume'){const taxon=byId.get(id);if(taxon){layer=taxon.kind==='teaching-group'?'groups':'minimum';query='';onlyFavorites=false;limit=24;renderStudio();$('#main').scrollTop=0;openTaxon(id);}}
  else if(action==='favorite')toggleFavorite(id);
- else if(action==='related'){layer='minimum';query='';onlyFavorites=false;if(tab==='studio')renderStudio();openTaxon(id);}
+ else if(action==='related'){const parent=byId.get(currentTaxon)||byId.get(target.closest('.card')?.querySelector('[data-action="open"]')?.dataset.id);if(parent?.kind==='teaching-group'){detailIds=(parent.relatedIds||[]).filter(key=>byId.has(key));}else if(!detailIds){layer='minimum';query='';onlyFavorites=false;if(tab==='studio')renderStudio();}openTaxon(id);}
  else if(action==='tenerife')openTenerife();
  else if(action==='tenerife-note'){if(!notesWritable){status('Note non leggibili: salvataggio sospeso.');return;}const draft=freshDraft();draft.notes='Tenerife — località generale: ';drafts.unshift(draft);selectedDraft=draft.id;persistDrafts();$('#detail').close();scrollPositions[tab]=$('#main').scrollTop;tab='notes';renderTab();}
  else if(action==='area')openArea(id);
@@ -289,8 +354,8 @@ document.addEventListener('click',event=>{
 $('#main').addEventListener('scroll',()=>{clearTimeout(readingTimer);if(tab!=='studio'||!feed)return;readingTimer=setTimeout(()=>{if(tab!=='studio'||!feed||$('#detail').open)return;const root=$('#main').getBoundingClientRect(),line=root.top+Math.min(120,root.height*.3);const card=[...document.querySelectorAll('#cards article')].find(element=>{const box=element.getBoundingClientRect();return box.top<=line&&box.bottom>line;});const id=card?.querySelector('[data-action="open"]')?.dataset.id;if(id&&byId.has(id)&&id!==resumeId){resumeId=id;persistStudy();updateResume();}},350);});
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{if(!data||tab===b.dataset.tab)return;scrollPositions[tab]=$('#main').scrollTop;tab=b.dataset.tab;renderTab();});
 $('#close').onclick=()=>$('#detail').close();
-$('#detail').addEventListener('close',()=>currentTaxon=null);
-$('#previous').onclick=()=>{const rows=filtered(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>0)openTaxon(rows[index-1].id);};
+$('#detail').addEventListener('close',()=>{currentTaxon=null;detailIds=null;});
+$('#previous').onclick=()=>{const rows=detailRows(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>0)openTaxon(rows[index-1].id);};
 $('#next').onclick=()=>{const rows=filtered(),index=rows.findIndex(t=>t.id===currentTaxon);if(index>=0&&index<rows.length-1)openTaxon(rows[index+1].id);};
 function networkStatus(){const installed=matchMedia('(display-mode: standalone)').matches||navigator.standalone;$('#network').textContent=(installed?'App sulla Home · ':'')+(navigator.onLine?'Rete disponibile':'Senza rete')+(offlineReady?' · Catalogo offline':'');if(tab==='areas'&&mapOn&&data)renderMap(visibleAreas());}
 window.addEventListener('online',networkStatus);window.addEventListener('offline',networkStatus);networkStatus();

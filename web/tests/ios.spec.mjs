@@ -332,3 +332,91 @@ test('course corrections and pointwise source pages appear without duplicate doc
  await expect(detail).toContainText('mandorle amare o marzapane');
  await expect(detail).not.toContainText('Scientific Baseline');
 });
+
+test('compact study facts preserve food conditions and keep internal guide hidden',async({page,request})=>{
+ const response=await request.get('./data.json'),payload=await response.json();
+ const poison=payload.catalog.find(t=>t.scientificName==='Amanita phalloides');
+ expect(poison.studyProfile.edibility.label).toMatch(/mortale/i);
+ const conditional=payload.catalog.find(t=>t.scientificName==='Amanita rubescens');
+ expect(conditional.studyProfile.edibility.precautions.join(' ')).toMatch(/cottura/i);
+ expect(JSON.stringify(payload)).not.toContain('S2-guida-ragionata');
+ await ready(page);
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita rubescens');
+ await page.getByRole('button',{name:'Apri Amanita rubescens',exact:true}).click();
+ const body=page.locator('#detail-body');
+ await expect(body.getByText('Commestibilità',{exact:true})).toBeVisible();
+ await expect(body).toContainText(/cottura/i);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test('genus recall uses linked species without inheriting their edibility',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Agaricus');
+ await page.getByRole('button',{name:'Apri Agaricus',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Consulta le singole specie');
+ await expect(page.getByRole('heading',{name:'Schede collegate',exact:true})).toBeVisible();
+ await expect(page.locator('#detail-body')).toContainText('Ripasso del genere');
+});
+
+test('corrupt study fields fail closed and preserve private drafts',async({page})=>{
+ await page.addInitScript(({notesKey,draft})=>localStorage.setItem(notesKey,JSON.stringify({version:1,drafts:[draft]})),{notesKey,draft:importDraft('keep-profile','Bozza da conservare')});
+ await page.route('**/data.json',async route=>{
+  const response=await route.fetch(),data=await response.json();
+  data.catalog[0].studyProfile={edibility:{label:'Commestibile',precautions:'invalid'}};
+  await route.fulfill({response,json:data});
+ });
+ await page.goto('./');
+ await expect(page.getByRole('heading',{name:'Catalogo non disponibile',exact:true})).toBeVisible();
+ expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).drafts[0].taxon,notesKey)).toBe('Bozza da conservare');
+});
+
+test('three reference views enlarge independently and return focus to the current species',async({page})=>{
+ await page.route('**/images/reference/fixture-*.jpg',route=>route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><rect width="300" height="200" fill="#d4dfce"/></svg>'}));
+ await page.route('**/data.json',async route=>{
+  const response=await route.fetch(),data=await response.json();
+  const taxon=data.catalog.find(t=>t.scientificName==='Amanita caesarea');
+  taxon.referenceImages=['lateral','top','underside'].map((view,i)=>({src:'images/reference/fixture-'+view+'.jpg',view,alt:'Vista di prova '+view,credit:'Fixture di test, non fotografia scientifica'}));
+  await route.fulfill({response,json:data});
+ });
+ await ready(page);
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita caesarea');
+ await page.getByRole('button',{name:'Apri Amanita caesarea',exact:true}).click();
+ const buttons=page.locator('#detail-body .photo-thumb');await expect(buttons).toHaveCount(3);
+ const opener=buttons.first();await opener.click();
+ await expect(page.locator('#photo-viewer')).toBeVisible();await expect(page.locator('#detail')).toBeVisible();
+ await expect(page.locator('#photo-full')).toHaveAttribute('alt','Vista di prova lateral');
+ await expect(page.locator('#photo-credit')).toContainText('Fixture di test');
+ await page.getByRole('button',{name:'Ingrandisci',exact:true}).click();
+ await page.getByRole('button',{name:'Riduci',exact:true}).click();
+ await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
+ await expect(page.locator('#photo-viewer')).not.toBeVisible();await expect(opener).toBeFocused();
+ await expect(page.locator('#detail-body h2').first()).toHaveText('Amanita caesarea');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+test('Russula legend labels I–IV without inventing a species class',async({page})=>{
+ await ready(page);
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Russula Foetentinae');
+ await page.getByRole('button',{name:'Apri Russula Foetentinae',exact:true}).click();
+ const body=page.locator('#detail-body');
+ await expect(body).toContainText('Bianca–crema');await expect(body).toContainText('I');
+ await expect(body).toContainText('IV');
+ await expect(body).not.toContainText('Acredine');
+});
+
+test('genus species pager and full genus recall preserve atlas filters',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
+ await search.fill('Amanita');await page.getByRole('button',{name:'Apri Amanita',exact:true}).click();
+ await page.getByRole('button',{name:'Ripassa specie collegate',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Scheda 1 di 16');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await expect(page.locator('#layer')).toHaveValue('groups');await expect(search).toHaveValue('Amanita');
+ await page.getByRole('button',{name:'Apri Amanita',exact:true}).click();
+ await page.getByRole('button',{name:'Studia Amanita phalloides',exact:true}).click();
+ await expect(page.locator('#position')).toHaveText('1 / 16');
+ await page.getByRole('button',{name:'Successiva →',exact:true}).click();
+ await expect(page.locator('#position')).toHaveText('2 / 16');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await expect(page.locator('#layer')).toHaveValue('groups');await expect(search).toHaveValue('Amanita');
+});

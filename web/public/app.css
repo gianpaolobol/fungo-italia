@@ -7,3 +7,27 @@ button.mushroom-toggle,button.mushroom-toggle[aria-pressed="true"]{flex:0 0 44px
 .mushroom-toggle svg{display:block;width:24px;height:24px;fill:#fff;stroke:var(--green);stroke-width:1.5;stroke-linejoin:round}
 .mushroom-toggle[aria-pressed="true"] svg{fill:#238443}
 .mushroom-toggle:hover{box-shadow:inset 0 0 0 1px var(--line)}
+
+.photo-triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin:10px 0}
+.photo-triptych figure{margin:0;min-width:0}
+.photo-thumb{display:block;width:100%;padding:0;aspect-ratio:1;border-radius:10px;overflow:hidden}
+.photo-thumb img{display:block;width:100%;height:100%;object-fit:contain;background:#eef2eb}
+.photo-missing{aspect-ratio:1;display:grid;place-items:center;text-align:center;font-size:12px;padding:7px;background:#edf2ea;border-radius:10px;color:var(--muted)}
+.photo-triptych figcaption{font-size:12px;text-align:center;margin-top:4px}
+.photo-pending{font-size:12px;margin:8px 0}
+.study-facts{display:grid;grid-template-columns:100px minmax(0,1fr);gap:6px 10px;font-size:14px;line-height:1.4;margin:10px 0}
+.study-facts dt{font-weight:650}.study-facts dd{margin:0;overflow-wrap:anywhere}
+.spore-swatch{display:inline-block;width:16px;height:16px;border:1px solid #63715d;border-radius:50%;vertical-align:middle;margin-right:5px;flex-shrink:0}
+.food-precautions{font-size:14px;line-height:1.4;margin:10px 0}.food-precautions ul{padding-left:20px;margin:5px 0}.food-precautions li{margin:4px 0}
+.compact-details{border-top:1px solid var(--line);margin-top:8px;padding:0}
+.compact-details summary{min-height:44px;padding:11px 0;cursor:pointer;font-size:14px;font-weight:650}
+.compact-details summary:focus-visible{outline:3px solid #a76c14;outline-offset:2px}
+.spore-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;font-size:13px}
+.spore-legend span{display:flex;align-items:center;gap:3px}
+.revision-prompts{font-size:14px;line-height:1.4}
+#photo-viewer{max-width:1000px}
+.photo-controls{display:flex;align-items:center;justify-content:center;gap:12px;padding:8px;flex-shrink:0}
+.photo-stage{flex:1;min-height:0;overflow:auto;background:#e3eadd;touch-action:pan-x pan-y pinch-zoom}
+#photo-full{display:block;width:100%;max-width:none;height:auto}
+#photo-credit{padding:8px 12px;margin:0;flex-shrink:0;font-size:12px}
+.dialog-body>h3,.card>h3{margin:12px 0 6px}.dialog-body ol,.card ol{font-size:14px;line-height:1.45}.dialog-body li,.card li{margin-bottom:5px}
