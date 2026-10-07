@@ -28,7 +28,7 @@ const foundations=JSON.parse(await readFile('src/data/internal-foundations.json'
 assert.deepEqual(foundations.documents.map(d=>d.sourceId),['S1-obiettivi-tassonomici-v4-2026-06-09','S2-guida-ragionata-commestibilita-2021']);
 assert(foundations.documents.every(d=>d.visibility==='internal'));
 assert.equal(foundations.scientificStatus.independentReviewComplete,false);
-assert.equal(foundations.scientificStatus.edibilityAssessment,'not-published');
+assert.equal(foundations.scientificStatus.edibilityAssessment,'source-attributed-partial');
 assert.equal(foundations.rules.foodClaimsRequirePointwiseGuideEvidence,true);
 for(const t of [...catalog,...groups]){
  assert(t.curriculum?.documentId===foundations.curriculum.objectiveSourceId&&Number.isInteger(t.curriculum.sourcePage)&&t.curriculum.sourcePage>0,'Missing curriculum reference');
@@ -62,3 +62,12 @@ for(const entry of courseLiterature.records){
 assert(courseRegistry.documents.filter(d=>d.analysisStatus==='content-unread').every(d=>!courseLiterature.records.some(e=>e.evidence.some(s=>s.sourceId===d.sourceId))),'Unread archive used as evidence');
 assert(courseRegistry.documents.every(d=>d.rights.originalPublished===false));
 console.log('Course integrations, pointwise references and corrections survive regeneration; unread archives excluded and scientific gate preserved.');
+
+const studyProfiles=JSON.parse(await readFile('src/data/study-profiles.json','utf8'));
+const referenceImages=JSON.parse(await readFile('src/data/reference-images.json','utf8'));
+const {applyStudyProfiles,applyReferenceImages}=await import('./study-profiles.mjs');
+const expected=[...catalog,...groups].map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
+applyStudyProfiles(expected,studyProfiles,courseRegistry);
+applyReferenceImages(expected,referenceImages);
+for(const t of [...catalog,...groups]){const e=expected.find(row=>row.id===t.id);assert.deepEqual(t.studyProfile,e.studyProfile);assert.deepEqual(t.referenceImages,e.referenceImages);}
+console.log('Pointwise study profiles and authorized reference galleries survive canonical regeneration.');

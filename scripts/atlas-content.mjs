@@ -20,5 +20,5 @@ export function cleanBibliography(sources){
 }
 export function internalFoundations(sources){
  const documents=[...foundationIds].map(id=>{const source=sources.find(s=>s.sourceId===id);if(!source)throw Error('Missing founding document '+id);return {...source,role:id.startsWith('S1-')?'curriculum':'edibility-reference',visibility:'internal'};});
- return {schemaVersion:1,documents,curriculum:{requiredMinimumUnits:148,requiredTeachingGroups:66,objectiveSourceId:documents[0].sourceId},scientificStatus:{independentReviewComplete:false,edibilityAssessment:'not-published'},rules:{foodClaimsRequirePointwiseGuideEvidence:true,internalAuditIsNotExternalEvidence:true}};
+ return {schemaVersion:1,documents,curriculum:{requiredMinimumUnits:148,requiredTeachingGroups:66,objectiveSourceId:documents[0].sourceId},scientificStatus:{independentReviewComplete:false,edibilityAssessment:'source-attributed-partial'},rules:{foodClaimsRequirePointwiseGuideEvidence:true,internalAuditIsNotExternalEvidence:true}};
 }

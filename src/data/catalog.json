@@ -39,6 +39,9 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--01--agaricus-sez-xanthodermatei"
+    },
+    "studyProfile": {
+      "odor": "Fenolico, di inchiostro o disinfettante."
     }
   },
   {
@@ -118,6 +121,9 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--02--agaricus-bresadolanus"
+    },
+    "studyProfile": {
+      "odor": "Possibile lieve componente fenolica alla base del gambo; variabile."
     }
   },
   {
@@ -160,6 +166,9 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses"
+    },
+    "studyProfile": {
+      "odor": "Di anice o mandorle amare."
     }
   },
   {
@@ -220,6 +229,9 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--04--agaricus-sez-sanguinolenti"
+    },
+    "studyProfile": {
+      "odor": "Poco caratterizzato."
     }
   },
   {
@@ -284,6 +296,9 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--05--agaricus-campestris"
+    },
+    "studyProfile": {
+      "odor": "Debole e gradevole."
     }
   },
   {
@@ -550,6 +565,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--01--amanita-phalloides"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenosa, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -609,6 +630,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--03--amanita-virosa"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenosa, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -681,6 +708,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--04--amanita-proxima"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossica, nefrotossica",
+        "precautions": []
+      }
     }
   },
   {
@@ -753,6 +786,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--05--amanita-ovoidea"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Non ammettere al consumo",
+        "precautions": []
+      }
     }
   },
   {
@@ -808,6 +847,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--06--amanita-pantherina"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenosa",
+        "precautions": []
+      }
     }
   },
   {
@@ -888,6 +933,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--07--amanita-muscaria"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenosa",
+        "precautions": []
+      }
     }
   },
   {
@@ -981,6 +1032,14 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--08--amanita-caesarea"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": [
+          "Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
+        ]
+      }
     }
   },
   {
@@ -1039,6 +1098,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--09--amanita-gemmata"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -1065,6 +1130,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--10--amanita-citrina"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -1091,6 +1162,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--11--amanita-porphyria"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -1177,6 +1254,14 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--13--amanita-strobiliformis"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Sconsigliata",
+        "precautions": [
+          "Rischio di confusione con Amanita pericolose."
+        ]
+      }
     }
   },
   {
@@ -1267,6 +1352,14 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--15--amanita-rubescens"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Richiede cottura completa; non consumare cruda."
+        ]
+      }
     }
   },
   {
@@ -2931,6 +3024,16 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
       "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": [
+          "Utilizzare esemplari freschi e cuocere completamente; non consumare cruda.",
+          "Utilizzare il cappello, scartando il gambo fibroso.",
+          "Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
+        ]
+      }
     }
   },
   {
@@ -4293,6 +4396,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 14,
       "learningUnitId": "objective-russula--01--russula-foetentinae"
+    },
+    "studyProfile": {
+      "odor": "Variabile: varechina nella serie foetens; note miste mandorlate in R. illota; mandorle amare o marzapane in R. grata e R. fragrantissima.",
+      "sporePrint": {
+        "label": "Bianca–crema; descrizione del sottogenere Ingratula comprendente Foetentinae."
+      }
     }
   },
   {
@@ -4819,6 +4928,16 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17,
       "learningUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": [
+          "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
+          "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
+          "La prebollitura non è indicata come trattamento necessario."
+        ]
+      }
     }
   },
   {
@@ -4862,6 +4981,16 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17,
       "learningUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": [
+          "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
+          "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
+          "La prebollitura non è indicata come trattamento necessario."
+        ]
+      }
     }
   },
   {

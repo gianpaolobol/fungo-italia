@@ -1,3 +1,4 @@
+import {applyStudyProfiles,applyReferenceImages} from '../scripts/study-profiles.mjs';
 import {mkdir,readFile,writeFile,cp,rm} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
@@ -13,7 +14,13 @@ assert(catalog.every(t=>t.characters.length===3&&typeof t.differentiatingCharact
 assert(areas.every(a=>Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180),'Invalid centroid');
 const amiata=areas.find(a=>a.name.includes('Amiata'));
 assert(amiata&&amiata.center[0]>42&&amiata.center[0]<44&&amiata.center[1]>10&&amiata.center[1]<13,'Amiata latitude/longitude inverted');
-const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter'];
+const studyProfiles=await readJSON('study-profiles');
+const referenceImages=await readJSON('reference-images');
+const sourceRegistry=await readJSON('course-sources');
+applyStudyProfiles([...catalog,...groups],studyProfiles,sourceRegistry);
+applyReferenceImages([...catalog,...groups],referenceImages);
+for(const asset of referenceImages.images){await readFile(path.join(web,'public',asset.src));}
+const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
 const bibliography=await readJSON('bibliography');
 const foundations=await readJSON('internal-foundations');
@@ -27,8 +34,9 @@ const vendor=path.join(output,'vendor');await mkdir(vendor,{recursive:true});
 for(const name of ['leaflet.js','leaflet.css','images'])await cp(path.join(web,'node_modules/leaflet/dist',name),path.join(vendor,name),{recursive:true});
 await cp(path.join(web,'node_modules/leaflet/LICENSE'),path.join(vendor,'LEAFLET-LICENSE.txt'));
 const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
+files.push(...referenceImages.images.map(asset=>asset.src));
 const hash=createHash('sha256');for(const file of files)hash.update(await readFile(path.join(output,file)));
 const version=hash.digest('hex').slice(0,20),sw=await readFile(path.join(output,'sw.js'),'utf8');
-await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version));
+await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version).replace("const FILES=[",'const FILES=['+referenceImages.images.map(asset=>JSON.stringify('./'+asset.src)+',').join('')));
 await writeFile(path.join(output,'build.json'),JSON.stringify({version,sourceCommit:process.env.GITHUB_SHA||null,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length},null,2));
 console.log(JSON.stringify({output,version,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length}));

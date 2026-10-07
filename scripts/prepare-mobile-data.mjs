@@ -1,3 +1,4 @@
+import {applyStudyProfiles,applyReferenceImages} from './study-profiles.mjs';
 import {applyCourseLiterature} from './course-literature.mjs';
 import {cleanAtlasRecord,internalFoundations} from './atlas-content.mjs';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
@@ -34,6 +35,10 @@ if(teachingGroups.length!==66||new Set(teachingGroups.map(g=>g.id)).size!==66||t
 const courseRegistry=JSON.parse(await readFile(join(output,'course-sources.json'),'utf8'));
 const courseLiterature=JSON.parse(await readFile(join(output,'course-literature.json'),'utf8'));
 applyCourseLiterature([...catalog,...teachingGroups],courseLiterature,courseRegistry);
+const studyProfiles=JSON.parse(await readFile(join(output,'study-profiles.json'),'utf8'));
+const referenceImages=JSON.parse(await readFile(join(output,'reference-images.json'),'utf8'));
+applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
+applyReferenceImages([...catalog,...teachingGroups],referenceImages);
 const mobileAreas=areas.map(a=>{if(!Array.isArray(a.center)||a.center.length!==2||!a.center.every(Number.isFinite)||Math.abs(a.center[0])>90||Math.abs(a.center[1])>180)throw Error('Invalid [latitude,longitude] '+a.id);return {...a,coordinateOrder:'latitude-longitude',signalProvenance:a.signalProvenance??'heuristic',verifiedSignals:a.signalProvenance==='measured'?a.verifiedSignals:0,delayedVisitors:a.signalProvenance==='measured'?a.delayedVisitors:0};});
 
 const areaLiterature=JSON.parse(await readFile(join(output,'area-literature.json'),'utf8'));

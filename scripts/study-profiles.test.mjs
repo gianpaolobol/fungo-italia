@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {applyStudyProfiles,applyReferenceImages} from './study-profiles.mjs';
+const taxa=()=>[{id:'species',scientificName:'Example species'},{id:'genus',scientificName:'Example',kind:'teaching-group'}];
+const registry={documents:[{sourceId:'COURSE-read',analysisStatus:'extracted-text-reviewed',pageCount:10}],externalReferences:[]};
+const food=()=>({version:1,records:[{scientificName:'Example species',profile:{edibility:{label:'Velenosa',precautions:[]}},evidence:[{sourceId:'S2-guida-ragionata-commestibilita-2021',page:31,fields:['edibility'],supportedClaim:'Categoria alimentare attribuita alla specie.'}]}]});
+test('food field remains taxon-scoped and evidence stays separate from public profile',()=>{const rows=taxa();applyStudyProfiles(rows,food(),registry);assert.equal(rows[0].studyProfile.edibility.label,'Velenosa');assert(!JSON.stringify(rows).includes('S2-'));});
+test('genus cannot inherit a food category',()=>{const dataset=food();dataset.records[0].scientificName='Example';assert.throws(()=>applyStudyProfiles(taxa(),dataset,registry));});
+test('non-founding evidence cannot authorize a food claim',()=>{const dataset=food();dataset.records[0].evidence[0].sourceId='COURSE-read';assert.throws(()=>applyStudyProfiles(taxa(),dataset,registry));});
+test('unknown or unsupported profile fields are rejected',()=>{const dataset=food();dataset.records[0].profile.odor='Odore non provato';assert.throws(()=>applyStudyProfiles(taxa(),dataset,registry));});
+test('invalid source page and duplicate units are rejected',()=>{const dataset=food();dataset.records[0].evidence[0].page=183;assert.throws(()=>applyStudyProfiles(taxa(),dataset,registry));dataset.records[0].evidence[0].page=31;dataset.records.push(dataset.records[0]);assert.throws(()=>applyStudyProfiles(taxa(),dataset,registry));});
+test('empty gallery is valid without inventing photographs',()=>{const rows=taxa();applyReferenceImages(rows,{version:1,images:[]});assert.equal(rows[0].referenceImages,undefined);});
+test('unverified publication rights prevent reference image release',()=>{const asset={scientificName:'Example species',src:'images/reference/example.jpg',view:'lateral',alt:'Vista laterale',credit:'Autore',sourceId:'COURSE-read',page:1,taxonStatus:'identified',rights:{status:'pending',publicRepository:false,pages:false,permissionEvidenceId:'pending'}};assert.throws(()=>applyReferenceImages(taxa(),{version:1,images:[asset]}));});

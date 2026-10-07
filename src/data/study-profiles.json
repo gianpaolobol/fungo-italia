@@ -1,0 +1,470 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "scientificName": "Amanita phalloides",
+      "profile": {
+        "edibility": {
+          "label": "Velenosa, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 31,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenosa, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "profile": {
+        "edibility": {
+          "label": "Velenosa, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 31,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenosa, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "profile": {
+        "edibility": {
+          "label": "Velenosa",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 31,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenosa"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "profile": {
+        "edibility": {
+          "label": "Velenosa",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 31,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenosa"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 31,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Non commestibile"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "profile": {
+        "edibility": {
+          "label": "Tossica, nefrotossica",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 32,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tossica, nefrotossica"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "profile": {
+        "edibility": {
+          "label": "Non ammettere al consumo",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 32,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Non ammettere al consumo"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliata",
+          "precautions": [
+            "Rischio di confusione con Amanita pericolose."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 32,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Sconsigliata. Rischio di confusione con Amanita pericolose."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 32,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Non commestibile"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 33,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Non commestibile"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "profile": {
+        "edibility": {
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Richiede cottura completa; non consumare cruda."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 33,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibilità condizionata. Richiede cottura completa; non consumare cruda."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": [
+            "Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 34,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile. Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
+        }
+      ]
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": [
+            "Utilizzare esemplari freschi e cuocere completamente; non consumare cruda.",
+            "Utilizzare il cappello, scartando il gambo fibroso.",
+            "Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 72,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile. Utilizzare esemplari freschi e cuocere completamente; non consumare cruda. Utilizzare il cappello, scartando il gambo fibroso. Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 73,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Escludere consumo crudo e apertura forzata in acqua; consumo del cappello, non del gambo, richiamato nei requisiti svizzeri."
+        }
+      ]
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": [
+            "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
+            "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
+            "La prebollitura non è indicata come trattamento necessario."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 118,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile. Preferire esemplari giovani; eliminare gambi fibrosi e cuticola. Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti. La prebollitura non è indicata come trattamento necessario."
+        }
+      ]
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": [
+            "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
+            "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
+            "La prebollitura non è indicata come trattamento necessario."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 118,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile. Preferire esemplari giovani; eliminare gambi fibrosi e cuticola. Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti. La prebollitura non è indicata come trattamento necessario."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus",
+      "profile": {
+        "sporePrint": {
+          "label": "Bruno-porpora",
+          "color": "#654252"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "Bruno-porpora"
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "profile": {
+        "odor": "Fenolico, di inchiostro o disinfettante."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 25,
+          "fields": [
+            "odor"
+          ],
+          "supportedClaim": "Fenolico, di inchiostro o disinfettante."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus sez. Arvenses",
+      "profile": {
+        "odor": "Di anice o mandorle amare."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 20,
+          "fields": [
+            "odor"
+          ],
+          "supportedClaim": "Di anice o mandorle amare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "profile": {
+        "odor": "Poco caratterizzato."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 17,
+          "fields": [
+            "odor"
+          ],
+          "supportedClaim": "Poco caratterizzato."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus campestris",
+      "profile": {
+        "odor": "Debole e gradevole."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 8,
+          "fields": [
+            "odor"
+          ],
+          "supportedClaim": "Debole e gradevole."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "profile": {
+        "odor": "Possibile lieve componente fenolica alla base del gambo; variabile."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 15,
+          "fields": [
+            "odor"
+          ],
+          "supportedClaim": "Possibile lieve componente fenolica alla base del gambo; variabile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyroporus",
+      "profile": {
+        "sporePrint": {
+          "label": "Molto chiara"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "page": 35,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "Molto chiara"
+        }
+      ]
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "profile": {
+        "odor": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "page": 43,
+          "fields": [
+            "odor"
+          ],
+          "supportedClaim": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum."
+        }
+      ]
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "profile": {
+        "odor": "Variabile: varechina nella serie foetens; note miste mandorlate in R. illota; mandorle amare o marzapane in R. grata e R. fragrantissima.",
+        "sporePrint": {
+          "label": "Bianca–crema; descrizione del sottogenere Ingratula comprendente Foetentinae."
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+          "page": null,
+          "locator": "Sottogenere Ingratula — caratteri diagnostici; Ingratae — Foetentinae, schema della serie foetens",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "supportedClaim": "Ingratula: sporata da bianca a crema; nella serie foetens gli odori differiscono fra specie: varechina, misto mandorlato, mandorle amare o marzapane."
+        }
+      ]
+    }
+  ]
+}

@@ -26,6 +26,12 @@
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4
+    },
+    "studyProfile": {
+      "sporePrint": {
+        "label": "Bruno-porpora",
+        "color": "#654252"
+      }
     }
   },
   {
@@ -1297,6 +1303,11 @@
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
+    },
+    "studyProfile": {
+      "sporePrint": {
+        "label": "Molto chiara"
+      }
     }
   },
   {
@@ -1355,7 +1366,10 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
     },
-    "diagnosticNote": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile."
+    "diagnosticNote": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile.",
+    "studyProfile": {
+      "odor": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum."
+    }
   },
   {
     "id": "minimum-genus-card-hygrophoropsis",

@@ -1,13 +1,16 @@
 name: iPhone PWA and Expo Go
 on:
   push:
-    branches: [main, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
+    branches: [main, feat/study-layout-oct07, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
     paths:
       - 'web/**'
       - 'components/**'
       - 'App.tsx'
       - 'src/data/**'
       - 'scripts/course-literature.mjs'
+      - 'scripts/study-profiles.mjs'
+      - 'scripts/study-profiles.test.mjs'
+      - 'scripts/atlas-content.mjs'
       - 'scripts/prepare-mobile-data.mjs'
       - 'scripts/validate-mobile-data.mjs'
       - 'assets/icon.png'
@@ -36,6 +39,7 @@ jobs:
       - name: Validate browser code and build offline package
         run: |
           node --check web/public/app.js
+          node --test scripts/study-profiles.test.mjs
           node --check web/public/importa-foto.js
           node --check web/public/photo-core.js
           node --check web/public/sw.js
