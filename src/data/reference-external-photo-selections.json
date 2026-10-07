@@ -1300,6 +1300,689 @@
       "reviewNotes": "Figura1B, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
       "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "subjectTaxon": "Entoloma sinuatum",
+      "view": "underside",
+      "crop": [
+        0,
+        0.23,
+        1,
+        1
+      ],
+      "sourceId": "EXT-COMP-ENT-SIN-40542",
+      "sourcePath": "source-photo-assets/external/ext-comp-ent-sin-40542-original.jpg",
+      "candidateSha256": "d904272a36e57e7cc520d11e789cdee4974ae3b9a9e364d2dc10b941120e9b42",
+      "sourceSha256": "2ba2f02770b3693f954769113f0f32016d3b8731ca1fb3dcde95adeb0177791d",
+      "sourcePage": null,
+      "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Vista reale dal basso: lamelle rosa e attacco al gambo visibili; parte inferiore del gambo oltre il margine. Identità dalla fotografia di Gerhard Koller, non conferma indipendente.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "subjectTaxon": "Amanita porphyria",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-COMP-PORPHYRIA-2",
+      "sourcePath": "source-photo-assets/external/ext-comp-porphyria-2-original.jpg",
+      "candidateSha256": "17675cbd6f1fbf64f479b4e1678f39377d26ce2f246628bb68790f5429ba5d50",
+      "sourceSha256": "9a4cadadd6775b52dde9f758bdf13e4a8a5697c52f1e71cc9c51c872e2f52549",
+      "sourcePage": null,
+      "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Revisione visuale suJPEG: profiloobliquo cappello, gambo e anello; baseincompleta.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "subjectTaxon": "Amanita muscaria",
+      "view": "top",
+      "crop": [
+        0.1,
+        0.25,
+        0.88,
+        0.8
+      ],
+      "sourceId": "EXT-COMP-MUSCARIA-3",
+      "sourcePath": "source-photo-assets/external/ext-comp-muscaria-3-original.jpg",
+      "candidateSha256": "893eaf0d19070772e578449767138d28ea498e8af3aa0374e150ff7fb5c639af",
+      "sourceSha256": "48fd0753b910cbb410a181a15d2cb172a1b10bba5edfddbfe5568106bf960752",
+      "sourcePage": null,
+      "credit": "Tiril Myhre Pedersen · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Revisionevisuale: vistasuperiore cappellodisteso con residuivelo; nonvistasotto.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "subjectTaxon": "Clitocybe phyllophila",
+      "view": "top",
+      "crop": [
+        0.015,
+        0.19,
+        0.445,
+        0.7
+      ],
+      "sourceId": "EXT-COMP-PHYLL-WB",
+      "sourcePath": "source-photo-assets/external/ext-comp-phyll-wb-original.jpg",
+      "candidateSha256": "52d8ce71683743179c3006764c2c831a220b3eb6628d47bef6b95c7d4b700454",
+      "sourceSha256": "f37e258dad3dfdea51d39afbb3310697f53567a00165f79c47985bfbcdd5a510",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Ritaglioesemplaresinistro: superficie cappellorealmentevista dallalto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "subjectTaxon": "Clitocybe phyllophila",
+      "view": "underside",
+      "crop": [
+        0.39,
+        0.13,
+        0.68,
+        0.7
+      ],
+      "sourceId": "EXT-COMP-PHYLL-WB",
+      "sourcePath": "source-photo-assets/external/ext-comp-phyll-wb-original.jpg",
+      "candidateSha256": "52d8ce71683743179c3006764c2c831a220b3eb6628d47bef6b95c7d4b700454",
+      "sourceSha256": "f37e258dad3dfdea51d39afbb3310697f53567a00165f79c47985bfbcdd5a510",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Esemplarecentrale capovolto lamelle egambo visibili; sovrapposizionemarginalecappellivicini.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "subjectTaxon": "Cortinarius praestans",
+      "view": "top",
+      "crop": [
+        0.3,
+        0.2,
+        0.62,
+        0.52
+      ],
+      "sourceId": "EXT-COMP-PRAESTANS-NEW1",
+      "sourcePath": "source-photo-assets/external/ext-comp-praestans-new1-original.jpg",
+      "candidateSha256": "21b0bfa91da5e59cfc98b1f7fce4251da91dd7f0e039057c082caa905548ab57",
+      "sourceSha256": "99628b050a529d63597169b38a0b5c1f94f7ca3bea8fa45d616c66008687cf09",
+      "sourcePage": null,
+      "credit": "Bálint Dima / NINA · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Revisione visuale: cappello centrale maturo realmente visto dall’alto; margine e cuticola visibili.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "subjectTaxon": "Cortinarius praestans",
+      "view": "underside",
+      "crop": [
+        0.015,
+        0.43,
+        0.295,
+        0.965
+      ],
+      "sourceId": "EXT-COMP-PRAESTANS-NEW1",
+      "sourcePath": "source-photo-assets/external/ext-comp-praestans-new1-original.jpg",
+      "candidateSha256": "21b0bfa91da5e59cfc98b1f7fce4251da91dd7f0e039057c082caa905548ab57",
+      "sourceSha256": "99628b050a529d63597169b38a0b5c1f94f7ca3bea8fa45d616c66008687cf09",
+      "sourcePage": null,
+      "credit": "Bálint Dima / NINA · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Revisione visuale: adulto realmente capovolto in basso a sinistra, con lamelle e gambo. Esemplare distinto da quello della vista superiore nella stessa fotografia.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "subjectTaxon": "Hygrocybe punicea",
+      "view": "top",
+      "crop": [
+        0.24,
+        0.235,
+        0.58,
+        0.63
+      ],
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "sourcePath": "source-photo-assets/external/ext-comp-punicea-2329-original.jpg",
+      "candidateSha256": "7f514ed9d62724da8d4755b0e053d6e6bcde254213ed5145bab07beedf306fc4",
+      "sourceSha256": "3f2fdb6d6f41ad5b56811c68d01edd5459c51cdd5966f19e23c5367cbcdae9bf",
+      "sourcePage": null,
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Cappello rosso sinistro realmente visto dall’alto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    },
+    {
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "subjectTaxon": "Hygrocybe punicea",
+      "view": "top",
+      "crop": [
+        0.24,
+        0.235,
+        0.58,
+        0.63
+      ],
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "sourcePath": "source-photo-assets/external/ext-comp-punicea-2329-original.jpg",
+      "candidateSha256": "7f514ed9d62724da8d4755b0e053d6e6bcde254213ed5145bab07beedf306fc4",
+      "sourceSha256": "3f2fdb6d6f41ad5b56811c68d01edd5459c51cdd5966f19e23c5367cbcdae9bf",
+      "sourcePage": null,
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Cappello rosso sinistro realmente visto dall’alto. Specie rappresentativa del genere esplicitamente indicata.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "subjectTaxon": "Hygrocybe punicea",
+      "view": "underside",
+      "crop": [
+        0.315,
+        0.535,
+        0.75,
+        0.97
+      ],
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "sourcePath": "source-photo-assets/external/ext-comp-punicea-2329-original.jpg",
+      "candidateSha256": "7f514ed9d62724da8d4755b0e053d6e6bcde254213ed5145bab07beedf306fc4",
+      "sourceSha256": "3f2fdb6d6f41ad5b56811c68d01edd5459c51cdd5966f19e23c5367cbcdae9bf",
+      "sourcePage": null,
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Esemplare sdraiato con lamelle giallastre e gambo visibili.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    },
+    {
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "subjectTaxon": "Hygrocybe punicea",
+      "view": "underside",
+      "crop": [
+        0.315,
+        0.535,
+        0.75,
+        0.97
+      ],
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "sourcePath": "source-photo-assets/external/ext-comp-punicea-2329-original.jpg",
+      "candidateSha256": "7f514ed9d62724da8d4755b0e053d6e6bcde254213ed5145bab07beedf306fc4",
+      "sourceSha256": "3f2fdb6d6f41ad5b56811c68d01edd5459c51cdd5966f19e23c5367cbcdae9bf",
+      "sourcePage": null,
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Esemplare sdraiato con lamelle giallastre e gambo visibili. Specie rappresentativa del genere esplicitamente indicata.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "subjectTaxon": "Macrolepiota procera",
+      "view": "top",
+      "crop": [
+        0.13,
+        0.02,
+        0.9,
+        0.97
+      ],
+      "sourceId": "EXT-COMP-PROCERA-CAP",
+      "sourcePath": "source-photo-assets/external/ext-comp-procera-cap-original.jpg",
+      "candidateSha256": "d3157bb3db2a31d61f5562a09e22e00210a37c721e0927a78566914cccd413f2",
+      "sourceSha256": "c74b0eb7fc7867eb9491010f221fa1020b6f049865f927845acb64e86433f295",
+      "sourcePage": null,
+      "credit": "J Milburn · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Cappello maturo realmente visto dall’alto; umbone e squame visibili.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macrolepiota_procera_cap.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "subjectTaxon": "Echinoderma asperum",
+      "view": "top",
+      "crop": [
+        0.36,
+        0.13,
+        0.79,
+        0.48
+      ],
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "sourcePath": "source-photo-assets/external/ext-comp-asperum-w-original.jpg",
+      "candidateSha256": "93e9dab122d5cdfe7996c29da37b6e515dbf3a503c6ae7f28573c4ac5dd00b1f",
+      "sourceSha256": "598651e5b08272d856b0884d16c4c79ca03602a7b7296c547f0f3f9f0cc34176",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Cappello con squame appuntite visto da sopra in posizione obliqua.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "subjectTaxon": "Echinoderma asperum",
+      "view": "lateral",
+      "crop": [
+        0.35,
+        0.12,
+        0.8,
+        0.7
+      ],
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "sourcePath": "source-photo-assets/external/ext-comp-asperum-w-original.jpg",
+      "candidateSha256": "93e9dab122d5cdfe7996c29da37b6e515dbf3a503c6ae7f28573c4ac5dd00b1f",
+      "sourceSha256": "598651e5b08272d856b0884d16c4c79ca03602a7b7296c547f0f3f9f0cc34176",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Habitus obliquo: cappello e gambo dell’esemplare eretto visibili. Stessa fotografia della vista superiore, non uno scatto indipendente.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "subjectTaxon": "Echinoderma asperum",
+      "view": "underside",
+      "crop": [
+        0.2,
+        0.47,
+        0.53,
+        0.9
+      ],
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "sourcePath": "source-photo-assets/external/ext-comp-asperum-w-original.jpg",
+      "candidateSha256": "93e9dab122d5cdfe7996c29da37b6e515dbf3a503c6ae7f28573c4ac5dd00b1f",
+      "sourceSha256": "598651e5b08272d856b0884d16c4c79ca03602a7b7296c547f0f3f9f0cc34176",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Esemplare distinto realmente capovolto: lamelle fitte e gambo visibili.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "subjectTaxon": "Pleurotus eryngii",
+      "view": "underside",
+      "crop": [
+        0.1,
+        0.22,
+        0.85,
+        0.78
+      ],
+      "sourceId": "EXT-COMP-ERYNGII-54421",
+      "sourcePath": "source-photo-assets/external/ext-comp-eryngii-54421-original.jpg",
+      "candidateSha256": "7493cd6ac617cf42aaf9ba3ff28198c24fab0cb4543984775c137b58725f0aac",
+      "sourceSha256": "c468fe88d35c43aec18fef6deea4f6f7404ecb91c47af0cfa7fd2174e346f613",
+      "sourcePage": null,
+      "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Posizione bassa della fotocamera: lamelle decorrenti e gambo osservabili; erba copre parte della base.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_(DC.)_Gillet_54421_2008-11-11.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "subjectTaxon": "Psathyrella candolleana",
+      "view": "top",
+      "crop": [
+        0.55,
+        0.01,
+        0.95,
+        0.51
+      ],
+      "sourceId": "EXT-COMP-PSATH-WA",
+      "sourcePath": "source-photo-assets/external/ext-comp-psath-wa-original.jpg",
+      "candidateSha256": "021404e8e99f3bbf5841fe701d5ae237d7b45596b6672b958f815ce4e647b82a",
+      "sourceSha256": "f1ace39b6d279b9d69f8aa4dfb2ae7497b0c24daeceb7569a2a7d96f6a8435d7",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Cappello eretto in alto a destra realmente visto dall’alto; rappresentante del gruppo, oggi Candolleomyces candolleanus.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "subjectTaxon": "Psathyrella candolleana",
+      "view": "underside",
+      "crop": [
+        0.01,
+        0.38,
+        0.67,
+        0.93
+      ],
+      "sourceId": "EXT-COMP-PSATH-WA",
+      "sourcePath": "source-photo-assets/external/ext-comp-psath-wa-original.jpg",
+      "candidateSha256": "021404e8e99f3bbf5841fe701d5ae237d7b45596b6672b958f815ce4e647b82a",
+      "sourceSha256": "f1ace39b6d279b9d69f8aa4dfb2ae7497b0c24daeceb7569a2a7d96f6a8435d7",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Due carpofori realmente capovolti con lamelle brune mature e gambo; rappresentante del gruppo, oggi Candolleomyces candolleanus.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.498,
+        0.498
+      ],
+      "sourceId": "EXT-COMP-FILAMENTOSUM-SEN2019",
+      "sourcePath": "source-photo-assets/external/ext-comp-filamentosum-sen2019-x4588.jpg",
+      "candidateSha256": "3555163dfff9bb88fc922520179417c2f4c4dc384f3f656c9c4deb8787f727de",
+      "sourceSha256": "a6e6c104bd2d9ca42310bd964b13784fa0082a1cd474a06ce435901bad0b6edd",
+      "sourcePage": 6,
+      "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 2a: cappello adulto invecchiato con squame e abrasioni, realmente visto dall’alto.",
+      "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "view": "underside",
+      "crop": [
+        0.504,
+        0,
+        1,
+        0.498
+      ],
+      "sourceId": "EXT-COMP-FILAMENTOSUM-SEN2019",
+      "sourcePath": "source-photo-assets/external/ext-comp-filamentosum-sen2019-x4588.jpg",
+      "candidateSha256": "3555163dfff9bb88fc922520179417c2f4c4dc384f3f656c9c4deb8787f727de",
+      "sourceSha256": "a6e6c104bd2d9ca42310bd964b13784fa0082a1cd474a06ce435901bad0b6edd",
+      "sourcePage": 6,
+      "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 2b: adulto danneggiato rovesciato con lamelle e gambo; pannelli microscopici esclusi.",
+      "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "subjectTaxon": "Volvariella volvacea",
+      "view": "top",
+      "crop": [
+        0.567,
+        0.007,
+        0.996,
+        0.556
+      ],
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "sourcePath": "source-photo-assets/external/ext-comp-volvacea-plos-original.jpg",
+      "candidateSha256": "ef7d7082cc1b6bd484ee835b70756188a10f5c6d3548fb4df753590478837fda",
+      "sourceSha256": "9edc2855713a73f0e547ac01debac42196b9926d3669a3623cfe8a7fd68d571f",
+      "sourcePage": null,
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 1B: cappelli giovani chiusi di esemplari coltivati, realmente visti dall’alto. Rappresentante nominato; disegno A escluso.",
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "subjectTaxon": "Volvariella volvacea",
+      "view": "top",
+      "crop": [
+        0.567,
+        0.007,
+        0.996,
+        0.556
+      ],
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "sourcePath": "source-photo-assets/external/ext-comp-volvacea-plos-original.jpg",
+      "candidateSha256": "ef7d7082cc1b6bd484ee835b70756188a10f5c6d3548fb4df753590478837fda",
+      "sourceSha256": "9edc2855713a73f0e547ac01debac42196b9926d3669a3623cfe8a7fd68d571f",
+      "sourcePage": null,
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 1B: cappelli giovani chiusi di esemplari coltivati, realmente visti dall’alto. Rappresentante nominato; disegno A escluso.",
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "subjectTaxon": "Volvariella volvacea",
+      "view": "lateral",
+      "crop": [
+        0.567,
+        0.56,
+        0.996,
+        0.993
+      ],
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "sourcePath": "source-photo-assets/external/ext-comp-volvacea-plos-original.jpg",
+      "candidateSha256": "ef7d7082cc1b6bd484ee835b70756188a10f5c6d3548fb4df753590478837fda",
+      "sourceSha256": "9edc2855713a73f0e547ac01debac42196b9926d3669a3623cfe8a7fd68d571f",
+      "sourcePage": null,
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 1C: esemplari maturi coltivati con cappello, gambo e base in vista laterale obliqua; lamelle nascoste.",
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "subjectTaxon": "Volvariella volvacea",
+      "view": "lateral",
+      "crop": [
+        0.567,
+        0.56,
+        0.996,
+        0.993
+      ],
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "sourcePath": "source-photo-assets/external/ext-comp-volvacea-plos-original.jpg",
+      "candidateSha256": "ef7d7082cc1b6bd484ee835b70756188a10f5c6d3548fb4df753590478837fda",
+      "sourceSha256": "9edc2855713a73f0e547ac01debac42196b9926d3669a3623cfe8a7fd68d571f",
+      "sourcePage": null,
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 1C: esemplari maturi coltivati con cappello, gambo e base in vista laterale obliqua; lamelle nascoste.",
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Gomphus clavatus",
+      "subjectTaxon": "Gomphus clavatus",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-COMP-GOMPHUS-702984",
+      "sourcePath": "source-photo-assets/external/ext-comp-gomphus-702984-original.jpg",
+      "candidateSha256": "a5eba654dfe2ba1c93881a7ed7d4ac72f3448b9142f7bfed64b4d1ff33357294",
+      "sourceSha256": "99b17ba218cc511d78b60642a26a4fc02ac378066a94ba2067a47cb8f84cbb9a",
+      "sourcePage": null,
+      "credit": "Ron Pastorino · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Carpofori raccolti appoggiati, corpi interi e imenoforo a pieghe violacee in posizione obliqua laterale. Determinazione e sporata descritte dall’autore; rappresentante nominato.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Gomphus",
+      "subjectTaxon": "Gomphus clavatus",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-COMP-GOMPHUS-702984",
+      "sourcePath": "source-photo-assets/external/ext-comp-gomphus-702984-original.jpg",
+      "candidateSha256": "a5eba654dfe2ba1c93881a7ed7d4ac72f3448b9142f7bfed64b4d1ff33357294",
+      "sourceSha256": "99b17ba218cc511d78b60642a26a4fc02ac378066a94ba2067a47cb8f84cbb9a",
+      "sourcePage": null,
+      "credit": "Ron Pastorino · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Carpofori raccolti appoggiati, corpi interi e imenoforo a pieghe violacee in posizione obliqua laterale. Determinazione e sporata descritte dall’autore; rappresentante nominato.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Polyporus umbellatus",
+      "subjectTaxon": "Polyporus umbellatus",
+      "view": "underside",
+      "crop": [
+        0.655,
+        0.255,
+        0.995,
+        0.945
+      ],
+      "sourceId": "EXT-COMP-POLY-66485178",
+      "sourcePath": "source-photo-assets/external/ext-comp-poly-66485178-original.jpg",
+      "candidateSha256": "4b706ec3036201897712ecc4eea9d158b1aa6132efe01064e9dddc9b4d533a78",
+      "sourceSha256": "22a715a7600c2995be23cda46ee2ecff778721ed8fa78d9ab24a2e8d19ea6d17",
+      "sourcePage": null,
+      "credit": "Nina Filippova · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Gruppo a destra realmente rovesciato: pori inferiori bianchi, gambo ramificato e base visibili.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "subjectTaxon": "Grifola frondosa",
+      "view": "underside",
+      "crop": [
+        0.145,
+        0.035,
+        0.405,
+        0.365
+      ],
+      "sourceId": "EXT-ADB-39725-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-39725-2-original.jpg",
+      "candidateSha256": "568b2af9338483b08100bfea4b28fc3f9482c0fd5453edc7900f772ed2960090",
+      "sourceSha256": "216dab734bdcd02b29f737553dfb3d843fd7ae59cfa4f048fb5a9d6817991c78",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Superficie poroide chiara del cappello superiore sinistro realmente visibile frontalmente; margine scuro. Ritaglio selezionato distinto dalle superfici superiori.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "subjectTaxon": "Clitopilus prunulus",
+      "view": "underside",
+      "crop": [
+        0.28,
+        0.17,
+        0.7,
+        0.81
+      ],
+      "sourceId": "EXT-COMP-PRUN-050",
+      "sourcePath": "source-photo-assets/external/ext-comp-prun-050-original.jpg",
+      "candidateSha256": "a272bbc46864e6e5b2e8c4e93fd183eaeb7e4377f862acfb7ea76eb44fa9a490",
+      "sourceSha256": "204da6042d8adb1f98d71bac5ce4467033e0f1ba26aec1eae18740ad980cedb9",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Carpoforo realmente capovolto: lamelle decorrenti e gambo visibili. Identificazione dichiarata dal fotografo e sporata rosa descritta; nessun voucher.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Clitopilus",
+      "subjectTaxon": "Clitopilus prunulus",
+      "view": "underside",
+      "crop": [
+        0.28,
+        0.17,
+        0.7,
+        0.81
+      ],
+      "sourceId": "EXT-COMP-PRUN-050",
+      "sourcePath": "source-photo-assets/external/ext-comp-prun-050-original.jpg",
+      "candidateSha256": "a272bbc46864e6e5b2e8c4e93fd183eaeb7e4377f862acfb7ea76eb44fa9a490",
+      "sourceSha256": "204da6042d8adb1f98d71bac5ce4467033e0f1ba26aec1eae18740ad980cedb9",
+      "sourcePage": null,
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Carpoforo realmente capovolto: lamelle decorrenti e gambo visibili. Identificazione dichiarata dal fotografo e sporata rosa descritta; nessun voucher.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Pisolithus",
+      "subjectTaxon": "Pisolithus albus",
+      "view": "top",
+      "crop": [
+        0.352,
+        0.002,
+        0.679,
+        0.414
+      ],
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "sourcePath": "source-photo-assets/external/ext-oa-pisolithus-albus2023-x150.jpg",
+      "candidateSha256": "b897db51203777aa32f8d933552faaf77e335ca54154049146bd73b7883e1b3d",
+      "sourceSha256": "649c7a5f18c204f21540255d7d92ad77d9580910e79dded404ae160c96e4dd32",
+      "sourcePage": 5,
+      "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 2B: superficie esterna superiore di Pisolithus albus in habitat; specie rappresentativa del genere.",
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Pisolithus albus — vista superiore"
+    },
+    {
+      "scientificName": "Pisolithus",
+      "subjectTaxon": "Pisolithus albus",
+      "view": "lateral",
+      "crop": [
+        0.002,
+        0.423,
+        0.247,
+        0.998
+      ],
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "sourcePath": "source-photo-assets/external/ext-oa-pisolithus-albus2023-x150.jpg",
+      "candidateSha256": "b897db51203777aa32f8d933552faaf77e335ca54154049146bd73b7883e1b3d",
+      "sourceSha256": "649c7a5f18c204f21540255d7d92ad77d9580910e79dded404ae160c96e4dd32",
+      "sourcePage": 5,
+      "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 2D: esemplare estratto intero con corpo, base lunga e filamenti basali; nessuna sezione interna.",
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Pisolithus albus — vista laterale"
+    },
+    {
+      "scientificName": "Pisolithus",
+      "subjectTaxon": "Pisolithus albus",
+      "view": "underside",
+      "crop": [
+        0.509,
+        0.423,
+        0.761,
+        0.71
+      ],
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "sourcePath": "source-photo-assets/external/ext-oa-pisolithus-albus2023-x150.jpg",
+      "candidateSha256": "b897db51203777aa32f8d933552faaf77e335ca54154049146bd73b7883e1b3d",
+      "sourceSha256": "649c7a5f18c204f21540255d7d92ad77d9580910e79dded404ae160c96e4dd32",
+      "sourcePage": 5,
+      "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 2F: base esterna rivolta all’osservatore. Pisolithus albus rappresentante esplicito; Fig. 2G con sezione interna esclusa.",
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Pisolithus albus — base esterna"
+    },
+    {
+      "scientificName": "Scleroderma",
+      "subjectTaxon": "Scleroderma verrucosum",
+      "view": "lateral",
+      "crop": [
+        0.002,
+        0.002,
+        0.385,
+        0.297
+      ],
+      "sourceId": "EXT-OA-SCLERODERMA-2022",
+      "sourcePath": "source-photo-assets/external/ext-oa-scleroderma-2022-x81.jpg",
+      "candidateSha256": "2a06fe59aee162e5bd84d99acb97146d78d7a0c8b4eec053640629d7a41e87ca",
+      "sourceSha256": "765894af89693f06cc8d995abc81134cffc460eeb41ab38f4a3d987caf990e3f",
+      "sourcePage": 13,
+      "credit": "Namera Chinnappa Karun; Shivannegowda Mahadevakumar; Kandikere Ramaiah Sridhar · CC BY 4.0 · ritaglio/ridimensionamento",
+      "reviewNotes": "Fig. 8a: esemplari eretti con corpo e pseudogambo visibili sul terreno. Determinazione macro/microscopica della raccolta; rappresentante del genere.",
+      "sourceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 }
