@@ -20,6 +20,8 @@ for(const taxon of taxa){
 }
 check(coverage.summary.images===manifest.images.length&&coverage.summary.cards===taxa.length,'Coverage count mismatch');
 check(coverage.summary.completeTriplets===coverage.cards.filter(c=>c.missingViews.length===0).length&&coverage.summary.missingViews===coverage.cards.reduce((n,c)=>n+c.missingViews.length,0),'Coverage completeness mismatch');
+check(coverage.summary.partialCards===coverage.cards.filter(c=>c.availableViews.length>0&&c.availableViews.length<3).length&&coverage.summary.withoutImages===coverage.cards.filter(c=>c.availableViews.length===0).length,'Coverage partial counts mismatch');
+let imageBytes=0;
 const hashes=new Map();
 for(const image of manifest.images){
  const source=sources.get(image.sourceId),proof=proofs.get(image.src);
@@ -28,6 +30,7 @@ for(const image of manifest.images){
  check(proof.visualReview==='verified'&&proof.subjectTaxon===image.subjectTaxon&&/^[a-f0-9]{64}$/.test(proof.sourceSha256),'Image visual review missing');
  check(image.rights.permissionEvidenceId==='OWNER-COURSE-PHOTOS-2026-10-07','Unexpected image permission');
  const bytes=await readFile('web/public/'+image.src);
+ imageBytes+=bytes.length;
  check(createHash('sha256').update(bytes).digest('hex')===proof.sha256,'Image bytes changed: '+image.src);
  check(bytes[0]===255&&bytes[1]===216&&bytes.at(-2)===255&&bytes.at(-1)===217,'Invalid JPEG');
  let width=0,height=0;
@@ -46,4 +49,5 @@ for(const image of manifest.images){
  check(!repeated||(repeated.view===image.view&&repeated.subjectTaxon===image.subjectTaxon),'Identical image relabeled as a different view or taxon');
  hashes.set(proof.sha256,{view:image.view,subjectTaxon:image.subjectTaxon});
 }
+check(coverage.summary.imageBytes===imageBytes,'Coverage storage size mismatch');
 console.log(JSON.stringify({verifiedImages:manifest.images.length,cards:new Set(manifest.images.map(i=>i.scientificName)).size,personalMetadataRemoved:true}));
