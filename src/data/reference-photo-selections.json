@@ -3420,20 +3420,6 @@
       "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
       "page": 51,
       "xref": 135,
-      "view": "lateral",
-      "filename": "pleurotus-eryngii-lateral-135.jpg",
-      "alt": "Pleurotus eryngii var. ferulae — vista laterale di cappello e gambo",
-      "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, p. 51. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica."
-    },
-    {
-      "scientificName": "Pleurotus eryngii s.l.",
-      "subjectTaxon": "Pleurotus eryngii var. ferulae",
-      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
-      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
-      "page": 51,
-      "xref": 135,
       "view": "top",
       "crop": [
         0.39,
@@ -4132,34 +4118,6 @@
       "filename": "hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--underside-295.jpg",
       "alt": "Hydnum repandum — vista inferiore di cappello e gambo",
       "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 36; fotografo non specificato nella pagina della fonte.",
-      "visualReview": "verified",
-      "reviewNotes": "Taxon e vista controllati visivamente sulla fotografia della fonte; ritagli della medesima composizione dichiarati. Fotografia rappresentativa, senza inferire commestibilità o attribuire le caratteristiche di una specie a tutto il genere."
-    },
-    {
-      "scientificName": "Cantharellus cibarius complex",
-      "subjectTaxon": "Cantharellus cibarius",
-      "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
-      "sourceSha256": "0bdfb3c8548df78a6feda0fb1bb0dd58201b0c604e62892292346e6a0197d36d",
-      "page": 54,
-      "xref": 395,
-      "view": "underside",
-      "filename": "cantharellus-cibarius-complex-underside-395.jpg",
-      "alt": "Cantharellus cibarius — vista inferiore di cappello e gambo",
-      "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 54; fotografo non specificato nella pagina della fonte.",
-      "visualReview": "verified",
-      "reviewNotes": "Taxon e vista controllati visivamente sulla fotografia della fonte; ritagli della medesima composizione dichiarati. Fotografia rappresentativa, senza inferire commestibilità o attribuire le caratteristiche di una specie a tutto il genere."
-    },
-    {
-      "scientificName": "Cantharellus",
-      "subjectTaxon": "Cantharellus cibarius",
-      "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
-      "sourceSha256": "0bdfb3c8548df78a6feda0fb1bb0dd58201b0c604e62892292346e6a0197d36d",
-      "page": 54,
-      "xref": 395,
-      "view": "underside",
-      "filename": "cantharellus-underside-395.jpg",
-      "alt": "Cantharellus cibarius — vista inferiore di cappello e gambo",
-      "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 54; fotografo non specificato nella pagina della fonte.",
       "visualReview": "verified",
       "reviewNotes": "Taxon e vista controllati visivamente sulla fotografia della fonte; ritagli della medesima composizione dichiarati. Fotografia rappresentativa, senza inferire commestibilità o attribuire le caratteristiche di una specie a tutto il genere."
     },
@@ -6002,10 +5960,10 @@
       "xref": 233,
       "view": "top",
       "crop": [
-        0.32,
-        0.12,
-        0.81,
-        0.5
+        0,
+        0,
+        0.7,
+        0.7
       ],
       "filename": "clitocybe-dealbata-collybia-rivulosa-top-233.jpg",
       "alt": "Clitocybe dealbata — vista superiore di cappello e gambo",
@@ -6102,9 +6060,9 @@
       "xref": 59,
       "view": "lateral",
       "crop": [
-        0.67,
-        0.35,
-        0.99,
+        0.65,
+        0,
+        1,
         1
       ],
       "filename": "tricholoma-columbetta-lateral-59.jpg",
@@ -6460,26 +6418,6 @@
       "reviewNotes": "Attribuzione verificata sul PDF completo, sequenza didattica pp. 37–39, fonte SHA256 66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749; pagine di revisione registrate in research/course-photo-extraction/photo-review/pages/index.json. Fotografia della specie nel segmento esplicito della lezione; ritagli della composizione originale, non determinazione basata sui soli pixel."
     },
     {
-      "scientificName": "Cyclocybe cylindracea",
-      "subjectTaxon": "Cyclocybe cylindracea",
-      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
-      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
-      "page": 39,
-      "xref": 103,
-      "view": "underside",
-      "crop": [
-        0,
-        0.38,
-        0.3,
-        0.87
-      ],
-      "filename": "cyclocybe-cylindracea-underside-103.jpg",
-      "alt": "Cyclocybe cylindracea — vista inferiore",
-      "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
-      "visualReview": "verified",
-      "reviewNotes": "Attribuzione verificata sul PDF completo, sequenza didattica pp. 37–39, fonte SHA256 66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749; pagine di revisione registrate in research/course-photo-extraction/photo-review/pages/index.json. Fotografia della specie nel segmento esplicito della lezione; ritagli della composizione originale, non determinazione basata sui soli pixel."
-    },
-    {
       "scientificName": "Agrocybe + Cyclocybe",
       "subjectTaxon": "Cyclocybe cylindracea",
       "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
@@ -6515,26 +6453,6 @@
       ],
       "filename": "agrocybe-cyclocybe-top-98.jpg",
       "alt": "Cyclocybe cylindracea — vista superiore",
-      "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
-      "visualReview": "verified",
-      "reviewNotes": "Attribuzione verificata sul PDF completo, sequenza didattica pp. 37–39, fonte SHA256 66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749; pagine di revisione registrate in research/course-photo-extraction/photo-review/pages/index.json. Fotografia della specie nel segmento esplicito della lezione; ritagli della composizione originale, non determinazione basata sui soli pixel."
-    },
-    {
-      "scientificName": "Agrocybe + Cyclocybe",
-      "subjectTaxon": "Cyclocybe cylindracea",
-      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
-      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
-      "page": 39,
-      "xref": 103,
-      "view": "underside",
-      "crop": [
-        0,
-        0.38,
-        0.3,
-        0.87
-      ],
-      "filename": "agrocybe-cyclocybe-underside-103.jpg",
-      "alt": "Cyclocybe cylindracea — vista inferiore",
       "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
       "visualReview": "verified",
       "reviewNotes": "Attribuzione verificata sul PDF completo, sequenza didattica pp. 37–39, fonte SHA256 66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749; pagine di revisione registrate in research/course-photo-extraction/photo-review/pages/index.json. Fotografia della specie nel segmento esplicito della lezione; ritagli della composizione originale, non determinazione basata sui soli pixel."
@@ -6743,8 +6661,8 @@
       "view": "lateral",
       "crop": [
         0,
-        0,
-        0.64,
+        0.35,
+        0.36,
         1
       ],
       "filename": "rubroboletus-pulchrotinctus-lateral-134.jpg",
@@ -6752,6 +6670,216 @@
       "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 34. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
       "visualReview": "verified",
       "reviewNotes": "Pagina completa p34 renderizzata e verificata: la didascalia assegna esplicitamente pulchrotinctus agli esemplari a sinistra e in alto. Ritaglio esclude l’esemplare Butyriboletus di confronto a destra; nessuna assegnazione di tutto il pannello alla specie."
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "subjectTaxon": "Cantharellus cibarius",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 456,
+      "view": "lateral",
+      "filename": "cantharellus-cibarius-complex-lateral-456.jpg",
+      "alt": "Cantharellus cibarius — cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "subjectTaxon": "Cantharellus cibarius",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 456,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.48,
+        0.72
+      ],
+      "filename": "cantharellus-cibarius-complex-top-456.jpg",
+      "alt": "Cantharellus cibarius — cappello dall’alto",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "subjectTaxon": "Cantharellus cibarius",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 456,
+      "view": "underside",
+      "crop": [
+        0.45,
+        0,
+        1,
+        1
+      ],
+      "filename": "cantharellus-cibarius-complex-underside-456.jpg",
+      "alt": "Cantharellus cibarius — imenoforo e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "subjectTaxon": "Pleurotus eryngii s.l.",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 459,
+      "view": "lateral",
+      "filename": "pleurotus-eryngii-s-l--lateral-459.jpg",
+      "alt": "Pleurotus eryngii s.l. — cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "subjectTaxon": "Hygrophorus russula",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 136,
+      "xref": 518,
+      "view": "lateral",
+      "filename": "hygrophorus-russula-lateral-518.jpg",
+      "alt": "Hygrophorus russula — cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 136. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "subjectTaxon": "Hygrophorus russula",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 136,
+      "xref": 518,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.63,
+        0.76
+      ],
+      "filename": "hygrophorus-russula-top-518.jpg",
+      "alt": "Hygrophorus russula — cappello dall’alto",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 136. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "subjectTaxon": "Hygrophorus russula",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 136,
+      "xref": 518,
+      "view": "underside",
+      "crop": [
+        0.3,
+        0.3,
+        1,
+        1
+      ],
+      "filename": "hygrophorus-russula-underside-518.jpg",
+      "alt": "Hygrophorus russula — imenoforo e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 136. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "subjectTaxon": "Amanita caesarea",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 460,
+      "view": "lateral",
+      "filename": "amanita-caesarea-lateral-460.jpg",
+      "alt": "Amanita caesarea — cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "subjectTaxon": "Amanita caesarea",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 460,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.8,
+        0.74
+      ],
+      "filename": "amanita-caesarea-top-460.jpg",
+      "alt": "Amanita caesarea — cappello dall’alto",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Cantharellus",
+      "subjectTaxon": "Cantharellus cibarius",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 456,
+      "view": "lateral",
+      "filename": "cantharellus-cibarius-genere-lateral-456.jpg",
+      "alt": "Cantharellus cibarius — cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Cantharellus",
+      "subjectTaxon": "Cantharellus cibarius",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 456,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.48,
+        0.72
+      ],
+      "filename": "cantharellus-cibarius-genere-top-456.jpg",
+      "alt": "Cantharellus cibarius — cappello dall’alto",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
+    },
+    {
+      "scientificName": "Cantharellus",
+      "subjectTaxon": "Cantharellus cibarius",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "page": 121,
+      "xref": 456,
+      "view": "underside",
+      "crop": [
+        0.45,
+        0,
+        1,
+        1
+      ],
+      "filename": "cantharellus-cibarius-genere-underside-456.jpg",
+      "alt": "Cantharellus cibarius — imenoforo e gambo",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Attribuzione verificata sulle pagine complete della lezione, didascalie e confronto morfologico; ritaglio della fotografia originale, senza generazione o modifica dei caratteri."
     }
   ]
 }
