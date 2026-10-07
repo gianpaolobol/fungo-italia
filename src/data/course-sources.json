@@ -418,21 +418,24 @@
       "sourceId": "COURSE-14oNLSt55Z6Sm--phSisdujvQzhGejbbY",
       "driveFileId": "14oNLSt55Z6Sm--phSisdujvQzhGejbbY",
       "title": "Sitta - Figura professionale del Micologo 8_9_25 - slide 1.ppt",
-      "authors": [],
-      "documentDate": null,
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2025-09-08",
       "pageCount": null,
       "url": "https://drive.google.com/file/d/14oNLSt55Z6Sm--phSisdujvQzhGejbbY/view",
       "mimeType": "application/vnd.ms-powerpoint",
       "bytes": 343040,
       "folderId": "1rFERsXAYeBUT2A09gw5_ixnaGfP2uCtH",
       "access": "read-through-owner-connector",
-      "analysisStatus": "content-unread",
-      "authorVerification": "unresolved",
+      "analysisStatus": "presentation-text-reviewed",
+      "authorVerification": "title-slide",
       "rights": {
         "redistribution": "not-established",
         "originalPublished": false
       },
-      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione."
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "File contenente la prima diapositiva: titolo, autore, corso e data verificati nei record testuali PowerPoint; non considerato equivalente alla lezione PDF completa."
     },
     {
       "sourceId": "COURSE-1NL1XWc1noflalHc3NGlpfMNM18_tvHb_",

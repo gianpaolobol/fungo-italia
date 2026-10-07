@@ -64,14 +64,14 @@
         ],
         "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
         "location": "p. 15",
-        "supportedClaim": "Ambienti ruderali, parchi e giardini.",
+        "supportedClaim": "Viraggi deboli e variabili: possibile lieve arrossamento nella carne del gambo e ingiallimento localizzato alla base; odore basale talora debolmente fenolico.",
         "fields": [
           "characters"
         ],
-        "sourcePage": 15,
         "characterIndices": [
           2
-        ]
+        ],
+        "sourcePage": 15
       },
       {
         "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
@@ -100,10 +100,10 @@
           "characters",
           "habitat"
         ],
-        "sourcePage": 2,
         "characterIndices": [
           2
-        ]
+        ],
+        "sourcePage": 2
       }
     ],
     "rank": "species",
@@ -311,7 +311,7 @@
         ],
         "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
         "location": "p. 10",
-        "supportedClaim": "Agaricus bisporus: confrontare soprattutto il doppio anello di A. bitorquis.",
+        "supportedClaim": "Margini stradali e terreni compatti; può emergere attraverso l’asfalto.",
         "fields": [
           "habitat"
         ],
@@ -647,7 +647,7 @@
         ],
         "url": "https://drive.google.com/file/d/1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2/view",
         "location": "p. 13",
-        "supportedClaim": "Amanita ovoidea: aspetto bianco e carne immutabile sono condivisi e non bastano per separarle.",
+        "supportedClaim": "Boschi termofili in ambienti collinari.",
         "fields": [
           "habitat"
         ],
@@ -719,7 +719,7 @@
         ],
         "url": "https://drive.google.com/file/d/1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2/view",
         "location": "p. 13",
-        "supportedClaim": "Amanita proxima: la somiglianza tra le amanite bianche richiede l’esame completo dei caratteri.",
+        "supportedClaim": "Boschi termofili in ambienti collinari.",
         "fields": [
           "habitat"
         ],
@@ -1292,14 +1292,11 @@
         ],
         "url": "https://drive.google.com/file/d/1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR/view",
         "location": "p. 33",
-        "supportedClaim": "Gambo slanciato, generalmente non nettamente bulboso; volva basale di consistenza variabile, anche sottile o friabile.",
+        "supportedClaim": "La volva può essere sottile o friabile: l’assenza di un sacco robusto non esclude la sezione.",
         "fields": [
           "diagnosticNote"
         ],
-        "sourcePage": 33,
-        "characterIndices": [
-          2
-        ]
+        "sourcePage": 33
       },
       {
         "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
@@ -1328,6 +1325,9 @@
         "supportedClaim": "Gambo slanciato, generalmente non nettamente bulboso; volva basale di consistenza variabile, anche sottile o friabile.",
         "fields": [
           "characters"
+        ],
+        "characterIndices": [
+          2
         ],
         "sourcePage": 33
       }
@@ -1384,7 +1384,7 @@
         ],
         "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
         "location": "Diapositiva «Calocybe gambosa»",
-        "supportedClaim": "Entoloma clypeatum e Inocybe primaverili: confrontare sviluppo e colore delle lamelle, insieme agli altri caratteri.",
+        "supportedClaim": "Prati e ambienti erbosi, anche in prossimità di Rosaceae.",
         "fields": [
           "habitat"
         ]
@@ -1762,7 +1762,7 @@
         ],
         "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
         "location": "Diapositiva «Marasmius oreades»",
-        "supportedClaim": "Marasmius collinus: confrontare soprattutto consistenza e resistenza del gambo.",
+        "supportedClaim": "Prati e superfici erbose, spesso in cerchi o file.",
         "fields": [
           "habitat"
         ]
@@ -3150,7 +3150,7 @@
         ],
         "url": "https://drive.google.com/file/d/1_dhoC5hs6I5tG_bAI145535dXMtXEa_V/view",
         "location": "p. 73",
-        "supportedClaim": "Clitocybe bianche muscariniche: la crescita in colonia non basta a escluderle.",
+        "supportedClaim": "Colonie lungo strade e mulattiere, anche su terreno ghiaioso.",
         "fields": [
           "habitat"
         ],
@@ -3321,7 +3321,7 @@
         ],
         "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
         "location": "Diapositiva «Kuehneromyces mutabilis»",
-        "supportedClaim": "Galerina marginata group: confrontare anello e rivestimento del gambo; una raccolta cespitosa non esclude esemplari diversi.",
+        "supportedClaim": "Su legno, anche in boschi montani di faggio e abete rosso.",
         "fields": [
           "habitat"
         ]
