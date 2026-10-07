@@ -2345,6 +2345,103 @@
       "taxonomicEvidence": "Borovicka2024 Fig2a-c Scoronaria PRM959506/952333/959482,d-fScrassaescludere; revisionemolecolare.",
       "verificationBasis": "source-caption-reviewed",
       "kind": "image"
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-UKR2023",
+      "subjectTaxon": "Pisolithus arhizus",
+      "sourceUrl": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "assetUrl": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "author": "Islomiddinov et al. (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "taxonomicEvidence": "https://ukrbotj.co.ua/pdf/80/4/ukrbotj-2023-80-4-337.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "subjectTaxon": "Pisolithus albus",
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "assetUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "author": "Abdel-Aziz & Bakhit (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "taxonomicEvidence": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-PISOLITHUS-SIF2021",
+      "subjectTaxon": "Pisolithus collections",
+      "sourceUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "assetUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "author": "Reenu Chouhan; Charu Panwar",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "taxonomicEvidence": "https://maxapress.com/data/article/sif/preview/pdf/sif-6-1-352.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-SCLERODERMA-2022",
+      "subjectTaxon": "Scleroderma verrucosum",
+      "sourceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "assetUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "author": "Namera Chinnappa Karun; Shivannegowda Mahadevakumar; Kandikere Ramaiah Sridhar",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "taxonomicEvidence": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-RADICANS-MARTIN2025",
+      "subjectTaxon": "Caloboletus radicans",
+      "sourceUrl": "https://comptes-rendus.academie-sciences.fr/biologies/item/10.5802/crbiol.179.pdf",
+      "assetUrl": "https://comptes-rendus.academie-sciences.fr/biologies/item/10.5802/crbiol.179.pdf",
+      "author": "Francis Martin (2025)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://comptes-rendus.academie-sciences.fr/biologies/item/10.5802/crbiol.179.pdf",
+      "taxonomicEvidence": "https://comptes-rendus.academie-sciences.fr/biologies/item/10.5802/crbiol.179.pdf",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-CHROOGOMPHUS-KIRAN2020",
+      "subjectTaxon": "Chroogomphus collections",
+      "sourceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "assetUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "author": "Kiran et al. (2020)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "taxonomicEvidence": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+      "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
+      "kind": "pdf",
+      "pages": [
+        5
+      ]
     }
   ]
 }

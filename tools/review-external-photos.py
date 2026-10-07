@@ -21,6 +21,11 @@ def save(source,raw,suffix,page=None,xref=None):
  im.save(path,quality=90,optimize=True)
  items.append({**source,"candidateId":source["sourceId"]+"-"+suffix,"candidatePath":str(path),"sourceSha256":source_hash,"extractedImageSha256":hashlib.sha256(raw).hexdigest(),"candidateSha256":hashlib.sha256(path.read_bytes()).hexdigest(),"width":im.width,"height":im.height,"page":page,"xref":xref,"reviewStatus":"pending-visual-review"})
 for source in sources:
+ if ("upload.wikimedia.org/" in source["assetUrl"] or "/Special:FilePath/" in source["assetUrl"]):
+  cached=[i for i in previous if i["sourceId"]==source["sourceId"] and i["licenseUrl"]==source["licenseUrl"]]
+  if cached and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):items.extend(cached)
+  else:failures.append({"sourceId":source["sourceId"],"errorType":"PublisherRateLimit","message":"Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."})
+  continue
  if source["sourceId"].startswith("EXT-COMP-") and ("upload.wikimedia.org/" in source["assetUrl"] or "/Special:FilePath/" in source["assetUrl"]):
   original_url=source["assetUrl"]
   filename=urllib.parse.unquote(urllib.parse.urlparse(original_url).path.rsplit("/",1)[-1]).replace(" ","_")
