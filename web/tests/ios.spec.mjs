@@ -154,7 +154,7 @@ test('keyboard detail navigation restores focus to the opener',async({page})=>{
  await ready(page);const opener=page.getByRole('button',{name:/^Apri /}).first();await opener.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Torna',exact:true})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(opener).toBeFocused();
 });
 test('study library shows bibliography without audit coverage statistics',async({page})=>{
- await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage a')).toHaveCount(3);await expect(page.locator('#scientific-coverage')).not.toContainText('revisione');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
+ await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage a')).toHaveCount(3);await expect(page.locator('#scientific-coverage')).not.toContainText('Scientific Baseline');await expect(page.locator('#scientific-coverage')).not.toContainText('Sintesi editoriale');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
 });
 
 test('common-name search reaches porcini and preserves the non-unique prugnolo mapping',async({page})=>{

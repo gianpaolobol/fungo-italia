@@ -228,7 +228,7 @@ async function restoreBackup(file){
  }catch(error){status(error.message||'Backup non leggibile. Nessun dato importato.');}
 }
 function scientificCoverage(){
- return '<details id="scientific-coverage"><summary>Biblioteca di studio</summary>'+(data.bibliography||[]).map(s=>'<div class="source"><p>'+escape(s.title)+'</p><p class="small">'+escape([...(s.authors||[]),s.publisher,s.publicationYear].filter(Boolean).join(' · '))+'</p>'+(s.url?'<p>'+safeLink(s.url,'Apri riferimento esterno')+'</p>':'')+'</div>').join('')+'</details>';
+ return '<details id="scientific-coverage"><summary>Biblioteca di studio</summary>'+studySources({sources:data.bibliography||[]}).map(s=>'<div class="source"><p>'+escape(s.title)+'</p><p class="small">'+escape([...(s.authors||[]),s.publisher,s.publicationYear].filter(Boolean).join(' · '))+'</p>'+(s.url?'<p>'+safeLink(s.url,'Apri riferimento esterno')+'</p>':'')+'</div>').join('')+'</details>';
 }
 
 function renderCommunity(){
