@@ -1,0 +1,1138 @@
+{
+  "specialists": [
+    {
+      "userId": 7536423,
+      "name": "Lucian Clanet",
+      "sourceObservation": 232719197
+    },
+    {
+      "userId": 447269,
+      "name": "Davide Puddu",
+      "sourceObservation": 19154361
+    },
+    {
+      "userId": 913789,
+      "name": "Eugene Popov",
+      "sourceObservation": 34492154
+    },
+    {
+      "userId": 927267,
+      "name": "Nina Filippova",
+      "sourceObservation": 45700061
+    }
+  ],
+  "searches": [
+    {
+      "taxon": "Agaricus bresadolanus",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Agaricus bitorquis",
+      "observationId": 342744967,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 624201479,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/624201479/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 624201500,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/624201500/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 624201514,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/624201514/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 624201528,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/624201528/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Polytech, Montpellier, Occitanie, FR"
+    },
+    {
+      "taxon": "Agaricus bisporus",
+      "observationId": 406107181,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 746061514,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/746061514/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 746061559,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/746061559/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 746061598,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/746061598/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Saint-Bonnet-le-Froid, Auvergne-Rhône-Alpes, FR"
+    },
+    {
+      "taxon": "Cyclocybe cylindracea",
+      "observationId": 345109575,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 628884342,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/628884342/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 628884408,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/628884408/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 628884464,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/628884464/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Parc national de Port-Cros, Hyères, Provence-Alpes-Côte d'Azur, FR"
+    },
+    {
+      "taxon": "Amanita ovoidea",
+      "observationId": 329076323,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 596438648,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/596438648/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 596438667,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/596438667/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 596438680,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/596438680/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "La Pointe Fauconnière, Saint-Cyr-sur-Mer, Provence-Alpes-Côte d'Azur, FR"
+    },
+    {
+      "taxon": "Amanita pantherina",
+      "observationId": 243935577,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 435049500,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435049500/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 435049540,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435049540/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 435049568,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435049568/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Rue du Pas Redon, Meymac, Nouvelle-Aquitaine, FR"
+    },
+    {
+      "taxon": "Amanita muscaria",
+      "observationId": 334382481,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 607221111,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/607221111/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Tascusì"
+    },
+    {
+      "taxon": "Amanita caesarea",
+      "observationId": 5668752,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 7018635,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/7018635/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Provincia di Cagliari, Italia"
+    },
+    {
+      "taxon": "Saproamanita vittadinii",
+      "observationId": 324211086,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 586766902,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/586766902/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 586766931,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/586766931/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Via Germania 370, 07026 Olbia SS, Italia"
+    },
+    {
+      "taxon": "Collybia phyllophila",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Infundibulicybe geotropa",
+      "observationId": 63969281,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 102756756,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/102756756/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "09031 Arbus SU, Italia"
+    },
+    {
+      "taxon": "Infundibulicybe gibba",
+      "observationId": 42149732,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 66909131,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66909131/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66909135,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66909135/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66909138,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66909138/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Clitopilus prunulus",
+      "observationId": 57862867,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 92330905,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92330905/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 92330890,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92330890/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 92330908,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92330908/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 92330917,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92330917/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Coprinopsis atramentaria",
+      "observationId": 41697490,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 66152132,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66152132/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66152145,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66152145/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66152697,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66152697/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Coprinus comatus",
+      "observationId": 60172827,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 96195237,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/96195237/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 96195251,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/96195251/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Псковская обл., Россия, 182914"
+    },
+    {
+      "taxon": "Phlegmacium variiforme",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Entoloma rhodopolium",
+      "observationId": 93020374,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 154105020,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/154105020/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 154105085,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/154105085/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Loknyanskiy rayon, Pskov, Russia"
+    },
+    {
+      "taxon": "Entoloma vernum",
+      "observationId": 26436965,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 41052107,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41052107/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 41052094,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41052094/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 41052127,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41052127/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Entoloma saundersii",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Galerina marginata",
+      "observationId": 15915275,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 23802577,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/23802577/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 23802578,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/23802578/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Tomskiy rayon, RU-TO, RU"
+    },
+    {
+      "taxon": "Hygrocybe conica",
+      "observationId": 95024080,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 157702405,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157702405/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 157702411,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157702411/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 157702422,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157702422/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 157702430,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157702430/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Shkotovskiy rayon, Primor'ye, Russia"
+    },
+    {
+      "taxon": "Hygrocybe punicea",
+      "observationId": 406014874,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 745878058,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/745878058/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 745878091,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/745878091/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 745878165,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/745878165/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Saint-André-en-Vivarais, Auvergne-Rhône-Alpes, FR"
+    },
+    {
+      "taxon": "Hypholoma fasciculare",
+      "observationId": 13580849,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 19973009,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/19973009/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 19973017,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/19973017/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 19973036,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/19973036/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 19973078,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/19973078/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Lentinula edodes",
+      "observationId": 92358289,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 152912573,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/152912573/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 152912610,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/152912610/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 152912643,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/152912643/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 152912684,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/152912684/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ussuriyskiy rayon, Primor'ye, Russia"
+    },
+    {
+      "taxon": "Lepiota cristata",
+      "observationId": 19161953,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 29424136,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29424136/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 29424141,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29424141/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "sentiero per Punta Sèbera, 09010 Pula CA, Italia"
+    },
+    {
+      "taxon": "Leucoagaricus leucothites",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Panaeolus cyanescens",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Kuehneromyces mutabilis",
+      "observationId": 86452505,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 142398980,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/142398980/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 142398998,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/142398998/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Khanty-Mansiyskiy rayon, Khanty-Mansiy, Russia"
+    },
+    {
+      "taxon": "Stropharia rugosoannulata",
+      "observationId": 277465141,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 498212175,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/498212175/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 498212207,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/498212207/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 498212250,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/498212250/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 498214096,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/498214096/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Route de la Lauze, Ponteils-et-Brésis, Occitanie, FR"
+    },
+    {
+      "taxon": "Tricholoma filamentosum",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Tricholoma equestre",
+      "observationId": 91509593,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 151381336,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/151381336/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 151381344,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/151381344/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 151381350,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/151381350/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийск, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Tricholoma terreum",
+      "observationId": 52001804,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 82642199,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/82642199/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 82642200,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/82642200/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийск, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Tricholoma sejunctum",
+      "observationId": 329855255,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 598007089,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/598007089/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Parc national de Port-Cros, Hyères, Provence-Alpes-Côte d'Azur, FR"
+    },
+    {
+      "taxon": "Tricholoma imbricatum",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Volvopluteus gloiocephalus",
+      "observationId": 33745350,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 53033033,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53033033/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 53033039,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53033039/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 53033049,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53033049/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Псковская обл., Россия, 182930"
+    },
+    {
+      "taxon": "Volvariella volvacea",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Lactifluus volemus",
+      "observationId": 58219367,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 92928052,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92928052/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 92928058,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92928058/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "г. Уссурийск, Приморский край, Россия"
+    },
+    {
+      "taxon": "Lactarius tesquorum",
+      "observationId": 9367882,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 12719631,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/12719631/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Provincia di Oristano, Italia"
+    },
+    {
+      "taxon": "Russula delica",
+      "observationId": 56437718,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 89936743,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/89936743/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 89936749,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/89936749/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийск, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Rubroboletus satanas",
+      "observationId": 194975564,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 342882623,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342882623/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 342882671,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342882671/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Forêt Domaniale de la Braconne-Bois Blanc, Mornac, Nouvelle-Aquitaine, FR"
+    },
+    {
+      "taxon": "Rubroboletus pulchrotinctus",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Caloboletus calopus",
+      "observationId": 10421125,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 14475656,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14475656/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 14475667,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14475667/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 14475661,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14475661/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "08039 Tonara NU, Italia"
+    },
+    {
+      "taxon": "Hygrophoropsis aurantiaca",
+      "observationId": 92362901,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 152921788,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/152921788/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 152921901,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/152921901/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Loknyanskiy rayon, Pskov, Russia"
+    },
+    {
+      "taxon": "Craterellus tubaeformis",
+      "observationId": 247459433,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 441974490,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/441974490/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 441974589,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/441974589/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 441974672,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/441974672/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 441974739,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/441974739/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Forêt Sectionale de Cornillou, Valiergues, Nouvelle-Aquitaine, FR"
+    },
+    {
+      "taxon": "Craterellus cornucopioides",
+      "observationId": 89664683,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 148090200,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/148090200/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 148089982,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/148089982/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 148090181,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/148090181/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Чемальский р-н, Респ. Алтай, Россия"
+    },
+    {
+      "taxon": "Gomphus clavatus",
+      "observationId": 57458865,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 91650688,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/91650688/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 91650702,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/91650702/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 91650705,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/91650705/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Gomphidius glutinosus",
+      "observationId": 34117478,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 53654079,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53654079/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Псковская обл., Россия, 182930"
+    },
+    {
+      "taxon": "Hericium erinaceus",
+      "observationId": 95048953,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 157746043,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157746043/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 157746051,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157746051/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 157746072,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157746072/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 157746088,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/157746088/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Shkotovskiy rayon, Primor'ye, Russia"
+    },
+    {
+      "taxon": "Hapalopilus rutilans",
+      "observationId": 46398375,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 73588800,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73588800/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 73588797,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73588797/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 73588825,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/73588825/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийск, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Laetiporus sulphureus",
+      "observationId": 77479031,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 126711604,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/126711604/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 126711626,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/126711626/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 126711649,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/126711649/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Khanty-Mansiyskiy rayon, Khanty-Mansiy, Russia"
+    },
+    {
+      "taxon": "Scutiger pes-caprae",
+      "observationId": 5650495,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 6993854,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6993854/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "8350 Podstenice, Slovenia"
+    },
+    {
+      "taxon": "Polyporus umbellatus",
+      "observationId": 41896329,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 66485178,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66485178/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66485182,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66485182/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66485189,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66485189/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 66485199,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/66485199/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Meripilus giganteus",
+      "observationId": 5650472,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 6993815,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/6993815/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "08020 Gavoi NU, Italia"
+    },
+    {
+      "taxon": "Ramaria formosa",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Ramaria pallida",
+      "usableObservations": 0
+    },
+    {
+      "taxon": "Ramaria botrytis",
+      "observationId": 143042174,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 245302345,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/245302345/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Provincia di Sassari, Italia"
+    },
+    {
+      "taxon": "Auricularia auricula-judae",
+      "observationId": 332288153,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 603004531,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603004531/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 603004550,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603004550/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 603004566,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603004566/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 603004586,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/603004586/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Route de la Lauze, Ponteils-et-Brésis, Occitanie, FR"
+    },
+    {
+      "taxon": "Gyromitra esculenta",
+      "observationId": 26486302,
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 41132970,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41132970/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 41132975,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41132975/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 41132978,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41132978/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 41132987,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/41132987/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ханты-Мансийский р-н, Ханты-Мансийский автономный округ, Россия"
+    },
+    {
+      "taxon": "Sarcosphaera coronaria",
+      "observationId": 10726841,
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 14987338,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/14987338/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "08034 Cubeddu, Laconi OR, Italia"
+    },
+    {
+      "taxon": "Psilocybe semilanceata",
+      "observationId": 405526683,
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 744889529,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/744889529/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 744889586,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/744889586/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 744889634,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/744889634/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Ardèche, Rhône-Alpes, FR"
+    },
+    {
+      "taxon": "Scleroderma citrinum",
+      "observationId": 33967379,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 53404962,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53404962/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 53404973,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53404973/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 53404980,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/53404980/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Псковская обл., Россия, 181370"
+    },
+    {
+      "taxon": "Morchella esculenta",
+      "observationId": 114602458,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 193513524,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/193513524/original.jpeg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 193513554,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/193513554/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Башово, Псковская обл., Россия, 182930"
+    },
+    {
+      "taxon": "Helvella lacunosa",
+      "observationId": 131348945,
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 223506813,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/223506813/original.jpg",
+          "licenseCode": "cc-by"
+        },
+        {
+          "photoId": 223506545,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/223506545/original.jpg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Gatchinskiy rayon, Leningrad, Russia"
+    }
+  ],
+  "failures": []
+}

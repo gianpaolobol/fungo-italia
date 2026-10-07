@@ -19,6 +19,52 @@
       ]
     },
     {
+      "observationId": 19154361,
+      "taxon": "Entoloma clypeatum",
+      "qualityGrade": "research",
+      "author": "Davide Puddu",
+      "photos": [
+        {
+          "photoId": 29410010,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29410010/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Davide Puddu, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 45700061,
+      "taxon": "Verpa bohemica",
+      "qualityGrade": "research",
+      "author": "Nina Filippova",
+      "photos": [
+        {
+          "photoId": 72474474,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474474/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 72474512,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474512/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 72474556,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474556/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 72474583,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474583/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
       "observationId": 232719197,
       "taxon": "Gyroporus cyanescens",
       "qualityGrade": "research",
