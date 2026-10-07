@@ -154,7 +154,11 @@ test('keyboard detail navigation restores focus to the opener',async({page})=>{
  await ready(page);const opener=page.getByRole('button',{name:/^Apri /}).first();await opener.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Torna',exact:true})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(opener).toBeFocused();
 });
 test('study library shows bibliography without audit coverage statistics',async({page})=>{
- await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage a')).toHaveCount(2);await expect(page.locator('#scientific-coverage')).not.toContainText('Scientific Baseline');await expect(page.locator('#scientific-coverage')).not.toContainText('Sintesi editoriale');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
+ await ready(page);await page.locator('#scientific-coverage summary').click();const exported=JSON.parse(await readFile('../dist-ios/data.json','utf8'));
+ const expectedUrls=[...new Set(exported.bibliography.filter(s=>s.url&&!/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId||'')&&!/^Scientific Baseline\b/.test(s.title)).map(s=>s.url))];
+ await expect(page.locator('#scientific-coverage a')).toHaveCount(expectedUrls.length);
+ const actualUrls=await page.locator('#scientific-coverage a').evaluateAll(links=>links.map(a=>a.getAttribute('href')));
+ expect([...actualUrls].sort()).toEqual([...expectedUrls].sort());await expect(page.locator('#scientific-coverage')).not.toContainText('Scientific Baseline');await expect(page.locator('#scientific-coverage')).not.toContainText('Sintesi editoriale');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
 });
 
 test('common-name search reaches porcini and preserves the non-unique prugnolo mapping',async({page})=>{
@@ -293,4 +297,23 @@ test('notes and contributions show concise useful instructions without yellow au
  for(const text of ['baseline','audit interno','revisione indipendente pendente','non autorizzano il consumo','non è cifrato'])await expect(page.locator('#main')).not.toContainText(text);
  }
  await expect(page.getByRole('link',{name:/Proponi una correzione scientifica su GitHub/})).toBeVisible();
+});
+
+test('course corrections and pointwise source pages appear without duplicate document entries',async({page})=>{
+ await ready(page);
+ const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
+ await search.fill('Agaricus bresadolanus');
+ await page.getByRole('button',{name:'Apri Agaricus bresadolanus',exact:true}).click();
+ const detail=page.locator('#detail-body');
+ await expect(detail).toContainText('Viraggi deboli e variabili');
+ await expect(detail).toContainText('ingiallimento localizzato alla base');
+ await expect(detail).toContainText('Ambienti ruderali, parchi e giardini');
+ await expect(detail.locator('a[href="https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view"]')).toHaveCount(1);
+ await expect(detail).toContainText('p. 15');
+ await expect(detail).toContainText('p. stampata 114');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
+ await search.fill('Foetentinae');
+ await page.getByRole('button',{name:'Apri Russula Foetentinae',exact:true}).click();
+ await expect(detail).toContainText('mandorle amare o marzapane');
+ await expect(detail).not.toContainText('Scientific Baseline');
 });
