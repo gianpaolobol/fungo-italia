@@ -9,8 +9,11 @@ out=ROOT/"photo-review/pages";out.mkdir(parents=True,exist_ok=True)
 report={"version":1,"sources":[]}
 for file_id,pages in [
  ("1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",[30,31,32,37,38,39,56,57,66,67]),
- ("1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",[34,42]),
- ("1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",[31])
+ ("1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",[34,42,121,136]),
+ ("1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",[31]),
+ ("1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",[71,74]),
+ ("1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",[30]),
+ ("1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",[53,54,62])
 ]:
  source=sources[file_id]
  with tempfile.TemporaryDirectory() as tmp:
