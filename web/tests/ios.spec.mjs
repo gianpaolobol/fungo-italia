@@ -9,8 +9,8 @@ test('iPhone 320: fresh navigation with unreachable origin preserves search, fav
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
  await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
  await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();
- await page.getByRole('button',{name:'Salva preferito',exact:true}).click();
- await expect(page.getByRole('button',{name:'Rimuovi preferito',exact:true})).toBeVisible();
+ await page.locator('#detail').getByRole('button',{name:'Salva preferito',exact:true}).click();
+ await expect(page.locator('#detail').getByRole('button',{name:'Rimuovi preferito',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
  await page.getByRole('button',{name:'← Precedente',exact:true}).click();
  await page.getByRole('button',{name:'Torna',exact:true}).click();
@@ -60,7 +60,7 @@ test('malformed storage is preserved; scrolling catalog and group sources remain
  await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
  await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Lettura continua',exact:true})).toBeVisible();
  await page.getByRole('heading',{name:'Schede collegate'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Schede collegate'}).first()).toBeInViewport();
- await page.getByRole('button',{name:'Salva preferito',exact:true}).first().click();
+ await page.locator('#cards').getByRole('button',{name:'Salva preferito',exact:true}).first().click();
  expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe('{broken-study');
  await page.getByRole('button',{name:'Note',exact:true}).click();await expect(page.getByText('Bozze non leggibili.',{exact:false})).toBeVisible();
  expect(await page.evaluate(key=>localStorage.getItem(key),notesKey)).toBe('{broken-notes');
@@ -116,9 +116,9 @@ test('restricted search expands the catalog without losing its query',async({pag
 test('removing the current favorite keeps remaining details reachable',async({page})=>{
  const items=JSON.parse(await readFile(new URL('../../src/data/catalog.json',import.meta.url),'utf8')).slice(0,3);
  await page.addInitScript(({studyKey,ids})=>localStorage.setItem(studyKey,JSON.stringify({version:1,favoriteIds:ids,resumeId:null})),{studyKey,ids:items.map(t=>t.id)});
- await ready(page);await page.getByRole('button',{name:'Preferiti',exact:true}).click();await page.getByRole('button',{name:'Apri '+items[1].scientificName,exact:true}).click();await expect(page.locator('#position')).toHaveText('2 / 3');await page.getByRole('button',{name:'Rimuovi preferito',exact:true}).click();
+ await ready(page);await page.getByRole('button',{name:'Preferiti',exact:true}).click();await page.getByRole('button',{name:'Apri '+items[1].scientificName,exact:true}).click();await expect(page.locator('#position')).toHaveText('2 / 3');await page.locator('#detail').getByRole('button',{name:'Rimuovi preferito',exact:true}).click();
  await expect(page.locator('#detail-body')).toContainText(items[2].scientificName);await expect(page.locator('#position')).toHaveText('2 / 2');await page.getByRole('button',{name:'← Precedente',exact:true}).click();await expect(page.locator('#detail-body')).toContainText(items[0].scientificName);await page.getByRole('button',{name:'Successiva →',exact:true}).click();
- await page.getByRole('button',{name:'Rimuovi preferito',exact:true}).click();await expect(page.locator('#detail-body')).toContainText(items[0].scientificName);await expect(page.locator('#position')).toHaveText('1 / 1');await page.getByRole('button',{name:'Rimuovi preferito',exact:true}).click();await expect(page.locator('#detail')).not.toBeVisible();await expect(page.locator('#catalog-count')).toContainText('0 schede');
+ await page.locator('#detail').getByRole('button',{name:'Rimuovi preferito',exact:true}).click();await expect(page.locator('#detail-body')).toContainText(items[0].scientificName);await expect(page.locator('#position')).toHaveText('1 / 1');await page.locator('#detail').getByRole('button',{name:'Rimuovi preferito',exact:true}).click();await expect(page.locator('#detail')).not.toBeVisible();await expect(page.locator('#catalog-count')).toContainText('0 schede');
 });
 function backupUpload(payload){return {name:'backup.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(payload))};}
 function importDraft(id='import-test',taxon='Bozza importata'){return {id,updatedAt:'2026-10-06T10:00:00.000Z',date:'2026-10-06',taxon,habitat:'',characters:'Lamelle osservate',evidence:'',sources:'',notes:'',latitude:'',longitude:''};}
@@ -181,7 +181,7 @@ test('scientific contribution opens the real public repository form without send
  await expect(link).toHaveAttribute('href','https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml');
  await expect(link).toHaveAttribute('rel','noopener noreferrer');
  await expect(page.locator('#main')).toContainText('La proposta sarà pubblica');
- await expect(page.locator('#main')).toContainText('non aggiorna automaticamente il catalogo');
+ await expect(page.locator('#main')).toContainText('Sarà verificata prima di aggiornare l’atlante');
  await expect(page.locator('#main details')).not.toHaveAttribute('open');
 });
 
@@ -272,4 +272,25 @@ test('public atlas excludes founding documents while field safety checks stay av
  await page.getByRole('button',{name:'Apri Kuehneromyces mutabilis',exact:true}).click();
  await expect(page.locator('#detail-body')).toContainText('Escludere Galerina marginata group');
  await expect(page.locator('#detail-body .notice')).toHaveCount(0);
+});
+
+test('mushroom favorites beside names switch white to green, synchronize and survive reload',async({page})=>{
+ await ready(page);const card=page.locator('#cards article').first(),toggle=card.locator('.mushroom-toggle');
+ await expect(toggle).toHaveAttribute('aria-pressed','false');await expect(toggle).toHaveText('');
+ await expect(toggle.locator('svg')).toHaveCSS('fill','rgb(255, 255, 255)');
+ await toggle.focus();await page.keyboard.press('Space');await expect(toggle).toHaveAttribute('aria-pressed','true');await expect(toggle).toBeFocused();
+ await expect(toggle.locator('svg')).toHaveCSS('fill','rgb(35, 132, 67)');
+ await expect(page.locator('#detail')).not.toBeVisible();await expect(page.locator('#catalog-count')).toContainText('1 preferito');
+ await card.locator('.heading').click();const detail=page.locator('#detail-body .taxon-title .mushroom-toggle');
+ await expect(detail).toHaveAttribute('aria-pressed','true');await detail.click();await expect(detail).toHaveAttribute('aria-pressed','false');
+ await detail.click();await page.getByRole('button',{name:'Torna',exact:true}).click();await page.reload();
+ await expect(page.locator('#cards article').first().locator('.mushroom-toggle')).toHaveAttribute('aria-pressed','true');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+test('notes and contributions show concise useful instructions without yellow audit boxes',async({page})=>{
+ await ready(page);for(const tab of ['Note','Contributi']){
+ await page.getByRole('button',{name:tab,exact:true}).click();await expect(page.locator('#main .notice')).toHaveCount(0);
+ for(const text of ['baseline','audit interno','revisione indipendente pendente','non autorizzano il consumo','non è cifrato'])await expect(page.locator('#main')).not.toContainText(text);
+ }
+ await expect(page.getByRole('link',{name:/Proponi una correzione scientifica su GitHub/})).toBeVisible();
 });

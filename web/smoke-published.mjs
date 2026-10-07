@@ -15,6 +15,7 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
  await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
  await expect(page.getByRole('heading',{name:'Carattere differenziante (+1)',exact:true})).toBeVisible();
+ const favorite=page.locator('#detail-body .taxon-title .mushroom-toggle');await expect(favorite).toHaveAttribute('aria-pressed','false');await favorite.click();await expect(favorite).toHaveAttribute('aria-pressed','true');await favorite.click();await expect(favorite).toHaveAttribute('aria-pressed','false');
  await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  if(name==='chromium'){

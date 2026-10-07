@@ -24,7 +24,10 @@ function persistStudy(){if(!studyWritable)return;try{localStorage.setItem(studyK
 function persistDrafts(){if(!notesWritable)return false;try{localStorage.setItem(notesKey,JSON.stringify({version:1,drafts}));notesSaveError='';const saved=$('#saved');if(saved)saved.textContent='Salvato su questo dispositivo.';const warning=$('#save-warning');if(warning)warning.hidden=true;return true;}catch{notesSaveError='Salvataggio non riuscito. Le modifiche restano in memoria: esporta la bozza o il backup prima di chiudere.';const saved=$('#saved');if(saved)saved.textContent=notesSaveError;const warning=$('#save-warning');if(warning){warning.textContent=notesSaveError;warning.hidden=false;}status('Salvataggio della bozza non riuscito.');return false;}}
 function matchesQuery(t){return norm([t.scientificName,...t.commonNames,...(t.aliases||[]),...(t.currentAcceptedNames||[]),...(t.currentGenera||[])].join(' ')).includes(norm(query));}
 function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&matchesQuery(t));}
-function favoriteButton(t){return button(favoriteIds.includes(t.id)?'Rimuovi preferito':'Salva preferito','favorite',t.id);}
+function favoriteButton(t){
+ const selected=favoriteIds.includes(t.id);
+ return '<button class="mushroom-toggle" data-action="favorite" data-id="'+escape(t.id)+'" aria-pressed="'+selected+'" aria-label="'+(selected?'Rimuovi preferito':'Salva preferito')+'" title="'+(selected?'Rimuovi dai preferiti':'Aggiungi ai preferiti')+'"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12C3 6.5 7 3 12 3s9 3.5 9 9c0 1-1 2-2 2H5c-1 0-2-1-2-2Z"/><path d="M9 14h6l1 6c0 1-1 1-4 1s-4 0-4-1l1-6Z"/></svg></button>';
+}
 function safeLink(url,label){return typeof url==='string'&&/^https:\/\//i.test(url)?'<a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(label||url)+'</a>':escape(label||url);}
 function studyText(value){
  return value.replace(/ richiesto da S1/g,'').replace(/Nel defined set S1,/g,'In questo gruppo,').replace(/ectomicorrizico S1:/g,'ectomicorrizico:').replace(/Morfogruppo S1 dei/g,'Gruppo dei').replace(/; gruppo didattico S1\./g,'.').replace(/; profilo volutamente al rango Hydnum spp\.\/gruppo S1\./g,'.').replace(/S1 include A\. vidua; /g,'Il gruppo include A. vidua; ').replace(/Denominazione S1 mantenuta; /g,'');
@@ -39,7 +42,7 @@ function studySources(t){
 function content(t,showIdentity=true){
  const sources=studySources(t),summary=studySummary(t);
  const diagnostic=['field_high_confidence_when_typical','field_high_confidence_when_host_known','field_high_confidence_when_young','microscopy_required_for_fine_id','dna_confirmatory'].includes(t.diagnosticStatus)?diagnosticLimits[t.diagnosticStatus]:'';
- return (showIdentity?'<h2>'+escape(t.scientificName)+'</h2><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
+ return (showIdentity?'<div class="taxon-title"><h2>'+escape(t.scientificName)+'</h2>'+favoriteButton(t)+'</div><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
  (t.safetyCheck?'<h3>Controlli sul campo</h3><p>'+escape(t.safetyCheck)+'</p>':'')+(diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
@@ -103,7 +106,8 @@ function renderStudio(){
  $('#more').onclick=()=>{limit+=24;renderCards(false);};
  $('#main').classList.toggle('feed',feed);renderCards();
 }
-function cardHTML(t){return '<article class="card"><button class="heading" data-action="open" data-id="'+escape(t.id)+'" aria-label="Apri '+escape(t.scientificName)+'"><strong>'+escape(t.scientificName)+'</strong><span>'+escape([ranks[t.rank]||t.rank,...t.commonNames].filter(Boolean).join(' · '))+'</span></button>'+(feed?favoriteButton(t)+content(t,false):'')+'</article>';}
+function cardHTML(t){return '<article class="card"><div class="taxon-title"><button class="heading" data-action="open" data-id="'+escape(t.id)+'" aria-label="Apri '+escape(t.scientificName)+'"><strong>'+escape(t.scientificName)+'</strong><span>'+escape([ranks[t.rank]||t.rank,...t.commonNames].filter(Boolean).join(' · '))+'</span></button>'+favoriteButton(t)+'</div>'+(feed?content(t,false):'')+'</article>';}
+
 function updateCatalogCount(rows=filtered()){if($('#catalog-count'))$('#catalog-count').textContent=rows.length+' '+(rows.length===1?'scheda':'schede')+' · '+favoriteIds.length+' '+(favoriteIds.length===1?'preferito':'preferiti');}
 function updateResume(){const element=$('#resume');if(element&&resumeId)element.innerHTML=button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full');}
 function renderCards(reset=true){
@@ -123,16 +127,18 @@ function openTaxon(id){
  const rows=filtered(),index=rows.findIndex(t=>t.id===id);
  $('#position').textContent=index<0?'Fuori filtri':(index+1)+' / '+rows.length;
  $('#previous').disabled=index<=0;$('#next').disabled=index<0||index===rows.length-1;
- showDialog('Scheda di studio',notice+'<div class="row">'+favoriteButton(t)+'</div>'+content(t),true);
+ showDialog('Scheda di studio',content(t),true);
 }
 function toggleFavorite(id){
  if(!studyWritable){status('Salvataggio sospeso: i dati esistenti non sono leggibili.');return;}
  const removing=favoriteIds.includes(id),moveDetail=removing&&onlyFavorites&&$('#detail').open&&currentTaxon===id;
  const oldIndex=moveDetail?filtered().findIndex(t=>t.id===id):-1;
  favoriteIds=removing?favoriteIds.filter(value=>value!==id):[...favoriteIds,id];persistStudy();
- if(tab==='studio'){if(onlyFavorites)renderCards();else{updateCatalogCount();document.querySelectorAll('#cards button[data-action="favorite"]').forEach(b=>{if(b.dataset.id===id)b.textContent=favoriteIds.includes(id)?'Rimuovi preferito':'Salva preferito';});}}
+ if(tab==='studio'){if(onlyFavorites)renderCards();else updateCatalogCount();}
+ document.querySelectorAll('button.mushroom-toggle').forEach(b=>{if(b.dataset.id===id){const selected=favoriteIds.includes(id);b.setAttribute('aria-pressed',String(selected));b.setAttribute('aria-label',selected?'Rimuovi preferito':'Salva preferito');b.title=selected?'Rimuovi dai preferiti':'Aggiungi ai preferiti';}});
+
  if(moveDetail){const rows=filtered(),next=rows[Math.min(Math.max(oldIndex,0),rows.length-1)];if(next){openTaxon(next.id);status('Preferito rimosso. Aperta la scheda disponibile successiva.');}else{currentTaxon=null;$('#detail').close();status('Nessuna scheda corrisponde ai filtri: modifica la ricerca o disattiva Preferiti.');}return;}
- if($('#detail').open&&currentTaxon===id){const savedScroll=$('#detail-body').scrollTop;openTaxon(id);$('#detail-body').scrollTop=savedScroll;}
+
 }
 function visibleAreas(){return data.areas.filter(a=>(areaRegion==='Tutte'||a.region===areaRegion)&&norm([a.name,a.region,...a.habitat].join(' ')).includes(norm(areaQuery)));}
 function renderAreas(){
@@ -176,11 +182,11 @@ const labels={date:'Data (AAAA-MM-GG)',taxon:'Ipotesi tassonomica',habitat:'Habi
 function freshDraft(){return {id:typeof crypto.randomUUID==='function'?crypto.randomUUID():Date.now().toString(36)+'-'+Math.random().toString(36).slice(2),date:new Date().toISOString().slice(0,10),taxon:'',habitat:'',characters:'',evidence:'',sources:'',notes:'',latitude:'',longitude:'',updatedAt:new Date().toISOString()};}
 function renderNotes(){
  $('#main').classList.remove('feed');const draft=drafts.find(d=>d.id===selectedDraft);
- $('#main').innerHTML='<section><h1>Osservazioni offline</h1><p><a class="button photo-import-link" href="./importa-foto.html">Importa foto dal telefono a GitHub</a></p><p>Bozze personali su questo dispositivo, senza invio o pubblicazione. Il taxon è un’ipotesi: documenta caratteri mancanti e fonti prima della revisione.</p><p class="notice">Le bozze non autorizzano il consumo. Il salvataggio locale non è cifrato né un backup. Safari può rimuovere i dati: esporta le note e proteggi il dispositivo.</p>'+
+ $('#main').innerHTML='<section><h1>Osservazioni offline</h1><p><a class="button photo-import-link" href="./importa-foto.html">Importa foto dal telefono a GitHub</a></p><p class="small">Annota ritrovamenti e caratteri osservati. Le note restano su questo dispositivo: esportale per conservarle.</p>'+
  (!notesWritable?'<p class="error">Bozze non leggibili. I dati esistenti non saranno sovrascritti.</p>':button('Nuova bozza','new-draft','', 'full'))+
  '<p id="save-warning" class="error" role="alert"'+(notesSaveError?'':' hidden')+'>'+escape(notesSaveError)+'</p><div class="drafts">'+drafts.map(d=>button((d.id===selectedDraft?'✓ ':'')+(d.taxon||'Taxon non determinato')+' · '+d.date,'select-draft',d.id)).join('')+'</div>'+
- (draft?'<form id="draft-form">'+fields.map(field=>'<label for="draft-'+field+'">'+labels[field]+'</label>'+(['date','taxon','latitude','longitude'].includes(field)?'<input type="text" '+(['latitude','longitude'].includes(field)?'inputmode="decimal" ':'')+'id="draft-'+field+'" name="'+field+'" value="'+escape(draft[field])+'">':'<textarea id="draft-'+field+'" name="'+field+'">'+escape(draft[field])+'</textarea>')).join('')+'</form><p id="saved" class="saved" role="status"></p><label class="check"><input type="checkbox" id="include-coordinates">Includi le coordinate strutturate nell’esportazione. Sono escluse per impostazione predefinita; eventuali coordinate scritte nelle note non vengono rimosse.</label><div class="row">'+button('Scarica JSON','download-draft')+button('Condividi JSON','share-draft')+'</div><p id="draft-error" class="error" role="alert" hidden></p><div class="controls">'+button('Salva di nuovo','save-draft')+button('Elimina bozza','delete-draft','','danger')+'</div><p class="small">Le fotografie non sono allegate: indica riferimenti e caratteri visibili. Nessun accesso GPS richiesto.</p>':'<p>Nessuna bozza. Registra il prossimo ritrovamento.</p>')+
- '<h3>Backup personale</h3><p class="small">Il backup completo contiene anche eventuali coordinate private. Conservalo in un luogo protetto.</p>'+button('Scarica backup locale','backup','', 'full')+'<label for="restore-backup">Ripristina backup JSON</label><input id="restore-backup" type="file" accept="application/json,.json"><p class="small">Unisce preferiti e bozze senza cancellare i dati attuali. Le coordinate private vengono conservate.</p></section>';
+ (draft?'<form id="draft-form">'+fields.map(field=>'<label for="draft-'+field+'">'+labels[field]+'</label>'+(['date','taxon','latitude','longitude'].includes(field)?'<input type="text" '+(['latitude','longitude'].includes(field)?'inputmode="decimal" ':'')+'id="draft-'+field+'" name="'+field+'" value="'+escape(draft[field])+'">':'<textarea id="draft-'+field+'" name="'+field+'">'+escape(draft[field])+'</textarea>')).join('')+'</form><p id="saved" class="saved" role="status"></p><label class="check"><input type="checkbox" id="include-coordinates">Includi coordinate nell’esportazione. Controlla anche eventuali località scritte nelle note.</label><div class="row">'+button('Scarica JSON','download-draft')+button('Condividi JSON','share-draft')+'</div><p id="draft-error" class="error" role="alert" hidden></p><div class="controls">'+button('Salva di nuovo','save-draft')+button('Elimina bozza','delete-draft','','danger')+'</div><p class="small">Per le fotografie, indica un riferimento nel campo Evidenze.</p>':'<p>Nessuna bozza. Registra il prossimo ritrovamento.</p>')+
+ '<h3>Backup personale</h3><p class="small">Salva preferiti e note, incluse le coordinate private.</p>'+button('Scarica backup locale','backup','', 'full')+'<label for="restore-backup">Ripristina backup JSON</label><input id="restore-backup" type="file" accept="application/json,.json"><p class="small">Importa il backup senza cancellare i dati attuali.</p></section>';
  const form=$('#draft-form');if(form)form.addEventListener('input',event=>{const field=event.target.name;if(!fields.includes(field))return;const current=drafts.find(d=>d.id===selectedDraft);if(current){current[field]=event.target.value;current.updatedAt=new Date().toISOString();persistDrafts();}});
  const restoreInput=$('#restore-backup');if(restoreInput)restoreInput.onchange=event=>{const file=event.target.files?.[0];event.target.value='';void restoreBackup(file);};
 }
@@ -235,11 +241,11 @@ function scientificCoverage(){
 }
 
 function renderCommunity(){
- $('#main').classList.remove('feed');$('#main').innerHTML='<section><h1>Contributi scientifici</h1><p><a class="button photo-import-link" href="./importa-foto.html">Importa foto · proprietario e manutentori</a></p><p>Le bozze personali restano sul dispositivo. Puoi proporre una correzione documentata nel repository pubblico di Fungo Italia usando un account GitHub gratuito.</p><div class="link-list"><a href="https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml" target="_blank" rel="noopener noreferrer"><strong>Proponi una correzione scientifica su GitHub</strong>Indica il taxon, la modifica proposta e le fonti con pagina, DOI o URL.</a></div><p class="notice">La proposta sarà pubblica. Non inserire coordinate precise o dati personali; usa solo immagini pubblicabili, senza GPS nei metadati. Una proposta non è un’approvazione scientifica e non aggiorna automaticamente il catalogo.</p><details><summary>Servizio storico e account esistenti</summary><p>I contributi già pubblicati e i ruoli del servizio precedente restano disponibili. Questi flussi richiedono autenticazione e connessione.</p><div class="link-list">'+[
+ $('#main').classList.remove('feed');$('#main').innerHTML='<section><h1>Contributi scientifici</h1><p><a class="button photo-import-link" href="./importa-foto.html">Importa foto · proprietario e manutentori</a></p><p>Aiuta a migliorare l’atlante con una correzione documentata: indica il fungo, la modifica e una fonte verificabile.</p><div class="link-list"><a href="https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml" target="_blank" rel="noopener noreferrer"><strong>Proponi una correzione scientifica su GitHub</strong>Indica il taxon, la modifica proposta e le fonti con pagina, DOI o URL.</a></div><p class="small">La proposta sarà pubblica e richiede un account GitHub. Non includere dati personali o coordinate precise; condividi solo foto pubblicabili. Sarà verificata prima di aggiornare l’atlante.</p><details><summary>Servizio storico e account esistenti</summary><p class="small">Accedi con il tuo account per consultare o inviare contributi nel servizio precedente.</p><div class="link-list">'+[
  ['/catalog/proposals/new','Proposta nel servizio storico','Per gli account già presenti.'],
  ['/observations/new','Osservazione nel servizio storico','Fotografie e caratteri osservati con il proprio account.'],
  ['/admin/catalog','Revisione nel servizio storico','Disponibile ai ruoli autorizzati dal servizio.']
- ].map(([path,title,description])=>'<a href="https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site'+path+'" target="_blank" rel="noopener noreferrer"><strong>'+title+'</strong>'+description+'</a>').join('')+'</div></details><p class="small">La revisione indipendente del catalogo è pendente. Gli aggiornamenti dei servizi esterni non modificano automaticamente il pacchetto offline.</p></section>';
+ ].map(([path,title,description])=>'<a href="https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site'+path+'" target="_blank" rel="noopener noreferrer"><strong>'+title+'</strong>'+description+'</a>').join('')+'</div></details></section>';
 }
 function renderTab(){
  destroyMap();if(observer)observer.disconnect();currentTaxon=null;
