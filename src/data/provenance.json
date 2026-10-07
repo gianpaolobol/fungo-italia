@@ -1,11 +1,16 @@
 {
   "schemaVersion": 1,
   "legacySnapshotCommit": "e3b9ca01bd43ec87d3630ab954c45229b2ba15e1",
-  "sourceExportCommit": "7b8a1ea3d1b034b75d168ab3f6f38aca8e249c20",
+  "sourceExportCommit": "8c7ccb3fcd08e0783e272a102a34479e86aafeee",
   "canonicalUnits": 148,
   "areas": 71,
   "independentReviewComplete": false,
   "pendingScientificClaims": 616,
+  "supplementaryLiterature": {
+    "file": "supplementary-literature.json",
+    "sha256": "3de2d8c107f4811c73ca356747cc8cdb51fb31e7dc3da4de480f0f6970c552e6",
+    "reviewStatus": "source-consulted-independent-review-not-attested"
+  },
   "sourceFileChecksums": [
     {
       "name": "catalog-data.json",

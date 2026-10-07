@@ -65,11 +65,6 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Anello presente e volva assente: quadro da Agaricus, da separare dagli Arvenses per odore e sede dell'ingiallimento.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--01--agaricus-sez-xanthodermatei"
-    },
     "studyProfile": {
       "odor": "Fenolico, di inchiostro o disinfettante.",
       "edibility": {
@@ -80,6 +75,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--01--agaricus-sez-xanthodermatei"
     }
   },
   {
@@ -185,11 +185,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Crescita terricola in parchi, prati e margini alberati, spesso in gruppi.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--02--agaricus-bresadolanus"
-    },
     "studyProfile": {
       "odor": "Possibile lieve componente fenolica alla base del gambo; variabile.",
       "edibility": {
@@ -200,6 +195,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--02--agaricus-bresadolanus"
     }
   },
   {
@@ -268,11 +268,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Lamelle libere da pallide/rosa a bruno scuro con la maturazione.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses"
-    },
     "studyProfile": {
       "odor": "Di anice o mandorle amare.",
       "edibility": {
@@ -285,6 +280,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses"
     }
   },
   {
@@ -371,11 +371,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Anello supero generalmente consistente, con pagina inferiore fibrillosa o squamosa, talora a ruota dentata; struttura e odore vanno valutati insieme.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--04--agaricus-sez-sanguinolenti"
-    },
     "studyProfile": {
       "odor": "Poco caratterizzato.",
       "edibility": {
@@ -386,6 +381,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--04--agaricus-sez-sanguinolenti"
     }
   },
   {
@@ -476,11 +476,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne bianca con lieve rosatura, soprattutto presso le lamelle; specie tipica di prati e pascoli.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--05--agaricus-campestris"
-    },
     "studyProfile": {
       "odor": "Debole e gradevole.",
       "edibility": {
@@ -491,6 +486,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--05--agaricus-campestris"
     }
   },
   {
@@ -563,11 +563,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente su terreni compatti e disturbati, bordi stradali e aree calpestate.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--06--agaricus-bitorquis"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibile",
@@ -577,6 +572,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--06--agaricus-bitorquis"
     }
   },
   {
@@ -648,11 +648,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Saprotrofo di terreni molto ricchi e concimati, anche su cumuli di letame; tipico portamento robusto dello champignon.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--07--agaricus-bisporus"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibile",
@@ -662,6 +657,11 @@
         "label": "Bruno-porpora; carattere del genere Agaricus.",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--07--agaricus-bisporus"
     }
   },
   {
@@ -803,16 +803,25 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Gambo spesso con zebrature o marezzature olivastre; base sempre da estrarre integra.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--01--amanita-phalloides"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenosa, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-phalloides-lateral-58.jpg",
+        "view": "lateral",
+        "alt": "Amanita phalloides — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 15. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita phalloides"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--01--amanita-phalloides"
     }
   },
   {
@@ -842,6 +851,22 @@
     "deepMorphologyRequired": true,
     "sourceName": "Amanita verna (inclusa A. vidua)",
     "differentiatingCharacter": "Fenologia soprattutto primaverile e inizio estate, spesso con latifoglie.",
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-verna-amanita-vidua-lateral-74.jpg",
+        "view": "lateral",
+        "alt": "Amanita verna — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 19. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita verna"
+      },
+      {
+        "src": "images/reference/amanita-verna-amanita-vidua-underside-75.jpg",
+        "view": "underside",
+        "alt": "Amanita verna — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 19. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita verna"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
@@ -868,16 +893,32 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Prevalentemente estivo-autunnale in boschi umidi montani di conifere o misti.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--03--amanita-virosa"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenosa, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-virosa-lateral-79.jpg",
+        "view": "lateral",
+        "alt": "Amanita virosa — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita virosa"
+      },
+      {
+        "src": "images/reference/amanita-virosa-underside-80.jpg",
+        "view": "underside",
+        "alt": "Amanita virosa — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita virosa"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--03--amanita-virosa"
     }
   },
   {
@@ -946,16 +987,25 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Specie termofila mediterranea su suoli calcarei, spesso con querce e conifere.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--04--amanita-proxima"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Tossica, nefrotossica",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-proxima-lateral-123.jpg",
+        "view": "lateral",
+        "alt": "Amanita proxima — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 30. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita proxima"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--04--amanita-proxima"
     }
   },
   {
@@ -1024,16 +1074,25 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Specie termofila mediterranea, spesso su terreno calcareo.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--05--amanita-ovoidea"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Non ammettere al consumo",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-ovoidea-lateral-117.jpg",
+        "view": "lateral",
+        "alt": "Amanita ovoidea — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 29. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita ovoidea"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--05--amanita-ovoidea"
     }
   },
   {
@@ -1085,16 +1144,32 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Carne bianca immutabile, senza arrossamento; utile contro A. rubescens.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--06--amanita-pantherina"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenosa",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-pantherina-lateral-193.jpg",
+        "view": "lateral",
+        "alt": "Amanita pantherina — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 48. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita pantherina"
+      },
+      {
+        "src": "images/reference/amanita-pantherina-top-197.jpg",
+        "view": "top",
+        "alt": "Amanita pantherina — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 49. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita pantherina"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--06--amanita-pantherina"
     }
   },
   {
@@ -1171,16 +1246,25 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Gambo e lamelle restano bianchi; margine del cappello spesso striato negli adulti.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--07--amanita-muscaria"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenosa",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-muscaria-lateral-177.jpg",
+        "view": "lateral",
+        "alt": "Amanita muscaria — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 44. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita muscaria"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--07--amanita-muscaria"
     }
   },
   {
@@ -1270,11 +1354,6 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Nello stadio chiuso la sezione longitudinale mostra già strutture interne gialle.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--08--amanita-caesarea"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibile",
@@ -1282,6 +1361,11 @@
           "Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
         ]
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--08--amanita-caesarea"
     }
   },
   {
@@ -1336,16 +1420,25 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttifica soprattutto in primavera, ma anche in autunno, in boschi di latifoglie e conifere; possibile anche in pinete litoranee su suolo sabbioso.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--09--amanita-gemmata"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-gemmata-lateral-227.jpg",
+        "view": "lateral",
+        "alt": "Amanita gemmata — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 57. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita gemmata"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--09--amanita-gemmata"
     }
   },
   {
@@ -1368,16 +1461,25 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Anello membranoso giallastro o biancastro; lamelle bianche.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--10--amanita-citrina"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-citrina-lateral-166.jpg",
+        "view": "lateral",
+        "alt": "Amanita citrina — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 41. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita citrina"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--10--amanita-citrina"
     }
   },
   {
@@ -1400,16 +1502,25 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Odore spesso rafanoide; tipica di conifere su suoli acidi.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--11--amanita-porphyria"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
         "precautions": []
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-porphyria-underside-170.jpg",
+        "view": "underside",
+        "alt": "Amanita porphyria — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 42. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita porphyria"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--11--amanita-porphyria"
     }
   },
   {
@@ -1448,6 +1559,22 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne non arrossante: utile separazione dal gruppo A. rubescens.",
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-underside-258.jpg",
+        "view": "underside",
+        "alt": "Amanita excelsa (= A. spissa) — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 65. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita excelsa (= A. spissa)"
+      },
+      {
+        "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-lateral-262.jpg",
+        "view": "lateral",
+        "alt": "Amanita franchetii — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 66. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita franchetii"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
@@ -1492,11 +1619,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Specie termofila, spesso con latifoglie su terreni calcarei.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--13--amanita-strobiliformis"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Sconsigliata",
@@ -1504,6 +1626,20 @@
           "Rischio di confusione con Amanita pericolose."
         ]
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-strobiliformis-lateral-269.jpg",
+        "view": "lateral",
+        "alt": "Amanita strobiliformis — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 68. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita strobiliformis"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--13--amanita-strobiliformis"
     }
   },
   {
@@ -1564,6 +1700,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Amanita vittadinii",
     "differentiatingCharacter": "Ecologia prevalentemente praticola o in ambienti aperti, insolita per una Amanita.",
+    "referenceImages": [
+      {
+        "src": "images/reference/saproamanita-vittadinii-top-277.jpg",
+        "view": "top",
+        "alt": "Amanita vittadinii — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita vittadinii"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
@@ -1590,11 +1735,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Bulbo basale senza volva sacciforme; assenza dei cercini netti di A. pantherina.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--15--amanita-rubescens"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibilità condizionata",
@@ -1602,6 +1742,34 @@
           "Richiede cottura completa; non consumare cruda."
         ]
       }
+    },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-rubescens-lateral-249.jpg",
+        "view": "lateral",
+        "alt": "Amanita rubescens — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita rubescens"
+      },
+      {
+        "src": "images/reference/amanita-rubescens-underside-250.jpg",
+        "view": "underside",
+        "alt": "Amanita rubescens — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita rubescens"
+      },
+      {
+        "src": "images/reference/amanita-rubescens-top-254.jpg",
+        "view": "top",
+        "alt": "Amanita rubescens — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 64. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita rubescens"
+      }
+    ],
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--15--amanita-rubescens"
     }
   },
   {
@@ -1670,15 +1838,24 @@
     "rank": "section",
     "currentAcceptedNames": [],
     "diagnosticStatus": "field_high_confidence_at_source_rank",
+    "diagnosticNote": "La volva può essere sottile o friabile: l’assenza di un sacco robusto non esclude la sezione.",
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne fragile e lamelle bianche; riconoscimento corretto al rango di sezione.",
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-sez-vaginatae-lateral-143.jpg",
+        "view": "lateral",
+        "alt": "Amanita vaginata s.l. — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita vaginata s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-amanita--16--amanita-sez-vaginatae"
-    },
-    "diagnosticNote": "La volva può essere sottile o friabile: l’assenza di un sacco robusto non esclude la sezione."
+    }
   },
   {
     "id": "minimum-card-objective-calocybe--01--calocybe-gambosa",
@@ -2223,16 +2400,16 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Soprattutto sotto latifoglie, in particolare Quercus, in ambienti caldi.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 6,
-      "learningUnitId": "objective-cortinarius--01--cortinarius-orellanus"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenoso, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--01--cortinarius-orellanus"
     }
   },
   {
@@ -2291,16 +2468,16 @@
     "deepMorphologyRequired": true,
     "sourceName": "Cortinarius orellanoides (= C. rubellus, C. speciosissimus)",
     "differentiatingCharacter": "Tipico soprattutto di conifere e ambienti muscosi.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 6,
-      "learningUnitId": "objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenoso, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus"
     }
   },
   {
@@ -2473,16 +2650,16 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Odore forte di farina, talvolta sgradevole negli esemplari maturi.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 7,
-      "learningUnitId": "objective-entoloma--01--entoloma-sinuatum"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Tossico gastrointestinale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--01--entoloma-sinuatum"
     }
   },
   {
@@ -2693,16 +2870,16 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Galerina marginata",
     "differentiatingCharacter": "Cespitoso su ceppaie e tronchi morti, particolarmente frequente su conifere; profilo riferito al gruppo G. marginata.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 7,
-      "learningUnitId": "objective-galerina--01--galerina-marginata-group"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenoso, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 7,
+      "learningUnitId": "objective-galerina--01--galerina-marginata-group"
     }
   },
   {
@@ -3012,16 +3189,16 @@
     "deepMorphologyRequired": true,
     "sourceName": "Lepiota subincarnata (= L. josserandii)",
     "differentiatingCharacter": "Frequente in prati, radure, parchi e giardini.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenosa, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii"
     }
   },
   {
@@ -3062,16 +3239,16 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Frequente in prati, aiuole, margini e ambienti antropizzati.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Velenosa, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata"
     }
   },
   {
@@ -3094,16 +3271,16 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Gambo chiaro, talvolta con tonalità rosa-lilacine in basso; anello sottile e fugace.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata"
     }
   },
   {
@@ -3304,11 +3481,6 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Macrolepiota procera",
     "differentiatingCharacter": "Carne sostanzialmente bianca, senza rapido viraggio arancio-rosso del gruppo rhacodes.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibile",
@@ -3318,6 +3490,11 @@
           "Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
         ]
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
     }
   },
   {
@@ -3650,16 +3827,16 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Gambo spesso eccentrico e carne fibrosa-tenace.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11,
-      "learningUnitId": "objective-omphalotus--01--omphalotus-olearius"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Tossico gastrointestinale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11,
+      "learningUnitId": "objective-omphalotus--01--omphalotus-olearius"
     }
   },
   {
@@ -3899,6 +4076,29 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Associato soprattutto a Fagus e Abies su suoli calcarei.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-pardinum-lateral-162.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma pardinum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 38. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma pardinum"
+      },
+      {
+        "src": "images/reference/tricholoma-pardinum-top-165.jpg",
+        "view": "top",
+        "alt": "Tricholoma pardinum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 39. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma pardinum"
+      },
+      {
+        "src": "images/reference/tricholoma-pardinum-underside-161.jpg",
+        "view": "underside",
+        "alt": "Tricholoma pardinum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 38. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma pardinum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -3951,6 +4151,29 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Odore caratteristico di cimice, Lactarius quietus o olio di lino dopo sezionamento.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-josserandii-lateral-216.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma josserandii — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma josserandii"
+      },
+      {
+        "src": "images/reference/tricholoma-josserandii-top-216.jpg",
+        "view": "top",
+        "alt": "Tricholoma josserandii — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma josserandii"
+      },
+      {
+        "src": "images/reference/tricholoma-josserandii-underside-216.jpg",
+        "view": "underside",
+        "alt": "Tricholoma josserandii — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma josserandii"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4021,6 +4244,29 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Odore farinaceo più evidente dopo il taglio; prevalentemente con conifere.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-portentosum-lateral-211.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma portentosum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 52. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma portentosum"
+      },
+      {
+        "src": "images/reference/tricholoma-portentosum-top-212.jpg",
+        "view": "top",
+        "alt": "Tricholoma portentosum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 52. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma portentosum"
+      },
+      {
+        "src": "images/reference/tricholoma-portentosum-underside-208.jpg",
+        "view": "underside",
+        "alt": "Tricholoma portentosum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 51. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma portentosum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4094,6 +4340,29 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Frequente con Pinus, spesso su terreni sabbiosi, limosi o disturbati.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-terreum-lateral-175.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma terreum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma terreum"
+      },
+      {
+        "src": "images/reference/tricholoma-terreum-top-174.jpg",
+        "view": "top",
+        "alt": "Tricholoma terreum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma terreum"
+      },
+      {
+        "src": "images/reference/tricholoma-terreum-underside-173.jpg",
+        "view": "underside",
+        "alt": "Tricholoma terreum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma terreum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4139,6 +4408,29 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Tricholoma saponaceum",
     "differentiatingCharacter": "Lamelle piuttosto spesse e spaziate, bianche-crema o olivastre.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-saponaceum-s-l-lateral-41.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma saponaceum s.l. — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 9. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma saponaceum s.l."
+      },
+      {
+        "src": "images/reference/tricholoma-saponaceum-s-l-top-36.jpg",
+        "view": "top",
+        "alt": "Tricholoma saponaceum s.l. — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 8. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma saponaceum s.l."
+      },
+      {
+        "src": "images/reference/tricholoma-saponaceum-s-l-underside-42.jpg",
+        "view": "underside",
+        "alt": "Tricholoma saponaceum s.l. — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 9. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma saponaceum s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4227,6 +4519,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "L'albero simbionte orienta il gruppo: Quercus verso album, Betula verso stiparophyllum, Fagus verso lascivum.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-lateral-63.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma gruppo album — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma gruppo album"
+      },
+      {
+        "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-top-62.jpg",
+        "view": "top",
+        "alt": "Tricholoma gruppo album — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma gruppo album"
+      },
+      {
+        "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-underside-62.jpg",
+        "view": "underside",
+        "alt": "Tricholoma gruppo album — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma gruppo album"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4265,6 +4580,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Viraggi orientano: scalpturatum tende al giallo; orirubens può arrossare e ha micelio basale giallo; squarrulosum ha squamule nerastre anche sul gambo.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-lateral-180.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma scalpturatum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma scalpturatum"
+      },
+      {
+        "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-top-179.jpg",
+        "view": "top",
+        "alt": "Tricholoma scalpturatum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma scalpturatum"
+      },
+      {
+        "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-underside-182.jpg",
+        "view": "underside",
+        "alt": "Tricholoma scalpturatum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma scalpturatum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4289,6 +4627,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Forma del cappello e ospite orientano: conifere/Betula verso virgatum, Fagus verso sciodes, Quercus e gambo squamoso verso bresadolanum.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-lateral-204.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma bresadolanum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma bresadolanum"
+      },
+      {
+        "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-top-204.jpg",
+        "view": "top",
+        "alt": "Tricholoma bresadolanum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma bresadolanum"
+      },
+      {
+        "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-underside-205.jpg",
+        "view": "underside",
+        "alt": "Tricholoma bresadolanum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma bresadolanum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4333,6 +4694,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Micorrizico soprattutto con latifoglie su suoli calcarei o argillosi.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-sejunctum-lateral-48.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma sejunctum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 11. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma sejunctum"
+      },
+      {
+        "src": "images/reference/tricholoma-sejunctum-top-45.jpg",
+        "view": "top",
+        "alt": "Tricholoma sejunctum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma sejunctum"
+      },
+      {
+        "src": "images/reference/tricholoma-sejunctum-underside-45.jpg",
+        "view": "underside",
+        "alt": "Tricholoma sejunctum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma sejunctum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4378,6 +4762,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Micelio basale spesso giallo; il morfotipo classico è macroscopicamente molto caratteristico.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-sulphureum-lateral-78.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma sulphureum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 18. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma sulphureum"
+      },
+      {
+        "src": "images/reference/tricholoma-sulphureum-top-81.jpg",
+        "view": "top",
+        "alt": "Tricholoma sulphureum — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 19. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma sulphureum"
+      },
+      {
+        "src": "images/reference/tricholoma-sulphureum-underside-81.jpg",
+        "view": "underside",
+        "alt": "Tricholoma sulphureum — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 19. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma sulphureum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4429,6 +4836,29 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Tricholoma acerbum",
     "differentiatingCharacter": "Specie termofile soprattutto con Quercus e Castanea su suoli calcarei.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tricholoma-acerbum-s-l-lateral-104.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma acerbum s.l. — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 24. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma acerbum s.l."
+      },
+      {
+        "src": "images/reference/tricholoma-acerbum-s-l-top-105.jpg",
+        "view": "top",
+        "alt": "Tricholoma acerbum s.l. — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 24. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma acerbum s.l."
+      },
+      {
+        "src": "images/reference/tricholoma-acerbum-s-l-underside-106.jpg",
+        "view": "underside",
+        "alt": "Tricholoma acerbum s.l. — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 24. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Tricholoma acerbum s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -4697,16 +5127,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Lamelle spesso macchiantesi di bruno e talvolta essudanti goccioline nei giovani.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 14,
-      "learningUnitId": "objective-russula--01--russula-foetentinae"
-    },
     "studyProfile": {
       "odor": "Variabile: varechina nella serie foetens; note miste mandorlate in R. illota; mandorle amare o marzapane in R. grata e R. fragrantissima.",
       "sporePrint": {
         "label": "Bianca–crema; descrizione del sottogenere Ingratula comprendente Foetentinae."
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 14,
+      "learningUnitId": "objective-russula--01--russula-foetentinae"
     }
   },
   {
@@ -4871,6 +5301,7 @@
     "rank": "section",
     "currentAcceptedNames": [],
     "diagnosticStatus": "defined_morphogroup_s1",
+    "diagnosticNote": "Sono possibili forme xantoidi con pori gialli. Intensità e rapidità del viraggio al blu dipendono anche da freschezza e turgore.",
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Morfogruppo S1 dei boleti a pori colorati e carne bluescente.",
@@ -4878,8 +5309,7 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15,
       "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi"
-    },
-    "diagnosticNote": "Sono possibili forme xantoidi con pori gialli. Intensità e rapidità del viraggio al blu dipendono anche da freschezza e turgore."
+    }
   },
   {
     "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
@@ -5229,11 +5659,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Micorrizico con Pinus.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17,
-      "learningUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibile",
@@ -5243,6 +5668,11 @@
           "La prebollitura non è indicata come trattamento necessario."
         ]
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17,
+      "learningUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus"
     }
   },
   {
@@ -5282,11 +5712,6 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Micorrizico con pini, soprattutto specie a due aghi.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17,
-      "learningUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Commestibile",
@@ -5296,6 +5721,11 @@
           "La prebollitura non è indicata come trattamento necessario."
         ]
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17,
+      "learningUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus"
     }
   },
   {
@@ -6080,16 +6510,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione primaverile, spesso con conifere su suoli sabbiosi o disturbati.",
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 21,
-      "learningUnitId": "objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
-    },
     "studyProfile": {
       "edibility": {
         "label": "Tossica, potenzialmente mortale",
         "precautions": []
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 21,
+      "learningUnitId": "objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
     }
   },
   {

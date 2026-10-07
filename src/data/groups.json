@@ -39,15 +39,15 @@
         "sourcePage": 2
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4
-    },
     "studyProfile": {
       "sporePrint": {
         "label": "Bruno-porpora",
         "color": "#654252"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4
     }
   },
   {
@@ -325,11 +325,11 @@
         "sourcePage": 73
       }
     ],
+    "diagnosticNote": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione.",
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6
-    },
-    "diagnosticNote": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione."
+    }
   },
   {
     "id": "minimum-genus-card-entoloma",
@@ -1180,12 +1180,12 @@
         "sourcePage": 3
       }
     ],
+    "differentiatingCharacter": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
+    "diagnosticNote": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie.",
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 14
-    },
-    "differentiatingCharacter": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
-    "diagnosticNote": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie."
+    }
   },
   {
     "id": "minimum-genus-card-butyriboletus",
@@ -1331,14 +1331,14 @@
         "sourcePage": 35
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 16
-    },
     "studyProfile": {
       "sporePrint": {
         "label": "Molto chiara"
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 16
     }
   },
   {
@@ -1408,13 +1408,13 @@
         "sourcePage": 43
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 16
-    },
     "diagnosticNote": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile.",
     "studyProfile": {
       "odor": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum."
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 16
     }
   },
   {

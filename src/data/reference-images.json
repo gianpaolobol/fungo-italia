@@ -1,4 +1,923 @@
 {
   "version": 1,
-  "images": []
+  "images": [
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "subjectTaxon": "Tricholoma saponaceum s.l.",
+      "src": "images/reference/tricholoma-saponaceum-s-l-lateral-41.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma saponaceum s.l. — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 9. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 9,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "subjectTaxon": "Tricholoma saponaceum s.l.",
+      "src": "images/reference/tricholoma-saponaceum-s-l-top-36.jpg",
+      "view": "top",
+      "alt": "Tricholoma saponaceum s.l. — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 8. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 8,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "subjectTaxon": "Tricholoma saponaceum s.l.",
+      "src": "images/reference/tricholoma-saponaceum-s-l-underside-42.jpg",
+      "view": "underside",
+      "alt": "Tricholoma saponaceum s.l. — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 9. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 9,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "subjectTaxon": "Tricholoma sejunctum",
+      "src": "images/reference/tricholoma-sejunctum-lateral-48.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma sejunctum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 11. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 11,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "subjectTaxon": "Tricholoma sejunctum",
+      "src": "images/reference/tricholoma-sejunctum-top-45.jpg",
+      "view": "top",
+      "alt": "Tricholoma sejunctum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 10,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "subjectTaxon": "Tricholoma sejunctum",
+      "src": "images/reference/tricholoma-sejunctum-underside-45.jpg",
+      "view": "underside",
+      "alt": "Tricholoma sejunctum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 10,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "subjectTaxon": "Tricholoma gruppo album",
+      "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-lateral-63.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma gruppo album — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 15,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "subjectTaxon": "Tricholoma gruppo album",
+      "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-top-62.jpg",
+      "view": "top",
+      "alt": "Tricholoma gruppo album — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 15,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "subjectTaxon": "Tricholoma gruppo album",
+      "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-underside-62.jpg",
+      "view": "underside",
+      "alt": "Tricholoma gruppo album — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 15,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "subjectTaxon": "Tricholoma sulphureum",
+      "src": "images/reference/tricholoma-sulphureum-lateral-78.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma sulphureum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 18. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 18,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "subjectTaxon": "Tricholoma sulphureum",
+      "src": "images/reference/tricholoma-sulphureum-top-81.jpg",
+      "view": "top",
+      "alt": "Tricholoma sulphureum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 19. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 19,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "subjectTaxon": "Tricholoma sulphureum",
+      "src": "images/reference/tricholoma-sulphureum-underside-81.jpg",
+      "view": "underside",
+      "alt": "Tricholoma sulphureum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 19. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 19,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "subjectTaxon": "Tricholoma acerbum s.l.",
+      "src": "images/reference/tricholoma-acerbum-s-l-lateral-104.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma acerbum s.l. — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 24. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 24,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "subjectTaxon": "Tricholoma acerbum s.l.",
+      "src": "images/reference/tricholoma-acerbum-s-l-top-105.jpg",
+      "view": "top",
+      "alt": "Tricholoma acerbum s.l. — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 24. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 24,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "subjectTaxon": "Tricholoma acerbum s.l.",
+      "src": "images/reference/tricholoma-acerbum-s-l-underside-106.jpg",
+      "view": "underside",
+      "alt": "Tricholoma acerbum s.l. — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 24. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 24,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "subjectTaxon": "Tricholoma pardinum",
+      "src": "images/reference/tricholoma-pardinum-lateral-162.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma pardinum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 38. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 38,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "subjectTaxon": "Tricholoma pardinum",
+      "src": "images/reference/tricholoma-pardinum-top-165.jpg",
+      "view": "top",
+      "alt": "Tricholoma pardinum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 39. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 39,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "subjectTaxon": "Tricholoma pardinum",
+      "src": "images/reference/tricholoma-pardinum-underside-161.jpg",
+      "view": "underside",
+      "alt": "Tricholoma pardinum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 38. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 38,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "subjectTaxon": "Tricholoma terreum",
+      "src": "images/reference/tricholoma-terreum-lateral-175.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma terreum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 42,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "subjectTaxon": "Tricholoma terreum",
+      "src": "images/reference/tricholoma-terreum-top-174.jpg",
+      "view": "top",
+      "alt": "Tricholoma terreum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 42,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "subjectTaxon": "Tricholoma terreum",
+      "src": "images/reference/tricholoma-terreum-underside-173.jpg",
+      "view": "underside",
+      "alt": "Tricholoma terreum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 42,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "subjectTaxon": "Tricholoma scalpturatum",
+      "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-lateral-180.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma scalpturatum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 43,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "subjectTaxon": "Tricholoma scalpturatum",
+      "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-top-179.jpg",
+      "view": "top",
+      "alt": "Tricholoma scalpturatum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 43,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "subjectTaxon": "Tricholoma scalpturatum",
+      "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-underside-182.jpg",
+      "view": "underside",
+      "alt": "Tricholoma scalpturatum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 43,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "subjectTaxon": "Tricholoma bresadolanum",
+      "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-lateral-204.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma bresadolanum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 50,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "subjectTaxon": "Tricholoma bresadolanum",
+      "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-top-204.jpg",
+      "view": "top",
+      "alt": "Tricholoma bresadolanum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 50,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "subjectTaxon": "Tricholoma bresadolanum",
+      "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-underside-205.jpg",
+      "view": "underside",
+      "alt": "Tricholoma bresadolanum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 50,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "subjectTaxon": "Tricholoma portentosum",
+      "src": "images/reference/tricholoma-portentosum-lateral-211.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma portentosum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 52. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 52,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "subjectTaxon": "Tricholoma portentosum",
+      "src": "images/reference/tricholoma-portentosum-top-212.jpg",
+      "view": "top",
+      "alt": "Tricholoma portentosum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 52. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 52,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "subjectTaxon": "Tricholoma portentosum",
+      "src": "images/reference/tricholoma-portentosum-underside-208.jpg",
+      "view": "underside",
+      "alt": "Tricholoma portentosum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 51. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 51,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "subjectTaxon": "Tricholoma josserandii",
+      "src": "images/reference/tricholoma-josserandii-lateral-216.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma josserandii — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 53,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "subjectTaxon": "Tricholoma josserandii",
+      "src": "images/reference/tricholoma-josserandii-top-216.jpg",
+      "view": "top",
+      "alt": "Tricholoma josserandii — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 53,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "subjectTaxon": "Tricholoma josserandii",
+      "src": "images/reference/tricholoma-josserandii-underside-216.jpg",
+      "view": "underside",
+      "alt": "Tricholoma josserandii — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 53,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "src": "images/reference/amanita-phalloides-lateral-58.jpg",
+      "view": "lateral",
+      "alt": "Amanita phalloides — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 15. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 15,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "subjectTaxon": "Amanita verna",
+      "src": "images/reference/amanita-verna-amanita-vidua-lateral-74.jpg",
+      "view": "lateral",
+      "alt": "Amanita verna — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 19. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 19,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "subjectTaxon": "Amanita verna",
+      "src": "images/reference/amanita-verna-amanita-vidua-underside-75.jpg",
+      "view": "underside",
+      "alt": "Amanita verna — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 19. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 19,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "subjectTaxon": "Amanita virosa",
+      "src": "images/reference/amanita-virosa-lateral-79.jpg",
+      "view": "lateral",
+      "alt": "Amanita virosa — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 20,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "subjectTaxon": "Amanita virosa",
+      "src": "images/reference/amanita-virosa-underside-80.jpg",
+      "view": "underside",
+      "alt": "Amanita virosa — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 20,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "subjectTaxon": "Amanita ovoidea",
+      "src": "images/reference/amanita-ovoidea-lateral-117.jpg",
+      "view": "lateral",
+      "alt": "Amanita ovoidea — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 29. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 29,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "subjectTaxon": "Amanita proxima",
+      "src": "images/reference/amanita-proxima-lateral-123.jpg",
+      "view": "lateral",
+      "alt": "Amanita proxima — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 30. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 30,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "subjectTaxon": "Amanita vaginata s.l.",
+      "src": "images/reference/amanita-sez-vaginatae-lateral-143.jpg",
+      "view": "lateral",
+      "alt": "Amanita vaginata s.l. — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 35,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "subjectTaxon": "Amanita citrina",
+      "src": "images/reference/amanita-citrina-lateral-166.jpg",
+      "view": "lateral",
+      "alt": "Amanita citrina — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 41. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 41,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "subjectTaxon": "Amanita porphyria",
+      "src": "images/reference/amanita-porphyria-underside-170.jpg",
+      "view": "underside",
+      "alt": "Amanita porphyria — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 42. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 42,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "subjectTaxon": "Amanita muscaria",
+      "src": "images/reference/amanita-muscaria-lateral-177.jpg",
+      "view": "lateral",
+      "alt": "Amanita muscaria — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 44. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 44,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "src": "images/reference/amanita-pantherina-lateral-193.jpg",
+      "view": "lateral",
+      "alt": "Amanita pantherina — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 48. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 48,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "src": "images/reference/amanita-pantherina-top-197.jpg",
+      "view": "top",
+      "alt": "Amanita pantherina — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 49. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 49,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "subjectTaxon": "Amanita gemmata",
+      "src": "images/reference/amanita-gemmata-lateral-227.jpg",
+      "view": "lateral",
+      "alt": "Amanita gemmata — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 57. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 57,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "subjectTaxon": "Amanita rubescens",
+      "src": "images/reference/amanita-rubescens-lateral-249.jpg",
+      "view": "lateral",
+      "alt": "Amanita rubescens — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 63,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "subjectTaxon": "Amanita rubescens",
+      "src": "images/reference/amanita-rubescens-underside-250.jpg",
+      "view": "underside",
+      "alt": "Amanita rubescens — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 63,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "subjectTaxon": "Amanita rubescens",
+      "src": "images/reference/amanita-rubescens-top-254.jpg",
+      "view": "top",
+      "alt": "Amanita rubescens — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 64. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 64,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "subjectTaxon": "Amanita excelsa (= A. spissa)",
+      "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-underside-258.jpg",
+      "view": "underside",
+      "alt": "Amanita excelsa (= A. spissa) — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 65. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 65,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "subjectTaxon": "Amanita franchetii",
+      "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-lateral-262.jpg",
+      "view": "lateral",
+      "alt": "Amanita franchetii — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 66. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 66,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "subjectTaxon": "Amanita strobiliformis",
+      "src": "images/reference/amanita-strobiliformis-lateral-269.jpg",
+      "view": "lateral",
+      "alt": "Amanita strobiliformis — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 68. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 68,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "subjectTaxon": "Amanita vittadinii",
+      "src": "images/reference/saproamanita-vittadinii-top-277.jpg",
+      "view": "top",
+      "alt": "Amanita vittadinii — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 70,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    }
+  ]
 }
