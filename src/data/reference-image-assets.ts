@@ -441,4 +441,7 @@ export const referenceImageAssets:Record<string,ImageSourcePropType>={
 "images/reference/external-pleurotus-ostreatus-lateral.jpg":require("../../web/public/images/reference/external-pleurotus-ostreatus-lateral.jpg"),
 "images/reference/external-pleurotus-ostreatus-top.jpg":require("../../web/public/images/reference/external-pleurotus-ostreatus-top.jpg"),
 "images/reference/external-pleurotus-ostreatus-underside.jpg":require("../../web/public/images/reference/external-pleurotus-ostreatus-underside.jpg"),
+"images/reference/external-chlorophyllum-molybdites-lateral.jpg":require("../../web/public/images/reference/external-chlorophyllum-molybdites-lateral.jpg"),
+"images/reference/external-chlorophyllum-molybdites-top.jpg":require("../../web/public/images/reference/external-chlorophyllum-molybdites-top.jpg"),
+"images/reference/external-chlorophyllum-molybdites-underside.jpg":require("../../web/public/images/reference/external-chlorophyllum-molybdites-underside.jpg"),
 };

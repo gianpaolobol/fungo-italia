@@ -8568,6 +8568,78 @@
       "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-LIN-PLEUROTUS-2022",
       "sourceUrl": "https://doi.org/10.3390/jof8070652",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-chlorophyllum-molybdites-lateral.jpg",
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "sourceSha256": "bcd3f016b1a694f717ed679d7ee8a41e704d89d39b4ceb75dae7ab64c11a791f",
+      "candidateSha256": "9805cfd61d9c1ce6f7601960668cbe6014216530f252523a14c825ae24a92fd7",
+      "sourcePath": "source-photo-assets/external/ext-soares-molybdites-2024-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "crop": [
+        0,
+        0,
+        0.61,
+        0.365
+      ],
+      "sha256": "d442fe0d9e682cebcb6b6dde98d580259dab947827566d833e06cb2895775c0c",
+      "width": 719,
+      "height": 584,
+      "visualReview": "verified",
+      "reviewNotes": "Figura1A, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-chlorophyllum-molybdites-top.jpg",
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "sourceSha256": "bcd3f016b1a694f717ed679d7ee8a41e704d89d39b4ceb75dae7ab64c11a791f",
+      "candidateSha256": "9805cfd61d9c1ce6f7601960668cbe6014216530f252523a14c825ae24a92fd7",
+      "sourcePath": "source-photo-assets/external/ext-soares-molybdites-2024-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "crop": [
+        0.372,
+        0.374,
+        1,
+        0.733
+      ],
+      "sha256": "861525adb9ddbaad146094dffc773d419cf73c774cf7c70a5b67f1c2158d0f24",
+      "width": 740,
+      "height": 575,
+      "visualReview": "verified",
+      "reviewNotes": "Figura1D, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-chlorophyllum-molybdites-underside.jpg",
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "sourceSha256": "bcd3f016b1a694f717ed679d7ee8a41e704d89d39b4ceb75dae7ab64c11a791f",
+      "candidateSha256": "9805cfd61d9c1ce6f7601960668cbe6014216530f252523a14c825ae24a92fd7",
+      "sourcePath": "source-photo-assets/external/ext-soares-molybdites-2024-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "crop": [
+        0.612,
+        0,
+        1,
+        0.365
+      ],
+      "sha256": "8e7f4e6c30e79f5985e2b86050468430a821259e46ae2c256f8f49aaa3c6e0c8",
+      "width": 457,
+      "height": 584,
+      "visualReview": "verified",
+      "reviewNotes": "Figura1B, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 }

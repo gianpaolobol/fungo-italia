@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 441,
-    "completeTriplets": 116,
+    "images": 444,
+    "completeTriplets": 117,
     "partialCards": 61,
-    "withoutImages": 37,
-    "missingViews": 201,
-    "imageBytes": 135717071
+    "withoutImages": 36,
+    "missingViews": 198,
+    "imageBytes": 135884069
   },
   "cards": [
     {
@@ -611,12 +611,12 @@
     },
     {
       "scientificName": "Chlorophyllum molybdites",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Echinoderma asperum s.l.",

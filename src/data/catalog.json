@@ -4163,6 +4163,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Specie di prati, parchi e giardini in climi caldi; sporata verde come conferma avanzata.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-chlorophyllum-molybdites-lateral.jpg",
+        "view": "lateral",
+        "alt": "Chlorophyllum molybdites — vista laterale",
+        "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1A",
+        "subjectTaxon": "Chlorophyllum molybdites",
+        "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-chlorophyllum-molybdites-top.jpg",
+        "view": "top",
+        "alt": "Chlorophyllum molybdites — vista superiore",
+        "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1D",
+        "subjectTaxon": "Chlorophyllum molybdites",
+        "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-chlorophyllum-molybdites-underside.jpg",
+        "view": "underside",
+        "alt": "Chlorophyllum molybdites — imenoforo",
+        "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1B",
+        "subjectTaxon": "Chlorophyllum molybdites",
+        "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,

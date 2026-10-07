@@ -7621,6 +7621,63 @@
         "pages": true,
         "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-LIN-PLEUROTUS-2022"
       }
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "src": "images/reference/external-chlorophyllum-molybdites-lateral.jpg",
+      "view": "lateral",
+      "alt": "Chlorophyllum molybdites — vista laterale",
+      "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1A",
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "page": null,
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024"
+      }
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "src": "images/reference/external-chlorophyllum-molybdites-top.jpg",
+      "view": "top",
+      "alt": "Chlorophyllum molybdites — vista superiore",
+      "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1D",
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "page": null,
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024"
+      }
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "src": "images/reference/external-chlorophyllum-molybdites-underside.jpg",
+      "view": "underside",
+      "alt": "Chlorophyllum molybdites — imenoforo",
+      "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1B",
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "page": null,
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024"
+      }
     }
   ]
 }
