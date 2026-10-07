@@ -40,7 +40,7 @@ async function fakeGitHub(page,{login=owner,write=true,unreachable=false}={}){
  });
  return state;
 }
-test.beforeEach(async({page})=>{page.on('pageerror',error=>console.log('ADMIN PAGE ERROR',error.message));});
+test.beforeEach(async({page})=>{page.on('pageerror',error=>console.log('ADMIN PAGE ERROR',error.message));page.on('console',message=>{if(message.text().startsWith('ADMIN DIAGNOSTIC'))console.log(message.text());});await page.addInitScript(()=>window.addEventListener('fungo:admin-error',event=>console.log('ADMIN DIAGNOSTIC',JSON.stringify(event.detail))));});
 test.afterEach(async({page},info)=>{if(info.status!==info.expectedStatus)console.log('ADMIN FAILURE UI',await page.evaluate(()=>document.body.innerText.slice(-5000)).catch(()=>''));});
 function publicationCalls(state){return state.calls.filter(x=>x.method==='PATCH'||x.path.endsWith('/git/trees')||x.path.endsWith('/git/commits')&&x.method==='POST');}
 async function ready(page){await page.goto('./');await expect(page.locator('#admin-edit')).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);}
