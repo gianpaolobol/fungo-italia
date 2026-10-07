@@ -1240,6 +1240,66 @@
       "reviewNotes": "Figura1B, p.5: PH11 coltivato in atmosfera normale (LCO), esclusi D–F ad altaCO2.",
       "sourceUrl": "https://doi.org/10.3390/jof8070652",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        0.61,
+        0.365
+      ],
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "sourcePath": "source-photo-assets/external/ext-soares-molybdites-2024-original.jpg",
+      "candidateSha256": "9805cfd61d9c1ce6f7601960668cbe6014216530f252523a14c825ae24a92fd7",
+      "sourceSha256": "bcd3f016b1a694f717ed679d7ee8a41e704d89d39b4ceb75dae7ab64c11a791f",
+      "sourcePage": null,
+      "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1A",
+      "reviewNotes": "Figura1A, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "view": "top",
+      "crop": [
+        0.372,
+        0.374,
+        1,
+        0.733
+      ],
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "sourcePath": "source-photo-assets/external/ext-soares-molybdites-2024-original.jpg",
+      "candidateSha256": "9805cfd61d9c1ce6f7601960668cbe6014216530f252523a14c825ae24a92fd7",
+      "sourceSha256": "bcd3f016b1a694f717ed679d7ee8a41e704d89d39b4ceb75dae7ab64c11a791f",
+      "sourcePage": null,
+      "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1D",
+      "reviewNotes": "Figura1D, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "view": "underside",
+      "crop": [
+        0.612,
+        0,
+        1,
+        0.365
+      ],
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "sourcePath": "source-photo-assets/external/ext-soares-molybdites-2024-original.jpg",
+      "candidateSha256": "9805cfd61d9c1ce6f7601960668cbe6014216530f252523a14c825ae24a92fd7",
+      "sourceSha256": "bcd3f016b1a694f717ed679d7ee8a41e704d89d39b4ceb75dae7ab64c11a791f",
+      "sourcePage": null,
+      "credit": "Soares, Santana e Canto (2024) · CC BY 4.0 · ritaglio figura1B",
+      "reviewNotes": "Figura1B, fonte tassonomica macro/microscopica con voucherHSTMFungi16326–16331; selezionata figura completa ad alta risoluzione, esclusi E–H.",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 }
