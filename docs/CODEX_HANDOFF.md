@@ -46,3 +46,13 @@ Ogni lotto produce commit, test ripetibili, elenco file, prove, regressioni, lim
 
 ## Prima istruzione per il nuovo agente
 Leggi questo file e tutta la documentazione del repository. Confronta i branch recenti e identifica l'implementazione più avanzata. Produci un rapporto con matrice requisiti/implementato/testato/mancante e poi avvia lotti di completamento senza alterare la baseline stabile prima della verifica.
+
+## Requisito UX prioritario — riempimento fotografico uniforme (2026-10-08)
+PROBLEMA CONFERMATO DALL'UTENTE: nella vista scheda alcune fotografie mostrano bande/spazi vuoti; l'effetto è poco professionale. Correggere il codice effettivo dei componenti fotografici, non soltanto i dati o questa documentazione. Applicare a tutte le fotografie attuali e a ogni nuova foto caricata/sostituita dall'amministratore, sulle viste fianco/sopra/sotto, card, gallerie e preview.
+- Impostare un contenitore con dimensioni/aspect ratio coerenti per tutte le card, clipping e rendering cover (CSS object-fit:cover; React Native resizeMode='cover' o equivalente), mai contain come default nelle card.
+- Conservare proporzioni originali, senza stretching/deformazione. Usare crop centrato o focal point configurabile (object-position / posizione crop); proteggere parti diagnostiche importanti (lamelle, pori, anello, volva, gambo).
+- Nell'editor admin fornire anteprima identica alla scheda pubblica e controllo di riposizionamento/zoom/crop per ciascuna vista, salvando parametri persistenti e riutilizzandoli in tutte le piattaforme. Conservare sempre originale non ritagliato e modalità visualizzazione completa/lightbox al tap.
+- Se un'immagine include bordi bianchi intrinseci, individuare il problema e offrire crop editoriale non distruttivo; non promettere che object-fit li elimini sempre.
+- Gestire loading/error con placeholder progettato, ma mai spazi bianchi residui a immagine caricata.
+- Test visuali automatici su immagini verticali, orizzontali, quadrate, panoramiche e con bordo, su iPhone 13 mini/320pt, desktop, PWA, Android; verificare anche foto sostituite e cache invalidation. Non pubblicare finché non sono verificati allineamento, assenza di bande vuote e visibilità dei caratteri diagnostici.
+- Evitare crop irreversibili o automatici che eliminino caratteri necessari per identificazione; se il soggetto non può essere inquadrato correttamente nel box, usare un ritaglio editoriale dedicato e mantenere la vista integrale accessibile.
