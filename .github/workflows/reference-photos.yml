@@ -26,7 +26,7 @@ jobs:
         run: python tools/materialize-course-photos.py
       - name: Regenerate canonical atlas and check provenance
         run: |
-          node scripts/prepare-mobile-data.mjs
+          node scripts/prepare-data.mjs
           node scripts/validate-mobile-data.mjs
           node --test scripts/study-profiles.test.mjs
       - name: Save photographs on feature branch for final review
