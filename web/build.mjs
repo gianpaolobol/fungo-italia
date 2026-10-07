@@ -9,14 +9,17 @@ function assert(condition,message){if(!condition)throw Error(message);}
 assert(catalog.length>=148&&groups.length>=66&&areas.length>=71,'Baseline content removed');
 assert(new Set([...catalog,...groups].map(t=>t.id)).size===catalog.length+groups.length,'Duplicate taxon IDs');
 assert(new Set(areas.map(a=>a.region)).size===20,'Region count changed');
-assert(catalog.every(t=>t.characters.length===3&&typeof t.differentiatingCharacter==='string'&&t.differentiatingCharacter.trim()&&t.sources.length>=2&&t.independentReviewStatus==='not-attested'),'Scientific provenance missing');
+assert(catalog.every(t=>t.characters.length===3&&typeof t.differentiatingCharacter==='string'&&t.differentiatingCharacter.trim()&&t.curriculum?.documentId==='S1-obiettivi-tassonomici-v4-2026-06-09'&&t.curriculum.sourcePage>0),'Scientific provenance missing');
 assert(areas.every(a=>Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180),'Invalid centroid');
 const amiata=areas.find(a=>a.name.includes('Amiata'));
 assert(amiata&&amiata.center[0]>42&&amiata.center[0]<44&&amiata.center[1]>10&&amiata.center[1]<13,'Amiata latitude/longitude inverted');
-const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','differentiatingCharacter'];
+const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
 const bibliography=await readJSON('bibliography');
-const data={bibliography,version:1,scientificReview:'pending-independent-review',publishedDatabaseChangesIncluded:false,catalog:catalog.map(t=>pick(t,taxonKeys)),groups:groups.map(t=>pick(t,taxonKeys)),areas:areas.map(a=>pick(a,['id','name','region','center','habitat','evidenceSources','elevationRangeM']))};
+const foundations=await readJSON('internal-foundations');
+assert(foundations.documents.length===2&&foundations.documents.every(s=>s.visibility==='internal')&&foundations.rules.foodClaimsRequirePointwiseGuideEvidence,'Missing internal foundations');
+assert(!bibliography.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)),'Internal reference in public bibliography');
+const data={bibliography,version:1,catalog:catalog.map(t=>pick(t,taxonKeys)),groups:groups.map(t=>pick(t,taxonKeys)),areas:areas.map(a=>pick(a,['id','name','region','center','habitat','evidenceSources','elevationRangeM']))};
 await rm(output,{recursive:true,force:true});await mkdir(output,{recursive:true});await cp(path.join(web,'public'),output,{recursive:true});
 await writeFile(path.join(output,'data.json'),JSON.stringify(data));
 await cp(path.join(root,'assets/icon.png'),path.join(output,'icon.png'));
@@ -27,5 +30,5 @@ const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.j
 const hash=createHash('sha256');for(const file of files)hash.update(await readFile(path.join(output,file)));
 const version=hash.digest('hex').slice(0,20),sw=await readFile(path.join(output,'sw.js'),'utf8');
 await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version));
-await writeFile(path.join(output,'build.json'),JSON.stringify({version,sourceCommit:process.env.GITHUB_SHA||null,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length,scientificReview:'pending-independent-review'},null,2));
+await writeFile(path.join(output,'build.json'),JSON.stringify({version,sourceCommit:process.env.GITHUB_SHA||null,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length},null,2));
 console.log(JSON.stringify({output,version,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length}));

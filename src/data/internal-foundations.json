@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "documents": [
+    {
+      "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourceType": "courseDocument",
+      "title": "Obiettivi tassonomici nella formazione dei micologi: livello minimo, livello auspicabile e approfondimenti facoltativi",
+      "authors": [],
+      "publisher": null,
+      "publicationYear": 2026,
+      "version": "V4 - 09.06.2026",
+      "url": null,
+      "isbnOrDoi": null,
+      "accessedAt": null,
+      "licenseNote": "Fonte didattica usata per dati strutturati e sintesi originali; nessuna riproduzione estesa del testo.",
+      "fileHashSha256": null,
+      "role": "curriculum",
+      "visibility": "internal"
+    },
+    {
+      "sourceId": "S2-guida-ragionata-commestibilita-2021",
+      "sourceType": "book",
+      "title": "Guida ragionata alla commestibilità dei funghi. Revisione critica della letteratura micotossicologica e biochimica e analisi della casistica del Centro Antiveleni di Milano",
+      "authors": [
+        "Sitta N.",
+        "Davoli P.",
+        "Floriani M.",
+        "Suriano E."
+      ],
+      "publisher": "Regione Piemonte",
+      "publicationYear": 2021,
+      "version": null,
+      "url": "https://www.regione.piemonte.it/web/media/24510/download",
+      "isbnOrDoi": null,
+      "accessedAt": "2026-09-21",
+      "licenseNote": "Fonte primaria per categorie alimentari e trattamenti; il catalogo conserva dati strutturati, riferimenti puntuali e sintesi originali.",
+      "fileHashSha256": null,
+      "role": "edibility-reference",
+      "visibility": "internal"
+    }
+  ],
+  "curriculum": {
+    "requiredMinimumUnits": 148,
+    "requiredTeachingGroups": 66,
+    "objectiveSourceId": "S1-obiettivi-tassonomici-v4-2026-06-09"
+  },
+  "scientificStatus": {
+    "independentReviewComplete": false,
+    "edibilityAssessment": "not-published"
+  },
+  "rules": {
+    "foodClaimsRequirePointwiseGuideEvidence": true,
+    "internalAuditIsNotExternalEvidence": true
+  }
+}

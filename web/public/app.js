@@ -30,11 +30,11 @@ function studyText(value){
  return value.replace(/ richiesto da S1/g,'').replace(/Nel defined set S1,/g,'In questo gruppo,').replace(/ectomicorrizico S1:/g,'ectomicorrizico:').replace(/Morfogruppo S1 dei/g,'Gruppo dei').replace(/; gruppo didattico S1\./g,'.').replace(/; profilo volutamente al rango Hydnum spp\.\/gruppo S1\./g,'.').replace(/S1 include A\. vidua; /g,'Il gruppo include A. vidua; ').replace(/Denominazione S1 mantenuta; /g,'');
 }
 function studySummary(t){
- if(t.summary.startsWith('Unità didattica al rango ')||t.summary.startsWith('Obiettivo didattico di genere o gruppo.'))return '';
- return t.summary;
+ if(t.summary?.startsWith('Unità didattica al rango ')||t.summary?.startsWith('Obiettivo didattico di genere o gruppo.'))return '';
+ return t.summary||'';
 }
 function studySources(t){
- return t.sources.filter(s=>!/^AUDIT-|^EDITORIAL-/.test(s.sourceId||'')&&!/^Scientific Baseline\b/.test(s.title));
+ return t.sources.filter(s=>! /^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId||'')&&!/^Scientific Baseline\b/.test(s.title));
 }
 function content(t,showIdentity=true){
  const sources=studySources(t),summary=studySummary(t);
@@ -42,7 +42,7 @@ function content(t,showIdentity=true){
  return (showIdentity?'<h2>'+escape(t.scientificName)+'</h2><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
- (diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
+ (t.safetyCheck?'<h3>Controlli sul campo</h3><p>'+escape(t.safetyCheck)+'</p>':'')+(diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
  (summary?'<p>'+escape(summary)+'</p>':'')+
  (t.characters.length?'<h3>Caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(studyText(c))+'</li>').join('')+'</ol>':'<p>Per studiare i caratteri, apri le schede collegate.</p>')+
  (t.differentiatingCharacter?'<h3>Carattere differenziante (+1)</h3><p>'+escape(studyText(t.differentiatingCharacter))+'</p>':'')+
@@ -83,7 +83,7 @@ function validCatalog(value){
  if(!value||value.version!==1||!Array.isArray(value.catalog)||!value.catalog.length||!Array.isArray(value.groups)||!Array.isArray(value.areas)||!value.areas.length||!Array.isArray(value.bibliography))return false;
  const rows=[...value.catalog,...value.groups];
  const textList=items=>Array.isArray(items)&&items.every(item=>typeof item==='string');
- return new Set(rows.map(t=>t?.id)).size===rows.length&&rows.every(t=>t&&typeof t.id==='string'&&t.id.length&&typeof t.scientificName==='string'&&typeof t.summary==='string'&&['commonNames','characters','lookalikes','habitat'].every(key=>textList(t[key]))&&['aliases','currentAcceptedNames','currentGenera','relatedIds'].every(key=>t[key]===undefined||textList(t[key]))&&(t.differentiatingCharacter===undefined||typeof t.differentiatingCharacter==='string')&&Array.isArray(t.sources)&&t.sources.every(source=>source&&typeof source.title==='string'))&&
+ return new Set(rows.map(t=>t?.id)).size===rows.length&&rows.every(t=>t&&typeof t.id==='string'&&t.id.length&&typeof t.scientificName==='string'&&(t.summary===undefined||typeof t.summary==='string')&&['commonNames','characters','lookalikes','habitat'].every(key=>textList(t[key]))&&['aliases','currentAcceptedNames','currentGenera','relatedIds'].every(key=>t[key]===undefined||textList(t[key]))&&(t.differentiatingCharacter===undefined||typeof t.differentiatingCharacter==='string')&&Array.isArray(t.sources)&&t.sources.every(source=>source&&typeof source.title==='string'))&&
  value.bibliography.every(source=>source&&typeof source.title==='string'&&(source.authors===undefined||textList(source.authors)))&&new Set(value.areas.map(a=>a?.id)).size===value.areas.length&&value.areas.every(a=>a&&typeof a.id==='string'&&typeof a.name==='string'&&typeof a.region==='string'&&textList(a.habitat)&&Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180&&(!a.elevationRangeM||(Array.isArray(a.elevationRangeM)&&a.elevationRangeM.length===2&&a.elevationRangeM.every(Number.isFinite))));
 }
 

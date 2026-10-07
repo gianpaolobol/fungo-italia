@@ -59,7 +59,7 @@ test('malformed storage is preserved; scrolling catalog and group sources remain
  await page.addInitScript(({studyKey,notesKey})=>{localStorage.setItem(studyKey,'{broken-study');localStorage.setItem(notesKey,'{broken-notes');},{studyKey,notesKey});
  await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
  await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Lettura continua',exact:true})).toBeVisible();
- await page.getByRole('heading',{name:'Fonti'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Fonti'}).first()).toBeInViewport();
+ await page.getByRole('heading',{name:'Schede collegate'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Schede collegate'}).first()).toBeInViewport();
  await page.getByRole('button',{name:'Salva preferito',exact:true}).first().click();
  expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe('{broken-study');
  await page.getByRole('button',{name:'Note',exact:true}).click();await expect(page.getByText('Bozze non leggibili.',{exact:false})).toBeVisible();
@@ -154,7 +154,7 @@ test('keyboard detail navigation restores focus to the opener',async({page})=>{
  await ready(page);const opener=page.getByRole('button',{name:/^Apri /}).first();await opener.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Torna',exact:true})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(opener).toBeFocused();
 });
 test('study library shows bibliography without audit coverage statistics',async({page})=>{
- await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage a')).toHaveCount(3);await expect(page.locator('#scientific-coverage')).not.toContainText('Scientific Baseline');await expect(page.locator('#scientific-coverage')).not.toContainText('Sintesi editoriale');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
+ await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage a')).toHaveCount(2);await expect(page.locator('#scientific-coverage')).not.toContainText('Scientific Baseline');await expect(page.locator('#scientific-coverage')).not.toContainText('Sintesi editoriale');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
 });
 
 test('common-name search reaches porcini and preserves the non-unique prugnolo mapping',async({page})=>{
@@ -258,7 +258,18 @@ test('Xanthodermatei detail and continuous reading hide internal metadata and re
  await page.getByRole('button',{name:'Apri '+name,exact:true}).click();
  const body=page.locator('#detail-body');await expect(body.locator('h2')).toHaveCount(1);await expect(body.locator('.notice')).toHaveCount(0);
  for(const text of ['Scientific Baseline','Audit interno','revisione','objective-agaricus','Rango:','Unità didattica al rango','Valutazione alimentare non pubblicata'])await expect(body).not.toContainText(text);
- await expect(body).toContainText('Odore fenolico');await expect(body).toContainText('Carattere differenziante (+1)');await expect(body).toContainText('Obiettivi tassonomici nella formazione');
+ await expect(body).toContainText('Odore fenolico');await expect(body).toContainText('Carattere differenziante (+1)');await expect(body).not.toContainText('Obiettivi tassonomici nella formazione');
  await page.getByRole('button',{name:'Torna',exact:true}).click();await page.getByRole('button',{name:'Elenco',exact:true}).click();
  const card=page.locator('#cards article').first();await expect(card.locator('h2')).toHaveCount(0);await expect(card.locator('.heading strong')).toHaveText(name);await expect(card.locator('.heading span')).toHaveText('Sezione');await expect(card.locator('.notice')).toHaveCount(0);await expect(card).not.toContainText('Scientific Baseline');
+});
+
+test('public atlas excludes founding documents while field safety checks stay available',async({page,request})=>{
+ const response=await request.get('./data.json'),payload=await response.json();
+ const raw=JSON.stringify(payload);
+ for(const text of ['S1-obiettivi-tassonomici','S2-guida-ragionata','Scientific Baseline','EDITORIAL-minimum','Obiettivi tassonomici nella formazione','Guida ragionata alla commestibilità'])expect(raw).not.toContain(text);
+ expect(payload.catalog).toHaveLength(148);expect(payload.groups).toHaveLength(66);
+ await ready(page);await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Kuehneromyces mutabilis');
+ await page.getByRole('button',{name:'Apri Kuehneromyces mutabilis',exact:true}).click();
+ await expect(page.locator('#detail-body')).toContainText('Escludere Galerina marginata group');
+ await expect(page.locator('#detail-body .notice')).toHaveCount(0);
 });

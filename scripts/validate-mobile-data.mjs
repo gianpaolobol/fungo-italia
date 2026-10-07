@@ -7,7 +7,7 @@ assert.equal(new Set([...catalog,...groups].map(t=>t.id)).size,214);
 const areas=JSON.parse(await readFile('src/data/areas.json','utf8'));
 assert.equal(catalog.length,148);
 assert.equal(new Set(catalog.map(t=>t.id)).size,148);
-assert(catalog.every(t=>t.characters.length===3&&t.sources.length&&t.independentReviewStatus==='not-attested'));
+assert(catalog.every(t=>t.characters.length===3&&t.differentiatingCharacter&&t.curriculum?.sourcePage>0));
 assert.equal(new Set(areas.map(a=>a.region)).size,20);
 assert.equal(areas.length,71);
 const amiata=areas.find(a=>a.id==='amiata');
@@ -23,3 +23,20 @@ for(const extra of supplements.records){
 }
 assert(catalog.find(t=>t.scientificName==='Boletus edulis s.l.').commonNames.includes('Porcini'));
 console.log('Supplementary names, habitats and comparison pointers survive canonical data regeneration without changing independent review status.');
+
+const foundations=JSON.parse(await readFile('src/data/internal-foundations.json','utf8'));
+assert.deepEqual(foundations.documents.map(d=>d.sourceId),['S1-obiettivi-tassonomici-v4-2026-06-09','S2-guida-ragionata-commestibilita-2021']);
+assert(foundations.documents.every(d=>d.visibility==='internal'));
+assert.equal(foundations.scientificStatus.independentReviewComplete,false);
+assert.equal(foundations.scientificStatus.edibilityAssessment,'not-published');
+assert.equal(foundations.rules.foodClaimsRequirePointwiseGuideEvidence,true);
+for(const t of [...catalog,...groups]){
+ assert(t.curriculum?.documentId===foundations.curriculum.objectiveSourceId&&Number.isInteger(t.curriculum.sourcePage)&&t.curriculum.sourcePage>0,'Missing curriculum reference');
+ assert(!('summary' in t)&&!('reviewStatus' in t)&&!('independentReviewStatus' in t),'Redundant generated metadata returned');
+ assert(!t.sources.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)),'Internal document in public sources');
+}
+assert.equal(catalog.filter(t=>t.diagnosticNote).length,15);
+assert.equal(catalog.filter(t=>t.safetyCheck).length,4);
+const bibliography=JSON.parse(await readFile('src/data/bibliography.json','utf8'));
+assert(!bibliography.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)));
+console.log('Founding curriculum and edibility documents remain internal; useful diagnostic limits, safety checks and external references preserved.');
