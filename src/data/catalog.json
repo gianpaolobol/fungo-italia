@@ -1325,6 +1325,15 @@
         "subjectTaxon": "Amanita ovoidea",
         "sourceUrl": "https://www.inaturalist.org/observations/329076323",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-amanita-ovoidea-top.jpg",
+        "view": "top",
+        "alt": "Amanita ovoidea — vista superiore obliqua",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Amanita ovoidea",
+        "sourceUrl": "https://www.inaturalist.org/observations/329076323",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1402,6 +1411,15 @@
         "alt": "Amanita pantherina — vista superiore del cappello",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 49. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
         "subjectTaxon": "Amanita pantherina"
+      },
+      {
+        "src": "images/reference/external-amanita-pantherina-underside.jpg",
+        "view": "underside",
+        "alt": "Amanita pantherina — vista inferiore obliqua, lamelle parzialmente visibili",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Amanita pantherina",
+        "sourceUrl": "https://www.inaturalist.org/observations/245238974",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -7119,6 +7137,15 @@
         "src": "images/reference/external-lactarius-tesquorum-lateral.jpg",
         "view": "lateral",
         "alt": "Lactarius tesquorum — vista laterale",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Lactarius tesquorum",
+        "sourceUrl": "https://www.inaturalist.org/observations/9367882",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-tesquorum-top.jpg",
+        "view": "top",
+        "alt": "Lactarius tesquorum — vista superiore obliqua di esemplare giovane",
         "credit": "Davide Puddu, CC BY 4.0",
         "subjectTaxon": "Lactarius tesquorum",
         "sourceUrl": "https://www.inaturalist.org/observations/9367882",

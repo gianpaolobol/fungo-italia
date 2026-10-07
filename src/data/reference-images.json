@@ -10870,6 +10870,82 @@
         "pages": true,
         "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-19154361-29410010"
       }
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "subjectTaxon": "Amanita ovoidea",
+      "src": "images/reference/external-amanita-ovoidea-top.jpg",
+      "view": "top",
+      "alt": "Amanita ovoidea — vista superiore obliqua",
+      "credit": "Lucian Clanet, CC BY 4.0",
+      "sourceId": "EXT-INAT-329076323-596438680",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/329076323",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-329076323-596438680"
+      }
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "src": "images/reference/external-amanita-pantherina-underside.jpg",
+      "view": "underside",
+      "alt": "Amanita pantherina — vista inferiore obliqua, lamelle parzialmente visibili",
+      "credit": "Lucian Clanet, CC BY 4.0",
+      "sourceId": "EXT-INAT-245238974-437582452",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/245238974",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-245238974-437582452"
+      }
+    },
+    {
+      "scientificName": "Hebeloma",
+      "subjectTaxon": "Hebeloma mesophaeum",
+      "src": "images/reference/external-hebeloma-top.jpg",
+      "view": "top",
+      "alt": "Hebeloma mesophaeum — vista superiore obliqua",
+      "credit": "Nina Filippova, CC BY 4.0",
+      "sourceId": "EXT-INAT-41997316-66652685",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/41997316",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-41997316-66652685"
+      }
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "subjectTaxon": "Lactarius tesquorum",
+      "src": "images/reference/external-lactarius-tesquorum-top.jpg",
+      "view": "top",
+      "alt": "Lactarius tesquorum — vista superiore obliqua di esemplare giovane",
+      "credit": "Davide Puddu, CC BY 4.0",
+      "sourceId": "EXT-INAT-9367882-12719631",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/9367882",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-9367882-12719631"
+      }
     }
   ]
 }

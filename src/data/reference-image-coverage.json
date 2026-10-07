@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 612,
-    "completeTriplets": 189,
-    "partialCards": 23,
+    "images": 616,
+    "completeTriplets": 193,
+    "partialCards": 19,
     "withoutImages": 2,
-    "missingViews": 30,
-    "imageBytes": 162133128
+    "missingViews": 26,
+    "imageBytes": 163253747
   },
   "cards": [
     {
@@ -128,21 +128,19 @@
       "scientificName": "Amanita ovoidea",
       "availableViews": [
         "lateral",
+        "top",
         "underside"
       ],
-      "missingViews": [
-        "top"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Amanita pantherina",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Amanita muscaria",
@@ -966,11 +964,10 @@
       "scientificName": "Lactarius tesquorum",
       "availableViews": [
         "lateral",
+        "top",
         "underside"
       ],
-      "missingViews": [
-        "top"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Russula Foetentinae",
@@ -1486,11 +1483,10 @@
       "scientificName": "Hebeloma",
       "availableViews": [
         "lateral",
+        "top",
         "underside"
       ],
-      "missingViews": [
-        "top"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",

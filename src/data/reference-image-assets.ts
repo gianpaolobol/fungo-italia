@@ -612,4 +612,8 @@ export const referenceImageAssets:Record<string,ImageSourcePropType>={
 "images/reference/external-verpa-top.jpg":require("../../web/public/images/reference/external-verpa-top.jpg"),
 "images/reference/external-hygrophorus-penarioides-lateral.jpg":require("../../web/public/images/reference/external-hygrophorus-penarioides-lateral.jpg"),
 "images/reference/external-entoloma-clypeatum-s-l-lateral.jpg":require("../../web/public/images/reference/external-entoloma-clypeatum-s-l-lateral.jpg"),
+"images/reference/external-amanita-ovoidea-top.jpg":require("../../web/public/images/reference/external-amanita-ovoidea-top.jpg"),
+"images/reference/external-amanita-pantherina-underside.jpg":require("../../web/public/images/reference/external-amanita-pantherina-underside.jpg"),
+"images/reference/external-hebeloma-top.jpg":require("../../web/public/images/reference/external-hebeloma-top.jpg"),
+"images/reference/external-lactarius-tesquorum-top.jpg":require("../../web/public/images/reference/external-lactarius-tesquorum-top.jpg"),
 };

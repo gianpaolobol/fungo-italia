@@ -12672,6 +12672,102 @@
       "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-19154361-29410010",
       "sourceUrl": "https://www.inaturalist.org/observations/19154361",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-amanita-ovoidea-top.jpg",
+      "sourceId": "EXT-INAT-329076323-596438680",
+      "sourceSha256": "305174706d9cff7359145f919bc6d2a3c528ef913d21c962a763e7518334d1a9",
+      "candidateSha256": "226a08e05b601952afe9efe12c9fc50bfb7ecb66f86caca5f2f57e2cd0989025",
+      "sourcePath": "source-photo-assets/external/ext-inat-329076323-596438680-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Amanita ovoidea",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "67a9904f3777472146775d4c10ed654d5b3bb694dd1da59b431bcaeede4d8ce4",
+      "width": 1200,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. ",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-329076323-596438680",
+      "sourceUrl": "https://www.inaturalist.org/observations/329076323",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-amanita-pantherina-underside.jpg",
+      "sourceId": "EXT-INAT-245238974-437582452",
+      "sourceSha256": "aada478bb0248f11a8d26e5d544614130fd9f988a2c49f0f224d149b32f1544f",
+      "candidateSha256": "4d5005ae82527eca062eff539475557dd1e51478d9aee8dbdcb7b1631ab73c47",
+      "sourcePath": "source-photo-assets/external/ext-inat-245238974-437582452-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Amanita pantherina",
+      "crop": [
+        0,
+        0.3,
+        0.51,
+        1
+      ],
+      "sha256": "300ef915b57867ce90eb95b9f06b49ab343e0c576db1e481e8ea16957b95fcc5",
+      "width": 816,
+      "height": 840,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. ",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-245238974-437582452",
+      "sourceUrl": "https://www.inaturalist.org/observations/245238974",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-hebeloma-top.jpg",
+      "sourceId": "EXT-INAT-41997316-66652685",
+      "sourceSha256": "0f55858e8ba13661d59a98c5f8e649ba9ae1bbf6e7abf23e7fa107ce89abe6b8",
+      "candidateSha256": "9b97fff945bac798c82a2b5166c782bb6eec60b17c1d53c5f6207c23a7bc9309",
+      "sourcePath": "source-photo-assets/external/ext-inat-41997316-66652685-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Hebeloma mesophaeum",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "3fdcb129b7bf1df4e73c8e4aa3c6c92d8e62b2c7277e32ffbd11eb7b9c5357af",
+      "width": 1600,
+      "height": 1015,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. ",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-41997316-66652685",
+      "sourceUrl": "https://www.inaturalist.org/observations/41997316",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-lactarius-tesquorum-top.jpg",
+      "sourceId": "EXT-INAT-9367882-12719631",
+      "sourceSha256": "59098c3024450d8fd9fd578ef4b7c0035fb100acd402eed857e2f6534136bd0a",
+      "candidateSha256": "bca3a8e3f510a288da965b845b12f339068842d2f1e067abb4688345d7fad595",
+      "sourcePath": "source-photo-assets/external/ext-inat-9367882-12719631-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Lactarius tesquorum",
+      "crop": [
+        0.425,
+        0.505,
+        0.61,
+        0.735
+      ],
+      "sha256": "757e9aaa4c89691879828ab07a91aa2e0fad842470d01c8aad6f5642ea6fd20f",
+      "width": 296,
+      "height": 246,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root actual-pixel review. Correct dorsal surface or visible radial gills in oblique view; distinct specimen crop where shared plate. Source identification consensus retained, no independent certification. Young central specimen, approximately 296 × 245 pixels, no upscaling.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-9367882-12719631",
+      "sourceUrl": "https://www.inaturalist.org/observations/9367882",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 }
