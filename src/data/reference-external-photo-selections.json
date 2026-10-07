@@ -4756,6 +4756,237 @@
       "sourceUrl": "https://www.inaturalist.org/observations/9367882",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "alt": "Lactarius tesquorum — vista superiore obliqua di esemplare giovane"
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "subjectTaxon": "Ramaria formosa",
+      "view": "top",
+      "crop": [
+        0.13,
+        0.02,
+        0.8,
+        0.95
+      ],
+      "sourceId": "EXT-ADB-RAM-10415",
+      "sourcePath": "source-photo-assets/external/ext-adb-ram-10415-original.jpg",
+      "candidateSha256": "f0458fb3a5d4b7d7ef566341dedc985fd0926115f7ed445a05c31c9a2fa3c665",
+      "sourceSha256": "687dc9996cfb47b8dc65e6b07c97e7667157a4cd51dd608c914726ec0d7a539d",
+      "sourcePage": null,
+      "credit": "Egil Bendiksen, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Institutional caption and attribution verified. Dorsal surface or cap/stem profile shown at the stated angle. Source concept: Ramaria formosa sensu Christan (2008). ",
+      "sourceUrl": "https://biodiversity.no/Pages/233020/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Ramaria formosa — vista superiore obliqua del corpo fruttifero ramificato"
+    },
+    {
+      "scientificName": "Lepiota cristata",
+      "subjectTaxon": "Lepiota cristata",
+      "view": "underside",
+      "crop": [
+        0.06,
+        0.08,
+        0.94,
+        1
+      ],
+      "sourceId": "EXT-INAT-186863535-326653443",
+      "sourcePath": "source-photo-assets/external/ext-inat-186863535-326653443-original.jpg",
+      "candidateSha256": "3a2fd4304684e3ee54b410331ae8a61b1547da8a94df094dfdec92898f685fc9",
+      "sourceSha256": "79eef5ef376014b9e11fabcd8df967e665bdb163f6367d4dd8ac46fbe02be098",
+      "sourcePage": null,
+      "credit": "sharoncooper, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Image shows actual inferior surface, not a section; partial stems or oblique angles explicitly disclosed in alt. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/186863535",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Lepiota cristata — vista inferiore con lamelle e parte del gambo"
+    },
+    {
+      "scientificName": "Volvopluteus gloiocephalus",
+      "subjectTaxon": "Volvopluteus gloiocephalus",
+      "view": "underside",
+      "crop": [
+        0.18,
+        0.26,
+        0.9,
+        1
+      ],
+      "sourceId": "EXT-INAT-145349981-249642946",
+      "sourcePath": "source-photo-assets/external/ext-inat-145349981-249642946-original.jpg",
+      "candidateSha256": "3bcee9d0890e882774869b473bdd67d40b6b3cd5f1139e0fa91251a92ae5c3e6",
+      "sourceSha256": "3df7ed8fa850ca8dc6879e98bdd3c4e9b16321fa4fcae128b6f3281860c37e7b",
+      "sourcePage": null,
+      "credit": "Duarte Frade, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Image shows actual inferior surface, not a section; partial stems or oblique angles explicitly disclosed in alt. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/145349981",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Volvopluteus gloiocephalus — vista inferiore con lamelle e parte del gambo"
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "subjectTaxon": "Volvariella volvacea",
+      "view": "underside",
+      "crop": [
+        0.33,
+        0.07,
+        0.74,
+        0.78
+      ],
+      "sourceId": "EXT-INAT-215265326-380551814",
+      "sourcePath": "source-photo-assets/external/ext-inat-215265326-380551814-original.jpg",
+      "candidateSha256": "ec9d4fd2a0157f674fbb5eca58340c423ca341bb85357c0c7c304219dd727f71",
+      "sourceSha256": "d9a25cd24a669907cb2f6d619b097256343225d347452ca302ba84a3f05eb0b6",
+      "sourcePage": null,
+      "credit": "Liubov Ilminska, CC0 1.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Image shows actual inferior surface, not a section; partial stems or oblique angles explicitly disclosed in alt. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/215265326",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "alt": "Volvariella volvacea — vista inferiore con lamelle e gambo"
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "subjectTaxon": "Volvopluteus gloiocephalus",
+      "view": "underside",
+      "crop": [
+        0.18,
+        0.26,
+        0.9,
+        1
+      ],
+      "sourceId": "EXT-INAT-145349981-249642946",
+      "sourcePath": "source-photo-assets/external/ext-inat-145349981-249642946-original.jpg",
+      "candidateSha256": "3bcee9d0890e882774869b473bdd67d40b6b3cd5f1139e0fa91251a92ae5c3e6",
+      "sourceSha256": "3df7ed8fa850ca8dc6879e98bdd3c4e9b16321fa4fcae128b6f3281860c37e7b",
+      "sourcePage": null,
+      "credit": "Duarte Frade, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Image shows actual inferior surface, not a section; partial stems or oblique angles explicitly disclosed in alt. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/145349981",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Volvopluteus gloiocephalus — vista inferiore con lamelle e parte del gambo"
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "subjectTaxon": "Hericium coralloides",
+      "view": "underside",
+      "crop": [
+        0.08,
+        0.06,
+        0.91,
+        0.91
+      ],
+      "sourceId": "EXT-INAT-72438785-118105525",
+      "sourcePath": "source-photo-assets/external/ext-inat-72438785-118105525-original.jpg",
+      "candidateSha256": "2d605ea4b30b333ead421c30bf22526571ee8fc6de21ecfbd4272a9e56c70b3b",
+      "sourceSha256": "022aac1a1c87a4bbefb8169a04f61411abde7673ef750cfebe9639cb1f78906c",
+      "sourcePage": null,
+      "credit": "Sigitas Juzėnas, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Image shows actual inferior surface, not a section; partial stems or oblique angles explicitly disclosed in alt. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/72438785",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Hericium coralloides — vista dal basso obliqua degli aculei e delle ramificazioni"
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "subjectTaxon": "Collybia phyllophila",
+      "view": "lateral",
+      "crop": [
+        0.18,
+        0.005,
+        0.88,
+        0.96
+      ],
+      "sourceId": "EXT-INAT-320121594-578749364",
+      "sourcePath": "source-photo-assets/external/ext-inat-320121594-578749364-original.jpg",
+      "candidateSha256": "c793bdab424e0a7afe2e6564b7fd103157876bac00fc9b97a72e60242a247fcd",
+      "sourceSha256": "506bb7d5dd6ea85b2bf06f38e567bc32434f023dd9e56c7d029044d3141a4335",
+      "sourcePage": null,
+      "credit": "Andrey Polstianoi, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Dorsal surface or cap/stem profile shown at the stated angle. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/320121594",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Collybia phyllophila — vista laterale, cappello e gambo"
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "subjectTaxon": "Scutiger pes-caprae",
+      "view": "lateral",
+      "crop": [
+        0.035,
+        0.115,
+        0.83,
+        0.89
+      ],
+      "sourceId": "EXT-INAT-245808041-438699350",
+      "sourcePath": "source-photo-assets/external/ext-inat-245808041-438699350-original.jpg",
+      "candidateSha256": "1f35ae21b195bb897dcccac4a8abd4947f895d5e17b9cf7818eb8b5da5460dc0",
+      "sourceSha256": "24ee6e746ec156b1ffdc4d6c6fac67f3ba9d563dbd7d882c664b079e4bc916b3",
+      "sourcePage": null,
+      "credit": "Lorenzo Emanuele Labate, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Dorsal surface or cap/stem profile shown at the stated angle. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/245808041",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Scutiger pes-caprae — vista laterale obliqua, cappello e gambo"
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "view": "lateral",
+      "crop": [
+        0.39,
+        0.34,
+        0.76,
+        0.91
+      ],
+      "sourceId": "EXT-PAPER-FILAMENTOSUM-2023",
+      "sourcePath": "source-photo-assets/external/ext-paper-filamentosum-2023-x281.jpg",
+      "candidateSha256": "b0d51f580f671d64de3381a240336dbb37d492429d995ff5442cd6a9e6d42f5a",
+      "sourceSha256": "eb27861175f218a08dd92e09103f61e9aabbe3796c6329da263137752c0cc986",
+      "sourcePage": 26,
+      "credit": "Inger-Lise Fonneland, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Institutional caption and attribution verified. Dorsal surface or cap/stem profile shown at the stated angle. ",
+      "sourceUrl": "https://naturvernforbundet.no/content/uploads/sites/11/2023/10/Rodlistede-markboende-sopp-i-kalkbarskoger-1.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Tricholoma filamentosum — vista laterale, cappello e gambo"
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "subjectTaxon": "Tricholoma imbricatum",
+      "view": "lateral",
+      "crop": [
+        0.43,
+        0.27,
+        0.69,
+        0.92
+      ],
+      "sourceId": "EXT-INAT-321606464-581642558",
+      "sourcePath": "source-photo-assets/external/ext-inat-321606464-581642558-original.jpg",
+      "candidateSha256": "0e533f75223a5a33015d0e04324dc4c5346b8a39253fe15f759b92597a611be0",
+      "sourceSha256": "c5a268585fe6e1b73771af94fd23ab2d13f4f39d03aa3bda0c12db8697ca3390",
+      "sourcePage": null,
+      "credit": "Patrick Bayan, CC BY 4.0",
+      "reviewNotes": "Independent agent and root actual-pixel review: photographed anatomical surface and intact profile verified; caption and photo-specific license retained. Primary matching research-grade community identifications, not an independent specimen determination. Dorsal surface or cap/stem profile shown at the stated angle. ",
+      "sourceUrl": "https://www.inaturalist.org/observations/321606464",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Tricholoma imbricatum — vista laterale obliqua, cappello e gambo"
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "subjectTaxon": "Agaricus bresadolanus",
+      "view": "lateral",
+      "crop": [
+        0.42,
+        0.28,
+        0.95,
+        0.83
+      ],
+      "sourceId": "EXT-INAT-253610934-454140085",
+      "sourcePath": "source-photo-assets/external/ext-inat-253610934-454140085-original.jpg",
+      "candidateSha256": "c4f3eb01e020d6b276503f294126096db0772165e9432a3b1c8793f710babfb9",
+      "sourceSha256": "a0deaf73f9ac36d93d5c8eb8df6027491f46607156f5ec0c079231a5e6b53f19",
+      "sourcePage": null,
+      "credit": "Tatiana Pires, CC BY 4.0",
+      "reviewNotes": "Root and independent scientific reviewer actual-pixel review: convex cap profile, broad visible cuticle band, annulus and long stem face. Oblique view from below with prominent gills. Finger obscures part of lower stem/base; does not document unobstructed rhizomorphs. Primary current identifications Tatiana Pires and Nicolas Schwab agree; prior A. campestris withdrawn. No independent specimen determination.",
+      "sourceUrl": "https://www.inaturalist.org/observations/253610934",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Agaricus bresadolanus — vista laterale obliqua dal basso, cappello, anello e gambo"
     }
   ]
 }
