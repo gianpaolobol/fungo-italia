@@ -57,8 +57,13 @@ def launch():
 def scroll_top():
     size=adb('shell','wm','size')
     width,height=map(int,re.findall(r'(\d+)x(\d+)',size)[-1])
-    for _ in range(3):
-        adb('shell','input','swipe',str(width//2),str(height//3),str(width//2),str(height*3//4),'250')
+    previous=None
+    for _ in range(15):
+        current=ET.tostring(dump(),encoding='unicode')
+        if current==previous:
+            break
+        previous=current
+        adb('shell','input','swipe',str(width//2),str(height//4),str(width//2),str(height*4//5),'250')
         time.sleep(.3)
 def seed_photos():
     from PIL import Image
@@ -134,6 +139,7 @@ def main():
     tap('Apri Amanita',prefix=True)
     scroll_top()
     wait_text('Specie')
+    scroll_top()
     tap('Salva preferito')
     wait_text('Rimuovi preferito')
     wait_text('Caratteri di studio')
