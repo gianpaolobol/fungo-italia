@@ -1805,6 +1805,116 @@
       "visualReview": "verified",
       "reviewNotes": "Fotografia, vista e taxon controllati visivamente sul foglio di contatto dell’immagine estratta mediante accesso Drive autorizzato. Didascalia della pagina conservata. Ritaglio di un esemplare della composizione, senza ricostruzione. Fotografia rappresentativa del genere; specie raffigurata indicata esplicitamente.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/boletus-edulis-s-l-lateral-40.jpg",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "sourcePage": 10,
+      "xref": 40,
+      "subjectTaxon": "Boletus edulis",
+      "crop": null,
+      "sha256": "8d0078d554f2fd4fdda61f5f8de13d05d2bd2c10eeb3d9a105b5577efd837ea0",
+      "width": 1600,
+      "height": 1066,
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Fotografia integrale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/boletus-edulis-s-l-top-48.jpg",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "sourcePage": 12,
+      "xref": 48,
+      "subjectTaxon": "Boletus edulis",
+      "crop": [
+        0,
+        0,
+        0.6,
+        1
+      ],
+      "sha256": "477a08061c094088f2472aaf14255694a99a49dc1bf338c26d83e6b32eec45c7",
+      "width": 1444,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/boletus-edulis-s-l-underside-44.jpg",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "sourcePage": 11,
+      "xref": 44,
+      "subjectTaxon": "Boletus edulis",
+      "crop": [
+        0,
+        0.15,
+        0.58,
+        1
+      ],
+      "sha256": "c4f76bb98aa61495dd4dbcc979704a15c53573a9bc9335efccfec0d776b47dff",
+      "width": 1511,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/boletus-s-str-lateral-40.jpg",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "sourcePage": 10,
+      "xref": 40,
+      "subjectTaxon": "Boletus edulis",
+      "crop": null,
+      "sha256": "8d0078d554f2fd4fdda61f5f8de13d05d2bd2c10eeb3d9a105b5577efd837ea0",
+      "width": 1600,
+      "height": 1066,
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Fotografia integrale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/boletus-s-str-top-48.jpg",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "sourcePage": 12,
+      "xref": 48,
+      "subjectTaxon": "Boletus edulis",
+      "crop": [
+        0,
+        0,
+        0.6,
+        1
+      ],
+      "sha256": "477a08061c094088f2472aaf14255694a99a49dc1bf338c26d83e6b32eec45c7",
+      "width": 1444,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/boletus-s-str-underside-44.jpg",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "sourcePage": 11,
+      "xref": 44,
+      "subjectTaxon": "Boletus edulis",
+      "crop": [
+        0,
+        0.15,
+        0.58,
+        1
+      ],
+      "sha256": "c4f76bb98aa61495dd4dbcc979704a15c53573a9bc9335efccfec0d776b47dff",
+      "width": 1511,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     }
   ]
 }

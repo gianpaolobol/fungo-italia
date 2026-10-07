@@ -1734,6 +1734,108 @@
         "pages": true,
         "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
       }
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "subjectTaxon": "Boletus edulis",
+      "src": "images/reference/boletus-edulis-s-l-lateral-40.jpg",
+      "view": "lateral",
+      "alt": "Boletus edulis — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 10. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato.",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "page": 10,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "subjectTaxon": "Boletus edulis",
+      "src": "images/reference/boletus-edulis-s-l-top-48.jpg",
+      "view": "top",
+      "alt": "Boletus edulis — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 12. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "page": 12,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "subjectTaxon": "Boletus edulis",
+      "src": "images/reference/boletus-edulis-s-l-underside-44.jpg",
+      "view": "underside",
+      "alt": "Boletus edulis — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 11. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "page": 11,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "subjectTaxon": "Boletus edulis",
+      "src": "images/reference/boletus-s-str-lateral-40.jpg",
+      "view": "lateral",
+      "alt": "Boletus edulis — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 10. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato.",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "page": 10,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "subjectTaxon": "Boletus edulis",
+      "src": "images/reference/boletus-s-str-top-48.jpg",
+      "view": "top",
+      "alt": "Boletus edulis — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 12. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "page": 12,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "subjectTaxon": "Boletus edulis",
+      "src": "images/reference/boletus-s-str-underside-44.jpg",
+      "view": "underside",
+      "alt": "Boletus edulis — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 11. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "page": 11,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
     }
   ]
 }

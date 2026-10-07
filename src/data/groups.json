@@ -1228,6 +1228,29 @@
     ],
     "differentiatingCharacter": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
     "diagnosticNote": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie.",
+    "referenceImages": [
+      {
+        "src": "images/reference/boletus-s-str-lateral-40.jpg",
+        "view": "lateral",
+        "alt": "Boletus edulis — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 10. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato.",
+        "subjectTaxon": "Boletus edulis"
+      },
+      {
+        "src": "images/reference/boletus-s-str-top-48.jpg",
+        "view": "top",
+        "alt": "Boletus edulis — vista superiore del cappello",
+        "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 12. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+        "subjectTaxon": "Boletus edulis"
+      },
+      {
+        "src": "images/reference/boletus-s-str-underside-44.jpg",
+        "view": "underside",
+        "alt": "Boletus edulis — vista inferiore del cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 11. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+        "subjectTaxon": "Boletus edulis"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 14
