@@ -79,3 +79,18 @@ Questa sezione prevale sulle indicazioni di baseline precedenti quando più rece
 - https://github.com/gianpaolobol/fungo-italia/pull/32
 - https://github.com/gianpaolobol/fungo-italia/blob/main/docs/RELEASE-READINESS-GATE.md
 - https://github.com/gianpaolobol/fungo-italia/commit/0b0a47237f863422383255b678440ab562024191
+
+
+## AUDIT DATI E NUOVI REQUISITI VINCOLANTI — 2026-10-08
+Ispezionato direttamente `src/data/catalog.json` su main (148 record; blob SHA `1c1fc6507c1cc6d75d628c60d1d7a3f09e8d0d02`). Conteggi dei CAMPI PRESENTI, NON della correttezza scientifica:
+- Triadi foto lateral/top/underside: 143/148; 5 incomplete. Nessuna foto: Phlegmacium variiforme, Entoloma saundersii. Manca underside: Ramaria formosa, Ramaria pallida, Ramaria botrytis s.l.
+- `studyProfile.odor` valorizzato: 6/148 (142 assenti).
+- `studyProfile.sporePrint.label` valorizzato: 8/148 (140 assenti).
+- `studyProfile.edibility.label` valorizzato: 31/148 (117 assenti).
+- `sources[].fields` contiene odor solo in 6 schede, sporePrint in 8; NON dedurre che altri record siano verificati.
+ATTENZIONE: campi odor/sporePrint/edibility sono dentro `studyProfile`, non necessariamente a livello root. Il vecchio release gate controlla immagini/3+1/habitat/sosia/fonti/review ma NON questi tre campi: estenderlo con test e report dedicati.
+
+### Obiettivo obbligatorio per Codex
+Completare per TUTTI i taxa di rilascio: immagini autentiche fianco/sopra/sotto o equivalente anatomico motivato; odore (anche 'non caratteristico' SOLO se attestato da fonte); sporata (colore e modalità, distinguendo dato di genere da dato di specie, SOLO se documentato); commestibilità/tossicità con qualificazioni, precauzioni, limiti di evidenza e giurisdizione, senza consigli al consumo. Per taxa non risolvibili a livello di specie, mantenere ambiguità esplicita; per dati non reperibili, `non documentato` e blocco release, NON inventare valori.
+Per ogni nuovo dato registrare fonte puntuale e campo supportato, data di verifica e revisore; distinguere bozza, documentato, revisionato, pubblicabile. I nomi storici e le categorie 'commestibile' non autorizzano consumo; casi dubbi richiedono revisione micologica qualificata. Le foto da web richiedono fonte originale, autore, licenza compatibile, attribuzione, taxon e vista verificati; conservare editor admin per sostituzione e crop.
+Aggiornare schema/validatore e UI per mostrare questi campi in modo leggibile e omogeneo anche su iPhone; non nascondere le lacune dietro placeholder. Generare matrice CSV/Markdown dei 148 taxa con quattro stati separati (triade/odore/sporata/commestibilità), fonti, revisione, blocker. Implementare in piccoli lotti testati e committati. Non dichiarare 100% completezza finché tutti i controlli non passano realmente.
