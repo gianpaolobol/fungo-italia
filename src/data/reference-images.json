@@ -55,23 +55,6 @@
     {
       "scientificName": "Tricholoma sejunctum",
       "subjectTaxon": "Tricholoma sejunctum",
-      "src": "images/reference/tricholoma-sejunctum-lateral-48.jpg",
-      "view": "lateral",
-      "alt": "Tricholoma sejunctum — vista laterale di cappello e gambo",
-      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 11. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
-      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
-      "page": 11,
-      "taxonStatus": "identified",
-      "rights": {
-        "status": "verified",
-        "publicRepository": true,
-        "pages": true,
-        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-      }
-    },
-    {
-      "scientificName": "Tricholoma sejunctum",
-      "subjectTaxon": "Tricholoma sejunctum",
       "src": "images/reference/tricholoma-sejunctum-top-45.jpg",
       "view": "top",
       "alt": "Tricholoma sejunctum — vista superiore del cappello",
@@ -310,23 +293,6 @@
     {
       "scientificName": "Tricholoma terreum",
       "subjectTaxon": "Tricholoma terreum",
-      "src": "images/reference/tricholoma-terreum-lateral-175.jpg",
-      "view": "lateral",
-      "alt": "Tricholoma terreum — vista laterale di cappello e gambo",
-      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
-      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
-      "page": 42,
-      "taxonStatus": "identified",
-      "rights": {
-        "status": "verified",
-        "publicRepository": true,
-        "pages": true,
-        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-      }
-    },
-    {
-      "scientificName": "Tricholoma terreum",
-      "subjectTaxon": "Tricholoma terreum",
       "src": "images/reference/tricholoma-terreum-top-174.jpg",
       "view": "top",
       "alt": "Tricholoma terreum — vista superiore del cappello",
@@ -411,13 +377,13 @@
     },
     {
       "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
-      "subjectTaxon": "Tricholoma bresadolanum",
-      "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-lateral-204.jpg",
+      "subjectTaxon": "Tricholoma sciodes",
+      "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-lateral-201.jpg",
       "view": "lateral",
-      "alt": "Tricholoma bresadolanum — vista laterale di cappello e gambo",
+      "alt": "Tricholoma sciodes — vista laterale di cappello e gambo",
       "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
       "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
-      "page": 50,
+      "page": 49,
       "taxonStatus": "identified",
       "rights": {
         "status": "verified",
@@ -554,6 +520,57 @@
       "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 53. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
       "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
       "page": 53,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma",
+      "subjectTaxon": "Tricholoma saponaceum s.l.",
+      "src": "images/reference/tricholoma-lateral-41.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma saponaceum s.l. — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 9. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 9,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma",
+      "subjectTaxon": "Tricholoma saponaceum s.l.",
+      "src": "images/reference/tricholoma-top-36.jpg",
+      "view": "top",
+      "alt": "Tricholoma saponaceum s.l. — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 8. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 8,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Tricholoma",
+      "subjectTaxon": "Tricholoma saponaceum s.l.",
+      "src": "images/reference/tricholoma-underside-42.jpg",
+      "view": "underside",
+      "alt": "Tricholoma saponaceum s.l. — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 9. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "page": 9,
       "taxonStatus": "identified",
       "rights": {
         "status": "verified",
@@ -911,6 +928,805 @@
       "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
       "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
       "page": 70,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "src": "images/reference/amanita-phalloides-top-58.jpg",
+      "view": "top",
+      "alt": "Amanita phalloides — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 15. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 15,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "src": "images/reference/amanita-phalloides-underside-58.jpg",
+      "view": "underside",
+      "alt": "Amanita phalloides — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 15. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 15,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "subjectTaxon": "Amanita verna",
+      "src": "images/reference/amanita-verna-amanita-vidua-top-75.jpg",
+      "view": "top",
+      "alt": "Amanita verna — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 19. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 19,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "subjectTaxon": "Amanita virosa",
+      "src": "images/reference/amanita-virosa-top-80.jpg",
+      "view": "top",
+      "alt": "Amanita virosa — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 20,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "subjectTaxon": "Amanita ovoidea",
+      "src": "images/reference/amanita-ovoidea-top-117.jpg",
+      "view": "top",
+      "alt": "Amanita ovoidea — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 29. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 29,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "subjectTaxon": "Amanita proxima",
+      "src": "images/reference/amanita-proxima-top-123.jpg",
+      "view": "top",
+      "alt": "Amanita proxima — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 30. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 30,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "subjectTaxon": "Amanita proxima",
+      "src": "images/reference/amanita-proxima-underside-123.jpg",
+      "view": "underside",
+      "alt": "Amanita proxima — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 30. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 30,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "subjectTaxon": "Amanita vaginata s.l.",
+      "src": "images/reference/amanita-sez-vaginatae-top-143.jpg",
+      "view": "top",
+      "alt": "Amanita vaginata s.l. — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 35,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "subjectTaxon": "Amanita vaginata s.l.",
+      "src": "images/reference/amanita-sez-vaginatae-underside-143.jpg",
+      "view": "underside",
+      "alt": "Amanita vaginata s.l. — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 35,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "subjectTaxon": "Amanita citrina",
+      "src": "images/reference/amanita-citrina-top-166.jpg",
+      "view": "top",
+      "alt": "Amanita citrina — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 41. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 41,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "subjectTaxon": "Amanita citrina",
+      "src": "images/reference/amanita-citrina-underside-166.jpg",
+      "view": "underside",
+      "alt": "Amanita citrina — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 41. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 41,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "subjectTaxon": "Amanita porphyria",
+      "src": "images/reference/amanita-porphyria-top-170.jpg",
+      "view": "top",
+      "alt": "Amanita porphyria — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 42. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 42,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "src": "images/reference/amanita-pantherina-underside-197.jpg",
+      "view": "underside",
+      "alt": "Amanita pantherina — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 49. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 49,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "subjectTaxon": "Amanita gemmata",
+      "src": "images/reference/amanita-gemmata-top-227.jpg",
+      "view": "top",
+      "alt": "Amanita gemmata — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 57. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 57,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "subjectTaxon": "Amanita gemmata",
+      "src": "images/reference/amanita-gemmata-underside-227.jpg",
+      "view": "underside",
+      "alt": "Amanita gemmata — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 57. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 57,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "subjectTaxon": "Amanita excelsa (= A. spissa)",
+      "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-top-258.jpg",
+      "view": "top",
+      "alt": "Amanita excelsa (= A. spissa) — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 65. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 65,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "subjectTaxon": "Amanita strobiliformis",
+      "src": "images/reference/amanita-strobiliformis-top-269.jpg",
+      "view": "top",
+      "alt": "Amanita strobiliformis — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 68. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 68,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "subjectTaxon": "Amanita strobiliformis",
+      "src": "images/reference/amanita-strobiliformis-underside-269.jpg",
+      "view": "underside",
+      "alt": "Amanita strobiliformis — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 68. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 68,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "subjectTaxon": "Amanita vittadinii",
+      "src": "images/reference/saproamanita-vittadinii-lateral-277.jpg",
+      "view": "lateral",
+      "alt": "Amanita vittadinii — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 70,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "subjectTaxon": "Amanita vittadinii",
+      "src": "images/reference/saproamanita-vittadinii-underside-277.jpg",
+      "view": "underside",
+      "alt": "Amanita vittadinii — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 70,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita",
+      "subjectTaxon": "Amanita rubescens",
+      "src": "images/reference/amanita-lateral-249.jpg",
+      "view": "lateral",
+      "alt": "Amanita rubescens — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 63,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita",
+      "subjectTaxon": "Amanita rubescens",
+      "src": "images/reference/amanita-underside-250.jpg",
+      "view": "underside",
+      "alt": "Amanita rubescens — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 63,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Amanita",
+      "subjectTaxon": "Amanita rubescens",
+      "src": "images/reference/amanita-top-254.jpg",
+      "view": "top",
+      "alt": "Amanita rubescens — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 64. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "page": 64,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "subjectTaxon": "Hemileccinum depilatum",
+      "src": "images/reference/hemileccinum-lateral-183.jpg",
+      "view": "lateral",
+      "alt": "Hemileccinum depilatum — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 45. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 45,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "subjectTaxon": "Hemileccinum impolitum",
+      "src": "images/reference/hemileccinum-top-179.jpg",
+      "view": "top",
+      "alt": "Hemileccinum impolitum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 44. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 44,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "subjectTaxon": "Hemileccinum impolitum",
+      "src": "images/reference/hemileccinum-underside-179.jpg",
+      "view": "underside",
+      "alt": "Hemileccinum impolitum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 44. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 44,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Butyriboletus",
+      "subjectTaxon": "Butyriboletus fechtneri",
+      "src": "images/reference/butyriboletus-lateral-213.jpg",
+      "view": "lateral",
+      "alt": "Butyriboletus fechtneri — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 53. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 53,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Butyriboletus",
+      "subjectTaxon": "Butyriboletus regius",
+      "src": "images/reference/butyriboletus-top-221.jpg",
+      "view": "top",
+      "alt": "Butyriboletus regius — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 55. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 55,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Butyriboletus",
+      "subjectTaxon": "Butyriboletus appendiculatus",
+      "src": "images/reference/butyriboletus-underside-217.jpg",
+      "view": "underside",
+      "alt": "Butyriboletus appendiculatus — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 54. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 54,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Imleria badia",
+      "subjectTaxon": "Imleria badia",
+      "src": "images/reference/imleria-badia-lateral-194.jpg",
+      "view": "lateral",
+      "alt": "Imleria badia — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 48. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 48,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Imleria badia",
+      "subjectTaxon": "Imleria badia",
+      "src": "images/reference/imleria-badia-top-198.jpg",
+      "view": "top",
+      "alt": "Imleria badia — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 49. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 49,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Imleria badia",
+      "subjectTaxon": "Imleria badia",
+      "src": "images/reference/imleria-badia-underside-198.jpg",
+      "view": "underside",
+      "alt": "Imleria badia — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 49. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 49,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "subjectTaxon": "Suillus granulatus",
+      "src": "images/reference/suillus-granulatus-lateral-334.jpg",
+      "view": "lateral",
+      "alt": "Suillus granulatus — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 86. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 86,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "subjectTaxon": "Suillus granulatus",
+      "src": "images/reference/suillus-granulatus-top-330.jpg",
+      "view": "top",
+      "alt": "Suillus granulatus — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 85. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 85,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "subjectTaxon": "Suillus granulatus",
+      "src": "images/reference/suillus-granulatus-underside-330.jpg",
+      "view": "underside",
+      "alt": "Suillus granulatus — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 85. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 85,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Leccinellum",
+      "subjectTaxon": "Leccinellum crocipodium",
+      "src": "images/reference/leccinellum-lateral-369.jpg",
+      "view": "lateral",
+      "alt": "Leccinellum crocipodium — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 95. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 95,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Leccinellum",
+      "subjectTaxon": "Leccinellum corsicum",
+      "src": "images/reference/leccinellum-top-365.jpg",
+      "view": "top",
+      "alt": "Leccinellum corsicum — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 94. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 94,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Leccinellum",
+      "subjectTaxon": "Leccinellum corsicum",
+      "src": "images/reference/leccinellum-underside-365.jpg",
+      "view": "underside",
+      "alt": "Leccinellum corsicum — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 94. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 94,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "subjectTaxon": "Xerocomus pruinatus",
+      "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-lateral-172.jpg",
+      "view": "lateral",
+      "alt": "Xerocomus pruinatus — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 42. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 42,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "subjectTaxon": "Xerocomus subtomentosus",
+      "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-top-164.jpg",
+      "view": "top",
+      "alt": "Xerocomus subtomentosus — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 40. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 40,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "subjectTaxon": "Xerocomus ferrugineus",
+      "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-underside-168.jpg",
+      "view": "underside",
+      "alt": "Xerocomus ferrugineus — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 41. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 41,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Imleria",
+      "subjectTaxon": "Imleria badia",
+      "src": "images/reference/imleria-lateral-194.jpg",
+      "view": "lateral",
+      "alt": "Imleria badia — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 48. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 48,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Imleria",
+      "subjectTaxon": "Imleria badia",
+      "src": "images/reference/imleria-top-198.jpg",
+      "view": "top",
+      "alt": "Imleria badia — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 49. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 49,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Imleria",
+      "subjectTaxon": "Imleria badia",
+      "src": "images/reference/imleria-underside-198.jpg",
+      "view": "underside",
+      "alt": "Imleria badia — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 49. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 49,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "subjectTaxon": "Suillus granulatus",
+      "src": "images/reference/suillus-incluso-boletinus-lateral-334.jpg",
+      "view": "lateral",
+      "alt": "Suillus granulatus — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 86. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 86,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "subjectTaxon": "Suillus granulatus",
+      "src": "images/reference/suillus-incluso-boletinus-top-330.jpg",
+      "view": "top",
+      "alt": "Suillus granulatus — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 85. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 85,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "subjectTaxon": "Suillus granulatus",
+      "src": "images/reference/suillus-incluso-boletinus-underside-330.jpg",
+      "view": "underside",
+      "alt": "Suillus granulatus — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletales (26/01/2026), p. 85. Archivio fotografico accreditato: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "page": 85,
       "taxonStatus": "identified",
       "rights": {
         "status": "verified",
