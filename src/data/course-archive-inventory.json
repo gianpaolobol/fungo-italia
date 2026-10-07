@@ -1,0 +1,404 @@
+{
+  "version": 1,
+  "inspectedAt": "2026-10-07",
+  "archives": [
+    {
+      "label": "Atzeni",
+      "driveFileId": "1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "expectedBytes": 57307299,
+      "bytes": 57307299,
+      "sha256": "e46679444aff82f65185f4a201e1b6fcb118b1b060f7e0f59b5e7db7b50fa123",
+      "files": [
+        {
+          "path": "Atzeni lezione microscopia 2026_compressed.pdf",
+          "bytes": 15192217,
+          "pages": 161,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 14371
+        },
+        {
+          "path": "Salerni. Microscopia Corso Amiata 12 Maggio 2026.pdf",
+          "bytes": 5611828,
+          "pages": 82,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 28428
+        },
+        {
+          "path": "Verzolla - PRONTUARIO DEL MICOLOGO IN PS.pdf",
+          "bytes": 126298,
+          "pages": 2,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 4583
+        },
+        {
+          "path": "Verzolla PRESENTAZIONE Abbadia 13.5.26.pdf",
+          "bytes": 7097301,
+          "pages": 155,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 31567
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Agaricus bisporus 400x.jpg",
+          "bytes": 487778
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Agaricus litoralis + Amanita verna 400x.jpg",
+          "bytes": 382510
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita caesarea + A. verna 1000x.jpg",
+          "bytes": 398336
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita caesarea + A. verna 15.05  1000x.jpg",
+          "bytes": 423314
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita caesarea 400x.jpg",
+          "bytes": 224566
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita strobiliformis Melzer 1000x - 2.jpg",
+          "bytes": 537120
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita strobiliformis Melzer 1000x.jpg",
+          "bytes": 443416
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita strobiliformis Melzer 400x.jpg",
+          "bytes": 445705
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita verna Melzer 1000x.jpg",
+          "bytes": 477329
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita verna Melzer 400x.jpg",
+          "bytes": 541291
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Amanita verna sporata 1000x.jpg",
+          "bytes": 388491
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Armillaria mellea 400x.jpg",
+          "bytes": 326746
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Aureoboletus + Boletus + Suillus 400x.jpg",
+          "bytes": 507423
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Aureoboletus projectellus 400x.jpg",
+          "bytes": 527190
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Boletus violaceofuscus 400x.jpg",
+          "bytes": 532294
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Cantharellus cibarius 1000x.jpg",
+          "bytes": 418649
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Cortinarius orellanoides 1000x.jpg",
+          "bytes": 413664
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Entoloma clypeatum 1000x.jpg",
+          "bytes": 513353
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Entoloma hirtipes 400x.jpg",
+          "bytes": 811288
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Gyromitra esculenta 200x.jpg",
+          "bytes": 500410
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Gyromitra esculenta 400x.jpg",
+          "bytes": 485136
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Harrya cfr. chromapes 400x.jpg",
+          "bytes": 680611
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Imleria badia 400x.jpg",
+          "bytes": 786554
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Inocybe praetervisa 1000x.jpg",
+          "bytes": 378785
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Inocybe praetervisa 400x.jpg",
+          "bytes": 404367
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Inocybe sp. 400x.jpg",
+          "bytes": 566483
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Kuehneromyces mutabilis  1000x.jpg",
+          "bytes": 392609
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Leccinum sp Cina 400x.jpg",
+          "bytes": 496676
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Leccinum sp Cina Palumbo 400x.jpg",
+          "bytes": 561078
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Leucopaxillus macrorhizus Melzer 1000x.jpg",
+          "bytes": 527481
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Macrolepiota 1000x blu di cresile.jpg",
+          "bytes": 462757
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Macrolepiota 400x blu di cresile.jpg",
+          "bytes": 478364
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Macrolepiota 400x melzer.jpg",
+          "bytes": 455344
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Morchella elata sl 400x.jpg",
+          "bytes": 560462
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Peziza cfr badia 400x.jpg",
+          "bytes": 484094
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Phlebopus sp. 400x.jpg",
+          "bytes": 470270
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Pluteus sp. 1000x.jpg",
+          "bytes": 503087
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Pluteus sp. 400x.jpg",
+          "bytes": 471283
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/polvere Suillus + porcini dich porcini 400x.jpg",
+          "bytes": 531899
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/polvere Suillus 400x.jpg",
+          "bytes": 646609
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Ramaria sp. 400x.jpg",
+          "bytes": 451799
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Rozites caperatus 1000x.jpg",
+          "bytes": 426283
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Rozites caperatus 400x.jpg",
+          "bytes": 542019
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Rugiboletus extremiorientalis 400x.jpg",
+          "bytes": 441331
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Russula Nigricantina Melzer 1000x.jpg",
+          "bytes": 423588
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Sarcosphaera coronaria 200x.jpg",
+          "bytes": 367950
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Sarcosphaera coronaria 400x.jpg",
+          "bytes": 477490
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Sepedonium chlorinum aleurioconidio 400x.jpg",
+          "bytes": 524394
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Suillus + Boletus 400x.jpg",
+          "bytes": 512975
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber aestivum 1000x.jpg",
+          "bytes": 423717
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber aestivum immaturo 1000x.jpg",
+          "bytes": 472548
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber aestivum sl 200x.jpg",
+          "bytes": 691347
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber aestivum sl 400x 2.jpg",
+          "bytes": 633669
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber borchii sl + T. magnatum 400x 1.jpg",
+          "bytes": 698135
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber borchii sl 400x 1.jpg",
+          "bytes": 673261
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber macrosporum 200x.jpg",
+          "bytes": 194914
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tuber melanosporum 400x.jpg",
+          "bytes": 215624
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Tylopilus sp. 400x.jpg",
+          "bytes": 467380
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Verpa bohemica 200x.jpg",
+          "bytes": 504914
+        },
+        {
+          "path": "foto microscopia funghi epigei e ipogei/Verpa bohemica 400x.jpg",
+          "bytes": 476626
+        }
+      ],
+      "status": "downloaded-and-inspected"
+    },
+    {
+      "label": "Morimando",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "expectedBytes": 54892580,
+      "bytes": 54892580,
+      "sha256": "6fa6e0cb4b68a5fc2b8ede7cd5fc440316e2b9c2d037080f655df9b93b1b02cd",
+      "files": [
+        {
+          "path": "3 IL CAPPELLO.pdf",
+          "bytes": 5933687,
+          "pages": 70,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 2074
+        },
+        {
+          "path": "4 L_IMENOFORO DEF.pdf",
+          "bytes": 13250280,
+          "pages": 125,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 5555
+        },
+        {
+          "path": "CARNE [modalitÃ  compatibilitÃ ].pdf",
+          "bytes": 6490389,
+          "pages": 45,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 4369
+        },
+        {
+          "path": "FORME 13 [modalitÃ  compatibilitÃ ].pdf",
+          "bytes": 6734854,
+          "pages": 51,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 1817
+        },
+        {
+          "path": "MODI DI CRESCITA 13 [modalitÃ  compatibilitÃ ].pdf",
+          "bytes": 2660347,
+          "pages": 20,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 703
+        },
+        {
+          "path": "LA MORFOLOGIA NEI FUNGHI HA UN’IMPORTANZA VITALE.pdf",
+          "bytes": 1368762,
+          "pages": 14,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 918
+        },
+        {
+          "path": "VELI PAT MODIFICA 2013 [modalitÃ  compatibilitÃ ].pdf",
+          "bytes": 12137448,
+          "pages": 89,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 3555
+        },
+        {
+          "path": "IL GAMBO PAT MODIFICA 2013 [modalitÃ  compatibilitÃ ].pdf",
+          "bytes": 6315121,
+          "pages": 63,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 1213
+        }
+      ],
+      "status": "downloaded-and-inspected"
+    },
+    {
+      "label": "Salerni",
+      "driveFileId": "1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "expectedBytes": 39658263,
+      "bytes": 39658263,
+      "sha256": "3b8d121924ef9e40648e224f46e487f7cf6f5ad939c1aa77eb0cd4f89bfe79a6",
+      "files": [
+        {
+          "path": "Salerni Elena/Salerni Clima.pdf",
+          "bytes": 7641649,
+          "pages": 40,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 19647
+        },
+        {
+          "path": "Salerni Elena/Salerni Coltivazione.pdf",
+          "bytes": 10042865,
+          "pages": 48,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 20082
+        },
+        {
+          "path": "Salerni Elena/Salerni Comunità fungine.pdf",
+          "bytes": 14864708,
+          "pages": 37,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 13854
+        },
+        {
+          "path": "Salerni Elena/Salerni Trofismo 1.pdf",
+          "bytes": 13162653,
+          "pages": 60,
+          "passwordRequired": 0,
+          "copyPermitted": true,
+          "textCharacters": 18271
+        }
+      ],
+      "status": "downloaded-and-inspected"
+    }
+  ]
+}

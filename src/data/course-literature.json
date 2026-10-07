@@ -1281,6 +1281,251 @@
           ]
         }
       ]
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "additions": {
+        "lookalikes": [
+          "Tylopilus felleus: confronto di portamento e imenoforo da approfondire."
+        ]
+      },
+      "replacements": {
+        "differentiatingCharacter": "Negli esemplari giovani i pori possono essere occlusi da una patina bianca."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+          "fields": [
+            "differentiatingCharacter"
+          ],
+          "page": 2,
+          "locator": "p. 2",
+          "supportedClaim": "Negli esemplari giovani i pori possono essere occlusi da una patina bianca."
+        },
+        {
+          "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 9,
+          "locator": "p. 9",
+          "supportedClaim": "Tylopilus felleus: confronto di portamento e imenoforo da approfondire."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tylopilus felleus",
+      "additions": {
+        "lookalikes": [
+          "Boletus edulis s.l.: confrontare portamento e imenoforo sull’esemplare completo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 9,
+          "locator": "p. 9",
+          "supportedClaim": "Boletus edulis s.l.: confrontare portamento e imenoforo sull’esemplare completo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Carne bianca, non virante.",
+          "Gambo variamente reticolato.",
+          "Pori inizialmente bianchi, poi gialli e infine olivastri."
+        ],
+        "differentiatingCharacter": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
+        "diagnosticNote": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+          "fields": [
+            "characters"
+          ],
+          "page": 2,
+          "locator": "p. 2",
+          "supportedClaim": "Carne bianca, non virante. Gambo variamente reticolato. Pori inizialmente bianchi, poi gialli e infine olivastri."
+        },
+        {
+          "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+          "fields": [
+            "differentiatingCharacter"
+          ],
+          "page": 2,
+          "locator": "p. 2",
+          "supportedClaim": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca."
+        },
+        {
+          "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+          "fields": [
+            "diagnosticNote"
+          ],
+          "page": 3,
+          "locator": "p. 3",
+          "supportedClaim": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyroporus",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Pori chiari anche negli esemplari maturi.",
+          "Superficie del cappello tipicamente feltrata.",
+          "Gambo liscio all’esterno e cavernoso all’interno."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "characters"
+          ],
+          "page": 35,
+          "locator": "p. 35",
+          "supportedClaim": "Pori chiari anche negli esemplari maturi. Superficie del cappello tipicamente feltrata. Gambo liscio all’esterno e cavernoso all’interno."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Gambo privo di reticolo.",
+          "Carne non bluescente.",
+          "Possibile odore fenolico alla base del gambo."
+        ],
+        "diagnosticNote": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "characters"
+          ],
+          "page": 43,
+          "locator": "p. 43",
+          "supportedClaim": "Gambo privo di reticolo. Carne non bluescente. Possibile odore fenolico alla base del gambo."
+        },
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "diagnosticNote"
+          ],
+          "page": 43,
+          "locator": "p. 43",
+          "supportedClaim": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Imleria",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Gambo privo di reticolo.",
+          "Pori che virano al blu alla lesione.",
+          "Carne con viraggio più lieve; imenoforo verde scuro a maturità."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "characters"
+          ],
+          "page": 47,
+          "locator": "p. 47",
+          "supportedClaim": "Gambo privo di reticolo. Pori che virano al blu alla lesione. Carne con viraggio più lieve; imenoforo verde scuro a maturità."
+        }
+      ]
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "additions": {
+        "habitat": [
+          "Rapporto micorrizico con conifere."
+        ]
+      },
+      "replacements": {
+        "characters": [
+          "Cuticola separabile dalla carne del cappello.",
+          "Pori, velo e granulazioni variano tra le specie e vanno confrontati insieme."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "characters"
+          ],
+          "page": 77,
+          "locator": "p. 77",
+          "supportedClaim": "Cuticola separabile dalla carne del cappello. Pori, velo e granulazioni variano tra le specie e vanno confrontati insieme."
+        },
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "habitat"
+          ],
+          "page": 77,
+          "locator": "p. 77",
+          "supportedClaim": "Rapporto micorrizico con conifere."
+        }
+      ]
+    },
+    {
+      "scientificName": "Leccinum",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Asperità o squamette in rilievo sul gambo.",
+          "Viraggi della carne variabili, da osservare sull’esemplare fresco."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "characters"
+          ],
+          "page": 92,
+          "locator": "p. 92",
+          "supportedClaim": "Asperità o squamette in rilievo sul gambo. Viraggi della carne variabili, da osservare sull’esemplare fresco."
+        }
+      ]
+    },
+    {
+      "scientificName": "Leccinellum",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Asperità o squamette in rilievo sul gambo.",
+          "Viraggi della carne variabili, da osservare sull’esemplare fresco."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+          "fields": [
+            "characters"
+          ],
+          "page": 92,
+          "locator": "p. 92",
+          "supportedClaim": "Asperità o squamette in rilievo sul gambo. Viraggi della carne variabili, da osservare sull’esemplare fresco."
+        }
+      ]
     }
   ]
 }

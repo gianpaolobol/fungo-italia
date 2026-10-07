@@ -113,13 +113,20 @@
       "bytes": 57307299,
       "folderId": "1fyq0Cx9tvr0HanGzfzHxHsTSyVcyOLxa",
       "access": "read-through-owner-connector",
-      "analysisStatus": "content-unread",
+      "analysisStatus": "archive-inventoried",
       "authorVerification": "unresolved",
       "rights": {
         "redistribution": "not-established",
         "originalPublished": false
       },
-      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione."
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "archiveInventory": {
+        "sha256": "e46679444aff82f65185f4a201e1b6fcb118b1b060f7e0f59b5e7db7b50fa123",
+        "pdfDocuments": 4,
+        "imageFiles": 60,
+        "file": "course-archive-inventory.json",
+        "contentScientificReview": "pending"
+      }
     },
     {
       "sourceId": "COURSE-1oSGiTqrB7StBcWoF-rtYPf6HSZ6UC4Th",
@@ -340,13 +347,20 @@
       "bytes": 39658263,
       "folderId": "1XNoNU9WmJxmFVH0yMNQ9Uvphd_ITLBOq",
       "access": "read-through-owner-connector",
-      "analysisStatus": "content-unread",
+      "analysisStatus": "archive-inventoried",
       "authorVerification": "unresolved",
       "rights": {
         "redistribution": "not-established",
         "originalPublished": false
       },
-      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione."
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "archiveInventory": {
+        "sha256": "3b8d121924ef9e40648e224f46e487f7cf6f5ad939c1aa77eb0cd4f89bfe79a6",
+        "pdfDocuments": 4,
+        "imageFiles": 0,
+        "file": "course-archive-inventory.json",
+        "contentScientificReview": "pending"
+      }
     },
     {
       "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
@@ -383,13 +397,20 @@
       "bytes": 54892580,
       "folderId": "1MCCeg7-nefgixgCecunRvrmgUCil3GuQ",
       "access": "read-through-owner-connector",
-      "analysisStatus": "content-unread",
+      "analysisStatus": "archive-inventoried",
       "authorVerification": "unresolved",
       "rights": {
         "redistribution": "not-established",
         "originalPublished": false
       },
-      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione."
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "archiveInventory": {
+        "sha256": "6fa6e0cb4b68a5fc2b8ede7cd5fc440316e2b9c2d037080f655df9b93b1b02cd",
+        "pdfDocuments": 8,
+        "imageFiles": 0,
+        "file": "course-archive-inventory.json",
+        "contentScientificReview": "pending"
+      }
     },
     {
       "sourceId": "COURSE-1kVCuJN1J2r2R4U6ZFgFxp0HmPxK_q4Kq",
@@ -551,13 +572,347 @@
       },
       "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
       "analysisSummary": "Ife, micelio, nutrizione e trofismo. Nessuna generalizzazione non verificata delle reti micorriziche."
+    },
+    {
+      "sourceId": "COURSE-1l0YIqJEu3hKuxwbc_2xAbKBzlqexwpIT",
+      "driveFileId": "1l0YIqJEu3hKuxwbc_2xAbKBzlqexwpIT",
+      "title": "0a legislazione funghi.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-26",
+      "pageCount": 46,
+      "url": "https://drive.google.com/file/d/1l0YIqJEu3hKuxwbc_2xAbKBzlqexwpIT/view",
+      "mimeType": "application/pdf",
+      "bytes": 1335733,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Distinzione fra raccolta, controllo, identità tassonomica e commercializzazione. Richiami normativi della lezione non certificati come interamente vigenti a ottobre 2026."
+    },
+    {
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "driveFileId": "1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "title": "1a Boletales.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-26",
+      "pageCount": 111,
+      "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+      "mimeType": "application/pdf",
+      "bytes": 4784113,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Caratteri e variabilità delle Boletales; integrazioni circoscritte delle schede di genere. Nessuna approvazione alimentare."
+    },
+    {
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "driveFileId": "1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "title": "1b Boletus sez. Boletus.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-26",
+      "pageCount": 79,
+      "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+      "mimeType": "application/pdf",
+      "bytes": 4528804,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Gruppo edulis: imenoforo, patina giovanile, reticolo, confronti con Tylopilus; ecologia didattica non convertita in previsione di raccolta."
+    },
+    {
+      "sourceId": "COURSE-1emsQE_4E0rECqZSgYyiFsVg965FOM0Aw",
+      "driveFileId": "1emsQE_4E0rECqZSgYyiFsVg965FOM0Aw",
+      "title": "2 tartufi morfologia legislazione.pdf",
+      "authors": [
+        "Edoardo Suriano",
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-27",
+      "pageCount": 48,
+      "url": "https://drive.google.com/file/d/1emsQE_4E0rECqZSgYyiFsVg965FOM0Aw/view",
+      "mimeType": "application/pdf",
+      "bytes": 3344050,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false,
+        "imageReuse": "microscopy-photo-permission-limited-to-course"
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Peridio, gleba, maturità e ornamentazione delle spore dei tartufi. Argomento esterno alle 148 unità minime; normativa da verificare su fonti ufficiali correnti."
+    },
+    {
+      "sourceId": "COURSE-1bmaeM2EnMI0tRqGybdrI04FJS9NP6GOn",
+      "driveFileId": "1bmaeM2EnMI0tRqGybdrI04FJS9NP6GOn",
+      "title": "3 tartufi T. borchii T. magnatum.pdf",
+      "authors": [
+        "Edoardo Suriano",
+        "Nicola Sitta"
+      ],
+      "documentDate": null,
+      "pageCount": 40,
+      "url": "https://drive.google.com/file/d/1bmaeM2EnMI0tRqGybdrI04FJS9NP6GOn/view",
+      "mimeType": "application/pdf",
+      "bytes": 3083896,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false,
+        "imageReuse": "microscopy-photo-permission-limited-to-course"
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Confronto borchii/magnatum e limiti della macrodeterminazione. I criteri di conteggio degli alveoli non sono soglie diagnostiche universali."
+    },
+    {
+      "sourceId": "COURSE-1Sh8wugz7xS027GWXv3NJMpfoWuRHEdsC",
+      "driveFileId": "1Sh8wugz7xS027GWXv3NJMpfoWuRHEdsC",
+      "title": "4 tartufi neri a confronto.pdf",
+      "authors": [
+        "Edoardo Suriano",
+        "Nicola Sitta"
+      ],
+      "documentDate": null,
+      "pageCount": 63,
+      "url": "https://drive.google.com/file/d/1Sh8wugz7xS027GWXv3NJMpfoWuRHEdsC/view",
+      "mimeType": "application/pdf",
+      "bytes": 5941862,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false,
+        "imageReuse": "microscopy-photo-permission-limited-to-course"
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Confronti dei tartufi neri: maturità e variabilità; fossetta non diagnostica da sola. Nuove delimitazioni molecolari da verificare primariamente."
+    },
+    {
+      "sourceId": "COURSE-1BxaRbN32rFQVXyEpSvKhPyZCLsgvitKK",
+      "driveFileId": "1BxaRbN32rFQVXyEpSvKhPyZCLsgvitKK",
+      "title": "5 artropodi dei funghi.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-28",
+      "pageCount": 124,
+      "url": "https://drive.google.com/file/d/1BxaRbN32rFQVXyEpSvKhPyZCLsgvitKK/view",
+      "mimeType": "application/pdf",
+      "bytes": 7591848,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Artropodi, gallerie e deterioramento distinti dalla determinazione e commestibilità. Non quantificare infestazione interna dalla sola fotografia."
+    },
+    {
+      "sourceId": "COURSE-1L1LZ-UVadxzABaGqD_ss7RiNAayNwnME",
+      "driveFileId": "1L1LZ-UVadxzABaGqD_ss7RiNAayNwnME",
+      "title": "6 legislazione - contaminanti pesticidi radioattività additivi etichettature.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-28",
+      "pageCount": 75,
+      "url": "https://drive.google.com/file/d/1L1LZ-UVadxzABaGqD_ss7RiNAayNwnME/view",
+      "mimeType": "application/pdf",
+      "bytes": 2915468,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Bioaccumulo e provenienza; fotografia e identità non misurano metalli, residui o radioattività. Nessuna classificazione delle macroaree come sicure e nessuna soglia importata."
+    },
+    {
+      "sourceId": "COURSE-1C8Y5s0g6472XRWIgUO9iVqfAhloHmhx8",
+      "driveFileId": "1C8Y5s0g6472XRWIgUO9iVqfAhloHmhx8",
+      "title": "7 funghi secchi trattazione specie.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-28",
+      "pageCount": 121,
+      "url": "https://drive.google.com/file/d/1C8Y5s0g6472XRWIgUO9iVqfAhloHmhx8/view",
+      "mimeType": "application/pdf",
+      "bytes": 6500664,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Micologia ispettiva del secco: essiccazione modifica colore e morfologia; non trasferire automaticamente il profilo fresco al prodotto trasformato."
+    },
+    {
+      "sourceId": "COURSE-1jdArVlp0Zxjn5iVA8_A_o4vrnX9KdimN",
+      "driveFileId": "1jdArVlp0Zxjn5iVA8_A_o4vrnX9KdimN",
+      "title": "8 specie estranee nei porcini secchi.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-29",
+      "pageCount": 91,
+      "url": "https://drive.google.com/file/d/1jdArVlp0Zxjn5iVA8_A_o4vrnX9KdimN/view",
+      "mimeType": "application/pdf",
+      "bytes": 5356460,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Specie estranee nei prodotti commerciali; episodi di contaminazione non registrati come somiglianze naturali."
+    },
+    {
+      "sourceId": "COURSE-1vmhlt0WiOEgpf7s7oUThGmG2Y9RlqCc7",
+      "driveFileId": "1vmhlt0WiOEgpf7s7oUThGmG2Y9RlqCc7",
+      "title": "9 porcini secchi difettosità alterazioni - granuli.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-29",
+      "pageCount": 76,
+      "url": "https://drive.google.com/file/d/1vmhlt0WiOEgpf7s7oUThGmG2Y9RlqCc7/view",
+      "mimeType": "application/pdf",
+      "bytes": 3665336,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Deterioramento, tramiti, infestazione postessiccazione, micromiceti e limiti dell’esame di polveri; nessuna diagnosi da una sola tonalità."
+    },
+    {
+      "sourceId": "COURSE-10j5hQmDz6cwWM_ScXXOicO8rcT48ew0H",
+      "driveFileId": "10j5hQmDz6cwWM_ScXXOicO8rcT48ew0H",
+      "title": "10 funghi congelati.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-30",
+      "pageCount": 138,
+      "url": "https://drive.google.com/file/d/10j5hQmDz6cwWM_ScXXOicO8rcT48ew0H/view",
+      "mimeType": "application/pdf",
+      "bytes": 6362534,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Controllo di prodotti congelati laminati o cubettati e casi di sostituzione. Nessuna ricetta, soglia o certificazione alimentare automatica."
+    },
+    {
+      "sourceId": "COURSE-1Uaki1jRZNJ9OEST4oV6wQzPdtlvh6PhW",
+      "driveFileId": "1Uaki1jRZNJ9OEST4oV6wQzPdtlvh6PhW",
+      "title": "11 funghi salamoia.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-30",
+      "pageCount": 82,
+      "url": "https://drive.google.com/file/d/1Uaki1jRZNJ9OEST4oV6wQzPdtlvh6PhW/view",
+      "mimeType": "application/pdf",
+      "bytes": 4181168,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Controllo della merce conservata, casi documentati e residui di substrato; informazioni professionali separate dai caratteri del fresco."
+    },
+    {
+      "sourceId": "COURSE-1w-tcsRDx2d57vwmeJC7riEKD-QFIwzgK",
+      "driveFileId": "1w-tcsRDx2d57vwmeJC7riEKD-QFIwzgK",
+      "title": "FERRAR~1.PDF",
+      "authors": [
+        "Angelo Ferrari",
+        "Lucia Decastelli",
+        "Cristiana Maurella",
+        "Daniela Manila Bianchi",
+        "Carla Ferraris",
+        "Sandra Fragassi",
+        "Ugo Della Marta",
+        "Pietro Noè",
+        "Domenico Monteleone",
+        "Angela Costa",
+        "Nicola Sitta"
+      ],
+      "documentDate": "2023-06",
+      "pageCount": 78,
+      "url": "https://drive.google.com/file/d/1w-tcsRDx2d57vwmeJC7riEKD-QFIwzgK/view",
+      "mimeType": "application/pdf",
+      "bytes": 1555280,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Alimenta 2/2023, articolo Ferrari et al. pp. stampate 283–353. Studio delle contaminazioni entomatiche; non prova di caratteri tassonomici o commestibilità."
     }
   ],
   "blockedFolders": [
-    {
-      "folderId": "1Q6D5emWE84-bfxft4_S53TJOPfB3ScTI",
-      "status": "not-found-or-inaccessible"
-    },
     {
       "folderId": "1vKbm6DiwWtEclLKqFhHoE4yzbkI0cQEZ",
       "status": "no-readable-items-returned"
@@ -595,6 +950,15 @@
         "redistribution": "not-established",
         "originalPublished": false
       }
+    }
+  ],
+  "resolvedFolders": [
+    {
+      "folderId": "1Q6D5emWE84-bfxft4_S53TJOPfB3ScTI",
+      "childFolderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "account": "Gian Paolo Franceschini",
+      "verifiedAt": "2026-10-07",
+      "pdfDocuments": 14
     }
   ]
 }

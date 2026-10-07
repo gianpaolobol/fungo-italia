@@ -4356,7 +4356,8 @@
       "Gambo almeno in parte reticolato."
     ],
     "lookalikes": [
-      "Rubroboletus satanas (Boletus satanas nella fonte): confronto con il gruppo edulis."
+      "Rubroboletus satanas (Boletus satanas nella fonte): confronto con il gruppo edulis.",
+      "Tylopilus felleus: confronto di portamento e imenoforo da approfondire."
     ],
     "habitat": [],
     "sources": [
@@ -4379,6 +4380,36 @@
         "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
         "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
         "reviewStatus": "source-consulted-pending-independent-review"
+      },
+      {
+        "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+        "reviewScope": "course-material",
+        "title": "1b Boletus sez. Boletus.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+        "location": "p. 2",
+        "supportedClaim": "Negli esemplari giovani i pori possono essere occlusi da una patina bianca.",
+        "fields": [
+          "differentiatingCharacter"
+        ],
+        "sourcePage": 2
+      },
+      {
+        "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+        "reviewScope": "course-material",
+        "title": "1b Boletus sez. Boletus.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+        "location": "p. 9",
+        "supportedClaim": "Tylopilus felleus: confronto di portamento e imenoforo da approfondire.",
+        "fields": [
+          "lookalikes"
+        ],
+        "sourcePage": 9
       }
     ],
     "rank": "speciesGroup",
@@ -4389,7 +4420,7 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "acceptedName": "Boletus edulis",
-    "differentiatingCharacter": "Assenza di pori rossi e di viraggi azzurri; profilo riferito al gruppo dei porcini.",
+    "differentiatingCharacter": "Negli esemplari giovani i pori possono essere occlusi da una patina bianca.",
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 14,
@@ -4842,9 +4873,27 @@
       "Gambo robusto con reticolo bruno grossolano e molto evidente.",
       "Carne bianca sostanzialmente non virante al blu."
     ],
-    "lookalikes": [],
+    "lookalikes": [
+      "Boletus edulis s.l.: confrontare portamento e imenoforo sull’esemplare completo."
+    ],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+        "reviewScope": "course-material",
+        "title": "1b Boletus sez. Boletus.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+        "location": "p. 9",
+        "supportedClaim": "Boletus edulis s.l.: confrontare portamento e imenoforo sull’esemplare completo.",
+        "fields": [
+          "lookalikes"
+        ],
+        "sourcePage": 9
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Tylopilus felleus"

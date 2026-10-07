@@ -1096,7 +1096,11 @@
     "commonNames": [],
     "rank": "operationalGroup",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Carne bianca, non virante.",
+      "Gambo variamente reticolato.",
+      "Pori inizialmente bianchi, poi gialli e infine olivastri."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1107,11 +1111,59 @@
     "relatedIds": [
       "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+        "reviewScope": "course-material",
+        "title": "1b Boletus sez. Boletus.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+        "location": "p. 2",
+        "supportedClaim": "Carne bianca, non virante. Gambo variamente reticolato. Pori inizialmente bianchi, poi gialli e infine olivastri.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 2
+      },
+      {
+        "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+        "reviewScope": "course-material",
+        "title": "1b Boletus sez. Boletus.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+        "location": "p. 2",
+        "supportedClaim": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
+        "fields": [
+          "differentiatingCharacter"
+        ],
+        "sourcePage": 2
+      },
+      {
+        "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+        "reviewScope": "course-material",
+        "title": "1b Boletus sez. Boletus.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+        "location": "p. 3",
+        "supportedClaim": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie.",
+        "fields": [
+          "diagnosticNote"
+        ],
+        "sourcePage": 3
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 14
-    }
+    },
+    "differentiatingCharacter": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
+    "diagnosticNote": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie."
   },
   {
     "id": "minimum-genus-card-butyriboletus",
@@ -1209,7 +1261,11 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Pori chiari anche negli esemplari maturi.",
+      "Superficie del cappello tipicamente feltrata.",
+      "Gambo liscio all’esterno e cavernoso all’interno."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1221,7 +1277,23 @@
       "minimum-card-objective-gyroporus--01--gyroporus-cyanescens",
       "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 35",
+        "supportedClaim": "Pori chiari anche negli esemplari maturi. Superficie del cappello tipicamente feltrata. Gambo liscio all’esterno e cavernoso all’interno.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 35
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -1233,7 +1305,11 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Gambo privo di reticolo.",
+      "Carne non bluescente.",
+      "Possibile odore fenolico alla base del gambo."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1243,11 +1319,43 @@
       "Hemileccinum"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 43",
+        "supportedClaim": "Gambo privo di reticolo. Carne non bluescente. Possibile odore fenolico alla base del gambo.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 43
+      },
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 43",
+        "supportedClaim": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile.",
+        "fields": [
+          "diagnosticNote"
+        ],
+        "sourcePage": 43
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
-    }
+    },
+    "diagnosticNote": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile."
   },
   {
     "id": "minimum-genus-card-hygrophoropsis",
@@ -1278,7 +1386,11 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Gambo privo di reticolo.",
+      "Pori che virano al blu alla lesione.",
+      "Carne con viraggio più lieve; imenoforo verde scuro a maturità."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1289,7 +1401,23 @@
     "relatedIds": [
       "minimum-card-objective-imleria--01--imleria-badia"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 47",
+        "supportedClaim": "Gambo privo di reticolo. Pori che virano al blu alla lesione. Carne con viraggio più lieve; imenoforo verde scuro a maturità.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 47
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -1301,7 +1429,10 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Asperità o squamette in rilievo sul gambo.",
+      "Viraggi della carne variabili, da osservare sull’esemplare fresco."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1311,7 +1442,23 @@
       "Leccinellum"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 92",
+        "supportedClaim": "Asperità o squamette in rilievo sul gambo. Viraggi della carne variabili, da osservare sull’esemplare fresco.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 92
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -1323,7 +1470,10 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Asperità o squamette in rilievo sul gambo.",
+      "Viraggi della carne variabili, da osservare sull’esemplare fresco."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1333,7 +1483,23 @@
       "Leccinum"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 92",
+        "supportedClaim": "Asperità o squamette in rilievo sul gambo. Viraggi della carne variabili, da osservare sull’esemplare fresco.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 92
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -1367,9 +1533,14 @@
     "commonNames": [],
     "rank": "operationalGroup",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Cuticola separabile dalla carne del cappello.",
+      "Pori, velo e granulazioni variano tra le specie e vanno confrontati insieme."
+    ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "Rapporto micorrizico con conifere."
+    ],
     "aliases": [],
     "currentAcceptedNames": [],
     "currentGenera": [
@@ -1379,7 +1550,38 @@
       "minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus",
       "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 77",
+        "supportedClaim": "Cuticola separabile dalla carne del cappello. Pori, velo e granulazioni variano tra le specie e vanno confrontati insieme.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 77
+      },
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 77",
+        "supportedClaim": "Rapporto micorrizico con conifere.",
+        "fields": [
+          "habitat"
+        ],
+        "sourcePage": 77
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17

@@ -17,7 +17,7 @@ export function applyCourseLiterature(records,integration,registry){
    taxon[field]=[...new Set([...(taxon[field]??[]),...values])];
   }
   for(const [field,value] of Object.entries(entry.replacements)){
-   if(field==='characters')assert(Array.isArray(value)&&value.length===3&&value.every(v=>typeof v==='string'&&v.trim()));
+   if(field==='characters')assert(Array.isArray(value)&&(taxon.kind==='teaching-group'?value.length>0&&value.length<=3:value.length===3)&&value.every(v=>typeof v==='string'&&v.trim()));
    else assert(typeof value==='string'&&value.trim());
    taxon[field]=structuredClone(value);
   }
