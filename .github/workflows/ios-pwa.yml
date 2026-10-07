@@ -8,6 +8,7 @@ on:
       - 'App.tsx'
       - 'src/data/**'
       - 'scripts/course-literature.mjs'
+      - 'scripts/validate-reference-images.mjs'
       - 'scripts/study-profiles.mjs'
       - 'scripts/study-profiles.test.mjs'
       - 'scripts/atlas-content.mjs'
@@ -44,6 +45,7 @@ jobs:
           node --check web/public/photo-core.js
           node --check web/public/sw.js
           python -m py_compile tools/validate-photo-library.py
+          node scripts/validate-reference-images.mjs
           node web/build.mjs
       - name: Install WebKit
         working-directory: web

@@ -420,3 +420,32 @@ test('genus species pager and full genus recall preserve atlas filters',async({p
  await page.getByRole('button',{name:'Torna',exact:true}).click();
  await expect(page.locator('#layer')).toHaveValue('groups');await expect(search).toHaveValue('Amanita');
 });
+
+test('real teacher photographs load at 320 points and remain available without the origin',async({page,request})=>{
+ await ready(page);
+ await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ await request.get('http://127.0.0.1:4174/?state=stop');
+ try{
+  const response=await page.goto('./?photos-offline='+Date.now());
+  expect(response.fromServiceWorker()).toBe(true);
+  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Tricholoma saponaceum');
+  await page.getByRole('button',{name:'Apri Tricholoma saponaceum s.l.',exact:true}).click();
+  await expect(page.locator('#detail-body .photo-thumb')).toHaveCount(3);
+  await page.waitForFunction(()=>[...document.querySelectorAll('#detail-body .photo-thumb img')].every(img=>img.complete&&img.naturalWidth>0));
+  const cached=await page.evaluate(async()=>Promise.all([...document.querySelectorAll('#detail-body .photo-thumb img')].map(async img=>!!await caches.match(img.src))));
+  expect(cached).toEqual([true,true,true]);
+  await page.locator('#detail-body .photo-thumb').nth(2).click();
+  await expect(page.locator('#photo-credit')).toContainText('Nicola Sitta');
+  await page.waitForFunction(()=>document.querySelector('#photo-full').naturalWidth>0);
+  await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ }finally{await request.get('http://127.0.0.1:4174/?state=start');}
+});
+test('genus photographs name their actual species once without duplicating the heading',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
+ await page.getByRole('button',{name:'Apri Amanita',exact:true}).click();
+ await expect(page.locator('#detail-body .photo-thumb')).toHaveCount(3);
+ await expect(page.locator('#detail-body .photo-subject-label')).toHaveText('Specie raffigurata: Amanita rubescens');
+ await expect(page.locator('#detail-body .photo-subject')).toHaveCount(0);
+});

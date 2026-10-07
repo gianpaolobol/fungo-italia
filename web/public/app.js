@@ -57,10 +57,11 @@ function studyFacts(t){
 }
 function referenceGallery(t){
  const images=t.referenceImages||[];
+ const subjects=[...new Set(images.map(p=>p.subjectTaxon).filter(Boolean))];
  if(!images.length)return '<p class="small photo-pending">Immagini di riferimento non ancora disponibili.</p>';
- return '<div class="photo-triptych">'+referenceViews.map(([view,label])=>{
+ return (subjects.length===1&&subjects[0]!==t.scientificName?'<p class="photo-subject-label">Specie raffigurata: '+escape(subjects[0])+'</p>':'')+'<div class="photo-triptych">'+referenceViews.map(([view,label])=>{
   const photo=images.find(p=>p.view===view&&referencePath.test(p.src));
-  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+label.toLowerCase()+' di '+escape(t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+label+(photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
+  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+label.toLowerCase()+' di '+escape(t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+label+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
  }).join('')+'</div>';
 }
 let photoOpener=null,photoScale=1,detailIds=null;
