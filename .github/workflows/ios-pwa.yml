@@ -54,7 +54,7 @@ jobs:
           node --check web/public/importa-foto.js
           node --check web/public/photo-core.js
           node --check web/public/sw.js
-          python -m py_compile tools/validate-photo-library.py
+          python3 -m py_compile tools/validate-photo-library.py
           node scripts/validate-reference-images.mjs
           node scripts/validate-admin-reference-images.mjs
           node web/build.mjs

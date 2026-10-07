@@ -92,7 +92,7 @@ test('owner replaces only one view through a non-forced atomic GitHub commit',as
 test('wrong identity and read-only owner token never unlock editing',async({page})=>{
  let api=await fakeGitHub(page,{login:'another-user'});await ready(page);
  await page.locator('#admin-edit').click();await page.locator('#admin-login-key').fill(token);await page.locator('#admin-login-submit').click();
- await expect(page.locator('#admin-login-error')).not.toBeEmpty();await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);expect(publicationCalls(api)).toEqual([]);
+ await expect(page.locator('#admin-login-error')).toContainText(/Accesso non riuscito|Password o accesso GitHub non validi/);await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);expect(publicationCalls(api)).toEqual([]);
  await page.unroute('https://api.github.com/**');api=await fakeGitHub(page,{write:false});
  await page.locator('#admin-login-key').fill(token);await page.locator('#admin-login-submit').click();
  await expect.poll(()=>api.calls.some(x=>x.method==='POST'&&x.path.endsWith('/git/blobs'))).toBe(true);
@@ -103,7 +103,7 @@ test('cancelled selection and failed upload do not confirm publication',async({p
  await page.locator('#admin-photo-cancel').click();expect(publicationCalls(api)).toEqual([]);
  await choosePhoto(page);await page.locator('#admin-photo-rights').check();
  await page.unroute('https://api.github.com/**');await page.route('https://api.github.com/**',route=>route.abort('failed'));
- await page.locator('#admin-photo-save').click();await expect(page.locator('#admin-photo-error')).not.toBeEmpty();
+ await page.locator('#admin-photo-save').click();await expect(page.locator('#admin-photo-error')).toContainText('Salvataggio non riuscito');
  expect(publicationCalls(api)).toEqual([]);await expect(page.locator('#admin-photo-save')).toBeEnabled();
  await expect(page.locator('#admin-photo-publication-status')).toHaveCount(0);
 });
