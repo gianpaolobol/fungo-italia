@@ -1,12 +1,12 @@
 name: Review licensed scientific image sources
 on:
   push:
-    branches: [research/primary-reference-v9]
+    branches: [research/focused-reference-v11]
     paths: ['tools/review-external-photos.py', 'tools/search-community-reference-photos.py', 'tools/search-expert-reference-photos.py', 'src/data/reference-external-source-candidates.json', '.github/workflows/external-photo-review.yml']
 permissions:
   contents: write
 concurrency:
-  group: primary-source-photo-review-v9
+  group: focused-reference-v11
   cancel-in-progress: false
 jobs:
   acquire:

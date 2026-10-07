@@ -4,9 +4,9 @@ p=pathlib.Path("src/data/reference-external-source-candidates.json");data=json.l
 report={"searches":[],"failures":[]};licenses={"cc-by":("CC BY 4.0","https://creativecommons.org/licenses/by/4.0/"),"cc-by-sa":("CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/"),"cc0":("CC0 1.0","https://creativecommons.org/publicdomain/zero/1.0/")}
 def get(url):
  with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"FungoItalia/1.0 source-evidence review github.com/gianpaolobol/fungo-italia"}),timeout=45) as r:return json.load(r)
-for target in ["Agaricus bresadolanus","Agaricus romagnesii","Phlegmacium variiforme","Cortinarius variiformis","Entoloma saundersii","Amanita pantherina","Amanita ovoidea","Collybia phyllophila","Coprinus comatus","Lepiota cristata","Tricholoma filamentosum","Tricholoma equestre","Tricholoma imbricatum","Volvopluteus gloiocephalus","Volvariella volvacea","Lactarius tesquorum","Russula delica","Hericium erinaceus","Hericium coralloides","Scutiger pes-caprae","Ramaria formosa","Ramaria pallida","Ramaria botrytis","Hebeloma mesophaeum","Morchella esculenta","Verpa bohemica"]:
+for target in ["Agaricus bresadolanus","Tricholoma equestre","Russula delica","Coprinus comatus","Morchella esculenta","Verpa conica","Ramaria flava","Ramaria flavescens"]:
  try:
-  params=urllib.parse.urlencode({"taxon_name":target,"quality_grade":"research","photo_license":"cc-by,cc-by-sa,cc0","photos":"true","per_page":15,"order_by":"votes","order":"desc","nelat":72,"nelng":50,"swlat":28,"swlng":-25})
+  params=urllib.parse.urlencode({"taxon_name":target,"quality_grade":"research","photo_license":"cc-by,cc-by-sa,cc0","photos":"true","per_page":60,"order_by":"votes","order":"desc","nelat":72,"nelng":50,"swlat":28,"swlng":-25})
   results=get("https://api.inaturalist.org/v1/observations?"+params)["results"];matches=[]
   for obs in results:
    actual=obs.get("taxon",{}).get("name")
@@ -17,7 +17,7 @@ for target in ["Agaricus bresadolanus","Agaricus romagnesii","Phlegmacium variif
    photos=[a["photo"] for a in obs.get("observation_photos",[]) if a.get("photo",{}).get("license_code") in licenses]
    if photos:matches.append((len(photos),len(identifiers),obs,photos))
   if not matches:report["searches"].append({"taxon":target,"qualifiedObservations":0});continue
-  for _,votes,obs,photos in sorted(matches,key=lambda x:(x[0],x[1]),reverse=True)[:2]:
+  for _,votes,obs,photos in sorted(matches,key=lambda x:(x[0],x[1]),reverse=True)[:8]:
    oid=obs["id"];author=obs["user"].get("name") or obs["user"]["login"];selected=[]
    for photo in photos[:4]:
     pid=photo["id"];code=photo["license_code"];url=photo.get("original_url") or photo.get("url","").replace("/square.","/original.")
