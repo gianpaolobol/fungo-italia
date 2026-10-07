@@ -998,6 +998,29 @@
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-WANG-SARCODON-2024",
+      "subjectTaxon": "Sarcodon imbricatus — Figure 7 panels a–c",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+      "assetUrl": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/d949/10964585/36e165a80365/43008_2023_138_Fig7_HTML.jpg",
+      "author": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1#rights-permissions",
+      "taxonomicEvidence": "https://doi.org/10.1186/s43008-023-00138-1",
+      "verificationBasis": "peer-reviewed-morphology-and-multilocus-phylogeny-panel-identification",
+      "kind": "image",
+      "candidateId": "EXT-WANG-SARCODON-2024-original",
+      "candidatePath": "reference-candidates/ext-wang-sarcodon-2024-original.jpg",
+      "sourceSha256": "239b38fc48eab6b3483c2da8d09fbba8486178778c6e27e46683715e15db5b67",
+      "extractedImageSha256": "239b38fc48eab6b3483c2da8d09fbba8486178778c6e27e46683715e15db5b67",
+      "candidateSha256": "804d0b284dd5b9b68d0a438ed72f580e023135e336580520555620711bfb1475",
+      "width": 1559,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
     }
   ],
   "failures": [
