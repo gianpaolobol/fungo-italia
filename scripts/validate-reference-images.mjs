@@ -9,6 +9,17 @@ const sources=new Map(registry.documents.map(s=>[s.sourceId,s])),proofs=new Map(
 check(proofs.size===evidence.images.length&&proofs.size===manifest.images.length,'Image evidence count mismatch');
 const permission=await readFile('docs/reference-image-permission.md','utf8');
 check(permission.includes('OWNER-COURSE-PHOTOS-2026-10-07'),'Missing owner permission evidence');
+const coverage=await read('reference-image-coverage');
+const taxa=[...catalog,...groups],required=['lateral','top','underside'];
+check(JSON.stringify(coverage.requiredViews)===JSON.stringify(required)&&coverage.cards.length===taxa.length,'Coverage targets mismatch');
+check(new Set(coverage.cards.map(c=>c.scientificName)).size===taxa.length,'Duplicate coverage rows');
+for(const taxon of taxa){
+ const row=coverage.cards.find(r=>r.scientificName===taxon.scientificName);
+ const available=required.filter(v=>manifest.images.some(i=>i.scientificName===taxon.scientificName&&i.view===v));
+ check(row&&JSON.stringify(row.availableViews)===JSON.stringify(available)&&JSON.stringify(row.missingViews)===JSON.stringify(required.filter(v=>!available.includes(v))),'Coverage does not match released images');
+}
+check(coverage.summary.images===manifest.images.length&&coverage.summary.cards===taxa.length,'Coverage count mismatch');
+check(coverage.summary.completeTriplets===coverage.cards.filter(c=>c.missingViews.length===0).length&&coverage.summary.missingViews===coverage.cards.reduce((n,c)=>n+c.missingViews.length,0),'Coverage completeness mismatch');
 const hashes=new Map();
 for(const image of manifest.images){
  const source=sources.get(image.sourceId),proof=proofs.get(image.src);
@@ -26,7 +37,7 @@ for(const image of manifest.images){
   if(marker===218||marker===217)break;
   const size=bytes.readUInt16BE(p+2);
   check(size>=2&&p+2+size<=bytes.length,'Invalid JPEG segment');
-  check(![225,237,254].includes(marker),'Personal image metadata retained');
+  check(![225,237,254].includes(marker),'Personal image metadata retained: '+image.src);
   if([192,193,194].includes(marker)){height=bytes.readUInt16BE(p+5);width=bytes.readUInt16BE(p+7);}
   p+=size+2;
  }
