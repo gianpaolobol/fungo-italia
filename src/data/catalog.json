@@ -2659,6 +2659,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Coprinopsis atramentaria",
     "differentiatingCharacter": "Gambo pallido con zona velare o pseudoanulare bassa e fugace.",
+    "referenceImages": [
+      {
+        "src": "images/reference/coprinus-atramentarius-s-l--lateral-340.jpg",
+        "view": "lateral",
+        "alt": "Coprinopsis atramentaria — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 86. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Coprinopsis atramentaria"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -3896,6 +3905,29 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Chlorophyllum rhacodes",
     "differentiatingCharacter": "Base del gambo ingrossata; profilo riferito al gruppo s.l.",
+    "referenceImages": [
+      {
+        "src": "images/reference/chlorophyllum-rhacodes-s-l--lateral-138.jpg",
+        "view": "lateral",
+        "alt": "Chlorophyllum brunneum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Chlorophyllum brunneum"
+      },
+      {
+        "src": "images/reference/chlorophyllum-rhacodes-s-l--top-138.jpg",
+        "view": "top",
+        "alt": "Chlorophyllum brunneum — vista superiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Chlorophyllum brunneum"
+      },
+      {
+        "src": "images/reference/chlorophyllum-rhacodes-s-l--underside-138.jpg",
+        "view": "underside",
+        "alt": "Chlorophyllum brunneum — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Chlorophyllum brunneum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
@@ -3975,6 +4007,15 @@
         ]
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/macrolepiota-procera-s-l--lateral-280.jpg",
+        "view": "lateral",
+        "alt": "Macrolepiota procera — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 70. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Macrolepiota procera"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
@@ -6119,6 +6160,29 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Neoboletus erythropus",
     "differentiatingCharacter": "Carne gialla con viraggio al blu molto rapido e intenso.",
+    "referenceImages": [
+      {
+        "src": "images/reference/boletus-neoboletus-erythropus-s-l--lateral-290.jpg",
+        "view": "lateral",
+        "alt": "Neoboletus erythropus s.l. — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 74. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Neoboletus erythropus s.l."
+      },
+      {
+        "src": "images/reference/boletus-neoboletus-erythropus-s-l--top-290.jpg",
+        "view": "top",
+        "alt": "Neoboletus erythropus s.l. — vista superiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 74. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Neoboletus erythropus s.l."
+      },
+      {
+        "src": "images/reference/boletus-neoboletus-erythropus-s-l--underside-290.jpg",
+        "view": "underside",
+        "alt": "Neoboletus erythropus s.l. — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 74. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Neoboletus erythropus s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15,
@@ -6148,6 +6212,29 @@
     "deepMorphologyRequired": false,
     "sourceName": "Boletus (Suillellus) luridus",
     "differentiatingCharacter": "Carne gialla spesso con zona subimeniale rossastra e rapido azzurramento.",
+    "referenceImages": [
+      {
+        "src": "images/reference/suillellus-luridus-lateral-278.jpg",
+        "view": "lateral",
+        "alt": "Suillellus luridus — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 71. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Suillellus luridus"
+      },
+      {
+        "src": "images/reference/suillellus-luridus-top-278.jpg",
+        "view": "top",
+        "alt": "Suillellus luridus — vista superiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 71. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Suillellus luridus"
+      },
+      {
+        "src": "images/reference/suillellus-luridus-underside-274.jpg",
+        "view": "underside",
+        "alt": "Suillellus luridus — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 70. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Suillellus luridus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15,
@@ -6201,6 +6288,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne giallo-pallida che azzurra rapidamente al taglio.",
+    "referenceImages": [
+      {
+        "src": "images/reference/caloboletus-radicans-top-205.jpg",
+        "view": "top",
+        "alt": "Caloboletus radicans — vista superiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 51. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Caloboletus radicans"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15,
@@ -6227,6 +6323,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne che azzurra al taglio.",
+    "referenceImages": [
+      {
+        "src": "images/reference/caloboletus-calopus-lateral-209.jpg",
+        "view": "lateral",
+        "alt": "Caloboletus calopus — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 52. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Caloboletus calopus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15,
@@ -6959,6 +7064,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce su rami e tronchi morti di latifoglie, frequentemente querce.",
+    "referenceImages": [
+      {
+        "src": "images/reference/hapalopilus-rutilans-top-379.jpg",
+        "view": "top",
+        "alt": "Hapalopilus rutilans — corpi fruttiferi, vista superiore",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 97. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Hapalopilus rutilans"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -6986,6 +7100,22 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Laetiporus sulphureus",
     "differentiatingCharacter": "Crescita direttamente sul legno; profilo riferito al complesso s.l.",
+    "referenceImages": [
+      {
+        "src": "images/reference/laetiporus-sulphureus-s-l--top-217.jpg",
+        "view": "top",
+        "alt": "Laetiporus sulphureus s.l. — corpi fruttiferi, vista superiore",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 53. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Laetiporus sulphureus s.l."
+      },
+      {
+        "src": "images/reference/laetiporus-sulphureus-s-l--lateral-217.jpg",
+        "view": "lateral",
+        "alt": "Laetiporus sulphureus s.l. — corpi fruttiferi, vista laterale",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 53. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Laetiporus sulphureus s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7284,7 +7414,7 @@
       {
         "src": "images/reference/ramaria-formosa-lateral-303.jpg",
         "view": "lateral",
-        "alt": "Ramaria formosa — vista laterale di cappello e gambo",
+        "alt": "Ramaria formosa — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Ramaria formosa"
       }
@@ -7376,7 +7506,7 @@
       {
         "src": "images/reference/auricularia-auricula-judae-lateral-306.jpg",
         "view": "lateral",
-        "alt": "Auricularia auricula-judae — vista laterale di cappello e gambo",
+        "alt": "Auricularia auricula-judae — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Auricularia auricula-judae"
       }

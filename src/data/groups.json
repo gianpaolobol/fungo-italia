@@ -391,6 +391,15 @@
       "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-e-lateral-340.jpg",
+        "view": "lateral",
+        "alt": "Coprinopsis atramentaria — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 86. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Coprinopsis atramentaria"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6
@@ -1704,6 +1713,22 @@
       "minimum-card-objective-caloboletus--02--caloboletus-calopus"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/caloboletus-lateral-209.jpg",
+        "view": "lateral",
+        "alt": "Caloboletus calopus — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 52. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Caloboletus calopus"
+      },
+      {
+        "src": "images/reference/caloboletus-top-205.jpg",
+        "view": "top",
+        "alt": "Caloboletus radicans — vista superiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 51. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Caloboletus radicans"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15
@@ -2150,6 +2175,29 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/paxillus-lateral-348.jpg",
+        "view": "lateral",
+        "alt": "Paxillus involutus s.l. — vista laterale di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 88. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Paxillus involutus s.l."
+      },
+      {
+        "src": "images/reference/paxillus-top-348.jpg",
+        "view": "top",
+        "alt": "Paxillus involutus s.l. — vista superiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 88. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Paxillus involutus s.l."
+      },
+      {
+        "src": "images/reference/paxillus-underside-348.jpg",
+        "view": "underside",
+        "alt": "Paxillus involutus s.l. — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 88. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Paxillus involutus s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -2453,7 +2501,7 @@
       {
         "src": "images/reference/ramaria-lateral-303.jpg",
         "view": "lateral",
-        "alt": "Ramaria formosa — vista laterale di cappello e gambo",
+        "alt": "Ramaria formosa — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Ramaria formosa"
       }
@@ -2529,7 +2577,7 @@
       {
         "src": "images/reference/auricularia-lateral-306.jpg",
         "view": "lateral",
-        "alt": "Auricularia auricula-judae — vista laterale di cappello e gambo",
+        "alt": "Auricularia auricula-judae — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Auricularia auricula-judae"
       }
@@ -2651,6 +2699,15 @@
       "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/sarcosphaera-top-128.jpg",
+        "view": "top",
+        "alt": "Sarcosphaera sp. — corpi fruttiferi, vista superiore",
+        "credit": "Fonte: Claudia Perini, Perini Classificazione bis.pdf, p. 15; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Sarcosphaera sp."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21
