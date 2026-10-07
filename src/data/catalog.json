@@ -2449,6 +2449,29 @@
     "deepMorphologyRequired": false,
     "sourceName": "Clitocybe amoenolens",
     "differentiatingCharacter": "Odore aromatico-floreale intenso; specie tipicamente mediterranea.",
+    "referenceImages": [
+      {
+        "src": "images/reference/paralepistopsis-amoenolens-lateral-221.jpg",
+        "view": "lateral",
+        "alt": "Paralepistopsis amoenolens — cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 54. Fotografia: Archivio GEMA Abruzzo.",
+        "subjectTaxon": "Paralepistopsis amoenolens"
+      },
+      {
+        "src": "images/reference/paralepistopsis-amoenolens-top-221.jpg",
+        "view": "top",
+        "alt": "Paralepistopsis amoenolens — vista superiore",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 54. Fotografia: Archivio GEMA Abruzzo.",
+        "subjectTaxon": "Paralepistopsis amoenolens"
+      },
+      {
+        "src": "images/reference/paralepistopsis-amoenolens-underside-221.jpg",
+        "view": "underside",
+        "alt": "Paralepistopsis amoenolens — vista inferiore",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 54. Fotografia: Archivio GEMA Abruzzo.",
+        "subjectTaxon": "Paralepistopsis amoenolens"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 5,
@@ -2476,6 +2499,22 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Infundibulicybe gibba",
     "differentiatingCharacter": "Carne sottile e crescita sulla lettiera boschiva.",
+    "referenceImages": [
+      {
+        "src": "images/reference/clitocybe-gibba-s-l--top-253.jpg",
+        "view": "top",
+        "alt": "Infundibulicybe gibba s.l. — vista superiore",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 62. Autore individuale non specificato.",
+        "subjectTaxon": "Infundibulicybe gibba s.l."
+      },
+      {
+        "src": "images/reference/clitocybe-gibba-s-l--underside-253.jpg",
+        "view": "underside",
+        "alt": "Infundibulicybe gibba s.l. — vista inferiore",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 62. Autore individuale non specificato.",
+        "subjectTaxon": "Infundibulicybe gibba s.l."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 5,
@@ -4893,6 +4932,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Grandi cespi su ceppaie e legno, soprattutto di latifoglie.",
+    "referenceImages": [
+      {
+        "src": "images/reference/kuehneromyces-mutabilis-lateral-121.jpg",
+        "view": "lateral",
+        "alt": "Kuehneromyces mutabilis — cappello e gambo",
+        "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Kuehneromyces mutabilis"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 11,
@@ -7632,6 +7680,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Conifere e viraggi orientano i taxa del defined group: citrinus tende a ingiallire; subrubescens è più legato a Pinus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--lateral-475.jpg",
+        "view": "lateral",
+        "alt": "Albatrellus subrubescens — cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 125. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Albatrellus subrubescens"
+      },
+      {
+        "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--top-476.jpg",
+        "view": "top",
+        "alt": "Albatrellus subrubescens — vista superiore",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 125. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Albatrellus subrubescens"
+      },
+      {
+        "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--underside-477.jpg",
+        "view": "underside",
+        "alt": "Albatrellus subrubescens — vista inferiore",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 125. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Albatrellus subrubescens"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -8061,6 +8132,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Sarcosphaera coronaria",
     "differentiatingCharacter": "Primaverile su suoli calcarei; il rango s.l. evita di forzare la separazione delle specie occidentali criptiche.",
+    "referenceImages": [
+      {
+        "src": "images/reference/sarcosphaera-coronaria-s-l--top-44.jpg",
+        "view": "top",
+        "alt": "Sarcosphaera coronaria — vista superiore",
+        "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Sarcosphaera coronaria"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21,

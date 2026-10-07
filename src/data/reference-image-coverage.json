@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 367,
-    "completeTriplets": 99,
-    "partialCards": 46,
-    "withoutImages": 69,
-    "missingViews": 275,
-    "imageBytes": 115520266
+    "images": 379,
+    "completeTriplets": 101,
+    "partialCards": 51,
+    "withoutImages": 62,
+    "missingViews": 263,
+    "imageBytes": 119523927
   },
   "cards": [
     {
@@ -289,20 +289,21 @@
     },
     {
       "scientificName": "Paralepistopsis amoenolens",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Clitocybe gibba s.l.",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -744,9 +745,10 @@
     },
     {
       "scientificName": "Kuehneromyces mutabilis",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
@@ -1262,12 +1264,12 @@
     },
     {
       "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Scutiger pes-caprae",
@@ -1373,10 +1375,11 @@
     },
     {
       "scientificName": "Sarcosphaera coronaria s.l.",
-      "availableViews": [],
+      "availableViews": [
+        "top"
+      ],
       "missingViews": [
         "lateral",
-        "top",
         "underside"
       ]
     },
@@ -1647,9 +1650,10 @@
     },
     {
       "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
@@ -1980,9 +1984,10 @@
     },
     {
       "scientificName": "Verpa",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
