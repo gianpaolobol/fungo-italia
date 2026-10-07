@@ -1,0 +1,27 @@
+/* Gallery cleanup 2026-10-08
+   Keep existing reference photos visible, remove view labels, and hide empty public slots.
+   Admin edit controls are still injected by admin-photos.js when edit mode is active. */
+.photo-triptych {
+  grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+}
+.photo-triptych figcaption {
+  display: none;
+}
+.photo-triptych figure:has(.photo-missing):not(:has([data-admin-photo-control])) {
+  display: none;
+}
+.photo-missing {
+  display: none;
+}
+html.admin-photo-active .photo-triptych figure:has([data-admin-photo-control]) {
+  display: block;
+}
+html.admin-photo-active .admin-photo-change {
+  font-size: 0;
+  line-height: 1;
+}
+html.admin-photo-active .admin-photo-change::after {
+  content: 'Cambia immagine';
+  font-size: 13px;
+  line-height: 1.2;
+}
