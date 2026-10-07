@@ -1,17 +1,17 @@
 name: Review licensed scientific image sources
 on:
   push:
-    branches: [research/primary-reference-v3]
+    branches: [research/primary-reference-v4]
     paths: ['tools/review-external-photos.py', 'tools/review-primary-observation-photos.py', 'tools/search-expert-reference-photos.py', 'src/data/reference-external-source-candidates.json', '.github/workflows/external-photo-review.yml']
 permissions:
   contents: write
 concurrency:
-  group: primary-source-photo-review-v3
+  group: primary-source-photo-review-v4
   cancel-in-progress: false
 jobs:
   acquire:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,4 +28,4 @@ jobs:
           git add reference-candidates/ src/data/reference-external-source-candidates.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Acquire attributed licensed photographs for visual review"
-          git push origin HEAD:research/primary-reference-v3
+          git push origin HEAD:research/primary-reference-v4
