@@ -13,3 +13,12 @@ test('requests never forward credentials through redirects and logout disables a
 test('corrupt existing manifest fails closed',async()=>{const client=createAdminPhotoClient(token,{fetcher:async url=>{if(url.endsWith('/user'))return response({login:'gianpaolobol'});if(url.endsWith('fungo-italia'))return response({full_name:'gianpaolobol/fungo-italia',default_branch:'main',permissions:{push:true}});if(url.endsWith('/git/blobs'))return response({sha:'a'.repeat(40)});if(url.includes('/git/ref/'))return response({object:{sha:'a'.repeat(40)}});if(url.includes('/git/commits/'))return response({tree:{sha:'b'.repeat(40)}});return response({encoding:'base64',size:10,content:btoa('broken')});}});await client.authenticate();await assert.rejects(client.snapshot(),/corrotto/);});
 test('cancelled operation makes no request',async()=>{let calls=0;const client=createAdminPhotoClient(token,{fetcher:async()=>{calls++;return response({});}});const controller=new AbortController();controller.abort();await assert.rejects(client.authenticate({signal:controller.signal}),{name:'AbortError'});assert.equal(calls,0);});
 test('encrypted device vault roundtrips and rejects wrong passwords and tampering',async()=>{const password='una-password-lunga';const vault=await encryptAdminKey(token,password);assert.equal(await decryptAdminKey(vault,password),token);assert.equal(JSON.stringify(vault).includes(token),false);await assert.rejects(decryptAdminKey(vault,'password-errata'),/Password errata/);await assert.rejects(decryptAdminKey({...vault,ciphertext:vault.ciphertext.slice(0,-4)+'AAAA'},password),/Password errata/);await assert.rejects(encryptAdminKey(token,'short'),/12/);});
+test('owner token with read-only Contents cannot unlock edit mode',async()=>{
+ const client=createAdminPhotoClient(token,{fetcher:async url=>url.endsWith('/user')?response({login:'gianpaolobol'}):url.endsWith('/git/blobs')?response({},403):response({full_name:'gianpaolobol/fungo-italia',default_branch:'main',permissions:{push:true}})});
+ await assert.rejects(client.authenticate(),error=>error.status===403);
+ await assert.rejects(client.snapshot(),/Accedi/);
+});
+test('all canonical teaching titles fit the administrator manifest schema',async()=>{
+ const {readFile}=await import('node:fs/promises'),groups=JSON.parse(await readFile(new URL('../src/data/groups.json',import.meta.url),'utf8'));
+ for(const group of groups)assert.doesNotThrow(()=>validateAdminManifest({version:1,images:[{...row,taxonId:group.id,scientificName:group.scientificName}]}));
+});

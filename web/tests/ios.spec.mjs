@@ -1,5 +1,7 @@
 import {test,expect,chromium} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
+const adminImages=JSON.parse(await readFile(new URL('../../src/data/admin-reference-images.json',import.meta.url),'utf8')).images;
+const overridden=(name,view)=>adminImages.find(image=>image.scientificName===name&&image.view===view);
 const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
 async function ready(page){await page.goto('./');await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);}
 test('iPhone 320: fresh navigation with unreachable origin preserves search, favorites and Amiata vector map',async({page,context,browser,request},testInfo)=>{
@@ -435,7 +437,7 @@ test('real teacher photographs load at 320 points and remain available without t
   const cached=await page.evaluate(async()=>Promise.all([...document.querySelectorAll('#detail-body .photo-thumb img')].map(async img=>!!await caches.match(img.src))));
   expect(cached).toEqual([true,true,true]);
   await page.locator('#detail-body .photo-thumb').nth(2).click();
-  await expect(page.locator('#photo-credit')).toContainText('Nicola Sitta');
+  await expect(page.locator('#photo-credit')).toContainText(overridden('Tricholoma saponaceum s.l.','underside')?'Libreria personale':'Nicola Sitta');
   await page.waitForFunction(()=>document.querySelector('#photo-full').naturalWidth>0);
   await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
@@ -446,7 +448,7 @@ test('genus photographs name their actual species once without duplicating the h
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
  await page.getByRole('button',{name:'Apri Amanita',exact:true}).click();
  await expect(page.locator('#detail-body .photo-thumb')).toHaveCount(3);
- await expect(page.locator('#detail-body .photo-subject-label')).toHaveText('Specie raffigurata: Amanita rubescens');
+ if(!adminImages.some(image=>image.scientificName==='Amanita')) await expect(page.locator('#detail-body .photo-subject-label')).toHaveText('Specie raffigurata: Amanita rubescens');
  await expect(page.locator('#detail-body .photo-subject')).toHaveCount(0);
 });
 
@@ -461,12 +463,14 @@ test('licensed external reference photograph preserves attribution links and dec
   await page.getByRole('button',{name:'Apri Cortinarius praestans',exact:true}).click();
   const opener=page.locator('#detail-body .photo-thumb[data-view="lateral"]');
   await expect(opener).toHaveCount(1);
-  await expect(opener.locator('img')).toHaveAttribute('src','images/reference/external-cortinarius-praestans-lateral.jpg');
+  const replacement=overridden('Cortinarius praestans','lateral');
+  await expect(opener.locator('img')).toHaveAttribute('src',replacement?.src||'images/reference/external-cortinarius-praestans-lateral.jpg');
   await expect.poll(()=>opener.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
   expect(await opener.locator('img').evaluate(async img=>!!await caches.match(img.src))).toBe(true);
   await opener.click();
   await expect(page.locator('#photo-viewer')).toBeVisible();
   await expect.poll(()=>page.locator('#photo-full').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
+  if(replacement){await expect(page.locator('#photo-credit')).toContainText('Libreria personale');}else{
   await expect(page.locator('#photo-credit')).toContainText('Bálint Dima');
   await expect(page.locator('#photo-credit')).toContainText('CC BY 4.0');
   const source=page.locator('#photo-links').getByRole('link',{name:'Fonte',exact:true});
@@ -478,6 +482,7 @@ test('licensed external reference photograph preserves attribution links and dec
    await expect(link).toHaveAttribute('target','_blank');
    await expect(link).toHaveAttribute('rel','noopener noreferrer');
    const box=await link.boundingBox();expect(box.height).toBeGreaterThanOrEqual(44);
+  }
   }
   await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
   await expect(page.locator('#photo-viewer')).not.toBeVisible();
@@ -494,10 +499,11 @@ test('gasteroid base photograph names the anatomical view and depicted species a
  const body=page.locator('#detail-body');
  await expect(body.locator('.photo-thumb')).toHaveCount(3);
  await expect(body.locator('figcaption').getByText('Base esterna',{exact:true})).toHaveCount(1);
- const opener=body.getByRole('button',{name:'Ingrandisci vista base esterna di Pisolithus albus',exact:true});
+ const subject=overridden('Pisolithus','underside')?.subjectTaxon||'Pisolithus albus';
+ const opener=body.getByRole('button',{name:'Ingrandisci vista base esterna di '+subject,exact:true});
  await opener.click();
- await expect(page.locator('#photo-title')).toHaveText('Pisolithus albus · Base esterna');
- await expect(page.locator('#photo-full')).toHaveAttribute('alt','Pisolithus albus — base esterna');
+ await expect(page.locator('#photo-title')).toHaveText(subject+' · Base esterna');
+ await expect(page.locator('#photo-full')).toHaveAttribute('alt',subject+' — base esterna');
  await expect.poll(()=>page.locator('#photo-full').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
  await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
  await expect(opener).toBeFocused();

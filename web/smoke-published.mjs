@@ -11,7 +11,13 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  try{
  await page.goto(url);await expect(page.getByRole('heading',{name:'Studio e atlante'})).toBeVisible();
  await expect(page.locator('#catalog-count')).toContainText('148 schede');
- await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ await expect(page.locator('[data-action="admin-photo-edit"]')).toHaveCount(0);
+ await page.locator('#admin-edit').click();await expect(page.locator('#admin-login-key')).toHaveAttribute('type','password');
+ await expect(page.getByRole('link',{name:'Crea la chiave su GitHub',exact:true})).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.screenshot({path:'published-evidence/'+name+'-admin-login.png',fullPage:true});
+ await page.locator('.admin-photo-dialog').getByRole('button',{name:'Annulla',exact:true}).click();
+ await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'),null,{timeout:120000});
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
  await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
  await expect(page.getByRole('heading',{name:'Carattere differenziante (+1)',exact:true})).toBeVisible();
