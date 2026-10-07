@@ -421,5 +421,5 @@ window.addEventListener('fungo:admin-photo-saved',event=>{
  if(tab==='studio')renderCards();
  if($('#detail').open&&currentTaxon===taxonId){const position=$('#detail-body').scrollTop;$('#detail-body').innerHTML=content(taxon);$('#detail-body').scrollTop=position;window.dispatchEvent(new CustomEvent('fungo:atlas-render'));}
 });
-window.addEventListener('pagehide',()=>{for(const src of adminPhotoPreviews.values())URL.revokeObjectURL(src);adminPhotoPreviews.clear();});
+window.addEventListener('pagehide',event=>{if(event.persisted)return;for(const src of adminPhotoPreviews.values())URL.revokeObjectURL(src);adminPhotoPreviews.clear();});
 void start();

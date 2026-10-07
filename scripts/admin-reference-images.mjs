@@ -6,7 +6,7 @@ const text=v=>typeof v==='string'&&!!v.trim();
 const date=v=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}T/.test(v)&&Number.isFinite(Date.parse(v));
 const check=(ok,message)=>{if(!ok)throw Error('Invalid administrator photograph: '+message);};
 export function validateAdminReferenceImages(manifest,records){
- check(manifest?.version===1&&Array.isArray(manifest.images)&&manifest.images.length<=642,'manifest');
+ check(only(manifest,['version','images'])&&manifest.version===1&&Array.isArray(manifest.images)&&manifest.images.length<=642,'manifest');
  const seen=new Set(),taxa=records?new Map(records.map(t=>[t.id,t])):null;
  for(const image of manifest.images){
   check(image&&typeof image==='object'&&!Array.isArray(image)&&Object.keys(image).every(k=>keys.includes(k)),'fields');
