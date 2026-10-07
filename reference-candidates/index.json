@@ -1286,7 +1286,7 @@
       "sourceId": "EXT-COMP-ENT-SIN-40542",
       "subjectTaxon": "Entoloma sinuatum",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
-      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Entoloma_sinuatum_40542.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Entoloma_sinuatum_40542.jpg/1280px-Entoloma_sinuatum_40542.jpg",
       "author": "Gerhard Koller",
       "licenseName": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
@@ -1294,13 +1294,15 @@
       "taxonomicEvidence": "MO40542, Austria; esemplare maturo con lamelle rosa descritto dall’autore.",
       "verificationBasis": "photographer-identification",
       "kind": "image",
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Entoloma_sinuatum_40542.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
       "candidateId": "EXT-COMP-ENT-SIN-40542-original",
       "candidatePath": "reference-candidates/ext-comp-ent-sin-40542-original.jpg",
-      "sourceSha256": "2717b91ccb3376f52b6b4fab9dd0e337a3d43e02df344b565758d1cbc7deba4e",
-      "extractedImageSha256": "2717b91ccb3376f52b6b4fab9dd0e337a3d43e02df344b565758d1cbc7deba4e",
-      "candidateSha256": "95e52f6c53be7b05ac16c3b6b3bcb0c58272a29c7e71dbe2493755652c532851",
-      "width": 1600,
-      "height": 1200,
+      "sourceSha256": "2ba2f02770b3693f954769113f0f32016d3b8731ca1fb3dcde95adeb0177791d",
+      "extractedImageSha256": "2ba2f02770b3693f954769113f0f32016d3b8731ca1fb3dcde95adeb0177791d",
+      "candidateSha256": "d904272a36e57e7cc520d11e789cdee4974ae3b9a9e364d2dc10b941120e9b42",
+      "width": 1280,
+      "height": 960,
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
@@ -1447,7 +1449,7 @@
       "sourceId": "EXT-COMP-PHYLL-WA",
       "subjectTaxon": "Clitocybe phyllophila",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wa.JPG",
-      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Clitocybe_phyllophila_20121111wa.JPG",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Clitocybe_phyllophila_20121111wa.JPG/1280px-Clitocybe_phyllophila_20121111wa.JPG",
       "author": "Strobilomyces",
       "licenseName": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
@@ -1455,36 +1457,115 @@
       "taxonomicEvidence": "Francia2012; note identificative sporata crema, spore circa4×3µm.",
       "verificationBasis": "photographer-identification",
       "kind": "image",
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Clitocybe_phyllophila_20121111wa.JPG",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
       "candidateId": "EXT-COMP-PHYLL-WA-original",
       "candidatePath": "reference-candidates/ext-comp-phyll-wa-original.jpg",
-      "sourceSha256": "62ec140754e395fea14bbd5dca41788198b6f39cdeb6cf0dc6be3db28db6e988",
-      "extractedImageSha256": "62ec140754e395fea14bbd5dca41788198b6f39cdeb6cf0dc6be3db28db6e988",
-      "candidateSha256": "cd82249493f87e6854fd37cfb16118e000e77b703dfd03761b1293aea91474e6",
-      "width": 1600,
-      "height": 1066,
+      "sourceSha256": "7e7d54337bd3303bd8228c66fa8b5c463cb9d3accbc0646bf4f52b330cda8680",
+      "extractedImageSha256": "7e7d54337bd3303bd8228c66fa8b5c463cb9d3accbc0646bf4f52b330cda8680",
+      "candidateSha256": "5f384d6dfdcde15a9317ad66c7820c1e84aa3c207a9dc9088347946d54b3cb5a",
+      "width": 1280,
+      "height": 853,
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
     },
     {
-      "sourceId": "EXT-COMP-PHYLL-WB",
-      "subjectTaxon": "Clitocybe phyllophila",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
-      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Clitocybe_phyllophila_20121111wb.JPG",
+      "sourceId": "EXT-COMP-PROCERA-CAP",
+      "subjectTaxon": "Macrolepiota procera",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macrolepiota_procera_cap.JPG",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Macrolepiota_procera_cap.JPG/1280px-Macrolepiota_procera_cap.JPG",
+      "author": "J Milburn",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Macrolepiota_procera_cap.JPG",
+      "taxonomicEvidence": "Foto propria, cappello di esemplare raccolto con umbone e squame descritti.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/Macrolepiota_procera_cap.JPG",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-PROCERA-CAP-original",
+      "candidatePath": "reference-candidates/ext-comp-procera-cap-original.jpg",
+      "sourceSha256": "c74b0eb7fc7867eb9491010f221fa1020b6f049865f927845acb64e86433f295",
+      "extractedImageSha256": "c74b0eb7fc7867eb9491010f221fa1020b6f049865f927845acb64e86433f295",
+      "candidateSha256": "d3157bb3db2a31d61f5562a09e22e00210a37c721e0927a78566914cccd413f2",
+      "width": 1280,
+      "height": 960,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "subjectTaxon": "Echinoderma asperum",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Echinoderma_asperum20061022wb.jpg/1280px-Echinoderma_asperum20061022wb.jpg",
       "author": "Strobilomyces",
       "licenseName": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
-      "taxonomicEvidence": "Francia2012; note identificative sporata crema, spore circa4×3µm.",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "taxonomicEvidence": "Evry2006; note odore Scleroderma, cheilocistidi e spore9.5×3.5µm.",
       "verificationBasis": "photographer-identification",
       "kind": "image",
-      "candidateId": "EXT-COMP-PHYLL-WB-original",
-      "candidatePath": "reference-candidates/ext-comp-phyll-wb-original.jpg",
-      "sourceSha256": "f37e258dad3dfdea51d39afbb3310697f53567a00165f79c47985bfbcdd5a510",
-      "extractedImageSha256": "f37e258dad3dfdea51d39afbb3310697f53567a00165f79c47985bfbcdd5a510",
-      "candidateSha256": "52d8ce71683743179c3006764c2c831a220b3eb6628d47bef6b95c7d4b700454",
-      "width": 1600,
-      "height": 1067,
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Echinoderma_asperum20061022wb.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-ASPERUM-W-original",
+      "candidatePath": "reference-candidates/ext-comp-asperum-w-original.jpg",
+      "sourceSha256": "598651e5b08272d856b0884d16c4c79ca03602a7b7296c547f0f3f9f0cc34176",
+      "extractedImageSha256": "598651e5b08272d856b0884d16c4c79ca03602a7b7296c547f0f3f9f0cc34176",
+      "candidateSha256": "93e9dab122d5cdfe7996c29da37b6e515dbf3a503c6ae7f28573c4ac5dd00b1f",
+      "width": 1280,
+      "height": 853,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-ERYNGII-54421",
+      "subjectTaxon": "Pleurotus eryngii",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_(DC.)_Gillet_54421_2008-11-11.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Pleurotus_eryngii_%28DC.%29_Gillet_54421_2008-11-11.jpg/1280px-Pleurotus_eryngii_%28DC.%29_Gillet_54421_2008-11-11.jpg",
+      "author": "Gerhard Koller",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_(DC.)_Gillet_54421_2008-11-11.jpg",
+      "taxonomicEvidence": "MO54421 IllmitzAustria su radici Eryngium campestre, identificazione autore.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pleurotus_eryngii_%28DC.%29_Gillet_54421_2008-11-11.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-ERYNGII-54421-original",
+      "candidatePath": "reference-candidates/ext-comp-eryngii-54421-original.jpg",
+      "sourceSha256": "c468fe88d35c43aec18fef6deea4f6f7404ecb91c47af0cfa7fd2174e346f613",
+      "extractedImageSha256": "c468fe88d35c43aec18fef6deea4f6f7404ecb91c47af0cfa7fd2174e346f613",
+      "candidateSha256": "7493cd6ac617cf42aaf9ba3ff28198c24fab0cb4543984775c137b58725f0aac",
+      "width": 1280,
+      "height": 960,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-GOMPHUS-702984",
+      "subjectTaxon": "Gomphus clavatus",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Gomphus_clavatus_702984.jpg/1280px-Gomphus_clavatus_702984.jpg",
+      "author": "Ron Pastorino",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+      "taxonomicEvidence": "MO702984, misure spore nella fonte; fotografo collaboratore micologico.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Gomphus_clavatus_702984.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-GOMPHUS-702984-original",
+      "candidatePath": "reference-candidates/ext-comp-gomphus-702984-original.jpg",
+      "sourceSha256": "99b17ba218cc511d78b60642a26a4fc02ac378066a94ba2067a47cb8f84cbb9a",
+      "extractedImageSha256": "99b17ba218cc511d78b60642a26a4fc02ac378066a94ba2067a47cb8f84cbb9a",
+      "candidateSha256": "a5eba654dfe2ba1c93881a7ed7d4ac72f3448b9142f7bfed64b4d1ff33357294",
+      "width": 1280,
+      "height": 1137,
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
@@ -1534,21 +1615,204 @@
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PSATH-WA",
+      "subjectTaxon": "Psathyrella candolleana",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Psathyrella_candolleana_060801wa.jpg/1280px-Psathyrella_candolleana_060801wa.jpg",
+      "author": "Strobilomyces",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+      "taxonomicEvidence": "Identificazione documentata dal fotografo nella fonte primaria.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "originalAssetUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Psathyrella_candolleana_060801wa.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-PSATH-WA-original",
+      "candidatePath": "reference-candidates/ext-comp-psath-wa-original.jpg",
+      "sourceSha256": "f1ace39b6d279b9d69f8aa4dfb2ae7497b0c24daeceb7569a2a7d96f6a8435d7",
+      "extractedImageSha256": "f1ace39b6d279b9d69f8aa4dfb2ae7497b0c24daeceb7569a2a7d96f6a8435d7",
+      "candidateSha256": "021404e8e99f3bbf5841fe701d5ae237d7b45596b6672b958f815ce4e647b82a",
+      "width": 1280,
+      "height": 854,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-FILAMENTOSUM-SEN2019",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+      "assetUrl": "https://acikerisim.mu.edu.tr/xmlui/bitstream/handle/20.500.12809/1151/%C5%9Een.pdf?isAllowed=y&sequence=1",
+      "author": "İsmail Şen & Hakan Allı",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://doi.org/10.3906/bot-1812-52",
+      "taxonomicEvidence": "ŞenAllı2019 Fig2a-b p6, determinazionemacromicroecologia, licenzap1.",
+      "verificationBasis": "published-taxonomic-study",
+      "kind": "pdf",
+      "pages": [
+        6
+      ],
+      "candidateId": "EXT-COMP-FILAMENTOSUM-SEN2019-x4588",
+      "candidatePath": "reference-candidates/ext-comp-filamentosum-sen2019-x4588.jpg",
+      "sourceSha256": "a6e6c104bd2d9ca42310bd964b13784fa0082a1cd474a06ce435901bad0b6edd",
+      "extractedImageSha256": "c5147428dc1ad61ffa183c68230bf759139a1aeec53fd23ad6e7dde9de1ab5cd",
+      "candidateSha256": "3555163dfff9bb88fc922520179417c2f4c4dc384f3f656c9c4deb8787f727de",
+      "width": 955,
+      "height": 712,
+      "page": 6,
+      "xref": 4588,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "subjectTaxon": "Volvariella volvacea",
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "assetUrl": "https://journals.plos.org/plosone/article/figure/image?download=&id=10.1371%2Fjournal.pone.0058294.g001&size=large",
+      "author": "Bao et al.2013",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "taxonomicEvidence": "DOI10.1371/journal.pone.0058294 Figura1B-C coltivato.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-VOLVACEA-PLOS-original",
+      "candidatePath": "reference-candidates/ext-comp-volvacea-plos-original.jpg",
+      "sourceSha256": "9edc2855713a73f0e547ac01debac42196b9926d3669a3623cfe8a7fd68d571f",
+      "extractedImageSha256": "9edc2855713a73f0e547ac01debac42196b9926d3669a3623cfe8a7fd68d571f",
+      "candidateSha256": "ef7d7082cc1b6bd484ee835b70756188a10f5c6d3548fb4df753590478837fda",
+      "width": 1600,
+      "height": 1247,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-POLY-66485178",
+      "subjectTaxon": "Polyporus umbellatus",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Polyporus_umbellatus_66485178.jpg/1280px-Polyporus_umbellatus_66485178.jpg",
+      "author": "Nina Filippova",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
+      "taxonomicEvidence": "iNat41896329 Russia2019 micologa.",
+      "verificationBasis": "source-caption-reviewed",
+      "kind": "image",
+      "originalAssetUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Polyporus_umbellatus_66485178.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-POLY-66485178-original",
+      "candidatePath": "reference-candidates/ext-comp-poly-66485178-original.jpg",
+      "sourceSha256": "22a715a7600c2995be23cda46ee2ecff778721ed8fa78d9ab24a2e8d19ea6d17",
+      "extractedImageSha256": "22a715a7600c2995be23cda46ee2ecff778721ed8fa78d9ab24a2e8d19ea6d17",
+      "candidateSha256": "4b706ec3036201897712ecc4eea9d158b1aa6132efe01064e9dddc9b4d533a78",
+      "width": 1280,
+      "height": 787,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PRAESTANS-NEW0",
+      "subjectTaxon": "Cortinarius praestans",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/214147/Cortinarius_praestans_Balint_Dima.JPG",
+      "author": "Bálint Dima / NINA",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "taxonomicEvidence": "Schedaistituzionale fotoattribuita; filename336-13-BD nonprovaDNA.",
+      "verificationBasis": "source-caption-reviewed",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PRAESTANS-NEW0-original",
+      "candidatePath": "reference-candidates/ext-comp-praestans-new0-original.jpg",
+      "sourceSha256": "42cb70044207eff63671a6f0b309caa10fdebdcb48a48c2c182b3bd881cd423c",
+      "extractedImageSha256": "42cb70044207eff63671a6f0b309caa10fdebdcb48a48c2c182b3bd881cd423c",
+      "candidateSha256": "d1e1ce8781e0e581384771de9f52755f49b7a7a66e6cddeecb1fe6f2e09128ce",
+      "width": 1600,
+      "height": 1113,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PRAESTANS-NEW1",
+      "subjectTaxon": "Cortinarius praestans",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/214147/Cortinarius_praestans_Balint_Dima_336-13-BD.jpg",
+      "author": "Bálint Dima / NINA",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "taxonomicEvidence": "Schedaistituzionale fotoattribuita; filename336-13-BD nonprovaDNA.",
+      "verificationBasis": "source-caption-reviewed",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PRAESTANS-NEW1-original",
+      "candidatePath": "reference-candidates/ext-comp-praestans-new1-original.jpg",
+      "sourceSha256": "99628b050a529d63597169b38a0b5c1f94f7ca3bea8fa45d616c66008687cf09",
+      "extractedImageSha256": "99628b050a529d63597169b38a0b5c1f94f7ca3bea8fa45d616c66008687cf09",
+      "candidateSha256": "21b0bfa91da5e59cfc98b1f7fce4251da91dd7f0e039057c082caa905548ab57",
+      "width": 1600,
+      "height": 1162,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PRUN-050",
+      "subjectTaxon": "Clitopilus prunulus",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Clitopilus_prunulus_050922w.jpg/1280px-Clitopilus_prunulus_050922w.jpg",
+      "author": "Strobilomyces",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+      "taxonomicEvidence": "Didascaliaautore sporatarosa.",
+      "verificationBasis": "source-caption-reviewed",
+      "kind": "image",
+      "originalAssetUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Clitopilus_prunulus_050922w.jpg",
+      "retrievalNote": "Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file.",
+      "candidateId": "EXT-COMP-PRUN-050-original",
+      "candidatePath": "reference-candidates/ext-comp-prun-050-original.jpg",
+      "sourceSha256": "204da6042d8adb1f98d71bac5ce4467033e0f1ba26aec1eae18740ad980cedb9",
+      "extractedImageSha256": "204da6042d8adb1f98d71bac5ce4467033e0f1ba26aec1eae18740ad980cedb9",
+      "candidateSha256": "a272bbc46864e6e5b2e8c4e93fd183eaeb7e4377f862acfb7ea76eb44fa9a490",
+      "width": 1280,
+      "height": 853,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-SARCO-2024",
+      "subjectTaxon": "Sarcosphaera coronaria",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+      "assetUrl": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11557-024-02006-7/MediaObjects/11557_2024_2006_Fig2_HTML.jpg",
+      "author": "Jiří Souček (a); Jan Borovička (b–f)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+      "taxonomicEvidence": "Borovicka2024 Fig2a-c Scoronaria PRM959506/952333/959482,d-fScrassaescludere; revisionemolecolare.",
+      "verificationBasis": "source-caption-reviewed",
+      "kind": "image",
+      "candidateId": "EXT-COMP-SARCO-2024-original",
+      "candidatePath": "reference-candidates/ext-comp-sarco-2024-original.jpg",
+      "sourceSha256": "2ee7ad0121eed8a84e7868030c2798f22a15433e2d98f0506f885777e76225dc",
+      "extractedImageSha256": "2ee7ad0121eed8a84e7868030c2798f22a15433e2d98f0506f885777e76225dc",
+      "candidateSha256": "a8b6fa8a7e7265c345843afba66a8d812f9ab2a0f3d3fba208b2667bf71ed6c8",
+      "width": 1587,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
     }
   ],
   "failures": [
     {
-      "sourceId": "EXT-WANG-CLYPEATUM-2026",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 403: Forbidden"
-    },
-    {
-      "sourceId": "EXT-SILVA-CONICA-2019",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 403: Forbidden"
-    },
-    {
-      "sourceId": "EXT-COMP-PROCERA-CAP",
+      "sourceId": "EXT-COMP-PHYLL-WB",
       "errorType": "HTTPError",
       "message": "HTTP Error 429: Too many requests (f061ab2)"
     },
@@ -1558,17 +1822,7 @@
       "message": "HTTP Error 429: Too many requests (f061ab2)"
     },
     {
-      "sourceId": "EXT-COMP-ASPERUM-W",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
-    },
-    {
       "sourceId": "EXT-COMP-ELAI-607806",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
-    },
-    {
-      "sourceId": "EXT-COMP-ERYNGII-54421",
       "errorType": "HTTPError",
       "message": "HTTP Error 429: Too many requests (f061ab2)"
     },
@@ -1578,99 +1832,569 @@
       "message": "HTTP Error 429: Too many requests (f061ab2)"
     },
     {
-      "sourceId": "EXT-COMP-GOMPHUS-702984",
-      "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests (f061ab2)"
-    },
-    {
       "sourceId": "EXT-COMP-CONICA-KUNZE",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-GALERINA-582666",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-CONICA-ROCK",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-LEUCOTHITES",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-PUNICEA-1789",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-BITORQUIS",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-BRESADOLANUS",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-GEOTROPA",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-PRUNULUS",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-VERPA-FREE",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-VERPA-RON",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-VERPA-135307",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-TESQ-399417",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-TESQ-399418",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-PSILO-MESC",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-PSILO-SEM",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-PSILO-ALL",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
     },
     {
       "sourceId": "EXT-COMP-PSATH-CAND",
       "errorType": "HTTPError",
-      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-KUEHN-G28",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-STROPH-183479",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-ASPERUM-WA",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CRISTATA-G5",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PSATH-1410",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-VOLEM-90024",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-VOLEM-90022",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-VOLEM-90023",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-VOLEM-90060",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SEJUNCT-494602",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-VERNUM-138013",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SAUND-515187",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PLUTEUS-AMER",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HYPHO-W",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PANA-599341",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PANA-GROUP",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HYGROPHOR-241718",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SATANAS-60561",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CALOPUS-LIND",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-OVOIDEA-G",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-DELICA",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SHIITAKE-KRISP",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SHIITAKE-USDA",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HEBE-MESO",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HEBE-HIEMALE",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CORNUCOP-1",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CAESAREA-NIS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-POLY-66485199",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-POLY-CAPS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-MERIP-UNDER",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SCUT-31566",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SCUT-37540",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SCUT-NIS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HERIC-920867",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-FORM-ROCK",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-FORM-TOP",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-PALL-LIP",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-PALL-870",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-PALL-873",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-BOTR-702590",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-GRIF-02",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-GRIF-03",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HAP-9135124",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-LAET-HORTUS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-KUEHN-B",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-KUEHN-C",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-LEUCO-WB",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-LEUCO-WC",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PANA-80603457",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PANA-80603453",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-STROPH-UNDER4",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HYPHO-119885",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-STROPH-183478",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-ASPERUM-6632",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PROCERA-HELD",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-GYROP-KUNZE",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-GOMPHIDIUS-421",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CORNUCOP-2",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CLYPEAT-362786",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RHODOP-1",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RHODOP-2",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CAESAREA-NIS2",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CAESAREA-NIS3",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-GIBBA",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-BISPORUS-G4",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-ATRAMENT-G3",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-ATRAMENT-G31",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-COMATUS-G3",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-OVOIDEA-ARCH",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-OVOIDEA-PERE3",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-OVOIDEA-RAN",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PANTH-TS4",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HELVELLA-2008",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SARCO-302962",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SARCO-302963",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CALO-RAD-304",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-MORCH-5B",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CHROOG-FIG2",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PRUN-130",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PHYLL-1130296",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-BITOR-1419454",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HERIC-284",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HERIC-FAGUS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-HERIC-64176",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-FORM2",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-FORM8",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-RAM-BOTR4",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PULCHRO1",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-PULCHRO2",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-CALOPUS-LIND1",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-GOMPHIDIUS-57130",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SIN-54291818",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-SCL-MONSTER",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-COMATUS-WILD",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Your request does not comply with our robot policy, https://w.wiki/4wJS. Please contact noc@wikimedia.org for further information (0fa5166)"
+    },
+    {
+      "sourceId": "EXT-COMP-IMA-TRICHO2020",
+      "errorType": "UnidentifiedImageError",
+      "message": "cannot identify image file <_io.BytesIO object at 0x7f9e46a27470>"
     }
   ]
 }
