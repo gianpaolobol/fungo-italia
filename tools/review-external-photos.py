@@ -5,6 +5,7 @@ from PIL import Image,ImageOps,ImageDraw
 root=pathlib.Path("reference-candidates");root.mkdir(exist_ok=True)
 sources=json.loads(pathlib.Path("src/data/reference-external-source-candidates.json").read_text())["sources"]
 items=[];failures=[]
+previous=json.loads((root/"index.json").read_text())["candidates"] if (root/"index.json").exists() else []
 def get(url):
  if not url.startswith("https://"):raise ValueError("HTTPS required")
  req=urllib.request.Request(url,headers={"User-Agent":"FungoItalia/1.0 scientific educational image curation (github.com/gianpaolobol/fungo-italia)"})
@@ -20,6 +21,9 @@ def save(source,raw,suffix,page=None,xref=None):
  im.save(path,quality=90,optimize=True)
  items.append({**source,"candidateId":source["sourceId"]+"-"+suffix,"candidatePath":str(path),"sourceSha256":source_hash,"extractedImageSha256":hashlib.sha256(raw).hexdigest(),"candidateSha256":hashlib.sha256(path.read_bytes()).hexdigest(),"width":im.width,"height":im.height,"page":page,"xref":xref,"reviewStatus":"pending-visual-review"})
 for source in sources:
+ cached=[i for i in previous if i["sourceId"]==source["sourceId"] and i["assetUrl"]==source["assetUrl"] and i["licenseUrl"]==source["licenseUrl"]]
+ if cached and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):
+  items.extend([{**i,**source} for i in cached]);continue
  try:
   data=get(source["assetUrl"]);source_hash=hashlib.sha256(data).hexdigest()
   if source["kind"]=="pdf":
