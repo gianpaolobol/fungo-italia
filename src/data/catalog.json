@@ -1255,13 +1255,6 @@
         "alt": "Amanita ovoidea — vista laterale di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 29. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
         "subjectTaxon": "Amanita ovoidea"
-      },
-      {
-        "src": "images/reference/amanita-ovoidea-top-117.jpg",
-        "view": "top",
-        "alt": "Amanita ovoidea — vista superiore del cappello",
-        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 29. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
-        "subjectTaxon": "Amanita ovoidea"
       }
     ],
     "curriculum": {
@@ -1338,13 +1331,6 @@
         "view": "top",
         "alt": "Amanita pantherina — vista superiore del cappello",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 49. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
-        "subjectTaxon": "Amanita pantherina"
-      },
-      {
-        "src": "images/reference/amanita-pantherina-underside-197.jpg",
-        "view": "underside",
-        "alt": "Amanita pantherina — vista inferiore del cappello e gambo",
-        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 49. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
         "subjectTaxon": "Amanita pantherina"
       }
     ],
@@ -1944,13 +1930,6 @@
         "view": "top",
         "alt": "Amanita vittadinii — vista superiore del cappello",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
-        "subjectTaxon": "Amanita vittadinii"
-      },
-      {
-        "src": "images/reference/saproamanita-vittadinii-lateral-277.jpg",
-        "view": "lateral",
-        "alt": "Amanita vittadinii — vista laterale di cappello e gambo",
-        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
         "subjectTaxon": "Amanita vittadinii"
       },
       {
@@ -2865,6 +2844,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Basidiomi in genere piccoli-medi e non glutinosi; riconoscimento al rango di sottogenere.",
+    "referenceImages": [
+      {
+        "src": "images/reference/cortinarius-sottogenere-dermocybe-lateral-35.jpg",
+        "view": "lateral",
+        "alt": "Cortinarius uliginosus — vista laterale di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 10. Fotografia: Federico Calledda.",
+        "subjectTaxon": "Cortinarius uliginosus"
+      },
+      {
+        "src": "images/reference/cortinarius-sottogenere-dermocybe-top-43.jpg",
+        "view": "top",
+        "alt": "Cortinarius sanguineus s.l. — vista superiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 12. Fotografia: Federico Calledda.",
+        "subjectTaxon": "Cortinarius sanguineus s.l."
+      },
+      {
+        "src": "images/reference/cortinarius-sottogenere-dermocybe-underside-44.jpg",
+        "view": "underside",
+        "alt": "Cortinarius croceus — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 12. Fotografia: Federico Calledda.",
+        "subjectTaxon": "Cortinarius croceus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -2917,6 +2919,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente in boschi di conifere.",
+    "referenceImages": [
+      {
+        "src": "images/reference/cortinarius-cumatilis-lateral-59.jpg",
+        "view": "lateral",
+        "alt": "Cortinarius cumatilis — vista laterale di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 17. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius cumatilis"
+      },
+      {
+        "src": "images/reference/cortinarius-cumatilis-top-59.jpg",
+        "view": "top",
+        "alt": "Cortinarius cumatilis — vista superiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 17. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius cumatilis"
+      },
+      {
+        "src": "images/reference/cortinarius-cumatilis-underside-59.jpg",
+        "view": "underside",
+        "alt": "Cortinarius cumatilis — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 17. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius cumatilis"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -2975,6 +3000,29 @@
     "deepMorphologyRequired": false,
     "sourceName": "Cortinarius caperatus (= Rozites caperatus)",
     "differentiatingCharacter": "Tipico di boschi umidi di conifere e brughiere montane.",
+    "referenceImages": [
+      {
+        "src": "images/reference/cortinarius-caperatus-lateral-32.jpg",
+        "view": "lateral",
+        "alt": "Cortinarius caperatus — vista laterale di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 9. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius caperatus"
+      },
+      {
+        "src": "images/reference/cortinarius-caperatus-top-32.jpg",
+        "view": "top",
+        "alt": "Cortinarius caperatus — vista superiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 9. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius caperatus"
+      },
+      {
+        "src": "images/reference/cortinarius-caperatus-underside-32.jpg",
+        "view": "underside",
+        "alt": "Cortinarius caperatus — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 9. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius caperatus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -6205,6 +6253,22 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo privo di reticolo: la coppia gambo cavo + forte azzurramento è altamente diagnostica.",
+    "referenceImages": [
+      {
+        "src": "images/reference/gyroporus-cyanescens-top-197.jpg",
+        "view": "top",
+        "alt": "Gyroporus cyanescens — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 35; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus cyanescens"
+      },
+      {
+        "src": "images/reference/gyroporus-cyanescens-underside-197.jpg",
+        "view": "underside",
+        "alt": "Gyroporus cyanescens — vista inferiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 35; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus cyanescens"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16,
@@ -6232,6 +6296,29 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Gyroporus castaneus",
     "differentiatingCharacter": "Carne bianca che non azzurra, in contrasto con G. cyanescens.",
+    "referenceImages": [
+      {
+        "src": "images/reference/gyroporus-castaneus-s-l--top-193.jpg",
+        "view": "top",
+        "alt": "Gyroporus castaneus — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 34; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus castaneus"
+      },
+      {
+        "src": "images/reference/gyroporus-castaneus-s-l--underside-193.jpg",
+        "view": "underside",
+        "alt": "Gyroporus castaneus — vista inferiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 34; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus castaneus"
+      },
+      {
+        "src": "images/reference/gyroporus-castaneus-s-l--lateral-193.jpg",
+        "view": "lateral",
+        "alt": "Gyroporus castaneus — vista laterale di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 34; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus castaneus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16,
@@ -6360,6 +6447,29 @@
         ]
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/suillus-luteus-top-461.jpg",
+        "view": "top",
+        "alt": "Suillus luteus — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
+        "subjectTaxon": "Suillus luteus"
+      },
+      {
+        "src": "images/reference/suillus-luteus-underside-461.jpg",
+        "view": "underside",
+        "alt": "Suillus luteus — vista inferiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
+        "subjectTaxon": "Suillus luteus"
+      },
+      {
+        "src": "images/reference/suillus-luteus-lateral-461.jpg",
+        "view": "lateral",
+        "alt": "Suillus luteus — vista laterale di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
+        "subjectTaxon": "Suillus luteus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17,
@@ -6480,6 +6590,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cappello bruno-ocraceo dall'aspetto porcinoide; contrasto netto con i pori rosati maturi.",
+    "referenceImages": [
+      {
+        "src": "images/reference/tylopilus-felleus-top-546.jpg",
+        "view": "top",
+        "alt": "Tylopilus felleus — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      },
+      {
+        "src": "images/reference/tylopilus-felleus-underside-546.jpg",
+        "view": "underside",
+        "alt": "Tylopilus felleus — vista inferiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      },
+      {
+        "src": "images/reference/tylopilus-felleus-lateral-547.jpg",
+        "view": "lateral",
+        "alt": "Tylopilus felleus — vista laterale di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17,
@@ -6551,6 +6684,15 @@
     "deepMorphologyRequired": true,
     "acceptedName": "Cantharellus cibarius",
     "differentiatingCharacter": "Odore frequentemente fruttato o di albicocca; profilo riferito al complesso.",
+    "referenceImages": [
+      {
+        "src": "images/reference/cantharellus-cibarius-complex-underside-395.jpg",
+        "view": "underside",
+        "alt": "Cantharellus cibarius — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 54; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Cantharellus cibarius"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17,
@@ -6699,6 +6841,29 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Hydnum repandum",
     "differentiatingCharacter": "Gambo spesso eccentrico; profilo volutamente al rango Hydnum spp./gruppo S1.",
+    "referenceImages": [
+      {
+        "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--lateral-214.jpg",
+        "view": "lateral",
+        "alt": "Hydnum repandum — vista laterale di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 23; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Hydnum repandum"
+      },
+      {
+        "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--top-214.jpg",
+        "view": "top",
+        "alt": "Hydnum repandum — vista superiore di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 23; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Hydnum repandum"
+      },
+      {
+        "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--underside-295.jpg",
+        "view": "underside",
+        "alt": "Hydnum repandum — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 36; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Hydnum repandum"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7115,6 +7280,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Rami principali grossi e relativamente paralleli/eretti; la tricoloria è più affidabile nei giovani freschi.",
+    "referenceImages": [
+      {
+        "src": "images/reference/ramaria-formosa-lateral-303.jpg",
+        "view": "lateral",
+        "alt": "Ramaria formosa — vista laterale di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Ramaria formosa"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 19,
@@ -7198,6 +7372,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Lignicola su latifoglie, frequentemente Sambucus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/auricularia-auricula-judae-lateral-306.jpg",
+        "view": "lateral",
+        "alt": "Auricularia auricula-judae — vista laterale di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Auricularia auricula-judae"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 20,

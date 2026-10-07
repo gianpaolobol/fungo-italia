@@ -441,6 +441,29 @@
       }
     ],
     "diagnosticNote": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione.",
+    "referenceImages": [
+      {
+        "src": "images/reference/cortinarius-lateral-32.jpg",
+        "view": "lateral",
+        "alt": "Cortinarius caperatus — vista laterale di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 9. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius caperatus"
+      },
+      {
+        "src": "images/reference/cortinarius-top-32.jpg",
+        "view": "top",
+        "alt": "Cortinarius caperatus — vista superiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 9. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius caperatus"
+      },
+      {
+        "src": "images/reference/cortinarius-underside-32.jpg",
+        "view": "underside",
+        "alt": "Cortinarius caperatus — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 9. Fotografia: Alessandro Valdagni, GMBresadola.",
+        "subjectTaxon": "Cortinarius caperatus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6
@@ -1789,6 +1812,29 @@
         "label": "Molto chiara"
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/gyroporus-top-193.jpg",
+        "view": "top",
+        "alt": "Gyroporus castaneus — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 34; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus castaneus"
+      },
+      {
+        "src": "images/reference/gyroporus-underside-193.jpg",
+        "view": "underside",
+        "alt": "Gyroporus castaneus — vista inferiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 34; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus castaneus"
+      },
+      {
+        "src": "images/reference/gyroporus-lateral-193.jpg",
+        "view": "lateral",
+        "alt": "Gyroporus castaneus — vista laterale di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 34; fotografo individuale non indicato.",
+        "subjectTaxon": "Gyroporus castaneus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -2210,6 +2256,29 @@
       "minimum-card-objective-tylopilus--01--tylopilus-felleus"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/tylopilus-top-546.jpg",
+        "view": "top",
+        "alt": "Tylopilus felleus — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      },
+      {
+        "src": "images/reference/tylopilus-underside-546.jpg",
+        "view": "underside",
+        "alt": "Tylopilus felleus — vista inferiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      },
+      {
+        "src": "images/reference/tylopilus-lateral-547.jpg",
+        "view": "lateral",
+        "alt": "Tylopilus felleus — vista laterale di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17
@@ -2298,6 +2367,15 @@
         "sourcePage": 54
       }
     ],
+    "referenceImages": [
+      {
+        "src": "images/reference/cantharellus-underside-395.jpg",
+        "view": "underside",
+        "alt": "Cantharellus cibarius — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 54; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Cantharellus cibarius"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17
@@ -2371,6 +2449,15 @@
       "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/ramaria-lateral-303.jpg",
+        "view": "lateral",
+        "alt": "Ramaria formosa — vista laterale di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Ramaria formosa"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 19
@@ -2438,6 +2525,15 @@
       "minimum-card-objective-auricularia--01--auricularia-auricula-judae"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/auricularia-lateral-306.jpg",
+        "view": "lateral",
+        "alt": "Auricularia auricula-judae — vista laterale di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Auricularia auricula-judae"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 20
@@ -2492,6 +2588,15 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/helvella-lateral-296.jpg",
+        "view": "lateral",
+        "alt": "Helvella spadicea — vista laterale di cappello e gambo",
+        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 36; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Helvella spadicea"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21
