@@ -511,6 +511,8 @@ test('commercialization on iPhone stays distinct from edibility and respects ban
  await open('Amanita caesarea');
  await expect(page.locator('#detail-body .commerce-inline')).toHaveText('Specie commerciabile in Italia');
  await expect(page.locator('#detail-body .study-facts')).toContainText('Commestibilità');
+ await page.locator('#detail-body .commerce-details summary').click();await expect(page.locator('#detail-body .commerce-badge')).toHaveCount(1);
+ await page.locator('#detail-body .commerce-details summary').click();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.screenshot({path:testInfo.outputPath('iphone-commerce-caesarea.png'),fullPage:true});
  await page.getByRole('button',{name:'Torna',exact:true}).click();await open('Amanita phalloides');
@@ -545,4 +547,17 @@ test('malformed commercial status and false equestre authorization fail catalog 
  });
  await page.goto('./');await expect(page.getByRole('heading',{name:'Catalogo non disponibile'})).toBeVisible();
  await expect(page.locator('.commerce-badge')).toHaveCount(0);
+});
+
+test('whole-genus legal provisions remain visible without a blanket species badge',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ for(const name of ['Morchella','Leccinum']){
+  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(name);
+  await page.getByRole('button',{name:'Apri '+name,exact:true}).click();
+  await expect(page.locator('#detail-body .commerce-inline')).toHaveCount(0);
+  await page.locator('#detail-body .commerce-details summary').click();
+  await expect(page.locator('#detail-body .commerce-genus-provision')).toContainText('tutte le specie del genere '+name);
+  await expect(page.locator('#detail-body .commerce-details')).toContainText('esempi');
+  await page.getByRole('button',{name:'Torna',exact:true}).click();
+ }
 });

@@ -15,7 +15,7 @@ export function validateCommercialization(dataset){
  for(const b of dataset.bans)if(!text(b.scientificName)||!text(b.label)||sources.get(b.sourceId)?.scope!=='national')fail('ban');
  if(!dataset.bans.some(b=>b.scientificName==='Tricholoma equestre'&&b.sourceId==='OM2002-EQUESTRE'))fail('missing equestre override');
  const names=new Set([...dataset.rules.map(r=>r.scientificName),...dataset.bans.map(b=>b.scientificName)]),cards=new Set();
- for(const c of dataset.cards){if(!text(c.scientificName)||cards.has(c.scientificName)||typeof c.wholeCard!=='boolean'||!Array.isArray(c.members)||!c.members.length||new Set(c.members).size!==c.members.length||c.members.some(n=>!names.has(n))||(c.wholeCard&&(c.members.length!==1||c.members[0]!==c.scientificName)))fail('card mapping');cards.add(c.scientificName);}
+ for(const c of dataset.cards){if(!text(c.scientificName)||cards.has(c.scientificName)||typeof c.wholeCard!=='boolean'||!Array.isArray(c.members)||!c.members.length||new Set(c.members).size!==c.members.length||c.members.some(n=>!names.has(n))||(c.wholeCard&&(c.members.length!==1||c.members[0]!==c.scientificName)))fail('card mapping');if(c.genusProvision!==undefined&&(!['Morchella','Leccinum'].includes(c.genusProvision.genus)||c.scientificName!==c.genusProvision.genus||c.genusProvision.sourceId!=='DPR376-ANNEX-I'))fail('genus provision');cards.add(c.scientificName);}
  return dataset;
 }
 export function applyCommercialization(taxa,dataset){
@@ -35,7 +35,7 @@ export function applyCommercialization(taxa,dataset){
    const applicable=national?[national]:rules.filter(r=>r.scope==='regional');
    return {scientificName,status:national?'national':'regional',label:national?'Specie commerciabile in Italia':'Specie commerciabile in '+applicable.map(r=>r.region).join(', '),regions:applicable.filter(r=>r.scope==='regional').map(r=>r.region),sources:applicable.flatMap(r=>[sources.get(r.sourceId),...(r.taxonomySourceId?[sources.get(r.taxonomySourceId)]:[])])};
   });
-  t.commercialization={product:'fresh',wholeCard,reviewedAt:dataset.reviewedAt,context:dataset.context,conditions:dataset.conditions,members};
+  t.commercialization={product:'fresh',wholeCard,reviewedAt:dataset.reviewedAt,context:dataset.context,conditions:dataset.conditions,members,...(mapping?.genusProvision?{genusProvision:{genus:mapping.genusProvision.genus,label:'L’allegato I comprende tutte le specie del genere '+mapping.genusProvision.genus+'.',source:sources.get(mapping.genusProvision.sourceId)}}:{})};
  }
  return taxa;
 }

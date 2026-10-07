@@ -80,6 +80,20 @@
       "conditions": "Per i funghi freschi spontanei destinati alla vendita al dettaglio serve il controllo micologico previsto dall’art. 3. Restano applicabili autorizzazioni e prescrizioni locali.",
       "members": [
         {
+          "scientificName": "Agaricus arvensis",
+          "status": "national",
+          "label": "Specie commerciabile in Italia",
+          "regions": [],
+          "sources": [
+            {
+              "id": "DPR376-ANNEX-I",
+              "title": "D.P.R. 376/1995 · allegato I",
+              "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=1&art.idArticolo=1&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+              "scope": "national"
+            }
+          ]
+        },
+        {
           "scientificName": "Agaricus campestris",
           "status": "national",
           "label": "Specie commerciabile in Italia",
@@ -2108,6 +2122,20 @@
       "members": [
         {
           "scientificName": "Kuehneromyces mutabilis",
+          "status": "national",
+          "label": "Specie commerciabile in Italia",
+          "regions": [],
+          "sources": [
+            {
+              "id": "DPR376-ANNEX-I",
+              "title": "D.P.R. 376/1995 · allegato I",
+              "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=1&art.idArticolo=1&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+              "scope": "national"
+            }
+          ]
+        },
+        {
+          "scientificName": "Pholiota microspora",
           "status": "national",
           "label": "Specie commerciabile in Italia",
           "regions": [],
@@ -4176,7 +4204,17 @@
             }
           ]
         }
-      ]
+      ],
+      "genusProvision": {
+        "genus": "Leccinum",
+        "label": "L’allegato I comprende tutte le specie del genere Leccinum.",
+        "source": {
+          "id": "DPR376-ANNEX-I",
+          "title": "D.P.R. 376/1995 · allegato I",
+          "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=1&art.idArticolo=1&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+          "scope": "national"
+        }
+      }
     }
   },
   {
@@ -5166,7 +5204,17 @@
             }
           ]
         }
-      ]
+      ],
+      "genusProvision": {
+        "genus": "Morchella",
+        "label": "L’allegato I comprende tutte le specie del genere Morchella.",
+        "source": {
+          "id": "DPR376-ANNEX-I",
+          "title": "D.P.R. 376/1995 · allegato I",
+          "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=1&art.idArticolo=1&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+          "scope": "national"
+        }
+      }
     }
   },
   {

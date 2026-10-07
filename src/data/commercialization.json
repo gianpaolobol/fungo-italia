@@ -510,7 +510,9 @@
     },
     {
       "scientificName": "Suillus bellinii",
-      "aliases": [],
+      "aliases": [
+        "Suillus bellini"
+      ],
       "scope": "regional",
       "region": "Toscana",
       "sourceId": "TOSCANA939-1999"
@@ -677,14 +679,19 @@
     },
     {
       "scientificName": "Scutiger pes-caprae",
-      "aliases": [],
+      "aliases": [
+        "Albatrellus pes-caprae",
+        "Albatrellus pes-carprae"
+      ],
       "scope": "regional",
       "region": "Calabria",
       "sourceId": "CALABRIA30-2001"
     },
     {
       "scientificName": "Butyriboletus subappendiculatus",
-      "aliases": [],
+      "aliases": [
+        "Boletus subappendiculatus"
+      ],
       "scope": "regional",
       "region": "Calabria",
       "sourceId": "CALABRIA30-2001"
@@ -838,7 +845,9 @@
     },
     {
       "scientificName": "Suillus bellinii",
-      "aliases": [],
+      "aliases": [
+        "Suillus bellini"
+      ],
       "scope": "regional",
       "region": "Calabria",
       "sourceId": "CALABRIA30-2001"
@@ -1252,7 +1261,11 @@
       "members": [
         "Morchella esculenta"
       ],
-      "wholeCard": false
+      "wholeCard": false,
+      "genusProvision": {
+        "genus": "Morchella",
+        "sourceId": "DPR376-ANNEX-I"
+      }
     },
     {
       "scientificName": "Leccinum",
@@ -1260,7 +1273,11 @@
         "Leccinum aurantiacum",
         "Leccinum scabrum"
       ],
-      "wholeCard": false
+      "wholeCard": false,
+      "genusProvision": {
+        "genus": "Leccinum",
+        "sourceId": "DPR376-ANNEX-I"
+      }
     },
     {
       "scientificName": "Cortinarius praestans",
@@ -1398,6 +1415,21 @@
         "Hygrophorus russula",
         "Hygrophorus hypothejus",
         "Hygrophorus pudorinus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Agaricus sez. Arvenses",
+      "members": [
+        "Agaricus arvensis"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+      "members": [
+        "Kuehneromyces mutabilis",
+        "Pholiota microspora"
       ],
       "wholeCard": false
     }

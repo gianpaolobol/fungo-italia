@@ -12,7 +12,7 @@ Le integrazioni regionali di Toscana, Lombardia, Piemonte, Liguria e Calabria so
 
 Il dataset mantiene il nome moderno, le denominazioni storiche e le fonti. I collegamenti alle schede sono espliciti. Nessuna autorizzazione viene propagata automaticamente da un nome simile, da una fotografia, da un genere o da un nome s.l.
 
-Nei gruppi e nei generi si elencano soltanto i membri verificati; non compare il badge che attribuirebbe la commerciabilità all'intera scheda. Pleurotus cornucopiae non autorizza P. citrinopileatus; Hygrophorus penarius non autorizza H. penarioides. Le indicazioni di Macrolepiota procera, Ramaria botrytis, Lyophyllum decastes e Laetiporus sulphureus riguardano il taxon nominato, non tutti i membri dell'aggregato didattico.
+Per Morchella e Leccinum il dettaglio indica anche la disposizione esplicita dell’allegato I che comprende tutte le specie del genere; i nomi elencati sono esempi e non limitano tale previsione. Per gli altri gruppi e generi si elencano soltanto i membri verificati; non compare il badge che attribuirebbe la commerciabilità all'intera scheda. Pleurotus cornucopiae non autorizza P. citrinopileatus; Hygrophorus penarius non autorizza H. penarioides. Le indicazioni di Macrolepiota procera, Ramaria botrytis, Lyophyllum decastes e Laetiporus sulphureus riguardano il taxon nominato, non tutti i membri dell'aggregato didattico.
 
 Cantharellus tubaeformis (oggi Craterellus tubaeformis) è compreso nell'ambito nazionale: la voce dell'allegato esclude la varietà lutescens, non tutta la specie. Craterellus lutescens è collegato soltanto alle integrazioni regionali verificate. Il criterio è documentato anche nella guida ASL TO5 di Sitta e Davoli.
 
