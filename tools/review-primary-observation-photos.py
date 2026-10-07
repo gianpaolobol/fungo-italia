@@ -2,14 +2,14 @@
 import json,pathlib,time,urllib.request,urllib.error
 path=pathlib.Path("src/data/reference-external-source-candidates.json")
 data=json.loads(path.read_text()); ids={s["sourceId"] for s in data["sources"]}; evidence=[]; failures=[]
-targets={232719197:"Gyroporus cyanescens",194984296:"Caloboletus radicans",244111371:"Caloboletus radicans",41289920:"Gyroporus cyanescens",241513396:"Caloboletus radicans",155152863:"Gyromitra esculenta",34492154:"Entoloma sinuatum"}
+targets={19154361:"Entoloma clypeatum",45700061:"Verpa bohemica",232719197:"Gyroporus cyanescens",194984296:"Caloboletus radicans",244111371:"Caloboletus radicans",41289920:"Gyroporus cyanescens",241513396:"Caloboletus radicans",155152863:"Gyromitra esculenta",34492154:"Entoloma sinuatum"}
 licenses={"cc-by":("CC BY 4.0","https://creativecommons.org/licenses/by/4.0/"),"cc-by-sa":("CC BY-SA 4.0","https://creativecommons.org/licenses/by-sa/4.0/"),"cc0":("CC0 1.0","https://creativecommons.org/publicdomain/zero/1.0/")}
 try:
  req=urllib.request.Request("https://api.gbif.org/v1/occurrence/1978831435",headers={"User-Agent":"FungoItalia/1.0 github.com/gianpaolobol/fungo-italia"})
  with urllib.request.urlopen(req,timeout=45) as r:gbif=json.load(r)
  references=str(gbif.get("occurrenceID",""))+" "+str(gbif.get("references",""))
  import re
- match=re.search(r"inaturalist.org/observations/(\\d+)",references)
+ match=re.search(r"inaturalist.org/observations/(\d+)",references)
  if match:targets[int(match.group(1))]="Entoloma clypeatum"
  evidence.append({"gbifOccurrenceId":1978831435,"scientificName":gbif.get("scientificName"),"references":references,"media":gbif.get("media")})
 except Exception as e:failures.append({"gbifOccurrenceId":1978831435,"type":type(e).__name__,"message":str(e)[:150]})

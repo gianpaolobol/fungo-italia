@@ -2825,6 +2825,134 @@
       "primaryObservationId": 34492154,
       "primaryPhotoId": 54291818,
       "qualityGrade": "research"
+    },
+    {
+      "sourceId": "EXT-OA-LEPIOTA-FERREIRA2012",
+      "subjectTaxon": "Lepiota elaiophylla",
+      "sourceUrl": "https://www.mycosphere.org/pdf/MC3_6_No11.pdf",
+      "assetUrl": "https://www.mycosphere.org/pdf/MC3_6_No11.pdf",
+      "author": "Ana Júlia Ferreira; Vagner Gularte Cortez (2012)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://mycosphere.org/editors.php",
+      "taxonomicEvidence": "https://www.mycosphere.org/pdf/MC3_6_No11.pdf",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "pdf",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-PSILOCYBE-FENG2025",
+      "subjectTaxon": "Psilocybe striata",
+      "sourceUrl": "https://www.mdpi.com/2309-608X/11/12/887",
+      "assetUrl": "https://pdfs.semanticscholar.org/a72a/4e7f76f9d317c1f6375237a27d23547dbfa7.pdf",
+      "author": "Feng; Li; Yang; Cao; Zhao (2025)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.mdpi.com/2309-608X/11/12/887",
+      "taxonomicEvidence": "https://www.mdpi.com/2309-608X/11/12/887",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "pdf",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-STROPHARIA-YANG2022",
+      "subjectTaxon": "Stropharia rugosoannulata",
+      "sourceUrl": "https://www.mdpi.com/2309-608X/8/2/162",
+      "assetUrl": "https://pdfs.semanticscholar.org/6492/a5ae2c037e0ea5838660a7bddae387a68d4f.pdf",
+      "author": "Yang; Meng; Ni; Zhang; Dong (2022)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.mdpi.com/2309-608X/8/2/162",
+      "taxonomicEvidence": "https://www.mdpi.com/2309-608X/8/2/162",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "pdf",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-HELVELLA-MDPI2023",
+      "subjectTaxon": "Helvella collections",
+      "sourceUrl": "https://www.mdpi.com/2309-608X/9/7/697",
+      "assetUrl": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9058/10381826/c6679774094f/jof-09-00697-g002.jpg",
+      "author": "Authors of Helvella diversity study (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.mdpi.com/2309-608X/9/7/697",
+      "taxonomicEvidence": "https://www.mdpi.com/2309-608X/9/7/697",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "image",
+      "pages": [
+        null
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-MORCHELLA-PETRZELOVA2019",
+      "subjectTaxon": "Morchella collections",
+      "sourceUrl": "https://zenodo.org/records/3488232",
+      "assetUrl": "https://zenodo.org/records/3488232/files/big_300131.jpg?download=1",
+      "author": "Vavřinec Klener; Irena Petrželová; Jan Kramoliš; Dušan Bureš (panel-specific credits)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://zenodo.org/records/3488232",
+      "taxonomicEvidence": "https://zenodo.org/records/3488232",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "image",
+      "pages": [
+        null
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-HELVELLA-YU2023-F2",
+      "subjectTaxon": "Helvella atroides",
+      "sourceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "assetUrl": "https://www.frontiersin.org/files/Articles/1182025/xml-images/fmicb-14-1182025-g0002.webp",
+      "author": "Yu; Lei; Luangharn; Zhao; Zhu (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "taxonomicEvidence": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "image",
+      "pages": [
+        null
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-HELVELLA-YU2023-F3",
+      "subjectTaxon": "Helvella orentitomentosa",
+      "sourceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "assetUrl": "https://www.frontiersin.org/files/Articles/1182025/xml-images/fmicb-14-1182025-g0003.webp",
+      "author": "Yu; Lei; Luangharn; Zhao; Zhu (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "taxonomicEvidence": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "image",
+      "pages": [
+        null
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-HELVELLA-YU2023-F5",
+      "subjectTaxon": "Helvella rugosa",
+      "sourceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "assetUrl": "https://www.frontiersin.org/files/Articles/1182025/xml-images/fmicb-14-1182025-g0005.webp",
+      "author": "Yu; Lei; Luangharn; Zhao; Zhu (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "taxonomicEvidence": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+      "verificationBasis": "Published figure explicitly captioned for the photographed taxon; specimen and photographic angle reviewed separately.",
+      "kind": "image",
+      "pages": [
+        null
+      ]
     }
   ]
 }

@@ -35,7 +35,7 @@ for source in sources:
   source["assetUrl"]="https://upload.wikimedia.org/wikipedia/commons/thumb/"+digest[0]+"/"+digest[:2]+"/"+encoded+"/1280px-"+encoded
   source["retrievalNote"]="Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file."
  cached=[i for i in previous if i["sourceId"]==source["sourceId"] and i["assetUrl"]==source["assetUrl"] and i["licenseUrl"]==source["licenseUrl"]]
- if cached and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):
+ if cached and (source["kind"]!="pdf" or {i["page"] for i in cached}==set(source["pages"])) and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):
   items.extend([{**i,**source} for i in cached]);continue
  try:
   data=get(source["assetUrl"]);source_hash=hashlib.sha256(data).hexdigest()
