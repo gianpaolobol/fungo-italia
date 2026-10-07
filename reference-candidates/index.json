@@ -1281,6 +1281,259 @@
       "page": null,
       "xref": null,
       "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-ENT-SIN-40542",
+      "subjectTaxon": "Entoloma sinuatum",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Entoloma_sinuatum_40542.jpg",
+      "author": "Gerhard Koller",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
+      "taxonomicEvidence": "MO40542, Austria; esemplare maturo con lamelle rosa descritto dall’autore.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-ENT-SIN-40542-original",
+      "candidatePath": "reference-candidates/ext-comp-ent-sin-40542-original.jpg",
+      "sourceSha256": "2717b91ccb3376f52b6b4fab9dd0e337a3d43e02df344b565758d1cbc7deba4e",
+      "extractedImageSha256": "2717b91ccb3376f52b6b4fab9dd0e337a3d43e02df344b565758d1cbc7deba4e",
+      "candidateSha256": "95e52f6c53be7b05ac16c3b6b3bcb0c58272a29c7e71dbe2493755652c532851",
+      "width": 1600,
+      "height": 1200,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PORPHYRIA-1",
+      "subjectTaxon": "Amanita porphyria",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/367485/Svartringfluesopp_Elverum_300824.jpg",
+      "author": "Frode Ødegaard / NTNU Vitenskapsmuseet",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/34971",
+      "taxonomicEvidence": "Scheda istituzionale Artsdatabanken e credito fotografico specifico.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PORPHYRIA-1-original",
+      "candidatePath": "reference-candidates/ext-comp-porphyria-1-original.jpg",
+      "sourceSha256": "2c56fd76586351c2cde5837686344884658f2f90bfbcb972465d26bc9dffd3dc",
+      "extractedImageSha256": "2c56fd76586351c2cde5837686344884658f2f90bfbcb972465d26bc9dffd3dc",
+      "candidateSha256": "6d2d7480ab7b4c119915bd7ab04e2b09a5e3f583bd9fb32cb675dfa8bfa6c047",
+      "width": 1200,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PORPHYRIA-2",
+      "subjectTaxon": "Amanita porphyria",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/367485/Svartringfluesopp_Elverum_300824_2.jpg",
+      "author": "Frode Ødegaard / NTNU Vitenskapsmuseet",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/34971",
+      "taxonomicEvidence": "Scheda istituzionale Artsdatabanken e credito fotografico specifico.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PORPHYRIA-2-original",
+      "candidatePath": "reference-candidates/ext-comp-porphyria-2-original.jpg",
+      "sourceSha256": "9a4cadadd6775b52dde9f758bdf13e4a8a5697c52f1e71cc9c51c872e2f52549",
+      "extractedImageSha256": "9a4cadadd6775b52dde9f758bdf13e4a8a5697c52f1e71cc9c51c872e2f52549",
+      "candidateSha256": "17675cbd6f1fbf64f479b4e1678f39377d26ce2f246628bb68790f5429ba5d50",
+      "width": 1200,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-MUSCARIA-0",
+      "subjectTaxon": "Amanita muscaria",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/264266/20210918_150332.jpg",
+      "author": "Tiril Myhre Pedersen",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "taxonomicEvidence": "Scheda istituzionale Artsdatabanken, foto identificate e attribuite.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-MUSCARIA-0-original",
+      "candidatePath": "reference-candidates/ext-comp-muscaria-0-original.jpg",
+      "sourceSha256": "b4d0e14ae62f7d569ecddc2881d37b5e7659f7ca75f08f82a1c4553ea85c78ae",
+      "extractedImageSha256": "b4d0e14ae62f7d569ecddc2881d37b5e7659f7ca75f08f82a1c4553ea85c78ae",
+      "candidateSha256": "fbef3d11ac57d06d5c74c3bc698504b802b4956ebe5e743e5c0444b63b8cf2be",
+      "width": 1600,
+      "height": 1200,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-MUSCARIA-1",
+      "subjectTaxon": "Amanita muscaria",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/264266/20210912_144043.jpg",
+      "author": "Tiril Myhre Pedersen",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "taxonomicEvidence": "Scheda istituzionale Artsdatabanken, foto identificate e attribuite.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-MUSCARIA-1-original",
+      "candidatePath": "reference-candidates/ext-comp-muscaria-1-original.jpg",
+      "sourceSha256": "e84a2b620ea380d27ab58fabb284cb93cc829fe240a81d8b0ae195cf445ef858",
+      "extractedImageSha256": "e84a2b620ea380d27ab58fabb284cb93cc829fe240a81d8b0ae195cf445ef858",
+      "candidateSha256": "caaf03119830f06cad6fb4ef890c5e9d4642094920a8be5964449b4b58382d02",
+      "width": 1200,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-MUSCARIA-2",
+      "subjectTaxon": "Amanita muscaria",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/264266/20210918_150344.jpg",
+      "author": "Tiril Myhre Pedersen",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "taxonomicEvidence": "Scheda istituzionale Artsdatabanken, foto identificate e attribuite.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-MUSCARIA-2-original",
+      "candidatePath": "reference-candidates/ext-comp-muscaria-2-original.jpg",
+      "sourceSha256": "cdf423495be431024d0f298c4101c7507b76634665a52806cb377d0d8b2200d7",
+      "extractedImageSha256": "cdf423495be431024d0f298c4101c7507b76634665a52806cb377d0d8b2200d7",
+      "candidateSha256": "52b72731d422064a9dab449c862eac8b11c3538d657f6e30f67173fb09741b0e",
+      "width": 1200,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-MUSCARIA-3",
+      "subjectTaxon": "Amanita muscaria",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/264266/20210918_150539.jpg",
+      "author": "Tiril Myhre Pedersen",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "taxonomicEvidence": "Scheda istituzionale Artsdatabanken, foto identificate e attribuite.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-MUSCARIA-3-original",
+      "candidatePath": "reference-candidates/ext-comp-muscaria-3-original.jpg",
+      "sourceSha256": "48fd0753b910cbb410a181a15d2cb172a1b10bba5edfddbfe5568106bf960752",
+      "extractedImageSha256": "48fd0753b910cbb410a181a15d2cb172a1b10bba5edfddbfe5568106bf960752",
+      "candidateSha256": "893eaf0d19070772e578449767138d28ea498e8af3aa0374e150ff7fb5c639af",
+      "width": 1200,
+      "height": 1600,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PHYLL-WA",
+      "subjectTaxon": "Clitocybe phyllophila",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wa.JPG",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Clitocybe_phyllophila_20121111wa.JPG",
+      "author": "Strobilomyces",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wa.JPG",
+      "taxonomicEvidence": "Francia2012; note identificative sporata crema, spore circa4×3µm.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PHYLL-WA-original",
+      "candidatePath": "reference-candidates/ext-comp-phyll-wa-original.jpg",
+      "sourceSha256": "62ec140754e395fea14bbd5dca41788198b6f39cdeb6cf0dc6be3db28db6e988",
+      "extractedImageSha256": "62ec140754e395fea14bbd5dca41788198b6f39cdeb6cf0dc6be3db28db6e988",
+      "candidateSha256": "cd82249493f87e6854fd37cfb16118e000e77b703dfd03761b1293aea91474e6",
+      "width": 1600,
+      "height": 1066,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PHYLL-WB",
+      "subjectTaxon": "Clitocybe phyllophila",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/1/17/Clitocybe_phyllophila_20121111wb.JPG",
+      "author": "Strobilomyces",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+      "taxonomicEvidence": "Francia2012; note identificative sporata crema, spore circa4×3µm.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PHYLL-WB-original",
+      "candidatePath": "reference-candidates/ext-comp-phyll-wb-original.jpg",
+      "sourceSha256": "f37e258dad3dfdea51d39afbb3310697f53567a00165f79c47985bfbcdd5a510",
+      "extractedImageSha256": "f37e258dad3dfdea51d39afbb3310697f53567a00165f79c47985bfbcdd5a510",
+      "candidateSha256": "52d8ce71683743179c3006764c2c831a220b3eb6628d47bef6b95c7d4b700454",
+      "width": 1600,
+      "height": 1067,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "subjectTaxon": "Hygrocybe punicea",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "assetUrl": "https://live.staticflickr.com/7173/6667872329_5d99d2525a_o.jpg",
+      "author": "GLJIVARSKO DRUSTVO NIS",
+      "licenseName": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "taxonomicEvidence": "Didascalia specie, Vranje2009; società micologicaNiš, licenzaFlickrverificata.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-PUNICEA-2329-original",
+      "candidatePath": "reference-candidates/ext-comp-punicea-2329-original.jpg",
+      "sourceSha256": "3f2fdb6d6f41ad5b56811c68d01edd5459c51cdd5966f19e23c5367cbcdae9bf",
+      "extractedImageSha256": "3f2fdb6d6f41ad5b56811c68d01edd5459c51cdd5966f19e23c5367cbcdae9bf",
+      "candidateSha256": "7f514ed9d62724da8d4755b0e053d6e6bcde254213ed5145bab07beedf306fc4",
+      "width": 1122,
+      "height": 746,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
+    },
+    {
+      "sourceId": "EXT-COMP-GYROMITRA-NIS",
+      "subjectTaxon": "Gyromitra esculenta",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:GYROMITRA_ESCULENTA_(Krombh.)_Cooke_(5897315242).jpg",
+      "assetUrl": "https://live.staticflickr.com/5115/5897315242_65fc39e507_o.jpg",
+      "author": "GLJIVARSKO DRUSTVO NIS",
+      "licenseName": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:GYROMITRA_ESCULENTA_(Krombh.)_Cooke_(5897315242).jpg",
+      "taxonomicEvidence": "Didascaliasocietàmicologica Serbia, licenzaFlickrreview2020.",
+      "verificationBasis": "photographer-identification",
+      "kind": "image",
+      "candidateId": "EXT-COMP-GYROMITRA-NIS-original",
+      "candidatePath": "reference-candidates/ext-comp-gyromitra-nis-original.jpg",
+      "sourceSha256": "8a25c70794fae8bc9277418dd4eebf6b559d808ad42c5db34c1fa8ee8f11c23a",
+      "extractedImageSha256": "8a25c70794fae8bc9277418dd4eebf6b559d808ad42c5db34c1fa8ee8f11c23a",
+      "candidateSha256": "a642f307d8f8ad176bd36cdeeae9c9cb189816a96de32c3f4c472a3fd30457f2",
+      "width": 640,
+      "height": 480,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review"
     }
   ],
   "failures": [
@@ -1293,6 +1546,131 @@
       "sourceId": "EXT-SILVA-CONICA-2019",
       "errorType": "HTTPError",
       "message": "HTTP Error 403: Forbidden"
+    },
+    {
+      "sourceId": "EXT-COMP-PROCERA-CAP",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-CRISTATA-W",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-ELAI-607806",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-ERYNGII-54421",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-GOMPHUS-HYM",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-GOMPHUS-702984",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "sourceId": "EXT-COMP-CONICA-KUNZE",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-GALERINA-582666",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-CONICA-ROCK",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-LEUCOTHITES",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-PUNICEA-1789",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-BITORQUIS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-BRESADOLANUS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-GEOTROPA",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-PRUNULUS",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-VERPA-FREE",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-VERPA-RON",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-VERPA-135307",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-TESQ-399417",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-TESQ-399418",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-PSILO-MESC",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-PSILO-SEM",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-PSILO-ALL",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
+    },
+    {
+      "sourceId": "EXT-COMP-PSATH-CAND",
+      "errorType": "HTTPError",
+      "message": "HTTP Error 429: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai. ("
     }
   ]
 }
