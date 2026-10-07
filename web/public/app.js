@@ -62,7 +62,7 @@ function content(t,showIdentity=true){
 }
 
 function beginReview(retry=false){
- const rows=retry&&reviewSession?reviewSession.missed.map(id=>byId.get(id)).filter(Boolean):filtered().filter(t=>t.characters.length&&t.differentiatingCharacter);
+ const rows=retry&&reviewSession?reviewSession.missed.map(id=>byId.get(id)).filter(Boolean):filtered().filter(t=>t.characters.length===3&&t.differentiatingCharacter);
  if(!rows.length){status('Nessuna scheda 3+1 nei filtri: scegli Minimo o Tutte, oppure modifica ricerca e Preferiti.');return;}
  const shuffled=[...rows];for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
  reviewSession={ids:shuffled.slice(0,10).map(t=>t.id),index:0,revealed:false,remembered:0,missed:[]};
