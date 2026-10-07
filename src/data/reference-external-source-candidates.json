@@ -5129,6 +5129,49 @@
       "primaryObservationId": 131348945,
       "primaryPhotoId": 223506545,
       "qualityGrade": "research"
+    },
+    {
+      "sourceId": "EXT-OA-PSATH-SQUARROSA2022",
+      "subjectTaxon": "Psathyrella squarrosa",
+      "sourceUrl": "https://doi.org/10.48130/SIF-2022-0003",
+      "assetUrl": "https://www.maxapress.com/data/article/sif/preview/pdf/SIF-2022-0003.pdf",
+      "author": "Pilankatta Kumbala Nayana; Chittethu Kunjan Pradeep (2022)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.maxapress.com/data/article/sif/preview/pdf/SIF-2022-0003.pdf",
+      "taxonomicEvidence": "https://doi.org/10.48130/SIF-2022-0003",
+      "taxonomicNotes": "Fig.2a–d habit in situ and2e lamella; voucher TBGT(M)18695, ITS OM301743. Genus representative only.",
+      "verificationBasis": "Published taxonomic description and voucher; candidate photo angles pending visual review.",
+      "kind": "pdf",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "sourceId": "EXT-INAT-GUIDE-270043934",
+      "subjectTaxon": "Panaeolus cyanescens",
+      "sourceUrl": "https://www.inaturalist.org/guide_taxa/2242036",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/270043934/large.jpg",
+      "author": "Alan Rockefeller",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/guide_taxa/2242036",
+      "taxonomicEvidence": "https://www.inaturalist.org/guide_taxa/2242036",
+      "verificationBasis": "Original guide-taxon's named-photographer credit and explicit native-photo CC BY license. No DNA-validation claim without original collection evidence.",
+      "kind": "image"
+    },
+    {
+      "sourceId": "EXT-OA-RAMARIA-ZHONG2026",
+      "subjectTaxon": "Ramaria collections",
+      "sourceUrl": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136008",
+      "assetUrl": "https://www.bioacad.com/biomedia//Fungal%20Diversity/2026-08/136008/fig13.jpg",
+      "author": "Zhong et al. (2026)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136008",
+      "taxonomicEvidence": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136008",
+      "verificationBasis": "Original voucher-based taxonomic revision and explicit publisher CC BY license; panel taxa and actual photographic angles pending visual review.",
+      "kind": "image"
     }
   ]
 }
