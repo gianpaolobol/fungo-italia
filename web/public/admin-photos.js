@@ -14,6 +14,7 @@ const make = (tag, text, attrs = {}) => {
   for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
   return node;
 };
+function reportError(error, phase) { window.dispatchEvent(new CustomEvent('fungo:admin-error', { detail: { phase, name: error.name, message: error.message, status: error.status } })); }
 function notice(text, bad = false) {
   const box = dialog.querySelector('[data-admin-status]');
   if (box) { box.textContent = text; box.classList.toggle('admin-photo-error', bad); }
@@ -176,6 +177,7 @@ function login() {
       closeDialog();
       updateControls();
     } catch (error) {
+      reportError(error, 'login');
       candidate?.dispose();
       if (error.name !== 'AbortError') notice(vault ? 'Password o accesso GitHub non validi. Riprova o collega di nuovo GitHub.' : 'Accesso non riuscito. Verifica la chiave e i permessi sul repository.', true);
     } finally {
@@ -273,6 +275,7 @@ function editPhoto(taxon, view, label) {
       const host = document.querySelector('#detail[open] .dialog-body') || document.getElementById('main');
       if (!status.isConnected) host?.prepend(status);
     } catch (error) {
+      reportError(error, 'save');
       if (error.name === 'AbortError') return;
       if (error.status === 401 || error.status === 403) {
         leave();
