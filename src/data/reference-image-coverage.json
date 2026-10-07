@@ -1,0 +1,1979 @@
+{
+  "version": 1,
+  "requiredViews": [
+    "lateral",
+    "top",
+    "underside"
+  ],
+  "summary": {
+    "cards": 214,
+    "images": 284,
+    "completeTriplets": 79,
+    "partialCards": 34,
+    "withoutImages": 101,
+    "missingViews": 358,
+    "imageBytes": 91019837
+  },
+  "cards": [
+    {
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Agaricus sez. Arvenses",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Agaricus campestris",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Agaricus bisporus",
+      "availableViews": [
+        "top"
+      ],
+      "missingViews": [
+        "lateral",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "availableViews": [
+        "lateral",
+        "top"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Clitocybe nebularis",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Infundibulicybe geotropa",
+      "availableViews": [
+        "lateral",
+        "top"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Paralepistopsis amoenolens",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Clitocybe gibba s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Rhodocollybia maculata",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gymnopus fusipes",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cortinarius cumatilis",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Phlegmacium variiforme",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cortinarius caperatus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Entoloma vernum",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Entoloma clypeatum s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Entoloma saundersii",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Flammulina velutipes s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Hygrocybe conica s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hypholoma lateritium",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lepiota subincarnata",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Lepiota cristata",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lepiota elaiophylla",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lepista nuda s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Lepista flaccida s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Leucopaxillus gentianeus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lyophyllum decastes s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Lyophyllum specie annerenti",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Leucocybe connata",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Mycena sez. Purae",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Panaeolus cyanescens",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "availableViews": [
+        "lateral",
+        "top"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Stropharia rugosoannulata",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Volvopluteus gloiocephalus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lactarius volemus s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Russula Compactae Nigricantinae",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Suillellus luridus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Caloboletus radicans",
+      "availableViews": [
+        "top"
+      ],
+      "missingViews": [
+        "lateral",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Caloboletus calopus",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gyroporus cyanescens",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Gyroporus castaneus s.l.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Imleria badia",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tylopilus felleus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "availableViews": [
+        "underside"
+      ],
+      "missingViews": [
+        "lateral",
+        "top"
+      ]
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Craterellus cornucopioides",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gomphus clavatus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hapalopilus rutilans",
+      "availableViews": [
+        "top"
+      ],
+      "missingViews": [
+        "lateral",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "availableViews": [
+        "lateral",
+        "top"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Albatrellopsis confluens",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Polyporus umbellatus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Meripilus giganteus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cerioporus squamosus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Agaricus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Agrocybe + Cyclocybe",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Amanita",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Armillaria + Desarmillaria",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Calocybe",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Clitopilus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Cortinarius",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Entoloma",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Flammulina",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Galerina",
+      "availableViews": [
+        "top",
+        "underside"
+      ],
+      "missingViews": [
+        "lateral"
+      ]
+    },
+    {
+      "scientificName": "Hebeloma",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus + Cuphophyllus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Hypholoma",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Laccaria",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Lentinula",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Lepista",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Melanoleuca",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Mycena",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Omphalotus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Pluteus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Psilocybe s.l. (incluso Deconica)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Tricholoma",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Russula",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Butyriboletus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Caloboletus",
+      "availableViews": [
+        "lateral",
+        "top"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Chroogomphus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gomphidius",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gyroporus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Hygrophoropsis",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Imleria",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Leccinellum",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Leccinum",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Paxillus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Tylopilus",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "availableViews": [
+        "lateral",
+        "top",
+        "underside"
+      ],
+      "missingViews": []
+    },
+    {
+      "scientificName": "Cantharellus",
+      "availableViews": [
+        "underside"
+      ],
+      "missingViews": [
+        "lateral",
+        "top"
+      ]
+    },
+    {
+      "scientificName": "Craterellus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gomphus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Ramaria",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pisolithus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Scleroderma",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Auricularia",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Gyromitra (incluso Discina)",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Helvella",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Morchella",
+      "availableViews": [
+        "lateral"
+      ],
+      "missingViews": [
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Sarcosphaera",
+      "availableViews": [
+        "top"
+      ],
+      "missingViews": [
+        "lateral",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Verpa",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    }
+  ]
+}
