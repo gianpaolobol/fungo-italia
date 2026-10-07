@@ -1,5 +1,7 @@
 import {test,expect} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
+// API simulations must stay under Playwright routing, outside service-worker-owned requests.
+test.use({serviceWorkers:'block'});
 const owner='gianpaolobol',token='github_pat_TEST_ONLY_NOT_A_REAL_CREDENTIAL_1234567890',repository='gianpaolobol/fungo-italia';
 const fixture=new URL('../public/images/reference/amanita-caesarea-lateral-460.jpg',import.meta.url);
 const originalHead='a'.repeat(40),originalTree='b'.repeat(40);
@@ -43,7 +45,7 @@ async function fakeGitHub(page,{login=owner,write=true,unreachable=false}={}){
 test.beforeEach(async({page})=>{page.on('pageerror',error=>console.log('ADMIN PAGE ERROR',error.message));page.on('console',message=>{if(message.text().startsWith('ADMIN DIAGNOSTIC'))console.log(message.text());});await page.addInitScript(()=>window.addEventListener('fungo:admin-error',event=>console.log('ADMIN DIAGNOSTIC',JSON.stringify(event.detail))));});
 test.afterEach(async({page},info)=>{if(info.status!==info.expectedStatus)console.log('ADMIN FAILURE UI',await page.evaluate(()=>document.body.innerText.slice(-5000)).catch(()=>''));});
 function publicationCalls(state){return state.calls.filter(x=>x.method==='PATCH'||x.path.endsWith('/git/trees')||x.path.endsWith('/git/commits')&&x.method==='POST');}
-async function ready(page){await page.goto('./');await expect(page.locator('#admin-edit')).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);}
+async function ready(page){await page.goto('./');await expect(page.locator('#admin-edit')).toBeVisible();await expect(page.locator('#catalog-count')).toContainText('148 schede');}
 async function openTaxon(page,name='Amanita caesarea',query=name){
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(query);
  await page.getByRole('button',{name:'Apri '+name,exact:true}).click();
