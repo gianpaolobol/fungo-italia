@@ -7,6 +7,7 @@ on:
       - 'components/**'
       - 'App.tsx'
       - 'src/data/**'
+      - 'docs/reference-image-delivery.md'
       - 'scripts/course-literature.mjs'
       - 'scripts/validate-reference-images.mjs'
       - 'scripts/study-profiles.mjs'
