@@ -338,6 +338,10 @@
         "edibility": {
           "label": "Tossici gastrointestinali",
           "precautions": []
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -356,6 +360,14 @@
             "edibility"
           ],
           "supportedClaim": "Tossici gastrointestinali"
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },
@@ -368,6 +380,10 @@
           "precautions": [
             "Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
           ]
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -394,6 +410,14 @@
             "edibility"
           ],
           "supportedClaim": "La guida suggerisce un consumo non frequente per Agaricus sezione Arvenses in relazione all’accumulo di metalli pesanti."
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },
@@ -404,6 +428,10 @@
         "edibility": {
           "label": "Commestibili",
           "precautions": []
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -422,6 +450,14 @@
             "edibility"
           ],
           "supportedClaim": "Commestibili"
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },
@@ -432,6 +468,10 @@
         "edibility": {
           "label": "Commestibile",
           "precautions": []
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -450,6 +490,14 @@
             "edibility"
           ],
           "supportedClaim": "Commestibile"
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },
@@ -460,6 +508,10 @@
         "edibility": {
           "label": "Tossico gastrointestinale",
           "precautions": []
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -478,6 +530,14 @@
             "edibility"
           ],
           "supportedClaim": "Tossico gastrointestinale"
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },
@@ -542,6 +602,10 @@
         "edibility": {
           "label": "Commestibile",
           "precautions": []
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -552,6 +616,14 @@
             "edibility"
           ],
           "supportedClaim": "Commestibile"
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },
@@ -561,6 +633,10 @@
         "edibility": {
           "label": "Commestibile",
           "precautions": []
+        },
+        "sporePrint": {
+          "label": "Bruno-porpora; carattere del genere Agaricus.",
+          "color": "#654252"
         }
       },
       "evidence": [
@@ -571,6 +647,14 @@
             "edibility"
           ],
           "supportedClaim": "Commestibile"
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "page": 2,
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
         }
       ]
     },

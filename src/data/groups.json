@@ -22,7 +22,23 @@
       "minimum-card-objective-agaricus--06--agaricus-bitorquis",
       "minimum-card-objective-agaricus--07--agaricus-bisporus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+        "reviewScope": "course-material",
+        "title": "Inquadramento schematico Agaricus ES.pdf",
+        "authors": [
+          "Edoardo Suriano"
+        ],
+        "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
+        "location": "p. 2",
+        "supportedClaim": "Bruno-porpora",
+        "fields": [
+          "sporePrint"
+        ],
+        "sourcePage": 2
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4
@@ -1298,6 +1314,21 @@
           "characters"
         ],
         "sourcePage": 35
+      },
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 35",
+        "supportedClaim": "Molto chiara",
+        "fields": [
+          "sporePrint"
+        ],
+        "sourcePage": 35
       }
     ],
     "curriculum": {
@@ -1358,6 +1389,21 @@
         "supportedClaim": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile.",
         "fields": [
           "diagnosticNote"
+        ],
+        "sourcePage": 43
+      },
+      {
+        "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "reviewScope": "course-material",
+        "title": "1a Boletales.pdf",
+        "authors": [
+          "Nicola Sitta"
+        ],
+        "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+        "location": "p. 43",
+        "supportedClaim": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum.",
+        "fields": [
+          "odor"
         ],
         "sourcePage": 43
       }

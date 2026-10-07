@@ -42,6 +42,12 @@ export function applyStudyProfiles(records,integration,registry){
     check(!evidence.fields.includes('edibility'),'Food claim needs pointwise founding guide evidence');
    }
    evidence.fields.forEach(field=>covered.add(field));
+   if(evidence.sourceId!==foodSource){
+    const source=refs.get(evidence.sourceId),location=evidence.page===null?evidence.locator:'p. '+evidence.page;
+    taxon.sources??=[];
+    const citation={sourceId:source.sourceId,reviewScope:'course-material',title:source.title,authors:source.authors||[],url:source.url,location,supportedClaim:evidence.supportedClaim,fields:evidence.fields,...(evidence.page===null?{}:{sourcePage:evidence.page})};
+    if(!taxon.sources.some(s=>s.sourceId===citation.sourceId&&s.location===location&&s.supportedClaim===citation.supportedClaim))taxon.sources.push(citation);
+   }
   }
   check(Object.keys(profile).every(field=>covered.has(field)),'Study field not supported');
   taxon.studyProfile=structuredClone(profile);
