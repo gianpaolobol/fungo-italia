@@ -2440,8 +2440,38 @@
       "verificationBasis": "Published specimen description and explicitly licensed photographic figure; visual angles pending separate review.",
       "kind": "pdf",
       "pages": [
-        5
+        7
       ]
+    },
+    {
+      "sourceId": "EXT-OA-TUBAEFORMIS-LOVAAS2023",
+      "subjectTaxon": "Craterellus tubaeformis",
+      "sourceUrl": "https://doi.org/10.21203/rs.3.rs-3173005/v1",
+      "assetUrl": "https://assets-eu.researchsquare.com/files/rs-3173005/v1/42d43773-969f-4946-bd5d-c8b9b03b2040.pdf",
+      "author": "Mai Løvaas (photographs); Ingvar Svanberg & Mai Løvaas (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://assets-eu.researchsquare.com/files/rs-3173005/v1/42d43773-969f-4946-bd5d-c8b9b03b2040.pdf",
+      "taxonomicEvidence": "https://doi.org/10.21203/rs.3.rs-3173005/v1",
+      "verificationBasis": "Norwegian field photographs explicitly captioned in an ethnomycological preprint; not peer-reviewed identification.",
+      "kind": "pdf",
+      "pages": [
+        16,
+        21
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-POLY-BIOACAD2026",
+      "subjectTaxon": "Polyporus umbellatus",
+      "sourceUrl": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136002",
+      "assetUrl": "https://www.bioacad.com/biomedia//Fungal%20Diversity/2026-01/136002/fig1.png",
+      "author": "Zhao H.; Yuan H.-S.; Cui Y.-J.; Wang K.; Wu F.; Dai Y.-C.; Yuan Y.",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136002",
+      "taxonomicEvidence": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136002",
+      "verificationBasis": "Figure 1r explicitly captioned Polyporus umbellatus; article and figure CC BY 4.0 with no separate rights exception; photographic voucher not specified.",
+      "kind": "image"
     }
   ]
 }

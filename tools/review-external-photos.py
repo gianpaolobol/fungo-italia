@@ -43,14 +43,20 @@ for source in sources:
    with pymupdf.open(stream=data,filetype="pdf") as pdf:
     for n in source["pages"]:
      page=pdf[n-1]
+     before=len(items)
      page.get_pixmap(matrix=pymupdf.Matrix(1.8,1.8)).pil_save(root/(source["sourceId"].lower()+"-page-"+str(n)+".jpg"))
      for info in page.get_image_info(xrefs=True):
       x=info["xref"]
       if x and info["width"]>=150 and info["height"]>=150:save(source,pdf.extract_image(x)["image"],"x"+str(x),n,x)
+     if len(items)==before:save(source,page.get_pixmap(matrix=pymupdf.Matrix(2,2)).tobytes("png"),"rendered-page-"+str(n),n,None)
   else:save(source,data,"original")
  except Exception as e:
   failures.append({"sourceId":source["sourceId"],"errorType":type(e).__name__,"message":str(e)[:180]})
  time.sleep(3)
+for item in items:
+ preview=Image.open(item["candidatePath"]).convert("RGB");preview.thumbnail((900,900),Image.Resampling.LANCZOS)
+ preview.save(root/(pathlib.Path(item["candidatePath"]).stem+"-preview.jpg"),quality=78,optimize=True)
+ item["previewPath"]=str(root/(pathlib.Path(item["candidatePath"]).stem+"-preview.jpg"))
 (root/"index.json").write_text(json.dumps({"version":1,"candidates":items,"failures":failures},ensure_ascii=False,indent=2)+"\n")
 for offset in range(0,len(items),12):
  sheet=Image.new("RGB",(1200,1200),(245,245,245));draw=ImageDraw.Draw(sheet)
