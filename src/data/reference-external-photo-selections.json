@@ -127,8 +127,8 @@
       "view": "lateral",
       "crop": [
         0,
-        0,
-        1,
+        0.44,
+        0.9,
         1
       ],
       "sourceId": "EXT-ADB-39725-1",
@@ -523,23 +523,23 @@
     },
     {
       "scientificName": "Lactarius sez. Deliciosi",
-      "subjectTaxon": "Lactarius deterrimus",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
       "view": "underside",
       "crop": [
-        0,
+        0.49,
         0,
         1,
-        1
+        0.49
       ],
-      "sourceId": "EXT-KUNZE-DETER-2011",
-      "sourcePath": "source-photo-assets/external/ext-kunze-deter-2011-original.jpg",
-      "candidateSha256": "022c469d6c37392825369831ed8c6d9f085986c4aedf152f58524360ddd92bc3",
-      "sourceSha256": "f5ffbc8242efef2a70f43e19ff9d5a5693a9b0fa92952cc302d4c6f3bbaded4d",
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "sourcePath": "source-photo-assets/external/ext-barge-deliciosi-2016-original.jpg",
+      "candidateSha256": "5e66d28ee2a4e79c1c1373195182c6a4a2324ba1fe8e953d355759facc58d8a4",
+      "sourceSha256": "72ccc19a035d0031c37be3a9c8294c528ad2ca2340cd6831cee2c0d0865c0030",
       "sourcePage": null,
-      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
-      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-31_Lactarius_deterrimus_3.jpg",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio figura22A",
+      "reviewNotes": "Figura22A, gruppo L.deliciosus nordamericano: capovolto, lamelle e gambo intero visibili. Preferito al primo piano privo della base del gambo; non L.deliciosus europeo sensu stricto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "scientificName": "Lactarius (incluso Lactifluus)",
@@ -583,23 +583,23 @@
     },
     {
       "scientificName": "Lactarius (incluso Lactifluus)",
-      "subjectTaxon": "Lactarius deterrimus",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
       "view": "underside",
       "crop": [
-        0,
+        0.49,
         0,
         1,
-        1
+        0.49
       ],
-      "sourceId": "EXT-KUNZE-DETER-2011",
-      "sourcePath": "source-photo-assets/external/ext-kunze-deter-2011-original.jpg",
-      "candidateSha256": "022c469d6c37392825369831ed8c6d9f085986c4aedf152f58524360ddd92bc3",
-      "sourceSha256": "f5ffbc8242efef2a70f43e19ff9d5a5693a9b0fa92952cc302d4c6f3bbaded4d",
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "sourcePath": "source-photo-assets/external/ext-barge-deliciosi-2016-original.jpg",
+      "candidateSha256": "5e66d28ee2a4e79c1c1373195182c6a4a2324ba1fe8e953d355759facc58d8a4",
+      "sourceSha256": "72ccc19a035d0031c37be3a9c8294c528ad2ca2340cd6831cee2c0d0865c0030",
       "sourcePage": null,
-      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
-      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-31_Lactarius_deterrimus_3.jpg",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio figura22A",
+      "reviewNotes": "Figura22A, gruppo L.deliciosus nordamericano: capovolto, lamelle e gambo intero visibili. Preferito al primo piano privo della base del gambo; non L.deliciosus europeo sensu stricto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
       "scientificName": "Hebeloma",

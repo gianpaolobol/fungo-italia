@@ -83,7 +83,7 @@ function zoomReference(id,view,opener){
  $('#photo-title').textContent=(photo.subjectTaxon||taxon.scientificName)+' · '+(referenceViews.find(v=>v[0]===view)?.[1]||'');
  $('#photo-full').src=photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
  const links=$('#photo-links');links.replaceChildren();
- for(const [field,label] of [['sourceUrl','Fonte'],['licenseUrl','Licenza']])if(publicPhotoHttps(photo[field])){const link=document.createElement('a');link.href=photo[field];link.textContent=label;link.target='_blank';link.rel='noopener noreferrer';links.append(link,document.createTextNode(' · '));}
+ for(const [field,label] of [['sourceUrl','Fonte'],['licenseUrl','Licenza']])if(publicPhotoHttps(photo[field])){const link=document.createElement('a');link.href=photo[field];link.textContent=label;link.target='_blank';link.rel='noopener noreferrer';links.append(link);}
  resizeReference(0);viewer.showModal();$('#photo-close').focus();
 }
 function resizeReference(delta){

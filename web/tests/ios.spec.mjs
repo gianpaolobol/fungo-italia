@@ -449,3 +449,40 @@ test('genus photographs name their actual species once without duplicating the h
  await expect(page.locator('#detail-body .photo-subject-label')).toHaveText('Specie raffigurata: Amanita rubescens');
  await expect(page.locator('#detail-body .photo-subject')).toHaveCount(0);
 });
+
+test('licensed external reference photograph preserves attribution links and decodes offline',async({page,request})=>{
+ await ready(page);
+ await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ await request.get('http://127.0.0.1:4174/?state=stop');
+ try{
+  const response=await page.goto('./?licensed-photo-offline='+Date.now());
+  expect(response.fromServiceWorker()).toBe(true);
+  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Cortinarius praestans');
+  await page.getByRole('button',{name:'Apri Cortinarius praestans',exact:true}).click();
+  const opener=page.locator('#detail-body .photo-thumb[data-view="lateral"]');
+  await expect(opener).toHaveCount(1);
+  await expect(opener.locator('img')).toHaveAttribute('src','images/reference/external-cortinarius-praestans-lateral.jpg');
+  await expect.poll(()=>opener.locator('img').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
+  expect(await opener.locator('img').evaluate(async img=>!!await caches.match(img.src))).toBe(true);
+  await opener.click();
+  await expect(page.locator('#photo-viewer')).toBeVisible();
+  await expect.poll(()=>page.locator('#photo-full').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
+  await expect(page.locator('#photo-credit')).toContainText('Bálint Dima');
+  await expect(page.locator('#photo-credit')).toContainText('CC BY 4.0');
+  const source=page.locator('#photo-links').getByRole('link',{name:'Fonte',exact:true});
+  const license=page.locator('#photo-links').getByRole('link',{name:'Licenza',exact:true});
+  await expect(source).toHaveAttribute('href','https://artsdatabanken.no/arter/takson/35265/beskrivelse');
+  await expect(license).toHaveAttribute('href','https://creativecommons.org/licenses/by/4.0/');
+  for(const link of [source,license]){
+   await expect(link).toBeVisible();
+   await expect(link).toHaveAttribute('target','_blank');
+   await expect(link).toHaveAttribute('rel','noopener noreferrer');
+   const box=await link.boundingBox();expect(box.height).toBeGreaterThanOrEqual(44);
+  }
+  await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
+  await expect(page.locator('#photo-viewer')).not.toBeVisible();
+  await expect(opener).toBeFocused();
+  await expect(page.locator('#detail-body h2').first()).toHaveText('Cortinarius praestans');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ }finally{await request.get('http://127.0.0.1:4174/?state=start');}
+});
