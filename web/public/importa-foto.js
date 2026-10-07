@@ -16,7 +16,7 @@ function render(){
  queue.forEach(item=>{
   const card=document.createElement('article'),title=document.createElement('p'),state=document.createElement('p');
   title.textContent='Foto '+item.number;card.append(title);
-  if(item.preview){const image=document.createElement('img');image.src=item.preview;image.alt='Anteprima locale foto '+item.number+';image.loading='lazy';card.append(image);}
+  if(item.preview){const image=document.createElement('img');image.src=item.preview;image.alt='Anteprima foto '+item.number;image.loading='lazy';card.append(image);}
   state.textContent=item.state==='ready'?'Pronta':item.state==='uploaded'?'Caricata':item.message;card.append(state);
   $('queue').append(card);
  });
