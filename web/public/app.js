@@ -11,7 +11,7 @@ const scrollPositions={studio:0,areas:0,notes:0,community:0};
 let notesSaveError='',studySaveError='';
 const notice='';
 const button=(label,action,id='',className='')=>'<button class="'+escape(className)+'" data-action="'+action+'"'+(id?' data-id="'+escape(id)+'"':'')+'>'+escape(label)+'</button>';
-function status(message){$('#status').textContent=message;$('#status').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#status').hidden=true,4500);}
+function status(message,{background=false}={}){if(background&&!$('#status').hidden)return;$('#status').textContent=message;$('#status').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#status').hidden=true,4500);}
 function storageGet(key){try{return localStorage.getItem(key);}catch{throw Error('Memoria locale non disponibile');}}
 function restore(){
  const validIds=new Set(taxa.map(t=>t.id));
@@ -368,7 +368,7 @@ $('#install').onclick=async()=>{
 async function setupOffline(){
  if(!('serviceWorker'in navigator)){status('Modalità offline non disponibile in questo browser.');return;}
  try{registration=await navigator.serviceWorker.register('./sw.js',{scope:'./',updateViaCache:'none'});await navigator.serviceWorker.ready;
- const checkCache=async()=>{const controller=navigator.serviceWorker.controller;if(!controller)return;const channel=new MessageChannel();const ready=await new Promise(resolve=>{const timer=setTimeout(()=>resolve(false),4000);channel.port1.onmessage=event=>{clearTimeout(timer);resolve(event.data?.ready===true);};controller.postMessage({type:'CACHE_STATUS'},[channel.port2]);});offlineReady=ready;networkStatus();status(ready?'Catalogo pronto offline.':'Pacchetto offline non verificato: riapri con connessione o aggiorna l’app.');};
+ const checkCache=async()=>{const controller=navigator.serviceWorker.controller;if(!controller)return;const channel=new MessageChannel();const ready=await new Promise(resolve=>{const timer=setTimeout(()=>resolve(false),4000);channel.port1.onmessage=event=>{clearTimeout(timer);resolve(event.data?.ready===true);};controller.postMessage({type:'CACHE_STATUS'},[channel.port2]);});offlineReady=ready;networkStatus();status(ready?'Catalogo pronto offline.':'Pacchetto offline non verificato: riapri con connessione o aggiorna l’app.',{background:true});};
  if(navigator.serviceWorker.controller)void checkCache();
  else navigator.serviceWorker.addEventListener('controllerchange',()=>void checkCache(),{once:true});
  const offer=()=>{$('#update').hidden=false;};
