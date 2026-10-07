@@ -10,7 +10,7 @@ export default function ReferencePhotos({taxon}:{taxon:{scientificName:string;re
  if(!photos.length)return <Text style={styles.pending}>Immagini di riferimento non ancora disponibili.</Text>;
  const asset=selected?referenceImageAssets[selected.src]:undefined;
  const dimensions=asset?Image.resolveAssetSource(asset):null;
- const imageWidth=Math.max(240,width-24)*zoom,imageHeight=dimensions?imageWidth*dimensions.height/dimensions.width:imageWidth;
+ const imageWidth=Math.max(240,width-24)*zoom,imageHeight=dimensions?.height&&dimensions.width?imageWidth*dimensions.height/dimensions.width:imageWidth;
  const close=()=>{setSelected(null);setZoom(1);};
  return <View>
   {subjects.length===1&&subjects[0]!==taxon.scientificName&&<Text style={styles.subject}>Specie raffigurata: {subjects[0]}</Text>}

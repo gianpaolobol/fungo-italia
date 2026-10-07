@@ -168,6 +168,42 @@
       "sourceSha256": "7c4bfa22f90f6b489161f81796976204b645f743a9c0a58a336215b5afa1e1f2",
       "imageSha256": "584902474349f3670e606e3dbc7e8e9cfd5967bd9c1a1f4366ae9376664a90ca",
       "path": "source-photo-assets/boletales-x168.jpg"
+    },
+    {
+      "xref": 40,
+      "width": 800,
+      "height": 533,
+      "page": 10,
+      "pageText": "Boletus edulis\n",
+      "id": "1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn-p10-x40",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "imageSha256": "33e8abdb2bbd0ef20e3fbc4cbc75bea97ab9ffd99f17d883f6a913f75079bf9b",
+      "path": "source-photo-assets/porcini-x40.jpg"
+    },
+    {
+      "xref": 48,
+      "width": 800,
+      "height": 532,
+      "page": 12,
+      "pageText": "Boletus edulis\n",
+      "id": "1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn-p12-x48",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "imageSha256": "5f9e7714b3e364a269ce1509ef41b7f3d9568c67e79daf36d8d4aa40d062d666",
+      "path": "source-photo-assets/porcini-x48.jpg"
+    },
+    {
+      "xref": 44,
+      "width": 1024,
+      "height": 740,
+      "page": 11,
+      "pageText": "Boletus edulis\n",
+      "id": "1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn-p11-x44",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "imageSha256": "3b2e2d0a57141af9b87ab7bd6e5a04373031588a67216fc2752be437950dd1d1",
+      "path": "source-photo-assets/porcini-x44.jpg"
     }
   ]
 }

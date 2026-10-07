@@ -1806,6 +1806,126 @@
         0.58,
         1
       ]
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "subjectTaxon": "Boletus edulis",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "page": 10,
+      "xref": 40,
+      "view": "lateral",
+      "filename": "boletus-edulis-s-l-lateral-40.jpg",
+      "alt": "Boletus edulis — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 10. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Fotografia integrale.",
+      "sourceImagePath": "source-photo-assets/porcini-x40.jpg",
+      "sourceImageSha256": "33e8abdb2bbd0ef20e3fbc4cbc75bea97ab9ffd99f17d883f6a913f75079bf9b"
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "subjectTaxon": "Boletus edulis",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "page": 12,
+      "xref": 48,
+      "view": "top",
+      "filename": "boletus-edulis-s-l-top-48.jpg",
+      "alt": "Boletus edulis — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 12. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "sourceImagePath": "source-photo-assets/porcini-x48.jpg",
+      "sourceImageSha256": "5f9e7714b3e364a269ce1509ef41b7f3d9568c67e79daf36d8d4aa40d062d666",
+      "crop": [
+        0,
+        0,
+        0.6,
+        1
+      ]
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "subjectTaxon": "Boletus edulis",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "page": 11,
+      "xref": 44,
+      "view": "underside",
+      "filename": "boletus-edulis-s-l-underside-44.jpg",
+      "alt": "Boletus edulis — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 11. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "sourceImagePath": "source-photo-assets/porcini-x44.jpg",
+      "sourceImageSha256": "3b2e2d0a57141af9b87ab7bd6e5a04373031588a67216fc2752be437950dd1d1",
+      "crop": [
+        0,
+        0.15,
+        0.58,
+        1
+      ]
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "subjectTaxon": "Boletus edulis",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "page": 10,
+      "xref": 40,
+      "view": "lateral",
+      "filename": "boletus-s-str-lateral-40.jpg",
+      "alt": "Boletus edulis — vista laterale di cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 10. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Fotografia integrale.",
+      "sourceImagePath": "source-photo-assets/porcini-x40.jpg",
+      "sourceImageSha256": "33e8abdb2bbd0ef20e3fbc4cbc75bea97ab9ffd99f17d883f6a913f75079bf9b"
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "subjectTaxon": "Boletus edulis",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "page": 12,
+      "xref": 48,
+      "view": "top",
+      "filename": "boletus-s-str-top-48.jpg",
+      "alt": "Boletus edulis — vista superiore del cappello",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 12. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "sourceImagePath": "source-photo-assets/porcini-x48.jpg",
+      "sourceImageSha256": "5f9e7714b3e364a269ce1509ef41b7f3d9568c67e79daf36d8d4aa40d062d666",
+      "crop": [
+        0,
+        0,
+        0.6,
+        1
+      ]
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "subjectTaxon": "Boletus edulis",
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "sourceSha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691",
+      "page": 11,
+      "xref": 44,
+      "view": "underside",
+      "filename": "boletus-s-str-underside-44.jpg",
+      "alt": "Boletus edulis — vista inferiore del cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Boletus sensu stricto (26/01/2026), p. 11. Fotografie accreditate nel documento a Sitta, Floriani, Donini, Suriano, Angelini e Manavella; autore individuale non specificato. Ritaglio della fotografia originale.",
+      "visualReview": "verified",
+      "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
+      "sourceImagePath": "source-photo-assets/porcini-x44.jpg",
+      "sourceImageSha256": "3b2e2d0a57141af9b87ab7bd6e5a04373031588a67216fc2752be437950dd1d1",
+      "crop": [
+        0,
+        0.15,
+        0.58,
+        1
+      ]
     }
   ]
 }
