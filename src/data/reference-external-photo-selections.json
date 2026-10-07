@@ -4969,25 +4969,88 @@
       "alt": "Tricholoma imbricatum — vista laterale obliqua, cappello e gambo"
     },
     {
+      "scientificName": "Coprinus comatus",
+      "subjectTaxon": "Coprinus comatus",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-INAT-138270308-236302012",
+      "sourcePath": "source-photo-assets/external/ext-inat-138270308-236302012-original.jpg",
+      "candidateSha256": "bc0af86e68d85d4c7e0c6d4c43b4fd5db300b6a8607797344faee18c845efde5",
+      "sourceSha256": "a2767a932f8a405b16ce23450f400e9b9b8981114de49363b97f7f197a1c4f02",
+      "sourcePage": null,
+      "credit": "Wolfgang Jauch, CC BY 4.0",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. True close-up from below with black deliquescent radial gills and partial upper stem; not a collection or consumption example.",
+      "sourceUrl": "https://www.inaturalist.org/observations/138270308",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Coprinus comatus — vista inferiore ravvicinata, lamelle nere in deliquescenza e parte del gambo"
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "subjectTaxon": "Tricholoma equestre",
+      "view": "lateral",
+      "crop": [
+        0.225,
+        0.005,
+        0.995,
+        0.995
+      ],
+      "sourceId": "EXT-INAT-183837798-320790488",
+      "sourcePath": "source-photo-assets/external/ext-inat-183837798-320790488-original.jpg",
+      "candidateSha256": "3b9d6a2a43f626dd57726417816909135e2a5a0bba145395ef85594bb72b67f6",
+      "sourceSha256": "c2f8a5e0e674ed7ceb720ba6c3dd29410edc02f76d211e5f233541b38f7a6f9b",
+      "sourcePage": null,
+      "credit": "Veeti Varjo, CC0 1.0",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. Whole cap profile and stem down to ground; base naturally buried. Author currently identifies genus, two other current contributors agree on species, earlier Suillus identification withdrawn.",
+      "sourceUrl": "https://www.inaturalist.org/observations/183837798",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "alt": "Tricholoma equestre — vista laterale in habitat, base del gambo nel terreno"
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "subjectTaxon": "Russula delica",
+      "view": "lateral",
+      "crop": [
+        0.025,
+        0.25,
+        0.94,
+        0.79
+      ],
+      "sourceId": "EXT-INAT-96701730-160690308",
+      "sourcePath": "source-photo-assets/external/ext-inat-96701730-160690308-original.jpg",
+      "candidateSha256": "937f1c3b68a053bdf139eacfe8a5802d80fa20be7b32d56c8795aee0f1b490f4",
+      "sourceSha256": "a24fda72e71a1212b42ad64b75a385d183f87c123c571b6ccbe51ca633a307e5",
+      "sourcePage": null,
+      "credit": "Carminda Santos, CC BY 4.0",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. Intact broad cap profile and short stout stem, oblique side view, slight soft focus with readable gross morphology.",
+      "sourceUrl": "https://www.inaturalist.org/observations/96701730",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "alt": "Russula delica — vista laterale obliqua del cappello e del gambo"
+    },
+    {
       "scientificName": "Agaricus bresadolanus",
       "subjectTaxon": "Agaricus bresadolanus",
       "view": "lateral",
       "crop": [
-        0.42,
-        0.28,
-        0.95,
-        0.83
+        0.055,
+        0.275,
+        0.96,
+        0.805
       ],
-      "sourceId": "EXT-INAT-253610934-454140085",
-      "sourcePath": "source-photo-assets/external/ext-inat-253610934-454140085-original.jpg",
-      "candidateSha256": "c4f3eb01e020d6b276503f294126096db0772165e9432a3b1c8793f710babfb9",
-      "sourceSha256": "a0deaf73f9ac36d93d5c8eb8df6027491f46607156f5ec0c079231a5e6b53f19",
+      "sourceId": "EXT-INAT-318836697-576770685",
+      "sourcePath": "source-photo-assets/external/ext-inat-318836697-576770685-original.jpg",
+      "candidateSha256": "9568283a74cf26536e358eeead602e3122460dccfde456ae25932e370f632d8e",
+      "sourceSha256": "87c238061a898964a369378962596eeee3403afe36a982dfcd8c0cf5d70f0eea",
       "sourcePage": null,
-      "credit": "Tatiana Pires, CC BY 4.0",
-      "reviewNotes": "Root and independent scientific reviewer actual-pixel review: convex cap profile, broad visible cuticle band, annulus and long stem face. Oblique view from below with prominent gills. Finger obscures part of lower stem/base; does not document unobstructed rhizomorphs. Primary current identifications Tatiana Pires and Nicolas Schwab agree; prior A. campestris withdrawn. No independent specimen determination.",
-      "sourceUrl": "https://www.inaturalist.org/observations/253610934",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "alt": "Agaricus bresadolanus — vista laterale obliqua dal basso, cappello, anello e gambo"
+      "credit": "ÖkopatóPál, CC0 1.0",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. Cleaner lateral replacement: unobstructed cap profile, annulus, stem and external basal rhizomorph.",
+      "sourceUrl": "https://www.inaturalist.org/observations/318836697",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "alt": "Agaricus bresadolanus — vista laterale del cappello, anello, gambo e base con rizomorfo"
     }
   ]
 }
