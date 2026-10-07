@@ -2294,14 +2294,14 @@
       "xref": 135,
       "subjectTaxon": "Russula adusta",
       "crop": [
-        0.42,
+        0,
         0,
         1,
         1
       ],
-      "sha256": "e32b3ff32352c43d0ca546ecd2687b4ad002d70850b77e0cc849d7b737f07922",
+      "sha256": "1451c5be0a88342e73966b230f6795cf16ddf24c5281540ce9ce54331ae449ba",
       "width": 1600,
-      "height": 910,
+      "height": 528,
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
@@ -2354,14 +2354,14 @@
       "xref": 153,
       "subjectTaxon": "Russula delica",
       "crop": [
-        0.34,
         0,
-        0.77,
+        0,
+        1,
         1
       ],
-      "sha256": "0d422e22c3596adfe8c375a34ae2282a3278511e33dea686c3bb74ba59ee88a2",
+      "sha256": "81eff30a29bcb17e5cc2902b8cc3a457a28094e72a4f2ef5860c51c1009153c4",
       "width": 1600,
-      "height": 1236,
+      "height": 531,
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
@@ -2387,23 +2387,23 @@
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
-      "src": "images/reference/russula-lactarioides-underside-153.jpg",
+      "src": "images/reference/russula-lactarioides-underside-156.jpg",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "sourcePage": 41,
-      "xref": 153,
-      "subjectTaxon": "Russula delica",
+      "sourcePage": 42,
+      "xref": 156,
+      "subjectTaxon": "Russula chloroides",
       "crop": [
-        0.65,
+        0.35,
         0,
         1,
         1
       ],
-      "sha256": "e90d37f5f8563a21817c69b5040784f76b2c13f7c44eb34ae388b41a88f2432c",
+      "sha256": "0713217b92b544fdfa180b9c73be50f7f2118c1b7d1d5cf497ca281a3eddeb29",
       "width": 1600,
-      "height": 1520,
+      "height": 822,
       "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "reviewNotes": "Russula chloroides è raffigurata con didascalia specifica; rappresentante del gruppo R. delica nella scheda di gruppo, non una fotografia attribuita a R. delica.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
@@ -2414,14 +2414,14 @@
       "xref": 153,
       "subjectTaxon": "Russula delica",
       "crop": [
-        0.34,
         0,
-        0.77,
+        0,
+        1,
         1
       ],
-      "sha256": "0d422e22c3596adfe8c375a34ae2282a3278511e33dea686c3bb74ba59ee88a2",
+      "sha256": "81eff30a29bcb17e5cc2902b8cc3a457a28094e72a4f2ef5860c51c1009153c4",
       "width": 1600,
-      "height": 1236,
+      "height": 531,
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
@@ -2447,23 +2447,23 @@
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
-      "src": "images/reference/russula-genere-underside-153.jpg",
+      "src": "images/reference/russula-genere-underside-156.jpg",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "sourcePage": 41,
-      "xref": 153,
-      "subjectTaxon": "Russula delica",
+      "sourcePage": 42,
+      "xref": 156,
+      "subjectTaxon": "Russula chloroides",
       "crop": [
-        0.65,
+        0.35,
         0,
         1,
         1
       ],
-      "sha256": "e90d37f5f8563a21817c69b5040784f76b2c13f7c44eb34ae388b41a88f2432c",
+      "sha256": "0713217b92b544fdfa180b9c73be50f7f2118c1b7d1d5cf497ca281a3eddeb29",
       "width": 1600,
-      "height": 1520,
+      "height": 822,
       "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "reviewNotes": "Russula chloroides è raffigurata con didascalia specifica; rappresentante del gruppo R. delica nella scheda di gruppo, non una fotografia attribuita a R. delica.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
@@ -2474,14 +2474,14 @@
       "xref": 183,
       "subjectTaxon": "Russula foetens",
       "crop": [
-        0.48,
+        0,
         0,
         1,
         1
       ],
-      "sha256": "fb6b95b613927039cdc3f3c84676caa82c69384f73629e8942049add04daeec5",
+      "sha256": "bff1bb496656f4c2edc107a73385da6ff0bb3696eb0c149a966572a454e4e792",
       "width": 1600,
-      "height": 1028,
+      "height": 534,
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
@@ -2524,6 +2524,371 @@
       "height": 1336,
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/marasmius-oreades-lateral-55.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 13,
+      "xref": 55,
+      "subjectTaxon": "Marasmius oreades",
+      "crop": [
+        0,
+        0,
+        0.38,
+        1
+      ],
+      "sha256": "b674b026f47116d1702e69426bd21784c5d53b4c23422fd432aa574ab19edc67",
+      "width": 911,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/marasmius-oreades-top-51.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 12,
+      "xref": 51,
+      "subjectTaxon": "Marasmius oreades",
+      "crop": [
+        0,
+        0,
+        0.53,
+        1
+      ],
+      "sha256": "ec5df2096677a257d147a93cd7884340bacfac7bcbcc167f02a2cc844193948c",
+      "width": 1272,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/marasmius-oreades-underside-55.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 13,
+      "xref": 55,
+      "subjectTaxon": "Marasmius oreades",
+      "crop": [
+        0.36,
+        0,
+        1,
+        1
+      ],
+      "sha256": "2c484dbabddfb4ffd54b5787c4b80b8d671f713291849b328c266902d4f0a701",
+      "width": 1534,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/collybioidi-marasmioidi-lateral-55.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 13,
+      "xref": 55,
+      "subjectTaxon": "Marasmius oreades",
+      "crop": [
+        0,
+        0,
+        0.38,
+        1
+      ],
+      "sha256": "b674b026f47116d1702e69426bd21784c5d53b4c23422fd432aa574ab19edc67",
+      "width": 911,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/collybioidi-marasmioidi-top-51.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 12,
+      "xref": 51,
+      "subjectTaxon": "Marasmius oreades",
+      "crop": [
+        0,
+        0,
+        0.53,
+        1
+      ],
+      "sha256": "ec5df2096677a257d147a93cd7884340bacfac7bcbcc167f02a2cc844193948c",
+      "width": 1272,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/collybioidi-marasmioidi-underside-55.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 13,
+      "xref": 55,
+      "subjectTaxon": "Marasmius oreades",
+      "crop": [
+        0.36,
+        0,
+        1,
+        1
+      ],
+      "sha256": "2c484dbabddfb4ffd54b5787c4b80b8d671f713291849b328c266902d4f0a701",
+      "width": 1534,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/lepiota-brunneoincarnata-lateral-369.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 369,
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "crop": [
+        0,
+        0.2,
+        0.44,
+        1
+      ],
+      "sha256": "b4e2f745759269cd2d31b64ae5d1278975e7f37b5a7148828a7dbcc3b8ecd5ab",
+      "width": 1260,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/lepiota-brunneoincarnata-top-369.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 369,
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "crop": [
+        0.08,
+        0,
+        0.66,
+        0.54
+      ],
+      "sha256": "1476c5e2a1d6a48160dee4dd3da5373b91ee013d93170a0041ae0821829ce00b",
+      "width": 1600,
+      "height": 1041,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/lepiota-brunneoincarnata-underside-369.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 369,
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "crop": [
+        0.35,
+        0.4,
+        0.73,
+        1
+      ],
+      "sha256": "46eb9aa8614011cf9cfab5da8ea1184ddf323733b880536a53e1dafe3c44e433",
+      "width": 1452,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/lepiotoidi-lateral-369.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 369,
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "crop": [
+        0,
+        0.2,
+        0.44,
+        1
+      ],
+      "sha256": "b4e2f745759269cd2d31b64ae5d1278975e7f37b5a7148828a7dbcc3b8ecd5ab",
+      "width": 1260,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/lepiotoidi-top-369.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 369,
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "crop": [
+        0.08,
+        0,
+        0.66,
+        0.54
+      ],
+      "sha256": "1476c5e2a1d6a48160dee4dd3da5373b91ee013d93170a0041ae0821829ce00b",
+      "width": 1600,
+      "height": 1041,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/lepiotoidi-underside-369.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 369,
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "crop": [
+        0.35,
+        0.4,
+        0.73,
+        1
+      ],
+      "sha256": "46eb9aa8614011cf9cfab5da8ea1184ddf323733b880536a53e1dafe3c44e433",
+      "width": 1452,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/galerina-marginata-top-370.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 370,
+      "subjectTaxon": "Galerina marginata",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "0a14ab2725a7f3a15fe8bd236f577b6dac194e6e34f87229bb64ff1f6d3870ac",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/galerina-marginata-underside-370.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 370,
+      "subjectTaxon": "Galerina marginata",
+      "crop": [
+        0.08,
+        0.2,
+        0.5,
+        1
+      ],
+      "sha256": "19044e51b3b6d55fe889346b00c66de0c145cc544a5c2c8ea657d5bb1cd79bf3",
+      "width": 1120,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/galerina-genere-top-370.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 370,
+      "subjectTaxon": "Galerina marginata",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "0a14ab2725a7f3a15fe8bd236f577b6dac194e6e34f87229bb64ff1f6d3870ac",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/galerina-genere-underside-370.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 24,
+      "xref": 370,
+      "subjectTaxon": "Galerina marginata",
+      "crop": [
+        0.08,
+        0.2,
+        0.5,
+        1
+      ],
+      "sha256": "19044e51b3b6d55fe889346b00c66de0c145cc544a5c2c8ea657d5bb1cd79bf3",
+      "width": 1120,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/morchella-genere-lateral-718.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 60,
+      "xref": 718,
+      "subjectTaxon": "Morchella esculenta s.l.",
+      "crop": null,
+      "sha256": "bf82b9886c9eb25c276d435a8ec0e66c48c50142905c54ab3462924db296895f",
+      "width": 1363,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/gyromitra-esculenta-lateral-720.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 60,
+      "xref": 720,
+      "subjectTaxon": "Gyromitra esculenta",
+      "crop": null,
+      "sha256": "37ffe15c46150303deb81df02207835b406a257e75a3e3c0503c68a08d0df529",
+      "width": 1600,
+      "height": 949,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/gyromitra-genere-lateral-720.jpg",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "sourcePage": 60,
+      "xref": 720,
+      "subjectTaxon": "Gyromitra esculenta",
+      "crop": null,
+      "sha256": "37ffe15c46150303deb81df02207835b406a257e75a3e3c0503c68a08d0df529",
+      "width": 1600,
+      "height": 949,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     }
   ]

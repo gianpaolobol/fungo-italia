@@ -2568,6 +2568,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce in prati in file, archi e tipici cerchi delle streghe.",
+    "referenceImages": [
+      {
+        "src": "images/reference/marasmius-oreades-lateral-55.jpg",
+        "view": "lateral",
+        "alt": "Marasmius oreades — fianco, cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 13. Autore della singola fotografia non specificato.",
+        "subjectTaxon": "Marasmius oreades"
+      },
+      {
+        "src": "images/reference/marasmius-oreades-top-51.jpg",
+        "view": "top",
+        "alt": "Marasmius oreades — sopra, cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 12. Autore della singola fotografia non specificato.",
+        "subjectTaxon": "Marasmius oreades"
+      },
+      {
+        "src": "images/reference/marasmius-oreades-underside-55.jpg",
+        "view": "underside",
+        "alt": "Marasmius oreades — sotto, cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 13. Autore della singola fotografia non specificato.",
+        "subjectTaxon": "Marasmius oreades"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -3142,6 +3165,22 @@
         "precautions": []
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/galerina-marginata-top-370.jpg",
+        "view": "top",
+        "alt": "Galerina marginata — sopra, cappello e gambo",
+        "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Galerina marginata"
+      },
+      {
+        "src": "images/reference/galerina-marginata-underside-370.jpg",
+        "view": "underside",
+        "alt": "Galerina marginata — sotto, cappello e gambo",
+        "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Galerina marginata"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -3511,6 +3550,29 @@
         "precautions": []
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/lepiota-brunneoincarnata-lateral-369.jpg",
+        "view": "lateral",
+        "alt": "Lepiota brunneoincarnata — fianco, cappello e gambo",
+        "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Lepiota brunneoincarnata"
+      },
+      {
+        "src": "images/reference/lepiota-brunneoincarnata-top-369.jpg",
+        "view": "top",
+        "alt": "Lepiota brunneoincarnata — sopra, cappello e gambo",
+        "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Lepiota brunneoincarnata"
+      },
+      {
+        "src": "images/reference/lepiota-brunneoincarnata-underside-369.jpg",
+        "view": "underside",
+        "alt": "Lepiota brunneoincarnata — sotto, cappello e gambo",
+        "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Lepiota brunneoincarnata"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
@@ -5495,11 +5557,11 @@
         "subjectTaxon": "Russula delica"
       },
       {
-        "src": "images/reference/russula-lactarioides-underside-153.jpg",
+        "src": "images/reference/russula-lactarioides-underside-156.jpg",
         "view": "underside",
-        "alt": "Russula delica — vista inferiore di cappello e gambo",
-        "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-        "subjectTaxon": "Russula delica"
+        "alt": "Russula chloroides — vista inferiore di cappello e gambo",
+        "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
+        "subjectTaxon": "Russula chloroides"
       }
     ],
     "curriculum": {
@@ -6906,6 +6968,15 @@
         "precautions": []
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/gyromitra-esculenta-lateral-720.jpg",
+        "view": "lateral",
+        "alt": "Gyromitra esculenta — fianco, cappello e gambo",
+        "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 60; fotografo non specificato nella pagina della fonte.",
+        "subjectTaxon": "Gyromitra esculenta"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21,
