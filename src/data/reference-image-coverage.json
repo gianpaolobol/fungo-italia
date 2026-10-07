@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 284,
-    "completeTriplets": 76,
-    "partialCards": 39,
-    "withoutImages": 99,
-    "missingViews": 358,
-    "imageBytes": 91551756
+    "images": 343,
+    "completeTriplets": 93,
+    "partialCards": 43,
+    "withoutImages": 78,
+    "missingViews": 299,
+    "imageBytes": 108627010
   },
   "cards": [
     {
@@ -259,12 +259,12 @@
     },
     {
       "scientificName": "Clitocybe dealbata / Collybia rivulosa",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Clitocybe nebularis",
@@ -314,21 +314,21 @@
     },
     {
       "scientificName": "Rhodocollybia maculata",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Gymnopus fusipes",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Marasmius oreades",
@@ -360,21 +360,21 @@
     },
     {
       "scientificName": "Cortinarius orellanus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Cortinarius rubellus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Cortinarius sottogenere Dermocybe",
@@ -559,21 +559,22 @@
     },
     {
       "scientificName": "Lentinula edodes",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
-        "top",
+        "top"
+      ],
+      "missingViews": [
         "underside"
       ]
     },
     {
       "scientificName": "Lepiota subincarnata",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Lepiota brunneoincarnata",
@@ -668,21 +669,21 @@
     },
     {
       "scientificName": "Leucopaxillus giganteus s.l.",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Leucopaxillus gentianeus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Lyophyllum decastes s.l.",
@@ -704,21 +705,21 @@
     },
     {
       "scientificName": "Leucocybe connata",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Mycena sez. Purae",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Omphalotus olearius",
@@ -813,11 +814,12 @@
     },
     {
       "scientificName": "Tricholoma equestre",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -850,12 +852,12 @@
     },
     {
       "scientificName": "Tricholoma columbetta",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
@@ -905,11 +907,12 @@
     },
     {
       "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -1015,12 +1018,12 @@
     },
     {
       "scientificName": "Boletus sez. Luridi",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Rubroboletus satanas",
@@ -1061,12 +1064,12 @@
     },
     {
       "scientificName": "Boletus queletii e specie vicine/intermedie",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Caloboletus radicans",
@@ -1403,12 +1406,12 @@
     },
     {
       "scientificName": "Armillaria + Desarmillaria",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Calocybe",
@@ -1531,12 +1534,12 @@
     },
     {
       "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Laccaria",
@@ -1549,10 +1552,11 @@
     },
     {
       "scientificName": "Lentinula",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
-        "top",
+        "top"
+      ],
+      "missingViews": [
         "underside"
       ]
     },
@@ -1576,12 +1580,12 @@
     },
     {
       "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
@@ -1821,12 +1825,12 @@
     },
     {
       "scientificName": "Leccinum",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Paxillus",
