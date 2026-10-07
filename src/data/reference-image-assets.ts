@@ -626,5 +626,8 @@ export const referenceImageAssets:Record<string,ImageSourcePropType>={
 "images/reference/external-scutiger-pes-caprae-lateral.jpg":require("../../web/public/images/reference/external-scutiger-pes-caprae-lateral.jpg"),
 "images/reference/external-tricholoma-filamentosum-lateral.jpg":require("../../web/public/images/reference/external-tricholoma-filamentosum-lateral.jpg"),
 "images/reference/external-tricholoma-sez-genuina-gruppo-albobrunnei-lateral.jpg":require("../../web/public/images/reference/external-tricholoma-sez-genuina-gruppo-albobrunnei-lateral.jpg"),
+"images/reference/external-coprinus-comatus-underside.jpg":require("../../web/public/images/reference/external-coprinus-comatus-underside.jpg"),
+"images/reference/external-tricholoma-equestre-lateral.jpg":require("../../web/public/images/reference/external-tricholoma-equestre-lateral.jpg"),
+"images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg":require("../../web/public/images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg"),
 "images/reference/external-agaricus-bresadolanus-lateral.jpg":require("../../web/public/images/reference/external-agaricus-bresadolanus-lateral.jpg"),
 };

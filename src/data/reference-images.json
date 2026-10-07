@@ -11138,22 +11138,79 @@
       }
     },
     {
-      "scientificName": "Agaricus bresadolanus",
-      "subjectTaxon": "Agaricus bresadolanus",
-      "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
-      "view": "lateral",
-      "alt": "Agaricus bresadolanus — vista laterale obliqua dal basso, cappello, anello e gambo",
-      "credit": "Tatiana Pires, CC BY 4.0 · ritaglio",
-      "sourceId": "EXT-INAT-253610934-454140085",
+      "scientificName": "Coprinus comatus",
+      "subjectTaxon": "Coprinus comatus",
+      "src": "images/reference/external-coprinus-comatus-underside.jpg",
+      "view": "underside",
+      "alt": "Coprinus comatus — vista inferiore ravvicinata, lamelle nere in deliquescenza e parte del gambo",
+      "credit": "Wolfgang Jauch, CC BY 4.0 · copia JPEG rielaborata",
+      "sourceId": "EXT-INAT-138270308-236302012",
       "page": null,
-      "sourceUrl": "https://www.inaturalist.org/observations/253610934",
+      "sourceUrl": "https://www.inaturalist.org/observations/138270308",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "taxonStatus": "identified",
       "rights": {
         "status": "verified",
         "publicRepository": true,
         "pages": true,
-        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-253610934-454140085"
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-138270308-236302012"
+      }
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "subjectTaxon": "Tricholoma equestre",
+      "src": "images/reference/external-tricholoma-equestre-lateral.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma equestre — vista laterale in habitat, base del gambo nel terreno",
+      "credit": "Veeti Varjo, CC0 1.0 · ritaglio",
+      "sourceId": "EXT-INAT-183837798-320790488",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/183837798",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-183837798-320790488"
+      }
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "subjectTaxon": "Russula delica",
+      "src": "images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg",
+      "view": "lateral",
+      "alt": "Russula delica — vista laterale obliqua del cappello e del gambo",
+      "credit": "Carminda Santos, CC BY 4.0 · ritaglio",
+      "sourceId": "EXT-INAT-96701730-160690308",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/96701730",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-96701730-160690308"
+      }
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "subjectTaxon": "Agaricus bresadolanus",
+      "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
+      "view": "lateral",
+      "alt": "Agaricus bresadolanus — vista laterale del cappello, anello, gambo e base con rizomorfo",
+      "credit": "ÖkopatóPál, CC0 1.0 · ritaglio",
+      "sourceId": "EXT-INAT-318836697-576770685",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/318836697",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-318836697-576770685"
       }
     }
   ]

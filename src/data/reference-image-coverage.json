@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 627,
-    "completeTriplets": 203,
-    "partialCards": 9,
+    "images": 630,
+    "completeTriplets": 206,
+    "partialCards": 6,
     "withoutImages": 2,
-    "missingViews": 15,
-    "imageBytes": 165298141
+    "missingViews": 12,
+    "imageBytes": 166114838
   },
   "cards": [
     {
@@ -343,11 +343,10 @@
       "scientificName": "Coprinus comatus",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Cortinarius orellanus",
@@ -802,12 +801,11 @@
     {
       "scientificName": "Tricholoma equestre",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Tricholoma portentosum",
@@ -983,12 +981,11 @@
     {
       "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Boletus edulis s.l.",

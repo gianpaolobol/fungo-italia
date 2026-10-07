@@ -237,11 +237,11 @@
       {
         "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
         "view": "lateral",
-        "alt": "Agaricus bresadolanus — vista laterale obliqua dal basso, cappello, anello e gambo",
-        "credit": "Tatiana Pires, CC BY 4.0 · ritaglio",
+        "alt": "Agaricus bresadolanus — vista laterale del cappello, anello, gambo e base con rizomorfo",
+        "credit": "ÖkopatóPál, CC0 1.0 · ritaglio",
         "subjectTaxon": "Agaricus bresadolanus",
-        "sourceUrl": "https://www.inaturalist.org/observations/253610934",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+        "sourceUrl": "https://www.inaturalist.org/observations/318836697",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
       }
     ],
     "curriculum": {
@@ -3072,6 +3072,15 @@
         "credit": "Eugene Popov, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Coprinus comatus",
         "sourceUrl": "https://www.inaturalist.org/observations/34001400",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-coprinus-comatus-underside.jpg",
+        "view": "underside",
+        "alt": "Coprinus comatus — vista inferiore ravvicinata, lamelle nere in deliquescenza e parte del gambo",
+        "credit": "Wolfgang Jauch, CC BY 4.0 · copia JPEG rielaborata",
+        "subjectTaxon": "Coprinus comatus",
+        "sourceUrl": "https://www.inaturalist.org/observations/138270308",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -6135,6 +6144,15 @@
         "alt": "Tricholoma equestre s.l. — vista inferiore di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 17. Fotografie: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore individuale non specificato.",
         "subjectTaxon": "Tricholoma equestre s.l."
+      },
+      {
+        "src": "images/reference/external-tricholoma-equestre-lateral.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma equestre — vista laterale in habitat, base del gambo nel terreno",
+        "credit": "Veeti Varjo, CC0 1.0 · ritaglio",
+        "subjectTaxon": "Tricholoma equestre",
+        "sourceUrl": "https://www.inaturalist.org/observations/183837798",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
       }
     ],
     "curriculum": {
@@ -7388,6 +7406,15 @@
         "alt": "Russula chloroides — vista inferiore di cappello e gambo",
         "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
         "subjectTaxon": "Russula chloroides"
+      },
+      {
+        "src": "images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg",
+        "view": "lateral",
+        "alt": "Russula delica — vista laterale obliqua del cappello e del gambo",
+        "credit": "Carminda Santos, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Russula delica",
+        "sourceUrl": "https://www.inaturalist.org/observations/96701730",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {

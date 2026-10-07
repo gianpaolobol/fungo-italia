@@ -13010,28 +13010,100 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     },
     {
+      "src": "images/reference/external-coprinus-comatus-underside.jpg",
+      "sourceId": "EXT-INAT-138270308-236302012",
+      "sourceSha256": "a2767a932f8a405b16ce23450f400e9b9b8981114de49363b97f7f197a1c4f02",
+      "candidateSha256": "bc0af86e68d85d4c7e0c6d4c43b4fd5db300b6a8607797344faee18c845efde5",
+      "sourcePath": "source-photo-assets/external/ext-inat-138270308-236302012-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Coprinus comatus",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "82d440dd302be79553a670d949b1cdcc5a344ae9f0a6f1162a6df7dc91ad8a70",
+      "width": 1600,
+      "height": 1199,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. True close-up from below with black deliquescent radial gills and partial upper stem; not a collection or consumption example.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-138270308-236302012",
+      "sourceUrl": "https://www.inaturalist.org/observations/138270308",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "src": "images/reference/external-tricholoma-equestre-lateral.jpg",
+      "sourceId": "EXT-INAT-183837798-320790488",
+      "sourceSha256": "c2f8a5e0e674ed7ceb720ba6c3dd29410edc02f76d211e5f233541b38f7a6f9b",
+      "candidateSha256": "3b9d6a2a43f626dd57726417816909135e2a5a0bba145395ef85594bb72b67f6",
+      "sourcePath": "source-photo-assets/external/ext-inat-183837798-320790488-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Tricholoma equestre",
+      "crop": [
+        0.225,
+        0.005,
+        0.995,
+        0.995
+      ],
+      "sha256": "5be996062eacf7778899665ac1e10b194b543846f234be328f42649de9302f49",
+      "width": 1232,
+      "height": 892,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. Whole cap profile and stem down to ground; base naturally buried. Author currently identifies genus, two other current contributors agree on species, earlier Suillus identification withdrawn.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-183837798-320790488",
+      "sourceUrl": "https://www.inaturalist.org/observations/183837798",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "src": "images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg",
+      "sourceId": "EXT-INAT-96701730-160690308",
+      "sourceSha256": "a24fda72e71a1212b42ad64b75a385d183f87c123c571b6ccbe51ca633a307e5",
+      "candidateSha256": "937f1c3b68a053bdf139eacfe8a5802d80fa20be7b32d56c8795aee0f1b490f4",
+      "sourcePath": "source-photo-assets/external/ext-inat-96701730-160690308-original.jpg",
+      "sourcePage": null,
+      "xref": null,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0.025,
+        0.25,
+        0.94,
+        0.79
+      ],
+      "sha256": "6a78ffe3bbf8964ad2166da4217c13cdd89706a75ceda7ac4dd686f37e96095a",
+      "width": 1098,
+      "height": 864,
+      "visualReview": "verified",
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. Intact broad cap profile and short stout stem, oblique side view, slight soft focus with readable gross morphology.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-96701730-160690308",
+      "sourceUrl": "https://www.inaturalist.org/observations/96701730",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
       "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
-      "sourceId": "EXT-INAT-253610934-454140085",
-      "sourceSha256": "a0deaf73f9ac36d93d5c8eb8df6027491f46607156f5ec0c079231a5e6b53f19",
-      "candidateSha256": "c4f3eb01e020d6b276503f294126096db0772165e9432a3b1c8793f710babfb9",
-      "sourcePath": "source-photo-assets/external/ext-inat-253610934-454140085-original.jpg",
+      "sourceId": "EXT-INAT-318836697-576770685",
+      "sourceSha256": "87c238061a898964a369378962596eeee3403afe36a982dfcd8c0cf5d70f0eea",
+      "candidateSha256": "9568283a74cf26536e358eeead602e3122460dccfde456ae25932e370f632d8e",
+      "sourcePath": "source-photo-assets/external/ext-inat-318836697-576770685-original.jpg",
       "sourcePage": null,
       "xref": null,
       "subjectTaxon": "Agaricus bresadolanus",
       "crop": [
-        0.42,
-        0.28,
-        0.95,
-        0.83
+        0.055,
+        0.275,
+        0.96,
+        0.805
       ],
-      "sha256": "c5d6471647c22e5281c558631ab0fc5bf071d2ab913f66eff9f2dd135cab9d7a",
-      "width": 636,
-      "height": 880,
+      "sha256": "508a27fec0001bfa54ca1fc645147a5bc461833d84c142b34c082aa71012cab2",
+      "width": 651,
+      "height": 848,
       "visualReview": "verified",
-      "reviewNotes": "Root and independent scientific reviewer actual-pixel review: convex cap profile, broad visible cuticle band, annulus and long stem face. Oblique view from below with prominent gills. Finger obscures part of lower stem/base; does not document unobstructed rhizomorphs. Primary current identifications Tatiana Pires and Nicolas Schwab agree; prior A. campestris withdrawn. No independent specimen determination.",
-      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-253610934-454140085",
-      "sourceUrl": "https://www.inaturalist.org/observations/253610934",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      "reviewNotes": "Independent agent and root reviewed actual source pixels, photographic anatomy, exact primary record and individual photo license. Current matching community species identifications support the provider label; no independent determination or molecular certification. Cleaner lateral replacement: unobstructed cap profile, annulus, stem and external basal rhizomorph.",
+      "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-318836697-576770685",
+      "sourceUrl": "https://www.inaturalist.org/observations/318836697",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
     }
   ]
 }
