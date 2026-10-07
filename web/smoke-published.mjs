@@ -36,10 +36,11 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  await expect(page.locator('.leaflet-interactive')).toHaveCount(1);
  await page.screenshot({path:'published-evidence/'+name+'-amiata.png',fullPage:true});
  await page.goto(url+'importa-foto.html');
- await expect(page.getByRole('heading',{name:'Foto dal telefono a GitHub'})).toBeVisible();
+ await expect(page.getByRole('heading',{name:'Carica immagini'})).toBeVisible();
  await page.waitForFunction(()=>typeof document.getElementById('photos').onchange==='function');
- await expect(page.locator('#choose')).toBeEnabled();
- await expect(page.locator('#upload')).toBeDisabled();
+ await expect(page.getByRole('button',{name:'Carica immagini selezionate'})).toBeEnabled();
+ await expect(page.getByRole('button')).toHaveCount(1);
+ await expect(page.locator('.notice')).toHaveCount(0);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
  await page.screenshot({path:'published-evidence/'+name+'-importa-foto.png',fullPage:true});
  expect(errors).toEqual([]);results.push({browser:name,status:'passed',offline:name==='chromium'});

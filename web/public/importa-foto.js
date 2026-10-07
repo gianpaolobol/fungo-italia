@@ -1,4 +1,4 @@
-import {MAX_BATCH,MAX_BYTES,BRANCH,REPOSITORY,digest,sanitizeJpeg,jpegDimensions,makeRecord,createGitHubClient} from './photo-core.js';
+import {MAX_BATCH,MAX_BYTES,digest,sanitizeJpeg,jpegDimensions,makeRecord,createGitHubClient} from './photo-core.js';
 const $=id=>document.getElementById(id);
 let queue=[],busy=false,client=null,connected=false,active=null,sequence=0;
 const allowed=['image/jpeg','image/png','image/webp','image/heic','image/heif','image/avif','image/gif'];
@@ -6,22 +6,22 @@ function say(text){$('status').textContent=text;}
 function fail(error){$('error').textContent=error?.name==='AbortError'?'Operazione interrotta. Le copie locali restano disponibili.':error?.message||'Operazione non riuscita.';$('error').hidden=false;}
 function clearError(){$('error').textContent='';$('error').hidden=true;}
 function controls(){
- $('choose').disabled=busy;$('camera').disabled=busy;$('connect').disabled=busy;$('forget').disabled=busy;
- $('clear').disabled=busy||!queue.length;$('cancel').disabled=!busy;
- $('upload').disabled=busy||!connected||!queue.some(item=>item.state==='ready')||!$('consent').checked||!$('credit').value.trim();
- $('credit').disabled=busy;$('consent').disabled=busy;$('token').disabled=busy;
+ $('upload').disabled=busy;
+ $('token').disabled=busy;
+ $('upload').setAttribute('aria-busy',String(busy));
 }
+
 function render(){
  $('queue').replaceChildren();
  queue.forEach(item=>{
   const card=document.createElement('article'),title=document.createElement('p'),state=document.createElement('p');
-  title.textContent='Foto '+item.number+' · '+item.localName;card.append(title);
-  if(item.preview){const image=document.createElement('img');image.src=item.preview;image.alt='Anteprima locale foto '+item.number+'; identificazione non eseguita';image.loading='lazy';card.append(image);}
-  state.textContent=item.state==='ready'?'Pronta · '+item.width+' × '+item.height+' · '+Math.ceil(item.bytes.length/1024)+' KB · non determinata':item.state==='uploaded'?'Registrata su GitHub · identificazione pendente':item.message;card.append(state);
-  const remove=document.createElement('button');remove.textContent='Rimuovi foto '+item.number+' dalla coda';remove.disabled=busy;remove.onclick=()=>{if(item.preview)URL.revokeObjectURL(item.preview);queue=queue.filter(photo=>photo!==item);render();};card.append(remove);$('queue').append(card);
+  title.textContent='Foto '+item.number;card.append(title);
+  if(item.preview){const image=document.createElement('img');image.src=item.preview;image.alt='Anteprima locale foto '+item.number+';image.loading='lazy';card.append(image);}
+  state.textContent=item.state==='ready'?'Pronta':item.state==='uploaded'?'Caricata':item.message;card.append(state);
+  $('queue').append(card);
  });
  const ready=queue.filter(item=>item.state==='ready').length,sent=queue.filter(item=>item.state==='uploaded').length;
- $('queue-count').textContent=queue.length?ready+' copie pronte · '+sent+' registrate · '+queue.filter(item=>item.state==='error').length+' non leggibili':'Nessuna fotografia selezionata.';
+ $('queue-count').hidden=!queue.length;$('queue-count').textContent=queue.length?ready+' copie pronte · '+sent+' caricate':'';
  controls();
 }
 function canvasBlob(canvas,quality){return new Promise((resolve,reject)=>canvas.toBlob(blob=>blob&&blob.type==='image/jpeg'?resolve(blob):reject(Error('Conversione JPEG non disponibile su questo browser.')),'image/jpeg',quality));}
@@ -50,47 +50,43 @@ async function prepare(file,signal){
 }
 async function choose(files){
  clearError();if(busy)return;
- const remaining=MAX_BATCH-queue.filter(item=>item.state!=='uploaded').length;
- if(remaining<=0){say('La coda contiene già 20 fotografie. Caricale o rimuovile prima di continuare.');return;}
- const selected=Array.from(files).slice(0,remaining);if(!selected.length)return;
- for(const item of queue)if(item.state==='uploaded'&&item.preview)URL.revokeObjectURL(item.preview);queue=queue.filter(item=>item.state!=='uploaded');$('consent').checked=false;
+ const selected=Array.from(files).slice(0,MAX_BATCH);if(!selected.length)return;
+ for(const item of queue)if(item.preview)URL.revokeObjectURL(item.preview);queue=[];
+ $('result').hidden=true;
  busy=true;active=new AbortController();render();let processed=0;
  try{
   for(const file of selected){
    if(active.signal.aborted)break;
-   const item={number:++sequence,localName:file.name,state:'error',message:'Conversione in corso…'};queue.push(item);
-   say('Preparazione locale '+(++processed)+' di '+selected.length+'…');render();
+   const item={number:++sequence,state:'error',message:'Conversione in corso…'};queue.push(item);
+   say('Preparazione '+(++processed)+' di '+selected.length+'…');render();
    try{const data=await prepare(file,active.signal);if(active.signal.aborted){URL.revokeObjectURL(data.preview);queue=queue.filter(p=>p!==item);break;}Object.assign(item,data,{state:'ready'});}
    catch(error){if(error.name==='AbortError'){queue=queue.filter(p=>p!==item);break;}item.message=error.message;}
    render();await new Promise(resolve=>requestAnimationFrame(resolve));
   }
-  say(Array.from(files).length>selected.length?'Preparato il primo lotto: sono state selezionate più foto del limite disponibile. Carica questo lotto e seleziona le successive.':'Preparazione conclusa. Controlla le anteprime prima del caricamento.');
- }finally{busy=false;active=null;render();$('photos').value='';$('capture').value='';}
+  say(Array.from(files).length>selected.length?'Selezionate le prime 20 foto.':'');$('authorization').hidden=connected||!queue.some(item=>item.state==='ready');
+ }finally{busy=false;active=null;render();$('photos').value='';}
 }
-$('choose').onclick=()=>$('photos').click();$('camera').onclick=()=>$('capture').click();
-$('photos').onchange=event=>choose(event.target.files);$('capture').onchange=event=>choose(event.target.files);
-$('clear').onclick=()=>{for(const item of queue)if(item.preview)URL.revokeObjectURL(item.preview);queue=[];render();say('Coda locale svuotata. Le fotografie su GitHub non sono state eliminate.');};
-$('connect').onclick=async()=>{
- clearError();connected=false;client=null;busy=true;active=new AbortController();controls();
- try{client=createGitHubClient($('token').value.trim());const repo=await client.repository(active.signal);const state=await client.snapshot(active.signal);connected=true;$('connection').textContent='Collegato a '+REPOSITORY+' · repository '+(repo.private?'privato':'pubblico')+' · '+state.metadata.photos.length+' foto nella libreria.';$('token').value='';say('GitHub collegato. Controlla le fotografie e autorizza la pubblicazione delle copie.');}
- catch(error){client=null;fail(error);$('connection').textContent='GitHub non collegato.';}
- finally{busy=false;active=null;controls();}
-};
-function forget(){connected=false;client=null;$('token').value='';$('connection').textContent='Autorizzazione dimenticata. Le copie locali restano disponibili.';controls();}
-$('forget').onclick=forget;$('consent').onchange=controls;$('credit').oninput=controls;
-$('cancel').onclick=()=>{active?.abort();say('Interruzione richiesta. Eventuali copie già registrate su GitHub restano nella libreria.');};
+$('photos').onchange=event=>choose(event.target.files);
+function forget(){connected=false;client=null;$('token').value='';controls();}
 $('upload').onclick=async()=>{
- if(busy||!connected||!client||!$('consent').checked||!$('credit').value.trim())return;
- clearError();const ready=queue.filter(item=>item.state==='ready');if(!ready.length)return;
- busy=true;active=new AbortController();const authorizedAt=new Date().toISOString(),attribution=$('credit').value.trim();render();
+ if(busy)return;
+ const ready=queue.filter(item=>item.state==='ready');
+ if(!ready.length){$('photos').click();return;}
+ clearError();busy=true;active=new AbortController();controls();
  try{
+  if(!client){
+   if(!$('token').value.trim()){$('authorization').hidden=false;return;}
+   client=createGitHubClient($('token').value.trim());$('token').value='';
+   await client.repository(active.signal);await client.snapshot(active.signal);connected=true;
+  }
+  $('authorization').hidden=true;
+  const authorizedAt=new Date().toISOString(),attribution='Raccolta Fungo Italia';
   const items=ready.map(item=>({bytes:item.bytes,record:makeRecord({sha:item.sha,width:item.width,height:item.height,attribution,authorizedAt})}));
-  const result=await client.publishBatch(items,{signal:active.signal,onStage:say});
+  const result=await client.publishBatch(items,{signal:active.signal,onStage:()=>say('Caricamento in corso…')});
   for(const item of ready){item.state='uploaded';item.bytes=null;}
-  say('Lotto registrato: '+result.added+' nuove fotografie · '+result.alreadyPresent+' già presenti. Genere e specie non sono ancora determinati.');
-  $('result').replaceChildren();const link=document.createElement('a');link.href=result.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Apri la cartella fotografica su GitHub';$('result').append(link);$('result').hidden=false;
-  $('consent').checked=false;
- }catch(error){fail(error);say('Caricamento non confermato. Le copie restano nella coda; puoi riprovare. Le immagini già registrate non saranno duplicate.');}
+  say('Lotto registrato: '+result.added+' nuove fotografie · '+result.alreadyPresent+' già presenti.');
+  $('result').replaceChildren();const link=document.createElement('a');link.href=result.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Immagini caricate';$('result').append(link);$('result').hidden=false;
+ }catch(error){fail(error);say('Caricamento non riuscito. Puoi riprovare.');$('authorization').hidden=false;}
  finally{busy=false;active=null;forget();render();}
 };
 window.addEventListener('pagehide',()=>{active?.abort();forget();});

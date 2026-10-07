@@ -44,16 +44,11 @@ async function choose(page,buffer,name='private-original-location.png'){
  await page.waitForFunction(()=>typeof document.getElementById('photos').onchange==='function');
  await page.locator('#photos').setInputFiles({name,mimeType:'image/png',buffer});
  await expect(page.locator('#queue-count')).toContainText('1 copie pronte');
- await expect(page.locator('#choose')).toBeEnabled();
+ await expect(page.locator('#upload')).toBeEnabled();
 }
-async function connect(page){
- await page.locator('#token').fill(TOKEN);await page.locator('#connect').click();
- await expect(page.locator('#connection')).toContainText('Collegato a');
- await expect(page.locator('#token')).toHaveValue('');
-}
+async function connect(page){await page.locator('#token').fill(TOKEN);}
 async function publish(page){
- await page.locator('#credit').fill('Raccolta personale');
- await page.locator('#consent').check();await page.locator('#upload').click();
+ await page.locator('#upload').click();
  await expect(page.locator('#status')).toContainText('Lotto registrato',{timeout:15000});
 }
 async function tokenAbsent(page){
@@ -71,11 +66,11 @@ test.describe('GitHub API simulation',()=>{
 test('photo picker converts locally; one atomic unresolved batch deduplicates repeated imports',async({page})=>{
  const git=await fakeGitHub(page);await page.goto('./importa-foto.html');
  await expect(page.locator('#photos')).toHaveAttribute('multiple','');
- await expect(page.locator('#capture')).toHaveAttribute('capture','environment');
+
  const png=await fixture(page);await choose(page,png);
  expect(git.requests).toHaveLength(0);
- await expect(page.locator('#queue')).toContainText('1600 × 800');
- await connect(page);await tokenAbsent(page);await publish(page);
+ await expect(page.locator('#queue')).toContainText('Pronta');
+ await connect(page);await publish(page);
  expect(git.blobs).toHaveLength(1);expect(git.trees).toHaveLength(1);expect(git.commits).toHaveLength(1);expect(git.moves).toBe(1);
  const bytes=git.blobs[0];expect(bytes.subarray(0,2)).toEqual(Buffer.from([255,216]));expect(bytes.length).toBeLessThanOrEqual(2*1024*1024);
  expect(jpegMetadataMarkers(bytes).some(m=>(m>=225&&m<=239)||m===254)).toBe(false);
@@ -90,11 +85,11 @@ test('photo picker converts locally; one atomic unresolved batch deduplicates re
 });
 for(const status of [401,403])test('GitHub '+status+' leaves prepared photos local and publishes nothing',async({page})=>{
  const git=await fakeGitHub(page,{deny:status});await page.goto('./importa-foto.html');await choose(page,await fixture(page));
- await page.locator('#token').fill(TOKEN);await page.locator('#connect').click();
+ await page.locator('#token').fill(TOKEN);await page.locator('#upload').click();
  await expect(page.locator('#error')).toContainText(status===401?'scaduta o non valida':'Contents read/write');
- await expect(page.locator('#upload')).toBeDisabled();await expect(page.locator('#queue-count')).toContainText('1 copie pronte');
+ await expect(page.locator('#upload')).toBeEnabled();await expect(page.locator('#queue-count')).toContainText('1 copie pronte');
  expect(git.blobs).toHaveLength(0);expect(git.moves).toBe(0);
- await page.locator('#forget').click();await tokenAbsent(page);
+ await tokenAbsent(page);
 });
 test('branch conflict rebases the import and preserves a concurrent scientific review',async({page})=>{
  const git=await fakeGitHub(page,{existing:[record()],conflict:true});await page.goto('./importa-foto.html');
@@ -112,6 +107,19 @@ test('temporary blob failures retry without extra commits or duplicate records',
  expect(git.requests.filter(r=>r.path.endsWith('/git/blobs'))).toHaveLength(3);
  expect(git.moves).toBe(1);expect(git.metadata.photos).toHaveLength(1);await tokenAbsent(page);
 });
+test('single upload action opens picker; at most twenty photos and no internal yellow boxes',async({page})=>{
+ const git=await fakeGitHub(page);await page.goto('./importa-foto.html');
+ await expect(page.getByRole('button')).toHaveCount(1);await expect(page.locator('.notice')).toHaveCount(0);
+ const chooser=page.waitForEvent('filechooser');await page.getByRole('button',{name:'Carica immagini selezionate'}).click();
+ const files=await chooser;const png=await fixture(page,20,10);
+ await files.setFiles(Array.from({length:21},(_,i)=>({name:'foto-'+i+'.png',mimeType:'image/png',buffer:png})));
+ await expect(page.locator('#queue article')).toHaveCount(20);await expect(page.locator('#queue-count')).toContainText('20 copie pronte');
+ await expect(page.locator('#status')).toContainText('prime 20');expect(git.requests).toHaveLength(0);
+ await page.locator('#upload').click();await expect(page.locator('#authorization')).toBeVisible();expect(git.requests).toHaveLength(0);
+ await expect(page.getByRole('button')).toHaveCount(1);
+ for(const text of ['Google Drive','EXIF','photo-library','Contents','Collega GitHub','non autorizza il consumo'])await expect(page.locator('#main')).not.toContainText(text);
+});
+
 });
 test('warm service worker opens the importer without the origin and prepares images offline',async({page,request})=>{
  await page.goto('./');await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
@@ -119,8 +127,8 @@ test('warm service worker opens the importer without the origin and prepares ima
  try{
   const response=await page.goto('./importa-foto.html');expect(response.status()).toBe(200);expect(response.fromServiceWorker()).toBe(true);
   expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();
-  await expect(page.getByRole('heading',{name:'Foto dal telefono a GitHub'})).toBeVisible();
-  await choose(page,await fixture(page,200,100));await expect(page.locator('#queue')).toContainText('200 × 100');
+  await expect(page.getByRole('heading',{name:'Carica immagini'})).toBeVisible();
+  await choose(page,await fixture(page,200,100));await expect(page.locator('#queue')).toContainText('Pronta');
   await expect(page.locator('#upload')).toBeDisabled();await tokenAbsent(page);
  }finally{await request.get('http://127.0.0.1:4174/?state=start');}
 });
