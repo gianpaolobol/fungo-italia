@@ -2079,7 +2079,7 @@
         0.62,
         0.6
       ],
-      "sha256": "40be520ac2fdb77235ff8c4d9c96fa26b9741503d8884e8cab3421b24da9c8e3",
+      "sha256": "06a93020d04c9f4c4af7355a4794fd30ee32ca603218de2e1a826b79b300bdd1",
       "width": 1600,
       "height": 1163,
       "visualReview": "verified",
@@ -2099,7 +2099,7 @@
         0.68,
         1
       ],
-      "sha256": "b095b7409995b06deb82f0bf83f2e385900a6794957208a8b805e26fda50ff41",
+      "sha256": "595dc099e57a95a29a8be2146f5cd66f9aea4ab5d129a0d8145cc1ed3bbd6888",
       "width": 1395,
       "height": 1600,
       "visualReview": "verified",
@@ -2647,6 +2647,426 @@
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
+      "src": "images/reference/flammulina-genere-lateral-149.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 37,
+      "xref": 149,
+      "subjectTaxon": "Flammulina velutipes",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "36cb563f51bcad62369e17186139262b56eb5597816bdbb44b24fc6601e8a043",
+      "width": 1600,
+      "height": 1078,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/flammulina-genere-top-149.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 37,
+      "xref": 149,
+      "subjectTaxon": "Flammulina velutipes",
+      "crop": [
+        0,
+        0.38,
+        0.48,
+        1
+      ],
+      "sha256": "fa199e8bf4203ca4883158c7d10444efba51df743fe2cc2c381682e6d62657bf",
+      "width": 1600,
+      "height": 1392,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/flammulina-genere-underside-149.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 37,
+      "xref": 149,
+      "subjectTaxon": "Flammulina velutipes",
+      "crop": [
+        0.35,
+        0,
+        0.72,
+        0.58
+      ],
+      "sha256": "0ed19a42989211f2db963a58fb375788b23638ad1fdf02df32d8cc067881b6ff",
+      "width": 1516,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/flammulina-velutipes-lateral-149.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 37,
+      "xref": 149,
+      "subjectTaxon": "Flammulina velutipes",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "36cb563f51bcad62369e17186139262b56eb5597816bdbb44b24fc6601e8a043",
+      "width": 1600,
+      "height": 1078,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/flammulina-velutipes-top-149.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 37,
+      "xref": 149,
+      "subjectTaxon": "Flammulina velutipes",
+      "crop": [
+        0,
+        0.38,
+        0.48,
+        1
+      ],
+      "sha256": "fa199e8bf4203ca4883158c7d10444efba51df743fe2cc2c381682e6d62657bf",
+      "width": 1600,
+      "height": 1392,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/flammulina-velutipes-underside-149.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 37,
+      "xref": 149,
+      "subjectTaxon": "Flammulina velutipes",
+      "crop": [
+        0.35,
+        0,
+        0.72,
+        0.58
+      ],
+      "sha256": "0ed19a42989211f2db963a58fb375788b23638ad1fdf02df32d8cc067881b6ff",
+      "width": 1516,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/omphalotus-genere-lateral-177.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 44,
+      "xref": 177,
+      "subjectTaxon": "Omphalotus olearius",
+      "crop": [
+        0,
+        0,
+        0.52,
+        1
+      ],
+      "sha256": "b0b7ee924c74447923e6ad395d97424886e7671f2be8c34dc17c1e30eac80125",
+      "width": 1246,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/omphalotus-genere-top-177.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 44,
+      "xref": 177,
+      "subjectTaxon": "Omphalotus olearius",
+      "crop": [
+        0,
+        0,
+        0.54,
+        0.58
+      ],
+      "sha256": "9d0cfa66de262d26ec3a300e5ae432f233ad2174b4850132e3147a7ddb1ce364",
+      "width": 1600,
+      "height": 1146,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/omphalotus-genere-underside-177.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 44,
+      "xref": 177,
+      "subjectTaxon": "Omphalotus olearius",
+      "crop": [
+        0.48,
+        0,
+        1,
+        1
+      ],
+      "sha256": "b6587bfea318b5f67e5a4e55f3fe4e7edd508de2172d4d470b4247d25ddec4b3",
+      "width": 1246,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/omphalotus-olearius-lateral-177.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 44,
+      "xref": 177,
+      "subjectTaxon": "Omphalotus olearius",
+      "crop": [
+        0,
+        0,
+        0.52,
+        1
+      ],
+      "sha256": "b0b7ee924c74447923e6ad395d97424886e7671f2be8c34dc17c1e30eac80125",
+      "width": 1246,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/omphalotus-olearius-top-177.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 44,
+      "xref": 177,
+      "subjectTaxon": "Omphalotus olearius",
+      "crop": [
+        0,
+        0,
+        0.54,
+        0.58
+      ],
+      "sha256": "9d0cfa66de262d26ec3a300e5ae432f233ad2174b4850132e3147a7ddb1ce364",
+      "width": 1600,
+      "height": 1146,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/omphalotus-olearius-underside-177.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 44,
+      "xref": 177,
+      "subjectTaxon": "Omphalotus olearius",
+      "crop": [
+        0.48,
+        0,
+        1,
+        1
+      ],
+      "sha256": "b6587bfea318b5f67e5a4e55f3fe4e7edd508de2172d4d470b4247d25ddec4b3",
+      "width": 1246,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/clitocybe-nebularis-lateral-241.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 59,
+      "xref": 241,
+      "subjectTaxon": "Clitocybe nebularis",
+      "crop": [
+        0.43,
+        0,
+        1,
+        1
+      ],
+      "sha256": "58712bcd209c031516a34c7ff502e29e4be91a59959a7cff534514dddd8a41f1",
+      "width": 1372,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/clitocybe-nebularis-top-237.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 58,
+      "xref": 237,
+      "subjectTaxon": "Clitocybe nebularis",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "c6f77b7edfe72d1397ed02a49c981309f45ef3ae587ff509b60bdb5e5c962b92",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/clitocybe-nebularis-underside-241.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 59,
+      "xref": 241,
+      "subjectTaxon": "Clitocybe nebularis",
+      "crop": [
+        0,
+        0,
+        0.58,
+        1
+      ],
+      "sha256": "a3c888abc1f6529982ccf65381125713eee2df955563dda422aa930ed9401c2d",
+      "width": 1396,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/clitocybe-genere-lateral-241.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 59,
+      "xref": 241,
+      "subjectTaxon": "Clitocybe nebularis",
+      "crop": [
+        0.43,
+        0,
+        1,
+        1
+      ],
+      "sha256": "58712bcd209c031516a34c7ff502e29e4be91a59959a7cff534514dddd8a41f1",
+      "width": 1372,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/clitocybe-genere-top-237.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 58,
+      "xref": 237,
+      "subjectTaxon": "Clitocybe nebularis",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "c6f77b7edfe72d1397ed02a49c981309f45ef3ae587ff509b60bdb5e5c962b92",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/clitocybe-genere-underside-241.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 59,
+      "xref": 241,
+      "subjectTaxon": "Clitocybe nebularis",
+      "crop": [
+        0,
+        0,
+        0.58,
+        1
+      ],
+      "sha256": "a3c888abc1f6529982ccf65381125713eee2df955563dda422aa930ed9401c2d",
+      "width": 1396,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/mycena-genere-lateral-126.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 31,
+      "xref": 126,
+      "subjectTaxon": "Mycena pura",
+      "crop": [
+        0,
+        0,
+        0.55,
+        1
+      ],
+      "sha256": "6d4a86c0dfe84e515653c32f84e325bd1a46d0ea4aec437a67706ead4ce68653",
+      "width": 1323,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/mycena-genere-top-126.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 31,
+      "xref": 126,
+      "subjectTaxon": "Mycena pura",
+      "crop": [
+        0,
+        0,
+        0.55,
+        0.57
+      ],
+      "sha256": "f6c32d1cf91dbe75d553b5c2854bb36a51a69649bfd7c89041562d77316a7edd",
+      "width": 1600,
+      "height": 1103,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/mycena-genere-underside-126.jpg",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "sourcePage": 31,
+      "xref": 126,
+      "subjectTaxon": "Mycena pura",
+      "crop": [
+        0.48,
+        0,
+        1,
+        1
+      ],
+      "sha256": "73c855a8fb9671ae6b6bdd196e6ec3337bdec4d73a070aa428e3d27a6e5f7f2a",
+      "width": 1250,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Taxon nella didascalia della pagina; orientamento e ritaglio verificati visivamente. Ritagli della composizione originale, non tre fotografie originali distinte.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
       "src": "images/reference/lepiota-brunneoincarnata-lateral-369.jpg",
       "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
       "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
@@ -2889,6 +3309,261 @@
       "height": 949,
       "visualReview": "verified",
       "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/hypholoma-lateritium-lateral-111.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 42,
+      "xref": 111,
+      "subjectTaxon": "Hypholoma lateritium",
+      "crop": null,
+      "sha256": "a8c8ca6eb4da4b9937a0532b4c93b607722072c1c9d36ec5c44fd69f9a0345ec",
+      "width": 1600,
+      "height": 1067,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/hypholoma-lateritium-top-111.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 42,
+      "xref": 111,
+      "subjectTaxon": "Hypholoma lateritium",
+      "crop": [
+        0,
+        0,
+        0.59,
+        1
+      ],
+      "sha256": "b8417b2eb6868f8037ca17abea388ec992465d8bc2f02243fabaf4147f9b4e86",
+      "width": 1415,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/hypholoma-lateritium-underside-111.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 42,
+      "xref": 111,
+      "subjectTaxon": "Hypholoma lateritium",
+      "crop": [
+        0.48,
+        0,
+        1,
+        1
+      ],
+      "sha256": "a47d2e4da1c2ccdfefd83363e0b077ca87793e52801d353803a22039b441f77c",
+      "width": 1248,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/hypholoma-genere-lateral-111.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 42,
+      "xref": 111,
+      "subjectTaxon": "Hypholoma lateritium",
+      "crop": null,
+      "sha256": "a8c8ca6eb4da4b9937a0532b4c93b607722072c1c9d36ec5c44fd69f9a0345ec",
+      "width": 1600,
+      "height": 1067,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/hypholoma-genere-top-111.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 42,
+      "xref": 111,
+      "subjectTaxon": "Hypholoma lateritium",
+      "crop": [
+        0,
+        0,
+        0.59,
+        1
+      ],
+      "sha256": "b8417b2eb6868f8037ca17abea388ec992465d8bc2f02243fabaf4147f9b4e86",
+      "width": 1415,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/hypholoma-genere-underside-111.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 42,
+      "xref": 111,
+      "subjectTaxon": "Hypholoma lateritium",
+      "crop": [
+        0.48,
+        0,
+        1,
+        1
+      ],
+      "sha256": "a47d2e4da1c2ccdfefd83363e0b077ca87793e52801d353803a22039b441f77c",
+      "width": 1248,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-citrinopileatus-lateral-129.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 49,
+      "xref": 129,
+      "subjectTaxon": "Pleurotus citrinopileatus",
+      "crop": null,
+      "sha256": "49761b2142a060165c19841bc50a03def1ed0b6f7b4d62f749791bb8d0875710",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-citrinopileatus-top-132.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 50,
+      "xref": 132,
+      "subjectTaxon": "Pleurotus citrinopileatus",
+      "crop": [
+        0,
+        0,
+        0.68,
+        0.82
+      ],
+      "sha256": "625d85f744d8a85ee50a01476e59f91bf0ead5fc004b9583eed6f3784ca4b3bd",
+      "width": 1600,
+      "height": 1085,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-citrinopileatus-underside-132.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 50,
+      "xref": 132,
+      "subjectTaxon": "Pleurotus citrinopileatus",
+      "crop": [
+        0.48,
+        0.45,
+        1,
+        1
+      ],
+      "sha256": "62dcef25dc629d680b38f11852f556d65014417d46504535f1bbdf642a39ac17",
+      "width": 1600,
+      "height": 951,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-genere-lateral-129.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 49,
+      "xref": 129,
+      "subjectTaxon": "Pleurotus citrinopileatus",
+      "crop": null,
+      "sha256": "49761b2142a060165c19841bc50a03def1ed0b6f7b4d62f749791bb8d0875710",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-genere-top-132.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 50,
+      "xref": 132,
+      "subjectTaxon": "Pleurotus citrinopileatus",
+      "crop": [
+        0,
+        0,
+        0.68,
+        0.82
+      ],
+      "sha256": "625d85f744d8a85ee50a01476e59f91bf0ead5fc004b9583eed6f3784ca4b3bd",
+      "width": 1600,
+      "height": 1085,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-genere-underside-132.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 50,
+      "xref": 132,
+      "subjectTaxon": "Pleurotus citrinopileatus",
+      "crop": [
+        0.48,
+        0.45,
+        1,
+        1
+      ],
+      "sha256": "62dcef25dc629d680b38f11852f556d65014417d46504535f1bbdf642a39ac17",
+      "width": 1600,
+      "height": 951,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-eryngii-lateral-135.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 51,
+      "xref": 135,
+      "subjectTaxon": "Pleurotus eryngii var. ferulae",
+      "crop": null,
+      "sha256": "f1d486c9111dbfff3b801e4e29b1f828e226ca0fa28b2c72caec61e2a94c87eb",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/pleurotus-eryngii-top-135.jpg",
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "sourceSha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749",
+      "sourcePage": 51,
+      "xref": 135,
+      "subjectTaxon": "Pleurotus eryngii var. ferulae",
+      "crop": [
+        0.39,
+        0.08,
+        0.96,
+        0.43
+      ],
+      "sha256": "91e9e38a0f6127582cfa462b95ff527be4a7fedbe434b1ba1a39816602b3a413",
+      "width": 1600,
+      "height": 737,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia e orientamento verificati visivamente. Ritaglio fotografico dichiarato della composizione originale; nessuna generazione o alterazione morfologica.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     }
   ]
