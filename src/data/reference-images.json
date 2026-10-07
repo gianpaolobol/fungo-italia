@@ -10946,6 +10946,215 @@
         "pages": true,
         "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-9367882-12719631"
       }
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "subjectTaxon": "Ramaria formosa",
+      "src": "images/reference/external-ramaria-formosa-top.jpg",
+      "view": "top",
+      "alt": "Ramaria formosa — vista superiore obliqua del corpo fruttifero ramificato",
+      "credit": "Egil Bendiksen, CC BY 4.0",
+      "sourceId": "EXT-ADB-RAM-10415",
+      "page": null,
+      "sourceUrl": "https://biodiversity.no/Pages/233020/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-ADB-RAM-10415"
+      }
+    },
+    {
+      "scientificName": "Lepiota cristata",
+      "subjectTaxon": "Lepiota cristata",
+      "src": "images/reference/external-lepiota-cristata-underside.jpg",
+      "view": "underside",
+      "alt": "Lepiota cristata — vista inferiore con lamelle e parte del gambo",
+      "credit": "sharoncooper, CC BY 4.0",
+      "sourceId": "EXT-INAT-186863535-326653443",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/186863535",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-186863535-326653443"
+      }
+    },
+    {
+      "scientificName": "Volvopluteus gloiocephalus",
+      "subjectTaxon": "Volvopluteus gloiocephalus",
+      "src": "images/reference/external-volvopluteus-gloiocephalus-underside.jpg",
+      "view": "underside",
+      "alt": "Volvopluteus gloiocephalus — vista inferiore con lamelle e parte del gambo",
+      "credit": "Duarte Frade, CC BY 4.0",
+      "sourceId": "EXT-INAT-145349981-249642946",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/145349981",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-145349981-249642946"
+      }
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "subjectTaxon": "Volvariella volvacea",
+      "src": "images/reference/external-volvariella-volvacea-underside.jpg",
+      "view": "underside",
+      "alt": "Volvariella volvacea — vista inferiore con lamelle e gambo",
+      "credit": "Liubov Ilminska, CC0 1.0",
+      "sourceId": "EXT-INAT-215265326-380551814",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/215265326",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-215265326-380551814"
+      }
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "subjectTaxon": "Volvopluteus gloiocephalus",
+      "src": "images/reference/external-volvariella-volvopluteus-underside.jpg",
+      "view": "underside",
+      "alt": "Volvopluteus gloiocephalus — vista inferiore con lamelle e parte del gambo",
+      "credit": "Duarte Frade, CC BY 4.0",
+      "sourceId": "EXT-INAT-145349981-249642946",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/145349981",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-145349981-249642946"
+      }
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "subjectTaxon": "Hericium coralloides",
+      "src": "images/reference/external-hericium-spp-underside.jpg",
+      "view": "underside",
+      "alt": "Hericium coralloides — vista dal basso obliqua degli aculei e delle ramificazioni",
+      "credit": "Sigitas Juzėnas, CC BY 4.0",
+      "sourceId": "EXT-INAT-72438785-118105525",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/72438785",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-72438785-118105525"
+      }
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "subjectTaxon": "Collybia phyllophila",
+      "src": "images/reference/external-collybia-phyllophila-lateral.jpg",
+      "view": "lateral",
+      "alt": "Collybia phyllophila — vista laterale, cappello e gambo",
+      "credit": "Andrey Polstianoi, CC BY 4.0",
+      "sourceId": "EXT-INAT-320121594-578749364",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/320121594",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-320121594-578749364"
+      }
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "subjectTaxon": "Scutiger pes-caprae",
+      "src": "images/reference/external-scutiger-pes-caprae-lateral.jpg",
+      "view": "lateral",
+      "alt": "Scutiger pes-caprae — vista laterale obliqua, cappello e gambo",
+      "credit": "Lorenzo Emanuele Labate, CC BY 4.0",
+      "sourceId": "EXT-INAT-245808041-438699350",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/245808041",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-245808041-438699350"
+      }
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "src": "images/reference/external-tricholoma-filamentosum-lateral.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma filamentosum — vista laterale, cappello e gambo",
+      "credit": "Inger-Lise Fonneland, CC BY 4.0",
+      "sourceId": "EXT-PAPER-FILAMENTOSUM-2023",
+      "page": 26,
+      "sourceUrl": "https://naturvernforbundet.no/content/uploads/sites/11/2023/10/Rodlistede-markboende-sopp-i-kalkbarskoger-1.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-PAPER-FILAMENTOSUM-2023"
+      }
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "subjectTaxon": "Tricholoma imbricatum",
+      "src": "images/reference/external-tricholoma-sez-genuina-gruppo-albobrunnei-lateral.jpg",
+      "view": "lateral",
+      "alt": "Tricholoma imbricatum — vista laterale obliqua, cappello e gambo",
+      "credit": "Patrick Bayan, CC BY 4.0",
+      "sourceId": "EXT-INAT-321606464-581642558",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/321606464",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-321606464-581642558"
+      }
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "subjectTaxon": "Agaricus bresadolanus",
+      "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
+      "view": "lateral",
+      "alt": "Agaricus bresadolanus — vista laterale obliqua dal basso, cappello, anello e gambo",
+      "credit": "Tatiana Pires, CC BY 4.0",
+      "sourceId": "EXT-INAT-253610934-454140085",
+      "page": null,
+      "sourceUrl": "https://www.inaturalist.org/observations/253610934",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-INAT-253610934-454140085"
+      }
     }
   ]
 }

@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 616,
-    "completeTriplets": 193,
-    "partialCards": 19,
+    "images": 627,
+    "completeTriplets": 203,
+    "partialCards": 9,
     "withoutImages": 2,
-    "missingViews": 26,
-    "imageBytes": 163253747
+    "missingViews": 15,
+    "imageBytes": 165298141
   },
   "cards": [
     {
@@ -27,12 +27,11 @@
     {
       "scientificName": "Agaricus bresadolanus",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Agaricus sez. Arvenses",
@@ -244,12 +243,11 @@
     {
       "scientificName": "Collybia phyllophila",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Clitocybe dealbata / Collybia rivulosa",
@@ -580,11 +578,10 @@
       "scientificName": "Lepiota cristata",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Lepiota elaiophylla",
@@ -787,12 +784,11 @@
     {
       "scientificName": "Tricholoma filamentosum",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Tricholoma josserandii",
@@ -897,12 +893,11 @@
     {
       "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Tricholoma acerbum s.l.",
@@ -917,21 +912,19 @@
       "scientificName": "Volvopluteus gloiocephalus",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Volvariella volvacea",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Lactarius sez. Deliciosi",
@@ -1199,11 +1192,10 @@
       "scientificName": "Hericium spp.",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
@@ -1253,12 +1245,11 @@
     {
       "scientificName": "Scutiger pes-caprae",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Fistulina hepatica",
@@ -1308,10 +1299,10 @@
     {
       "scientificName": "Ramaria formosa",
       "availableViews": [
-        "lateral"
+        "lateral",
+        "top"
       ],
       "missingViews": [
-        "top",
         "underside"
       ]
     },
@@ -1690,11 +1681,10 @@
       "scientificName": "Volvariella + Volvopluteus",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Lactarius (incluso Lactifluus)",
