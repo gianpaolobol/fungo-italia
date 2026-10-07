@@ -5513,6 +5513,40 @@
       "primaryObservationId": 251904096,
       "primaryPhotoId": 450827300,
       "qualityGrade": "research"
+    },
+    {
+      "sourceId": "EXT-INAT-19012847-29156979",
+      "subjectTaxon": "Hygrophorus penarioides",
+      "sourceUrl": "https://www.inaturalist.org/observations/19012847",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29156979/original.jpeg",
+      "author": "Davide Puddu",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/19012847",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/19012847",
+      "verificationBasis": "Primary European research-grade observation with at least four current matching species identifications and explicit native-photo license; not an independent scientific determination. Photo angles remain pending review.",
+      "kind": "image",
+      "primaryObservationId": 19012847,
+      "primaryPhotoId": 29156979,
+      "qualityGrade": "research",
+      "supportingIdentifierCount": 4
+    },
+    {
+      "sourceId": "EXT-INAT-17094188-25878930",
+      "subjectTaxon": "Verpa bohemica",
+      "sourceUrl": "https://www.inaturalist.org/observations/17094188",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/25878930/original.jpeg",
+      "author": "Eugene Popov",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/17094188",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/17094188",
+      "verificationBasis": "Primary European research-grade observation with at least four current matching species identifications and explicit native-photo license; not an independent scientific determination. Photo angles remain pending review.",
+      "kind": "image",
+      "primaryObservationId": 17094188,
+      "primaryPhotoId": 25878930,
+      "qualityGrade": "research",
+      "supportingIdentifierCount": 4
     }
   ]
 }

@@ -1,0 +1,105 @@
+{
+  "searches": [
+    {
+      "taxon": "Phlegmacium variiforme",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Cortinarius variiformis",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Entoloma saundersii",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Agaricus bresadolanus",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Agaricus romagnesii",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Hygrophorus penarioides",
+      "observationId": 19012847,
+      "author": "Davide Puddu",
+      "supportingIdentifierCount": 4,
+      "photos": [
+        {
+          "photoId": 29156979,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29156979/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Provincia del Medio Campidano, Italia",
+      "identifications": [
+        {
+          "name": "Marco Floriani",
+          "taxon": "Hygrophorus penarioides",
+          "current": true
+        },
+        {
+          "name": "Davide Puddu",
+          "taxon": "Hygrophorus penarioides",
+          "current": true
+        },
+        {
+          "name": "John Plischke",
+          "taxon": "Hygrophorus penarioides",
+          "current": true
+        },
+        {
+          "name": "Dan Pool",
+          "taxon": "Hygrophorus penarioides",
+          "current": true
+        }
+      ]
+    },
+    {
+      "taxon": "Ramaria formosa",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Ramaria pallida",
+      "qualifiedObservations": 0
+    },
+    {
+      "taxon": "Verpa bohemica",
+      "observationId": 17094188,
+      "author": "Eugene Popov",
+      "supportingIdentifierCount": 4,
+      "photos": [
+        {
+          "photoId": 25878930,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/25878930/original.jpeg",
+          "licenseCode": "cc-by"
+        }
+      ],
+      "placeDescription": "Курортный р-н, Санкт-Петербург, Россия",
+      "identifications": [
+        {
+          "name": "Isidoro Del Rio",
+          "taxon": "Verpa bohemica",
+          "current": true
+        },
+        {
+          "name": "Eugene Popov",
+          "taxon": "Verpa bohemica",
+          "current": true
+        },
+        {
+          "name": "John Plischke",
+          "taxon": "Verpa bohemica",
+          "current": true
+        },
+        {
+          "name": "Cordula Bernert",
+          "taxon": "Verpa bohemica",
+          "current": true
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

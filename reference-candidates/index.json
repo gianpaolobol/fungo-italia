@@ -7503,6 +7503,62 @@
       "xref": null,
       "reviewStatus": "pending-visual-review",
       "previewPath": "reference-candidates/ext-inat-251904096-450827300-original-preview.jpg"
+    },
+    {
+      "sourceId": "EXT-INAT-19012847-29156979",
+      "subjectTaxon": "Hygrophorus penarioides",
+      "sourceUrl": "https://www.inaturalist.org/observations/19012847",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29156979/original.jpeg",
+      "author": "Davide Puddu",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/19012847",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/19012847",
+      "verificationBasis": "Primary European research-grade observation with at least four current matching species identifications and explicit native-photo license; not an independent scientific determination. Photo angles remain pending review.",
+      "kind": "image",
+      "primaryObservationId": 19012847,
+      "primaryPhotoId": 29156979,
+      "qualityGrade": "research",
+      "supportingIdentifierCount": 4,
+      "candidateId": "EXT-INAT-19012847-29156979-original",
+      "candidatePath": "reference-candidates/ext-inat-19012847-29156979-original.jpg",
+      "sourceSha256": "10fac5f5d80e66d487096de34bba20e8ce6f822eaf4feaf13d04f3e371b7e9ea",
+      "extractedImageSha256": "10fac5f5d80e66d487096de34bba20e8ce6f822eaf4feaf13d04f3e371b7e9ea",
+      "candidateSha256": "b332ee87506847d1b849a0dc0c527df4c29950011de4302aa1dd61deb1c378d5",
+      "width": 1600,
+      "height": 1200,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review",
+      "previewPath": "reference-candidates/ext-inat-19012847-29156979-original-preview.jpg"
+    },
+    {
+      "sourceId": "EXT-INAT-17094188-25878930",
+      "subjectTaxon": "Verpa bohemica",
+      "sourceUrl": "https://www.inaturalist.org/observations/17094188",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/25878930/original.jpeg",
+      "author": "Eugene Popov",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.inaturalist.org/observations/17094188",
+      "taxonomicEvidence": "https://www.inaturalist.org/observations/17094188",
+      "verificationBasis": "Primary European research-grade observation with at least four current matching species identifications and explicit native-photo license; not an independent scientific determination. Photo angles remain pending review.",
+      "kind": "image",
+      "primaryObservationId": 17094188,
+      "primaryPhotoId": 25878930,
+      "qualityGrade": "research",
+      "supportingIdentifierCount": 4,
+      "candidateId": "EXT-INAT-17094188-25878930-original",
+      "candidatePath": "reference-candidates/ext-inat-17094188-25878930-original.jpg",
+      "sourceSha256": "57995ab042ba2049cd3b650a8339b8e968800422700a3ea046dbe468e28b4972",
+      "extractedImageSha256": "57995ab042ba2049cd3b650a8339b8e968800422700a3ea046dbe468e28b4972",
+      "candidateSha256": "4b4874abe41e6a7755d490314f69f5fe6026a2a9871a83fa23a5869e612a6534",
+      "width": 1600,
+      "height": 1200,
+      "page": null,
+      "xref": null,
+      "reviewStatus": "pending-visual-review",
+      "previewPath": "reference-candidates/ext-inat-17094188-25878930-original-preview.jpg"
     }
   ],
   "failures": [
@@ -8089,7 +8145,7 @@
     {
       "sourceId": "EXT-COMP-IMA-TRICHO2020",
       "errorType": "UnidentifiedImageError",
-      "message": "cannot identify image file <_io.BytesIO object at 0x7febd6dd62f0>"
+      "message": "cannot identify image file <_io.BytesIO object at 0x7f6aa03b36f0>"
     }
   ]
 }
