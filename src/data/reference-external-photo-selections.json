@@ -5032,69 +5032,6 @@
       "alt": "Russula delica — vista laterale obliqua del cappello e del gambo"
     },
     {
-      "scientificName": "Coprinus comatus",
-      "subjectTaxon": "Coprinus comatus",
-      "view": "underside",
-      "crop": [
-        0,
-        0,
-        1,
-        1
-      ],
-      "sourceId": "EXT-INAT-138270308-236302012",
-      "sourcePath": "source-photo-assets/external/ext-inat-138270308-236302012-original.jpg",
-      "candidateSha256": "bc0af86e68d85d4c7e0c6d4c43b4fd5db300b6a8607797344faee18c845efde5",
-      "sourceSha256": "a2767a932f8a405b16ce23450f400e9b9b8981114de49363b97f7f197a1c4f02",
-      "sourcePage": null,
-      "credit": "Wolfgang Jauch, CC BY 4.0",
-      "reviewNotes": "Independent agent and root actual-pixel review. Exact anatomical surface/profile verified; attribution and explicit native-photo license verified against primary API. European research-grade current matching identifications retained, not an independent specimen certification. Actual radial black gills in deliquescence; close-up with lower stem outside frame, mature specimen not a harvesting example.",
-      "sourceUrl": "https://www.inaturalist.org/observations/138270308",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "alt": "Coprinus comatus — vista inferiore ravvicinata, lamelle nere in deliquescenza e parte del gambo"
-    },
-    {
-      "scientificName": "Tricholoma equestre",
-      "subjectTaxon": "Tricholoma equestre",
-      "view": "lateral",
-      "crop": [
-        0.225,
-        0.005,
-        0.995,
-        0.995
-      ],
-      "sourceId": "EXT-INAT-183837798-320790488",
-      "sourcePath": "source-photo-assets/external/ext-inat-183837798-320790488-original.jpg",
-      "candidateSha256": "3b9d6a2a43f626dd57726417816909135e2a5a0bba145395ef85594bb72b67f6",
-      "sourceSha256": "c2f8a5e0e674ed7ceb720ba6c3dd29410edc02f76d211e5f233541b38f7a6f9b",
-      "sourcePage": null,
-      "credit": "Veeti Varjo, CC0 1.0",
-      "reviewNotes": "Independent agent and root actual-pixel review. Exact anatomical surface/profile verified; attribution and explicit native-photo license verified against primary API. European research-grade current matching identifications retained, not an independent specimen certification. Side profile in habitat; basal portion naturally buried.",
-      "sourceUrl": "https://www.inaturalist.org/observations/183837798",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "alt": "Tricholoma equestre — vista laterale in habitat, base del gambo nel terreno"
-    },
-    {
-      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
-      "subjectTaxon": "Russula delica",
-      "view": "lateral",
-      "crop": [
-        0.025,
-        0.25,
-        0.94,
-        0.79
-      ],
-      "sourceId": "EXT-INAT-96701730-160690308",
-      "sourcePath": "source-photo-assets/external/ext-inat-96701730-160690308-original.jpg",
-      "candidateSha256": "937f1c3b68a053bdf139eacfe8a5802d80fa20be7b32d56c8795aee0f1b490f4",
-      "sourceSha256": "a24fda72e71a1212b42ad64b75a385d183f87c123c571b6ccbe51ca633a307e5",
-      "sourcePage": null,
-      "credit": "Carminda Santos, CC BY 4.0",
-      "reviewNotes": "Independent agent and root actual-pixel review. Exact anatomical surface/profile verified; attribution and explicit native-photo license verified against primary API. European research-grade current matching identifications retained, not an independent specimen certification. Intact stout stem and broad cap profile; slight focus softness.",
-      "sourceUrl": "https://www.inaturalist.org/observations/96701730",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "alt": "Russula delica — vista laterale obliqua del cappello e del gambo"
-    },
-    {
       "scientificName": "Agaricus bresadolanus",
       "subjectTaxon": "Agaricus bresadolanus",
       "view": "lateral",
