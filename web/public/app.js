@@ -37,7 +37,13 @@ function studySummary(t){
  return t.summary||'';
 }
 function studySources(t){
- return t.sources.filter(s=>! /^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId||'')&&!/^Scientific Baseline\b/.test(s.title));
+ const grouped=new Map();
+ for(const source of t.sources.filter(s=>! /^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId||'')&&!/^Scientific Baseline\b/.test(s.title))){
+  const key=source.url||source.sourceId||source.title;
+  if(!grouped.has(key))grouped.set(key,{source,locations:new Set()});
+  if(source.location)grouped.get(key).locations.add(source.location);
+ }
+ return [...grouped.values()].map(({source,locations})=>({...source,location:[...locations].join('; ')}));
 }
 function content(t,showIdentity=true){
  const sources=studySources(t),summary=studySummary(t);
