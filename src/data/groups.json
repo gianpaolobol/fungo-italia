@@ -540,6 +540,35 @@
       "minimum-card-objective-entoloma--06--entoloma-saundersii"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-entoloma-lateral.jpg",
+        "view": "lateral",
+        "alt": "Entoloma hirtipes — vista laterale",
+        "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Entoloma hirtipes",
+        "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-top.jpg",
+        "view": "top",
+        "alt": "Entoloma hirtipes — vista superiore",
+        "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Entoloma hirtipes",
+        "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-underside.jpg",
+        "view": "underside",
+        "alt": "Entoloma hirtipes — imenoforo",
+        "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Entoloma hirtipes",
+        "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7
@@ -647,6 +676,26 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hebeloma-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hebeloma incarnatulum — vista laterale",
+        "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Hebeloma incarnatulum",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/37003",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hebeloma-underside.jpg",
+        "view": "underside",
+        "alt": "Hebeloma incarnatulum — imenoforo",
+        "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Hebeloma incarnatulum",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/37003",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7
@@ -1089,6 +1138,35 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-lateral.jpg",
+        "view": "lateral",
+        "alt": "Limacella furnacea — vista laterale",
+        "credit": "Davide Puddu · CC BY · ritaglio dall’originale",
+        "subjectTaxon": "Limacella furnacea",
+        "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+        "licenseUrl": "https://balearica.uib.cat/en/taxon/1969"
+      },
+      {
+        "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-top.jpg",
+        "view": "top",
+        "alt": "Limacella furnacea — vista superiore",
+        "credit": "Davide Puddu · CC BY · ritaglio dall’originale",
+        "subjectTaxon": "Limacella furnacea",
+        "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+        "licenseUrl": "https://balearica.uib.cat/en/taxon/1969"
+      },
+      {
+        "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-underside.jpg",
+        "view": "underside",
+        "alt": "Limacella furnacea — imenoforo",
+        "credit": "Davide Puddu · CC BY · ritaglio dall’originale",
+        "subjectTaxon": "Limacella furnacea",
+        "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+        "licenseUrl": "https://balearica.uib.cat/en/taxon/1969"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 10
@@ -1408,6 +1486,26 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-pluteus-top.jpg",
+        "view": "top",
+        "alt": "Pluteus conformis — vista superiore",
+        "credit": "Malysheva, Popov, Morozova, Dudka, Pham e Malysheva (2023) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Pluteus conformis",
+        "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/figure/jof-09-00584-f004/",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pluteus-underside.jpg",
+        "view": "underside",
+        "alt": "Pluteus conformis — imenoforo",
+        "credit": "Malysheva, Popov, Morozova, Dudka, Pham e Malysheva (2023) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Pluteus conformis",
+        "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/figure/jof-09-00584-f004/",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 11
@@ -1475,6 +1573,35 @@
       "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-lateral.jpg",
+        "view": "lateral",
+        "alt": "Stropharia aeruginosa — vista laterale",
+        "credit": "Mats Sæter · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Stropharia aeruginosa",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/38132",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-underside.jpg",
+        "view": "underside",
+        "alt": "Stropharia aeruginosa — imenoforo",
+        "credit": "Mats Sæter · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Stropharia aeruginosa",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/38132",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-top.jpg",
+        "view": "top",
+        "alt": "Stropharia aeruginosa — vista superiore",
+        "credit": "Mats Sæter · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Stropharia aeruginosa",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/38132",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12
@@ -1610,6 +1737,35 @@
         "sourcePage": 85
       }
     ],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lactarius-incluso-lactifluus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lactarius deliciosus group (North America) — vista laterale",
+        "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius deliciosus group (North America)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-incluso-lactifluus-top.jpg",
+        "view": "top",
+        "alt": "Lactarius deliciosus group (North America) — vista superiore",
+        "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius deliciosus group (North America)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-incluso-lactifluus-underside.jpg",
+        "view": "underside",
+        "alt": "Lactarius deterrimus — imenoforo",
+        "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius deterrimus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-31_Lactarius_deterrimus_3.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13
@@ -1670,6 +1826,15 @@
         "alt": "Russula chloroides — vista inferiore di cappello e gambo",
         "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
         "subjectTaxon": "Russula chloroides"
+      },
+      {
+        "src": "images/reference/external-russula-lateral.jpg",
+        "view": "lateral",
+        "alt": "Russula laurocerasi — vista laterale",
+        "credit": "Amadej Trnkoczy · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Russula laurocerasi",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-06_Russula_laurocerasi_Melzer_122166.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
     "curriculum": {
@@ -2108,6 +2273,26 @@
       "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hygrophoropsis-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hygrophoropsis aurantiaca — vista laterale",
+        "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+        "subjectTaxon": "Hygrophoropsis aurantiaca",
+        "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+        "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+      },
+      {
+        "src": "images/reference/external-hygrophoropsis-top.jpg",
+        "view": "top",
+        "alt": "Hygrophoropsis aurantiaca — vista superiore",
+        "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+        "subjectTaxon": "Hygrophoropsis aurantiaca",
+        "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+        "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16
@@ -2612,6 +2797,35 @@
       "minimum-card-objective-craterellus--03--craterellus-cornucopioides"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-craterellus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Craterellus lutescens — vista laterale",
+        "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus lutescens",
+        "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-top.jpg",
+        "view": "top",
+        "alt": "Craterellus lutescens — vista superiore",
+        "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus lutescens",
+        "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-underside.jpg",
+        "view": "underside",
+        "alt": "Craterellus lutescens — imenoforo",
+        "credit": "Wen-Hao Zhang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus lutescens",
+        "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18

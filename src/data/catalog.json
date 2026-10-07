@@ -3097,6 +3097,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo massiccio bianco-violetto, clavato ma non con bulbo marginato.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-cortinarius-praestans-lateral.jpg",
+        "view": "lateral",
+        "alt": "Cortinarius praestans — vista laterale",
+        "credit": "Bálint Dima / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Cortinarius praestans",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/35265/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -3309,6 +3320,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Odore peculiare ma variabile, da pesce/cetriolo a farinaceo-rancido.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-entoloma-hirtipes-lateral.jpg",
+        "view": "lateral",
+        "alt": "Entoloma hirtipes — vista laterale",
+        "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Entoloma hirtipes",
+        "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-hirtipes-top.jpg",
+        "view": "top",
+        "alt": "Entoloma hirtipes — vista superiore",
+        "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Entoloma hirtipes",
+        "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-hirtipes-underside.jpg",
+        "view": "underside",
+        "alt": "Entoloma hirtipes — imenoforo",
+        "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Entoloma hirtipes",
+        "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -3720,6 +3760,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Associazione con Quercus: criterio di campo fondamentale rispetto al vicino H. penarius associato a Fagus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hygrophorus-penarioides-top.jpg",
+        "view": "top",
+        "alt": "Hygrophorus penarioides — vista superiore",
+        "credit": "Irene Andersson · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Hygrophorus penarioides",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-hygrophorus-penarioides-underside.jpg",
+        "view": "underside",
+        "alt": "Hygrophorus penarioides — imenoforo",
+        "credit": "Irene Andersson · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Hygrophorus penarioides",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 8,
@@ -5014,6 +5074,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Lignicolo soprattutto su latifoglie, spesso nella stagione fredda.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-pleurotus-ostreatus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Pleurotus ostreatus (coltivato, ceppo PH11) — vista laterale",
+        "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+        "sourceUrl": "https://doi.org/10.3390/jof8070652",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pleurotus-ostreatus-top.jpg",
+        "view": "top",
+        "alt": "Pleurotus ostreatus (coltivato, ceppo PH11) — vista superiore",
+        "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+        "sourceUrl": "https://doi.org/10.3390/jof8070652",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pleurotus-ostreatus-underside.jpg",
+        "view": "underside",
+        "alt": "Pleurotus ostreatus (coltivato, ceppo PH11) — imenoforo",
+        "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+        "sourceUrl": "https://doi.org/10.3390/jof8070652",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 11,
@@ -6092,6 +6181,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Forte specificità ecologica con conifere come Pinus, Picea o Abies.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lactarius-sez-deliciosi-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lactarius deliciosus group (North America) — vista laterale",
+        "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius deliciosus group (North America)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-sez-deliciosi-top.jpg",
+        "view": "top",
+        "alt": "Lactarius deliciosus group (North America) — vista superiore",
+        "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius deliciosus group (North America)",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-sez-deliciosi-underside.jpg",
+        "view": "underside",
+        "alt": "Lactarius deterrimus — imenoforo",
+        "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius deterrimus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-31_Lactarius_deterrimus_3.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13,
@@ -6118,6 +6236,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Associazione praticamente esclusiva con Larix.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lactarius-porniniae-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lactarius porninsis — vista laterale",
+        "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius porninsis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-porniniae-top.jpg",
+        "view": "top",
+        "alt": "Lactarius porninsis — vista superiore",
+        "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius porninsis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-porniniae-underside.jpg",
+        "view": "underside",
+        "alt": "Lactarius porninsis — imenoforo",
+        "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius porninsis",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13,
@@ -6171,6 +6318,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Specie mediterranea associata a Cistus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lactarius-tesquorum-underside.jpg",
+        "view": "underside",
+        "alt": "Lactarius tesquorum — imenoforo",
+        "credit": "Davide Puddu · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius tesquorum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_tesquorum_Malençon_399418.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13,
@@ -6248,6 +6406,15 @@
         "alt": "Russula foetens — vista inferiore di cappello e gambo",
         "credit": "Fonte: Marco Floriani, Il genere Russula, p. 51. Autore della singola fotografia non specificato.",
         "subjectTaxon": "Russula foetens"
+      },
+      {
+        "src": "images/reference/external-russula-foetentinae-lateral.jpg",
+        "view": "lateral",
+        "alt": "Russula laurocerasi — vista laterale",
+        "credit": "Amadej Trnkoczy · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Russula laurocerasi",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-06_Russula_laurocerasi_Melzer_122166.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
     "curriculum": {
@@ -6943,6 +7110,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo arancio, spesso più brunastro alla base, senza anello.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hygrophoropsis-aurantiaca-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hygrophoropsis aurantiaca — vista laterale",
+        "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+        "subjectTaxon": "Hygrophoropsis aurantiaca",
+        "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+        "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+      },
+      {
+        "src": "images/reference/external-hygrophoropsis-aurantiaca-top.jpg",
+        "view": "top",
+        "alt": "Hygrophoropsis aurantiaca — vista superiore",
+        "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+        "subjectTaxon": "Hygrophoropsis aurantiaca",
+        "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+        "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 16,
@@ -7345,6 +7532,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne molto sottile ed elastica; pliche molto meno sviluppate che in C. tubaeformis.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-craterellus-lutescens-lateral.jpg",
+        "view": "lateral",
+        "alt": "Craterellus lutescens — vista laterale",
+        "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus lutescens",
+        "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-lutescens-top.jpg",
+        "view": "top",
+        "alt": "Craterellus lutescens — vista superiore",
+        "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus lutescens",
+        "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-lutescens-underside.jpg",
+        "view": "underside",
+        "alt": "Craterellus lutescens — imenoforo",
+        "credit": "Wen-Hao Zhang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus lutescens",
+        "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7371,6 +7587,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente tra muschi e lettiera di conifere.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-craterellus-tubaeformis-top.jpg",
+        "view": "top",
+        "alt": "Craterellus tubaeformis — vista superiore",
+        "credit": "Wouter Koch · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Craterellus tubaeformis",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/39039",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7527,6 +7754,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Ospite orientativo: S. imbricatus soprattutto Picea, S. squamosus soprattutto Pinus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Sarcodon imbricatus — vista laterale",
+        "credit": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024) · CC BY 4.0 · ritaglio figura 7a, basidioma di sinistra",
+        "subjectTaxon": "Sarcodon imbricatus",
+        "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-top.jpg",
+        "view": "top",
+        "alt": "Sarcodon imbricatus — vista superiore",
+        "credit": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024) · CC BY 4.0 · ritaglio figura 7b, basidioma di sinistra",
+        "subjectTaxon": "Sarcodon imbricatus",
+        "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-underside.jpg",
+        "view": "underside",
+        "alt": "Sarcodon imbricatus — imenoforo",
+        "credit": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024) · CC BY 4.0 · ritaglio figura 7a, basidioma di destra",
+        "subjectTaxon": "Sarcodon imbricatus",
+        "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7652,6 +7908,35 @@
     "deepMorphologyRequired": false,
     "sourceName": "Albatrellus confluens",
     "differentiatingCharacter": "Terrestre in boschi di conifere.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-albatrellopsis-confluens-lateral.jpg",
+        "view": "lateral",
+        "alt": "Albatrellus confluens — vista laterale",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Albatrellus confluens",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/40236/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-albatrellopsis-confluens-top.jpg",
+        "view": "top",
+        "alt": "Albatrellus confluens — vista superiore",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Albatrellus confluens",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/40236/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-albatrellopsis-confluens-underside.jpg",
+        "view": "underside",
+        "alt": "Albatrellus confluens — imenoforo",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Albatrellus confluens",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/40236/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7773,6 +8058,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce soprattutto su quercia e castagno.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-fistulina-hepatica-lateral.jpg",
+        "view": "lateral",
+        "alt": "Fistulina hepatica — vista laterale",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Fistulina hepatica",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/37950/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-fistulina-hepatica-top.jpg",
+        "view": "top",
+        "alt": "Fistulina hepatica — vista superiore",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Fistulina hepatica",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/37950/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-fistulina-hepatica-underside.jpg",
+        "view": "underside",
+        "alt": "Fistulina hepatica — imenoforo",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Fistulina hepatica",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/37950/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7815,6 +8129,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Non annerisce vistosamente alla contusione, a differenza di Meripilus giganteus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-grifola-frondosa-lateral.jpg",
+        "view": "lateral",
+        "alt": "Grifola frondosa — vista laterale",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Grifola frondosa",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-grifola-frondosa-top.jpg",
+        "view": "top",
+        "alt": "Grifola frondosa — vista superiore",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Grifola frondosa",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7867,6 +8201,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce alla base o sulle radici di grandi latifoglie, soprattutto faggio.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-meripilus-giganteus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Meripilus giganteus — vista laterale",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Meripilus giganteus",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/39728/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-meripilus-giganteus-top.jpg",
+        "view": "top",
+        "alt": "Meripilus giganteus — vista superiore",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Meripilus giganteus",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/39728/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7999,6 +8353,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne biancastra e sostanzialmente immutabile; riconoscimento più forte nei giovani tipici.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-ramaria-pallida-lateral.jpg",
+        "view": "lateral",
+        "alt": "Ramaria pallida — vista laterale",
+        "credit": "Egil Bendiksen / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Ramaria pallida",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-ramaria-pallida-top.jpg",
+        "view": "top",
+        "alt": "Ramaria pallida — vista superiore",
+        "credit": "Katriina Bendiksen / Naturhistorisk museum, Universitetet i Oslo · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Ramaria pallida",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 19,
@@ -8026,6 +8400,26 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Ramaria botrytis",
     "differentiatingCharacter": "Prevalentemente in boschi di latifoglie; profilo volutamente s.l.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-ramaria-botrytis-s-l-lateral.jpg",
+        "view": "lateral",
+        "alt": "Ramaria botrytis coll. — vista laterale",
+        "credit": "Tor Erik Brandrud / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Ramaria botrytis coll.",
+        "sourceUrl": "https://artsdatabanken.no/node/719717",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-ramaria-botrytis-s-l-top.jpg",
+        "view": "top",
+        "alt": "Ramaria botrytis coll. — vista superiore",
+        "credit": "Kristin Brandrud · CC BY 4.0 · ritaglio dall’originale",
+        "subjectTaxon": "Ramaria botrytis coll.",
+        "sourceUrl": "https://artsdatabanken.no/node/719717",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 19,
