@@ -286,11 +286,28 @@
       "minimum-card-objective-cortinarius--06--cortinarius-variiformis",
       "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+        "reviewScope": "course-material",
+        "title": "Perini classificazione.pdf",
+        "authors": [
+          "Claudia Perini"
+        ],
+        "url": "https://drive.google.com/file/d/1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr/view",
+        "location": "p. 73",
+        "supportedClaim": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione.",
+        "fields": [
+          "diagnosticNote"
+        ],
+        "sourcePage": 73
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6
-    }
+    },
+    "diagnosticNote": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione."
   },
   {
     "id": "minimum-genus-card-entoloma",
@@ -983,7 +1000,11 @@
     "commonNames": [],
     "rank": "operationalGroup",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Carne con rottura tipicamente gessosa, non fibrosa.",
+      "Emissione di latice alla lesione: osservarne colore e successivi cambiamenti.",
+      "Rapporto micorrizico con le piante: registrare gli alberi presenti."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1001,7 +1022,23 @@
       "minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
       "minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+        "reviewScope": "course-material",
+        "title": "Perini classificazione.pdf",
+        "authors": [
+          "Claudia Perini"
+        ],
+        "url": "https://drive.google.com/file/d/1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr/view",
+        "location": "p. 85",
+        "supportedClaim": "Carne con rottura tipicamente gessosa, non fibrosa. Emissione di latice alla lesione: osservarne colore e successivi cambiamenti. Rapporto micorrizico con le piante: registrare gli alberi presenti.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 85
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13
@@ -1013,7 +1050,11 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Carne con rottura tipicamente gessosa, non fibrosa.",
+      "Assenza di emissione di latice alla lesione, da confrontare con Lactarius.",
+      "Rapporto micorrizico con le piante: registrare gli alberi presenti."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1027,7 +1068,23 @@
       "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
       "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+        "reviewScope": "course-material",
+        "title": "Perini classificazione.pdf",
+        "authors": [
+          "Claudia Perini"
+        ],
+        "url": "https://drive.google.com/file/d/1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr/view",
+        "location": "p. 85",
+        "supportedClaim": "Carne con rottura tipicamente gessosa, non fibrosa. Assenza di emissione di latice alla lesione, da confrontare con Lactarius. Rapporto micorrizico con le piante: registrare gli alberi presenti.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 85
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 14
@@ -1379,7 +1436,11 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Imenoforo formato da pieghe, anziché da vere lamelle.",
+      "Pieghe che possono ramificarsi.",
+      "Collegamenti trasversali tra le pieghe, detti anastomosi."
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -1390,7 +1451,23 @@
     "relatedIds": [
       "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+        "reviewScope": "course-material",
+        "title": "Perini classificazione.pdf",
+        "authors": [
+          "Claudia Perini"
+        ],
+        "url": "https://drive.google.com/file/d/1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr/view",
+        "location": "p. 54",
+        "supportedClaim": "Imenoforo formato da pieghe, anziché da vere lamelle. Pieghe che possono ramificarsi. Collegamenti trasversali tra le pieghe, detti anastomosi.",
+        "fields": [
+          "characters"
+        ],
+        "sourcePage": 54
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 17

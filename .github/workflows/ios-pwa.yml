@@ -7,6 +7,9 @@ on:
       - 'components/**'
       - 'App.tsx'
       - 'src/data/**'
+      - 'scripts/course-literature.mjs'
+      - 'scripts/prepare-mobile-data.mjs'
+      - 'scripts/validate-mobile-data.mjs'
       - 'assets/icon.png'
       - '.github/workflows/ios-pwa.yml'
   workflow_dispatch:

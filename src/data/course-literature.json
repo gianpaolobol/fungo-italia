@@ -1,0 +1,1298 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "additions": {},
+      "replacements": {
+        "differentiatingCharacter": "Anello supero generalmente consistente, con pagina inferiore fibrillosa o squamosa, talora a ruota dentata; struttura e odore vanno valutati insieme."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "differentiatingCharacter"
+          ],
+          "page": 17,
+          "locator": "p. 17",
+          "supportedClaim": "Anello supero generalmente consistente, con pagina inferiore fibrillosa o squamosa, talora a ruota dentata; struttura e odore vanno valutati insieme."
+        },
+        {
+          "sourceId": "LIT-agaricus-palestina-villa-2020",
+          "fields": [
+            "differentiatingCharacter"
+          ],
+          "page": 10,
+          "locator": "p. 10, chiave punto 9; sezione Sanguinolenti",
+          "supportedClaim": "Variabilità dell’anello supero, spesso fibrilloso-squamoso nella pagina inferiore; non sempre semplice."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "additions": {
+        "habitat": [
+          "Ambienti ruderali, parchi e giardini."
+        ]
+      },
+      "replacements": {
+        "characters": [
+          "Cappello biancastro o grigio-bruno, spesso fibrilloso-squamuloso verso il centro.",
+          "Gambo con base nettamente bulbosa e spesso con cordoni o residui miceliari robusti.",
+          "Viraggi deboli e variabili: possibile lieve arrossamento nella carne del gambo e ingiallimento localizzato alla base; odore basale talora debolmente fenolico."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "characters"
+          ],
+          "page": 15,
+          "locator": "p. 15",
+          "supportedClaim": "Cappello biancastro o grigio-bruno, spesso fibrilloso-squamuloso verso il centro. Gambo con base nettamente bulbosa e spesso con cordoni o residui miceliari robusti. Viraggi deboli e variabili: possibile lieve arrossamento nella carne del gambo e ingiallimento localizzato alla base; odore basale talora debolmente fenolico.",
+          "characterIndices": [
+            2
+          ]
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "habitat"
+          ],
+          "page": 15,
+          "locator": "p. 15",
+          "supportedClaim": "Ambienti ruderali, parchi e giardini."
+        },
+        {
+          "sourceId": "LIT-agaricus-bresadolanus-leech-2014",
+          "fields": [
+            "characters",
+            "habitat"
+          ],
+          "page": 2,
+          "locator": "p. stampata 114 (pagina PDF 2)",
+          "supportedClaim": "Lieve arrossamento della carne del gambo, ingiallimento limitato alla superficie basale; raccolte in parchi e giardini.",
+          "characterIndices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "additions": {
+        "habitat": [
+          "Margini stradali e terreni compatti; può emergere attraverso l’asfalto."
+        ],
+        "lookalikes": [
+          "Agaricus bisporus: confrontare soprattutto il doppio anello di A. bitorquis."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "habitat"
+          ],
+          "page": 10,
+          "locator": "p. 10",
+          "supportedClaim": "Margini stradali e terreni compatti; può emergere attraverso l’asfalto."
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 10,
+          "locator": "p. 10",
+          "supportedClaim": "Agaricus bisporus: confrontare soprattutto il doppio anello di A. bitorquis."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus bisporus",
+      "additions": {
+        "lookalikes": [
+          "Agaricus bitorquis: verificare la struttura dell’anello, senza basarsi soltanto sull’aspetto del cappello."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 10,
+          "locator": "p. 10",
+          "supportedClaim": "Agaricus bitorquis: verificare la struttura dell’anello, senza basarsi soltanto sull’aspetto del cappello."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "additions": {
+        "lookalikes": [
+          "Agaricus sez. Arvenses: confrontare odore e modalità dell’ingiallimento, particolarmente alla base del gambo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 24,
+          "locator": "p. 24",
+          "supportedClaim": "Agaricus sez. Arvenses: confrontare odore e modalità dell’ingiallimento, particolarmente alla base del gambo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus sez. Arvenses",
+      "additions": {
+        "lookalikes": [
+          "Agaricus sez. Xanthodermatei: portamento e ambiente possono sovrapporsi; confrontare odore e ingiallimento basale."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 24,
+          "locator": "p. 24",
+          "supportedClaim": "Agaricus sez. Xanthodermatei: portamento e ambiente possono sovrapporsi; confrontare odore e ingiallimento basale."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "additions": {
+        "lookalikes": [
+          "Amanita phalloides negli ovoli chiusi; Amanita muscaria negli esemplari aperti. Osservare sempre l’intero carpoforo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 12,
+          "locator": "p. 12",
+          "supportedClaim": "Amanita phalloides negli ovoli chiusi; Amanita muscaria negli esemplari aperti. Osservare sempre l’intero carpoforo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "additions": {
+        "lookalikes": [
+          "Amanita caesarea negli ovoli chiusi: il solo involucro esterno non consente un’identificazione affidabile.",
+          "Russule verdi: confrontare struttura della carne e presenza di volva e anello; esaminare anche la base integra."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 9,
+          "locator": "p. 9",
+          "supportedClaim": "Amanita caesarea negli ovoli chiusi: il solo involucro esterno non consente un’identificazione affidabile."
+        },
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 5,
+          "locator": "p. 5",
+          "supportedClaim": "Russule verdi: confrontare struttura della carne e presenza di volva e anello; esaminare anche la base integra."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "additions": {
+        "lookalikes": [
+          "Amanita phalloides: confronto particolarmente importante quando i residui del velo sono incompleti."
+        ]
+      },
+      "replacements": {
+        "diagnosticNote": "La volva può essere sottile o friabile: l’assenza di un sacco robusto non esclude la sezione.",
+        "characters": [
+          "Assenza completa di anello sul gambo.",
+          "Margine del cappello fortemente e lungamente striato.",
+          "Gambo slanciato, generalmente non nettamente bulboso; volva basale di consistenza variabile, anche sottile o friabile."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "diagnosticNote"
+          ],
+          "page": 33,
+          "locator": "p. 33",
+          "supportedClaim": "La volva può essere sottile o friabile: l’assenza di un sacco robusto non esclude la sezione."
+        },
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 8,
+          "locator": "p. 8",
+          "supportedClaim": "Amanita phalloides: confronto particolarmente importante quando i residui del velo sono incompleti."
+        },
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "characters"
+          ],
+          "page": 33,
+          "locator": "p. 33",
+          "supportedClaim": "Gambo slanciato, generalmente non nettamente bulboso; volva basale di consistenza variabile, anche sottile o friabile.",
+          "characterIndices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "additions": {
+        "lookalikes": [
+          "Amanita pantherina, A. gioiosa, A. amici e A. eliae: forme intermedie e variabilità richiedono un confronto approfondito."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 61,
+          "locator": "p. 61",
+          "supportedClaim": "Amanita pantherina, A. gioiosa, A. amici e A. eliae: forme intermedie e variabilità richiedono un confronto approfondito."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "additions": {
+        "lookalikes": [
+          "Amanita pantherina: confronto da eseguire sul carpoforo completo, inclusi margine, anello e base."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 67,
+          "locator": "p. 67",
+          "supportedClaim": "Amanita pantherina: confronto da eseguire sul carpoforo completo, inclusi margine, anello e base."
+        }
+      ]
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "additions": {
+        "habitat": [
+          "Ambienti aperti, prati, vigneti e frutteti; specie saprotrofa."
+        ],
+        "lookalikes": [
+          "Amanita strobiliformis e altre amanite bianche con resti del velo: il colore bianco non è un carattere sufficiente."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "habitat"
+          ],
+          "page": 62,
+          "locator": "p. 62",
+          "supportedClaim": "Ambienti aperti, prati, vigneti e frutteti; specie saprotrofa."
+        },
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 71,
+          "locator": "p. 71",
+          "supportedClaim": "Amanita strobiliformis e altre amanite bianche con resti del velo: il colore bianco non è un carattere sufficiente."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "additions": {
+        "lookalikes": [
+          "Saproamanita vittadinii, Amanita ovoidea e A. proxima: confrontare attentamente le amanite bianche con resti del velo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 71,
+          "locator": "p. 71",
+          "supportedClaim": "Saproamanita vittadinii, Amanita ovoidea e A. proxima: confrontare attentamente le amanite bianche con resti del velo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "additions": {
+        "lookalikes": [
+          "Amanita caesarea: il confronto va fatto anche su lamelle, gambo e volva."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 71,
+          "locator": "p. 71",
+          "supportedClaim": "Amanita caesarea: il confronto va fatto anche su lamelle, gambo e volva."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "additions": {
+        "lookalikes": [
+          "Macrolepiota procera: è documentata questa confusione; confrontare velo, base e struttura del gambo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 70,
+          "locator": "p. 70",
+          "supportedClaim": "Macrolepiota procera: è documentata questa confusione; confrontare velo, base e struttura del gambo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "additions": {
+        "lookalikes": [
+          "Amanita pantherina: conservare la base integra e confrontare tutti i caratteri del velo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 70,
+          "locator": "p. 70",
+          "supportedClaim": "Amanita pantherina: conservare la base integra e confrontare tutti i caratteri del velo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Leucocybe connata",
+      "additions": {
+        "habitat": [
+          "Colonie lungo strade e mulattiere, anche su terreno ghiaioso."
+        ],
+        "lookalikes": [
+          "Clitocybe bianche muscariniche: la crescita in colonia non basta a escluderle."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+          "fields": [
+            "habitat"
+          ],
+          "page": 73,
+          "locator": "p. 73",
+          "supportedClaim": "Colonie lungo strade e mulattiere, anche su terreno ghiaioso."
+        },
+        {
+          "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 73,
+          "locator": "p. 73",
+          "supportedClaim": "Clitocybe bianche muscariniche: la crescita in colonia non basta a escluderle."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lyophyllum decastes s.l.",
+      "additions": {
+        "lookalikes": [
+          "Entoloma sinuatum e Tricholoma filamentosum: possono condividere l’ambiente; confrontare ogni esemplare.",
+          "Tricholoma saponaceum: la crescita cespitosa può essere poco evidente e non deve essere l’unico criterio."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 73,
+          "locator": "p. 73",
+          "supportedClaim": "Entoloma sinuatum e Tricholoma filamentosum: possono condividere l’ambiente; confrontare ogni esemplare."
+        },
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 35,
+          "locator": "p. 35",
+          "supportedClaim": "Tricholoma saponaceum: la crescita cespitosa può essere poco evidente e non deve essere l’unico criterio."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "additions": {
+        "lookalikes": [
+          "Lyophyllum decastes: confrontare anche gli esemplari isolati, senza affidarsi soltanto alla crescita cespitosa."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 35,
+          "locator": "p. 35",
+          "supportedClaim": "Lyophyllum decastes: confrontare anche gli esemplari isolati, senza affidarsi soltanto alla crescita cespitosa."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "additions": {
+        "lookalikes": [
+          "Amanita phalloides: verificare sempre velo e base del gambo, oltre al cappello verdastro."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 10,
+          "locator": "p. 10",
+          "supportedClaim": "Amanita phalloides: verificare sempre velo e base del gambo, oltre al cappello verdastro."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "additions": {
+        "lookalikes": [
+          "Inocybe grigio-brune: confronto importante, anche in pineta; il cappello grigio non è sufficiente.",
+          "Tricholoma pardinum: confronto da eseguire su più caratteri, non soltanto sulla superficie del cappello."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 62,
+          "locator": "p. 62",
+          "supportedClaim": "Inocybe grigio-brune: confronto importante, anche in pineta; il cappello grigio non è sufficiente."
+        },
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 119,
+          "locator": "p. 119",
+          "supportedClaim": "Tricholoma pardinum: confronto da eseguire su più caratteri, non soltanto sulla superficie del cappello."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "additions": {
+        "lookalikes": [
+          "Tricholoma album s.l.: confrontare cuticola lucida o fibrillosa con quella più opaca; la base può avere sfumature blu-verdi."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 13,
+          "locator": "p. 13",
+          "supportedClaim": "Tricholoma album s.l.: confrontare cuticola lucida o fibrillosa con quella più opaca; la base può avere sfumature blu-verdi."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "additions": {
+        "lookalikes": [
+          "Tricholoma columbetta: confrontare superficie del cappello e base del gambo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 13,
+          "locator": "p. 13",
+          "supportedClaim": "Tricholoma columbetta: confrontare superficie del cappello e base del gambo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "additions": {
+        "lookalikes": [
+          "Tricholoma sulphureum e Tricholomopsis rutilans: valutare odore e substrato; quest’ultimo cresce su legno."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 16,
+          "locator": "p. 16",
+          "supportedClaim": "Tricholoma sulphureum e Tricholomopsis rutilans: valutare odore e substrato; quest’ultimo cresce su legno."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "additions": {
+        "lookalikes": [
+          "Tricholoma equestre e Tricholomopsis rutilans: il giallo del carpoforo va interpretato insieme a odore e substrato."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 16,
+          "locator": "p. 16",
+          "supportedClaim": "Tricholoma equestre e Tricholomopsis rutilans: il giallo del carpoforo va interpretato insieme a odore e substrato."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "additions": {
+        "habitat": [
+          "Boschi di latifoglie."
+        ],
+        "lookalikes": [
+          "Chroogomphus helveticus e Armillaria: confusioni documentate; l’habitat non sostituisce l’esame del carpoforo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",
+          "fields": [
+            "habitat"
+          ],
+          "page": 36,
+          "locator": "p. 36",
+          "supportedClaim": "Boschi di latifoglie."
+        },
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 29,
+          "locator": "p. 29",
+          "supportedClaim": "Chroogomphus helveticus e Armillaria: confusioni documentate; l’habitat non sostituisce l’esame del carpoforo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "additions": {
+        "habitat": [
+          "Boschi di aghifoglie."
+        ],
+        "lookalikes": [
+          "Chroogomphus helveticus e Armillaria: confronti segnalati per il gruppo Orellani."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",
+          "fields": [
+            "habitat"
+          ],
+          "page": 36,
+          "locator": "p. 36",
+          "supportedClaim": "Boschi di aghifoglie."
+        },
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 29,
+          "locator": "p. 29",
+          "supportedClaim": "Chroogomphus helveticus e Armillaria: confronti segnalati per il gruppo Orellani."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "additions": {
+        "lookalikes": [
+          "Leprocybe: gli esemplari vecchi possono essere difficili da separare; confrontare portamento e base del gambo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 30,
+          "locator": "p. 30",
+          "supportedClaim": "Leprocybe: gli esemplari vecchi possono essere difficili da separare; confrontare portamento e base del gambo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "additions": {
+        "lookalikes": [
+          "Clitocybe dealbata / Collybia rivulosa: possono crescere negli stessi prati.",
+          "Marasmius collinus: confrontare soprattutto consistenza e resistenza del gambo."
+        ],
+        "habitat": [
+          "Prati e superfici erbose, spesso in cerchi o file."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 59,
+          "locator": "p. 59",
+          "supportedClaim": "Clitocybe dealbata / Collybia rivulosa: possono crescere negli stessi prati."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Marasmius oreades»",
+          "supportedClaim": "Prati e superfici erbose, spesso in cerchi o file."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Marasmius oreades»",
+          "supportedClaim": "Marasmius collinus: confrontare soprattutto consistenza e resistenza del gambo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "additions": {
+        "lookalikes": [
+          "Marasmius oreades: la crescita nel prato o in cerchi non esclude la confusione."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 59,
+          "locator": "p. 59",
+          "supportedClaim": "Marasmius oreades: la crescita nel prato o in cerchi non esclude la confusione."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepiota subincarnata",
+      "additions": {
+        "lookalikes": [
+          "Marasmius oreades, piccoli Agaricus e Leucoagaricus: il piccolo portamento non è sufficiente per separarli."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 24,
+          "locator": "p. 24",
+          "supportedClaim": "Marasmius oreades, piccoli Agaricus e Leucoagaricus: il piccolo portamento non è sufficiente per separarli."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "additions": {
+        "lookalikes": [
+          "Marasmius oreades, piccoli Agaricus e Leucoagaricus: confrontare l’intero carpoforo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 24,
+          "locator": "p. 24",
+          "supportedClaim": "Marasmius oreades, piccoli Agaricus e Leucoagaricus: confrontare l’intero carpoforo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "additions": {
+        "lookalikes": [
+          "Hapalopilus rutilans: è documentata una confusione; confrontare forma, consistenza e imenoforo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 99,
+          "locator": "p. 99",
+          "supportedClaim": "Hapalopilus rutilans: è documentata una confusione; confrontare forma, consistenza e imenoforo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hapalopilus rutilans",
+      "additions": {
+        "lookalikes": [
+          "Fistulina hepatica: confrontare l’imenoforo e la struttura del carpoforo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 99,
+          "locator": "p. 99",
+          "supportedClaim": "Fistulina hepatica: confrontare l’imenoforo e la struttura del carpoforo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "additions": {
+        "lookalikes": [
+          "Omphalotus olearius: confrontare pieghe dell’imenoforo e vere lamelle, oltre al substrato."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 119,
+          "locator": "p. 119",
+          "supportedClaim": "Omphalotus olearius: confrontare pieghe dell’imenoforo e vere lamelle, oltre al substrato."
+        }
+      ]
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "additions": {
+        "lookalikes": [
+          "Cantharellus cibarius complex: distinguere vere lamelle e pieghe; il colore da solo non basta."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 119,
+          "locator": "p. 119",
+          "supportedClaim": "Cantharellus cibarius complex: distinguere vere lamelle e pieghe; il colore da solo non basta."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "additions": {
+        "habitat": [
+          "Su legno di pioppo e di altre latifoglie."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Cyclocybe cylindracea»",
+          "supportedClaim": "Su legno di pioppo e di altre latifoglie."
+        }
+      ]
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "additions": {
+        "habitat": [
+          "Prati e ambienti erbosi, anche in prossimità di Rosaceae."
+        ],
+        "lookalikes": [
+          "Entoloma clypeatum e Inocybe primaverili: confrontare sviluppo e colore delle lamelle, insieme agli altri caratteri."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Calocybe gambosa»",
+          "supportedClaim": "Prati e ambienti erbosi, anche in prossimità di Rosaceae."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Calocybe gambosa»",
+          "supportedClaim": "Entoloma clypeatum e Inocybe primaverili: confrontare sviluppo e colore delle lamelle, insieme agli altri caratteri."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "additions": {
+        "habitat": [
+          "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Hygrophorus marzuolus»",
+          "supportedClaim": "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno."
+        }
+      ]
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "additions": {
+        "habitat": [
+          "Su legno, anche in boschi montani di faggio e abete rosso."
+        ],
+        "lookalikes": [
+          "Galerina marginata group: confrontare anello e rivestimento del gambo; una raccolta cespitosa non esclude esemplari diversi."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Kuehneromyces mutabilis»",
+          "supportedClaim": "Su legno, anche in boschi montani di faggio e abete rosso."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Kuehneromyces mutabilis»",
+          "supportedClaim": "Galerina marginata group: confrontare anello e rivestimento del gambo; una raccolta cespitosa non esclude esemplari diversi."
+        }
+      ]
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "additions": {
+        "lookalikes": [
+          "Kuehneromyces mutabilis: controllare ogni esemplare, anche all’interno dello stesso cespo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Kuehneromyces mutabilis»",
+          "supportedClaim": "Kuehneromyces mutabilis: controllare ogni esemplare, anche all’interno dello stesso cespo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hypholoma lateritium",
+      "additions": {
+        "lookalikes": [
+          "Hypholoma fasciculare: confrontare insieme cappello e lamelle, senza identificare soltanto dal rosso mattone."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Hypholoma lateritium»",
+          "supportedClaim": "Hypholoma fasciculare: confrontare insieme cappello e lamelle, senza identificare soltanto dal rosso mattone."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cerioporus squamosus",
+      "additions": {
+        "lookalikes": [
+          "Polyporus tuberaster: confronto tra polipori squamosi, da completare con substrato e caratteri del carpoforo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Diapositiva «Cerioporus squamosus»",
+          "supportedClaim": "Polyporus tuberaster: confronto tra polipori squamosi, da completare con substrato e caratteri del carpoforo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "additions": {},
+      "replacements": {
+        "diagnosticNote": "Sono possibili forme xantoidi con pori gialli. Intensità e rapidità del viraggio al blu dipendono anche da freschezza e turgore."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+          "fields": [
+            "diagnosticNote"
+          ],
+          "page": null,
+          "locator": "Trattazione dei viraggi e delle forme xantoidi",
+          "supportedClaim": "Sono possibili forme xantoidi con pori gialli. Intensità e rapidità del viraggio al blu dipendono anche da freschezza e turgore."
+        }
+      ]
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "additions": {
+        "habitat": [
+          "Boschi di conifere."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Trattazione del genere Suillus",
+          "supportedClaim": "Boschi di conifere."
+        }
+      ]
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "additions": {
+        "habitat": [
+          "Boschi di conifere."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Trattazione del genere Suillus",
+          "supportedClaim": "Boschi di conifere."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "additions": {
+        "habitat": [
+          "Boschi termofili in ambienti collinari."
+        ],
+        "lookalikes": [
+          "Amanita proxima: la somiglianza tra le amanite bianche richiede l’esame completo dei caratteri."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 13,
+          "locator": "p. 13",
+          "supportedClaim": "Boschi termofili in ambienti collinari."
+        },
+        {
+          "sourceId": "COURSE-1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 13,
+          "locator": "p. 13",
+          "supportedClaim": "Amanita proxima: la somiglianza tra le amanite bianche richiede l’esame completo dei caratteri."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "additions": {
+        "habitat": [
+          "Boschi termofili in ambienti collinari."
+        ],
+        "lookalikes": [
+          "Amanita ovoidea: aspetto bianco e carne immutabile sono condivisi e non bastano per separarle."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 13,
+          "locator": "p. 13",
+          "supportedClaim": "Boschi termofili in ambienti collinari."
+        },
+        {
+          "sourceId": "COURSE-1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 13,
+          "locator": "p. 13",
+          "supportedClaim": "Amanita ovoidea: aspetto bianco e carne immutabile sono condivisi e non bastano per separarle."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cantharellus",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Imenoforo formato da pieghe, anziché da vere lamelle.",
+          "Pieghe che possono ramificarsi.",
+          "Collegamenti trasversali tra le pieghe, detti anastomosi."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+          "fields": [
+            "characters"
+          ],
+          "page": 54,
+          "locator": "p. 54",
+          "supportedClaim": "Imenoforo formato da pieghe, anziché da vere lamelle. Pieghe che possono ramificarsi. Collegamenti trasversali tra le pieghe, detti anastomosi."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius",
+      "additions": {},
+      "replacements": {
+        "diagnosticNote": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione."
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+          "fields": [
+            "diagnosticNote"
+          ],
+          "page": 73,
+          "locator": "p. 73",
+          "supportedClaim": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione."
+        }
+      ]
+    },
+    {
+      "scientificName": "Russula",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Carne con rottura tipicamente gessosa, non fibrosa.",
+          "Assenza di emissione di latice alla lesione, da confrontare con Lactarius.",
+          "Rapporto micorrizico con le piante: registrare gli alberi presenti."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+          "fields": [
+            "characters"
+          ],
+          "page": 85,
+          "locator": "p. 85",
+          "supportedClaim": "Carne con rottura tipicamente gessosa, non fibrosa. Assenza di emissione di latice alla lesione, da confrontare con Lactarius. Rapporto micorrizico con le piante: registrare gli alberi presenti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Carne con rottura tipicamente gessosa, non fibrosa.",
+          "Emissione di latice alla lesione: osservarne colore e successivi cambiamenti.",
+          "Rapporto micorrizico con le piante: registrare gli alberi presenti."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+          "fields": [
+            "characters"
+          ],
+          "page": 85,
+          "locator": "p. 85",
+          "supportedClaim": "Carne con rottura tipicamente gessosa, non fibrosa. Emissione di latice alla lesione: osservarne colore e successivi cambiamenti. Rapporto micorrizico con le piante: registrare gli alberi presenti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "additions": {},
+      "replacements": {
+        "characters": [
+          "Cappello giallo-bruno o ocra, frequentemente molto viscido o glutinoso.",
+          "Margine nettamente tubercolato-striato o scanalato.",
+          "Odore variabile secondo la specie: di varechina o fetido, misto con note mandorlate, oppure di mandorle amare o marzapane."
+        ]
+      },
+      "evidence": [
+        {
+          "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+          "fields": [
+            "characters"
+          ],
+          "page": null,
+          "locator": "Sezione Ingratae – sottosez. Foetentinae, schema della serie foetens",
+          "supportedClaim": "Odore variabile secondo la specie: di varechina o fetido, misto con note mandorlate, oppure di mandorle amare o marzapane.",
+          "characterIndices": [
+            2
+          ]
+        }
+      ]
+    }
+  ]
+}

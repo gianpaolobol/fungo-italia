@@ -1,3 +1,4 @@
+import {applyCourseLiterature} from './course-literature.mjs';
 import {cleanAtlasRecord,internalFoundations} from './atlas-content.mjs';
 import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -30,6 +31,9 @@ const catalog=taxa.map(t=>{
 if(new Set(catalog.map(t=>t.id)).size!==148)throw Error('Duplicate canonical IDs');
 const teachingGroups=meta.genusCards.map(g=>({id:g.cardId,scientificName:g.displayTitle,commonNames:[],rank:g.sourceRank,kind:'teaching-group',characters:[],lookalikes:[],lookalikesStatus:'not-exported',habitat:[],aliases:[],currentAcceptedNames:[],currentGenera:g.currentGenera,sourceGenera:g.sourceGenera,sourceLabel:g.sourceLabel,relatedIds:g.minimumChildCardIds,sources:[{sourceId:'S1-obiettivi-tassonomici-v4-2026-06-09',reviewScope:'course-objective',title:sources.get('S1-obiettivi-tassonomici-v4-2026-06-09').title,location:'p. '+g.sourcePage,supportedClaim:'Obiettivo didattico e collegamento delle unità minime; non prova di commestibilità.'}],reviewScope:'internal',independentReviewStatus:'not-attested'}));
 if(teachingGroups.length!==66||new Set(teachingGroups.map(g=>g.id)).size!==66||teachingGroups.some(g=>g.relatedIds.some(id=>!units.has(id))))throw Error('Invalid teaching groups');
+const courseRegistry=JSON.parse(await readFile(join(output,'course-sources.json'),'utf8'));
+const courseLiterature=JSON.parse(await readFile(join(output,'course-literature.json'),'utf8'));
+applyCourseLiterature([...catalog,...teachingGroups],courseLiterature,courseRegistry);
 const mobileAreas=areas.map(a=>{if(!Array.isArray(a.center)||a.center.length!==2||!a.center.every(Number.isFinite)||Math.abs(a.center[0])>90||Math.abs(a.center[1])>180)throw Error('Invalid [latitude,longitude] '+a.id);return {...a,coordinateOrder:'latitude-longitude',signalProvenance:a.signalProvenance??'heuristic',verifiedSignals:a.signalProvenance==='measured'?a.verifiedSignals:0,delayedVisitors:a.signalProvenance==='measured'?a.delayedVisitors:0};});
 
 const areaLiterature=JSON.parse(await readFile(join(output,'area-literature.json'),'utf8'));

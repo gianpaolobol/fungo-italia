@@ -35,8 +35,29 @@ for(const t of [...catalog,...groups]){
  assert(!('summary' in t)&&!('reviewStatus' in t)&&!('independentReviewStatus' in t),'Redundant generated metadata returned');
  assert(!t.sources.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)),'Internal document in public sources');
 }
-assert.equal(catalog.filter(t=>t.diagnosticNote).length,15);
+assert(catalog.filter(t=>t.diagnosticNote).length>=15);
 assert.equal(catalog.filter(t=>t.safetyCheck).length,4);
 const bibliography=JSON.parse(await readFile('src/data/bibliography.json','utf8'));
 assert(!bibliography.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)));
 console.log('Founding curriculum and edibility documents remain internal; useful diagnostic limits, safety checks and external references preserved.');
+
+const courseRegistry=JSON.parse(await readFile('src/data/course-sources.json','utf8'));
+const courseLiterature=JSON.parse(await readFile('src/data/course-literature.json','utf8'));
+assert.equal(courseRegistry.course.independentReviewComplete,false);
+assert.deepEqual(courseRegistry.foundations,foundations.documents.map(d=>d.sourceId));
+const courseRefs=new Map([...courseRegistry.documents,...courseRegistry.externalReferences].map(d=>[d.sourceId,d]));
+for(const entry of courseLiterature.records){
+ const taxon=[...catalog,...groups].find(t=>t.scientificName===entry.scientificName);assert(taxon);
+ for(const [field,values] of Object.entries(entry.additions))assert(values.every(v=>taxon[field].includes(v)),'Course addition lost on regeneration');
+ for(const [field,value] of Object.entries(entry.replacements))assert.deepEqual(taxon[field],value,'Course correction lost on regeneration');
+ for(const evidence of entry.evidence){
+  const ref=courseRefs.get(evidence.sourceId);assert(ref);
+  const source=taxon.sources.find(s=>s.sourceId===evidence.sourceId&&s.location===evidence.locator&&JSON.stringify(s.supportedClaim)===JSON.stringify(evidence.supportedClaim));
+  assert(source&&source.reviewScope==='course-material','Course citation lost');
+  assert.deepEqual(source.fields,evidence.fields);
+  if(evidence.page!==null)assert(evidence.page>0&&evidence.page<=ref.pageCount&&source.sourcePage===evidence.page);
+ }
+}
+assert(courseRegistry.documents.filter(d=>d.analysisStatus==='content-unread').every(d=>!courseLiterature.records.some(e=>e.evidence.some(s=>s.sourceId===d.sourceId))),'Unread archive used as evidence');
+assert(courseRegistry.documents.every(d=>d.rights.originalPublished===false));
+console.log('Course integrations, pointwise references and corrections survive regeneration; unread archives excluded and scientific gate preserved.');
