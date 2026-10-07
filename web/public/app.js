@@ -26,6 +26,9 @@ function matchesQuery(t){return norm([t.scientificName,...t.commonNames,...(t.al
 function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&matchesQuery(t));}
 function favoriteButton(t){return button(favoriteIds.includes(t.id)?'Rimuovi preferito':'Salva preferito','favorite',t.id);}
 function safeLink(url,label){return typeof url==='string'&&/^https:\/\//i.test(url)?'<a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(label||url)+'</a>':escape(label||url);}
+function studyText(value){
+ return value.replace(/ richiesto da S1/g,'').replace(/Nel defined set S1,/g,'In questo gruppo,').replace(/ectomicorrizico S1:/g,'ectomicorrizico:').replace(/Morfogruppo S1 dei/g,'Gruppo dei').replace(/; gruppo didattico S1\./g,'.').replace(/; profilo volutamente al rango Hydnum spp\.\/gruppo S1\./g,'.').replace(/S1 include A\. vidua; /g,'Il gruppo include A. vidua; ').replace(/Denominazione S1 mantenuta; /g,'');
+}
 function studySummary(t){
  if(t.summary.startsWith('Unità didattica al rango ')||t.summary.startsWith('Obiettivo didattico di genere o gruppo.'))return '';
  return t.summary;
@@ -39,10 +42,10 @@ function content(t,showIdentity=true){
  return (showIdentity?'<h2>'+escape(t.scientificName)+'</h2><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
- (diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(t.diagnosticNote)+'</p>':'')+
+ (diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
  (summary?'<p>'+escape(summary)+'</p>':'')+
- (t.characters.length?'<h3>Caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol>':'<p>Per studiare i caratteri, apri le schede collegate.</p>')+
- (t.differentiatingCharacter?'<h3>Carattere differenziante (+1)</h3><p>'+escape(t.differentiatingCharacter)+'</p>':'')+
+ (t.characters.length?'<h3>Caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(studyText(c))+'</li>').join('')+'</ol>':'<p>Per studiare i caratteri, apri le schede collegate.</p>')+
+ (t.differentiatingCharacter?'<h3>Carattere differenziante (+1)</h3><p>'+escape(studyText(t.differentiatingCharacter))+'</p>':'')+
  (t.lookalikes.length?'<h3>Specie simili</h3><p>'+escape(t.lookalikes.join(' · '))+'</p>':'')+
  (t.habitat.length?'<h3>Habitat</h3><p>'+escape(t.habitat.join(' · '))+'</p>':'')+
  (sources.length?'<h3>Fonti</h3>'+sources.map(source=>'<div class="source"><p>'+escape(source.title)+(source.location?' · '+escape(source.location):'')+'</p>'+(source.url?'<p class="small">'+safeLink(source.url,'Consulta la fonte')+'</p>':'')+'</div>').join(''):'')+
@@ -64,7 +67,7 @@ function renderReview(){
   focusReviewHeading();return;
  }
  const t=byId.get(session.ids[session.index]);
- const question='<p class="counter">Scheda '+(session.index+1)+' di '+total+'</p><h2>Quale unità tassonomica?</h2><p class="small">Può essere una specie, una sezione o un gruppo di specie. Ricorda il nome a partire dai caratteri.</p><h3>Tre caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol><h3>Carattere differenziante (+1)</h3><p>'+escape(t.differentiatingCharacter)+'</p>';
+ const question='<p class="counter">Scheda '+(session.index+1)+' di '+total+'</p><h2>Quale unità tassonomica?</h2><p class="small">Può essere una specie, una sezione o un gruppo di specie. Ricorda il nome a partire dai caratteri.</p><h3>Tre caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(studyText(c))+'</li>').join('')+'</ol><h3>Carattere differenziante (+1)</h3><p>'+escape(studyText(t.differentiatingCharacter))+'</p>';
  const answer=session.revealed?'<section id="review-answer"><h2>'+escape(t.scientificName)+'</h2><p class="small">'+escape(ranks[t.rank]||t.rank)+'</p><div class="row">'+button('Da ripassare','review-rate','again')+button('Ricordata','review-rate','remembered')+'</div><details><summary>Confronta la scheda e le fonti</summary>'+content(t,false)+'</details></section>':button('Mostra risposta','review-reveal','','full');
  showDialog('Ripasso attivo',question+answer);focusReviewHeading();
 }
