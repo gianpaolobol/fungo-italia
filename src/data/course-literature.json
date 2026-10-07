@@ -638,9 +638,6 @@
       "additions": {
         "habitat": [
           "Boschi di latifoglie."
-        ],
-        "lookalikes": [
-          "Chroogomphus helveticus e Armillaria: confusioni documentate; l’habitat non sostituisce l’esame del carpoforo."
         ]
       },
       "replacements": {},
@@ -653,15 +650,6 @@
           "page": 36,
           "locator": "p. 36",
           "supportedClaim": "Boschi di latifoglie."
-        },
-        {
-          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
-          "fields": [
-            "lookalikes"
-          ],
-          "page": 29,
-          "locator": "p. 29",
-          "supportedClaim": "Chroogomphus helveticus e Armillaria: confusioni documentate; l’habitat non sostituisce l’esame del carpoforo."
         }
       ]
     },
@@ -692,7 +680,7 @@
             "lookalikes"
           ],
           "page": 29,
-          "locator": "p. 29",
+          "locator": "pp. 29–30, confronto del gruppo Orellani",
           "supportedClaim": "Chroogomphus helveticus e Armillaria: confronti segnalati per il gruppo Orellani."
         }
       ]
@@ -863,7 +851,7 @@
       "scientificName": "Cantharellus cibarius complex",
       "additions": {
         "lookalikes": [
-          "Omphalotus olearius: confrontare pieghe dell’imenoforo e vere lamelle, oltre al substrato."
+          "Omphalotus olearius: confronto segnalato nella lezione di micotossicologia."
         ]
       },
       "replacements": {},
@@ -875,7 +863,7 @@
           ],
           "page": 119,
           "locator": "p. 119",
-          "supportedClaim": "Omphalotus olearius: confrontare pieghe dell’imenoforo e vere lamelle, oltre al substrato."
+          "supportedClaim": "Omphalotus olearius: confronto segnalato nella lezione di micotossicologia."
         }
       ]
     },
@@ -883,7 +871,7 @@
       "scientificName": "Omphalotus olearius",
       "additions": {
         "lookalikes": [
-          "Cantharellus cibarius complex: distinguere vere lamelle e pieghe; il colore da solo non basta."
+          "Cantharellus cibarius complex: confronto segnalato nella lezione di micotossicologia."
         ]
       },
       "replacements": {},
@@ -895,7 +883,7 @@
           ],
           "page": 119,
           "locator": "p. 119",
-          "supportedClaim": "Cantharellus cibarius complex: distinguere vere lamelle e pieghe; il colore da solo non basta."
+          "supportedClaim": "Cantharellus cibarius complex: confronto segnalato nella lezione di micotossicologia."
         }
       ]
     },

@@ -26,8 +26,9 @@ export function applyCourseLiterature(records,integration,registry){
    assert(/^https:\/\//.test(source.url)&&evidence.locator&&evidence.supportedClaim);
    assert(evidence.fields.length>0&&evidence.fields.every(f=>changed.includes(f)));
    if(evidence.page!==null)assert(Number.isInteger(evidence.page)&&evidence.page>0&&Number.isInteger(source.pageCount)&&evidence.page<=source.pageCount,'Invalid source page');
+   if(evidence.characterIndices)assert(evidence.fields.includes('characters')&&Array.isArray(evidence.characterIndices)&&evidence.characterIndices.length>0&&evidence.characterIndices.every(i=>Number.isInteger(i)&&i>=0&&i<3),'Invalid character scope');
    if(source.driveFileId)assert(source.analysisStatus==='extracted-text-reviewed','Unread source cannot support a claim');
-   taxon.sources.push({sourceId:source.sourceId,reviewScope:'course-material',title:source.title,authors:source.authors,url:source.url,location:evidence.locator,supportedClaim:evidence.supportedClaim,fields:evidence.fields,...(evidence.page!==null?{sourcePage:evidence.page}:{})});
+   taxon.sources.push({sourceId:source.sourceId,reviewScope:'course-material',title:source.title,authors:source.authors,url:source.url,location:evidence.locator,supportedClaim:evidence.supportedClaim,fields:evidence.fields,...(evidence.characterIndices?{characterIndices:evidence.characterIndices}:{}),...(evidence.page!==null?{sourcePage:evidence.page}:{})});
   }
  }
  return records;

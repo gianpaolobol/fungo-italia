@@ -55,6 +55,7 @@ for(const entry of courseLiterature.records){
   const source=taxon.sources.find(s=>s.sourceId===evidence.sourceId&&s.location===evidence.locator&&JSON.stringify(s.supportedClaim)===JSON.stringify(evidence.supportedClaim));
   assert(source&&source.reviewScope==='course-material','Course citation lost');
   assert.deepEqual(source.fields,evidence.fields);
+  assert.deepEqual(source.characterIndices,evidence.characterIndices);
   if(evidence.page!==null)assert(evidence.page>0&&evidence.page<=ref.pageCount&&source.sourcePage===evidence.page);
  }
 }

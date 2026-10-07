@@ -64,11 +64,14 @@
         ],
         "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
         "location": "p. 15",
-        "supportedClaim": "Cappello biancastro o grigio-bruno, spesso fibrilloso-squamuloso verso il centro. Gambo con base nettamente bulbosa e spesso con cordoni o residui miceliari robusti. Viraggi deboli e variabili: possibile lieve arrossamento nella carne del gambo e ingiallimento localizzato alla base; odore basale talora debolmente fenolico.",
+        "supportedClaim": "Ambienti ruderali, parchi e giardini.",
         "fields": [
           "characters"
         ],
-        "sourcePage": 15
+        "sourcePage": 15,
+        "characterIndices": [
+          2
+        ]
       },
       {
         "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
@@ -97,7 +100,10 @@
           "characters",
           "habitat"
         ],
-        "sourcePage": 2
+        "sourcePage": 2,
+        "characterIndices": [
+          2
+        ]
       }
     ],
     "rank": "species",
@@ -305,7 +311,7 @@
         ],
         "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
         "location": "p. 10",
-        "supportedClaim": "Margini stradali e terreni compatti; può emergere attraverso l’asfalto.",
+        "supportedClaim": "Agaricus bisporus: confrontare soprattutto il doppio anello di A. bitorquis.",
         "fields": [
           "habitat"
         ],
@@ -641,7 +647,7 @@
         ],
         "url": "https://drive.google.com/file/d/1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2/view",
         "location": "p. 13",
-        "supportedClaim": "Boschi termofili in ambienti collinari.",
+        "supportedClaim": "Amanita ovoidea: aspetto bianco e carne immutabile sono condivisi e non bastano per separarle.",
         "fields": [
           "habitat"
         ],
@@ -713,7 +719,7 @@
         ],
         "url": "https://drive.google.com/file/d/1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2/view",
         "location": "p. 13",
-        "supportedClaim": "Boschi termofili in ambienti collinari.",
+        "supportedClaim": "Amanita proxima: la somiglianza tra le amanite bianche richiede l’esame completo dei caratteri.",
         "fields": [
           "habitat"
         ],
@@ -1286,11 +1292,14 @@
         ],
         "url": "https://drive.google.com/file/d/1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR/view",
         "location": "p. 33",
-        "supportedClaim": "La volva può essere sottile o friabile: l’assenza di un sacco robusto non esclude la sezione.",
+        "supportedClaim": "Gambo slanciato, generalmente non nettamente bulboso; volva basale di consistenza variabile, anche sottile o friabile.",
         "fields": [
           "diagnosticNote"
         ],
-        "sourcePage": 33
+        "sourcePage": 33,
+        "characterIndices": [
+          2
+        ]
       },
       {
         "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
@@ -1375,7 +1384,7 @@
         ],
         "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
         "location": "Diapositiva «Calocybe gambosa»",
-        "supportedClaim": "Prati e ambienti erbosi, anche in prossimità di Rosaceae.",
+        "supportedClaim": "Entoloma clypeatum e Inocybe primaverili: confrontare sviluppo e colore delle lamelle, insieme agli altri caratteri.",
         "fields": [
           "habitat"
         ]
@@ -1753,7 +1762,7 @@
         ],
         "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
         "location": "Diapositiva «Marasmius oreades»",
-        "supportedClaim": "Prati e superfici erbose, spesso in cerchi o file.",
+        "supportedClaim": "Marasmius collinus: confrontare soprattutto consistenza e resistenza del gambo.",
         "fields": [
           "habitat"
         ]
@@ -1852,9 +1861,7 @@
       "Lamelle relativamente spaziate, giallo-arancio poi ruggine.",
       "Gambo giallo-ocra fibrilloso, senza evidenti fasce anulari persistenti."
     ],
-    "lookalikes": [
-      "Chroogomphus helveticus e Armillaria: confusioni documentate; l’habitat non sostituisce l’esame del carpoforo."
-    ],
+    "lookalikes": [],
     "habitat": [
       "Boschi di latifoglie."
     ],
@@ -1871,21 +1878,6 @@
           "habitat"
         ],
         "sourcePage": 36
-      },
-      {
-        "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
-        "reviewScope": "course-material",
-        "title": "Sitta micotossicologia Amiata 1.10.25.pdf",
-        "authors": [
-          "Nicola Sitta"
-        ],
-        "url": "https://drive.google.com/file/d/1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK/view",
-        "location": "p. 29",
-        "supportedClaim": "Chroogomphus helveticus e Armillaria: confusioni documentate; l’habitat non sostituisce l’esame del carpoforo.",
-        "fields": [
-          "lookalikes"
-        ],
-        "sourcePage": 29
       }
     ],
     "rank": "species",
@@ -1939,7 +1931,7 @@
           "Nicola Sitta"
         ],
         "url": "https://drive.google.com/file/d/1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK/view",
-        "location": "p. 29",
+        "location": "pp. 29–30, confronto del gruppo Orellani",
         "supportedClaim": "Chroogomphus helveticus e Armillaria: confronti segnalati per il gruppo Orellani.",
         "fields": [
           "lookalikes"
@@ -3158,7 +3150,7 @@
         ],
         "url": "https://drive.google.com/file/d/1_dhoC5hs6I5tG_bAI145535dXMtXEa_V/view",
         "location": "p. 73",
-        "supportedClaim": "Colonie lungo strade e mulattiere, anche su terreno ghiaioso.",
+        "supportedClaim": "Clitocybe bianche muscariniche: la crescita in colonia non basta a escluderle.",
         "fields": [
           "habitat"
         ],
@@ -3233,7 +3225,7 @@
     ],
     "lookalikes": [
       "Cantharellus cibarius: confronto segnalato nella tabella dei sosia.",
-      "Cantharellus cibarius complex: distinguere vere lamelle e pieghe; il colore da solo non basta."
+      "Cantharellus cibarius complex: confronto segnalato nella lezione di micotossicologia."
     ],
     "habitat": [],
     "sources": [
@@ -3256,7 +3248,7 @@
         ],
         "url": "https://drive.google.com/file/d/1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6/view",
         "location": "p. 119",
-        "supportedClaim": "Cantharellus cibarius complex: distinguere vere lamelle e pieghe; il colore da solo non basta.",
+        "supportedClaim": "Cantharellus cibarius complex: confronto segnalato nella lezione di micotossicologia.",
         "fields": [
           "lookalikes"
         ],
@@ -3329,7 +3321,7 @@
         ],
         "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
         "location": "Diapositiva «Kuehneromyces mutabilis»",
-        "supportedClaim": "Su legno, anche in boschi montani di faggio e abete rosso.",
+        "supportedClaim": "Galerina marginata group: confrontare anello e rivestimento del gambo; una raccolta cespitosa non esclude esemplari diversi.",
         "fields": [
           "habitat"
         ]
@@ -4285,6 +4277,9 @@
         "supportedClaim": "Odore variabile secondo la specie: di varechina o fetido, misto con note mandorlate, oppure di mandorle amare o marzapane.",
         "fields": [
           "characters"
+        ],
+        "characterIndices": [
+          2
         ]
       }
     ],
@@ -4880,7 +4875,7 @@
     ],
     "lookalikes": [
       "Omphalotus olearius: confronto della fonte con Cantharellus cibarius; non risolve il complex moderno.",
-      "Omphalotus olearius: confrontare pieghe dell’imenoforo e vere lamelle, oltre al substrato."
+      "Omphalotus olearius: confronto segnalato nella lezione di micotossicologia."
     ],
     "habitat": [],
     "sources": [
@@ -4913,7 +4908,7 @@
         ],
         "url": "https://drive.google.com/file/d/1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6/view",
         "location": "p. 119",
-        "supportedClaim": "Omphalotus olearius: confrontare pieghe dell’imenoforo e vere lamelle, oltre al substrato.",
+        "supportedClaim": "Omphalotus olearius: confronto segnalato nella lezione di micotossicologia.",
         "fields": [
           "lookalikes"
         ],
