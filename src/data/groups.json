@@ -109,6 +109,15 @@
         "alt": "Cyclocybe cylindracea — vista superiore",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Cyclocybe cylindracea"
+      },
+      {
+        "src": "images/reference/external-agrocybe-cyclocybe-underside.jpg",
+        "view": "underside",
+        "alt": "Cyclocybe cylindracea — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Cyclocybe cylindracea",
+        "sourceUrl": "https://www.inaturalist.org/observations/345109575",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -357,6 +366,24 @@
         "subjectTaxon": "Clitopilus prunulus",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-clitopilus-top.jpg",
+        "view": "top",
+        "alt": "Clitopilus prunulus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Clitopilus prunulus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57862867",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-clitopilus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Clitopilus prunulus — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Clitopilus prunulus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57862867",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -663,6 +690,15 @@
         "alt": "Galerina marginata — sotto, cappello e gambo",
         "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Galerina marginata"
+      },
+      {
+        "src": "images/reference/external-galerina-lateral.jpg",
+        "view": "lateral",
+        "alt": "Galerina marginata — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Galerina marginata",
+        "sourceUrl": "https://www.inaturalist.org/observations/15915275",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -749,6 +785,15 @@
         "subjectTaxon": "Hygrocybe punicea",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      {
+        "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hygrocybe punicea — vista laterale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://www.inaturalist.org/observations/406014874",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1445,6 +1490,15 @@
         "alt": "Kuehneromyces mutabilis — cappello e gambo",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Kuehneromyces mutabilis"
+      },
+      {
+        "src": "images/reference/external-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces-top.jpg",
+        "view": "top",
+        "alt": "Kuehneromyces mutabilis — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Kuehneromyces mutabilis",
+        "sourceUrl": "https://www.inaturalist.org/observations/86452505",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1601,6 +1655,35 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-psilocybe-s-l-incluso-deconica-top.jpg",
+        "view": "top",
+        "alt": "Psilocybe striata — vista superiore",
+        "credit": "Feng; Li; Yang; Cao; Zhao (2025), Fig.3a, CC BY 4.0",
+        "subjectTaxon": "Psilocybe striata",
+        "sourceUrl": "https://www.mdpi.com/2309-608X/11/12/887",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-psilocybe-s-l-incluso-deconica-underside.jpg",
+        "view": "underside",
+        "alt": "Psilocybe striata — imenoforo",
+        "credit": "Feng; Li; Yang; Cao; Zhao (2025), Fig.3a, CC BY 4.0",
+        "subjectTaxon": "Psilocybe striata",
+        "sourceUrl": "https://www.mdpi.com/2309-608X/11/12/887",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-psilocybe-s-l-incluso-deconica-lateral.jpg",
+        "view": "lateral",
+        "alt": "Psilocybe striata — vista laterale",
+        "credit": "Feng; Li; Yang; Cao; Zhao (2025), Fig.3a, CC BY 4.0",
+        "subjectTaxon": "Psilocybe striata",
+        "sourceUrl": "https://www.mdpi.com/2309-608X/11/12/887",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12
@@ -2089,6 +2172,15 @@
         "alt": "Caloboletus radicans — vista superiore di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 51. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
         "subjectTaxon": "Caloboletus radicans"
+      },
+      {
+        "src": "images/reference/external-caloboletus-underside.jpg",
+        "view": "underside",
+        "alt": "Caloboletus radicans — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Caloboletus radicans",
+        "sourceUrl": "https://www.inaturalist.org/observations/244111371",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -2113,6 +2205,26 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-chroogomphus-underside.jpg",
+        "view": "underside",
+        "alt": "Chroogomphus pakistanicus — imenoforo",
+        "credit": "Kiran et al. (2020), Fig.2, CC BY 4.0",
+        "subjectTaxon": "Chroogomphus pakistanicus",
+        "sourceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-chroogomphus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Chroogomphus pakistanicus — vista laterale",
+        "credit": "Kiran et al. (2020), Fig.2, CC BY 4.0",
+        "subjectTaxon": "Chroogomphus pakistanicus",
+        "sourceUrl": "https://backoffice.biblio.ugent.be/download/8705242/8705243",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15
@@ -2135,6 +2247,26 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-gomphidius-underside.jpg",
+        "view": "underside",
+        "alt": "Gomphidius glutinosus — imenoforo",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Gomphidius glutinosus",
+        "sourceUrl": "https://www.inaturalist.org/observations/34117478",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-gomphidius-top.jpg",
+        "view": "top",
+        "alt": "Gomphidius glutinosus — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Gomphidius glutinosus",
+        "sourceUrl": "https://www.inaturalist.org/observations/34117478",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15
@@ -2929,6 +3061,24 @@
         "subjectTaxon": "Gomphus clavatus",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-gomphus-underside.jpg",
+        "view": "underside",
+        "alt": "Gomphus clavatus — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Gomphus clavatus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57458865",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-gomphus-top.jpg",
+        "view": "top",
+        "alt": "Gomphus clavatus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Gomphus clavatus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57458865",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3086,6 +3236,24 @@
         "alt": "Auricularia auricula-judae — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Auricularia auricula-judae"
+      },
+      {
+        "src": "images/reference/external-auricularia-top.jpg",
+        "view": "top",
+        "alt": "Auricularia auricula-judae — vista superiore",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Auricularia auricula-judae",
+        "sourceUrl": "https://www.inaturalist.org/observations/332288153",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-auricularia-underside.jpg",
+        "view": "underside",
+        "alt": "Auricularia auricula-judae — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Auricularia auricula-judae",
+        "sourceUrl": "https://www.inaturalist.org/observations/332288153",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3149,6 +3317,24 @@
         "alt": "Helvella spadicea — vista laterale di cappello e gambo",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 36; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Helvella spadicea"
+      },
+      {
+        "src": "images/reference/external-helvella-underside.jpg",
+        "view": "underside",
+        "alt": "Helvella orentitomentosa — imenoforo",
+        "credit": "Yu; Lei; Luangharn; Zhao; Zhu (2023), Fig.3a, CC BY 4.0",
+        "subjectTaxon": "Helvella orentitomentosa",
+        "sourceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-helvella-top.jpg",
+        "view": "top",
+        "alt": "Helvella orentitomentosa — vista superiore",
+        "credit": "Yu; Lei; Luangharn; Zhao; Zhu (2023), Fig.3b, CC BY 4.0",
+        "subjectTaxon": "Helvella orentitomentosa",
+        "sourceUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2023.1182025/full",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3180,6 +3366,15 @@
         "alt": "Morchella esculenta s.l. — fianco, cappello e gambo",
         "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 60; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Morchella esculenta s.l."
+      },
+      {
+        "src": "images/reference/external-morchella-top.jpg",
+        "view": "top",
+        "alt": "Morchella esculenta — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Morchella esculenta",
+        "sourceUrl": "https://www.inaturalist.org/observations/114602458",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3212,6 +3407,15 @@
         "alt": "Sarcosphaera sp. — corpi fruttiferi, vista superiore",
         "credit": "Fonte: Claudia Perini, Perini Classificazione bis.pdf, p. 15; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Sarcosphaera sp."
+      },
+      {
+        "src": "images/reference/external-sarcosphaera-underside.jpg",
+        "view": "underside",
+        "alt": "Sarcosphaera coronaria — base esterna",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Sarcosphaera coronaria",
+        "sourceUrl": "https://www.inaturalist.org/observations/10726841",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {

@@ -688,6 +688,24 @@
         "alt": "Agaricus bitorquis — vista laterale di cappello e gambo",
         "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 10. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata.",
         "subjectTaxon": "Agaricus bitorquis"
+      },
+      {
+        "src": "images/reference/external-agaricus-bitorquis-top.jpg",
+        "view": "top",
+        "alt": "Agaricus bitorquis — vista superiore",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Agaricus bitorquis",
+        "sourceUrl": "https://www.inaturalist.org/observations/342744967",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-agaricus-bitorquis-underside.jpg",
+        "view": "underside",
+        "alt": "Agaricus bitorquis — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Agaricus bitorquis",
+        "sourceUrl": "https://www.inaturalist.org/observations/342744967",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -782,6 +800,24 @@
         "alt": "Agaricus bisporus — vista superiore del cappello",
         "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 11. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata.",
         "subjectTaxon": "Agaricus bisporus"
+      },
+      {
+        "src": "images/reference/external-agaricus-bisporus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Agaricus bisporus — vista laterale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Agaricus bisporus",
+        "sourceUrl": "https://www.inaturalist.org/observations/406107181",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-agaricus-bisporus-underside.jpg",
+        "view": "underside",
+        "alt": "Agaricus bisporus — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Agaricus bisporus",
+        "sourceUrl": "https://www.inaturalist.org/observations/406107181",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -860,6 +896,15 @@
         "alt": "Cyclocybe cylindracea — vista superiore",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Cyclocybe cylindracea"
+      },
+      {
+        "src": "images/reference/external-cyclocybe-cylindracea-underside.jpg",
+        "view": "underside",
+        "alt": "Cyclocybe cylindracea — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Cyclocybe cylindracea",
+        "sourceUrl": "https://www.inaturalist.org/observations/345109575",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1271,6 +1316,15 @@
         "alt": "Amanita ovoidea — vista laterale di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 29. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
         "subjectTaxon": "Amanita ovoidea"
+      },
+      {
+        "src": "images/reference/external-amanita-ovoidea-underside.jpg",
+        "view": "underside",
+        "alt": "Amanita ovoidea — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Amanita ovoidea",
+        "sourceUrl": "https://www.inaturalist.org/observations/329076323",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1569,6 +1623,15 @@
         "alt": "Amanita caesarea — cappello dall’alto",
         "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
         "subjectTaxon": "Amanita caesarea"
+      },
+      {
+        "src": "images/reference/external-amanita-caesarea-underside.jpg",
+        "view": "underside",
+        "alt": "Amanita caesarea — imenoforo",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Amanita caesarea",
+        "sourceUrl": "https://www.inaturalist.org/observations/5668752",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1988,6 +2051,15 @@
         "alt": "Amanita vittadinii — vista inferiore del cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
         "subjectTaxon": "Amanita vittadinii"
+      },
+      {
+        "src": "images/reference/external-saproamanita-vittadinii-lateral.jpg",
+        "view": "lateral",
+        "alt": "Saproamanita vittadinii — vista laterale",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Saproamanita vittadinii",
+        "sourceUrl": "https://www.inaturalist.org/observations/324211086",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -2456,6 +2528,15 @@
         "alt": "Infundibulicybe geotropa — sopra, cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 63. Autore della singola fotografia non specificato.",
         "subjectTaxon": "Infundibulicybe geotropa"
+      },
+      {
+        "src": "images/reference/external-infundibulicybe-geotropa-underside.jpg",
+        "view": "underside",
+        "alt": "Infundibulicybe geotropa — imenoforo",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Infundibulicybe geotropa",
+        "sourceUrl": "https://www.inaturalist.org/observations/63969281",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -2603,6 +2684,24 @@
         "subjectTaxon": "Clitopilus prunulus",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-clitopilus-prunulus-s-l-top.jpg",
+        "view": "top",
+        "alt": "Clitopilus prunulus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Clitopilus prunulus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57862867",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-clitopilus-prunulus-s-l-lateral.jpg",
+        "view": "lateral",
+        "alt": "Clitopilus prunulus — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Clitopilus prunulus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57862867",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3346,6 +3445,24 @@
         "subjectTaxon": "Entoloma sinuatum",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-sinuatum-top.jpg",
+        "view": "top",
+        "alt": "Entoloma sinuatum — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Entoloma sinuatum",
+        "sourceUrl": "https://www.inaturalist.org/observations/34492154",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-sinuatum-lateral.jpg",
+        "view": "lateral",
+        "alt": "Entoloma sinuatum — vista laterale",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Entoloma sinuatum",
+        "sourceUrl": "https://www.inaturalist.org/observations/34492154",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3372,6 +3489,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Odore nitroso, clorato o saponaceo variabile; profilo riferito al complesso s.l.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-entoloma-rhodopolium-s-l-top.jpg",
+        "view": "top",
+        "alt": "Entoloma rhodopolium — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Entoloma rhodopolium",
+        "sourceUrl": "https://www.inaturalist.org/observations/93020374",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-rhodopolium-s-l-lateral.jpg",
+        "view": "lateral",
+        "alt": "Entoloma rhodopolium — vista laterale",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Entoloma rhodopolium",
+        "sourceUrl": "https://www.inaturalist.org/observations/93020374",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-rhodopolium-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Entoloma rhodopolium — imenoforo",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Entoloma rhodopolium",
+        "sourceUrl": "https://www.inaturalist.org/observations/93020374",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -3454,6 +3600,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione molto precoce in primavera, spesso in ambienti con conifere.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-entoloma-vernum-top.jpg",
+        "view": "top",
+        "alt": "Entoloma vernum — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Entoloma vernum",
+        "sourceUrl": "https://www.inaturalist.org/observations/26436965",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-vernum-lateral.jpg",
+        "view": "lateral",
+        "alt": "Entoloma vernum — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Entoloma vernum",
+        "sourceUrl": "https://www.inaturalist.org/observations/26436965",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-vernum-underside.jpg",
+        "view": "underside",
+        "alt": "Entoloma vernum — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Entoloma vernum",
+        "sourceUrl": "https://www.inaturalist.org/observations/26436965",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -3478,6 +3653,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione primaverile strettamente associata a Rosaceae legnose.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-entoloma-clypeatum-s-l-top.jpg",
+        "view": "top",
+        "alt": "Entoloma clypeatum — vista superiore",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Entoloma clypeatum",
+        "sourceUrl": "https://www.inaturalist.org/observations/19154361",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-entoloma-clypeatum-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Entoloma clypeatum — imenoforo",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Entoloma clypeatum",
+        "sourceUrl": "https://www.inaturalist.org/observations/19154361",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -3634,6 +3829,15 @@
         "alt": "Galerina marginata — sotto, cappello e gambo",
         "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Galerina marginata"
+      },
+      {
+        "src": "images/reference/external-galerina-marginata-group-lateral.jpg",
+        "view": "lateral",
+        "alt": "Galerina marginata — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Galerina marginata",
+        "sourceUrl": "https://www.inaturalist.org/observations/15915275",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3663,6 +3867,35 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Hygrocybe conica",
     "differentiatingCharacter": "Basidioma che annerisce nettamente per manipolazione, lesione o invecchiamento.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hygrocybe-conica-s-l-top.jpg",
+        "view": "top",
+        "alt": "Hygrocybe conica — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hygrocybe conica",
+        "sourceUrl": "https://www.inaturalist.org/observations/95024080",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hygrocybe-conica-s-l-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hygrocybe conica — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hygrocybe conica",
+        "sourceUrl": "https://www.inaturalist.org/observations/95024080",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hygrocybe-conica-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Hygrocybe conica — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hygrocybe conica",
+        "sourceUrl": "https://www.inaturalist.org/observations/95024080",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 8,
@@ -3707,6 +3940,15 @@
         "subjectTaxon": "Hygrocybe punicea",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      {
+        "src": "images/reference/external-hygrocybe-punicea-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hygrocybe punicea — vista laterale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://www.inaturalist.org/observations/406014874",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3904,6 +4146,35 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Gambo giallo più brunastro in basso, con velo o zona anulare effimera.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hypholoma-fasciculare-top.jpg",
+        "view": "top",
+        "alt": "Hypholoma fasciculare — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hypholoma fasciculare",
+        "sourceUrl": "https://www.inaturalist.org/observations/13580849",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hypholoma-fasciculare-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hypholoma fasciculare — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hypholoma fasciculare",
+        "sourceUrl": "https://www.inaturalist.org/observations/13580849",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hypholoma-fasciculare-underside.jpg",
+        "view": "underside",
+        "alt": "Hypholoma fasciculare — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hypholoma fasciculare",
+        "sourceUrl": "https://www.inaturalist.org/observations/13580849",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 8,
@@ -4208,6 +4479,26 @@
         "precautions": []
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lepiota-cristata-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lepiota cristata — vista laterale",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Lepiota cristata",
+        "sourceUrl": "https://www.inaturalist.org/observations/19161953",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lepiota-cristata-top.jpg",
+        "view": "top",
+        "alt": "Lepiota cristata — vista superiore",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Lepiota cristata",
+        "sourceUrl": "https://www.inaturalist.org/observations/19161953",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
@@ -4235,6 +4526,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Caratteristica di serre, terricci e vasi da fiori.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lepiota-elaiophylla-underside.jpg",
+        "view": "underside",
+        "alt": "Lepiota elaiophylla — imenoforo",
+        "credit": "Ana Júlia Ferreira; Vagner Gularte Cortez (2012), Fig.2, CC BY 4.0",
+        "subjectTaxon": "Lepiota elaiophylla",
+        "sourceUrl": "https://www.mycosphere.org/pdf/MC3_6_No11.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lepiota-elaiophylla-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lepiota elaiophylla — vista laterale",
+        "credit": "Ana Júlia Ferreira; Vagner Gularte Cortez (2012), Fig.3, CC BY 4.0",
+        "subjectTaxon": "Lepiota elaiophylla",
+        "sourceUrl": "https://www.mycosphere.org/pdf/MC3_6_No11.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lepiota-elaiophylla-top.jpg",
+        "view": "top",
+        "alt": "Lepiota elaiophylla — vista superiore",
+        "credit": "Ana Júlia Ferreira; Vagner Gularte Cortez (2012), Fig.3, CC BY 4.0",
+        "subjectTaxon": "Lepiota elaiophylla",
+        "sourceUrl": "https://www.mycosphere.org/pdf/MC3_6_No11.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
@@ -5164,6 +5484,15 @@
         "alt": "Kuehneromyces mutabilis — cappello e gambo",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Kuehneromyces mutabilis"
+      },
+      {
+        "src": "images/reference/external-kuehneromyces-mutabilis-top.jpg",
+        "view": "top",
+        "alt": "Kuehneromyces mutabilis — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Kuehneromyces mutabilis",
+        "sourceUrl": "https://www.inaturalist.org/observations/86452505",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -5373,6 +5702,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Tipica di cippato, pacciamature e residui legnosi, con robusti rizomorfi bianchi alla base.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-stropharia-rugosoannulata-lateral.jpg",
+        "view": "lateral",
+        "alt": "Stropharia rugosoannulata — vista laterale",
+        "credit": "Yang; Meng; Ni; Zhang; Dong (2022), Fig.1A, CC BY 4.0",
+        "subjectTaxon": "Stropharia rugosoannulata",
+        "sourceUrl": "https://www.mdpi.com/2309-608X/8/2/162",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-stropharia-rugosoannulata-top.jpg",
+        "view": "top",
+        "alt": "Stropharia rugosoannulata — vista superiore",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Stropharia rugosoannulata",
+        "sourceUrl": "https://www.inaturalist.org/observations/277465141",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-stropharia-rugosoannulata-underside.jpg",
+        "view": "underside",
+        "alt": "Stropharia rugosoannulata — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Stropharia rugosoannulata",
+        "sourceUrl": "https://www.inaturalist.org/observations/277465141",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -6083,6 +6441,15 @@
         "alt": "Tricholoma sejunctum — vista inferiore del cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
         "subjectTaxon": "Tricholoma sejunctum"
+      },
+      {
+        "src": "images/reference/external-tricholoma-sejunctum-lateral.jpg",
+        "view": "lateral",
+        "alt": "Tricholoma sejunctum — vista laterale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Tricholoma sejunctum",
+        "sourceUrl": "https://www.inaturalist.org/observations/329855255",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -6269,6 +6636,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente su terreni disturbati, campi, compost e prati ricchi.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-volvopluteus-gloiocephalus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Volvopluteus gloiocephalus — vista laterale",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Volvopluteus gloiocephalus",
+        "sourceUrl": "https://www.inaturalist.org/observations/33745350",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-volvopluteus-gloiocephalus-top.jpg",
+        "view": "top",
+        "alt": "Volvopluteus gloiocephalus — vista superiore",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Volvopluteus gloiocephalus",
+        "sourceUrl": "https://www.inaturalist.org/observations/33745350",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13,
@@ -6506,6 +6893,26 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Lactifluus volemus",
     "differentiatingCharacter": "Odore caratteristico di pesce o crostacei, più evidente negli esemplari maturi.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-lactarius-volemus-s-l-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lactifluus volemus — vista laterale",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Lactifluus volemus",
+        "sourceUrl": "https://www.inaturalist.org/observations/58219367",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-volemus-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Lactifluus volemus — imenoforo",
+        "credit": "Eugene Popov, CC BY 4.0",
+        "subjectTaxon": "Lactifluus volemus",
+        "sourceUrl": "https://www.inaturalist.org/observations/58219367",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13,
@@ -6541,6 +6948,15 @@
         "subjectTaxon": "Lactarius tesquorum",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_tesquorum_Malençon_399418.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-tesquorum-lateral.jpg",
+        "view": "lateral",
+        "alt": "Lactarius tesquorum — vista laterale",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Lactarius tesquorum",
+        "sourceUrl": "https://www.inaturalist.org/observations/9367882",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -6944,6 +7360,15 @@
         "alt": "Rubroboletus satanas — vista superiore di cappello e gambo",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
         "subjectTaxon": "Rubroboletus satanas"
+      },
+      {
+        "src": "images/reference/external-rubroboletus-satanas-underside.jpg",
+        "view": "underside",
+        "alt": "Rubroboletus satanas — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Rubroboletus satanas",
+        "sourceUrl": "https://www.inaturalist.org/observations/194975564",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -7169,6 +7594,24 @@
         "alt": "Caloboletus radicans — vista superiore di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 51. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
         "subjectTaxon": "Caloboletus radicans"
+      },
+      {
+        "src": "images/reference/external-caloboletus-radicans-lateral.jpg",
+        "view": "lateral",
+        "alt": "Caloboletus radicans — vista laterale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Caloboletus radicans",
+        "sourceUrl": "https://www.inaturalist.org/observations/194984296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-caloboletus-radicans-underside.jpg",
+        "view": "underside",
+        "alt": "Caloboletus radicans — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Caloboletus radicans",
+        "sourceUrl": "https://www.inaturalist.org/observations/194984296",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -7246,6 +7689,15 @@
         "alt": "Gyroporus cyanescens — vista inferiore di cappello e gambo",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 35; fotografo individuale non indicato.",
         "subjectTaxon": "Gyroporus cyanescens"
+      },
+      {
+        "src": "images/reference/external-gyroporus-cyanescens-lateral.jpg",
+        "view": "lateral",
+        "alt": "Gyroporus cyanescens — vista laterale",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Gyroporus cyanescens",
+        "sourceUrl": "https://www.inaturalist.org/observations/232719197",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -7810,6 +8262,15 @@
         "subjectTaxon": "Craterellus tubaeformis",
         "sourceUrl": "https://artsdatabanken.no/arter/takson/39039",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-tubaeformis-underside.jpg",
+        "view": "underside",
+        "alt": "Craterellus tubaeformis — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Craterellus tubaeformis",
+        "sourceUrl": "https://www.inaturalist.org/observations/247459433",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -7841,6 +8302,35 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne molto sottile e membranacea.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-craterellus-cornucopioides-lateral.jpg",
+        "view": "lateral",
+        "alt": "Craterellus cornucopioides — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Craterellus cornucopioides",
+        "sourceUrl": "https://www.inaturalist.org/observations/89664683",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-cornucopioides-underside.jpg",
+        "view": "underside",
+        "alt": "Craterellus cornucopioides — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Craterellus cornucopioides",
+        "sourceUrl": "https://www.inaturalist.org/observations/89664683",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-craterellus-cornucopioides-top.jpg",
+        "view": "top",
+        "alt": "Craterellus cornucopioides — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Craterellus cornucopioides",
+        "sourceUrl": "https://www.inaturalist.org/observations/89664683",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -7876,6 +8366,24 @@
         "subjectTaxon": "Gomphus clavatus",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-gomphus-clavatus-underside.jpg",
+        "view": "underside",
+        "alt": "Gomphus clavatus — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Gomphus clavatus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57458865",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-gomphus-clavatus-top.jpg",
+        "view": "top",
+        "alt": "Gomphus clavatus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Gomphus clavatus",
+        "sourceUrl": "https://www.inaturalist.org/observations/57458865",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -7952,6 +8460,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Architettura orienta le specie: erinaceus globoso; coralloides/alpestre ramificati.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hericium-spp-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hericium erinaceus — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hericium erinaceus",
+        "sourceUrl": "https://www.inaturalist.org/observations/95048953",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hericium-spp-top.jpg",
+        "view": "top",
+        "alt": "Hericium erinaceus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hericium erinaceus",
+        "sourceUrl": "https://www.inaturalist.org/observations/95048953",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -8059,6 +8587,24 @@
         "alt": "Hapalopilus rutilans — corpi fruttiferi, vista superiore",
         "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 97. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
         "subjectTaxon": "Hapalopilus rutilans"
+      },
+      {
+        "src": "images/reference/external-hapalopilus-rutilans-lateral.jpg",
+        "view": "lateral",
+        "alt": "Hapalopilus rutilans — vista laterale",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hapalopilus rutilans",
+        "sourceUrl": "https://www.inaturalist.org/observations/46398375",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-hapalopilus-rutilans-underside.jpg",
+        "view": "underside",
+        "alt": "Hapalopilus rutilans — imenoforo",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Hapalopilus rutilans",
+        "sourceUrl": "https://www.inaturalist.org/observations/46398375",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -8239,6 +8785,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Crescita terrestre.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-scutiger-pes-caprae-underside.jpg",
+        "view": "underside",
+        "alt": "Scutiger pes-caprae — imenoforo",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Scutiger pes-caprae",
+        "sourceUrl": "https://www.inaturalist.org/observations/5650495",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -8418,6 +8975,24 @@
         "subjectTaxon": "Polyporus umbellatus",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-polyporus-umbellatus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Polyporus umbellatus — vista laterale",
+        "credit": "Zhao H.; Yuan H.-S.; Cui Y.-J.; Wang K.; Wu F.; Dai Y.-C.; Yuan Y., CC BY 4.0",
+        "subjectTaxon": "Polyporus umbellatus",
+        "sourceUrl": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136002",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-polyporus-umbellatus-top.jpg",
+        "view": "top",
+        "alt": "Polyporus umbellatus — vista superiore",
+        "credit": "Nina Filippova, CC BY 4.0",
+        "subjectTaxon": "Polyporus umbellatus",
+        "sourceUrl": "https://www.inaturalist.org/observations/41896329",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -8464,6 +9039,15 @@
         "subjectTaxon": "Meripilus giganteus",
         "sourceUrl": "https://artsdatabanken.no/arter/takson/39728/beskrivelse",
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-meripilus-giganteus-underside.jpg",
+        "view": "underside",
+        "alt": "Meripilus giganteus — imenoforo",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Meripilus giganteus",
+        "sourceUrl": "https://www.inaturalist.org/observations/5650472",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -8701,6 +9285,24 @@
         "alt": "Auricularia auricula-judae — corpi fruttiferi",
         "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
         "subjectTaxon": "Auricularia auricula-judae"
+      },
+      {
+        "src": "images/reference/external-auricularia-auricula-judae-top.jpg",
+        "view": "top",
+        "alt": "Auricularia auricula-judae — vista superiore",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Auricularia auricula-judae",
+        "sourceUrl": "https://www.inaturalist.org/observations/332288153",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-auricularia-auricula-judae-underside.jpg",
+        "view": "underside",
+        "alt": "Auricularia auricula-judae — imenoforo",
+        "credit": "Lucian Clanet, CC BY 4.0",
+        "subjectTaxon": "Auricularia auricula-judae",
+        "sourceUrl": "https://www.inaturalist.org/observations/332288153",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -8778,6 +9380,15 @@
         "alt": "Sarcosphaera coronaria — vista superiore",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Sarcosphaera coronaria"
+      },
+      {
+        "src": "images/reference/external-sarcosphaera-coronaria-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Sarcosphaera coronaria — base esterna",
+        "credit": "Davide Puddu, CC BY 4.0",
+        "subjectTaxon": "Sarcosphaera coronaria",
+        "sourceUrl": "https://www.inaturalist.org/observations/10726841",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
