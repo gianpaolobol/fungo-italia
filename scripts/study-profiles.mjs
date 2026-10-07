@@ -58,16 +58,17 @@ export function applyReferenceImages(records,manifest){
  check(manifest?.version===1&&Array.isArray(manifest.images),'Invalid reference image manifest');
  const files=new Set(),views=new Set();
  for(const asset of manifest.images){
-  check(keys(asset,['scientificName','src','view','alt','credit','sourceId','page','taxonStatus','rights']),'Invalid image metadata');
+  check(keys(asset,['scientificName','src','view','alt','credit','sourceId','page','taxonStatus','rights','subjectTaxon']),'Invalid image metadata');
   const taxon=records.find(t=>t.scientificName===asset.scientificName);
   check(taxon&&imagePath.test(asset.src)&&!files.has(asset.src),'Unknown taxon or invalid image path');
   check(['lateral','top','underside'].includes(asset.view)&&!views.has(taxon.id+':'+asset.view),'Invalid or duplicate reference view');
   check(text(asset.alt)&&text(asset.credit)&&text(asset.sourceId)&&Number.isInteger(asset.page)&&asset.page>0&&asset.taxonStatus==='identified','Unverified reference image');
+  if('subjectTaxon' in asset)check(text(asset.subjectTaxon),'Invalid photographed taxon');
   const rights=asset.rights;
   check(keys(rights,['status','publicRepository','pages','permissionEvidenceId'])&&rights.status==='verified'&&rights.publicRepository===true&&rights.pages===true&&text(rights.permissionEvidenceId),'Reference image publication rights not established');
   files.add(asset.src);views.add(taxon.id+':'+asset.view);
   taxon.referenceImages??=[];
-  const publicAsset={src:asset.src,view:asset.view,alt:asset.alt,credit:asset.credit};
+  const publicAsset={src:asset.src,view:asset.view,alt:asset.alt,credit:asset.credit,...(asset.subjectTaxon?{subjectTaxon:asset.subjectTaxon}:{})};
   const previous=taxon.referenceImages.find(image=>image.view===asset.view);
   if(previous)check(JSON.stringify(previous)===JSON.stringify(publicAsset),'Reference image conflicts with canonical data');
   else taxon.referenceImages.push(publicAsset);
