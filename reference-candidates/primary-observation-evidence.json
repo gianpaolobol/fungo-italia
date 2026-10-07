@@ -1,0 +1,199 @@
+{
+  "observations": [
+    {
+      "gbifOccurrenceId": 1978831435,
+      "scientificName": "Entoloma clypeatum (L.) P.Kumm.",
+      "references": "https://www.inaturalist.org/observations/19154361 https://www.inaturalist.org/observations/19154361",
+      "media": [
+        {
+          "type": "StillImage",
+          "format": "image/jpeg",
+          "references": "https://www.inaturalist.org/photos/29410010",
+          "created": "2018-04-07T14:50:01.000+00:00",
+          "creator": "Davide Puddu",
+          "publisher": "iNaturalist",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "Davide Puddu",
+          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/29410010/original.jpeg"
+        }
+      ]
+    },
+    {
+      "observationId": 232719197,
+      "taxon": "Gyroporus cyanescens",
+      "qualityGrade": "research",
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 413483826,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413483826/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 413483870,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413483870/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 194984296,
+      "taxon": "Caloboletus radicans",
+      "qualityGrade": "research",
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 342901687,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342901687/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 342902893,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342902893/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 342903118,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903118/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 342903152,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903152/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 342903826,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903826/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 342903857,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903857/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 244111371,
+      "taxon": "Caloboletus radicans",
+      "qualityGrade": "research",
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 435401432,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401432/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 435401480,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401480/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 435401518,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401518/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 435401579,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401579/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 435401616,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401616/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 435401682,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401682/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 41289920,
+      "taxon": "Gyroporus cyanescens",
+      "qualityGrade": "research",
+      "author": "Михаил Малышев",
+      "photos": [
+        {
+          "photoId": 65487833,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/65487833/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Михаил Малышев, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 241513396,
+      "taxon": "Caloboletus radicans",
+      "qualityGrade": "research",
+      "author": "Matej Frančeškin",
+      "photos": [
+        {
+          "photoId": 430440166,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430440166/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 430440195,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430440195/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 430440250,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430440250/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 155152863,
+      "taxon": "Gyromitra esculenta",
+      "qualityGrade": "research",
+      "author": "Björn Sothmann",
+      "photos": [
+        {
+          "photoId": 268156230,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/268156230/original.jpeg",
+          "licenseCode": "cc-by-sa",
+          "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
+        }
+      ]
+    },
+    {
+      "observationId": 34492154,
+      "taxon": "Entoloma sinuatum",
+      "qualityGrade": "research",
+      "author": "Eugene Popov",
+      "photos": [
+        {
+          "photoId": 54291818,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/54291818/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Eugene Popov, some rights reserved (CC BY)"
+        }
+      ]
+    }
+  ],
+  "failures": []
+}
