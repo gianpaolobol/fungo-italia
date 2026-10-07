@@ -60,7 +60,7 @@ function referenceGallery(t){
  if(!images.length)return '<p class="small photo-pending">Immagini di riferimento non ancora disponibili.</p>';
  return '<div class="photo-triptych">'+referenceViews.map(([view,label])=>{
   const photo=images.find(p=>p.view===view&&referencePath.test(p.src));
-  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+label.toLowerCase()+' di '+escape(t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+label+'</figcaption></figure>';
+  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+label.toLowerCase()+' di '+escape(t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+label+(photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
  }).join('')+'</div>';
 }
 let photoOpener=null,photoScale=1,detailIds=null;
@@ -78,7 +78,7 @@ function zoomReference(id,view,opener){
   $('#photo-minus').onclick=()=>resizeReference(-.5);$('#photo-plus').onclick=()=>resizeReference(.5);
  }
  photoOpener=opener;photoScale=1;
- $('#photo-title').textContent=taxon.scientificName+' · '+(referenceViews.find(v=>v[0]===view)?.[1]||'');
+ $('#photo-title').textContent=(photo.subjectTaxon||taxon.scientificName)+' · '+(referenceViews.find(v=>v[0]===view)?.[1]||'');
  $('#photo-full').src=photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
  resizeReference(0);viewer.showModal();$('#photo-close').focus();
 }
@@ -102,7 +102,7 @@ function validStudyFields(t){
   if(p.sporePrint!==undefined){const print=p.sporePrint;if(!print||!text(print.label)||(print.color!==undefined&&!/^#[0-9a-f]{6}$/i.test(print.color))||(print.scale!==undefined&&!['I','II','III','IV','I–II','I–III','I–IV','II–III','II–IV','III–IV'].includes(print.scale)))return false;}
   if(p.edibility!==undefined&&(!p.edibility||!text(p.edibility.label)||!Array.isArray(p.edibility.precautions)||!p.edibility.precautions.every(text)))return false;
  }
- if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit))))return false;
+ if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit)&&(p.subjectTaxon===undefined||text(p.subjectTaxon)))))return false;
  return true;
 }
 
