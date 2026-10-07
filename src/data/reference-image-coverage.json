@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 343,
-    "completeTriplets": 93,
-    "partialCards": 43,
-    "withoutImages": 78,
-    "missingViews": 299,
-    "imageBytes": 108627010
+    "images": 360,
+    "completeTriplets": 98,
+    "partialCards": 45,
+    "withoutImages": 71,
+    "missingViews": 282,
+    "imageBytes": 113923449
   },
   "cards": [
     {
@@ -83,12 +83,12 @@
     },
     {
       "scientificName": "Cyclocybe cylindracea",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Amanita phalloides",
@@ -351,9 +351,10 @@
     },
     {
       "scientificName": "Coprinus comatus",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
@@ -514,12 +515,12 @@
     },
     {
       "scientificName": "Hygrophorus marzuolus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Hygrophorus russula",
@@ -1037,9 +1038,10 @@
     },
     {
       "scientificName": "Rubroboletus pulchrotinctus",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
@@ -1313,12 +1315,12 @@
     },
     {
       "scientificName": "Cerioporus squamosus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Ramaria formosa",
@@ -1388,12 +1390,12 @@
     },
     {
       "scientificName": "Agrocybe + Cyclocybe",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Amanita",
@@ -1516,12 +1518,12 @@
     },
     {
       "scientificName": "Hygrophorus + Cuphophyllus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Hypholoma",
