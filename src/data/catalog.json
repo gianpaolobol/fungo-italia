@@ -860,13 +860,6 @@
         "alt": "Cyclocybe cylindracea — vista superiore",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Cyclocybe cylindracea"
-      },
-      {
-        "src": "images/reference/cyclocybe-cylindracea-underside-103.jpg",
-        "view": "underside",
-        "alt": "Cyclocybe cylindracea — vista inferiore",
-        "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, pp. 37–39. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
-        "subjectTaxon": "Cyclocybe cylindracea"
       }
     ],
     "curriculum": {
@@ -1553,6 +1546,22 @@
         ]
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/amanita-caesarea-lateral-460.jpg",
+        "view": "lateral",
+        "alt": "Amanita caesarea — cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Amanita caesarea"
+      },
+      {
+        "src": "images/reference/amanita-caesarea-top-460.jpg",
+        "view": "top",
+        "alt": "Amanita caesarea — cappello dall’alto",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Amanita caesarea"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
@@ -3622,6 +3631,29 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Associato soprattutto a querce e altre latifoglie, frequentemente in ambiente mediterraneo.",
+    "referenceImages": [
+      {
+        "src": "images/reference/hygrophorus-russula-lateral-518.jpg",
+        "view": "lateral",
+        "alt": "Hygrophorus russula — cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 136. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Hygrophorus russula"
+      },
+      {
+        "src": "images/reference/hygrophorus-russula-top-518.jpg",
+        "view": "top",
+        "alt": "Hygrophorus russula — cappello dall’alto",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 136. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Hygrophorus russula"
+      },
+      {
+        "src": "images/reference/hygrophorus-russula-underside-518.jpg",
+        "view": "underside",
+        "alt": "Hygrophorus russula — imenoforo e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 136. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Hygrophorus russula"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 8,
@@ -4890,18 +4922,18 @@
     "differentiatingCharacter": "Sviluppo apparentemente terricolo ma associato a radici o basi di Apiaceae, soprattutto Eryngium e Ferula.",
     "referenceImages": [
       {
-        "src": "images/reference/pleurotus-eryngii-lateral-135.jpg",
-        "view": "lateral",
-        "alt": "Pleurotus eryngii var. ferulae — vista laterale di cappello e gambo",
-        "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, p. 51. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
-        "subjectTaxon": "Pleurotus eryngii var. ferulae"
-      },
-      {
         "src": "images/reference/pleurotus-eryngii-top-135.jpg",
         "view": "top",
         "alt": "Pleurotus eryngii var. ferulae — vista superiore di cappello e gambo",
         "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, p. 51. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
         "subjectTaxon": "Pleurotus eryngii var. ferulae"
+      },
+      {
+        "src": "images/reference/pleurotus-eryngii-s-l--lateral-459.jpg",
+        "view": "lateral",
+        "alt": "Pleurotus eryngii s.l. — cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Pleurotus eryngii s.l."
       }
     ],
     "curriculum": {
@@ -7204,10 +7236,24 @@
     "differentiatingCharacter": "Odore frequentemente fruttato o di albicocca; profilo riferito al complesso.",
     "referenceImages": [
       {
-        "src": "images/reference/cantharellus-cibarius-complex-underside-395.jpg",
+        "src": "images/reference/cantharellus-cibarius-complex-lateral-456.jpg",
+        "view": "lateral",
+        "alt": "Cantharellus cibarius — cappello e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Cantharellus cibarius"
+      },
+      {
+        "src": "images/reference/cantharellus-cibarius-complex-top-456.jpg",
+        "view": "top",
+        "alt": "Cantharellus cibarius — cappello dall’alto",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Cantharellus cibarius"
+      },
+      {
+        "src": "images/reference/cantharellus-cibarius-complex-underside-456.jpg",
         "view": "underside",
-        "alt": "Cantharellus cibarius — vista inferiore di cappello e gambo",
-        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 54; fotografo non specificato nella pagina della fonte.",
+        "alt": "Cantharellus cibarius — imenoforo e gambo",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
         "subjectTaxon": "Cantharellus cibarius"
       }
     ],

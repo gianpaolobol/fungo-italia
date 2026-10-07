@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 360,
-    "completeTriplets": 98,
-    "partialCards": 45,
-    "withoutImages": 71,
-    "missingViews": 282,
-    "imageBytes": 113923449
+    "images": 367,
+    "completeTriplets": 99,
+    "partialCards": 46,
+    "withoutImages": 69,
+    "missingViews": 275,
+    "imageBytes": 115520266
   },
   "cards": [
     {
@@ -85,10 +85,11 @@
       "scientificName": "Cyclocybe cylindracea",
       "availableViews": [
         "lateral",
-        "top",
-        "underside"
+        "top"
       ],
-      "missingViews": []
+      "missingViews": [
+        "underside"
+      ]
     },
     {
       "scientificName": "Amanita phalloides",
@@ -158,10 +159,11 @@
     },
     {
       "scientificName": "Amanita caesarea",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
-        "top",
+        "top"
+      ],
+      "missingViews": [
         "underside"
       ]
     },
@@ -524,12 +526,12 @@
     },
     {
       "scientificName": "Hygrophorus russula",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Hygrophorus penarioides",
@@ -1160,12 +1162,11 @@
     {
       "scientificName": "Cantharellus cibarius complex",
       "availableViews": [
+        "lateral",
+        "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral",
-        "top"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Craterellus lutescens",
@@ -1392,10 +1393,11 @@
       "scientificName": "Agrocybe + Cyclocybe",
       "availableViews": [
         "lateral",
-        "top",
-        "underside"
+        "top"
       ],
-      "missingViews": []
+      "missingViews": [
+        "underside"
+      ]
     },
     {
       "scientificName": "Amanita",
@@ -1873,12 +1875,11 @@
     {
       "scientificName": "Cantharellus",
       "availableViews": [
+        "lateral",
+        "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral",
-        "top"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Craterellus",
