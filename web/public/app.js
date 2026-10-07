@@ -47,6 +47,7 @@ function studySources(t){
 }
 
 const referenceViews=[['lateral','Laterale'],['top','Sopra'],['underside','Sotto']];
+const referenceLabel=(photo,fallback)=>photo?.alt?.endsWith(' — base esterna')?'Base esterna':fallback;
 const referencePath=/^images\/reference\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.(jpg|jpeg|png|webp)$/;
 function studyFacts(t){
  const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
@@ -62,7 +63,8 @@ function referenceGallery(t){
  if(!images.length)return '<p class="small photo-pending">Immagini di riferimento non ancora disponibili.</p>';
  return (subjects.length===1&&subjects[0]!==t.scientificName?'<p class="photo-subject-label">Specie raffigurata: '+escape(subjects[0])+'</p>':'')+'<div class="photo-triptych">'+referenceViews.map(([view,label])=>{
   const photo=images.find(p=>p.view===view&&referencePath.test(p.src));
-  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+label.toLowerCase()+' di '+escape(t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+label+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
+  const caption=referenceLabel(photo,label);
+  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+caption.toLowerCase()+' di '+escape(photo.subjectTaxon||t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+caption+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
  }).join('')+'</div>';
 }
 let photoOpener=null,photoScale=1,detailIds=null;
@@ -80,7 +82,7 @@ function zoomReference(id,view,opener){
   $('#photo-minus').onclick=()=>resizeReference(-.5);$('#photo-plus').onclick=()=>resizeReference(.5);
  }
  photoOpener=opener;photoScale=1;
- $('#photo-title').textContent=(photo.subjectTaxon||taxon.scientificName)+' · '+(referenceViews.find(v=>v[0]===view)?.[1]||'');
+ $('#photo-title').textContent=(photo.subjectTaxon||taxon.scientificName)+' · '+referenceLabel(photo,referenceViews.find(v=>v[0]===view)?.[1]||'');
  $('#photo-full').src=photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
  const links=$('#photo-links');links.replaceChildren();
  for(const [field,label] of [['sourceUrl','Fonte'],['licenseUrl','Licenza']])if(publicPhotoHttps(photo[field])){const link=document.createElement('a');link.href=photo[field];link.textContent=label;link.target='_blank';link.rel='noopener noreferrer';links.append(link);}
