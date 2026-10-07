@@ -485,6 +485,19 @@
       "taxonomicEvidence": "https://artsdatabanken.no/node/719717",
       "verificationBasis": "institutional-expert-editorial-collective-taxon",
       "kind": "image"
+    },
+    {
+      "sourceId": "EXT-SOARES-MOLYBDITES-2024",
+      "subjectTaxon": "Chlorophyllum molybdites",
+      "sourceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "assetUrl": "https://minio.scielo.br/documentstore/1809-4392/bzq7sc4rvF3WpDkKtDvxthh/e7722bd45079147653e7a7ef1ec1e126e95c438a.jpg",
+      "author": "Soares, Santana e Canto (2024)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://www.scielo.br/j/aa/a/bzq7sc4rvF3WpDkKtDvxthh/?format=html",
+      "taxonomicEvidence": "https://doi.org/10.1590/1809-4392202300482",
+      "verificationBasis": "peer-reviewed-macro-microscopic-taxonomy-vouchers-HSTMFungi16326-16331",
+      "kind": "image"
     }
   ]
 }
