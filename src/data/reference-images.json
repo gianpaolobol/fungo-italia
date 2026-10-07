@@ -2282,9 +2282,9 @@
     {
       "scientificName": "Russula Compactae Nigricantinae",
       "subjectTaxon": "Russula adusta",
-      "src": "images/reference/russula-nigricantinae-lateral-135.jpg",
+      "src": "images/reference/russula-nigricantinae-lateral-134.jpg",
       "view": "lateral",
-      "alt": "Russula adusta — vista laterale di cappello e gambo",
+      "alt": "Russula adusta — profilo esterno laterale obliquo nella composizione originale",
       "credit": "Fonte: Marco Floriani, Il genere Russula, p. 36. Fotografia: M. Donini.",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "page": 36,
@@ -2333,23 +2333,6 @@
     {
       "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
       "subjectTaxon": "Russula delica",
-      "src": "images/reference/russula-lactarioides-lateral-153.jpg",
-      "view": "lateral",
-      "alt": "Russula delica — vista laterale di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "page": 41,
-      "taxonStatus": "identified",
-      "rights": {
-        "status": "verified",
-        "publicRepository": true,
-        "pages": true,
-        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-      }
-    },
-    {
-      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
-      "subjectTaxon": "Russula delica",
       "src": "images/reference/russula-lactarioides-top-152.jpg",
       "view": "top",
       "alt": "Russula delica — vista superiore di cappello e gambo",
@@ -2384,23 +2367,6 @@
     {
       "scientificName": "Russula",
       "subjectTaxon": "Russula delica",
-      "src": "images/reference/russula-genere-lateral-153.jpg",
-      "view": "lateral",
-      "alt": "Russula delica — vista laterale di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "page": 41,
-      "taxonStatus": "identified",
-      "rights": {
-        "status": "verified",
-        "publicRepository": true,
-        "pages": true,
-        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-      }
-    },
-    {
-      "scientificName": "Russula",
-      "subjectTaxon": "Russula delica",
       "src": "images/reference/russula-genere-top-152.jpg",
       "view": "top",
       "alt": "Russula delica — vista superiore di cappello e gambo",
@@ -2424,23 +2390,6 @@
       "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "page": 42,
-      "taxonStatus": "identified",
-      "rights": {
-        "status": "verified",
-        "publicRepository": true,
-        "pages": true,
-        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-      }
-    },
-    {
-      "scientificName": "Russula Foetentinae",
-      "subjectTaxon": "Russula foetens",
-      "src": "images/reference/russula-foetentinae-lateral-183.jpg",
-      "view": "lateral",
-      "alt": "Russula foetens — vista laterale di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 51. Autore della singola fotografia non specificato.",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "page": 51,
       "taxonStatus": "identified",
       "rights": {
         "status": "verified",
@@ -4609,6 +4558,40 @@
       }
     },
     {
+      "scientificName": "Rubroboletus satanas",
+      "subjectTaxon": "Rubroboletus satanas",
+      "src": "images/reference/rubroboletus-satanas-lateral-305.jpg",
+      "view": "lateral",
+      "alt": "Rubroboletus satanas — vista laterale di cappello e gambo",
+      "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "page": 59,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "subjectTaxon": "Rubroboletus satanas",
+      "src": "images/reference/rubroboletus-satanas-top-305.jpg",
+      "view": "top",
+      "alt": "Rubroboletus satanas — vista superiore di cappello e gambo",
+      "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "page": 59,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
       "scientificName": "Laetiporus sulphureus s.l.",
       "subjectTaxon": "Laetiporus sulphureus s.l.",
       "src": "images/reference/laetiporus-sulphureus-s-l--top-217.jpg",
@@ -4685,6 +4668,23 @@
       "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
       "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
       "page": 35,
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+      }
+    },
+    {
+      "scientificName": "Scleroderma",
+      "subjectTaxon": "Scleroderma spp.",
+      "src": "images/reference/scleroderma-top-142.jpg",
+      "view": "top",
+      "alt": "Scleroderma spp. — peridio e gleba visibili nella composizione",
+      "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 36. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "page": 36,
       "taxonStatus": "identified",
       "rights": {
         "status": "verified",

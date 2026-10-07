@@ -2402,11 +2402,11 @@
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
-      "src": "images/reference/russula-nigricantinae-lateral-135.jpg",
+      "src": "images/reference/russula-nigricantinae-lateral-134.jpg",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
       "sourcePage": 36,
-      "xref": 135,
+      "xref": 134,
       "subjectTaxon": "Russula adusta",
       "crop": [
         0,
@@ -2414,11 +2414,11 @@
         1,
         1
       ],
-      "sha256": "1451c5be0a88342e73966b230f6795cf16ddf24c5281540ce9ce54331ae449ba",
+      "sha256": "66076c2233f4f9a76c30403765d1b19e9fb75320346b6ac4b4bd4b7d643cd1f5",
       "width": 1600,
-      "height": 528,
+      "height": 538,
       "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "reviewNotes": "Rivisto da secondo controllo visivo: sostituita la sezione longitudinale x135 con la fotografia x134 che mostra il profilo esterno obliquo.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
@@ -2457,26 +2457,6 @@
       "sha256": "ca9c817fa168f96c1e950effa3a119307278c439ccba8868537f0a2d81e76016",
       "width": 1600,
       "height": 977,
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
-      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-    },
-    {
-      "src": "images/reference/russula-lactarioides-lateral-153.jpg",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "sourcePage": 41,
-      "xref": 153,
-      "subjectTaxon": "Russula delica",
-      "crop": [
-        0,
-        0,
-        1,
-        1
-      ],
-      "sha256": "81eff30a29bcb17e5cc2902b8cc3a457a28094e72a4f2ef5860c51c1009153c4",
-      "width": 1600,
-      "height": 531,
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
@@ -2522,26 +2502,6 @@
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
-      "src": "images/reference/russula-genere-lateral-153.jpg",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "sourcePage": 41,
-      "xref": 153,
-      "subjectTaxon": "Russula delica",
-      "crop": [
-        0,
-        0,
-        1,
-        1
-      ],
-      "sha256": "81eff30a29bcb17e5cc2902b8cc3a457a28094e72a4f2ef5860c51c1009153c4",
-      "width": 1600,
-      "height": 531,
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
-      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-    },
-    {
       "src": "images/reference/russula-genere-top-152.jpg",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
@@ -2579,26 +2539,6 @@
       "height": 822,
       "visualReview": "verified",
       "reviewNotes": "Russula chloroides è raffigurata con didascalia specifica; rappresentante del gruppo R. delica nella scheda di gruppo, non una fotografia attribuita a R. delica.",
-      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
-    },
-    {
-      "src": "images/reference/russula-foetentinae-lateral-183.jpg",
-      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
-      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "sourcePage": 51,
-      "xref": 183,
-      "subjectTaxon": "Russula foetens",
-      "crop": [
-        0,
-        0,
-        1,
-        1
-      ],
-      "sha256": "bff1bb496656f4c2edc107a73385da6ff0bb3696eb0c149a966572a454e4e792",
-      "width": 1600,
-      "height": 534,
-      "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
@@ -5042,6 +4982,46 @@
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {
+      "src": "images/reference/rubroboletus-satanas-lateral-305.jpg",
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "sourceSha256": "7f9b952b0c871783be0bbf6dcc5cee369dd285b7db204d9520ccf1063ccb6335",
+      "sourcePage": 59,
+      "xref": 305,
+      "subjectTaxon": "Rubroboletus satanas",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sha256": "21bf5ae8dfd417c230c4dfdb7a62ae169464719d816098d7939c3fa828dbfbeb",
+      "width": 1600,
+      "height": 1067,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica Rubroboletus satanas e fotografia verificate. Vista inferiore assente, non sostituita con la sezione longitudinale presente nella stessa fotografia.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/rubroboletus-satanas-top-305.jpg",
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "sourceSha256": "7f9b952b0c871783be0bbf6dcc5cee369dd285b7db204d9520ccf1063ccb6335",
+      "sourcePage": 59,
+      "xref": 305,
+      "subjectTaxon": "Rubroboletus satanas",
+      "crop": [
+        0.42,
+        0,
+        1,
+        0.75
+      ],
+      "sha256": "95ca403365ed4e24d7d66be8a2d2133c4d5d24ef091a80a2b06910bcd01f1b89",
+      "width": 1600,
+      "height": 1379,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica Rubroboletus satanas e fotografia verificate. Vista inferiore assente, non sostituita con la sezione longitudinale presente nella stessa fotografia.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
       "src": "images/reference/laetiporus-sulphureus-s-l--top-217.jpg",
       "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
       "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
@@ -5139,6 +5119,21 @@
       "height": 1600,
       "visualReview": "verified",
       "reviewNotes": "Fonte e orientamento controllati visivamente; eventuali ritagli sono esplicitamente della stessa composizione fotografica originale. Nessuna attribuzione di commestibilità dalla fotografia.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/scleroderma-top-142.jpg",
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "sourceSha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1",
+      "sourcePage": 36,
+      "xref": 142,
+      "subjectTaxon": "Scleroderma spp.",
+      "crop": null,
+      "sha256": "c3fe71719064d864a4178f1560a56026cab87a0f53f332f05ac2af741b26be68",
+      "width": 1502,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia generica Scleroderma spp. verificata. Nessuna determinazione di specie inferita; non si presenta la gleba sezionata come una vista inferiore.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     },
     {

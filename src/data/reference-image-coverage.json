@@ -8,11 +8,11 @@
   "summary": {
     "cards": 214,
     "images": 284,
-    "completeTriplets": 79,
-    "partialCards": 34,
-    "withoutImages": 101,
+    "completeTriplets": 76,
+    "partialCards": 39,
+    "withoutImages": 99,
     "missingViews": 358,
-    "imageBytes": 91019837
+    "imageBytes": 91551756
   },
   "cards": [
     {
@@ -978,11 +978,12 @@
     {
       "scientificName": "Russula Foetentinae",
       "availableViews": [
-        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": []
+      "missingViews": [
+        "lateral"
+      ]
     },
     {
       "scientificName": "Russula Compactae Nigricantinae",
@@ -996,11 +997,12 @@
     {
       "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
       "availableViews": [
-        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": []
+      "missingViews": [
+        "lateral"
+      ]
     },
     {
       "scientificName": "Boletus edulis s.l.",
@@ -1022,10 +1024,11 @@
     },
     {
       "scientificName": "Rubroboletus satanas",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
-        "top",
+        "top"
+      ],
+      "missingViews": [
         "underside"
       ]
     },
@@ -1718,11 +1721,12 @@
     {
       "scientificName": "Russula",
       "availableViews": [
-        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": []
+      "missingViews": [
+        "lateral"
+      ]
     },
     {
       "scientificName": "Boletus s. str.",
@@ -1909,10 +1913,11 @@
     },
     {
       "scientificName": "Scleroderma",
-      "availableViews": [],
+      "availableViews": [
+        "top"
+      ],
       "missingViews": [
         "lateral",
-        "top",
         "underside"
       ]
     },

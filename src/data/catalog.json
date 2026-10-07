@@ -5800,13 +5800,6 @@
     },
     "referenceImages": [
       {
-        "src": "images/reference/russula-foetentinae-lateral-183.jpg",
-        "view": "lateral",
-        "alt": "Russula foetens — vista laterale di cappello e gambo",
-        "credit": "Fonte: Marco Floriani, Il genere Russula, p. 51. Autore della singola fotografia non specificato.",
-        "subjectTaxon": "Russula foetens"
-      },
-      {
         "src": "images/reference/russula-foetentinae-top-182.jpg",
         "view": "top",
         "alt": "Russula foetens — vista superiore di cappello e gambo",
@@ -5847,9 +5840,9 @@
     "differentiatingCharacter": "Nel morfotipo R. nigricans le lamelle sono particolarmente spesse e distanti, ma non generalizzare questo tratto a tutto il gruppo.",
     "referenceImages": [
       {
-        "src": "images/reference/russula-nigricantinae-lateral-135.jpg",
+        "src": "images/reference/russula-nigricantinae-lateral-134.jpg",
         "view": "lateral",
-        "alt": "Russula adusta — vista laterale di cappello e gambo",
+        "alt": "Russula adusta — profilo esterno laterale obliquo nella composizione originale",
         "credit": "Fonte: Marco Floriani, Il genere Russula, p. 36. Fotografia: M. Donini.",
         "subjectTaxon": "Russula adusta"
       },
@@ -5893,13 +5886,6 @@
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente sviluppo parzialmente interrato.",
     "referenceImages": [
-      {
-        "src": "images/reference/russula-lactarioides-lateral-153.jpg",
-        "view": "lateral",
-        "alt": "Russula delica — vista laterale di cappello e gambo",
-        "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-        "subjectTaxon": "Russula delica"
-      },
       {
         "src": "images/reference/russula-lactarioides-top-152.jpg",
         "view": "top",
@@ -6104,6 +6090,22 @@
     "deepMorphologyRequired": false,
     "sourceName": "Boletus (Rubroboletus) satanas",
     "differentiatingCharacter": "Specie termofila di latifoglie, soprattutto querce, spesso su terreno calcareo.",
+    "referenceImages": [
+      {
+        "src": "images/reference/rubroboletus-satanas-lateral-305.jpg",
+        "view": "lateral",
+        "alt": "Rubroboletus satanas — vista laterale di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
+        "subjectTaxon": "Rubroboletus satanas"
+      },
+      {
+        "src": "images/reference/rubroboletus-satanas-top-305.jpg",
+        "view": "top",
+        "alt": "Rubroboletus satanas — vista superiore di cappello e gambo",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 59; fotografo individuale non indicato.",
+        "subjectTaxon": "Rubroboletus satanas"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 15,

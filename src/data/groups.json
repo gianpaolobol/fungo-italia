@@ -1525,13 +1525,6 @@
     ],
     "referenceImages": [
       {
-        "src": "images/reference/russula-genere-lateral-153.jpg",
-        "view": "lateral",
-        "alt": "Russula delica — vista laterale di cappello e gambo",
-        "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
-        "subjectTaxon": "Russula delica"
-      },
-      {
         "src": "images/reference/russula-genere-top-152.jpg",
         "view": "top",
         "alt": "Russula delica — vista superiore di cappello e gambo",
@@ -2550,6 +2543,15 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/scleroderma-top-142.jpg",
+        "view": "top",
+        "alt": "Scleroderma spp. — peridio e gleba visibili nella composizione",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 36. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Scleroderma spp."
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 20
