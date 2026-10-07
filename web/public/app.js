@@ -57,14 +57,15 @@ function studyFacts(t){
  (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
 }
 const publicPhotoHttps=value=>{try{const url=new URL(value);return typeof value==='string'&&url.protocol==='https:'&&!url.username&&!url.password;}catch{return false;}};
+const adminPhotoPreviews=new Map();
 function referenceGallery(t){
  const images=t.referenceImages||[];
  const subjects=[...new Set(images.map(p=>p.subjectTaxon).filter(Boolean))];
- if(!images.length)return '<p class="small photo-pending">Immagini di riferimento non ancora disponibili.</p>';
- return (subjects.length===1&&subjects[0]!==t.scientificName?'<p class="photo-subject-label">Specie raffigurata: '+escape(subjects[0])+'</p>':'')+'<div class="photo-triptych">'+referenceViews.map(([view,label])=>{
+ if(!images.length)return '<div data-reference-taxon="'+escape(t.id)+'"><p class="small photo-pending">Immagini di riferimento non ancora disponibili.</p></div>';
+ return (subjects.length===1&&subjects[0]!==t.scientificName?'<p class="photo-subject-label">Specie raffigurata: '+escape(subjects[0])+'</p>':'')+'<div class="photo-triptych" data-reference-taxon="'+escape(t.id)+'">'+referenceViews.map(([view,label])=>{
   const photo=images.find(p=>p.view===view&&referencePath.test(p.src));
   const caption=referenceLabel(photo,label);
-  return '<figure>'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+caption.toLowerCase()+' di '+escape(photo.subjectTaxon||t.scientificName)+'"><img src="'+escape(photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+caption+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
+  return '<figure data-reference-view="'+view+'">'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+caption.toLowerCase()+' di '+escape(photo.subjectTaxon||t.scientificName)+'"><img src="'+escape(adminPhotoPreviews.get(t.id+':'+view)||photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+caption+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
  }).join('')+'</div>';
 }
 let photoOpener=null,photoScale=1,detailIds=null;
@@ -83,7 +84,7 @@ function zoomReference(id,view,opener){
  }
  photoOpener=opener;photoScale=1;
  $('#photo-title').textContent=(photo.subjectTaxon||taxon.scientificName)+' · '+referenceLabel(photo,referenceViews.find(v=>v[0]===view)?.[1]||'');
- $('#photo-full').src=photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
+ $('#photo-full').src=adminPhotoPreviews.get(id+':'+view)||photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
  const links=$('#photo-links');links.replaceChildren();
  for(const [field,label] of [['sourceUrl','Fonte'],['licenseUrl','Licenza']])if(publicPhotoHttps(photo[field])){const link=document.createElement('a');link.href=photo[field];link.textContent=label;link.target='_blank';link.rel='noopener noreferrer';links.append(link);}
  resizeReference(0);viewer.showModal();$('#photo-close').focus();
@@ -213,10 +214,12 @@ function renderCards(reset=true){
  renderedCount=Math.min(rows.length,limit);$('#more').hidden=rows.length<=limit;$('#main').scrollTop=savedScroll;
  if(observer)observer.disconnect();
  if('IntersectionObserver'in window&&rows.length>limit){observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){limit+=24;renderCards(false);}},{root:$('#main'),rootMargin:'100px'});observer.observe($('#sentinel'));}
+ window.dispatchEvent(new CustomEvent('fungo:atlas-render'));
 }
 function showDialog(title,body,paged=false){
  $('#detail-title').textContent=title;$('#detail-body').innerHTML=body;$('#pager').hidden=!paged;
  if(!$('#detail').open)$('#detail').showModal();$('#detail-body').scrollTop=0;
+ window.dispatchEvent(new CustomEvent('fungo:atlas-render'));
 }
 function openTaxon(id){
  const t=byId.get(id);if(!t)return;currentTaxon=id;resumeId=id;persistStudy();updateResume();
@@ -404,7 +407,19 @@ async function setupOffline(){
 }
 $('#reload').onclick=()=>{if(!registration?.waiting)return;navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});registration.waiting.postMessage({type:'ACTIVATE_UPDATE'});};
 async function start(){
- try{const response=await fetch('./data.json');if(!response.ok)throw Error('Catalogo non disponibile');data=await response.json();if(!validCatalog(data))throw Error('Catalogo incompleto');taxa=[...data.catalog,...data.groups];byId=new Map(taxa.map(t=>[t.id,t]));restore();renderTab();void setupOffline();}
+ try{const response=await fetch('./data.json');if(!response.ok)throw Error('Catalogo non disponibile');data=await response.json();if(!validCatalog(data))throw Error('Catalogo incompleto');taxa=[...data.catalog,...data.groups];byId=new Map(taxa.map(t=>[t.id,t]));restore();renderTab();window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));void setupOffline();}
  catch{$('#main').innerHTML='<section><h1>Catalogo non disponibile</h1><p>La prima apertura richiede connessione. Riprova; i dati personali già salvati non vengono cancellati.</p><button id="retry-load">Riprova caricamento</button></section>';$('#retry-load').onclick=()=>void start();}
 }
+window.addEventListener('fungo:request-atlas',()=>{if(taxa.length)window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));});
+window.addEventListener('fungo:admin-photo-saved',event=>{
+ const {taxonId,view,asset,photo}=event.detail||{},taxon=byId.get(taxonId);
+ if(!taxon||!asset||asset.taxonId!==taxon.id||asset.scientificName!==taxon.scientificName||!referenceViews.some(v=>v[0]===view)||asset.view!==view||!referencePath.test(asset.src)||!photo?.bytes)return;
+ const key=taxonId+':'+view,old=adminPhotoPreviews.get(key);if(old)URL.revokeObjectURL(old);
+ adminPhotoPreviews.set(key,URL.createObjectURL(new Blob([photo.bytes],{type:'image/jpeg'})));
+ const publicPhoto={src:asset.src,view,alt:asset.subjectTaxon+' — '+referenceViews.find(v=>v[0]===view)[1].toLowerCase(),subjectTaxon:asset.subjectTaxon,credit:'Foto: '+asset.attribution+'. Libreria personale; nome del taxon indicato dall’amministratore. Diritti riservati.'};
+ taxon.referenceImages=[...(taxon.referenceImages||[]).filter(p=>p.view!==view),publicPhoto];
+ if(tab==='studio')renderCards();
+ if($('#detail').open&&currentTaxon===taxonId){const position=$('#detail-body').scrollTop;$('#detail-body').innerHTML=content(taxon);$('#detail-body').scrollTop=position;window.dispatchEvent(new CustomEvent('fungo:atlas-render'));}
+});
+window.addEventListener('pagehide',event=>{if(event.persisted)return;for(const src of adminPhotoPreviews.values())URL.revokeObjectURL(src);adminPhotoPreviews.clear();});
 void start();

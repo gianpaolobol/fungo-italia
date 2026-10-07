@@ -69,6 +69,8 @@ const {applyStudyProfiles,applyReferenceImages}=await import('./study-profiles.m
 const expected=[...catalog,...groups].map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
 applyStudyProfiles(expected,studyProfiles,courseRegistry);
 applyReferenceImages(expected,referenceImages);
+const {applyAdminReferenceImages}=await import('./admin-reference-images.mjs');
+applyAdminReferenceImages(expected,JSON.parse(await readFile('src/data/admin-reference-images.json','utf8')));
 for(const t of [...catalog,...groups]){const e=expected.find(row=>row.id===t.id);assert.deepEqual(t.studyProfile,e.studyProfile);assert.deepEqual(t.referenceImages,e.referenceImages);}
 console.log('Pointwise study profiles and authorized reference galleries survive canonical regeneration.');
 

@@ -1,3 +1,4 @@
+import {applyAdminReferenceImages} from '../scripts/admin-reference-images.mjs';
 import {applyCommercialization} from '../scripts/commercialization.mjs';
 import {applyStudyProfiles,applyReferenceImages} from '../scripts/study-profiles.mjs';
 import {mkdir,readFile,writeFile,cp,rm} from 'node:fs/promises';
@@ -20,8 +21,10 @@ const referenceImages=await readJSON('reference-images');
 const sourceRegistry=await readJSON('course-sources');
 applyStudyProfiles([...catalog,...groups],studyProfiles,sourceRegistry);
 applyReferenceImages([...catalog,...groups],referenceImages);
+const adminImages=await readJSON('admin-reference-images');
+applyAdminReferenceImages([...catalog,...groups],adminImages);
 applyCommercialization([...catalog,...groups],await readJSON('commercialization'));
-for(const asset of referenceImages.images){await readFile(path.join(web,'public',asset.src));}
+for(const asset of [...referenceImages.images,...adminImages.images]){await readFile(path.join(web,'public',asset.src));}
 const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages','commercialization'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
 const bibliography=await readJSON('bibliography');
@@ -35,10 +38,11 @@ await cp(path.join(root,'assets/icon.png'),path.join(output,'icon.png'));
 const vendor=path.join(output,'vendor');await mkdir(vendor,{recursive:true});
 for(const name of ['leaflet.js','leaflet.css','images'])await cp(path.join(web,'node_modules/leaflet/dist',name),path.join(vendor,name),{recursive:true});
 await cp(path.join(web,'node_modules/leaflet/LICENSE'),path.join(vendor,'LEAFLET-LICENSE.txt'));
-const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
-files.push(...referenceImages.images.map(asset=>asset.src));
+const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','admin-photo-core.js','admin-photos.js','admin-photos.css','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
+const imageFiles=[...new Set([...referenceImages.images,...adminImages.images].map(asset=>asset.src))];
+files.push(...imageFiles);
 const hash=createHash('sha256');for(const file of files)hash.update(await readFile(path.join(output,file)));
 const version=hash.digest('hex').slice(0,20),sw=await readFile(path.join(output,'sw.js'),'utf8');
-await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version).replace("const FILES=[",'const FILES=['+referenceImages.images.map(asset=>JSON.stringify('./'+asset.src)+',').join('')));
+await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version).replace("const FILES=[",'const FILES=['+imageFiles.map(src=>JSON.stringify('./'+src)+',').join('')));
 await writeFile(path.join(output,'build.json'),JSON.stringify({version,sourceCommit:process.env.GITHUB_SHA||null,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length},null,2));
 console.log(JSON.stringify({output,version,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length}));

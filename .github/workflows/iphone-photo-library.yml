@@ -9,6 +9,7 @@ on:
       - 'App.tsx'
       - 'components/**'
       - 'src/**'
+      - '!src/data/admin-reference-images.json'
       - 'app.json'
       - 'app.config.js'
       - 'eas.json'

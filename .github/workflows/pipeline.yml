@@ -2,6 +2,9 @@ name: Expo Android and iOS
 on:
   push:
     branches: [main, feat/expo-migration]
+    paths-ignore:
+      - 'src/data/admin-reference-images.json'
+      - 'web/public/images/reference/admin-*.jpg'
   workflow_dispatch:
 permissions:
   contents: read
