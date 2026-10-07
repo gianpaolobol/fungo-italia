@@ -129,7 +129,7 @@ test('warm service worker opens the importer without the origin and prepares ima
   expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();
   await expect(page.getByRole('heading',{name:'Carica immagini'})).toBeVisible();
   await choose(page,await fixture(page,200,100));await expect(page.locator('#queue')).toContainText('Pronta');
-  await expect(page.locator('#upload')).toBeDisabled();await tokenAbsent(page);
+  await expect(page.locator('#upload')).toBeEnabled();await page.locator('#upload').click();await expect(page.locator('#authorization')).toBeVisible();await tokenAbsent(page);
  }finally{await request.get('http://127.0.0.1:4174/?state=start');}
 });
 
