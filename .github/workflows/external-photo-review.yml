@@ -1,12 +1,12 @@
 name: Review licensed scientific image sources
 on:
   push:
-    branches: [research/primary-reference-v8]
+    branches: [research/primary-reference-v9]
     paths: ['tools/review-external-photos.py', 'tools/search-community-reference-photos.py', 'tools/search-expert-reference-photos.py', 'src/data/reference-external-source-candidates.json', '.github/workflows/external-photo-review.yml']
 permissions:
   contents: write
 concurrency:
-  group: primary-source-photo-review-v8
+  group: primary-source-photo-review-v9
   cancel-in-progress: false
 jobs:
   acquire:
@@ -27,4 +27,4 @@ jobs:
           git add reference-candidates/ src/data/reference-external-source-candidates.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Acquire attributed licensed photographs for visual review"
-          git push origin HEAD:research/primary-reference-v8
+          git push origin "HEAD:refs/heads/research/reviewed-community-$(git rev-parse --short=12 HEAD)"
