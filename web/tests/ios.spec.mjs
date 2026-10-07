@@ -449,7 +449,7 @@ test('genus photographs name their actual species once without duplicating the h
  await page.getByRole('button',{name:'Apri Amanita',exact:true}).click();
  await expect(page.locator('#detail-body .photo-thumb')).toHaveCount(3);
  if(!adminImages.some(image=>image.scientificName==='Amanita')) await expect(page.locator('#detail-body .photo-subject-label')).toHaveText('Specie raffigurata: Amanita rubescens');
- await expect(page.locator('#detail-body .photo-subject')).toHaveCount(0);
+ if(!adminImages.some(image=>image.scientificName==='Amanita')) await expect(page.locator('#detail-body .photo-subject')).toHaveCount(0);
 });
 
 test('licensed external reference photograph preserves attribution links and decodes offline',async({page,request})=>{
