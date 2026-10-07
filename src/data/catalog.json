@@ -41,7 +41,11 @@
       "learningUnitId": "objective-agaricus--01--agaricus-sez-xanthodermatei"
     },
     "studyProfile": {
-      "odor": "Fenolico, di inchiostro o disinfettante."
+      "odor": "Fenolico, di inchiostro o disinfettante.",
+      "edibility": {
+        "label": "Tossici gastrointestinali",
+        "precautions": []
+      }
     }
   },
   {
@@ -123,7 +127,11 @@
       "learningUnitId": "objective-agaricus--02--agaricus-bresadolanus"
     },
     "studyProfile": {
-      "odor": "Possibile lieve componente fenolica alla base del gambo; variabile."
+      "odor": "Possibile lieve componente fenolica alla base del gambo; variabile.",
+      "edibility": {
+        "label": "Tossico gastrointestinale",
+        "precautions": []
+      }
     }
   },
   {
@@ -168,7 +176,13 @@
       "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses"
     },
     "studyProfile": {
-      "odor": "Di anice o mandorle amare."
+      "odor": "Di anice o mandorle amare.",
+      "edibility": {
+        "label": "Commestibili",
+        "precautions": [
+          "Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
+        ]
+      }
     }
   },
   {
@@ -231,7 +245,11 @@
       "learningUnitId": "objective-agaricus--04--agaricus-sez-sanguinolenti"
     },
     "studyProfile": {
-      "odor": "Poco caratterizzato."
+      "odor": "Poco caratterizzato.",
+      "edibility": {
+        "label": "Commestibili",
+        "precautions": []
+      }
     }
   },
   {
@@ -298,7 +316,11 @@
       "learningUnitId": "objective-agaricus--05--agaricus-campestris"
     },
     "studyProfile": {
-      "odor": "Debole e gradevole."
+      "odor": "Debole e gradevole.",
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -360,6 +382,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--06--agaricus-bitorquis"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -420,6 +448,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 4,
       "learningUnitId": "objective-agaricus--07--agaricus-bisporus"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -1985,6 +2019,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
       "learningUnitId": "objective-cortinarius--01--cortinarius-orellanus"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenoso, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -2047,6 +2087,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
       "learningUnitId": "objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenoso, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -2223,6 +2269,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
       "learningUnitId": "objective-entoloma--01--entoloma-sinuatum"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossico gastrointestinale",
+        "precautions": []
+      }
     }
   },
   {
@@ -2437,6 +2489,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
       "learningUnitId": "objective-galerina--01--galerina-marginata-group"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenoso, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -2750,6 +2808,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
       "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenosa, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -2794,6 +2858,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
       "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Velenosa, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {
@@ -2820,6 +2890,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
       "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": []
+      }
     }
   },
   {
@@ -3370,6 +3446,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 11,
       "learningUnitId": "objective-omphalotus--01--omphalotus-olearius"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossico gastrointestinale",
+        "precautions": []
+      }
     }
   },
   {
@@ -5779,6 +5861,12 @@
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21,
       "learningUnitId": "objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
+    },
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossica, potenzialmente mortale",
+        "precautions": []
+      }
     }
   },
   {

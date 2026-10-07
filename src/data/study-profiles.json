@@ -334,7 +334,11 @@
     {
       "scientificName": "Agaricus sez. Xanthodermatei",
       "profile": {
-        "odor": "Fenolico, di inchiostro o disinfettante."
+        "odor": "Fenolico, di inchiostro o disinfettante.",
+        "edibility": {
+          "label": "Tossici gastrointestinali",
+          "precautions": []
+        }
       },
       "evidence": [
         {
@@ -344,13 +348,27 @@
             "odor"
           ],
           "supportedClaim": "Fenolico, di inchiostro o disinfettante."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tossici gastrointestinali"
         }
       ]
     },
     {
       "scientificName": "Agaricus sez. Arvenses",
       "profile": {
-        "odor": "Di anice o mandorle amare."
+        "odor": "Di anice o mandorle amare.",
+        "edibility": {
+          "label": "Commestibili",
+          "precautions": [
+            "Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
+          ]
+        }
       },
       "evidence": [
         {
@@ -360,13 +378,33 @@
             "odor"
           ],
           "supportedClaim": "Di anice o mandorle amare."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibili. Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 29,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La guida suggerisce un consumo non frequente per Agaricus sezione Arvenses in relazione all’accumulo di metalli pesanti."
         }
       ]
     },
     {
       "scientificName": "Agaricus sez. Sanguinolenti",
       "profile": {
-        "odor": "Poco caratterizzato."
+        "odor": "Poco caratterizzato.",
+        "edibility": {
+          "label": "Commestibili",
+          "precautions": []
+        }
       },
       "evidence": [
         {
@@ -376,13 +414,25 @@
             "odor"
           ],
           "supportedClaim": "Poco caratterizzato."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 29,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibili"
         }
       ]
     },
     {
       "scientificName": "Agaricus campestris",
       "profile": {
-        "odor": "Debole e gradevole."
+        "odor": "Debole e gradevole.",
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": []
+        }
       },
       "evidence": [
         {
@@ -392,13 +442,25 @@
             "odor"
           ],
           "supportedClaim": "Debole e gradevole."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile"
         }
       ]
     },
     {
       "scientificName": "Agaricus bresadolanus",
       "profile": {
-        "odor": "Possibile lieve componente fenolica alla base del gambo; variabile."
+        "odor": "Possibile lieve componente fenolica alla base del gambo; variabile.",
+        "edibility": {
+          "label": "Tossico gastrointestinale",
+          "precautions": []
+        }
       },
       "evidence": [
         {
@@ -408,6 +470,14 @@
             "odor"
           ],
           "supportedClaim": "Possibile lieve componente fenolica alla base del gambo; variabile."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tossico gastrointestinale"
         }
       ]
     },
@@ -463,6 +533,215 @@
             "sporePrint"
           ],
           "supportedClaim": "Ingratula: sporata da bianca a crema; nella serie foetens gli odori differiscono fra specie: varechina, misto mandorlato, mandorle amare o marzapane."
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile"
+        }
+      ]
+    },
+    {
+      "scientificName": "Agaricus bisporus",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Commestibile"
+        }
+      ]
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "profile": {
+        "edibility": {
+          "label": "Velenoso, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 56,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenoso, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepiota subincarnata",
+      "profile": {
+        "edibility": {
+          "label": "Velenosa, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 67,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenosa, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "profile": {
+        "edibility": {
+          "label": "Velenosa, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 67,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenosa, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepiota cristata",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 68,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Non commestibile"
+        }
+      ]
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "profile": {
+        "edibility": {
+          "label": "Tossico gastrointestinale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 75,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tossico gastrointestinale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "profile": {
+        "edibility": {
+          "label": "Velenoso, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 48,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Velenoso, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "profile": {
+        "edibility": {
+          "label": "Tossico gastrointestinale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 53,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tossico gastrointestinale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "profile": {
+        "edibility": {
+          "label": "Tossica, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 26,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tossica, potenzialmente mortale"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "profile": {
+        "edibility": {
+          "label": "Velenoso, potenzialmente mortale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 48,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "C. orellanoides, indicato anche come C. speciosissimus o C. rubellus, è velenoso potenzialmente mortale."
         }
       ]
     }
