@@ -52,6 +52,8 @@ for source_id in dict.fromkeys(s["sourceId"] for s in selected["images"]):
     page=pdf[s["page"]-1]
     if not any(i["xref"]==s["xref"] for i in page.get_image_info(xrefs=True)):raise RuntimeError("Image not on cited page")
     render(s,Image.open(io.BytesIO(pdf.extract_image(s["xref"])["image"])),source_hash)
+for old_photo in output.glob("*.jpg"):
+ if old_photo.name not in seen:old_photo.unlink()
 (ROOT/"src/data/reference-images.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
 (ROOT/"src/data/reference-image-evidence.json").write_text(json.dumps(evidence,ensure_ascii=False,indent=2)+"\n")
 review=ROOT/"photo-review";review.mkdir(exist_ok=True)
@@ -64,4 +66,14 @@ for offset in range(0,len(selected["images"]),12):
   draw.text((x+8,y+257),str(offset+index+1)+" "+s["subjectTaxon"][:43],fill="black")
   draw.text((x+8,y+277),s["view"]+" p"+str(s["page"])+" x"+str(s["xref"]),fill="black")
  sheet.save(review/("selected-sheet-"+str(offset//12+1)+".jpg"),quality=87)
+
+taxa=json.loads((ROOT/"src/data/catalog.json").read_text())+json.loads((ROOT/"src/data/groups.json").read_text())
+required=["lateral","top","underside"]
+coverage_rows=[]
+for taxon in taxa:
+ available=[v for v in required if any(i["scientificName"]==taxon["scientificName"] and i["view"]==v for i in manifest["images"])]
+ coverage_rows.append({"scientificName":taxon["scientificName"],"availableViews":available,"missingViews":[v for v in required if v not in available]})
+coverage={"version":1,"requiredViews":required,"summary":{"cards":len(taxa),"images":len(manifest["images"]),"completeTriplets":sum(not r["missingViews"] for r in coverage_rows),"partialCards":sum(0<len(r["availableViews"])<3 for r in coverage_rows),"withoutImages":sum(not r["availableViews"] for r in coverage_rows),"missingViews":sum(len(r["missingViews"]) for r in coverage_rows),"imageBytes":sum((ROOT/"web/public"/i["src"]).stat().st_size for i in manifest["images"])},"cards":coverage_rows}
+(ROOT/"src/data/reference-image-coverage.json").write_text(json.dumps(coverage,ensure_ascii=False,indent=2)+"\n")
+
 print("Materialized",len(manifest["images"]),"visually reviewed photographs.")
