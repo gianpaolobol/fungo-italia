@@ -9,7 +9,7 @@ let data,taxa=[],byId=new Map(),favoriteIds=[],resumeId=null,studyWritable=true,
 let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapTimer=null,mapOn=false,registration=null,installPrompt=null,toastTimer,reviewSession=null,observer=null,readingTimer=null,offlineReady=false,renderedCount=0;
 const scrollPositions={studio:0,areas:0,notes:0,community:0};
 let notesSaveError='',studySaveError='';
-const notice='<p class="notice">Studio: revisione scientifica indipendente pendente. Le schede non autorizzano il consumo.</p>';
+const notice='';
 const button=(label,action,id='',className='')=>'<button class="'+escape(className)+'" data-action="'+action+'"'+(id?' data-id="'+escape(id)+'"':'')+'>'+escape(label)+'</button>';
 function status(message){$('#status').textContent=message;$('#status').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#status').hidden=true,4500);}
 function storageGet(key){try{return localStorage.getItem(key);}catch{throw Error('Memoria locale non disponibile');}}
@@ -26,19 +26,27 @@ function matchesQuery(t){return norm([t.scientificName,...t.commonNames,...(t.al
 function filtered(){return taxa.filter(t=>(layer==='all'||(layer==='groups')===(t.kind==='teaching-group'))&&(!onlyFavorites||favoriteIds.includes(t.id))&&matchesQuery(t));}
 function favoriteButton(t){return button(favoriteIds.includes(t.id)?'Rimuovi preferito':'Salva preferito','favorite',t.id);}
 function safeLink(url,label){return typeof url==='string'&&/^https:\/\//i.test(url)?'<a href="'+escape(url)+'" target="_blank" rel="noopener noreferrer">'+escape(label||url)+'</a>':escape(label||url);}
-function content(t){
- return '<h2>'+escape(t.scientificName)+'</h2>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':'')+'<p class="small">Rango: '+escape(ranks[t.rank]||t.rank||'da documentare')+'</p>'+
- (t.diagnosticStatus?'<p class="notice">Ambito didattico dei caratteri: '+escape(diagnosticLimits[t.diagnosticStatus]||'Condizioni da documentare')+'. Audit interno; revisione indipendente pendente.</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(t.diagnosticNote)+'</p>':'')+
+function studySummary(t){
+ if(t.summary.startsWith('Unità didattica al rango ')||t.summary.startsWith('Obiettivo didattico di genere o gruppo.'))return '';
+ return t.summary;
+}
+function studySources(t){
+ return t.sources.filter(s=>!/^AUDIT-|^EDITORIAL-/.test(s.sourceId||'')&&!/^Scientific Baseline\b/.test(s.title));
+}
+function content(t,showIdentity=true){
+ const sources=studySources(t),summary=studySummary(t);
+ const diagnostic=['field_high_confidence_when_typical','field_high_confidence_when_host_known','field_high_confidence_when_young','microscopy_required_for_fine_id','dna_confirmatory'].includes(t.diagnosticStatus)?diagnosticLimits[t.diagnosticStatus]:'';
+ return (showIdentity?'<h2>'+escape(t.scientificName)+'</h2><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
- (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi nel concetto didattico: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
- (t.deepMorphologyRequired?'<p class="notice">L’obiettivo richiede morfologia approfondita: questi caratteri di campo possono essere insufficienti per la determinazione.</p>':'')+
- '<p>'+escape(t.summary)+'</p><h3>Caratteri di studio</h3>'+
- (t.characters.length?'<ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol>':'<p>Caratteri del gruppo da documentare e verificare. Non trasferire a tutti i membri indicazioni relative a una singola specie.</p>')+
+ (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
+ (diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(t.diagnosticNote)+'</p>':'')+
+ (summary?'<p>'+escape(summary)+'</p>':'')+
+ (t.characters.length?'<h3>Caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol>':'<p>Per studiare i caratteri, apri le schede collegate.</p>')+
  (t.differentiatingCharacter?'<h3>Carattere differenziante (+1)</h3><p>'+escape(t.differentiatingCharacter)+'</p>':'')+
- '<h3>Confronti e habitat</h3><p>'+escape(t.lookalikes.length?t.lookalikes.join(' · '):'Confusioni specifiche non documentate in questa versione: non significa che siano assenti.')+'</p><p>'+escape(t.habitat.join(' · ')||'Habitat da documentare.')+'</p>'+
- (t.currentGenera?.length?'<p class="small">Generi correnti dei taxa collegati: '+escape(t.currentGenera.join(' · '))+'</p>':'')+
- '<h3>Fonti e limiti</h3>'+(t.sources.length?t.sources.map(source=>'<div class="source"><p>'+escape(source.title)+(source.location?' · '+escape(source.location):'')+'</p>'+(source.supportedClaim?'<p class="small">'+escape(source.supportedClaim)+'</p>':'')+(source.notes?'<p class="small">'+escape(source.notes)+'</p>':'')+(source.url?'<p class="small">'+safeLink(source.url)+'</p>':'')+'</div>').join(''):'<p>Riferimenti puntuali non disponibili.</p>')+
- (t.relatedIds?.length?'<h3>Unità minime collegate</h3><div class="drafts">'+t.relatedIds.filter(id=>byId.has(id)).map(id=>button('Studia '+byId.get(id).scientificName,'related',id)).join('')+'</div>':'');
+ (t.lookalikes.length?'<h3>Specie simili</h3><p>'+escape(t.lookalikes.join(' · '))+'</p>':'')+
+ (t.habitat.length?'<h3>Habitat</h3><p>'+escape(t.habitat.join(' · '))+'</p>':'')+
+ (sources.length?'<h3>Fonti</h3>'+sources.map(source=>'<div class="source"><p>'+escape(source.title)+(source.location?' · '+escape(source.location):'')+'</p>'+(source.url?'<p class="small">'+safeLink(source.url,'Consulta la fonte')+'</p>':'')+'</div>').join(''):'')+
+ (t.relatedIds?.length?'<h3>Schede collegate</h3><div class="drafts">'+t.relatedIds.filter(id=>byId.has(id)).map(id=>button('Studia '+byId.get(id).scientificName,'related',id)).join('')+'</div>':'');
 }
 
 function beginReview(retry=false){
@@ -56,8 +64,8 @@ function renderReview(){
   focusReviewHeading();return;
  }
  const t=byId.get(session.ids[session.index]);
- const question='<p class="counter">Scheda '+(session.index+1)+' di '+total+'</p><h2>Quale unità tassonomica?</h2><p class="small">Può essere una specie, una sezione o un gruppo di specie. Il ripasso usa profili didattici: revisione indipendente pendente.</p><h3>Tre caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol><h3>Carattere differenziante (+1)</h3><p>'+escape(t.differentiatingCharacter)+'</p>';
- const answer=session.revealed?'<section id="review-answer"><h2>'+escape(t.scientificName)+'</h2><p class="small">Rango: '+escape(ranks[t.rank]||t.rank)+'</p><div class="row">'+button('Da ripassare','review-rate','again')+button('Ricordata','review-rate','remembered')+'</div><details><summary>Confronta la scheda e le fonti</summary>'+notice+content(t)+'</details></section>':button('Mostra risposta','review-reveal','','full');
+ const question='<p class="counter">Scheda '+(session.index+1)+' di '+total+'</p><h2>Quale unità tassonomica?</h2><p class="small">Può essere una specie, una sezione o un gruppo di specie. Ricorda il nome a partire dai caratteri.</p><h3>Tre caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(c)+'</li>').join('')+'</ol><h3>Carattere differenziante (+1)</h3><p>'+escape(t.differentiatingCharacter)+'</p>';
+ const answer=session.revealed?'<section id="review-answer"><h2>'+escape(t.scientificName)+'</h2><p class="small">'+escape(ranks[t.rank]||t.rank)+'</p><div class="row">'+button('Da ripassare','review-rate','again')+button('Ricordata','review-rate','remembered')+'</div><details><summary>Confronta la scheda e le fonti</summary>'+content(t,false)+'</details></section>':button('Mostra risposta','review-reveal','','full');
  showDialog('Ripasso attivo',question+answer);focusReviewHeading();
 }
 function focusReviewHeading(){const heading=$('#review-answer > h2')||$('#detail-body h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}}
@@ -78,7 +86,7 @@ function validCatalog(value){
 
 function renderStudio(){
  renderedCount=0;
- $('#main').innerHTML='<section><h1>Studio e atlante</h1>'+notice+scientificCoverage()+
+ $('#main').innerHTML='<section><h1>Studio e atlante</h1>'+scientificCoverage()+
  (!studyWritable?'<p class="error">Preferiti non leggibili. La consultazione resta disponibile; il salvataggio è sospeso per conservare i dati esistenti.</p>':'')+
  '<input type="search" id="taxon-search" aria-label="Cerca nome scientifico, comune o sinonimo" placeholder="Nome scientifico, comune o sinonimo" value="'+escape(query)+'">'+
  '<div class="controls"><select id="layer" aria-label="Catalogo"><option value="minimum">Minimo · '+data.catalog.length+'</option><option value="groups">Generi e gruppi · '+data.groups.length+'</option><option value="all">Tutte · '+taxa.length+'</option></select>'+
@@ -92,7 +100,7 @@ function renderStudio(){
  $('#more').onclick=()=>{limit+=24;renderCards(false);};
  $('#main').classList.toggle('feed',feed);renderCards();
 }
-function cardHTML(t){return '<article class="card"><button class="heading" data-action="open" data-id="'+escape(t.id)+'" aria-label="Apri '+escape(t.scientificName)+'"><strong>'+escape(t.scientificName)+'</strong><span>'+escape(t.commonNames.join(' · ')||(ranks[t.rank]||t.rank||'Unità didattica'))+'</span></button>'+(feed?notice+favoriteButton(t)+content(t):'<p class="small">Fonti e caratteri nella scheda. Revisione indipendente pendente.</p>')+'</article>';}
+function cardHTML(t){return '<article class="card"><button class="heading" data-action="open" data-id="'+escape(t.id)+'" aria-label="Apri '+escape(t.scientificName)+'"><strong>'+escape(t.scientificName)+'</strong><span>'+escape([ranks[t.rank]||t.rank,...t.commonNames].filter(Boolean).join(' · '))+'</span></button>'+(feed?favoriteButton(t)+content(t,false):'')+'</article>';}
 function updateCatalogCount(rows=filtered()){if($('#catalog-count'))$('#catalog-count').textContent=rows.length+' '+(rows.length===1?'scheda':'schede')+' · '+favoriteIds.length+' '+(favoriteIds.length===1?'preferito':'preferiti');}
 function updateResume(){const element=$('#resume');if(element&&resumeId)element.innerHTML=button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full');}
 function renderCards(reset=true){
@@ -158,7 +166,7 @@ function openTenerife(){
 function openArea(id){
  const area=data.areas.find(a=>a.id===id);if(!area)return;currentTaxon=null;
  const url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(area.center.join(','));
- showDialog('Macroarea', '<h2>'+escape(area.name)+'</h2><p>'+escape(area.region)+'</p><p class="notice">Centro rappresentativo: non indica una fungaia, un accesso autorizzato o un percorso verificato.</p><p>'+escape(area.habitat.join(' · '))+'</p><p class="small">Centro macroarea: '+escape(area.center.join(', '))+' (latitudine, longitudine).</p><p>'+safeLink(url,'Apri il centro nelle mappe')+'</p>'+(area.elevationRangeM?'<p class="small">Fascia altimetrica indicativa: '+escape(area.elevationRangeM.join('–'))+' m. Non è un profilo del percorso.</p>':'')+'<h3>Prima dell’uscita</h3><ul><li>Verifica titolo di raccolta, limiti e divieti aggiornati presso le autorità locali.</li><li>Controlla regole del parco, accesso ai terreni, chiusure e condizioni del percorso.</li><li>Prepara le mappe del percorso e verifica il pacchetto offline prima di partire.</li></ul><h3>Fonti territoriali</h3>'+(area.evidenceSources?.length?area.evidenceSources.map(source=>'<p>'+safeLink(source.url,source.label)+'</p>').join(''):'<p>Fonti territoriali specifiche da integrare.</p>'));
+ showDialog('Macroarea', '<h2>'+escape(area.name)+'</h2><p>'+escape(area.region)+'</p><p class="small">Centro rappresentativo: non indica una fungaia, un accesso autorizzato o un percorso verificato.</p><p>'+escape(area.habitat.join(' · '))+'</p><p class="small">Centro macroarea: '+escape(area.center.join(', '))+' (latitudine, longitudine).</p><p>'+safeLink(url,'Apri il centro nelle mappe')+'</p>'+(area.elevationRangeM?'<p class="small">Fascia altimetrica indicativa: '+escape(area.elevationRangeM.join('–'))+' m. Non è un profilo del percorso.</p>':'')+'<h3>Prima dell’uscita</h3><ul><li>Verifica titolo di raccolta, limiti e divieti aggiornati presso le autorità locali.</li><li>Controlla regole del parco, accesso ai terreni, chiusure e condizioni del percorso.</li><li>Prepara le mappe del percorso e verifica il pacchetto offline prima di partire.</li></ul><h3>Fonti territoriali</h3>'+(area.evidenceSources?.length?area.evidenceSources.map(source=>'<p>'+safeLink(source.url,source.label)+'</p>').join(''):'<p>Fonti territoriali specifiche da integrare.</p>'));
 }
 const fields=['date','taxon','habitat','characters','evidence','sources','notes','latitude','longitude'];
 const labels={date:'Data (AAAA-MM-GG)',taxon:'Ipotesi tassonomica',habitat:'Habitat e substrato',characters:'Caratteri osservati',evidence:'Evidenze, foto di riferimento e limiti',sources:'Fonti: autore, titolo, pagina, DOI o URL',notes:'Note',latitude:'Latitudine facoltativa',longitude:'Longitudine facoltativa'};
@@ -220,11 +228,9 @@ async function restoreBackup(file){
  }catch(error){status(error.message||'Backup non leggibile. Nessun dato importato.');}
 }
 function scientificCoverage(){
- const internal=new Set(['S1-obiettivi-tassonomici-v4-2026-06-09','AUDIT-minimum-3plus1-baseline-1.0','EDITORIAL-minimum-card-synthesis-v1']);
- const external=data.catalog.filter(t=>(t.sources||[]).some(s=>s.sourceId&&!internal.has(s.sourceId)&&s.reviewScope!=='supplementary-literature'&&typeof s.supportedClaim==='string'&&s.supportedClaim.trim())).length;
- const habitats=data.catalog.filter(t=>t.habitat?.length).length,comparisons=data.catalog.filter(t=>t.lookalikes?.length).length;
- return '<details id="scientific-coverage"><summary>Copertura dei contenuti e biblioteca scientifica</summary><p>'+external+'/'+data.catalog.length+' schede Minimo con riscontri bibliografici esterni puntuali sui caratteri di campo. Habitat strutturati: '+habitats+'/'+data.catalog.length+'. Confronti strutturati: '+comparisons+'/'+data.catalog.length+'.</p><p>La revisione micologica indipendente non è attestata. La bibliografia generale non valida automaticamente i caratteri delle singole schede.</p><h2>Biblioteca generale</h2>'+(data.bibliography||[]).map(s=>'<div class="source"><p>'+escape(s.title)+'</p><p class="small">'+escape([...(s.authors||[]),s.publisher,s.publicationYear].filter(Boolean).join(' · '))+'</p>'+(s.url?'<p>'+safeLink(s.url,'Apri riferimento esterno')+'</p>':'')+(s.licenseNote?'<p class="small">'+escape(s.licenseNote)+'</p>':'')+'</div>').join('')+'</details>';
+ return '<details id="scientific-coverage"><summary>Biblioteca di studio</summary>'+(data.bibliography||[]).map(s=>'<div class="source"><p>'+escape(s.title)+'</p><p class="small">'+escape([...(s.authors||[]),s.publisher,s.publicationYear].filter(Boolean).join(' · '))+'</p>'+(s.url?'<p>'+safeLink(s.url,'Apri riferimento esterno')+'</p>':'')+'</div>').join('')+'</details>';
 }
+
 function renderCommunity(){
  $('#main').classList.remove('feed');$('#main').innerHTML='<section><h1>Contributi scientifici</h1><p><a class="button photo-import-link" href="./importa-foto.html">Importa foto · proprietario e manutentori</a></p><p>Le bozze personali restano sul dispositivo. Puoi proporre una correzione documentata nel repository pubblico di Fungo Italia usando un account GitHub gratuito.</p><div class="link-list"><a href="https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml" target="_blank" rel="noopener noreferrer"><strong>Proponi una correzione scientifica su GitHub</strong>Indica il taxon, la modifica proposta e le fonti con pagina, DOI o URL.</a></div><p class="notice">La proposta sarà pubblica. Non inserire coordinate precise o dati personali; usa solo immagini pubblicabili, senza GPS nei metadati. Una proposta non è un’approvazione scientifica e non aggiorna automaticamente il catalogo.</p><details><summary>Servizio storico e account esistenti</summary><p>I contributi già pubblicati e i ruoli del servizio precedente restano disponibili. Questi flussi richiedono autenticazione e connessione.</p><div class="link-list">'+[
  ['/catalog/proposals/new','Proposta nel servizio storico','Per gli account già presenti.'],

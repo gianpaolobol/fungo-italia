@@ -59,7 +59,7 @@ test('malformed storage is preserved; scrolling catalog and group sources remain
  await page.addInitScript(({studyKey,notesKey})=>{localStorage.setItem(studyKey,'{broken-study');localStorage.setItem(notesKey,'{broken-notes');},{studyKey,notesKey});
  await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
  await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Lettura continua',exact:true})).toBeVisible();
- await page.getByRole('heading',{name:'Fonti e limiti'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Fonti e limiti'}).first()).toBeInViewport();
+ await page.getByRole('heading',{name:'Fonti'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Fonti'}).first()).toBeInViewport();
  await page.getByRole('button',{name:'Salva preferito',exact:true}).first().click();
  expect(await page.evaluate(key=>localStorage.getItem(key),studyKey)).toBe('{broken-study');
  await page.getByRole('button',{name:'Note',exact:true}).click();await expect(page.getByText('Bozze non leggibili.',{exact:false})).toBeVisible();
@@ -153,8 +153,8 @@ test('scrolling study saves the visible learning unit for resume',async({page})=
 test('keyboard detail navigation restores focus to the opener',async({page})=>{
  await ready(page);const opener=page.getByRole('button',{name:/^Apri /}).first();await opener.focus();await page.keyboard.press('Enter');await expect(page.getByRole('button',{name:'Torna',exact:true})).toBeFocused();await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(opener).toBeFocused();
 });
-test('scientific coverage and general bibliography remain distinct',async({page})=>{
- await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage')).toContainText('7/148 schede Minimo con riscontri bibliografici esterni puntuali');await expect(page.locator('#scientific-coverage')).toContainText('Habitat strutturati: 3/148');await expect(page.locator('#scientific-coverage')).toContainText('Confronti strutturati: 14/148');await expect(page.locator('#scientific-coverage a')).toHaveCount(3);
+test('study library shows bibliography without audit coverage statistics',async({page})=>{
+ await ready(page);await page.locator('#scientific-coverage summary').click();await expect(page.locator('#scientific-coverage a')).toHaveCount(3);await expect(page.locator('#scientific-coverage')).not.toContainText('revisione');await expect(page.locator('#scientific-coverage')).not.toContainText('7/148');
 });
 
 test('common-name search reaches porcini and preserves the non-unique prugnolo mapping',async({page})=>{
@@ -250,4 +250,15 @@ test('keyboard recall keeps focus on each new question, answer and summary',asyn
  await page.getByRole('button',{name:'Mostra risposta',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.locator('#review-answer > h2')).toBeFocused();
  await page.getByRole('button',{name:'Ricordata',exact:true}).focus();await page.keyboard.press('Enter');await expect(page.getByRole('heading',{name:'Sessione conclusa',exact:true})).toBeFocused();
  await page.keyboard.press('Escape');await expect(page.locator('#detail')).not.toBeVisible();await expect(start).toBeFocused();
+});
+
+test('Xanthodermatei detail and continuous reading hide internal metadata and repeated identity',async({page})=>{
+ await ready(page);const name='Agaricus sez. Xanthodermatei';
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill(name);
+ await page.getByRole('button',{name:'Apri '+name,exact:true}).click();
+ const body=page.locator('#detail-body');await expect(body.locator('h2')).toHaveCount(1);await expect(body.locator('.notice')).toHaveCount(0);
+ for(const text of ['Scientific Baseline','Audit interno','revisione','objective-agaricus','Rango:','Unità didattica al rango','Valutazione alimentare non pubblicata'])await expect(body).not.toContainText(text);
+ await expect(body).toContainText('Odore fenolico');await expect(body).toContainText('Carattere differenziante (+1)');await expect(body).toContainText('Obiettivi tassonomici nella formazione');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await page.getByRole('button',{name:'Elenco',exact:true}).click();
+ const card=page.locator('#cards article').first();await expect(card.locator('h2')).toHaveCount(0);await expect(card.locator('.heading strong')).toHaveText(name);await expect(card.locator('.heading span')).toHaveText('Sezione');await expect(card.locator('.notice')).toHaveCount(0);await expect(card).not.toContainText('Scientific Baseline');
 });

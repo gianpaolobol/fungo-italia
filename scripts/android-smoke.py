@@ -133,7 +133,7 @@ def main():
     time.sleep(2)
     tap('Apri Amanita',prefix=True)
     scroll_top()
-    wait_text('Rango:')
+    wait_text('Specie')
     tap('Salva preferito')
     wait_text('Rimuovi preferito')
     wait_text('Caratteri di studio')
