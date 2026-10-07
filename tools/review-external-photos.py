@@ -23,7 +23,7 @@ def save(source,raw,suffix,page=None,xref=None):
 for source in sources:
  if ("upload.wikimedia.org/" in source["assetUrl"] or "/Special:FilePath/" in source["assetUrl"]):
   cached=[i for i in previous if i["sourceId"]==source["sourceId"] and i["licenseUrl"]==source["licenseUrl"]]
-  if cached and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):items.extend(cached)
+  if cached and (source["kind"]!="pdf" or {i["page"] for i in cached}==set(source["pages"])) and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):items.extend(cached)
   else:failures.append({"sourceId":source["sourceId"],"errorType":"PublisherRateLimit","message":"Wikimedia automated requests paused after robot-policy/rate-limit response; no retries or bypass."})
   continue
  if source["sourceId"].startswith("EXT-COMP-") and ("upload.wikimedia.org/" in source["assetUrl"] or "/Special:FilePath/" in source["assetUrl"]):

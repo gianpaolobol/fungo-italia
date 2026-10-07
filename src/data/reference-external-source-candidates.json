@@ -2472,6 +2472,39 @@
       "taxonomicEvidence": "https://www.bioacad.com/article/doi.org/10.65390/fdiv.2026.136002",
       "verificationBasis": "Figure 1r explicitly captioned Polyporus umbellatus; article and figure CC BY 4.0 with no separate rights exception; photographic voucher not specified.",
       "kind": "image"
+    },
+    {
+      "sourceId": "EXT-OA-TUBAEFORMIS-FINAL2025",
+      "subjectTaxon": "Craterellus tubaeformis",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s13002-025-00789-x",
+      "assetUrl": "https://d-nb.info/1372537155/34",
+      "author": "Mai Løvaas (photographs); Ingvar Svanberg; Mai Løvaas; Sabira Ståhlberg (2025)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://link.springer.com/article/10.1186/s13002-025-00789-x",
+      "taxonomicEvidence": "https://link.springer.com/article/10.1186/s13002-025-00789-x",
+      "verificationBasis": "Published photographic figure; species identification follows author and voucher evidence, no independent identification asserted.",
+      "kind": "pdf",
+      "pages": [
+        3,
+        8
+      ]
+    },
+    {
+      "sourceId": "EXT-OA-AMANITA-SU2026",
+      "subjectTaxon": "Amanita muscaria",
+      "sourceUrl": "https://doi.org/10.3897/imafungus.17.175874",
+      "assetUrl": "https://zenodo.org/records/19064031/files/imafungus_article_175874.pdf?download=1",
+      "author": "Su et al. (2026)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://doi.org/10.3897/imafungus.17.175874",
+      "taxonomicEvidence": "https://doi.org/10.3897/imafungus.17.175874",
+      "verificationBasis": "Published photographic figure; species identification follows author and voucher evidence, no independent identification asserted.",
+      "kind": "pdf",
+      "pages": [
+        5
+      ]
     }
   ]
 }
