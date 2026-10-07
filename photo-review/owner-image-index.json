@@ -1174,7 +1174,34 @@
           "path": "photo-review/raw/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg-x428.jpg"
         }
       ],
-      "sheets": []
+      "sheets": [
+        {
+          "path": "photo-review/owner-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg-sheet-1.jpg",
+          "from": 1,
+          "to": 20
+        },
+        {
+          "path": "photo-review/owner-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg-sheet-2.jpg",
+          "from": 21,
+          "to": 40
+        },
+        {
+          "path": "photo-review/owner-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg-sheet-3.jpg",
+          "from": 41,
+          "to": 60
+        },
+        {
+          "path": "photo-review/owner-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg-sheet-4.jpg",
+          "from": 61,
+          "to": 80
+        },
+        {
+          "path": "photo-review/owner-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg-sheet-5.jpg",
+          "from": 81,
+          "to": 97
+        }
+      ],
+      "status": "extracted-through-owner-access"
     }
   ]
 }
