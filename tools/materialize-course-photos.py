@@ -21,7 +21,10 @@ def render(s,im,source_hash):
  im=ImageOps.contain(im,(1600,1600))
  filename=s["filename"]
  if filename in seen or "/" in filename or not filename.endswith(".jpg"):raise RuntimeError("Unsafe filename")
- seen.add(filename);im.save(output/filename,quality=90,optimize=True,icc_profile=im.info.get("icc_profile"))
+ seen.add(filename)
+ icc=im.info.get("icc_profile")
+ im.info.clear()
+ im.save(output/filename,quality=90,optimize=True,icc_profile=icc)
  data=(output/filename).read_bytes()
  manifest["images"].append({"scientificName":s["scientificName"],"subjectTaxon":s["subjectTaxon"],"src":"images/reference/"+filename,"view":s["view"],"alt":s["alt"],"credit":s["credit"],"sourceId":s["sourceId"],"page":s["page"],"taxonStatus":"identified","rights":{"status":"verified","publicRepository":True,"pages":True,"permissionEvidenceId":"OWNER-COURSE-PHOTOS-2026-10-07"}})
  evidence["images"].append({"src":"images/reference/"+filename,"sourceId":s["sourceId"],"sourceSha256":source_hash,"sourcePage":s["page"],"xref":s["xref"],"subjectTaxon":s["subjectTaxon"],"crop":s.get("crop"),"sha256":hashlib.sha256(data).hexdigest(),"width":im.width,"height":im.height,"visualReview":"verified","reviewNotes":s["reviewNotes"],"permissionEvidenceId":"OWNER-COURSE-PHOTOS-2026-10-07"})
