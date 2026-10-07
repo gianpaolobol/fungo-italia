@@ -55,6 +55,7 @@ function studyFacts(t){
  (food?.precautions?.length?'<div class="food-precautions"><strong>Accorgimenti</strong><ul>'+food.precautions.map(value=>'<li>'+escape(value)+'</li>').join('')+'</ul></div>':'')+
  (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
 }
+const publicPhotoHttps=value=>{try{const url=new URL(value);return typeof value==='string'&&url.protocol==='https:'&&!url.username&&!url.password;}catch{return false;}};
 function referenceGallery(t){
  const images=t.referenceImages||[];
  const subjects=[...new Set(images.map(p=>p.subjectTaxon).filter(Boolean))];
@@ -72,7 +73,7 @@ function zoomReference(id,view,opener){
  let viewer=$('#photo-viewer');
  if(!viewer){
   viewer=document.createElement('dialog');viewer.id='photo-viewer';viewer.setAttribute('aria-labelledby','photo-title');
-  viewer.innerHTML='<div class="dialog-top"><button id="photo-close">Chiudi immagine</button><strong id="photo-title"></strong></div><div class="photo-controls"><button id="photo-minus">Riduci</button><span id="photo-scale"></span><button id="photo-plus">Ingrandisci</button></div><div class="photo-stage"><img id="photo-full" alt=""></div><p id="photo-credit" class="small"></p>';
+  viewer.innerHTML='<div class="dialog-top"><button id="photo-close">Chiudi immagine</button><strong id="photo-title"></strong></div><div class="photo-controls"><button id="photo-minus">Riduci</button><span id="photo-scale"></span><button id="photo-plus">Ingrandisci</button></div><div class="photo-stage"><img id="photo-full" alt=""></div><p id="photo-credit" class="small"></p><p id="photo-links" class="small"></p>';
   document.body.append(viewer);
   $('#photo-close').onclick=()=>viewer.close();
   viewer.addEventListener('close',()=>{photoOpener?.focus({preventScroll:true});photoOpener=null;});
@@ -81,6 +82,8 @@ function zoomReference(id,view,opener){
  photoOpener=opener;photoScale=1;
  $('#photo-title').textContent=(photo.subjectTaxon||taxon.scientificName)+' · '+(referenceViews.find(v=>v[0]===view)?.[1]||'');
  $('#photo-full').src=photo.src;$('#photo-full').alt=photo.alt;$('#photo-credit').textContent=photo.credit;
+ const links=$('#photo-links');links.replaceChildren();
+ for(const [field,label] of [['sourceUrl','Fonte'],['licenseUrl','Licenza']])if(publicPhotoHttps(photo[field])){const link=document.createElement('a');link.href=photo[field];link.textContent=label;link.target='_blank';link.rel='noopener noreferrer';links.append(link,document.createTextNode(' · '));}
  resizeReference(0);viewer.showModal();$('#photo-close').focus();
 }
 function resizeReference(delta){
@@ -103,7 +106,7 @@ function validStudyFields(t){
   if(p.sporePrint!==undefined){const print=p.sporePrint;if(!print||!text(print.label)||(print.color!==undefined&&!/^#[0-9a-f]{6}$/i.test(print.color))||(print.scale!==undefined&&!['I','II','III','IV','I–II','I–III','I–IV','II–III','II–IV','III–IV'].includes(print.scale)))return false;}
   if(p.edibility!==undefined&&(!p.edibility||!text(p.edibility.label)||!Array.isArray(p.edibility.precautions)||!p.edibility.precautions.every(text)))return false;
  }
- if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit)&&(p.subjectTaxon===undefined||text(p.subjectTaxon)))))return false;
+ if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit)&&(p.subjectTaxon===undefined||text(p.subjectTaxon))&&(p.sourceUrl===undefined||publicPhotoHttps(p.sourceUrl))&&(p.licenseUrl===undefined||publicPhotoHttps(p.licenseUrl)))))return false;
  return true;
 }
 

@@ -880,6 +880,366 @@
       "reviewNotes": "Figura 7a, basidioma di destra: S.imbricatus; esclusi tutti i pannelli d–f (S.leucopus). Identificazione pubblicata con morfologia e filogenesi multilocus; immagine non prova commestibilità.",
       "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "subjectTaxon": "Ramaria pallida",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-PALLIDA-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-pallida-1-original.jpg",
+      "candidateSha256": "917eb108a6b168b98466ab813afedb9614a70b4139cd6d05dc287adb57fea9ce",
+      "sourceSha256": "e0c2fcfb95656b9a1d8572061ef3b77c642b732ab7a9c1e730553141da1f4767",
+      "sourcePage": null,
+      "credit": "Egil Bendiksen / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "subjectTaxon": "Ramaria pallida",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-PALLIDA-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-pallida-2-original.jpg",
+      "candidateSha256": "910a1984a83478b36947e1df8082b6afa21d1f2fb482677db130f5b1e62dc03f",
+      "sourceSha256": "6e906552ee6ff4719aedd53b3aa887020b6e07ccbb1f0230e3920d95543ff349",
+      "sourcePage": null,
+      "credit": "Katriina Bendiksen / Naturhistorisk museum, Universitetet i Oslo · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "subjectTaxon": "Ramaria botrytis coll.",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-BOTRYTIS-110",
+      "sourcePath": "source-photo-assets/external/ext-adb-botrytis-110-original.jpg",
+      "candidateSha256": "55cfd5d49c7557dec68d4194ccda2a0e9a106a311447e83982be8fbb1b81e2e8",
+      "sourceSha256": "16b63635de65c53043123d72c8610d4efb79f90c53c22b8bcbf5e03fb8f1e36a",
+      "sourcePage": null,
+      "credit": "Tor Erik Brandrud / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://artsdatabanken.no/node/719717",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "subjectTaxon": "Ramaria botrytis coll.",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-BOTRYTIS-109",
+      "sourcePath": "source-photo-assets/external/ext-adb-botrytis-109-original.jpg",
+      "candidateSha256": "949ad6acc638c2d87a80b243edf81a1ab10c132c9410c65f0ff29ce3746013a1",
+      "sourceSha256": "080577a5e515977242051f89570c69589873ea796919d0b3a9974de2d86f67c3",
+      "sourcePage": null,
+      "credit": "Kristin Brandrud · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Raccolta del gruppo R.botrytis, fotografata dall’alto con basi e sezioni visibili; non determinazione sensu stricto.",
+      "sourceUrl": "https://artsdatabanken.no/node/719717",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "subjectTaxon": "Hygrophorus penarioides",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.565,
+        0.88
+      ],
+      "sourceId": "EXT-ANDERSSON-PENARIOIDES",
+      "sourcePath": "source-photo-assets/external/ext-andersson-penarioides-original.jpg",
+      "candidateSha256": "7afdf6963c585a7456332df037db3a547df8458202865c4efaf1321ed975a7da",
+      "sourceSha256": "320b3f3de861df616e6d3cf6770ee5badc7f6e4d24df9a19b509e8b3c1e2abfa",
+      "sourcePage": null,
+      "credit": "Irene Andersson · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Identificazione fotografica IreneAndersson, micologa documentata NAMA2021p29; pileo visto dall’alto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "subjectTaxon": "Hygrophorus penarioides",
+      "view": "underside",
+      "crop": [
+        0.5,
+        0.11,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ANDERSSON-PENARIOIDES",
+      "sourcePath": "source-photo-assets/external/ext-andersson-penarioides-original.jpg",
+      "candidateSha256": "7afdf6963c585a7456332df037db3a547df8458202865c4efaf1321ed975a7da",
+      "sourceSha256": "320b3f3de861df616e6d3cf6770ee5badc7f6e4d24df9a19b509e8b3c1e2abfa",
+      "sourcePage": null,
+      "credit": "Irene Andersson · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Lamelle e gambo; identificazione dell’autrice, non voucher molecolare.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "subjectTaxon": "Hygrophoropsis aurantiaca",
+      "view": "lateral",
+      "crop": [
+        0.15,
+        0.1,
+        0.98,
+        0.94
+      ],
+      "sourceId": "EXT-USFWS-HYGROPHOROPSIS",
+      "sourcePath": "source-photo-assets/external/ext-usfws-hygrophoropsis-original.jpg",
+      "candidateSha256": "97c9bb37cc0bf73dc611b7aeefb59991da93c3fe54bbd0260c598de997b3f453",
+      "sourceSha256": "f266ceeda354f253fe6b7241e3c0dedee4eb58228ff912a39d2d1096fb2ea7ff",
+      "sourcePage": null,
+      "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+    },
+    {
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "subjectTaxon": "Hygrophoropsis aurantiaca",
+      "view": "top",
+      "crop": [
+        0.5,
+        0.13,
+        0.99,
+        0.7
+      ],
+      "sourceId": "EXT-USFWS-HYGROPHOROPSIS",
+      "sourcePath": "source-photo-assets/external/ext-usfws-hygrophoropsis-original.jpg",
+      "candidateSha256": "97c9bb37cc0bf73dc611b7aeefb59991da93c3fe54bbd0260c598de997b3f453",
+      "sourceSha256": "f266ceeda354f253fe6b7241e3c0dedee4eb58228ff912a39d2d1096fb2ea7ff",
+      "sourcePage": null,
+      "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+      "reviewNotes": "Cappelli e stipiti in vista superiore obliqua, fonteUSFWS con nome esplicito.",
+      "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+    },
+    {
+      "scientificName": "Hygrophoropsis",
+      "subjectTaxon": "Hygrophoropsis aurantiaca",
+      "view": "lateral",
+      "crop": [
+        0.15,
+        0.1,
+        0.98,
+        0.94
+      ],
+      "sourceId": "EXT-USFWS-HYGROPHOROPSIS",
+      "sourcePath": "source-photo-assets/external/ext-usfws-hygrophoropsis-original.jpg",
+      "candidateSha256": "97c9bb37cc0bf73dc611b7aeefb59991da93c3fe54bbd0260c598de997b3f453",
+      "sourceSha256": "f266ceeda354f253fe6b7241e3c0dedee4eb58228ff912a39d2d1096fb2ea7ff",
+      "sourcePage": null,
+      "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+    },
+    {
+      "scientificName": "Hygrophoropsis",
+      "subjectTaxon": "Hygrophoropsis aurantiaca",
+      "view": "top",
+      "crop": [
+        0.5,
+        0.13,
+        0.99,
+        0.7
+      ],
+      "sourceId": "EXT-USFWS-HYGROPHOROPSIS",
+      "sourcePath": "source-photo-assets/external/ext-usfws-hygrophoropsis-original.jpg",
+      "candidateSha256": "97c9bb37cc0bf73dc611b7aeefb59991da93c3fe54bbd0260c598de997b3f453",
+      "sourceSha256": "f266ceeda354f253fe6b7241e3c0dedee4eb58228ff912a39d2d1096fb2ea7ff",
+      "sourcePage": null,
+      "credit": "Peter Pearsall / U.S. Fish and Wildlife Service · Public domain · ritaglio dall’originale",
+      "reviewNotes": "Cappelli e stipiti in vista superiore obliqua, fonteUSFWS con nome esplicito.",
+      "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca"
+    },
+    {
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "subjectTaxon": "Limacella furnacea",
+      "view": "lateral",
+      "crop": [
+        0.16,
+        0,
+        0.63,
+        0.61
+      ],
+      "sourceId": "EXT-UIB-LIMACELLA",
+      "sourcePath": "source-photo-assets/external/ext-uib-limacella-original.jpg",
+      "candidateSha256": "9a74f875574a6f87a230389c58256a6a84851812ae7b15b5ee5661417f94704e",
+      "sourceSha256": "d12e40cecf5afdfc8bd1797415f17c242b28b562e2239885983bbac8e08a436b",
+      "sourcePage": null,
+      "credit": "Davide Puddu · CC BY · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+      "licenseUrl": "https://balearica.uib.cat/en/taxon/1969"
+    },
+    {
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "subjectTaxon": "Limacella furnacea",
+      "view": "top",
+      "crop": [
+        0.12,
+        0.38,
+        0.52,
+        0.83
+      ],
+      "sourceId": "EXT-UIB-LIMACELLA",
+      "sourcePath": "source-photo-assets/external/ext-uib-limacella-original.jpg",
+      "candidateSha256": "9a74f875574a6f87a230389c58256a6a84851812ae7b15b5ee5661417f94704e",
+      "sourceSha256": "d12e40cecf5afdfc8bd1797415f17c242b28b562e2239885983bbac8e08a436b",
+      "sourcePage": null,
+      "credit": "Davide Puddu · CC BY · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+      "licenseUrl": "https://balearica.uib.cat/en/taxon/1969"
+    },
+    {
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "subjectTaxon": "Limacella furnacea",
+      "view": "underside",
+      "crop": [
+        0.53,
+        0.3,
+        0.9,
+        0.88
+      ],
+      "sourceId": "EXT-UIB-LIMACELLA",
+      "sourcePath": "source-photo-assets/external/ext-uib-limacella-original.jpg",
+      "candidateSha256": "9a74f875574a6f87a230389c58256a6a84851812ae7b15b5ee5661417f94704e",
+      "sourceSha256": "d12e40cecf5afdfc8bd1797415f17c242b28b562e2239885983bbac8e08a436b",
+      "sourcePage": null,
+      "credit": "Davide Puddu · CC BY · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e vista coerenti con didascalia istituzionale.",
+      "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+      "licenseUrl": "https://balearica.uib.cat/en/taxon/1969"
+    },
+    {
+      "scientificName": "Pluteus",
+      "subjectTaxon": "Pluteus conformis",
+      "view": "top",
+      "crop": [
+        0.491,
+        0,
+        0.757,
+        1
+      ],
+      "sourceId": "EXT-MALYSHEVA-PLUTEUS-2023",
+      "sourcePath": "source-photo-assets/external/ext-malysheva-pluteus-2023-original.jpg",
+      "candidateSha256": "9147c8716bf78e42ecae960132177d54e0fd293ee18af9726c23ea3e48e9912a",
+      "sourceSha256": "184cb91edb27c377532e4367965830ed3e7b8e6deb0c266f8bc0e3aa2dd88c6f",
+      "sourcePage": null,
+      "credit": "Malysheva, Popov, Morozova, Dudka, Pham e Malysheva (2023) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura4b, Pluteusconformis LEF313663, Vietnam, macro/microscopia e nrITS/tef1.",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/figure/jof-09-00584-f004/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Pluteus",
+      "subjectTaxon": "Pluteus conformis",
+      "view": "underside",
+      "crop": [
+        0.249,
+        0.022,
+        0.488,
+        0.965
+      ],
+      "sourceId": "EXT-MALYSHEVA-PLUTEUS-2023",
+      "sourcePath": "source-photo-assets/external/ext-malysheva-pluteus-2023-original.jpg",
+      "candidateSha256": "9147c8716bf78e42ecae960132177d54e0fd293ee18af9726c23ea3e48e9912a",
+      "sourceSha256": "184cb91edb27c377532e4367965830ed3e7b8e6deb0c266f8bc0e3aa2dd88c6f",
+      "sourcePage": null,
+      "credit": "Malysheva, Popov, Morozova, Dudka, Pham e Malysheva (2023) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura4a holotipoLEF313664, lamelle e gambointero; esempioPluteusconformis.",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/figure/jof-09-00584-f004/",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+      "view": "lateral",
+      "crop": [
+        0.028,
+        0.053,
+        0.33,
+        0.498
+      ],
+      "sourceId": "EXT-LIN-PLEUROTUS-2022",
+      "sourcePath": "source-photo-assets/external/ext-lin-pleurotus-2022-x86.jpg",
+      "candidateSha256": "1322e585e49f19685959cb4bcca3d3cb6cd511ce99b32276c84052bb1b21c70c",
+      "sourceSha256": "7dde6baf9b6de13cf48ee652d31caa86c5e5a0deab5b66090f66d065978abc75",
+      "sourcePage": 5,
+      "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura1A, p.5: PH11 coltivato in atmosfera normale (LCO), esclusi D–F ad altaCO2.",
+      "sourceUrl": "https://doi.org/10.3390/jof8070652",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+      "view": "top",
+      "crop": [
+        0.692,
+        0.054,
+        0.995,
+        0.498
+      ],
+      "sourceId": "EXT-LIN-PLEUROTUS-2022",
+      "sourcePath": "source-photo-assets/external/ext-lin-pleurotus-2022-x86.jpg",
+      "candidateSha256": "1322e585e49f19685959cb4bcca3d3cb6cd511ce99b32276c84052bb1b21c70c",
+      "sourceSha256": "7dde6baf9b6de13cf48ee652d31caa86c5e5a0deab5b66090f66d065978abc75",
+      "sourcePage": 5,
+      "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura1C, p.5: PH11 coltivato in atmosfera normale (LCO), esclusi D–F ad altaCO2.",
+      "sourceUrl": "https://doi.org/10.3390/jof8070652",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+      "view": "underside",
+      "crop": [
+        0.362,
+        0.054,
+        0.663,
+        0.498
+      ],
+      "sourceId": "EXT-LIN-PLEUROTUS-2022",
+      "sourcePath": "source-photo-assets/external/ext-lin-pleurotus-2022-x86.jpg",
+      "candidateSha256": "1322e585e49f19685959cb4bcca3d3cb6cd511ce99b32276c84052bb1b21c70c",
+      "sourceSha256": "7dde6baf9b6de13cf48ee652d31caa86c5e5a0deab5b66090f66d065978abc75",
+      "sourcePage": 5,
+      "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura1B, p.5: PH11 coltivato in atmosfera normale (LCO), esclusi D–F ad altaCO2.",
+      "sourceUrl": "https://doi.org/10.3390/jof8070652",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 }

@@ -1,12 +1,16 @@
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {applyReferenceImages} from './study-profiles.mjs';
+import {applyReferenceImages,validateExternalReference} from './study-profiles.mjs';
 const read=async name=>JSON.parse(await readFile('src/data/'+name+'.json','utf8'));
 const [catalog,groups,manifest,evidence,registry]=await Promise.all(['catalog','groups','reference-images','reference-image-evidence','course-sources'].map(read));
+const externalRegistry=await read('reference-external-sources');
 function check(ok,message){if(!ok)throw Error(message);}
 applyReferenceImages([...catalog,...groups],manifest);
 const sources=new Map(registry.documents.map(s=>[s.sourceId,s])),proofs=new Map(evidence.images.map(p=>[p.src,p]));
 check(proofs.size===evidence.images.length&&proofs.size===manifest.images.length,'Image evidence count mismatch');
+check(externalRegistry.version===1&&Array.isArray(externalRegistry.sources),'Invalid external source registry');
+const externalSources=new Map(externalRegistry.sources.map(s=>[s.sourceId,s]));
+check(externalSources.size===externalRegistry.sources.length,'Duplicate external image source');
 const permission=await readFile('docs/reference-image-permission.md','utf8');
 check(permission.includes('OWNER-COURSE-PHOTOS-2026-10-07'),'Missing owner permission evidence');
 const coverage=await read('reference-image-coverage');
@@ -24,11 +28,15 @@ check(coverage.summary.partialCards===coverage.cards.filter(c=>c.availableViews.
 let imageBytes=0;
 const hashes=new Map();
 for(const image of manifest.images){
- const source=sources.get(image.sourceId),proof=proofs.get(image.src);
+ const external=image.sourceId.startsWith('EXT-'),source=(external?externalSources:sources).get(image.sourceId),proof=proofs.get(image.src);
  check(source&&proof&&proof.sourceId===image.sourceId&&proof.sourcePage===image.page,'Image source mismatch');
- check(source.pageCount===null||image.page<=source.pageCount,'Image page outside source');
+ if(external){
+  validateExternalReference(image,source,proof);
+  check(createHash('sha256').update(await readFile(proof.sourcePath)).digest('hex')===proof.candidateSha256,'Reviewed original image bytes changed');
+  check(proof.permissionEvidenceId===image.rights.permissionEvidenceId&&typeof proof.reviewNotes==='string'&&proof.reviewNotes.trim(),'External review evidence missing');
+ }else check(source.pageCount===null||image.page<=source.pageCount,'Image page outside source');
  check(proof.visualReview==='verified'&&proof.subjectTaxon===image.subjectTaxon&&/^[a-f0-9]{64}$/.test(proof.sourceSha256),'Image visual review missing');
- check(image.rights.permissionEvidenceId==='OWNER-COURSE-PHOTOS-2026-10-07','Unexpected image permission');
+ if(!external)check(image.rights.permissionEvidenceId==='OWNER-COURSE-PHOTOS-2026-10-07','Unexpected image permission');
  const bytes=await readFile('web/public/'+image.src);
  imageBytes+=bytes.length;
  check(createHash('sha256').update(bytes).digest('hex')===proof.sha256,'Image bytes changed: '+image.src);

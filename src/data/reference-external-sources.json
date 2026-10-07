@@ -347,6 +347,139 @@
       "allowedSubjectTaxa": [
         "Sarcodon imbricatus"
       ]
+    },
+    {
+      "sourceId": "EXT-ADB-PALLIDA-1",
+      "subjectTaxon": "Ramaria pallida",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/214148/IMG_4071Ramaria_pallida_SRada_1.JPG",
+      "author": "Egil Bendiksen / Norsk institutt for naturforskning",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "taxonomicEvidence": "https://artsdatabanken.no/arter/takson/88451/beskrivelse",
+      "verificationBasis": "institutional-expert-editorial",
+      "kind": "image",
+      "sourceSha256": "e0c2fcfb95656b9a1d8572061ef3b77c642b732ab7a9c1e730553141da1f4767"
+    },
+    {
+      "sourceId": "EXT-ADB-PALLIDA-2",
+      "subjectTaxon": "Ramaria pallida",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/189712/92.png",
+      "author": "Katriina Bendiksen / Naturhistorisk museum, Universitetet i Oslo",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/arter/takson/88451",
+      "taxonomicEvidence": "https://artsdatabanken.no/arter/takson/88451/beskrivelse",
+      "verificationBasis": "institutional-expert-editorial",
+      "kind": "image",
+      "sourceSha256": "6e906552ee6ff4719aedd53b3aa887020b6e07ccbb1f0230e3920d95543ff349"
+    },
+    {
+      "sourceId": "EXT-ADB-BOTRYTIS-109",
+      "subjectTaxon": "Ramaria botrytis coll.",
+      "sourceUrl": "https://artsdatabanken.no/node/719717",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/189712/109.png",
+      "author": "Kristin Brandrud",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/node/719717",
+      "taxonomicEvidence": "https://artsdatabanken.no/node/719717",
+      "verificationBasis": "institutional-expert-editorial-collective-taxon",
+      "kind": "image",
+      "sourceSha256": "080577a5e515977242051f89570c69589873ea796919d0b3a9974de2d86f67c3"
+    },
+    {
+      "sourceId": "EXT-ADB-BOTRYTIS-110",
+      "subjectTaxon": "Ramaria botrytis coll.",
+      "sourceUrl": "https://artsdatabanken.no/node/719717",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/189712/110.png",
+      "author": "Tor Erik Brandrud / Norsk institutt for naturforskning",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/node/719717",
+      "taxonomicEvidence": "https://artsdatabanken.no/node/719717",
+      "verificationBasis": "institutional-expert-editorial-collective-taxon",
+      "kind": "image",
+      "sourceSha256": "16b63635de65c53043123d72c8610d4efb79f90c53c22b8bcbf5e03fb8f1e36a"
+    },
+    {
+      "sourceId": "EXT-ANDERSSON-PENARIOIDES",
+      "subjectTaxon": "Hygrophorus penarioides",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Hygrophorus_penarioides.jpg",
+      "author": "Irene Andersson",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+      "taxonomicEvidence": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
+      "expertiseEvidenceUrl": "https://namyco.org/wp-content/uploads/2023/08/A_Cortinarius_rubellus_Poisoning_in_Canada-2-1.pdf",
+      "verificationBasis": "photographer-identification-documented-mycologist-NAMA2021-p29-MO39823",
+      "kind": "image",
+      "sourceSha256": "320b3f3de861df616e6d3cf6770ee5badc7f6e4d24df9a19b509e8b3c1e2abfa"
+    },
+    {
+      "sourceId": "EXT-LIN-PLEUROTUS-2022",
+      "subjectTaxon": "Pleurotus ostreatus — cultivated strain PH11",
+      "sourceUrl": "https://doi.org/10.3390/jof8070652",
+      "assetUrl": "https://pdfs.semanticscholar.org/6d81/1ea9e408015597be8478af54afd1055a3596.pdf",
+      "author": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://doi.org/10.3390/jof8070652",
+      "taxonomicEvidence": "https://doi.org/10.3390/jof8070652",
+      "verificationBasis": "peer-reviewed-cultivated-strain-PH11-Fig1A-normal-atmosphere-only",
+      "kind": "pdf",
+      "pages": [
+        5
+      ],
+      "sourceSha256": "7dde6baf9b6de13cf48ee652d31caa86c5e5a0deab5b66090f66d065978abc75",
+      "allowedSubjectTaxa": [
+        "Pleurotus ostreatus (coltivato, ceppo PH11)"
+      ]
+    },
+    {
+      "sourceId": "EXT-MALYSHEVA-PLUTEUS-2023",
+      "subjectTaxon": "Pluteus conformis",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/figure/jof-09-00584-f004/",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Basidiocarps_of_Pluteus_conformis_in_situ.png",
+      "author": "Malysheva, Popov, Morozova, Dudka, Pham e Malysheva (2023)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10221287/",
+      "taxonomicEvidence": "https://doi.org/10.3390/jof9050584",
+      "verificationBasis": "published-morphology-nrITS-tef1-holotype-LE-F313664-LE-F313663",
+      "kind": "image",
+      "sourceSha256": "184cb91edb27c377532e4367965830ed3e7b8e6deb0c266f8bc0e3aa2dd88c6f"
+    },
+    {
+      "sourceId": "EXT-USFWS-HYGROPHOROPSIS",
+      "subjectTaxon": "Hygrophoropsis aurantiaca",
+      "sourceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "assetUrl": "https://www.fws.gov/sites/default/files/styles/max_1300x1300/public/images/2005-07/30055.jpg?itok=9GGHFnyZ",
+      "author": "Peter Pearsall / U.S. Fish and Wildlife Service",
+      "licenseName": "Public domain",
+      "licenseUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "licenseEvidenceUrl": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "taxonomicEvidence": "https://www.fws.gov/media/hygrophoropsis-aurantiaca",
+      "verificationBasis": "federal-institutional-editorial-photo-taxonomic-caption",
+      "kind": "image",
+      "sourceSha256": "f266ceeda354f253fe6b7241e3c0dedee4eb58228ff912a39d2d1096fb2ea7ff"
+    },
+    {
+      "sourceId": "EXT-UIB-LIMACELLA",
+      "subjectTaxon": "Limacella furnacea",
+      "sourceUrl": "https://balearica.uib.cat/en/taxon/1969",
+      "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/7623119/medium.jpeg",
+      "author": "Davide Puddu",
+      "licenseName": "CC BY",
+      "licenseUrl": "https://balearica.uib.cat/en/taxon/1969",
+      "licenseEvidenceUrl": "https://balearica.uib.cat/en/taxon/1969",
+      "taxonomicEvidence": "https://balearica.uib.cat/en/taxon/1969",
+      "verificationBasis": "university-editorial-reuse-photographer-identification-version-unspecified",
+      "kind": "image",
+      "sourceSha256": "d12e40cecf5afdfc8bd1797415f17c242b28b562e2239885983bbac8e08a436b"
     }
   ]
 }

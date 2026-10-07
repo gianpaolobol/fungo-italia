@@ -7,9 +7,19 @@ selected=json.loads((ROOT/"src/data/reference-photo-selections.json").read_text(
 registry=json.loads((ROOT/"src/data/course-sources.json").read_text())
 sources={d["sourceId"]:d for d in registry["documents"]}
 local_index={r["path"]:r for r in json.loads((ROOT/"src/data/reference-source-photo-assets.json").read_text())["images"]}
-manifest={"version":1,"images":[]};evidence={"version":1,"images":[]}
+def is_external_photo(row):
+ permission=row.get("permissionEvidenceId",row.get("rights",{}).get("permissionEvidenceId",""))
+ return permission.startswith("EXTERNAL-LICENSE:")
+manifest_path=ROOT/"src/data/reference-images.json"
+evidence_path=ROOT/"src/data/reference-image-evidence.json"
+course_views={(s["scientificName"],s["view"]) for s in selected["images"]}
+preserved_images=[r for r in json.loads(manifest_path.read_text())["images"] if is_external_photo(r) and (r["scientificName"],r["view"]) not in course_views] if manifest_path.exists() else []
+preserved_paths={r["src"] for r in preserved_images}
+preserved_evidence=[r for r in json.loads(evidence_path.read_text())["images"] if is_external_photo(r) and r["src"] in preserved_paths] if evidence_path.exists() else []
+if preserved_paths!={r["src"] for r in preserved_evidence}:raise RuntimeError("External image provenance is incomplete")
+manifest={"version":1,"images":preserved_images};evidence={"version":1,"images":preserved_evidence}
 output=ROOT/"web/public/images/reference";output.mkdir(parents=True,exist_ok=True)
-seen=set()
+seen={pathlib.PurePosixPath(r["src"]).name for r in preserved_images}
 def render(s,im,source_hash):
  if s["view"] not in ["lateral","top","underside"] or s.get("visualReview")!="verified":raise RuntimeError("Missing visual review")
  im=im.convert("RGB")

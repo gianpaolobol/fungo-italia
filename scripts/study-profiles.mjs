@@ -54,21 +54,43 @@ export function applyStudyProfiles(records,integration,registry){
  }
  return records;
 }
+export function isPublicHttps(value){
+ if(typeof value!=='string')return false;
+ try{const url=new URL(value);return url.protocol==='https:'&&!url.username&&!url.password&&!!url.hostname;}catch{return false;}
+}
+export function validateExternalReference(asset,source,proof){
+ check(source&&source.sourceId===asset.sourceId&&/^EXT-[a-zA-Z0-9._-]+$/.test(source.sourceId),'Unknown external image source');
+ check(['CC BY 3.0','CC BY 4.0','CC BY-SA 3.0','CC BY-SA 4.0','CC0','CC0 1.0','Public domain','CC BY'].includes(source.licenseName),'Unsupported external image license');
+ check(text(source.author)&&isPublicHttps(source.sourceUrl)&&isPublicHttps(source.licenseUrl)&&isPublicHttps(source.licenseEvidenceUrl)&&isPublicHttps(source.assetUrl)&&isPublicHttps(source.taxonomicEvidence)&&text(source.verificationBasis),'Incomplete external image provenance');
+ check(/^[a-f0-9]{64}$/.test(source.sourceSha256),'Invalid external source digest');
+ const subjects=source.allowedSubjectTaxa||[source.subjectTaxon];
+ check(Array.isArray(subjects)&&subjects.length>0&&subjects.every(text)&&subjects.includes(asset.subjectTaxon),'External photographed taxon mismatch');
+ check(asset.sourceUrl===source.sourceUrl&&asset.licenseUrl===source.licenseUrl,'External public citation mismatch');
+ check(asset.rights.permissionEvidenceId==='EXTERNAL-LICENSE:'+source.sourceId,'External permission evidence mismatch');
+ if(proof){
+  check(proof.sourceSha256===source.sourceSha256&&/^[a-f0-9]{64}$/.test(proof.candidateSha256)&&typeof proof.sourcePath==='string'&&/^source-photo-assets\/external\/[a-zA-Z0-9._-]+\.jpg$/.test(proof.sourcePath)&&!proof.sourcePath.includes('..'),'Invalid external extraction evidence');
+ }
+ return true;
+}
 export function applyReferenceImages(records,manifest){
  check(manifest?.version===1&&Array.isArray(manifest.images),'Invalid reference image manifest');
  const files=new Set(),views=new Set();
  for(const asset of manifest.images){
-  check(keys(asset,['scientificName','src','view','alt','credit','sourceId','page','taxonStatus','rights','subjectTaxon']),'Invalid image metadata');
+  check(keys(asset,['scientificName','src','view','alt','credit','sourceId','page','taxonStatus','rights','subjectTaxon','sourceUrl','licenseUrl']),'Invalid image metadata');
   const taxon=records.find(t=>t.scientificName===asset.scientificName);
   check(taxon&&imagePath.test(asset.src)&&!files.has(asset.src),'Unknown taxon or invalid image path');
   check(['lateral','top','underside'].includes(asset.view)&&!views.has(taxon.id+':'+asset.view),'Invalid or duplicate reference view');
-  check(text(asset.alt)&&text(asset.credit)&&text(asset.sourceId)&&Number.isInteger(asset.page)&&asset.page>0&&asset.taxonStatus==='identified','Unverified reference image');
+  const external=typeof asset.sourceId==='string'&&asset.sourceId.startsWith('EXT-');
+  check(text(asset.alt)&&text(asset.credit)&&text(asset.sourceId)&&(external?asset.page===null||(Number.isInteger(asset.page)&&asset.page>0):Number.isInteger(asset.page)&&asset.page>0)&&asset.taxonStatus==='identified','Unverified reference image');
+  for(const field of ['sourceUrl','licenseUrl'])if(field in asset)check(isPublicHttps(asset[field]),'Invalid public image citation');
+  if(external)check(text(asset.subjectTaxon)&&isPublicHttps(asset.sourceUrl)&&isPublicHttps(asset.licenseUrl),'Missing external public provenance');
   if('subjectTaxon' in asset)check(text(asset.subjectTaxon),'Invalid photographed taxon');
   const rights=asset.rights;
   check(keys(rights,['status','publicRepository','pages','permissionEvidenceId'])&&rights.status==='verified'&&rights.publicRepository===true&&rights.pages===true&&text(rights.permissionEvidenceId),'Reference image publication rights not established');
+  if(external)check(rights.permissionEvidenceId==='EXTERNAL-LICENSE:'+asset.sourceId,'External permission evidence mismatch');
   files.add(asset.src);views.add(taxon.id+':'+asset.view);
   taxon.referenceImages??=[];
-  const publicAsset={src:asset.src,view:asset.view,alt:asset.alt,credit:asset.credit,...(asset.subjectTaxon?{subjectTaxon:asset.subjectTaxon}:{})};
+  const publicAsset={src:asset.src,view:asset.view,alt:asset.alt,credit:asset.credit,...(asset.subjectTaxon?{subjectTaxon:asset.subjectTaxon}:{}),...(asset.sourceUrl?{sourceUrl:asset.sourceUrl}:{}),...(asset.licenseUrl?{licenseUrl:asset.licenseUrl}:{})};
   const previous=taxon.referenceImages.find(image=>image.view===asset.view);
   if(previous)check(JSON.stringify(previous)===JSON.stringify(publicAsset),'Reference image conflicts with canonical data');
   else taxon.referenceImages.push(publicAsset);

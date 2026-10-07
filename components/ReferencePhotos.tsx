@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
-import {Image,Modal,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
+import {Image,Linking,Modal,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {referenceImageAssets} from '../src/data/reference-image-assets';
-export type ReferenceImage={src:string;view:'lateral'|'top'|'underside';alt:string;credit:string;subjectTaxon?:string};
+export type ReferenceImage={src:string;view:'lateral'|'top'|'underside';alt:string;credit:string;subjectTaxon?:string;sourceUrl?:string;licenseUrl?:string};
+const publicHttps=(value?:string)=>typeof value==='string'&&/^https:\/\/[a-z0-9.-]+(?::[0-9]+)?(?:[/?#][^\s]*)?$/i.test(value);
 const views=[['lateral','Fianco'],['top','Sopra'],['underside','Sotto']] as const;
 export default function ReferencePhotos({taxon}:{taxon:{scientificName:string;referenceImages?:ReferenceImage[]}}){
  const [selected,setSelected]=useState<ReferenceImage|null>(null),[zoom,setZoom]=useState(1),[width,setWidth]=useState(320);
@@ -23,7 +24,7 @@ export default function ReferencePhotos({taxon}:{taxon:{scientificName:string;re
     <View style={styles.controls}><Pressable accessibilityRole="button" onPress={close} style={styles.button}><Text>Chiudi immagine</Text></Pressable><Text style={styles.title}>{selected?.subjectTaxon||taxon.scientificName}</Text></View>
     <View style={styles.controls}><Pressable accessibilityRole="button" accessibilityState={{disabled:zoom<=1}} disabled={zoom<=1} onPress={()=>setZoom(z=>Math.max(1,z-.5))} style={styles.button}><Text>Riduci</Text></Pressable><Text accessibilityLiveRegion="polite">{Math.round(zoom*100)}%</Text><Pressable accessibilityRole="button" accessibilityState={{disabled:zoom>=4}} disabled={zoom>=4} onPress={()=>setZoom(z=>Math.min(4,z+.5))} style={styles.button}><Text>Ingrandisci</Text></Pressable></View>
     <ScrollView style={styles.stage} nestedScrollEnabled><ScrollView horizontal nestedScrollEnabled contentContainerStyle={styles.canvas}>{asset&&selected&&<Image source={asset} accessibilityLabel={selected.alt} resizeMode="contain" style={{width:imageWidth,height:imageHeight}}/>}</ScrollView></ScrollView>
-    <ScrollView style={styles.creditBox}><Text selectable style={styles.credit}>{selected?.credit}</Text></ScrollView>
+    <ScrollView style={styles.creditBox}><Text selectable style={styles.credit}>{selected?.credit}</Text>{([['sourceUrl','Fonte'],['licenseUrl','Licenza']] as const).map(([field,label])=>selected&&publicHttps(selected[field])?<Pressable key={field} accessibilityRole="link" accessibilityLabel={label+' della fotografia'} onPress={()=>{void Linking.openURL(selected[field]!).catch(()=>{});}} style={styles.button}><Text>{label}</Text></Pressable>:null)}</ScrollView>
    </SafeAreaView>
   </Modal>
  </View>;
