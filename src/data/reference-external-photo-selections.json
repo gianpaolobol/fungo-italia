@@ -1,0 +1,885 @@
+{
+  "version": 1,
+  "images": [
+    {
+      "scientificName": "Cortinarius praestans",
+      "subjectTaxon": "Cortinarius praestans",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-PRAESTANS-194863",
+      "sourcePath": "source-photo-assets/external/ext-adb-praestans-194863-original.jpg",
+      "candidateSha256": "2372e1eb8a5adef4d353d7b5edca413b302610b2a63945e5593ded9a0370e309",
+      "sourceSha256": "42cb70044207eff63671a6f0b309caa10fdebdcb48a48c2c182b3bd881cd423c",
+      "sourcePage": null,
+      "credit": "Bálint Dima / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/35265/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-37950-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-37950-1-original.jpg",
+      "candidateSha256": "0d6e805a03a7ecea2610541d02c1374ba6faf5d9adc6abd5a682189483ddfdd9",
+      "sourceSha256": "b84d1dd5ddf98c8cd638db5bafa57eb1a9117631a4ac6bc00dc90d743f691f97",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/37950/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-37950-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-37950-2-original.jpg",
+      "candidateSha256": "4d6e205b744796ebeb8acd7a3d5ff215bd8af59add9b2af4645f0e91d8f3cc91",
+      "sourceSha256": "e5bb056bf234ccc2a029dd56874f4c7202eb27fcbabbee2b952d9ddea86db721",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/37950/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-37950-3",
+      "sourcePath": "source-photo-assets/external/ext-adb-37950-3-original.jpg",
+      "candidateSha256": "83a4a562d61535f7bd14627c0100383ca0c853dd7be424fb744a44b4594719ae",
+      "sourceSha256": "b3310785053306dd0cccbaa7a7f30a1a36f526bc6572ef8fc007b2c9096cf5b2",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/37950/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Meripilus giganteus",
+      "subjectTaxon": "Meripilus giganteus",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-39728-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-39728-1-original.jpg",
+      "candidateSha256": "1e87376c61e054894d0ca80d2311693375ce0eadf8c2f9c69b3662de0b66d808",
+      "sourceSha256": "b85ce0e80539088e43fe1732a604bc515212821d4f21ac14fcd50bc00e7e425e",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39728/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Meripilus giganteus",
+      "subjectTaxon": "Meripilus giganteus",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-39728-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-39728-2-original.jpg",
+      "candidateSha256": "f8a19a5ce14259a2935bbb6bdeadd9bb3699e08f4f027ff77266abd1f9d5c750",
+      "sourceSha256": "5e77213cf167ceff7b807e612b89d7a9af89ec952495018a1987cbe134b85023",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39728/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "subjectTaxon": "Grifola frondosa",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-39725-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-39725-1-original.jpg",
+      "candidateSha256": "198aae39e4944cff924a96d25988f8775e3f21908956ac97ff738cd5652e0e94",
+      "sourceSha256": "eec68a528902173c57211d3b0bb38d8e57d608d93c9b617d0d83d52d9f4624c6",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "subjectTaxon": "Grifola frondosa",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-39725-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-39725-2-original.jpg",
+      "candidateSha256": "568b2af9338483b08100bfea4b28fc3f9482c0fd5453edc7900f772ed2960090",
+      "sourceSha256": "216dab734bdcd02b29f737553dfb3d843fd7ae59cfa4f048fb5a9d6817991c78",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Albatrellopsis confluens",
+      "subjectTaxon": "Albatrellus confluens",
+      "view": "lateral",
+      "crop": [
+        0.08,
+        0.4,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-40236-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-40236-1-original.jpg",
+      "candidateSha256": "85db89130df8791f15a6af9ce129cb46454269867cbe9cdee1b210458b902ab7",
+      "sourceSha256": "a6e25e9393fd8b3a1aa827aa9119ad36fcdeccfca32488878eb6427d209bed55",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "La fonte usa il sinonimo Albatrellus confluens; visibili cappelli e stipiti.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/40236/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Albatrellopsis confluens",
+      "subjectTaxon": "Albatrellus confluens",
+      "view": "top",
+      "crop": [
+        0.48,
+        0.1,
+        1,
+        0.92
+      ],
+      "sourceId": "EXT-ADB-40236-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-40236-2-original.jpg",
+      "candidateSha256": "77815e02dc8c92a89e9412eb33160f234548313a6ddfd0d60a04982367b7aa5f",
+      "sourceSha256": "379527a9b67512d8e03ab74b20108e86660f729085ceadace4662072b9a453ce",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/40236/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Albatrellopsis confluens",
+      "subjectTaxon": "Albatrellus confluens",
+      "view": "underside",
+      "crop": [
+        0,
+        0.42,
+        0.52,
+        1
+      ],
+      "sourceId": "EXT-ADB-40236-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-40236-2-original.jpg",
+      "candidateSha256": "77815e02dc8c92a89e9412eb33160f234548313a6ddfd0d60a04982367b7aa5f",
+      "sourceSha256": "379527a9b67512d8e03ab74b20108e86660f729085ceadace4662072b9a453ce",
+      "sourcePage": null,
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/40236/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "subjectTaxon": "Craterellus tubaeformis",
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-TUBAEFORMIS-0",
+      "sourcePath": "source-photo-assets/external/ext-adb-tubaeformis-0-original.jpg",
+      "candidateSha256": "5990900e7fc80ff8b1210989c4fd8c73012d81a179e0d9cc7f20ff3946717547",
+      "sourceSha256": "663d3f87424169259b3e673944b537898f4c830e9ad6182fc00fcdf8985e5cf8",
+      "sourcePage": null,
+      "credit": "Wouter Koch · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39039",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "subjectTaxon": "Entoloma hirtipes",
+      "view": "lateral",
+      "crop": [
+        0,
+        0.51,
+        0.495,
+        1
+      ],
+      "sourceId": "EXT-ACAR-HIRTIPES-2026",
+      "sourcePath": "source-photo-assets/external/ext-acar-hirtipes-2026-x48.jpg",
+      "candidateSha256": "ec8804fe618a26b9ef2c67b9bc4bf6802e9180d9e7d9d14c2490ab2291f71aa4",
+      "sourceSha256": "eaf2ba8be5c49b4d4c6c86dda111e5400a068dbe0952b92d28160236755131d0",
+      "sourcePage": 4,
+      "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura 2C, p.4: basidioma intero; voucher Acar1922, studio morfologico e ITS.",
+      "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "subjectTaxon": "Entoloma hirtipes",
+      "view": "top",
+      "crop": [
+        0.507,
+        0,
+        1,
+        0.494
+      ],
+      "sourceId": "EXT-ACAR-HIRTIPES-2026",
+      "sourcePath": "source-photo-assets/external/ext-acar-hirtipes-2026-x48.jpg",
+      "candidateSha256": "ec8804fe618a26b9ef2c67b9bc4bf6802e9180d9e7d9d14c2490ab2291f71aa4",
+      "sourceSha256": "eaf2ba8be5c49b4d4c6c86dda111e5400a068dbe0952b92d28160236755131d0",
+      "sourcePage": 4,
+      "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura 2B, p.4: superficie pileica e stipite; E.hirtipes, non le altre specie del genere.",
+      "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "subjectTaxon": "Entoloma hirtipes",
+      "view": "underside",
+      "crop": [
+        0.507,
+        0.506,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ACAR-HIRTIPES-2026",
+      "sourcePath": "source-photo-assets/external/ext-acar-hirtipes-2026-x48.jpg",
+      "candidateSha256": "ec8804fe618a26b9ef2c67b9bc4bf6802e9180d9e7d9d14c2490ab2291f71aa4",
+      "sourceSha256": "eaf2ba8be5c49b4d4c6c86dda111e5400a068dbe0952b92d28160236755131d0",
+      "sourcePage": 4,
+      "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura 2D, p.4: lamelle e stipite intero.",
+      "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma",
+      "subjectTaxon": "Entoloma hirtipes",
+      "view": "lateral",
+      "crop": [
+        0,
+        0.51,
+        0.495,
+        1
+      ],
+      "sourceId": "EXT-ACAR-HIRTIPES-2026",
+      "sourcePath": "source-photo-assets/external/ext-acar-hirtipes-2026-x48.jpg",
+      "candidateSha256": "ec8804fe618a26b9ef2c67b9bc4bf6802e9180d9e7d9d14c2490ab2291f71aa4",
+      "sourceSha256": "eaf2ba8be5c49b4d4c6c86dda111e5400a068dbe0952b92d28160236755131d0",
+      "sourcePage": 4,
+      "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura 2C, p.4: basidioma intero; voucher Acar1922, studio morfologico e ITS.",
+      "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma",
+      "subjectTaxon": "Entoloma hirtipes",
+      "view": "top",
+      "crop": [
+        0.507,
+        0,
+        1,
+        0.494
+      ],
+      "sourceId": "EXT-ACAR-HIRTIPES-2026",
+      "sourcePath": "source-photo-assets/external/ext-acar-hirtipes-2026-x48.jpg",
+      "candidateSha256": "ec8804fe618a26b9ef2c67b9bc4bf6802e9180d9e7d9d14c2490ab2291f71aa4",
+      "sourceSha256": "eaf2ba8be5c49b4d4c6c86dda111e5400a068dbe0952b92d28160236755131d0",
+      "sourcePage": 4,
+      "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura 2B, p.4: superficie pileica e stipite; E.hirtipes, non le altre specie del genere.",
+      "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Entoloma",
+      "subjectTaxon": "Entoloma hirtipes",
+      "view": "underside",
+      "crop": [
+        0.507,
+        0.506,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ACAR-HIRTIPES-2026",
+      "sourcePath": "source-photo-assets/external/ext-acar-hirtipes-2026-x48.jpg",
+      "candidateSha256": "ec8804fe618a26b9ef2c67b9bc4bf6802e9180d9e7d9d14c2490ab2291f71aa4",
+      "sourceSha256": "eaf2ba8be5c49b4d4c6c86dda111e5400a068dbe0952b92d28160236755131d0",
+      "sourcePage": 4,
+      "credit": "İsmail Acar e Halide Karabıyık · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura 2D, p.4: lamelle e stipite intero.",
+      "sourceUrl": "https://dergipark.org.tr/en/pub/ajb/article/1968581",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "subjectTaxon": "Russula laurocerasi",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-MO-RUSSULA-122166",
+      "sourcePath": "source-photo-assets/external/ext-mo-russula-122166-original.jpg",
+      "candidateSha256": "3b11d8ccc447c5f8f780eba5e336679082ad67d0d3862d47771138b974a5c619",
+      "sourceSha256": "322e1d3f1190e8852f6c7c105fb60d141e8b6c8401a6fc454ae60b85a7820647",
+      "sourcePage": null,
+      "credit": "Amadej Trnkoczy · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-06_Russula_laurocerasi_Melzer_122166.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Russula",
+      "subjectTaxon": "Russula laurocerasi",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-MO-RUSSULA-122166",
+      "sourcePath": "source-photo-assets/external/ext-mo-russula-122166-original.jpg",
+      "candidateSha256": "3b11d8ccc447c5f8f780eba5e336679082ad67d0d3862d47771138b974a5c619",
+      "sourceSha256": "322e1d3f1190e8852f6c7c105fb60d141e8b6c8401a6fc454ae60b85a7820647",
+      "sourcePage": null,
+      "credit": "Amadej Trnkoczy · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-06_Russula_laurocerasi_Melzer_122166.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "subjectTaxon": "Lactarius tesquorum",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-MO-TESQUORUM-399418",
+      "sourcePath": "source-photo-assets/external/ext-mo-tesquorum-399418-original.jpg",
+      "candidateSha256": "daa670963e3dbcac0fd388ca769d44bbb1f2037d0bd0248bf27d7c94eba862bb",
+      "sourceSha256": "6da01c67b75f5233d1f0ef72f41765b31c83df6c86f8ede7fae1bc13ad59f7c8",
+      "sourcePage": null,
+      "credit": "Davide Puddu · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_tesquorum_Malençon_399418.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "subjectTaxon": "Lactarius porninsis",
+      "view": "lateral",
+      "crop": [
+        0.68,
+        0.52,
+        1,
+        0.9
+      ],
+      "sourceId": "EXT-KUNZE-PORN-2007",
+      "sourcePath": "source-photo-assets/external/ext-kunze-porn-2007-original.jpg",
+      "candidateSha256": "1e81c786abefcff7aa33845aa0b9088ce2d881f83250011ea7873bc93d1b3a6d",
+      "sourceSha256": "dc8ce813c84aefb48b26c4242418a9858aef266f3ccc9097d4603f1b4a3f7e5a",
+      "sourcePage": null,
+      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Nome nella fonte Lactarius porninsis; sinonimia verificata con Artsdatabanken 226190 e Index Fungorum 637370.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "subjectTaxon": "Lactarius porninsis",
+      "view": "top",
+      "crop": [
+        0.46,
+        0.31,
+        0.81,
+        0.67
+      ],
+      "sourceId": "EXT-KUNZE-PORN-2007",
+      "sourcePath": "source-photo-assets/external/ext-kunze-porn-2007-original.jpg",
+      "candidateSha256": "1e81c786abefcff7aa33845aa0b9088ce2d881f83250011ea7873bc93d1b3a6d",
+      "sourceSha256": "dc8ce813c84aefb48b26c4242418a9858aef266f3ccc9097d4603f1b4a3f7e5a",
+      "sourcePage": null,
+      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Nome nella fonte Lactarius porninsis; sinonimia verificata con Artsdatabanken 226190 e Index Fungorum 637370.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "subjectTaxon": "Lactarius porninsis",
+      "view": "underside",
+      "crop": [
+        0,
+        0.22,
+        0.47,
+        0.89
+      ],
+      "sourceId": "EXT-KUNZE-PORN-2007",
+      "sourcePath": "source-photo-assets/external/ext-kunze-porn-2007-original.jpg",
+      "candidateSha256": "1e81c786abefcff7aa33845aa0b9088ce2d881f83250011ea7873bc93d1b3a6d",
+      "sourceSha256": "dc8ce813c84aefb48b26c4242418a9858aef266f3ccc9097d4603f1b4a3f7e5a",
+      "sourcePage": null,
+      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Nome nella fonte Lactarius porninsis; sinonimia verificata con Artsdatabanken 226190 e Index Fungorum 637370.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
+      "view": "lateral",
+      "crop": [
+        0.72,
+        0.6,
+        1,
+        0.84
+      ],
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "sourcePath": "source-photo-assets/external/ext-barge-deliciosi-2016-original.jpg",
+      "candidateSha256": "5e66d28ee2a4e79c1c1373195182c6a4a2324ba1fe8e953d355759facc58d8a4",
+      "sourceSha256": "72ccc19a035d0031c37be3a9c8294c528ad2ca2340cd6831cee2c0d0865c0030",
+      "sourcePage": null,
+      "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura22B, gruppo L.deliciosus nordamericano, basidioma cap/stipite; non identifica L.deliciosus europeo sensu stricto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
+      "view": "top",
+      "crop": [
+        0,
+        0.497,
+        0.52,
+        0.81
+      ],
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "sourcePath": "source-photo-assets/external/ext-barge-deliciosi-2016-original.jpg",
+      "candidateSha256": "5e66d28ee2a4e79c1c1373195182c6a4a2324ba1fe8e953d355759facc58d8a4",
+      "sourceSha256": "72ccc19a035d0031c37be3a9c8294c528ad2ca2340cd6831cee2c0d0865c0030",
+      "sourcePage": null,
+      "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura22B, pileo del gruppo L.deliciosus nordamericano, voucherEB089-15.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "subjectTaxon": "Lactarius deterrimus",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-KUNZE-DETER-2011",
+      "sourcePath": "source-photo-assets/external/ext-kunze-deter-2011-original.jpg",
+      "candidateSha256": "022c469d6c37392825369831ed8c6d9f085986c4aedf152f58524360ddd92bc3",
+      "sourceSha256": "f5ffbc8242efef2a70f43e19ff9d5a5693a9b0fa92952cc302d4c6f3bbaded4d",
+      "sourcePage": null,
+      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-31_Lactarius_deterrimus_3.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
+      "view": "lateral",
+      "crop": [
+        0.72,
+        0.6,
+        1,
+        0.84
+      ],
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "sourcePath": "source-photo-assets/external/ext-barge-deliciosi-2016-original.jpg",
+      "candidateSha256": "5e66d28ee2a4e79c1c1373195182c6a4a2324ba1fe8e953d355759facc58d8a4",
+      "sourceSha256": "72ccc19a035d0031c37be3a9c8294c528ad2ca2340cd6831cee2c0d0865c0030",
+      "sourcePage": null,
+      "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura22B, gruppo L.deliciosus nordamericano, basidioma cap/stipite; non identifica L.deliciosus europeo sensu stricto.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
+      "view": "top",
+      "crop": [
+        0,
+        0.497,
+        0.52,
+        0.81
+      ],
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "sourcePath": "source-photo-assets/external/ext-barge-deliciosi-2016-original.jpg",
+      "candidateSha256": "5e66d28ee2a4e79c1c1373195182c6a4a2324ba1fe8e953d355759facc58d8a4",
+      "sourceSha256": "72ccc19a035d0031c37be3a9c8294c528ad2ca2340cd6831cee2c0d0865c0030",
+      "sourcePage": null,
+      "credit": "E. Barge; Barge & Cripps (2016) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura22B, pileo del gruppo L.deliciosus nordamericano, voucherEB089-15.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "subjectTaxon": "Lactarius deterrimus",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-KUNZE-DETER-2011",
+      "sourcePath": "source-photo-assets/external/ext-kunze-deter-2011-original.jpg",
+      "candidateSha256": "022c469d6c37392825369831ed8c6d9f085986c4aedf152f58524360ddd92bc3",
+      "sourceSha256": "f5ffbc8242efef2a70f43e19ff9d5a5693a9b0fa92952cc302d4c6f3bbaded4d",
+      "sourcePage": null,
+      "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2011-07-31_Lactarius_deterrimus_3.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "scientificName": "Hebeloma",
+      "subjectTaxon": "Hebeloma incarnatulum",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-HEBE-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-hebe-2-original.jpg",
+      "candidateSha256": "45e72e7669ce81245ef20f4f990cb1ce805e4cf85de9958a2e0b0f45ebd0f909",
+      "sourceSha256": "cd6526b41520fb5eb066219aee266fa49a3b42065d0349e52c4605b4034f4072",
+      "sourcePage": null,
+      "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/37003",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Hebeloma",
+      "subjectTaxon": "Hebeloma incarnatulum",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-HEBE-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-hebe-1-original.jpg",
+      "candidateSha256": "39819517a474ef5b2b50171c6946bafdd891b5934f755ffbbff190d5a25e0ab3",
+      "sourceSha256": "1b081c15f4a6300042fb19d6713872b3a6f575da6971d146609d006b49348a93",
+      "sourcePage": null,
+      "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/37003",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "subjectTaxon": "Stropharia aeruginosa",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-STRO-1",
+      "sourcePath": "source-photo-assets/external/ext-adb-stro-1-original.jpg",
+      "candidateSha256": "a09c784f403f6affb57a0f00edc939f327d79626a2cb2a1e12deeedc75c06bdb",
+      "sourceSha256": "0e7fe4c0c38d1b3d1c3d1d50ad4421771b5429bb618012f9a99ae3bee377f975",
+      "sourcePage": null,
+      "credit": "Mats Sæter · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/38132",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "subjectTaxon": "Stropharia aeruginosa",
+      "view": "underside",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sourceId": "EXT-ADB-STRO-2",
+      "sourcePath": "source-photo-assets/external/ext-adb-stro-2-original.jpg",
+      "candidateSha256": "ead845b5bae219f97857fd74bc53bacc76a583ba4e6fa523973cd512198e375e",
+      "sourceSha256": "28bccb9de4571d610fc828ea1c4af399cf5c3549939ef209f07ae6d7d2dfb8f8",
+      "sourcePage": null,
+      "credit": "Mats Sæter · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Esaminata visivamente: soggetto e inquadratura coerenti con la didascalia della fonte.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/38132",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "subjectTaxon": "Stropharia aeruginosa",
+      "view": "top",
+      "crop": [
+        0.27,
+        0.47,
+        0.56,
+        0.65
+      ],
+      "sourceId": "EXT-ADB-STRO-3",
+      "sourcePath": "source-photo-assets/external/ext-adb-stro-3-original.jpg",
+      "candidateSha256": "e3d829270c4fe79ba832215f288c7569079013e137cd54d885cbdecf579039d4",
+      "sourceSha256": "574c89562e6002161c16d3f137b3c001915ac0fff247392ccb2db616310363bf",
+      "sourcePage": null,
+      "credit": "Mats Sæter · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Cappello visto dall’alto in posizione obliqua, gambo visibile; esempio S.aeruginosa per il genere, non S.rugosoannulata.",
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/38132",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "subjectTaxon": "Craterellus lutescens",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        0.322,
+        0.361
+      ],
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "sourcePath": "source-photo-assets/external/ext-zhang-lutescens-2022-x56.jpg",
+      "candidateSha256": "faa2bd8ed4be55638cb458d4cc3dfaf568297d56fc682dc5349edbbc96c2ae64",
+      "sourceSha256": "45cddd46975da71c2850dc89d9a55bfcbc5f26702f92bb8fcf8933ad0aa28327",
+      "sourcePage": 12,
+      "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura6A, p.12, FHMU6547, Craterelluslutescens; esclusi pannelli E–I di altre specie.",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "subjectTaxon": "Craterellus lutescens",
+      "view": "top",
+      "crop": [
+        0.328,
+        0,
+        0.686,
+        0.361
+      ],
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "sourcePath": "source-photo-assets/external/ext-zhang-lutescens-2022-x56.jpg",
+      "candidateSha256": "faa2bd8ed4be55638cb458d4cc3dfaf568297d56fc682dc5349edbbc96c2ae64",
+      "sourceSha256": "45cddd46975da71c2850dc89d9a55bfcbc5f26702f92bb8fcf8933ad0aa28327",
+      "sourcePage": 12,
+      "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura6B, p.12, FHMU6548: superficie cappello e stipiti, dall’alto obliquo.",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "subjectTaxon": "Craterellus lutescens",
+      "view": "underside",
+      "crop": [
+        0.691,
+        0,
+        1,
+        0.361
+      ],
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "sourcePath": "source-photo-assets/external/ext-zhang-lutescens-2022-x56.jpg",
+      "candidateSha256": "faa2bd8ed4be55638cb458d4cc3dfaf568297d56fc682dc5349edbbc96c2ae64",
+      "sourceSha256": "45cddd46975da71c2850dc89d9a55bfcbc5f26702f92bb8fcf8933ad0aa28327",
+      "sourcePage": 12,
+      "credit": "Wen-Hao Zhang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura6C, p.12, FHMU6544: superficie inferiore e stipiti; esclusi pannelli E–I.",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Craterellus",
+      "subjectTaxon": "Craterellus lutescens",
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        0.322,
+        0.361
+      ],
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "sourcePath": "source-photo-assets/external/ext-zhang-lutescens-2022-x56.jpg",
+      "candidateSha256": "faa2bd8ed4be55638cb458d4cc3dfaf568297d56fc682dc5349edbbc96c2ae64",
+      "sourceSha256": "45cddd46975da71c2850dc89d9a55bfcbc5f26702f92bb8fcf8933ad0aa28327",
+      "sourcePage": 12,
+      "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura6A, p.12, FHMU6547, Craterelluslutescens; esclusi pannelli E–I di altre specie.",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Craterellus",
+      "subjectTaxon": "Craterellus lutescens",
+      "view": "top",
+      "crop": [
+        0.328,
+        0,
+        0.686,
+        0.361
+      ],
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "sourcePath": "source-photo-assets/external/ext-zhang-lutescens-2022-x56.jpg",
+      "candidateSha256": "faa2bd8ed4be55638cb458d4cc3dfaf568297d56fc682dc5349edbbc96c2ae64",
+      "sourceSha256": "45cddd46975da71c2850dc89d9a55bfcbc5f26702f92bb8fcf8933ad0aa28327",
+      "sourcePage": 12,
+      "credit": "Li-Ping Tang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura6B, p.12, FHMU6548: superficie cappello e stipiti, dall’alto obliquo.",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Craterellus",
+      "subjectTaxon": "Craterellus lutescens",
+      "view": "underside",
+      "crop": [
+        0.691,
+        0,
+        1,
+        0.361
+      ],
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "sourcePath": "source-photo-assets/external/ext-zhang-lutescens-2022-x56.jpg",
+      "candidateSha256": "faa2bd8ed4be55638cb458d4cc3dfaf568297d56fc682dc5349edbbc96c2ae64",
+      "sourceSha256": "45cddd46975da71c2850dc89d9a55bfcbc5f26702f92bb8fcf8933ad0aa28327",
+      "sourcePage": 12,
+      "credit": "Wen-Hao Zhang; Zhang et al. (2022) · CC BY 4.0 · ritaglio dall’originale",
+      "reviewNotes": "Figura6C, p.12, FHMU6544: superficie inferiore e stipiti; esclusi pannelli E–I.",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "subjectTaxon": "Sarcodon imbricatus",
+      "view": "lateral",
+      "crop": [
+        0.01,
+        0.1,
+        0.26,
+        0.35
+      ],
+      "sourceId": "EXT-WANG-SARCODON-2024",
+      "sourcePath": "source-photo-assets/external/ext-wang-sarcodon-2024-original.jpg",
+      "candidateSha256": "804d0b284dd5b9b68d0a438ed72f580e023135e336580520555620711bfb1475",
+      "sourceSha256": "239b38fc48eab6b3483c2da8d09fbba8486178778c6e27e46683715e15db5b67",
+      "sourcePage": null,
+      "credit": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024) · CC BY 4.0 · ritaglio figura 7a, basidioma di sinistra",
+      "reviewNotes": "Figura 7a, basidioma di sinistra: S.imbricatus; esclusi tutti i pannelli d–f (S.leucopus). Identificazione pubblicata con morfologia e filogenesi multilocus; immagine non prova commestibilità.",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "subjectTaxon": "Sarcodon imbricatus",
+      "view": "top",
+      "crop": [
+        0.025,
+        0.39,
+        0.253,
+        0.64
+      ],
+      "sourceId": "EXT-WANG-SARCODON-2024",
+      "sourcePath": "source-photo-assets/external/ext-wang-sarcodon-2024-original.jpg",
+      "candidateSha256": "804d0b284dd5b9b68d0a438ed72f580e023135e336580520555620711bfb1475",
+      "sourceSha256": "239b38fc48eab6b3483c2da8d09fbba8486178778c6e27e46683715e15db5b67",
+      "sourcePage": null,
+      "credit": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024) · CC BY 4.0 · ritaglio figura 7b, basidioma di sinistra",
+      "reviewNotes": "Figura 7b, basidioma di sinistra: S.imbricatus; esclusi tutti i pannelli d–f (S.leucopus). Identificazione pubblicata con morfologia e filogenesi multilocus; immagine non prova commestibilità.",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "subjectTaxon": "Sarcodon imbricatus",
+      "view": "underside",
+      "crop": [
+        0.21,
+        0.068,
+        0.47,
+        0.32
+      ],
+      "sourceId": "EXT-WANG-SARCODON-2024",
+      "sourcePath": "source-photo-assets/external/ext-wang-sarcodon-2024-original.jpg",
+      "candidateSha256": "804d0b284dd5b9b68d0a438ed72f580e023135e336580520555620711bfb1475",
+      "sourceSha256": "239b38fc48eab6b3483c2da8d09fbba8486178778c6e27e46683715e15db5b67",
+      "sourcePage": null,
+      "credit": "Wang, Feng, Zhou, Liu, Zhang, Xu, Tang, Peng e He (2024) · CC BY 4.0 · ritaglio figura 7a, basidioma di destra",
+      "reviewNotes": "Figura 7a, basidioma di destra: S.imbricatus; esclusi tutti i pannelli d–f (S.leucopus). Identificazione pubblicata con morfologia e filogenesi multilocus; immagine non prova commestibilità.",
+      "sourceUrl": "https://link.springer.com/article/10.1186/s43008-023-00138-1/figures/7",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}
