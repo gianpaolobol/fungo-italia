@@ -1,5 +1,5 @@
 """Inspect three owner-supplied Drive ZIPs without publishing their originals."""
-import contextlib, hashlib, io, json, pathlib, stat, tempfile, zipfile
+import contextlib, hashlib, io, json, pathlib, stat, tempfile, time, zipfile
 import gdown
 import pymupdf
 ARCHIVES=[
@@ -13,9 +13,17 @@ for label,file_id,expected_size in ARCHIVES:
  try:
   with tempfile.TemporaryDirectory(prefix="course-") as directory:
    archive=pathlib.Path(directory)/"source.zip"
-   with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
-    downloaded=gdown.download(id=file_id,output=str(archive),quiet=True,use_cookies=False)
-   if not downloaded or not archive.exists(): raise RuntimeError("Drive download unavailable")
+   for attempt in range(4):
+    try:
+     archive.unlink(missing_ok=True)
+     with contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
+      downloaded=gdown.download(id=file_id,output=str(archive),quiet=True,use_cookies=False)
+     if not downloaded or not archive.exists(): raise RuntimeError("Drive download unavailable")
+     result["attemptsUsed"]=attempt+1
+     break
+    except Exception:
+     if attempt==3: raise
+     time.sleep((5,15,30)[attempt])
    if archive.stat().st_size!=expected_size: raise RuntimeError("Archive size differs from owner inventory")
    result["bytes"]=archive.stat().st_size
    result["sha256"]=hashlib.sha256(archive.read_bytes()).hexdigest()
