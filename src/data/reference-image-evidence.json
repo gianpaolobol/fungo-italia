@@ -1915,6 +1915,616 @@
       "visualReview": "verified",
       "reviewNotes": "Foto e taxon controllati visivamente sui fogli di contatto; la didascalia indica Boletus edulis. Specie raffigurata esplicitata nella scheda del gruppo e del genere. Ritaglio di un esemplare della composizione originale.",
       "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-campestris-lateral-64.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 8,
+      "xref": 64,
+      "subjectTaxon": "Agaricus campestris",
+      "crop": [
+        0.7,
+        0.5,
+        1,
+        1
+      ],
+      "sha256": "3ecf9ae1037aedb44552dc3b8db399da43f6828453865e61a483859574b45f60",
+      "width": 1281,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-campestris-top-64.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 8,
+      "xref": 64,
+      "subjectTaxon": "Agaricus campestris",
+      "crop": [
+        0,
+        0,
+        0.55,
+        0.65
+      ],
+      "sha256": "2630a6beec0a3f689f655a31cb9a0f3eac857242c2de32fefaea2ccceeb7c06e",
+      "width": 1600,
+      "height": 1419,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-campestris-underside-64.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 8,
+      "xref": 64,
+      "subjectTaxon": "Agaricus campestris",
+      "crop": [
+        0.4,
+        0.4,
+        0.8,
+        1
+      ],
+      "sha256": "ce91e656b8cd5d355257ee2d2e0d6d48580496ff9fa23662f47b29faf83508d0",
+      "width": 1422,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-bitorquis-lateral-69.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 10,
+      "xref": 69,
+      "subjectTaxon": "Agaricus bitorquis",
+      "crop": null,
+      "sha256": "4ab8f7319d1517f74a1d202aa4032c04799d2489b31a068710a89621d7727583",
+      "width": 1600,
+      "height": 1200,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Fotografia integrale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-bisporus-top-72.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 11,
+      "xref": 72,
+      "subjectTaxon": "Agaricus bisporus",
+      "crop": null,
+      "sha256": "894826a37eec3de425dc4255aa79c85c5cb4bd4509d343e8a3f482b7fac63948",
+      "width": 1600,
+      "height": 1362,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Fotografia integrale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-bresadolanus-top-83.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 15,
+      "xref": 83,
+      "subjectTaxon": "Agaricus bresadolanus",
+      "crop": [
+        0.35,
+        0,
+        1,
+        1
+      ],
+      "sha256": "cb3483713ba9e6bdd72deef75fc72251dfb6d4ec3efe586ecef62a02dc6a5dde",
+      "width": 1387,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-bresadolanus-underside-86.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 16,
+      "xref": 86,
+      "subjectTaxon": "Agaricus bresadolanus",
+      "crop": [
+        0.5,
+        0,
+        1,
+        1
+      ],
+      "sha256": "968ff0d2c12cc0500d958db9b92207c100ff1dd6098ef6834b3f150411d3cb96",
+      "width": 1233,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-sanguinolenti-lateral-91.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 18,
+      "xref": 91,
+      "subjectTaxon": "Agaricus benesii",
+      "crop": [
+        0,
+        0,
+        0.4,
+        1
+      ],
+      "sha256": "4725d33cb79134ae86050aa1d641a4b396d6d95a83ea4efab08f8522daa18e77",
+      "width": 854,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-sanguinolenti-top-94.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 19,
+      "xref": 94,
+      "subjectTaxon": "Agaricus sylvaticus",
+      "crop": [
+        0,
+        0,
+        0.62,
+        0.6
+      ],
+      "sha256": "40be520ac2fdb77235ff8c4d9c96fa26b9741503d8884e8cab3421b24da9c8e3",
+      "width": 1600,
+      "height": 1163,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-sanguinolenti-underside-94.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 19,
+      "xref": 94,
+      "subjectTaxon": "Agaricus sylvaticus",
+      "crop": [
+        0.3,
+        0.42,
+        0.68,
+        1
+      ],
+      "sha256": "b095b7409995b06deb82f0bf83f2e385900a6794957208a8b805e26fda50ff41",
+      "width": 1395,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-arvenses-lateral-99.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 21,
+      "xref": 99,
+      "subjectTaxon": "Agaricus arvensis s.l.",
+      "crop": [
+        0,
+        0.2,
+        0.48,
+        1
+      ],
+      "sha256": "d55db59c2f61ee1a5f2c124983b4b0ba84421dbec289e08702c2d9652539fd45",
+      "width": 1280,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-arvenses-top-99.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 21,
+      "xref": 99,
+      "subjectTaxon": "Agaricus arvensis s.l.",
+      "crop": [
+        0.45,
+        0,
+        1,
+        0.8
+      ],
+      "sha256": "179d2888b8fd1ae2cc729431a103cc1e219ae32268450903bf21ecc99410c6b9",
+      "width": 1467,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-arvenses-underside-99.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 21,
+      "xref": 99,
+      "subjectTaxon": "Agaricus arvensis s.l.",
+      "crop": [
+        0,
+        0,
+        0.4,
+        0.76
+      ],
+      "sha256": "e2800353fe8692fcc456ee3388779cf06a047ff9b6856fb65bf51098dc85c639",
+      "width": 1123,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-xanthodermatei-lateral-112.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 25,
+      "xref": 112,
+      "subjectTaxon": "Agaricus sez. Xanthodermatei",
+      "crop": [
+        0,
+        0,
+        0.6,
+        1
+      ],
+      "sha256": "6c034444f916eea0259aae9d0d4f5d6934be4485b45408d074831c38f173e8b4",
+      "width": 1280,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-xanthodermatei-top-113.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 25,
+      "xref": 113,
+      "subjectTaxon": "Agaricus sez. Xanthodermatei",
+      "crop": [
+        0,
+        0.42,
+        1,
+        1
+      ],
+      "sha256": "398ece26dbb9c155eefdfebbd302e86d07972597ef6017865254ca0bd3d82a21",
+      "width": 1600,
+      "height": 715,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-sez-xanthodermatei-underside-112.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 25,
+      "xref": 112,
+      "subjectTaxon": "Agaricus sez. Xanthodermatei",
+      "crop": [
+        0.5,
+        0,
+        1,
+        1
+      ],
+      "sha256": "f00ac6c6ebbdded21ad982ffdb4f5b4d5d698d2c22b47f6c3f3a0e6fbdf3c0f8",
+      "width": 1066,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-lateral-64.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 8,
+      "xref": 64,
+      "subjectTaxon": "Agaricus campestris",
+      "crop": [
+        0.7,
+        0.5,
+        1,
+        1
+      ],
+      "sha256": "3ecf9ae1037aedb44552dc3b8db399da43f6828453865e61a483859574b45f60",
+      "width": 1281,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale. Specie rappresentativa del genere indicata esplicitamente.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-top-64.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 8,
+      "xref": 64,
+      "subjectTaxon": "Agaricus campestris",
+      "crop": [
+        0,
+        0,
+        0.55,
+        0.65
+      ],
+      "sha256": "2630a6beec0a3f689f655a31cb9a0f3eac857242c2de32fefaea2ccceeb7c06e",
+      "width": 1600,
+      "height": 1419,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale. Specie rappresentativa del genere indicata esplicitamente.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/agaricus-underside-64.jpg",
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "sourceSha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245",
+      "sourcePage": 8,
+      "xref": 64,
+      "subjectTaxon": "Agaricus campestris",
+      "crop": [
+        0.4,
+        0.4,
+        0.8,
+        1
+      ],
+      "sha256": "ce91e656b8cd5d355257ee2d2e0d6d48580496ff9fa23662f47b29faf83508d0",
+      "width": 1422,
+      "height": 1600,
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia, vista e didascalia controllate visivamente sui fogli di contatto. Nelle sezioni si conserva il rango o la specie effettivamente raffigurata, senza inventare una determinazione più fine. Ritaglio di un esemplare della composizione originale. Specie rappresentativa del genere indicata esplicitamente.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-nigricantinae-lateral-135.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 36,
+      "xref": 135,
+      "subjectTaxon": "Russula adusta",
+      "crop": [
+        0.42,
+        0,
+        1,
+        1
+      ],
+      "sha256": "e32b3ff32352c43d0ca546ecd2687b4ad002d70850b77e0cc849d7b737f07922",
+      "width": 1600,
+      "height": 910,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-nigricantinae-top-130.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 35,
+      "xref": 130,
+      "subjectTaxon": "Russula nigricans",
+      "crop": [
+        0,
+        0,
+        0.48,
+        1
+      ],
+      "sha256": "7d869ec63246e707632081aaa7e78566e4101adebc245f5a2819144032b86b92",
+      "width": 1600,
+      "height": 1120,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-nigricantinae-underside-130.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 35,
+      "xref": 130,
+      "subjectTaxon": "Russula nigricans",
+      "crop": [
+        0.45,
+        0,
+        1,
+        1
+      ],
+      "sha256": "ca9c817fa168f96c1e950effa3a119307278c439ccba8868537f0a2d81e76016",
+      "width": 1600,
+      "height": 977,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-lactarioides-lateral-153.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 41,
+      "xref": 153,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0.34,
+        0,
+        0.77,
+        1
+      ],
+      "sha256": "0d422e22c3596adfe8c375a34ae2282a3278511e33dea686c3bb74ba59ee88a2",
+      "width": 1600,
+      "height": 1236,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-lactarioides-top-152.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 41,
+      "xref": 152,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0,
+        0,
+        0.72,
+        1
+      ],
+      "sha256": "c6040b99cfa9886cffbcddd268ba2d5dfff7009d1fe9de83edaabe2687b47233",
+      "width": 1600,
+      "height": 747,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-lactarioides-underside-153.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 41,
+      "xref": 153,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0.65,
+        0,
+        1,
+        1
+      ],
+      "sha256": "e90d37f5f8563a21817c69b5040784f76b2c13f7c44eb34ae388b41a88f2432c",
+      "width": 1600,
+      "height": 1520,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-genere-lateral-153.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 41,
+      "xref": 153,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0.34,
+        0,
+        0.77,
+        1
+      ],
+      "sha256": "0d422e22c3596adfe8c375a34ae2282a3278511e33dea686c3bb74ba59ee88a2",
+      "width": 1600,
+      "height": 1236,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-genere-top-152.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 41,
+      "xref": 152,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0,
+        0,
+        0.72,
+        1
+      ],
+      "sha256": "c6040b99cfa9886cffbcddd268ba2d5dfff7009d1fe9de83edaabe2687b47233",
+      "width": 1600,
+      "height": 747,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-genere-underside-153.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 41,
+      "xref": 153,
+      "subjectTaxon": "Russula delica",
+      "crop": [
+        0.65,
+        0,
+        1,
+        1
+      ],
+      "sha256": "e90d37f5f8563a21817c69b5040784f76b2c13f7c44eb34ae388b41a88f2432c",
+      "width": 1600,
+      "height": 1520,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-foetentinae-lateral-183.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 51,
+      "xref": 183,
+      "subjectTaxon": "Russula foetens",
+      "crop": [
+        0.48,
+        0,
+        1,
+        1
+      ],
+      "sha256": "fb6b95b613927039cdc3f3c84676caa82c69384f73629e8942049add04daeec5",
+      "width": 1600,
+      "height": 1028,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-foetentinae-top-182.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 51,
+      "xref": 182,
+      "subjectTaxon": "Russula foetens",
+      "crop": [
+        0,
+        0,
+        0.6,
+        1
+      ],
+      "sha256": "3476a920cfcae51e4a7f9240e0bb64997776d7332fd8fae7d9bf61697a76bdbd",
+      "width": 1600,
+      "height": 891,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
+    },
+    {
+      "src": "images/reference/russula-foetentinae-underside-182.jpg",
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
+      "sourcePage": 51,
+      "xref": 182,
+      "subjectTaxon": "Russula foetens",
+      "crop": [
+        0.6,
+        0,
+        1,
+        1
+      ],
+      "sha256": "04d2626ac1862c24f1bb1409f63c095f52766a18b103a0ecb2a14360f147bf12",
+      "width": 1600,
+      "height": 1336,
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "permissionEvidenceId": "OWNER-COURSE-PHOTOS-2026-10-07"
     }
   ]
 }
