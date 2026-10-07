@@ -486,3 +486,20 @@ test('licensed external reference photograph preserves attribution links and dec
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  }finally{await request.get('http://127.0.0.1:4174/?state=start');}
 });
+
+test('gasteroid base photograph names the anatomical view and depicted species accessibly',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Pisolithus');
+ await page.getByRole('button',{name:'Apri Pisolithus',exact:true}).click();
+ const body=page.locator('#detail-body');
+ await expect(body.locator('.photo-thumb')).toHaveCount(3);
+ await expect(body.locator('figcaption').getByText('Base esterna',{exact:true})).toHaveCount(1);
+ const opener=body.getByRole('button',{name:'Ingrandisci vista base esterna di Pisolithus albus',exact:true});
+ await opener.click();
+ await expect(page.locator('#photo-title')).toHaveText('Pisolithus albus · Base esterna');
+ await expect(page.locator('#photo-full')).toHaveAttribute('alt','Pisolithus albus — base esterna');
+ await expect.poll(()=>page.locator('#photo-full').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
+ await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
+ await expect(opener).toBeFocused();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
