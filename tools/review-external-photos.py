@@ -1,5 +1,5 @@
 """Acquire explicitly attributed, licensed scientific reference photographs for visual review only."""
-import hashlib,io,json,pathlib,time,urllib.request
+import hashlib,io,json,pathlib,time,urllib.request,urllib.parse,urllib.error
 import pymupdf
 from PIL import Image,ImageOps,ImageDraw
 root=pathlib.Path("reference-candidates");root.mkdir(exist_ok=True)
@@ -21,6 +21,14 @@ def save(source,raw,suffix,page=None,xref=None):
  im.save(path,quality=90,optimize=True)
  items.append({**source,"candidateId":source["sourceId"]+"-"+suffix,"candidatePath":str(path),"sourceSha256":source_hash,"extractedImageSha256":hashlib.sha256(raw).hexdigest(),"candidateSha256":hashlib.sha256(path.read_bytes()).hexdigest(),"width":im.width,"height":im.height,"page":page,"xref":xref,"reviewStatus":"pending-visual-review"})
 for source in sources:
+ if source["sourceId"].startswith("EXT-COMP-") and ("upload.wikimedia.org/" in source["assetUrl"] or "/Special:FilePath/" in source["assetUrl"]):
+  original_url=source["assetUrl"]
+  filename=urllib.parse.unquote(urllib.parse.urlparse(original_url).path.rsplit("/",1)[-1]).replace(" ","_")
+  digest=hashlib.md5(filename.encode()).hexdigest()
+  encoded=urllib.parse.quote(filename,safe="")
+  source["originalAssetUrl"]=original_url
+  source["assetUrl"]="https://upload.wikimedia.org/wikipedia/commons/thumb/"+digest[0]+"/"+digest[:2]+"/"+encoded+"/1280px-"+encoded
+  source["retrievalNote"]="Publisher-provided 1280px thumbnail, as recommended by Wikimedia for reuse; not an original-resolution file."
  cached=[i for i in previous if i["sourceId"]==source["sourceId"] and i["assetUrl"]==source["assetUrl"] and i["licenseUrl"]==source["licenseUrl"]]
  if cached and all(pathlib.Path(i["candidatePath"]).exists() and hashlib.sha256(pathlib.Path(i["candidatePath"]).read_bytes()).hexdigest()==i["candidateSha256"] for i in cached):
   items.extend([{**i,**source} for i in cached]);continue
@@ -37,7 +45,7 @@ for source in sources:
   else:save(source,data,"original")
  except Exception as e:
   failures.append({"sourceId":source["sourceId"],"errorType":type(e).__name__,"message":str(e)[:180]})
- time.sleep(.35)
+ time.sleep(3)
 (root/"index.json").write_text(json.dumps({"version":1,"candidates":items,"failures":failures},ensure_ascii=False,indent=2)+"\n")
 for offset in range(0,len(items),12):
  sheet=Image.new("RGB",(1200,1200),(245,245,245));draw=ImageDraw.Draw(sheet)
