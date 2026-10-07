@@ -2309,7 +2309,7 @@
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "crop": [
-        0.42,
+        0,
         0,
         1,
         1
@@ -2369,9 +2369,9 @@
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "crop": [
-        0.34,
         0,
-        0.77,
+        0,
+        1,
         1
       ]
     },
@@ -2397,19 +2397,19 @@
     },
     {
       "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
-      "subjectTaxon": "Russula delica",
+      "subjectTaxon": "Russula chloroides",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "page": 41,
-      "xref": 153,
+      "page": 42,
+      "xref": 156,
       "view": "underside",
-      "filename": "russula-lactarioides-underside-153.jpg",
-      "alt": "Russula delica — vista inferiore di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
+      "filename": "russula-lactarioides-underside-156.jpg",
+      "alt": "Russula chloroides — vista inferiore di cappello e gambo",
+      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
       "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "reviewNotes": "Russula chloroides è raffigurata con didascalia specifica; rappresentante del gruppo R. delica nella scheda di gruppo, non una fotografia attribuita a R. delica.",
       "crop": [
-        0.65,
+        0.35,
         0,
         1,
         1
@@ -2429,9 +2429,9 @@
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "crop": [
-        0.34,
         0,
-        0.77,
+        0,
+        1,
         1
       ]
     },
@@ -2457,19 +2457,19 @@
     },
     {
       "scientificName": "Russula",
-      "subjectTaxon": "Russula delica",
+      "subjectTaxon": "Russula chloroides",
       "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
       "sourceSha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03",
-      "page": 41,
-      "xref": 153,
+      "page": 42,
+      "xref": 156,
       "view": "underside",
-      "filename": "russula-genere-underside-153.jpg",
-      "alt": "Russula delica — vista inferiore di cappello e gambo",
-      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
+      "filename": "russula-genere-underside-156.jpg",
+      "alt": "Russula chloroides — vista inferiore di cappello e gambo",
+      "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
       "visualReview": "verified",
-      "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
+      "reviewNotes": "Russula chloroides è raffigurata con didascalia specifica; rappresentante del gruppo R. delica nella scheda di gruppo, non una fotografia attribuita a R. delica.",
       "crop": [
-        0.65,
+        0.35,
         0,
         1,
         1
@@ -2489,7 +2489,7 @@
       "visualReview": "verified",
       "reviewNotes": "Didascalia specifica e vista controllate sul foglio fotografico. Ritaglio di un esemplare presente nella fotografia composta, senza alterazioni morfologiche.",
       "crop": [
-        0.48,
+        0,
         0,
         1,
         1
@@ -2534,6 +2534,368 @@
         1,
         1
       ]
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "subjectTaxon": "Marasmius oreades",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "page": 13,
+      "xref": 55,
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        0.38,
+        1
+      ],
+      "filename": "marasmius-oreades-lateral-55.jpg",
+      "alt": "Marasmius oreades — fianco, cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 13. Autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti."
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "subjectTaxon": "Marasmius oreades",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "page": 12,
+      "xref": 51,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.53,
+        1
+      ],
+      "filename": "marasmius-oreades-top-51.jpg",
+      "alt": "Marasmius oreades — sopra, cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 12. Autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti."
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "subjectTaxon": "Marasmius oreades",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "page": 13,
+      "xref": 55,
+      "view": "underside",
+      "crop": [
+        0.36,
+        0,
+        1,
+        1
+      ],
+      "filename": "marasmius-oreades-underside-55.jpg",
+      "alt": "Marasmius oreades — sotto, cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 13. Autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti."
+    },
+    {
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "subjectTaxon": "Marasmius oreades",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "page": 13,
+      "xref": 55,
+      "view": "lateral",
+      "crop": [
+        0,
+        0,
+        0.38,
+        1
+      ],
+      "filename": "collybioidi-marasmioidi-lateral-55.jpg",
+      "alt": "Marasmius oreades — fianco, cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 13. Autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti."
+    },
+    {
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "subjectTaxon": "Marasmius oreades",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "page": 12,
+      "xref": 51,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        0.53,
+        1
+      ],
+      "filename": "collybioidi-marasmioidi-top-51.jpg",
+      "alt": "Marasmius oreades — sopra, cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 12. Autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti."
+    },
+    {
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "subjectTaxon": "Marasmius oreades",
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "sourceSha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0",
+      "page": 13,
+      "xref": 55,
+      "view": "underside",
+      "crop": [
+        0.36,
+        0,
+        1,
+        1
+      ],
+      "filename": "collybioidi-marasmioidi-underside-55.jpg",
+      "alt": "Marasmius oreades — sotto, cappello e gambo",
+      "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 13. Autore della singola fotografia non specificato.",
+      "visualReview": "verified",
+      "reviewNotes": "Didascalia Marasmius oreades verificata. Vista e ritaglio controllati visivamente; esemplari della stessa composizione, non tre originali distinti."
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 369,
+      "view": "lateral",
+      "crop": [
+        0,
+        0.2,
+        0.44,
+        1
+      ],
+      "filename": "lepiota-brunneoincarnata-lateral-369.jpg",
+      "alt": "Lepiota brunneoincarnata — fianco, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 369,
+      "view": "top",
+      "crop": [
+        0.08,
+        0,
+        0.66,
+        0.54
+      ],
+      "filename": "lepiota-brunneoincarnata-top-369.jpg",
+      "alt": "Lepiota brunneoincarnata — sopra, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 369,
+      "view": "underside",
+      "crop": [
+        0.35,
+        0.4,
+        0.73,
+        1
+      ],
+      "filename": "lepiota-brunneoincarnata-underside-369.jpg",
+      "alt": "Lepiota brunneoincarnata — sotto, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 369,
+      "view": "lateral",
+      "crop": [
+        0,
+        0.2,
+        0.44,
+        1
+      ],
+      "filename": "lepiotoidi-lateral-369.jpg",
+      "alt": "Lepiota brunneoincarnata — fianco, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 369,
+      "view": "top",
+      "crop": [
+        0.08,
+        0,
+        0.66,
+        0.54
+      ],
+      "filename": "lepiotoidi-top-369.jpg",
+      "alt": "Lepiota brunneoincarnata — sopra, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "subjectTaxon": "Lepiota brunneoincarnata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 369,
+      "view": "underside",
+      "crop": [
+        0.35,
+        0.4,
+        0.73,
+        1
+      ],
+      "filename": "lepiotoidi-underside-369.jpg",
+      "alt": "Lepiota brunneoincarnata — sotto, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "subjectTaxon": "Galerina marginata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 370,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "filename": "galerina-marginata-top-370.jpg",
+      "alt": "Galerina marginata — sopra, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "subjectTaxon": "Galerina marginata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 370,
+      "view": "underside",
+      "crop": [
+        0.08,
+        0.2,
+        0.5,
+        1
+      ],
+      "filename": "galerina-marginata-underside-370.jpg",
+      "alt": "Galerina marginata — sotto, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Galerina",
+      "subjectTaxon": "Galerina marginata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 370,
+      "view": "top",
+      "crop": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "filename": "galerina-genere-top-370.jpg",
+      "alt": "Galerina marginata — sopra, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Galerina",
+      "subjectTaxon": "Galerina marginata",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 24,
+      "xref": 370,
+      "view": "underside",
+      "crop": [
+        0.08,
+        0.2,
+        0.5,
+        1
+      ],
+      "filename": "galerina-genere-underside-370.jpg",
+      "alt": "Galerina marginata — sotto, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 24; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Morchella",
+      "subjectTaxon": "Morchella esculenta s.l.",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 60,
+      "xref": 718,
+      "view": "lateral",
+      "filename": "morchella-genere-lateral-718.jpg",
+      "alt": "Morchella esculenta s.l. — fianco, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 60; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "subjectTaxon": "Gyromitra esculenta",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 60,
+      "xref": 720,
+      "view": "lateral",
+      "filename": "gyromitra-esculenta-lateral-720.jpg",
+      "alt": "Gyromitra esculenta — fianco, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 60; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
+    },
+    {
+      "scientificName": "Gyromitra (incluso Discina)",
+      "subjectTaxon": "Gyromitra esculenta",
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "sourceSha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29",
+      "page": 60,
+      "xref": 720,
+      "view": "lateral",
+      "filename": "gyromitra-genere-lateral-720.jpg",
+      "alt": "Gyromitra esculenta — fianco, cappello e gambo",
+      "credit": "Fonte: Andrea Missanelli, Missanelli definitivo.pdf, p. 60; fotografo non specificato nella pagina della fonte.",
+      "visualReview": "verified",
+      "reviewNotes": "Fotografia e didascalia verificate sul foglio fotografico. Eventuali ritagli sono della stessa composizione; si utilizza solo la fotografia, non le indicazioni di commestibilità della diapositiva."
     }
   ]
 }
