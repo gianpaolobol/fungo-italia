@@ -13,6 +13,9 @@
     "prepare:data": "node scripts/prepare-data.mjs",
     "typecheck": "tsc --noEmit",
     "export": "expo export --platform all",
+    "validate:release": "node scripts/release-readiness.mjs --strict",
+    "test:release-readiness": "node scripts/release-readiness.test.mjs",
+    "export:release-readiness": "node scripts/release-readiness.mjs --write",
     "eas-build-post-install": "npm run prepare:data"
   },
   "dependencies": {
