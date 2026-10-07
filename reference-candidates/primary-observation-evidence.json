@@ -1,242 +1,306 @@
 {
   "observations": [
     {
-      "gbifOccurrenceId": 1978831435,
-      "scientificName": "Entoloma clypeatum (L.) P.Kumm.",
-      "references": "https://www.inaturalist.org/observations/19154361 https://www.inaturalist.org/observations/19154361",
+      "gbifOccurrenceId": 5838016817,
+      "scientificName": "Rubroboletus pulchrotinctus (Alessio) Kuan Zhao & Zhu L.Yang",
+      "references": "https://www.inaturalist.org/observations/317527369 https://www.inaturalist.org/observations/317527369",
       "media": [
         {
           "type": "StillImage",
           "format": "image/jpeg",
-          "references": "https://www.inaturalist.org/photos/29410010",
-          "created": "2018-04-07T14:50:01.000+00:00",
-          "creator": "Davide Puddu",
+          "references": "https://www.inaturalist.org/photos/573780327",
+          "created": "2025-09-29T22:22:29.000+00:00",
+          "creator": "Bastien Le Mort",
           "publisher": "iNaturalist",
           "license": "http://creativecommons.org/licenses/by/4.0/",
-          "rightsHolder": "Davide Puddu",
-          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/29410010/original.jpeg"
+          "rightsHolder": "Bastien Le Mort",
+          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573780327/original.jpg"
+        },
+        {
+          "type": "StillImage",
+          "format": "image/jpeg",
+          "references": "https://www.inaturalist.org/photos/573826598",
+          "created": "2025-09-29T22:22:40.000+00:00",
+          "creator": "Bastien Le Mort",
+          "publisher": "iNaturalist",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "Bastien Le Mort",
+          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/573826598/original.jpg"
         }
       ]
     },
     {
-      "observationId": 19154361,
-      "taxon": "Entoloma clypeatum",
+      "gbifOccurrenceId": 4177135061,
+      "scientificName": "Rubroboletus pulchrotinctus (Alessio) Kuan Zhao & Zhu L.Yang",
+      "references": "https://www.inaturalist.org/observations/176329904 https://www.inaturalist.org/observations/176329904",
+      "media": [
+        {
+          "type": "StillImage",
+          "format": "image/jpeg",
+          "references": "https://www.inaturalist.org/photos/306545911",
+          "created": "2022-10-28T22:09:17.000+00:00",
+          "creator": "Anton Popovich",
+          "publisher": "iNaturalist",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "Anton Popovich",
+          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/306545911/original.jpeg"
+        },
+        {
+          "type": "StillImage",
+          "format": "image/jpeg",
+          "references": "https://www.inaturalist.org/photos/306545937",
+          "created": "2022-10-28T22:09:34.000+00:00",
+          "creator": "Anton Popovich",
+          "publisher": "iNaturalist",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "Anton Popovich",
+          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/306545937/original.jpeg"
+        },
+        {
+          "type": "StillImage",
+          "format": "image/jpeg",
+          "references": "https://www.inaturalist.org/photos/306545963",
+          "created": "2022-10-28T22:10:25.000+00:00",
+          "creator": "Anton Popovich",
+          "publisher": "iNaturalist",
+          "license": "http://creativecommons.org/licenses/by/4.0/",
+          "rightsHolder": "Anton Popovich",
+          "identifier": "https://inaturalist-open-data.s3.amazonaws.com/photos/306545963/original.jpeg"
+        }
+      ]
+    },
+    {
+      "observationId": 637711,
+      "taxon": "Sarcosphaera coronaria",
       "qualityGrade": "research",
-      "author": "Davide Puddu",
+      "author": "Matteo Piccinini",
       "photos": [
         {
-          "photoId": 29410010,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29410010/original.jpeg",
+          "photoId": 801890,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/801890/original.jpg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Davide Puddu, some rights reserved (CC BY)"
+          "attribution": "(c) Matteo Piccinini, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 803191,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/803191/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matteo Piccinini, some rights reserved (CC BY)"
         }
       ]
     },
     {
-      "observationId": 45700061,
-      "taxon": "Verpa bohemica",
+      "observationId": 65739079,
+      "taxon": "Hygrophoropsis aurantiaca",
       "qualityGrade": "research",
-      "author": "Nina Filippova",
+      "author": "Thomas and Guillaume",
       "photos": [
         {
-          "photoId": 72474474,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474474/original.jpeg",
+          "photoId": 105858196,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/105858196/original.jpeg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+          "attribution": "(c) Thomas and Guillaume, some rights reserved (CC BY)"
         },
         {
-          "photoId": 72474512,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474512/original.jpeg",
+          "photoId": 105858323,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/105858323/original.jpeg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+          "attribution": "(c) Thomas and Guillaume, some rights reserved (CC BY)"
         },
         {
-          "photoId": 72474556,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474556/original.jpeg",
+          "photoId": 105858295,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/105858295/original.jpeg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 72474583,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/72474583/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Nina Filippova, some rights reserved (CC BY)"
+          "attribution": "(c) Thomas and Guillaume, some rights reserved (CC BY)"
         }
       ]
     },
     {
-      "observationId": 232719197,
-      "taxon": "Gyroporus cyanescens",
+      "observationId": 66978174,
+      "taxon": "Hygrophoropsis aurantiaca",
       "qualityGrade": "research",
-      "author": "Lucian Clanet",
+      "author": "Valentin Hamon",
+      "photos": []
+    },
+    {
+      "observationId": 176329904,
+      "taxon": "Rubroboletus pulchrotinctus",
+      "qualityGrade": "research",
+      "author": "Anton Popovich",
       "photos": [
         {
-          "photoId": 413483826,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413483826/original.jpeg",
+          "photoId": 306545911,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/306545911/original.jpeg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+          "attribution": "(c) Anton Popovich, some rights reserved (CC BY)"
         },
         {
-          "photoId": 413483870,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/413483870/original.jpeg",
+          "photoId": 306545937,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/306545937/original.jpeg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+          "attribution": "(c) Anton Popovich, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 306545963,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/306545963/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Anton Popovich, some rights reserved (CC BY)"
         }
       ]
     },
     {
-      "observationId": 194984296,
-      "taxon": "Caloboletus radicans",
-      "qualityGrade": "research",
-      "author": "Lucian Clanet",
-      "photos": [
-        {
-          "photoId": 342901687,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342901687/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 342902893,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342902893/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 342903118,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903118/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 342903152,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903152/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 342903826,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903826/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 342903857,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/342903857/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        }
-      ]
-    },
-    {
-      "observationId": 244111371,
-      "taxon": "Caloboletus radicans",
-      "qualityGrade": "research",
-      "author": "Lucian Clanet",
-      "photos": [
-        {
-          "photoId": 435401432,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401432/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 435401480,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401480/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 435401518,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401518/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 435401579,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401579/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 435401616,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401616/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 435401682,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435401682/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
-        }
-      ]
-    },
-    {
-      "observationId": 41289920,
-      "taxon": "Gyroporus cyanescens",
-      "qualityGrade": "research",
-      "author": "Михаил Малышев",
-      "photos": [
-        {
-          "photoId": 65487833,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/65487833/original.jpeg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Михаил Малышев, some rights reserved (CC BY)"
-        }
-      ]
-    },
-    {
-      "observationId": 241513396,
-      "taxon": "Caloboletus radicans",
-      "qualityGrade": "research",
-      "author": "Matej Frančeškin",
-      "photos": [
-        {
-          "photoId": 430440166,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430440166/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 430440195,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430440195/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
-        },
-        {
-          "photoId": 430440250,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/430440250/original.jpg",
-          "licenseCode": "cc-by",
-          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
-        }
-      ]
-    },
-    {
-      "observationId": 155152863,
-      "taxon": "Gyromitra esculenta",
+      "observationId": 180606628,
+      "taxon": "Caloboletus calopus",
       "qualityGrade": "research",
       "author": "Björn Sothmann",
       "photos": [
         {
-          "photoId": 268156230,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/268156230/original.jpeg",
+          "photoId": 314633460,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314633460/original.jpeg",
+          "licenseCode": "cc-by-sa",
+          "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
+        },
+        {
+          "photoId": 314633545,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314633545/original.jpeg",
+          "licenseCode": "cc-by-sa",
+          "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
+        },
+        {
+          "photoId": 314633561,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314633561/original.jpeg",
+          "licenseCode": "cc-by-sa",
+          "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
+        },
+        {
+          "photoId": 314633558,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314633558/original.jpeg",
+          "licenseCode": "cc-by-sa",
+          "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
+        },
+        {
+          "photoId": 314633591,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314633591/original.jpeg",
+          "licenseCode": "cc-by-sa",
+          "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
+        },
+        {
+          "photoId": 314633611,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/314633611/original.jpeg",
           "licenseCode": "cc-by-sa",
           "attribution": "(c) Björn Sothmann, some rights reserved (CC BY-SA)"
         }
       ]
     },
     {
-      "observationId": 34492154,
-      "taxon": "Entoloma sinuatum",
+      "observationId": 240317830,
+      "taxon": "Caloboletus calopus",
       "qualityGrade": "research",
-      "author": "Eugene Popov",
+      "author": "Matej Frančeškin",
       "photos": [
         {
-          "photoId": 54291818,
-          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/54291818/original.jpg",
+          "photoId": 428137999,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/428137999/original.jpg",
           "licenseCode": "cc-by",
-          "attribution": "(c) Eugene Popov, some rights reserved (CC BY)"
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 428138070,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/428138070/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 244111771,
+      "taxon": "Hygrophoropsis aurantiaca",
+      "qualityGrade": "research",
+      "author": "Lucian Clanet",
+      "photos": [
+        {
+          "photoId": 435402093,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/435402093/original.jpeg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Lucian Clanet, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 283629167,
+      "taxon": "Sarcosphaera coronaria",
+      "qualityGrade": "research",
+      "author": "Matej Frančeškin",
+      "photos": [
+        {
+          "photoId": 509658380,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/509658380/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 509658390,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/509658390/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 509841521,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/509841521/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 509841544,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/509841544/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 509841546,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/509841546/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 509841549,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/509841549/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 302897493,
+      "taxon": "Caloboletus calopus",
+      "qualityGrade": "research",
+      "author": "Matej Frančeškin",
+      "photos": [
+        {
+          "photoId": 545903288,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/545903288/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Matej Frančeškin, some rights reserved (CC BY)"
+        }
+      ]
+    },
+    {
+      "observationId": 317527369,
+      "taxon": "Rubroboletus pulchrotinctus",
+      "qualityGrade": "research",
+      "author": "Bastien Le Mort",
+      "photos": [
+        {
+          "photoId": 573780327,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/573780327/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Bastien Le Mort, some rights reserved (CC BY)"
+        },
+        {
+          "photoId": 573826598,
+          "assetUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/573826598/original.jpg",
+          "licenseCode": "cc-by",
+          "attribution": "(c) Bastien Le Mort, some rights reserved (CC BY)"
         }
       ]
     }
