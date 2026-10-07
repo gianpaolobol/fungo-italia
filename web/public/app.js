@@ -99,7 +99,27 @@ function genusRevision(t){
  return '<section class="genus-revision"><h3>Ripasso del genere</h3><ol class="revision-prompts"><li>Forma complessiva e strutture dell’imenoforo.</li><li>Consistenza, veli e reazioni alle lesioni.</li><li>Odore, sporata, substrato e ospite.</li><li>Differenze fra specie e limiti dei caratteri.</li></ol>'+
  (units.length?button('Ripassa specie collegate','genus-review',t.id,'full')+'<details class="compact-details"><summary>Confronta '+units.length+' schede</summary>'+units.map(row=>'<details class="compact-details"><summary>'+escape(row.scientificName)+'</summary><ol>'+row.characters.map(value=>'<li>'+escape(studyText(value))+'</li>').join('')+'</ol>'+(row.differentiatingCharacter?'<p><strong>+1</strong> '+escape(studyText(row.differentiatingCharacter))+'</p>':'')+button('Apri '+row.scientificName,'related',row.id)+'</details>').join('')+'</details>':'<p class="small">Le specie di questo genere non sono ancora incluse nel catalogo.</p>')+'</section>';
 }
+function validCommercialFields(t){
+ const c=t.commercialization;if(c===undefined)return true;
+ const text=v=>typeof v==='string'&&!!v.trim();
+ if(!c||typeof c!=='object'||Array.isArray(c)||Object.keys(c).some(k=>!['product','wholeCard','reviewedAt','context','conditions','members'].includes(k))||c.product!=='fresh'||typeof c.wholeCard!=='boolean'||!/^\d{4}-\d{2}-\d{2}$/.test(c.reviewedAt)||!text(c.context)||!text(c.conditions)||!Array.isArray(c.members)||!c.members.length||new Set(c.members.map(m=>m?.scientificName)).size!==c.members.length)return false;
+ if(c.wholeCard&&(t.rank!=='species'||t.kind==='teaching-group'||c.members.length!==1||c.members[0]?.scientificName!==t.scientificName))return false;
+ return c.members.every(m=>{
+  if(!m||Object.keys(m).some(k=>!['scientificName','status','label','regions','sources'].includes(k))||!text(m.scientificName)||!['national','regional','banned'].includes(m.status)||!Array.isArray(m.regions)||!m.regions.every(text)||new Set(m.regions).size!==m.regions.length||!Array.isArray(m.sources)||!m.sources.length||!m.sources.every(s=>s&&text(s.id)&&text(s.title)&&publicPhotoHttps(s.url)&&['national','regional','taxonomy'].includes(s.scope)&&(s.scope!=='regional'||m.regions.includes(s.region))))return false;
+  if(m.status==='banned')return m.scientificName==='Tricholoma equestre'&&m.label==='Commercializzazione vietata in Italia'&&!m.regions.length&&m.sources.some(s=>s.id==='OM2002-EQUESTRE'&&s.scope==='national');
+  if(m.scientificName==='Tricholoma equestre')return false;
+  if(m.status==='national')return m.label==='Specie commerciabile in Italia'&&!m.regions.length&&m.sources.some(s=>s.id==='DPR376-ANNEX-I'&&s.scope==='national');
+  return m.regions.length>0&&m.label==='Specie commerciabile in '+m.regions.join(', ')&&m.regions.every(region=>m.sources.some(s=>s.scope==='regional'&&s.region===region));
+ });
+}
+function commercializationHTML(t){
+ const c=t.commercialization;if(!c||!validCommercialFields(t))return '';
+ const entries=c.members.map(m=>'<li>'+(!c.wholeCard?'<strong>'+escape(m.scientificName)+'</strong> · ':'')+'<span class="commerce-badge '+(m.status==='banned'?'commerce-ban':m.status==='regional'?'commerce-regional':'')+'">'+escape(m.label)+'</span><span class="commerce-sources">'+m.sources.map(s=>safeLink(s.url,s.title)).join(' · ')+'</span></li>').join('');
+ return (c.wholeCard?'<p class="commerce-inline"><span class="commerce-badge '+(c.members[0].status==='banned'?'commerce-ban':c.members[0].status==='regional'?'commerce-regional':'')+'">'+escape(c.members[0].label)+'</span></p>':'')+'<details class="compact-details commerce-details"><summary>'+(c.wholeCard?'Commercializzazione · riferimenti':'Specie commerciabili comprese nella scheda')+'</summary>'+(c.wholeCard?'':'<p class="small">Le indicazioni riguardano solo le specie elencate.</p>')+'<ul class="commerce-members">'+entries+'</ul><p class="small">'+escape(c.context)+'</p><p class="small">'+escape(c.conditions)+'</p><p class="small">La commerciabilità è distinta dalla commestibilità e non certifica gli esemplari raccolti. Le integrazioni regionali indicate sono quelle verificate per questa scheda.</p></details>';
+}
+
 function validStudyFields(t){
+ if(!validCommercialFields(t))return false;
  const text=value=>typeof value==='string'&&value.trim().length>0;
  const p=t.studyProfile;
  if(p!==undefined){
@@ -116,7 +136,7 @@ function content(t,showIdentity=true){
  const sources=studySources(t),summary=studySummary(t);
  const diagnostic=['field_high_confidence_when_typical','field_high_confidence_when_host_known','field_high_confidence_when_young','microscopy_required_for_fine_id','dna_confirmatory'].includes(t.diagnosticStatus)?diagnosticLimits[t.diagnosticStatus]:'';
  return (showIdentity?'<div class="taxon-title"><h2>'+escape(t.scientificName)+'</h2>'+favoriteButton(t)+'</div><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
- referenceGallery(t)+studyFacts(t)+
+ referenceGallery(t)+studyFacts(t)+commercializationHTML(t)+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
  (t.safetyCheck?'<h3>Controlli sul campo</h3><p>'+escape(t.safetyCheck)+'</p>':'')+(diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+

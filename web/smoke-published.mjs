@@ -15,9 +15,17 @@ for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){
  await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');
  await page.getByRole('button',{name:/^Apri Amanita/}).first().click();
  await expect(page.getByRole('heading',{name:'Carattere differenziante (+1)',exact:true})).toBeVisible();
+ await expect(page.locator('#detail-body .commerce-badge')).toHaveCount(0);
  const favorite=page.locator('#detail-body .taxon-title .mushroom-toggle');await expect(favorite).toHaveAttribute('aria-pressed','false');await favorite.click();await expect(favorite).toHaveAttribute('aria-pressed','true');await favorite.click();await expect(favorite).toHaveAttribute('aria-pressed','false');
  await page.getByRole('button',{name:'Successiva →',exact:true}).click();await expect(page.locator('#position')).toContainText('2 /');
  await page.getByRole('button',{name:'Torna',exact:true}).click();
+ const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
+ await search.fill('Amanita caesarea');await page.getByRole('button',{name:'Apri Amanita caesarea',exact:true}).click();
+ await expect(page.locator('#detail-body .commerce-inline')).toHaveText('Specie commerciabile in Italia');
+ await page.screenshot({path:'published-evidence/'+name+'-commerce-caesarea.png',fullPage:true});
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await search.fill('Tricholoma equestre');await page.getByRole('button',{name:'Apri Tricholoma equestre',exact:true}).click();
+ await expect(page.locator('#detail-body .commerce-inline')).toHaveText('Commercializzazione vietata in Italia');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await search.fill('');
  if(name==='chromium'){
  await page.evaluate(()=>window.__oldDocument=true);await context.setOffline(true);
  const response=await page.goto(url+'?offline='+Date.now());expect(response.fromServiceWorker()).toBe(true);

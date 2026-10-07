@@ -503,3 +503,46 @@ test('gasteroid base photograph names the anatomical view and depicted species a
  await expect(opener).toBeFocused();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+
+test('commercialization on iPhone stays distinct from edibility and respects bans and regions',async({page},testInfo)=>{
+ await ready(page);
+ const search=page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'});
+ async function open(name){await search.fill(name);await page.getByRole('button',{name:'Apri '+name,exact:true}).click();}
+ await open('Amanita caesarea');
+ await expect(page.locator('#detail-body .commerce-inline')).toHaveText('Specie commerciabile in Italia');
+ await expect(page.locator('#detail-body .study-facts')).toContainText('Commestibilità');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.screenshot({path:testInfo.outputPath('iphone-commerce-caesarea.png'),fullPage:true});
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await open('Amanita phalloides');
+ await expect(page.locator('#detail-body .commerce-badge')).toHaveCount(0);
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await open('Tricholoma equestre');
+ await expect(page.locator('#detail-body .commerce-inline')).toHaveText('Commercializzazione vietata in Italia');
+ await expect(page.locator('#detail-body .commerce-inline')).not.toContainText('Specie commerciabile');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await open('Craterellus lutescens');
+ await expect(page.locator('#detail-body .commerce-inline')).toContainText('Toscana');
+ await expect(page.locator('#detail-body .commerce-inline')).not.toContainText('in Italia');
+ await page.getByRole('button',{name:'Torna',exact:true}).click();await open('Pleurotus cornucopiae / Pleurotus citrinopileatus');
+ await expect(page.locator('#detail-body .commerce-inline')).toHaveCount(0);
+ await page.locator('#detail-body .commerce-details summary').click();
+ await expect(page.locator('#detail-body .commerce-members')).toContainText('Pleurotus cornucopiae');
+ await expect(page.locator('#detail-body .commerce-members')).not.toContainText('Pleurotus citrinopileatus');
+ await expect(page.locator('#detail-body .commerce-details')).toContainText('solo le specie elencate');
+});
+test('genus commercial references name eligible species without a genus-wide badge',async({page})=>{
+ await ready(page);await page.locator('#layer').selectOption('groups');
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Russula');
+ await page.getByRole('button',{name:'Apri Russula',exact:true}).click();
+ await expect(page.locator('#detail-body .commerce-inline')).toHaveCount(0);
+ await page.locator('#detail-body .commerce-details summary').click();
+ await expect(page.locator('#detail-body .commerce-members')).toContainText('Russula cyanoxantha');
+ await expect(page.locator('#detail-body .commerce-members')).not.toContainText('Specie commerciabile in Italia');
+});
+test('malformed commercial status and false equestre authorization fail catalog validation',async({page})=>{
+ await page.route('**/data.json',async route=>{
+  const response=await route.fetch(),data=await response.json(),t=data.catalog.find(t=>t.scientificName==='Tricholoma equestre');
+  t.commercialization.members[0].status='national';t.commercialization.members[0].label='Specie commerciabile in Italia';
+  await route.fulfill({response,json:data});
+ });
+ await page.goto('./');await expect(page.getByRole('heading',{name:'Catalogo non disponibile'})).toBeVisible();
+ await expect(page.locator('.commerce-badge')).toHaveCount(0);
+});

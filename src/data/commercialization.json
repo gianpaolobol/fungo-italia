@@ -1,0 +1,1412 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-07",
+  "product": "fresh",
+  "context": "In Italia, la commercializzazione dei funghi freschi spontanei e coltivati è regolamentata dal D.P.R. 376/1995 e successive integrazioni regionali o ministeriali.",
+  "conditions": "Per i funghi freschi spontanei destinati alla vendita al dettaglio serve il controllo micologico previsto dall’art. 3. Restano applicabili autorizzazioni e prescrizioni locali.",
+  "sources": [
+    {
+      "id": "DPR376-ANNEX-I",
+      "title": "D.P.R. 376/1995 · allegato I",
+      "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=1&art.idArticolo=1&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "scope": "national"
+    },
+    {
+      "id": "DPR376-ART4",
+      "title": "D.P.R. 376/1995 · art. 4",
+      "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "scope": "national"
+    },
+    {
+      "id": "DPR376-ART3",
+      "title": "D.P.R. 376/1995 · art. 3",
+      "url": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=0&art.idArticolo=3&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "scope": "national"
+    },
+    {
+      "id": "OM2002-EQUESTRE",
+      "title": "Ordinanza 20 agosto 2002 · divieto Tricholoma equestre",
+      "url": "https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.codiceRedazionale=02A10867&atto.dataPubblicazioneGazzetta=2002-08-28&tipoSerie=serie_generale&tipoVigenza=originario",
+      "scope": "national"
+    },
+    {
+      "id": "TOSCANA939-1999",
+      "title": "Toscana · DGRT 939/1999",
+      "url": "https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.codiceRedazionale=099A8742&atto.dataPubblicazioneGazzetta=1999-10-21&tipoSerie=serie_generale&tipoVigenza=originario",
+      "scope": "regional",
+      "region": "Toscana"
+    },
+    {
+      "id": "LOMBARDIA31-107",
+      "title": "Lombardia · L.R. 31/2008, art. 107",
+      "url": "https://normelombardia.consiglio.regione.lombardia.it/normelombardia/accessibile/main.aspx?iddoc=lr002008120500031&view=showdoc",
+      "scope": "regional",
+      "region": "Lombardia"
+    },
+    {
+      "id": "ASL-TO5-CANTHARELLUS",
+      "title": "Sitta e Davoli · Guida al commercio dei funghi, ASL TO5",
+      "url": "https://www.aslto5.piemonte.it/media/1860/download",
+      "scope": "taxonomy"
+    },
+    {
+      "id": "PIEMONTE1997",
+      "title": "Piemonte · DGR 66-17092/1997 e linee guida regionali 2018",
+      "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2018-10/linee_guida_micologi_2018.pdf",
+      "scope": "regional",
+      "region": "Piemonte"
+    },
+    {
+      "id": "CALABRIA30-2001",
+      "title": "Calabria · L.R. 30/2001, allegato C",
+      "url": "https://www.consiglioregionale.calabria.it/bdf/api/BDF?anno=2001&numero=30",
+      "scope": "regional",
+      "region": "Calabria"
+    },
+    {
+      "id": "LIGURIA175-2020",
+      "title": "Liguria · DGR 175/2020",
+      "url": "https://www.burl.it/ArchivioFile/P_20200408101728758317115411_1.PDF",
+      "scope": "regional",
+      "region": "Liguria"
+    }
+  ],
+  "rules": [
+    {
+      "scientificName": "Agaricus arvensis",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Agaricus bisporus",
+      "aliases": [
+        "Agaricus hortensis",
+        "Psalliota bispora",
+        "Psalliota hortensis"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Agaricus campestris",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Armillaria mellea",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "aliases": [
+        "Auricolaria auricolaria judae"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Boletus aereus",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Butyriboletus appendiculatus",
+      "aliases": [
+        "Boletus appendicolatus",
+        "Boletus appendiculatus"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Imleria badia",
+      "aliases": [
+        "Boletus badius",
+        "Xerocomus badius"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Boletus edulis",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "aliases": [
+        "Boletus granulatus"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Hemileccinum impolitum",
+      "aliases": [
+        "Boletus impolitus"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "aliases": [
+        "Boletus luteus"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Boletus pinophilus",
+      "aliases": [
+        "Boletus pinicola"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Butyriboletus regius",
+      "aliases": [
+        "Boletus regius"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Boletus reticulatus",
+      "aliases": [
+        "Boletus aestivalis"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Leccinum aurantiacum",
+      "aliases": [
+        "Boletus rufa"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Leccinum scabrum",
+      "aliases": [
+        "Boletus scabra"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Cantharellus cibarius",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "aliases": [
+        "Cantharellus tubaeformis"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I",
+      "taxonomySourceId": "ASL-TO5-CANTHARELLUS"
+    },
+    {
+      "scientificName": "Infundibulicybe geotropa",
+      "aliases": [
+        "Clitocybe geotropa"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Aspropaxillus giganteus",
+      "aliases": [
+        "Leucopaxillus giganteus",
+        "Clitocybe gigantea"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Craterellus cornucopioides",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Hydnum repandum",
+      "aliases": [
+        "Hyduum repandum"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Lactarius deliciosus",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "aliases": [
+        "Lentinus edodes"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Macrolepiota procera",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Pleurotus eryngii",
+      "aliases": [
+        "Pleurotus eringii"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "aliases": [
+        "Pholiota mutabilis"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Pholiota microspora",
+      "aliases": [
+        "Pholiota nameko",
+        "Pholiota nameko mutabilis"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "aliases": [
+        "Tricholoma georgii"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Tricholoma imbricatum",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "aliases": [
+        "Tricholoma portentoso"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "aliases": [
+        "Volvariella valvacea",
+        "Volvariella esculenta"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "aliases": [
+        "Agrocybe aegerita",
+        "Pholiota aegerita"
+      ],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Stropharia rugosoannulata",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Desarmillaria tabescens",
+      "aliases": [
+        "Armillaria tabescens"
+      ],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "aliases": [
+        "Cantharellus lutescens"
+      ],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Infundibulicybe gibba",
+      "aliases": [
+        "Clitocybe gibba"
+      ],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Hydnum rufescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Hygrophorus penarius",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Lactarius salmonicolor",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Lactarius sanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Lactarius semisanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Lyophyllum decastes",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Lyophyllum fumosum",
+      "aliases": [
+        "Lyophyllum decastes var. fumosum"
+      ],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Lyophyllum loricatum",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Russula aurea",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Russula cyanoxantha",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Russula vesca",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Russula virescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Suillus bellinii",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Suillus collinitus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Toscana",
+      "sourceId": "TOSCANA939-1999"
+    },
+    {
+      "scientificName": "Russula cyanoxantha",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Lombardia",
+      "sourceId": "LOMBARDIA31-107"
+    },
+    {
+      "scientificName": "Russula virescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Lombardia",
+      "sourceId": "LOMBARDIA31-107"
+    },
+    {
+      "scientificName": "Lactarius salmonicolor",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Lombardia",
+      "sourceId": "LOMBARDIA31-107"
+    },
+    {
+      "scientificName": "Lactarius deterrimus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Lombardia",
+      "sourceId": "LOMBARDIA31-107"
+    },
+    {
+      "scientificName": "Lactarius sanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Lombardia",
+      "sourceId": "LOMBARDIA31-107"
+    },
+    {
+      "scientificName": "Lactarius semisanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Lombardia",
+      "sourceId": "LOMBARDIA31-107"
+    },
+    {
+      "scientificName": "Morchella esculenta",
+      "aliases": [],
+      "scope": "national",
+      "sourceId": "DPR376-ANNEX-I"
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Hygrophorus penarius",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Lactarius salmonicolor",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Lactarius deterrimus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Lactarius sanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Lactarius semisanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Lactarius vinosus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Lyophyllum decastes",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Russula aurea",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Russula cyanoxantha",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Russula virescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Suillus grevillei",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Piemonte",
+      "sourceId": "PIEMONTE1997"
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Butyriboletus subappendiculatus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Hydnum rufescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Hygrophorus hypothejus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Hygrophorus pudorinus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Lactarius salmonicolor",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Lactarius sanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Lactarius semisanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Lactarius vinosus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Laetiporus sulphureus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Lyophyllum conglobatum",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Pleurotus ferulae",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Russula aurea",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Russula virescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Russula cyanoxantha",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Russula delica",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Russula chloroides",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Russula vesca",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Ramaria botrytis",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Suillus bellinii",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Tricholoma acerbum",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Tricholoma populinum",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Tricholoma stans",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Calabria",
+      "sourceId": "CALABRIA30-2001"
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Hydnum rufescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Lactarius salmonicolor",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Lactarius sanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Lactarius semisanguifluus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Lactarius deterrimus",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Collybia nuda",
+      "aliases": [
+        "Lepista nuda"
+      ],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Russula aurea",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Russula cyanoxantha",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Russula virescens",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Tricholoma acerbum",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    },
+    {
+      "scientificName": "Suillus grevillei",
+      "aliases": [],
+      "scope": "regional",
+      "region": "Liguria",
+      "sourceId": "LIGURIA175-2020"
+    }
+  ],
+  "cards": [
+    {
+      "scientificName": "Agaricus campestris",
+      "members": [
+        "Agaricus campestris"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "members": [
+        "Agaricus bitorquis"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Agaricus bisporus",
+      "members": [
+        "Agaricus bisporus"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "members": [
+        "Cyclocybe cylindracea"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "members": [
+        "Amanita caesarea"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "members": [
+        "Calocybe gambosa"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Infundibulicybe geotropa",
+      "members": [
+        "Infundibulicybe geotropa"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Clitocybe gibba s.l.",
+      "members": [
+        "Infundibulicybe gibba"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "members": [
+        "Marasmius oreades"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "members": [
+        "Hygrophorus marzuolus"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "members": [
+        "Hygrophorus russula"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "members": [
+        "Lentinula edodes"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "members": [
+        "Macrolepiota procera"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "members": [
+        "Aspropaxillus giganteus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Lyophyllum decastes s.l.",
+      "members": [
+        "Lyophyllum decastes"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "members": [
+        "Kuehneromyces mutabilis"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "members": [
+        "Pleurotus eryngii"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "members": [
+        "Pleurotus ostreatus"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "members": [
+        "Pleurotus cornucopiae"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Stropharia rugosoannulata",
+      "members": [
+        "Stropharia rugosoannulata"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "members": [
+        "Tricholoma equestre"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "members": [
+        "Tricholoma portentosum"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "members": [
+        "Tricholoma terreum"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "members": [
+        "Tricholoma columbetta"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "members": [
+        "Tricholoma imbricatum"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "members": [
+        "Volvariella volvacea"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "members": [
+        "Lactarius deliciosus",
+        "Lactarius salmonicolor",
+        "Lactarius deterrimus",
+        "Lactarius sanguifluus",
+        "Lactarius semisanguifluus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "members": [
+        "Boletus edulis",
+        "Boletus aereus",
+        "Boletus reticulatus",
+        "Boletus pinophilus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Imleria badia",
+      "members": [
+        "Imleria badia"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "members": [
+        "Suillus luteus"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "members": [
+        "Suillus granulatus"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "members": [
+        "Cantharellus cibarius"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "members": [
+        "Craterellus lutescens"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "members": [
+        "Craterellus tubaeformis"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Craterellus cornucopioides",
+      "members": [
+        "Craterellus cornucopioides"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "members": [
+        "Hydnum repandum",
+        "Hydnum rufescens"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "members": [
+        "Auricularia auricula-judae"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Morchella",
+      "members": [
+        "Morchella esculenta"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Leccinum",
+      "members": [
+        "Leccinum aurantiacum",
+        "Leccinum scabrum"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "members": [
+        "Cortinarius praestans"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Lepista nuda s.l.",
+      "members": [
+        "Collybia nuda"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "members": [
+        "Tricholoma acerbum"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "members": [
+        "Russula delica",
+        "Russula chloroides"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "members": [
+        "Laetiporus sulphureus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "members": [
+        "Scutiger pes-caprae"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "members": [
+        "Fistulina hepatica"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "members": [
+        "Grifola frondosa"
+      ],
+      "wholeCard": true
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "members": [
+        "Ramaria botrytis"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Armillaria + Desarmillaria",
+      "members": [
+        "Armillaria mellea",
+        "Desarmillaria tabescens"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Butyriboletus",
+      "members": [
+        "Butyriboletus appendiculatus",
+        "Butyriboletus regius",
+        "Butyriboletus subappendiculatus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "members": [
+        "Hemileccinum impolitum"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Russula",
+      "members": [
+        "Russula aurea",
+        "Russula cyanoxantha",
+        "Russula virescens",
+        "Russula vesca",
+        "Russula delica",
+        "Russula chloroides"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "members": [
+        "Suillus luteus",
+        "Suillus granulatus",
+        "Suillus bellinii",
+        "Suillus collinitus",
+        "Suillus grevillei"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "members": [
+        "Boletus edulis",
+        "Boletus aereus",
+        "Boletus pinophilus",
+        "Boletus reticulatus"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Cantharellus",
+      "members": [
+        "Cantharellus cibarius"
+      ],
+      "wholeCard": false
+    },
+    {
+      "scientificName": "Hygrophorus + Cuphophyllus",
+      "members": [
+        "Hygrophorus marzuolus",
+        "Hygrophorus penarius",
+        "Hygrophorus russula",
+        "Hygrophorus hypothejus",
+        "Hygrophorus pudorinus"
+      ],
+      "wholeCard": false
+    }
+  ],
+  "bans": [
+    {
+      "scientificName": "Tricholoma equestre",
+      "sourceId": "OM2002-EQUESTRE",
+      "label": "Commercializzazione vietata in Italia"
+    }
+  ]
+}
