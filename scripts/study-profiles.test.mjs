@@ -23,3 +23,15 @@ test('external evidence enforces source identity, licensing, original digest and
 test('comparative plate allows only explicitly listed photographed taxa',()=>{const source=externalSource();source.subjectTaxon='Example species — panel A';source.allowedSubjectTaxa=['Example species'];assert.equal(validateExternalReference(external(),source,externalProof()),true);source.allowedSubjectTaxa=['Other species'];assert.throws(()=>validateExternalReference(external(),source,externalProof()));});
 test('external extraction rejects missing candidate digest and unsafe source paths',()=>{for(const change of [{candidateSha256:''},{sourcePath:'../private.jpg'},{sourcePath:'/private.jpg'},{sourcePath:'photo-review/../../private.jpg'},{sourcePath:'photo-review/other.jpg'}])assert.throws(()=>validateExternalReference(external(),externalSource(),{...externalProof(),...change}));});
 test('curated public domain and unspecified CC BY preserve license wording',()=>{for(const licenseName of ['Public domain','CC BY'])assert.equal(validateExternalReference(external(),{...externalSource(),licenseName},externalProof()),true);});
+
+test('historical freely reusable CC BY and BY-SA photographs preserve exact license versions',()=>{
+ for(const version of ['1.0','2.0','2.5','3.0','4.0'])for(const variant of ['by','by-sa']){
+  const asset=external(),source=externalSource();
+  source.licenseName='CC '+(variant==='by'?'BY':'BY-SA')+' '+version;
+  asset.licenseUrl=source.licenseUrl='https://creativecommons.org/licenses/'+variant+'/'+version+'/';
+  assert.equal(validateExternalReference(asset,source,externalProof()),true);
+ }
+ for(const name of ['CC BY-ND 2.0','CC BY-NC-SA 3.0','All rights reserved']){
+  assert.throws(()=>validateExternalReference(external(),{...externalSource(),licenseName:name},externalProof()));
+ }
+});

@@ -60,7 +60,7 @@ export function isPublicHttps(value){
 }
 export function validateExternalReference(asset,source,proof){
  check(source&&source.sourceId===asset.sourceId&&/^EXT-[a-zA-Z0-9._-]+$/.test(source.sourceId),'Unknown external image source');
- check(['CC BY 3.0','CC BY 4.0','CC BY-SA 3.0','CC BY-SA 4.0','CC0','CC0 1.0','Public domain','CC BY'].includes(source.licenseName),'Unsupported external image license');
+ check(['CC BY 1.0','CC BY 2.0','CC BY 2.5','CC BY 3.0','CC BY 4.0','CC BY-SA 1.0','CC BY-SA 2.0','CC BY-SA 2.5','CC BY-SA 3.0','CC BY-SA 4.0','CC0','CC0 1.0','Public domain','CC BY'].includes(source.licenseName),'Unsupported external image license');
  check(text(source.author)&&isPublicHttps(source.sourceUrl)&&isPublicHttps(source.licenseUrl)&&isPublicHttps(source.licenseEvidenceUrl)&&isPublicHttps(source.assetUrl)&&isPublicHttps(source.taxonomicEvidence)&&text(source.verificationBasis),'Incomplete external image provenance');
  check(/^[a-f0-9]{64}$/.test(source.sourceSha256),'Invalid external source digest');
  const subjects=source.allowedSubjectTaxa||[source.subjectTaxon];

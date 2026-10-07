@@ -1,7 +1,7 @@
 name: iPhone PWA and Expo Go
 on:
   push:
-    branches: [main, feat/external-reference-photos, feat/study-layout-oct07, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
+    branches: [main, feat/complete-reference-triplets, feat/external-reference-photos, feat/study-layout-oct07, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
     paths:
       - 'web/**'
       - 'components/**'

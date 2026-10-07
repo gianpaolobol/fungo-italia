@@ -1,7 +1,7 @@
 name: Materialize licensed external reference photographs
 on:
   push:
-    branches: [feat/external-reference-photos]
+    branches: [feat/complete-reference-triplets]
     paths:
       - src/data/reference-external-photo-selections.json
       - src/data/reference-external-sources.json
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   materialize:
-    if: github.ref == 'refs/heads/feat/external-reference-photos'
+    if: github.ref == 'refs/heads/feat/complete-reference-triplets'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
