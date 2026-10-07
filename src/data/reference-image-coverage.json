@@ -7,12 +7,12 @@
   ],
   "summary": {
     "cards": 214,
-    "images": 444,
-    "completeTriplets": 117,
-    "partialCards": 61,
-    "withoutImages": 36,
-    "missingViews": 198,
-    "imageBytes": 134720395
+    "images": 478,
+    "completeTriplets": 123,
+    "partialCards": 70,
+    "withoutImages": 21,
+    "missingViews": 164,
+    "imageBytes": 139204460
   },
   "cards": [
     {
@@ -150,10 +150,10 @@
     {
       "scientificName": "Amanita muscaria",
       "availableViews": [
-        "lateral"
+        "lateral",
+        "top"
       ],
       "missingViews": [
-        "top",
         "underside"
       ]
     },
@@ -188,12 +188,11 @@
     {
       "scientificName": "Amanita porphyria",
       "availableViews": [
+        "lateral",
         "top",
         "underside"
       ],
-      "missingViews": [
-        "lateral"
-      ]
+      "missingViews": []
     },
     {
       "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
@@ -252,11 +251,12 @@
     },
     {
       "scientificName": "Collybia phyllophila",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -308,11 +308,12 @@
     },
     {
       "scientificName": "Clitopilus prunulus s.l.",
-      "availableViews": [],
+      "availableViews": [
+        "underside"
+      ],
       "missingViews": [
         "lateral",
-        "top",
-        "underside"
+        "top"
       ]
     },
     {
@@ -392,12 +393,11 @@
     {
       "scientificName": "Cortinarius praestans",
       "availableViews": [
-        "lateral"
-      ],
-      "missingViews": [
+        "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Cortinarius cumatilis",
@@ -428,11 +428,12 @@
     },
     {
       "scientificName": "Entoloma sinuatum",
-      "availableViews": [],
+      "availableViews": [
+        "underside"
+      ],
       "missingViews": [
         "lateral",
-        "top",
-        "underside"
+        "top"
       ]
     },
     {
@@ -510,11 +511,12 @@
     },
     {
       "scientificName": "Hygrocybe punicea",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -620,12 +622,12 @@
     },
     {
       "scientificName": "Echinoderma asperum s.l.",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Leucoagaricus leucothites s.l.",
@@ -648,10 +650,10 @@
     {
       "scientificName": "Macrolepiota procera s.l.",
       "availableViews": [
-        "lateral"
+        "lateral",
+        "top"
       ],
       "missingViews": [
-        "top",
         "underside"
       ]
     },
@@ -759,11 +761,10 @@
       "scientificName": "Pleurotus eryngii s.l.",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Pleurotus ostreatus",
@@ -803,11 +804,12 @@
     },
     {
       "scientificName": "Tricholoma filamentosum",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -942,10 +944,11 @@
     },
     {
       "scientificName": "Volvariella volvacea",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
-        "top",
+        "top"
+      ],
+      "missingViews": [
         "underside"
       ]
     },
@@ -1203,9 +1206,10 @@
     },
     {
       "scientificName": "Gomphus clavatus",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
@@ -1297,19 +1301,19 @@
       "scientificName": "Grifola frondosa",
       "availableViews": [
         "lateral",
-        "top"
-      ],
-      "missingViews": [
+        "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Polyporus umbellatus",
-      "availableViews": [],
+      "availableViews": [
+        "underside"
+      ],
       "missingViews": [
         "lateral",
-        "top",
-        "underside"
+        "top"
       ]
     },
     {
@@ -1448,11 +1452,12 @@
     },
     {
       "scientificName": "Clitopilus",
-      "availableViews": [],
+      "availableViews": [
+        "underside"
+      ],
       "missingViews": [
         "lateral",
-        "top",
-        "underside"
+        "top"
       ]
     },
     {
@@ -1523,11 +1528,12 @@
     },
     {
       "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -1688,11 +1694,12 @@
     },
     {
       "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
-      "availableViews": [],
-      "missingViews": [
-        "lateral",
+      "availableViews": [
         "top",
         "underside"
+      ],
+      "missingViews": [
+        "lateral"
       ]
     },
     {
@@ -1724,10 +1731,11 @@
     },
     {
       "scientificName": "Volvariella + Volvopluteus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
-        "top",
+        "top"
+      ],
+      "missingViews": [
         "underside"
       ]
     },
@@ -1906,9 +1914,10 @@
     },
     {
       "scientificName": "Gomphus",
-      "availableViews": [],
+      "availableViews": [
+        "lateral"
+      ],
       "missingViews": [
-        "lateral",
         "top",
         "underside"
       ]
@@ -1925,20 +1934,20 @@
     },
     {
       "scientificName": "Pisolithus",
-      "availableViews": [],
-      "missingViews": [
+      "availableViews": [
         "lateral",
         "top",
         "underside"
-      ]
+      ],
+      "missingViews": []
     },
     {
       "scientificName": "Scleroderma",
       "availableViews": [
+        "lateral",
         "top"
       ],
       "missingViews": [
-        "lateral",
         "underside"
       ]
     },

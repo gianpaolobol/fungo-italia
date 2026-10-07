@@ -7678,6 +7678,652 @@
         "pages": true,
         "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-SOARES-MOLYBDITES-2024"
       }
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "subjectTaxon": "Entoloma sinuatum",
+      "src": "images/reference/external-entoloma-sinuatum-underside.jpg",
+      "view": "underside",
+      "alt": "Entoloma sinuatum — imenoforo",
+      "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-ENT-SIN-40542",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-ENT-SIN-40542"
+      }
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "subjectTaxon": "Amanita porphyria",
+      "src": "images/reference/external-amanita-porphyria-lateral.jpg",
+      "view": "lateral",
+      "alt": "Amanita porphyria — vista laterale",
+      "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PORPHYRIA-2",
+      "page": null,
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PORPHYRIA-2"
+      }
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "subjectTaxon": "Amanita muscaria",
+      "src": "images/reference/external-amanita-muscaria-top.jpg",
+      "view": "top",
+      "alt": "Amanita muscaria — vista superiore",
+      "credit": "Tiril Myhre Pedersen · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-MUSCARIA-3",
+      "page": null,
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-MUSCARIA-3"
+      }
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "subjectTaxon": "Clitocybe phyllophila",
+      "src": "images/reference/external-collybia-phyllophila-top.jpg",
+      "view": "top",
+      "alt": "Clitocybe phyllophila — vista superiore",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PHYLL-WB",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PHYLL-WB"
+      }
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "subjectTaxon": "Clitocybe phyllophila",
+      "src": "images/reference/external-collybia-phyllophila-underside.jpg",
+      "view": "underside",
+      "alt": "Clitocybe phyllophila — imenoforo",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PHYLL-WB",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PHYLL-WB"
+      }
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "subjectTaxon": "Cortinarius praestans",
+      "src": "images/reference/external-cortinarius-praestans-top.jpg",
+      "view": "top",
+      "alt": "Cortinarius praestans — vista superiore",
+      "credit": "Bálint Dima / NINA · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PRAESTANS-NEW1",
+      "page": null,
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PRAESTANS-NEW1"
+      }
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "subjectTaxon": "Cortinarius praestans",
+      "src": "images/reference/external-cortinarius-praestans-underside.jpg",
+      "view": "underside",
+      "alt": "Cortinarius praestans — imenoforo",
+      "credit": "Bálint Dima / NINA · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PRAESTANS-NEW1",
+      "page": null,
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PRAESTANS-NEW1"
+      }
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "subjectTaxon": "Hygrocybe punicea",
+      "src": "images/reference/external-hygrocybe-punicea-top.jpg",
+      "view": "top",
+      "alt": "Hygrocybe punicea — vista superiore",
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PUNICEA-2329"
+      }
+    },
+    {
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "subjectTaxon": "Hygrocybe punicea",
+      "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-top.jpg",
+      "view": "top",
+      "alt": "Hygrocybe punicea — vista superiore",
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PUNICEA-2329"
+      }
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "subjectTaxon": "Hygrocybe punicea",
+      "src": "images/reference/external-hygrocybe-punicea-underside.jpg",
+      "view": "underside",
+      "alt": "Hygrocybe punicea — imenoforo",
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PUNICEA-2329"
+      }
+    },
+    {
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "subjectTaxon": "Hygrocybe punicea",
+      "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-underside.jpg",
+      "view": "underside",
+      "alt": "Hygrocybe punicea — imenoforo",
+      "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PUNICEA-2329",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PUNICEA-2329"
+      }
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "subjectTaxon": "Macrolepiota procera",
+      "src": "images/reference/external-macrolepiota-procera-s-l-top.jpg",
+      "view": "top",
+      "alt": "Macrolepiota procera — vista superiore",
+      "credit": "J Milburn · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PROCERA-CAP",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macrolepiota_procera_cap.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PROCERA-CAP"
+      }
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "subjectTaxon": "Echinoderma asperum",
+      "src": "images/reference/external-echinoderma-asperum-s-l-top.jpg",
+      "view": "top",
+      "alt": "Echinoderma asperum — vista superiore",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-ASPERUM-W"
+      }
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "subjectTaxon": "Echinoderma asperum",
+      "src": "images/reference/external-echinoderma-asperum-s-l-lateral.jpg",
+      "view": "lateral",
+      "alt": "Echinoderma asperum — vista laterale",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-ASPERUM-W"
+      }
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "subjectTaxon": "Echinoderma asperum",
+      "src": "images/reference/external-echinoderma-asperum-s-l-underside.jpg",
+      "view": "underside",
+      "alt": "Echinoderma asperum — imenoforo",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-ASPERUM-W",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-ASPERUM-W"
+      }
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "subjectTaxon": "Pleurotus eryngii",
+      "src": "images/reference/external-pleurotus-eryngii-s-l-underside.jpg",
+      "view": "underside",
+      "alt": "Pleurotus eryngii — imenoforo",
+      "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-ERYNGII-54421",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_(DC.)_Gillet_54421_2008-11-11.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-ERYNGII-54421"
+      }
+    },
+    {
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "subjectTaxon": "Psathyrella candolleana",
+      "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-top.jpg",
+      "view": "top",
+      "alt": "Psathyrella candolleana — vista superiore",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PSATH-WA",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PSATH-WA"
+      }
+    },
+    {
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "subjectTaxon": "Psathyrella candolleana",
+      "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-underside.jpg",
+      "view": "underside",
+      "alt": "Psathyrella candolleana — imenoforo",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PSATH-WA",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PSATH-WA"
+      }
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "src": "images/reference/external-tricholoma-filamentosum-top.jpg",
+      "view": "top",
+      "alt": "Tricholoma filamentosum — vista superiore",
+      "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-FILAMENTOSUM-SEN2019",
+      "page": 6,
+      "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-FILAMENTOSUM-SEN2019"
+      }
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "src": "images/reference/external-tricholoma-filamentosum-underside.jpg",
+      "view": "underside",
+      "alt": "Tricholoma filamentosum — imenoforo",
+      "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-FILAMENTOSUM-SEN2019",
+      "page": 6,
+      "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-FILAMENTOSUM-SEN2019"
+      }
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "subjectTaxon": "Volvariella volvacea",
+      "src": "images/reference/external-volvariella-volvacea-top.jpg",
+      "view": "top",
+      "alt": "Volvariella volvacea — vista superiore",
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "page": null,
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-VOLVACEA-PLOS"
+      }
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "subjectTaxon": "Volvariella volvacea",
+      "src": "images/reference/external-volvariella-volvopluteus-top.jpg",
+      "view": "top",
+      "alt": "Volvariella volvacea — vista superiore",
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "page": null,
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-VOLVACEA-PLOS"
+      }
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "subjectTaxon": "Volvariella volvacea",
+      "src": "images/reference/external-volvariella-volvacea-lateral.jpg",
+      "view": "lateral",
+      "alt": "Volvariella volvacea — vista laterale",
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "page": null,
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-VOLVACEA-PLOS"
+      }
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "subjectTaxon": "Volvariella volvacea",
+      "src": "images/reference/external-volvariella-volvopluteus-lateral.jpg",
+      "view": "lateral",
+      "alt": "Volvariella volvacea — vista laterale",
+      "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-VOLVACEA-PLOS",
+      "page": null,
+      "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-VOLVACEA-PLOS"
+      }
+    },
+    {
+      "scientificName": "Gomphus clavatus",
+      "subjectTaxon": "Gomphus clavatus",
+      "src": "images/reference/external-gomphus-clavatus-lateral.jpg",
+      "view": "lateral",
+      "alt": "Gomphus clavatus — vista laterale",
+      "credit": "Ron Pastorino · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-GOMPHUS-702984",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-GOMPHUS-702984"
+      }
+    },
+    {
+      "scientificName": "Gomphus",
+      "subjectTaxon": "Gomphus clavatus",
+      "src": "images/reference/external-gomphus-lateral.jpg",
+      "view": "lateral",
+      "alt": "Gomphus clavatus — vista laterale",
+      "credit": "Ron Pastorino · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-GOMPHUS-702984",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-GOMPHUS-702984"
+      }
+    },
+    {
+      "scientificName": "Polyporus umbellatus",
+      "subjectTaxon": "Polyporus umbellatus",
+      "src": "images/reference/external-polyporus-umbellatus-underside.jpg",
+      "view": "underside",
+      "alt": "Polyporus umbellatus — imenoforo",
+      "credit": "Nina Filippova · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-POLY-66485178",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-POLY-66485178"
+      }
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "subjectTaxon": "Grifola frondosa",
+      "src": "images/reference/external-grifola-frondosa-underside.jpg",
+      "view": "underside",
+      "alt": "Grifola frondosa — imenoforo",
+      "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-ADB-39725-2",
+      "page": null,
+      "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-ADB-39725-2"
+      }
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "subjectTaxon": "Clitopilus prunulus",
+      "src": "images/reference/external-clitopilus-prunulus-s-l-underside.jpg",
+      "view": "underside",
+      "alt": "Clitopilus prunulus — imenoforo",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PRUN-050",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PRUN-050"
+      }
+    },
+    {
+      "scientificName": "Clitopilus",
+      "subjectTaxon": "Clitopilus prunulus",
+      "src": "images/reference/external-clitopilus-underside.jpg",
+      "view": "underside",
+      "alt": "Clitopilus prunulus — imenoforo",
+      "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-COMP-PRUN-050",
+      "page": null,
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-COMP-PRUN-050"
+      }
+    },
+    {
+      "scientificName": "Pisolithus",
+      "subjectTaxon": "Pisolithus albus",
+      "src": "images/reference/external-pisolithus-top.jpg",
+      "view": "top",
+      "alt": "Pisolithus albus — vista superiore",
+      "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "page": 5,
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-OA-PISOLITHUS-ALBUS2023"
+      }
+    },
+    {
+      "scientificName": "Pisolithus",
+      "subjectTaxon": "Pisolithus albus",
+      "src": "images/reference/external-pisolithus-lateral.jpg",
+      "view": "lateral",
+      "alt": "Pisolithus albus — vista laterale",
+      "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "page": 5,
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-OA-PISOLITHUS-ALBUS2023"
+      }
+    },
+    {
+      "scientificName": "Pisolithus",
+      "subjectTaxon": "Pisolithus albus",
+      "src": "images/reference/external-pisolithus-underside.jpg",
+      "view": "underside",
+      "alt": "Pisolithus albus — base esterna",
+      "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-OA-PISOLITHUS-ALBUS2023",
+      "page": 5,
+      "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-OA-PISOLITHUS-ALBUS2023"
+      }
+    },
+    {
+      "scientificName": "Scleroderma",
+      "subjectTaxon": "Scleroderma verrucosum",
+      "src": "images/reference/external-scleroderma-lateral.jpg",
+      "view": "lateral",
+      "alt": "Scleroderma verrucosum — vista laterale",
+      "credit": "Namera Chinnappa Karun; Shivannegowda Mahadevakumar; Kandikere Ramaiah Sridhar · CC BY 4.0 · ritaglio/ridimensionamento",
+      "sourceId": "EXT-OA-SCLERODERMA-2022",
+      "page": 13,
+      "sourceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "taxonStatus": "identified",
+      "rights": {
+        "status": "verified",
+        "publicRepository": true,
+        "pages": true,
+        "permissionEvidenceId": "EXTERNAL-LICENSE:EXT-OA-SCLERODERMA-2022"
+      }
     }
   ]
 }

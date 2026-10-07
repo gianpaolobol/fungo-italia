@@ -1443,6 +1443,15 @@
         "alt": "Amanita muscaria — vista laterale di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 44. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
         "subjectTaxon": "Amanita muscaria"
+      },
+      {
+        "src": "images/reference/external-amanita-muscaria-top.jpg",
+        "view": "top",
+        "alt": "Amanita muscaria — vista superiore",
+        "credit": "Tiril Myhre Pedersen · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Amanita muscaria",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/199186",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -1750,6 +1759,15 @@
         "alt": "Amanita porphyria — vista superiore del cappello",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 42. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
         "subjectTaxon": "Amanita porphyria"
+      },
+      {
+        "src": "images/reference/external-amanita-porphyria-lateral.jpg",
+        "view": "lateral",
+        "alt": "Amanita porphyria — vista laterale",
+        "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Amanita porphyria",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -2253,6 +2271,26 @@
     "deepMorphologyRequired": true,
     "sourceName": "Clitocybe cerussata (= C. phyllophila)",
     "differentiatingCharacter": "Crescita sulla lettiera boschiva; trattare didatticamente come parte delle Clitocybe bianche.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-collybia-phyllophila-top.jpg",
+        "view": "top",
+        "alt": "Clitocybe phyllophila — vista superiore",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Clitocybe phyllophila",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-collybia-phyllophila-underside.jpg",
+        "view": "underside",
+        "alt": "Clitocybe phyllophila — imenoforo",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Clitocybe phyllophila",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 5,
@@ -2556,6 +2594,17 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Clitopilus prunulus",
     "differentiatingCharacter": "Odore molto forte di farina fresca o pasta.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-clitopilus-prunulus-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Clitopilus prunulus — imenoforo",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Clitopilus prunulus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 5,
@@ -3106,6 +3155,24 @@
         "subjectTaxon": "Cortinarius praestans",
         "sourceUrl": "https://artsdatabanken.no/arter/takson/35265/beskrivelse",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-cortinarius-praestans-top.jpg",
+        "view": "top",
+        "alt": "Cortinarius praestans — vista superiore",
+        "credit": "Bálint Dima / NINA · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Cortinarius praestans",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-cortinarius-praestans-underside.jpg",
+        "view": "underside",
+        "alt": "Cortinarius praestans — imenoforo",
+        "credit": "Bálint Dima / NINA · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Cortinarius praestans",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/225346",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
@@ -3270,6 +3337,17 @@
         "precautions": []
       }
     },
+    "referenceImages": [
+      {
+        "src": "images/reference/external-entoloma-sinuatum-underside.jpg",
+        "view": "underside",
+        "alt": "Entoloma sinuatum — imenoforo",
+        "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Entoloma sinuatum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -3611,6 +3689,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Taglia nettamente grande per il genere; tipica di prati permanenti poco fertilizzati.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hygrocybe-punicea-top.jpg",
+        "view": "top",
+        "alt": "Hygrocybe punicea — vista superiore",
+        "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      {
+        "src": "images/reference/external-hygrocybe-punicea-underside.jpg",
+        "view": "underside",
+        "alt": "Hygrocybe punicea — imenoforo",
+        "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 8,
@@ -4219,6 +4317,35 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Echinoderma asperum",
     "differentiatingCharacter": "Odore pungente, terroso-gommoso, spesso simile a quello di Lepiota cristata.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-echinoderma-asperum-s-l-top.jpg",
+        "view": "top",
+        "alt": "Echinoderma asperum — vista superiore",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Echinoderma asperum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-echinoderma-asperum-s-l-lateral.jpg",
+        "view": "lateral",
+        "alt": "Echinoderma asperum — vista laterale",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Echinoderma asperum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-echinoderma-asperum-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Echinoderma asperum — imenoforo",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Echinoderma asperum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Echinoderma_asperum20061022wb.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 9,
@@ -4383,6 +4510,15 @@
         "alt": "Macrolepiota procera — vista laterale di cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 70. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
         "subjectTaxon": "Macrolepiota procera"
+      },
+      {
+        "src": "images/reference/external-macrolepiota-procera-s-l-top.jpg",
+        "view": "top",
+        "alt": "Macrolepiota procera — vista superiore",
+        "credit": "J Milburn · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Macrolepiota procera",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macrolepiota_procera_cap.JPG",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
     "curriculum": {
@@ -5071,6 +5207,15 @@
         "alt": "Pleurotus eryngii s.l. — cappello e gambo",
         "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 121. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
         "subjectTaxon": "Pleurotus eryngii s.l."
+      },
+      {
+        "src": "images/reference/external-pleurotus-eryngii-s-l-underside.jpg",
+        "view": "underside",
+        "alt": "Pleurotus eryngii — imenoforo",
+        "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Pleurotus eryngii",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleurotus_eryngii_(DC.)_Gillet_54421_2008-11-11.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
     "curriculum": {
@@ -5303,6 +5448,26 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Prevalentemente associato a latifoglie come Fagus, Quercus e Castanea.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-tricholoma-filamentosum-top.jpg",
+        "view": "top",
+        "alt": "Tricholoma filamentosum — vista superiore",
+        "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Tricholoma filamentosum",
+        "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-tricholoma-filamentosum-underside.jpg",
+        "view": "underside",
+        "alt": "Tricholoma filamentosum — imenoforo",
+        "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Tricholoma filamentosum",
+        "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12,
@@ -6160,6 +6325,26 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Saprotrofa termofila di terreni molto concimati, paglia/residui vegetali e legno marcescente; largamente coltivata.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-volvariella-volvacea-top.jpg",
+        "view": "top",
+        "alt": "Volvariella volvacea — vista superiore",
+        "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Volvariella volvacea",
+        "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-volvariella-volvacea-lateral.jpg",
+        "view": "lateral",
+        "alt": "Volvariella volvacea — vista laterale",
+        "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Volvariella volvacea",
+        "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13,
@@ -7682,6 +7867,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Prevalentemente in boschi maturi di Abies, Picea o Fagus.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-gomphus-clavatus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Gomphus clavatus — vista laterale",
+        "credit": "Ron Pastorino · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Gomphus clavatus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,
@@ -8176,6 +8372,15 @@
         "subjectTaxon": "Grifola frondosa",
         "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      {
+        "src": "images/reference/external-grifola-frondosa-underside.jpg",
+        "view": "underside",
+        "alt": "Grifola frondosa — imenoforo",
+        "credit": "Tom Hellik Hofton / Biofokus · CC BY 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Grifola frondosa",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/39725/beskrivelse",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
       }
     ],
     "curriculum": {
@@ -8204,6 +8409,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Sviluppo da un grande sclerozio sotterraneo.",
+    "referenceImages": [
+      {
+        "src": "images/reference/external-polyporus-umbellatus-underside.jpg",
+        "view": "underside",
+        "alt": "Polyporus umbellatus — imenoforo",
+        "credit": "Nina Filippova · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Polyporus umbellatus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18,

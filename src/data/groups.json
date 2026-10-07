@@ -348,6 +348,17 @@
       "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-clitopilus-underside.jpg",
+        "view": "underside",
+        "alt": "Clitopilus prunulus — imenoforo",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Clitopilus prunulus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitopilus_prunulus_050922w.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 5
@@ -720,6 +731,26 @@
       "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-top.jpg",
+        "view": "top",
+        "alt": "Hygrocybe punicea — vista superiore",
+        "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      },
+      {
+        "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-underside.jpg",
+        "view": "underside",
+        "alt": "Hygrocybe punicea — imenoforo",
+        "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 8
@@ -1528,6 +1559,26 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-top.jpg",
+        "view": "top",
+        "alt": "Psathyrella candolleana — vista superiore",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Psathyrella candolleana",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      {
+        "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-underside.jpg",
+        "view": "underside",
+        "alt": "Psathyrella candolleana — imenoforo",
+        "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Psathyrella candolleana",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Psathyrella_candolleana_060801wa.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 12
@@ -1687,6 +1738,26 @@
       "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-volvariella-volvopluteus-top.jpg",
+        "view": "top",
+        "alt": "Volvariella volvacea — vista superiore",
+        "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Volvariella volvacea",
+        "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-volvariella-volvopluteus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Volvariella volvacea — vista laterale",
+        "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Volvariella volvacea",
+        "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 13
@@ -2849,6 +2920,17 @@
       "minimum-card-objective-gomphus--01--gomphus-clavatus"
     ],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-gomphus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Gomphus clavatus — vista laterale",
+        "credit": "Ron Pastorino · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Gomphus clavatus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gomphus_clavatus_702984.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 18
@@ -2905,6 +2987,35 @@
     ],
     "relatedIds": [],
     "sources": [],
+    "referenceImages": [
+      {
+        "src": "images/reference/external-pisolithus-top.jpg",
+        "view": "top",
+        "alt": "Pisolithus albus — vista superiore",
+        "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Pisolithus albus",
+        "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pisolithus-lateral.jpg",
+        "view": "lateral",
+        "alt": "Pisolithus albus — vista laterale",
+        "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Pisolithus albus",
+        "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-pisolithus-underside.jpg",
+        "view": "underside",
+        "alt": "Pisolithus albus — base esterna",
+        "credit": "Abdel-Aziz & Bakhit (2023) · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Pisolithus albus",
+        "sourceUrl": "https://pfsyst.botany.pl/pdf-163491-92778?filename=Pisolithus-albus--Sclerod.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 19
@@ -2934,6 +3045,15 @@
         "alt": "Scleroderma spp. — peridio e gleba visibili nella composizione",
         "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 2 ottobre 2025, p. 36. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
         "subjectTaxon": "Scleroderma spp."
+      },
+      {
+        "src": "images/reference/external-scleroderma-lateral.jpg",
+        "view": "lateral",
+        "alt": "Scleroderma verrucosum — vista laterale",
+        "credit": "Namera Chinnappa Karun; Shivannegowda Mahadevakumar; Kandikere Ramaiah Sridhar · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Scleroderma verrucosum",
+        "sourceUrl": "https://www.discoveryjournals.org/Species/current_issue/2022/v23/n71/A44.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "curriculum": {
