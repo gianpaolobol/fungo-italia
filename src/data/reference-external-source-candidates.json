@@ -328,6 +328,82 @@
       "taxonomicEvidence": "https://artsdatabanken.no/arter/takson/38132",
       "verificationBasis": "institutional-editorial",
       "kind": "image"
+    },
+    {
+      "sourceId": "EXT-LODGE-HYGRO-2014",
+      "subjectTaxon": "Hygrocyboideae — comparative plate, Figure 27",
+      "sourceUrl": "https://link.springer.com/article/10.1007/s13225-013-0259-0/figures/27",
+      "assetUrl": "https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs13225-013-0259-0/MediaObjects/13225_2013_259_Fig27_HTML.gif",
+      "author": "Fotografi specificati nella didascalia dei singoli pannelli; Lodge et al. (2014)",
+      "licenseName": "CC BY (licenza dell’articolo)",
+      "licenseUrl": "https://link.springer.com/article/10.1007/s13225-013-0259-0#rights-permissions",
+      "licenseEvidenceUrl": "https://link.springer.com/article/10.1007/s13225-013-0259-0#rights-permissions",
+      "taxonomicEvidence": "https://doi.org/10.1007/s13225-013-0259-0",
+      "verificationBasis": "peer-reviewed-figure-with-panel-specific-photographer-and-identification",
+      "kind": "image"
+    },
+    {
+      "sourceId": "EXT-ZHANG-LUTESCENS-2022",
+      "subjectTaxon": "Craterellus lutescens",
+      "sourceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "assetUrl": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2022.906296/pdf",
+      "author": "Wen-Hao Zhang et al. (2022); fotografie Li-Ping Tang e Wen-Hao Zhang",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://doi.org/10.3389/fmicb.2022.906296",
+      "taxonomicEvidence": "https://doi.org/10.3389/fmicb.2022.906296",
+      "verificationBasis": "published-study-caption-with-specimen-evidence",
+      "kind": "pdf",
+      "pages": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "sourceId": "EXT-CORANA-HERICIUM-2019",
+      "subjectTaxon": "Hericium erinaceus",
+      "sourceUrl": "https://doi.org/10.3390/molecules24193511",
+      "assetUrl": "https://pdfs.semanticscholar.org/cd5f/97a99c22e2a334eb37e085bfa019a1d58af6.pdf",
+      "author": "Corana et al. (2019)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://doi.org/10.3390/molecules24193511",
+      "taxonomicEvidence": "https://doi.org/10.3390/molecules24193511",
+      "verificationBasis": "published-study-caption-with-specimen-evidence",
+      "kind": "pdf",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "sourceId": "EXT-BARGE-DELICIOSI-2016",
+      "subjectTaxon": "Lactarius deliciosus group (North America)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/4/49/Lactarius_deliciosus_%2810.3897-mycokeys.15.9587%29_Figure_22.jpg",
+      "author": "E. Barge; Barge & Cripps (2016)",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_deliciosus_(10.3897-mycokeys.15.9587)_Figure_22.jpg",
+      "taxonomicEvidence": "https://doi.org/10.3897/mycokeys.15.9587",
+      "verificationBasis": "published-morphological-molecular-vouchers-EB107-15-EB089-15",
+      "kind": "image"
+    },
+    {
+      "sourceId": "EXT-WANG-CLYPEATUM-2026",
+      "subjectTaxon": "Entoloma clypeatum",
+      "sourceUrl": "https://doi.org/10.1002/fsn3.71980",
+      "assetUrl": "https://onlinelibrary.wiley.com/doi/epdf/10.1002/fsn3.71980",
+      "author": "Wang, Li, Yang, Lv e Zhang (2026)",
+      "licenseName": "CC BY (licenza dell’articolo)",
+      "licenseUrl": "https://doi.org/10.1002/fsn3.71980",
+      "licenseEvidenceUrl": "https://doi.org/10.1002/fsn3.71980",
+      "taxonomicEvidence": "https://doi.org/10.1002/fsn3.71980",
+      "verificationBasis": "published-study-caption-with-specimen-evidence",
+      "kind": "pdf",
+      "pages": [
+        2
+      ]
     }
   ]
 }
