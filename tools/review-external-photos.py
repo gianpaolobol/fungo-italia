@@ -16,7 +16,7 @@ def get(url):
 def save(source,raw,suffix,page=None,xref=None):
  im=Image.open(io.BytesIO(raw));im=ImageOps.exif_transpose(im).convert("RGB")
  if min(im.size)<100:return
- im=ImageOps.contain(im,(1600,1600));im.info.clear()
+ im.thumbnail((1600,1600),Image.Resampling.LANCZOS);im.info.clear()
  name=source["sourceId"].lower()+"-"+suffix+".jpg";path=root/name
  im.save(path,quality=90,optimize=True)
  items.append({**source,"candidateId":source["sourceId"]+"-"+suffix,"candidatePath":str(path),"sourceSha256":source_hash,"extractedImageSha256":hashlib.sha256(raw).hexdigest(),"candidateSha256":hashlib.sha256(path.read_bytes()).hexdigest(),"width":im.width,"height":im.height,"page":page,"xref":xref,"reviewStatus":"pending-visual-review"})
