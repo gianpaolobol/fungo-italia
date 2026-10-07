@@ -498,12 +498,13 @@ test('gasteroid base photograph names the anatomical view and depicted species a
  await page.getByRole('button',{name:'Apri Pisolithus',exact:true}).click();
  const body=page.locator('#detail-body');
  await expect(body.locator('.photo-thumb')).toHaveCount(3);
- await expect(body.locator('figcaption').getByText('Base esterna',{exact:true})).toHaveCount(1);
- const subject=overridden('Pisolithus','underside')?.subjectTaxon||'Pisolithus albus';
- const opener=body.getByRole('button',{name:'Ingrandisci vista base esterna di '+subject,exact:true});
+ const replacement=overridden('Pisolithus','underside'),label=replacement?'Sotto':'Base esterna';
+ await expect(body.locator('figcaption').getByText(label,{exact:true})).toHaveCount(1);
+ const subject=replacement?.subjectTaxon||'Pisolithus albus';
+ const opener=body.getByRole('button',{name:'Ingrandisci vista '+label.toLowerCase()+' di '+subject,exact:true});
  await opener.click();
- await expect(page.locator('#photo-title')).toHaveText(subject+' · Base esterna');
- await expect(page.locator('#photo-full')).toHaveAttribute('alt',subject+' — base esterna');
+ await expect(page.locator('#photo-title')).toHaveText(subject+' · '+label);
+ await expect(page.locator('#photo-full')).toHaveAttribute('alt',subject+' — '+(replacement?'vista dal basso':'base esterna'));
  await expect.poll(()=>page.locator('#photo-full').evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
  await page.getByRole('button',{name:'Chiudi immagine',exact:true}).click();
  await expect(opener).toBeFocused();
