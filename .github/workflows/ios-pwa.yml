@@ -34,6 +34,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -57,9 +58,6 @@ jobs:
           node scripts/validate-reference-images.mjs
           node scripts/validate-admin-reference-images.mjs
           node web/build.mjs
-      - name: Install WebKit
-        working-directory: web
-        run: npx playwright install --with-deps webkit chromium
       - name: Verify iPhone workflows at 320 points
         working-directory: web
         run: npm test
@@ -180,6 +178,7 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
@@ -189,9 +188,6 @@ jobs:
       - name: Install verification tools
         working-directory: web
         run: npm ci
-      - name: Install browsers
-        working-directory: web
-        run: npx playwright install --with-deps chromium webkit
       - name: Verify published Pages revision, smartphone navigation and offline map
         working-directory: web
         run: node smoke-published.mjs
