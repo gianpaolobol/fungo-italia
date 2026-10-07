@@ -59,10 +59,7 @@ jobs:
           node scripts/validate-admin-reference-images.mjs
           node web/build.mjs
       - name: Verify iPhone workflows at 320 points
-        if: github.ref != 'refs/heads/main'
         working-directory: web
-        continue-on-error: true
-        timeout-minutes: 4
         run: npm test
       - uses: actions/upload-artifact@v4
         if: always()
