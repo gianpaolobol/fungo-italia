@@ -38,7 +38,7 @@ await cp(path.join(root,'assets/icon.png'),path.join(output,'icon.png'));
 const vendor=path.join(output,'vendor');await mkdir(vendor,{recursive:true});
 for(const name of ['leaflet.js','leaflet.css','images'])await cp(path.join(web,'node_modules/leaflet/dist',name),path.join(vendor,name),{recursive:true});
 await cp(path.join(web,'node_modules/leaflet/LICENSE'),path.join(vendor,'LEAFLET-LICENSE.txt'));
-const files=['index.html','app.js','app.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','admin-photo-core.js','admin-photos.js','admin-photos.css','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
+const files=['index.html','admin-photos.html','admin-photos-entry.js','app.js','app.css','gallery-cleanup.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','admin-photo-core.js','admin-photos.js','admin-photos.css','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
 const imageFiles=[...new Set([...referenceImages.images,...adminImages.images].map(asset=>asset.src))];
 files.push(...imageFiles);
 const hash=createHash('sha256');for(const file of files)hash.update(await readFile(path.join(output,file)));
