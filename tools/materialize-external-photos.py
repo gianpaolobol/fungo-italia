@@ -90,11 +90,14 @@ def main():
         payload = buffer.getvalue()
         src = "images/reference/" + filename
         permission = PREFIX + s["sourceId"]
+        credit = s["credit"]
+        if not any(token in credit.lower() for token in ("ritaglio", "ridimension", "adattat", "rielaborat", "derivat")):
+            credit += " · " + ("ritaglio" if crop != [0, 0, 1, 1] else "copia JPEG rielaborata")
         entry = {
             "scientificName": s["scientificName"], "subjectTaxon": s["subjectTaxon"],
             "src": src, "view": view,
             "alt": s.get("alt", s["subjectTaxon"] + " — " + {"lateral": "vista laterale", "top": "vista superiore", "underside": "imenoforo"}[view]),
-            "credit": s["credit"], "sourceId": s["sourceId"], "page": page,
+            "credit": credit, "sourceId": s["sourceId"], "page": page,
             "sourceUrl": s["sourceUrl"], "licenseUrl": s["licenseUrl"], "taxonStatus": "identified",
             "rights": {"status": "verified", "publicRepository": True, "pages": True, "permissionEvidenceId": permission}
         }
