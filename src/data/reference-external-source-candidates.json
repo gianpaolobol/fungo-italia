@@ -459,6 +459,32 @@
       "pages": [
         3
       ]
+    },
+    {
+      "sourceId": "EXT-ADB-BOTRYTIS-109",
+      "subjectTaxon": "Ramaria botrytis coll.",
+      "sourceUrl": "https://artsdatabanken.no/node/719717",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/189712/109.png",
+      "author": "Kristin Brandrud",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/node/719717",
+      "taxonomicEvidence": "https://artsdatabanken.no/node/719717",
+      "verificationBasis": "institutional-expert-editorial-collective-taxon",
+      "kind": "image"
+    },
+    {
+      "sourceId": "EXT-ADB-BOTRYTIS-110",
+      "subjectTaxon": "Ramaria botrytis coll.",
+      "sourceUrl": "https://artsdatabanken.no/node/719717",
+      "assetUrl": "https://artsdatabanken.no/sites/default/files/migrated/189712/110.png",
+      "author": "Tor Erik Brandrud / Norsk institutt for naturforskning",
+      "licenseName": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidenceUrl": "https://artsdatabanken.no/node/719717",
+      "taxonomicEvidence": "https://artsdatabanken.no/node/719717",
+      "verificationBasis": "institutional-expert-editorial-collective-taxon",
+      "kind": "image"
     }
   ]
 }
