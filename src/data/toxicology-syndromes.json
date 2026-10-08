@@ -112,6 +112,20 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "syndrome": {
+        "label": "Sindrome muscarinica",
+        "latency": "Breve latenza",
+        "severity": "Intossicazione colinergica potenzialmente grave"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, sindromi a breve latenza: sindrome muscarinica da clitocibi bianchi",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
