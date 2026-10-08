@@ -26,6 +26,10 @@ jobs:
           node scripts/toxicology-syndromes.test.mjs
           node scripts/release-readiness.test.mjs
           node scripts/audit-toxicology-release.mjs
+      - name: Strict release gate
+        run: |
+          npm run validate:release
+          node scripts/audit-toxicology-release.mjs --strict
       - name: Check native types
         run: npm run typecheck
       - name: Web build
@@ -34,7 +38,12 @@ jobs:
           npm ci
           npm run build
       - name: Verify generated content tracked changes
-        run: git status --short
+        run: |
+          git status --short
+          if ! git diff --quiet -- src/data/catalog.json src/data/groups.json web/public/data.json; then
+            echo 'Generated atlas outputs are not committed to this branch.'
+            exit 1
+          fi
       - name: Preserve build evidence
         if: always()
         uses: actions/upload-artifact@v4
