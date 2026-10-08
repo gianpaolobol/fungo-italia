@@ -809,6 +809,55 @@
         "assessment": "single-specialist-source",
         "note": "Non generalizzare al genere; ricerca seconda fonte aperta."
       }
+    },
+    {
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "odor": "Lievemente fungino, non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/hygrophoropsis-aurantiaca.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-specialist-source",
+        "note": "Unica fonte puntuale verificata nel lotto; non presentare come conferma indipendente multipla."
+      }
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "odor": "Tenue, talvolta sgradevole negli esemplari maturi; una seconda pagina AMINT segnala possibili note floreali e mielate.",
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15461-hygrophorus-marzuolus-fr-fr-bres-1893/?comment=1086882&do=findComment",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore tenue, talvolta sgradevole negli esemplari maturi"
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3043",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Glossario Marzuolus: nota floreale, mielata e talvolta urinosa"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "intra-source-variation",
+        "note": "Due pagine della stessa organizzazione; odore variabile, sporata non documentata in questo lotto."
+      }
     }
   ],
   "administratorDecision": {
