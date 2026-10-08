@@ -25,7 +25,12 @@
           ],
           "locator": "Carne; Microscopia"
         }
-      ]
+      ],
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Cyclocybe cylindracea",
@@ -42,7 +47,12 @@
           ],
           "locator": "Descrizione di odore e spore in massa"
         }
-      ]
+      ],
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Amanita phalloides",
@@ -74,7 +84,12 @@
           "locator": "CARNE"
         }
       ],
-      "reviewStatus": "source-verified-admin-review"
+      "reviewStatus": "source-verified-admin-review",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Lactarius volemus s.l.",
@@ -99,7 +114,12 @@
           "locator": "Odour/taste; Spore print; verify accepted-name and complex scope"
         }
       ],
-      "reviewStatus": "candidate-taxonomic-scope-check-required"
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Amanita muscaria",
@@ -117,7 +137,12 @@
           "locator": "Identification guide — Odour/taste; Spore print"
         }
       ],
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Amanita virosa",
@@ -135,7 +160,12 @@
           "locator": "Identification guide — Odour/taste; Spore print"
         }
       ],
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "pending",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Amanita gemmata",
@@ -153,7 +183,12 @@
           "locator": "Identification guide — Odour/taste; Spore print"
         }
       ],
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Tricholoma sulphureum",
@@ -171,7 +206,12 @@
           "locator": "Identification guide — Odour/taste; Spore print"
         }
       ],
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Tricholoma equestre",
@@ -189,7 +229,12 @@
           "locator": "Identification guide — Odour/taste; Spore print"
         }
       ],
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Tylopilus felleus",
@@ -207,7 +252,12 @@
           "locator": "Identification guide — Odour/taste; Spore print"
         }
       ],
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Entoloma sinuatum",
@@ -225,7 +275,12 @@
       "sporePrint": {
         "label": "Bruno-rossa"
       },
-      "reviewStatus": "source-verified-admin-review"
+      "reviewStatus": "source-verified-admin-review",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     },
     {
       "scientificName": "Tricholoma pardinum",
@@ -239,13 +294,20 @@
         }
       ],
       "odor": "Farinaceo.",
-      "reviewStatus": "source-verified-admin-review"
+      "reviewStatus": "source-verified-admin-review",
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Nessuna"
+      }
     }
   ],
   "administratorDecision": {
-    "status": "approved",
-    "scope": "three proposed odor and spore-print descriptions",
+    "status": "per-record",
+    "scope": "12 candidate taxa",
     "date": "2026-10-08",
-    "note": "Editorial approval is not independent mycological attestation; source provenance and build validation remain mandatory."
+    "approved": 11,
+    "pending": 1,
+    "rejected": 0
   }
 }
