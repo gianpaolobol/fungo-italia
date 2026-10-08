@@ -2412,6 +2412,75 @@
         "assessment": "nominal-species-only",
         "note": "Singola fonte specialistica; per il complesso s.l. i dati sono riferiti solo alla specie nominale."
       }
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "odor": "Debole, di ravanello.",
+      "sporePrint": {
+        "label": "Bruno-rossastra, ruggine."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Proposta basata su fonte puntuale; per s.l. non generalizzare a tutto il complesso."
+      }
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bruno-rossastra, ruggine."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/cortinarius-praestans.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Proposta basata su fonte puntuale; per s.l. non generalizzare a tutto il complesso."
+      }
+    },
+    {
+      "scientificName": "Flammulina velutipes s.l.",
+      "odor": "Non distintivo (documentato per F. velutipes s.s.).",
+      "sporePrint": {
+        "label": "Bianca (F. velutipes s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/flammulina-velutipes.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Proposta basata su fonte puntuale; per s.l. non generalizzare a tutto il complesso."
+      }
     }
   ],
   "administratorDecision": {
