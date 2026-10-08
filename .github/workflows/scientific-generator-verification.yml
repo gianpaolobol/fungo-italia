@@ -1,0 +1,48 @@
+name: Scientific generator verification
+on:
+  push:
+    branches:
+      - feat/scientific-profile-coverage-oct08
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  generator:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+          cache: npm
+      - run: npm ci
+      - name: Generate all atlas datasets
+        run: npm run prepare:data
+      - name: Check scientific source and toxicology mapping
+        run: |
+          node scripts/toxicology-syndromes.test.mjs
+          node scripts/release-readiness.test.mjs
+          node scripts/audit-toxicology-release.mjs
+      - name: Check native types
+        run: npm run typecheck
+      - name: Web build
+        run: |
+          cd web
+          npm ci
+          npm run build
+      - name: Verify generated content tracked changes
+        run: git status --short
+      - name: Preserve build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scientific-generator-evidence
+          path: |
+            src/data/catalog.json
+            src/data/groups.json
+            src/data/toxicology-syndromes.json
+            web/public/data.json
+          retention-days: 7
