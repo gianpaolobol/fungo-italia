@@ -858,6 +858,110 @@
         "assessment": "intra-source-variation",
         "note": "Due pagine della stessa organizzazione; odore variabile, sporata non documentata in questo lotto."
       }
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "odor": "Debole, non distintivo.",
+      "sporePrint": {
+        "label": "Bianca o giallo molto pallido."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15665-craterellus-tubaeformis-fr-qu%C3%A9l-1888/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore debole ed insignificante"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/cantharellus-tubaeformis.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print (syn. Cantharellus tubaeformis)"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "odor-concordant-spore-one-source",
+        "note": "Due organizzazioni concordano sull'odore; sporata attestata direttamente da una sola fonte."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "pending",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "scientificName": "Craterellus cornucopioides",
+      "odor": "Variabile: delicatamente fruttato da giovane; può ricordare cantina o tartufo da maturo; un'altra fonte lo definisce non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/8013-craterellus-cornucopioides-l-pers-1825/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; imenio e deposito sporale"
+        },
+        {
+          "url": "https://mail.first-nature.com/fungi/craterellus-cornucopioides.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "spore-concordant-odor-discordant",
+        "note": "Sporata concordante; odore variabile e descritto diversamente, conservare entrambe le versioni."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "pending",
+        "date": "2026-10-08"
+      }
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "odor": "Di impasto del pane o farina; talvolta spermatico (documentato per C. prunulus s.s.).",
+      "sporePrint": {
+        "label": "Rosa-salmone in massa (documentato per C. prunulus s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1552",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Glossario Prunulus: carne e sporata"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/15085-clitopilus-prunulus-scop-fr-quel-1871/page/2/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione specie e citazione Tutto Funghi p.244"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "same-organization-two-pages",
+        "note": "Le due pagine AMINT non sono fonti indipendenti; non estendere senza verifica a tutto il complesso s.l."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "pending",
+        "date": "2026-10-08"
+      }
     }
   ],
   "administratorDecision": {
