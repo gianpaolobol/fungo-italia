@@ -2865,6 +2865,98 @@
         "assessment": "single-direct-source-with-synonym",
         "note": "Confermare che Craterellus lutescens nel catalogo corrisponda al taxon trattato come Cantharellus aurora nella fonte; nessuna approvazione automatica."
       }
+    },
+    {
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "odor": "Debole, gradevole (per L. giganteus s.s.).",
+      "sporePrint": {
+        "label": "Bianca (per L. giganteus s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/leucopaxillus-giganteus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "La fonte riguarda la specie nominale, mentre la scheda catalogo è sensu lato; non estendere automaticamente il dato al complesso."
+      }
+    },
+    {
+      "scientificName": "Lepista flaccida s.l.",
+      "odor": "Gradevole, dolciastro (per L. flaccida s.s.).",
+      "sporePrint": {
+        "label": "Bianco-crema (per L. flaccida s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/lepista-flaccida.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "La fonte riguarda la specie nominale, mentre la scheda catalogo è sensu lato; non estendere automaticamente il dato al complesso."
+      }
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "odor": "Molto debole, fruttato (per T. acerbum s.s.).",
+      "sporePrint": {
+        "label": "Bianca (per T. acerbum s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/tricholoma-acerbum.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "La fonte riguarda la specie nominale, mentre la scheda catalogo è sensu lato; non estendere automaticamente il dato al complesso."
+      }
+    },
+    {
+      "scientificName": "Lyophyllum decastes s.l.",
+      "odor": "Non significativo (per L. decastes s.s.).",
+      "sporePrint": {
+        "label": "Bianca (per L. decastes s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/lyophyllum-decastes.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "La fonte riguarda la specie nominale, mentre la scheda catalogo è sensu lato; non estendere automaticamente il dato al complesso."
+      }
     }
   ],
   "administratorDecision": {
