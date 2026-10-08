@@ -58,6 +58,7 @@ function studyFacts(t){
 }
 const publicPhotoHttps=value=>{try{const url=new URL(value);return typeof value==='string'&&url.protocol==='https:'&&!url.username&&!url.password;}catch{return false;}};
 const adminPhotoPreviews=new Map();
+const photoFramingStyle=photo=>{const f=photo?.framing;if(!f||![f.x,f.y,f.zoom].every(Number.isFinite)||f.x<0||f.x>100||f.y<0||f.y>100||f.zoom<1||f.zoom>3)return '';return ' style="object-position:'+f.x+'% '+f.y+'%;transform:scale('+f.zoom+')"';};
 function referenceGallery(t){
  const images=t.referenceImages||[];
  const subjects=[...new Set(images.map(p=>p.subjectTaxon).filter(Boolean))];
@@ -65,7 +66,7 @@ function referenceGallery(t){
  return (subjects.length===1&&subjects[0]!==t.scientificName?'<p class="photo-subject-label">Specie raffigurata: '+escape(subjects[0])+'</p>':'')+'<div class="photo-triptych" data-reference-taxon="'+escape(t.id)+'">'+referenceViews.map(([view,label])=>{
   const photo=images.find(p=>p.view===view&&referencePath.test(p.src));
   const caption=referenceLabel(photo,label);
-  return '<figure data-reference-view="'+view+'">'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+caption.toLowerCase()+' di '+escape(photo.subjectTaxon||t.scientificName)+'"><img src="'+escape(adminPhotoPreviews.get(t.id+':'+view)||photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+caption+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
+  return '<figure data-reference-view="'+view+'">'+(photo?'<button class="photo-thumb" data-action="photo-zoom" data-id="'+escape(t.id)+'" data-view="'+view+'" aria-label="Ingrandisci vista '+caption.toLowerCase()+' di '+escape(photo.subjectTaxon||t.scientificName)+'"><img src="'+escape(adminPhotoPreviews.get(t.id+':'+view)||photo.src)+'" alt="'+escape(photo.alt)+'" loading="lazy" decoding="async"'+photoFramingStyle(photo)+'></button>':'<div class="photo-missing">Vista non disponibile</div>')+'<figcaption>'+caption+(subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==t.scientificName?'<small class="photo-subject">'+escape(photo.subjectTaxon)+'</small>':'')+'</figcaption></figure>';
  }).join('')+'</div>';
 }
 let photoOpener=null,photoScale=1,detailIds=null;
@@ -130,7 +131,7 @@ function validStudyFields(t){
   if(p.sporePrint!==undefined){const print=p.sporePrint;if(!print||!text(print.label)||(print.color!==undefined&&!/^#[0-9a-f]{6}$/i.test(print.color))||(print.scale!==undefined&&!['I','II','III','IV','I–II','I–III','I–IV','II–III','II–IV','III–IV'].includes(print.scale)))return false;}
   if(p.edibility!==undefined&&(!p.edibility||!text(p.edibility.label)||!Array.isArray(p.edibility.precautions)||!p.edibility.precautions.every(text)))return false;
  }
- if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit)&&(p.subjectTaxon===undefined||text(p.subjectTaxon))&&(p.sourceUrl===undefined||publicPhotoHttps(p.sourceUrl))&&(p.licenseUrl===undefined||publicPhotoHttps(p.licenseUrl)))))return false;
+ if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit)&&(p.subjectTaxon===undefined||text(p.subjectTaxon))&&(p.framing===undefined||([p.framing.x,p.framing.y,p.framing.zoom].every(Number.isFinite)&&p.framing.x>=0&&p.framing.x<=100&&p.framing.y>=0&&p.framing.y<=100&&p.framing.zoom>=1&&p.framing.zoom<=3))&&(p.sourceUrl===undefined||publicPhotoHttps(p.sourceUrl))&&(p.licenseUrl===undefined||publicPhotoHttps(p.licenseUrl)))))return false;
  return true;
 }
 
@@ -416,7 +417,7 @@ window.addEventListener('fungo:admin-photo-saved',event=>{
  if(!taxon||!asset||asset.taxonId!==taxon.id||asset.scientificName!==taxon.scientificName||!referenceViews.some(v=>v[0]===view)||asset.view!==view||!referencePath.test(asset.src)||!photo?.bytes)return;
  const key=taxonId+':'+view,old=adminPhotoPreviews.get(key);if(old)URL.revokeObjectURL(old);
  adminPhotoPreviews.set(key,URL.createObjectURL(new Blob([photo.bytes],{type:'image/jpeg'})));
- const publicPhoto={src:asset.src,view,alt:asset.subjectTaxon+' — '+referenceViews.find(v=>v[0]===view)[1].toLowerCase(),subjectTaxon:asset.subjectTaxon,credit:'Foto: '+asset.attribution+'. Libreria personale; nome del taxon indicato dall’amministratore. Diritti riservati.'};
+ const publicPhoto={src:asset.src,view,alt:asset.subjectTaxon+' — '+referenceViews.find(v=>v[0]===view)[1].toLowerCase(),subjectTaxon:asset.subjectTaxon,credit:'Foto: '+asset.attribution+'. Libreria personale; nome del taxon indicato dall’amministratore. Diritti riservati.',...(asset.framing?{framing:asset.framing}:{})};
  taxon.referenceImages=[...(taxon.referenceImages||[]).filter(p=>p.view!==view),publicPhoto];
  if(tab==='studio')renderCards();
  if($('#detail').open&&currentTaxon===taxonId){const position=$('#detail-body').scrollTop;$('#detail-body').innerHTML=content(taxon);$('#detail-body').scrollTop=position;window.dispatchEvent(new CustomEvent('fungo:atlas-render'));}
