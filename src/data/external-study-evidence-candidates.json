@@ -3512,6 +3512,45 @@
         "assessment": "odor-agreement-spore-direct-source",
         "note": "Revisione tassonomica 2024: non generalizzare il dato all'intero complesso s.l."
       }
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "odor": "Generalmente non distintivo per A. vaginata, A. fulva e A. ceciliae; A. crocea può presentare odore dolciastro.",
+      "sporePrint": {
+        "label": "Bianca per le specie citate; carattere da verificare per le altre specie della sezione."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-vaginata.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print (A. vaginata)"
+        },
+        {
+          "url": "https://mail.first-nature.com/fungi/amanita-fulva.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print (A. fulva)"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-ceciliae.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print (A. ceciliae)"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "three-species-same-publisher-not-independent",
+        "note": "Concordanza fra tre specie della sezione, tutte descritte dalla stessa organizzazione; non estendere indiscriminatamente all'intera sezione."
+      }
     }
   ],
   "administratorDecision": {
