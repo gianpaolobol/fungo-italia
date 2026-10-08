@@ -739,6 +739,30 @@
         "independentOrganizations": 1,
         "assessment": "single-specialist-source",
         "note": "Necessaria seconda fonte indipendente; non confondere il colore delle lamelle con quello della sporata."
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Gradevole e fungino, talvolta con nota ittica; alcune fonti lo considerano non distintivo.",
+        "sporePrint": "Bianca o bianco-lilla, fino a grigio-lilla pallido.",
+        "note": "Sporata chiara concordante; odore variabile. Tre organizzazioni.",
+        "sources": [
+          {
+            "url": "https://www.mushroomexpert.com/pleurotus_ostreatus.html",
+            "fields": [
+              "odor",
+              "sporePrint"
+            ],
+            "locator": "Odor and Taste; Spore Print"
+          },
+          {
+            "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=100243",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Description: Smell mushroomy-fishy"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -926,6 +950,31 @@
       "administratorReview": {
         "status": "pending",
         "date": "2026-10-08"
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Odore tenue o non distintivo, talvolta dolce, gradevole o aromatico.",
+        "sporePrint": "Bianca o bianco-crema.",
+        "note": "Concordanza sporata; odore variabile. Quattro organizzazioni complessive; attenzione alla specie europea.",
+        "sources": [
+          {
+            "url": "https://www.mushroomexpert.com/craterellus_cornucopioides.html",
+            "fields": [
+              "odor",
+              "sporePrint"
+            ],
+            "locator": "Odor and Taste; Spore Print"
+          },
+          {
+            "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=100586",
+            "fields": [
+              "odor",
+              "sporePrint"
+            ],
+            "locator": "Description: Smell; Spore-print colour"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -984,6 +1033,30 @@
         "independentOrganizations": 1,
         "assessment": "single-specialist-source",
         "note": "Ricerca seconda fonte indipendente con descrizione esplicita ancora aperta; non usare sole foto o indici come conferma."
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Gradevole fungino o fruttato in alcune descrizioni; altre fonti lo giudicano non distintivo.",
+        "sporePrint": "Ocra, ocra-fulvo o color camoscio.",
+        "note": "Sporata concordante; odore variabile. Tre organizzazioni complessive.",
+        "sources": [
+          {
+            "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/suillus-luteus.html",
+            "fields": [
+              "odor",
+              "sporePrint"
+            ],
+            "locator": "Imenoforo; Carne"
+          },
+          {
+            "url": "https://natura.provincia.cuneo.it/funghi/commestibili/suillus-luteus/",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Carne"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
