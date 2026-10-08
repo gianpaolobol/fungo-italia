@@ -3206,6 +3206,67 @@
         "assessment": "two-pages-one-organization",
         "note": "Due pagine AMINT concordanti ma non due fonti indipendenti; sporata non documentata in questo lotto."
       }
+    },
+    {
+      "scientificName": "Entoloma saundersii",
+      "odor": "Farinaceo, simile a farina bagnata; talvolta sgradevole.",
+      "sporePrint": {
+        "label": "Rosa."
+      },
+      "sources": [
+        {
+          "url": "https://www.micologiabf.org/funghi/entoloma-saundersii-fr-sacc/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione macroscopica: Deposito sporale; Carne"
+        },
+        {
+          "url": "https://www.sardegnafunghi.it/esau.html",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Descrizione: odore netto di farina"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "odor-agreement-spore-direct-source",
+        "note": "Odore farinaceo confermato da due organizzazioni; deposito rosa riportato direttamente dall'Associazione Micologica Bassa Friulana."
+      }
+    },
+    {
+      "scientificName": "Leucopaxillus gentianeus",
+      "odor": "Farinaceo, anche intenso.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.mushroomexpert.com/leucopaxillus_gentianeus.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odor and Taste; Spore Print"
+        },
+        {
+          "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Scheda Leucopaxillus gentianeus, pagina stampata 205: CARNE; SPORE"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong-independent-agreement",
+        "note": "MushroomExpert e Regione Campania concordano su odore farinaceo e sporata bianca."
+      }
     }
   ],
   "administratorDecision": {
