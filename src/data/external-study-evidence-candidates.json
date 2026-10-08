@@ -204,6 +204,20 @@
             "sporePrint"
           ],
           "locator": "Identification guide — Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/15607-tricholoma-sulphureum-bull-fr-p-kumm-1871/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Commento di Alessandro Francolini: odore di gas illuminante, zolfo bruciato, asfalto caldo"
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3976",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Glossario AMINT, voce odore di formaggio: Tricholoma sulphureum, zolfo/gas e formaggio fermentato"
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -211,6 +225,12 @@
         "status": "approved",
         "date": "2026-10-08",
         "notes": "Nessuna"
+      },
+      "concordance": {
+        "field": "odor",
+        "independentOrganizations": 2,
+        "assessment": "concordant-with-descriptive-variation",
+        "note": "First Nature and AMINT agree on pungent unpleasant gas/sulphur-like odor; two AMINT pages count as one source organization."
       }
     },
     {
