@@ -182,6 +182,20 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "syndrome": {
+        "label": "Sindrome rabdomiolitica",
+        "latency": "Possibile comparsa ritardata, dopo consumi ripetuti",
+        "severity": "Potenzialmente grave o mortale; danno muscolare con possibile insufficienza renale"
+      },
+      "evidence": {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11556299/",
+        "location": "Bedry et al., Wild-mushroom intoxication as a cause of rhabdomyolysis, New England Journal of Medicine (2001), abstract: casi associati a Tricholoma equestre",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
