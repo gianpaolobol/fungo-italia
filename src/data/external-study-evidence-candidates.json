@@ -3371,6 +3371,80 @@
         "assessment": "nominal-species-only",
         "note": "Fonte aggiornata giugno 2026, tratta la variabilità tassonomica transatlantica; non attribuire automaticamente a ogni taxon del complesso."
       }
+    },
+    {
+      "scientificName": "Hapalopilus rutilans",
+      "odor": "Generalmente tenue o dolciastro; alcuni esemplari possono avere odore fungino. Sono documentate variazioni marcate dopo il distacco dal legno.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=100756",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Description: Smell; Spore-print colour"
+        },
+        {
+          "url": "https://micologica-barakaldo.org/hapalopilus-rutilans/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Caracteres macroscópicos: olor fúngico"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/16038-hapalopilus-rutilans-pers-fr-murrill-1904/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Osservazioni su variazione dell'odore dopo raccolta"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 3,
+        "assessment": "spore-direct-odor-variable",
+        "note": "Naturalis indica dolciastro, Barakaldo fungino, AMINT riporta cambiamenti nel tempo. Non rappresentare un odore univoco."
+      }
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "odor": "Debole, terroso o muschiato; alcune descrizioni lo considerano non distintivo.",
+      "sporePrint": {
+        "label": "Ocra (fonte secondaria; conferma specialistica ancora necessaria)."
+      },
+      "sources": [
+        {
+          "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Ramaria+formosa",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Odor: indistinct, earthy"
+        },
+        {
+          "url": "https://www.meteofunghi.it/MeteoFunghiNatura/Schede%20Micologiche/Ramaria%20formosa.html",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: debole odore gradevole"
+        },
+        {
+          "url": "https://it.wikipedia.org/wiki/Ramaria_formosa",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione: odore muschiato; sporata ocra; fonte secondaria"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 3,
+        "assessment": "odor-variable-spore-secondary-only",
+        "note": "La sporata ocra non è ancora corroborata da fonte specialistica diretta."
+      }
     }
   ],
   "administratorDecision": {
