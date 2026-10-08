@@ -3180,6 +3180,32 @@
         "assessment": "component-species-only",
         "note": "La sezione comprende più specie; non generalizzare i caratteri né il contenuto di muscarina a tutte."
       }
+    },
+    {
+      "scientificName": "Leucocybe connata",
+      "odor": "Forte, aromatico-balsamico; può ricordare le foglie di pomodoro.",
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/16015-leucocybe-connata-schumach-vizzini-p-alvarado-g-moreno-consiglio-2015/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Scheda Leucocybe connata: descrizione introduttiva, odore balsamico forte"
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=491",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Glossario Connatus: odore aromatico-balsamico, foglie di pomodoro"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "two-pages-one-organization",
+        "note": "Due pagine AMINT concordanti ma non due fonti indipendenti; sporata non documentata in questo lotto."
+      }
     }
   ],
   "administratorDecision": {
