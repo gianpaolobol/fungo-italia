@@ -3577,6 +3577,98 @@
         "assessment": "same-organization-two-pages",
         "note": "Due pagine AMINT concordanti, non due fonti indipendenti. Sporata non documentata: non inferire dal colore delle spore al microscopio."
       }
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "odor": "Erbaceo (AUSL Bologna); dolciastro secondo First Nature: carattere variabile.",
+      "sporePrint": {
+        "label": "Crema-rosa in massa."
+      },
+      "sources": [
+        {
+          "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Scheda Clitocybe phyllophila, p. 92, odore erbaceo e spore crema-rosa in massa"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/clitocybe-phyllophila.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print: sweet, pale pinkish ochraceous clay"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "spore-agreement-odor-disagreement",
+        "note": "Il catalogo usa Collybia phyllophila; verificare corrispondenza con Clitocybe phyllophila. Fonti concordano su sporata rosa-crema ma divergono sull'odore."
+      }
+    },
+    {
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "odor": "Non distintivo nella specie nominale Neoboletus luridiformis; altre descrizioni riportano talvolta note pungenti.",
+      "sporePrint": {
+        "label": "Bruno olivaceo, per N. luridiformis."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/neoboletus-luridiformis.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Taxonomic history (Boletus erythropus); Odour/taste; Spore print"
+        },
+        {
+          "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?noTransfer=0&sciname=Neoboletusluridiformis",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Odor: not distinctive or pungent, source citations Bessette/Thiers"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "spore-direct-odor-variable",
+        "note": "L'identità Boletus erythropus sensu auct. e N. luridiformis richiede attenzione nomenclaturale; non estendere al complesso."
+      }
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "odor": "Non distintivo nelle specie documentate H. erinaceus e H. americanum.",
+      "sporePrint": {
+        "label": "Bianca nelle due specie documentate."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/hericium-erinaceus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/hericium-americanum.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "two-species-one-publisher",
+        "note": "Due specie di Hericium, una sola organizzazione. Non attribuire automaticamente a tutte le specie del genere."
+      }
     }
   ],
   "administratorDecision": {
