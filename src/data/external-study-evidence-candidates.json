@@ -3003,6 +3003,29 @@
         "assessment": "single-specialist-source",
         "note": "Caratteri specifici di Entoloma vernum; da approvare. Non inferire commestibilità dalla fonte esterna."
       }
+    },
+    {
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "odor": "Non distintivo per E. rhodopolium s.s.; alcune forme già indicate come E. nidorosum possono avere odore nitroso.",
+      "sporePrint": {
+        "label": "Rosa (documentata per E. rhodopolium s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/entoloma-rhodopolium.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Spore print; Odour/taste; introductory note on former E. nidorosum form"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only-with-infraspecific-odor-variation",
+        "note": "La scheda è s.l.; non attribuire odore nitroso all'intero gruppo. In attesa di approvazione."
+      }
     }
   ],
   "administratorDecision": {
