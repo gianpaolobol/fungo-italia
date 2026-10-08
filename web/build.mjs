@@ -1,3 +1,4 @@
+import {applyToxicologySyndromes} from '../scripts/toxicology-syndromes.mjs';
 import {applyAdminReferenceImages} from '../scripts/admin-reference-images.mjs';
 import {applyCommercialization} from '../scripts/commercialization.mjs';
 import {applyStudyProfiles,applyReferenceImages} from '../scripts/study-profiles.mjs';
@@ -20,6 +21,7 @@ const studyProfiles=await readJSON('study-profiles');
 const referenceImages=await readJSON('reference-images');
 const sourceRegistry=await readJSON('course-sources');
 applyStudyProfiles([...catalog,...groups],studyProfiles,sourceRegistry);
+applyToxicologySyndromes([...catalog,...groups],await readJSON('toxicology-syndromes'));
 applyReferenceImages([...catalog,...groups],referenceImages);
 const adminImages=await readJSON('admin-reference-images');
 applyAdminReferenceImages([...catalog,...groups],adminImages);
