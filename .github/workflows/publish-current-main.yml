@@ -1,0 +1,39 @@
+name: Publish Fungo Italia current main to Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: fungo-italia-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run prepare:data
+      - name: Build current PWA
+        run: cd web && npm ci && npm run build
+      - name: Check generated site
+        run: |
+          test -s dist-ios/index.html
+          test -s dist-ios/data.json
+          node -e "const d=require('./dist-ios/data.json');if(d.catalog.length!==148||d.groups.length!==66)process.exit(1)"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-ios
+      - id: deployment
+        uses: actions/deploy-pages@v4
