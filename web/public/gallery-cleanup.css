@@ -44,6 +44,7 @@ html.admin-photo-active .admin-photo-change::after {
   min-height: 100%;
   object-fit: cover;
   object-position: var(--fungo-photo-position, 50% 50%);
+  transform-origin: center;
   background: #e7eee4;
 }
 
@@ -51,3 +52,5 @@ html.admin-photo-active .admin-photo-change::after {
 .photo-triptych .photo-thumb img[data-focal-x][data-focal-y] {
   object-position: var(--fungo-photo-position, 50% 50%);
 }
+
+.photo-triptych .photo-thumb img { max-width: none; }
