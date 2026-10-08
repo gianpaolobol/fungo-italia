@@ -231,6 +231,22 @@
         "independentOrganizations": 2,
         "assessment": "concordant-with-descriptive-variation",
         "note": "First Nature and AMINT agree on pungent unpleasant gas/sulphur-like odor; two AMINT pages count as one source organization."
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Forte, sgradevole, simile a gas illuminante o zolfo bruciato.",
+        "note": "Concordanza con First Nature già registrata.",
+        "sources": [
+          {
+            "url": "https://www.funghiitaliani.it/topic/15607-tricholoma-sulphureum-bull-fr-p-kumm-1871/",
+            "locator": "Odore di gas/zolfo"
+          },
+          {
+            "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3976",
+            "locator": "Odore gas/zolfo con possibile nota formaggio fermentato"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -254,6 +270,22 @@
         "status": "approved",
         "date": "2026-10-08",
         "notes": "Nessuna"
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Leggero e gradevole, farinaceo (talora floreale).",
+        "note": "Correzione proposta rispetto al precedente 'odore non significativo'; richiede nuova decisione amministrativa.",
+        "sources": [
+          {
+            "url": "https://www.funghiitaliani.it/topic/16799-tricholoma-equestre-l-fr-p-kumm-1871/",
+            "locator": "Carne: odore gradevole e leggero di farina"
+          },
+          {
+            "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3957",
+            "locator": "Glossario: odore leggero farinaceo, talora floreale"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -277,6 +309,23 @@
         "status": "approved",
         "date": "2026-10-08",
         "notes": "Nessuna"
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Grato o quasi nullo (non distintivo).",
+        "sporePrint": "Rosa.",
+        "note": "AMINT concorda con la proposta First Nature; due pagine AMINT non sono due fonti indipendenti.",
+        "sources": [
+          {
+            "url": "https://www.funghiitaliani.it/topic/9005-tylopilus-felleus%C2%A0bull-fr-p-karst-1881/",
+            "locator": "Carne; Cappello: odore grato/subnullo e sporata rosa"
+          },
+          {
+            "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1974",
+            "locator": "Tylopilus: spore rosate"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -300,6 +349,23 @@
         "status": "approved",
         "date": "2026-10-08",
         "notes": "Nessuna"
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.",
+        "sporePrint": "Rosata o rosa-salmone, descritta anche come bruno-rossa.",
+        "note": "Le descrizioni AMB divergono sull'intensità (debole/forte), ma concordano sul carattere farinaceo; colore sporata con sfumature diverse.",
+        "sources": [
+          {
+            "url": "https://www.ambbresadola.it/entoloma-sinuatum/",
+            "locator": "CARNE; odore forte farinoso"
+          },
+          {
+            "url": "https://www.funghiitaliani.it/topic/15052-entoloma-sinuatum-bull-fr-p-kumm-1871/",
+            "locator": "Carne; Microscopia; sporata rosa e odore farina fresca/rancida"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -319,6 +385,22 @@
         "status": "approved",
         "date": "2026-10-08",
         "notes": "Nessuna"
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Farinaceo, più o meno pronunciato.",
+        "note": "Conferme da AMINT e AMB già archiviata; le due pagine AMINT contano come una organizzazione.",
+        "sources": [
+          {
+            "url": "https://www.funghiitaliani.it/topic/24223-tricholoma-pardinum%C2%A0pers-secr-qu%C3%A9l-1873/",
+            "locator": "Carne: odore farina"
+          },
+          {
+            "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3957",
+            "locator": "Glossario odore farinaceo in T. pardinum"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     }
   ],
