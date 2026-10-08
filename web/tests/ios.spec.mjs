@@ -287,7 +287,8 @@ test('Xanthodermatei detail and continuous reading hide internal metadata and re
 test('public atlas excludes founding documents while field safety checks stay available',async({page,request})=>{
  const response=await request.get('./data.json'),payload=await response.json();
  const raw=JSON.stringify(payload);
- for(const text of ['S1-obiettivi-tassonomici','S2-guida-ragionata','Scientific Baseline','EDITORIAL-minimum','Obiettivi tassonomici nella formazione','Guida ragionata alla commestibilità'])expect(raw).not.toContain(text);
+ for(const text of ['S1-obiettivi-tassonomici','S2-guida-ragionata','Scientific Baseline','EDITORIAL-minimum','Obiettivi tassonomici nella formazione'])expect(raw).not.toContain(text);
+ // A legitimate public citation may name the scientific edibility guide; the internal source IDs and records must stay excluded.
  expect(payload.catalog).toHaveLength(148);expect(payload.groups).toHaveLength(66);
  await ready(page);await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Kuehneromyces mutabilis');
  await page.getByRole('button',{name:'Apri Kuehneromyces mutabilis',exact:true}).click();
