@@ -219,8 +219,8 @@
         "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
       },
       "evidence": {
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
-        "location": "StatPearls Mushroom Toxicity: Tricholoma pardinum, gastrointestinal poisoning; exact species attribution to verify",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata alla commestibilità dei funghi (2021), p. 85 (pagina PDF), sezione Tricholoma",
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
@@ -256,13 +256,13 @@
     {
       "scientificName": "Chlorophyllum molybdites",
       "syndrome": {
-        "label": "Sindrome gastrointestinale a tossicità costante",
-        "latency": "Generalmente breve; variabile secondo specie e quantità",
-        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+        "label": "Sindrome morganica (gastrointestinale a tossicità costante)",
+        "latency": "Breve latenza",
+        "severity": "Sindrome gastrointestinale potenzialmente severa; possibili complicazioni neurologiche"
       },
       "evidence": {
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
-        "location": "StatPearls Mushroom Toxicity: Chlorophyllum molybdites, gastrointestinal poisoning; exact species attribution to verify",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata alla commestibilità dei funghi (2021), p. 39 (pagina PDF), sezione Chlorophyllum",
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
