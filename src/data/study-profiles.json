@@ -1037,6 +1037,25 @@
           "supportedClaim": "La Guida ragionata (2021) colloca Amanita excelsa s.l. (incl. A. spissa, A. franchetii) nella categoria Non commestibile; il riferimento non certifica l'identificazione di esemplari."
         }
       ]
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "profile": {
+        "edibility": {
+          "label": "Tossica (sindrome muscarinica)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 50,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe dealbata e C. rivulosa sono clitocibi bianchi tossici con sindrome muscarinica; la denominazione della scheda è un raggruppamento didattico, non una specie unica."
+        }
+      ]
     }
   ]
 }
