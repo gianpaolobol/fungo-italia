@@ -3026,6 +3026,91 @@
         "assessment": "nominal-species-only-with-infraspecific-odor-variation",
         "note": "La scheda è s.l.; non attribuire odore nitroso all'intero gruppo. In attesa di approvazione."
       }
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "odor": "Da fresco lieve e fungino; da essiccato più intenso, con note solforate o d'aglio.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.viriar.com/blogs/mushrooms-encyclopedia/lentinula-edodes",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification Guide: Morphological Features (Odor, Spore Print)"
+        },
+        {
+          "url": "https://www.out-grow.com/pages/shiitake-3782-lentinula-edodes",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Macroscopic Features: Spore Print; Odor/Taste"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "agreement-with-fresh-dried-distinction",
+        "note": "Concordanza su sporata bianca e differenza tra odore fresco ed essiccato."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "odor": "Intenso e sgradevole, simile a gomma o gas (documentato per E. asperum s.s.).",
+      "sporePrint": {
+        "label": "Bianca (E. asperum s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://mushroomidentification.com/encyclopedia/freckled-dapperling",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Flesh & spore print"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "La scheda del catalogo è s.l.; non generalizzare a tutti i taxa."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Panaeolus cyanescens",
+      "odor": "Fungino o farinaceo: descrizioni non concordanti.",
+      "sporePrint": {
+        "label": "Nera."
+      },
+      "sources": [
+        {
+          "url": "https://colfungi.org/taxon/urn%3Alsid%3Aindexfungorum.org%3Anames%3A169479/general-information",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descriptions — Catalogue of Fungi of Colombia"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Panaeolus_cyanescens",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Description (secondary source; odor farinaceous)"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "spore-agreement-odor-disagreement",
+        "note": "ColFungi descrive odore fungino; altra fonte farinaceo. Non scegliere una variante per maggioranza apparente."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
     }
   ],
   "administratorDecision": {
