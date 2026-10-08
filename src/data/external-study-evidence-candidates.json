@@ -985,6 +985,59 @@
         "assessment": "single-specialist-source",
         "note": "Ricerca seconda fonte indipendente con descrizione esplicita ancora aperta; non usare sole foto o indici come conferma."
       }
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "odor": "Gradevole, fungino; può ricordare la nocciola.",
+      "sporePrint": {
+        "label": "Bruno-olivastro."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15310-boletus-edulis-bull-fr-1782/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore fungino gradevole"
+        },
+        {
+          "url": "https://mail.first-nature.com/fungi/boletus-edulis.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Spore print; Odour/taste"
+        }
+      ],
+      "note": "Due fonti indipendenti, ma descrizioni per B. edulis s.s.; gruppo s.l. da revisionare.",
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "assessment": "two-pages-check-independence",
+        "note": "Due fonti indipendenti, ma descrizioni per B. edulis s.s.; gruppo s.l. da revisionare."
+      }
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "odor": "Debole odore fruttato, simile ad albicocca.",
+      "sporePrint": {
+        "label": "Da giallo pallido a bianco-crema, talvolta lievemente rosata."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/cantharellus-cibarius.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Spore print; Odour/taste"
+        }
+      ],
+      "note": "Fonte per C. cibarius nominale, non automaticamente per tutto il complesso.",
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "assessment": "one-direct-source",
+        "note": "Fonte per C. cibarius nominale, non automaticamente per tutto il complesso."
+      }
     }
   ],
   "administratorDecision": {
