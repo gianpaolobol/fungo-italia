@@ -43,7 +43,7 @@ const studyProfiles=JSON.parse(await readFile(join(output,'study-profiles.json')
 const referenceImages=JSON.parse(await readFile(join(output,'reference-images.json'),'utf8'));
 applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
 applyToxicologySyndromes([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'toxicology-syndromes.json'),'utf8')));
-applyApprovedExternalStudyEvidence([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'external-study-evidence-candidates.json'),'utf8')));
+applyApprovedExternalStudyEvidence([...catalog,...teachingGroups],JSON.parse(await readFile(join('src/data','external-study-evidence-candidates.json'),'utf8')));
 applyReferenceImages([...catalog,...teachingGroups],referenceImages);
 const adminImages=JSON.parse(await readFile(join(output,'admin-reference-images.json'),'utf8'));
 applyAdminReferenceImages([...catalog,...teachingGroups],adminImages);
