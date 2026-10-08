@@ -34,3 +34,6 @@
   overflow: hidden;
   background: #e7eee4;
 }
+
+/* Clip interactive zoom without distorting the selected image. */
+.admin-photo-preview { transform-origin: center; }
