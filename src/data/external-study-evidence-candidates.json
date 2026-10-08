@@ -46,7 +46,7 @@
     },
     {
       "scientificName": "Amanita phalloides",
-      "odor": "Debole negli esemplari giovani; sgradevole negli esemplari maturi",
+      "odor": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.",
       "sporePrint": {
         "label": "Bianca"
       },
@@ -65,8 +65,16 @@
             "sporePrint"
           ],
           "locator": "Spore print"
+        },
+        {
+          "url": "https://ambbresadola.it/funghi_tossici/amanita-phalloides-vaill-ex-fr/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "CARNE"
         }
-      ]
+      ],
+      "reviewStatus": "source-verified-admin-review"
     },
     {
       "scientificName": "Lactarius volemus s.l.",
@@ -200,6 +208,38 @@
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "sources": [
+        {
+          "url": "https://ambbresadola.it/funghi_tossici/entoloma-sinuatum/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "CARNE; MICROSCOPIA"
+        }
+      ],
+      "odor": "Debole, farinaceo.",
+      "sporePrint": {
+        "label": "Bruno-rossa"
+      },
+      "reviewStatus": "source-verified-admin-review"
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "sources": [
+        {
+          "url": "https://ambbresadola.it/funghi_tossici/tricholoma-pardinum/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "CARNE"
+        }
+      ],
+      "odor": "Farinaceo.",
+      "reviewStatus": "source-verified-admin-review"
     }
   ],
   "administratorDecision": {
