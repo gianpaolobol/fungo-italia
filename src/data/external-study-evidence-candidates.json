@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "reviewStatus": "external-sources-verified-pending-canonical-integration",
+  "records": [
+    {
+      "scientificName": "Agaricus bisporus",
+      "odor": "Lieve, fungino o di nocciola",
+      "sporePrint": {
+        "label": "Bruno scuro, cioccolato"
+      },
+      "sources": [
+        {
+          "url": "https://www.mushroomexpert.com/agaricus_bisporus.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odor and Taste; Spore Print"
+        },
+        {
+          "url": "https://www.lavalledelmetauro.it/contenuti/funghi-flora-fauna/scheda/12059.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; Microscopia"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "odor": "Variabile: di lievito, mosto o vinaccia; talora formaggio stagionato o farina rancida",
+      "sporePrint": {
+        "label": "Bruno-ruggine, tabacco"
+      },
+      "sources": [
+        {
+          "url": "https://www.ameronlus.it/blog/2025/03/31/larticolo-del-mese-cyclocybe-cylindracea/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione di odore e spore in massa"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "odor": "Debole negli esemplari giovani; sgradevole negli esemplari maturi",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/amanita-phalloides.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; Microscopia"
+        },
+        {
+          "url": "https://www.cpbr.gov.au/fungi/deathcap.html",
+          "fields": [
+            "sporePrint"
+          ],
+          "locator": "Spore print"
+        }
+      ]
+    }
+  ]
+}
