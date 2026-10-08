@@ -37,3 +37,14 @@ button.mushroom-toggle,button.mushroom-toggle[aria-pressed="true"]{flex:0 0 44px
 #photo-links{display:flex;gap:8px;flex-wrap:wrap;padding:0 12px 8px;margin:0;flex-shrink:0}#photo-links:empty{display:none}#photo-links a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;color:var(--green);background:white;text-decoration:underline}
 
 .commerce-inline{margin:6px 0}.commerce-badge{display:inline-block;max-width:100%;padding:3px 8px;border:1px solid #769780;border-radius:9px;background:#eaf3e9;color:#174f2b;font-size:12px;font-weight:650;line-height:1.5;overflow-wrap:anywhere}.commerce-regional{background:#eef2f5;color:#244859;border-color:#8ba4af}.commerce-ban{background:#f7eceb;color:#8a2825;border-color:#ba7773}.commerce-members{padding-left:17px;line-height:1.6}.commerce-members li{margin:8px 0}.commerce-sources{display:block;font-size:12px;margin-top:3px;overflow-wrap:anywhere}
+
+/* Six editorial categories; labels remain visible without color perception. */
+.edibility-badge{display:inline-block;border:1px solid #475548;border-radius:7px;padding:3px 8px;font-size:12px;font-weight:750;line-height:1.5;vertical-align:middle}
+.edibility-free{background:#16b84e;color:#102f1b}
+.edibility-conditional{background:#a5dc8a;color:#183322}
+.edibility-discouraged{background:#f3d44c;color:#332900}
+.edibility-no-food-value{background:#fff;color:#303c32}
+.edibility-inedible{background:#f47a28;color:#28170c}
+.edibility-toxic{background:#c92332;color:#fff}
+.edibility-unknown{background:#e7e9e8;color:#29352e}
+.edibility-detail{font-size:12px;line-height:1.5}
