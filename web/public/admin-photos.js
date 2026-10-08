@@ -203,7 +203,7 @@ function editPhoto(taxon, view, label) {
   const preview = make('img', '', { id: 'admin-photo-preview', alt: 'Anteprima della foto selezionata' });
   preview.className = 'admin-photo-preview';
   preview.hidden = true;
-  form.append(preview);
+  const previewFrame=make('div');previewFrame.className='admin-photo-preview-frame';previewFrame.append(preview);form.append(previewFrame);
   const framing = {x:50,y:50,zoom:1};
   const framingInputs = [['x','Posizione orizzontale',0,100,1],['y','Posizione verticale',0,100,1],['zoom','Zoom',1,3,0.1]];
   for (const [key,label,min,max,step] of framingInputs) {
