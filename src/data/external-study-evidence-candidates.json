@@ -192,7 +192,7 @@
     },
     {
       "scientificName": "Tricholoma sulphureum",
-      "odor": "Odore molto intenso e sgradevole, simile a gas di carbone",
+      "odor": "Forte, sgradevole, simile a gas illuminante o zolfo bruciato.",
       "sporePrint": {
         "label": "Bianca"
       },
@@ -246,12 +246,17 @@
             "locator": "Odore gas/zolfo con possibile nota formaggio fermentato"
           }
         ],
-        "reviewDate": "2026-10-08"
+        "reviewDate": "2026-10-08",
+        "administratorDecision": {
+          "status": "approved",
+          "date": "2026-10-08",
+          "notes": "Nessuna"
+        }
       }
     },
     {
       "scientificName": "Tricholoma equestre",
-      "odor": "Odore non significativo",
+      "odor": "Leggero e gradevole, farinaceo (talora floreale).",
       "sporePrint": {
         "label": "Bianca"
       },
@@ -263,6 +268,20 @@
             "sporePrint"
           ],
           "locator": "Identification guide — Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/16799-tricholoma-equestre-l-fr-p-kumm-1871/",
+          "locator": "Carne: odore gradevole e leggero di farina",
+          "fields": [
+            "odor"
+          ]
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3957",
+          "locator": "Glossario: odore leggero farinaceo, talora floreale",
+          "fields": [
+            "odor"
+          ]
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -285,14 +304,19 @@
             "locator": "Glossario: odore leggero farinaceo, talora floreale"
           }
         ],
-        "reviewDate": "2026-10-08"
+        "reviewDate": "2026-10-08",
+        "administratorDecision": {
+          "status": "approved",
+          "date": "2026-10-08",
+          "notes": "Nessuna"
+        }
       }
     },
     {
       "scientificName": "Tylopilus felleus",
-      "odor": "Odore non distintivo",
+      "odor": "Grato o quasi nullo (non distintivo).",
       "sporePrint": {
-        "label": "Rosa argilla"
+        "label": "Rosa."
       },
       "sources": [
         {
@@ -302,6 +326,22 @@
             "sporePrint"
           ],
           "locator": "Identification guide — Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/9005-tylopilus-felleus%C2%A0bull-fr-p-karst-1881/",
+          "locator": "Carne; Cappello: odore grato/subnullo e sporata rosa",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ]
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1974",
+          "locator": "Tylopilus: spore rosate",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ]
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -325,7 +365,12 @@
             "locator": "Tylopilus: spore rosate"
           }
         ],
-        "reviewDate": "2026-10-08"
+        "reviewDate": "2026-10-08",
+        "administratorDecision": {
+          "status": "approved",
+          "date": "2026-10-08",
+          "notes": "Nessuna"
+        }
       }
     },
     {
@@ -338,11 +383,27 @@
             "sporePrint"
           ],
           "locator": "CARNE; MICROSCOPIA"
+        },
+        {
+          "url": "https://www.ambbresadola.it/entoloma-sinuatum/",
+          "locator": "CARNE; odore forte farinoso",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ]
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/15052-entoloma-sinuatum-bull-fr-p-kumm-1871/",
+          "locator": "Carne; Microscopia; sporata rosa e odore farina fresca/rancida",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ]
         }
       ],
-      "odor": "Debole, farinaceo.",
+      "odor": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.",
       "sporePrint": {
-        "label": "Bruno-rossa"
+        "label": "Rosata o rosa-salmone, descritta anche come bruno-rossa."
       },
       "reviewStatus": "source-verified-admin-review",
       "administratorReview": {
@@ -365,7 +426,12 @@
             "locator": "Carne; Microscopia; sporata rosa e odore farina fresca/rancida"
           }
         ],
-        "reviewDate": "2026-10-08"
+        "reviewDate": "2026-10-08",
+        "administratorDecision": {
+          "status": "approved",
+          "date": "2026-10-08",
+          "notes": "Nessuna"
+        }
       }
     },
     {
@@ -377,9 +443,23 @@
             "odor"
           ],
           "locator": "CARNE"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/24223-tricholoma-pardinum%C2%A0pers-secr-qu%C3%A9l-1873/",
+          "locator": "Carne: odore farina",
+          "fields": [
+            "odor"
+          ]
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3957",
+          "locator": "Glossario odore farinaceo in T. pardinum",
+          "fields": [
+            "odor"
+          ]
         }
       ],
-      "odor": "Farinaceo.",
+      "odor": "Farinaceo, più o meno pronunciato.",
       "reviewStatus": "source-verified-admin-review",
       "administratorReview": {
         "status": "approved",
@@ -400,7 +480,12 @@
             "locator": "Glossario odore farinaceo in T. pardinum"
           }
         ],
-        "reviewDate": "2026-10-08"
+        "reviewDate": "2026-10-08",
+        "administratorDecision": {
+          "status": "approved",
+          "date": "2026-10-08",
+          "notes": "Nessuna"
+        }
       }
     }
   ],
