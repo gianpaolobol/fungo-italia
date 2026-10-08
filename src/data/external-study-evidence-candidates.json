@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewStatus": "external-sources-verified-pending-canonical-integration",
+  "reviewStatus": "approved-by-project-administrator-pending-source-validation",
   "records": [
     {
       "scientificName": "Agaricus bisporus",
@@ -68,5 +68,11 @@
         }
       ]
     }
-  ]
+  ],
+  "administratorDecision": {
+    "status": "approved",
+    "scope": "three proposed odor and spore-print descriptions",
+    "date": "2026-10-08",
+    "note": "Editorial approval is not independent mycological attestation; source provenance and build validation remain mandatory."
+  }
 }
