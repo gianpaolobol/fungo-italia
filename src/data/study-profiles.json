@@ -923,6 +923,120 @@
           "supportedClaim": "La Guida classifica Tricholoma equestre fra le specie sconsigliate e documenta il divieto italiano."
         }
       ]
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile (commestibilità libera)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 39,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida ragionata (2021) colloca Calocybe gambosa nella categoria Commestibile (commestibilità libera); il riferimento non certifica l'identificazione di esemplari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe nebularis",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 24,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida ragionata (2021) colloca Clitocybe nebularis nella categoria Sconsigliato; il riferimento non certifica l'identificazione di esemplari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 24,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida ragionata (2021) colloca Chlorophyllum rhacodes s.l. nella categoria Sconsigliato; il riferimento non certifica l'identificazione di esemplari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 24,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida ragionata (2021) colloca Leucoagaricus leucothites s.l. nella categoria Sconsigliato; il riferimento non certifica l'identificazione di esemplari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 26,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida ragionata (2021) colloca Coprinus atramentarius s.l. nella categoria Non commestibile; il riferimento non certifica l'identificazione di esemplari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 25,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida ragionata (2021) colloca Amanita excelsa s.l. (incl. A. spissa, A. franchetii) nella categoria Non commestibile; il riferimento non certifica l'identificazione di esemplari."
+        }
+      ]
     }
   ]
 }
