@@ -24,12 +24,26 @@
             "sporePrint"
           ],
           "locator": "Carne; Microscopia"
+        },
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda0002.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Scheda 002, p. 1 (pagina stampata 91)"
         }
       ],
       "administratorReview": {
         "status": "approved",
         "date": "2026-10-08",
         "notes": "Nessuna"
+      },
+      "cmcaloreReview": {
+        "odor": "Gradevole, non ulteriormente caratterizzato nella scheda CMC.",
+        "sporePrint": "Bruno-porpora in massa.",
+        "status": "pending-administrator-approval",
+        "note": "Source transcription, not automatic override of prior approved wording."
       }
     },
     {
@@ -1250,6 +1264,24 @@
         "independentOrganizations": 1,
         "assessment": "nominal-species-only",
         "note": "Odore non inserito perché non verificato in questa ricerca; perimetro s.l. da valutare."
+      }
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "sources": [
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda067.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Scheda 067, p. 1 (pagina stampata 169)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "cmcaloreReview": {
+        "odor": "Leggermente aromatico.",
+        "status": "pending-administrator-approval",
+        "note": "Source transcription, not automatic override of prior approved wording."
       }
     }
   ],
