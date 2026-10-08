@@ -3267,6 +3267,48 @@
         "assessment": "strong-independent-agreement",
         "note": "MushroomExpert e Regione Campania concordano su odore farinaceo e sporata bianca."
       }
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "odor": "Debole, di ravanello in A. excelsa var. excelsa; tenue e sgradevole, non rafanoide, nella var. spissa.",
+      "sporePrint": {
+        "label": "Bianca (A. excelsa)."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/amanita-excelsa.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print; varieties excelsa and spissa"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "variety-specific-not-entire-group",
+        "note": "La fonte non documenta A. franchetii: non estendere i caratteri a tutto il gruppo."
+      }
+    },
+    {
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "odor": "Fruttato.",
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/profile/36492-archivio-micologico/content/page/536/?type=forums_topic_post",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Rubroboletus pulchrotinctus, commento di Mario Iannotti: odore fruttato"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "one-specific-observation",
+        "note": "Osservazione di un esemplare; sporata non attestata dalla fonte consultata."
+      }
     }
   ],
   "administratorDecision": {
