@@ -10,8 +10,9 @@ const completeTaxon = {
   habitat: ['boschi di latifoglie e conifere'],
   lookalikes: ['Tylopilus felleus'],
   sources: [
-    {sourceId: 'S-test', fields: ['habitat'], supportedClaim: 'habitat documented'},
+    {sourceId: 'S-test', fields: ['habitat', 'odor', 'sporePrint', 'edibility'], supportedClaim: 'habitat documented'},
   ],
+  studyProfile: {odor: 'odore documentato', sporePrint: {label: 'sporata documentata'}, edibility: {label: 'valutazione documentata'}},
   independentReviewStatus: 'reviewed',
   referenceImages: [
     {view: 'lateral', src: 'images/reference/test-lateral.jpg', alt: 'laterale', credit: 'tester'},
@@ -26,12 +27,16 @@ const completeTaxon = {
   assert.equal(report.totals.releaseReady, 1);
   assert.equal(report.totals.blocked, 0);
   assert.equal(report.totals.imageComplete, 1);
+  assert.equal(report.totals.odorPresent, 1);
+  assert.equal(report.totals.sporePrintPresent, 1);
+  assert.equal(report.totals.edibilityPresent, 1);
   assert.equal(report.totals.independentlyReviewed, 1);
 }
 
 {
   const incomplete = {
     ...completeTaxon,
+    studyProfile: {},
     id: 'amanita-muscaria',
     scientificName: 'Amanita muscaria',
     habitat: [],
@@ -48,6 +53,9 @@ const completeTaxon = {
     'missing-lookalikes',
     'missing-sources',
     'habitat-without-pointwise-evidence',
+    'missing-odor',
+    'missing-spore-print',
+    'missing-edibility',
     'missing-reference-views:top,underside',
     'independent-review-not-attested',
   ]);
@@ -57,3 +65,22 @@ const completeTaxon = {
 }
 
 console.log('release-readiness tests passed');
+
+{
+  const noStudy = {...completeTaxon, studyProfile: {}};
+  const report = buildReleaseReadinessReport([noStudy]);
+  assert.equal(report.releaseReady, false);
+  assert.equal(report.totals.odorPresent, 0);
+  assert.equal(report.totals.sporePrintPresent, 0);
+  assert.equal(report.totals.edibilityPresent, 0);
+  assert.ok(report.blockers[0].gaps.includes('missing-odor'));
+  assert.ok(report.blockers[0].gaps.includes('missing-spore-print'));
+  assert.ok(report.blockers[0].gaps.includes('missing-edibility'));
+}
+{
+  const unsupported = {...completeTaxon, sources: [{fields: ['habitat']}]};
+  const gaps = buildReleaseReadinessReport([unsupported]).blockers[0].gaps;
+  assert.ok(gaps.includes('odor-without-pointwise-evidence'));
+  assert.ok(gaps.includes('spore-print-without-pointwise-evidence'));
+  assert.ok(gaps.includes('edibility-without-pointwise-evidence'));
+}

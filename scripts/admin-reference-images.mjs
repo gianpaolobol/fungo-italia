@@ -1,6 +1,6 @@
 const views=['lateral','top','underside'];
 const viewLabels={lateral:'vista laterale',top:'vista superiore',underside:'vista dal basso'};
-const keys=['taxonId','scientificName','view','src','sha256','byteLength','width','height','subjectTaxon','attribution','source','rights','editedBy','updatedAt'];
+const keys=['taxonId','scientificName','view','src','sha256','byteLength','width','height','subjectTaxon','attribution','source','rights','editedBy','updatedAt','framing'];
 const only=(v,fields)=>v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).every(k=>fields.includes(k));
 const text=v=>typeof v==='string'&&!!v.trim();
 const date=v=>typeof v==='string'&&/^\d{4}-\d{2}-\d{2}T/.test(v)&&Number.isFinite(Date.parse(v));
@@ -18,12 +18,13 @@ export function validateAdminReferenceImages(manifest,records){
   check(only(image.source,['kind'])&&image.source.kind==='user-provided'&&image.editedBy==='gianpaolobol'&&date(image.updatedAt),'administrator provenance');
   const r=image.rights;
   check(only(r,['license','publicationScope','authorization'])&&r.license==='rights-reserved'&&r.publicationScope==='fungo-italia-authorized'&&only(r.authorization,['method','recordedAt'])&&r.authorization.method==='uploader-declaration'&&date(r.authorization.recordedAt),'publication declaration');
+  if(image.framing!==undefined){const f=image.framing;check(only(f,['x','y','zoom'])&&[f.x,f.y,f.zoom].every(Number.isFinite)&&f.x>=0&&f.x<=100&&f.y>=0&&f.y<=100&&f.zoom>=1&&f.zoom<=3,'framing');}
   seen.add(key);
  }
  return manifest;
 }
 export function publicAdminReferenceImage(image){
- return {src:image.src,view:image.view,alt:image.subjectTaxon+' — '+viewLabels[image.view],subjectTaxon:image.subjectTaxon,credit:'Foto: '+image.attribution+'. Libreria personale; nome del taxon indicato dall’amministratore. Diritti riservati.'};
+ return {src:image.src,view:image.view,alt:image.subjectTaxon+' — '+viewLabels[image.view],subjectTaxon:image.subjectTaxon,credit:'Foto: '+image.attribution+'. Libreria personale; nome del taxon indicato dall’amministratore. Diritti riservati.',...(image.framing?{framing:image.framing}:{})};
 }
 export function applyAdminReferenceImages(records,manifest){
  validateAdminReferenceImages(manifest,records);
