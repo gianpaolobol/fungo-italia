@@ -37,6 +37,13 @@ function profileGaps(taxon) {
   if (!Array.isArray(taxon.lookalikes) || taxon.lookalikes.length === 0 || !taxon.lookalikes.every(isText)) gaps.push('missing-lookalikes');
   if (!Array.isArray(taxon.sources) || taxon.sources.length === 0) gaps.push('missing-sources');
   if (!hasFieldEvidence(taxon, 'habitat')) gaps.push('habitat-without-pointwise-evidence');
+  const study = taxon.studyProfile ?? {};
+  if (!isText(study.odor)) gaps.push('missing-odor');
+  else if (!hasFieldEvidence(taxon, 'odor')) gaps.push('odor-without-pointwise-evidence');
+  if (!isText(study.sporePrint?.label)) gaps.push('missing-spore-print');
+  else if (!hasFieldEvidence(taxon, 'sporePrint')) gaps.push('spore-print-without-pointwise-evidence');
+  if (!isText(study.edibility?.label)) gaps.push('missing-edibility');
+  else if (!hasFieldEvidence(taxon, 'edibility')) gaps.push('edibility-without-pointwise-evidence');
   const images = imageCompleteness(taxon);
   if (images.missingViews.length) gaps.push('missing-reference-views:' + images.missingViews.join(','));
   if (images.invalidImages) gaps.push('invalid-reference-image-metadata');
