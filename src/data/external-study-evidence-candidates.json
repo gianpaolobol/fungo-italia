@@ -1041,6 +1041,13 @@
             "sporePrint"
           ],
           "locator": "Descrizione specie e citazione Tutto Funghi p.244"
+        },
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 23 (numerazione 1-based): Farina; specie nominale"
         }
       ],
       "concordance": {
@@ -1052,6 +1059,16 @@
       "administratorReview": {
         "status": "pending",
         "date": "2026-10-08"
+      },
+      "odorMonographReview": {
+        "odor": "Farinaceo; dato riferito a Clitopilus prunulus s.s.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 23,
+          "locator": "Farina; specie nominale"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
       }
     },
     {
@@ -1555,6 +1572,13 @@
             "odor"
           ],
           "locator": "Timbro fruttato (nome nella fonte: L. porninae)"
+        },
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 12 (numerazione 1-based): Arancia/scorza; corrispondenza del nome da verificare"
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -1566,6 +1590,16 @@
           "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
           "locator": "Timbro fruttato (nome nella fonte: L. porninae)"
         }
+      },
+      "odorMonographReview": {
+        "odor": "Agrumato, di scorza d'arancia; la fonte usa la grafia Lactarius porninsis.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 12,
+          "locator": "Arancia/scorza; corrispondenza del nome da verificare"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
       }
     },
     {
@@ -1577,6 +1611,13 @@
             "odor"
           ],
           "locator": "Altri esempi: lardaioli bianchi"
+        },
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 29 (numerazione 1-based): Latte bollito; fonte cita H. penarius"
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -1588,6 +1629,16 @@
           "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
           "locator": "Altri esempi: lardaioli bianchi"
         }
+      },
+      "odorMonographReview": {
+        "odor": "Latte bollito, documentato per Hygrophorus penarius; attribuzione a H. penarioides da verificare.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 29,
+          "locator": "Latte bollito; fonte cita H. penarius"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
       }
     },
     {
@@ -1877,6 +1928,167 @@
           "url": "https://www.micoponte.it/SchedeFunghi/Hydnum_repandum.html",
           "locator": "Principali caratteri identificativi; Caratteri microscopici"
         }
+      }
+    },
+    {
+      "scientificName": "Agaricus campestris",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 33 (numerazione 1-based): Nocciola; legno tagliato; prugna"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Di nocciola; la fonte riporta anche note di legno fresco e prugna.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 33,
+          "locator": "Nocciola; legno tagliato; prugna"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
+      }
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 14 (numerazione 1-based): Cacao; nome storico bresadolanum"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Di cacao (citato come Agaricus bresadolanum).",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 14,
+          "locator": "Cacao; nome storico bresadolanum"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
+      }
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 23 (numerazione 1-based): Farina; finocchio; luppolo"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Farinaceo; sono riportate anche note di finocchio e luppolo.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 23,
+          "locator": "Farina; finocchio; luppolo"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
+      }
+    },
+    {
+      "scientificName": "Lepista nuda s.l.",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 12 (numerazione 1-based): Anice; note farina/muschio; solo specie nominale"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Anisato, con possibili note di farina e muschio; riferito a Lepista nuda s.s.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 12,
+          "locator": "Anice; note farina/muschio; solo specie nominale"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
+      }
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 36 (numerazione 1-based): Pesce/crostacei; ostriche fresche"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Di pesce o ostriche fresche.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 36,
+          "locator": "Pesce/crostacei; ostriche fresche"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
+      }
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 33 (numerazione 1-based): Muffa/muffito"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Muffito (citata come Ramaria pallida).",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 33,
+          "locator": "Muffa/muffito"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
+      }
+    },
+    {
+      "scientificName": "Cerioporus squamosus",
+      "sources": [
+        {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "PDF p. 25 (numerazione 1-based): Formaggio; sinonimo Polyporus squamosus"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "odorMonographReview": {
+        "odor": "Di formaggio, riportato come Polyporus squamosus; verificare la sinonimia.",
+        "status": "pending-administrator-approval",
+        "source": {
+          "url": "https://www.fungietnaturae.it/wp-content/uploads/2020/05/GLI-ODORI-NEI-FUNGHI.pdf",
+          "page": 25,
+          "locator": "Formaggio; sinonimo Polyporus squamosus"
+        },
+        "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
       }
     }
   ],
