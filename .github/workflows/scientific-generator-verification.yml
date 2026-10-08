@@ -23,6 +23,7 @@ jobs:
         run: npm run prepare:data
       - name: Check scientific source and toxicology mapping
         run: |
+          node scripts/approved-external-study-evidence.test.mjs
           node scripts/toxicology-syndromes.test.mjs
           node scripts/release-readiness.test.mjs
           node scripts/audit-toxicology-release.mjs
