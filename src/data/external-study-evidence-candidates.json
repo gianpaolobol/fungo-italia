@@ -1138,6 +1138,119 @@
         "status": "pending",
         "notes": "Ricerca bibliografica, non approvata"
       }
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "odor": "Debole, fruttato.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "preliminary",
+        "note": "Specie potenzialmente mortale; caratteri non sufficienti per identificazione sicura."
+      }
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "odor": "Non distintivo (documentato per Macrolepiota procera var. procera).",
+      "sporePrint": {
+        "label": "Bianca o crema molto pallido (var. procera)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/macrolepiota-procera.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print; nominal variety"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-variety-only",
+        "note": "Il catalogo è s.l.; non generalizzare automaticamente a tutte le specie del complesso."
+      }
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "odor": "Non distintivo (documentato per Coprinopsis atramentaria s.s.).",
+      "sporePrint": {
+        "label": "Nera (C. atramentaria s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/coprinopsis-atramentaria.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print; synonym Coprinus atramentarius"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "La scheda è s.l.; verificare l'applicabilità alle specie del complesso."
+      }
+    },
+    {
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "odor": "Piacevole (documentato per C. rhacodes s.s.).",
+      "sporePrint": {
+        "label": "Bianca o crema pallido (C. rhacodes s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/chlorophyllum-rhacodes.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Non estendere il dato a C. brunneum e ad altri membri del complesso."
+      }
+    },
+    {
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "sporePrint": {
+        "label": "Bianca (documentata per L. leucothites s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/leucoagaricus-leucothites.php",
+          "fields": [
+            "sporePrint"
+          ],
+          "locator": "Spore print; nominal species"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Odore non inserito perché non verificato in questa ricerca; perimetro s.l. da valutare."
+      }
     }
   ],
   "administratorDecision": {
