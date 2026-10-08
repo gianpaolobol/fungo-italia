@@ -25,7 +25,7 @@ export function applyStudyProfiles(records,integration,registry){
   if('edibility' in profile){
    const food=profile.edibility;
    check(taxon.kind!=='teaching-group','Food category cannot be inferred for a teaching genus');
-   check(keys(food,['label','precautions'])&&text(food.label)&&Array.isArray(food.precautions)&&food.precautions.every(text),'Invalid food assessment');
+   check(keys(food,['label','precautions','syndrome'])&&text(food.label)&&Array.isArray(food.precautions)&&food.precautions.every(text)&&(food.syndrome===undefined||(keys(food.syndrome,['label','severity','latency'])&&text(food.syndrome.label))),'Invalid food assessment');
   }
   check(Array.isArray(entry.evidence)&&entry.evidence.length>0,'Missing study evidence');
   const covered=new Set();
