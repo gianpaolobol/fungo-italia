@@ -1056,6 +1056,44 @@
           "supportedClaim": "Clitocybe dealbata e C. rivulosa sono clitocibi bianchi tossici con sindrome muscarinica; la denominazione della scheda è un raggruppamento didattico, non una specie unica."
         }
       ]
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "profile": {
+        "edibility": {
+          "label": "Tossico gastrointestinale (tossicità costante)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 85,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma pardinum, incluso l'affine T. filamentosum, è tossico e causa sindrome gastrointestinale anche molto severa con tossicità costante."
+        }
+      ]
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "profile": {
+        "edibility": {
+          "label": "Tossico (sindrome morganica gastrointestinale)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 39,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Chlorophyllum molybdites è tossico; provoca sindrome gastrointestinale a breve latenza, talora con complicazioni neurologiche, indipendentemente dalla cottura."
+        }
+      ]
     }
   ]
 }
