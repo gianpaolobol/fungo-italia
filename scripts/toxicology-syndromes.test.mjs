@@ -11,4 +11,9 @@ for(const r of records){
 }
 assert.throws(()=>applyToxicologySyndromes([{scientificName:data.records[0].scientificName,studyProfile:{edibility:{label:'Commestibile',precautions:[]}}}],{version:1,records:[data.records[0]]}),/documented toxic/);
 assert.throws(()=>applyToxicologySyndromes(records,{version:1,records:[data.records[0],data.records[0]]}),/Invalid syndrome evidence/);
+const coprinic=data.records.find(r=>r.scientificName==='Coprinus atramentarius s.l.');
+assert.ok(coprinic);
+const nonEdible=[{scientificName:coprinic.scientificName,studyProfile:{edibility:{label:'Non commestibile',precautions:[]}},sources:[]}];
+applyToxicologySyndromes(nonEdible,{version:1,records:[coprinic]});
+assert.match(nonEdible[0].studyProfile.edibility.syndrome.label,/coprinica/i);
 console.log('toxicology-syndromes tests passed');
