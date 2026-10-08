@@ -962,6 +962,29 @@
         "status": "pending",
         "date": "2026-10-08"
       }
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Ocracea, color camoscio."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/suillus-luteus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Ricerca seconda fonte indipendente con descrizione esplicita ancora aperta; non usare sole foto o indici come conferma."
+      }
     }
   ],
   "administratorDecision": {
