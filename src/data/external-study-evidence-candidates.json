@@ -525,6 +525,11 @@
         "independentOrganizations": 3,
         "assessment": "high-for-nominal-species-only",
         "note": "Tre organizzazioni concordano per E. clypeatum s.s.; non attestano l'intero gruppo s.l."
+      },
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Approved all three; retain taxonomic and source caveats"
       }
     },
     {
@@ -555,6 +560,11 @@
         "independentOrganizations": 2,
         "assessment": "odor-descriptions-differ; spore-print-one-direct-source",
         "note": "Odore non perfettamente concordante; nessuna certezza artificiale."
+      },
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Approved all three; retain taxonomic and source caveats"
       }
     },
     {
@@ -585,6 +595,11 @@
         "independentOrganizations": 2,
         "assessment": "limited-by-infraspecific-scope",
         "note": "Una fonte è relativa alla varietà coniferarum; richiede conferma per T. sejunctum in senso ampio."
+      },
+      "administratorReview": {
+        "status": "approved",
+        "date": "2026-10-08",
+        "notes": "Approved all three; retain taxonomic and source caveats"
       }
     }
   ],
