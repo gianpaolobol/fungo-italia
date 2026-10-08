@@ -63,6 +63,11 @@ export function buildReleaseReadinessReport(catalog, groups = [], options = {}) 
     imageCompleteness: imageCompleteness(taxon),
   }));
   const blockers = profileRows.filter((row) => row.gaps.length > 0);
+  const editorial = {
+    odorPresent: records.filter((taxon) => isText(taxon.studyProfile?.odor)).length,
+    sporePrintPresent: records.filter((taxon) => isText(taxon.studyProfile?.sporePrint?.label)).length,
+    edibilityPresent: records.filter((taxon) => isText(taxon.studyProfile?.edibility?.label)).length,
+  };
   const imageComplete = profileRows.filter((row) => row.imageCompleteness.missingViews.length === 0 && row.imageCompleteness.invalidImages === 0).length;
   const reviewed = profileRows.filter((row) => !row.gaps.includes('independent-review-not-attested')).length;
   return {
@@ -75,6 +80,7 @@ export function buildReleaseReadinessReport(catalog, groups = [], options = {}) 
       groups: groups.length,
       checked: profileRows.length,
       imageComplete,
+      ...editorial,
       independentlyReviewed: reviewed,
       releaseReady: profileRows.length - blockers.length,
       blocked: blockers.length,
@@ -97,6 +103,9 @@ export function formatReleaseReadiness(report) {
   lines.push(`| Groups | ${report.totals.groups} |`);
   lines.push(`| Checked records | ${report.totals.checked} |`);
   lines.push(`| Complete image triplets | ${report.totals.imageComplete} |`);
+  lines.push(`| Odor present | ${report.totals.odorPresent} |`);
+  lines.push(`| Spore print present | ${report.totals.sporePrintPresent} |`);
+  lines.push(`| Edibility present | ${report.totals.edibilityPresent} |`);
   lines.push(`| Independently reviewed | ${report.totals.independentlyReviewed} |`);
   lines.push(`| Release-ready records | ${report.totals.releaseReady} |`);
   lines.push(`| Blocked records | ${report.totals.blocked} |`);
