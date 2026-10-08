@@ -2090,6 +2090,75 @@
         },
         "note": "Sintesi da repertorio olfattivo; non sostituisce eventuali descrizioni approvate. Verificare sinonimi e perimetro dei complessi."
       }
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "odor": "Di patata cruda o ravanello nei giovani esemplari; poco percepibile negli adulti.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-citrina.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Descrizione riferita alla varietà citrina; verificare altre varietà."
+      }
+    },
+    {
+      "scientificName": "Cortinarius caperatus",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bruno-ruggine o bruno-ocra."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/cortinarius-caperatus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Nome storico Cortinarius caperatus; verifica sinonimia con Cortinarius/Rozites."
+      }
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "odor": "Di ravanello, intenso quando schiacciato, per T. album s.s.; T. stiparophyllum è descritto come dolciastro e sgradevole.",
+      "sporePrint": {
+        "label": "Bianca, documentata per T. album s.s."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/tricholoma-album.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Il complesso comprende taxa con odori diversi; non attribuire una sola nota a tutto il gruppo."
+      }
     }
   ],
   "administratorDecision": {
