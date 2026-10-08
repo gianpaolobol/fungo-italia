@@ -763,6 +763,52 @@
         "assessment": "partial-composite-taxon",
         "note": "La scheda canonica include anche P. citrinopileatus: questi dati sono verificati solo per P. cornucopiae e NON possono essere applicati all'intera scheda composita senza differenziazione."
       }
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "odor": "Fungino, poco distintivo.",
+      "sporePrint": {
+        "label": "Bruno-porpora."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/hypholoma-fasciculare.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Nessuna seconda fonte indipendente verificata in questo lotto; non indicare concordanza multipla."
+      }
+    },
+    {
+      "scientificName": "Hypholoma lateritium",
+      "odor": "Non significativo.",
+      "sporePrint": {
+        "label": "Bruno-porpora."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/hypholoma-lateritium.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Non generalizzare al genere; ricerca seconda fonte aperta."
+      }
     }
   ],
   "administratorDecision": {
