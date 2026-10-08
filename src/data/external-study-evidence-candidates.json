@@ -3756,6 +3756,59 @@
         "assessment": "single-institutional-source-nominal-species",
         "note": "Non estendere a S. squamosus: la fonte tratta S. imbricatus."
       }
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "odor": "Spesso intenso e sgradevole, da fetido a nitroso-ammoniacale per R. foetens; alcune specie, come R. illota, hanno note di mandorle amare.",
+      "sporePrint": {
+        "label": "Crema per Russula foetens; non verificata per tutta la sottosezione."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15049-russula-foetens-pers-fr-1796/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Scheda R. foetens: Carne; Microscopia; osservazioni sulla sporata crema"
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=998",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Voce Illota: odore di mandorle amare; sottosezione Foetentinae"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "two-species-one-organization",
+        "note": "Non estendere la sporata crema a tutte le Foetentinae; odori variabili e non diagnostici isolatamente."
+      }
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "odor": "Farinaceo in T. scalpturatum, con nota rancida negli esemplari vecchi.",
+      "sporePrint": {
+        "label": "Bianca in T. scalpturatum."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/tricholoma-scalpturatum.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "one-component-species",
+        "note": "Non estendere il carattere a T. orirubens, T. squarrulosum o a tutto il gruppo."
+      }
     }
   ],
   "administratorDecision": {
