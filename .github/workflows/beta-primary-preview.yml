@@ -1,0 +1,30 @@
+name: Beta preview (isolated Pages artifact)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - release/beta-primary-review-20261008
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run prepare:data
+      - run: cd web && npm ci && npm run build
+      - name: Validate preview content
+        run: |
+          test -s dist-ios/data.json
+          node -e "const d=require('./dist-ios/data.json');if(d.catalog.length!==148||d.groups.length!==66)process.exit(1)"
+      - name: Archive isolated preview (no production deploy)
+        uses: actions/upload-artifact@v4
+        with:
+          name: beta-primary-preview-site
+          path: dist-ios/
+          retention-days: 14
