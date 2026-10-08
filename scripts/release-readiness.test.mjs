@@ -10,8 +10,9 @@ const completeTaxon = {
   habitat: ['boschi di latifoglie e conifere'],
   lookalikes: ['Tylopilus felleus'],
   sources: [
-    {sourceId: 'S-test', fields: ['habitat'], supportedClaim: 'habitat documented'},
+    {sourceId: 'S-test', fields: ['habitat', 'odor', 'sporePrint', 'edibility'], supportedClaim: 'habitat documented'},
   ],
+  studyProfile: {odor: 'odore documentato', sporePrint: {label: 'sporata documentata'}, edibility: {label: 'valutazione documentata'}},
   independentReviewStatus: 'reviewed',
   referenceImages: [
     {view: 'lateral', src: 'images/reference/test-lateral.jpg', alt: 'laterale', credit: 'tester'},
@@ -57,3 +58,19 @@ const completeTaxon = {
 }
 
 console.log('release-readiness tests passed');
+
+{
+  const noStudy = {...completeTaxon, studyProfile: {}};
+  const report = buildReleaseReadinessReport([noStudy]);
+  assert.equal(report.releaseReady, false);
+  assert.ok(report.blockers[0].gaps.includes('missing-odor'));
+  assert.ok(report.blockers[0].gaps.includes('missing-spore-print'));
+  assert.ok(report.blockers[0].gaps.includes('missing-edibility'));
+}
+{
+  const unsupported = {...completeTaxon, sources: [{fields: ['habitat']}]};
+  const gaps = buildReleaseReadinessReport([unsupported]).blockers[0].gaps;
+  assert.ok(gaps.includes('odor-without-pointwise-evidence'));
+  assert.ok(gaps.includes('spore-print-without-pointwise-evidence'));
+  assert.ok(gaps.includes('edibility-without-pointwise-evidence'));
+}
