@@ -3669,6 +3669,93 @@
         "assessment": "two-species-one-publisher",
         "note": "Due specie di Hericium, una sola organizzazione. Non attribuire automaticamente a tutte le specie del genere."
       }
+    },
+    {
+      "scientificName": "Agaricus sez. Arvenses",
+      "odor": "Anisato o di mandorla, documentato per Agaricus arvensis; non necessariamente uniforme nell'intera sezione.",
+      "sporePrint": {
+        "label": "Bruno-porpora scuro, documentata per A. arvensis."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/agaricus-arvensis.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Agaricus arvensis: Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.mushroomdiary.co.uk/2013/09/horse-mushrooms-identification-agaricus-arvensis/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Agaricus arvensis: Smell; Spore Print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "two-sources-one-component-species",
+        "note": "Due fonti indipendenti per A. arvensis, non due specie della sezione; non generalizzare."
+      }
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "odor": "Gradevole, fungino, con nota di nocciola.",
+      "sources": [
+        {
+          "url": "https://www.micoponte.it/SchedeFunghi/Scutiger_pes-caprae.html",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Principali caratteri identificativi: carne, odore di nocciola"
+        },
+        {
+          "url": "https://www.gruppomicologicocastellano.it/schedario/scutiger_pes-caprae.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore gradevole fungino"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/topic/15342-scutiger-pes-caprae-pers-fr-bondartsev-singer-1941/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Foto e descrizioni: odore fungino"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 3,
+        "assessment": "high-odor-agreement",
+        "note": "Sporata non dedotta da spore ialine osservate al microscopio."
+      }
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "odor": "Lieve; nel secco può ricordare fumo o cioccolato, documentato per S. imbricatus s.s.",
+      "sporePrint": {
+        "label": "Bruna, per S. imbricatus s.s."
+      },
+      "sources": [
+        {
+          "url": "https://www.fs.usda.gov/r6/reo/survey-and-manage/downloads/fungi/handbook-fu-pnwgtr572-2003.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "USDA PNW-GTR-572, species account Sarcodon imbricatus, S3-100"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-institutional-source-nominal-species",
+        "note": "Non estendere a S. squamosus: la fonte tratta S. imbricatus."
+      }
     }
   ],
   "administratorDecision": {
