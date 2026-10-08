@@ -1752,6 +1752,52 @@
         ],
         "reviewDate": "2026-10-08"
       }
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-caesarea.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-species-source",
+        "note": "Non confondere con A. jacksonii; nessuna commestibilità ricavata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "odor": "Non distintivo da fresco; sgradevole negli esemplari vecchi o deteriorati.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/amanita-rubescens.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-species-source",
+        "note": "Odore dei vecchi esemplari non diagnostico; la fonte di commestibilità rimane la Guida ragionata."
+      }
     }
   ],
   "administratorDecision": {
