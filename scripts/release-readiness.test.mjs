@@ -27,6 +27,9 @@ const completeTaxon = {
   assert.equal(report.totals.releaseReady, 1);
   assert.equal(report.totals.blocked, 0);
   assert.equal(report.totals.imageComplete, 1);
+  assert.equal(report.totals.odorPresent, 1);
+  assert.equal(report.totals.sporePrintPresent, 1);
+  assert.equal(report.totals.edibilityPresent, 1);
   assert.equal(report.totals.independentlyReviewed, 1);
 }
 
@@ -67,6 +70,9 @@ console.log('release-readiness tests passed');
   const noStudy = {...completeTaxon, studyProfile: {}};
   const report = buildReleaseReadinessReport([noStudy]);
   assert.equal(report.releaseReady, false);
+  assert.equal(report.totals.odorPresent, 0);
+  assert.equal(report.totals.sporePrintPresent, 0);
+  assert.equal(report.totals.edibilityPresent, 0);
   assert.ok(report.blockers[0].gaps.includes('missing-odor'));
   assert.ok(report.blockers[0].gaps.includes('missing-spore-print'));
   assert.ok(report.blockers[0].gaps.includes('missing-edibility'));
