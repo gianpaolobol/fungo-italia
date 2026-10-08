@@ -3809,6 +3809,68 @@
         "assessment": "one-component-species",
         "note": "Non estendere il carattere a T. orirubens, T. squarrulosum o a tutto il gruppo."
       }
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "odor": "Fruttato in Lactarius deliciosus s.s.; non uniforme in tutta la sezione.",
+      "sporePrint": {
+        "label": "Crema chiaro, talvolta rosato o giallastro, per L. deliciosus s.s."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/lactarius-deliciosus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.amep.it/lactarius%20deliciosus.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne: odore lieve; spore crema in massa"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "spore-agreement-odor-variation",
+        "note": "Fonti europee concordano su sporata chiara; odore fruttato o lieve. Non applicare automaticamente a tutti i Deliciosi."
+      }
+    },
+    {
+      "scientificName": "Russula Compactae Nigricantinae",
+      "odor": "Leggermente fruttato in Russula nigricans s.s.; non verificato per l'intera sottosezione.",
+      "sporePrint": {
+        "label": "Bianca per R. nigricans s.s."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/russula-nigricans.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        },
+        {
+          "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=100496",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Description: Smell fruity; Spore-print colour white"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong-for-component-species-only",
+        "note": "Due fonti indipendenti per R. nigricans; la scheda è un gruppo più ampio."
+      }
     }
   ],
   "administratorDecision": {
