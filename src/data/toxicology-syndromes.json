@@ -210,6 +210,62 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità costante",
+        "latency": "Generalmente breve; variabile secondo specie e quantità",
+        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+      },
+      "evidence": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls Mushroom Toxicity: Tricholoma pardinum, gastrointestinal poisoning; exact species attribution to verify",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità costante",
+        "latency": "Generalmente breve; variabile secondo specie e quantità",
+        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+      },
+      "evidence": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls Mushroom Toxicity: Omphalotus olearius, gastrointestinal poisoning; exact species attribution to verify",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità costante",
+        "latency": "Generalmente breve; variabile secondo specie e quantità",
+        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+      },
+      "evidence": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls Mushroom Toxicity: Hypholoma fasciculare, gastrointestinal poisoning; exact species attribution to verify",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità costante",
+        "latency": "Generalmente breve; variabile secondo specie e quantità",
+        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+      },
+      "evidence": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls Mushroom Toxicity: Chlorophyllum molybdites, gastrointestinal poisoning; exact species attribution to verify",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
