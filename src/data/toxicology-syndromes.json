@@ -126,6 +126,34 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "syndrome": {
+        "label": "Sindrome falloidea (amatossinica)",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente mortale; grave danno epatico"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, amatossine e Lepiota tossiche: verificare corrispondenza puntuale della specie in revisione",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Lepiota subincarnata",
+      "syndrome": {
+        "label": "Sindrome falloidea (amatossinica)",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente mortale; grave danno epatico"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, amatossine e Lepiota tossiche: verificare corrispondenza puntuale della specie in revisione",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
