@@ -3445,6 +3445,73 @@
         "assessment": "odor-variable-spore-secondary-only",
         "note": "La sporata ocra non è ancora corroborata da fonte specialistica diretta."
       }
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "odor": "Lieve negli esemplari giovani, poi sgradevole; alcune descrizioni richiamano salamoia di pesce.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.micoponte.it/SchedeFunghi/Amanita_proxima.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Principali caratteri identificativi; Caratteri microscopici"
+        },
+        {
+          "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Scheda Amanita proxima, p. 70"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong-spore-agreement-odor-variable",
+        "note": "Due fonti concordano su sporata bianca e odore che diviene sgradevole; nota di salamoia da terza fonte."
+      }
+    },
+    {
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "odor": "Debole, leggermente spermatico (documentato per S. coronaria s.s.).",
+      "sporePrint": {
+        "label": "Bianca (S. coronaria s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Scheda Sarcosphaera coronaria, carne e odore"
+        },
+        {
+          "url": "https://www.funghiitaliani.it/profile/36492-archivio-micologico/content/page/238/?type=forums_topic_post",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore debole leggermente spermatico"
+        },
+        {
+          "url": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+          "fields": [
+            "sporePrint"
+          ],
+          "locator": "Taxonomic revision, species description: spore print white"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 3,
+        "assessment": "odor-agreement-spore-direct-source",
+        "note": "Revisione tassonomica 2024: non generalizzare il dato all'intero complesso s.l."
+      }
     }
   ],
   "administratorDecision": {
