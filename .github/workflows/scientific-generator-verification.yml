@@ -84,3 +84,35 @@ jobs:
           name: scientific-pwa-webkit-report
           path: web/playwright-report
           retention-days: 7
+
+  technical-provenance:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run prepare:data
+      - run: cd web && npm ci && npm run build
+      - name: Package reproducible technical build
+        run: tar -czf fungo-italia-scientific-preview.tar.gz -C dist-ios .
+      - name: Attest source and build provenance
+        id: attest
+        uses: actions/attest@v4
+        with:
+          subject-path: fungo-italia-scientific-preview.tar.gz
+      - name: Verify signed attestation
+        run: gh attestation verify fungo-italia-scientific-preview.tar.gz --repo "$GITHUB_REPOSITORY"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: signed-scientific-preview
+          path: fungo-italia-scientific-preview.tar.gz
+          retention-days: 14
