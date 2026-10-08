@@ -3551,6 +3551,32 @@
         "assessment": "three-species-same-publisher-not-independent",
         "note": "Concordanza fra tre specie della sezione, tutte descritte dalla stessa organizzazione; non estendere indiscriminatamente all'intera sezione."
       }
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "odor": "Quasi inodore da giovane; odore sgradevole negli esemplari maturi.",
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15641-saproamanita-vittadinii%C2%A0moretti-redhead-vizzini-drehmel-contu-2016/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Descrizione macroscopica, paragrafo introduttivo: odore con l'età"
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3068",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Voce Vittadinii, descrizione di Saproamanita vittadinii"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "same-organization-two-pages",
+        "note": "Due pagine AMINT concordanti, non due fonti indipendenti. Sporata non documentata: non inferire dal colore delle spore al microscopio."
+      }
     }
   ],
   "administratorDecision": {
