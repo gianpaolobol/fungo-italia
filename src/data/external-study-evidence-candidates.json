@@ -487,6 +487,105 @@
           "notes": "Nessuna"
         }
       }
+    },
+    {
+      "scientificName": "Entoloma clypeatum s.l.",
+      "odor": "Odore gradevole di farina fresca (documentato per E. clypeatum s.s.; verificare l'estensione al complesso).",
+      "sporePrint": {
+        "label": "Rosa in massa (documentato per E. clypeatum s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/18070-entoloma-clypeatum-l-fr-p-kumm-1871/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; Microscopia"
+        },
+        {
+          "url": "https://www.sardegnafunghi.it/clypeatum.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione; Sporata"
+        },
+        {
+          "url": "https://hongoscomestiblesytoxicos.ib.unam.mx/fichas/entoloma_clypeatum.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione morfologica; esporada"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 3,
+        "assessment": "high-for-nominal-species-only",
+        "note": "Tre organizzazioni concordano per E. clypeatum s.s.; non attestano l'intero gruppo s.l."
+      }
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "odor": "Odore tenue, gradevole, leggermente farinaceo (AMINT); First Nature lo descrive non significativo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/24461-tricholoma-columbetta-fr-fr-p-kumm-1871/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Foto e descrizioni; Carne"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/tricholoma-columbetta.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "odor-descriptions-differ; spore-print-one-direct-source",
+        "note": "Odore non perfettamente concordante; nessuna certezza artificiale."
+      }
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "odor": "Odore tenue farinaceo.",
+      "sporePrint": {
+        "label": "Bianca in massa."
+      },
+      "sources": [
+        {
+          "url": "https://www.gruppomicologicocastellano.it/schedario/tricholoma_sejunctum_var_coniferarum.pdf",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne; descrizione della varietà coniferarum, non automaticamente della specie intera"
+        },
+        {
+          "url": "https://it.wikipedia.org/wiki/Tricholoma_sejunctum",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; Spore; fonte secondaria da confermare"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "limited-by-infraspecific-scope",
+        "note": "Una fonte è relativa alla varietà coniferarum; richiede conferma per T. sejunctum in senso ampio."
+      }
     }
   ],
   "administratorDecision": {
