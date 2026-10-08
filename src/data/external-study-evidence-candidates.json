@@ -2343,6 +2343,75 @@
         "assessment": "direct-specialist-source",
         "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
       }
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/hygrocybe-punicea.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-species-source",
+        "note": "Singola fonte specialistica; per il complesso s.l. i dati sono riferiti solo alla specie nominale."
+      }
+    },
+    {
+      "scientificName": "Imleria badia",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bruno olivaceo."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/imleria-badia.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-species-source",
+        "note": "Singola fonte specialistica; per il complesso s.l. i dati sono riferiti solo alla specie nominale."
+      }
+    },
+    {
+      "scientificName": "Hygrocybe conica s.l.",
+      "odor": "Non distintivo (documentato per H. conica s.s.).",
+      "sporePrint": {
+        "label": "Bianca (H. conica s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/hygrocybe-conica.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Singola fonte specialistica; per il complesso s.l. i dati sono riferiti solo alla specie nominale."
+      }
     }
   ],
   "administratorDecision": {
