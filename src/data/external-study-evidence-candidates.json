@@ -3309,6 +3309,68 @@
         "assessment": "one-specific-observation",
         "note": "Osservazione di un esemplare; sporata non attestata dalla fonte consultata."
       }
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "odor": "Lieve, fungino o leggermente farinaceo nella varietà eryngii; alcune varietà presentano note acidule.",
+      "sporePrint": {
+        "label": "Bianca, documentata per P. eryngii var. eryngii."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/8438-pleurotus-eryngii%C2%A0dc-fr-qu%C3%A9l-1872/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; Microscopia, var. eryngii"
+        },
+        {
+          "url": "https://www.ambpesaro.it/portfolio-item/pleurotus-eryngii/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Carne; Sporata"
+        },
+        {
+          "url": "https://www.ausl.mo.it/media/Dispensa_per_la_preparazione_all__esame.pdf?x17127=",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Dispensa ispettorato micologico, p. 96: Pleurotus eryngii"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 3,
+        "assessment": "spore-concordant-odor-variable",
+        "note": "Fonti concordano sulla sporata bianca; odore descritto da subnullo a leggermente farinaceo. Il complesso include varietà ecologiche."
+      }
+    },
+    {
+      "scientificName": "Gyroporus castaneus s.l.",
+      "odor": "Non distintivo, per G. castaneus s.s.",
+      "sporePrint": {
+        "label": "Giallo pallido, per G. castaneus s.s."
+      },
+      "sources": [
+        {
+          "url": "https://www.mushroomexpert.com/gyroporus_castaneus.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odor and Taste; Spore Print (Kuo, 2026)"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Fonte aggiornata giugno 2026, tratta la variabilità tassonomica transatlantica; non attribuire automaticamente a ogni taxon del complesso."
+      }
     }
   ],
   "administratorDecision": {
