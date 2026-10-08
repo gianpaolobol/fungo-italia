@@ -154,6 +154,20 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "syndrome": {
+        "label": "Sindrome falloidea (amatossinica)",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente mortale; grave danno epatico"
+      },
+      "evidence": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK431052/",
+        "location": "StatPearls, Amatoxin Mushroom Toxicity: Galerina marginata tra i taxa produttori di amatossine; il gruppo didattico non implica equivalenza tossicologica di ogni specie",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
