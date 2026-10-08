@@ -30,6 +30,7 @@ const completeTaxon = {
   assert.equal(report.totals.odorPresent, 1);
   assert.equal(report.totals.sporePrintPresent, 1);
   assert.equal(report.totals.edibilityPresent, 1);
+  assert.deepEqual(report.profileRows[0].fields, {odor:true, sporePrint:true, edibility:true});
   assert.equal(report.totals.independentlyReviewed, 1);
 }
 
@@ -73,6 +74,7 @@ console.log('release-readiness tests passed');
   assert.equal(report.totals.odorPresent, 0);
   assert.equal(report.totals.sporePrintPresent, 0);
   assert.equal(report.totals.edibilityPresent, 0);
+  assert.deepEqual(report.profileRows[0].fields, {odor:false, sporePrint:false, edibility:false});
   assert.ok(report.blockers[0].gaps.includes('missing-odor'));
   assert.ok(report.blockers[0].gaps.includes('missing-spore-print'));
   assert.ok(report.blockers[0].gaps.includes('missing-edibility'));
