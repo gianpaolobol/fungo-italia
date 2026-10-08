@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "scientificName": "Amanita phalloides",
+      "syndrome": {
+        "label": "Sindrome falloidea (amatossinica)",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente mortale"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, p. 30",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "syndrome": {
+        "label": "Sindrome falloidea (amatossinica)",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente mortale"
+      },
+      "evidence": {
+        "url": "https://www.epicentro.iss.it/ben/2015/giugno/1",
+        "location": "ISS Epicentro, episodi da Amanita in Calabria, introduzione",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "syndrome": {
+        "label": "Sindrome panterinica",
+        "latency": "Breve latenza",
+        "severity": "Intossicazione neurologica"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, Sindromi a breve latenza",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "syndrome": {
+        "label": "Sindrome panterinica",
+        "latency": "Breve latenza",
+        "severity": "Intossicazione neurologica"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, Sindromi a breve latenza",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "syndrome": {
+        "label": "Sindrome orellanica",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente mortale; danno renale"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, p. 30",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "syndrome": {
+        "label": "Sindrome giromitrica",
+        "latency": "Lunga latenza",
+        "severity": "Potenzialmente grave"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, p. 30",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Generalmente breve latenza",
+        "severity": "Intossicazione gastrointestinale"
+      },
+      "evidence": {
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, Sindromi a breve latenza",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "syndrome": {
+        "label": "Sindrome nefrotossica da Amanita proxima",
+        "latency": "Lunga latenza possibile",
+        "severity": "Insufficienza renale acuta"
+      },
+      "evidence": {
+        "url": "https://www.epicentro.iss.it/ben/2019/aprile/epidemiologia-intossicazione-funghi",
+        "location": "ISS Epicentro, casistica Centro Antiveleni Milano 1998–2017",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    }
+  ]
+}
