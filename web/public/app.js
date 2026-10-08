@@ -49,10 +49,24 @@ function studySources(t){
 const referenceViews=[['lateral','Laterale'],['top','Sopra'],['underside','Sotto']];
 const referenceLabel=(photo,fallback)=>photo?.alt?.endsWith(' — base esterna')?'Base esterna':fallback;
 const referencePath=/^images\/reference\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.(jpg|jpeg|png|webp)$/;
+const edibilityCategories=[
+ ['free','Commestibilità libera',/^(commestibile|commestibilità libera)(?!.*condizionat)/i],
+ ['conditional','Commestibilità condizionata',/commestibilit[aà] condizionata|commestibile.*condizion|previa cottura/i],
+ ['discouraged','Commestibilità sconsigliata',/sconsigliat/i],
+ ['no-food-value','Assenza di valore alimentare',/assenza di valore alimentare|privo di valore alimentare/i],
+ ['inedible','Non commestibilità',/non commestibile|non ammettere al consumo/i],
+ ['toxic','Tossicità',/tossic|velenos|mortale|nefrotossic/i]
+];
+function edibilityBadge(food){
+ const label=food?.label;
+ if(!label)return '<span class="edibility-badge edibility-unknown">Non documentata</span>';
+ const found=edibilityCategories.find(([, ,pattern])=>pattern.test(label));
+ return found?'<span class="edibility-badge edibility-'+found[0]+'">'+escape(found[1])+'</span> <span class="edibility-detail">'+escape(label)+'</span>':'<span class="edibility-badge edibility-unknown">Categoria da verificare</span> <span class="edibility-detail">'+escape(label)+'</span>';
+}
 function studyFacts(t){
  const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
  const color=print?.color&&/^#[0-9a-f]{6}$/i.test(print.color)?'<span class="spore-swatch" style="background:'+print.color+'" aria-hidden="true"></span>':'';
- return '<dl class="study-facts"><dt>Odore</dt><dd>'+escape(p.odor||'Non documentato')+'</dd><dt>Sporata</dt><dd>'+color+escape(print?.label||'Non documentata')+(print?.scale?' · '+escape(print.scale):'')+'</dd><dt>Commestibilità</dt><dd>'+escape(t.kind==='teaching-group'?'Consulta le singole specie':food?.label||'Non documentata')+'</dd></dl>'+
+ return '<dl class="study-facts"><dt>Odore</dt><dd>'+escape(p.odor||'Non documentato')+'</dd><dt>Sporata</dt><dd>'+color+escape(print?.label||'Non documentata')+(print?.scale?' · '+escape(print.scale):'')+'</dd><dt>Commestibilità</dt><dd>'+(t.kind==='teaching-group'?'Consulta le singole specie':edibilityBadge(food))+'</dd></dl>'+
  (food?.precautions?.length?'<div class="food-precautions"><strong>Accorgimenti</strong><ul>'+food.precautions.map(value=>'<li>'+escape(value)+'</li>').join('')+'</ul></div>':'')+
  (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
 }
