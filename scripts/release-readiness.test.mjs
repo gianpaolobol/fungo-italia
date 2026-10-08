@@ -33,6 +33,7 @@ const completeTaxon = {
 {
   const incomplete = {
     ...completeTaxon,
+    studyProfile: {},
     id: 'amanita-muscaria',
     scientificName: 'Amanita muscaria',
     habitat: [],
@@ -49,6 +50,9 @@ const completeTaxon = {
     'missing-lookalikes',
     'missing-sources',
     'habitat-without-pointwise-evidence',
+    'missing-odor',
+    'missing-spore-print',
+    'missing-edibility',
     'missing-reference-views:top,underside',
     'independent-review-not-attested',
   ]);
