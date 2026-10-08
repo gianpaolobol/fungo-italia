@@ -2688,6 +2688,75 @@
         "assessment": "single-direct-source",
         "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
       }
+    },
+    {
+      "scientificName": "Gomphus clavatus",
+      "odor": "Tenue.",
+      "sporePrint": {
+        "label": "Ocra fino a oliva-camoscio scuro."
+      },
+      "sources": [
+        {
+          "url": "https://www.fs.usda.gov/pnw/pubs/gtr576.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "USDA Forest Service, species account Gomphus clavatus; odor and spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta per revisione amministrativa; mantenere eventuali discrepanze e limiti tassonomici."
+      }
+    },
+    {
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "odor": "Non significativo per A. ovinus s.s.",
+      "sporePrint": {
+        "label": "Bianca per A. ovinus s.s."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/albatrellus-ovinus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print; species nominal only"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Proposta per revisione amministrativa; mantenere eventuali discrepanze e limiti tassonomici."
+      }
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "odor": "Lieve, fungino (una fonte descrive rafanoide: da approfondire).",
+      "sporePrint": {
+        "label": "Rosa."
+      },
+      "sources": [
+        {
+          "url": "https://mushroomidentification.com/encyclopedia/paddy-straw-mushroom",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Flesh and spore print; description"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta per revisione amministrativa; mantenere eventuali discrepanze e limiti tassonomici."
+      }
     }
   ],
   "administratorDecision": {
