@@ -2980,6 +2980,29 @@
         "assessment": "nominal-species-only",
         "note": "Il catalogo usa s.l.; non estendere la descrizione a tutte le specie affini."
       }
+    },
+    {
+      "scientificName": "Entoloma vernum",
+      "odor": "Debolmente farinaceo, non distintivo.",
+      "sporePrint": {
+        "label": "Rosa."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/entoloma-vernum.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Spore print; Odour/taste"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Caratteri specifici di Entoloma vernum; da approvare. Non inferire commestibilità dalla fonte esterna."
+      }
     }
   ],
   "administratorDecision": {
