@@ -2159,6 +2159,190 @@
         "assessment": "single-specialist-source",
         "note": "Il complesso comprende taxa con odori diversi; non attribuire una sola nota a tutto il gruppo."
       }
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "odor": "Non distintivo; lievemente di ravanello se contusa.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-pantherina.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "odor": "Sgradevole, terroso.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/amanita-porphyria.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "odor": "Di ravanello dopo taglio o contusione.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/amanita-strobiliformis.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/tricholoma-terreum.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Ocra o bruno-siena."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/suillus-granulatus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Caloboletus calopus",
+      "odor": "Fungino intenso e sgradevole.",
+      "sporePrint": {
+        "label": "Bruno olivaceo."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/caloboletus-calopus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Caloboletus radicans",
+      "odor": "Fungino intenso e sgradevole.",
+      "sporePrint": {
+        "label": "Bruno olivaceo."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/caloboletus-radicans.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/auricularia-auricula-judae.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "direct-specialist-source",
+        "note": "Caratteri estratti direttamente dalla scheda nominale; approvazione amministrativa ancora necessaria."
+      }
     }
   ],
   "administratorDecision": {
