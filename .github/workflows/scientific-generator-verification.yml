@@ -50,6 +50,7 @@ jobs:
           if ! git diff --quiet -- src/data/catalog.json src/data/groups.json src/data/provenance.json; then
             echo 'Generated atlas outputs differ from tracked files; preserve generated artifacts and reconcile before publication.'
             git diff --stat -- src/data/catalog.json src/data/groups.json src/data/provenance.json
+            git diff --binary -- src/data/catalog.json src/data/groups.json src/data/provenance.json > /tmp/generated-content-drift.patch
           fi
           test -s dist-ios/data.json
       - name: Enforce committed generated content (publication only)
@@ -57,6 +58,16 @@ jobs:
         run: |
           git diff --exit-code -- src/data/catalog.json src/data/groups.json src/data/provenance.json
           test -s dist-ios/data.json
+      - name: Preserve generated-content reconciliation patch
+        if: always()
+        run: |
+          git diff --binary -- src/data/catalog.json src/data/groups.json src/data/provenance.json > generated-content-drift.patch
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: generated-content-drift
+          path: generated-content-drift.patch
+          retention-days: 7
       - name: Preserve build evidence
         if: always()
         uses: actions/upload-artifact@v4
