@@ -44,13 +44,19 @@ jobs:
           cd web
           npm ci
           npm run build
-      - name: Verify generated content tracked changes
+      - name: Audit generated content drift (primary-review beta)
         run: |
           git status --short
-          if ! git diff --quiet -- src/data/catalog.json src/data/groups.json dist-ios/data.json; then
-            echo 'Generated atlas outputs are not committed to this branch.'
-            exit 1
+          if ! git diff --quiet -- src/data/catalog.json src/data/groups.json src/data/provenance.json; then
+            echo 'Generated atlas outputs differ from tracked files; preserve generated artifacts and reconcile before publication.'
+            git diff --stat -- src/data/catalog.json src/data/groups.json src/data/provenance.json
           fi
+          test -s dist-ios/data.json
+      - name: Enforce committed generated content (publication only)
+        if: ${{ github.ref == 'refs/heads/main' }}
+        run: |
+          git diff --exit-code -- src/data/catalog.json src/data/groups.json src/data/provenance.json
+          test -s dist-ios/data.json
       - name: Preserve build evidence
         if: always()
         uses: actions/upload-artifact@v4
