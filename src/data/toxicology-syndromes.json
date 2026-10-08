@@ -266,6 +266,48 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità non universale",
+        "latency": "Variabile; spesso breve",
+        "severity": "Disturbi gastrointestinali, talvolta intensi"
+      },
+      "evidence": {
+        "url": "https://www.fungimag.com/spring-2023-articles/V16I1-Gastro.pdf",
+        "location": "Benjamin & Sitta (2023), Mushrooms causing gastro-intestinal distress, group 2: Agaricus xanthodermus sensu lato: group 2, very common gastrointestinal toxicity but not universal",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità non universale",
+        "latency": "Variabile; spesso breve",
+        "severity": "Disturbi gastrointestinali, talvolta intensi"
+      },
+      "evidence": {
+        "url": "https://www.fungimag.com/spring-2023-articles/V16I1-Gastro.pdf",
+        "location": "Benjamin & Sitta (2023), Mushrooms causing gastro-intestinal distress, group 2: Boletus (Rubroboletus) satanas: group 2, very common gastrointestinal toxicity but not universal",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità non universale",
+        "latency": "Variabile; spesso breve",
+        "severity": "Disturbi gastrointestinali, talvolta intensi"
+      },
+      "evidence": {
+        "url": "https://www.fungimag.com/spring-2023-articles/V16I1-Gastro.pdf",
+        "location": "Benjamin & Sitta (2023), Mushrooms causing gastro-intestinal distress, group 2: Ramaria formosa: group 2, very common gastrointestinal toxicity but not universal",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
