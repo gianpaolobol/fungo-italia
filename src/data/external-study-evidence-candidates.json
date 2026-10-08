@@ -67,6 +67,31 @@
           "locator": "Spore print"
         }
       ]
+    },
+    {
+      "scientificName": "Lactarius volemus s.l.",
+      "odor": "Caratteristico odore di pesce o crostacei, particolarmente evidente con la maturazione; carattere riferito al complesso volemus.",
+      "sporePrint": {
+        "label": "Bianco-crema o crema pallido; da verificare per i taxa del complesso."
+      },
+      "sources": [
+        {
+          "url": "https://www.mushroomexpert.com/odortaste.html",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Fishy or shrimplike: Lactarius volemus"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/lactifluus-volemus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print; verify accepted-name and complex scope"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required"
     }
   ],
   "administratorDecision": {
