@@ -61,6 +61,7 @@ export function buildReleaseReadinessReport(catalog, groups = [], options = {}) 
     rank: taxon.rank ?? null,
     gaps: profileGaps(taxon),
     imageCompleteness: imageCompleteness(taxon),
+    fields: {odor: isText(taxon.studyProfile?.odor), sporePrint: isText(taxon.studyProfile?.sporePrint?.label), edibility: isText(taxon.studyProfile?.edibility?.label)},
   }));
   const blockers = profileRows.filter((row) => row.gaps.length > 0);
   const editorial = {
@@ -86,6 +87,7 @@ export function buildReleaseReadinessReport(catalog, groups = [], options = {}) 
       blocked: blockers.length,
     },
     blockers,
+    profileRows,
     releaseReady: blockers.length === 0,
   };
 }
