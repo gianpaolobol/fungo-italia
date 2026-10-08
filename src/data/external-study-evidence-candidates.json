@@ -2527,6 +2527,167 @@
         "assessment": "single-specialist-source",
         "note": "Da sottoporre alla revisione amministrativa; non attribuire commestibilità da questa fonte."
       }
+    },
+    {
+      "scientificName": "Suillellus luridus",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Bruno-oliva."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/suillellus-luridus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Species identification guide, Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Gyroporus cyanescens",
+      "odor": "Tenue, poco distintivo.",
+      "sporePrint": {
+        "label": "Giallo paglierino."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/gyroporus-cyanescens.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Species identification guide, Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Volvopluteus gloiocephalus",
+      "odor": "Gradevole e tenue, non distintivo.",
+      "sporePrint": {
+        "label": "Rosa."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/volvopluteus-gloiocephalus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Species identification guide, Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Meripilus giganteus",
+      "odor": "Poco distintivo, fungino.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=100770",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Description: Smell; Spore-print colour"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Polyporus umbellatus",
+      "odor": "Gradevole, dolciastro negli esemplari giovani.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/polyporus-umbellatus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Species identification guide, Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "odor": "Fungino (documentato per L. sulphureus s.s.).",
+      "sporePrint": {
+        "label": "Bianca (documentata per L. sulphureus s.s.)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/laetiporus-sulphureus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Species identification guide, Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "odor": "Leggermente fruttato.",
+      "sporePrint": {
+        "label": "Bianco-crema."
+      },
+      "sources": [
+        {
+          "url": "https://www.sardegnafunghi.it/tesquorum.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizione: carne, sporata"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source",
+        "note": "Proposta sintetica per revisione amministrativa; la classificazione di commestibilità non è derivata da questa fonte."
+      }
     }
   ],
   "administratorDecision": {
