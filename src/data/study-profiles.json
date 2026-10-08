@@ -828,6 +828,101 @@
           "supportedClaim": "C. orellanoides, indicato anche come C. speciosissimus o C. rubellus, è velenoso potenzialmente mortale."
         }
       ]
+    },
+    {
+      "scientificName": "Hypholoma lateritium",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 62,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida classifica Hypholoma lateritium non commestibile in Italia per la confondibilità con H. fasciculare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "profile": {
+        "edibility": {
+          "label": "Tossico gastrointestinale",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 62,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida descrive tossicità gastrointestinale costante per Hypholoma fasciculare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile (commestibilità libera)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 91,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida considera Tricholoma terreum commestibile, con criticità di confondibilità con specie tossiche."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "profile": {
+        "edibility": {
+          "label": "Commestibile (commestibilità libera)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 91,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida considera Tricholoma portentosum commestibile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato; raccolta, consumo e commercializzazione vietati in Italia secondo la Guida (2021)",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 88,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "La Guida classifica Tricholoma equestre fra le specie sconsigliate e documenta il divieto italiano."
+        }
+      ]
     }
   ]
 }
