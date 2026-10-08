@@ -1256,6 +1256,13 @@
             "sporePrint"
           ],
           "locator": "Odour/taste; Spore print; nominal variety"
+        },
+        {
+          "url": "https://www.micoponte.it/File/MicoPonte%204%20-%202010%20%28sito%20web%29.pdf",
+          "locator": "Scheda Macrolepiota procera, caratteri macroscopici",
+          "fields": [
+            "odor"
+          ]
         }
       ],
       "reviewStatus": "candidate-taxonomic-scope-check-required",
@@ -1263,6 +1270,15 @@
         "independentOrganizations": 1,
         "assessment": "nominal-variety-only",
         "note": "Il catalogo è s.l.; non generalizzare automaticamente a tutte le specie del complesso."
+      },
+      "micoponteReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Gradevole, fungino (documentato per M. procera s.s.).",
+        "note": "Specie nominale, non tutto il gruppo",
+        "source": {
+          "url": "https://www.micoponte.it/File/MicoPonte%204%20-%202010%20%28sito%20web%29.pdf",
+          "locator": "Scheda Macrolepiota procera, caratteri macroscopici"
+        }
       }
     },
     {
@@ -1767,6 +1783,13 @@
             "sporePrint"
           ],
           "locator": "Identification guide: Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.micoponte.it/SchedeFunghi/Amanita_caesarea.html",
+          "locator": "Principali caratteri identificativi",
+          "fields": [
+            "odor"
+          ]
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -1774,6 +1797,15 @@
         "independentOrganizations": 1,
         "assessment": "direct-species-source",
         "note": "Non confondere con A. jacksonii; nessuna commestibilità ricavata da questa fonte."
+      },
+      "micoponteReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Quasi nullo.",
+        "note": "Descrizione puntuale della specie; non sovrascrive precedenti approvazioni.",
+        "source": {
+          "url": "https://www.micoponte.it/SchedeFunghi/Amanita_caesarea.html",
+          "locator": "Principali caratteri identificativi"
+        }
       }
     },
     {
@@ -1797,6 +1829,54 @@
         "independentOrganizations": 1,
         "assessment": "direct-species-source",
         "note": "Odore dei vecchi esemplari non diagnostico; la fonte di commestibilità rimane la Guida ragionata."
+      }
+    },
+    {
+      "scientificName": "Stropharia rugosoannulata",
+      "sources": [
+        {
+          "url": "https://www.micoponte.it/SchedeFunghi/Stropharia_rugosoannulata.html",
+          "locator": "Carne; Caratteri microscopici",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ]
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "micoponteReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Leggero, di patata cruda o rapa.",
+        "sporePrint": "Bruno-violacea.",
+        "note": "Descrizione puntuale della specie; non sovrascrive precedenti approvazioni.",
+        "source": {
+          "url": "https://www.micoponte.it/SchedeFunghi/Stropharia_rugosoannulata.html",
+          "locator": "Carne; Caratteri microscopici"
+        }
+      }
+    },
+    {
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "sources": [
+        {
+          "url": "https://www.micoponte.it/SchedeFunghi/Hydnum_repandum.html",
+          "locator": "Principali caratteri identificativi; Caratteri microscopici",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ]
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "micoponteReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Leggero (documentato per Hydnum repandum s.s.).",
+        "sporePrint": "Bianco-crema (H. repandum s.s.).",
+        "note": "Specie nominale, non tutto il gruppo",
+        "source": {
+          "url": "https://www.micoponte.it/SchedeFunghi/Hydnum_repandum.html",
+          "locator": "Principali caratteri identificativi; Caratteri microscopici"
+        }
       }
     }
   ],
