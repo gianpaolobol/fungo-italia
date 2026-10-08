@@ -717,6 +717,52 @@
         "note": "Una sola fonte diretta verificata per entrambi i caratteri; cercare seconda fonte indipendente."
       },
       "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "odor": "Gradevole, fungino, ma non distintivo.",
+      "sporePrint": {
+        "label": "Bianca oppure grigio-lilla molto pallido."
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/pleurotus-ostreatus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Necessaria seconda fonte indipendente; non confondere il colore delle lamelle con quello della sporata."
+      }
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "odor": "Per Pleurotus cornucopiae: odore fungino, talvolta con lieve nota di anice.",
+      "sporePrint": {
+        "label": "Per Pleurotus cornucopiae: bianca o crema molto pallido."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/pleurotus-cornucopiae.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "partial-composite-taxon",
+        "note": "La scheda canonica include anche P. citrinopileatus: questi dati sono verificati solo per P. cornucopiae e NON possono essere applicati all'intera scheda composita senza differenziazione."
+      }
     }
   ],
   "administratorDecision": {
