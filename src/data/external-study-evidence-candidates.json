@@ -700,6 +700,13 @@
             "sporePrint"
           ],
           "locator": "Description: spore print white"
+        },
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro mandorlato"
         }
       ],
       "concordance": {
@@ -707,7 +714,16 @@
         "assessment": "high-for-spore-print-odor-variable",
         "note": "AMINT e Provincia Cuneo concordano sull'odore di mandorla, First Nature descrive fungino non distintivo; mantenere variabilità."
       },
-      "reviewStatus": "candidate-awaiting-administrator-approval"
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Gradevole, di mandorle amare.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro mandorlato"
+        }
+      }
     },
     {
       "scientificName": "Coprinus comatus",
@@ -1129,6 +1145,13 @@
             "sporePrint"
           ],
           "locator": "Identification guide: Spore print; Odour/taste"
+        },
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro fruttato"
         }
       ],
       "note": "Fonte per C. cibarius nominale, non automaticamente per tutto il complesso.",
@@ -1136,6 +1159,15 @@
       "concordance": {
         "assessment": "one-direct-source",
         "note": "Fonte per C. cibarius nominale, non automaticamente per tutto il complesso."
+      },
+      "mugelloReview": {
+        "odor": "Fruttato, di albicocca, documentato per C. cibarius s.s. e affini.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro fruttato"
+        }
       }
     },
     {
@@ -1366,6 +1398,13 @@
             "sporePrint"
           ],
           "locator": "I funghi della Campania, p. 187, sezioni CARNE/SPORE (secondo i campi presenti)"
+        },
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro fungino"
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -1374,6 +1413,15 @@
         "odor": "Fungino.",
         "sporePrint": "Bruno-rossastra.",
         "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
+      },
+      "mugelloReview": {
+        "odor": "Fungino, talvolta con nota fruttata.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro fungino"
+        }
       }
     },
     {
@@ -1392,6 +1440,226 @@
         "status": "pending-administrator-approval",
         "sporePrint": "Bianco-ocra.",
         "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
+      }
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro farinaceo"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Sgradevole, di farina rancida.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro farinaceo"
+        }
+      }
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro farinaceo"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Gradevole, di farina fresca.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro farinaceo"
+        }
+      }
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro fruttato (nome nella fonte: L. porninae)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Intenso, di scorza di mandarino.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro fruttato (nome nella fonte: L. porninae)"
+        }
+      }
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Altri esempi: lardaioli bianchi"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Di latte bollito o burro.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Altri esempi: lardaioli bianchi"
+        }
+      }
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Altri esempi: T. saponaceum s.s."
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Di sapone di Marsiglia, talora simile ad acqua di lavatrice.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Altri esempi: T. saponaceum s.s."
+        }
+      }
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro fungino, confronto con Kuehneromyces mutabilis"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Debole, farinaceo, descritto per G. marginata s.s.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro fungino, confronto con Kuehneromyces mutabilis"
+        }
+      }
+    },
+    {
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro fenolico"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Fenolico, di inchiostro; caratteristico di numerose specie della sezione.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro fenolico"
+        }
+      }
+    },
+    {
+      "scientificName": "Clitocybe nebularis",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Nota su Clitocybe nebularis"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Acidulo, con note di sudore.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Nota su Clitocybe nebularis"
+        }
+      }
+    },
+    {
+      "scientificName": "Infundibulicybe geotropa",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro floreale"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Floreale e aromatico.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro floreale"
+        }
+      }
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "sources": [
+        {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Timbro fruttato"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "mugelloReview": {
+        "odor": "Fruttato, simile a caramelle alla fragola; documentato per R. botrytis s.s.",
+        "status": "pending-administrator-approval",
+        "note": "Fonte olfattiva divulgativa specialistica; mantenere eventuali limiti di specie/gruppo e descrizioni già approvate.",
+        "source": {
+          "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+          "locator": "Timbro fruttato"
+        }
       }
     }
   ],
