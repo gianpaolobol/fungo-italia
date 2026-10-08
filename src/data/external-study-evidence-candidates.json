@@ -3871,6 +3871,67 @@
         "assessment": "strong-for-component-species-only",
         "note": "Due fonti indipendenti per R. nigricans; la scheda è un gruppo più ampio."
       }
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "odor": "In R. delica, inizialmente fruttato e successivamente sgradevole, con nota di pesce; R. chloroides può avere nota fruttata o di pelargonio.",
+      "sporePrint": {
+        "label": "Bianca o crema molto pallido nelle due specie documentate."
+      },
+      "sources": [
+        {
+          "url": "https://www.ambpesaro.it/portfolio-item/russula-delica/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Russula delica, DESCRIZIONE: Carne; Sporata"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/russula-chloroides.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Russula chloroides, Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "two-species-two-organizations",
+        "note": "Caratteri riferiti a R. delica e R. chloroides, non a tutti i taxa del gruppo."
+      }
+    },
+    {
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "odor": "Debole, leggermente fruttato, per Suillellus queletii.",
+      "sporePrint": {
+        "label": "Bruno-olivastra, per S. queletii."
+      },
+      "sources": [
+        {
+          "url": "https://www.gruppomicologicocastellano.it/schedario/boletus_queletii.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Scheda n. 0123, Carne; Spore"
+        },
+        {
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1604",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Boletus queletii = Suillellus queletii; odore debole fruttato"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "two-sources-one-component-species",
+        "note": "Nessuna generalizzazione alle specie vicine/intermedie."
+      }
     }
   ],
   "administratorDecision": {
