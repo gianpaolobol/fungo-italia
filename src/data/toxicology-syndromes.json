@@ -196,6 +196,20 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "syndrome": {
+        "label": "Sindrome coprinica (reazione disulfiram-simile con etanolo)",
+        "latency": "Generalmente entro minuti–2 ore dall'assunzione di alcol; interazione possibile anche nei giorni successivi al fungo",
+        "severity": "Intossicazione da interazione con alcol: flushing, cefalea, tachicardia, nausea e possibile ipotensione"
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante funghi velenosi, sezione 'Sindrome coprinica', Coprinopsis atramentaria (sin. Coprinus atramentarius); la generalizzazione all'intero gruppo s.l. richiede revisione",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
