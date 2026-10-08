@@ -2957,6 +2957,29 @@
         "assessment": "nominal-species-only",
         "note": "La fonte riguarda la specie nominale, mentre la scheda catalogo è sensu lato; non estendere automaticamente il dato al complesso."
       }
+    },
+    {
+      "scientificName": "Clitocybe gibba s.l.",
+      "odor": "Molto debole, di mandorle; talvolta paragonato al fieno appena tagliato (documentato per Clitocybe/Infundibulicybe gibba s.s.).",
+      "sporePrint": {
+        "label": "Bianca (specie nominale)."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/clitocybe-gibba.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide: Spore print; Odour/taste; Taxonomic history"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "nominal-species-only",
+        "note": "Il catalogo usa s.l.; non estendere la descrizione a tutte le specie affini."
+      }
     }
   ],
   "administratorDecision": {
