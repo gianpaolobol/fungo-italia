@@ -22,3 +22,15 @@
 .admin-photo-dialog input:focus-visible,.admin-photo-dialog button:focus-visible,.admin-photo-change:focus-visible{outline:3px solid #87b993;outline-offset:2px}
 
 .brand-actions{display:flex;flex-direction:column;gap:.3rem;max-width:138px;flex:none}.brand-actions button{font-size:.78rem;padding:.45rem .55rem;min-height:44px}.brand>div:first-child{min-width:0}
+
+/* Admin preview matches the published square cover thumbnail. */
+.admin-photo-preview {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  max-height: none;
+  object-fit: cover;
+  object-position: var(--fungo-photo-position, 50% 50%);
+  overflow: hidden;
+  background: #e7eee4;
+}
