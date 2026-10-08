@@ -3932,6 +3932,66 @@
         "assessment": "two-sources-one-component-species",
         "note": "Nessuna generalizzazione alle specie vicine/intermedie."
       }
+    },
+    {
+      "scientificName": "Paralepistopsis amoenolens",
+      "odor": "Intenso, aromatico e floreale, con note di gelsomino o iris.",
+      "sporePrint": {
+        "label": "Biancastra o crema pallido."
+      },
+      "sources": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11003440/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Species discussion: strong aromatic floral odour"
+        },
+        {
+          "url": "https://www.basidio.org/agaricales/agaricales-genera-incertae-sedis/paralepistopsis/paralepistopsis-amoenolens.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Species description: Context odour; Spore print whitish to pale"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong",
+        "note": "Due trattazioni scientifiche concordano sui caratteri; mantenere separata la sindrome acromelalgica."
+      }
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "odor": "Farinaceo, talvolta con nota di cetriolo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://micologica-barakaldo.org/tricholoma-filamentosum/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Caracteres macroscópicos: olor harinoso; microscópicos: esporada blanca"
+        },
+        {
+          "url": "https://lavalledelmetauro.it/contenuti/funghi-flora-fauna/scheda/12465.html",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore di farina e cetriolo"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong",
+        "note": "Concordanza sull'odore farinaceo; sporata bianca attestata direttamente da Barakaldo."
+      }
     }
   ],
   "administratorDecision": {
