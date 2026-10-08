@@ -7,6 +7,8 @@ export function applyApprovedExternalStudyEvidence(records,dataset){
   if(!text(row.scientificName)||seen.has(row.scientificName))throw Error('Duplicate or invalid external candidate');
   seen.add(row.scientificName);
   if(row.administratorReview?.status!=='approved')continue;
+  if(row.reviewStatus==='candidate-taxonomic-scope-check-required')continue;
+  if(!text(row.administratorReview.date))throw Error('Missing approval date: '+row.scientificName);
   const taxon=records.find(t=>t.scientificName===row.scientificName);
   if(!taxon||!Array.isArray(row.sources)||!row.sources.length)throw Error('Approved external evidence lacks taxon or sources: '+row.scientificName);
   const fields=[...(text(row.odor)?['odor']:[]),...(text(row.sporePrint?.label)?['sporePrint']:[])];
