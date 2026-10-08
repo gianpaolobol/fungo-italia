@@ -55,3 +55,32 @@ jobs:
             src/data/toxicology-syndromes.json
             web/public/data.json
           retention-days: 7
+
+  pwa-browser:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run prepare:data
+      - name: Install PWA dependencies and WebKit
+        run: |
+          cd web
+          npm ci
+          npx playwright install --with-deps webkit
+      - name: Build PWA with toxicology content
+        run: cd web && npm run build
+      - name: Run iPhone-sized WebKit tests
+        run: cd web && npm test
+      - name: Save browser test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scientific-pwa-webkit-report
+          path: web/playwright-report
+          retention-days: 7
