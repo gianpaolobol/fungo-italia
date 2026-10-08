@@ -1,3 +1,4 @@
+import {applyApprovedExternalStudyEvidence} from '../scripts/approved-external-study-evidence.mjs';
 import {applyToxicologySyndromes} from '../scripts/toxicology-syndromes.mjs';
 import {applyAdminReferenceImages} from '../scripts/admin-reference-images.mjs';
 import {applyCommercialization} from '../scripts/commercialization.mjs';
@@ -22,6 +23,7 @@ const referenceImages=await readJSON('reference-images');
 const sourceRegistry=await readJSON('course-sources');
 applyStudyProfiles([...catalog,...groups],studyProfiles,sourceRegistry);
 applyToxicologySyndromes([...catalog,...groups],await readJSON('toxicology-syndromes'));
+applyApprovedExternalStudyEvidence([...catalog,...groups],await readJSON('external-study-evidence-candidates'));
 applyReferenceImages([...catalog,...groups],referenceImages);
 const adminImages=await readJSON('admin-reference-images');
 applyAdminReferenceImages([...catalog,...groups],adminImages);
