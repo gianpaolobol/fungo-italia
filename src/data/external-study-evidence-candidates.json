@@ -604,6 +604,119 @@
         "notes": "Nessuna",
         "scope": "descriptions with stated taxonomic limits"
       }
+    },
+    {
+      "scientificName": "Lepiota cristata",
+      "odor": "Forte, sgradevole, simile a gomma o caucciù; carattere diagnostico ricorrente.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15255-lepiota-cristata-bolton-fr-p-kumm-1871/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Osservazioni, odore penetrante caratteristico"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/lepiota-cristata.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        },
+        {
+          "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/lepiota-cristata/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne"
+        },
+        {
+          "url": "https://momyco.org/research/vouchers/96-lepiota-cristata",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Voucher information; spore print; smell of gills"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 4,
+        "assessment": "high",
+        "note": "Descrittori sgradevole/gomma convergenti; odore non unico per determinazione."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "odor": "Gradevole, talora di mandorle amare; First Nature riporta odore fungino poco distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://www.funghiitaliani.it/topic/15202-marasmius-oreades-bolton-fr-1836/page/2/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Descrizioni e microscopia; mandorle amare; sporata bianca"
+        },
+        {
+          "url": "https://natura.provincia.cuneo.it/funghi/commestibili/marasmius-oreades/",
+          "fields": [
+            "odor"
+          ],
+          "locator": "Carne: odore gradevole di mandorle"
+        },
+        {
+          "url": "https://www.first-nature.com/fungi/marasmius-oreades.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        },
+        {
+          "url": "https://mdc.mo.gov/discover-nature/field-guide/fairy-ring-mushroom",
+          "fields": [
+            "sporePrint"
+          ],
+          "locator": "Description: spore print white"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 4,
+        "assessment": "high-for-spore-print-odor-variable",
+        "note": "AMINT e Provincia Cuneo concordano sull'odore di mandorla, First Nature descrive fungino non distintivo; mantenere variabilità."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "odor": "Debole, abbastanza gradevole, non distintivo.",
+      "sporePrint": {
+        "label": "Nera."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/coprinus-comatus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "preliminary",
+        "note": "Una sola fonte diretta verificata per entrambi i caratteri; cercare seconda fonte indipendente."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
     }
   ],
   "administratorDecision": {
