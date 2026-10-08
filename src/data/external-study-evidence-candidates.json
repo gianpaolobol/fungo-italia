@@ -92,6 +92,114 @@
         }
       ],
       "reviewStatus": "candidate-taxonomic-scope-check-required"
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "odor": "Odore non distintivo",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-muscaria.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "odor": "Negli esemplari maturi odore debole, sgradevole e nauseante",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-virosa.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "odor": "Odore non significativo",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/amanita-gemmata.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "odor": "Odore molto intenso e sgradevole, simile a gas di carbone",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://mail.first-nature.com/fungi/tricholoma-sulphureum.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "odor": "Odore non significativo",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/tricholoma-equestre.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Tylopilus felleus",
+      "odor": "Odore non distintivo",
+      "sporePrint": {
+        "label": "Rosa argilla"
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/tylopilus-felleus.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Identification guide — Odour/taste; Spore print"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval"
     }
   ],
   "administratorDecision": {
