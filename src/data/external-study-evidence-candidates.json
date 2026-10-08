@@ -1038,6 +1038,33 @@
         "assessment": "one-direct-source",
         "note": "Fonte per C. cibarius nominale, non automaticamente per tutto il complesso."
       }
+    },
+    {
+      "scientificName": "Lepiota subincarnata",
+      "odor": "Debole, dolciastro.",
+      "sporePrint": {
+        "label": "Bianca"
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/lepiota-subincarnata.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-specialist-source",
+        "note": "Fonte unica; specie contenente amatossine, non usare l'odore come criterio di sicurezza."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "administratorReview": {
+        "status": "pending",
+        "notes": "Ricerca bibliografica, non approvata"
+      }
     }
   ],
   "administratorDecision": {
