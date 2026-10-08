@@ -2842,6 +2842,29 @@
         "note": "Fonte secondaria, da confrontare con monografia prima dell'approvazione."
       },
       "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "odor": "Non distintivo, secondo la descrizione della specie riportata come Cantharellus aurora.",
+      "sporePrint": {
+        "label": "Bianca o giallo pallido."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/cantharellus-aurora.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Taxonomic history (syn. Cantharellus lutescens); Identification guide: Spore print; Odour/taste"
+        }
+      ],
+      "reviewStatus": "candidate-taxonomic-scope-check-required",
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "single-direct-source-with-synonym",
+        "note": "Confermare che Craterellus lutescens nel catalogo corrisponda al taxon trattato come Cantharellus aurora nella fonte; nessuna approvazione automatica."
+      }
     }
   ],
   "administratorDecision": {
