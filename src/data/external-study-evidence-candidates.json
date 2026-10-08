@@ -816,6 +816,13 @@
             "sporePrint"
           ],
           "locator": "Identification guide — Odour/taste; Spore print"
+        },
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda079.pdf",
+          "fields": [
+            "sporePrint"
+          ],
+          "locator": "I funghi della Campania, p. 181, sezioni CARNE/SPORE (secondo i campi presenti)"
         }
       ],
       "reviewStatus": "candidate-awaiting-administrator-approval",
@@ -823,6 +830,11 @@
         "independentOrganizations": 1,
         "assessment": "single-specialist-source",
         "note": "Nessuna seconda fonte indipendente verificata in questo lotto; non indicare concordanza multipla."
+      },
+      "cmcaloreReview": {
+        "status": "pending-administrator-approval",
+        "sporePrint": "Bruno scuro-violacea.",
+        "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
       }
     },
     {
@@ -1282,6 +1294,104 @@
         "odor": "Leggermente aromatico.",
         "status": "pending-administrator-approval",
         "note": "Source transcription, not automatic override of prior approved wording."
+      }
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "sources": [
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda0003.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "I funghi della Campania, p. 92, sezioni CARNE/SPORE (secondo i campi presenti)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "cmcaloreReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Gradevole, non particolarmente caratterizzato.",
+        "sporePrint": "Bruno-porpora.",
+        "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
+      }
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "sources": [
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda029.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "I funghi della Campania, p. 131, sezioni CARNE/SPORE (secondo i campi presenti)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "cmcaloreReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Intenso e persistente, di farina fresca.",
+        "sporePrint": "Bianca.",
+        "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
+      }
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "sources": [
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda054.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "I funghi della Campania, p. 156, sezioni CARNE/SPORE (secondo i campi presenti)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "cmcaloreReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Debole, vagamente simile a rapa.",
+        "sporePrint": "Bruno-ruggine.",
+        "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
+      }
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "sources": [
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda085.pdf",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "I funghi della Campania, p. 187, sezioni CARNE/SPORE (secondo i campi presenti)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "cmcaloreReview": {
+        "status": "pending-administrator-approval",
+        "odor": "Fungino.",
+        "sporePrint": "Bruno-rossastra.",
+        "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
+      }
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "sources": [
+        {
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda061.pdf",
+          "fields": [
+            "sporePrint"
+          ],
+          "locator": "I funghi della Campania, p. 163, sezioni CARNE/SPORE (secondo i campi presenti)"
+        }
+      ],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "cmcaloreReview": {
+        "status": "pending-administrator-approval",
+        "sporePrint": "Bianco-ocra.",
+        "note": "Sintesi dalla scheda nominale. Nessuna sostituzione automatica dei dati approvati; la commestibilità resta regolata dalla Guida ragionata."
       }
     }
   ],
