@@ -1168,6 +1168,28 @@
           "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
           "locator": "Timbro fruttato"
         }
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Fruttato, di albicocca matura; carattere attestato per C. cibarius s.s.",
+        "note": "Due pagine AMINT non sono due organizzazioni indipendenti; non generalizzare al complesso.",
+        "sources": [
+          {
+            "url": "https://www.funghiitaliani.it/topic/16812-cantharellus-cibarius-fr-1821/",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          },
+          {
+            "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1351",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -1484,6 +1506,28 @@
           "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
           "locator": "Timbro farinaceo"
         }
+      },
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Gradevole, di farina fresca o impasto del pane.",
+        "note": "Concordanza su odore farinaceo; AMB cita la specie nel confronto diagnostico.",
+        "sources": [
+          {
+            "url": "https://www.funghiitaliani.it/topic/15443-tricholoma-portentosum-fr-fr-qu%C3%A9l-1873/",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          },
+          {
+            "url": "https://www.ambbresadola.it/tricholoma-josserandii/",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     },
     {
@@ -1660,6 +1704,53 @@
           "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
           "locator": "Timbro fruttato"
         }
+      }
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "sources": [],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Sgradevole, di farina rancida e cimice, talvolta con nota di liquirizia.",
+        "note": "Concordanza su odore cimicino e sgradevole; AMB descrive ulteriori note.",
+        "sources": [
+          {
+            "url": "https://www.ambbresadola.it/tricholoma-josserandii/",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          },
+          {
+            "url": "https://www.funghiitaliani.it/profile/36492-archivio-micologico/content/page/210/?type=forums_topic_post",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          }
+        ],
+        "reviewDate": "2026-10-08"
+      }
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "sources": [],
+      "reviewStatus": "candidate-awaiting-administrator-approval",
+      "concordanceReview": {
+        "status": "proposed-for-administrator-review",
+        "odor": "Debole e gradevole.",
+        "note": "Fonte diretta unica; non presentare come concordanza multipla.",
+        "sources": [
+          {
+            "url": "https://ambbresadola.it/funghi_tossici/omphalotus-olearius/",
+            "fields": [
+              "odor"
+            ],
+            "locator": "Descrizione e confronto olfattivo"
+          }
+        ],
+        "reviewDate": "2026-10-08"
       }
     }
   ],
