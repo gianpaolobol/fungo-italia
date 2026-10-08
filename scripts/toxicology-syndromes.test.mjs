@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {applyToxicologySyndromes} from './toxicology-syndromes.mjs';
 const data=JSON.parse(readFileSync('src/data/toxicology-syndromes.json','utf8'));
-assert.equal(data.records.length,8);
+assert.ok(data.records.length>=20, 'Expected at least 20 sourced syndrome mappings');
 const records=data.records.map(r=>({scientificName:r.scientificName,studyProfile:{edibility:{label:'Tossica',precautions:[]}},sources:[]}));
 applyToxicologySyndromes(records,data);
 for(const r of records){
