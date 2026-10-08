@@ -67,6 +67,7 @@ function studyFacts(t){
  const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
  const color=print?.color&&/^#[0-9a-f]{6}$/i.test(print.color)?'<span class="spore-swatch" style="background:'+print.color+'" aria-hidden="true"></span>':'';
  return '<dl class="study-facts"><dt>Odore</dt><dd>'+escape(p.odor||'Non documentato')+'</dd><dt>Sporata</dt><dd>'+color+escape(print?.label||'Non documentata')+(print?.scale?' · '+escape(print.scale):'')+'</dd><dt>Commestibilità</dt><dd>'+(t.kind==='teaching-group'?'Consulta le singole specie':edibilityBadge(food))+'</dd></dl>'+
+ (food?.syndrome?.label?'<p class="food-syndrome"><strong>Sindrome tossicologica:</strong> '+escape(food.syndrome.label)+'</p>':'')+
  (food?.precautions?.length?'<div class="food-precautions"><strong>Accorgimenti</strong><ul>'+food.precautions.map(value=>'<li>'+escape(value)+'</li>').join('')+'</ul></div>':'')+
  (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
 }
@@ -143,7 +144,7 @@ function validStudyFields(t){
   if(!p||typeof p!=='object'||Array.isArray(p)||Object.keys(p).some(key=>!['odor','sporePrint','edibility'].includes(key)))return false;
   if(p.odor!==undefined&&!text(p.odor))return false;
   if(p.sporePrint!==undefined){const print=p.sporePrint;if(!print||!text(print.label)||(print.color!==undefined&&!/^#[0-9a-f]{6}$/i.test(print.color))||(print.scale!==undefined&&!['I','II','III','IV','I–II','I–III','I–IV','II–III','II–IV','III–IV'].includes(print.scale)))return false;}
-  if(p.edibility!==undefined&&(!p.edibility||!text(p.edibility.label)||!Array.isArray(p.edibility.precautions)||!p.edibility.precautions.every(text)))return false;
+  if(p.edibility!==undefined&&(!p.edibility||!text(p.edibility.label)||!Array.isArray(p.edibility.precautions)||!p.edibility.precautions.every(text)||(p.edibility.syndrome!==undefined&&(!p.edibility.syndrome||!text(p.edibility.syndrome.label)))))return false;
  }
  if(t.referenceImages!==undefined&&(!Array.isArray(t.referenceImages)||new Set(t.referenceImages.map(p=>p?.view)).size!==t.referenceImages.length||!t.referenceImages.every(p=>p&&referencePath.test(p.src)&&referenceViews.some(([view])=>view===p.view)&&text(p.alt)&&text(p.credit)&&(p.subjectTaxon===undefined||text(p.subjectTaxon))&&(p.framing===undefined||([p.framing.x,p.framing.y,p.framing.zoom].every(Number.isFinite)&&p.framing.x>=0&&p.framing.x<=100&&p.framing.y>=0&&p.framing.y<=100&&p.framing.zoom>=1&&p.framing.zoom<=3))&&(p.sourceUrl===undefined||publicPhotoHttps(p.sourceUrl))&&(p.licenseUrl===undefined||publicPhotoHttps(p.licenseUrl)))))return false;
  return true;
