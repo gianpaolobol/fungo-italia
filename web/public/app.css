@@ -48,3 +48,5 @@ button.mushroom-toggle,button.mushroom-toggle[aria-pressed="true"]{flex:0 0 44px
 .edibility-toxic{background:#c92332;color:#fff}
 .edibility-unknown{background:#e7e9e8;color:#29352e}
 .edibility-detail{font-size:12px;line-height:1.5}
+
+.food-syndrome{font-size:14px;line-height:1.5;margin:8px 0 12px;border-left:4px solid #c92332;padding:7px 10px;background:#fff1f1;color:#502024;border-radius:0 7px 7px 0}
