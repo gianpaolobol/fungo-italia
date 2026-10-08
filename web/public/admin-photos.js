@@ -204,6 +204,17 @@ function editPhoto(taxon, view, label) {
   preview.className = 'admin-photo-preview';
   preview.hidden = true;
   form.append(preview);
+  const framing = {x:50,y:50,zoom:1};
+  const framingInputs = [['x','Posizione orizzontale',0,100,1],['y','Posizione verticale',0,100,1],['zoom','Zoom',1,3,0.1]];
+  for (const [key,label,min,max,step] of framingInputs) {
+    const control = field(form,label,make('input','',{type:'range',min:String(min),max:String(max),step:String(step),'aria-label':label}));
+    control.value=String(framing[key]);
+    control.addEventListener('input',()=>{
+      framing[key]=Number(control.value);
+      preview.style.objectPosition=framing.x+'% '+framing.y+'%';
+      preview.style.transform='scale('+framing.zoom+')';
+    });
+  }
   const subject = field(form, 'Specie raffigurata',
     make('input', '', { type: 'text', required: '', maxlength: '160', 'aria-label': 'Specie raffigurata' }));
   subject.value = taxon.referenceImages?.find(item => item.view === view)?.subjectTaxon || (taxon.scientificName.length <= 160 ? taxon.scientificName : taxon.scientificName.split(' ')[0]);
@@ -261,7 +272,7 @@ function editPhoto(taxon, view, label) {
       const result = await currentClient.savePhoto({
         taxon: { id: currentTaxon.id, scientificName: currentTaxon.scientificName, rank: currentTaxon.rank, kind: currentTaxon.kind },
         view: currentView, photo: selectedPhoto, subjectTaxon: subject.value.trim(),
-        attribution: attribution.value.trim(), rightsConfirmed: consent.checked
+        attribution: attribution.value.trim(), rightsConfirmed: consent.checked, framing
       }, { signal: pending.signal, onStage: () => notice('Salvataggio su GitHub…') });
       if (!active || currentClient !== client || pending.signal.aborted || !form.isConnected) return;
       const detail = { taxonId: currentTaxon.id, view: currentView, asset: result.asset, commitSha: result.commitSha, photo: { bytes: selectedPhoto.bytes, width: selectedPhoto.width, height: selectedPhoto.height, sha: selectedPhoto.sha } };
