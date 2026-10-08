@@ -168,6 +168,20 @@
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "syndrome": {
+        "label": "Sindrome orellanica",
+        "latency": "Lunga latenza, anche diversi giorni",
+        "severity": "Potenzialmente mortale; grave danno renale"
+      },
+      "evidence": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls, Mushroom Toxicity: Cortinarius orellanus e C. rubellus, orellanina e nefrotossicità; corrispondenza puntuale da revisionare",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
     }
   ]
 }
