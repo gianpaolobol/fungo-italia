@@ -2757,6 +2757,91 @@
         "assessment": "single-direct-source",
         "note": "Proposta per revisione amministrativa; mantenere eventuali discrepanze e limiti tassonomici."
       }
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "odor": "Non distintivo.",
+      "sporePrint": {
+        "label": "Verde grigiastro, verde oliva."
+      },
+      "sources": [
+        {
+          "url": "https://ask.ifas.ufl.edu/publication/PP324",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "UF/IFAS, identification: odor; spore print"
+        },
+        {
+          "url": "https://mushroomexpert.com/chlorophyllum_molybdites.html",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odor and Taste; Spore Print"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong-independent-agreement",
+        "note": "Due fonti indipendenti concordano su odore non distintivo e sporata verdastra; specie tossica."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "odor": "Lieve da giovane; forte e sgradevole, putrido, a maturità.",
+      "sporePrint": {
+        "label": "Bruno olivaceo."
+      },
+      "sources": [
+        {
+          "url": "https://www.first-nature.com/fungi/rubroboletus-satanas.php",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Odour/taste; Spore print"
+        },
+        {
+          "url": "https://fungiatlas.com/rubroboletus-satanas/",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Flesh: odour; spore print"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 2,
+        "assessment": "strong-independent-agreement",
+        "note": "Concordanza su odore dipendente dall'età e sporata olivacea."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "odor": "Tenue, non distintivo.",
+      "sporePrint": {
+        "label": "Bianca."
+      },
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Hygrophorus_russula",
+          "fields": [
+            "odor",
+            "sporePrint"
+          ],
+          "locator": "Description; cites Davis, Sommer & Menge, Field Guide to Mushrooms of Western North America"
+        }
+      ],
+      "concordance": {
+        "independentOrganizations": 1,
+        "assessment": "secondary-source-pending-confirmation",
+        "note": "Fonte secondaria, da confrontare con monografia prima dell'approvazione."
+      },
+      "reviewStatus": "candidate-awaiting-administrator-approval"
     }
   ],
   "administratorDecision": {
