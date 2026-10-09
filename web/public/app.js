@@ -61,13 +61,13 @@ function edibilityBadge(food){
  const label=food?.label;
  if(!label)return '<span class="edibility-badge edibility-unknown">Non documentata</span>';
  const found=edibilityCategories.find(([, ,pattern])=>pattern.test(label));
- return found?'<span class="edibility-badge edibility-'+found[0]+'">'+escape(found[1])+'</span> <span class="edibility-detail">'+escape(label)+'</span>':'<span class="edibility-badge edibility-unknown">Categoria da verificare</span> <span class="edibility-detail">'+escape(label)+'</span>';
+ return '<span class="edibility-badge edibility-'+(found?found[0]:'unknown')+'">'+escape(label)+'</span>';
 }
 function studyFacts(t){
  const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
  const color=print?.color&&/^#[0-9a-f]{6}$/i.test(print.color)?'<span class="spore-swatch" style="background:'+print.color+'" aria-hidden="true"></span>':'';
  return '<dl class="study-facts"><dt>Odore</dt><dd>'+escape(p.odor||'Non documentato')+'</dd><dt>Sporata</dt><dd>'+color+escape(print?.label||'Non documentata')+(print?.scale?' · '+escape(print.scale):'')+'</dd><dt>Commestibilità</dt><dd>'+(t.kind==='teaching-group'?'Consulta le singole specie':edibilityBadge(food))+'</dd></dl>'+
- '<p class="food-syndrome"><strong>Sindrome tossicologica:</strong> '+(food?.syndrome?.label?escape(food.syndrome.label):t.kind==='teaching-group'?'Valutare le singole specie':food?.label&&/tossic|velenos|mortale|sconsigliat|non commestibile/i.test(food.label)?'Da documentare per questo taxon':'Non associata sulla base delle fonti disponibili')+'</p>'+
+ (food?.syndrome?.label&&!/^Da documentare per questo taxon\.?$/i.test(food.syndrome.label.trim())?'<p class="food-syndrome"><strong>Sindrome tossicologica:</strong> '+escape(food.syndrome.label)+'</p>':'')+
  (food?.precautions?.length?'<div class="food-precautions"><strong>Accorgimenti</strong><ul>'+food.precautions.map(value=>'<li>'+escape(value)+'</li>').join('')+'</ul></div>':'')+
  (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
 }
