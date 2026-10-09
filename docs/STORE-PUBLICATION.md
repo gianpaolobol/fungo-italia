@@ -64,3 +64,11 @@ Riferimenti ufficiali:
 - https://support.google.com/googleplay/android-developer/answer/14151465
 
 Questa scheda è preparatoria; nessuna domanda di revisione degli store è stata inviata.
+
+## Collegamento Apple completato il 10 ottobre 2026
+
+Accesso diretto a Expo verificato. App Store Connect: app `6821140326`, bundle `it.fungoitalia.app`, team `BX9MDXAHKG`. Scheda italiana creata, descrizione e parole chiave salvate; rilascio manuale selezionato. Nessun invio alla revisione.
+
+Certificato Apple Distribution `DXLA5NHSKQ` e profilo App Store `NATQT6SSTB` generati e salvati in Expo; entrambi risultano validi, con scadenza 9 ottobre 2027. Nessun segreto o file di firma va inserito nel repository.
+
+Prima build production iOS avviata da main, commit `45ad46bb47b315fabf05b7b042da2bc44e2bf19e`: https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/builds/1fdc27d4-cec2-4b9d-bddd-511f1407a5dc. L’avvio non attesta il completamento né la distribuzione della build. La chiave API per EAS Submit non è ancora configurata.
