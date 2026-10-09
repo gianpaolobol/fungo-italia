@@ -1,9 +1,6 @@
 name: Submit existing iOS build
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/workflows/store-submit-ios.yml]
 permissions:
   contents: read
 concurrency:
