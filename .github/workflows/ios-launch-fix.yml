@@ -1,9 +1,6 @@
 name: Rebuild iOS native launch fix
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/workflows/ios-launch-fix.yml]
 permissions:
   contents: read
 concurrency:
