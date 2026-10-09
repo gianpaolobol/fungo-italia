@@ -45,7 +45,8 @@ button.mushroom-toggle,button.mushroom-toggle[aria-pressed="true"]{flex:0 0 44px
 .edibility-discouraged{background:#f3d44c;color:#332900}
 .edibility-no-food-value{background:#fff;color:#303c32}
 .edibility-inedible{background:#f47a28;color:#28170c}
-.edibility-toxic{background:#c92332;color:#fff}
+.edibility-toxic{background:#f4770b;color:#28170c}
+.edibility-deadly{background:#c92332;color:#fff}
 .edibility-unknown{background:#e7e9e8;color:#29352e}
 .edibility-detail{font-size:12px;line-height:1.5}
 
