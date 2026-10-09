@@ -1,0 +1,2841 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-09",
+  "inputDocument": "fungo_italia_lotto_ricerca_20261009.json",
+  "inputSha256": "3d4072809438065043a158ef2a828669c160f0a73ced75af5c3548a0dce842e6",
+  "scope": "148 schede specifiche e 66 schede di genere; odore, sporata, habitat puntuale, nota tossicologica; commestibilità invariata rispetto alla Guida fondante",
+  "independentScientificReviewComplete": false,
+  "records": [
+    {
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus sez. Arvenses",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus campestris",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus bitorquis",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+        "LIT-ATLAS-890f0eaedfc5e7df"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus bisporus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita phalloides",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-426c9e8aa0a57396"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita proxima",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita ovoidea",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-12a81707b692bbe9",
+        "LIT-ATLAS-67fd41eaa59ee0ba"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita pantherina",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-1b958648496bf357"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita muscaria",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-c7b7063ed6aefde8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita caesarea",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-f6b3f094a209a701"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-3c8db4664871f2fc"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-9940578ef661b588"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-df28c90d08f6d84d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-86b570dc39990d6c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita strobiliformis",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-73027cc51881100b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-b1f82b509307a5b0",
+        "LIT-ATLAS-e50edee92dc57842"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-3d6106937e6d51a0"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-22f657232915e445"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-4ba7a2258c275e20"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5",
+        "LIT-ATLAS-f038569acc36db19"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-24ca2fb110c642bf"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Clitocybe nebularis",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-2d88aa9bd7a9071c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Infundibulicybe geotropa",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-1c4d7d254152116d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Paralepistopsis amoenolens",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-1df302148bf8d2a5",
+        "LIT-ATLAS-45fb592671b2df4a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Clitocybe gibba s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-320461b445bd0aac"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-5747795d4bfc1b3c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Rhodocollybia maculata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-e5e308c3375a81af"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gymnopus fusipes",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-d52af6ecebb0c57d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-00d2f43c38c358a6"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-b48cdd65baca5163"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-82e0a9de626fd212"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-399eb0ebb946cf1a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-d714d8f31591a72b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-bf3041cb3fe85821"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-427e024f1be59bd5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius cumatilis",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-8d5d456ae027d52d",
+        "LIT-ATLAS-d26e328b435c183e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Phlegmacium variiforme",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-1c2efd25a14f8532",
+        "LIT-ATLAS-d26e328b435c183e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius caperatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-dbc167797895e0a0"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-f6834c2f9ad06113"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-415af68385f8f974",
+        "LIT-ATLAS-66258c9a0d0f4235"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma vernum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-435ef3df571fb3a9"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma clypeatum s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma saundersii",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-27084381fcbff40e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Flammulina velutipes s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-b424e3043a9faf02"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-439d79a7fe5dfeb5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrocybe conica s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-74f86a9f0ca3b0db"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrocybe punicea",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-2693f3e74dfad660"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-0c2baff58de241d1"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-1f1ff482941e6501"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-28a4137b4cfe1173"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-f04588496e299cce"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hypholoma lateritium",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-5611d4cf7e4c8665"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-0cdd18ebb41c7382",
+        "LIT-ATLAS-2f13351d63467c04"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepiota subincarnata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-ba4a41a9b842a50f"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-c606245a6df485b8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepiota cristata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-721a66e983d483bc"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepiota elaiophylla",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-22b954a188803e6b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-c3d19e4b0d8ae4a5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-8348342d6dca687b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-a76936e043488372"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Macrolepiota procera s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-e197f487c5df2b56"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepista nuda s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-c0e3081780cfe530"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepista flaccida s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-3923cdbe8bcd31d2"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-2171fbe60f843348"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leucopaxillus gentianeus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-30bcd9b6e24d2d68",
+        "LIT-ATLAS-42af6a8e7d14589a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lyophyllum decastes s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-b28242703e0327e1"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lyophyllum specie annerenti",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-f69529c082deb701"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leucocybe connata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-884607bc2304e248",
+        "LIT-ATLAS-9e22028922c66fa0"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Mycena sez. Purae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-8431e30ff438168c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Omphalotus olearius",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-f9b832feb5c69468"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Panaeolus cyanescens",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-4ee6d48da98f1292"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-08145657e15d693c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-45de79d55d876349"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-a99f33edb65d4b92"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-1f9da2587379d823"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Stropharia rugosoannulata",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-fc62f13ddc4e3988"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-6dba16ad98f48044"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-911f2a31f81dc20b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-c7d660d450418bba"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-8e203c42a0a05227"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-70cb16a3512d3493",
+        "LIT-ATLAS-c292358389907901"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-8b03b11a6678537a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-227aacf3362bb842",
+        "LIT-ATLAS-c80fd0162e351c83"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-f60175ced15edd63"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-9cb8e07680b9335d",
+        "LIT-ATLAS-e696f803998afcf1"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-5b42f80a10189887"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Volvopluteus gloiocephalus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-e6f3923b72b834c7"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-de5eaae55bf108ae"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-3fadc78e35c59267"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-66258c9a0d0f4235",
+        "LIT-ATLAS-b0a84939ad5f0125"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lactarius volemus s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-0c59ee6a3786abb8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-44e7de3494909d7b",
+        "LIT-ATLAS-7b9477f3921676c2"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [
+        "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Russula Compactae Nigricantinae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-847f5b670d415937",
+        "LIT-ATLAS-a7bba3a6b94a18b5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-09d9b71db300fd47"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-330ec3ca0a469fa9"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-bc1e8c9dfd295936"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-719257b5c7b5c61c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5",
+        "LIT-ATLAS-fb93445ae568677f"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-c3ecd01d76580f45"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Suillellus luridus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-bc1e8c9dfd295936"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-f004a6bb1e2595a3"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Caloboletus radicans",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-292b62a9cd8e88d3"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Caloboletus calopus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-5a0acdf63b42a6b7"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gyroporus cyanescens",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-70e3c361667c8c7a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gyroporus castaneus s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-31c5ce113ea7f4e1",
+        "LIT-ATLAS-55d461c9971befbf",
+        "LIT-ATLAS-973274814bf3c5f3"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-139d0ee10f0435d8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Imleria badia",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-9fbc346226e6cfac"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Suillus luteus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-8aa4df6a118b66d8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Suillus granulatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7ecb0173c39eac2e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tylopilus felleus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "pre-existing-evidence",
+      "sourceIds": [],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-e0bc9ff7cdef6a1d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-5b37c8e25bc08462"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-757aa4df510a07b2"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Craterellus cornucopioides",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-4b4e5262e6ce7bd0"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gomphus clavatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-831340c04a9c88ec"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-022d08ab54f925d6"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-4803cda0f3280dfc"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-e962f964a7c0055a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hapalopilus rutilans",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-57bcf0c821a74e17"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-166a9cf52c17a761"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Albatrellopsis confluens",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-1cbe00e0ee019831"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-46f8dbf6a101dca8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "not-documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7e21263cd7b636b7"
+      ],
+      "missingFields": [
+        "sporePrint"
+      ]
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-49c847a0e6ff6c77"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-bac0507b10a0ed22"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Polyporus umbellatus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-3ab369c4ffaa2e57"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Meripilus giganteus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-e89c7030ff885ca2"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cerioporus squamosus",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-6a45ae16adc5b1eb"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-73882c2af53a6caf"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "not-documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": [
+        "sporePrint"
+      ]
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-66258c9a0d0f4235",
+        "LIT-ATLAS-a71e62ae218f77ab"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-214ec1316272091e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "species",
+      "sourceIds": [
+        "LIT-ATLAS-646f8f58040feb5f",
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "kind": "species",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-14a2e07e4e53db36",
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agaricus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Agrocybe + Cyclocybe",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-df33c2b195f53306"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Amanita",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-426c9e8aa0a57396",
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Armillaria + Desarmillaria",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-532375ecfc2dd7dd"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Calocybe",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-4ba7a2258c275e20"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-24ca2fb110c642bf",
+        "LIT-ATLAS-7dc2065705bfd0e5",
+        "LIT-ATLAS-f038569acc36db19"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Clitopilus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-5747795d4bfc1b3c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-d52af6ecebb0c57d",
+        "LIT-ATLAS-e5e308c3375a81af"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-82e0a9de626fd212",
+        "LIT-ATLAS-b48cdd65baca5163"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cortinarius",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-399eb0ebb946cf1a",
+        "LIT-ATLAS-d714d8f31591a72b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Entoloma",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-415af68385f8f974",
+        "LIT-ATLAS-66258c9a0d0f4235",
+        "LIT-ATLAS-f6834c2f9ad06113"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Flammulina",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-b424e3043a9faf02"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Galerina",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-439d79a7fe5dfeb5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hebeloma",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-a37c6814ef93405b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-2693f3e74dfad660",
+        "LIT-ATLAS-74f86a9f0ca3b0db"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrophorus + Cuphophyllus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-0c2baff58de241d1",
+        "LIT-ATLAS-1f1ff482941e6501"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hypholoma",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-5611d4cf7e4c8665",
+        "LIT-ATLAS-f04588496e299cce"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-ad644ded28c6f43e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Laccaria",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-b6e54038bceb042b"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lentinula",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-0cdd18ebb41c7382",
+        "LIT-ATLAS-2f13351d63467c04"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-ba4a41a9b842a50f",
+        "LIT-ATLAS-c606245a6df485b8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lepista",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-3923cdbe8bcd31d2",
+        "LIT-ATLAS-c0e3081780cfe530"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-2171fbe60f843348",
+        "LIT-ATLAS-30bcd9b6e24d2d68",
+        "LIT-ATLAS-42af6a8e7d14589a"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-fafb370bdfb98162"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-b28242703e0327e1",
+        "LIT-ATLAS-f69529c082deb701"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Melanoleuca",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-6ce573c0c05b3c99"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Mycena",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-8431e30ff438168c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Omphalotus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-f9b832feb5c69468"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-4ee6d48da98f1292"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-08145657e15d693c"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-45de79d55d876349",
+        "LIT-ATLAS-a99f33edb65d4b92"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pluteus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-34775f4b77a1846d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-7198cbfcde8c01cf"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Psilocybe s.l. (incluso Deconica)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-00a9f82e66600d08"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-fc62f13ddc4e3988"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tricholoma",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Volvariella + Volvopluteus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-de5eaae55bf108ae",
+        "LIT-ATLAS-e6f3923b72b834c7"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-3fadc78e35c59267",
+        "LIT-ATLAS-66258c9a0d0f4235",
+        "LIT-ATLAS-b0a84939ad5f0125"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Russula",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+        "LIT-ATLAS-847f5b670d415937",
+        "LIT-ATLAS-a7bba3a6b94a18b5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Boletus s. str.",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-330ec3ca0a469fa9"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Butyriboletus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-5f313eab87f7cec8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Caloboletus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-292b62a9cd8e88d3",
+        "LIT-ATLAS-5a0acdf63b42a6b7"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Chroogomphus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-0318f5c4de6e7984"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gomphidius",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-bda9677a85e18ac2"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gyroporus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "LIT-ATLAS-31c5ce113ea7f4e1",
+        "LIT-ATLAS-55d461c9971befbf",
+        "LIT-ATLAS-70e3c361667c8c7a",
+        "LIT-ATLAS-973274814bf3c5f3"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hemileccinum",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+        "LIT-ATLAS-d1998459f6c9751d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Hygrophoropsis",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-139d0ee10f0435d8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Imleria",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-9fbc346226e6cfac"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leccinellum",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-0625fe5ee994d348"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Leccinum",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-8bec88474d7e91e1"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Paxillus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-91e8c62879ed85f8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Suillus (incluso Boletinus)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-7ecb0173c39eac2e",
+        "LIT-ATLAS-8aa4df6a118b66d8"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Tylopilus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-f59b5baac5df9dd4"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-e0288658e065dc35"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Cantharellus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-e0bc9ff7cdef6a1d"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Craterellus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-5b37c8e25bc08462",
+        "LIT-ATLAS-757aa4df510a07b2"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gomphus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-831340c04a9c88ec"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Ramaria",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-73882c2af53a6caf",
+        "LIT-ATLAS-7dc2065705bfd0e5",
+        "LIT-ATLAS-a71e62ae218f77ab"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Pisolithus",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-f2fff1e6b9517946"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Scleroderma",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-56141c2de2896c46",
+        "LIT-ATLAS-8393fda2252237c0"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Auricularia",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-214ec1316272091e"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Gyromitra (incluso Discina)",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-646f8f58040feb5f",
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Helvella",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-6dc1dc4426070066"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Morchella",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-36b15daea4380891"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Sarcosphaera",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "named-examples",
+      "sourceIds": [
+        "LIT-ATLAS-14a2e07e4e53db36",
+        "LIT-ATLAS-7dc2065705bfd0e5"
+      ],
+      "missingFields": []
+    },
+    {
+      "scientificName": "Verpa",
+      "kind": "teaching-group",
+      "fields": {
+        "odor": "documented",
+        "sporePrint": "documented"
+      },
+      "taxonomicScope": "representative-species",
+      "sourceIds": [
+        "LIT-ATLAS-e8f7fa6ed59ae363"
+      ],
+      "missingFields": []
+    }
+  ]
+}

@@ -1526,6 +1526,77 @@
           "supportedClaim": "Asperità o squamette in rilievo sul gambo. Viraggi della carne variabili, da osservare sull’esemplare fresco."
         }
       ]
+    },
+    {
+      "scientificName": "Lepiota elaiophylla",
+      "additions": {
+        "habitat": [
+          "Saprotrofa in serre di coltivazione; tipica di ambienti artificiali."
+        ]
+      },
+      "replacements": {
+        "diagnosticNote": "Fuori dall'habitat artificiale tipico confrontare specie affini e confermare se necessario. L’Atlante dei funghi velenosi AUSL Bologna (2023, p. 206) riporta α- e β-amanitina e un potenziale quadro falloideo per questa specie, citando Sarawi et al. (2022). L’assenza del taxon nella Guida fondante (2021) non documenta innocuità o commestibilità."
+      },
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+          "page": 205,
+          "locator": "p. stampata 206 (PDF 205): Carne; Spore in massa",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Saprotrofa in serre di coltivazione; tipica di ambienti artificiali."
+        },
+        {
+          "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+          "page": 205,
+          "locator": "p. stampata 206 (PDF 205): Lepiota elaiophylla, Tossicità; Sarawi et al. (2022)",
+          "fields": [
+            "diagnosticNote"
+          ],
+          "supportedClaim": "L’Atlante dei funghi velenosi AUSL Bologna (2023, p. 206) riporta α- e β-amanitina e un potenziale quadro falloideo per questa specie, citando Sarawi et al. (2022). L’assenza del taxon nella Guida fondante (2021) non documenta innocuità o commestibilità."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "additions": {
+        "habitat": [
+          "Micorrizico con Cistus spp.; la raccolta descritta è associata a Cistus laurifolius."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-44e7de3494909d7b",
+          "page": 2,
+          "locator": "p. stampata 27: Lactarius tesquorum, Odour; Spore print; raccolta ÖFÇ 1147",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Micorrizico con Cistus spp.; la raccolta descritta è associata a Cistus laurifolius."
+        }
+      ]
+    },
+    {
+      "scientificName": "Paralepistopsis amoenolens",
+      "additions": {
+        "habitat": [
+          "In autunno, soprattutto sotto conifere (Pinus, Picea, Cedrus), anche in boschi misti."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-45fb592671b2df4a",
+          "page": 42,
+          "locator": "p. stampata 40: Pierluigi Angeli, Carne; Habitat; Osservazioni",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "In autunno, soprattutto sotto conifere (Pinus, Picea, Cedrus), anche in boschi misti."
+        }
+      ]
     }
   ]
 }

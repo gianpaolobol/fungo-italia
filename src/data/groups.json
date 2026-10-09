@@ -37,13 +37,44 @@
           "sporePrint"
         ],
         "sourcePage": 2
+      },
+      {
+        "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+        "reviewScope": "course-material",
+        "title": "Inquadramento schematico Agaricus ES.pdf",
+        "authors": [
+          "Edoardo Suriano"
+        ],
+        "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
+        "location": "p. 25",
+        "supportedClaim": "Esempio riferito a Agaricus sez. Xanthodermatei, non a tutto il genere: Fenolico, di inchiostro o disinfettante.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 25
+      },
+      {
+        "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+        "reviewScope": "course-material",
+        "title": "Inquadramento schematico Agaricus ES.pdf",
+        "authors": [
+          "Edoardo Suriano"
+        ],
+        "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
+        "location": "p. 15",
+        "supportedClaim": "Esempio riferito a Agaricus bresadolanus, non a tutto il genere: Possibile lieve componente fenolica alla base del gambo; variabile.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 15
       }
     ],
     "studyProfile": {
       "sporePrint": {
         "label": "Bruno-porpora",
         "color": "#654252"
-      }
+      },
+      "odor": "Esempi documentati: Agaricus sez. Xanthodermatei — Fenolico, di inchiostro o disinfettante.; Agaricus bresadolanus — Possibile lieve componente fenolica alla base del gambo; variabile. Non estendere automaticamente questi dati a tutte le specie del gruppo."
     },
     "referenceImages": [
       {
@@ -68,10 +99,6 @@
         "subjectTaxon": "Agaricus campestris"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -136,6 +163,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4
     }
   },
   {
@@ -159,7 +190,27 @@
     "relatedIds": [
       "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-df33c2b195f53306",
+        "reviewScope": "course-material",
+        "title": "www.ameronlus.it — ",
+        "authors": [],
+        "url": "https://www.ameronlus.it/blog/2025/03/31/larticolo-del-mese-cyclocybe-cylindracea/",
+        "location": "Gabriele Bortolami: descrizione, odore; spore in massa",
+        "supportedClaim": "Contributo alla sintesi documentata per Cyclocybe cylindracea (representative-species); odor: Variabile tra descrizioni di C. cylindracea: lievito, mosto o vinaccia, oppure formaggio stagionato o farina rancida. Esempio del gruppo, non esteso a tutte le specie.; sporePrint: Bruno-ruggine in massa in C. cylindracea; esempio documentato del gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Variabile tra descrizioni di C. cylindracea: lievito, mosto o vinaccia, oppure formaggio stagionato o farina rancida. Esempio del gruppo, non esteso a tutte le specie.",
+      "sporePrint": {
+        "label": "Bruno-ruggine in massa in C. cylindracea; esempio documentato del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/agrocybe-cyclocybe-lateral-103.jpg",
@@ -185,10 +236,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -211,6 +258,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4
     }
   },
   {
@@ -249,7 +300,39 @@
       "minimum-card-objective-amanita--15--amanita-rubescens",
       "minimum-card-objective-amanita--16--amanita-sez-vaginatae"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 75",
+        "supportedClaim": "Esempio riferito a Amanita verna / Amanita vidua, non a tutto il genere: Contributo alla sintesi documentata per Amanita verna (representative-species); odor: Lieve da giovane, sgradevole in vecchiaia; descrizione riferita ad A. verna nel senso della fonte, senza estenderla alla distinzione moderna con A. vidua.; sporePrint: Bianca in massa; documentata per A. verna nel senso della fonte.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 75
+      },
+      {
+        "sourceId": "LIT-ATLAS-426c9e8aa0a57396",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — amanita-virosa.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/amanita-virosa.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Amanita virosa, non a tutto il genere: Contributo alla sintesi documentata per Amanita virosa (species); odor: Debole e sgradevole, talvolta nauseante negli esemplari maturi.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Amanita verna / Amanita vidua — Lieve da giovane, sgradevole in vecchiaia; descrizione riferita ad A. verna nel senso della fonte, senza estenderla alla distinzione moderna con A. vidua.; Amanita virosa — Debole e sgradevole, talvolta nauseante negli esemplari maturi. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Amanita verna / Amanita vidua — Bianca in massa; documentata per A. verna nel senso della fonte.; Amanita virosa — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/amanita-lateral-249.jpg",
@@ -273,10 +356,6 @@
         "subjectTaxon": "Amanita rubescens"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -299,6 +378,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4
     }
   },
   {
@@ -318,7 +401,27 @@
       "Desarmillaria"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-532375ecfc2dd7dd",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — armillaria-mellea.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/armillaria-mellea.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Armillaria mellea (representative-species); odor: Debolmente acidulo. Esempio: Armillaria mellea; le altre specie possono differire.; sporePrint: Bianco-crema molto pallido. Esempio: Armillaria mellea; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Debolmente acidulo. Esempio: Armillaria mellea; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bianco-crema molto pallido. Esempio: Armillaria mellea; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/armillaria-desarmillaria-lateral-161.jpg",
@@ -342,10 +445,6 @@
         "subjectTaxon": "Armillaria ostoyae"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 5
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -385,6 +484,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 5
     }
   },
   {
@@ -404,7 +507,26 @@
     "relatedIds": [
       "minimum-card-objective-calocybe--01--calocybe-gambosa"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-4ba7a2258c275e20",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — calocybe-gambosa.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/calocybe-gambosa.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Calocybe gambosa, non a tutto il genere: Contributo alla sintesi documentata per Calocybe gambosa (species); odor: Intensamente farinaceo.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Calocybe gambosa — Intensamente farinaceo. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Calocybe gambosa — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/calocybe-genere-lateral-277.jpg",
@@ -428,10 +550,6 @@
         "subjectTaxon": "Calocybe gambosa"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 5
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -454,6 +572,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 5
     }
   },
   {
@@ -484,7 +606,51 @@
       "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
       "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f038569acc36db19",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — clitocybe-phyllophila.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/clitocybe-phyllophila.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Collybia phyllophila, non a tutto il genere: Contributo alla sintesi documentata per Clitocybe phyllophila (species); odor: Erbaceo (AUSL Bologna); dolciastro nella descrizione di First Nature.; sporePrint: Crema-rosa in massa.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 91",
+        "supportedClaim": "Esempio riferito a Collybia phyllophila, non a tutto il genere: Contributo alla sintesi documentata per Clitocybe phyllophila (species); odor: Erbaceo (AUSL Bologna); dolciastro nella descrizione di First Nature.; sporePrint: Crema-rosa in massa.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 91
+      },
+      {
+        "sourceId": "LIT-ATLAS-24ca2fb110c642bf",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — clitocybe-rivulosa.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/clitocybe-rivulosa.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Clitocybe dealbata / Collybia rivulosa, non a tutto il genere: Contributo alla sintesi documentata per Clitocybe rivulosa (representative-species); odor: Dolciastro ma poco caratteristico. Dato riferito a Clitocybe rivulosa; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianca. Documentata per Clitocybe rivulosa; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Collybia phyllophila — Erbaceo (AUSL Bologna); dolciastro nella descrizione di First Nature.; Clitocybe dealbata / Collybia rivulosa — Dolciastro ma poco caratteristico. Dato riferito a Clitocybe rivulosa; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Collybia phyllophila — Crema-rosa in massa.; Clitocybe dealbata / Collybia rivulosa — Bianca. Documentata per Clitocybe rivulosa; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/clitocybe-genere-lateral-241.jpg",
@@ -508,10 +674,6 @@
         "subjectTaxon": "Clitocybe nebularis"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 5
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -551,6 +713,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 5
     }
   },
   {
@@ -570,7 +736,26 @@
     "relatedIds": [
       "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-5747795d4bfc1b3c",
+        "reviewScope": "course-material",
+        "title": "www.funghiitaliani.it — ",
+        "authors": [],
+        "url": "https://www.funghiitaliani.it/topic/15085-clitopilus-prunulus-scop-fr-quel-1871/page/2/",
+        "location": "Descrizioni di Alessandro Francolini e Mario Iannotti: odore e sporata",
+        "supportedClaim": "Esempio riferito a Clitopilus prunulus s.l., non a tutto il genere: Contributo alla sintesi documentata per Clitopilus prunulus (representative-species); odor: Farinaceo, simile a impasto del pane, talvolta con una componente spermatica; descrizione di C. prunulus nominale.; sporePrint: Rosa-salmone in massa, documentata per C. prunulus nominale.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Clitopilus prunulus s.l. — Farinaceo, simile a impasto del pane, talvolta con una componente spermatica; descrizione di C. prunulus nominale. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Clitopilus prunulus s.l. — Rosa-salmone in massa, documentata per C. prunulus nominale. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-clitopilus-underside.jpg",
@@ -630,7 +815,38 @@
       "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
       "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-e5e308c3375a81af",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — rhodocollybia-maculata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/rhodocollybia-maculata.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Rhodocollybia maculata, non a tutto il genere: Contributo alla sintesi documentata per Rhodocollybia maculata (species); odor: Poco caratteristico nella descrizione di First Nature.; sporePrint: Crema, spesso con una sfumatura rosata.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-d52af6ecebb0c57d",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — gymnopus-fusipes.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/gymnopus-fusipes.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Gymnopus fusipes, non a tutto il genere: Contributo alla sintesi documentata per Gymnopus fusipes (species); odor: Poco caratteristico nella descrizione di First Nature.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Rhodocollybia maculata — Poco caratteristico nella descrizione di First Nature.; Gymnopus fusipes — Poco caratteristico nella descrizione di First Nature. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Rhodocollybia maculata — Crema, spesso con una sfumatura rosata.; Gymnopus fusipes — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/collybioidi-marasmioidi-lateral-55.jpg",
@@ -654,10 +870,6 @@
         "subjectTaxon": "Marasmius oreades"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 6
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -680,6 +892,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 6
     }
   },
   {
@@ -704,7 +920,38 @@
       "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
       "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-b48cdd65baca5163",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — coprinopsis-atramentaria.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/coprinopsis-atramentaria.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Coprinus atramentarius s.l., non a tutto il genere: Contributo alla sintesi documentata per Coprinopsis atramentaria (representative-species); odor: Poco caratteristico. Dato riferito a Coprinopsis atramentaria; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Nera. Documentata per Coprinopsis atramentaria; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-82e0a9de626fd212",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — coprinus-comatus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/coprinus-comatus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Coprinus comatus, non a tutto il genere: Contributo alla sintesi documentata per Coprinus comatus (species); odor: Tenue e gradevole, poco caratteristico.; sporePrint: Nera.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Coprinus atramentarius s.l. — Poco caratteristico. Dato riferito a Coprinopsis atramentaria; non descrive necessariamente tutte le componenti della scheda.; Coprinus comatus — Tenue e gradevole, poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Coprinus atramentarius s.l. — Nera. Documentata per Coprinopsis atramentaria; non estesa automaticamente all’intero gruppo.; Coprinus comatus — Nera. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-e-lateral-340.jpg",
@@ -779,9 +1026,39 @@
           "diagnosticNote"
         ],
         "sourcePage": 73
+      },
+      {
+        "sourceId": "LIT-ATLAS-399eb0ebb946cf1a",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — cortinarius-orellanus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/cortinarius-orellanus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Cortinarius orellanus, non a tutto il genere: Contributo alla sintesi documentata per Cortinarius orellanus (species); odor: Debolmente rafanoide.; sporePrint: Bruno-rossastra, ruggine.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-d714d8f31591a72b",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — cortinarius-rubellus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/cortinarius-rubellus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Cortinarius rubellus, non a tutto il genere: Contributo alla sintesi documentata per Cortinarius rubellus (species); odor: Debole, di ravanello.; sporePrint: Bruno-rossastra, ruggine.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
       }
     ],
     "diagnosticNote": "La cortina è fugace: cercarne i resti nei giovani esemplari e sul gambo, senza considerare la sua apparente assenza una prova di esclusione.",
+    "studyProfile": {
+      "odor": "Esempi documentati: Cortinarius orellanus — Debolmente rafanoide.; Cortinarius rubellus — Debole, di ravanello. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Cortinarius orellanus — Bruno-rossastra, ruggine.; Cortinarius rubellus — Bruno-rossastra, ruggine. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cortinarius-lateral-32.jpg",
@@ -805,10 +1082,6 @@
         "subjectTaxon": "Cortinarius caperatus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 6
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -834,6 +1107,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 6
     }
   },
   {
@@ -858,7 +1135,50 @@
       "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
       "minimum-card-objective-entoloma--06--entoloma-saundersii"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f6834c2f9ad06113",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — entoloma-rhodopolium.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/entoloma-rhodopolium.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Entoloma rhodopolium s.l., non a tutto il genere: Contributo alla sintesi documentata per Entoloma rhodopolium (representative-species); odor: Poco caratteristico nella descrizione della specie nominale. Dato riferito a Entoloma rhodopolium; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Rosa. Documentata per Entoloma rhodopolium; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-66258c9a0d0f4235",
+        "reviewScope": "course-material",
+        "title": "cultura.ilfilo.net — ",
+        "authors": [],
+        "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+        "location": "Alessandro Francolini: (1) Timbro farinaceo, Entoloma hirtipes",
+        "supportedClaim": "Esempio riferito a Entoloma hirtipes, non a tutto il genere: Contributo alla sintesi documentata per Entoloma hirtipes (species); odor: Farinaceo, spesso di farina rancida; in alcune raccolte è descritto anche come cetriolo fresco.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-415af68385f8f974",
+        "reviewScope": "course-material",
+        "title": "www.funghiitaliani.it — ",
+        "authors": [],
+        "url": "https://www.funghiitaliani.it/topic/16800-entoloma-hirtipes-schumach-mm-moser-1978/page/2/",
+        "location": "Raccolte Tomaso Lezzi, Lazio marzo 2018 e 2024: Carne; lamelle con deposito sporale rosa",
+        "supportedClaim": "Esempio riferito a Entoloma hirtipes, non a tutto il genere: Contributo alla sintesi documentata per Entoloma hirtipes (species); odor: Farinaceo, spesso di farina rancida; in alcune raccolte è descritto anche come cetriolo fresco.; sporePrint: Rosa.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Entoloma rhodopolium s.l. — Poco caratteristico nella descrizione della specie nominale. Dato riferito a Entoloma rhodopolium; non descrive necessariamente tutte le componenti della scheda.; Entoloma hirtipes — Farinaceo, spesso di farina rancida; in alcune raccolte è descritto anche come cetriolo fresco. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Entoloma rhodopolium s.l. — Rosa. Documentata per Entoloma rhodopolium; non estesa automaticamente all’intero gruppo.; Entoloma hirtipes — Rosa. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-entoloma-lateral.jpg",
@@ -910,7 +1230,26 @@
     "relatedIds": [
       "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-b424e3043a9faf02",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — flammulina-velutipes.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/flammulina-velutipes.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Flammulina velutipes s.l., non a tutto il genere: Contributo alla sintesi documentata per Flammulina velutipes (representative-species); odor: Poco caratteristico. Dato riferito a Flammulina velutipes; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianca. Documentata per Flammulina velutipes; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Flammulina velutipes s.l. — Poco caratteristico. Dato riferito a Flammulina velutipes; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Flammulina velutipes s.l. — Bianca. Documentata per Flammulina velutipes; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/flammulina-genere-lateral-149.jpg",
@@ -956,7 +1295,26 @@
     "relatedIds": [
       "minimum-card-objective-galerina--01--galerina-marginata-group"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-439d79a7fe5dfeb5",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — galerina-marginata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/galerina-marginata.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Galerina marginata group, non a tutto il genere: Contributo alla sintesi documentata per Galerina marginata (representative-species); odor: Farinaceo. Documentato per Galerina marginata; variabilità delle altre componenti non verificata.; sporePrint: Bruno tabacco. Documentata per Galerina marginata; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Galerina marginata group — Farinaceo. Documentato per Galerina marginata; variabilità delle altre componenti non verificata. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Galerina marginata group — Bruno tabacco. Documentata per Galerina marginata; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/galerina-genere-top-370.jpg",
@@ -1003,7 +1361,27 @@
       "Hebeloma"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-a37c6814ef93405b",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hebeloma-crustuliniforme.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hebeloma-crustuliniforme.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Hebeloma crustuliniforme (representative-species); odor: Di ravanello. Esempio: Hebeloma crustuliniforme; le altre specie possono differire.; sporePrint: Bruno-rossastra. Esempio: Hebeloma crustuliniforme; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Di ravanello. Esempio: Hebeloma crustuliniforme; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno-rossastra. Esempio: Hebeloma crustuliniforme; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hebeloma-lateral.jpg",
@@ -1056,7 +1434,38 @@
       "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
       "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-74f86a9f0ca3b0db",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — hygrocybe-conica.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/hygrocybe-conica.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Hygrocybe conica s.l., non a tutto il genere: Contributo alla sintesi documentata per Hygrocybe conica (representative-species); odor: Poco caratteristico. Dato riferito a Hygrocybe conica; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianca. Documentata per Hygrocybe conica; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-2693f3e74dfad660",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — hygrocybe-punicea.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/hygrocybe-punicea.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Hygrocybe punicea, non a tutto il genere: Contributo alla sintesi documentata per Hygrocybe punicea (species); odor: Poco caratteristico.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Hygrocybe conica s.l. — Poco caratteristico. Dato riferito a Hygrocybe conica; non descrive necessariamente tutte le componenti della scheda.; Hygrocybe punicea — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Hygrocybe conica s.l. — Bianca. Documentata per Hygrocybe conica; non estesa automaticamente all’intero gruppo.; Hygrocybe punicea — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-top.jpg",
@@ -1114,7 +1523,38 @@
       "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
       "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-0c2baff58de241d1",
+        "reviewScope": "course-material",
+        "title": "www.ambpesaro.it — ",
+        "authors": [],
+        "url": "https://www.ambpesaro.it/portfolio-item/hygrophorus-marzuolus/",
+        "location": "Descrizione: Carne; Sporata",
+        "supportedClaim": "Esempio riferito a Hygrophorus marzuolus, non a tutto il genere: Contributo alla sintesi documentata per Hygrophorus marzuolus (species); odor: Tenue; sono descritte anche note floreali e mielate.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-1f1ff482941e6501",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — hygrophorus_russula.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/hygrophorus_russula.html",
+        "location": "Description: Odor and Taste; Spore Print",
+        "supportedClaim": "Esempio riferito a Hygrophorus russula, non a tutto il genere: Contributo alla sintesi documentata per Hygrophorus russula (species); odor: Poco caratteristico.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Hygrophorus marzuolus — Tenue; sono descritte anche note floreali e mielate.; Hygrophorus russula — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Hygrophorus marzuolus — Bianca.; Hygrophorus russula — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hygrophorus-cuphophyllus-lateral-85.jpg",
@@ -1138,10 +1578,6 @@
         "subjectTaxon": "Hygrophorus marzuolus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 8
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -1283,6 +1719,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 8
     }
   },
   {
@@ -1303,7 +1743,38 @@
       "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
       "minimum-card-objective-hypholoma--02--hypholoma-lateritium"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f04588496e299cce",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hypholoma-fasciculare.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hypholoma-fasciculare.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Hypholoma fasciculare, non a tutto il genere: Contributo alla sintesi documentata per Hypholoma fasciculare (species); odor: Fungino ma poco caratteristico.; sporePrint: Bruno-porpora.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-5611d4cf7e4c8665",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hypholoma-lateritium.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hypholoma-lateritium.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Hypholoma lateritium, non a tutto il genere: Contributo alla sintesi documentata per Hypholoma lateritium (species); odor: Poco significativo.; sporePrint: Bruno-porpora.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Hypholoma fasciculare — Fungino ma poco caratteristico.; Hypholoma lateritium — Poco significativo. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Hypholoma fasciculare — Bruno-porpora.; Hypholoma lateritium — Bruno-porpora. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hypholoma-genere-lateral-111.jpg",
@@ -1348,7 +1819,27 @@
       "Inocybe"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-ad644ded28c6f43e",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — inocybe-geophylla.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/inocybe-geophylla.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Inocybe geophylla (representative-species); odor: Lievemente terroso o farinaceo. Esempio: Inocybe geophylla; le altre specie possono differire.; sporePrint: Bruna opaca. Esempio: Inocybe geophylla; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Lievemente terroso o farinaceo. Esempio: Inocybe geophylla; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruna opaca. Esempio: Inocybe geophylla; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma--lateral-245.jpg",
@@ -1393,7 +1884,27 @@
       "Laccaria"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-b6e54038bceb042b",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — laccaria-laccata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/laccaria-laccata.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Laccaria laccata (representative-species); odor: Poco caratteristico. Esempio: Laccaria laccata; le altre specie possono differire.; sporePrint: Bianca. Esempio: Laccaria laccata; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Laccaria laccata; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bianca. Esempio: Laccaria laccata; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/laccaria-genere-lateral-376.jpg",
@@ -1439,7 +1950,38 @@
     "relatedIds": [
       "minimum-card-objective-lentinula--01--lentinula-edodes"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-2f13351d63467c04",
+        "reviewScope": "course-material",
+        "title": "Tissue-Specific Volatile Flavor Profiles of Fresh Lentinula edodes — studio sperimentale",
+        "authors": [],
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10778291/",
+        "location": "Discussion: C8 compounds and tissue/strain-driven variations; il colore della sporata proviene dalla fonte Cornell",
+        "supportedClaim": "Esempio riferito a Lentinula edodes, non a tutto il genere: Contributo alla sintesi documentata per Lentinula edodes (species); odor: Fungino; il profilo aromatico negli esemplari freschi varia tra tessuti e ceppi studiati.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-0cdd18ebb41c7382",
+        "reviewScope": "course-material",
+        "title": "smallfarms.cornell.edu — ",
+        "authors": [],
+        "url": "https://smallfarms.cornell.edu/resources/harvest-to-market-guide/section-2-enterprise-planning/",
+        "location": "Characteristics for Shiitake (Lentinula Edodes): Spore print",
+        "supportedClaim": "Esempio riferito a Lentinula edodes, non a tutto il genere: Contributo alla sintesi documentata per Lentinula edodes (species); sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Lentinula edodes — Fungino; il profilo aromatico negli esemplari freschi varia tra tessuti e ceppi studiati. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Lentinula edodes — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lentinula-lateral-173.jpg",
@@ -1465,10 +2007,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -1491,6 +2029,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9
     }
   },
   {
@@ -1530,7 +2072,38 @@
       "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
       "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-ba4a41a9b842a50f",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — lepiota-subincarnata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/lepiota-subincarnata.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Lepiota subincarnata, non a tutto il genere: Contributo alla sintesi documentata per Lepiota subincarnata (species); odor: Tenue, dolciastro.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-c606245a6df485b8",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — lepiota-brunneoincarnata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Lepiota brunneoincarnata, non a tutto il genere: Contributo alla sintesi documentata per Lepiota brunneoincarnata (species); odor: Tenue, fruttato.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Lepiota subincarnata — Tenue, dolciastro.; Lepiota brunneoincarnata — Tenue, fruttato. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Lepiota subincarnata — Bianca.; Lepiota brunneoincarnata — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lepiotoidi-lateral-369.jpg",
@@ -1554,10 +2127,6 @@
         "subjectTaxon": "Lepiota brunneoincarnata"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -1580,6 +2149,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9
     }
   },
   {
@@ -1604,7 +2177,38 @@
       "minimum-card-objective-lepista--01--lepista-nuda-s-l",
       "minimum-card-objective-lepista--02--lepista-flaccida-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-c0e3081780cfe530",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — lepista-nuda.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/lepista-nuda.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Lepista nuda s.l., non a tutto il genere: Contributo alla sintesi documentata per Lepista nuda (representative-species); odor: Tenue, anisato. Documentato per Lepista nuda; variabilità delle altre componenti non verificata.; sporePrint: Crema-rosato pallido. Documentata per Lepista nuda; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-3923cdbe8bcd31d2",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — lepista-flaccida.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/lepista-flaccida.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Lepista flaccida s.l., non a tutto il genere: Contributo alla sintesi documentata per Lepista flaccida (representative-species); odor: Gradevole, dolciastro. Dato riferito a Lepista flaccida; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianco-crema. Documentata per Lepista flaccida; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Lepista nuda s.l. — Tenue, anisato. Documentato per Lepista nuda; variabilità delle altre componenti non verificata.; Lepista flaccida s.l. — Gradevole, dolciastro. Dato riferito a Lepista flaccida; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Lepista nuda s.l. — Crema-rosato pallido. Documentata per Lepista nuda; non estesa automaticamente all’intero gruppo.; Lepista flaccida s.l. — Bianco-crema. Documentata per Lepista flaccida; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lepista-genere-lateral-318.jpg",
@@ -1628,10 +2232,6 @@
         "subjectTaxon": "Lepista nuda"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -1657,6 +2257,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9
     }
   },
   {
@@ -1681,7 +2285,50 @@
       "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
       "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-2171fbe60f843348",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — leucopaxillus-giganteus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/leucopaxillus-giganteus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Leucopaxillus giganteus s.l., non a tutto il genere: Contributo alla sintesi documentata per Leucopaxillus giganteus (representative-species); odor: Tenue e gradevole. Dato riferito a Leucopaxillus giganteus; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianca. Documentata per Leucopaxillus giganteus; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-42af6a8e7d14589a",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — leucopaxillus_gentianeus.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/leucopaxillus_gentianeus.html",
+        "location": "Description: Odor and Taste; Spore Print",
+        "supportedClaim": "Esempio riferito a Leucopaxillus gentianeus, non a tutto il genere: Contributo alla sintesi documentata per Leucopaxillus gentianeus (species); odor: Farinaceo, anche intenso.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-30bcd9b6e24d2d68",
+        "reviewScope": "course-material",
+        "title": "www.funghiitaliani.it — ",
+        "authors": [],
+        "url": "https://www.funghiitaliani.it/topic/25454-leucopaxillus-gentianeus-qu%C3%A9l-kotl-1966/",
+        "location": "Raccolta Umbria dicembre 2015, Stefano Rocchi: odore di farina; sporata bianca",
+        "supportedClaim": "Esempio riferito a Leucopaxillus gentianeus, non a tutto il genere: Contributo alla sintesi documentata per Leucopaxillus gentianeus (species); odor: Farinaceo, anche intenso.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Leucopaxillus giganteus s.l. — Tenue e gradevole. Dato riferito a Leucopaxillus giganteus; non descrive necessariamente tutte le componenti della scheda.; Leucopaxillus gentianeus — Farinaceo, anche intenso. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Leucopaxillus giganteus s.l. — Bianca. Documentata per Leucopaxillus giganteus; non estesa automaticamente all’intero gruppo.; Leucopaxillus gentianeus — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-lateral-346.jpg",
@@ -1705,10 +2352,6 @@
         "subjectTaxon": "Leucopaxillus giganteus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 10
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -1731,6 +2374,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 10
     }
   },
   {
@@ -1749,7 +2396,27 @@
       "Limacella"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-fafb370bdfb98162",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — limacella_glioderma.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/limacella_glioderma.html",
+        "location": "Description: Odor and Taste; Spore Print; Herb. Kuo 08290201",
+        "supportedClaim": "Contributo alla sintesi documentata per Limacella glioderma (representative-species); odor: Farinaceo nella descrizione di Limacella glioderma; esempio del gruppo, non esteso agli altri generi.; sporePrint: Bianca nella descrizione di Limacella glioderma; non estesa all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Farinaceo nella descrizione di Limacella glioderma; esempio del gruppo, non esteso agli altri generi.",
+      "sporePrint": {
+        "label": "Bianca nella descrizione di Limacella glioderma; non estesa all’intero gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-lateral.jpg",
@@ -1807,7 +2474,38 @@
       "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
       "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-b28242703e0327e1",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — lyophyllum-decastes.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/lyophyllum-decastes.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Lyophyllum decastes s.l., non a tutto il genere: Contributo alla sintesi documentata per Lyophyllum decastes (representative-species); odor: Poco significativo. Dato riferito a Lyophyllum decastes; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianca. Documentata per Lyophyllum decastes; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-f69529c082deb701",
+        "reviewScope": "course-material",
+        "title": "www.sardegnafunghi.it — semitale.html",
+        "authors": [],
+        "url": "https://www.sardegnafunghi.it/semitale.html",
+        "location": "Raccolta determinata da Filippo Negosanti: Carne; Sporata",
+        "supportedClaim": "Esempio riferito a Lyophyllum specie annerenti, non a tutto il genere: Contributo alla sintesi documentata per Lyophyllum semitale (representative-species); odor: Farinaceo, non intenso, in L. semitale; non esteso a tutte le specie annerenti.; sporePrint: Bianca in L. semitale; esempio documentato, non misura dell’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Lyophyllum decastes s.l. — Poco significativo. Dato riferito a Lyophyllum decastes; non descrive necessariamente tutte le componenti della scheda.; Lyophyllum specie annerenti — Farinaceo, non intenso, in L. semitale; non esteso a tutte le specie annerenti. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Lyophyllum decastes s.l. — Bianca. Documentata per Lyophyllum decastes; non estesa automaticamente all’intero gruppo.; Lyophyllum specie annerenti — Bianca in L. semitale; esempio documentato, non misura dell’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lyophyllum-genere-lateral-303.jpg",
@@ -1831,10 +2529,6 @@
         "subjectTaxon": "Lyophyllum decastes s.l."
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 10
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -1868,6 +2562,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 10
     }
   },
   {
@@ -1886,7 +2584,27 @@
       "Melanoleuca"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-6ce573c0c05b3c99",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — melanoleuca-melaleuca.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/melanoleuca-melaleuca.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Melanoleuca melaleuca (representative-species); odor: Poco caratteristico. Esempio: Melanoleuca melaleuca; le altre specie possono differire.; sporePrint: Crema molto pallido. Esempio: Melanoleuca melaleuca; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Melanoleuca melaleuca; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Crema molto pallido. Esempio: Melanoleuca melaleuca; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/melanoleuca-genere-lateral-368.jpg",
@@ -1933,7 +2651,26 @@
     "relatedIds": [
       "minimum-card-objective-mycena--01--mycena-sez-purae"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-8431e30ff438168c",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — mycena-pura.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/mycena-pura.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Mycena sez. Purae, non a tutto il genere: Contributo alla sintesi documentata per Mycena pura (representative-species); odor: Intensamente rafanoide alla contusione. Dato riferito a Mycena pura; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bianca. Documentata per Mycena pura; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Mycena sez. Purae — Intensamente rafanoide alla contusione. Dato riferito a Mycena pura; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Mycena sez. Purae — Bianca. Documentata per Mycena pura; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/mycena-genere-lateral-126.jpg",
@@ -1979,7 +2716,26 @@
     "relatedIds": [
       "minimum-card-objective-omphalotus--01--omphalotus-olearius"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f9b832feb5c69468",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — omphalotus-olearius.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/omphalotus-olearius.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Omphalotus olearius, non a tutto il genere: Contributo alla sintesi documentata per Omphalotus olearius (species); odor: Piuttosto intenso ma gradevole nella descrizione di First Nature.; sporePrint: Bianco-crema.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Omphalotus olearius — Piuttosto intenso ma gradevole nella descrizione di First Nature. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Omphalotus olearius — Bianco-crema. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/omphalotus-genere-lateral-177.jpg",
@@ -2025,7 +2781,26 @@
     "relatedIds": [
       "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-4ee6d48da98f1292",
+        "reviewScope": "course-material",
+        "title": "colfungi.org — general-information",
+        "authors": [],
+        "url": "https://colfungi.org/taxon/urn%3Alsid%3Aindexfungorum.org%3Anames%3A169479/general-information",
+        "location": "Taxon description: Odor; Spore print",
+        "supportedClaim": "Esempio riferito a Panaeolus cyanescens, non a tutto il genere: Contributo alla sintesi documentata per Panaeolus cyanescens (species); odor: Fungino nella descrizione del Catalogue of Fungi of Colombia.; sporePrint: Nera.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Panaeolus cyanescens — Fungino nella descrizione del Catalogue of Fungi of Colombia. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Panaeolus cyanescens — Nera. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-top.jpg",
@@ -2081,7 +2856,26 @@
     "relatedIds": [
       "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-08145657e15d693c",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — kuehneromyces-mutabilis.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/kuehneromyces-mutabilis.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Kuehneromyces mutabilis, non a tutto il genere: Contributo alla sintesi documentata per Kuehneromyces mutabilis (species); odor: Poco caratteristico nella descrizione di First Nature.; sporePrint: Da ocra-rossastro a bruno-cannella scuro.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Kuehneromyces mutabilis — Poco caratteristico nella descrizione di First Nature. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Kuehneromyces mutabilis — Da ocra-rossastro a bruno-cannella scuro. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--lateral-121.jpg",
@@ -2109,10 +2903,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2149,6 +2939,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11
     }
   },
   {
@@ -2170,7 +2964,38 @@
       "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
       "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-45de79d55d876349",
+        "reviewScope": "course-material",
+        "title": "www.ambpesaro.it — ",
+        "authors": [],
+        "url": "https://www.ambpesaro.it/portfolio-item/pleurotus-eryngii/",
+        "location": "Exsic. 3612: Carne; Sporata",
+        "supportedClaim": "Esempio riferito a Pleurotus eryngii s.l., non a tutto il genere: Contributo alla sintesi documentata per Pleurotus eryngii (representative-species); odor: Lievemente farinaceo, documentato per P. eryngii nominale; non esteso automaticamente a tutto il complesso.; sporePrint: Bianca, documentata per P. eryngii nominale; non estesa automaticamente a tutto il complesso.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-a99f33edb65d4b92",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — pleurotus-ostreatus.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/pleurotus-ostreatus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Pleurotus ostreatus, non a tutto il genere: Contributo alla sintesi documentata per Pleurotus ostreatus (species); odor: Gradevole ma poco caratteristico.; sporePrint: Bianca o grigio-lilla molto pallido.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Pleurotus eryngii s.l. — Lievemente farinaceo, documentato per P. eryngii nominale; non esteso automaticamente a tutto il complesso.; Pleurotus ostreatus — Gradevole ma poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Pleurotus eryngii s.l. — Bianca, documentata per P. eryngii nominale; non estesa automaticamente a tutto il complesso.; Pleurotus ostreatus — Bianca o grigio-lilla molto pallido. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/pleurotus-genere-lateral-129.jpg",
@@ -2194,10 +3019,6 @@
         "subjectTaxon": "Pleurotus citrinopileatus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2248,6 +3069,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11
     }
   },
   {
@@ -2266,7 +3091,27 @@
       "Pluteus"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-34775f4b77a1846d",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — pluteus-cervinus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/pluteus-cervinus.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Pluteus cervinus (representative-species); odor: Poco caratteristico. Esempio: Pluteus cervinus; le altre specie possono differire.; sporePrint: Rosa pallido. Esempio: Pluteus cervinus; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Pluteus cervinus; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Rosa pallido. Esempio: Pluteus cervinus; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-pluteus-top.jpg",
@@ -2317,7 +3162,27 @@
       "Psathyrella"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-7198cbfcde8c01cf",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — psathyrella-candolleana.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/psathyrella-candolleana.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Psathyrella candolleana (representative-species); odor: Poco caratteristico. Esempio: Psathyrella candolleana; le altre specie possono differire.; sporePrint: Bruno scuro. Esempio: Psathyrella candolleana; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Psathyrella candolleana; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno scuro. Esempio: Psathyrella candolleana; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-top.jpg",
@@ -2368,7 +3233,27 @@
       "Psilocybe"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-00a9f82e66600d08",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — psilocybe-semilanceata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/psilocybe-semilanceata.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Psilocybe semilanceata (representative-species); odor: Di muffa. Esempio: Psilocybe semilanceata; le altre specie possono differire.; sporePrint: Bruno-porpora molto scuro. Esempio: Psilocybe semilanceata; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Di muffa. Esempio: Psilocybe semilanceata; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno-porpora molto scuro. Esempio: Psilocybe semilanceata; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-psilocybe-s-l-incluso-deconica-top.jpg",
@@ -2420,7 +3305,26 @@
     "relatedIds": [
       "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-fc62f13ddc4e3988",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — stropharia-rugosoannulata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/stropharia-rugosoannulata.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Stropharia rugosoannulata, non a tutto il genere: Contributo alla sintesi documentata per Stropharia rugosoannulata (species); odor: Gradevole ma poco caratteristico.; sporePrint: Bruno-porpora.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Stropharia rugosoannulata — Gradevole ma poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Stropharia rugosoannulata — Bruno-porpora. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-lateral.jpg",
@@ -2450,10 +3354,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2476,6 +3376,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12
     }
   },
   {
@@ -2509,7 +3413,40 @@
       "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
       "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 313",
+        "supportedClaim": "Esempio riferito a Tricholoma pardinum, non a tutto il genere: Contributo alla sintesi documentata per Tricholoma pardinum (species); odor: Farinaceo.; sporePrint: Bianca in massa.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 313
+      },
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 309",
+        "supportedClaim": "Esempio riferito a Tricholoma filamentosum, non a tutto il genere: Contributo alla sintesi documentata per Tricholoma filamentosum (species); odor: Farinaceo, con una componente di cetriolo.; sporePrint: Bianca in massa.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 309
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Tricholoma pardinum — Farinaceo.; Tricholoma filamentosum — Farinaceo, con una componente di cetriolo. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Tricholoma pardinum — Bianca in massa.; Tricholoma filamentosum — Bianca in massa. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-lateral-41.jpg",
@@ -2533,10 +3470,6 @@
         "subjectTaxon": "Tricholoma saponaceum s.l."
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2640,6 +3573,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12
     }
   },
   {
@@ -2661,7 +3598,38 @@
       "minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
       "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-e6f3923b72b834c7",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — volvopluteus-gloiocephalus.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/volvopluteus-gloiocephalus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Volvopluteus gloiocephalus, non a tutto il genere: Contributo alla sintesi documentata per Volvopluteus gloiocephalus (species); odor: Tenue e gradevole, poco caratteristico.; sporePrint: Rosa.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-de5eaae55bf108ae",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — volvariella_volvacea.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/volvariella_volvacea.html",
+        "location": "Description: Odor and Taste; Spore Print",
+        "supportedClaim": "Esempio riferito a Volvariella volvacea, non a tutto il genere: Contributo alla sintesi documentata per Volvariella volvacea (species); odor: Poco caratteristico.; sporePrint: Rosa-brunastra.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Volvopluteus gloiocephalus — Tenue e gradevole, poco caratteristico.; Volvariella volvacea — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Volvopluteus gloiocephalus — Rosa.; Volvariella volvacea — Rosa-brunastra. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-volvariella-volvopluteus-top.jpg",
@@ -2691,10 +3659,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 13
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2717,6 +3681,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 13
     }
   },
   {
@@ -2762,8 +3730,50 @@
           "characters"
         ],
         "sourcePage": 85
+      },
+      {
+        "sourceId": "LIT-ATLAS-3fadc78e35c59267",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — lactarius-deliciosus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/lactarius-deliciosus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Lactarius sez. Deliciosi, non a tutto il genere: Contributo alla sintesi documentata per Lactarius deliciosus (representative-species); odor: Fruttato. Dato riferito a Lactarius deliciosus; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Crema-rosato pallido. Documentata per Lactarius deliciosus; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-66258c9a0d0f4235",
+        "reviewScope": "course-material",
+        "title": "cultura.ilfilo.net — ",
+        "authors": [],
+        "url": "https://cultura.ilfilo.net/pillole-di-funghi-in-mugello-lodore-dei-funghi/?amp=1",
+        "location": "Alessandro Francolini: (4) Timbro fruttato, Lactarius porninae",
+        "supportedClaim": "Esempio riferito a Lactarius porniniae, non a tutto il genere: Contributo alla sintesi documentata per Lactarius porninae (species); odor: Intenso, simile a scorza di mandarino.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-b0a84939ad5f0125",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — lactarius_porninsis.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/lactarius_porninsis.html",
+        "location": "Description: Spore Print, dato bibliografico riferito e non misurato dall’autore",
+        "supportedClaim": "Esempio riferito a Lactarius porniniae, non a tutto il genere: Contributo alla sintesi documentata per Lactarius porninsis (species); sporePrint: Crema secondo Heilmann-Clausen et al. (2000), riportata da Kuo; la fonte segnala anche un’illustrazione aranciata pallida in Kränzlin (2005). Sporata non ottenuta sulle raccolte di Kuo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "sporePrint"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Lactarius sez. Deliciosi — Fruttato. Dato riferito a Lactarius deliciosus; non descrive necessariamente tutte le componenti della scheda.; Lactarius porniniae — Intenso, simile a scorza di mandarino. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Lactarius sez. Deliciosi — Crema-rosato pallido. Documentata per Lactarius deliciosus; non estesa automaticamente all’intero gruppo.; Lactarius porniniae — Crema secondo Heilmann-Clausen et al. (2000), riportata da Kuo; la fonte segnala anche un’illustrazione aranciata pallida in Kränzlin (2005). Sporata non ottenuta sulle raccolte di Kuo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-lactarius-incluso-lactifluus-lateral.jpg",
@@ -2793,10 +3803,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 13
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2999,6 +4005,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 13
     }
   },
   {
@@ -3040,8 +4050,52 @@
           "characters"
         ],
         "sourcePage": 85
+      },
+      {
+        "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+        "reviewScope": "course-material",
+        "title": "Marco Floriani - Il genere Russula (Toscana-Basilicata 2025-2026).pdf",
+        "authors": [
+          "Marco Floriani"
+        ],
+        "url": "https://drive.google.com/file/d/1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR/view",
+        "location": "Sottogenere Ingratula — caratteri diagnostici; Ingratae — Foetentinae, schema della serie foetens",
+        "supportedClaim": "Esempio riferito a Russula Foetentinae, non a tutto il genere: Ingratula: sporata da bianca a crema; nella serie foetens gli odori differiscono fra specie: varechina, misto mandorlato, mandorle amare o marzapane.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-847f5b670d415937",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — russula-nigricans.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/russula-nigricans.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Russula Compactae Nigricantinae, non a tutto il genere: Contributo alla sintesi documentata per Russula nigricans (representative-species); odor: Lievemente fruttato. Dato riferito a Russula nigricans; non descrive necessariamente tutte le componenti della scheda.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-a7bba3a6b94a18b5",
+        "reviewScope": "course-material",
+        "title": "mushrooms.linnaeus.naturalis.nl — nsr_taxon.php",
+        "authors": [],
+        "url": "https://mushrooms.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=100496",
+        "location": "Description: Spore-print colour",
+        "supportedClaim": "Esempio riferito a Russula Compactae Nigricantinae, non a tutto il genere: Contributo alla sintesi documentata per Russula nigricans (representative-species); sporePrint: Bianca in R. nigricans; esempio documentato, non esteso a tutta la sottosezione.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "sporePrint"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Russula Foetentinae — Variabile: varechina nella serie foetens; note miste mandorlate in R. illota; mandorle amare o marzapane in R. grata e R. fragrantissima.; Russula Compactae Nigricantinae — Lievemente fruttato. Dato riferito a Russula nigricans; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Russula Foetentinae — Bianca–crema; descrizione del sottogenere Ingratula comprendente Foetentinae.; Russula Compactae Nigricantinae — Bianca in R. nigricans; esempio documentato, non esteso a tutta la sottosezione. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/russula-genere-top-152.jpg",
@@ -3067,10 +4121,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 14
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -3277,6 +4327,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 14
     }
   },
   {
@@ -3345,10 +4399,28 @@
           "diagnosticNote"
         ],
         "sourcePage": 3
+      },
+      {
+        "sourceId": "LIT-ATLAS-330ec3ca0a469fa9",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — boletus-edulis.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/boletus-edulis.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Boletus edulis s.l., non a tutto il genere: Contributo alla sintesi documentata per Boletus edulis (representative-species); odor: Tenue e gradevole. Dato riferito a Boletus edulis; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Bruno-oliva. Documentata per Boletus edulis; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
       }
     ],
     "differentiatingCharacter": "Nei giovani esemplari i pori possono essere occlusi da una patina bianca.",
     "diagnosticNote": "Per lo studio dell’ecologia, confrontare le specie termofile B. aereus e B. reticulatus con le mesofile B. edulis e B. pinophilus. L’ambiente non determina da solo la specie.",
+    "studyProfile": {
+      "odor": "Esempi documentati: Boletus edulis s.l. — Tenue e gradevole. Dato riferito a Boletus edulis; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Boletus edulis s.l. — Bruno-oliva. Documentata per Boletus edulis; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/boletus-s-str-lateral-40.jpg",
@@ -3372,10 +4444,6 @@
         "subjectTaxon": "Boletus edulis"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 14
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -3440,6 +4508,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 14
     }
   },
   {
@@ -3458,7 +4530,27 @@
       "Butyriboletus"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-5f313eab87f7cec8",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — butyriboletus_brunneus.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/butyriboletus_brunneus.html",
+        "location": "Description: Odor and Taste; Spore Print; Herb. Kuo",
+        "supportedClaim": "Contributo alla sintesi documentata per Butyriboletus brunneus (representative-species); odor: Poco caratteristico in B. brunneus; esempio nordamericano, non esteso a tutte le specie del genere.; sporePrint: Bruno-oliva in B. brunneus; esempio documentato del genere.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico in B. brunneus; esempio nordamericano, non esteso a tutte le specie del genere.",
+      "sporePrint": {
+        "label": "Bruno-oliva in B. brunneus; esempio documentato del genere."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/butyriboletus-lateral-213.jpg",
@@ -3482,10 +4574,6 @@
         "subjectTaxon": "Butyriboletus appendiculatus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 15
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -3539,6 +4627,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 15
     }
   },
   {
@@ -3559,7 +4651,38 @@
       "minimum-card-objective-caloboletus--01--caloboletus-radicans",
       "minimum-card-objective-caloboletus--02--caloboletus-calopus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-292b62a9cd8e88d3",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — caloboletus-radicans.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/caloboletus-radicans.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Caloboletus radicans, non a tutto il genere: Contributo alla sintesi documentata per Caloboletus radicans (species); odor: Fungino, intenso e sgradevole.; sporePrint: Bruno-olivastro.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-5a0acdf63b42a6b7",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — caloboletus-calopus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/caloboletus-calopus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Caloboletus calopus, non a tutto il genere: Contributo alla sintesi documentata per Caloboletus calopus (species); odor: Fungino, intenso e sgradevole.; sporePrint: Bruno-olivastro.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Caloboletus radicans — Fungino, intenso e sgradevole.; Caloboletus calopus — Fungino, intenso e sgradevole. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Caloboletus radicans — Bruno-olivastro.; Caloboletus calopus — Bruno-olivastro. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/caloboletus-lateral-209.jpg",
@@ -3606,7 +4729,27 @@
       "Chroogomphus"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-0318f5c4de6e7984",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — chroogomphus-rutilus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/chroogomphus-rutilus.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Chroogomphus rutilus (representative-species); odor: Poco caratteristico. Esempio: Chroogomphus rutilus; le altre specie possono differire.; sporePrint: Da oliva-fumo molto scuro a nera. Esempio: Chroogomphus rutilus; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Chroogomphus rutilus; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Da oliva-fumo molto scuro a nera. Esempio: Chroogomphus rutilus; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-chroogomphus-underside.jpg",
@@ -3657,7 +4800,27 @@
       "Gomphidius"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-bda9677a85e18ac2",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — gomphidius-glutinosus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/gomphidius-glutinosus.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Gomphidius glutinosus (representative-species); odor: Poco caratteristico. Esempio: Gomphidius glutinosus; le altre specie possono differire.; sporePrint: Bruno-seppia scuro. Esempio: Gomphidius glutinosus; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Gomphidius glutinosus; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno-seppia scuro. Esempio: Gomphidius glutinosus; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-gomphidius-underside.jpg",
@@ -3744,12 +4907,61 @@
           "sporePrint"
         ],
         "sourcePage": 35
+      },
+      {
+        "sourceId": "LIT-ATLAS-70e3c361667c8c7a",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — gyroporus-cyanescens.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/gyroporus-cyanescens.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Gyroporus cyanescens, non a tutto il genere: Contributo alla sintesi documentata per Gyroporus cyanescens (species); odor: Poco caratteristico.; sporePrint: Giallo paglierino.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-31c5ce113ea7f4e1",
+        "reviewScope": "course-material",
+        "title": "www.funghipantelleria.com — gyroporus-castaneus",
+        "authors": [],
+        "url": "https://www.funghipantelleria.com/schede-funghi/g/gyroporus-castaneus",
+        "location": "Odore; Microscopia: sporata",
+        "supportedClaim": "Esempio riferito a Gyroporus castaneus s.l., non a tutto il genere: Contributo alla sintesi documentata per Gyroporus castaneus (representative-species); odor: Tenue, talvolta di nocciola (Gruppo Micologico Pantelleria); poco caratteristico nelle descrizioni di Kuo e McNabb. Dati riferiti a G. castaneus nel senso delle fonti.; sporePrint: Giallo limone (Gruppo Micologico Pantelleria) o giallo pallido (Kuo); non estesa alle altre entità del complesso.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-55d461c9971befbf",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — gyroporus_castaneus.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/gyroporus_castaneus.html",
+        "location": "Description: Odor and Taste; Spore Print",
+        "supportedClaim": "Esempio riferito a Gyroporus castaneus s.l., non a tutto il genere: Contributo alla sintesi documentata per Gyroporus castaneus (representative-species); odor: Tenue, talvolta di nocciola (Gruppo Micologico Pantelleria); poco caratteristico nelle descrizioni di Kuo e McNabb. Dati riferiti a G. castaneus nel senso delle fonti.; sporePrint: Giallo limone (Gruppo Micologico Pantelleria) o giallo pallido (Kuo); non estesa alle altre entità del complesso.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-973274814bf3c5f3",
+        "reviewScope": "course-material",
+        "title": "virtualmycota.landcareresearch.co.nz — vM_Species_Details.aspx",
+        "authors": [],
+        "url": "https://virtualmycota.landcareresearch.co.nz/webforms/vM_Species_Details.aspx?pk=4257",
+        "location": "McNabb (1968): SMELL; SPORES. La sporata è riferita, non ottenuta sulle raccolte descritte.",
+        "supportedClaim": "Esempio riferito a Gyroporus castaneus s.l., non a tutto il genere: Contributo alla sintesi documentata per Gyroporus castaneus (representative-species); odor: Tenue, talvolta di nocciola (Gruppo Micologico Pantelleria); poco caratteristico nelle descrizioni di Kuo e McNabb. Dati riferiti a G. castaneus nel senso delle fonti.; sporePrint: Giallo limone (Gruppo Micologico Pantelleria) o giallo pallido (Kuo); non estesa alle altre entità del complesso.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
       }
     ],
     "studyProfile": {
       "sporePrint": {
         "label": "Molto chiara"
-      }
+      },
+      "odor": "Esempi documentati: Gyroporus cyanescens — Poco caratteristico.; Gyroporus castaneus s.l. — Tenue, talvolta di nocciola (Gruppo Micologico Pantelleria); poco caratteristico nelle descrizioni di Kuo e McNabb. Dati riferiti a G. castaneus nel senso delle fonti. Non estendere automaticamente questi dati a tutte le specie del gruppo."
     },
     "referenceImages": [
       {
@@ -3844,11 +5056,26 @@
           "odor"
         ],
         "sourcePage": 43
+      },
+      {
+        "sourceId": "LIT-ATLAS-d1998459f6c9751d",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hemileccinum-impolitum.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hemileccinum-impolitum.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Hemileccinum impolitum (representative-species); sporePrint: Bruno-oliva in H. impolitum; esempio documentato del genere.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "sporePrint"
+        ]
       }
     ],
     "diagnosticNote": "I caratteri illustrati nella lezione si riferiscono a H. impolitum e H. depilatum; l’odore basale può essere variabile.",
     "studyProfile": {
-      "odor": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum."
+      "odor": "Possibile odore fenolico alla base del gambo, variabile; descritto per H. impolitum e H. depilatum.",
+      "sporePrint": {
+        "label": "Bruno-oliva in H. impolitum; esempio documentato del genere."
+      }
     },
     "referenceImages": [
       {
@@ -3873,10 +5100,6 @@
         "subjectTaxon": "Hemileccinum impolitum"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 16
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -3899,6 +5122,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 16
     }
   },
   {
@@ -3918,7 +5145,26 @@
     "relatedIds": [
       "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-139d0ee10f0435d8",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hygrophoropsis-aurantiaca.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hygrophoropsis-aurantiaca.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Hygrophoropsis aurantiaca, non a tutto il genere: Contributo alla sintesi documentata per Hygrophoropsis aurantiaca (species); odor: Lievemente fungino, poco caratteristico.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Hygrophoropsis aurantiaca — Lievemente fungino, poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Hygrophoropsis aurantiaca — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hygrophoropsis-lateral.jpg",
@@ -3989,8 +5235,26 @@
           "characters"
         ],
         "sourcePage": 47
+      },
+      {
+        "sourceId": "LIT-ATLAS-9fbc346226e6cfac",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — imleria-badia.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/imleria-badia.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Imleria badia, non a tutto il genere: Contributo alla sintesi documentata per Imleria badia (species); odor: Poco caratteristico.; sporePrint: Bruno-olivastro.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Imleria badia — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Imleria badia — Bruno-olivastro. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/imleria-lateral-194.jpg",
@@ -4014,10 +5278,6 @@
         "subjectTaxon": "Imleria badia"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 16
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -4040,6 +5300,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 16
     }
   },
   {
@@ -4076,8 +5340,27 @@
           "characters"
         ],
         "sourcePage": 92
+      },
+      {
+        "sourceId": "LIT-ATLAS-0625fe5ee994d348",
+        "reviewScope": "course-material",
+        "title": "www.ambpesaro.it — ",
+        "authors": [],
+        "url": "https://www.ambpesaro.it/portfolio-item/leccinellum-lepidum/",
+        "location": "Descrizione: Carne; Sporata",
+        "supportedClaim": "Contributo alla sintesi documentata per Leccinellum lepidum (representative-species); odor: Debole in L. lepidum; non esteso a tutte le specie del genere.; sporePrint: Bruno-oliva in L. lepidum; esempio documentato del genere.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Debole in L. lepidum; non esteso a tutte le specie del genere.",
+      "sporePrint": {
+        "label": "Bruno-oliva in L. lepidum; esempio documentato del genere."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/leccinellum-lateral-369.jpg",
@@ -4140,8 +5423,27 @@
           "characters"
         ],
         "sourcePage": 92
+      },
+      {
+        "sourceId": "LIT-ATLAS-8bec88474d7e91e1",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — leccinum-scabrum.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/leccinum-scabrum.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Leccinum scabrum (representative-species); odor: Tenue e gradevole, poco caratteristico. Esempio: Leccinum scabrum; le altre specie possono differire.; sporePrint: Bruno-olivastro. Esempio: Leccinum scabrum; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Tenue e gradevole, poco caratteristico. Esempio: Leccinum scabrum; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno-olivastro. Esempio: Leccinum scabrum; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/leccinum-lateral-381.jpg",
@@ -4165,10 +5467,6 @@
         "subjectTaxon": "Leccinum duriusculum"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 16
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -4215,6 +5513,10 @@
           "scope": "national"
         }
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 16
     }
   },
   {
@@ -4233,7 +5535,27 @@
       "Paxillus"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-91e8c62879ed85f8",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — paxillus-involutus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/paxillus-involutus.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Paxillus involutus (representative-species); odor: Poco caratteristico. Esempio: Paxillus involutus; le altre specie possono differire.; sporePrint: Bruno-siena. Esempio: Paxillus involutus; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Paxillus involutus; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno-siena. Esempio: Paxillus involutus; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/paxillus-lateral-348.jpg",
@@ -4315,8 +5637,38 @@
           "habitat"
         ],
         "sourcePage": 77
+      },
+      {
+        "sourceId": "LIT-ATLAS-8aa4df6a118b66d8",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — suillus-luteus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/suillus-luteus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Suillus luteus, non a tutto il genere: Contributo alla sintesi documentata per Suillus luteus (species); odor: Poco caratteristico.; sporePrint: Ocra o crema-ocra.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-7ecb0173c39eac2e",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — suillus-granulatus.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/suillus-granulatus.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Suillus granulatus, non a tutto il genere: Contributo alla sintesi documentata per Suillus granulatus (species); odor: Poco caratteristico.; sporePrint: Ocra o bruno-siena.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Suillus luteus — Poco caratteristico.; Suillus granulatus — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Suillus luteus — Ocra o crema-ocra.; Suillus granulatus — Ocra o bruno-siena. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/suillus-incluso-boletinus-lateral-334.jpg",
@@ -4340,10 +5692,6 @@
         "subjectTaxon": "Suillus granulatus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -4447,6 +5795,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17
     }
   },
   {
@@ -4466,7 +5818,27 @@
     "relatedIds": [
       "minimum-card-objective-tylopilus--01--tylopilus-felleus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f59b5baac5df9dd4",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — tylopilus-felleus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/tylopilus-felleus.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Tylopilus felleus (representative-species); odor: Poco significativo in T. felleus; esempio documentato, non esteso all’intero genere.; sporePrint: Rosa in T. felleus; esempio documentato del genere.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco significativo in T. felleus; esempio documentato, non esteso all’intero genere.",
+      "sporePrint": {
+        "label": "Rosa in T. felleus; esempio documentato del genere."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tylopilus-top-546.jpg",
@@ -4511,7 +5883,27 @@
       "Xerocomus"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-e0288658e065dc35",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — xerocomellus-chrysenteron.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/xerocomellus-chrysenteron.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Xerocomellus chrysenteron (representative-species); odor: Poco caratteristico. Esempio: Xerocomellus chrysenteron; le altre specie possono differire.; sporePrint: Bruno-olivastro. Esempio: Xerocomellus chrysenteron; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Xerocomellus chrysenteron; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bruno-olivastro. Esempio: Xerocomellus chrysenteron; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-lateral-172.jpg",
@@ -4576,8 +5968,26 @@
           "characters"
         ],
         "sourcePage": 54
+      },
+      {
+        "sourceId": "LIT-ATLAS-e0bc9ff7cdef6a1d",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — cantharellus-cibarius.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/cantharellus-cibarius.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Cantharellus cibarius complex, non a tutto il genere: Contributo alla sintesi documentata per Cantharellus cibarius (representative-species); odor: Tenue, simile ad albicocca. Dato riferito a Cantharellus cibarius; non descrive necessariamente tutte le componenti della scheda.; sporePrint: Da giallo pallido a bianco-crema, talvolta lievemente rosata. Documentata per Cantharellus cibarius; non estesa automaticamente all’intero gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
       }
     ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Cantharellus cibarius complex — Tenue, simile ad albicocca. Dato riferito a Cantharellus cibarius; non descrive necessariamente tutte le componenti della scheda. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Cantharellus cibarius complex — Da giallo pallido a bianco-crema, talvolta lievemente rosata. Documentata per Cantharellus cibarius; non estesa automaticamente all’intero gruppo. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cantharellus-cibarius-genere-lateral-456.jpg",
@@ -4601,10 +6011,6 @@
         "subjectTaxon": "Cantharellus cibarius"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -4627,6 +6033,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17
     }
   },
   {
@@ -4648,7 +6058,38 @@
       "minimum-card-objective-craterellus--02--craterellus-tubaeformis",
       "minimum-card-objective-craterellus--03--craterellus-cornucopioides"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-5b37c8e25bc08462",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — cantharellus-aurora.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/cantharellus-aurora.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Craterellus lutescens, non a tutto il genere: Contributo alla sintesi documentata per Cantharellus aurora (species); odor: Poco caratteristico.; sporePrint: Bianca o giallo pallido.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-757aa4df510a07b2",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — cantharellus-tubaeformis.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/cantharellus-tubaeformis.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Craterellus tubaeformis, non a tutto il genere: Contributo alla sintesi documentata per Cantharellus tubaeformis (species); odor: Poco caratteristico.; sporePrint: Bianca o giallo molto pallido.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Craterellus lutescens — Poco caratteristico.; Craterellus tubaeformis — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Craterellus lutescens — Bianca o giallo pallido.; Craterellus tubaeformis — Bianca o giallo molto pallido. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-craterellus-lateral.jpg",
@@ -4678,10 +6119,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -4749,6 +6186,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18
     }
   },
   {
@@ -4768,7 +6209,27 @@
     "relatedIds": [
       "minimum-card-objective-gomphus--01--gomphus-clavatus"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-831340c04a9c88ec",
+        "reviewScope": "course-material",
+        "title": "USDA Forest Service — Handbook to additional fungal species of special concern (2003)",
+        "authors": [],
+        "url": "https://research.fs.usda.gov/download/treesearch/5298.pdf",
+        "location": "p. 35",
+        "supportedClaim": "Esempio riferito a Gomphus clavatus, non a tutto il genere: Contributo alla sintesi documentata per Gomphus clavatus (species); odor: Tenue.; sporePrint: Da ocra a oliva-camoscio scuro.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 35
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Gomphus clavatus — Tenue. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Gomphus clavatus — Da ocra a oliva-camoscio scuro. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-gomphus-lateral.jpg",
@@ -4822,7 +6283,51 @@
       "minimum-card-objective-ramaria--02--ramaria-pallida",
       "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-73882c2af53a6caf",
+        "reviewScope": "course-material",
+        "title": "linnet.geog.ubc.ca — Atlas.aspx",
+        "authors": [],
+        "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Ramaria+formosa",
+        "location": "Odor; Spore Deposit: Marr",
+        "supportedClaim": "Esempio riferito a Ramaria formosa, non a tutto il genere: Contributo alla sintesi documentata per Ramaria formosa (species); odor: Poco caratteristico o terroso.; sporePrint: Giallo dorato nella descrizione citata da E-Flora BC.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 277",
+        "supportedClaim": "Esempio riferito a Ramaria pallida, non a tutto il genere: Contributo alla sintesi documentata per Ramaria pallida (species); odor: Di cicoria tostata.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 277
+      },
+      {
+        "sourceId": "LIT-ATLAS-a71e62ae218f77ab",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — ramaria-botrytis.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/ramaria-botrytis.php",
+        "location": "Identification guide: Odour/taste (odore non significativo; fruttato è qui il sapore); Spore print",
+        "supportedClaim": "Esempio riferito a Ramaria botrytis s.l., non a tutto il genere: Contributo alla sintesi documentata per Ramaria botrytis (representative-species); odor: Variabile tra descrizioni: poco significativo (First Nature), fruttato con note di caramelle alla fragola (Francolini). Dati di R. botrytis nominale.; sporePrint: Giallo pallido in R. botrytis; non esteso alle altre componenti del complesso.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Ramaria formosa — Poco caratteristico o terroso.; Ramaria pallida — Di cicoria tostata. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Ramaria formosa — Giallo dorato nella descrizione citata da E-Flora BC.; Ramaria botrytis s.l. — Giallo pallido in R. botrytis; non esteso alle altre componenti del complesso. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/ramaria-lateral-303.jpg",
@@ -4841,10 +6346,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 19
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -4870,6 +6371,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 19
     }
   },
   {
@@ -4888,7 +6393,27 @@
       "Pisolithus"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f2fff1e6b9517946",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — pisolithus_arhizus.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/pisolithus_arhizus.html",
+        "location": "Description: Fruiting Body (spore dust); Odor; Spore Print",
+        "supportedClaim": "Contributo alla sintesi documentata per Pisolithus arhizus (representative-species); odor: Poco caratteristico in P. arhizus; le altre specie possono differire.; sporePrint: Polvere sporale bruno-cannella nella gleba di P. arhizus; non una tradizionale impronta da cappello e non estesa a tutto il genere.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico in P. arhizus; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Polvere sporale bruno-cannella nella gleba di P. arhizus; non una tradizionale impronta da cappello e non estesa a tutto il genere."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-pisolithus-top.jpg",
@@ -4939,7 +6464,39 @@
       "Scleroderma"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-56141c2de2896c46",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — scleroderma_citrinum.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/scleroderma_citrinum.html",
+        "location": "Description: Fruiting Body (spore mass); Odor",
+        "supportedClaim": "Contributo alla sintesi documentata per Scleroderma citrinum (representative-species); odor: Variabile nelle descrizioni di S. citrinum: sgradevole, simile a gas (First Nature), oppure poco caratteristico (Kuo); non esteso all’intero genere.; sporePrint: Polvere sporale da nerastra a bruno scuro nella gleba matura di S. citrinum; non estesa a tutte le specie.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-8393fda2252237c0",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — scleroderma-citrinum.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/scleroderma-citrinum.php",
+        "location": "Identification guide: Odour/taste",
+        "supportedClaim": "Contributo alla sintesi documentata per Scleroderma citrinum (representative-species); odor: Variabile nelle descrizioni di S. citrinum: sgradevole, simile a gas (First Nature), oppure poco caratteristico (Kuo); non esteso all’intero genere.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Variabile nelle descrizioni di S. citrinum: sgradevole, simile a gas (First Nature), oppure poco caratteristico (Kuo); non esteso all’intero genere.",
+      "sporePrint": {
+        "label": "Polvere sporale da nerastra a bruno scuro nella gleba matura di S. citrinum; non estesa a tutte le specie."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/scleroderma-top-142.jpg",
@@ -4989,7 +6546,26 @@
     "relatedIds": [
       "minimum-card-objective-auricularia--01--auricularia-auricula-judae"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-214ec1316272091e",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — auricularia-auricula-judae.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/auricularia-auricula-judae.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Auricularia auricula-judae, non a tutto il genere: Contributo alla sintesi documentata per Auricularia auricula judae (species); odor: Poco caratteristico.; sporePrint: Bianca.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Auricularia auricula-judae — Poco caratteristico. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Auricularia auricula-judae — Bianca. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/auricularia-lateral-306.jpg",
@@ -5017,10 +6593,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 20
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -5043,6 +6615,10 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 20
     }
   },
   {
@@ -5062,7 +6638,39 @@
     "relatedIds": [
       "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-646f8f58040feb5f",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — gyromitra-esculenta.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/gyromitra-esculenta.php",
+        "location": "Odour/taste; Spore print",
+        "supportedClaim": "Esempio riferito a Gyromitra esculenta, non a tutto il genere: Contributo alla sintesi documentata per Gyromitra esculenta (species); odor: Variabile tra descrizioni: poco caratteristico (First Nature), a componente spermatica intensa (AUSL Bologna).; sporePrint: Crema-giallastra o giallo-camoscio.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 125",
+        "supportedClaim": "Esempio riferito a Gyromitra esculenta, non a tutto il genere: Contributo alla sintesi documentata per Gyromitra esculenta (species); odor: Variabile tra descrizioni: poco caratteristico (First Nature), a componente spermatica intensa (AUSL Bologna).. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 125
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Gyromitra esculenta — Variabile tra descrizioni: poco caratteristico (First Nature), a componente spermatica intensa (AUSL Bologna). Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Gyromitra esculenta — Crema-giallastra o giallo-camoscio. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/gyromitra-genere-lateral-720.jpg",
@@ -5111,7 +6719,27 @@
       "Helvella"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-6dc1dc4426070066",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — helvella-crispa.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/helvella-crispa.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Helvella crispa (representative-species); odor: Tenue. Esempio: Helvella crispa; le altre specie possono differire.; sporePrint: Bianca. Esempio: Helvella crispa; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Tenue. Esempio: Helvella crispa; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bianca. Esempio: Helvella crispa; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/helvella-lateral-296.jpg",
@@ -5160,7 +6788,27 @@
       "Morchella"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-36b15daea4380891",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — morchella-esculenta.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/morchella-esculenta.php",
+        "location": "Identification guide: Odour/taste; Spore print",
+        "supportedClaim": "Contributo alla sintesi documentata per Morchella esculenta (representative-species); odor: Poco caratteristico. Esempio: Morchella esculenta; le altre specie possono differire.; sporePrint: Bianco-crema o ocra pallido. Esempio: Morchella esculenta; non estesa a tutto il gruppo.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico. Esempio: Morchella esculenta; le altre specie possono differire.",
+      "sporePrint": {
+        "label": "Bianco-crema o ocra pallido. Esempio: Morchella esculenta; non estesa a tutto il gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/morchella-genere-lateral-718.jpg",
@@ -5179,10 +6827,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 21
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -5215,6 +6859,10 @@
           "scope": "national"
         }
       }
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 21
     }
   },
   {
@@ -5234,7 +6882,39 @@
     "relatedIds": [
       "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l"
     ],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. 295",
+        "supportedClaim": "Esempio riferito a Sarcosphaera coronaria s.l., non a tutto il genere: Contributo alla sintesi documentata per Sarcosphaera coronaria (representative-species); odor: Debole, con una componente spermatica nella descrizione AUSL; dato riferito a S. coronaria nel senso della fonte.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor"
+        ],
+        "sourcePage": 295
+      },
+      {
+        "sourceId": "LIT-ATLAS-14a2e07e4e53db36",
+        "reviewScope": "course-material",
+        "title": "link.springer.com — s11557-024-02006-7",
+        "authors": [],
+        "url": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+        "location": "Taxonomic treatments: S. coronaria and S. crassa, Description: Spore print",
+        "supportedClaim": "Esempio riferito a Sarcosphaera coronaria s.l., non a tutto il genere: Contributo alla sintesi documentata per Sarcosphaera coronaria, Sarcosphaera crassa (representative-species); sporePrint: Bianca in S. coronaria e S. crassa nella revisione del 2024; non estesa agli altri taxa del complesso.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Esempi documentati: Sarcosphaera coronaria s.l. — Debole, con una componente spermatica nella descrizione AUSL; dato riferito a S. coronaria nel senso della fonte. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "sporePrint": {
+        "label": "Esempi documentati: Sarcosphaera coronaria s.l. — Bianca in S. coronaria e S. crassa nella revisione del 2024; non estesa agli altri taxa del complesso. Non estendere automaticamente questi dati a tutte le specie del gruppo."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/sarcosphaera-top-128.jpg",
@@ -5283,7 +6963,27 @@
       "Verpa"
     ],
     "relatedIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "LIT-ATLAS-e8f7fa6ed59ae363",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — verpa_conica.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/verpa_conica.html",
+        "location": "Description: Odor and Taste; Spore Print; Herb. Kuo",
+        "supportedClaim": "Contributo alla sintesi documentata per Verpa conica (representative-species); odor: Poco caratteristico in V. conica; non esteso a tutte le specie del genere.; sporePrint: Aranciata pallida nella descrizione di V. conica; non estesa a tutte le specie.. Le varianti riportate in altre fonti non sono attribuite come misure a questa fonte.",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ]
+      }
+    ],
+    "studyProfile": {
+      "odor": "Poco caratteristico in V. conica; non esteso a tutte le specie del genere.",
+      "sporePrint": {
+        "label": "Aranciata pallida nella descrizione di V. conica; non estesa a tutte le specie."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/verpa-lateral-19.jpg",
