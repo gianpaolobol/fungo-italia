@@ -87,4 +87,6 @@ Correzione su main `f2484da38a344b390b24e0148f7824a20c7b8818`: Expo Autolinking 
 
 Verifica locale: test della risoluzione Autolinking fallito prima della modifica e superato dopo; 63 test superati e TypeScript superato. Queste verifiche non dimostrano il corretto avvio sul dispositivo.
 
-Ricompilazione pulita e auto-submit TestFlight avviati: https://github.com/gianpaolobol/fungo-italia/actions/runs/38003287826. La nuova build va attesa, associata al gruppo interno e provata su iPhone prima di dichiarare il problema risolto. Nessun log privato del tester è inserito nel repository.
+Ricompilazione pulita e auto-submit TestFlight completati con successo: https://github.com/gianpaolobol/fungo-italia/actions/runs/38003287826. Build 1.0.0 (3): https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/builds/bd31650a-6974-4cd8-8350-f27bbd3af28f. I log nativi confermano compilazione e packaging da sorgente di ExpoModulesCore ed ExpoMediaLibrary. Upload Apple riuscito: https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/submissions/fe5ee8f9-4b42-4df7-b3df-927adcd94f9e. I controlli GitHub (TypeScript e 63 test) sono superati.
+
+App Store Connect mostra la build 3 in Processing: non è ancora associabile al gruppo interno. Quando Apple completa l'elaborazione, aggiungerla al gruppo Proprietario — prova iPhone e verificare l'avvio sul dispositivo prima di dichiarare il problema risolto. Nessun log privato del tester è inserito nel repository. Backup verificato invariato a 277466878a64f6c49eecb691ecd9c6fb595ef41a.
