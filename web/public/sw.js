@@ -1,6 +1,9 @@
 const PREFIX='fungo-italia-pwa:'+self.registration.scope+':';
-const CACHE=PREFIX+'2026-10-09-main-beta-refresh-v1';
+const CACHE=PREFIX+'__BUILD_VERSION__';
 const FILES=['./','./index.html','./admin-photos.html','./admin-photos-entry.js','./app.js','./app.css','./gallery-cleanup.css','./importa-foto.html','./importa-foto.js','./importa-foto.css','./photo-core.js','./admin-photo-core.js','./admin-photos.js','./admin-photos.css','./data.json','./manifest.webmanifest','./icon.png','./vendor/leaflet.js','./vendor/leaflet.css','./vendor/images/layers.png','./vendor/images/layers-2x.png','./vendor/images/marker-icon.png','./vendor/images/marker-icon-2x.png','./vendor/images/marker-shadow.png'];
+// Keep large reference photographs out of the atomic install: iOS quota or one
+// unavailable photo must not leave an old service worker active indefinitely.
+const CORE_FILES=FILES.filter(file=>! /\.(?:avif|gif|jpe?g|png|webp)$/i.test(file)||file==='./icon.png'||file.startsWith('./vendor/'));
 function pageFor(url,scope){
  const path=url.pathname;
  if(path===new URL('./admin-photos.html',scope).pathname)return './admin-photos.html';
@@ -19,8 +22,8 @@ async function fetchFreshHtml(request,cache,pageUrl){
   return response;
  }finally{clearTimeout(timer);}
 }
-self.addEventListener('install',event=>event.waitUntil((async()=>{try{const cache=await caches.open(CACHE);await cache.addAll(FILES);await self.skipWaiting();}catch(error){await caches.delete(CACHE);throw error;}})()));
-self.addEventListener('message',event=>{if(event.data?.type==='ACTIVATE_UPDATE')self.skipWaiting();if(event.data?.type==='CACHE_STATUS'&&event.ports[0])event.waitUntil((async()=>{const cache=await caches.open(CACHE);const available=await Promise.all(FILES.map(file=>cache.match(new URL(file,self.registration.scope).href)));event.ports[0].postMessage({ready:available.every(Boolean)});})());});
+self.addEventListener('install',event=>event.waitUntil((async()=>{try{const cache=await caches.open(CACHE);await cache.addAll(CORE_FILES);await self.skipWaiting();}catch(error){await caches.delete(CACHE);throw error;}})()));
+self.addEventListener('message',event=>{if(event.data?.type==='ACTIVATE_UPDATE')self.skipWaiting();if(event.data?.type==='CACHE_STATUS'&&event.ports[0])event.waitUntil((async()=>{const cache=await caches.open(CACHE);const available=await Promise.all(CORE_FILES.map(file=>cache.match(new URL(file,self.registration.scope).href)));event.ports[0].postMessage({ready:available.every(Boolean)});})());});
 self.addEventListener('activate',event=>event.waitUntil((async()=>{await Promise.all((await caches.keys()).filter(key=>key.startsWith(PREFIX)&&key!==CACHE).map(key=>caches.delete(key)));await self.clients.claim();})()));
 self.addEventListener('fetch',event=>{
  const url=new URL(event.request.url),scope=new URL(self.registration.scope);
@@ -31,5 +34,5 @@ self.addEventListener('fetch',event=>{
  }
  const allowed=FILES.map(path=>new URL(path,scope).href);
  if(!allowed.includes(url.href))return;
- event.respondWith((async()=>{const cache=await caches.open(CACHE),cached=await cache.match(event.request);return cached||fetch(event.request);})());
+ event.respondWith((async()=>{const cache=await caches.open(CACHE),cached=await cache.match(event.request);if(cached)return cached;const response=await fetch(event.request);if(response.ok){try{await cache.put(event.request,response.clone());}catch{/* A photo cache failure must not block viewing. */}}return response;})());
 });
