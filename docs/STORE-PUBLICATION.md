@@ -78,3 +78,13 @@ La chiave App Store Connect `fungoitalia` (`35MS8YN74G`) è stata salvata in Exp
 Upload ad App Store Connect completato con successo secondo Expo e GitHub Actions: https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/submissions/750f529c-72db-41ec-8794-7c1e2b8c6e1a e https://github.com/gianpaolobol/fungo-italia/actions/runs/37999504066. I log confermano il caricamento IPA all'app 6821140326 e specificano che l'attesa dell'elaborazione Apple è saltata. App Store Connect ha completato l'elaborazione della versione 1.0.0, build 2: stato Ready to Submit verificato. Gruppo interno Proprietario — prova iPhone creato, distribuzione automatica disabilitata, build 1.0.0 (2) associata con stato Ready to Test. Il solo proprietario dell'account è stato invitato con autorizzazione esplicita: stato Invited verificato. Istruzioni What to Test salvate. Non è stata verificata l'installazione su iPhone e non è stata inviata la revisione App Store.
 
 Il workflow `store-submit-ios.yml` conserva soltanto il trigger manuale per evitare ulteriori upload automatici. Non rieseguirlo dopo l'accettazione della build 2: per una nuova submission serve una nuova build con numero incrementato. Restano da completare metadati, privacy, screenshot nativi, dichiarazioni del titolare e revisione App Store; Google Play è ancora da configurare. Il backup resta a `277466878a64f6c49eecb691ecd9c6fb595ef41a`.
+
+## Arresto nativo all'avvio — 10 ottobre 2026
+
+La prova fisica della build 2 ha rilevato un arresto immediato su iPhone 13 mini con iOS 18.6.2. Il rapporto TestFlight riporta `Termination Reason: DYLD 4 Symbol missing`: `ExpoMediaLibrary` richiede il simbolo Swift `AppContext.permissions` non disponibile in `ExpoModulesCore`. Il processo termina prima dell'esecuzione JavaScript.
+
+Correzione su main `f2484da38a344b390b24e0148f7824a20c7b8818`: Expo Autolinking iOS `buildFromSource: [".*"]` per compilare insieme i moduli invece di collegare framework Expo precompilati incompatibili. La libreria Foto resta inclusa. Riferimento: https://docs.expo.dev/guides/prebuilt-expo-modules/.
+
+Verifica locale: test della risoluzione Autolinking fallito prima della modifica e superato dopo; 63 test superati e TypeScript superato. Queste verifiche non dimostrano il corretto avvio sul dispositivo.
+
+Ricompilazione pulita e auto-submit TestFlight avviati: https://github.com/gianpaolobol/fungo-italia/actions/runs/38003287826. La nuova build va attesa, associata al gruppo interno e provata su iPhone prima di dichiarare il problema risolto. Nessun log privato del tester è inserito nel repository.
