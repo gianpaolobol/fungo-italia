@@ -56,5 +56,5 @@ export function applyReviewedMatrix(records,matrix,profiles){
    if(!t.sources.some(s=>s.sourceId===citation.sourceId&&s.location===citation.location&&s.supportedClaim===citation.supportedClaim))t.sources.push(citation);
   }
  }
- return {version:matrix.matrixVersion,sha256:approvedHash,edibilityAuthority:guide};
+ return {version:matrix.matrixVersion,sha256:approvedHash,edibilityAuthority:'Guida ragionata alla commestibilità dei funghi (2021)',edibilityAuthorityISBN:'979-12-200-9297-5'};
 }
