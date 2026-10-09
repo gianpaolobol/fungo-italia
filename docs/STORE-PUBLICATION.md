@@ -71,4 +71,10 @@ Accesso diretto a Expo verificato. App Store Connect: app `6821140326`, bundle `
 
 Certificato Apple Distribution `DXLA5NHSKQ` e profilo App Store `NATQT6SSTB` generati e salvati in Expo; entrambi risultano validi, con scadenza 9 ottobre 2027. Nessun segreto o file di firma va inserito nel repository.
 
-Prima build production iOS avviata da main, commit `45ad46bb47b315fabf05b7b042da2bc44e2bf19e`: https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/builds/1fdc27d4-cec2-4b9d-bddd-511f1407a5dc. L’avvio non attesta il completamento né la distribuzione della build. La chiave API per EAS Submit non è ancora configurata.
+Prima build production iOS completata con successo da main, commit `45ad46bb47b315fabf05b7b042da2bc44e2bf19e`, versione 1.0.0 (2): https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/builds/1fdc27d4-cec2-4b9d-bddd-511f1407a5dc.
+
+La chiave App Store Connect `fungoitalia` (`35MS8YN74G`) è stata salvata in Expo con autorizzazione esplicita del titolare; nessun contenuto segreto è nel repository.
+
+Upload ad App Store Connect completato con successo secondo Expo e GitHub Actions: https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/submissions/750f529c-72db-41ec-8794-7c1e2b8c6e1a e https://github.com/gianpaolobol/fungo-italia/actions/runs/37999504066. I log confermano il caricamento IPA all'app 6821140326 e specificano che l'attesa dell'elaborazione Apple è saltata. Al controllo iniziale Apple non mostra ancora build: la disponibilità TestFlight e l'installazione su iPhone non sono ancora verificate.
+
+Il workflow `store-submit-ios.yml` conserva soltanto il trigger manuale per evitare ulteriori upload automatici. Non rieseguirlo dopo l'accettazione della build 2: per una nuova submission serve una nuova build con numero incrementato. Restano da completare metadati, privacy, screenshot nativi, dichiarazioni del titolare e revisione App Store; Google Play è ancora da configurare. Il backup resta a `277466878a64f6c49eecb691ecd9c6fb595ef41a`.
