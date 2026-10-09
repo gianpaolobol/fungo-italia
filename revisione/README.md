@@ -71,3 +71,17 @@ La Guida ragionata alla commestibilità 2021 resta prioritaria per commestibilit
 Conflitto conservato: ISPRA 188/2019 p.169 (PDF179) descrive la sporata di Gyromitra esculenta bianca, mentre la fonte precedente la descrive crema/giallo-camoscio. Il valore precedente resta in Matrice con nota di conflitto. Nessuna estensione automatica della specie nominale a complessi, generi o gruppi.
 
 Originale conserva integralmente la matrice V1. Nessuna firma o approvazione professionale è stata attribuita. Excel e JSON sono stati confrontati su tutti gli 8774 valori della Matrice; il collegamento automatico all’app resta da implementare.
+
+## Regola prevalente della commestibilità — edizione V3
+
+Edizione `FI-REV-20261009-v3-GUIDA-PREVALENTE`.
+
+La **Guida ragionata alla commestibilità dei funghi, prima edizione 2021, ISBN 979-12-200-9297-5**, prevale su ogni altra fonte per i giudizi di commestibilità e le relative precauzioni. Questa disposizione sostituisce qualsiasi criterio di maggioranza o possibilità di modifica del giudizio alimentare mediante altre fonti presente nei documenti precedenti. Il criterio dei riscontri multipli o della fonte unica non si applica per sostituire i giudizi alimentari della Guida.
+
+Le indicazioni discordanti di ISPRA o di altre fonti restano soltanto confronti bibliografici. Non possono riclassificare una specie, introdurre una preparazione che ne autorizzi il consumo o trasformare una specie sconsigliata in commestibile. Le categorie della Guida vengono mantenute distinte, inclusa la categoria non commestibile. Una revisione può correggere una trascrizione o un’attribuzione errata rispetto alla Guida, con pagina e motivazione; non sostituirne il giudizio usando un’altra fonte.
+
+Il foglio **Autorità commestibilità** documenta il controllo su tutte le 214 schede: 147 giudizi alimentari attribuiti alla Guida, una specie senza giudizio puntuale registrato e 66 schede di generi/gruppi senza categoria unica. Dove manca un giudizio applicabile della Guida, il dato resta non documentato e non viene colmato con altre fonti. Non si estende a tutto un genere il giudizio relativo a una specie esemplificativa.
+
+Le 147 categorie già registrate corrispondono alla classificazione attribuita alla Guida; non è stata necessaria una riclassificazione. È stata corretta la formulazione dei campi strutturati di Macrolepiota procera s.l.: la cottura di almeno 20 minuti del solo cappello è una prescrizione svizzera citata a p.73; non è una condizione generale imposta dalla Guida, che a p.72 non richiede particolari trattamenti per esemplari freschi idonei e sconsiglia comunque il consumo crudo. La citazione resta distinta dalle prescrizioni adottate dalla Guida.
+
+Il PDF originale della Guida è stato recuperato dall’URL della Regione Piemonte; hash SHA-256 e metadati sono registrati nel JSON. Tutti i valori Excel–JSON sono stati verificati. Originale resta invariato e nessuna firma professionale è stata assegnata. L’app non viene modificata da questo aggiornamento della matrice.
