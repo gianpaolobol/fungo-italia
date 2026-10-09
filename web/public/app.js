@@ -50,18 +50,17 @@ const referenceViews=[['lateral','Laterale'],['top','Sopra'],['underside','Sotto
 const referenceLabel=(photo,fallback)=>photo?.alt?.endsWith(' — base esterna')?'Base esterna':fallback;
 const referencePath=/^images\/reference\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.(jpg|jpeg|png|webp)$/;
 const edibilityCategories=[
- ['free','Commestibilità libera',/^(commestibile|commestibilità libera)(?!.*condizionat)/i],
- ['conditional','Commestibilità condizionata',/commestibilit[aà] condizionata|commestibile.*condizion|previa cottura/i],
- ['discouraged','Commestibilità sconsigliata',/sconsigliat/i],
- ['no-food-value','Assenza di valore alimentare',/assenza di valore alimentare|privo di valore alimentare/i],
- ['inedible','Non commestibilità',/non commestibile|non ammettere al consumo/i],
- ['toxic','Tossicità',/tossic|velenos|mortale|nefrotossic/i]
+ ['deadly','tossico mortale',/mortal|letale/i],
+ ['discouraged','sconsigliato',/sconsigliat/i],
+ ['conditional','condizionata',/condizionat|previa cottura|dopo.*cottura/i],
+ ['toxic','tossico',/tossic|velenos|nefrotossic/i],
+ ['free','libera',/^(commestibile|commestibilità libera|libera)\b/i],
+ ['no-food-value','privo di valore',/privo di valore|assenza di valore|non commestibile|non documentat/i]
 ];
 function edibilityBadge(food){
- const label=food?.label;
- if(!label)return '<span class="edibility-badge edibility-unknown">Non documentata</span>';
- const found=edibilityCategories.find(([, ,pattern])=>pattern.test(label));
- return '<span class="edibility-badge edibility-'+(found?found[0]:'unknown')+'">'+escape(label)+'</span>';
+ const found=edibilityCategories.find(([, ,pattern])=>pattern.test(food?.label||''));
+ const [category,label]=found||['no-food-value','privo di valore'];
+ return '<span class="edibility-badge edibility-'+category+'">'+escape(label)+'</span>';
 }
 function studyFacts(t){
  const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
