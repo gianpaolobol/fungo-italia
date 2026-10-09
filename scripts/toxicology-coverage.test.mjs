@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {applyToxicologySyndromes} from './toxicology-syndromes.mjs';
+const read=async n=>JSON.parse(await readFile(new URL('../src/data/'+n+'.json',import.meta.url)));
+const catalog=await read('catalog'), toxic=await read('toxicology-syndromes');
+const foodBefore=catalog.map(t=>t.studyProfile?.edibility?.category);
+applyToxicologySyndromes(catalog,toxic);
+const dangerous=catalog.filter(t=>['toxic','deadly'].includes(t.studyProfile?.edibility?.category));
+assert.equal(dangerous.length,38);
+assert.deepEqual(dangerous.filter(t=>!t.studyProfile.edibility.syndrome).map(t=>t.scientificName),[]);
+assert.deepEqual(catalog.map(t=>t.studyProfile?.edibility?.category),foodBefore);
+const syndrome=n=>catalog.find(t=>t.scientificName===n).studyProfile.edibility.syndrome;
+assert.match(syndrome('Cortinarius sottogenere Dermocybe').label,/non orellanic/i);
+assert.match(syndrome('Mycena sez. Purae').label,/gastrointestinale.*incostante/i);
+assert.match(syndrome('Hypholoma fasciculare').latency,/5.?10/);
+assert.match(syndrome('Hapalopilus rutilans').severity,/renale.*epatica|epatica.*renale/i);
+console.log('38 toxic/deadly profiles covered; food categories unchanged and disputed syndromes scoped');

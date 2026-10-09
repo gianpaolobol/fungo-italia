@@ -834,7 +834,9 @@
           "Fistulina hepatica: confrontare l’imenoforo e la struttura del carpoforo."
         ]
       },
-      "replacements": {},
+      "replacements": {
+        "differentiatingCharacter": "Reazione nettamente viola al KOH (idrossido di potassio), carattere di conferma da esaminare con reagente; non ricavabile dalla sola fotografia."
+      },
       "evidence": [
         {
           "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
@@ -844,6 +846,15 @@
           "page": 99,
           "locator": "p. 99",
           "supportedClaim": "Fistulina hepatica: confrontare l’imenoforo e la struttura del carpoforo."
+        },
+        {
+          "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+          "fields": [
+            "differentiatingCharacter"
+          ],
+          "page": 133,
+          "locator": "p. stampata 134 (pagina PDF 133)",
+          "supportedClaim": "Reazione nettamente viola al KOH (idrossido di potassio), carattere di conferma da esaminare con reagente; non ricavabile dalla sola fotografia."
         }
       ]
     },

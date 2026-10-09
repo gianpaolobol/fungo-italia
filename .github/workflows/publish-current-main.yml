@@ -25,14 +25,16 @@ jobs:
       - run: npm ci
       - run: npm run prepare:data
       - name: Verify founding guide categories
-        run: node --test scripts/study-profiles.test.mjs scripts/edibility-guide.test.mjs scripts/toxicology-syndromes.test.mjs scripts/atlas-field-review.test.mjs
+        run: node --test scripts/study-profiles.test.mjs scripts/edibility-guide.test.mjs scripts/toxicology-syndromes.test.mjs scripts/atlas-field-review.test.mjs scripts/toxicology-coverage.test.mjs scripts/exam-core.test.mjs scripts/micology-display.test.mjs
       - name: Build current PWA
         run: cd web && npm ci && npm run build
+      - name: Verify compact iPhone UI and photo exam
+        run: cd web && npx playwright install --with-deps webkit chromium && npm test -- tests/ios.spec.mjs tests/exam.spec.mjs
       - name: Check generated site
         run: |
           test -s dist-ios/index.html
           test -s dist-ios/data.json
-          node -e "const d=require('./dist-ios/data.json');if(d.catalog.length!==148||d.groups.length!==66)process.exit(1)"
+          node -e "const d=require('./dist-ios/data.json');if(d.catalog.length!==148||d.groups.length!==66||d.examBank.length<15)process.exit(1)"
       - uses: actions/configure-pages@v5
       - name: Verify Pages uses GitHub Actions
         uses: actions/github-script@v7

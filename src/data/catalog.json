@@ -216,6 +216,18 @@
           "sporePrint"
         ],
         "sourcePage": 2
+      },
+      {
+        "sourceId": "TOX-agaricus-bresadolanus",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 38 (pagina PDF 37); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -231,7 +243,13 @@
       "edibility": {
         "label": "Tossico",
         "precautions": [],
-        "category": "toxic"
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -1209,6 +1227,18 @@
         "sourcePage": 5
       },
       {
+        "sourceId": "TOX-CLINICAL-amanita-phalloides-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-phalloides",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -1273,8 +1303,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome falloidea (amatossinica)",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente mortale"
+          "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+          "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            }
+          ]
         }
       },
       "odor": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.",
@@ -1336,6 +1372,18 @@
           "sporePrint"
         ],
         "sourcePage": 75
+      },
+      {
+        "sourceId": "TOX-amanita-verna-amanita-vidua",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, pp. stampate 17 e 76 (PDF 16 e 75)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome falloidea (amatossinica); A. verna nel senso della fonte",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -1359,7 +1407,13 @@
         "label": "Tossico potenzialmente mortale",
         "precautions": [
           "La Guida usa A. verna e il gruppo Phalloideae; la scheda mantiene separate le denominazioni A. verna e A. vidua."
-        ]
+        ],
+        "syndrome": {
+          "label": "Sindrome falloidea (amatossinica); A. verna nel senso della fonte",
+          "latency": "Lunga: di solito 6–12 ore, anche oltre.",
+          "severity": "Gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La fonte tratta A. verna, senza separare modernamente A. vidua.",
+          "references": []
+        }
       },
       "odor": "Lieve da giovane, sgradevole in vecchiaia; descrizione riferita ad A. verna nel senso della fonte, senza estenderla alla distinzione moderna con A. vidua.",
       "sporePrint": {
@@ -1421,6 +1475,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-amanita-virosa-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-virosa",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.epicentro.iss.it/ben/2015/giugno/1",
@@ -1448,8 +1514,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome falloidea (amatossinica)",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente mortale"
+          "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+          "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            }
+          ]
         }
       },
       "odor": "Debole e sgradevole, talvolta nauseante negli esemplari maturi.",
@@ -1558,6 +1630,18 @@
         "sourcePage": 69
       },
       {
+        "sourceId": "TOX-CLINICAL-amanita-proxima-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome norleucinica, p. 30 (PDF 29)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile: circa 4–8 ore per l’esordio gastrointestinale, anche fino a 48 ore. Nausea, vomito e dolori addominali seguiti da insufficienza renale acuta, con possibile interessamento epatico; può richiedere dialisi.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-proxima",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.epicentro.iss.it/ben/2019/aprile/epidemiologia-intossicazione-funghi",
@@ -1565,7 +1649,7 @@
         "fields": [
           "syndrome"
         ],
-        "supportedClaim": "Sindrome nefrotossica da Amanita proxima",
+        "supportedClaim": "Sindrome nefrotossica da Amanita proxima (norleucinica)",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }
@@ -1584,9 +1668,15 @@
         "precautions": [],
         "category": "deadly",
         "syndrome": {
-          "label": "Sindrome nefrotossica da Amanita proxima",
-          "latency": "Lunga latenza possibile",
-          "severity": "Insufficienza renale acuta"
+          "label": "Sindrome nefrotossica da Amanita proxima (norleucinica)",
+          "latency": "Variabile: circa 4–8 ore per l’esordio gastrointestinale, anche fino a 48 ore.",
+          "severity": "Nausea, vomito e dolori addominali seguiti da insufficienza renale acuta, con possibile interessamento epatico; può richiedere dialisi.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome norleucinica, p. 30 (PDF 29)"
+            }
+          ]
         }
       },
       "odor": "Lieve da giovane, poi sgradevole.",
@@ -1815,6 +1905,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-amanita-pantherina-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome panterinica, p. 32 (PDF 31)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-pantherina",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
@@ -1842,8 +1944,14 @@
         "category": "toxic",
         "syndrome": {
           "label": "Sindrome panterinica",
-          "latency": "Breve latenza",
-          "severity": "Intossicazione neurologica"
+          "latency": "Breve: circa 15–30 minuti fino a 2–3 ore.",
+          "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome panterinica, p. 32 (PDF 31)"
+            }
+          ]
         }
       },
       "odor": "Poco caratteristico; lieve nota di ravanello alla contusione.",
@@ -1961,6 +2069,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-amanita-muscaria-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome panterinica, p. 32 (PDF 31)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-muscaria",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
@@ -2001,8 +2121,14 @@
         "category": "toxic",
         "syndrome": {
           "label": "Sindrome panterinica",
-          "latency": "Breve latenza",
-          "severity": "Intossicazione neurologica"
+          "latency": "Breve: circa 15–30 minuti fino a 2–3 ore.",
+          "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome panterinica, p. 32 (PDF 31)"
+            }
+          ]
         }
       },
       "odor": "Odore non distintivo",
@@ -3164,6 +3290,18 @@
           "sporePrint"
         ],
         "sourcePage": 91
+      },
+      {
+        "sourceId": "TOX-collybia-phyllophila",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Clitocybe phyllophila p. 92 (PDF 91); sindrome p. 28 (PDF 27)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome muscarinica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -3181,7 +3319,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome muscarinica",
+          "latency": "Breve: circa 15 minuti–3 ore.",
+          "severity": "Muscarina: sudorazione, salivazione e lacrimazione, miosi, vomito e diarrea; bradicardia, ipotensione e broncocostrizione. Coinvolgimento autonomico, cardiocircolatorio e respiratorio, potenzialmente grave.",
+          "references": []
+        }
       },
       "odor": "Erbaceo (AUSL Bologna); dolciastro nella descrizione di First Nature.",
       "sporePrint": {
@@ -3569,6 +3713,30 @@
           "sporePrint"
         ],
         "sourcePage": 5
+      },
+      {
+        "sourceId": "TOX-CLINICAL-paralepistopsis-amoenolens-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://dergipark.org.tr/en/download/article-file/396432",
+        "location": "Çolak, Kaygusuz e Battistin (2017), introduzione: edema e dolore alle estremità",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Esordio ritardato; l’intervallo preciso non è stabilito dalla fonte qui riportata. Dolore intenso alle estremità, soprattutto piedi, edema e arrossamento; quadro diverso dalla comune gastroenterite. Le fonti riportano acromelalgia / eritromelalgia.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-paralepistopsis-amoenolens",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 41 (PDF 40), Clitocybe amoenolens",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome acromelalgica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -3586,7 +3754,18 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome acromelalgica",
+          "latency": "Esordio ritardato; l’intervallo preciso non è stabilito dalla fonte qui riportata.",
+          "severity": "Dolore intenso alle estremità, soprattutto piedi, edema e arrossamento; quadro diverso dalla comune gastroenterite. Le fonti riportano acromelalgia / eritromelalgia.",
+          "references": [
+            {
+              "url": "https://dergipark.org.tr/en/download/article-file/396432",
+              "location": "Çolak, Kaygusuz e Battistin (2017), introduzione: edema e dolore alle estremità"
+            }
+          ]
+        }
       },
       "odor": "Intenso, aromatico-floreale, talvolta paragonato alla pera.",
       "sporePrint": {
@@ -4361,6 +4540,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-cortinarius-orellanus-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome orellanica, p. 31 (PDF 30)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni. Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-cortinarius-orellanus",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -4388,8 +4579,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome orellanica",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente mortale; danno renale"
+          "latency": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni.",
+          "severity": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome orellanica, p. 31 (PDF 30)"
+            }
+          ]
         }
       },
       "odor": "Debolmente rafanoide.",
@@ -4484,6 +4681,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-cortinarius-rubellus-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome orellanica, p. 31 (PDF 30)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni. Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-cortinarius-rubellus",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -4514,8 +4723,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome orellanica",
-          "latency": "Lunga latenza, anche diversi giorni",
-          "severity": "Potenzialmente mortale; grave danno renale"
+          "latency": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni.",
+          "severity": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome orellanica, p. 31 (PDF 30)"
+            }
+          ]
         }
       },
       "odor": "Debole, di ravanello.",
@@ -4591,6 +4806,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-cortinarius-sottogenere-dermocybe",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 50–51 (PDF 49–50), Cortinarius",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Tossicità gastrointestinale e/o sospetta nefrotossicità non orellanica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "subgenus",
@@ -4605,7 +4832,13 @@
         "label": "Tossico",
         "precautions": [
           "La Guida distingue questa sospetta nefrotossicità dalla sindrome orellanica."
-        ]
+        ],
+        "syndrome": {
+          "label": "Tossicità gastrointestinale e/o sospetta nefrotossicità non orellanica",
+          "latency": "Non definita per l’intero sottogenere; dati clinici insufficienti.",
+          "severity": "Possibili disturbi gastrointestinali. Nefrotossicità non orellanica sospetta: mancano conferme cliniche umane per attribuire al sottogenere un quadro renale definito.",
+          "references": []
+        }
       },
       "odor": "Debolmente rafanoide in C. cinnamomeus; non esteso a tutte le specie del sottogenere.",
       "sporePrint": {
@@ -5129,6 +5362,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-entoloma-rhodopolium-s-l-",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 54–55 (PDF 53–54), Entoloma",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale, forse a tossicità incostante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "speciesGroup",
@@ -5141,7 +5386,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale, forse a tossicità incostante",
+          "latency": "Variabile; casistica limitata e determinazioni spesso incomplete.",
+          "severity": "Disturbi gastrointestinali; il quadro e la frequenza non sono uniformemente documentati per tutte le entità del complesso.",
+          "references": []
+        }
       },
       "odor": "Poco caratteristico nella descrizione della specie nominale. Dato riferito a Entoloma rhodopolium; non descrive necessariamente tutte le componenti della scheda.",
       "sporePrint": {
@@ -5219,6 +5470,30 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-CLINICAL-entoloma-hirtipes-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro gastroenterico, p. 19 (PDF 18); non applicare universalmente la latenza breve",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Possibile esordio tardivo, anche 8–12 ore nel gruppo discusso dalla Guida; conferme cliniche più solide per E. vernum. Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-entoloma-hirtipes",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 53–54 (PDF 52–53), Entoloma",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -5233,7 +5508,18 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Possibile esordio tardivo, anche 8–12 ore nel gruppo discusso dalla Guida; conferme cliniche più solide per E. vernum.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro gastroenterico, p. 19 (PDF 18); non applicare universalmente la latenza breve"
+            }
+          ]
+        }
       },
       "odor": "Farinaceo, spesso di farina rancida; in alcune raccolte è descritto anche come cetriolo fresco.",
       "sporePrint": {
@@ -5299,6 +5585,30 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-CLINICAL-entoloma-vernum-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro gastroenterico, p. 19 (PDF 18); non applicare universalmente la latenza breve",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Possibile esordio tardivo, anche 8–12 ore nel gruppo discusso dalla Guida; conferme cliniche più solide per E. vernum. Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-entoloma-vernum",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 53–54 (PDF 52–53), Entoloma",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -5314,7 +5624,18 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Possibile esordio tardivo, anche 8–12 ore nel gruppo discusso dalla Guida; conferme cliniche più solide per E. vernum.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro gastroenterico, p. 19 (PDF 18); non applicare universalmente la latenza breve"
+            }
+          ]
+        }
       },
       "odor": "Lievemente farinaceo, poco caratteristico.",
       "sporePrint": {
@@ -5649,6 +5970,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-galerina-marginata-group-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-galerina-marginata-group",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK431052/",
@@ -5678,8 +6011,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome falloidea (amatossinica)",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente mortale; grave danno epatico"
+          "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+          "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            }
+          ]
         }
       },
       "odor": "Farinaceo. Documentato per Galerina marginata; variabilità delle altre componenti non verificata.",
@@ -5742,6 +6081,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-hygrocybe-conica-s-l-",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 60–61 (PDF 59–60), Hygrocybe",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale probabilmente incostante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "speciesGroup",
@@ -5757,7 +6108,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale probabilmente incostante",
+          "latency": "Non definita uniformemente per il complesso.",
+          "severity": "Disturbi gastrointestinali generalmente modesti; le vecchie attribuzioni di mortalità non costituiscono una dimostrazione per questo taxon.",
+          "references": []
+        }
       },
       "odor": "Poco caratteristico. Dato riferito a Hygrocybe conica; non descrive necessariamente tutte le componenti della scheda.",
       "sporePrint": {
@@ -6249,6 +6606,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-hypholoma-fasciculare-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome da Hypholoma, p. 22 (PDF 21)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile; descritti anche esordi a 5–10 ore, quindi non esclusivamente breve. Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-hypholoma-fasciculare",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -6276,8 +6645,14 @@
         "category": "toxic",
         "syndrome": {
           "label": "Sindrome gastrointestinale a tossicità costante",
-          "latency": "Generalmente breve; variabile secondo specie e quantità",
-          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+          "latency": "Variabile; descritti anche esordi a 5–10 ore, quindi non esclusivamente breve.",
+          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome da Hypholoma, p. 22 (PDF 21)"
+            }
+          ]
         }
       },
       "odor": "Fungino ma poco caratteristico.",
@@ -6578,6 +6953,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-lepiota-subincarnata-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-lepiota-subincarnata",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -6609,8 +6996,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome falloidea (amatossinica)",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente mortale; grave danno epatico"
+          "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+          "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            }
+          ]
         }
       },
       "odor": "Tenue, dolciastro.",
@@ -6690,6 +7083,18 @@
         ]
       },
       {
+        "sourceId": "TOX-CLINICAL-lepiota-brunneoincarnata-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-lepiota-brunneoincarnata",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -6717,8 +7122,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome falloidea (amatossinica)",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente mortale; grave danno epatico"
+          "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+          "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            }
+          ]
         }
       },
       "odor": "Tenue, fruttato.",
@@ -8153,6 +8564,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-mycena-sez-purae",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 74–75 (PDF 73–74), Mycena",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale a tossicità incostante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "section",
@@ -8166,7 +8589,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale a tossicità incostante",
+          "latency": "Non definita per la sezione; casistica recente limitata.",
+          "severity": "Le intossicazioni italiane recenti discusse nella Guida sono gastrointestinali. L’attribuzione automatica di sindrome muscarinica o psicotropa resta discutibile: il solo dato biochimico non dimostra il quadro clinico.",
+          "references": []
+        }
       },
       "odor": "Intensamente rafanoide alla contusione. Dato riferito a Mycena pura; non descrive necessariamente tutte le componenti della scheda.",
       "sporePrint": {
@@ -8345,6 +8774,30 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-CLINICAL-panaeolus-cyanescens-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome psicotropa, p. 35 (PDF 34): quadro clinico generale, non casistica specifica di P. cyanescens",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente breve, circa 30 minuti–2 ore per la sindrome psicotropa. Psilocibina / psilocina: alterazioni percettive, stato confusionale e ansia, possibili nausea e tachicardia; coinvolgimento del sistema nervoso centrale.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-panaeolus-cyanescens",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 77 (PDF 76), Panaeolus",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome psilocibinica (psicotropa)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -8360,7 +8813,18 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome psilocibinica (psicotropa)",
+          "latency": "Generalmente breve, circa 30 minuti–2 ore per la sindrome psicotropa.",
+          "severity": "Psilocibina / psilocina: alterazioni percettive, stato confusionale e ansia, possibili nausea e tachicardia; coinvolgimento del sistema nervoso centrale.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome psicotropa, p. 35 (PDF 34): quadro clinico generale, non casistica specifica di P. cyanescens"
+            }
+          ]
+        }
       },
       "odor": "Fungino nella descrizione del Catalogue of Fungi of Colombia.",
       "sporePrint": {
@@ -9127,6 +9591,18 @@
           "sporePrint"
         ],
         "sourcePage": 309
+      },
+      {
+        "sourceId": "TOX-tricholoma-filamentosum",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 310 (pagina PDF 309); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale intensa e prolungata",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -9141,7 +9617,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale intensa e prolungata",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "odor": "Farinaceo, con una componente di cetriolo.",
       "sporePrint": {
@@ -9208,6 +9690,18 @@
           "sporePrint"
         ],
         "sourcePage": 311
+      },
+      {
+        "sourceId": "TOX-tricholoma-josserandii",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 312 (pagina PDF 311); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale intensa e prolungata",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -9222,7 +9716,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale intensa e prolungata",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "odor": "Complesso, con note di farina, cimice e talvolta liquirizia.",
       "sporePrint": {
@@ -11448,6 +11948,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-russula-foetentinae",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 100 (PDF 99), Russula",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale a tossicità incostante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "subsection",
@@ -11464,7 +11976,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale a tossicità incostante",
+          "latency": "Non definita uniformemente per la sottosezione.",
+          "severity": "Possibili disturbi gastrointestinali; non estendere il giudizio di questo insieme a tutte le Russula.",
+          "references": []
+        }
       }
     },
     "referenceImages": [
@@ -12021,6 +12539,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-rubroboletus-satanas",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 290 (pagina PDF 289); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -12038,7 +12568,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "odor": "Lieve da giovane; intenso e sgradevole, putrido, negli esemplari vecchi.",
       "sporePrint": {
@@ -12112,6 +12648,18 @@
         "fields": [
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-rubroboletus-pulchrotinctus",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 286 (pagina PDF 285); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Possibile sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -12129,7 +12677,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Possibile sindrome gastrointestinale",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "odor": "Fruttato.",
       "sporePrint": {
@@ -12427,6 +12981,30 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-CLINICAL-caloboletus-radicans-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Quadro gastroenterico generale, p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile; la fonte specifica non stabilisce un intervallo unico. Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-caloboletus-radicans",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 110 (PDF 109), Boletus",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -12441,7 +13019,18 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Variabile; la fonte specifica non stabilisce un intervallo unico.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Quadro gastroenterico generale, p. 19 (PDF 18)"
+            }
+          ]
+        }
       },
       "odor": "Fungino, intenso e sgradevole.",
       "sporePrint": {
@@ -14157,6 +14746,19 @@
         "sourcePage": 99
       },
       {
+        "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
+        "reviewScope": "course-material",
+        "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
+        "authors": [],
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "p. stampata 134 (pagina PDF 133)",
+        "supportedClaim": "Reazione nettamente viola al KOH (idrossido di potassio), carattere di conferma da esaminare con reagente; non ricavabile dalla sola fotografia.",
+        "fields": [
+          "differentiatingCharacter"
+        ],
+        "sourcePage": 133
+      },
+      {
         "sourceId": "LIT-ATLAS-57bcf0c821a74e17",
         "reviewScope": "course-material",
         "title": "mushrooms.linnaeus.naturalis.nl — taxon.php",
@@ -14168,6 +14770,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-hapalopilus-rutilans",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, pp. 15 e 134 (PDF 14 e 133)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome da acido poliporico (neurotossica tardiva)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -14177,12 +14791,18 @@
     "diagnosticStatus": "field_high_confidence_when_typical",
     "aliases": [],
     "deepMorphologyRequired": false,
-    "differentiatingCharacter": "Cresce su rami e tronchi morti di latifoglie, frequentemente querce.",
+    "differentiatingCharacter": "Reazione nettamente viola al KOH (idrossido di potassio), carattere di conferma da esaminare con reagente; non ricavabile dalla sola fotografia.",
     "studyProfile": {
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome da acido poliporico (neurotossica tardiva)",
+          "latency": "Lunga: circa 6–12 ore nei casi umani descritti.",
+          "severity": "Disturbi gastrointestinali, sonnolenza o agitazione e alterazioni visive; possibile insufficienza renale ed epatica, urine violette. Non confondere il dato clinico umano con gli esperimenti animali.",
+          "references": []
+        }
       },
       "odor": "Dolciastro o fungino; può cambiare dopo il distacco, passando da note di anice o mandorla a un odore sgradevole.",
       "sporePrint": {
@@ -15155,6 +15775,18 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "TOX-ramaria-formosa",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 276 (pagina PDF 275); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -15170,7 +15802,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "odor": "Poco caratteristico o terroso.",
       "sporePrint": {
@@ -15225,6 +15863,18 @@
           "odor"
         ],
         "sourcePage": 277
+      },
+      {
+        "sourceId": "TOX-ramaria-pallida",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 278 (pagina PDF 277); quadro gastroenterico p. 19 (PDF 18)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -15240,7 +15890,13 @@
       "edibility": {
         "category": "toxic",
         "label": "Tossico",
-        "precautions": []
+        "precautions": [],
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+          "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+          "references": []
+        }
       },
       "odor": "Di cicoria tostata."
     },
@@ -15528,6 +16184,18 @@
         "sourcePage": 125
       },
       {
+        "sourceId": "TOX-CLINICAL-gyromitra-esculenta-0",
+        "title": "Fonte del quadro clinico",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "Sindrome giromitrica, p. 27 (PDF 26)",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, talvolta oltre. Giromitrina e metaboliti: disturbi gastrointestinali, possibili lesioni epatiche e renali, disturbi neurologici e emolisi; quadro potenzialmente mortale.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-gyromitra-esculenta",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -15555,8 +16223,14 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome giromitrica",
-          "latency": "Lunga latenza",
-          "severity": "Potenzialmente grave"
+          "latency": "Lunga: generalmente 6–12 ore, talvolta oltre.",
+          "severity": "Giromitrina e metaboliti: disturbi gastrointestinali, possibili lesioni epatiche e renali, disturbi neurologici e emolisi; quadro potenzialmente mortale.",
+          "references": [
+            {
+              "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+              "location": "Sindrome giromitrica, p. 27 (PDF 26)"
+            }
+          ]
         }
       },
       "odor": "Variabile tra descrizioni: poco caratteristico (First Nature), a componente spermatica intensa (AUSL Bologna).",

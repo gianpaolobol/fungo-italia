@@ -5,8 +5,14 @@
       "scientificName": "Amanita phalloides",
       "syndrome": {
         "label": "Sindrome falloidea (amatossinica)",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente mortale"
+        "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+        "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -19,8 +25,14 @@
       "scientificName": "Amanita virosa",
       "syndrome": {
         "label": "Sindrome falloidea (amatossinica)",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente mortale"
+        "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+        "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.epicentro.iss.it/ben/2015/giugno/1",
@@ -33,8 +45,14 @@
       "scientificName": "Amanita muscaria",
       "syndrome": {
         "label": "Sindrome panterinica",
-        "latency": "Breve latenza",
-        "severity": "Intossicazione neurologica"
+        "latency": "Breve: circa 15–30 minuti fino a 2–3 ore.",
+        "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome panterinica, p. 32 (PDF 31)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
@@ -47,8 +65,14 @@
       "scientificName": "Amanita pantherina",
       "syndrome": {
         "label": "Sindrome panterinica",
-        "latency": "Breve latenza",
-        "severity": "Intossicazione neurologica"
+        "latency": "Breve: circa 15–30 minuti fino a 2–3 ore.",
+        "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome panterinica, p. 32 (PDF 31)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
@@ -61,8 +85,14 @@
       "scientificName": "Cortinarius orellanus",
       "syndrome": {
         "label": "Sindrome orellanica",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente mortale; danno renale"
+        "latency": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni.",
+        "severity": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome orellanica, p. 31 (PDF 30)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -75,8 +105,14 @@
       "scientificName": "Gyromitra esculenta",
       "syndrome": {
         "label": "Sindrome giromitrica",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente grave"
+        "latency": "Lunga: generalmente 6–12 ore, talvolta oltre.",
+        "severity": "Giromitrina e metaboliti: disturbi gastrointestinali, possibili lesioni epatiche e renali, disturbi neurologici e emolisi; quadro potenzialmente mortale.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome giromitrica, p. 27 (PDF 26)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -102,9 +138,15 @@
     {
       "scientificName": "Amanita proxima",
       "syndrome": {
-        "label": "Sindrome nefrotossica da Amanita proxima",
-        "latency": "Lunga latenza possibile",
-        "severity": "Insufficienza renale acuta"
+        "label": "Sindrome nefrotossica da Amanita proxima (norleucinica)",
+        "latency": "Variabile: circa 4–8 ore per l’esordio gastrointestinale, anche fino a 48 ore.",
+        "severity": "Nausea, vomito e dolori addominali seguiti da insufficienza renale acuta, con possibile interessamento epatico; può richiedere dialisi.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome norleucinica, p. 30 (PDF 29)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.epicentro.iss.it/ben/2019/aprile/epidemiologia-intossicazione-funghi",
@@ -131,8 +173,14 @@
       "scientificName": "Lepiota brunneoincarnata",
       "syndrome": {
         "label": "Sindrome falloidea (amatossinica)",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente mortale; grave danno epatico"
+        "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+        "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -145,8 +193,14 @@
       "scientificName": "Lepiota subincarnata",
       "syndrome": {
         "label": "Sindrome falloidea (amatossinica)",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente mortale; grave danno epatico"
+        "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+        "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -159,8 +213,14 @@
       "scientificName": "Galerina marginata group",
       "syndrome": {
         "label": "Sindrome falloidea (amatossinica)",
-        "latency": "Lunga latenza",
-        "severity": "Potenzialmente mortale; grave danno epatico"
+        "latency": "Lunga: generalmente 6–12 ore, anche oltre.",
+        "severity": "Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK431052/",
@@ -173,8 +233,14 @@
       "scientificName": "Cortinarius rubellus",
       "syndrome": {
         "label": "Sindrome orellanica",
-        "latency": "Lunga latenza, anche diversi giorni",
-        "severity": "Potenzialmente mortale; grave danno renale"
+        "latency": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni.",
+        "severity": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome orellanica, p. 31 (PDF 30)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -243,8 +309,14 @@
       "scientificName": "Hypholoma fasciculare",
       "syndrome": {
         "label": "Sindrome gastrointestinale a tossicità costante",
-        "latency": "Generalmente breve; variabile secondo specie e quantità",
-        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+        "latency": "Variabile; descritti anche esordi a 5–10 ore, quindi non esclusivamente breve.",
+        "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome da Hypholoma, p. 22 (PDF 21)"
+          }
+        ]
       },
       "evidence": {
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -277,6 +349,331 @@
       "evidence": {
         "url": "https://www.fungimag.com/spring-2023-articles/V16I1-Gastro.pdf",
         "location": "Benjamin & Sitta (2023), Mushrooms causing gastro-intestinal distress, group 2: Agaricus xanthodermus sensu lato: group 2, very common gastrointestinal toxicity but not universal",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Agaricus bresadolanus",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 38 (pagina PDF 37); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale intensa e prolungata",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 310 (pagina PDF 309); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale intensa e prolungata",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 312 (pagina PDF 311); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 290 (pagina PDF 289); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "syndrome": {
+        "label": "Possibile sindrome gastrointestinale",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 286 (pagina PDF 285); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 276 (pagina PDF 275); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 278 (pagina PDF 277); quadro gastroenterico p. 19 (PDF 18)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "syndrome": {
+        "label": "Sindrome falloidea (amatossinica); A. verna nel senso della fonte",
+        "latency": "Lunga: di solito 6–12 ore, anche oltre.",
+        "severity": "Gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La fonte tratta A. verna, senza separare modernamente A. vidua.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, pp. stampate 17 e 76 (PDF 16 e 75)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "syndrome": {
+        "label": "Sindrome muscarinica",
+        "latency": "Breve: circa 15 minuti–3 ore.",
+        "severity": "Muscarina: sudorazione, salivazione e lacrimazione, miosi, vomito e diarrea; bradicardia, ipotensione e broncocostrizione. Coinvolgimento autonomico, cardiocircolatorio e respiratorio, potenzialmente grave.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Clitocybe phyllophila p. 92 (PDF 91); sindrome p. 28 (PDF 27)",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Paralepistopsis amoenolens",
+      "syndrome": {
+        "label": "Sindrome acromelalgica",
+        "latency": "Esordio ritardato; l’intervallo preciso non è stabilito dalla fonte qui riportata.",
+        "severity": "Dolore intenso alle estremità, soprattutto piedi, edema e arrossamento; quadro diverso dalla comune gastroenterite. Le fonti riportano acromelalgia / eritromelalgia.",
+        "references": [
+          {
+            "url": "https://dergipark.org.tr/en/download/article-file/396432",
+            "location": "Çolak, Kaygusuz e Battistin (2017), introduzione: edema e dolore alle estremità"
+          }
+        ]
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 41 (PDF 40), Clitocybe amoenolens",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "syndrome": {
+        "label": "Tossicità gastrointestinale e/o sospetta nefrotossicità non orellanica",
+        "latency": "Non definita per l’intero sottogenere; dati clinici insufficienti.",
+        "severity": "Possibili disturbi gastrointestinali. Nefrotossicità non orellanica sospetta: mancano conferme cliniche umane per attribuire al sottogenere un quadro renale definito.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 50–51 (PDF 49–50), Cortinarius",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale, forse a tossicità incostante",
+        "latency": "Variabile; casistica limitata e determinazioni spesso incomplete.",
+        "severity": "Disturbi gastrointestinali; il quadro e la frequenza non sono uniformemente documentati per tutte le entità del complesso.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 54–55 (PDF 53–54), Entoloma",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Possibile esordio tardivo, anche 8–12 ore nel gruppo discusso dalla Guida; conferme cliniche più solide per E. vernum.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro gastroenterico, p. 19 (PDF 18); non applicare universalmente la latenza breve"
+          }
+        ]
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 53–54 (PDF 52–53), Entoloma",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Entoloma vernum",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Possibile esordio tardivo, anche 8–12 ore nel gruppo discusso dalla Guida; conferme cliniche più solide per E. vernum.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro gastroenterico, p. 19 (PDF 18); non applicare universalmente la latenza breve"
+          }
+        ]
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 53–54 (PDF 52–53), Entoloma",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Hygrocybe conica s.l.",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale probabilmente incostante",
+        "latency": "Non definita uniformemente per il complesso.",
+        "severity": "Disturbi gastrointestinali generalmente modesti; le vecchie attribuzioni di mortalità non costituiscono una dimostrazione per questo taxon.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 60–61 (PDF 59–60), Hygrocybe",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Mycena sez. Purae",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità incostante",
+        "latency": "Non definita per la sezione; casistica recente limitata.",
+        "severity": "Le intossicazioni italiane recenti discusse nella Guida sono gastrointestinali. L’attribuzione automatica di sindrome muscarinica o psicotropa resta discutibile: il solo dato biochimico non dimostra il quadro clinico.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), pp. 74–75 (PDF 73–74), Mycena",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Panaeolus cyanescens",
+      "syndrome": {
+        "label": "Sindrome psilocibinica (psicotropa)",
+        "latency": "Generalmente breve, circa 30 minuti–2 ore per la sindrome psicotropa.",
+        "severity": "Psilocibina / psilocina: alterazioni percettive, stato confusionale e ansia, possibili nausea e tachicardia; coinvolgimento del sistema nervoso centrale.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Sindrome psicotropa, p. 35 (PDF 34): quadro clinico generale, non casistica specifica di P. cyanescens"
+          }
+        ]
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 77 (PDF 76), Panaeolus",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Russula Foetentinae",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale a tossicità incostante",
+        "latency": "Non definita uniformemente per la sottosezione.",
+        "severity": "Possibili disturbi gastrointestinali; non estendere il giudizio di questo insieme a tutte le Russula.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 100 (PDF 99), Russula",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Caloboletus radicans",
+      "syndrome": {
+        "label": "Sindrome gastrointestinale",
+        "latency": "Variabile; la fonte specifica non stabilisce un intervallo unico.",
+        "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "references": [
+          {
+            "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+            "location": "Quadro gastroenterico generale, p. 19 (PDF 18)"
+          }
+        ]
+      },
+      "evidence": {
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata (2021), p. 110 (PDF 109), Boletus",
+        "field": "syndrome",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    },
+    {
+      "scientificName": "Hapalopilus rutilans",
+      "syndrome": {
+        "label": "Sindrome da acido poliporico (neurotossica tardiva)",
+        "latency": "Lunga: circa 6–12 ore nei casi umani descritti.",
+        "severity": "Disturbi gastrointestinali, sonnolenza o agitazione e alterazioni visive; possibile insufficienza renale ed epatica, urine violette. Non confondere il dato clinico umano con gli esperimenti animali.",
+        "references": []
+      },
+      "evidence": {
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, pp. 15 e 134 (PDF 14 e 133)",
         "field": "syndrome",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       }

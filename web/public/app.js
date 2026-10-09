@@ -1,3 +1,4 @@
+import {initExam} from './exam-ui.js';
 'use strict';
 const $=selector=>document.querySelector(selector);
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -5,6 +6,7 @@ const norm=value=>String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').
 const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
 const ranks={species:'Specie',genus:'Genere',section:'Sezione',group:'Gruppo',speciesGroup:'Gruppo di specie',aggregate:'Aggregato',operationalGroup:'Gruppo operativo',family:'Famiglia',subgenus:'Sottogenere',subsection:'Sottosezione',subspecies:'Sottospecie',variety:'Varietà'};
 const diagnosticLimits={field_high_confidence:'Caratteri di campo; determinazione da verificare',field_high_confidence_when_typical:'Condizione: esemplari tipici',field_high_confidence_when_host_known:'Ospite ed ecologia devono essere noti',field_high_confidence_when_young:'Condizione: esemplari giovani',field_high_confidence_at_source_rank:'Risoluzione limitata al rango didattico S1',field_confirmatory:'Conferma specialistica nei casi dubbi',defined_morphogroup_s1:'Morfogruppo didattico S1',defined_set_s1:'Insieme didattico definito S1',microscopy_required_for_fine_id:'Microscopia necessaria per la specie fine',dna_confirmatory:'Conferma molecolare per la risoluzione fine'};
+let photoExam;
 let data,taxa=[],byId=new Map(),favoriteIds=[],resumeId=null,studyWritable=true,notesWritable=true,drafts=[],selectedDraft=null;
 let tab='studio',query='',layer='minimum',onlyFavorites=false,feed=false,limit=24,areaQuery='',areaRegion='Tutte',currentTaxon=null,map=null,mapTimer=null,mapOn=false,registration=null,installPrompt=null,toastTimer,reviewSession=null,observer=null,readingTimer=null,offlineReady=false,renderedCount=0;
 const scrollPositions={studio:0,areas:0,notes:0,community:0};
@@ -59,7 +61,7 @@ function studyFacts(t){
  const p=t.studyProfile||{},print=p.sporePrint,food=p.edibility;
  const color=print?.color&&/^#[0-9a-f]{6}$/i.test(print.color)?'<span class="spore-swatch" style="background:'+print.color+'" aria-hidden="true"></span>':'';
  return '<dl class="study-facts"><dt>Odore</dt><dd>'+escape(p.odor||'Non documentato')+'</dd><dt>Sporata</dt><dd>'+color+escape(print?.label||'Non documentata')+(print?.scale?' · '+escape(print.scale):'')+'</dd><dt>Commestibilità</dt><dd>'+(t.kind==='teaching-group'?'Consulta le singole specie':edibilityBadge(food))+'</dd></dl>'+
- (food?.syndrome?.label&&!/^Da documentare per questo taxon\.?$/i.test(food.syndrome.label.trim())?'<p class="food-syndrome"><strong>Sindrome tossicologica:</strong> '+escape(food.syndrome.label)+'</p>':'')+
+ (food?.syndrome?.label&&!/^Da documentare per questo taxon\.?$/i.test(food.syndrome.label.trim())?'<p class="food-syndrome"><strong>Sindrome tossicologica:</strong> '+escape(food.syndrome.label)+'</p>'+(food.syndrome.latency?'<p class="food-syndrome"><strong>Latenza:</strong> '+escape(food.syndrome.latency)+'</p>':'')+(food.syndrome.severity?'<p class="food-syndrome"><strong>Quadro e gravità:</strong> '+escape(food.syndrome.severity)+'</p>':''):'')+
  (food?.precautions?.length?'<div class="food-precautions"><strong>Accorgimenti</strong><ul>'+food.precautions.map(value=>'<li>'+escape(value)+'</li>').join('')+'</ul></div>':'')+
  (/^Russula\b/.test(t.scientificName)?'<details class="compact-details russula-scale"><summary>Scala della sporata I–IV</summary><div class="spore-legend">'+[['I','Bianca','#fffdf4'],['II','Crema','#f0e3bf'],['III','Ocra','#d5b16c'],['IV','Gialla','#e5bc41']].map(([code,label,color])=>'<span><i class="spore-swatch" style="background:'+color+'" aria-hidden="true"></i>'+code+' · '+label+'</span>').join('')+'</div><p class="small">Colori indicativi, non calibrati. La classe precisa va verificata sul deposito sporale, non sulle lamelle.</p>'+safeLink('https://s2hnh.org/wp-content/uploads/2016/10/La-couleur-des-spore%CC%81es-2016-7reduit.pdf','Scala Romagnesi · approfondimento')+'</details>':'');
 }
@@ -144,12 +146,12 @@ function validStudyFields(t){
 
 function content(t,showIdentity=true){
  const sources=studySources(t),summary=studySummary(t);
- const diagnostic=['field_high_confidence_when_typical','field_high_confidence_when_host_known','field_high_confidence_when_young','microscopy_required_for_fine_id','dna_confirmatory'].includes(t.diagnosticStatus)?diagnosticLimits[t.diagnosticStatus]:'';
+ const diagnostic=diagnosticLimits[t.diagnosticStatus]||'';
  return (showIdentity?'<div class="taxon-title"><h2>'+escape(t.scientificName)+'</h2>'+favoriteButton(t)+'</div><p class="small">'+escape(ranks[t.rank]||t.rank||'')+'</p>'+(t.commonNames.length?'<p>'+escape(t.commonNames.join(' · '))+'</p>':''):'')+
  referenceGallery(t)+studyFacts(t)+commercializationHTML(t)+
  (t.authorship?'<p class="small">Autore nomenclaturale: '+escape(t.authorship)+'</p>':'')+(t.family?'<p class="small">Famiglia: '+escape(t.family)+'</p>':'')+
  (t.rank!=='species'&&t.currentAcceptedNames?.length?'<p class="small">Nomi compresi: '+escape(t.currentAcceptedNames.join(' · '))+'</p>':'')+
- (t.safetyCheck?'<h3>Controlli sul campo</h3><p>'+escape(t.safetyCheck)+'</p>':'')+(diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="small">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
+ (t.safetyCheck?'<h3>Controlli sul campo</h3><p>'+escape(t.safetyCheck)+'</p>':'')+(diagnostic?'<p class="small">'+escape(diagnostic)+'</p>':'')+(t.diagnosticNote?'<p class="'+(t.scientificName==='Lepiota elaiophylla'?'notice':'small')+'">'+escape(studyText(t.diagnosticNote))+'</p>':'')+
  (summary?'<p>'+escape(summary)+'</p>':'')+
  (t.characters.length?'<h3>Caratteri di studio</h3><ol>'+t.characters.map(c=>'<li>'+escape(studyText(c))+'</li>').join('')+'</ol>':'<p>Per studiare i caratteri, apri le schede collegate.</p>')+
  (t.differentiatingCharacter?'<h3>Carattere differenziante (+1)</h3><p>'+escape(studyText(t.differentiatingCharacter))+'</p>':'')+
@@ -202,7 +204,7 @@ function renderStudio(){
  '<input type="search" id="taxon-search" aria-label="Cerca nome scientifico, comune o sinonimo" placeholder="Nome scientifico, comune o sinonimo" value="'+escape(query)+'">'+
  '<div class="controls"><select id="layer" aria-label="Catalogo"><option value="minimum">Minimo · '+data.catalog.length+'</option><option value="groups">Generi e gruppi · '+data.groups.length+'</option><option value="all">Tutte · '+taxa.length+'</option></select>'+
  '<button id="feed" aria-pressed="'+feed+'">'+(feed?'Lettura continua':'Elenco')+'</button><button id="favorites" aria-pressed="'+onlyFavorites+'">Preferiti</button></div>'+
- '<p class="small">Tocca una scheda oppure attiva la lettura continua. Nel dettaglio usa Precedente e Successiva.</p>'+button('Ripasso attivo','review-start','','full')+'<p class="small">Ricorda il nome dai caratteri, poi confronta la risposta. Usa ricerca e Preferiti per scegliere il gruppo da ripassare.</p><div id="resume">'+(resumeId?button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full'):'')+'</div><p id="catalog-count" class="counter"></p><div id="cards"></div><div id="sentinel"></div><button id="more" class="full">Altre schede</button></section>';
+ '<p class="small">Tocca una scheda oppure attiva la lettura continua. Nel dettaglio usa Precedente e Successiva.</p>'+button('Test fotografico · 15 funghi','exam-open','','full')+button('Ripasso attivo','review-start','','full')+'<p class="small">Ricorda il nome dai caratteri, poi confronta la risposta. Usa ricerca e Preferiti per scegliere il gruppo da ripassare.</p><div id="resume">'+(resumeId?button('Riprendi '+byId.get(resumeId).scientificName,'resume',resumeId,'full'):'')+'</div><p id="catalog-count" class="counter"></p><div id="cards"></div><div id="sentinel"></div><button id="more" class="full">Altre schede</button></section>';
  $('#layer').value=layer;
  $('#taxon-search').addEventListener('input',event=>{query=event.target.value;limit=24;renderCards();$('#main').scrollTop=0;});
  $('#layer').addEventListener('change',event=>{layer=event.target.value;limit=24;renderCards();$('#main').scrollTop=0;});
@@ -364,6 +366,7 @@ document.addEventListener('click',event=>{
  const target=event.target.closest('button[data-action]');if(!target)return;const action=target.dataset.action,id=target.dataset.id;
  if(action==='photo-zoom')zoomReference(id,target.dataset.view,target);
  else if(action==='genus-review'){const group=byId.get(id);if(group)beginReview(false,group.relatedIds||[]);}
+ else if(action==='exam-open')photoExam?.open();
  else if(action==='review-start')beginReview();
  else if(action==='review-retry')beginReview(true);
  else if(action==='review-reveal'){if(reviewSession){reviewSession.revealed=true;renderReview();}}
@@ -415,7 +418,7 @@ async function setupOffline(){
 }
 $('#reload').onclick=()=>{const waiting=registration?.waiting;$('#update').hidden=true;if(!waiting){location.reload();return;}navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});waiting.postMessage({type:'ACTIVATE_UPDATE'});};
 async function start(){
- try{const response=await fetch('./data.json');if(!response.ok)throw Error('Catalogo non disponibile');data=await response.json();if(!validCatalog(data))throw Error('Catalogo incompleto');taxa=[...data.catalog,...data.groups];byId=new Map(taxa.map(t=>[t.id,t]));restore();renderTab();window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));void setupOffline();}
+ try{const response=await fetch('./data.json');if(!response.ok)throw Error('Catalogo non disponibile');data=await response.json();if(!validCatalog(data))throw Error('Catalogo incompleto');taxa=[...data.catalog,...data.groups];byId=new Map(taxa.map(t=>[t.id,t]));restore();photoExam=initExam({bank:data.examBank||[],showDialog,badge:edibilityBadge});renderTab();window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));void setupOffline();}
  catch{$('#main').innerHTML='<section><h1>Catalogo non disponibile</h1><p>La prima apertura richiede connessione. Riprova; i dati personali già salvati non vengono cancellati.</p><button id="retry-load">Riprova caricamento</button></section>';$('#retry-load').onclick=()=>void start();}
 }
 window.addEventListener('fungo:request-atlas',()=>{if(taxa.length)window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));});
