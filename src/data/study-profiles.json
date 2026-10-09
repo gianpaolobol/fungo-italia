@@ -5,8 +5,9 @@
       "scientificName": "Amanita phalloides",
       "profile": {
         "edibility": {
-          "label": "Velenosa, potenzialmente mortale",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -16,7 +17,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenosa, potenzialmente mortale"
+          "supportedClaim": "Amanita phalloides e A. virosa: velenose potenzialmente mortali, sindrome falloidea."
         }
       ]
     },
@@ -24,8 +25,9 @@
       "scientificName": "Amanita virosa",
       "profile": {
         "edibility": {
-          "label": "Velenosa, potenzialmente mortale",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -35,7 +37,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenosa, potenzialmente mortale"
+          "supportedClaim": "Amanita phalloides e A. virosa: velenose potenzialmente mortali, sindrome falloidea."
         }
       ]
     },
@@ -43,8 +45,9 @@
       "scientificName": "Amanita pantherina",
       "profile": {
         "edibility": {
-          "label": "Velenosa",
-          "precautions": []
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
         }
       },
       "evidence": [
@@ -54,7 +57,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenosa"
+          "supportedClaim": "Amanita pantherina e A. muscaria: velenose; non classificate a commestibilità condizionata."
         }
       ]
     },
@@ -62,8 +65,9 @@
       "scientificName": "Amanita muscaria",
       "profile": {
         "edibility": {
-          "label": "Velenosa",
-          "precautions": []
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
         }
       },
       "evidence": [
@@ -73,7 +77,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenosa"
+          "supportedClaim": "Amanita pantherina e A. muscaria: velenose; non classificate a commestibilità condizionata."
         }
       ]
     },
@@ -82,7 +86,8 @@
       "profile": {
         "edibility": {
           "label": "Non commestibile",
-          "precautions": []
+          "precautions": [],
+          "category": "inedible"
         }
       },
       "evidence": [
@@ -92,7 +97,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Non commestibile"
+          "supportedClaim": "Amanita gemmata: non commestibile, con criticità tossicologiche e di determinazione."
         }
       ]
     },
@@ -100,8 +105,9 @@
       "scientificName": "Amanita proxima",
       "profile": {
         "edibility": {
-          "label": "Tossica, nefrotossica",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -111,7 +117,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Tossica, nefrotossica"
+          "supportedClaim": "Amanita proxima può causare intossicazioni nefrotossiche gravi e potenzialmente mortali, con esiti infausti documentati."
         }
       ]
     },
@@ -119,8 +125,11 @@
       "scientificName": "Amanita ovoidea",
       "profile": {
         "edibility": {
-          "label": "Non ammettere al consumo",
-          "precautions": []
+          "label": "Non commestibile",
+          "precautions": [
+            "Non ammettere al consumo: la Guida descrive una sospetta nefrotossicità."
+          ],
+          "category": "inedible"
         }
       },
       "evidence": [
@@ -130,7 +139,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Non ammettere al consumo"
+          "supportedClaim": "Amanita ovoidea non deve essere ammessa al consumo per segnalazioni di intossicazioni e sospetta nefrotossicità."
         }
       ]
     },
@@ -138,10 +147,9 @@
       "scientificName": "Amanita strobiliformis",
       "profile": {
         "edibility": {
-          "label": "Sconsigliata",
-          "precautions": [
-            "Rischio di confusione con Amanita pericolose."
-          ]
+          "label": "Sconsigliato",
+          "precautions": [],
+          "category": "discouraged"
         }
       },
       "evidence": [
@@ -151,7 +159,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Sconsigliata. Rischio di confusione con Amanita pericolose."
+          "supportedClaim": "Amanita strobiliformis e A. vittadinii (= Saproamanita vittadinii nel catalogo): sconsigliate per confondibilità con Amanita pericolose."
         }
       ]
     },
@@ -160,26 +168,8 @@
       "profile": {
         "edibility": {
           "label": "Non commestibile",
-          "precautions": []
-        }
-      },
-      "evidence": [
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 32,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Non commestibile"
-        }
-      ]
-    },
-    {
-      "scientificName": "Amanita porphyria",
-      "profile": {
-        "edibility": {
-          "label": "Non commestibile",
-          "precautions": []
+          "precautions": [],
+          "category": "inedible"
         }
       },
       "evidence": [
@@ -189,7 +179,27 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Non commestibile"
+          "supportedClaim": "Amanita citrina e A. porphyria: non commestibili, principalmente per confondibilità con specie potenzialmente mortali."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": [],
+          "category": "inedible"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 33,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Amanita citrina e A. porphyria: non commestibili, principalmente per confondibilità con specie potenzialmente mortali."
         }
       ]
     },
@@ -199,8 +209,9 @@
         "edibility": {
           "label": "Commestibilità condizionata",
           "precautions": [
-            "Richiede cottura completa; non consumare cruda."
-          ]
+            "È obbligatoria la cottura completa; non consumare cruda o poco cotta."
+          ],
+          "category": "conditional"
         }
       },
       "evidence": [
@@ -210,7 +221,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Commestibilità condizionata. Richiede cottura completa; non consumare cruda."
+          "supportedClaim": "Amanita rubescens: commestibile solo dopo completa cottura."
         }
       ]
     },
@@ -218,10 +229,11 @@
       "scientificName": "Amanita caesarea",
       "profile": {
         "edibility": {
-          "label": "Commestibile",
+          "label": "Commestibilità libera",
           "precautions": [
-            "Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
-          ]
+            "Controllare ogni esemplare: gli ovoli chiusi possono essere confusi con Amanita phalloides."
+          ],
+          "category": "free"
         }
       },
       "evidence": [
@@ -231,7 +243,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Commestibile. Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
+          "supportedClaim": "Amanita caesarea: commestibile senza trattamenti particolari."
         }
       ]
     },
@@ -239,12 +251,13 @@
       "scientificName": "Macrolepiota procera s.l.",
       "profile": {
         "edibility": {
-          "label": "Commestibile",
+          "label": "Commestibilità libera",
           "precautions": [
-            "Utilizzare esemplari freschi e cuocere completamente; non consumare cruda.",
-            "Utilizzare il cappello, scartando il gambo fibroso.",
-            "Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
-          ]
+            "Utilizzare esemplari freschi, con lamelle bianche e diritte.",
+            "Evitare il consumo crudo e l’apertura forzata in acqua degli esemplari chiusi.",
+            "La Guida riporta la prescrizione svizzera di cuocere il solo cappello almeno 20 minuti, scartando il gambo (p. 73)."
+          ],
+          "category": "free"
         }
       },
       "evidence": [
@@ -254,15 +267,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Commestibile. Utilizzare esemplari freschi e cuocere completamente; non consumare cruda. Utilizzare il cappello, scartando il gambo fibroso. Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
-        },
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 73,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Escludere consumo crudo e apertura forzata in acqua; consumo del cappello, non del gambo, richiamato nei requisiti svizzeri."
+          "supportedClaim": "Macrolepiota procera s.l.: commestibile; nei freschi esemplari idonei non occorrono particolari prescrizioni di trattamento. Le indicazioni svizzere riportate a p. 73 non cambiano la categoria della Guida."
         }
       ]
     },
@@ -270,12 +275,12 @@
       "scientificName": "Suillus luteus",
       "profile": {
         "edibility": {
-          "label": "Commestibile",
+          "label": "Commestibilità libera",
           "precautions": [
-            "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
-            "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
-            "La prebollitura non è indicata come trattamento necessario."
-          ]
+            "Preferire esemplari giovani, eliminando gambi fibrosi e cuticola.",
+            "Iniziare con quantità modeste: possibili effetti lassativi individuali; la prebollitura non è necessaria."
+          ],
+          "category": "free"
         }
       },
       "evidence": [
@@ -285,7 +290,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Commestibile. Preferire esemplari giovani; eliminare gambi fibrosi e cuticola. Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti. La prebollitura non è indicata come trattamento necessario."
+          "supportedClaim": "Suillus: prebollitura non necessaria; limitare quantità e usare esemplari giovani."
         }
       ]
     },
@@ -293,12 +298,12 @@
       "scientificName": "Suillus granulatus",
       "profile": {
         "edibility": {
-          "label": "Commestibile",
+          "label": "Commestibilità libera",
           "precautions": [
-            "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
-            "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
-            "La prebollitura non è indicata come trattamento necessario."
-          ]
+            "Preferire esemplari giovani, eliminando gambi fibrosi e cuticola.",
+            "Iniziare con quantità modeste: possibili effetti lassativi individuali; la prebollitura non è necessaria."
+          ],
+          "category": "free"
         }
       },
       "evidence": [
@@ -308,7 +313,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Commestibile. Preferire esemplari giovani; eliminare gambi fibrosi e cuticola. Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti. La prebollitura non è indicata come trattamento necessario."
+          "supportedClaim": "Suillus: prebollitura non necessaria; limitare quantità e usare esemplari giovani."
         }
       ]
     },
@@ -336,8 +341,9 @@
       "profile": {
         "odor": "Fenolico, di inchiostro o disinfettante.",
         "edibility": {
-          "label": "Tossici gastrointestinali",
-          "precautions": []
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -354,20 +360,20 @@
           "supportedClaim": "Fenolico, di inchiostro o disinfettante."
         },
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 28,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Tossici gastrointestinali"
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agaricus sez. Xanthodermatei e A. bresadolanus: tossicità gastrointestinale incostante."
         }
       ]
     },
@@ -376,10 +382,11 @@
       "profile": {
         "odor": "Di anice o mandorle amare.",
         "edibility": {
-          "label": "Commestibili",
+          "label": "Commestibilità libera",
           "precautions": [
-            "Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
-          ]
+            "La Guida raccomanda un consumo non frequente per il possibile accumulo di metalli pesanti (p. 29)."
+          ],
+          "category": "free"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -396,28 +403,20 @@
           "supportedClaim": "Di anice o mandorle amare."
         },
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 28,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Commestibili. Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
-        },
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 29,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "La guida suggerisce un consumo non frequente per Agaricus sezione Arvenses in relazione all’accumulo di metalli pesanti."
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Le specie della sez. Arvenses sono commestibili senza trattamenti particolari."
         }
       ]
     },
@@ -426,8 +425,9 @@
       "profile": {
         "odor": "Poco caratterizzato.",
         "edibility": {
-          "label": "Commestibili",
-          "precautions": []
+          "label": "Commestibilità libera",
+          "precautions": [],
+          "category": "free"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -444,20 +444,20 @@
           "supportedClaim": "Poco caratterizzato."
         },
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 29,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Commestibili"
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 29,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agaricus sez. Sanguinolenti: commestibili senza trattamenti particolari."
         }
       ]
     },
@@ -466,8 +466,9 @@
       "profile": {
         "odor": "Debole e gradevole.",
         "edibility": {
-          "label": "Commestibile",
-          "precautions": []
+          "label": "Commestibilità libera",
+          "precautions": [],
+          "category": "free"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -484,20 +485,20 @@
           "supportedClaim": "Debole e gradevole."
         },
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 28,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Commestibile"
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agaricus campestris, A. bitorquis e A. bisporus: commestibili senza trattamenti particolari."
         }
       ]
     },
@@ -506,8 +507,9 @@
       "profile": {
         "odor": "Possibile lieve componente fenolica alla base del gambo; variabile.",
         "edibility": {
-          "label": "Tossico gastrointestinale",
-          "precautions": []
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -524,20 +526,20 @@
           "supportedClaim": "Possibile lieve componente fenolica alla base del gambo; variabile."
         },
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 28,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Tossico gastrointestinale"
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agaricus sez. Xanthodermatei e A. bresadolanus: tossicità gastrointestinale incostante."
         }
       ]
     },
@@ -581,6 +583,11 @@
         "odor": "Variabile: varechina nella serie foetens; note miste mandorlate in R. illota; mandorle amare o marzapane in R. grata e R. fragrantissima.",
         "sporePrint": {
           "label": "Bianca–crema; descrizione del sottogenere Ingratula comprendente Foetentinae."
+        },
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
         }
       },
       "evidence": [
@@ -593,6 +600,14 @@
             "sporePrint"
           ],
           "supportedClaim": "Ingratula: sporata da bianca a crema; nella serie foetens gli odori differiscono fra specie: varechina, misto mandorlato, mandorle amare o marzapane."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 99,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Russula Foetentinae: tossicità gastrointestinale incostante."
         }
       ]
     },
@@ -600,8 +615,9 @@
       "scientificName": "Agaricus bitorquis",
       "profile": {
         "edibility": {
-          "label": "Commestibile",
-          "precautions": []
+          "label": "Commestibilità libera",
+          "precautions": [],
+          "category": "free"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -610,20 +626,20 @@
       },
       "evidence": [
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 28,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Commestibile"
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agaricus campestris, A. bitorquis e A. bisporus: commestibili senza trattamenti particolari."
         }
       ]
     },
@@ -631,8 +647,9 @@
       "scientificName": "Agaricus bisporus",
       "profile": {
         "edibility": {
-          "label": "Commestibile",
-          "precautions": []
+          "label": "Commestibilità libera",
+          "precautions": [],
+          "category": "free"
         },
         "sporePrint": {
           "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -641,20 +658,20 @@
       },
       "evidence": [
         {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 28,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "Commestibile"
-        },
-        {
           "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
           "page": 2,
           "fields": [
             "sporePrint"
           ],
           "supportedClaim": "La sporata bruno-porpora è descritta nella lezione come carattere del genere Agaricus, non come determinazione della singola specie."
+        },
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 28,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agaricus campestris, A. bitorquis e A. bisporus: commestibili senza trattamenti particolari."
         }
       ]
     },
@@ -662,8 +679,9 @@
       "scientificName": "Galerina marginata group",
       "profile": {
         "edibility": {
-          "label": "Velenoso, potenzialmente mortale",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -673,7 +691,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenoso, potenzialmente mortale"
+          "supportedClaim": "Galerina marginata s.l.: velenosa potenzialmente mortale per le amanitine."
         }
       ]
     },
@@ -681,8 +699,9 @@
       "scientificName": "Lepiota subincarnata",
       "profile": {
         "edibility": {
-          "label": "Velenosa, potenzialmente mortale",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -692,7 +711,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenosa, potenzialmente mortale"
+          "supportedClaim": "Lepiota subincarnata e L. brunneoincarnata: velenose potenzialmente mortali per amanitine."
         }
       ]
     },
@@ -700,8 +719,9 @@
       "scientificName": "Lepiota brunneoincarnata",
       "profile": {
         "edibility": {
-          "label": "Velenosa, potenzialmente mortale",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -711,7 +731,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenosa, potenzialmente mortale"
+          "supportedClaim": "Lepiota subincarnata e L. brunneoincarnata: velenose potenzialmente mortali per amanitine."
         }
       ]
     },
@@ -720,7 +740,8 @@
       "profile": {
         "edibility": {
           "label": "Non commestibile",
-          "precautions": []
+          "precautions": [],
+          "category": "inedible"
         }
       },
       "evidence": [
@@ -730,7 +751,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Non commestibile"
+          "supportedClaim": "Lepiota cristata: nessuna amanitina rilevata negli studi citati a p. 67; rimane non commestibile nel quadro precauzionale del genere. Non si inferisce l’innocuità dal solo mancato rilevamento di amanitine."
         }
       ]
     },
@@ -738,8 +759,9 @@
       "scientificName": "Omphalotus olearius",
       "profile": {
         "edibility": {
-          "label": "Tossico gastrointestinale",
-          "precautions": []
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
         }
       },
       "evidence": [
@@ -749,7 +771,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Tossico gastrointestinale"
+          "supportedClaim": "Omphalotus olearius: tossicità gastrointestinale costante."
         }
       ]
     },
@@ -757,8 +779,9 @@
       "scientificName": "Cortinarius orellanus",
       "profile": {
         "edibility": {
-          "label": "Velenoso, potenzialmente mortale",
-          "precautions": []
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
         }
       },
       "evidence": [
@@ -768,7 +791,7 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Velenoso, potenzialmente mortale"
+          "supportedClaim": "Cortinarius orellanus e C. orellanoides (= C. speciosissimus, C. rubellus): velenosi potenzialmente mortali."
         }
       ]
     },
@@ -776,7 +799,766 @@
       "scientificName": "Entoloma sinuatum",
       "profile": {
         "edibility": {
-          "label": "Tossico gastrointestinale",
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 53,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Entoloma sinuatum: tossico gastrointestinale costante."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "profile": {
+        "edibility": {
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 142,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Gyromitra esculenta: tossica con potenziale intossicazione grave e mortale; non diventa una specie a commestibilità condizionata."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius rubellus",
+      "profile": {
+        "edibility": {
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [],
+          "category": "deadly"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 48,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Cortinarius orellanus e C. orellanoides (= C. speciosissimus, C. rubellus): velenosi potenzialmente mortali."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hypholoma lateritium",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": [],
+          "category": "inedible"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 62,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hypholoma lateritium: non commestibile in Italia per confondibilità con H. fasciculare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "profile": {
+        "edibility": {
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 62,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hypholoma fasciculare: tossicità gastrointestinale costante."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma terreum",
+      "profile": {
+        "edibility": {
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare ogni esemplare per escludere le specie tossiche confondibili."
+          ],
+          "category": "free"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 91,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma portentosum e gruppo di T. terreum sensu latissimo (incluse le specie elencate nella scheda): commestibili."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "profile": {
+        "edibility": {
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare ogni esemplare per escludere le specie tossiche confondibili."
+          ],
+          "category": "free"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 91,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma portentosum e gruppo di T. terreum sensu latissimo (incluse le specie elencate nella scheda): commestibili."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma equestre",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": [
+            "La Guida (2021) documenta il divieto italiano di raccolta, consumo e commercializzazione; non destinare al consumo."
+          ],
+          "category": "discouraged"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 87,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma equestre: la Guida classifica sconsigliato, non tossico; riporta il divieto italiano."
+        }
+      ]
+    },
+    {
+      "scientificName": "Calocybe gambosa",
+      "profile": {
+        "edibility": {
+          "label": "Commestibilità libera",
+          "precautions": [],
+          "category": "free"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 39,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Calocybe gambosa: commestibile senza trattamenti particolari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe nebularis",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": [
+            "Il trattamento di prebollitura con eliminazione dell’acqua e successiva cottura prolungata non cambia il giudizio di consumo sconsigliato."
+          ],
+          "category": "discouraged"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 44,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe nebularis: consumo sconsigliato; la Guida non la classifica tossica."
+        }
+      ]
+    },
+    {
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": [],
+          "category": "discouraged"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 40,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Chlorophyllum rhacodes e specie vicine: assolutamente sconsigliate."
+        }
+      ]
+    },
+    {
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Sconsigliato",
+          "precautions": [],
+          "category": "discouraged"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 69,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Leucoagaricus leucothites s.l.: consumo sconsigliato per criticità e confondibilità."
+        }
+      ]
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": [
+            "Il consumo associato ad alcol può provocare sindrome coprinica; la Guida mantiene il giudizio non commestibile."
+          ],
+          "category": "inedible"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 47,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Coprinus atramentarius (= Coprinopsis atramentaria) e specie vicine: non commestibili, rischio di sindrome coprinica."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "profile": {
+        "edibility": {
+          "label": "Non commestibile",
+          "precautions": [],
+          "category": "inedible"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 33,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Amanita excelsa s.l. (inclusa A. spissa) e A. franchetii: non commestibili per confondibilità con A. pantherina."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "profile": {
+        "edibility": {
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 41,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe dealbata (= C. rivulosa, Collybia rivulosa nel catalogo): tossica muscarinica."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "profile": {
+        "edibility": {
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 85,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma pardinum e l’affine T. filamentosum: tossici gastrointestinali costanti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Chlorophyllum molybdites",
+      "profile": {
+        "edibility": {
+          "label": "Tossico",
+          "precautions": [],
+          "category": "toxic"
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 39,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Chlorophyllum molybdites: tossico, sindrome morganica indipendente dalla cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cyclocybe cylindracea",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Eliminare le parti fibrose dei gambi, conservando solo le parti tenerissime.",
+            "È obbligatoria la cottura completa."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 30,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Agrocybe cylindracea (= A. aegerita = Cyclocybe cylindracea): commestibile solo dopo eliminazione dei gambi fibrosi e completa cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "profile": {
+        "edibility": {
+          "category": "deadly",
+          "label": "Tossico potenzialmente mortale",
+          "precautions": [
+            "La Guida usa A. verna e il gruppo Phalloideae; la scheda mantiene separate le denominazioni A. verna e A. vidua."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 34,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tabella 1: A. verna e le altre specie della sez. Phalloideae sono tossiche potenzialmente mortali. Il giudizio è applicato al raggruppamento didattico verna/vidua del catalogo, non come sinonimia fra le due specie."
+        }
+      ]
+    },
+    {
+      "scientificName": "Saproamanita vittadinii",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 32,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Amanita strobiliformis e A. vittadinii (= Saproamanita vittadinii nel catalogo): sconsigliate per confondibilità con Amanita pericolose."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita sez. Vaginatae",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È obbligatoria la cottura completa."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 34,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tutte le specie di Amanita sez. Vaginatae: commestibili dopo completa cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Collybia phyllophila",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 41,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe cerussata (= C. phyllophila, Collybia phyllophila nel catalogo): tossica muscarinica."
+        }
+      ]
+    },
+    {
+      "scientificName": "Infundibulicybe geotropa",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda la cottura completa."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 44,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe geotropa (= Infundibulicybe geotropa): commestibile; cottura completa raccomandata."
+        }
+      ]
+    },
+    {
+      "scientificName": "Paralepistopsis amoenolens",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 41,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe amoenolens (= Paralepistopsis amoenolens): tossica, sindrome acromelalgica."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe gibba s.l.",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È necessaria la cottura completa."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 44,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitocybe gibba s.l. e specie vicine: commestibili dopo cottura completa."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare tutti gli esemplari per escludere le Clitocybe bianche tossiche."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 45,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Clitopilus gruppo prunulus: commestibili senza trattamenti particolari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Rhodocollybia maculata",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 46,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Collybia maculata (= Rhodocollybia maculata): non commestibile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gymnopus fusipes",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 46,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Collybia fusipes (= Gymnopus fusipes): consumo sconsigliato."
+        }
+      ]
+    },
+    {
+      "scientificName": "Marasmius oreades",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare tutti gli esemplari: possibile confusione con specie prative pericolose di piccole dimensioni."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 73,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Marasmius oreades: commestibile; nessun trattamento obbligatorio specifico indicato nella Guida."
+        }
+      ]
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Utilizzare solo esemplari con lamelle completamente bianche.",
+            "Cuocere preferibilmente il giorno della raccolta; conservazione in frigorifero allo stato crudo per non più di una notte."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 48,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Coprinus comatus: commestibile senza trattamenti particolari finché le lamelle sono completamente bianche."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": [
+            "La Guida distingue questa sospetta nefrotossicità dalla sindrome orellanica."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 50,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tabella 4: sottogenere Dermocybe fra i tossici gastrointestinali e/o sospetti nefrotossici non orellanici."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 51,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Cortinarius praestans, C. cumatilis e C. variiformis (= Phlegmacium variiforme nel catalogo): commestibili; cottura completa raccomandata senza tossine termolabili note."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius cumatilis",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 51,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Cortinarius praestans, C. cumatilis e C. variiformis (= Phlegmacium variiforme nel catalogo): commestibili; cottura completa raccomandata senza tossine termolabili note."
+        }
+      ]
+    },
+    {
+      "scientificName": "Phlegmacium variiforme",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 51,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Cortinarius praestans, C. cumatilis e C. variiformis (= Phlegmacium variiforme nel catalogo): commestibili; cottura completa raccomandata senza tossine termolabili note."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius caperatus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Limitare la frequenza del consumo per la capacità di accumulare radiocesio; la Guida suggerisce anche una rapida prebollitura con eliminazione dell’acqua."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 84,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Rozites caperatus (= Cortinarius caperatus): commestibile; consigliati consumo non frequente e/o rapida prebollitura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 54,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Entoloma rhodopolium s.l.: tossico gastrointestinale."
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma hirtipes",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
           "precautions": []
         }
       },
@@ -787,52 +1569,223 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Tossico gastrointestinale"
+          "supportedClaim": "Entoloma hirtipes e E. vernum: tossici gastrointestinali; conferme discusse a p. 54."
         }
       ]
     },
     {
-      "scientificName": "Gyromitra esculenta",
+      "scientificName": "Entoloma vernum",
       "profile": {
         "edibility": {
-          "label": "Tossica, potenzialmente mortale",
+          "category": "toxic",
+          "label": "Tossico",
           "precautions": []
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 26,
+          "page": 53,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Tossica, potenzialmente mortale"
+          "supportedClaim": "Entoloma hirtipes e E. vernum: tossici gastrointestinali; conferme discusse a p. 54."
         }
       ]
     },
     {
-      "scientificName": "Cortinarius rubellus",
+      "scientificName": "Entoloma clypeatum s.l.",
       "profile": {
         "edibility": {
-          "label": "Velenoso, potenzialmente mortale",
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare raccolte in ambienti urbani inquinati o frutteti appena trattati con prodotti fitosanitari (p. 55)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 54,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Entoloma clypeatum s.l. e E. saundersii: Entoloma primaverili commestibili."
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma saundersii",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare raccolte in ambienti urbani inquinati o frutteti appena trattati con prodotti fitosanitari (p. 55)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 54,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Entoloma clypeatum s.l. e E. saundersii: Entoloma primaverili commestibili."
+        }
+      ]
+    },
+    {
+      "scientificName": "Flammulina velutipes s.l.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda di eliminare le parti fibrose dei gambi e cuocere completamente."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 56,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Flammulina velutipes: certamente commestibile; eliminazione delle parti fibrose dei gambi e cottura completa raccomandate a scopo precauzionale."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrocybe conica s.l.",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
           "precautions": []
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 48,
+          "page": 59,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "C. orellanoides, indicato anche come C. speciosissimus o C. rubellus, è velenoso potenzialmente mortale."
+          "supportedClaim": "Hygrocybe conica s.l.: tossicità gastrointestinale, probabilmente incostante; la Guida respinge l’attribuzione di tossicità mortale."
         }
       ]
     },
     {
-      "scientificName": "Hypholoma lateritium",
+      "scientificName": "Hygrocybe punicea",
       "profile": {
         "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 60,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hygrocybe punicea s.l.: certamente commestibile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus marzuolus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 60,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hygrophorus marzuolus e H. russula: commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 60,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hygrophorus marzuolus e H. russula: commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 60,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hygrophorus penarioides (spesso erroneamente denominato H. penarius): fra le specie commestibili della Guida."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Cuocere completamente per prevenire la tossidermia da shiitake; la Guida riporta anche la prescrizione svizzera di almeno 20 minuti."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 66,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Lentinula edodes: completa cottura per evitare la possibile dermatite flagellata da consumo crudo o poco cotto."
+        }
+      ]
+    },
+    {
+      "scientificName": "Echinoderma asperum s.l.",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
           "label": "Non commestibile",
           "precautions": []
         }
@@ -840,170 +1793,85 @@
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 62,
+          "page": 53,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "La Guida classifica Hypholoma lateritium non commestibile in Italia per la confondibilità con H. fasciculare."
+          "supportedClaim": "Echinoderma asperum e specie affini: non commestibili; documentate reazioni gastrointestinali e con alcol."
         }
       ]
     },
     {
-      "scientificName": "Hypholoma fasciculare",
+      "scientificName": "Lepista nuda s.l.",
       "profile": {
         "edibility": {
-          "label": "Tossico gastrointestinale",
-          "precautions": []
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda la cottura completa."
+          ]
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 62,
+          "page": 68,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "La Guida descrive tossicità gastrointestinale costante per Hypholoma fasciculare."
+          "supportedClaim": "Lepista nuda e specie del gruppo: commestibili, con completa cottura raccomandata."
         }
       ]
     },
     {
-      "scientificName": "Tricholoma terreum",
+      "scientificName": "Lepista flaccida s.l.",
       "profile": {
         "edibility": {
-          "label": "Commestibile (commestibilità libera)",
-          "precautions": []
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È necessaria la cottura completa."
+          ]
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 91,
+          "page": 68,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "La Guida considera Tricholoma terreum commestibile, con criticità di confondibilità con specie tossiche."
+          "supportedClaim": "Lepista flaccida s.l.: commestibile dopo completa cottura."
         }
       ]
     },
     {
-      "scientificName": "Tricholoma portentosum",
+      "scientificName": "Leucopaxillus giganteus s.l.",
       "profile": {
         "edibility": {
-          "label": "Commestibile (commestibilità libera)",
-          "precautions": []
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida raccomanda la cottura completa."
+          ]
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 91,
+          "page": 71,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "La Guida considera Tricholoma portentosum commestibile."
+          "supportedClaim": "Leucopaxillus giganteus (incluso L. candidus): commestibile con cottura completa raccomandata."
         }
       ]
     },
     {
-      "scientificName": "Tricholoma equestre",
+      "scientificName": "Leucopaxillus gentianeus",
       "profile": {
         "edibility": {
-          "label": "Sconsigliato; raccolta, consumo e commercializzazione vietati in Italia secondo la Guida (2021)",
-          "precautions": []
-        }
-      },
-      "evidence": [
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 88,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "La Guida classifica Tricholoma equestre fra le specie sconsigliate e documenta il divieto italiano."
-        }
-      ]
-    },
-    {
-      "scientificName": "Calocybe gambosa",
-      "profile": {
-        "edibility": {
-          "label": "Commestibile (commestibilità libera)",
-          "precautions": []
-        }
-      },
-      "evidence": [
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 39,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "La Guida ragionata (2021) colloca Calocybe gambosa nella categoria Commestibile (commestibilità libera); il riferimento non certifica l'identificazione di esemplari."
-        }
-      ]
-    },
-    {
-      "scientificName": "Clitocybe nebularis",
-      "profile": {
-        "edibility": {
-          "label": "Sconsigliato",
-          "precautions": []
-        }
-      },
-      "evidence": [
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 24,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "La Guida ragionata (2021) colloca Clitocybe nebularis nella categoria Sconsigliato; il riferimento non certifica l'identificazione di esemplari."
-        }
-      ]
-    },
-    {
-      "scientificName": "Chlorophyllum rhacodes s.l.",
-      "profile": {
-        "edibility": {
-          "label": "Sconsigliato",
-          "precautions": []
-        }
-      },
-      "evidence": [
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 24,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "La Guida ragionata (2021) colloca Chlorophyllum rhacodes s.l. nella categoria Sconsigliato; il riferimento non certifica l'identificazione di esemplari."
-        }
-      ]
-    },
-    {
-      "scientificName": "Leucoagaricus leucothites s.l.",
-      "profile": {
-        "edibility": {
-          "label": "Sconsigliato",
-          "precautions": []
-        }
-      },
-      "evidence": [
-        {
-          "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 24,
-          "fields": [
-            "edibility"
-          ],
-          "supportedClaim": "La Guida ragionata (2021) colloca Leucoagaricus leucothites s.l. nella categoria Sconsigliato; il riferimento non certifica l'identificazione di esemplari."
-        }
-      ]
-    },
-    {
-      "scientificName": "Coprinus atramentarius s.l.",
-      "profile": {
-        "edibility": {
+          "category": "inedible",
           "label": "Non commestibile",
           "precautions": []
         }
@@ -1011,57 +1879,235 @@
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 25,
+          "page": 71,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "La Guida ragionata (2021) colloca Coprinus atramentarius s.l. nella categoria Non commestibile; il riferimento non certifica l'identificazione di esemplari."
+          "supportedClaim": "Leucopaxillus gentianeus: non commestibile."
         }
       ]
     },
     {
-      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "scientificName": "Lyophyllum decastes s.l.",
       "profile": {
         "edibility": {
-          "label": "Non commestibile",
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare le possibili confusioni con Entoloma sinuatum e Tricholoma filamentosum."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 72,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Lyophyllum decastes s.l.: commestibile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lyophyllum specie annerenti",
+      "profile": {
+        "edibility": {
+          "category": "mixed",
+          "label": "Commestibilità variabile: consulta le singole specie",
+          "precautions": [
+            "La Guida considera generalmente privi di valore gli annerenti, con eccezione del commestibile L. rhopalopodium."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 72,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Le specie annerenti di Lyophyllum sono generalmente prive di valore, con eccezione di L. rhopalopodium che è commestibile: nessuna categoria unica vale per tutto il gruppo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Leucocybe connata",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
           "precautions": []
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 33,
+          "page": 72,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "La Guida ragionata (2021) colloca Amanita excelsa s.l. (incl. A. spissa, A. franchetii) nella categoria Non commestibile; il riferimento non certifica l'identificazione di esemplari."
+          "supportedClaim": "Lyophyllum connatum (= Leucocybe connata): sconsigliato per confondibilità con Clitocybe muscariniche."
         }
       ]
     },
     {
-      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "scientificName": "Mycena sez. Purae",
       "profile": {
         "edibility": {
-          "label": "Tossica (sindrome muscarinica)",
+          "category": "toxic",
+          "label": "Tossico",
           "precautions": []
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 50,
+          "page": 75,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Clitocybe dealbata e C. rivulosa sono clitocibi bianchi tossici con sindrome muscarinica; la denominazione della scheda è un raggruppamento didattico, non una specie unica."
+          "supportedClaim": "Mycena sez. Purae: tossiche gastrointestinali incostanti; non si attribuisce automaticamente una sindrome muscarinica."
         }
       ]
     },
     {
-      "scientificName": "Tricholoma pardinum",
+      "scientificName": "Panaeolus cyanescens",
       "profile": {
         "edibility": {
-          "label": "Tossico gastrointestinale (tossicità costante)",
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 76,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Panaeolus cyanescens (= Copelandia cyanescens): tossico psilocibinico."
+        }
+      ]
+    },
+    {
+      "scientificName": "Kuehneromyces mutabilis",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "La Guida disincentiva il consumo degli esemplari spontanei per la possibile confusione con Galerina marginata; raccomanda il controllo di tutti gli esemplari."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 77,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Pholiota mutabilis (= Kuehneromyces mutabilis): la Guida conferma la categoria commestibile, pur indicando il consumo spontaneo come da disincentivare per confusione con Galerina."
+        }
+      ]
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare il consumo crudo; per P. ostreatus spontaneo scartare gli esemplari troppo coriacei o alterati (p. 79)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 78,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Pleurotus eryngii s.l. e P. ostreatus: commestibili senza trattamenti particolari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Pleurotus ostreatus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare il consumo crudo; per P. ostreatus spontaneo scartare gli esemplari troppo coriacei o alterati (p. 79)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 78,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Pleurotus eryngii s.l. e P. ostreatus: commestibili senza trattamenti particolari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "profile": {
+        "edibility": {
+          "category": "mixed",
+          "label": "Commestibilità variabile: consulta le singole specie",
+          "precautions": [
+            "P. cornucopiae è commestibile secondo la Guida; P. citrinopileatus non è trattato per nome. Il giudizio sulla scheda composta resta distinto per specie."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 79,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Pleurotus cornucopiae è esplicitamente commestibile, ma P. citrinopileatus non è trattato per nome nella Guida; non si estende automaticamente il giudizio alla scheda composta."
+        }
+      ]
+    },
+    {
+      "scientificName": "Stropharia rugosoannulata",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È necessaria la cottura completa.",
+            "Accertare il luogo di raccolta; evitare esemplari da aiuole, pacciamature o altri ambienti potenzialmente inquinati."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 85,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Stropharia rugosoannulata: consumo previa completa cottura e verifica del luogo di raccolta."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma filamentosum",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
           "precautions": []
         }
       },
@@ -1072,26 +2118,1160 @@
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Tricholoma pardinum, incluso l'affine T. filamentosum, è tossico e causa sindrome gastrointestinale anche molto severa con tossicità costante."
+          "supportedClaim": "Tricholoma pardinum e l’affine T. filamentosum: tossici gastrointestinali costanti."
         }
       ]
     },
     {
-      "scientificName": "Chlorophyllum molybdites",
+      "scientificName": "Tricholoma josserandii",
       "profile": {
         "edibility": {
-          "label": "Tossico (sindrome morganica gastrointestinale)",
+          "category": "toxic",
+          "label": "Tossico",
           "precautions": []
         }
       },
       "evidence": [
         {
           "sourceId": "S2-guida-ragionata-commestibilita-2021",
-          "page": 39,
+          "page": 85,
           "fields": [
             "edibility"
           ],
-          "supportedClaim": "Chlorophyllum molybdites è tossico; provoca sindrome gastrointestinale a breve latenza, talora con complicazioni neurologiche, indipendentemente dalla cottura."
+          "supportedClaim": "Tricholoma josserandii: tossico gastrointestinale, con tossicità presente anche dopo completa cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare ogni esemplare per escludere le specie tossiche confondibili."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 91,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma portentosum e gruppo di T. terreum sensu latissimo (incluse le specie elencate nella scheda): commestibili."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 87,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma saponaceum s.l., gruppo T. album, gruppo Virgati e T. sulphureum: non commestibili; la Guida considera dubbia la tossicità gastrointestinale spesso loro attribuita."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 87,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma saponaceum s.l., gruppo T. album, gruppo Virgati e T. sulphureum: non commestibili; la Guida considera dubbia la tossicità gastrointestinale spesso loro attribuita."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 87,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma saponaceum s.l., gruppo T. album, gruppo Virgati e T. sulphureum: non commestibili; la Guida considera dubbia la tossicità gastrointestinale spesso loro attribuita."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sulphureum",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 87,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma saponaceum s.l., gruppo T. album, gruppo Virgati e T. sulphureum: non commestibili; la Guida considera dubbia la tossicità gastrointestinale spesso loro attribuita."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma columbetta",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare le confusioni con Entoloma sinuatum, Tricholoma pardinum e Inocybe."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 92,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma columbetta: categoria commestibile confermata nella Guida."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sejunctum",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 88,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma sejunctum: sconsigliato per confondibilità con Amanita phalloides."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "profile": {
+        "edibility": {
+          "category": "mixed",
+          "label": "Commestibilità variabile: consulta le singole specie",
+          "precautions": [
+            "Gran parte degli Albobrunnei è sconsigliata.",
+            "La Guida distingue T. populinum (commestibile dopo completa cottura), T. imbricatum e T. vaccinum (commestibili)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 90,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Nella sez. Genuina gran parte degli Albobrunnei è sconsigliata, ma T. populinum, T. imbricatum e T. vaccinum sono commestibili: giudizio variabile entro il perimetro della scheda."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È necessaria la cottura completa."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 90,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tricholoma acerbum e T. roseoacerbum: commestibili con necessità di completa cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Volvopluteus gloiocephalus",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 94,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Volvariella gloiocephala (= Volvopluteus gloiocephalus): sconsigliata per confondibilità con Amanita phalloides."
+        }
+      ]
+    },
+    {
+      "scientificName": "Volvariella volvacea",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 94,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Volvariella volvacea: commestibile, specie coltivata importata."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius sez. Deliciosi",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 98,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Lactarius sez. Deliciosi, L. porninsis (= L. porniniae nel catalogo) e L. volemus s.l.: commestibili senza trattamenti obbligatori specifici."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius porniniae",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 98,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Lactarius sez. Deliciosi, L. porninsis (= L. porniniae nel catalogo) e L. volemus s.l.: commestibili senza trattamenti obbligatori specifici."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius volemus s.l.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 98,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Lactarius sez. Deliciosi, L. porninsis (= L. porniniae nel catalogo) e L. volemus s.l.: commestibili senza trattamenti obbligatori specifici."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lactarius tesquorum",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Effettuare una rapida sbollentatura e poi cuocere."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 98,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Lactarius tesquorum: commestibilità condizionata a rapida sbollentatura e successiva cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Russula Compactae Nigricantinae",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 100,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Russula Compactae (= Nigricantinae): prudenzialmente non commestibili; la Guida non attesta tossicità mortale delle specie europee."
+        }
+      ]
+    },
+    {
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 101,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Russula Lactarioides (gruppo delica incl. chloroides): commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus edulis s.l.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare il consumo crudo e le quantità eccessive; usare solo esemplari in buono stato di conservazione (pp. 105–106)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 106,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Boletus edulis s.l.: buon livello di sicurezza alimentare dopo cottura; senza prescrizione di trattamenti speciali."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "profile": {
+        "edibility": {
+          "category": "mixed",
+          "label": "Commestibilità variabile: consulta le singole specie",
+          "precautions": [
+            "Il viraggio o l’appartenenza alla sezione non determinano la commestibilità. Consultare la scheda della specie: la Guida distingue tutte le categorie nel gruppo (pp. 106–109)."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 108,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Boletus ex sez. Luridi include specie tossiche, sconsigliate, non commestibili e commestibili dopo completa cottura; nessun giudizio unico vale per la sezione."
+        }
+      ]
+    },
+    {
+      "scientificName": "Rubroboletus satanas",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 106,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Rubroboletus satanas e R. pulchrotinctus: tossici gastrointestinali, anche incostanti dopo prebollitura e cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 106,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Rubroboletus satanas e R. pulchrotinctus: tossici gastrointestinali, anche incostanti dopo prebollitura e cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È obbligatoria la cottura completa; la Guida non richiede la prebollitura."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 108,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Boletus erythropus s.l. (Neoboletus), gruppo luridus (Suillellus) e gruppo queletii: commestibili solo dopo completa cottura, tossici da crudi o poco cotti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Suillellus luridus",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È obbligatoria la cottura completa; la Guida non richiede la prebollitura."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 108,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Boletus erythropus s.l. (Neoboletus), gruppo luridus (Suillellus) e gruppo queletii: commestibili solo dopo completa cottura, tossici da crudi o poco cotti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "È obbligatoria la cottura completa; la Guida non richiede la prebollitura."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 108,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Boletus erythropus s.l. (Neoboletus), gruppo luridus (Suillellus) e gruppo queletii: commestibili solo dopo completa cottura, tossici da crudi o poco cotti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Caloboletus radicans",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 109,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Caloboletus radicans: tossico gastrointestinale incostante."
+        }
+      ]
+    },
+    {
+      "scientificName": "Caloboletus calopus",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 110,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Caloboletus calopus: consumo sconsigliato."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyroporus cyanescens",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Cuocere completamente e verificare attentamente lo stato di conservazione."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 111,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Gyroporus cyanescens e G. castaneus: commestibili dopo completa cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyroporus castaneus s.l.",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Cuocere completamente e verificare attentamente lo stato di conservazione."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 111,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Gyroporus cyanescens e G. castaneus: commestibili dopo completa cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 113,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hygrophoropsis aurantiaca: sconsigliato in Italia per confondibilità con Omphalotus; la Guida non ne conferma la presunta tossicità."
+        }
+      ]
+    },
+    {
+      "scientificName": "Imleria badia",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Cuocere completamente, preferibilmente dopo eliminazione dei gambi.",
+            "La Guida consiglia consumo non frequente per la capacità di accumulare radiocesio."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 113,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Imleria badia: commestibile da sottoporre a cottura completa."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tylopilus felleus",
+      "profile": {
+        "edibility": {
+          "category": "inedible",
+          "label": "Non commestibile",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 118,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tylopilus felleus: non commestibile indipendentemente dall’intensità del sapore amaro."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cantharellus cibarius complex",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Controllare le possibili confusioni con Omphalotus olearius."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 121,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Cantharellus cibarius s.l.: commestibile con buon livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Craterellus lutescens",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 122,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Craterellus lutescens, C. tubaeformis e C. cornucopioides: commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Craterellus tubaeformis",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 122,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Craterellus lutescens, C. tubaeformis e C. cornucopioides: commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Craterellus cornucopioides",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 122,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Craterellus lutescens, C. tubaeformis e C. cornucopioides: commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Gomphus clavatus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 122,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Gomphus clavatus: commestibile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 122,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tutte le specie di Hydnum (gruppi repandum, rufescens, albidum): commestibili con ottimo livello di sicurezza alimentare."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 123,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Tutte le specie del genere Hericium: commestibili. Il giudizio del genere è esplicito nella Guida, non inferito."
+        }
+      ]
+    },
+    {
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare gli esemplari vecchi e amari."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 122,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Sarcodon imbricatus s.l. (incl. S. squamosus): commestibile."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hapalopilus rutilans",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 123,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Hapalopilus rutilans: tossico, sindrome da acido poliporico."
+        }
+      ]
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "profile": {
+        "edibility": {
+          "category": "conditional",
+          "label": "Commestibilità condizionata",
+          "precautions": [
+            "Utilizzare esemplari giovani e teneri e cuocere completamente.",
+            "La Guida descrive taglio a strisce sottili e cottura di mezz’ora o più; una rapida prebollitura può contribuire alla sicurezza, ma non sostituisce la cottura."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 125,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Laetiporus sulphureus s.l.: commestibile con obbligo prudenziale di completa cottura; tabella 11 p. 126."
+        }
+      ]
+    },
+    {
+      "scientificName": "Albatrellopsis confluens",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Utilizzare solo esemplari giovani e teneri; quelli troppo sviluppati e fibrosi possono causare disturbi digestivi."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 125,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Albatrellus confluens (= Albatrellopsis confluens): commestibile limitando ai soli esemplari più giovani."
+        }
+      ]
+    },
+    {
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Usare esemplari giovani e teneri.",
+            "Per quelli più sviluppati e mediamente coriacei la Guida richiede prebollitura e preferisce l’uso sottolio; gli esemplari molto coriacei non vanno consumati."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 127,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Albatrellus ovinus, A. subrubescens e A. citrinus: stessa commestibilità; i giovanissimi e teneri sono commestibili con qualunque cottura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 129,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Scutiger pes-caprae: commestibile senza trattamenti particolari."
+        }
+      ]
+    },
+    {
+      "scientificName": "Fistulina hepatica",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Utilizzare esemplari giovani e teneri."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 127,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Fistulina hepatica: commestibile senza trattamenti particolari, riferito agli esemplari giovani e teneri."
+        }
+      ]
+    },
+    {
+      "scientificName": "Grifola frondosa",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Utilizzare esemplari giovani; per i più maturi può essere effettuata una rapida prebollitura."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 127,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Grifola frondosa: gli esemplari giovani sono commestibili con cottura semplice; prebollitura non necessaria."
+        }
+      ]
+    },
+    {
+      "scientificName": "Polyporus umbellatus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 129,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Polyporus umbellatus: commestibile con cottura semplice, senza necessità di prebollitura."
+        }
+      ]
+    },
+    {
+      "scientificName": "Meripilus giganteus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Usare solo esemplari giovani; la Guida preferisce la prebollitura e raccomanda la completa cottura."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 127,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Meripilus giganteus: commestibile solo da giovane; prebollitura preferibile e cottura completa raccomandata."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cerioporus squamosus",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Usare solo esemplari giovani e teneri."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 128,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Polyporus squamosus (= Cerioporus squamosus): gli esemplari giovani sono commestibili con cottura semplice."
+        }
+      ]
+    },
+    {
+      "scientificName": "Ramaria formosa",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 130,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Ramaria formosa e R. pallida: tossiche gastrointestinali incostanti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Ramaria pallida",
+      "profile": {
+        "edibility": {
+          "category": "toxic",
+          "label": "Tossico",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 130,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Ramaria formosa e R. pallida: tossiche gastrointestinali incostanti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Limitare la raccolta agli esemplari riconoscibili, giovani o medio-maturi."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 130,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Ramaria botrytis s.l.: commestibile, con miglior riconoscibilità degli esemplari giovani e medio-maturi."
+        }
+      ]
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "profile": {
+        "edibility": {
+          "category": "free",
+          "label": "Commestibilità libera",
+          "precautions": [
+            "Evitare consumo ripetuto in numerosi pasti consecutivi.",
+            "La Guida sconsiglia il consumo alle persone che assumono anticoagulanti."
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 136,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Auricularia auricula-judae: commestibile; la Guida non prescrive trattamenti obbligatori specifici."
+        }
+      ]
+    },
+    {
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "profile": {
+        "edibility": {
+          "category": "discouraged",
+          "label": "Sconsigliato",
+          "precautions": []
+        }
+      },
+      "evidence": [
+        {
+          "sourceId": "S2-guida-ragionata-commestibilita-2021",
+          "page": 151,
+          "fields": [
+            "edibility"
+          ],
+          "supportedClaim": "Sarcosphaera coronaria: consumo sconsigliato per criticità relative all’arsenico."
         }
       ]
     }

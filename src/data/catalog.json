@@ -57,6 +57,18 @@
           "sporePrint"
         ],
         "sourcePage": 2
+      },
+      {
+        "sourceId": "TOX-agaricus-sez-xanthodermatei",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.fungimag.com/spring-2023-articles/V16I1-Gastro.pdf",
+        "location": "Benjamin & Sitta (2023), Mushrooms causing gastro-intestinal distress, group 2: Agaricus xanthodermus sensu lato: group 2, very common gastrointestinal toxicity but not universal",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale a tossicità non universale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "section",
@@ -68,8 +80,14 @@
     "studyProfile": {
       "odor": "Fenolico, di inchiostro o disinfettante.",
       "edibility": {
-        "label": "Tossici gastrointestinali",
-        "precautions": []
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome gastrointestinale a tossicità non universale",
+          "latency": "Variabile; spesso breve",
+          "severity": "Disturbi gastrointestinali, talvolta intensi"
+        }
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -211,8 +229,9 @@
     "studyProfile": {
       "odor": "Possibile lieve componente fenolica alla base del gambo; variabile.",
       "edibility": {
-        "label": "Tossico gastrointestinale",
-        "precautions": []
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic"
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -319,10 +338,11 @@
     "studyProfile": {
       "odor": "Di anice o mandorle amare.",
       "edibility": {
-        "label": "Commestibili",
+        "label": "Commestibilità libera",
         "precautions": [
-          "Evitare un consumo frequente: alcune specie accumulano metalli pesanti."
-        ]
+          "La Guida raccomanda un consumo non frequente per il possibile accumulo di metalli pesanti (p. 29)."
+        ],
+        "category": "free"
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -352,11 +372,6 @@
         "subjectTaxon": "Agaricus arvensis s.l."
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -379,6 +394,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses"
     }
   },
   {
@@ -468,8 +488,9 @@
     "studyProfile": {
       "odor": "Poco caratterizzato.",
       "edibility": {
-        "label": "Commestibili",
-        "precautions": []
+        "label": "Commestibilità libera",
+        "precautions": [],
+        "category": "free"
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -596,8 +617,9 @@
     "studyProfile": {
       "odor": "Debole e gradevole.",
       "edibility": {
-        "label": "Commestibile",
-        "precautions": []
+        "label": "Commestibilità libera",
+        "precautions": [],
+        "category": "free"
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -627,11 +649,6 @@
         "subjectTaxon": "Agaricus campestris"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--05--agaricus-campestris"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -654,6 +671,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--05--agaricus-campestris"
     }
   },
   {
@@ -728,8 +750,9 @@
     "differentiatingCharacter": "Frequente su terreni compatti e disturbati, bordi stradali e aree calpestate.",
     "studyProfile": {
       "edibility": {
-        "label": "Commestibile",
-        "precautions": []
+        "label": "Commestibilità libera",
+        "precautions": [],
+        "category": "free"
       },
       "sporePrint": {
         "label": "Bruno-porpora; carattere del genere Agaricus.",
@@ -763,11 +786,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--06--agaricus-bitorquis"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -790,6 +808,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--06--agaricus-bitorquis"
     }
   },
   {
@@ -850,6 +873,45 @@
           "sporePrint"
         ],
         "sourcePage": 2
+      },
+      {
+        "sourceId": "EXT-ADMIN-agaricus-bisporus",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.mushroomexpert.com/agaricus_bisporus.html",
+        "location": "Odor and Taste; Spore Print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Lieve, fungino o di nocciola; Bruno scuro, cioccolato"
+      },
+      {
+        "sourceId": "EXT-ADMIN-agaricus-bisporus",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.lavalledelmetauro.it/contenuti/funghi-flora-fauna/scheda/12059.html",
+        "location": "Carne; Microscopia",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Lieve, fungino o di nocciola; Bruno scuro, cioccolato"
+      },
+      {
+        "sourceId": "EXT-ADMIN-agaricus-bisporus",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda0002.pdf",
+        "location": "Scheda 002, p. 1 (pagina stampata 91)",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Lieve, fungino o di nocciola; Bruno scuro, cioccolato"
       }
     ],
     "rank": "species",
@@ -863,13 +925,14 @@
     "differentiatingCharacter": "Saprotrofo di terreni molto ricchi e concimati, anche su cumuli di letame; tipico portamento robusto dello champignon.",
     "studyProfile": {
       "edibility": {
-        "label": "Commestibile",
-        "precautions": []
+        "label": "Commestibilità libera",
+        "precautions": [],
+        "category": "free"
       },
       "sporePrint": {
-        "label": "Bruno-porpora; carattere del genere Agaricus.",
-        "color": "#654252"
-      }
+        "label": "Bruno scuro, cioccolato"
+      },
+      "odor": "Lieve, fungino o di nocciola"
     },
     "referenceImages": [
       {
@@ -898,11 +961,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agaricus--07--agaricus-bisporus"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -925,6 +983,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--07--agaricus-bisporus"
     }
   },
   {
@@ -971,6 +1034,19 @@
         "fields": [
           "habitat"
         ]
+      },
+      {
+        "sourceId": "EXT-ADMIN-cyclocybe-cylindracea",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.ameronlus.it/blog/2025/03/31/larticolo-del-mese-cyclocybe-cylindracea/",
+        "location": "Descrizione di odore e spore in massa",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Variabile: di lievito, mosto o vinaccia; talora formaggio stagionato o farina rancida; Bruno-ruggine, tabacco"
       }
     ],
     "rank": "species",
@@ -983,6 +1059,20 @@
     ],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Crescita lignicola dalla primavera all’autunno inoltrato, soprattutto su vecchi pioppi ma anche olmi, salici, querce e fichi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Eliminare le parti fibrose dei gambi, conservando solo le parti tenerissime.",
+          "È obbligatoria la cottura completa."
+        ]
+      },
+      "odor": "Variabile: di lievito, mosto o vinaccia; talora formaggio stagionato o farina rancida",
+      "sporePrint": {
+        "label": "Bruno-ruggine, tabacco"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cyclocybe-cylindracea-lateral-103.jpg",
@@ -1008,11 +1098,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -1035,6 +1120,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea"
     }
   },
   {
@@ -1104,6 +1194,55 @@
           "lookalikes"
         ],
         "sourcePage": 5
+      },
+      {
+        "sourceId": "TOX-amanita-phalloides",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, p. 30",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome falloidea (amatossinica)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "EXT-ADMIN-amanita-phalloides",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/amanita-phalloides.html",
+        "location": "Carne; Microscopia",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.; Bianca"
+      },
+      {
+        "sourceId": "EXT-ADMIN-amanita-phalloides",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.cpbr.gov.au/fungi/deathcap.html",
+        "location": "Spore print",
+        "fields": [
+          "sporePrint"
+        ],
+        "supportedClaim": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.; Bianca"
+      },
+      {
+        "sourceId": "EXT-ADMIN-amanita-phalloides",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://ambbresadola.it/funghi_tossici/amanita-phalloides-vaill-ex-fr/",
+        "location": "CARNE",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.; Bianca"
       }
     ],
     "rank": "species",
@@ -1116,8 +1255,18 @@
     "differentiatingCharacter": "Gambo spesso con zebrature o marezzature olivastre; base sempre da estrarre integra.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenosa, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome falloidea (amatossinica)",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente mortale"
+        }
+      },
+      "odor": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.",
+      "sporePrint": {
+        "label": "Bianca"
       }
     },
     "referenceImages": [
@@ -1176,6 +1325,15 @@
     "deepMorphologyRequired": true,
     "sourceName": "Amanita verna (inclusa A. vidua)",
     "differentiatingCharacter": "Fenologia soprattutto primaverile e inizio estate, spesso con latifoglie.",
+    "studyProfile": {
+      "edibility": {
+        "category": "deadly",
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [
+          "La Guida usa A. verna e il gruppo Phalloideae; la scheda mantiene separate le denominazioni A. verna e A. vidua."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/amanita-verna-amanita-vidua-lateral-74.jpg",
@@ -1216,7 +1374,20 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-amanita-virosa",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.epicentro.iss.it/ben/2015/giugno/1",
+        "location": "ISS Epicentro, episodi da Amanita in Calabria, introduzione",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome falloidea (amatossinica)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Amanita virosa"
@@ -1227,8 +1398,14 @@
     "differentiatingCharacter": "Prevalentemente estivo-autunnale in boschi umidi montani di conifere o misti.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenosa, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome falloidea (amatossinica)",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente mortale"
+        }
       }
     },
     "referenceImages": [
@@ -1316,6 +1493,18 @@
           "lookalikes"
         ],
         "sourcePage": 13
+      },
+      {
+        "sourceId": "TOX-amanita-proxima",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.epicentro.iss.it/ben/2019/aprile/epidemiologia-intossicazione-funghi",
+        "location": "ISS Epicentro, casistica Centro Antiveleni Milano 1998–2017",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome nefrotossica da Amanita proxima",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -1328,8 +1517,14 @@
     "differentiatingCharacter": "Specie termofila mediterranea su suoli calcarei, spesso con querce e conifere.",
     "studyProfile": {
       "edibility": {
-        "label": "Tossica, nefrotossica",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome nefrotossica da Amanita proxima",
+          "latency": "Lunga latenza possibile",
+          "severity": "Insufficienza renale acuta"
+        }
       }
     },
     "referenceImages": [
@@ -1429,8 +1624,11 @@
     "differentiatingCharacter": "Specie termofila mediterranea, spesso su terreno calcareo.",
     "studyProfile": {
       "edibility": {
-        "label": "Non ammettere al consumo",
-        "precautions": []
+        "label": "Non commestibile",
+        "precautions": [
+          "Non ammettere al consumo: la Guida descrive una sospetta nefrotossicità."
+        ],
+        "category": "inedible"
       }
     },
     "referenceImages": [
@@ -1505,6 +1703,18 @@
           "lookalikes"
         ],
         "sourcePage": 70
+      },
+      {
+        "sourceId": "TOX-amanita-pantherina",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, Sindromi a breve latenza",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome panterinica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -1517,8 +1727,14 @@
     "differentiatingCharacter": "Carne bianca immutabile, senza arrossamento; utile contro A. rubescens.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenosa",
-        "precautions": []
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome panterinica",
+          "latency": "Breve latenza",
+          "severity": "Intossicazione neurologica"
+        }
       }
     },
     "referenceImages": [
@@ -1616,6 +1832,31 @@
           "lookalikes"
         ],
         "sourcePage": 71
+      },
+      {
+        "sourceId": "TOX-amanita-muscaria",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, Sindromi a breve latenza",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome panterinica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "EXT-ADMIN-amanita-muscaria",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.first-nature.com/fungi/amanita-muscaria.php",
+        "location": "Identification guide — Odour/taste; Spore print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Odore non distintivo; Bianca"
       }
     ],
     "rank": "species",
@@ -1628,8 +1869,18 @@
     "differentiatingCharacter": "Gambo e lamelle restano bianchi; margine del cappello spesso striato negli adulti.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenosa",
-        "precautions": []
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome panterinica",
+          "latency": "Breve latenza",
+          "severity": "Intossicazione neurologica"
+        }
+      },
+      "odor": "Odore non distintivo",
+      "sporePrint": {
+        "label": "Bianca"
       }
     },
     "referenceImages": [
@@ -1754,10 +2005,11 @@
     "differentiatingCharacter": "Nello stadio chiuso la sezione longitudinale mostra già strutture interne gialle.",
     "studyProfile": {
       "edibility": {
-        "label": "Commestibile",
+        "label": "Commestibilità libera",
         "precautions": [
-          "Controllare ogni esemplare: gli ovoli chiusi possono confondersi con Amanita phalloides."
-        ]
+          "Controllare ogni esemplare: gli ovoli chiusi possono essere confusi con Amanita phalloides."
+        ],
+        "category": "free"
       }
     },
     "referenceImages": [
@@ -1785,11 +2037,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 4,
-      "learningUnitId": "objective-amanita--08--amanita-caesarea"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -1812,6 +2059,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--08--amanita-caesarea"
     }
   },
   {
@@ -1855,6 +2107,19 @@
           "lookalikes"
         ],
         "sourcePage": 61
+      },
+      {
+        "sourceId": "EXT-ADMIN-amanita-gemmata",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.first-nature.com/fungi/amanita-gemmata.php",
+        "location": "Identification guide — Odour/taste; Spore print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Odore non significativo; Bianca"
       }
     ],
     "rank": "species",
@@ -1869,7 +2134,12 @@
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
-        "precautions": []
+        "precautions": [],
+        "category": "inedible"
+      },
+      "odor": "Odore non significativo",
+      "sporePrint": {
+        "label": "Bianca"
       }
     },
     "referenceImages": [
@@ -1924,7 +2194,8 @@
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
-        "precautions": []
+        "precautions": [],
+        "category": "inedible"
       }
     },
     "referenceImages": [
@@ -1979,7 +2250,8 @@
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
-        "precautions": []
+        "precautions": [],
+        "category": "inedible"
       }
     },
     "referenceImages": [
@@ -2049,6 +2321,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne non arrossante: utile separazione dal gruppo A. rubescens.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": [],
+        "category": "inedible"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-underside-258.jpg",
@@ -2118,10 +2397,9 @@
     "differentiatingCharacter": "Specie termofila, spesso con latifoglie su terreni calcarei.",
     "studyProfile": {
       "edibility": {
-        "label": "Sconsigliata",
-        "precautions": [
-          "Rischio di confusione con Amanita pericolose."
-        ]
+        "label": "Sconsigliato",
+        "precautions": [],
+        "category": "discouraged"
       }
     },
     "referenceImages": [
@@ -2211,6 +2489,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Amanita vittadinii",
     "differentiatingCharacter": "Ecologia prevalentemente praticola o in ambienti aperti, insolita per una Amanita.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/saproamanita-vittadinii-top-277.jpg",
@@ -2266,8 +2551,9 @@
       "edibility": {
         "label": "Commestibilità condizionata",
         "precautions": [
-          "Richiede cottura completa; non consumare cruda."
-        ]
+          "È obbligatoria la cottura completa; non consumare cruda o poco cotta."
+        ],
+        "category": "conditional"
       }
     },
     "referenceImages": [
@@ -2369,6 +2655,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne fragile e lamelle bianche; riconoscimento corretto al rango di sezione.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È obbligatoria la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/amanita-sez-vaginatae-lateral-143.jpg",
@@ -2465,6 +2760,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione tipicamente primaverile in prati, siepi, margini e cerchi.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibilità libera",
+        "precautions": [],
+        "category": "free"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/calocybe-gambosa-lateral-277.jpg",
@@ -2488,11 +2790,6 @@
         "subjectTaxon": "Calocybe gambosa"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 5,
-      "learningUnitId": "objective-calocybe--01--calocybe-gambosa"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -2515,6 +2812,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 5,
+      "learningUnitId": "objective-calocybe--01--calocybe-gambosa"
     }
   },
   {
@@ -2540,6 +2842,13 @@
     "deepMorphologyRequired": true,
     "sourceName": "Clitocybe cerussata (= C. phyllophila)",
     "differentiatingCharacter": "Crescita sulla lettiera boschiva; trattare didatticamente come parte delle Clitocybe bianche.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-collybia-phyllophila-top.jpg",
@@ -2603,6 +2912,18 @@
           "lookalikes"
         ],
         "sourcePage": 59
+      },
+      {
+        "sourceId": "TOX-clitocybe-dealbata-collybia-rivulosa",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, sindromi a breve latenza: sindrome muscarinica da clitocibi bianchi",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome muscarinica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -2619,6 +2940,18 @@
     "deepMorphologyRequired": true,
     "sourceName": "Clitocybe dealbata (= C. rivulosa)",
     "differentiatingCharacter": "Tipica di prati, radure e bordi erbosi, spesso in archi o cerchi.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome muscarinica",
+          "latency": "Breve latenza",
+          "severity": "Intossicazione colinergica potenzialmente grave"
+        }
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/clitocybe-dealbata-collybia-rivulosa-lateral-233.jpg",
@@ -2668,6 +3001,15 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Odore forte, dolciastro-farinaceo fino a sgradevole negli esemplari maturi.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Sconsigliato",
+        "precautions": [
+          "Il trattamento di prebollitura con eliminazione dell’acqua e successiva cottura prolungata non cambia il giudizio di consumo sconsigliato."
+        ],
+        "category": "discouraged"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/clitocybe-nebularis-lateral-241.jpg",
@@ -2720,6 +3062,15 @@
     "deepMorphologyRequired": true,
     "sourceName": "Clitocybe geotropa",
     "differentiatingCharacter": "Gambo alto e robusto; spesso in grandi archi o cerchi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/infundibulicybe-geotropa-lateral-257.jpg",
@@ -2745,11 +3096,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 5,
-      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -2772,6 +3118,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa"
     }
   },
   {
@@ -2797,6 +3148,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Clitocybe amoenolens",
     "differentiatingCharacter": "Odore aromatico-floreale intenso; specie tipicamente mediterranea.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/paralepistopsis-amoenolens-lateral-221.jpg",
@@ -2847,6 +3205,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Infundibulicybe gibba",
     "differentiatingCharacter": "Carne sottile e crescita sulla lettiera boschiva.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È necessaria la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/clitocybe-gibba-s-l--top-253.jpg",
@@ -2872,11 +3239,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 5,
-      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -2902,6 +3264,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l"
     }
   },
   {
@@ -2939,6 +3306,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Clitopilus prunulus",
     "differentiatingCharacter": "Odore molto forte di farina fresca o pasta.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare tutti gli esemplari per escludere le Clitocybe bianche tossiche."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-clitopilus-prunulus-s-l-underside.jpg",
@@ -2997,6 +3373,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Collybia maculata",
     "differentiatingCharacter": "Tipica di lettiera di conifere o legno molto degradato.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/rhodocollybia-maculata-lateral-99.jpg",
@@ -3049,6 +3432,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Collybia fusipes",
     "differentiatingCharacter": "Assenza di anello; consistenza tenace.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/gymnopus-fusipes-lateral-91.jpg",
@@ -3161,6 +3551,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce in prati in file, archi e tipici cerchi delle streghe.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare tutti gli esemplari: possibile confusione con specie prative pericolose di piccole dimensioni."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/marasmius-oreades-lateral-55.jpg",
@@ -3184,11 +3583,6 @@
         "subjectTaxon": "Marasmius oreades"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 6,
-      "learningUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -3211,6 +3605,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 6,
+      "learningUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades"
     }
   },
   {
@@ -3224,7 +3623,20 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-coprinus-atramentarius-s-l-",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+        "location": "AUSL Bologna, Atlante funghi velenosi, sezione 'Sindrome coprinica', Coprinopsis atramentaria (sin. Coprinus atramentarius); la generalizzazione all'intero gruppo s.l. richiede revisione",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome coprinica (reazione disulfiram-simile con etanolo)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    ],
     "rank": "speciesGroup",
     "currentAcceptedNames": [
       "Coprinopsis atramentaria"
@@ -3234,6 +3646,20 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Coprinopsis atramentaria",
     "differentiatingCharacter": "Gambo pallido con zona velare o pseudoanulare bassa e fugace.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": [
+          "Il consumo associato ad alcol può provocare sindrome coprinica; la Guida mantiene il giudizio non commestibile."
+        ],
+        "category": "inedible",
+        "syndrome": {
+          "label": "Sindrome coprinica (reazione disulfiram-simile con etanolo)",
+          "latency": "Generalmente entro minuti–2 ore dall'assunzione di alcol; interazione possibile anche nei giorni successivi al fungo",
+          "severity": "Intossicazione da interazione con alcol: flushing, cefalea, tachicardia, nausea e possibile ipotensione"
+        }
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/coprinus-atramentarius-s-l--lateral-340.jpg",
@@ -3290,6 +3716,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Tipico di prati e terreni disturbati; spesso isolato o in gruppi non fascicolati.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Utilizzare solo esemplari con lamelle completamente bianche.",
+          "Cuocere preferibilmente il giorno della raccolta; conservazione in frigorifero allo stato crudo per non più di una notte."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/coprinus-comatus-lateral-180.jpg",
@@ -3349,6 +3785,18 @@
           "habitat"
         ],
         "sourcePage": 36
+      },
+      {
+        "sourceId": "TOX-cortinarius-orellanus",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, p. 30",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome orellanica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -3361,8 +3809,14 @@
     "differentiatingCharacter": "Soprattutto sotto latifoglie, in particolare Quercus, in ambienti caldi.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenoso, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome orellanica",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente mortale; danno renale"
+        }
       }
     },
     "referenceImages": [
@@ -3437,6 +3891,18 @@
           "lookalikes"
         ],
         "sourcePage": 29
+      },
+      {
+        "sourceId": "TOX-cortinarius-rubellus",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls, Mushroom Toxicity: Cortinarius orellanus e C. rubellus, orellanina e nefrotossicità; corrispondenza puntuale da revisionare",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome orellanica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -3452,8 +3918,14 @@
     "differentiatingCharacter": "Tipico soprattutto di conifere e ambienti muscosi.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenoso, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome orellanica",
+          "latency": "Lunga latenza, anche diversi giorni",
+          "severity": "Potenzialmente mortale; grave danno renale"
+        }
       }
     },
     "referenceImages": [
@@ -3519,6 +3991,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Basidiomi in genere piccoli-medi e non glutinosi; riconoscimento al rango di sottogenere.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": [
+          "La Guida distingue questa sospetta nefrotossicità dalla sindrome orellanica."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cortinarius-sottogenere-dermocybe-lateral-35.jpg",
@@ -3568,6 +4049,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo massiccio bianco-violetto, clavato ma non con bulbo marginato.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-cortinarius-praestans-lateral.jpg",
@@ -3597,11 +4087,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 6,
-      "learningUnitId": "objective-cortinarius--04--cortinarius-praestans"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -3627,6 +4112,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--04--cortinarius-praestans"
     }
   },
   {
@@ -3649,6 +4139,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente in boschi di conifere.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cortinarius-cumatilis-lateral-59.jpg",
@@ -3701,6 +4200,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Cortinarius variiformis",
     "differentiatingCharacter": "Nel concetto moderno s.str. è soprattutto mediterraneo con Cistus, spesso su substrati silicei.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili."
+        ]
+      }
+    },
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 6,
@@ -3730,6 +4238,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Cortinarius caperatus (= Rozites caperatus)",
     "differentiatingCharacter": "Tipico di boschi umidi di conifere e brughiere montane.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Limitare la frequenza del consumo per la capacità di accumulare radiocesio; la Guida suggerisce anche una rapida prebollitura con eliminazione dell’acqua."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cortinarius-caperatus-lateral-32.jpg",
@@ -3770,7 +4287,59 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-entoloma-sinuatum",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
+        "location": "Ministero della Salute, Sindromi a breve latenza",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "EXT-ADMIN-entoloma-sinuatum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://ambbresadola.it/funghi_tossici/entoloma-sinuatum/",
+        "location": "CARNE; MICROSCOPIA",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.; Rosata o rosa-salmone, descritta anche come bruno-rossa."
+      },
+      {
+        "sourceId": "EXT-ADMIN-entoloma-sinuatum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.ambbresadola.it/entoloma-sinuatum/",
+        "location": "CARNE; odore forte farinoso",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.; Rosata o rosa-salmone, descritta anche come bruno-rossa."
+      },
+      {
+        "sourceId": "EXT-ADMIN-entoloma-sinuatum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/15052-entoloma-sinuatum-bull-fr-p-kumm-1871/",
+        "location": "Carne; Microscopia; sporata rosa e odore farina fresca/rancida",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.; Rosata o rosa-salmone, descritta anche come bruno-rossa."
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Entoloma sinuatum"
@@ -3781,8 +4350,18 @@
     "differentiatingCharacter": "Odore forte di farina, talvolta sgradevole negli esemplari maturi.",
     "studyProfile": {
       "edibility": {
-        "label": "Tossico gastrointestinale",
-        "precautions": []
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome gastrointestinale",
+          "latency": "Generalmente breve latenza",
+          "severity": "Intossicazione gastrointestinale"
+        }
+      },
+      "odor": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.",
+      "sporePrint": {
+        "label": "Rosata o rosa-salmone, descritta anche come bruno-rossa."
       }
     },
     "referenceImages": [
@@ -3838,6 +4417,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Odore nitroso, clorato o saponaceo variabile; profilo riferito al complesso s.l.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-entoloma-rhodopolium-s-l-top.jpg",
@@ -3893,6 +4479,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Odore peculiare ma variabile, da pesce/cetriolo a farinaceo-rancido.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-entoloma-hirtipes-lateral.jpg",
@@ -3949,6 +4542,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione molto precoce in primavera, spesso in ambienti con conifere.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-entoloma-vernum-top.jpg",
@@ -3995,13 +4595,66 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "EXT-ADMIN-entoloma-clypeatum-s-l-",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/18070-entoloma-clypeatum-l-fr-p-kumm-1871/",
+        "location": "Carne; Microscopia",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Odore gradevole di farina fresca (documentato per E. clypeatum s.s.; verificare l'estensione al complesso).; Rosa in massa (documentato per E. clypeatum s.s.)."
+      },
+      {
+        "sourceId": "EXT-ADMIN-entoloma-clypeatum-s-l-",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.sardegnafunghi.it/clypeatum.html",
+        "location": "Descrizione; Sporata",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Odore gradevole di farina fresca (documentato per E. clypeatum s.s.; verificare l'estensione al complesso).; Rosa in massa (documentato per E. clypeatum s.s.)."
+      },
+      {
+        "sourceId": "EXT-ADMIN-entoloma-clypeatum-s-l-",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://hongoscomestiblesytoxicos.ib.unam.mx/fichas/entoloma_clypeatum.html",
+        "location": "Descrizione morfologica; esporada",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Odore gradevole di farina fresca (documentato per E. clypeatum s.s.; verificare l'estensione al complesso).; Rosa in massa (documentato per E. clypeatum s.s.)."
+      }
+    ],
     "rank": "speciesGroup",
     "currentAcceptedNames": [],
     "diagnosticStatus": "field_high_confidence_at_source_rank",
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione primaverile strettamente associata a Rosaceae legnose.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare raccolte in ambienti urbani inquinati o frutteti appena trattati con prodotti fitosanitari (p. 55)."
+        ]
+      },
+      "odor": "Odore gradevole di farina fresca (documentato per E. clypeatum s.s.; verificare l'estensione al complesso).",
+      "sporePrint": {
+        "label": "Rosa in massa (documentato per E. clypeatum s.s.)."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-entoloma-clypeatum-s-l-top.jpg",
@@ -4057,6 +4710,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione molto precoce, da fine inverno a primavera, tipicamente presso Ulmus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare raccolte in ambienti urbani inquinati o frutteti appena trattati con prodotti fitosanitari (p. 55)."
+        ]
+      }
+    },
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 7,
@@ -4084,6 +4746,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Flammulina velutipes",
     "differentiatingCharacter": "Lignicola e tipicamente tardo-autunnale/invernale.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda di eliminare le parti fibrose dei gambi e cuocere completamente."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/flammulina-velutipes-lateral-149.jpg",
@@ -4155,6 +4826,18 @@
         "fields": [
           "lookalikes"
         ]
+      },
+      {
+        "sourceId": "TOX-galerina-marginata-group",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK431052/",
+        "location": "StatPearls, Amatoxin Mushroom Toxicity: Galerina marginata tra i taxa produttori di amatossine; il gruppo didattico non implica equivalenza tossicologica di ogni specie",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome falloidea (amatossinica)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "speciesGroup",
@@ -4169,8 +4852,14 @@
     "differentiatingCharacter": "Cespitoso su ceppaie e tronchi morti, particolarmente frequente su conifere; profilo riferito al gruppo G. marginata.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenoso, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome falloidea (amatossinica)",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente mortale; grave danno epatico"
+        }
       }
     },
     "referenceImages": [
@@ -4225,6 +4914,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Hygrocybe conica",
     "differentiatingCharacter": "Basidioma che annerisce nettamente per manipolazione, lesione o invecchiamento.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hygrocybe-conica-s-l-top.jpg",
@@ -4280,6 +4976,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Taglia nettamente grande per il genere; tipica di prati permanenti poco fertilizzati.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hygrocybe-punicea-top.jpg",
@@ -4356,6 +5059,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione invernale-primaverile molto precoce, spesso parzialmente interrata.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hygrophorus-marzuolus-lateral-85.jpg",
@@ -4379,11 +5089,6 @@
         "subjectTaxon": "Hygrophorus marzuolus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 8,
-      "learningUnitId": "objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -4425,6 +5130,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus"
     }
   },
   {
@@ -4450,6 +5160,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Associato soprattutto a querce e altre latifoglie, frequentemente in ambiente mediterraneo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hygrophorus-russula-lateral-518.jpg",
@@ -4473,11 +5190,6 @@
         "subjectTaxon": "Hygrophorus russula"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 8,
-      "learningUnitId": "objective-hygrophorus-cuphophyllus--02--hygrophorus-russula"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -4527,6 +5239,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrophorus-cuphophyllus--02--hygrophorus-russula"
     }
   },
   {
@@ -4550,6 +5267,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Associazione con Quercus: criterio di campo fondamentale rispetto al vicino H. penarius associato a Fagus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hygrophorus-penarioides-top.jpg",
@@ -4596,7 +5320,20 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-hypholoma-fasciculare",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls Mushroom Toxicity: Hypholoma fasciculare, gastrointestinal poisoning; exact species attribution to verify",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale a tossicità costante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Hypholoma fasciculare"
@@ -4605,6 +5342,18 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Gambo giallo più brunastro in basso, con velo o zona anulare effimera.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome gastrointestinale a tossicità costante",
+          "latency": "Generalmente breve; variabile secondo specie e quantità",
+          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+        }
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hypholoma-fasciculare-top.jpg",
@@ -4677,6 +5426,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cespitoso su legno marcescente, soprattutto di latifoglie.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Non commestibile",
+        "precautions": [],
+        "category": "inedible"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hypholoma-lateritium-lateral-111.jpg",
@@ -4740,6 +5496,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fungo lignicolo spontaneo in Asia e diffusamente coltivato; in Italia è soprattutto presente sul mercato come prodotto coltivato/conservato.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Cuocere completamente per prevenire la tossidermia da shiitake; la Guida riporta anche la prescrizione svizzera di almeno 20 minuti."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lentinula-edodes-lateral-173.jpg",
@@ -4765,11 +5530,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lentinula--01--lentinula-edodes"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -4792,6 +5552,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lentinula--01--lentinula-edodes"
     }
   },
   {
@@ -4822,6 +5587,18 @@
           "lookalikes"
         ],
         "sourcePage": 24
+      },
+      {
+        "sourceId": "TOX-lepiota-subincarnata",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, amatossine e Lepiota tossiche: verificare corrispondenza puntuale della specie in revisione",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome falloidea (amatossinica)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -4838,8 +5615,14 @@
     "differentiatingCharacter": "Frequente in prati, radure, parchi e giardini.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenosa, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome falloidea (amatossinica)",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente mortale; grave danno epatico"
+        }
       }
     },
     "referenceImages": [
@@ -4899,6 +5682,18 @@
           "lookalikes"
         ],
         "sourcePage": 24
+      },
+      {
+        "sourceId": "TOX-lepiota-brunneoincarnata",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, amatossine e Lepiota tossiche: verificare corrispondenza puntuale della specie in revisione",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome falloidea (amatossinica)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -4911,8 +5706,14 @@
     "differentiatingCharacter": "Frequente in prati, aiuole, margini e ambienti antropizzati.",
     "studyProfile": {
       "edibility": {
-        "label": "Velenosa, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome falloidea (amatossinica)",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente mortale; grave danno epatico"
+        }
       }
     },
     "referenceImages": [
@@ -4967,7 +5768,8 @@
     "studyProfile": {
       "edibility": {
         "label": "Non commestibile",
-        "precautions": []
+        "precautions": [],
+        "category": "inedible"
       }
     },
     "referenceImages": [
@@ -5072,7 +5874,20 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-chlorophyllum-molybdites",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata alla commestibilità dei funghi (2021), p. 39 (pagina PDF), sezione Chlorophyllum",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome morganica (gastrointestinale a tossicità costante)",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Chlorophyllum molybdites"
@@ -5081,6 +5896,18 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Specie di prati, parchi e giardini in climi caldi; sporata verde come conferma avanzata.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome morganica (gastrointestinale a tossicità costante)",
+          "latency": "Breve latenza",
+          "severity": "Sindrome gastrointestinale potenzialmente severa; possibili complicazioni neurologiche"
+        }
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-chlorophyllum-molybdites-lateral.jpg",
@@ -5137,6 +5964,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Echinoderma asperum",
     "differentiatingCharacter": "Odore pungente, terroso-gommoso, spesso simile a quello di Lepiota cristata.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-echinoderma-asperum-s-l-top.jpg",
@@ -5194,6 +6028,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Leucocoprinus leucothites",
     "differentiatingCharacter": "Tipico di prati, parchi e bordi stradali; la base deve essere osservata integra.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Sconsigliato",
+        "precautions": [],
+        "category": "discouraged"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-leucoagaricus-leucothites-s-l-top.jpg",
@@ -5250,6 +6091,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Chlorophyllum rhacodes",
     "differentiatingCharacter": "Base del gambo ingrossata; profilo riferito al gruppo s.l.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Sconsigliato",
+        "precautions": [],
+        "category": "discouraged"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/chlorophyllum-rhacodes-s-l--lateral-138.jpg",
@@ -5344,12 +6192,13 @@
     "differentiatingCharacter": "Carne sostanzialmente bianca, senza rapido viraggio arancio-rosso del gruppo rhacodes.",
     "studyProfile": {
       "edibility": {
-        "label": "Commestibile",
+        "label": "Commestibilità libera",
         "precautions": [
-          "Utilizzare esemplari freschi e cuocere completamente; non consumare cruda.",
-          "Utilizzare il cappello, scartando il gambo fibroso.",
-          "Non forzare l’apertura degli esemplari chiusi immergendo il gambo in acqua."
-        ]
+          "Utilizzare esemplari freschi, con lamelle bianche e diritte.",
+          "Evitare il consumo crudo e l’apertura forzata in acqua degli esemplari chiusi.",
+          "La Guida riporta la prescrizione svizzera di cuocere il solo cappello almeno 20 minuti, scartando il gambo (p. 73)."
+        ],
+        "category": "free"
       }
     },
     "referenceImages": [
@@ -5379,11 +6228,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -5406,6 +6250,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l"
     }
   },
   {
@@ -5429,6 +6278,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Collybia nuda",
     "differentiatingCharacter": "Fruttificazione tardo-autunnale/invernale su lettiera e residui organici.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lepista-nuda-s-l--lateral-318.jpg",
@@ -5452,11 +6310,6 @@
         "subjectTaxon": "Lepista nuda"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 9,
-      "learningUnitId": "objective-lepista--01--lepista-nuda-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -5482,6 +6335,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepista--01--lepista-nuda-s-l"
     }
   },
   {
@@ -5505,6 +6363,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Paralepista flaccida",
     "differentiatingCharacter": "Crescita gregaria o cespitosa in archi sulla lettiera, soprattutto sotto conifere.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È necessaria la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lepista-flaccida-s-l--lateral-330.jpg",
@@ -5555,6 +6422,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Aspropaxillus giganteus",
     "differentiatingCharacter": "Grandi gruppi, archi o cerchi in prati, radure e margini.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida raccomanda la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/leucopaxillus-giganteus-s-l--lateral-346.jpg",
@@ -5578,11 +6454,6 @@
         "subjectTaxon": "Leucopaxillus giganteus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 10,
-      "learningUnitId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -5605,6 +6476,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 10,
+      "learningUnitId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l"
     }
   },
   {
@@ -5627,6 +6503,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Crescita gregaria in file, archi o cerchi, soprattutto in coniferete.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/leucopaxillus-gentianeus-lateral-354.jpg",
@@ -5711,6 +6594,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Lyophyllum decastes",
     "differentiatingCharacter": "Frequente su terreni disturbati, sentieri, margini e aree erbose.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare le possibili confusioni con Entoloma sinuatum e Tricholoma filamentosum."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lyophyllum-decastes-s-l--lateral-303.jpg",
@@ -5734,11 +6626,6 @@
         "subjectTaxon": "Lyophyllum decastes s.l."
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 10,
-      "learningUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -5772,6 +6659,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 10,
+      "learningUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l"
     }
   },
   {
@@ -5792,6 +6684,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "L'annerimento può essere lento: osservare anche dopo alcuni minuti.",
+    "studyProfile": {
+      "edibility": {
+        "category": "mixed",
+        "label": "Commestibilità variabile: consulta le singole specie",
+        "precautions": [
+          "La Guida considera generalmente privi di valore gli annerenti, con eccezione del commestibile L. rhopalopodium."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/lyophyllum-annerenti-lateral-307.jpg",
@@ -5879,6 +6780,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Lyophyllum connatum",
     "differentiatingCharacter": "Saprotrofo su terreno disturbato ricco di lettiera; esemplari isolati richiedono maggiore cautela.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/leucocybe-connata-lateral-311.jpg",
@@ -5927,6 +6835,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Nel defined set S1, M. pelianthina si distingue per il filo lamellare bruno-porpora o viola-nerastro.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/mycena-sez-purae-lateral-126.jpg",
@@ -5995,6 +6910,18 @@
           "lookalikes"
         ],
         "sourcePage": 119
+      },
+      {
+        "sourceId": "TOX-omphalotus-olearius",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
+        "location": "StatPearls Mushroom Toxicity: Omphalotus olearius, gastrointestinal poisoning; exact species attribution to verify",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale a tossicità costante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       }
     ],
     "rank": "species",
@@ -6007,8 +6934,14 @@
     "differentiatingCharacter": "Gambo spesso eccentrico e carne fibrosa-tenace.",
     "studyProfile": {
       "edibility": {
-        "label": "Tossico gastrointestinale",
-        "precautions": []
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome gastrointestinale a tossicità costante",
+          "latency": "Generalmente breve; variabile secondo specie e quantità",
+          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+        }
       }
     },
     "referenceImages": [
@@ -6061,6 +6994,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo molto esile, pallido e privo di vero anello; frequente su letame o prati fortemente concimati.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-panaeolus-cyanescens-top.jpg",
@@ -6150,6 +7090,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Grandi cespi su ceppaie e legno, soprattutto di latifoglie.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "La Guida disincentiva il consumo degli esemplari spontanei per la possibile confusione con Galerina marginata; raccomanda il controllo di tutti gli esemplari."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/kuehneromyces-mutabilis-lateral-121.jpg",
@@ -6177,11 +7126,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11,
-      "learningUnitId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -6204,6 +7148,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis"
     }
   },
   {
@@ -6227,6 +7176,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Pleurotus eryngii",
     "differentiatingCharacter": "Sviluppo apparentemente terricolo ma associato a radici o basi di Apiaceae, soprattutto Eryngium e Ferula.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare il consumo crudo; per P. ostreatus spontaneo scartare gli esemplari troppo coriacei o alterati (p. 79)."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/pleurotus-eryngii-top-135.jpg",
@@ -6252,11 +7210,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11,
-      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -6279,6 +7232,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l"
     }
   },
   {
@@ -6305,6 +7263,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Lignicolo soprattutto su latifoglie, spesso nella stagione fredda.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare il consumo crudo; per P. ostreatus spontaneo scartare gli esemplari troppo coriacei o alterati (p. 79)."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-pleurotus-ostreatus-lateral.jpg",
@@ -6334,11 +7301,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11,
-      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -6361,6 +7323,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus"
     }
   },
   {
@@ -6389,6 +7356,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Pleurotus cornucopiae (incluso P. citrinopileatus)",
     "differentiatingCharacter": "Colore orientativo nel defined set: P. cornucopiae pallido-crema/ocraceo, P. citrinopileatus giallo limone vivo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "mixed",
+        "label": "Commestibilità variabile: consulta le singole specie",
+        "precautions": [
+          "P. cornucopiae è commestibile secondo la Guida; P. citrinopileatus non è trattato per nome. Il giudizio sulla scheda composta resta distinto per specie."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/pleurotus-citrinopileatus-lateral-129.jpg",
@@ -6412,11 +7388,6 @@
         "subjectTaxon": "Pleurotus citrinopileatus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 11,
-      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -6439,6 +7410,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus"
     }
   },
   {
@@ -6476,6 +7452,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Tipica di cippato, pacciamature e residui legnosi, con robusti rizomorfi bianchi alla base.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È necessaria la cottura completa.",
+          "Accertare il luogo di raccolta; evitare esemplari da aiuole, pacciamature o altri ambienti potenzialmente inquinati."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-stropharia-rugosoannulata-lateral.jpg",
@@ -6505,11 +7491,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -6532,6 +7513,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata"
     }
   },
   {
@@ -6545,7 +7531,56 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-tricholoma-pardinum",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
+        "location": "Guida ragionata alla commestibilità dei funghi (2021), p. 85 (pagina PDF), sezione Tricholoma",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome gastrointestinale a tossicità costante",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-pardinum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://ambbresadola.it/funghi_tossici/tricholoma-pardinum/",
+        "location": "CARNE",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Farinaceo, più o meno pronunciato."
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-pardinum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/24223-tricholoma-pardinum%C2%A0pers-secr-qu%C3%A9l-1873/",
+        "location": "Carne: odore farina",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Farinaceo, più o meno pronunciato."
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-pardinum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3957",
+        "location": "Glossario odore farinaceo in T. pardinum",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Farinaceo, più o meno pronunciato."
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Tricholoma pardinum"
@@ -6554,6 +7589,19 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Associato soprattutto a Fagus e Abies su suoli calcarei.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Tossico",
+        "precautions": [],
+        "category": "toxic",
+        "syndrome": {
+          "label": "Sindrome gastrointestinale a tossicità costante",
+          "latency": "Generalmente breve; variabile secondo specie e quantità",
+          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+        }
+      },
+      "odor": "Farinaceo, più o meno pronunciato."
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-pardinum-lateral-162.jpg",
@@ -6603,6 +7651,13 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Prevalentemente associato a latifoglie come Fagus, Quercus e Castanea.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-tricholoma-filamentosum-top.jpg",
@@ -6658,6 +7713,13 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Odore caratteristico di cimice, Lactarius quietus o olio di lino dopo sezionamento.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-josserandii-lateral-216.jpg",
@@ -6715,6 +7777,55 @@
           "lookalikes"
         ],
         "sourcePage": 16
+      },
+      {
+        "sourceId": "TOX-tricholoma-equestre",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11556299/",
+        "location": "Bedry et al., Wild-mushroom intoxication as a cause of rhabdomyolysis, New England Journal of Medicine (2001), abstract: casi associati a Tricholoma equestre",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome rabdomiolitica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-equestre",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.first-nature.com/fungi/tricholoma-equestre.php",
+        "location": "Identification guide — Odour/taste; Spore print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Leggero e gradevole, farinaceo (talora floreale).; Bianca"
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-equestre",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/16799-tricholoma-equestre-l-fr-p-kumm-1871/",
+        "location": "Carne: odore gradevole e leggero di farina",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Leggero e gradevole, farinaceo (talora floreale).; Bianca"
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-equestre",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3957",
+        "location": "Glossario: odore leggero farinaceo, talora floreale",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Leggero e gradevole, farinaceo (talora floreale).; Bianca"
       }
     ],
     "rank": "species",
@@ -6725,6 +7836,24 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Micorriza tipica con Pinus su suoli poveri e sabbiosi.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Sconsigliato",
+        "precautions": [
+          "La Guida (2021) documenta il divieto italiano di raccolta, consumo e commercializzazione; non destinare al consumo."
+        ],
+        "category": "discouraged",
+        "syndrome": {
+          "label": "Sindrome rabdomiolitica",
+          "latency": "Possibile comparsa ritardata, dopo consumi ripetuti",
+          "severity": "Potenzialmente grave o mortale; danno muscolare con possibile insufficienza renale"
+        }
+      },
+      "odor": "Leggero e gradevole, farinaceo (talora floreale).",
+      "sporePrint": {
+        "label": "Bianca"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-equestre-top-75.jpg",
@@ -6750,11 +7879,6 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-tricholoma--04--tricholoma-equestre"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -6777,6 +7901,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--04--tricholoma-equestre"
     }
   },
   {
@@ -6799,6 +7928,15 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Odore farinaceo più evidente dopo il taglio; prevalentemente con conifere.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare ogni esemplare per escludere le specie tossiche confondibili."
+        ],
+        "category": "free"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-portentosum-lateral-211.jpg",
@@ -6822,11 +7960,6 @@
         "subjectTaxon": "Tricholoma portentosum"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-tricholoma--05--tricholoma-portentosum"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -6849,6 +7982,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--05--tricholoma-portentosum"
     }
   },
   {
@@ -6918,6 +8056,15 @@
     "aliases": [],
     "deepMorphologyRequired": true,
     "differentiatingCharacter": "Frequente con Pinus, spesso su terreni sabbiosi, limosi o disturbati.",
+    "studyProfile": {
+      "edibility": {
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare ogni esemplare per escludere le specie tossiche confondibili."
+        ],
+        "category": "free"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-terreum-top-174.jpg",
@@ -6943,11 +8090,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-tricholoma--06--tricholoma-terreum"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -6970,6 +8112,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--06--tricholoma-terreum"
     }
   },
   {
@@ -7011,6 +8158,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Tricholoma saponaceum",
     "differentiatingCharacter": "Lamelle piuttosto spesse e spaziate, bianche-crema o olivastre.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-saponaceum-s-l-lateral-41.jpg",
@@ -7070,6 +8224,31 @@
           "lookalikes"
         ],
         "sourcePage": 13
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-columbetta",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/24461-tricholoma-columbetta-fr-fr-p-kumm-1871/",
+        "location": "Foto e descrizioni; Carne",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Odore tenue, gradevole, leggermente farinaceo (AMINT); First Nature lo descrive non significativo.; Bianca."
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-columbetta",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.first-nature.com/fungi/tricholoma-columbetta.php",
+        "location": "Odour/taste; Spore print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Odore tenue, gradevole, leggermente farinaceo (AMINT); First Nature lo descrive non significativo.; Bianca."
       }
     ],
     "rank": "species",
@@ -7080,6 +8259,19 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Tipico di boschi di latifoglie.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare le confusioni con Entoloma sinuatum, Tricholoma pardinum e Inocybe."
+        ]
+      },
+      "odor": "Odore tenue, gradevole, leggermente farinaceo (AMINT); First Nature lo descrive non significativo.",
+      "sporePrint": {
+        "label": "Bianca."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-columbetta-lateral-59.jpg",
@@ -7103,11 +8295,6 @@
         "subjectTaxon": "Tricholoma columbetta"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-tricholoma--08--tricholoma-columbetta"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -7130,6 +8317,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--08--tricholoma-columbetta"
     }
   },
   {
@@ -7168,6 +8360,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "L'albero simbionte orienta il gruppo: Quercus verso album, Betula verso stiparophyllum, Fagus verso lascivum.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-lateral-63.jpg",
@@ -7229,6 +8428,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Viraggi orientano: scalpturatum tende al giallo; orirubens può arrossare e ha micelio basale giallo; squarrulosum ha squamule nerastre anche sul gambo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare ogni esemplare per escludere le specie tossiche confondibili."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-lateral-180.jpg",
@@ -7276,6 +8484,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Forma del cappello e ospite orientano: conifere/Betula verso virgatum, Fagus verso sciodes, Quercus e gambo squamoso verso bresadolanum.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-lateral-201.jpg",
@@ -7343,6 +8558,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Micorrizico soprattutto con latifoglie su suoli calcarei o argillosi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-sejunctum-top-45.jpg",
@@ -7402,6 +8624,43 @@
           "lookalikes"
         ],
         "sourcePage": 16
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-sulphureum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://mail.first-nature.com/fungi/tricholoma-sulphureum.php",
+        "location": "Identification guide — Odour/taste; Spore print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Forte, sgradevole, simile a gas illuminante o zolfo bruciato.; Bianca"
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-sulphureum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/15607-tricholoma-sulphureum-bull-fr-p-kumm-1871/",
+        "location": "Commento di Alessandro Francolini: odore di gas illuminante, zolfo bruciato, asfalto caldo",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Forte, sgradevole, simile a gas illuminante o zolfo bruciato.; Bianca"
+      },
+      {
+        "sourceId": "EXT-ADMIN-tricholoma-sulphureum",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=3976",
+        "location": "Glossario AMINT, voce odore di formaggio: Tricholoma sulphureum, zolfo/gas e formaggio fermentato",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Forte, sgradevole, simile a gas illuminante o zolfo bruciato.; Bianca"
       }
     ],
     "rank": "species",
@@ -7413,6 +8672,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Micelio basale spesso giallo; il morfotipo classico è macroscopicamente molto caratteristico.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      },
+      "odor": "Forte, sgradevole, simile a gas illuminante o zolfo bruciato.",
+      "sporePrint": {
+        "label": "Bianca"
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-sulphureum-lateral-78.jpg",
@@ -7460,6 +8730,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Morfogruppo ectomicorrizico S1: l'ospite è molto utile per orientare le singole specie.",
+    "studyProfile": {
+      "edibility": {
+        "category": "mixed",
+        "label": "Commestibilità variabile: consulta le singole specie",
+        "precautions": [
+          "Gran parte degli Albobrunnei è sconsigliata.",
+          "La Guida distingue T. populinum (commestibile dopo completa cottura), T. imbricatum e T. vaccinum (commestibili)."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-sez-genuina-gruppo-albobrunnei--top-132.jpg",
@@ -7485,11 +8765,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -7512,6 +8787,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei"
     }
   },
   {
@@ -7535,6 +8815,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Tricholoma acerbum",
     "differentiatingCharacter": "Specie termofile soprattutto con Quercus e Castanea su suoli calcarei.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È necessaria la cottura completa."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tricholoma-acerbum-s-l-lateral-104.jpg",
@@ -7558,11 +8847,6 @@
         "subjectTaxon": "Tricholoma acerbum s.l."
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 12,
-      "learningUnitId": "objective-tricholoma--15--tricholoma-acerbum-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -7596,6 +8880,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--15--tricholoma-acerbum-s-l"
     }
   },
   {
@@ -7618,6 +8907,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente su terreni disturbati, campi, compost e prati ricchi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-volvopluteus-gloiocephalus-lateral.jpg",
@@ -7703,6 +8999,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Saprotrofa termofila di terreni molto concimati, paglia/residui vegetali e legno marcescente; largamente coltivata.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-volvariella-volvacea-top.jpg",
@@ -7732,11 +9035,6 @@
         "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 13,
-      "learningUnitId": "objective-volvariella-volvopluteus--02--volvariella-volvacea"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -7759,6 +9057,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 13,
+      "learningUnitId": "objective-volvariella-volvopluteus--02--volvariella-volvacea"
     }
   },
   {
@@ -7805,6 +9108,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Forte specificità ecologica con conifere come Pinus, Picea o Abies.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-lactarius-sez-deliciosi-lateral.jpg",
@@ -7834,11 +9144,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 13,
-      "learningUnitId": "objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -8041,6 +9346,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 13,
+      "learningUnitId": "objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi"
     }
   },
   {
@@ -8063,6 +9373,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Associazione praticamente esclusiva con Larix.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-lactarius-porniniae-lateral.jpg",
@@ -8119,6 +9436,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Lactifluus volemus",
     "differentiatingCharacter": "Odore caratteristico di pesce o crostacei, più evidente negli esemplari maturi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-lactarius-volemus-s-l-lateral.jpg",
@@ -8174,6 +9498,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Specie mediterranea associata a Cistus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Effettuare una rapida sbollentatura e poi cuocere."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-lactarius-tesquorum-underside.jpg",
@@ -8264,6 +9597,11 @@
       "odor": "Variabile: varechina nella serie foetens; note miste mandorlate in R. illota; mandorle amare o marzapane in R. grata e R. fragrantissima.",
       "sporePrint": {
         "label": "Bianca–crema; descrizione del sottogenere Ingratula comprendente Foetentinae."
+      },
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
       }
     },
     "referenceImages": [
@@ -8315,6 +9653,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Nel morfotipo R. nigricans le lamelle sono particolarmente spesse e distanti, ma non generalizzare questo tratto a tutto il gruppo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/russula-nigricantinae-lateral-134.jpg",
@@ -8362,6 +9707,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente sviluppo parzialmente interrato.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/russula-lactarioides-top-152.jpg",
@@ -8387,11 +9739,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 14,
-      "learningUnitId": "objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -8434,6 +9781,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 14,
+      "learningUnitId": "objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica"
     }
   },
   {
@@ -8514,6 +9866,15 @@
     "deepMorphologyRequired": true,
     "acceptedName": "Boletus edulis",
     "differentiatingCharacter": "Negli esemplari giovani i pori possono essere occlusi da una patina bianca.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare il consumo crudo e le quantità eccessive; usare solo esemplari in buono stato di conservazione (pp. 105–106)."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/boletus-edulis-s-l-lateral-40.jpg",
@@ -8537,11 +9898,6 @@
         "subjectTaxon": "Boletus edulis"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 14,
-      "learningUnitId": "objective-boletus-s-str--01--boletus-edulis-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -8606,6 +9962,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 14,
+      "learningUnitId": "objective-boletus-s-str--01--boletus-edulis-s-l"
     }
   },
   {
@@ -8642,6 +10003,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Morfogruppo S1 dei boleti a pori colorati e carne bluescente.",
+    "studyProfile": {
+      "edibility": {
+        "category": "mixed",
+        "label": "Commestibilità variabile: consulta le singole specie",
+        "precautions": [
+          "Il viraggio o l’appartenenza alla sezione non determinano la commestibilità. Consultare la scheda della specie: la Guida distingue tutte le categorie nel gruppo (pp. 106–109)."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/boletus-luridi-lateral-278.jpg",
@@ -8707,6 +10077,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Boletus (Rubroboletus) satanas",
     "differentiatingCharacter": "Specie termofila di latifoglie, soprattutto querce, spesso su terreno calcareo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/rubroboletus-satanas-lateral-305.jpg",
@@ -8761,6 +10138,13 @@
     "deepMorphologyRequired": false,
     "sourceName": "Boletus pulchrotinctus",
     "differentiatingCharacter": "Termofilo con latifoglie, soprattutto Quercus, su terreno calcareo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/rubroboletus-pulchrotinctus-lateral-134.jpg",
@@ -8815,6 +10199,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Neoboletus erythropus",
     "differentiatingCharacter": "Carne gialla con viraggio al blu molto rapido e intenso.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È obbligatoria la cottura completa; la Guida non richiede la prebollitura."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/boletus-neoboletus-erythropus-s-l--lateral-290.jpg",
@@ -8867,6 +10260,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Boletus (Suillellus) luridus",
     "differentiatingCharacter": "Carne gialla spesso con zona subimeniale rossastra e rapido azzurramento.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È obbligatoria la cottura completa; la Guida non richiede la prebollitura."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/suillellus-luridus-lateral-278.jpg",
@@ -8917,6 +10319,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Suillellus queletii",
     "differentiatingCharacter": "Base del gambo e carne basale tipicamente rosso-vinose; gruppo didattico S1.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "È obbligatoria la cottura completa; la Guida non richiede la prebollitura."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/boletus-queletii-e-specie-vicine-intermedie-lateral-286.jpg",
@@ -8966,6 +10377,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne giallo-pallida che azzurra rapidamente al taglio.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/caloboletus-radicans-top-205.jpg",
@@ -9019,6 +10437,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne che azzurra al taglio.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/caloboletus-calopus-lateral-209.jpg",
@@ -9072,6 +10497,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo privo di reticolo: la coppia gambo cavo + forte azzurramento è altamente diagnostica.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Cuocere completamente e verificare attentamente lo stato di conservazione."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/gyroporus-cyanescens-top-197.jpg",
@@ -9124,6 +10558,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Gyroporus castaneus",
     "differentiatingCharacter": "Carne bianca che non azzurra, in contrasto con G. cyanescens.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Cuocere completamente e verificare attentamente lo stato di conservazione."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/gyroporus-castaneus-s-l--top-193.jpg",
@@ -9173,6 +10616,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Gambo arancio, spesso più brunastro alla base, senza anello.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hygrophoropsis-aurantiaca-lateral.jpg",
@@ -9228,6 +10678,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne biancastra-giallastra con azzurramento soprattutto sopra i tubuli.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Cuocere completamente, preferibilmente dopo eliminazione dei gambi.",
+          "La Guida consiglia consumo non frequente per la capacità di accumulare radiocesio."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/imleria-badia-lateral-194.jpg",
@@ -9251,11 +10711,6 @@
         "subjectTaxon": "Imleria badia"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 16,
-      "learningUnitId": "objective-imleria--01--imleria-badia"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -9278,6 +10733,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 16,
+      "learningUnitId": "objective-imleria--01--imleria-badia"
     }
   },
   {
@@ -9319,12 +10779,12 @@
     "differentiatingCharacter": "Micorrizico con Pinus.",
     "studyProfile": {
       "edibility": {
-        "label": "Commestibile",
+        "label": "Commestibilità libera",
         "precautions": [
-          "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
-          "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
-          "La prebollitura non è indicata come trattamento necessario."
-        ]
+          "Preferire esemplari giovani, eliminando gambi fibrosi e cuticola.",
+          "Iniziare con quantità modeste: possibili effetti lassativi individuali; la prebollitura non è necessaria."
+        ],
+        "category": "free"
       }
     },
     "referenceImages": [
@@ -9350,11 +10810,6 @@
         "subjectTaxon": "Suillus luteus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17,
-      "learningUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -9377,6 +10832,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17,
+      "learningUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus"
     }
   },
   {
@@ -9418,12 +10878,12 @@
     "differentiatingCharacter": "Micorrizico con pini, soprattutto specie a due aghi.",
     "studyProfile": {
       "edibility": {
-        "label": "Commestibile",
+        "label": "Commestibilità libera",
         "precautions": [
-          "Preferire esemplari giovani; eliminare gambi fibrosi e cuticola.",
-          "Possibili effetti lassativi, variabili tra consumatori; evitare quantità abbondanti.",
-          "La prebollitura non è indicata come trattamento necessario."
-        ]
+          "Preferire esemplari giovani, eliminando gambi fibrosi e cuticola.",
+          "Iniziare con quantità modeste: possibili effetti lassativi individuali; la prebollitura non è necessaria."
+        ],
+        "category": "free"
       }
     },
     "referenceImages": [
@@ -9449,11 +10909,6 @@
         "subjectTaxon": "Suillus granulatus"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17,
-      "learningUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -9476,6 +10931,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17,
+      "learningUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus"
     }
   },
   {
@@ -9506,6 +10966,45 @@
           "lookalikes"
         ],
         "sourcePage": 9
+      },
+      {
+        "sourceId": "EXT-ADMIN-tylopilus-felleus",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.first-nature.com/fungi/tylopilus-felleus.php",
+        "location": "Identification guide — Odour/taste; Spore print",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Grato o quasi nullo (non distintivo).; Rosa."
+      },
+      {
+        "sourceId": "EXT-ADMIN-tylopilus-felleus",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://www.funghiitaliani.it/topic/9005-tylopilus-felleus%C2%A0bull-fr-p-karst-1881/",
+        "location": "Carne; Cappello: odore grato/subnullo e sporata rosa",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Grato o quasi nullo (non distintivo).; Rosa."
+      },
+      {
+        "sourceId": "EXT-ADMIN-tylopilus-felleus",
+        "reviewScope": "administrator-approved-external-literature",
+        "reviewStatus": "administrator-approved-not-independently-reviewed",
+        "title": "External mycological source",
+        "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1974",
+        "location": "Tylopilus: spore rosate",
+        "fields": [
+          "odor",
+          "sporePrint"
+        ],
+        "supportedClaim": "Grato o quasi nullo (non distintivo).; Rosa."
       }
     ],
     "rank": "species",
@@ -9516,6 +11015,17 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cappello bruno-ocraceo dall'aspetto porcinoide; contrasto netto con i pori rosati maturi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "inedible",
+        "label": "Non commestibile",
+        "precautions": []
+      },
+      "odor": "Grato o quasi nullo (non distintivo).",
+      "sporePrint": {
+        "label": "Rosa."
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/tylopilus-felleus-top-546.jpg",
@@ -9610,6 +11120,15 @@
     "deepMorphologyRequired": true,
     "acceptedName": "Cantharellus cibarius",
     "differentiatingCharacter": "Odore frequentemente fruttato o di albicocca; profilo riferito al complesso.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Controllare le possibili confusioni con Omphalotus olearius."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cantharellus-cibarius-complex-lateral-456.jpg",
@@ -9633,11 +11152,6 @@
         "subjectTaxon": "Cantharellus cibarius"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 17,
-      "learningUnitId": "objective-cantharellus--01--cantharellus-cibarius-complex"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -9660,6 +11174,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 17,
+      "learningUnitId": "objective-cantharellus--01--cantharellus-cibarius-complex"
     }
   },
   {
@@ -9696,6 +11215,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne molto sottile ed elastica; pliche molto meno sviluppate che in C. tubaeformis.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-craterellus-lutescens-lateral.jpg",
@@ -9725,11 +11251,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-craterellus--01--craterellus-lutescens"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -9763,6 +11284,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-craterellus--01--craterellus-lutescens"
     }
   },
   {
@@ -9785,6 +11311,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Frequente tra muschi e lettiera di conifere.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-craterellus-tubaeformis-top.jpg",
@@ -9814,11 +11347,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-craterellus--02--craterellus-tubaeformis"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -9847,6 +11375,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-craterellus--02--craterellus-tubaeformis"
     }
   },
   {
@@ -9872,6 +11405,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne molto sottile e membranacea.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-craterellus-cornucopioides-lateral.jpg",
@@ -9901,11 +11441,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-craterellus--03--craterellus-cornucopioides"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -9928,6 +11463,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-craterellus--03--craterellus-cornucopioides"
     }
   },
   {
@@ -9950,6 +11490,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Prevalentemente in boschi maturi di Abies, Picea o Fagus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-gomphus-clavatus-lateral.jpg",
@@ -10006,6 +11553,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Hydnum repandum",
     "differentiatingCharacter": "Gambo spesso eccentrico; profilo volutamente al rango Hydnum spp./gruppo S1.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--lateral-214.jpg",
@@ -10029,11 +11583,6 @@
         "subjectTaxon": "Hydnum repandum"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -10089,6 +11638,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens"
     }
   },
   {
@@ -10109,6 +11663,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Architettura orienta le specie: erinaceus globoso; coralloides/alpestre ramificati.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-hericium-spp-lateral.jpg",
@@ -10165,6 +11726,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Ospite orientativo: S. imbricatus soprattutto Picea, S. squamosus soprattutto Pinus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare gli esemplari vecchi e amari."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-lateral.jpg",
@@ -10238,6 +11808,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce su rami e tronchi morti di latifoglie, frequentemente querce.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/hapalopilus-rutilans-top-379.jpg",
@@ -10292,6 +11869,16 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Laetiporus sulphureus",
     "differentiatingCharacter": "Crescita direttamente sul legno; profilo riferito al complesso s.l.",
+    "studyProfile": {
+      "edibility": {
+        "category": "conditional",
+        "label": "Commestibilità condizionata",
+        "precautions": [
+          "Utilizzare esemplari giovani e teneri e cuocere completamente.",
+          "La Guida descrive taglio a strisce sottili e cottura di mezz’ora o più; una rapida prebollitura può contribuire alla sicurezza, ma non sostituisce la cottura."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/laetiporus-sulphureus-s-l--top-217.jpg",
@@ -10317,11 +11904,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -10347,6 +11929,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l"
     }
   },
   {
@@ -10372,6 +11959,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Albatrellus confluens",
     "differentiatingCharacter": "Terrestre in boschi di conifere.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Utilizzare solo esemplari giovani e teneri; quelli troppo sviluppati e fibrosi possono causare disturbi digestivi."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-albatrellopsis-confluens-lateral.jpg",
@@ -10429,6 +12025,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Conifere e viraggi orientano i taxa del defined group: citrinus tende a ingiallire; subrubescens è più legato a Pinus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Usare esemplari giovani e teneri.",
+          "Per quelli più sviluppati e mediamente coriacei la Guida richiede prebollitura e preferisce l’uso sottolio; gli esemplari molto coriacei non vanno consumati."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--lateral-475.jpg",
@@ -10478,6 +12084,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Crescita terrestre.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-scutiger-pes-caprae-underside.jpg",
@@ -10507,11 +12120,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-polyporaceae-s-l--05--scutiger-pes-caprae"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -10545,6 +12153,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--05--scutiger-pes-caprae"
     }
   },
   {
@@ -10585,6 +12198,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce soprattutto su quercia e castagno.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Utilizzare esemplari giovani e teneri."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-fistulina-hepatica-lateral.jpg",
@@ -10614,11 +12236,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-polyporaceae-s-l--06--fistulina-hepatica"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -10652,6 +12269,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--06--fistulina-hepatica"
     }
   },
   {
@@ -10690,6 +12312,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Non annerisce vistosamente alla contusione, a differenza di Meripilus giganteus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Utilizzare esemplari giovani; per i più maturi può essere effettuata una rapida prebollitura."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-grifola-frondosa-lateral.jpg",
@@ -10719,11 +12350,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 18,
-      "learningUnitId": "objective-polyporaceae-s-l--07--grifola-frondosa"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -10765,6 +12391,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--07--grifola-frondosa"
     }
   },
   {
@@ -10787,6 +12418,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Sviluppo da un grande sclerozio sotterraneo.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-polyporus-umbellatus-underside.jpg",
@@ -10842,6 +12480,15 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Cresce alla base o sulle radici di grandi latifoglie, soprattutto faggio.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Usare solo esemplari giovani; la Guida preferisce la prebollitura e raccomanda la completa cottura."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-meripilus-giganteus-lateral.jpg",
@@ -10917,6 +12564,15 @@
     "deepMorphologyRequired": false,
     "sourceName": "Polyporus squamosus",
     "differentiatingCharacter": "Lignicolo su latifoglie.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Usare solo esemplari giovani e teneri."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/cerioporus-squamosus-lateral-151.jpg",
@@ -10967,6 +12623,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Rami principali grossi e relativamente paralleli/eretti; la tricoloria è più affidabile nei giovani freschi.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/ramaria-formosa-lateral-303.jpg",
@@ -11012,6 +12675,13 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Carne biancastra e sostanzialmente immutabile; riconoscimento più forte nei giovani tipici.",
+    "studyProfile": {
+      "edibility": {
+        "category": "toxic",
+        "label": "Tossico",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-ramaria-pallida-lateral.jpg",
@@ -11059,6 +12729,15 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Ramaria botrytis",
     "differentiatingCharacter": "Prevalentemente in boschi di latifoglie; profilo volutamente s.l.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Limitare la raccolta agli esemplari riconoscibili, giovani o medio-maturi."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/external-ramaria-botrytis-s-l-lateral.jpg",
@@ -11079,11 +12758,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 19,
-      "learningUnitId": "objective-ramaria--03--ramaria-botrytis-s-l"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": false,
@@ -11109,6 +12783,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 19,
+      "learningUnitId": "objective-ramaria--03--ramaria-botrytis-s-l"
     }
   },
   {
@@ -11134,6 +12813,16 @@
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Lignicola su latifoglie, frequentemente Sambucus.",
+    "studyProfile": {
+      "edibility": {
+        "category": "free",
+        "label": "Commestibilità libera",
+        "precautions": [
+          "Evitare consumo ripetuto in numerosi pasti consecutivi.",
+          "La Guida sconsiglia il consumo alle persone che assumono anticoagulanti."
+        ]
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/auricularia-auricula-judae-lateral-306.jpg",
@@ -11161,11 +12850,6 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
-    "curriculum": {
-      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
-      "sourcePage": 20,
-      "learningUnitId": "objective-auricularia--01--auricularia-auricula-judae"
-    },
     "commercialization": {
       "product": "fresh",
       "wholeCard": true,
@@ -11188,6 +12872,11 @@
           ]
         }
       ]
+    },
+    "curriculum": {
+      "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+      "sourcePage": 20,
+      "learningUnitId": "objective-auricularia--01--auricularia-auricula-judae"
     }
   },
   {
@@ -11201,7 +12890,20 @@
     ],
     "lookalikes": [],
     "habitat": [],
-    "sources": [],
+    "sources": [
+      {
+        "sourceId": "TOX-gyromitra-esculenta",
+        "title": "Fonte tossicologica istituzionale",
+        "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
+        "location": "Ministero della Salute, Tossine naturali, p. 30",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Sindrome giromitrica",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      }
+    ],
     "rank": "species",
     "currentAcceptedNames": [
       "Gyromitra esculenta"
@@ -11212,8 +12914,14 @@
     "differentiatingCharacter": "Fruttificazione primaverile, spesso con conifere su suoli sabbiosi o disturbati.",
     "studyProfile": {
       "edibility": {
-        "label": "Tossica, potenzialmente mortale",
-        "precautions": []
+        "label": "Tossico potenzialmente mortale",
+        "precautions": [],
+        "category": "deadly",
+        "syndrome": {
+          "label": "Sindrome giromitrica",
+          "latency": "Lunga latenza",
+          "severity": "Potenzialmente grave"
+        }
       }
     },
     "referenceImages": [
@@ -11270,6 +12978,13 @@
     "deepMorphologyRequired": false,
     "acceptedName": "Sarcosphaera coronaria",
     "differentiatingCharacter": "Primaverile su suoli calcarei; il rango s.l. evita di forzare la separazione delle specie occidentali criptiche.",
+    "studyProfile": {
+      "edibility": {
+        "category": "discouraged",
+        "label": "Sconsigliato",
+        "precautions": []
+      }
+    },
     "referenceImages": [
       {
         "src": "images/reference/sarcosphaera-coronaria-s-l--top-44.jpg",

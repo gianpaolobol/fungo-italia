@@ -1,5 +1,6 @@
 const foodSource='S2-guida-ragionata-commestibilita-2021';
 const scales=new Set(['I','II','III','IV','I–II','I–III','I–IV','II–III','II–IV','III–IV']);
+const foodCategories=new Set(['free','conditional','discouraged','no-food-value','inedible','toxic','deadly','mixed']);
 const imagePath=/^images\/reference\/[a-zA-Z0-9][a-zA-Z0-9._-]*\.(?:jpg|jpeg|png|webp)$/;
 function check(ok,message){if(!ok)throw Error(message);}
 function text(value){return typeof value==='string'&&value.trim().length>0;}
@@ -25,7 +26,7 @@ export function applyStudyProfiles(records,integration,registry){
   if('edibility' in profile){
    const food=profile.edibility;
    check(taxon.kind!=='teaching-group','Food category cannot be inferred for a teaching genus');
-   check(keys(food,['label','precautions','syndrome'])&&text(food.label)&&Array.isArray(food.precautions)&&food.precautions.every(text)&&(food.syndrome===undefined||(keys(food.syndrome,['label','severity','latency'])&&text(food.syndrome.label))),'Invalid food assessment');
+   check(keys(food,['category','label','precautions','syndrome'])&&text(food.label)&&(food.category===undefined||foodCategories.has(food.category))&&Array.isArray(food.precautions)&&food.precautions.every(text)&&(food.syndrome===undefined||(keys(food.syndrome,['label','severity','latency'])&&text(food.syndrome.label))),'Invalid food assessment');
   }
   check(Array.isArray(entry.evidence)&&entry.evidence.length>0,'Missing study evidence');
   const covered=new Set();

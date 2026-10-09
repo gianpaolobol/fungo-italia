@@ -24,6 +24,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run prepare:data
+      - name: Verify founding guide categories
+        run: node --test scripts/study-profiles.test.mjs scripts/edibility-guide.test.mjs scripts/toxicology-syndromes.test.mjs
       - name: Build current PWA
         run: cd web && npm ci && npm run build
       - name: Check generated site
