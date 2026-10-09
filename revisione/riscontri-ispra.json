@@ -1,0 +1,3382 @@
+{
+  "version": "FI-REV-20261009-v2-ISPRA",
+  "sources": [
+    {
+      "sourceId": "ISPRA-MLG-158-2017",
+      "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+      "year": 2017,
+      "pageCount": 249,
+      "printedPageOffset": 3,
+      "sha256": "ef23565afc7fb40678edba24cd1986800fbf2df1abbbf9296d1636469fbbb08c",
+      "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "authors": "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella",
+      "editors": "C. Siniscalco, C. Luperi, F. Floccia, L. Campana",
+      "rights": "Riproduzione autorizzata citando la fonte; crediti fotografici da verificare separatamente",
+      "versionNote": "Analizzato il PDF fornito dall’utente; non equiparato automaticamente a successive revisioni online."
+    },
+    {
+      "sourceId": "ISPRA-MLG-188-2019",
+      "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+      "year": 2019,
+      "pageCount": 258,
+      "printedPageOffset": 10,
+      "sha256": "7f45c209f69238aa8ac2ac9c364f760d2502e3105c26e3b62351f8a13b53d6b0",
+      "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "authors": "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella",
+      "editors": "C. Siniscalco, C. Luperi, F. Floccia, L. Campana",
+      "rights": "Riproduzione autorizzata citando la fonte; crediti fotografici da verificare separatamente",
+      "versionNote": "Analizzato il PDF fornito dall’utente; non equiparato automaticamente a successive revisioni online."
+    }
+  ],
+  "updates": {
+    "minimum-card-objective-amanita--08--amanita-caesarea": {
+      "odor": "Odore lieve negli esemplari freschi; può divenire sgradevole negli esemplari vecchi.",
+      "habitat": "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte.\nISPRA 158/2017, p. 32: Boschi di latifoglie, in particolare castagno; periodo indicato maggio–novembre.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 32 (PDF 35); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n"
+    },
+    "minimum-card-objective-amanita--01--amanita-phalloides": {
+      "odor": "Odore poco evidente da giovane, più sgradevole negli esemplari maturi.",
+      "habitat": "ISPRA 158/2017, p. 49: Boschi di latifoglie, più raramente conifere; periodo indicato agosto–novembre.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 49 (PDF 52); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n"
+    },
+    "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex": {
+      "odor": "Albicocca: dato riferito a C. cibarius nominale, non attestato indistintamente per tutto il complesso.",
+      "habitat": "ISPRA 158/2017, p. 83: C. cibarius nominale: boschi con diverse essenze; fenologia variabile. Non generalizzare al complesso.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 83 (PDF 86); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n"
+    },
+    "minimum-card-objective-craterellus--03--craterellus-cornucopioides": {
+      "odor": "Generalmente poco marcato o gradevole; intensità variabile fra descrizioni.",
+      "habitat": "ISPRA 158/2017, p. 101: Boschi di latifoglie, soprattutto castagno e faggio; periodo indicato agosto–dicembre.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 101 (PDF 104); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\nISPRA 158/2017 p.101 descrive il consumo dopo cottura; non modificata la categoria libera della Guida. Escluse dalla matrice le affermazioni terapeutiche non verificate del capitolo.\n"
+    },
+    "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l": {
+      "odor": "F. velutipes nominale: poco caratteristico secondo la fonte già registrata; ISPRA descrive variabilità, talora nota di geranio. Non universale nel gruppo.",
+      "habitat": "ISPRA 158/2017, p. 118: F. velutipes nominale: legno di latifoglie, raramente conifere; periodo indicato settembre–marzo. Non generalizzare a tutte le specie del gruppo.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 118 (PDF 121); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n",
+      "review.preparation.sgambatura": "Eliminare le parti fibrose del gambo, secondo le precauzioni della Guida già registrate.",
+      "review.preparation.cottura": "Cuocere completamente; nessuna durata minima numerica ricavata dalle precauzioni registrate."
+    },
+    "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta": {
+      "odor": "Variabile nelle descrizioni; poco marcato oppure spermatico. ISPRA 158/2017, p.149, descrive la nota spermatica.",
+      "habitat": "ISPRA 158/2017, p. 149: Terreni acidi sotto conifere, anche disturbati o bruciati; fruttificazione primaverile.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 149 (PDF 152); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\nCONFLITTO SPORATA: ISPRA 188/2019 p.169 (PDF179) indica bianca in massa; la fonte già registrata descrive crema/giallo-camoscio. Dato precedente conservato in attesa di revisione.\n"
+    },
+    "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea": {
+      "odor": "Poco caratteristico / non significativo.",
+      "habitat": "ISPRA 158/2017, p. 185: Prati, anche montani; periodo indicato fine agosto–dicembre.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 185 (PDF 188); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n"
+    },
+    "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus": {
+      "odor": "Tenue, talora descritto con note floreali/mielate; ISPRA lo indica quasi inodore. Variabilità descrittiva da conservare.",
+      "habitat": "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno.\nISPRA 158/2017, p. 201: Boschi di latifoglie o misti, anche con faggio; febbraio–maggio, in prossimità dello scioglimento della neve.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 201 (PDF 204); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n"
+    },
+    "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l": {
+      "odor": "M. procera nominale: poco caratteristico nelle fonti già registrate; ISPRA lo descrive fruttato. Non estendere automaticamente a tutto il gruppo.",
+      "habitat": "ISPRA 158/2017, p. 217: M. procera nominale: pascoli e boschi aperti; periodo indicato agosto–gennaio. Non generalizzare a tutte le specie del gruppo.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 217 (PDF 220); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n",
+      "review.preparation.sgambatura": "Scartare il gambo; consumare il solo cappello. La Guida riporta la prescrizione svizzera (p.73).",
+      "review.preparation.cottura": "La Guida riporta la prescrizione svizzera: solo cappello, almeno 20 minuti (p.73). È una prescrizione citata, non una nuova categoria condizionata.",
+      "review.preparation.altre": "Esemplari freschi con lamelle bianche e diritte; evitare consumo crudo e apertura forzata in acqua degli esemplari chiusi. Vedere precauzioni complete della Guida."
+    },
+    "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l": {
+      "odor": "Variabile nelle descrizioni della specie nominale; ISPRA lo indica lieve. Le altre note odorose registrate restano da confrontare.",
+      "habitat": "ISPRA 158/2017, p. 244: R. botrytis nominale: boschi di latifoglie; periodo indicato agosto–dicembre. Non generalizzare a tutto il gruppo.",
+      "review.notes": "Riscontri ISPRA 158/2017, p. 244 (PDF 247); dettagli nel foglio Riscontri. Una scheda della specie nominale non convalida tutte le specie di un complesso.\n"
+    },
+    "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis": {
+      "odor": "Forte e complesso: aromatico/farinaceo secondo ISPRA, dolciastro-fruttato o simile alla rapa nelle fonti già registrate; può risultare sgradevole.",
+      "habitat": "Non documentato\nISPRA 188/2019, p.22: gruppi nella stagione tarda, boschi di conifere e latifoglie.",
+      "review.notes": "ISPRA 188/2019, pp.26,50,80: indicazioni tossicologiche e limiti della prebollitura; mantenuto il giudizio sconsigliato della Guida. Non inserita una nuova sindrome senza confronto puntuale con il documento fondante.\n"
+    },
+    "minimum-genus-card-gyromitra-incluso-discina": {
+      "review.notes": "CONFLITTO SPORATA: ISPRA 188/2019 p.169 (PDF179) indica bianca in massa; la fonte già registrata descrive crema/giallo-camoscio. Dato precedente conservato in attesa di revisione.\n"
+    },
+    "minimum-genus-card-helvella": {
+      "characters.0": "Ascoma con mitra o sella irregolare; imenio sulla superficie esterna. [ISPRA 188/2019, p.173]",
+      "characters.1": "Gambo cavo, spesso rugoso o profondamente costolato; variabile secondo la specie. [ISPRA 188/2019, p.173]",
+      "characters.2": "Carne sottile, cartilaginea o elastica. [ISPRA 188/2019, p.173]",
+      "differentiatingCharacter": "Combinazione di mitra/sella irregolare e struttura del gambo; richiede identificazione della singola specie, anche microscopica. [ISPRA 188/2019, p.173]",
+      "review.notes": "Caratteri del genere integrati da ISPRA 188/2019 p.173. La scheda H. crispa di ISPRA158 p.165 non è estesa al giudizio alimentare di tutte le Helvella.\n"
+    }
+  },
+  "assertions": [
+    {
+      "taxonId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "scientificName": "Amanita caesarea",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 35,
+      "printedPage": 32,
+      "claim": "Cappello giallo-arancio; lamelle, gambo e anello gialli; volva membranosa.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "scientificName": "Amanita caesarea",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 35,
+      "printedPage": 32,
+      "claim": "Odore lieve negli esemplari freschi; può divenire sgradevole negli esemplari vecchi.",
+      "scope": "Taxon nominale",
+      "previousValue": "Poco significativo negli esemplari freschi.",
+      "newValue": "Odore lieve negli esemplari freschi; può divenire sgradevole negli esemplari vecchi.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "scientificName": "Amanita caesarea",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 35,
+      "printedPage": 32,
+      "claim": "Boschi di latifoglie, in particolare castagno; periodo indicato maggio–novembre.",
+      "scope": "Taxon nominale",
+      "previousValue": "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte.",
+      "newValue": "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte.\nISPRA 158/2017, p. 32: Boschi di latifoglie, in particolare castagno; periodo indicato maggio–novembre.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "scientificName": "Amanita phalloides",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 52,
+      "printedPage": 49,
+      "claim": "Cappello giallo-olivastro con fibrille radiali; lamelle bianche; anello e volva membranosi.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "scientificName": "Amanita phalloides",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 52,
+      "printedPage": 49,
+      "claim": "Odore poco evidente da giovane, più sgradevole negli esemplari maturi.",
+      "scope": "Taxon nominale",
+      "previousValue": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.",
+      "newValue": "Odore poco evidente da giovane, più sgradevole negli esemplari maturi.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "scientificName": "Amanita phalloides",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 52,
+      "printedPage": 49,
+      "claim": "Boschi di latifoglie, più raramente conifere; periodo indicato agosto–novembre.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 49: Boschi di latifoglie, più raramente conifere; periodo indicato agosto–novembre.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "scientificName": "Cantharellus cibarius complex",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 86,
+      "printedPage": 83,
+      "claim": "Pliche decorrenti, ramificate e anastomosate; colorazione giallo-uovo; odore di albicocca.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "scientificName": "Cantharellus cibarius complex",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 86,
+      "printedPage": 83,
+      "claim": "Albicocca: dato riferito a C. cibarius nominale, non attestato indistintamente per tutto il complesso.",
+      "scope": "Taxon nominale",
+      "previousValue": "Tenue, simile ad albicocca. Dato riferito a Cantharellus cibarius; non descrive necessariamente tutte le componenti della scheda.",
+      "newValue": "Albicocca: dato riferito a C. cibarius nominale, non attestato indistintamente per tutto il complesso.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "scientificName": "Cantharellus cibarius complex",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 86,
+      "printedPage": 83,
+      "claim": "C. cibarius nominale: boschi con diverse essenze; fenologia variabile. Non generalizzare al complesso.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 83: C. cibarius nominale: boschi con diverse essenze; fenologia variabile. Non generalizzare al complesso.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "scientificName": "Craterellus cornucopioides",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 104,
+      "printedPage": 101,
+      "claim": "Forma a trombetta, superficie grigio-nera, gambo cavo e carne sottile ed elastica.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "scientificName": "Craterellus cornucopioides",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 104,
+      "printedPage": 101,
+      "claim": "Generalmente poco marcato o gradevole; intensità variabile fra descrizioni.",
+      "scope": "Taxon nominale",
+      "previousValue": "Poco caratteristico.",
+      "newValue": "Generalmente poco marcato o gradevole; intensità variabile fra descrizioni.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "scientificName": "Craterellus cornucopioides",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 104,
+      "printedPage": 101,
+      "claim": "Boschi di latifoglie, soprattutto castagno e faggio; periodo indicato agosto–dicembre.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 101: Boschi di latifoglie, soprattutto castagno e faggio; periodo indicato agosto–dicembre.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 121,
+      "printedPage": 118,
+      "claim": "Cappello giallo-arancio viscoso con umidità; lamelle chiare; gambo bruno-nero vellutato e tenace.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 121,
+      "printedPage": 118,
+      "claim": "F. velutipes nominale: poco caratteristico secondo la fonte già registrata; ISPRA descrive variabilità, talora nota di geranio. Non universale nel gruppo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Poco caratteristico. Dato riferito a Flammulina velutipes; non descrive necessariamente tutte le componenti della scheda.",
+      "newValue": "F. velutipes nominale: poco caratteristico secondo la fonte già registrata; ISPRA descrive variabilità, talora nota di geranio. Non universale nel gruppo.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 121,
+      "printedPage": 118,
+      "claim": "F. velutipes nominale: legno di latifoglie, raramente conifere; periodo indicato settembre–marzo. Non generalizzare a tutte le specie del gruppo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 118: F. velutipes nominale: legno di latifoglie, raramente conifere; periodo indicato settembre–marzo. Non generalizzare a tutte le specie del gruppo.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 152,
+      "printedPage": 149,
+      "claim": "Mitra cerebriforme bruno-rossastra; gambo chiaro e cavo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 152,
+      "printedPage": 149,
+      "claim": "Variabile nelle descrizioni; poco marcato oppure spermatico. ISPRA 158/2017, p.149, descrive la nota spermatica.",
+      "scope": "Taxon nominale",
+      "previousValue": "Variabile tra descrizioni: poco caratteristico (First Nature), a componente spermatica intensa (AUSL Bologna).",
+      "newValue": "Variabile nelle descrizioni; poco marcato oppure spermatico. ISPRA 158/2017, p.149, descrive la nota spermatica.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 152,
+      "printedPage": 149,
+      "claim": "Terreni acidi sotto conifere, anche disturbati o bruciati; fruttificazione primaverile.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 149: Terreni acidi sotto conifere, anche disturbati o bruciati; fruttificazione primaverile.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "scientificName": "Hygrocybe punicea",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 188,
+      "printedPage": 185,
+      "claim": "Cappello robusto rosso con parti gialle; lamelle ceracee distanziate; gambo fibroso rosso-giallo con base chiara.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "scientificName": "Hygrocybe punicea",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 188,
+      "printedPage": 185,
+      "claim": "Poco caratteristico / non significativo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Poco caratteristico.",
+      "newValue": "Poco caratteristico / non significativo.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "scientificName": "Hygrocybe punicea",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 188,
+      "printedPage": 185,
+      "claim": "Prati, anche montani; periodo indicato fine agosto–dicembre.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 185: Prati, anche montani; periodo indicato fine agosto–dicembre.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "scientificName": "Hygrophorus marzuolus",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 204,
+      "printedPage": 201,
+      "claim": "Cappello chiaro se coperto e grigio-nero se esposto; lamelle spesse e ceracee; gambo corto e robusto.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "scientificName": "Hygrophorus marzuolus",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 204,
+      "printedPage": 201,
+      "claim": "Tenue, talora descritto con note floreali/mielate; ISPRA lo indica quasi inodore. Variabilità descrittiva da conservare.",
+      "scope": "Taxon nominale",
+      "previousValue": "Tenue; sono descritte anche note floreali e mielate.",
+      "newValue": "Tenue, talora descritto con note floreali/mielate; ISPRA lo indica quasi inodore. Variabilità descrittiva da conservare.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "scientificName": "Hygrophorus marzuolus",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 204,
+      "printedPage": 201,
+      "claim": "Boschi di latifoglie o misti, anche con faggio; febbraio–maggio, in prossimità dello scioglimento della neve.",
+      "scope": "Taxon nominale",
+      "previousValue": "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno.",
+      "newValue": "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno.\nISPRA 158/2017, p. 201: Boschi di latifoglie o misti, anche con faggio; febbraio–maggio, in prossimità dello scioglimento della neve.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 220,
+      "printedPage": 217,
+      "claim": "Cappello squamoso; gambo con ornamentazione a pelle di serpente; anello doppio e mobile.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 220,
+      "printedPage": 217,
+      "claim": "M. procera nominale: poco caratteristico nelle fonti già registrate; ISPRA lo descrive fruttato. Non estendere automaticamente a tutto il gruppo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Poco caratteristico. Dato riferito a Macrolepiota procera; non descrive necessariamente tutte le componenti della scheda.",
+      "newValue": "M. procera nominale: poco caratteristico nelle fonti già registrate; ISPRA lo descrive fruttato. Non estendere automaticamente a tutto il gruppo.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 220,
+      "printedPage": 217,
+      "claim": "M. procera nominale: pascoli e boschi aperti; periodo indicato agosto–gennaio. Non generalizzare a tutte le specie del gruppo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 217: M. procera nominale: pascoli e boschi aperti; periodo indicato agosto–gennaio. Non generalizzare a tutte le specie del gruppo.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "scientificName": "Ramaria botrytis s.l.",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 247,
+      "printedPage": 244,
+      "claim": "Struttura coralloide compatta e robusta; rami chiari e punte rosa-porpora da giovane.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "scientificName": "Ramaria botrytis s.l.",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 247,
+      "printedPage": 244,
+      "claim": "Variabile nelle descrizioni della specie nominale; ISPRA lo indica lieve. Le altre note odorose registrate restano da confrontare.",
+      "scope": "Taxon nominale",
+      "previousValue": "Variabile tra descrizioni: poco significativo (First Nature), fruttato con note di caramelle alla fragola (Francolini). Dati di R. botrytis nominale.",
+      "newValue": "Variabile nelle descrizioni della specie nominale; ISPRA lo indica lieve. Le altre note odorose registrate restano da confrontare.",
+      "decision": "Integrata variabilità descrittiva; non carattere assoluto",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "scientificName": "Ramaria botrytis s.l.",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 247,
+      "printedPage": 244,
+      "claim": "R. botrytis nominale: boschi di latifoglie; periodo indicato agosto–dicembre. Non generalizzare a tutto il gruppo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "ISPRA 158/2017, p. 244: R. botrytis nominale: boschi di latifoglie; periodo indicato agosto–dicembre. Non generalizzare a tutto il gruppo.",
+      "decision": "Integrazione da una fonte, con ambito esplicito",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "scientificName": "Tylopilus felleus",
+      "field": "sporePrint.label",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 46,
+      "printedPage": 43,
+      "claim": "Sporata rosa / bruno-rosa; imenoforo inizialmente bianco, poi rosato.",
+      "scope": "Taxon nominale",
+      "previousValue": "Rosa.",
+      "newValue": "Rosa.",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "scientificName": "Clitocybe nebularis",
+      "field": "characters.additional",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 32,
+      "printedPage": 22,
+      "claim": "Cappello grigio; lamelle chiare facilmente separabili dalla carne; gambo robusto con base clavata e micelio bianco.",
+      "scope": "Taxon nominale",
+      "previousValue": "Nessuno registrato",
+      "newValue": "Nessuno registrato",
+      "decision": "Compatibile con dato attuale; riscontro bibliografico",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "scientificName": "Clitocybe nebularis",
+      "field": "odor",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 32,
+      "printedPage": 22,
+      "claim": "Odore forte, complesso, aromatico e farinaceo.",
+      "scope": "Taxon nominale",
+      "previousValue": "Dolciastro-fruttato; per alcuni ricorda la rapa.",
+      "newValue": "Forte e complesso: aromatico/farinaceo secondo ISPRA, dolciastro-fruttato o simile alla rapa nelle fonti già registrate; può risultare sgradevole.",
+      "decision": "Integrate descrizioni variabili",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "scientificName": "Clitocybe nebularis",
+      "field": "habitat",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 32,
+      "printedPage": 22,
+      "claim": "Fruttifica in gruppi nella stagione tarda, sotto conifere e latifoglie.",
+      "scope": "Taxon nominale",
+      "previousValue": "Non documentato",
+      "newValue": "Non documentato\nISPRA 188/2019, p.22: gruppi nella stagione tarda, boschi di conifere e latifoglie.",
+      "decision": "Integrazione da una fonte",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "scientificName": "Clitocybe nebularis",
+      "field": "edibility.category",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 60,
+      "printedPage": 50,
+      "claim": "Sono descritte intossicazioni gastrointestinali, anche dopo trattamenti culinari.",
+      "scope": "Taxon nominale",
+      "previousValue": "sconsigliato",
+      "newValue": "sconsigliato",
+      "decision": "Guida prioritaria: mantenuto sconsigliato; nessuna promozione a commestibile",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "field": "sporePrint.label",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 179,
+      "printedPage": 169,
+      "claim": "Il testo attribuisce sporata bianca in massa a G. esculenta, G. gigas e G. infula.",
+      "scope": "G. esculenta e specie nominate; non tutto il gruppo Discina",
+      "previousValue": "Crema-giallastra o giallo-camoscio.",
+      "newValue": "Crema-giallastra o giallo-camoscio.",
+      "decision": "Conflitto: conservato dato precedente crema/giallo-camoscio; richiesta revisione",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-genus-card-gyromitra-incluso-discina",
+      "scientificName": "Gyromitra (incluso Discina)",
+      "field": "sporePrint.label",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 179,
+      "printedPage": 169,
+      "claim": "Il testo attribuisce sporata bianca in massa a G. esculenta, G. gigas e G. infula.",
+      "scope": "G. esculenta e specie nominate; non tutto il gruppo Discina",
+      "previousValue": "Esempi documentati: Gyromitra esculenta — Crema-giallastra o giallo-camoscio. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "newValue": "Esempi documentati: Gyromitra esculenta — Crema-giallastra o giallo-camoscio. Non estendere automaticamente questi dati a tutte le specie del gruppo.",
+      "decision": "Conflitto: conservato dato precedente crema/giallo-camoscio; richiesta revisione",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "field": "edibility.category",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 152,
+      "printedPage": 149,
+      "claim": "Specie mortale; cottura ed essiccazione non autorizzano il consumo.",
+      "scope": "Taxon nominale",
+      "previousValue": "tossico mortale",
+      "newValue": "tossico mortale",
+      "decision": "Compatibile con tossico mortale della Guida; categoria invariata",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "field": "syndrome.latency",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 152,
+      "printedPage": 149,
+      "claim": "Sindrome giromitrica: latenza indicata 6–12 ore.",
+      "scope": "Taxon nominale",
+      "previousValue": "Lunga: generalmente 6–12 ore, talvolta oltre.",
+      "newValue": "Lunga: generalmente 6–12 ore, talvolta oltre.",
+      "decision": "Riscontro bibliografico; dati tossicologici della Guida invariati",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "scientificName": "Cortinarius orellanus",
+      "field": "syndrome.severity",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 164,
+      "printedPage": 154,
+      "claim": "Sindrome orellanica con bersaglio renale e possibile insufficienza irreversibile.",
+      "scope": "Specie orellaniniche nominate nel capitolo",
+      "previousValue": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+      "newValue": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+      "decision": "Riscontro bibliografico; dati della Guida invariati",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "scientificName": "Cortinarius orellanus",
+      "field": "edibility.category",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 161,
+      "printedPage": 151,
+      "claim": "L’orellanina non viene resa innocua da bollitura o essiccazione.",
+      "scope": "Taxon nominale",
+      "previousValue": "tossico mortale",
+      "newValue": "tossico mortale",
+      "decision": "Compatibile con tossico mortale della Guida; nessuna preparazione abilitante",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "scientificName": "Cortinarius rubellus",
+      "field": "syndrome.severity",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 164,
+      "printedPage": 154,
+      "claim": "Sindrome orellanica con bersaglio renale e possibile insufficienza irreversibile.",
+      "scope": "Specie orellaniniche nominate nel capitolo",
+      "previousValue": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+      "newValue": "Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+      "decision": "Riscontro bibliografico; dati della Guida invariati",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "scientificName": "Cortinarius rubellus",
+      "field": "edibility.category",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 161,
+      "printedPage": 151,
+      "claim": "L’orellanina non viene resa innocua da bollitura o essiccazione.",
+      "scope": "Taxon nominale",
+      "previousValue": "tossico mortale",
+      "newValue": "tossico mortale",
+      "decision": "Compatibile con tossico mortale della Guida; nessuna preparazione abilitante",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "scientificName": "Craterellus cornucopioides",
+      "field": "edibility.category",
+      "sourceId": "ISPRA-MLG-158-2017",
+      "pdfPage": 104,
+      "printedPage": 101,
+      "claim": "ISPRA usa la formulazione velenoso da crudo, commestibile dopo cottura.",
+      "scope": "Taxon nominale",
+      "previousValue": "libera",
+      "newValue": "libera",
+      "decision": "Terminologia divergente: mantenuta libera secondo la Guida; non riclassificato condizionato",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-genus-card-helvella",
+      "scientificName": "Helvella",
+      "field": "characters.0",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 183,
+      "printedPage": 173,
+      "claim": "Ascoma con mitra o sella irregolare; imenio sulla superficie esterna.",
+      "scope": "Genere Helvella; non giudizio alimentare",
+      "previousValue": "Non documentato",
+      "newValue": "Ascoma con mitra o sella irregolare; imenio sulla superficie esterna. [ISPRA 188/2019, p.173]",
+      "decision": "Colmata lacuna da una fonte; descrizione del genere",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-genus-card-helvella",
+      "scientificName": "Helvella",
+      "field": "characters.1",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 183,
+      "printedPage": 173,
+      "claim": "Gambo cavo, spesso rugoso o profondamente costolato; variabile secondo la specie.",
+      "scope": "Genere Helvella; non giudizio alimentare",
+      "previousValue": "Non documentato",
+      "newValue": "Gambo cavo, spesso rugoso o profondamente costolato; variabile secondo la specie. [ISPRA 188/2019, p.173]",
+      "decision": "Colmata lacuna da una fonte; descrizione del genere",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-genus-card-helvella",
+      "scientificName": "Helvella",
+      "field": "characters.2",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 183,
+      "printedPage": 173,
+      "claim": "Carne sottile, cartilaginea o elastica.",
+      "scope": "Genere Helvella; non giudizio alimentare",
+      "previousValue": "Non documentato",
+      "newValue": "Carne sottile, cartilaginea o elastica. [ISPRA 188/2019, p.173]",
+      "decision": "Colmata lacuna da una fonte; descrizione del genere",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-genus-card-helvella",
+      "scientificName": "Helvella",
+      "field": "differentiatingCharacter",
+      "sourceId": "ISPRA-MLG-188-2019",
+      "pdfPage": 183,
+      "printedPage": 173,
+      "claim": "Combinazione di mitra/sella irregolare e struttura del gambo; richiede identificazione della singola specie, anche microscopica.",
+      "scope": "Genere Helvella; non giudizio alimentare",
+      "previousValue": "Non documentato",
+      "newValue": "Combinazione di mitra/sella irregolare e struttura del gambo; richiede identificazione della singola specie, anche microscopica. [ISPRA 188/2019, p.173]",
+      "decision": "Colmata lacuna da una fonte; descrizione del genere",
+      "sourceFamily": "ISPRA-AK-Siniscalco",
+      "independentVerification": "Il riscontro ISPRA è verificato nel PDF. Le altre fonti già registrate non sono automaticamente certificate indipendenti.",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "field": "review.preparation.sgambatura",
+      "sourceId": "S2-guida-ragionata-commestibilita-2021",
+      "pdfPage": null,
+      "printedPage": 73,
+      "claim": "Scartare il gambo; consumare il solo cappello. La Guida riporta la prescrizione svizzera (p.73).",
+      "scope": "Precauzioni già documentate nella matrice V1",
+      "previousValue": "Da specificare separatamente dal revisore; vedere precauzioni complete",
+      "newValue": "Scartare il gambo; consumare il solo cappello. La Guida riporta la prescrizione svizzera (p.73).",
+      "decision": "Strutturazione del testo della Guida già registrato; non nuova prescrizione ISPRA",
+      "sourceFamily": "Guida-2021",
+      "independentVerification": "Fonte fondante; nessuna votazione fra fonti",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "field": "review.preparation.cottura",
+      "sourceId": "S2-guida-ragionata-commestibilita-2021",
+      "pdfPage": null,
+      "printedPage": 73,
+      "claim": "La Guida riporta la prescrizione svizzera: solo cappello, almeno 20 minuti (p.73). È una prescrizione citata, non una nuova categoria condizionata.",
+      "scope": "Precauzioni già documentate nella matrice V1",
+      "previousValue": "Da specificare separatamente dal revisore; vedere precauzioni complete",
+      "newValue": "La Guida riporta la prescrizione svizzera: solo cappello, almeno 20 minuti (p.73). È una prescrizione citata, non una nuova categoria condizionata.",
+      "decision": "Strutturazione del testo della Guida già registrato; non nuova prescrizione ISPRA",
+      "sourceFamily": "Guida-2021",
+      "independentVerification": "Fonte fondante; nessuna votazione fra fonti",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "field": "review.preparation.altre",
+      "sourceId": "S2-guida-ragionata-commestibilita-2021",
+      "pdfPage": null,
+      "printedPage": 73,
+      "claim": "Esemplari freschi con lamelle bianche e diritte; evitare consumo crudo e apertura forzata in acqua degli esemplari chiusi. Vedere precauzioni complete della Guida.",
+      "scope": "Precauzioni già documentate nella matrice V1",
+      "previousValue": "Da specificare separatamente dal revisore; vedere precauzioni complete",
+      "newValue": "Esemplari freschi con lamelle bianche e diritte; evitare consumo crudo e apertura forzata in acqua degli esemplari chiusi. Vedere precauzioni complete della Guida.",
+      "decision": "Strutturazione del testo della Guida già registrato; non nuova prescrizione ISPRA",
+      "sourceFamily": "Guida-2021",
+      "independentVerification": "Fonte fondante; nessuna votazione fra fonti",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "field": "review.preparation.sgambatura",
+      "sourceId": "S2-guida-ragionata-commestibilita-2021",
+      "pdfPage": null,
+      "printedPage": null,
+      "claim": "Eliminare le parti fibrose del gambo, secondo le precauzioni della Guida già registrate.",
+      "scope": "Precauzioni già documentate nella matrice V1",
+      "previousValue": "Da specificare separatamente dal revisore; vedere precauzioni complete",
+      "newValue": "Eliminare le parti fibrose del gambo, secondo le precauzioni della Guida già registrate.",
+      "decision": "Strutturazione del testo della Guida già registrato; non nuova prescrizione ISPRA",
+      "sourceFamily": "Guida-2021",
+      "independentVerification": "Fonte fondante; nessuna votazione fra fonti",
+      "professionalStatus": "Da revisionare"
+    },
+    {
+      "taxonId": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "field": "review.preparation.cottura",
+      "sourceId": "S2-guida-ragionata-commestibilita-2021",
+      "pdfPage": null,
+      "printedPage": null,
+      "claim": "Cuocere completamente; nessuna durata minima numerica ricavata dalle precauzioni registrate.",
+      "scope": "Precauzioni già documentate nella matrice V1",
+      "previousValue": "Da specificare separatamente dal revisore; vedere precauzioni complete",
+      "newValue": "Cuocere completamente; nessuna durata minima numerica ricavata dalle precauzioni registrate.",
+      "decision": "Strutturazione del testo della Guida già registrato; non nuova prescrizione ISPRA",
+      "sourceFamily": "Guida-2021",
+      "independentVerification": "Fonte fondante; nessuna votazione fra fonti",
+      "professionalStatus": "Da revisionare"
+    }
+  ],
+  "coverage": [
+    {
+      "taxonId": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agaricus--02--agaricus-bresadolanus",
+      "scientificName": "Agaricus bresadolanus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agaricus--03--agaricus-sez-arvenses",
+      "scientificName": "Agaricus sez. Arvenses",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agaricus--05--agaricus-campestris",
+      "scientificName": "Agaricus campestris",
+      "lexicalMentions": [
+        "158:PDF148"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agaricus--06--agaricus-bitorquis",
+      "scientificName": "Agaricus bitorquis",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agaricus--07--agaricus-bisporus",
+      "scientificName": "Agaricus bisporus",
+      "lexicalMentions": [
+        "158:PDF115",
+        "188:PDF47"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "scientificName": "Cyclocybe cylindracea",
+      "lexicalMentions": [
+        "158:PDF170",
+        "158:PDF172"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "scientificName": "Amanita phalloides",
+      "lexicalMentions": [
+        "158:PDF8",
+        "158:PDF23",
+        "158:PDF24",
+        "158:PDF51",
+        "158:PDF52",
+        "158:PDF141",
+        "158:PDF142",
+        "158:PDF143",
+        "158:PDF145",
+        "158:PDF186",
+        "158:PDF193",
+        "158:PDF194"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+      "scientificName": "Amanita verna / Amanita vidua",
+      "lexicalMentions": [
+        "158:PDF141",
+        "158:PDF143",
+        "158:PDF144"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--03--amanita-virosa",
+      "scientificName": "Amanita virosa",
+      "lexicalMentions": [
+        "158:PDF141",
+        "158:PDF143",
+        "158:PDF145"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--04--amanita-proxima",
+      "scientificName": "Amanita proxima",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--05--amanita-ovoidea",
+      "scientificName": "Amanita ovoidea",
+      "lexicalMentions": [
+        "158:PDF93",
+        "188:PDF11",
+        "188:PDF56"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "scientificName": "Amanita pantherina",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--07--amanita-muscaria",
+      "scientificName": "Amanita muscaria",
+      "lexicalMentions": [
+        "158:PDF14",
+        "158:PDF22",
+        "188:PDF26"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "scientificName": "Amanita caesarea",
+      "lexicalMentions": [
+        "158:PDF3",
+        "158:PDF8",
+        "158:PDF21",
+        "158:PDF23",
+        "158:PDF25",
+        "158:PDF26",
+        "158:PDF27",
+        "158:PDF34",
+        "158:PDF35",
+        "158:PDF115",
+        "188:PDF3",
+        "188:PDF11",
+        "188:PDF43"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--09--amanita-gemmata",
+      "scientificName": "Amanita gemmata",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--10--amanita-citrina",
+      "scientificName": "Amanita citrina",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--11--amanita-porphyria",
+      "scientificName": "Amanita porphyria",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "scientificName": "Amanita strobiliformis",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--14--amanita-vittadinii",
+      "scientificName": "Saproamanita vittadinii",
+      "lexicalMentions": [
+        "188:PDF11",
+        "188:PDF66"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--15--amanita-rubescens",
+      "scientificName": "Amanita rubescens",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-amanita--16--amanita-sez-vaginatae",
+      "scientificName": "Amanita sez. Vaginatae",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-calocybe--01--calocybe-gambosa",
+      "scientificName": "Calocybe gambosa",
+      "lexicalMentions": [
+        "158:PDF204"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+      "scientificName": "Collybia phyllophila",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "scientificName": "Clitocybe nebularis",
+      "lexicalMentions": [
+        "188:PDF3",
+        "188:PDF16",
+        "188:PDF17",
+        "188:PDF18",
+        "188:PDF19",
+        "188:PDF31",
+        "188:PDF32",
+        "188:PDF33",
+        "188:PDF34",
+        "188:PDF37",
+        "188:PDF38",
+        "188:PDF40",
+        "188:PDF41",
+        "188:PDF44",
+        "188:PDF45",
+        "188:PDF47",
+        "188:PDF48",
+        "188:PDF50",
+        "188:PDF52",
+        "188:PDF57",
+        "188:PDF58",
+        "188:PDF59",
+        "188:PDF60",
+        "188:PDF62",
+        "188:PDF63",
+        "188:PDF64",
+        "188:PDF65",
+        "188:PDF67",
+        "188:PDF68",
+        "188:PDF70",
+        "188:PDF73",
+        "188:PDF76",
+        "188:PDF77",
+        "188:PDF79",
+        "188:PDF80",
+        "188:PDF81",
+        "188:PDF84",
+        "188:PDF86",
+        "188:PDF87",
+        "188:PDF89",
+        "188:PDF90",
+        "188:PDF93",
+        "188:PDF94",
+        "188:PDF95",
+        "188:PDF96",
+        "188:PDF97",
+        "188:PDF98",
+        "188:PDF99",
+        "188:PDF100",
+        "188:PDF102",
+        "188:PDF104",
+        "188:PDF105",
+        "188:PDF107",
+        "188:PDF109",
+        "188:PDF112",
+        "188:PDF114",
+        "188:PDF116",
+        "188:PDF118",
+        "188:PDF122",
+        "188:PDF125",
+        "188:PDF127",
+        "188:PDF130",
+        "188:PDF131",
+        "188:PDF134",
+        "188:PDF137",
+        "188:PDF139",
+        "188:PDF141",
+        "188:PDF145",
+        "188:PDF148",
+        "188:PDF151",
+        "188:PDF154",
+        "188:PDF157",
+        "188:PDF158",
+        "188:PDF245"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "edibility.category",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+      "scientificName": "Infundibulicybe geotropa",
+      "lexicalMentions": [
+        "188:PDF14",
+        "188:PDF167"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+      "scientificName": "Paralepistopsis amoenolens",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "scientificName": "Clitocybe gibba s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "scientificName": "Clitopilus prunulus s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "scientificName": "Rhodocollybia maculata",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "scientificName": "Gymnopus fusipes",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+      "scientificName": "Marasmius oreades",
+      "lexicalMentions": [
+        "158:PDF115"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "scientificName": "Coprinus atramentarius s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+      "scientificName": "Coprinus comatus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "scientificName": "Cortinarius orellanus",
+      "lexicalMentions": [
+        "158:PDF183",
+        "158:PDF184",
+        "188:PDF19",
+        "188:PDF20",
+        "188:PDF161",
+        "188:PDF163",
+        "188:PDF165"
+      ],
+      "reviewedFields": [
+        "edibility.category",
+        "syndrome.severity"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "scientificName": "Cortinarius rubellus",
+      "lexicalMentions": [
+        "158:PDF183",
+        "188:PDF19",
+        "188:PDF20",
+        "188:PDF161",
+        "188:PDF162",
+        "188:PDF163",
+        "188:PDF166"
+      ],
+      "reviewedFields": [
+        "edibility.category",
+        "syndrome.severity"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--04--cortinarius-praestans",
+      "scientificName": "Cortinarius praestans",
+      "lexicalMentions": [
+        "188:PDF254"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--05--cortinarius-cumatilis",
+      "scientificName": "Cortinarius cumatilis",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--06--cortinarius-variiformis",
+      "scientificName": "Phlegmacium variiforme",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "scientificName": "Cortinarius caperatus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "scientificName": "Entoloma sinuatum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-entoloma--03--entoloma-hirtipes",
+      "scientificName": "Entoloma hirtipes",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-entoloma--04--entoloma-vernum",
+      "scientificName": "Entoloma vernum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "scientificName": "Entoloma clypeatum s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-entoloma--06--entoloma-saundersii",
+      "scientificName": "Entoloma saundersii",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF120",
+        "158:PDF121"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor",
+        "review.preparation.cottura",
+        "review.preparation.sgambatura"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-galerina--01--galerina-marginata-group",
+      "scientificName": "Galerina marginata group",
+      "lexicalMentions": [
+        "158:PDF141",
+        "158:PDF169",
+        "158:PDF170",
+        "158:PDF172"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "scientificName": "Hygrocybe conica s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "scientificName": "Hygrocybe punicea",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF187",
+        "158:PDF188",
+        "188:PDF245"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "scientificName": "Hygrophorus marzuolus",
+      "lexicalMentions": [
+        "158:PDF10",
+        "158:PDF203",
+        "158:PDF204"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "scientificName": "Hygrophorus russula",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+      "scientificName": "Hygrophorus penarioides",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "scientificName": "Hypholoma fasciculare",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hypholoma--02--hypholoma-lateritium",
+      "scientificName": "Hypholoma lateritium",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lentinula--01--lentinula-edodes",
+      "scientificName": "Lentinula edodes",
+      "lexicalMentions": [
+        "158:PDF119",
+        "188:PDF140"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+      "scientificName": "Lepiota subincarnata",
+      "lexicalMentions": [
+        "158:PDF141",
+        "158:PDF146",
+        "158:PDF150",
+        "158:PDF163"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "scientificName": "Lepiota brunneoincarnata",
+      "lexicalMentions": [
+        "158:PDF141",
+        "158:PDF146",
+        "158:PDF147",
+        "158:PDF149",
+        "158:PDF163",
+        "158:PDF166"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+      "scientificName": "Lepiota cristata",
+      "lexicalMentions": [
+        "188:PDF244"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+      "scientificName": "Lepiota elaiophylla",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+      "scientificName": "Chlorophyllum molybdites",
+      "lexicalMentions": [
+        "158:PDF221"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "scientificName": "Echinoderma asperum s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "lexicalMentions": [
+        "158:PDF3",
+        "158:PDF10",
+        "158:PDF146",
+        "158:PDF147",
+        "158:PDF164",
+        "158:PDF166",
+        "158:PDF219",
+        "158:PDF220",
+        "188:PDF14",
+        "188:PDF16",
+        "188:PDF47",
+        "188:PDF48",
+        "188:PDF200",
+        "188:PDF254"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor",
+        "review.preparation.altre",
+        "review.preparation.cottura",
+        "review.preparation.sgambatura"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "scientificName": "Lepista nuda s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
+      "scientificName": "Lepista flaccida s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+      "scientificName": "Leucopaxillus gentianeus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+      "scientificName": "Lyophyllum decastes s.l.",
+      "lexicalMentions": [
+        "188:PDF254"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "scientificName": "Lyophyllum specie annerenti",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+      "scientificName": "Leucocybe connata",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "scientificName": "Mycena sez. Purae",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-omphalotus--01--omphalotus-olearius",
+      "scientificName": "Omphalotus olearius",
+      "lexicalMentions": [
+        "158:PDF61",
+        "158:PDF62",
+        "158:PDF86",
+        "158:PDF173",
+        "158:PDF174",
+        "158:PDF175",
+        "158:PDF176",
+        "158:PDF177",
+        "158:PDF178",
+        "158:PDF179",
+        "158:PDF180",
+        "158:PDF182",
+        "158:PDF189",
+        "158:PDF190",
+        "158:PDF191",
+        "158:PDF199"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+      "scientificName": "Panaeolus cyanescens",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+      "scientificName": "Kuehneromyces mutabilis",
+      "lexicalMentions": [
+        "158:PDF170",
+        "158:PDF171"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+      "scientificName": "Pleurotus eryngii s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "scientificName": "Pleurotus ostreatus",
+      "lexicalMentions": [
+        "158:PDF115"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+      "scientificName": "Stropharia rugosoannulata",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--01--tricholoma-pardinum",
+      "scientificName": "Tricholoma pardinum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "scientificName": "Tricholoma filamentosum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--03--tricholoma-josserandii",
+      "scientificName": "Tricholoma josserandii",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--04--tricholoma-equestre",
+      "scientificName": "Tricholoma equestre",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
+      "scientificName": "Tricholoma portentosum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "scientificName": "Tricholoma terreum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
+      "scientificName": "Tricholoma columbetta",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--12--tricholoma-sejunctum",
+      "scientificName": "Tricholoma sejunctum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--13--tricholoma-sulphureum",
+      "scientificName": "Tricholoma sulphureum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "scientificName": "Tricholoma acerbum s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+      "scientificName": "Volvopluteus gloiocephalus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea",
+      "scientificName": "Volvariella volvacea",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+      "scientificName": "Lactarius sez. Deliciosi",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+      "scientificName": "Lactarius porniniae",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+      "scientificName": "Lactarius volemus s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+      "scientificName": "Lactarius tesquorum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-russula--01--russula-foetentinae",
+      "scientificName": "Russula Foetentinae",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
+      "scientificName": "Russula Compactae Nigricantinae",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l",
+      "scientificName": "Boletus edulis s.l.",
+      "lexicalMentions": [
+        "158:PDF28",
+        "158:PDF29",
+        "158:PDF30",
+        "158:PDF56",
+        "158:PDF110",
+        "158:PDF115"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "scientificName": "Boletus sez. Luridi",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+      "scientificName": "Rubroboletus satanas",
+      "lexicalMentions": [
+        "188:PDF3"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "scientificName": "Suillellus luridus",
+      "lexicalMentions": [
+        "158:PDF43",
+        "158:PDF93"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "lexicalMentions": [
+        "158:PDF44"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-caloboletus--01--caloboletus-radicans",
+      "scientificName": "Caloboletus radicans",
+      "lexicalMentions": [
+        "158:PDF42"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-caloboletus--02--caloboletus-calopus",
+      "scientificName": "Caloboletus calopus",
+      "lexicalMentions": [
+        "158:PDF40",
+        "158:PDF41",
+        "158:PDF48",
+        "158:PDF56"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-gyroporus--01--gyroporus-cyanescens",
+      "scientificName": "Gyroporus cyanescens",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "scientificName": "Gyroporus castaneus s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "lexicalMentions": [
+        "158:PDF86"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-imleria--01--imleria-badia",
+      "scientificName": "Imleria badia",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus",
+      "scientificName": "Suillus luteus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "scientificName": "Suillus granulatus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "scientificName": "Tylopilus felleus",
+      "lexicalMentions": [
+        "158:PDF46",
+        "158:PDF47",
+        "158:PDF69"
+      ],
+      "reviewedFields": [
+        "sporePrint.label"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "scientificName": "Cantharellus cibarius complex",
+      "lexicalMentions": [
+        "158:PDF8",
+        "158:PDF59",
+        "158:PDF60",
+        "158:PDF62",
+        "158:PDF63",
+        "158:PDF65",
+        "158:PDF70",
+        "158:PDF72",
+        "158:PDF73",
+        "158:PDF85",
+        "158:PDF86",
+        "158:PDF93",
+        "158:PDF94",
+        "158:PDF105",
+        "158:PDF108",
+        "158:PDF174",
+        "158:PDF175",
+        "158:PDF178"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--01--craterellus-lutescens",
+      "scientificName": "Craterellus lutescens",
+      "lexicalMentions": [
+        "158:PDF72",
+        "158:PDF73",
+        "158:PDF74",
+        "158:PDF76",
+        "158:PDF80",
+        "158:PDF83",
+        "158:PDF87",
+        "158:PDF90",
+        "158:PDF94",
+        "158:PDF95",
+        "158:PDF97"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--02--craterellus-tubaeformis",
+      "scientificName": "Craterellus tubaeformis",
+      "lexicalMentions": [
+        "158:PDF75",
+        "158:PDF76",
+        "158:PDF77",
+        "158:PDF94"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "scientificName": "Craterellus cornucopioides",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF80",
+        "158:PDF81",
+        "158:PDF82",
+        "158:PDF84",
+        "158:PDF94",
+        "158:PDF95",
+        "158:PDF97",
+        "158:PDF98",
+        "158:PDF99",
+        "158:PDF100",
+        "158:PDF101",
+        "158:PDF104",
+        "158:PDF115"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "edibility.category",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-gomphus--01--gomphus-clavatus",
+      "scientificName": "Gomphus clavatus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
+      "scientificName": "Hericium spp.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+      "scientificName": "Hapalopilus rutilans",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--03--albatrellus-confluens",
+      "scientificName": "Albatrellopsis confluens",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "scientificName": "Scutiger pes-caprae",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "scientificName": "Fistulina hepatica",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--07--grifola-frondosa",
+      "scientificName": "Grifola frondosa",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--08--polyporus-umbellatus",
+      "scientificName": "Polyporus umbellatus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--09--meripilus-giganteus",
+      "scientificName": "Meripilus giganteus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-polyporaceae-s-l--10--polyporus-squamosus",
+      "scientificName": "Cerioporus squamosus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-ramaria--01--ramaria-formosa",
+      "scientificName": "Ramaria formosa",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-ramaria--02--ramaria-pallida",
+      "scientificName": "Ramaria pallida",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "scientificName": "Ramaria botrytis s.l.",
+      "lexicalMentions": [
+        "158:PDF10",
+        "158:PDF246",
+        "158:PDF247"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "habitat",
+        "odor"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-auricularia--01--auricularia-auricula-judae",
+      "scientificName": "Auricularia auricula-judae",
+      "lexicalMentions": [
+        "158:PDF115",
+        "158:PDF116",
+        "158:PDF117",
+        "158:PDF118",
+        "158:PDF119"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF151",
+        "158:PDF152",
+        "188:PDF3",
+        "188:PDF19",
+        "188:PDF20",
+        "188:PDF142",
+        "188:PDF143",
+        "188:PDF146",
+        "188:PDF149",
+        "188:PDF150",
+        "188:PDF152",
+        "188:PDF153",
+        "188:PDF179"
+      ],
+      "reviewedFields": [
+        "characters.additional",
+        "edibility.category",
+        "habitat",
+        "odor",
+        "sporePrint.label",
+        "syndrome.latency"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "lexicalMentions": [
+        "188:PDF15",
+        "188:PDF213"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-agaricus",
+      "scientificName": "Agaricus",
+      "lexicalMentions": [
+        "158:PDF93",
+        "158:PDF115",
+        "158:PDF148",
+        "188:PDF13",
+        "188:PDF47",
+        "188:PDF121",
+        "188:PDF237",
+        "188:PDF241",
+        "188:PDF242",
+        "188:PDF250"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-agrocybe-cyclocybe",
+      "scientificName": "Agrocybe + Cyclocybe",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-amanita",
+      "scientificName": "Amanita",
+      "lexicalMentions": [
+        "158:PDF3",
+        "158:PDF8",
+        "158:PDF14",
+        "158:PDF21",
+        "158:PDF22",
+        "158:PDF23",
+        "158:PDF24",
+        "158:PDF25",
+        "158:PDF26",
+        "158:PDF27",
+        "158:PDF34",
+        "158:PDF35",
+        "158:PDF51",
+        "158:PDF52",
+        "158:PDF93",
+        "158:PDF115",
+        "158:PDF141",
+        "158:PDF142",
+        "158:PDF143",
+        "158:PDF144",
+        "158:PDF145",
+        "158:PDF186",
+        "158:PDF193",
+        "158:PDF194",
+        "188:PDF3",
+        "188:PDF11",
+        "188:PDF26",
+        "188:PDF43",
+        "188:PDF56",
+        "188:PDF66",
+        "188:PDF233",
+        "188:PDF238",
+        "188:PDF243",
+        "188:PDF245",
+        "188:PDF247",
+        "188:PDF248",
+        "188:PDF249",
+        "188:PDF255"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-armillaria-desarmillaria",
+      "scientificName": "Armillaria + Desarmillaria",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-calocybe",
+      "scientificName": "Calocybe",
+      "lexicalMentions": [
+        "158:PDF204",
+        "188:PDF233",
+        "188:PDF246"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "scientificName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-clitopilus",
+      "scientificName": "Clitopilus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "scientificName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-cortinarius",
+      "scientificName": "Cortinarius",
+      "lexicalMentions": [
+        "158:PDF183",
+        "158:PDF184",
+        "188:PDF19",
+        "188:PDF20",
+        "188:PDF161",
+        "188:PDF162",
+        "188:PDF163",
+        "188:PDF165",
+        "188:PDF166",
+        "188:PDF234",
+        "188:PDF236",
+        "188:PDF237",
+        "188:PDF238",
+        "188:PDF249",
+        "188:PDF254"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-entoloma",
+      "scientificName": "Entoloma",
+      "lexicalMentions": [
+        "188:PDF249",
+        "188:PDF255",
+        "188:PDF256"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-flammulina",
+      "scientificName": "Flammulina",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF120",
+        "158:PDF121"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-galerina",
+      "scientificName": "Galerina",
+      "lexicalMentions": [
+        "158:PDF141",
+        "158:PDF169",
+        "158:PDF170",
+        "158:PDF172",
+        "188:PDF239",
+        "188:PDF242"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-hebeloma",
+      "scientificName": "Hebeloma",
+      "lexicalMentions": [
+        "188:PDF234",
+        "188:PDF237",
+        "188:PDF244",
+        "188:PDF256"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-hygrophorus-cuphophyllus",
+      "scientificName": "Hygrophorus + Cuphophyllus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-hypholoma",
+      "scientificName": "Hypholoma",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-laccaria",
+      "scientificName": "Laccaria",
+      "lexicalMentions": [
+        "188:PDF239",
+        "188:PDF247",
+        "188:PDF248",
+        "188:PDF249"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-lentinula",
+      "scientificName": "Lentinula",
+      "lexicalMentions": [
+        "158:PDF119",
+        "188:PDF140"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-lepista",
+      "scientificName": "Lepista",
+      "lexicalMentions": [
+        "188:PDF239"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+      "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-limacella-inclusi-limacellopsis-zhuliangomyces",
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "scientificName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-melanoleuca",
+      "scientificName": "Melanoleuca",
+      "lexicalMentions": [
+        "188:PDF241"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-mycena",
+      "scientificName": "Mycena",
+      "lexicalMentions": [
+        "188:PDF244",
+        "188:PDF251"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-omphalotus",
+      "scientificName": "Omphalotus",
+      "lexicalMentions": [
+        "158:PDF61",
+        "158:PDF62",
+        "158:PDF86",
+        "158:PDF173",
+        "158:PDF174",
+        "158:PDF175",
+        "158:PDF176",
+        "158:PDF177",
+        "158:PDF178",
+        "158:PDF179",
+        "158:PDF180",
+        "158:PDF181",
+        "158:PDF182",
+        "158:PDF189",
+        "158:PDF190",
+        "158:PDF191",
+        "158:PDF199"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+      "scientificName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "scientificName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-pluteus",
+      "scientificName": "Pluteus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-la",
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-psilocybe-s-l-incluso-deconica",
+      "scientificName": "Psilocybe s.l. (incluso Deconica)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-tricholoma",
+      "scientificName": "Tricholoma",
+      "lexicalMentions": [
+        "188:PDF238",
+        "188:PDF240",
+        "188:PDF242",
+        "188:PDF244",
+        "188:PDF250",
+        "188:PDF251"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-volvariella-volvopluteus",
+      "scientificName": "Volvariella + Volvopluteus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-lactarius-incluso-lactifluus",
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-russula",
+      "scientificName": "Russula",
+      "lexicalMentions": [
+        "158:PDF193",
+        "158:PDF194",
+        "188:PDF73",
+        "188:PDF239",
+        "188:PDF240",
+        "188:PDF251",
+        "188:PDF254"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-boletus-s-str",
+      "scientificName": "Boletus s. str.",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-butyriboletus",
+      "scientificName": "Butyriboletus",
+      "lexicalMentions": [
+        "158:PDF36",
+        "158:PDF37",
+        "158:PDF38"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-caloboletus",
+      "scientificName": "Caloboletus",
+      "lexicalMentions": [
+        "158:PDF40",
+        "158:PDF41",
+        "158:PDF42",
+        "158:PDF48",
+        "158:PDF56"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-chroogomphus",
+      "scientificName": "Chroogomphus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-gomphidius",
+      "scientificName": "Gomphidius",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-gyroporus",
+      "scientificName": "Gyroporus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-hemileccinum",
+      "scientificName": "Hemileccinum",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-hygrophoropsis",
+      "scientificName": "Hygrophoropsis",
+      "lexicalMentions": [
+        "158:PDF86"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-imleria",
+      "scientificName": "Imleria",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-leccinellum",
+      "scientificName": "Leccinellum",
+      "lexicalMentions": [
+        "158:PDF50",
+        "158:PDF55"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-leccinum",
+      "scientificName": "Leccinum",
+      "lexicalMentions": [
+        "158:PDF50",
+        "158:PDF55",
+        "188:PDF242",
+        "188:PDF244"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-paxillus",
+      "scientificName": "Paxillus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-suillus-incluso-boletinus",
+      "scientificName": "Suillus (incluso Boletinus)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-tylopilus",
+      "scientificName": "Tylopilus",
+      "lexicalMentions": [
+        "158:PDF37",
+        "158:PDF46",
+        "158:PDF47",
+        "158:PDF69"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbaribo",
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-cantharellus",
+      "scientificName": "Cantharellus",
+      "lexicalMentions": [
+        "158:PDF8",
+        "158:PDF59",
+        "158:PDF60",
+        "158:PDF62",
+        "158:PDF63",
+        "158:PDF64",
+        "158:PDF65",
+        "158:PDF66",
+        "158:PDF67",
+        "158:PDF70",
+        "158:PDF71",
+        "158:PDF72",
+        "158:PDF73",
+        "158:PDF74",
+        "158:PDF75",
+        "158:PDF76",
+        "158:PDF78",
+        "158:PDF79",
+        "158:PDF80",
+        "158:PDF83",
+        "158:PDF84",
+        "158:PDF85",
+        "158:PDF86",
+        "158:PDF87",
+        "158:PDF90",
+        "158:PDF91",
+        "158:PDF92",
+        "158:PDF93",
+        "158:PDF94",
+        "158:PDF95",
+        "158:PDF97",
+        "158:PDF104",
+        "158:PDF105",
+        "158:PDF106",
+        "158:PDF108",
+        "158:PDF115",
+        "158:PDF174",
+        "158:PDF175",
+        "158:PDF178"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-craterellus",
+      "scientificName": "Craterellus",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF72",
+        "158:PDF73",
+        "158:PDF74",
+        "158:PDF75",
+        "158:PDF76",
+        "158:PDF77",
+        "158:PDF78",
+        "158:PDF79",
+        "158:PDF80",
+        "158:PDF81",
+        "158:PDF82",
+        "158:PDF83",
+        "158:PDF84",
+        "158:PDF87",
+        "158:PDF90",
+        "158:PDF94",
+        "158:PDF95",
+        "158:PDF97",
+        "158:PDF98",
+        "158:PDF99",
+        "158:PDF100",
+        "158:PDF101",
+        "158:PDF104",
+        "158:PDF115"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-gomphus",
+      "scientificName": "Gomphus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-ramaria",
+      "scientificName": "Ramaria",
+      "lexicalMentions": [
+        "158:PDF10",
+        "158:PDF246",
+        "158:PDF247",
+        "188:PDF238",
+        "188:PDF241",
+        "188:PDF250"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-pisolithus",
+      "scientificName": "Pisolithus",
+      "lexicalMentions": [],
+      "reviewedFields": [],
+      "status": "Nessun riscontro lessicale con i nomi registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-scleroderma",
+      "scientificName": "Scleroderma",
+      "lexicalMentions": [
+        "188:PDF248"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-auricularia",
+      "scientificName": "Auricularia",
+      "lexicalMentions": [
+        "158:PDF111",
+        "158:PDF112",
+        "158:PDF113",
+        "158:PDF114",
+        "158:PDF115",
+        "158:PDF116",
+        "158:PDF117",
+        "158:PDF118",
+        "158:PDF119",
+        "158:PDF122",
+        "158:PDF125",
+        "158:PDF126",
+        "158:PDF127"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-gyromitra-incluso-discina",
+      "scientificName": "Gyromitra (incluso Discina)",
+      "lexicalMentions": [],
+      "reviewedFields": [
+        "sporePrint.label"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-helvella",
+      "scientificName": "Helvella",
+      "lexicalMentions": [
+        "158:PDF9",
+        "158:PDF167",
+        "158:PDF168",
+        "158:PDF233",
+        "188:PDF20",
+        "188:PDF21",
+        "188:PDF150",
+        "188:PDF169",
+        "188:PDF171",
+        "188:PDF173",
+        "188:PDF176",
+        "188:PDF183",
+        "188:PDF185",
+        "188:PDF186",
+        "188:PDF189",
+        "188:PDF190",
+        "188:PDF192",
+        "188:PDF193",
+        "188:PDF195",
+        "188:PDF196",
+        "188:PDF198",
+        "188:PDF199",
+        "188:PDF202",
+        "188:PDF203",
+        "188:PDF205",
+        "188:PDF206",
+        "188:PDF208",
+        "188:PDF209",
+        "188:PDF211",
+        "188:PDF212",
+        "188:PDF240",
+        "188:PDF241",
+        "188:PDF242"
+      ],
+      "reviewedFields": [
+        "characters.0",
+        "characters.1",
+        "characters.2",
+        "differentiatingCharacter"
+      ],
+      "status": "Riscontri puntuali registrati",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-morchella",
+      "scientificName": "Morchella",
+      "lexicalMentions": [
+        "158:PDF10",
+        "158:PDF115",
+        "158:PDF232",
+        "158:PDF233",
+        "188:PDF19",
+        "188:PDF146",
+        "188:PDF147",
+        "188:PDF150",
+        "188:PDF241"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-sarcosphaera",
+      "scientificName": "Sarcosphaera",
+      "lexicalMentions": [
+        "188:PDF15",
+        "188:PDF213"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    },
+    {
+      "taxonId": "minimum-genus-card-verpa",
+      "scientificName": "Verpa",
+      "lexicalMentions": [
+        "188:PDF19",
+        "188:PDF150",
+        "188:PDF152",
+        "188:PDF169",
+        "188:PDF171",
+        "188:PDF173",
+        "188:PDF176"
+      ],
+      "reviewedFields": [],
+      "status": "Menzioni: non costituiscono conferma",
+      "limitation": "Ricerca lessicale, inclusi indici, bibliografia e didascalie; nessuna inferenza automatica di esattezza."
+    }
+  ],
+  "method": "Guida prioritaria per commestibilità, tossicità e preparazione. Singola fonte ammessa con provenienza esplicita. Concordanze non equivalgono a certezza; fonti dipendenti non contate più volte."
+}

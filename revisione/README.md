@@ -57,3 +57,17 @@ L’app deve usare l’ultima revisione approvata su `main`. Le proposte in lavo
 - `matrice.json`: snapshot testuale di tutti i valori della Matrice, con definizioni dei campi, ordine, ID stabili, commit di origine e hash dell’Excel. Le fonti dettagliate e il registro delle revisioni sono conservati nell’Excel.
 
 La coerenza di Excel e JSON è stata verificata per l’edizione iniziale. Le edizioni successive devono mantenere entrambi allineati.
+
+## Integrazione ISPRA — 9 ottobre 2026
+
+Edizione `FI-REV-20261009-v2-ISPRA`: 53 riscontri puntuali, 44 celle integrate in 13 schede; tutte le 214 schede conservate nello stesso ordine.
+
+- `Riscontri` documenta affermazioni, pagine stampate/PDF, valori precedenti, decisioni e limiti.
+- `Copertura ISPRA` censisce le 214 schede: le menzioni lessicali includono bibliografie, indici e didascalie e non costituiscono conferme scientifiche.
+- `riscontri-ispra.json` registra i due PDF forniti, URL ufficiali, hash SHA-256, copertura e decisioni per campo. I PDF sono collegati dalle fonti, senza duplicare immagini nel repository.
+
+La Guida ragionata alla commestibilità 2021 resta prioritaria per commestibilità, tossicità e preparazione. Nessuna categoria alimentare o sindrome è stata cambiata. Cinque campi di preparazione riprendono precauzioni della Guida già registrate nella versione precedente. Una sola fonte può integrare una lacuna con provenienza esplicita. I due volumi ISPRA appartengono alla stessa serie editoriale: ripetizioni e citazioni dello stesso riferimento non costituiscono fonti indipendenti. La concordanza non equivale a certezza o approvazione micologica.
+
+Conflitto conservato: ISPRA 188/2019 p.169 (PDF179) descrive la sporata di Gyromitra esculenta bianca, mentre la fonte precedente la descrive crema/giallo-camoscio. Il valore precedente resta in Matrice con nota di conflitto. Nessuna estensione automatica della specie nominale a complessi, generi o gruppi.
+
+Originale conserva integralmente la matrice V1. Nessuna firma o approvazione professionale è stata attribuita. Excel e JSON sono stati confrontati su tutti gli 8774 valori della Matrice; il collegamento automatico all’app resta da implementare.
