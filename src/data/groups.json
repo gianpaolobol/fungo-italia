@@ -6663,6 +6663,21 @@
           "odor"
         ],
         "sourcePage": 125
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 169 (PDF 179)",
+        "fields": [
+          "sporePrint.label"
+        ],
+        "supportedClaim": "Il testo attribuisce sporata bianca in massa a G. esculenta, G. gigas e G. infula.",
+        "notes": "G. esculenta e specie nominate; non tutto il gruppo Discina; Conflitto: conservato dato precedente crema/giallo-camoscio; richiesta revisione",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "studyProfile": {
@@ -6698,6 +6713,7 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
+    "diagnosticNote": "CONFLITTO SPORATA: ISPRA 188/2019 p.169 (PDF179) indica bianca in massa; la fonte già registrata descrive crema/giallo-camoscio. Dato precedente conservato in attesa di revisione.",
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21
@@ -6709,7 +6725,11 @@
     "commonNames": [],
     "rank": "genus",
     "kind": "teaching-group",
-    "characters": [],
+    "characters": [
+      "Ascoma con mitra o sella irregolare; imenio sulla superficie esterna. [ISPRA 188/2019, p.173]",
+      "Gambo cavo, spesso rugoso o profondamente costolato; variabile secondo la specie. [ISPRA 188/2019, p.173]",
+      "Carne sottile, cartilaginea o elastica. [ISPRA 188/2019, p.173]"
+    ],
     "lookalikes": [],
     "habitat": [],
     "aliases": [],
@@ -6732,6 +6752,66 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 173 (PDF 183)",
+        "fields": [
+          "characters.0"
+        ],
+        "supportedClaim": "Ascoma con mitra o sella irregolare; imenio sulla superficie esterna.",
+        "notes": "Genere Helvella; non giudizio alimentare; Colmata lacuna da una fonte; descrizione del genere",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 173 (PDF 183)",
+        "fields": [
+          "characters.1"
+        ],
+        "supportedClaim": "Gambo cavo, spesso rugoso o profondamente costolato; variabile secondo la specie.",
+        "notes": "Genere Helvella; non giudizio alimentare; Colmata lacuna da una fonte; descrizione del genere",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 173 (PDF 183)",
+        "fields": [
+          "characters.2"
+        ],
+        "supportedClaim": "Carne sottile, cartilaginea o elastica.",
+        "notes": "Genere Helvella; non giudizio alimentare; Colmata lacuna da una fonte; descrizione del genere",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 173 (PDF 183)",
+        "fields": [
+          "differentiatingCharacter"
+        ],
+        "supportedClaim": "Combinazione di mitra/sella irregolare e struttura del gambo; richiede identificazione della singola specie, anche microscopica.",
+        "notes": "Genere Helvella; non giudizio alimentare; Colmata lacuna da una fonte; descrizione del genere",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "studyProfile": {
@@ -6767,6 +6847,7 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
+    "differentiatingCharacter": "Combinazione di mitra/sella irregolare e struttura del gambo; richiede identificazione della singola specie, anche microscopica. [ISPRA 188/2019, p.173]",
     "curriculum": {
       "documentId": "S1-obiettivi-tassonomici-v4-2026-06-09",
       "sourcePage": 21

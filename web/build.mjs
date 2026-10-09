@@ -1,4 +1,5 @@
 import {buildExamBank} from './public/exam-core.js';
+import {applyReviewedMatrix,readReviewedMatrix} from '../scripts/reviewed-matrix.mjs';
 import {applyApprovedExternalStudyEvidence} from '../scripts/approved-external-study-evidence.mjs';
 import {applyToxicologySyndromes} from '../scripts/toxicology-syndromes.mjs';
 import {applyAdminReferenceImages} from '../scripts/admin-reference-images.mjs';
@@ -29,6 +30,7 @@ applyReferenceImages([...catalog,...groups],referenceImages);
 const adminImages=await readJSON('admin-reference-images');
 applyAdminReferenceImages([...catalog,...groups],adminImages);
 applyCommercialization([...catalog,...groups],await readJSON('commercialization'));
+const matrixIntegration=applyReviewedMatrix([...catalog,...groups],await readReviewedMatrix(),studyProfiles);
 for(const asset of [...referenceImages.images,...adminImages.images]){await readFile(path.join(web,'public',asset.src));}
 const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages','commercialization'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
@@ -38,7 +40,7 @@ assert(foundations.documents.length===2&&foundations.documents.every(s=>s.visibi
 assert(!bibliography.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)),'Internal reference in public bibliography');
 const examBank=buildExamBank(catalog,studyProfiles);
 assert(examBank.length>=15,'Not enough documented examination cases');
-const data={examBank,bibliography,version:1,catalog:catalog.map(t=>pick(t,taxonKeys)),groups:groups.map(t=>pick(t,taxonKeys)),areas:areas.map(a=>pick(a,['id','name','region','center','habitat','evidenceSources','elevationRangeM']))};
+const data={matrixIntegration,examBank,bibliography,version:1,catalog:catalog.map(t=>pick(t,taxonKeys)),groups:groups.map(t=>pick(t,taxonKeys)),areas:areas.map(a=>pick(a,['id','name','region','center','habitat','evidenceSources','elevationRangeM']))};
 await rm(output,{recursive:true,force:true});await mkdir(output,{recursive:true});await cp(path.join(web,'public'),output,{recursive:true});
 await writeFile(path.join(output,'data.json'),JSON.stringify(data));
 await cp(path.join(root,'assets/icon.png'),path.join(output,'icon.png'));

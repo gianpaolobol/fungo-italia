@@ -1,4 +1,5 @@
 import {applyApprovedExternalStudyEvidence} from './approved-external-study-evidence.mjs';
+import {applyReviewedMatrix,readReviewedMatrix} from './reviewed-matrix.mjs';
 import {applyToxicologySyndromes} from './toxicology-syndromes.mjs';
 import {applyAdminReferenceImages} from './admin-reference-images.mjs';
 import {applyCommercialization} from './commercialization.mjs';
@@ -48,6 +49,7 @@ applyReferenceImages([...catalog,...teachingGroups],referenceImages);
 const adminImages=JSON.parse(await readFile(join(output,'admin-reference-images.json'),'utf8'));
 applyAdminReferenceImages([...catalog,...teachingGroups],adminImages);
 applyCommercialization([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'commercialization.json'),'utf8')));
+applyReviewedMatrix([...catalog,...teachingGroups],await readReviewedMatrix(),studyProfiles);
 const mobileAreas=areas.map(a=>{if(!Array.isArray(a.center)||a.center.length!==2||!a.center.every(Number.isFinite)||Math.abs(a.center[0])>90||Math.abs(a.center[1])>180)throw Error('Invalid [latitude,longitude] '+a.id);return {...a,coordinateOrder:'latitude-longitude',signalProvenance:a.signalProvenance??'heuristic',verifiedSignals:a.signalProvenance==='measured'?a.verifiedSignals:0,delayedVisitors:a.signalProvenance==='measured'?a.delayedVisitors:0};});
 
 const areaLiterature=JSON.parse(await readFile(join(output,'area-literature.json'),'utf8'));

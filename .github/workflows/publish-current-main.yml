@@ -25,7 +25,7 @@ jobs:
       - run: npm ci
       - run: npm run prepare:data
       - name: Verify founding guide categories
-        run: node --test scripts/study-profiles.test.mjs scripts/edibility-guide.test.mjs scripts/toxicology-syndromes.test.mjs scripts/atlas-field-review.test.mjs scripts/toxicology-coverage.test.mjs scripts/exam-core.test.mjs scripts/micology-display.test.mjs
+        run: node --test scripts/reviewed-matrix.test.mjs scripts/study-profiles.test.mjs scripts/edibility-guide.test.mjs scripts/toxicology-syndromes.test.mjs scripts/atlas-field-review.test.mjs scripts/toxicology-coverage.test.mjs scripts/exam-core.test.mjs scripts/micology-display.test.mjs
       - name: Build current PWA
         run: cd web && npm ci && npm run build
       - name: Verify compact iPhone UI and photo exam

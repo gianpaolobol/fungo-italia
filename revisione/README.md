@@ -39,7 +39,7 @@ Il branch `backup/main-pre-beta-publish-20261009` è escluso da questo flusso e 
 
 ## Collegamento all’atlante
 
-**Stato attuale:** questi file sono pubblicati per la revisione e non alimentano automaticamente l’app. I dati dell’atlante continuano a essere costruiti dalla pipeline esistente.
+**Stato attuale:** la versione `FI-REV-20261009-v3-GUIDA-PREVALENTE` è autorizzata per l’importazione nella beta. La pipeline applica questa versione dopo gli altri arricchimenti e controlla il suo hash. Modifiche successive alla matrice non vengono pubblicate senza una nuova integrazione autorizzata. Vedere [integrazione della matrice](../docs/REVIEWED-MATRIX-INTEGRATION.md).
 
 Il flusso da implementare per la sincronizzazione è:
 
@@ -84,4 +84,4 @@ Il foglio **Autorità commestibilità** documenta il controllo su tutte le 214 s
 
 Le 147 categorie già registrate corrispondono alla classificazione attribuita alla Guida; non è stata necessaria una riclassificazione. È stata corretta la formulazione dei campi strutturati di Macrolepiota procera s.l.: la cottura di almeno 20 minuti del solo cappello è una prescrizione svizzera citata a p.73; non è una condizione generale imposta dalla Guida, che a p.72 non richiede particolari trattamenti per esemplari freschi idonei e sconsiglia comunque il consumo crudo. La citazione resta distinta dalle prescrizioni adottate dalla Guida.
 
-Il PDF originale della Guida è stato recuperato dall’URL della Regione Piemonte; hash SHA-256 e metadati sono registrati nel JSON. Tutti i valori Excel–JSON sono stati verificati. Originale resta invariato e nessuna firma professionale è stata assegnata. L’app non viene modificata da questo aggiornamento della matrice.
+Il PDF originale della Guida è stato recuperato dall’URL della Regione Piemonte; hash SHA-256 e metadati sono registrati nel JSON. Tutti i valori Excel–JSON sono stati verificati. Originale resta invariato e nessuna firma professionale è stata assegnata. La successiva integrazione autorizzata nell’app è descritta nella sezione Collegamento all’atlante.

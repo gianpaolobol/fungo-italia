@@ -1174,7 +1174,9 @@
       "Amanita caesarea negli ovoli chiusi: il solo involucro esterno non consente un’identificazione affidabile.",
       "Russule verdi: confrontare struttura della carne e presenza di volva e anello; esaminare anche la base integra."
     ],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 49: Boschi di latifoglie, più raramente conifere; periodo indicato agosto–novembre."
+    ],
     "sources": [
       {
         "sourceId": "SUPPLEMENT-minimum-card-objective-amanita--01--amanita-phalloides-0",
@@ -1286,6 +1288,51 @@
           "odor"
         ],
         "supportedClaim": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.; Bianca"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 49 (PDF 52)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello giallo-olivastro con fibrille radiali; lamelle bianche; anello e volva membranosi.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 49 (PDF 52)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Odore poco evidente da giovane, più sgradevole negli esemplari maturi.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 49 (PDF 52)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Boschi di latifoglie, più raramente conifere; periodo indicato agosto–novembre.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -1313,7 +1360,7 @@
           ]
         }
       },
-      "odor": "Da quasi inodore a lievemente sgradevole; negli esemplari vecchi ricorda acqua di fiori stagnante.",
+      "odor": "Odore poco evidente da giovane, più sgradevole negli esemplari maturi.",
       "sporePrint": {
         "label": "Bianca"
       }
@@ -2189,7 +2236,8 @@
       "Amanita phalloides negli ovoli chiusi; Amanita muscaria negli esemplari aperti. Osservare sempre l’intero carpoforo."
     ],
     "habitat": [
-      "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte."
+      "Boschi luminosi di latifoglie, con castagno o quercia; estate e inizio autunno secondo la fonte.",
+      "ISPRA 158/2017, p. 32: Boschi di latifoglie, in particolare castagno; periodo indicato maggio–novembre."
     ],
     "sources": [
       {
@@ -2259,6 +2307,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 32 (PDF 35)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello giallo-arancio; lamelle, gambo e anello gialli; volva membranosa.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 32 (PDF 35)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Odore lieve negli esemplari freschi; può divenire sgradevole negli esemplari vecchi.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 32 (PDF 35)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Boschi di latifoglie, in particolare castagno; periodo indicato maggio–novembre.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -2277,7 +2370,7 @@
         ],
         "category": "free"
       },
-      "odor": "Poco significativo negli esemplari freschi.",
+      "odor": "Odore lieve negli esemplari freschi; può divenire sgradevole negli esemplari vecchi.",
       "sporePrint": {
         "label": "Bianca."
       }
@@ -3491,7 +3584,10 @@
       "Gambo robusto con base clavata e abbondante micelio bianco."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "Non documentato",
+      "ISPRA 188/2019, p.22: gruppi nella stagione tarda, boschi di conifere e latifoglie."
+    ],
     "sources": [
       {
         "sourceId": "LIT-ATLAS-2d88aa9bd7a9071c",
@@ -3505,6 +3601,66 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 22 (PDF 32)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello grigio; lamelle chiare facilmente separabili dalla carne; gambo robusto con base clavata e micelio bianco.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 22 (PDF 32)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Odore forte, complesso, aromatico e farinaceo.",
+        "notes": "Taxon nominale; Integrate descrizioni variabili",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 22 (PDF 32)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Fruttifica in gruppi nella stagione tarda, sotto conifere e latifoglie.",
+        "notes": "Taxon nominale; Integrazione da una fonte",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 50 (PDF 60)",
+        "fields": [
+          "edibility.category"
+        ],
+        "supportedClaim": "Sono descritte intossicazioni gastrointestinali, anche dopo trattamenti culinari.",
+        "notes": "Taxon nominale; SOLO CONFRONTO BIBLIOGRAFICO, NON NORMATIVO. Guida prioritaria: mantenuto sconsigliato; nessuna promozione a commestibile",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -3523,7 +3679,7 @@
         ],
         "category": "discouraged"
       },
-      "odor": "Dolciastro-fruttato; per alcuni ricorda la rapa.",
+      "odor": "Forte e complesso: aromatico/farinaceo secondo ISPRA, dolciastro-fruttato o simile alla rapa nelle fonti già registrate; può risultare sgradevole.",
       "sporePrint": {
         "label": "Da bianco-crema a crema-ocra molto pallido."
       }
@@ -4562,6 +4718,36 @@
         "supportedClaim": "Sindrome orellanica",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 154 (PDF 164)",
+        "fields": [
+          "syndrome.severity"
+        ],
+        "supportedClaim": "Sindrome orellanica con bersaglio renale e possibile insufficienza irreversibile.",
+        "notes": "Specie orellaniniche nominate nel capitolo; Riscontro bibliografico; dati della Guida invariati",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 151 (PDF 161)",
+        "fields": [
+          "edibility.category"
+        ],
+        "supportedClaim": "L’orellanina non viene resa innocua da bollitura o essiccazione.",
+        "notes": "Taxon nominale; SOLO CONFRONTO BIBLIOGRAFICO, NON NORMATIVO. Compatibile con tossico mortale della Guida; nessuna preparazione abilitante",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -4703,6 +4889,36 @@
         "supportedClaim": "Sindrome orellanica",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 154 (PDF 164)",
+        "fields": [
+          "syndrome.severity"
+        ],
+        "supportedClaim": "Sindrome orellanica con bersaglio renale e possibile insufficienza irreversibile.",
+        "notes": "Specie orellaniniche nominate nel capitolo; Riscontro bibliografico; dati della Guida invariati",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 151 (PDF 161)",
+        "fields": [
+          "edibility.category"
+        ],
+        "supportedClaim": "L’orellanina non viene resa innocua da bollitura o essiccazione.",
+        "notes": "Taxon nominale; SOLO CONFRONTO BIBLIOGRAFICO, NON NORMATIVO. Compatibile con tossico mortale della Guida; nessuna preparazione abilitante",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -5846,7 +6062,9 @@
       "Gambo tenace senza anello, progressivamente bruno scuro fino a nero e vellutato nella parte inferiore."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 118: F. velutipes nominale: legno di latifoglie, raramente conifere; periodo indicato settembre–marzo. Non generalizzare a tutte le specie del gruppo."
+    ],
     "sources": [
       {
         "sourceId": "LIT-ATLAS-b424e3043a9faf02",
@@ -5860,6 +6078,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 118 (PDF 121)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello giallo-arancio viscoso con umidità; lamelle chiare; gambo bruno-nero vellutato e tenace.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 118 (PDF 121)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "F. velutipes nominale: poco caratteristico secondo la fonte già registrata; ISPRA descrive variabilità, talora nota di geranio. Non universale nel gruppo.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 118 (PDF 121)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "F. velutipes nominale: legno di latifoglie, raramente conifere; periodo indicato settembre–marzo. Non generalizzare a tutte le specie del gruppo.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "speciesGroup",
@@ -5879,7 +6142,7 @@
           "La Guida raccomanda di eliminare le parti fibrose dei gambi e cuocere completamente."
         ]
       },
-      "odor": "Poco caratteristico. Dato riferito a Flammulina velutipes; non descrive necessariamente tutte le componenti della scheda.",
+      "odor": "F. velutipes nominale: poco caratteristico secondo la fonte già registrata; ISPRA descrive variabilità, talora nota di geranio. Non universale nel gruppo.",
       "sporePrint": {
         "label": "Bianca. Documentata per Flammulina velutipes; non estesa automaticamente all’intero gruppo."
       }
@@ -6166,7 +6429,9 @@
       "Gambo robusto, asciutto, fortemente fibrilloso-striato, rosso-arancio con base giallo-biancastra."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 185: Prati, anche montani; periodo indicato fine agosto–dicembre."
+    ],
     "sources": [
       {
         "sourceId": "LIT-ATLAS-2693f3e74dfad660",
@@ -6180,6 +6445,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 185 (PDF 188)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello robusto rosso con parti gialle; lamelle ceracee distanziate; gambo fibroso rosso-giallo con base chiara.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 185 (PDF 188)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Poco caratteristico / non significativo.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 185 (PDF 188)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Prati, anche montani; periodo indicato fine agosto–dicembre.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -6196,7 +6506,7 @@
         "label": "Commestibilità libera",
         "precautions": []
       },
-      "odor": "Poco caratteristico.",
+      "odor": "Poco caratteristico / non significativo.",
       "sporePrint": {
         "label": "Bianca."
       }
@@ -6251,7 +6561,8 @@
     ],
     "lookalikes": [],
     "habitat": [
-      "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno."
+      "Boschi di abete e altre conifere, anche con latifoglie; i giovani carpofori possono essere seminascosti nel terreno.",
+      "ISPRA 158/2017, p. 201: Boschi di latifoglie o misti, anche con faggio; febbraio–maggio, in prossimità dello scioglimento della neve."
     ],
     "sources": [
       {
@@ -6280,6 +6591,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 201 (PDF 204)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello chiaro se coperto e grigio-nero se esposto; lamelle spesse e ceracee; gambo corto e robusto.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 201 (PDF 204)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Tenue, talora descritto con note floreali/mielate; ISPRA lo indica quasi inodore. Variabilità descrittiva da conservare.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 201 (PDF 204)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Boschi di latifoglie o misti, anche con faggio; febbraio–maggio, in prossimità dello scioglimento della neve.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -6296,7 +6652,7 @@
         "label": "Commestibilità libera",
         "precautions": []
       },
-      "odor": "Tenue; sono descritte anche note floreali e mielate.",
+      "odor": "Tenue, talora descritto con note floreali/mielate; ISPRA lo indica quasi inodore. Variabilità descrittiva da conservare.",
       "sporePrint": {
         "label": "Bianca."
       }
@@ -7702,7 +8058,9 @@
       "Amanita pantherina: confronto segnalato nella tabella dei sosia; la fonte usa Macrolepiota procera.",
       "Amanita pantherina: conservare la base integra e confrontare tutti i caratteri del velo."
     ],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 217: M. procera nominale: pascoli e boschi aperti; periodo indicato agosto–gennaio. Non generalizzare a tutte le specie del gruppo."
+    ],
     "sources": [
       {
         "sourceId": "SUPPLEMENT-minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l-0",
@@ -7751,6 +8109,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 217 (PDF 220)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Cappello squamoso; gambo con ornamentazione a pelle di serpente; anello doppio e mobile.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 217 (PDF 220)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "M. procera nominale: poco caratteristico nelle fonti già registrate; ISPRA lo descrive fruttato. Non estendere automaticamente a tutto il gruppo.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 217 (PDF 220)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "M. procera nominale: pascoli e boschi aperti; periodo indicato agosto–gennaio. Non generalizzare a tutte le specie del gruppo.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "speciesGroup",
@@ -7768,11 +8171,11 @@
         "precautions": [
           "Utilizzare esemplari freschi, con lamelle bianche e diritte.",
           "Evitare il consumo crudo e l’apertura forzata in acqua degli esemplari chiusi.",
-          "La Guida riporta la prescrizione svizzera di cuocere il solo cappello almeno 20 minuti, scartando il gambo (p. 73)."
+          "Evitare il consumo crudo (pp.72–73). La Guida non stabilisce qui una durata minima generale per esemplari freschi idonei. Il trattamento di almeno 20 minuti del solo cappello è una prescrizione svizzera citata, non una prescrizione generale della Guida."
         ],
         "category": "free"
       },
-      "odor": "Poco caratteristico. Dato riferito a Macrolepiota procera; non descrive necessariamente tutte le componenti della scheda.",
+      "odor": "M. procera nominale: poco caratteristico nelle fonti già registrate; ISPRA lo descrive fruttato. Non estendere automaticamente a tutto il gruppo.",
       "sporePrint": {
         "label": "Bianca o crema molto pallido. Documentata per Macrolepiota procera; non estesa automaticamente all’intero gruppo."
       }
@@ -13808,6 +14211,21 @@
           "sporePrint"
         ],
         "supportedClaim": "Grato o quasi nullo (non distintivo).; Rosa."
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 43 (PDF 46)",
+        "fields": [
+          "sporePrint.label"
+        ],
+        "supportedClaim": "Sporata rosa / bruno-rosa; imenoforo inizialmente bianco, poi rosato.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -13876,7 +14294,9 @@
       "Omphalotus olearius: confronto della fonte con Cantharellus cibarius; non risolve il complex moderno.",
       "Omphalotus olearius: confronto segnalato nella lezione di micotossicologia."
     ],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 83: C. cibarius nominale: boschi con diverse essenze; fenologia variabile. Non generalizzare al complesso."
+    ],
     "sources": [
       {
         "sourceId": "SUPPLEMENT-minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex-0",
@@ -13925,6 +14345,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 83 (PDF 86)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Pliche decorrenti, ramificate e anastomosate; colorazione giallo-uovo; odore di albicocca.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 83 (PDF 86)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Albicocca: dato riferito a C. cibarius nominale, non attestato indistintamente per tutto il complesso.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 83 (PDF 86)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "C. cibarius nominale: boschi con diverse essenze; fenologia variabile. Non generalizzare al complesso.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "speciesGroup",
@@ -13944,7 +14409,7 @@
           "Controllare le possibili confusioni con Omphalotus olearius."
         ]
       },
-      "odor": "Tenue, simile ad albicocca. Dato riferito a Cantharellus cibarius; non descrive necessariamente tutte le componenti della scheda.",
+      "odor": "Albicocca: dato riferito a C. cibarius nominale, non attestato indistintamente per tutto il complesso.",
       "sporePrint": {
         "label": "Da giallo pallido a bianco-crema, talvolta lievemente rosata. Documentata per Cantharellus cibarius; non estesa automaticamente all’intero gruppo."
       }
@@ -14250,7 +14715,9 @@
       "Superficie fertile esterna liscia o debolmente rugosa, senza vere pliche sviluppate."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 101: Boschi di latifoglie, soprattutto castagno e faggio; periodo indicato agosto–dicembre."
+    ],
     "sources": [
       {
         "sourceId": "LIT-ATLAS-4b4e5262e6ce7bd0",
@@ -14264,6 +14731,66 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 101 (PDF 104)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Forma a trombetta, superficie grigio-nera, gambo cavo e carne sottile ed elastica.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 101 (PDF 104)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Generalmente poco marcato o gradevole; intensità variabile fra descrizioni.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 101 (PDF 104)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Boschi di latifoglie, soprattutto castagno e faggio; periodo indicato agosto–dicembre.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 101 (PDF 104)",
+        "fields": [
+          "edibility.category"
+        ],
+        "supportedClaim": "ISPRA usa la formulazione velenoso da crudo, commestibile dopo cottura.",
+        "notes": "Taxon nominale; SOLO CONFRONTO BIBLIOGRAFICO, NON NORMATIVO. Terminologia divergente: mantenuta libera secondo la Guida; non riclassificato condizionato",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -14280,7 +14807,7 @@
         "label": "Commestibilità libera",
         "precautions": []
       },
-      "odor": "Poco caratteristico.",
+      "odor": "Generalmente poco marcato o gradevole; intensità variabile fra descrizioni.",
       "sporePrint": {
         "label": "Bianca."
       }
@@ -15936,7 +16463,9 @@
       "Apici giovani rosa, rosso-vinosi o porpora."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 244: R. botrytis nominale: boschi di latifoglie; periodo indicato agosto–dicembre. Non generalizzare a tutto il gruppo."
+    ],
     "sources": [
       {
         "sourceId": "LIT-ATLAS-66258c9a0d0f4235",
@@ -15962,6 +16491,51 @@
           "odor",
           "sporePrint"
         ]
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 244 (PDF 247)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Struttura coralloide compatta e robusta; rami chiari e punte rosa-porpora da giovane.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 244 (PDF 247)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Variabile nelle descrizioni della specie nominale; ISPRA lo indica lieve. Le altre note odorose registrate restano da confrontare.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 244 (PDF 247)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "R. botrytis nominale: boschi di latifoglie; periodo indicato agosto–dicembre. Non generalizzare a tutto il gruppo.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "speciesGroup",
@@ -15981,7 +16555,7 @@
           "Limitare la raccolta agli esemplari riconoscibili, giovani o medio-maturi."
         ]
       },
-      "odor": "Variabile tra descrizioni: poco significativo (First Nature), fruttato con note di caramelle alla fragola (Francolini). Dati di R. botrytis nominale.",
+      "odor": "Variabile nelle descrizioni della specie nominale; ISPRA lo indica lieve. Le altre note odorose registrate restano da confrontare.",
       "sporePrint": {
         "label": "Giallo pallido in R. botrytis; non esteso alle altre componenti del complesso."
       }
@@ -16155,7 +16729,9 @@
       "Gambo pallido, internamente cavo e lacunoso, con cappello saldato irregolarmente."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "ISPRA 158/2017, p. 149: Terreni acidi sotto conifere, anche disturbati o bruciati; fruttificazione primaverile."
+    ],
     "sources": [
       {
         "sourceId": "LIT-ATLAS-646f8f58040feb5f",
@@ -16206,6 +16782,96 @@
         "supportedClaim": "Sindrome giromitrica",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 149 (PDF 152)",
+        "fields": [
+          "characters.additional"
+        ],
+        "supportedClaim": "Mitra cerebriforme bruno-rossastra; gambo chiaro e cavo.",
+        "notes": "Taxon nominale; Compatibile con dato attuale; riscontro bibliografico",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 149 (PDF 152)",
+        "fields": [
+          "odor"
+        ],
+        "supportedClaim": "Variabile nelle descrizioni; poco marcato oppure spermatico. ISPRA 158/2017, p.149, descrive la nota spermatica.",
+        "notes": "Taxon nominale; Integrata variabilità descrittiva; non carattere assoluto",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 149 (PDF 152)",
+        "fields": [
+          "habitat"
+        ],
+        "supportedClaim": "Terreni acidi sotto conifere, anche disturbati o bruciati; fruttificazione primaverile.",
+        "notes": "Taxon nominale; Integrazione da una fonte, con ambito esplicito",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-188-2019",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici — Volume 2",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2019/pubblicazioni/manuali-linee-guida/MLG_188_19_Funghi_comuni_vol_2.pdf",
+        "location": "p. 169 (PDF 179)",
+        "fields": [
+          "sporePrint.label"
+        ],
+        "supportedClaim": "Il testo attribuisce sporata bianca in massa a G. esculenta, G. gigas e G. infula.",
+        "notes": "G. esculenta e specie nominate; non tutto il gruppo Discina; Conflitto: conservato dato precedente crema/giallo-camoscio; richiesta revisione",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 149 (PDF 152)",
+        "fields": [
+          "edibility.category"
+        ],
+        "supportedClaim": "Specie mortale; cottura ed essiccazione non autorizzano il consumo.",
+        "notes": "Taxon nominale; SOLO CONFRONTO BIBLIOGRAFICO, NON NORMATIVO. Compatibile con tossico mortale della Guida; categoria invariata",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
+      },
+      {
+        "sourceId": "ISPRA-MLG-158-2017",
+        "title": "Funghi comuni. Caratteristiche principali, sosia e aspetti tossicologici",
+        "authors": [
+          "Carmine Siniscalco; schede tecniche 158/2017: Carmine Lavorato e Maria Rotella"
+        ],
+        "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+        "location": "p. 149 (PDF 152)",
+        "fields": [
+          "syndrome.latency"
+        ],
+        "supportedClaim": "Sindrome giromitrica: latenza indicata 6–12 ore.",
+        "notes": "Taxon nominale; Riscontro bibliografico; dati tossicologici della Guida invariati",
+        "reviewStatus": "bibliographic-review-not-professional-approval"
       }
     ],
     "rank": "species",
@@ -16213,6 +16879,7 @@
       "Gyromitra esculenta"
     ],
     "diagnosticStatus": "field_high_confidence",
+    "diagnosticNote": "CONFLITTO SPORATA: ISPRA 188/2019 p.169 (PDF179) indica bianca in massa; la fonte già registrata descrive crema/giallo-camoscio. Dato precedente conservato in attesa di revisione.",
     "aliases": [],
     "deepMorphologyRequired": false,
     "differentiatingCharacter": "Fruttificazione primaverile, spesso con conifere su suoli sabbiosi o disturbati.",
@@ -16233,7 +16900,7 @@
           ]
         }
       },
-      "odor": "Variabile tra descrizioni: poco caratteristico (First Nature), a componente spermatica intensa (AUSL Bologna).",
+      "odor": "Variabile nelle descrizioni; poco marcato oppure spermatico. ISPRA 158/2017, p.149, descrive la nota spermatica.",
       "sporePrint": {
         "label": "Crema-giallastra o giallo-camoscio."
       }
