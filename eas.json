@@ -1,7 +1,7 @@
 {
   "cli": {
     "version": ">=16.0.0",
-    "appVersionSource": "local"
+    "appVersionSource": "remote"
   },
   "build": {
     "preview": {
@@ -17,7 +17,13 @@
       "node": "24.3.0"
     },
     "production": {
+      "distribution": "store",
+      "autoIncrement": true,
       "channel": "production",
+      "environment": "production",
+      "env": {
+        "EXPO_PROJECT_ID": "b65af584-739f-4ef0-8fe5-6c0ba692c088"
+      },
       "android": {
         "buildType": "app-bundle"
       },
@@ -29,6 +35,14 @@
       "node": "24.3.0",
       "ios": {
         "simulator": false
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
       }
     }
   }
