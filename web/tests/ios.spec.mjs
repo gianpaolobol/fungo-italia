@@ -427,6 +427,11 @@ test('genus species pager and full genus recall preserve atlas filters',async({p
 test('real teacher photographs load at 320 points and remain available without the origin',async({page,request})=>{
  await ready(page);
  await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ // Reference photos are cached on viewing, separately from the atomic catalog install.
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Tricholoma saponaceum');
+ await page.getByRole('button',{name:'Apri Tricholoma saponaceum s.l.',exact:true}).click();
+ await page.waitForFunction(async()=>{const images=[...document.querySelectorAll('#detail-body .photo-thumb img')];return images.length===3&&(await Promise.all(images.map(async img=>img.complete&&img.naturalWidth>0&&!!await caches.match(img.src)))).every(Boolean);},{},{timeout:10000});
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
  await request.get('http://127.0.0.1:4174/?state=stop');
  try{
   const response=await page.goto('./?photos-offline='+Date.now());

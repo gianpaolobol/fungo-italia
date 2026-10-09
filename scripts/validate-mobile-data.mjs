@@ -68,6 +68,10 @@ const referenceImages=JSON.parse(await readFile('src/data/reference-images.json'
 const {applyStudyProfiles,applyReferenceImages}=await import('./study-profiles.mjs');
 const expected=[...catalog,...groups].map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
 applyStudyProfiles(expected,studyProfiles,courseRegistry);
+const {applyToxicologySyndromes}=await import('./toxicology-syndromes.mjs');
+applyToxicologySyndromes(expected,JSON.parse(await readFile('src/data/toxicology-syndromes.json','utf8')));
+const {applyApprovedExternalStudyEvidence}=await import('./approved-external-study-evidence.mjs');
+applyApprovedExternalStudyEvidence(expected,JSON.parse(await readFile('src/data/external-study-evidence-candidates.json','utf8')));
 applyReferenceImages(expected,referenceImages);
 const {applyAdminReferenceImages}=await import('./admin-reference-images.mjs');
 applyAdminReferenceImages(expected,JSON.parse(await readFile('src/data/admin-reference-images.json','utf8')));

@@ -37,13 +37,17 @@ test('training gives immediate correction, flags dangerous category and can enla
  if(!['free','conditional'].includes(c.category)||c.category==='conditional')await expect(page.locator('#detail-body')).toContainText('Errore alimentare pericoloso');
  await page.getByRole('button',{name:'Prossimo esemplare',exact:true}).click();await expect(page.locator('#detail-body h2')).toHaveText('Esemplare 2 di 15');
 });
-test('photo exam resumes all downloaded session photos after offline reload',async({page,context})=>{
+test('photo exam resumes all downloaded session photos after offline reload',async({page,request})=>{
  await openExam(page,'exam');await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);
  await page.getByRole('button',{name:'Scarica foto della sessione',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('Foto della sessione pronte offline');
- await context.setOffline(true);await page.reload();await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione (1/15)',exact:true}).click();
+ // WebKit offline emulation breaks service workers; stop the real origin instead.
+ await request.get('http://127.0.0.1:4174/?state=stop');
+ try{
+ await page.goto('./?exam-offline='+Date.now());await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione (1/15)',exact:true}).click();
  for(let i=0;i<15;i++){
   await expect(page.locator('#detail-body h2')).toHaveText('Esemplare '+(i+1)+' di 15');for(const image of await page.locator('#detail-body img').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);}
   await page.getByRole('button',{name:i===14?'Concludi e correggi':'Salva e continua',exact:true}).click();
  }
  await expect(page.locator('#detail-body')).toContainText('Sessione conclusa');
+ }finally{await request.get('http://127.0.0.1:4174/?state=start');}
 });
