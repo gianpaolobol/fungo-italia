@@ -1,0 +1,34 @@
+name: Rebuild iOS native launch fix
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/ios-launch-fix.yml]
+permissions:
+  contents: read
+concurrency:
+  group: ios-native-launch-fix
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Validate native linking and source
+        run: |
+          npm run prepare:data
+          npm run typecheck
+          node --test scripts/*.test.mjs
+      - name: Rebuild and upload iOS launch fix
+        run: |
+          test -n "$EXPO_TOKEN"
+          test -n "$EXPO_PROJECT_ID"
+          npx eas-cli@24.8.0 build --platform ios --profile production --non-interactive --clear-cache --auto-submit --wait

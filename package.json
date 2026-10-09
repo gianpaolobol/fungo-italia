@@ -35,5 +35,14 @@
   },
   "overrides": {
     "react-native": "$react-native"
+  },
+  "expo": {
+    "autolinking": {
+      "ios": {
+        "buildFromSource": [
+          ".*"
+        ]
+      }
+    }
   }
 }
