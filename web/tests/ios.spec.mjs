@@ -461,6 +461,13 @@ test('genus photographs name their actual species once without duplicating the h
 test('licensed external reference photograph preserves attribution links and decodes offline',async({page,request})=>{
  await ready(page);
  await page.waitForFunction(()=>document.querySelector('#network').textContent.includes('Catalogo offline'));
+ // Warm the exact licensed photograph; catalog readiness does not promise every photo.
+ await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Cortinarius praestans');
+ await page.getByRole('button',{name:'Apri Cortinarius praestans',exact:true}).click();
+ const warmImage=page.locator('#detail-body .photo-thumb[data-view="lateral"] img');
+ await warmImage.scrollIntoViewIfNeeded();
+ await expect.poll(()=>warmImage.evaluate(async img=>img.complete&&img.naturalWidth>0&&!!await caches.match(img.src))).toBe(true);
+ await page.getByRole('button',{name:'Torna',exact:true}).click();
  await request.get('http://127.0.0.1:4174/?state=stop');
  try{
   const response=await page.goto('./?licensed-photo-offline='+Date.now());
