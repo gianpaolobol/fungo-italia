@@ -1,9 +1,6 @@
 name: Apple Vision photo filter smoke
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [.github/workflows/vision-photo-smoke.yml]
 permissions:
   contents: read
 jobs:
