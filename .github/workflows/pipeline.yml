@@ -150,7 +150,7 @@ jobs:
             gh release create native-preview artifacts/android/Fungo-Italia.apk --target "$GITHUB_SHA" --title "Fungo Italia — anteprima Android" --notes-file docs/ANDROID-PREVIEW.md --prerelease
           fi
   expo-update:
-    needs: [android, android-smoke]
+    needs: android
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
