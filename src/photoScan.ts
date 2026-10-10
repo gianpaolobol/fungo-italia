@@ -13,7 +13,9 @@ export function decidePhoto(r:Classification):Decision{
  if(!r.supported)return 'uncertain';
  const fungal=Math.max(0,...r.predictions.filter(p=>/mushroom|fungus|fungi/i.test(p.label)).map(p=>p.score));
  const other=Math.max(0,...r.predictions.filter(p=>!/mushroom|fungus|fungi/i.test(p.label)).map(p=>p.score));
- return fungal>=.15?'candidate':other>=.9&&fungal<.01?'other':'uncertain';
+ if(fungal>=.72&&fungal>=other+.22)return 'candidate';
+ if(other>=.75||fungal<.25)return 'other';
+ return 'uncertain';
 }
 export async function runPhotoBatch(start:PhotoScan,deps:{query:(offset:number)=>Promise<Photo[]>;classify:(photo:Photo)=>Promise<Classification>;save:(state:PhotoScan)=>Promise<void>;stopped:()=>boolean}):Promise<PhotoScan>{
  let state:PhotoScan={...start,lastBatch:[...start.lastBatch]};if(state.complete)return state;
