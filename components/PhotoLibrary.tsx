@@ -1,84 +1,75 @@
-import React,{useState} from 'react';
-import {Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
+import React,{useEffect,useRef,useState} from 'react';
+import {AppState,Image,Platform,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {clusterByTime,makeObservationId,PrivateObservation} from '../src/photoObservations';
-import {enrichCandidates} from '../src/photoCandidatePipeline';
 import {buildVisualReviewQueue} from '../src/visualReviewQueue';
 import {visualReviewStore} from '../src/reviewStorage';
-import {rankObservationPhotos,PhotoMeta} from '../src/photoSelection';
+import {createScan,decodeScan,runPhotoBatch,scanKey,PhotoScan,Decision,Photo,PhotoResult,decodeManifest,observationsForPhotos} from '../src/photoScan';
+import {classifyLocalPhoto,photoClassifierAvailable,createPhotoSnapshot} from '../src/localPhotoClassifier';
 
-type ScanState={permission:'unknown'|'granted'|'limited'|'denied';count:number;observations:number;message:string};
-const privateKey='fungo-italia:private-observations:v1';
-const evidenceKey='fungo-italia:private-candidate-evidence:v1';
-
+const labels:Record<Decision,string>={candidate:'Possibile fungo',other:'Non pertinente',uncertain:'Incerta'};
 export default function PhotoLibrary(){
- const [state,setState]=useState<ScanState>({permission:'unknown',count:0,observations:0,message:'Nessuna scansione avviata.'});
- async function scan(){
-  if(Platform.OS!=='ios'&&Platform.OS!=='android'){
-   setState(s=>({...s,message:'La scansione della libreria Foto richiede Fungo Italia installato su iPhone o Android. La PWA resta dedicata alla consultazione.'}));
-   return;
+ const [scan,setScan]=useState<PhotoScan>(createScan),[busy,setBusy]=useState(false),[ready,setReady]=useState(false),[message,setMessage]=useState('Caricamento del punto di ripresa…');
+ const [history,setHistory]=useState<{number:number;photos:PhotoResult[]}|null>(null);
+ const manifest=useRef<Photo[]|null>(null);
+ const snapshot=useRef(scan),lock=useRef(false),stop=useRef(false),alive=useRef(true);
+ function display(value:PhotoScan){snapshot.current=value;if(alive.current)setScan(value);}
+ function archiveKey(number:number){return `${scanKey}:${snapshot.current.sessionId}:batch:${number}`;}
+ function manifestKey(){return `${scanKey}:${snapshot.current.sessionId}:manifest`;}
+ async function save(value:PhotoScan){await AsyncStorage.setItem(scanKey,JSON.stringify(value));display(value);}
+ useEffect(()=>{alive.current=true;void AsyncStorage.getItem(scanKey).then(raw=>{display(decodeScan(raw));setReady(true);setMessage('Pronto. Ogni avvio analizza al massimo 20 foto.');}).catch(()=>setMessage('Punto di ripresa non leggibile. I dati esistenti sono conservati: scansione bloccata.'));const sub=AppState.addEventListener('change',value=>{if(value!=='active')stop.current=true;});return()=>{alive.current=false;stop.current=true;sub.remove();};},[]);
+ async function exclusive(action:()=>Promise<void>){if(lock.current||!ready)return;lock.current=true;stop.current=false;setBusy(true);try{await action();}catch{if(alive.current)setMessage('Operazione interrotta. Riparti dall’ultima foto salvata; controlla permessi Foto e spazio disponibile.');}finally{lock.current=false;if(alive.current)setBusy(false);}}
+ async function analyze(){await exclusive(async()=>{
+  if(Platform.OS!=='ios'||!photoClassifierAvailable){setMessage('Il filtro locale richiede la nuova versione iOS distribuita tramite TestFlight.');return;}
+  const MediaLibrary=await import('expo-media-library');
+  const permission=await MediaLibrary.requestPermissionsAsync(false,['photo']);
+  if(!permission.granted){setMessage('Accesso Foto non concesso. Verifica le Impostazioni dell’iPhone.');return;}
+  if(stop.current)return;
+  let current=snapshot.current;
+  if(current.lastBatch.length===20&&!current.complete){
+   // Archive before clearing the current batch; storage failure leaves it reviewable.
+   await AsyncStorage.setItem(archiveKey(current.batchNumber),JSON.stringify(current.lastBatch));
+   current={...current,batchNumber:current.batchNumber+1,lastBatch:[]};await save(current);
   }
-  try{
-   const MediaLibrary=await import('expo-media-library');
-   const permission=await MediaLibrary.requestPermissionsAsync(false,['photo']);
-   if(!permission.granted){
-    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'denied',count:0,observations:0,message:'Accesso Foto non concesso. Puoi modificarlo nelle Impostazioni del telefono.'});
-    return;
-   }
-   const {Query,AssetField,MediaType}=MediaLibrary;
-   let offset=0,total=0,pages=0;const metadata:PhotoMeta[]=[];
-   for(;;){
-    const assets=await new Query()
-     .eq(AssetField.MEDIA_TYPE,MediaType.IMAGE)
-     .limit(250)
-     .offset(offset)
-     .orderBy({key:AssetField.CREATION_TIME,ascending:false})
-     .exeForMetadata();
-    metadata.push(...assets.map(a=>({id:a.id,creationTime:a.creationTime,width:a.width,height:a.height,isFavorite:a.isFavorite})));
-    total+=assets.length;pages++;
-    setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:0,message:`Indicizzazione locale: ${total} foto lette. Nessun originale caricato.`});
-    if(assets.length<250)break;
-    offset+=assets.length;
-    if(pages>2000)throw new Error('Limite di sicurezza scansione');
-   }
-   const groups=clusterByTime(metadata).sort((a,b)=>(b[0]?.creationTime??0)-(a[0]?.creationTime??0));
-   const observations:PrivateObservation[]=groups.map(group=>({id:makeObservationId(group.map(a=>a.id),group[0]?.creationTime??null),assetIds:rankObservationPhotos(group,8).map(a=>a.assetId),capturedAt:group[0]?.creationTime??null,preciseLocation:null,appleCandidate:null,verificationStatus:'unreviewed'}));
-   await AsyncStorage.setItem(privateKey,JSON.stringify({version:1,observations}));
-   setState({permission:(permission as {accessPrivileges?:string}).accessPrivileges==='limited'?'limited':'granted',count:total,observations:observations.length,message:`Indice completato: ${total} foto accessibili, raggruppate localmente in ${observations.length} gruppi per data; le foto senza data restano separate. GPS/EXIF vengono letti solo quando richiedi l’analisi dei gruppi. Nessun riconoscimento automatico è eseguito.`});
-  }catch(e){
-   setState(s=>({...s,message:'Scansione non completata. Verifica il permesso Foto e riprova.'}));
+  if(current.complete){setMessage('Le foto accessibili sono state analizzate. Puoi revisionare l’ultimo lotto.');return;}
+  if(!manifest.current){
+   const raw=await AsyncStorage.getItem(manifestKey());
+   if(raw)manifest.current=decodeManifest(raw);
+   else {if(current.offset>0)throw Error('Elenco foto mancante');const photos=await createPhotoSnapshot();await AsyncStorage.setItem(manifestKey(),JSON.stringify(photos));manifest.current=photos;}
   }
- }
-
- async function enrich(){
-  try{
-   const raw=await AsyncStorage.getItem(privateKey);if(!raw){setState(s=>({...s,message:'Prima esegui l’indicizzazione della libreria.'}));return;}
-   const parsed=JSON.parse(raw) as {version:1;observations:PrivateObservation[]};
-   const evidence=await enrichCandidates(parsed.observations,100);
-   await AsyncStorage.setItem(privateKey,JSON.stringify(parsed));
-   await AsyncStorage.setItem(evidenceKey,JSON.stringify({version:1,evidence}));
-   setState(s=>({...s,message:`Arricchiti privatamente ${evidence.length} gruppi con GPS/EXIF. Le coordinate precise restano sul dispositivo. Prossimo stadio: revisione visuale 3+1.`}));
-  }catch{setState(s=>({...s,message:'Arricchimento GPS/EXIF non riuscito. Riprova dopo aver verificato il permesso Foto.'}));}
- }
-
- async function prepareReview(){
-  try{
-   const raw=await AsyncStorage.getItem(privateKey);if(!raw){setState(s=>({...s,message:'Prima indicizza la libreria.'}));return;}
-   const parsed=JSON.parse(raw) as {version:1;observations:PrivateObservation[]};
-   const queue=buildVisualReviewQueue(parsed.observations,100);
-   const combined=await visualReviewStore.merge(queue);
-   setState(s=>({...s,message:`Coda 3+1 pronta: ${combined.length} osservazioni. Ogni gruppo mantiene al massimo 8 scatti e richiede 3 caratteri diagnostici + 1 conferma prima di essere considerato completo.`}));
-  }catch{setState(s=>({...s,message:'Preparazione della coda 3+1 non riuscita.'}));}
- }
+  setMessage('Analisi locale in corso. Puoi mettere in pausa; nessuna foto viene inviata.');
+  const result=await runPhotoBatch(current,{
+   query:async offset=>manifest.current!.slice(offset,offset+20),
+   classify:photo=>classifyLocalPhoto(photo.id),save,stopped:()=>stop.current
+  });
+  display(result);
+  setMessage(stop.current?'In pausa. La prossima analisi riprende dalla foto successiva.':result.complete?'Foto accessibili terminate. Controlla i risultati prima di confermare.':'Lotto terminato. Controlla i risultati e conferma i funghi nel 3+1 prima di proseguire.');
+ });}
+ async function change(id:string,decision:Decision){await exclusive(async()=>{if(history){const photos=history.photos.map(p=>p.id===id?{...p,decision}:p);await AsyncStorage.setItem(archiveKey(history.number),JSON.stringify(photos));setHistory({...history,photos});}else await save({...snapshot.current,lastBatch:snapshot.current.lastBatch.map(p=>p.id===id?{...p,decision}:p)});});}
+ async function browse(number:number){await exclusive(async()=>{if(number===snapshot.current.batchNumber){setHistory(null);return;}const raw=await AsyncStorage.getItem(archiveKey(number));if(!raw)throw Error('Lotto mancante');const decoded=decodeScan(JSON.stringify({...createScan(),lastBatch:JSON.parse(raw)}));setHistory({number,photos:decoded.lastBatch});});}
+ async function restart(){await exclusive(async()=>{const old=snapshot.current;if(old.lastBatch.length)await AsyncStorage.setItem(archiveKey(old.batchNumber),JSON.stringify(old.lastBatch));await save(createScan());manifest.current=null;setHistory(null);setMessage('Nuova scansione pronta: includerà le foto ora autorizzate. Le bozze 3+1 sono conservate.');});}
+ const visible=history?.photos??scan.lastBatch;
+ const visibleNumber=history?.number??scan.batchNumber;
+ async function confirm(){await exclusive(async()=>{
+  const selected=(history?.photos??snapshot.current.lastBatch).filter(p=>p.decision==='candidate');
+  if(!selected.length){setMessage('Nessun fungo selezionato. Puoi correggere manualmente anche le foto incerte.');return;}
+  const observations=observationsForPhotos(selected);
+  await visualReviewStore.merge(buildVisualReviewQueue(observations,20));
+  setMessage(`${selected.length} foto confermate nella coda 3+1. Le bozze precedenti sono conservate.`);
+ });}
  return <ScrollView contentContainerStyle={s.page}>
-  <Text style={s.title}>La mia raccolta fotografica</Text>
-  <Text style={s.body}>Fungo Italia può indicizzare le foto autorizzate sul dispositivo senza trasferire l'intera libreria. Gli originali restano sul telefono finché non scegli di usare una fotografia in una scheda.</Text>
-  <View style={s.card}><Text style={s.head}>Pipeline 3+1</Text><Text style={s.body}>Indicizza le foto autorizzate, forma gruppi per data (foto senza data separate), ordina prima i più recenti e preseleziona fino a 8 scatti per ciascuno dei primi 100 gruppi. In 3+1 puoi rimuovere gli scatti non pertinenti e compilare la bozza. Non riconosce automaticamente funghi, esemplari o parti anatomiche.</Text></View>
-  <Pressable accessibilityRole="button" onPress={scan} style={s.button}><Text style={s.buttonText}>Autorizza e indicizza Foto</Text></Pressable>
-  <Pressable accessibilityRole="button" onPress={enrich} style={s.secondary}><Text style={s.secondaryText}>Analizza GPS/EXIF dei primi 100 gruppi</Text></Pressable>
-  <Pressable accessibilityRole="button" onPress={prepareReview} style={s.secondary}><Text style={s.secondaryText}>Prepara coda visuale 3+1</Text></Pressable>
-  <View style={s.card}><Text style={s.head}>Stato</Text><Text style={s.body}>{state.message}</Text>{state.count>0&&<Text style={s.count}>{state.count} foto indicizzate</Text>}{state.observations>0&&<Text style={s.count}>{state.observations} gruppi temporali</Text>}</View>
-  <Text style={s.note}>Privacy: l'autorizzazione può essere completa o limitata. Questa prima fase legge soltanto l'indice della libreria; non invia automaticamente fotografie né coordinate.</Text>
+  <Text style={s.title}>Selezione locale delle foto</Text>
+  <Text style={s.body}>Analizza fino a 20 immagini alla volta, una per volta, dalla più recente. Apple Vision cerca possibili funghi sul dispositivo. Non identifica la specie o la commestibilità. Verifica anche le immagini escluse: il filtro può sbagliare.</Text>
+  <View style={s.card}><Text style={s.head}>Lotto {visibleNumber}: {visible.length} / 20</Text><Text style={s.body}>{scan.total} foto analizzate · {visible.filter(p=>p.decision==='candidate').length} possibili funghi</Text><Text accessibilityRole="alert" style={s.body}>{message}</Text></View>
+  <Pressable accessibilityRole="button" disabled={busy||!ready||scan.complete||!!history} onPress={()=>void analyze()} style={[s.button,(busy||!ready||scan.complete||!!history)&&s.disabled]}><Text style={s.buttonText}>{scan.total?'Continua: massimo 20 foto':'Autorizza e analizza 20 foto'}</Text></Pressable>
+  {busy&&<Pressable accessibilityRole="button" onPress={()=>{stop.current=true;setMessage('Pausa richiesta. Attendo il salvataggio della foto corrente.');}} style={s.secondary}><Text style={s.secondaryText}>Ferma dopo la foto corrente</Text></Pressable>}
+  {!!visible.length&&<Pressable disabled={busy} style={[s.button,busy&&s.disabled]} onPress={()=>void confirm()}><Text style={s.buttonText}>Conferma le selezionate nel 3+1</Text></Pressable>}
+  <View style={s.row}>{visibleNumber>1&&<Pressable disabled={busy} style={s.secondary} onPress={()=>void browse(visibleNumber-1)}><Text>Lotto precedente</Text></Pressable>}{history&&<Pressable disabled={busy} style={s.secondary} onPress={()=>void browse(Math.min(scan.batchNumber,visibleNumber+1))}><Text>Lotto successivo</Text></Pressable>}</View>
+  {scan.complete&&<Pressable disabled={busy} style={s.secondary} onPress={()=>void restart()}><Text>Nuova scansione delle foto autorizzate</Text></Pressable>}
+  {visible.map((photo,i)=><View key={photo.id} style={s.card}>
+   <Text style={s.head}>Foto {i+1} · {labels[photo.decision]}</Text><Text style={s.note}>Selezione da verificare manualmente</Text>{photo.uri?<Image source={{uri:photo.uri}} style={s.image} resizeMode="contain"/>:<Text style={s.body}>Miniatura non disponibile localmente</Text>}{photo.reason&&<Text style={s.body}>{photo.reason}</Text>}
+   <View style={s.row}>{(['candidate','other','uncertain'] as Decision[]).map(decision=><Pressable accessibilityRole="button" accessibilityState={{selected:photo.decision===decision}} disabled={busy} key={decision} style={[s.choice,photo.decision===decision&&s.chosen]} onPress={()=>void change(photo.id,decision)}><Text style={s.secondaryText}>{labels[decision]}</Text></Pressable>)}</View>
+  </View>)}
+  <Text style={s.note}>Solo miniature locali; niente invio di fotografie o coordinate. Le foto disponibili soltanto su iCloud restano incerte. Puoi concedere accesso solo alle foto che scegli. Ogni lotto viene conservato sul dispositivo; la coda 3+1 mantiene solo le foto che confermi.</Text>
  </ScrollView>;
 }
-const s=StyleSheet.create({page:{padding:16,gap:14},title:{fontSize:22,fontWeight:'800',color:'#174f2b'},body:{fontSize:15,lineHeight:21,color:'#304c39'},card:{padding:14,borderRadius:14,backgroundColor:'#fff',borderWidth:1,borderColor:'#d5dfd3',gap:6},head:{fontSize:16,fontWeight:'800',color:'#174f2b'},button:{padding:15,borderRadius:14,backgroundColor:'#174f2b',alignItems:'center'},buttonText:{color:'#fff',fontWeight:'800'},count:{fontSize:18,fontWeight:'800',color:'#174f2b'},note:{fontSize:12,lineHeight:17,color:'#607268'},secondary:{padding:14,borderRadius:14,borderWidth:1,borderColor:'#174f2b',alignItems:'center'},secondaryText:{color:'#174f2b',fontWeight:'800'}});
+const s=StyleSheet.create({page:{padding:16,gap:14},title:{fontSize:22,fontWeight:'800',color:'#174f2b'},body:{fontSize:15,lineHeight:21,color:'#304c39'},card:{padding:14,borderRadius:14,backgroundColor:'#fff',borderWidth:1,borderColor:'#d5dfd3',gap:8},head:{fontSize:16,fontWeight:'800',color:'#174f2b'},button:{padding:15,borderRadius:14,backgroundColor:'#174f2b',alignItems:'center'},buttonText:{color:'#fff',fontWeight:'800'},note:{fontSize:12,lineHeight:17,color:'#607268'},secondary:{padding:14,borderRadius:14,borderWidth:1,borderColor:'#174f2b',alignItems:'center'},secondaryText:{color:'#174f2b',fontWeight:'700'},disabled:{opacity:.4},image:{width:'100%',height:180,borderRadius:10},row:{flexDirection:'row',flexWrap:'wrap',gap:8},choice:{padding:10,minHeight:44,borderRadius:10,borderWidth:1,borderColor:'#d5dfd3'},chosen:{backgroundColor:'#dcebdc',borderColor:'#174f2b'}});
