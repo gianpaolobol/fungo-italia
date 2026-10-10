@@ -1,0 +1,16 @@
+name: Apple Vision photo filter smoke
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/vision-photo-smoke.yml]
+permissions:
+  contents: read
+jobs:
+  vision:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exercise Apple Vision on existing atlas images
+        run: swift scripts/vision-photo-smoke.swift
