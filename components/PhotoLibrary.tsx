@@ -7,6 +7,7 @@ import {createScan,decodeScan,runPhotoBatch,scanKey,PhotoScan,Decision,Photo,Pho
 import {classifyLocalPhoto,photoClassifierAvailable,createPhotoSnapshot} from '../src/localPhotoClassifier';
 
 const labels:Record<Decision,string>={candidate:'Possibile fungo',other:'Non pertinente',uncertain:'Incerta'};
+const showable=(photo:PhotoResult)=>photo.decision!=='other';
 export default function PhotoLibrary(){
  const [scan,setScan]=useState<PhotoScan>(createScan),[busy,setBusy]=useState(false),[ready,setReady]=useState(false),[message,setMessage]=useState('Caricamento del punto di ripresa…');
  const [history,setHistory]=useState<{number:number;photos:PhotoResult[]}|null>(null);
@@ -26,7 +27,6 @@ export default function PhotoLibrary(){
   if(stop.current)return;
   let current=snapshot.current;
   if(current.lastBatch.length===20&&!current.complete){
-   // Archive before clearing the current batch; storage failure leaves it reviewable.
    await AsyncStorage.setItem(archiveKey(current.batchNumber),JSON.stringify(current.lastBatch));
    current={...current,batchNumber:current.batchNumber+1,lastBatch:[]};await save(current);
   }
@@ -42,12 +42,14 @@ export default function PhotoLibrary(){
    classify:photo=>classifyLocalPhoto(photo.id),save,stopped:()=>stop.current
   });
   display(result);
-  setMessage(stop.current?'In pausa. La prossima analisi riprende dalla foto successiva.':result.complete?'Foto accessibili terminate. Controlla i risultati prima di confermare.':'Lotto terminato. Controlla i risultati e conferma i funghi nel 3+1 prima di proseguire.');
+  const visibleResult=result.lastBatch.filter(showable).length;
+  setMessage(stop.current?'In pausa. La prossima analisi riprende dalla foto successiva.':result.complete?'Foto accessibili terminate. Controlla i risultati prima di confermare.':visibleResult?'Lotto terminato. Controlla i risultati e conferma i funghi nel 3+1 prima di proseguire.':'Lotto terminato: nessuna foto con funghi da mostrare. Le immagini non pertinenti sono state scartate.');
  });}
  async function change(id:string,decision:Decision){await exclusive(async()=>{if(history){const photos=history.photos.map(p=>p.id===id?{...p,decision}:p);await AsyncStorage.setItem(archiveKey(history.number),JSON.stringify(photos));setHistory({...history,photos});}else await save({...snapshot.current,lastBatch:snapshot.current.lastBatch.map(p=>p.id===id?{...p,decision}:p)});});}
  async function browse(number:number){await exclusive(async()=>{if(number===snapshot.current.batchNumber){setHistory(null);return;}const raw=await AsyncStorage.getItem(archiveKey(number));if(!raw)throw Error('Lotto mancante');const decoded=decodeScan(JSON.stringify({...createScan(),lastBatch:JSON.parse(raw)}));setHistory({number,photos:decoded.lastBatch});});}
  async function restart(){await exclusive(async()=>{const old=snapshot.current;if(old.lastBatch.length)await AsyncStorage.setItem(archiveKey(old.batchNumber),JSON.stringify(old.lastBatch));await save(createScan());manifest.current=null;setHistory(null);setMessage('Nuova scansione pronta: includerà le foto ora autorizzate. Le bozze 3+1 sono conservate.');});}
- const visible=history?.photos??scan.lastBatch;
+ const allPhotos=history?.photos??scan.lastBatch;
+ const visible=allPhotos.filter(showable);
  const visibleNumber=history?.number??scan.batchNumber;
  async function confirm(){await exclusive(async()=>{
   const selected=(history?.photos??snapshot.current.lastBatch).filter(p=>p.decision==='candidate');
@@ -58,16 +60,17 @@ export default function PhotoLibrary(){
  });}
  return <ScrollView contentContainerStyle={s.page}>
   <Text style={s.title}>Selezione locale delle foto</Text>
-  <Text style={s.body}>Analizza fino a 20 immagini alla volta, una per volta, dalla più recente. Apple Vision cerca possibili funghi sul dispositivo. Non identifica la specie o la commestibilità. Verifica anche le immagini escluse: il filtro può sbagliare.</Text>
-  <View style={s.card}><Text style={s.head}>Lotto {visibleNumber}: {visible.length} / 20</Text><Text style={s.body}>{scan.total} foto analizzate · {visible.filter(p=>p.decision==='candidate').length} possibili funghi</Text><Text accessibilityRole="alert" style={s.body}>{message}</Text></View>
+  <Text style={s.body}>Analizza fino a 20 immagini alla volta, una per volta, dalla più recente. Apple Vision cerca possibili funghi sul dispositivo. Non identifica la specie o la commestibilità. Le immagini non pertinenti vengono scartate dalla visualizzazione.</Text>
+  <View style={s.card}><Text style={s.head}>Lotto {visibleNumber}: {allPhotos.length} / 20</Text><Text style={s.body}>{scan.total} foto analizzate · {visible.length} immagini da verificare · {allPhotos.filter(p=>p.decision==='candidate').length} possibili funghi</Text><Text accessibilityRole="alert" style={s.body}>{message}</Text></View>
   <Pressable accessibilityRole="button" disabled={busy||!ready||scan.complete||!!history} onPress={()=>void analyze()} style={[s.button,(busy||!ready||scan.complete||!!history)&&s.disabled]}><Text style={s.buttonText}>{scan.total?'Continua: massimo 20 foto':'Autorizza e analizza 20 foto'}</Text></Pressable>
   {busy&&<Pressable accessibilityRole="button" onPress={()=>{stop.current=true;setMessage('Pausa richiesta. Attendo il salvataggio della foto corrente.');}} style={s.secondary}><Text style={s.secondaryText}>Ferma dopo la foto corrente</Text></Pressable>}
   {!!visible.length&&<Pressable disabled={busy} style={[s.button,busy&&s.disabled]} onPress={()=>void confirm()}><Text style={s.buttonText}>Conferma le selezionate nel 3+1</Text></Pressable>}
   <View style={s.row}>{visibleNumber>1&&<Pressable disabled={busy} style={s.secondary} onPress={()=>void browse(visibleNumber-1)}><Text>Lotto precedente</Text></Pressable>}{history&&<Pressable disabled={busy} style={s.secondary} onPress={()=>void browse(Math.min(scan.batchNumber,visibleNumber+1))}><Text>Lotto successivo</Text></Pressable>}</View>
   {scan.complete&&<Pressable disabled={busy} style={s.secondary} onPress={()=>void restart()}><Text>Nuova scansione delle foto autorizzate</Text></Pressable>}
+  {!visible.length&&allPhotos.length>0&&<View style={s.card}><Text style={s.head}>Nessuna immagine con funghi da mostrare</Text><Text style={s.body}>Tutte le immagini del lotto sono state classificate come non pertinenti e sono state nascoste per mantenere pulita la revisione.</Text></View>}
   {visible.map((photo,i)=><View key={photo.id} style={s.card}>
    <Text style={s.head}>Foto {i+1} · {labels[photo.decision]}</Text><Text style={s.note}>Selezione da verificare manualmente</Text>{photo.uri?<Image source={{uri:photo.uri}} style={s.image} resizeMode="contain"/>:<Text style={s.body}>Miniatura non disponibile localmente</Text>}{photo.reason&&<Text style={s.body}>{photo.reason}</Text>}
-   <View style={s.row}>{(['candidate','other','uncertain'] as Decision[]).map(decision=><Pressable accessibilityRole="button" accessibilityState={{selected:photo.decision===decision}} disabled={busy} key={decision} style={[s.choice,photo.decision===decision&&s.chosen]} onPress={()=>void change(photo.id,decision)}><Text style={s.secondaryText}>{labels[decision]}</Text></Pressable>)}</View>
+   <View style={s.row}>{(['candidate','uncertain'] as Decision[]).map(decision=><Pressable accessibilityRole="button" accessibilityState={{selected:photo.decision===decision}} disabled={busy} key={decision} style={[s.choice,photo.decision===decision&&s.chosen]} onPress={()=>void change(photo.id,decision)}><Text style={s.secondaryText}>{labels[decision]}</Text></Pressable>)}</View>
   </View>)}
   <Text style={s.note}>Solo miniature locali; niente invio di fotografie o coordinate. Le foto disponibili soltanto su iCloud restano incerte. Puoi concedere accesso solo alle foto che scegli. Ogni lotto viene conservato sul dispositivo; la coda 3+1 mantiene solo le foto che confermi.</Text>
  </ScrollView>;
