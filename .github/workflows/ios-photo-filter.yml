@@ -1,6 +1,9 @@
 name: Build iOS local photo filter
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/ios-photo-filter.yml]
 permissions:
   contents: read
 concurrency:
