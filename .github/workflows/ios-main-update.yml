@@ -1,0 +1,35 @@
+name: Align TestFlight iOS with main
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/ios-main-update.yml']
+permissions:
+  contents: read
+concurrency:
+  group: ios-production-update
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Validate current app
+        run: |
+          npm run prepare:data
+          npm run typecheck
+          node --test scripts/*.test.mjs
+      - name: Verify compatibility with TestFlight build 5
+        run: |
+          npx expo-updates runtimeversion:resolve --platform ios > /tmp/runtime.json
+          node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync('/tmp/runtime.json','utf8'));if(r.runtimeVersion!=='9d5f0a507eaa68f99fc6794a7f063631362c38f8')throw Error('Runtime mismatch: rebuild required');console.log(r.runtimeVersion)"
+      - name: Publish current main to TestFlight production channel
+        run: npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Align iOS with main $GITHUB_SHA" --non-interactive --json
