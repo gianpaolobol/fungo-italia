@@ -1,0 +1,35 @@
+name: Publish iOS layout fix
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/ios-layout-update.yml]
+permissions:
+  contents: read
+concurrency:
+  group: ios-layout-update
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Validate layout source
+        run: |
+          npm run prepare:data
+          npm run typecheck
+          node --test scripts/*.test.mjs
+      - name: Verify compatibility with iOS build 3
+        run: |
+          npx expo-updates runtimeversion:resolve --platform ios > /tmp/runtime.json
+          node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync('/tmp/runtime.json','utf8'));if(r.runtimeVersion!=='29a60ac4b6192d029d49078ef7ccd2c3f35415db')throw Error('Runtime mismatch: rebuild required');console.log(r.runtimeVersion)"
+      - name: Publish layout correction to installed iOS app
+        run: npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Fix iPhone atlas safe areas, food label wrapping and photo thumbnails" --non-interactive

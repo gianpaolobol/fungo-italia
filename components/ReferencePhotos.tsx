@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Image,Linking,Modal,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {SafeAreaProvider,SafeAreaView} from 'react-native-safe-area-context';
 import {referenceImageAssets} from '../src/data/reference-image-assets';
 export type ReferenceImage={src:string;view:'lateral'|'top'|'underside';alt:string;credit:string;subjectTaxon?:string;sourceUrl?:string;licenseUrl?:string};
 const publicHttps=(value?:string)=>typeof value==='string'&&/^https:\/\/[a-z0-9.-]+(?::[0-9]+)?(?:[/?#][^\s]*)?$/i.test(value);
@@ -19,15 +19,15 @@ export default function ReferencePhotos({taxon}:{taxon:{scientificName:string;re
   <View style={styles.triptych}>{views.map(([view,label])=>{
    const photo=photos.find(p=>p.view===view),source=photo?referenceImageAssets[photo.src]:undefined;
    const caption=referenceLabel(photo,label);
-   return <View key={view} style={styles.cell}>{photo&&source?<Pressable accessibilityRole="button" accessibilityLabel={'Ingrandisci vista '+caption.toLowerCase()+' di '+(photo.subjectTaxon||taxon.scientificName)} onPress={()=>{setSelected(photo);setZoom(1);}} style={styles.thumbnail}><Image source={source} accessibilityLabel={photo.alt} style={styles.image} resizeMode="contain"/></Pressable>:<View style={styles.thumbnail}><Text style={styles.pending}>Vista non disponibile</Text></View>}<Text style={styles.caption}>{caption}</Text>{subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==taxon.scientificName&&<Text style={styles.subject}>{photo.subjectTaxon}</Text>}</View>;
+   return <View key={view} style={styles.cell}>{photo&&source?<Pressable accessibilityRole="button" accessibilityLabel={'Ingrandisci vista '+caption.toLowerCase()+' di '+(photo.subjectTaxon||taxon.scientificName)} onPress={()=>{setSelected(photo);setZoom(1);}} style={styles.thumbnail}><Image source={source} accessibilityLabel={photo.alt} style={styles.image} resizeMode="cover"/></Pressable>:<View style={styles.thumbnail}><Text style={styles.pending}>Vista non disponibile</Text></View>}<Text style={styles.caption}>{caption}</Text>{subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==taxon.scientificName&&<Text style={styles.subject}>{photo.subjectTaxon}</Text>}</View>;
   })}</View>
   <Modal visible={!!selected} animationType="fade" onRequestClose={close}>
-   <SafeAreaView style={styles.viewer} onLayout={event=>setWidth(event.nativeEvent.layout.width)}>
+   <SafeAreaProvider><SafeAreaView style={styles.viewer} onLayout={event=>setWidth(event.nativeEvent.layout.width)}>
     <View style={styles.controls}><Pressable accessibilityRole="button" onPress={close} style={styles.button}><Text>Chiudi immagine</Text></Pressable><Text style={styles.title}>{selected?.subjectTaxon||taxon.scientificName}{selected?' · '+referenceLabel(selected,views.find(([view])=>view===selected.view)?.[1]||''):''}</Text></View>
     <View style={styles.controls}><Pressable accessibilityRole="button" accessibilityState={{disabled:zoom<=1}} disabled={zoom<=1} onPress={()=>setZoom(z=>Math.max(1,z-.5))} style={styles.button}><Text>Riduci</Text></Pressable><Text accessibilityLiveRegion="polite">{Math.round(zoom*100)}%</Text><Pressable accessibilityRole="button" accessibilityState={{disabled:zoom>=4}} disabled={zoom>=4} onPress={()=>setZoom(z=>Math.min(4,z+.5))} style={styles.button}><Text>Ingrandisci</Text></Pressable></View>
     <ScrollView style={styles.stage} nestedScrollEnabled><ScrollView horizontal nestedScrollEnabled contentContainerStyle={styles.canvas}>{asset&&selected&&<Image source={asset} accessibilityLabel={selected.alt} resizeMode="contain" style={{width:imageWidth,height:imageHeight}}/>}</ScrollView></ScrollView>
     <ScrollView style={styles.creditBox}><Text selectable style={styles.credit}>{selected?.credit}</Text>{([['sourceUrl','Fonte'],['licenseUrl','Licenza']] as const).map(([field,label])=>selected&&publicHttps(selected[field])?<Pressable key={field} accessibilityRole="link" accessibilityLabel={label+' della fotografia'} onPress={()=>{void Linking.openURL(selected[field]!).catch(()=>{});}} style={styles.button}><Text>{label}</Text></Pressable>:null)}</ScrollView>
-   </SafeAreaView>
+   </SafeAreaView></SafeAreaProvider>
   </Modal>
  </View>;
 }
