@@ -59,3 +59,19 @@ test('variable or explicitly not exclusively short latency has no overlapping di
  const q=core.detailQuestions(c,realBank).find(q=>q.id==='latency');
  assert.equal(q.options.length,2);
 });
+test('three-letter prefix returns every matching atlas name, including Amanita rubescens, with no substring matches',()=>{
+ const names=[...realBank,{acceptedNames:['Xamanita ficta']}];
+ const expected=[...new Set(names.flatMap(c=>c.acceptedNames).filter(n=>core.normalizeName(n).startsWith('ama')))];
+ const actual=core.suggestNames(names,'Ama');
+ assert.ok(expected.length>8);
+ assert.ok(actual.includes('Amanita rubescens'));
+ assert.deepEqual(new Set(actual),new Set(expected));
+ assert.ok(!actual.includes('Xamanita ficta'));
+});
+test('every three-letter prefix in the documented name pool returns its full matching set',()=>{
+ const pool=[...new Set(realBank.flatMap(c=>c.acceptedNames))];
+ for(const prefix of new Set(pool.map(n=>core.normalizeName(n).slice(0,3)))){
+  const expected=pool.filter(n=>core.normalizeName(n).startsWith(prefix));
+  assert.deepEqual(new Set(core.suggestNames(realBank,prefix)),new Set(expected),prefix);
+ }
+});

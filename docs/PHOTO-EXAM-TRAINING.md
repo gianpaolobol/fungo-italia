@@ -5,7 +5,7 @@ Impostazione confermata dall'utente il 12 ottobre 2026.
 ## Flusso
 
 - Ogni sessione parte con 15 specie documentate, mantenendo la distribuzione della banca esistente.
-- Dopo tre caratteri vengono proposti nomi scientifici e sinonimi accettati. Il tocco completa il nome; il ricorso ai suggerimenti è registrato.
+- Dopo tre caratteri vengono proposti tutti i nomi scientifici e sinonimi accettati che iniziano con il prefisso inserito, senza un limite al numero di risultati. Il tocco completa il nome; il ricorso ai suggerimenti è registrato.
 - La commestibilità usa i colori dell'atlante.
 - La preparazione richiede tutte le precauzioni documentate; nessuna omissione è considerata corretta.
 - Tossicologia: risposte multiple su sindrome, latenza e manifestazioni/gravità. Le descrizioni equivalenti non sono distrattori. I casi con latenza variabile o non precisata non ricevono intervalli alternativi arbitrari.
@@ -32,3 +32,7 @@ I test automatici non certificano il riconoscimento micologico tramite immagini 
 ## Pubblicazione
 
 La produzione iOS usa `ios-main-update.yml` sul canale `production`, compatibile con TestFlight 1.0.0 (5), runtime `9d5f0a507eaa68f99fc6794a7f063631362c38f8`. Pages pubblica la stessa revisione web. Il backup `backup/main-pre-beta-publish-20261009` non deve essere modificato.
+
+## Correzione del 12 ottobre: elenco completo
+
+Il limite di otto risultati del test fotografico ometteva Amanita rubescens dopo «Ama». È stato rimosso, insieme al limite del campo 3+1. L’esame confronta esclusivamente l’inizio del nome, ignorando maiuscole/minuscole; i test controllano ogni prefisso di tre lettere della banca e l’elenco completo nell’interfaccia web. Le sessioni e lo storico esistenti restano compatibili.

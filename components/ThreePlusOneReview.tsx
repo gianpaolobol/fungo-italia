@@ -34,7 +34,7 @@ export default function ThreePlusOneReview({active=true}:{active?:boolean}){
  }
  async function retry(){await retryPendingVisualReviews(pending.current,persist);}
  const item=queue[index];
- const suggestions=item?suggestionsFromAtlas(taxa,item.taxonCandidate||'',10).filter(x=>findTaxon(x.scientificName)):[];
+ const suggestions=item?suggestionsFromAtlas(taxa,item.taxonCandidate||'').filter(x=>findTaxon(x.scientificName)):[];
  function patch(p:Partial<VisualReviewItem>){if(!canWrite.current||!item)return;const snapshot={...item,...p,confidence:'unknown' as const,status:p.status??'reviewing' as const};const next=queue.map((x,i)=>i===index?snapshot:x);setQueue(next);setResult(null);pending.current.set(snapshot.observationId,snapshot);setUnsaved(pending.current.size);void persist(snapshot);}
  function check(){if(!item)return;const outcome=validate(item);setResult(outcome);patch({status:outcome.ok?'done':'needs-more-evidence',confidence:outcome.ok?'medium':'low'});}
  function go(next:number){setIndex(Math.max(0,Math.min(queue.length-1,next)));setResult(null);}

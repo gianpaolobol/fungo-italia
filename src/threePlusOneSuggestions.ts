@@ -1,4 +1,4 @@
-import {StudyTaxon} from '../components/Studio';
+import type {StudyTaxon} from '../components/Studio';
 export type CharacterSuggestion={taxonId:string;scientificName:string;characters:[string,string,string];confirmation:string;source:'atlas';};
 function clean(value:unknown){return typeof value==='string'?value.trim():'';}
 function normalize(value:unknown){return clean(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('it');}
@@ -23,14 +23,12 @@ function score(taxon:StudyTaxon,query:string){
   const n=normalize(name);if(!n)continue;
   if(n===q)best=Math.max(best,100);
   else if(n.startsWith(q))best=Math.max(best,90);
-  else if(n.split(/[^a-z0-9]+/).some(part=>part.startsWith(q)))best=Math.max(best,80);
-  else if(n.includes(q))best=Math.max(best,50);
  }
  return best;
 }
-export function suggestionsFromAtlas(taxa:StudyTaxon[],query:string,limit=25):CharacterSuggestion[]{
+export function suggestionsFromAtlas(taxa:StudyTaxon[],query:string,limit=Infinity):CharacterSuggestion[]{
  const q=query.trim();
- if(normalize(q).length<2)return [];
+ if(normalize(q).length<3)return [];
  return taxa.map((taxon,index)=>({taxon,index,score:score(taxon,q)}))
   .filter(item=>item.score>0)
   .sort((a,b)=>b.score-a.score||a.taxon.scientificName.localeCompare(b.taxon.scientificName,'it')||a.index-b.index)

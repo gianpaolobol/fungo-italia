@@ -22,3 +22,8 @@ test('prefix matches rank before generic contains matches',()=>{
  const first=suggestionsFromAtlas(taxa,'gom',25)[0];
  assert.equal(first.taxonId,'gom-group');
 });
+test('default suggestions retain every matching species beyond previous limits',()=>{
+ const all=[...Array.from({length:35},(_,i)=>({...base,id:String(i),scientificName:'Amanita specie'+i})),{...base,id:'rubescens',scientificName:'Amanita rubescens'}];
+ assert.equal(suggestionsFromAtlas(all,'ama').length,36);
+ assert.ok(suggestionsFromAtlas(all,'ama').some(x=>x.taxonId==='rubescens'));
+});

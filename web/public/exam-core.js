@@ -54,7 +54,7 @@ export const trainingHistoryKey='fungo-italia:photo-training-history:v2';
 export const foodColors={free:'#9ecb91',conditional:'#d8ebc2',discouraged:'#ffe680','no-food-value':'#ffffff',inedible:'#eeeeee',toxic:'#f49a45',deadly:'#eb5757'};
 export function suggestNames(bank,value){
  const q=normalizeName(value);if(q.length<3)return [];
- return [...new Set(bank.flatMap(c=>c.acceptedNames||[c.scientificName]).filter(n=>typeof n==='string'&&normalizeName(n).includes(q)))].sort((a,b)=>Number(!normalizeName(a).startsWith(q))-Number(!normalizeName(b).startsWith(q))||a.localeCompare(b,'it')).slice(0,8);
+ return [...new Set(bank.flatMap(c=>c.acceptedNames||[c.scientificName]).filter(n=>typeof n==='string'&&normalizeName(n).startsWith(q)))].sort((a,b)=>a.localeCompare(b,'it'));
 }
 function orderedOptions(values,seed){
  const options=[...new Set(values.filter(Boolean))].map((label,i)=>({id:String(i),label}));
