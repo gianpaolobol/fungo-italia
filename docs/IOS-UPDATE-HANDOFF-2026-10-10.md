@@ -1,4 +1,10 @@
-# Fungo Italia — stato aggiornamento iOS
+# Fungo Italia — aggiornamento test del 12 ottobre 2026
+
+Il nuovo test fotografico sostituisce il flusso precedente: suggerimenti dopo tre lettere, correzione immediata, risposte multiple e ripetizione degli errori con storico locale. Dettagli in `PHOTO-EXAM-TRAINING.md`. Verifica: TypeScript, 78 test Node e 64 test web PASS; export iOS e runtime build 5 verificati. La distribuzione usa `ios-main-update.yml` sul canale production.
+
+Le informazioni seguenti descrivono il rilascio storico del 10 ottobre, non l’ultima revisione funzionale.
+
+## Rilascio storico del 10 ottobre
 
 Aggiornato: 2026-10-10, 10:50 UTC
 Branch: `main`

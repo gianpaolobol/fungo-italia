@@ -418,7 +418,7 @@ async function setupOffline(){
 }
 $('#reload').onclick=()=>{const waiting=registration?.waiting;$('#update').hidden=true;if(!waiting){location.reload();return;}navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});waiting.postMessage({type:'ACTIVATE_UPDATE'});};
 async function start(){
- try{const response=await fetch('./data.json');if(!response.ok)throw Error('Catalogo non disponibile');data=await response.json();if(!validCatalog(data))throw Error('Catalogo incompleto');taxa=[...data.catalog,...data.groups];byId=new Map(taxa.map(t=>[t.id,t]));restore();photoExam=initExam({bank:data.examBank||[],showDialog,badge:edibilityBadge});renderTab();window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));void setupOffline();}
+ try{const response=await fetch('./data.json');if(!response.ok)throw Error('Catalogo non disponibile');data=await response.json();if(!validCatalog(data))throw Error('Catalogo incompleto');taxa=[...data.catalog,...data.groups];byId=new Map(taxa.map(t=>[t.id,t]));restore();photoExam=initExam({bank:data.examBank||[],taxa,showDialog,badge:edibilityBadge});renderTab();window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));void setupOffline();}
  catch{$('#main').innerHTML='<section><h1>Catalogo non disponibile</h1><p>La prima apertura richiede connessione. Riprova; i dati personali già salvati non vengono cancellati.</p><button id="retry-load">Riprova caricamento</button></section>';$('#retry-load').onclick=()=>void start();}
 }
 window.addEventListener('fungo:request-atlas',()=>{if(taxa.length)window.dispatchEvent(new CustomEvent('fungo:atlas-ready',{detail:{taxa}}));});

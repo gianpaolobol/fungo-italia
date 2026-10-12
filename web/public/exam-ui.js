@@ -1,96 +1,52 @@
-import {selectCases,gradeAnswer,restoreSession,foodLabels} from './exam-core.js';
-const key='fungo-italia:photo-exam:v1';
+import {startTraining,submitTraining,advanceTraining,restoreTraining,trainingSummary,trainingKey,foodLabels,foodColors,suggestNames,detailQuestions,bankSignature} from './exam-core.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const control=(label,action,id='',extra='')=>'<button type="button" data-exam-action="'+action+'" data-exam-id="'+esc(id)+'" '+extra+'>'+esc(label)+'</button>';
 const views={lateral:'Laterale',top:'Cappello',underside:'Superficie fertile e gambo'};
 export function questionPhotos(c){
  return '<div class="exam-photos">'+c.photos.map((p,i)=>'<figure><button type="button" class="exam-photo" data-exam-action="zoom" aria-label="Ingrandisci immagine '+(i+1)+'"><img src="'+esc(p.src)+'" alt="Esemplare da identificare, immagine '+(i+1)+'" loading="lazy"></button><figcaption>'+esc(views[p.view]||'Vista disponibile')+'</figcaption></figure>').join('')+'</div><p class="small">Tocca una foto per ingrandirla. Alcune viste sono ritagli della stessa fotografia; non rappresentano necessariamente esemplari diversi.</p>';
 }
-export function initExam({bank,showDialog,badge}){
- const byId=new Map(bank.map(c=>[c.id,c]));
- // Invalidate saved answers when reviewed solutions or photo subjects change.
- let hash=2166136261;for(const ch of JSON.stringify(bank))hash=Math.imul(hash^ch.charCodeAt(0),16777619);
- const signature=String(hash>>>0);
- let session=null,reviewIndex=null,storageMessage='',photoMessage='';
- try{const raw=localStorage.getItem(key);if(raw){const restored=restoreSession(raw,bank);if(restored&&restored.signature===signature)session=restored;else storageMessage='La sessione salvata non è compatibile con i contenuti attuali. Avvia una nuova sessione.';}}catch{storageMessage='Memoria locale non disponibile: la sessione resta aperta finché non chiudi o ricarichi l’app.';}
- function save(){try{session.signature=signature;localStorage.setItem(key,JSON.stringify(session));storageMessage='';}catch{storageMessage='Sessione non salvata sul dispositivo. Mantieni aperta questa pagina per conservare le risposte.';}}
- const notice=()=>(storageMessage?'<p class="notice" role="status">'+esc(storageMessage)+'</p>':'')+(photoMessage?'<p class="notice" role="status">'+esc(photoMessage)+'</p>':'');
- const caseAt=i=>byId.get(session.ids[i]);
+export function initExam({bank,taxa=[],showDialog,badge}){
+ const names=[...bank,...(taxa.length?taxa.filter(t=>t.rank==='species').map(t=>({acceptedNames:[t.scientificName,...(t.aliases||[]),...(t.currentAcceptedNames||[])].filter(n=>/^[A-Z][a-z]+ [a-z][a-z-]+$/.test(n)&&!(t.commonNames||[]).includes(n))})):bank)];
+ let session=null,history=[],message='',photoMessage='';
+ try{const raw=localStorage.getItem(trainingKey);if(raw){const saved=JSON.parse(raw);session=restoreTraining(JSON.stringify(saved.session),bank);if(Array.isArray(saved.history))history=saved.history.filter(h=>h&&typeof h.id==='string'&&Array.isArray(h.errors)&&Array.isArray(h.attempts));if(!session)message='La sessione precedente non è compatibile con il catalogo attuale; lo storico è conservato.';}}catch{message='Salvataggio locale non disponibile.';}
+ const notice=()=>message?'<p class="notice" role="alert">'+esc(message)+'</p>':'';
+ function persist(next,h=history){try{localStorage.setItem(trainingKey,JSON.stringify({session:next,history:h}));session=next;history=h;message='';return true;}catch{message='Salvataggio non riuscito. Il test non è avanzato: libera spazio e riprova.';return false;}}
+ function summaryHtml(h){return '<h3>'+esc(new Date(h.startedAt).toLocaleString('it-IT'))+'</h3><p>Primo tentativo: '+h.correct+'/'+h.total+' schede corrette · '+(h.completedAt?'Ripasso completato':'Sessione in corso')+'</p><p>Nome '+h.names+'/'+h.total+' · Commestibilità '+h.categories+'/'+h.total+'</p><p>Preparazione '+(h.preparationCorrect??0)+'/'+(h.preparationTotal??0)+' · Tossicologia '+(h.toxicologyCorrect??0)+'/'+(h.toxicologyTotal??0)+' casi pertinenti</p><p>'+h.assisted+' risposte con suggerimenti · '+h.retries+' tentativi di ripasso</p>'+(h.danger?'<p class="error">'+h.danger+' errori alimentari pericolosi al primo tentativo</p>':'');}
  function open(){
-  reviewIndex=null;
-  const counts=Object.keys(foodLabels).map(cat=>foodLabels[cat]+': '+bank.filter(c=>c.category===cat).length).join(' · ');
-  showDialog('Test fotografico','<h2>15 funghi da riconoscere</h2><p>Nome scientifico, commestibilità e spiegazione della preparazione o della tossicologia. Le categorie alimentari seguono la valutazione del catalogo fondata sulla Guida ragionata.</p><p>'+bank.length+' casi con fotografie attribuite al taxon e soluzione documentata. I gruppi e i casi incompleti restano nell’atlante e sono esclusi da questo test.</p><p class="small">'+esc(counts)+'</p>'+notice()+(session?control(session.complete?'Rivedi ultima correzione':'Riprendi sessione ('+(session.index+1)+'/15)','resume'):'')+'<p class="small">Per studiare senza rete: avvia una sessione con connessione e scarica le sue foto prima di uscire.</p><div class="exam-modes">'+control('Allenamento · correzione immediata','start','training')+control('Simulazione · correzione dopo 15','start','exam')+'</div><p class="notice">Esercizio fotografico per lo studio: non riproduce la valutazione ufficiale né sostituisce l’esame di esemplari reali. “Libera” non significa che qualsiasi consumo a crudo sia sicuro.</p><p class="small">Nome e categoria hanno una correzione automatica. Le spiegazioni aperte si confrontano con una griglia e si autovalutano separatamente. La sessione viene conservata solo su questo dispositivo, quando il salvataggio è disponibile.</p>');
+  const completed=history.filter(h=>h.total===15&&h.signature===bankSignature(bank)),frequent=new Map();for(const h of history)for(const e of h.errors){const old=frequent.get(e.id)||{name:e.name,count:0};frequent.set(e.id,{...old,count:old.count+1});}
+  showDialog('Test fotografico','<h2>15 funghi da riconoscere</h2><p>Completa il nome dai suggerimenti dopo tre lettere. Dopo ogni invio ricevi la correzione; tutte le schede sbagliate vengono riproposte fino alla risposta corretta.</p>'+notice()+control('Inizia 15 casi','start')+(session&&session.phase!=='complete'?control('Riprendi sessione','resume'):'')+'<p class="notice">Esercizio didattico: le foto non autorizzano il consumo. I giudizi seguono il catalogo fondato sulla Guida ragionata. Lo storico è salvato solo su questo dispositivo.</p><h2>Storico delle sessioni</h2>'+(completed.length>=2?'<p>Prime e ultime prestazioni: '+completed[0].correct+'/15 → '+completed[completed.length-1].correct+'/15 al primo tentativo</p>':'')+(history.length?[...history].reverse().map(h=>'<section class="exam-history">'+summaryHtml(h)+control('Dettaglio sessione','history',h.id)+'</section>').join(''):'<p>Nessuna sessione registrata.</p>')+(frequent.size?'<h3>Specie sbagliate più spesso</h3><ul>'+[...frequent.values()].sort((a,b)=>b.count-a.count).slice(0,10).map(e=>'<li>'+esc(e.name)+': '+e.count+' sessioni</li>').join('')+'</ul>':''));
  }
- function begin(mode){
-  photoMessage='';
-  if(bank.length<15){showDialog('Test fotografico','<p>Il pacchetto di test non è disponibile. Aggiorna l’app con connessione attiva.</p>');return;}
-  session={version:1,mode,ids:selectCases(bank).map(c=>c.id),answers:[],index:0,complete:false,signature};reviewIndex=null;save();question();
+ function suggestions(){const node=document.querySelector('#exam-suggestions');if(node)node.innerHTML=suggestNames(names,session.draft.name).filter(n=>n!==session.draft.name).map(n=>control(n,'suggest',n)).join('');}
+ const current=()=>bank.find(c=>c.id===session.queue[0]);
+ function question(keepPosition=false){
+  if(session.phase==='complete'){results();return;}if(session.feedback){feedback();return;}
+  const c=current(),a=session.draft,position=document.querySelector('#detail-body')?.scrollTop||0;
+  showDialog('Allenamento fotografico','<h2>'+(session.phase==='initial'?'Esemplare '+(session.first.length+1)+' di 15':'Ripasso '+session.round+' · '+session.queue.length+' schede rimaste')+'</h2>'+notice()+(photoMessage?'<p role="status">'+esc(photoMessage)+'</p>':'')+control('Scarica foto della sessione','offline')+questionPhotos(c)+'<div class="exam-form"><label for="exam-name">Nome scientifico</label><input id="exam-name" maxlength="200" autocomplete="off" autocapitalize="none" spellcheck="false" value="'+esc(a.name)+'" placeholder="Scrivi almeno tre lettere"><div id="exam-suggestions" aria-label="Suggerimenti dei nomi"></div><h3>Commestibilità</h3><div class="exam-options">'+Object.entries(foodLabels).map(([cat,label])=>control((a.category===cat?'● ':'○ ')+label,'category',cat,'role="radio" aria-checked="'+(a.category===cat)+'" style="background:'+foodColors[cat]+';color:'+(cat==='deadly'?'#fff':'#222')+'"')).join('')+'</div>'+detailQuestions(c,bank).map(q=>'<section><h3>'+esc(q.title)+'</h3><p>'+(q.multiple?'Seleziona tutte le risposte necessarie.':'Seleziona una risposta.')+'</p><div class="exam-options">'+q.options.map(o=>{const selected=a.choices[q.id]?.includes(o.id);return control((selected?'● ':'○ ')+o.label,'choice',o.id,'data-exam-question="'+q.id+'" role="'+(q.multiple?'checkbox':'radio')+'" aria-checked="'+!!selected+'"');}).join('')+'</div></section>').join('')+'</div><div class="exam-controls">'+control('Invia risposta','answer')+control('Torna al menu del test','home')+'</div>');suggestions();if(keepPosition)document.querySelector('#detail-body').scrollTop=position;
  }
- function capture(){
-  const name=document.querySelector('#exam-name');if(!name)return;
-  const old=session.answers[session.index]||{};
-  session.answers[session.index]={...old,name:name.value.slice(0,200),category:document.querySelector('#exam-category').value,detail:document.querySelector('#exam-detail').value.slice(0,5000)};
-  save();
+ function feedback(){
+  const c=current(),r=session.feedback,questions=detailQuestions(c,bank);
+  showDialog('Correzione immediata','<h2>'+(r.grade.passed?'Risposta corretta':'Da ripassare')+'</h2><h3>'+esc(c.name)+'</h3>'+badge({category:c.category})+notice()+'<p>Nome: '+esc(r.answer.name||'Non risposto')+' · '+(r.grade.name?'corretto':'da correggere')+'</p><p>Commestibilità: '+esc(foodLabels[r.answer.category]||'Non risposto')+' · '+(r.grade.category?'corretta':'da correggere')+'</p>'+(r.grade.danger?'<p class="error">Errore alimentare pericoloso: rivedi categoria e condizioni.</p>':'')+questions.map(q=>'<section><h3>'+esc(q.title)+' · '+(r.grade.details.find(d=>d.id===q.id)?.correct?'corretta':'da correggere')+'</h3><p>La tua scelta: '+esc(q.options.filter(o=>r.answer.choices[q.id]?.includes(o.id)).map(o=>o.label).join('; ')||'Non risposto')+'</p><p><strong>Soluzione:</strong> '+esc(q.options.filter(o=>q.correct.includes(o.id)).map(o=>o.label).join('; '))+'</p></section>').join('')+'<details><summary>Fonti della correzione</summary>'+(c.sources||[]).filter(s=>/^https:\/\//.test(s.url||'')).map(s=>'<p><a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title||'Fonte')+'</a> '+esc(s.location||'')+'</p>').join('')+'</details>'+control('Continua','next')+control('Torna al menu del test','home'));
  }
- function question(){
-  reviewIndex=null;const c=caseAt(session.index),a=session.answers[session.index]||{};
-  if(session.mode==='training'&&a.revealed){showTraining();return;}
-  showDialog(session.mode==='exam'?'Simulazione d’esame':'Allenamento fotografico','<h2>Esemplare '+(session.index+1)+' di 15</h2><progress value="'+(session.index+1)+'" max="15" aria-label="Avanzamento"></progress>'+notice()+control('Scarica foto della sessione','offline')+questionPhotos(c)+'<div class="exam-form"><label for="exam-name">Nome scientifico</label><input id="exam-name" maxlength="200" autocomplete="off" autocapitalize="none" spellcheck="false" value="'+esc(a.name)+'" placeholder="Genere e specie"><label for="exam-category">Commestibilità</label><select id="exam-category"><option value="">Non so / non risposto</option>'+Object.entries(foodLabels).map(([v,l])=>'<option value="'+v+'"'+(a.category===v?' selected':'')+'>'+esc(l)+'</option>').join('')+'</select><label for="exam-detail">Preparazione o tossicologia</label><textarea id="exam-detail" maxlength="5000" rows="5" placeholder="Se condizionata: trattamento e condizioni. Se tossica o mortale: sindrome, latenza, manifestazioni e organi coinvolti.">'+esc(a.detail)+'</textarea></div><p class="small">Se non riconosci il fungo puoi lasciare la risposta vuota. La spiegazione non viene valutata automaticamente.</p><div class="exam-controls">'+(session.index>0?control('Precedente','previous'):'')+control(session.mode==='training'?'Confronta la risposta':session.index===14?'Concludi e correggi':'Salva e continua','answer')+'</div>');
- }
- function clinicalRubric(c,a,index){
-  if(!c.detailKind)return c.preparation.length?'<h3>Accorgimenti di studio</h3><ul>'+c.preparation.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul>':'';
-  const kind=c.detailKind==='preparation'?'Preparazione':'Tossicologia';
-  const solution=c.detailKind==='preparation'?'<ul>'+c.preparation.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ul><p class="small">Verifica ogni condizione indicata: non applicare tempi o bolliture generiche a tutte le specie.</p>':'<dl><dt>Sindrome</dt><dd>'+esc(c.syndrome.label)+'</dd><dt>Latenza</dt><dd>'+esc(c.syndrome.latency)+'</dd><dt>Manifestazioni, organi e gravità</dt><dd>'+esc(c.syndrome.severity)+'</dd></dl>';
-  return '<h3>'+kind+' · confronto con la soluzione</h3><p class="exam-written"><strong>La tua spiegazione:</strong> '+esc(a.detail||'Non risposto')+'</p>'+solution+'<p>Confronta tutti i punti della griglia. Segna separatamente la completezza della tua spiegazione.</p><div class="exam-rating">'+[['correct','Completa'],['partial','Parziale'],['wrong','Da ripassare']].map(([v,l])=>control(l,'rate',index+':'+v,'aria-pressed="'+(a.selfRating===v)+'"')).join('')+'</div><p class="small">Autovalutazione: '+esc({correct:'completa',partial:'parziale',wrong:'da ripassare'}[a.selfRating]||'da confermare')+'. Non è un giudizio automatico né una valutazione docente.</p>';
- }
- function solution(index){
-  const c=caseAt(index),a=session.answers[index]||{},g=gradeAnswer(c,a);
-  const sources=[...new Map(c.sources.filter(s=>/^https:\/\//.test(s.url||'')).map(s=>[s.url+'|'+s.location,s])).values()];
-  return '<h2>'+esc(c.name)+'</h2>'+badge({category:c.category})+'<p><strong>Nome:</strong> '+esc(a.name||'Non risposto')+' · '+(g.name?'corretto':'da ripassare')+'</p><p><strong>Categoria:</strong> '+esc(foodLabels[a.category]||'Non risposto')+' · '+(g.category?'corretta':'da ripassare')+'</p>'+(g.danger?'<p class="error"><strong>Errore alimentare pericoloso:</strong> hai indicato un consumo consentito o senza condizioni per una categoria che non lo consente.</p>':'')+clinicalRubric(c,a,index)+'<h3>Caratteri da verificare</h3><ul>'+c.characters.map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul><p>'+esc(c.differentiatingCharacter)+'</p>'+(c.diagnosticNote?'<p class="notice">'+esc(c.diagnosticNote)+'</p>':'')+questionPhotos(c)+'<details><summary>Crediti fotografici e fonti della correzione</summary>'+c.photos.map(p=>'<p class="small">'+esc(p.subjectTaxon)+' · '+esc(p.credit)+(p.sourceUrl&&/^https:\/\//.test(p.sourceUrl)?' · <a href="'+esc(p.sourceUrl)+'" target="_blank" rel="noopener noreferrer">Fotografia originale</a>':'')+(p.licenseUrl&&/^https:\/\//.test(p.licenseUrl)?' · <a href="'+esc(p.licenseUrl)+'" target="_blank" rel="noopener noreferrer">Licenza</a>':'')+'</p>').join('')+sources.map(s=>'<p class="small"><a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title||'Fonte')+'</a> · '+esc(s.location||'')+'</p>').join('')+'</details>';
- }
- function showTraining(){showDialog('Allenamento · correzione',notice()+solution(session.index)+control(session.index===14?'Concludi sessione':'Prossimo esemplare','next'));}
- function results(){
-  reviewIndex=null;const rows=session.ids.map((_,i)=>{const c=caseAt(i),a=session.answers[i]||{};return {c,a,g:gradeAnswer(c,a),i};});
-  const wrongName=rows.filter(r=>!r.g.name),wrongCategory=rows.filter(r=>!r.g.category),danger=rows.filter(r=>r.g.danger);
-  const details=kind=>{const relevant=rows.filter(r=>r.c.detailKind===kind);return relevant.filter(r=>['partial','wrong'].includes(r.a.selfRating)).length+' da ripassare · '+relevant.filter(r=>!r.a.selfRating).length+' da autovalutare / '+relevant.length;};
-  showDialog('Risultati · 15 funghi','<h2>Sessione conclusa</h2>'+notice()+'<ul><li>Identificazione: '+(15-wrongName.length)+'/15 corrette</li><li>Commestibilità: '+(15-wrongCategory.length)+'/15 corrette</li><li>Preparazione: '+details('preparation')+'</li><li>Tossicologia: '+details('toxicology')+'</li></ul>'+(danger.length?'<p class="error"><strong>'+danger.length+' errori alimentari pericolosi da rivedere.</strong></p>':'<p>Nessun errore alimentare pericoloso nella scelta della categoria. Le preparazioni restano da verificare nella griglia.</p>')+'<p class="small">Nessuna soglia di promozione ufficiale viene attribuita a questi risultati.</p><div class="exam-results">'+rows.map(r=>control((r.i+1)+'. '+r.c.name+' · '+(!r.g.name||!r.g.category?'errori da rivedere':r.c.detailKind&&!r.a.selfRating?'spiegazione da valutare':'rivedi soluzione'),'review',r.i)).join('')+'</div>'+control('Nuova sessione / modalità','home'));
- }
- function showReview(index){reviewIndex=index;showDialog('Correzione · esemplare '+(index+1),solution(index)+control('Torna ai risultati','results'));}
- document.addEventListener('input',event=>{if(event.target.matches('#exam-name,#exam-category,#exam-detail'))capture();});
- document.addEventListener('change',event=>{if(event.target.matches('#exam-category'))capture();});
+ function results(){showDialog('Risultati','<h2>Sessione e ripasso conclusi</h2>'+notice()+summaryHtml(trainingSummary(session))+control('Storico e nuova sessione','home'));}
+ function historyDetail(id){const h=history.find(h=>h.id===id);if(!h)return;showDialog('Dettaglio sessione',summaryHtml(h)+h.errors.map(e=>'<section><h3>'+esc(e.name)+'</h3><p>'+esc([e.nameError?'Nome':null,e.categoryError?'Commestibilità':null,...e.detailErrors].filter(Boolean).join(' · '))+'</p></section>').join('')+control('Torna allo storico','home'));}
+ document.addEventListener('input',event=>{if(!session||session.feedback||!event.target.matches('#exam-name'))return;const next={...session,draft:{...session.draft,name:event.target.value.slice(0,200)}};if(persist(next))suggestions();else{const target=document.querySelector('#exam-suggestions');if(target)target.innerHTML=notice();}});
  document.addEventListener('click',event=>{
-  const b=event.target.closest('[data-exam-action]');if(!b)return;
-  const action=b.dataset.examAction,id=b.dataset.examId;
-  if(action==='start'){begin(id);return;}if(action==='home'){open();return;}if(action==='resume'){session.complete?results():question();return;}
-  if(!session)return;
-  if(action==='offline'){void prepareOffline();return;}
-  if(action==='zoom'){b.classList.toggle('exam-photo-large');b.setAttribute('aria-expanded',String(b.classList.contains('exam-photo-large')));}
-  else if(action==='previous'){capture();session.index--;save();question();}
-  else if(action==='answer'){
-   capture();session.answers[session.index]??={name:'',category:'',detail:''};
-   if(session.mode==='training'){session.answers[session.index].revealed=true;save();showTraining();}
-   else advance();
-  }else if(action==='next')advance();
-  else if(action==='review'){const i=Number(id);if(session.complete&&Number.isInteger(i)&&i>=0&&i<15)showReview(i);}
-  else if(action==='results')results();
-  else if(action==='rate'){
-   const [i,rating]=id.split(':'),index=Number(i);if(!session.answers[index]||!['correct','partial','wrong'].includes(rating))return;
-   session.answers[index].selfRating=rating;save();reviewIndex!==null?showReview(reviewIndex):showTraining();
-  }
+  const b=event.target.closest('[data-exam-action]');if(!b)return;const action=b.dataset.examAction,id=b.dataset.examId;
+  if(action==='home'){open();return;}if(action==='history'){historyDetail(id);return;}if(action==='start'){if(persist(startTraining(bank)))question();else open();return;}if(action==='resume'){question();return;}if(!session)return;
+  if(action==='zoom'){b.classList.toggle('exam-photo-large');return;}if(action==='offline'){void prepareOffline();return;}
+  if(action==='answer'){const next=submitTraining(session,session.draft,bank),h=[...history.filter(x=>x.id!==next.id),trainingSummary(next)];if(persist(next,h))feedback();else question(true);return;}
+  if(action==='next'){const next=advanceTraining(session),h=[...history.filter(x=>x.id!==next.id),trainingSummary(next)];if(persist(next,h))question();else feedback();return;}
+  if(session.feedback)return;
+  let a={...session.draft,choices:{...session.draft.choices}};
+  if(action==='suggest'){a.name=id;a.assisted=true;}else if(action==='category')a.category=id;
+  else if(action==='choice'){const q=detailQuestions(current(),bank).find(q=>q.id===b.dataset.examQuestion);if(!q)return;const previous=a.choices[q.id]||[];a.choices[q.id]=q.multiple?(previous.includes(id)?previous.filter(v=>v!==id):[...previous,id]):[id];}else return;
+  if(persist({...session,draft:a}))question(true);
  });
  async function prepareOffline(){
-  const worker=navigator.serviceWorker?.controller;
-  if(!worker){photoMessage='Attendi che il catalogo sia pronto offline, poi riprova.';question();return;}
-  const requested=session,channel=new MessageChannel();photoMessage='Download delle foto della sessione in corso…';question();
-  const result=await new Promise(resolve=>{
-   const timer=setTimeout(()=>{channel.port1.close();resolve({ready:false});},60000);
-   channel.port1.onmessage=event=>{clearTimeout(timer);channel.port1.close();resolve(event.data);};
-   worker.postMessage({type:'CACHE_EXAM_PHOTOS',paths:[...new Set(requested.ids.flatMap(id=>byId.get(id).photos.map(p=>'./'+p.src)))]},[channel.port2]);
-  });
-  if(session!==requested)return;
-  photoMessage=result.ready?'Foto della sessione pronte offline. Puoi riprendere queste 15 domande senza rete.':'Foto non tutte disponibili offline. Mantieni la connessione e riprova il download prima di uscire.';
-  if(document.querySelector('#exam-name'))question();
+  const worker=navigator.serviceWorker?.controller;if(!worker){photoMessage='Attendi che il catalogo sia pronto offline, poi riprova.';question();return;}
+  const requested=session,channel=new MessageChannel();photoMessage='Download delle foto della sessione in corso…';question(true);
+  const result=await new Promise(resolve=>{const timer=setTimeout(()=>{channel.port1.close();resolve({ready:false});},60000);channel.port1.onmessage=event=>{clearTimeout(timer);channel.port1.close();resolve(event.data);};worker.postMessage({type:'CACHE_EXAM_PHOTOS',paths:[...new Set(requested.ids.flatMap(id=>bank.find(c=>c.id===id).photos.map(p=>'./'+p.src)))]},[channel.port2]);});
+  if(session.id!==requested.id)return;photoMessage=result.ready?'Foto della sessione pronte offline.':'Foto non tutte disponibili offline. Mantieni la connessione e riprova.';if(document.querySelector('#exam-name'))question(true);
  }
- function advance(){if(session.index===14){session.complete=true;save();results();}else{session.index++;save();question();}}
  return {open};
 }

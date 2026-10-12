@@ -1,53 +1,18 @@
 import {test,expect} from '@playwright/test';
-async function openExam(page,mode){await page.goto('./');await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();await page.getByRole('button',{name:mode==='exam'?'Simulazione · correzione dopo 15':'Allenamento · correzione immediata',exact:true}).click();}
-test('15-case simulation hides names, resumes locally and separates manual explanations from automatic grading',async({page})=>{
- const errors=[];page.on('pageerror',e=>errors.push(e.message));
- await openExam(page,'exam');
- const session=await page.evaluate(()=>JSON.parse(localStorage.getItem('fungo-italia:photo-exam:v1')));
- const data=await (await page.request.get('data.json')).json();
- const cases=session.ids.map(id=>data.examBank.find(c=>c.id===id));
- await expect(page.locator('#detail-body')).not.toContainText(cases[0].name);
- await expect(page.locator('#detail-body img').first()).toHaveAttribute('alt',/Esemplare da identificare/);
- await page.locator('#exam-name').fill(cases[0].name);
- await page.locator('#exam-category').selectOption(cases[0].category);
- await page.locator('#exam-detail').fill('Spiegazione da valutare separatamente.');
- await page.reload();await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione (1/15)',exact:true}).click();
- await expect(page.locator('#exam-name')).toHaveValue(cases[0].name);
- for(let i=0;i<15;i++){
-  await expect(page.locator('#detail-body h2')).toHaveText('Esemplare '+(i+1)+' di 15');
-  if(i>0){await page.locator('#exam-name').fill(cases[i].name);await page.locator('#exam-category').selectOption(cases[i].category);}
-  await page.getByRole('button',{name:i===14?'Concludi e correggi':'Salva e continua',exact:true}).click();
- }
- await expect(page.locator('#detail-body')).toContainText('Identificazione: 15/15 corrette');
- await expect(page.locator('#detail-body')).toContainText('Commestibilità: 15/15 corrette');
- await expect(page.locator('#detail-body')).toContainText('da autovalutare');
- const i=cases.findIndex(c=>c.detailKind);await page.locator('[data-exam-action="review"][data-exam-id="'+i+'"]').click();
- await expect(page.locator('#detail-body')).toContainText('Autovalutazione: da confermare');
- await page.getByRole('button',{name:'Completa',exact:true}).click();await expect(page.getByRole('button',{name:'Completa',exact:true})).toHaveAttribute('aria-pressed','true');
- await page.getByRole('button',{name:'Torna ai risultati',exact:true}).click();
- expect(errors).toEqual([]);
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+import {detailQuestions} from '../public/exam-core.js';
+const key='fungo-italia:photo-training:v2';
+async function open(page){await page.goto('./');await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();}
+async function start(page){await open(page);await page.getByRole('button',{name:'Inizia 15 casi',exact:true}).click();}
+async function saved(page){return page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);}
+async function answer(page,c,bank,wrong=false){await page.locator('#exam-name').fill(wrong?'specie errata':c.name);await page.locator('[data-exam-action="category"][data-exam-id="'+c.category+'"]').click();for(const q of detailQuestions(c,bank))for(const id of q.correct)await page.locator('[data-exam-action="choice"][data-exam-question="'+q.id+'"][data-exam-id="'+id+'"]').click();await page.getByRole('button',{name:'Invia risposta',exact:true}).click();}
+test('autocomplete begins at three letters, atlas colors and draft resume',async({page})=>{
+ await start(page);await page.locator('#exam-name').fill('Am');await expect(page.locator('[data-exam-action="suggest"]')).toHaveCount(0);await page.locator('#exam-name').fill('Ama');await expect(page.locator('[data-exam-action="suggest"]').first()).toBeVisible();const name=await page.locator('[data-exam-action="suggest"]').first().textContent();await page.locator('[data-exam-action="suggest"]').first().click();await expect(page.locator('#exam-name')).toHaveValue(name);await expect(page.locator('[data-exam-action="category"][data-exam-id="deadly"]')).toHaveCSS('background-color','rgb(235, 87, 87)');await open(page);await page.getByRole('button',{name:'Riprendi sessione',exact:true}).click();await expect(page.locator('#exam-name')).toHaveValue(name);expect((await saved(page)).session.draft.assisted).toBe(true);expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
-test('training gives immediate correction, flags dangerous category and can enlarge an anonymous photo',async({page})=>{
- await openExam(page,'training');
- await page.locator('#detail-body .exam-photo').first().click();await expect(page.locator('.exam-photo-large')).toHaveCount(1);await page.locator('.exam-photo-large').click();
- const s=await page.evaluate(()=>JSON.parse(localStorage.getItem('fungo-italia:photo-exam:v1'))),d=await (await page.request.get('data.json')).json();
- const c=d.examBank.find(c=>c.id===s.ids[0]);await page.locator('#exam-category').selectOption('free');await page.getByRole('button',{name:'Confronta la risposta',exact:true}).click();
- await expect(page.locator('#detail-body h2')).toHaveText(c.name);
- if(!['free','conditional'].includes(c.category)||c.category==='conditional')await expect(page.locator('#detail-body')).toContainText('Errore alimentare pericoloso');
- await page.getByRole('button',{name:'Prossimo esemplare',exact:true}).click();await expect(page.locator('#detail-body h2')).toHaveText('Esemplare 2 di 15');
+test('feedback, durable error rounds, first-attempt score and session history',async({page})=>{
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));await start(page);const bank=(await (await page.request.get('data.json')).json()).examBank,initial=(await saved(page)).session,wrongId=initial.ids[0];
+ for(let i=0;i<15;i++){const c=bank.find(c=>c.id===initial.ids[i]);await answer(page,c,bank,i===0);await expect(page.locator('#detail-body')).toContainText(i===0?'Da ripassare':'Risposta corretta');await expect(page.locator('#detail-body')).toContainText(c.name);await page.getByRole('button',{name:'Continua',exact:true}).click();}
+ await expect(page.locator('#detail-body')).toContainText('Ripasso 1');expect((await saved(page)).session.queue).toEqual([wrongId]);await open(page);await page.getByRole('button',{name:'Riprendi sessione',exact:true}).click();await answer(page,bank.find(c=>c.id===wrongId),bank);await page.getByRole('button',{name:'Continua',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('Sessione e ripasso conclusi');await expect(page.locator('#detail-body')).toContainText('14/15');const archive=await saved(page);expect(archive.history[0].retries).toBe(1);expect(archive.history[0].errors).toHaveLength(1);await page.getByRole('button',{name:'Storico e nuova sessione',exact:true}).click();await page.getByRole('button',{name:'Inizia 15 casi',exact:true}).click();const s=await saved(page);await answer(page,bank.find(c=>c.id===s.session.queue[0]),bank);expect((await saved(page)).history).toHaveLength(2);expect(errors).toEqual([]);
 });
-test('photo exam resumes all downloaded session photos after offline reload',async({page,request})=>{
- await openExam(page,'exam');await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);
- await page.getByRole('button',{name:'Scarica foto della sessione',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('Foto della sessione pronte offline');
- // WebKit offline emulation breaks service workers; stop the real origin instead.
- await request.get('http://127.0.0.1:4174/?state=stop');
- try{
- await page.goto('./?exam-offline='+Date.now());await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione (1/15)',exact:true}).click();
- for(let i=0;i<15;i++){
-  await expect(page.locator('#detail-body h2')).toHaveText('Esemplare '+(i+1)+' di 15');for(const image of await page.locator('#detail-body img').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);}
-  await page.getByRole('button',{name:i===14?'Concludi e correggi':'Salva e continua',exact:true}).click();
- }
- await expect(page.locator('#detail-body')).toContainText('Sessione conclusa');
- }finally{await request.get('http://127.0.0.1:4174/?state=start');}
+test('downloaded questions survive offline reload',async({page,request})=>{
+ await start(page);await page.waitForFunction(()=>navigator.serviceWorker.controller!==null);await page.getByRole('button',{name:'Scarica foto della sessione',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('Foto della sessione pronte offline');await request.get('http://127.0.0.1:4174/?state=stop');try{await page.goto('./?exam-offline='+Date.now());await page.getByRole('button',{name:'Test fotografico · 15 funghi',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione',exact:true}).click();for(const image of await page.locator('#detail-body img').all()){await image.scrollIntoViewIfNeeded();await expect.poll(()=>image.evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);}await page.getByRole('button',{name:'Invia risposta',exact:true}).click();await expect(page.locator('#detail-body')).toContainText('Da ripassare');}finally{await request.get('http://127.0.0.1:4174/?state=start');}
 });
