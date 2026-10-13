@@ -8,6 +8,7 @@ import {classifyLocalPhoto,photoClassifierAvailable,createPhotoSnapshot} from '.
 
 const labels:Record<Decision,string>={candidate:'Possibile fungo',other:'Non pertinente',uncertain:'Incerta'};
 const showable=(photo:PhotoResult)=>photo.decision!=='other';
+const isLimitedPhotoAccess=(permission:{accessPrivileges?:string})=>permission.accessPrivileges==='limited';
 export default function PhotoLibrary(){
  const [scan,setScan]=useState<PhotoScan>(createScan),[busy,setBusy]=useState(false),[ready,setReady]=useState(false),[message,setMessage]=useState('Caricamento del punto di ripresa…');
  const [history,setHistory]=useState<{number:number;photos:PhotoResult[]}|null>(null);
@@ -24,7 +25,7 @@ export default function PhotoLibrary(){
   const MediaLibrary=await import('expo-media-library');
   const permission=await MediaLibrary.requestPermissionsAsync(false,['photo']);
   if(!permission.granted){setMessage('Accesso Foto non concesso. Seleziona le fotografie da analizzare nelle Impostazioni dell’iPhone.');return;}
-  if(permission.accessPrivileges!=='limited'){setMessage('Per proteggere la tua libreria, scegli “Foto selezionate” nelle Impostazioni iOS > Fungo Italia > Foto. L’accesso completo non avvia l’analisi.');return;}
+  if(!isLimitedPhotoAccess(permission)){setMessage('Per proteggere la tua libreria, scegli “Foto selezionate” nelle Impostazioni iOS > Fungo Italia > Foto. L’accesso completo non avvia l’analisi.');return;}
   if(stop.current)return;
   let current=snapshot.current;
   if(current.lastBatch.length===20&&!current.complete){
