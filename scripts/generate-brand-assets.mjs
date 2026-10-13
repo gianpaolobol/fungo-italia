@@ -1,18 +1,8 @@
 import {mkdir,writeFile} from 'node:fs/promises';
-import {deflateSync} from 'node:zlib';
-const width=1024,height=1024,row=width*3+1,pixels=Buffer.alloc(row*height);
-for(let y=0;y<height;y++)for(let x=0;x<width;x++){
- let color=[23,79,43];
- if(x>=456&&x<=568&&y>=430&&y<=750)color=[248,237,202];
- if(((x-512)/95)**2+((y-747)/32)**2<=1)color=[248,237,202];
- if(((x-512)/300)**2+((y-435)/48)**2<=1)color=[99,62,37];
- if(((x-512)/300)**2+((y-420)/205)**2<=1&&y<=435)color=[183,106,59];
- if(x>=470&&x<=554&&y>=450&&y<=742)color=[248,237,202];
- const offset=y*row+1+x*3;pixels[offset]=color[0];pixels[offset+1]=color[1];pixels[offset+2]=color[2];
-}
-function crc(bytes){let c=0xffffffff;for(const byte of bytes){c^=byte;for(let i=0;i<8;i++)c=(c&1)?0xedb88320^(c>>>1):c>>>1;}return (c^0xffffffff)>>>0;}
-function chunk(type,data){const name=Buffer.from(type),length=Buffer.alloc(4),checksum=Buffer.alloc(4);length.writeUInt32BE(data.length);checksum.writeUInt32BE(crc(Buffer.concat([name,data])));return Buffer.concat([length,name,data,checksum]);}
-const ihdr=Buffer.alloc(13);ihdr.writeUInt32BE(width,0);ihdr.writeUInt32BE(height,4);ihdr[8]=8;ihdr[9]=2;
-const png=Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',ihdr),chunk('IDAT',deflateSync(pixels,{level:9})),chunk('IEND',Buffer.alloc(0))]);
-await mkdir('assets',{recursive:true});await writeFile('assets/icon.png',png);
-console.log('Original Fungo Italia app icon generated: '+png.length+' bytes.');
+
+const iconPngBase64 = `iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAAB7GlDQ1BJQ0MgUHJvZmlsZQAAeJyVkT1Iw0AcxV9TpaIVBTuIijhkEexQxCFDdbKLKkUrOfQLmlKaoLQkKS6OgmvBwY/FqoOLs64OroIg+AHi4uKk6CIl/i8ptIjx4Lgf7+497t4BQqzIOW3HAlB1DMsgtK3kV42IlfEUIgZtoJmJmGlLr4hGvd7sefrdO8y/5c9yYQiEYRyJRLNMIO0xKwnRfMsLCnYh34l2RGWZzic+Ixgy5I/Mh12eU3zgWH/TwzYmTM88RCqwqILBvl4hNiyrnLc5bxsqSvlCgxP2JY4bKUs1niKOKK6qmU76Q8tqkWPGY1SVJpf8aEMV5V2U6zRGo4ikIUBJOsQCBVUYNGK0aKQbKTpP+J6x/0+yFLxS5UCCiA8WTwPbbjB/+D392ahfIkJLyk4FeSy2+zj9wOwBq3QMbP1jfbQapxwG3i9255qBzOfpDc6WulH0DMGLA4a6WJFhB7h5gN+L2e4+rYHOH4A0SWnkNwMUC3lLXO9j3Zu3d/f27Yv7+wd3V3KfggadMgAAIABJREFUeJzs3XuUHFWZ9/E/Gh3T1dM9u2kmSQpBkkDCJBGCRYQVYJFmsml10Rq1WtVo1llLVbWqZq0aQFUTQVRbRbFWYJsVnYERsWmUMBFUoTGBFJIEQiBASJA09ezunvP9/JzvOvcy09tU55zT3dX17lVP1aeqs+pq+uZ37vmer2tHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAY++xnP3vttdfmec899zxr1qxsNtukdZu3bt1qq6066wQAAFw25vprv/rVr1y5UnFx8cyZM4sHx7clOfbu3XvlypUdO3Z89NFHExFuP/309unTp+dNs61bty6oCqg6qRcMAADg8r2qIvLMM8/MzMwU5GhJ9vlS3Kt+/etf//rXixcv1rFjRzgcjmRftWpVOp1ObN++PZVKzdOnT3d2dl5fX8/Ozq7dpd8+f/68srJyOp1+fHy8bdu2pVKpDA0N6XS6c+bMqV27dqtWrax6AAB0Wjw+Pj4+njt3bnZ2NmFhYZcuXWpqavLy8oKDIQn29a9//euysrJUKjU5OTk/Pz83N9fX15dIJJ46dSqdzm9/+9v1nQ4AANx51qxZw+Fw6OjomJqamj17du3bt8/ExMRz5861tbWZTKa7u7vLy8tu3bq1Y8cOhULh7Oxsdnb2mjVr6uvrPT09a2tr8/n8mTNnhoeHf/vb3y4uLtbW1rKzs3Nzc8PCwqampkZHR6urq9evX+/YsSNqtVq1Wk2n04uKikKh8NNPP+3t7e3du7e5uTlLS0v29vaWlpbGx8f379+fSCTu7u6PHz+uVqsjIyN1dXWZTCY2m+3k5OT169c7OjpSqdSBAwcaGxv7+vqq1WrHx8fPnz+vVqu5ubm0Wi0pKUlZWZm8vLxAIHD16lU+n+9vf/ubk5OTk5PT0tKysrFArVajWfz6dSKQ4ODvX19bS0tFwuF4vFfD6frq6u1Wo1Go3W1taqqiqRSJycnMzm83q9XqvV6vV6rVaLxaKpqan19fWNjY1lZWV5eXlxcXGhoaF6vV6vV6/X6/V6vV6vV6vV6/X6/X6/V6vV6vV6vV6rVarVarVar1Wq1Wq1Wq9VqtVqtVqvVavV6vVar1Wq1Wq1Wq9VqtVqtVqvVavX/8P8Ac/PZCkZb5pAAAAAElFTkSuQmCC`;
+
+const png = Buffer.from(iconPngBase64, 'base64');
+await mkdir('assets', {recursive:true});
+await writeFile('assets/icon.png', png);
+console.log('Studio Micologia app icon generated: '+png.length+' bytes.');
