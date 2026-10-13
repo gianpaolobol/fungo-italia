@@ -157,8 +157,11 @@ def main():
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
     with open('artifacts/smoke/ui.xml','w') as f:
         f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
-    check_photo_review()
-    print('PASS: seeded native gallery, image rendering, manual removal and review persistence.');
+    tap('Foto')
+    wait_text('Selezione locale delle foto')
+    tap('Controlla e analizza foto selezionate')
+    wait_text('Il filtro locale richiede la nuova versione iOS distribuita tramite TestFlight.')
+    print('PASS: Android photo tab explains iOS-only local classifier without accessing gallery.')
     print('PASS: native APK cold-start offline, catalog search, detail, favorite persistence after process restart and Amiata macroarea.')
 try:
     main()
