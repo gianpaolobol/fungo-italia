@@ -35,4 +35,5 @@ jobs:
         run: |
           test -n "$EXPO_TOKEN"
           test -n "$EXPO_PROJECT_ID"
+          echo "Queueing App Store build with Studio Micologia logo for $GITHUB_SHA"
           npx eas-cli@24.8.0 build --platform "$STORE_PLATFORM" --profile production --auto-submit --non-interactive --no-wait
