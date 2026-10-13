@@ -8,7 +8,7 @@ import {classifyLocalPhoto,photoClassifierAvailable,createPhotoSnapshot} from '.
 
 const labels:Record<Decision,string>={candidate:'Possibile fungo',other:'Non pertinente',uncertain:'Incerta'};
 const showable=(photo:PhotoResult)=>photo.decision!=='other';
-const isLimitedPhotoAccess=(permission:{accessPrivileges?:string})=>permission.accessPrivileges==='limited';
+const isLimitedPhotoAccess=(permission:unknown)=>typeof permission==='object'&&permission!==null&&'accessPrivileges' in permission&&(permission as {accessPrivileges?:unknown}).accessPrivileges==='limited';
 export default function PhotoLibrary(){
  const [scan,setScan]=useState<PhotoScan>(createScan),[busy,setBusy]=useState(false),[ready,setReady]=useState(false),[message,setMessage]=useState('Caricamento del punto di ripresa…');
  const [history,setHistory]=useState<{number:number;photos:PhotoResult[]}|null>(null);
