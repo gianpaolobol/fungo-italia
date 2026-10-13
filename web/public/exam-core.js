@@ -10,13 +10,21 @@ const documentedCompoundSynonyms={
  'Suillellus luridus':['Boletus luridus']
 };
 const binomial=value=>typeof value==='string'&&/^[A-Z][a-z]+ [a-z][a-z-]+$/.test(value);
+const viewOrder={lateral:0,top:1,underside:2};
+function examPhotos(t,names){
+ const matching=(t.referenceImages||[]).filter(p=>p.src?.startsWith('images/')&&names.some(n=>normalizeName(n)===normalizeName(p.subjectTaxon)));
+ const unique=[];
+ for(const photo of matching)if(!unique.some(old=>old.src===photo.src))unique.push(photo);
+ if(unique.length<3)return [];
+ return unique.sort((a,b)=>(viewOrder[a.view]??9)-(viewOrder[b.view]??9)||a.src.localeCompare(b.src)).slice(0,3);
+}
 export function buildExamBank(taxa,profiles={records:[]}){
  const genera=new Set([...taxa.flatMap(t=>[t.scientificName,...(t.currentAcceptedNames||[])]).map(n=>n.split(' ')[0]),'Agaricus','Agrocybe','Amanita','Boletus','Clitocybe','Collybia','Cortinarius','Rozites','Lyophyllum','Albatrellus','Polyporus']);
  return taxa.flatMap(t=>{
   const food=t.studyProfile?.edibility;
   if(t.rank!=='species'||!binomial(t.scientificName)||!foodLabels[food?.category])return [];
   const names=[...new Set([t.scientificName,...(t.aliases||[]),...(t.currentAcceptedNames||[]),...((t.aliases||[]).some(a=>a.includes('('))?(documentedCompoundSynonyms[t.scientificName]||[]):[])].filter(n=>binomial(n)&&genera.has(n.split(' ')[0])&&!(t.commonNames||[]).includes(n)))];
-  const photos=(t.referenceImages||[]).filter(p=>p.src?.startsWith('images/')&&names.some(n=>normalizeName(n)===normalizeName(p.subjectTaxon)));
+  const photos=examPhotos(t,names);
   const foodEvidence=profiles.records?.find(r=>r.scientificName===t.scientificName)?.evidence?.some(e=>e.sourceId==='S2-guida-ragionata-commestibilita-2021'&&e.fields?.includes('edibility'));
   if(!photos.length||(!foodEvidence&&!t.sources?.some(s=>s.fields?.includes('edibility'))))return [];
   const detailKind=food.category==='conditional'?'preparation':['toxic','deadly'].includes(food.category)?'toxicology':null;
