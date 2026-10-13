@@ -65,65 +65,6 @@ def scroll_top():
         previous=current
         adb('shell','input','swipe',str(width//2),str(height//4),str(width//2),str(height*4//5),'250')
         time.sleep(.3)
-def seed_photos():
-    from PIL import Image
-    os.makedirs('artifacts/smoke/fixtures',exist_ok=True)
-    adb('shell','mkdir','-p','/sdcard/Pictures/FungoItaliaTest')
-    for i,color in enumerate([(80,130,70),(160,100,70)],1):
-        path='artifacts/smoke/fixtures/scatto'+str(i)+'.jpg'
-        # EXIF is in the file, so MediaScanner can safely regenerate DATE_TAKEN.
-        exif=Image.Exif()
-        exif[306]='2023:11:14 22:13:'+str(19+i).zfill(2)
-        exif[34665]={36867:exif[306],36881:'+00:00'}
-        Image.new('RGB',(180,180),color).save(path,format='JPEG',exif=exif)
-        with Image.open(path) as fixture:
-            tags=fixture.getexif().get_ifd(34665)
-            assert tags[36867]==exif[306] and tags[36881]=='+00:00','EXIF fixture sub-IFD invalid'
-        remote='/sdcard/Pictures/FungoItaliaTest/scatto'+str(i)+'.jpg'
-        adb('push',path,remote)
-        adb('shell','am','broadcast','-a','android.intent.action.MEDIA_SCANNER_SCAN_FILE','-d','file://'+remote)
-    for _ in range(40):
-        rows=adb('shell','content','query','--uri','content://media/external/images/media','--projection','_id:_display_name:datetaken')
-        dates=[]
-        for name in ['scatto1.jpg','scatto2.jpg']:
-            row=next((line for line in rows.splitlines() if name in line),'')
-            value=re.search(r'datetaken=([0-9]+)',row)
-            if value and int(value.group(1))>0: dates.append(int(value.group(1)))
-        if len(dates)==2 and abs(dates[0]-dates[1])<=2000:
-            print('Gallery fixture timestamps verified:',dates)
-            break
-        time.sleep(1)
-    else: raise AssertionError('Gallery fixtures missing verified EXIF capture dates: '+rows)
-    adb('shell','pm','grant','it.fungoitalia.app','android.permission.READ_MEDIA_IMAGES')
-def check_photo_review():
-    seed_photos()
-    tap('Foto')
-    tap('Autorizza e indicizza Foto')
-    wait_text('2 foto indicizzate')
-    scroll_top()
-    tap('Prepara coda visuale 3+1')
-    wait_text('Coda 3+1 pronta:')
-    tap('3+1')
-    wait_text('2 scatti selezionati')
-    wait_text('Fotografia 1')
-    time.sleep(3)
-    ui=text_of(dump())
-    assert 'Fotografia non disponibile' not in ui and 'Fotografia non visualizzabile' not in ui,'Native thumbnail failed'
-    with open('artifacts/smoke/android-native-photos.png','wb') as f:
-        f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
-    print('PASS: native gallery grouping and both images rendered.')
-    tap('Rimuovi scatto 2 dalla bozza')
-    scroll_top()
-    wait_text('1 scatti selezionati')
-    print('PASS: manual removal persisted in the visible review header.')
-    time.sleep(2)
-    launch()
-    tap('3+1')
-    wait_text('1 scatti selezionati')
-    wait_text('Fotografia 1')
-    with open('artifacts/smoke/android-photo-review-persisted.png','wb') as f:
-        f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
-
 def main():
     adb('install','-r','artifacts/android/app-release.apk')
     adb('shell','wm','size','720x1280')
@@ -157,11 +98,12 @@ def main():
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
     with open('artifacts/smoke/ui.xml','w') as f:
         f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
-    tap('Foto')
-    wait_text('Selezione locale delle foto')
-    tap('Controlla e analizza foto selezionate')
-    wait_text('Il filtro locale richiede la nuova versione iOS distribuita tramite TestFlight.')
-    print('PASS: Android photo tab explains iOS-only local classifier without accessing gallery.')
+    # The current product navigation intentionally contains only Studio, Aree and Esame.
+    # Photo-library/3+1 flows are not accessible tabs; do not test removed UI.
+    tap('Esame')
+    wait_text('Esame fotografico')
+    wait_text('Inizia 15 casi')
+    print('PASS: exam tab is accessible from the current three-tab navigation.')
     print('PASS: native APK cold-start offline, catalog search, detail, favorite persistence after process restart and Amiata macroarea.')
 try:
     main()
