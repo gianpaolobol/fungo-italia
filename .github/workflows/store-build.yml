@@ -31,8 +31,8 @@ jobs:
           npm run prepare:data
           npm run typecheck
           node --test scripts/*.test.mjs
-      - name: Queue signed store build
+      - name: Queue signed store build and App Store submit
         run: |
           test -n "$EXPO_TOKEN"
           test -n "$EXPO_PROJECT_ID"
-          npx eas-cli@24.8.0 build --platform "$STORE_PLATFORM" --profile production --non-interactive --no-wait
+          npx eas-cli@24.8.0 build --platform "$STORE_PLATFORM" --profile production --auto-submit --non-interactive --no-wait
