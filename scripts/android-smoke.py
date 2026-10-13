@@ -72,7 +72,7 @@ def main():
     adb('shell','svc','wifi','disable')
     adb('shell','svc','data','disable')
     launch()
-    wait_text('148 schede')
+    wait_text('Studio e atlante')
     tap('Cerca nome scientifico, comune o sinonimo')
     adb('shell','input','text','Amanita')
     adb('shell','input','keyevent','KEYCODE_BACK')
@@ -92,7 +92,7 @@ def main():
     time.sleep(2)
     launch()
     root=wait_text('1 preferito')
-    assert '148 schede' in text_of(root),'Offline catalog count unavailable after restart'
+    assert 'Studio e atlante' in text_of(root),'Offline study screen unavailable after restart'
     os.makedirs('artifacts/smoke',exist_ok=True)
     with open('artifacts/smoke/android-offline.png','wb') as f:
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
