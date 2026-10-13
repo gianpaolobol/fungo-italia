@@ -32,4 +32,4 @@ jobs:
           npx expo-updates runtimeversion:resolve --platform ios > /tmp/runtime.json
           node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync('/tmp/runtime.json','utf8'));if(r.runtimeVersion!=='9d5f0a507eaa68f99fc6794a7f063631362c38f8')throw Error('Runtime mismatch: rebuild required');console.log(r.runtimeVersion)"
       - name: Publish current main to TestFlight production channel
-        run: npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Publish selected-photo permission typecheck fix $GITHUB_SHA" --non-interactive --json
+        run: npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Publish robust selected-photo permission fix $GITHUB_SHA" --non-interactive --json
