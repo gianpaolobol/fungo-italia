@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 60
     env:
       CI: '1'
+      DEVELOPER_DIR: /Applications/Xcode_26.3.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
       - uses: actions/checkout@v4
@@ -39,7 +40,10 @@ jobs:
           workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
           xcodebuild -list -json -workspace "$workspace" > store-evidence/xcode-project.json
           scheme=$(node -e 'const p=require("./store-evidence/xcode-project.json");process.stdout.write(p.workspace.schemes.find(s=>/fungo/i.test(s))||p.workspace.schemes[0])')
-          xcodebuild -workspace "$workspace" -scheme "$scheme" -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath native-build ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 build > store-evidence/native-build.log 2>&1
+          if ! xcodebuild -workspace "$workspace" -scheme "$scheme" -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath native-build ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 build > store-evidence/native-build.log 2>&1; then
+            tail -n 160 store-evidence/native-build.log
+            exit 1
+          fi
       - name: Install pinned UI automation
         run: |
           curl --fail --location https://github.com/mobile-dev-inc/Maestro/releases/download/cli-2.11.0/maestro.zip -o /tmp/maestro.zip
