@@ -1,11 +1,13 @@
 const PREFIX='fungo-italia-pwa:'+self.registration.scope+':';
 const CACHE=PREFIX+'__BUILD_VERSION__';
-const FILES=['./','./index.html','./admin-photos.html','./admin-photos-entry.js','./app.js','./exam-core.js','./exam-ui.js','./app.css','./gallery-cleanup.css','./importa-foto.html','./importa-foto.js','./importa-foto.css','./photo-core.js','./admin-photo-core.js','./admin-photos.js','./admin-photos.css','./data.json','./manifest.webmanifest','./icon.png','./vendor/leaflet.js','./vendor/leaflet.css','./vendor/images/layers.png','./vendor/images/layers-2x.png','./vendor/images/marker-icon.png','./vendor/images/marker-icon-2x.png','./vendor/images/marker-shadow.png'];
+const FILES=['./','./index.html','./privacy.html','./support.html','./admin-photos.html','./admin-photos-entry.js','./app.js','./exam-core.js','./exam-ui.js','./app.css','./gallery-cleanup.css','./importa-foto.html','./importa-foto.js','./importa-foto.css','./photo-core.js','./admin-photo-core.js','./admin-photos.js','./admin-photos.css','./data.json','./manifest.webmanifest','./icon.png','./vendor/leaflet.js','./vendor/leaflet.css','./vendor/images/layers.png','./vendor/images/layers-2x.png','./vendor/images/marker-icon.png','./vendor/images/marker-icon-2x.png','./vendor/images/marker-shadow.png'];
 // Keep large reference photographs out of the atomic install: iOS quota or one
 // unavailable photo must not leave an old service worker active indefinitely.
 const CORE_FILES=FILES.filter(file=>! /\.(?:avif|gif|jpe?g|png|webp)$/i.test(file)||file==='./icon.png'||file.startsWith('./vendor/'));
 function pageFor(url,scope){
  const path=url.pathname;
+ if(path===new URL('./privacy.html',scope).pathname)return './privacy.html';
+ if(path===new URL('./support.html',scope).pathname)return './support.html';
  if(path===new URL('./admin-photos.html',scope).pathname)return './admin-photos.html';
  if(path===new URL('./importa-foto.html',scope).pathname)return './importa-foto.html';
  return './index.html';
