@@ -9,9 +9,11 @@ Verificato direttamente con App Store Connect tramite la credenziale esistente d
 - Descrizione, sottotitolo, parole chiave e testo promozionale italiani aggiornati alle funzioni native Studio/Aree/Esame; nessuna promessa di riconoscimento automatico o di strumenti presenti soltanto sul web.
 - URL assistenza e privacy corretti. Email pubblica autorizzata dal titolare: `gianpaolo.franceschini@gmail.com`.
 - Contatti privati del revisore già presenti: preservati e non riportati qui. Account demo non richiesto; istruzioni del revisore salvate.
+- Categorie Apple configurate e rilette: `EDUCATION` e `REFERENCE`.
 - Screenshot ancora da caricare. È stata predisposta acquisizione dell'app nativa Release su simulatori iPhone/iPad; non usare screenshot PWA per rappresentare l'app nativa.
 - Preparazione nativa corretta: il generatore icona sovrascriveva un PNG valido con Base64 troncato. Ora conserva e convalida il file originale; due test di regressione passano.
-- Questionario Privacy dell'app, contratti per le app a pagamento e dati fiscali/bancari non sono esposti dall'API pubblica usata. Il loro completamento non è attestato da questo audit.
+- Il titolare conferma che il questionario Privacy dell'app **non è ancora compilato**. L'API pubblica interrogata risponde `404 PATH_ERROR` per questa funzione: completarlo nel portale seguendo [la scheda tecnica](APP-STORE-PRIVACY-WORKSHEET.md).
+- Contratti per le app a pagamento e dati fiscali/bancari non sono esposti dall'API pubblica usata. Il loro completamento non è attestato da questo audit.
 
 ## Privacy tecnica
 
