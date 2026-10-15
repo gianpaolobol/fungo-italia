@@ -1,0 +1,31 @@
+name: App Store Connect status
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/app-store-status.yml', 'scripts/app-store-connect.mjs']
+permissions:
+  contents: read
+concurrency:
+  group: app-store-connect-administration
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check scripts/app-store-connect.mjs
+      - name: Inspect authorized App Store record
+        run: node scripts/app-store-connect.mjs
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: App-Store-status
+          path: store-evidence/app-store-status.json
+          retention-days: 14
