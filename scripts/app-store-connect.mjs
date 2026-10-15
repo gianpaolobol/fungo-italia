@@ -79,7 +79,7 @@ export async function audit(){
   if(review.ok)await patch('appStoreReviewDetails',review.data.id,{demoAccountRequired:false,demoAccountName:null,demoAccountPassword:null,notes:config.reviewNotes});
   const point=report.targetPricePoint;
   if(!point?.id||Number(point.attributes.customerPrice)!==9.99)throw Error('Exact Italian EUR9.99 Apple price point not found; price unchanged');
-  const price=await api('/v1/appPriceSchedules',{method:'POST',body:{data:{type:'appPriceSchedules',relationships:{app:{data:{type:'apps',id:APP}},baseTerritory:{data:{type:'territories',id:'ITA'}},manualPrices:{data:[{type:'appPrices',id:'new-italy-price'}]}}},included:[{type:'appPrices',id:'new-italy-price',attributes:{startDate:null,endDate:null},relationships:{appPricePoint:{data:{type:'appPricePoints',id:point.id}}}}]}});
+  const price=await api('/v1/appPriceSchedules',{method:'POST',body:{data:{type:'appPriceSchedules',relationships:{app:{data:{type:'apps',id:APP}},baseTerritory:{data:{type:'territories',id:'ITA'}},manualPrices:{data:[{type:'appPrices',id:'${italyPrice}'}]}}},included:[{type:'appPrices',id:'${italyPrice}',attributes:{startDate:null,endDate:null},relationships:{appPricePoint:{data:{type:'appPricePoints',id:point.id}}}}]}});
   if(!price.ok)throw Error('Price update failed HTTP '+price.status+' '+price.codes.join(',')+' '+price.sources.join(','));
   console.log('APP_STORE_PRICE_SAVED Italy EUR 9.99');
   report.applied={metadata:true,price:true};
