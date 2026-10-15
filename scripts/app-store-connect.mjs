@@ -45,7 +45,7 @@ export async function audit(){
  api('/v1/apps/'+APP+'/appInfos?limit=20'),
  api('/v1/builds?filter[app]='+APP+'&sort=-uploadedDate&limit=10&include=preReleaseVersion'),
  api('/v1/apps/'+APP+'/appPriceSchedule?include=baseTerritory'),
- api('/v1/apps/'+APP+'/appAvailabilityV2')]);
+ api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200')]);
  report.builds=builds.ok?builds.data.map(b=>({id:b.id,version:b.attributes.version,processingState:b.attributes.processingState,expired:b.attributes.expired,uploadedDate:b.attributes.uploadedDate,usesNonExemptEncryption:b.attributes.usesNonExemptEncryption,preReleaseVersion:builds.included?.find(i=>i.id===b.relationships?.preReleaseVersion?.data?.id)?.attributes.version})):builds;
  report.pricing=pricing;report.availability=availability;
  const points=await api('/v1/apps/'+APP+'/appPricePoints?filter[territory]=ITA&limit=200&include=territory');
@@ -83,6 +83,28 @@ export async function audit(){
   if(!price.ok)throw Error('Price update failed HTTP '+price.status+' '+price.codes.join(',')+' '+price.sources.join(','));
   console.log('APP_STORE_PRICE_SAVED Italy EUR 9.99');
   report.applied={metadata:true,price:true};
+ }
+ if(process.argv.includes('--worldwide')){
+  let current=await api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200');
+  if(!current.ok&&current.status===404){
+   const territories=await api('/v1/territories?limit=200');if(!territories.ok||territories.links?.next)throw Error('Complete Apple territory list unavailable');
+   const included=territories.data.map(t=>({type:'territoryAvailabilities',id:'${territory-'+t.id+'}',attributes:{available:true,preOrderEnabled:false},relationships:{territory:{data:{type:'territories',id:t.id}}}}));
+   const result=await api('/v2/appAvailabilities',{method:'POST',body:{data:{type:'appAvailabilities',attributes:{availableInNewTerritories:true},relationships:{app:{data:{type:'apps',id:APP}},territoryAvailabilities:{data:included.map(t=>({type:t.type,id:t.id}))}}},included}});
+   if(!result.ok)throw Error('Worldwide availability create failed HTTP '+result.status+' '+result.codes.join(','));
+   current=await api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200');
+  }
+  if(!current.ok)throw Error('Worldwide availability unavailable HTTP '+current.status);
+  const territories=(current.included||[]).filter(t=>t.type==='territoryAvailabilities');
+  if(!territories.length)throw Error('No territory availability records');
+  for(const t of territories.filter(t=>!t.attributes.available)){
+   const result=await api('/v1/territoryAvailabilities/'+t.id,{method:'PATCH',body:{data:{type:'territoryAvailabilities',id:t.id,attributes:{available:true}}}});
+   if(!result.ok)throw Error('Territory update rejected HTTP '+result.status+' '+result.codes.join(','));
+  }
+  report.availability=await api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200');
+  const rows=report.availability.included?.filter(t=>t.type==='territoryAvailabilities')||[];
+  report.worldwideVerification={selected:rows.filter(t=>t.attributes.available).length,total:rows.length};
+  if(!rows.length||rows.some(t=>!t.attributes.available))throw Error('Worldwide availability not fully confirmed');
+  console.log('APP_STORE_WORLDWIDE_CONFIRMED '+JSON.stringify(report.worldwideVerification));
  }
  await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/app-store-status.json',JSON.stringify(report,null,2)+'\n');
  console.log('APP_STORE_STATUS '+JSON.stringify(report));
