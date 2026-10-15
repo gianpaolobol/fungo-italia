@@ -10,10 +10,16 @@ Verificato direttamente con App Store Connect tramite la credenziale esistente d
 - URL assistenza e privacy corretti. Email pubblica autorizzata dal titolare: `gianpaolo.franceschini@gmail.com`.
 - Contatti privati del revisore già presenti: preservati e non riportati qui. Account demo non richiesto; istruzioni del revisore salvate.
 - Categorie Apple configurate e rilette: `EDUCATION` e `REFERENCE`.
-- Screenshot ancora da caricare. È stata predisposta acquisizione dell'app nativa Release su simulatori iPhone/iPad; non usare screenshot PWA per rappresentare l'app nativa.
+- **Sei screenshot nativi caricati e accettati da Apple (`COMPLETE`)**: Studio, Aree ed Esame per iPhone 16 Pro Max (1320×2868) e iPad Pro 13-inch M4 (2064×2752). Tutti controllati visivamente; PNG RGB opachi, con provenienza e hash nel [manifest](../store/screenshots/manifest.json). Nessuno screenshot PWA o mockup generato.
+- Test di navigazione nativa superati sui due simulatori: avvio Release, ricerca, apertura della scheda, passaggio ad Aree ed Esame.
+- Versione web pubblicata su GitHub Pages: 50 test WebKit superati, inclusa apertura offline di privacy/assistenza. Verifiche dati mobili e TypeScript superate.
 - Preparazione nativa corretta: il generatore icona sovrascriveva un PNG valido con Base64 troncato. Ora conserva e convalida il file originale; due test di regressione passano.
 - Il titolare conferma che il questionario Privacy dell'app **non è ancora compilato**. L'API pubblica interrogata risponde `404 PATH_ERROR` per questa funzione: completarlo nel portale seguendo [la scheda tecnica](APP-STORE-PRIVACY-WORKSHEET.md).
 - Contratti per le app a pagamento e dati fiscali/bancari non sono esposti dall'API pubblica usata. Il loro completamento non è attestato da questo audit.
+
+## Passaggio ancora aperto
+
+Il questionario [Privacy dell'app](https://appstoreconnect.apple.com/apps/6821140326/appPrivacy) resta da compilare e pubblicare nel portale, secondo la conferma del titolare. La disponibilità della build e dei materiali non equivale all'invio in revisione. Nessun invio finale è stato eseguito con questo requisito ancora aperto.
 
 ## Privacy tecnica
 
@@ -23,5 +29,10 @@ Il client Expo Updates invia `EAS-Client-ID`, piattaforma, runtime e identificat
 
 - Listino italiano e metadati riletti dal job `116386170707` del workflow https://github.com/gianpaolobol/fungo-italia/actions/runs/38724021430 .
 - Distribuzione mondiale confermata dal job `116390503065` del workflow https://github.com/gianpaolobol/fungo-italia/actions/runs/38725587249 .
+
+- Acquisizione nativa: https://github.com/gianpaolobol/fungo-italia/actions/runs/38729164821 .
+- Rilettura finale Apple del 15 ottobre 2026 alle 12:10 UTC: screenshot 3+3, categorie Istruzione/Consultazione, versione ancora `PREPARE_FOR_SUBMISSION`, build associata (7), nessun account demo richiesto. Job `116413766122`: https://github.com/gianpaolobol/fungo-italia/actions/runs/38729164716 .
+- Tutte le sei immagini confermate `COMPLETE` dal job `116413295764`: https://github.com/gianpaolobol/fungo-italia/actions/runs/38732450123 .
+- Verifica web e pubblicazione delle pagine legali: https://github.com/gianpaolobol/fungo-italia/actions/runs/38729636903 .
 
 Nessun segreto, contatto privato dei revisori o dato fiscale è conservato in questi file. Il prezzo configurato non equivale alla pubblicazione o all'approvazione Apple.
