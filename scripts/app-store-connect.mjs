@@ -12,8 +12,10 @@ async function credential(){
  if(!process.env.EXPO_TOKEN)throw Error('EXPO_TOKEN missing');
  mask(process.env.EXPO_TOKEN);
  const d=await graph('query($name:String!){account{byName(accountName:$name){appStoreConnectApiKeysPaginated(first:50){edges{node{id keyIdentifier appleTeam{appleTeamIdentifier}}}}}}}',{name:ACCOUNT});
- const keys=d.account.byName.appStoreConnectApiKeysPaginated.edges.map(e=>e.node).filter(k=>k.appleTeam?.appleTeamIdentifier===TEAM);
- const selected=keys.find(k=>k.keyIdentifier==='35MS8YN74G')||(keys.length===1?keys[0]:null);
+ const keys=d.account.byName.appStoreConnectApiKeysPaginated.edges.map(e=>e.node);
+ const teamKeys=keys.filter(k=>k.appleTeam?.appleTeamIdentifier===TEAM);
+ const selected=keys.find(k=>k.keyIdentifier==='35MS8YN74G')||(teamKeys.length===1?teamKeys[0]:keys.length===1?keys[0]:null);
+ console.log('EXPO_APPLE_KEY_METADATA '+JSON.stringify(keys.map(k=>({keyId:k.keyIdentifier,team:k.appleTeam?.appleTeamIdentifier||null}))));
  if(!selected)throw Error('No unambiguous App Store credential for the authorized Apple team');
  const out=await graph('query($id:ID!){appStoreConnectApiKey{byId(id:$id){keyIdentifier issuerIdentifier keyP8}}}',{id:selected.id});
  const key=out.appStoreConnectApiKey.byId;if(!key?.keyP8||!key.issuerIdentifier)throw Error('App Store credential is incomplete');
