@@ -1,0 +1,24 @@
+appId: it.fungoitalia.app
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "Studio"
+    timeout: 60000
+- tapOn: "Cerca nome scientifico, comune o sinonimo"
+- inputText: "Amanita caesarea"
+- hideKeyboard
+- tapOn: "Apri Amanita caesarea"
+- waitForAnimationToEnd
+- takeScreenshot: ${SCREENSHOT_DIR}/01-studio
+- tapOn: "Torna alle schede"
+- tapOn:
+    text: "Aree"
+    index: 0
+- waitForAnimationToEnd
+- takeScreenshot: ${SCREENSHOT_DIR}/02-aree
+- tapOn:
+    text: "Esame"
+    index: 0
+- waitForAnimationToEnd
+- takeScreenshot: ${SCREENSHOT_DIR}/03-esame

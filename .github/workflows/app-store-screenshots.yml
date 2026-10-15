@@ -1,0 +1,74 @@
+name: Capture native App Store screenshots
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/app-store-screenshots.yml', '.maestro/store.yaml']
+permissions:
+  contents: read
+concurrency:
+  group: native-store-screenshots
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: macos-15
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Prepare actual native application
+        run: |
+          npm ci
+          npm run prepare:data
+          npx expo prebuild --platform ios --no-install
+          cd ios
+          pod install
+      - name: Compile Release application for the simulator
+        run: |
+          mkdir -p store-evidence
+          workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
+          xcodebuild -list -json -workspace "$workspace" > store-evidence/xcode-project.json
+          scheme=$(node -e 'const p=require("./store-evidence/xcode-project.json");process.stdout.write(p.workspace.schemes.find(s=>/fungo/i.test(s))||p.workspace.schemes[0])')
+          xcodebuild -workspace "$workspace" -scheme "$scheme" -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath native-build ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 build > store-evidence/native-build.log 2>&1
+      - name: Install pinned UI automation
+        run: |
+          curl --fail --location https://github.com/mobile-dev-inc/Maestro/releases/download/cli-2.11.0/maestro.zip -o /tmp/maestro.zip
+          curl --fail --location https://github.com/mobile-dev-inc/Maestro/releases/download/cli-2.11.0/checksums_sha256.txt -o /tmp/checksums_sha256.txt
+          cd /tmp
+          shasum -a 256 --check --ignore-missing checksums_sha256.txt
+          unzip -q maestro.zip -d "$RUNNER_TEMP/maestro"
+          echo "$RUNNER_TEMP/maestro/maestro/bin" >> "$GITHUB_PATH"
+      - name: Capture iPhone and iPad from the native app
+        run: |
+          app=$(find native-build/Build/Products/Release-iphonesimulator -maxdepth 1 -name '*.app' -print -quit)
+          test -n "$app"
+          xcrun simctl list runtimes -j > /tmp/sim-runtimes.json
+          runtime=$(node -e 'const a=require("/tmp/sim-runtimes.json").runtimes.filter(r=>r.isAvailable&&r.identifier.includes(".iOS-"));a.sort((a,b)=>a.version.localeCompare(b.version,undefined,{numeric:true}));process.stdout.write(a.at(-1).identifier)')
+          xcrun simctl list devicetypes -j > /tmp/sim-types.json
+          for family in iphone ipad; do
+            device_type=$(FAMILY="$family" node -e 'const a=require("/tmp/sim-types.json").devicetypes;const pattern=process.env.FAMILY==="iphone"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error("Required App Store screenshot device unavailable");process.stdout.write(d.identifier)')
+            udid=$(xcrun simctl create "FungoStore-$family" "$device_type" "$runtime")
+            xcrun simctl boot "$udid"
+            xcrun simctl bootstatus "$udid" -b
+            xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
+            xcrun simctl install "$udid" "$app"
+            mkdir -p "store-evidence/screenshots/$family"
+            maestro --device "$udid" test --env SCREENSHOT_DIR="$GITHUB_WORKSPACE/store-evidence/screenshots/$family" .maestro/store.yaml
+            xcrun simctl shutdown "$udid"
+          done
+          printf '%s\n' "$GITHUB_SHA" > store-evidence/screenshots/source-commit.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Native-App-Store-screenshots
+          path: store-evidence/
+          retention-days: 30
