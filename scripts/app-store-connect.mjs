@@ -132,6 +132,12 @@ export async function audit(){
    console.log('APP_STORE_CATEGORIES_SAVED Education / Reference');
   }else console.log('APP_STORE_CATEGORIES_ALREADY_PRESENT');
  }
+ const privacyProbe=await api('/v1/appDataUsages?filter[app]='+APP);
+ report.privacyQuestionnaireAccess={ok:privacyProbe.ok,status:privacyProbe.status,codes:privacyProbe.codes||[],entries:Array.isArray(privacyProbe.data)?privacyProbe.data.length:null};
+ try{
+  const response=await fetch('https://expo.dev/privacy',{signal:AbortSignal.timeout(20000)});
+  if(response.ok){const html=await response.text();const plain=html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');const excerpts=[];for(const match of plain.matchAll(/end.user|IP address|identifiers|retention|retain|device information/gi)){excerpts.push(plain.slice(Math.max(0,match.index-100),match.index+600));if(excerpts.length>=12)break;}report.expoPrivacyReference={url:'https://expo.dev/privacy',checkedAt:new Date().toISOString(),excerpts};}
+ }catch{report.expoPrivacyReference={url:'https://expo.dev/privacy',retrieved:false};}
  await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/app-store-status.json',JSON.stringify(report,null,2)+'\n');
  console.log('APP_STORE_STATUS '+JSON.stringify(report));
 }
