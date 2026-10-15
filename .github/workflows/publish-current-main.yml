@@ -29,7 +29,7 @@ jobs:
       - name: Build current PWA
         run: cd web && npm ci && npm run build
       - name: Verify compact iPhone UI and photo exam
-        run: cd web && npx playwright install --with-deps webkit chromium && npm test -- tests/ios.spec.mjs tests/exam.spec.mjs
+        run: cd web && npx playwright install --with-deps webkit chromium && npm test -- tests/ios.spec.mjs tests/exam.spec.mjs tests/legal-pages.spec.mjs
       - name: Check generated site
         run: |
           test -s dist-ios/index.html
