@@ -1,4 +1,4 @@
-name: Configure App Store listing at EUR 9.99
+name: Configure worldwide App Store availability
 on:
   workflow_dispatch:
   push:
@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: '24'
       - run: node --check scripts/app-store-connect.mjs
-      - name: Apply authorized Italian listing and EUR9.99 price
-        run: node scripts/app-store-connect.mjs --apply
+      - name: Apply authorized worldwide territory availability
+        run: node scripts/app-store-connect.mjs --worldwide
       - uses: actions/upload-artifact@v4
         if: success()
         with:
