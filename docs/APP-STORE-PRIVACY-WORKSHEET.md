@@ -25,3 +25,9 @@ Riferimenti:
 - https://developer.apple.com/app-store/app-privacy-details/
 - https://expo.dev/privacy
 - https://github.com/expo/expo/blob/main/packages/expo-updates/ios/EXUpdates/AppLoader/FileDownloader.swift
+
+## Riferimento del fornitore verificato il 15 ottobre 2026
+
+La policy ufficiale Expo dichiara che, per EAS Update, può raccogliere sistema operativo del dispositivo e token casuali per determinare se è stato scaricato un aggiornamento; descrive inoltre dati di rete (IP), errori e metriche tecniche, con conservazione per il tempo necessario alle finalità del servizio. L'API Apple per `appDataUsages`, interrogata con la credenziale autorizzata, risponde 404 `PATH_ERROR`: il questionario resta un passaggio nel portale.
+
+Schema prudente per la verifica nel portale: **ID dispositivo**, **dati sugli arresti anomali/altri dati diagnostici** e, per i log IP trattenuti, **altri tipi di dati**. Finalità: **Funzionalità dell'app**. Nessun impiego pubblicitario o tracciamento è implementato nell'app. Le richieste e la diagnostica possono essere associate alla stessa installazione: non dichiararle anonime solo perché non esiste un account nominativo. Controllare la corrispondenza con le definizioni Apple prima di pubblicare le risposte.

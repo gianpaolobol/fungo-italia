@@ -59,7 +59,7 @@ export async function audit(){
  delete report.app.sku;
  const [versions,infos,builds,pricing,availability]=await Promise.all([
  api('/v1/apps/'+APP+'/appStoreVersions?filter[platform]=IOS&limit=20'),
- api('/v1/apps/'+APP+'/appInfos?limit=20'),
+ api('/v1/apps/'+APP+'/appInfos?limit=20&include=primaryCategory,secondaryCategory'),
  api('/v1/builds?filter[app]='+APP+'&sort=-uploadedDate&limit=10&include=preReleaseVersion'),
  api('/v1/apps/'+APP+'/appPriceSchedule?include=baseTerritory'),
  availabilityResource()]);
