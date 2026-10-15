@@ -31,7 +31,7 @@ jobs:
         id: native-cache
         with:
           path: native-build/Build/Products/Release-iphonesimulator/FungoItalia.app
-          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'scripts/prepare*.mjs', 'scripts/generate-brand-assets.mjs') }}
+          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'package.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'lib/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'legacy/web/data/catalog/**', 'scripts/*.mjs') }}
       - name: Prepare actual native application
         if: steps.native-cache.outputs.cache-hit != 'true'
         run: |
