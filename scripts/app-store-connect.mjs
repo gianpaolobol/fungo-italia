@@ -49,7 +49,7 @@ export async function audit(){
  if(pricing.ok){report.manualPrices=await api('/v1/appPriceSchedules/'+pricing.data.id+'/manualPrices?include=appPricePoint,territory&limit=200');}
  if(versions.ok)for(const v of versions.data){
   const [localizations,review,build]=await Promise.all([api('/v1/appStoreVersions/'+v.id+'/appStoreVersionLocalizations'),api('/v1/appStoreVersions/'+v.id+'/appStoreReviewDetail'),api('/v1/appStoreVersions/'+v.id+'/build')]);
-  const row={id:v.id,...v.attributes,build:build.ok?build.data?.id:null,localizations:[],reviewDetails:review.ok?{present:true,contactFirstName:!!review.data.attributes.contactFirstName,contactLastName:!!review.data.attributes.contactLastName,contactPhone:!!review.data.attributes.contactPhone,contactEmail:!!review.data.attributes.contactEmail,demoAccountRequired:review.data.attributes.demoAccountRequired,notes:review.data.attributes.notes}:review};
+  const row={id:v.id,...v.attributes,build:build.ok?build.data?.id:null,localizations:[],reviewDetails:review.ok?{present:true,contactFirstName:!!review.data.attributes.contactFirstName,contactLastName:!!review.data.attributes.contactLastName,contactPhone:!!review.data.attributes.contactPhone,contactEmail:!!review.data.attributes.contactEmail,demoAccountRequired:review.data.attributes.demoAccountRequired,notesPresent:!!review.data.attributes.notes}:review};
   if(localizations.ok)for(const l of localizations.data){
    const screenshots=await api('/v1/appStoreVersionLocalizations/'+l.id+'/appScreenshotSets?include=appScreenshots');
    row.localizations.push({id:l.id,...l.attributes,screenshots:screenshots.ok?screenshots.data.map(s=>({id:s.id,displayType:s.attributes.screenshotDisplayType,count:s.relationships.appScreenshots?.data?.length||0})):screenshots});
