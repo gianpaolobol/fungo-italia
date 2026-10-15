@@ -1,0 +1,57 @@
+name: Stage native screenshot evidence
+on:
+  workflow_run:
+    workflows: ['Capture native App Store screenshots']
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  stage:
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch native screenshots from the successful capture
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CAPTURE_RUN: ${{ github.event.workflow_run.id }}
+        run: |
+          node --input-type=module <<'JS'
+          import {writeFile} from 'node:fs/promises';
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
+          const headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'};
+          const r=await fetch(base+'/actions/runs/'+process.env.CAPTURE_RUN+'/artifacts',{headers});
+          if(!r.ok)throw Error('Artifact listing failed');
+          const a=(await r.json()).artifacts.find(a=>a.name==='Native-App-Store-screenshots'&&!a.expired);
+          if(!a)throw Error('Screenshot artifact unavailable');
+          const zip=await fetch(a.archive_download_url,{headers});
+          if(!zip.ok)throw Error('Artifact download failed');
+          await writeFile('/tmp/native-screenshots.zip',Buffer.from(await zip.arrayBuffer()));
+          JS
+          mkdir -p /tmp/native-screenshots
+          unzip -q /tmp/native-screenshots.zip -d /tmp/native-screenshots
+      - name: Stage immutable image blobs without changing any branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CAPTURE_COMMIT: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          node --input-type=module <<'JS'
+          import {readFile} from 'node:fs/promises';
+          import {createHash} from 'node:crypto';
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
+          const source=(await readFile('/tmp/native-screenshots/screenshots/source-commit.txt','utf8')).trim();
+          if(source!==process.env.CAPTURE_COMMIT)throw Error('Capture provenance mismatch');
+          for(const family of ['iphone','ipad'])for(const name of ['01-studio','02-aree','03-esame']){
+            const bytes=await readFile('/tmp/native-screenshots/screenshots/'+family+'/'+name+'.png');
+            if(bytes.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error('Not a PNG');
+            const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
+            if(family==='iphone'&&(width!==1320||height!==2868))throw Error('Unexpected iPhone screenshot size');
+            if(family==='ipad'&&(width!==2064||height!==2752))throw Error('Unexpected iPad screenshot size');
+            const r=await fetch(base+'/git/blobs',{method:'POST',headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify({encoding:'base64',content:bytes.toString('base64')})});
+            if(!r.ok)throw Error('Screenshot staging failed HTTP '+r.status);
+            const blob=await r.json();
+            console.log('SCREENSHOT_BLOB '+JSON.stringify({path:'store/screenshots/'+family+'/'+name+'.png',sha:blob.sha,byteLength:bytes.length,width,height,sha256:createHash('sha256').update(bytes).digest('hex'),sourceCommit:source}));
+          }
+          JS
