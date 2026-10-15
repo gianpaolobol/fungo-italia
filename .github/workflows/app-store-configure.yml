@@ -1,0 +1,31 @@
+name: Configure paid App Store listing
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/app-store-configure.yml']
+permissions:
+  contents: read
+concurrency:
+  group: app-store-connect-administration
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check scripts/app-store-connect.mjs
+      - name: Apply authorized Italian listing and EUR9.99 price
+        run: node scripts/app-store-connect.mjs --apply
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: App-Store-paid-configuration
+          path: store-evidence/app-store-status.json
+          retention-days: 14
