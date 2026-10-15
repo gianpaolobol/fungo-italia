@@ -23,6 +23,7 @@ for(const family of ['iphone','ipad']){
   if(!/^store\/screenshots\/(iphone|ipad)\/0[123]-(studio|aree|esame)\.png$/.test(image.path))throw Error('Unexpected screenshot path');
   const bytes=await readFile(image.path);
   if(bytes.length!==image.byteLength||createHash('sha256').update(bytes).digest('hex')!==image.sha256||bytes.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error('Screenshot content mismatch');
+  if(bytes[24]!==8||bytes[25]!==2)throw Error('App Store screenshots must be opaque RGB PNGs');
   const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
   if(width!==image.width||height!==image.height||(family==='iphone'&&(width!==1320||height!==2868))||(family==='ipad'&&(width!==2064||height!==2752)))throw Error('Screenshot dimensions mismatch');
   const fileName='fungo-italia-native-'+manifest.sourceCommit.slice(0,8)+'-'+family+'-'+image.path.split('/').at(-1);
