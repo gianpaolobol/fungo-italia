@@ -1,8 +1,29 @@
-import {mkdir,writeFile} from 'node:fs/promises';
-
-const iconPngBase64 = `iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAAB7GlDQ1BJQ0MgUHJvZmlsZQAAeJyVkT1Iw0AcxV9TpaIVBTuIijhkEexQxCFDdbKLKkUrOfQLmlKaoLQkKS6OgmvBwY/FqoOLs64OroIg+AHi4uKk6CIl/i8ptIjx4Lgf7+497t4BQqzIOW3HAlB1DMsgtK3kV42IlfEUIgZtoJmJmGlLr4hGvd7sefrdO8y/5c9yYQiEYRyJRLNMIO0xKwnRfMsLCnYh34l2RGWZzic+Ixgy5I/Mh12eU3zgWH/TwzYmTM88RCqwqILBvl4hNiyrnLc5bxsqSvlCgxP2JY4bKUs1niKOKK6qmU76Q8tqkWPGY1SVJpf8aEMV5V2U6zRGo4ikIUBJOsQCBVUYNGK0aKQbKTpP+J6x/0+yFLxS5UCCiA8WTwPbbjB/+D392ahfIkJLyk4FeSy2+zj9wOwBq3QMbP1jfbQapxwG3i9255qBzOfpDc6WulH0DMGLA4a6WJFhB7h5gN+L2e4+rYHOH4A0SWnkNwMUC3lLXO9j3Zu3d/f27Yv7+wd3V3KfggadMgAAIABJREFUeJzs3XuUHFWZ9/E/Gh3T1dM9u2kmSQpBkkDCJBGCRYQVYJFmsml10Rq1WtVo1llLVbWqZq0aQFUTQVRbRbFWYJsVnYERsWmUMBFUoTGBFJIEQiBASJA09ezunvP9/JzvOvcy09tU55zT3dX17lVP1aeqs+pq+uZ37vmer2tHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAY++xnP3vttdfmec899zxr1qxsNtukdZu3bt1qq6066wQAAFw25vprv/rVr1y5UnFx8cyZM4sHx7clOfbu3XvlypUdO3Z89NFHExFuP/309unTp+dNs61bty6oCqg6qRcMAADg8r2qIvLMM8/MzMwU5GhJ9vlS3Kt+/etf//rXixcv1rFjRzgcjmRftWpVOp1ObN++PZVKzdOnT3d2dl5fX8/Ozq7dpd8+f/68srJyOp1+fHy8bdu2pVKpDA0N6XS6c+bMqV27dqtWrax6AAB0Wjw+Pj4+njt3bnZ2NmFhYZcuXWpqavLy8oKDIQn29a9//euysrJUKjU5OTk/Pz83N9fX15dIJJ46dSqdzm9/+9v1nQ4AANx51qxZw+Fw6OjomJqamj17du3bt8/ExMRz5861tbWZTKa7u7vLy8tu3bq1Y8cOhULh7Oxsdnb2mjVr6uvrPT09a2tr8/n8mTNnhoeHf/vb3y4uLtbW1rKzs3Nzc8PCwqampkZHR6urq9evX+/YsSNqtVq1Wk2n04uKikKh8NNPP+3t7e3du7e5uTlLS0v29vaWlpbGx8f379+fSCTu7u6PHz+uVqsjIyN1dXWZTCY2m+3k5OT169c7OjpSqdSBAwcaGxv7+vqq1WrHx8fPnz+vVqu5ubm0Wi0pKUlZWZm8vLxAIHD16lU+n+9vf/ubk5OTk5PT0tKysrFArVajWfz6dSKQ4ODvX19bS0tFwuF4vFfD6frq6u1Wo1Go3W1taqqiqRSJycnMzm83q9XqvV6vV6rVaLxaKpqan19fWNjY1lZWV5eXlxcXGhoaF6vV6vV6/X6/V6vV6vV6vV6/X6/X6/V6vV6vV6vV6rVarVarVar1Wq1Wq1Wq9VqtVqtVqvVavV6vVar1Wq1Wq1Wq9VqtVqtVqvVavX/8P8Ac/PZCkZb5pAAAAAElFTkSuQmCC`;
-
-const png = Buffer.from(iconPngBase64, 'base64');
-await mkdir('assets', {recursive:true});
-await writeFile('assets/icon.png', png);
-console.log('Studio Micologia app icon generated: '+png.length+' bytes.');
+import {readFile} from 'node:fs/promises';
+import {inflateSync} from 'node:zlib';
+export function validateAppIcon(png){
+ const fail=message=>{throw Error('Invalid committed app icon: '+message);};
+ if(!Buffer.isBuffer(png)||!png.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))fail('PNG signature');
+ let offset=8,width=0,height=0,ended=false;const idat=[];
+ const crc32=bytes=>{let crc=0xffffffff;for(const b of bytes){crc^=b;for(let bit=0;bit<8;bit++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}return (crc^0xffffffff)>>>0;};
+ while(offset<png.length){
+  if(offset+12>png.length)fail('truncated chunk');
+  const length=png.readUInt32BE(offset),type=png.toString('ascii',offset+4,offset+8),end=offset+12+length;
+  if(end>png.length||length>32*1024*1024)fail('invalid chunk length');
+  if(crc32(png.subarray(offset+4,end-4))!==png.readUInt32BE(end-4))fail('chunk checksum');
+  const data=png.subarray(offset+8,end-4);
+  if(offset===8&&type!=='IHDR')fail('missing header');
+  if(type==='IHDR'){if(length!==13||width)fail('header');width=data.readUInt32BE(0);height=data.readUInt32BE(4);if(width!==1024||height!==1024||data[8]!==8||data[9]!==2||data[10]||data[11]||data[12])fail('requires opaque 1024x1024 RGB PNG');}
+  if(type==='IDAT')idat.push(data);
+  if(type==='IEND'){if(length||end!==png.length)fail('end marker');ended=true;}
+  offset=end;
+ }
+ if(!ended||!idat.length)fail('missing image data');
+ let pixels;try{pixels=inflateSync(Buffer.concat(idat),{maxOutputLength:4*1024*1024});}catch{fail('compressed image data');}
+ const stride=width*3+1;if(pixels.length!==height*stride)fail('pixel length');
+ for(let y=0;y<height;y++)if(pixels[y*stride]>4)fail('scanline filter');
+ return {width,height,bytes:png.length};
+}
+if(process.argv[1]?.endsWith('/generate-brand-assets.mjs')){
+ const result=validateAppIcon(await readFile(new URL('../assets/icon.png',import.meta.url)));
+ console.log('Committed app icon verified without overwriting: '+JSON.stringify(result));
+}
