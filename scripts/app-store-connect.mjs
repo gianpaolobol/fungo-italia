@@ -75,7 +75,7 @@ export async function audit(){
  }else report.versionsError=versions;
  if(infos.ok)for(const info of infos.data){
   const [loc,age]=await Promise.all([api('/v1/appInfos/'+info.id+'/appInfoLocalizations'),api('/v1/appInfos/'+info.id+'/ageRatingDeclaration')]);
-  report.appInfos.push({id:info.id,...info.attributes,localizations:loc.ok?loc.data.map(l=>({id:l.id,...l.attributes})):loc,ageRating:age.ok?{id:age.data.id,...age.data.attributes}:age});
+  report.appInfos.push({id:info.id,...info.attributes,primaryCategory:info.relationships?.primaryCategory?.data?.id||null,secondaryCategory:info.relationships?.secondaryCategory?.data?.id||null,localizations:loc.ok?loc.data.map(l=>({id:l.id,...l.attributes})):loc,ageRating:age.ok?{id:age.data.id,...age.data.attributes}:age});
  }else report.appInfosError=infos;
  if(process.argv.includes('--apply')){
   const config=JSON.parse(await readFile('store/it-IT.json','utf8'));
