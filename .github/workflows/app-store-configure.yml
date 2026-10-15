@@ -1,4 +1,4 @@
-name: Configure paid App Store listing
+name: Configure App Store listing at EUR 9.99
 on:
   workflow_dispatch:
   push:
