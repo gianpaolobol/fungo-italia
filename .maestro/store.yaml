@@ -10,15 +10,15 @@ appId: it.fungoitalia.app
 - hideKeyboard
 - tapOn: "Apri Amanita caesarea"
 - waitForAnimationToEnd
-- takeScreenshot: ${SCREENSHOT_DIR}/01-studio
+- takeScreenshot: 01-studio
 - tapOn: "Torna alle schede"
 - tapOn:
     text: "Aree"
     index: 0
 - waitForAnimationToEnd
-- takeScreenshot: ${SCREENSHOT_DIR}/02-aree
+- takeScreenshot: 02-aree
 - tapOn:
     text: "Esame"
     index: 0
 - waitForAnimationToEnd
-- takeScreenshot: ${SCREENSHOT_DIR}/03-esame
+- takeScreenshot: 03-esame

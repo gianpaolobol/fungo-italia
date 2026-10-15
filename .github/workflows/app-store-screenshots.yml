@@ -15,6 +15,7 @@ jobs:
     timeout-minutes: 60
     env:
       CI: '1'
+      MAESTRO_CLI_NO_ANALYTICS: '1'
       DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
@@ -26,7 +27,13 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - uses: actions/cache/restore@v4
+        id: native-cache
+        with:
+          path: native-build/Build/Products/Release-iphonesimulator/FungoItalia.app
+          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'package.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'lib/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'legacy/web/data/catalog/**', 'scripts/*.mjs') }}
       - name: Prepare actual native application
+        if: steps.native-cache.outputs.cache-hit != 'true'
         run: |
           npm ci
           node --test scripts/brand-assets.test.mjs
@@ -35,6 +42,7 @@ jobs:
           cd ios
           pod install
       - name: Compile Release application for the simulator
+        if: steps.native-cache.outputs.cache-hit != 'true'
         run: |
           mkdir -p store-evidence
           workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
@@ -44,6 +52,11 @@ jobs:
             tail -n 160 store-evidence/native-build.log
             exit 1
           fi
+      - uses: actions/cache/save@v4
+        if: steps.native-cache.outputs.cache-hit != 'true'
+        with:
+          path: native-build/Build/Products/Release-iphonesimulator/FungoItalia.app
+          key: ${{ steps.native-cache.outputs.cache-primary-key }}
       - name: Install pinned UI automation
         run: |
           curl --fail --location https://github.com/mobile-dev-inc/Maestro/releases/download/cli-2.11.0/maestro.zip -o /tmp/maestro.zip
@@ -69,7 +82,12 @@ jobs:
             xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
             xcrun simctl install "$udid" "$app"
             mkdir -p "store-evidence/screenshots/$family"
-            maestro --device "$udid" test --env SCREENSHOT_DIR="$GITHUB_WORKSPACE/store-evidence/screenshots/$family" .maestro/store.yaml
+            maestro --device "$udid" test --test-output-dir "$GITHUB_WORKSPACE/store-evidence/maestro/$family" .maestro/store.yaml
+            for name in 01-studio 02-aree 03-esame; do
+              generated=$(find "store-evidence/maestro/$family" -type f -name "$name.png" -print -quit)
+              test -n "$generated"
+              cp "$generated" "store-evidence/screenshots/$family/$name.png"
+            done
             xcrun simctl shutdown "$udid"
           done
           printf '%s\n' "$GITHUB_SHA" > store-evidence/screenshots/source-commit.txt
