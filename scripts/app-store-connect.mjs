@@ -119,6 +119,15 @@ export async function audit(){
   if(!rows.length||rows.some(t=>!t.attributes.available))throw Error('Worldwide availability not fully confirmed');
   console.log('APP_STORE_WORLDWIDE_CONFIRMED '+JSON.stringify(report.worldwideVerification));
  }
+ if(process.argv.includes('--categories')){
+  const info=report.appInfos.find(i=>i.appStoreState==='PREPARE_FOR_SUBMISSION');if(!info)throw Error('No editable app information');
+  if(!info.primaryCategory||!info.secondaryCategory){
+   const relationships={};if(!info.primaryCategory)relationships.primaryCategory={data:{type:'appCategories',id:'EDUCATION'}};if(!info.secondaryCategory)relationships.secondaryCategory={data:{type:'appCategories',id:'REFERENCE'}};
+   const result=await api('/v1/appInfos/'+info.id,{method:'PATCH',body:{data:{type:'appInfos',id:info.id,relationships}}});
+   if(!result.ok)throw Error('App category update rejected HTTP '+result.status+' '+result.codes.join(','));
+   console.log('APP_STORE_CATEGORIES_SAVED Education / Reference');
+  }else console.log('APP_STORE_CATEGORIES_ALREADY_PRESENT');
+ }
  await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/app-store-status.json',JSON.stringify(report,null,2)+'\n');
  console.log('APP_STORE_STATUS '+JSON.stringify(report));
 }

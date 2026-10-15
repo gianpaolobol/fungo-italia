@@ -1,4 +1,4 @@
-name: Verify worldwide App Store availability
+name: Complete App Store categories
 on:
   workflow_dispatch:
   push:
@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: '24'
       - run: node --check scripts/app-store-connect.mjs
-      - name: Apply authorized worldwide territory availability
-        run: node scripts/app-store-connect.mjs --worldwide
+      - name: Complete the missing educational store categories
+        run: node scripts/app-store-connect.mjs --categories
       - uses: actions/upload-artifact@v4
         if: success()
         with:
