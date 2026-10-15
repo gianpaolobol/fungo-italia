@@ -32,7 +32,20 @@ export async function audit(){
  async function api(path,{method='GET',body}={}){
   if(!path.startsWith('/v1/')&&!path.startsWith('/v2/'))throw Error('Unsupported App Store path');
   const r=await fetch('https://api.appstoreconnect.apple.com'+path,{method,headers:{Authorization:'Bearer '+jwt,Accept:'application/json',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(45000)});
-  const j=r.status===204?{}:await r.json();return r.ok?{ok:true,status:r.status,...j}:{ok:false,status:r.status,codes:(j.errors||[]).map(e=>e.code),sources:(j.errors||[]).map(e=>e.source?.pointer||e.source?.parameter||'')};
+  const j=r.status===204?{}:await r.json();return r.ok?{ok:true,status:r.status,...j}:{ok:false,status:r.status,codes:(j.errors||[]).map(e=>e.code),sources:(j.errors||[]).map(e=>e.source?.pointer||e.source?.parameter||''),details:(j.errors||[]).map(e=>(e.detail||'').replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,'[redacted]').slice(0,700))};
+ }
+ async function availabilityResource(){
+  const resource=await api('/v2/appAvailabilities/'+APP);
+  if(!resource.ok)return resource;
+  const related=resource.data.relationships?.territoryAvailabilities?.links?.related;
+  if(!related)return {...resource,ok:false,status:422,codes:['TERRITORY_LINK_MISSING']};
+  let next=related,rows=[],pages=0;
+  while(next){
+   const u=new URL(next);if(u.origin!=='https://api.appstoreconnect.apple.com'||++pages>20)throw Error('Unexpected availability pagination');
+   const result=await api(u.pathname+u.search);if(!result.ok)return result;
+   rows.push(...result.data);next=result.links?.next;
+  }
+  return {...resource,included:rows};
  }
  const app=await api('/v1/apps/'+APP);
  if(!app.ok)throw Error('App Store access failed HTTP '+app.status+' '+app.codes.join(','));
@@ -45,7 +58,7 @@ export async function audit(){
  api('/v1/apps/'+APP+'/appInfos?limit=20'),
  api('/v1/builds?filter[app]='+APP+'&sort=-uploadedDate&limit=10&include=preReleaseVersion'),
  api('/v1/apps/'+APP+'/appPriceSchedule?include=baseTerritory'),
- api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200')]);
+ availabilityResource()]);
  report.builds=builds.ok?builds.data.map(b=>({id:b.id,version:b.attributes.version,processingState:b.attributes.processingState,expired:b.attributes.expired,uploadedDate:b.attributes.uploadedDate,usesNonExemptEncryption:b.attributes.usesNonExemptEncryption,preReleaseVersion:builds.included?.find(i=>i.id===b.relationships?.preReleaseVersion?.data?.id)?.attributes.version})):builds;
  report.pricing=pricing;report.availability=availability;
  const points=await api('/v1/apps/'+APP+'/appPricePoints?filter[territory]=ITA&limit=200&include=territory');
@@ -85,22 +98,22 @@ export async function audit(){
   report.applied={metadata:true,price:true};
  }
  if(process.argv.includes('--worldwide')){
-  let current=await api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200');
+  let current=await availabilityResource();
   if(!current.ok&&current.status===404){
    const territories=await api('/v1/territories?limit=200');if(!territories.ok||territories.links?.next)throw Error('Complete Apple territory list unavailable');
    const included=territories.data.map(t=>({type:'territoryAvailabilities',id:'${territory-'+t.id+'}',attributes:{available:true,preOrderEnabled:false},relationships:{territory:{data:{type:'territories',id:t.id}}}}));
    const result=await api('/v2/appAvailabilities',{method:'POST',body:{data:{type:'appAvailabilities',attributes:{availableInNewTerritories:true},relationships:{app:{data:{type:'apps',id:APP}},territoryAvailabilities:{data:included.map(t=>({type:t.type,id:t.id}))}}},included}});
    if(!result.ok)throw Error('Worldwide availability create failed HTTP '+result.status+' '+result.codes.join(','));
-   current=await api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200');
+   current=await availabilityResource();
   }
-  if(!current.ok)throw Error('Worldwide availability unavailable HTTP '+current.status);
+  if(!current.ok)throw Error('Worldwide availability unavailable HTTP '+current.status+' '+(current.details||[]).join(';'));
   const territories=(current.included||[]).filter(t=>t.type==='territoryAvailabilities');
   if(!territories.length)throw Error('No territory availability records');
   for(const t of territories.filter(t=>!t.attributes.available)){
    const result=await api('/v1/territoryAvailabilities/'+t.id,{method:'PATCH',body:{data:{type:'territoryAvailabilities',id:t.id,attributes:{available:true}}}});
    if(!result.ok)throw Error('Territory update rejected HTTP '+result.status+' '+result.codes.join(','));
   }
-  report.availability=await api('/v2/appAvailabilities/'+APP+'?include=territoryAvailabilities&limit[territoryAvailabilities]=200');
+  report.availability=await availabilityResource();
   const rows=report.availability.included?.filter(t=>t.type==='territoryAvailabilities')||[];
   report.worldwideVerification={selected:rows.filter(t=>t.attributes.available).length,total:rows.length};
   if(!rows.length||rows.some(t=>!t.attributes.available))throw Error('Worldwide availability not fully confirmed');

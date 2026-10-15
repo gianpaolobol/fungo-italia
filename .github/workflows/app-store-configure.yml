@@ -1,4 +1,4 @@
-name: Configure worldwide App Store availability
+name: Verify worldwide App Store availability
 on:
   workflow_dispatch:
   push:
