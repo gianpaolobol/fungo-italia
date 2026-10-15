@@ -19,7 +19,7 @@ jobs:
           node --input-type=module <<'JS'
           import {writeFile} from 'node:fs/promises';
           const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY,headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'};
-          const r=await fetch(base+'/actions/runs/38724525161/artifacts',{headers});if(!r.ok)throw Error('Cannot list build artifact');
+          const r=await fetch(base+'/actions/runs/38725587159/artifacts',{headers});if(!r.ok)throw Error('Cannot list build artifact');
           const artifact=(await r.json()).artifacts.find(a=>a.name==='Native-App-Store-screenshots');
           const zip=await fetch(artifact.archive_download_url,{headers});if(!zip.ok)throw Error('Cannot read build artifact');
           await writeFile('/tmp/native-diagnostic.zip',Buffer.from(await zip.arrayBuffer()));
@@ -29,6 +29,6 @@ jobs:
           node --input-type=module <<'JS'
           import {readFile} from 'node:fs/promises';
           const s=await readFile('/tmp/native-diagnostic/native-build.log','utf8');
-          console.log(s.split('\n').filter(l=>/error:|BUILD FAILED|failed|requires|unsupported|not found/i.test(l)).slice(-80).join('\n'));
+          const lines=s.split('\n');for(let i=0;i<lines.length;i++)if(/error:|error generated|Could not resolve|Failed frontend command/.test(lines[i]))console.log(lines.slice(Math.max(0,i-3),i+24).join('\n'));
           console.log(s.split('\n').slice(-60).join('\n'));
           JS
