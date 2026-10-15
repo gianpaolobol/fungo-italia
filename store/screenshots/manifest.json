@@ -1,0 +1,54 @@
+{
+  "sourceCommit": "b58954cdc5d495812750177ce29bce394729b9af",
+  "captureRun": "https://github.com/gianpaolobol/fungo-italia/actions/runs/38729164821",
+  "images": [
+    {
+      "path": "store/screenshots/iphone/01-studio.png",
+      "family": "iphone",
+      "width": 1320,
+      "height": 2868,
+      "byteLength": 963463,
+      "sha256": "1e02b00d512afdd4f47cad87dab99f4b4ef306d622e11c24a68fe2b2dd58d943"
+    },
+    {
+      "path": "store/screenshots/iphone/02-aree.png",
+      "family": "iphone",
+      "width": 1320,
+      "height": 2868,
+      "byteLength": 247551,
+      "sha256": "18e1d8a99b6a0c79dbed8b74461d12040a5d2888c9479076dfb596b8d6d14ea6"
+    },
+    {
+      "path": "store/screenshots/iphone/03-esame.png",
+      "family": "iphone",
+      "width": 1320,
+      "height": 2868,
+      "byteLength": 166823,
+      "sha256": "3c3c88336a5c68aa2dce75f14c5d3334cb706f6b4dfb77bf5def10f6f312c502"
+    },
+    {
+      "path": "store/screenshots/ipad/01-studio.png",
+      "family": "ipad",
+      "width": 2064,
+      "height": 2752,
+      "byteLength": 1965456,
+      "sha256": "c29364ef5ec38a2a8949aea32ff77e4c832ee617bc9d924a29c926527d823aa3"
+    },
+    {
+      "path": "store/screenshots/ipad/02-aree.png",
+      "family": "ipad",
+      "width": 2064,
+      "height": 2752,
+      "byteLength": 326756,
+      "sha256": "08b431f13bc9cddf96ea9726925aedcf0aea82402033ea56032f4407a5548a1b"
+    },
+    {
+      "path": "store/screenshots/ipad/03-esame.png",
+      "family": "ipad",
+      "width": 2064,
+      "height": 2752,
+      "byteLength": 164886,
+      "sha256": "b63d2775625c1fdbabaddc3cf82c372d28fbc923196eb249688c3b947060587b"
+    }
+  ]
+}
