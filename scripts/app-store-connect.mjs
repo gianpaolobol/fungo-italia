@@ -27,13 +27,17 @@ export function appleJwt(key,now=Math.floor(Date.now()/1000)){
  const body=b64({alg:'ES256',kid:key.keyIdentifier,typ:'JWT'})+'.'+b64({iss:key.issuerIdentifier,iat:now,exp:now+900,aud:'appstoreconnect-v1'});
  return body+'.'+sign('sha256',Buffer.from(body),{key:createPrivateKey(key.keyP8),dsaEncoding:'ieee-p1363'}).toString('base64url');
 }
-export async function audit(){
+export async function createAppleApi(){
  const key=await credential(),jwt=appleJwt(key);mask(jwt);key.keyP8='';
  async function api(path,{method='GET',body}={}){
   if(!path.startsWith('/v1/')&&!path.startsWith('/v2/'))throw Error('Unsupported App Store path');
   const r=await fetch('https://api.appstoreconnect.apple.com'+path,{method,headers:{Authorization:'Bearer '+jwt,Accept:'application/json',...(body?{'Content-Type':'application/json'}:{})},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(45000)});
   const j=r.status===204?{}:await r.json();return r.ok?{ok:true,status:r.status,...j}:{ok:false,status:r.status,codes:(j.errors||[]).map(e=>e.code),sources:(j.errors||[]).map(e=>e.source?.pointer||e.source?.parameter||''),details:(j.errors||[]).map(e=>(e.detail||'').replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,'[redacted]').slice(0,700))};
  }
+ return api;
+}
+export async function audit(){
+ const api=await createAppleApi();
  async function availabilityResource(){
   const resource=await api('/v2/appAvailabilities/'+APP);
   if(!resource.ok)return resource;
