@@ -28,6 +28,7 @@ jobs:
       - name: Prepare actual native application
         run: |
           npm ci
+          node --test scripts/brand-assets.test.mjs
           npm run prepare:data
           npx expo prebuild --platform ios --no-install
           cd ios
@@ -46,7 +47,9 @@ jobs:
           cd /tmp
           shasum -a 256 --check --ignore-missing checksums_sha256.txt
           unzip -q maestro.zip -d "$RUNNER_TEMP/maestro"
-          echo "$RUNNER_TEMP/maestro/maestro/bin" >> "$GITHUB_PATH"
+          maestro_bin=$(find "$RUNNER_TEMP/maestro" -type f -path "*/bin/maestro" -print -quit)
+          test -n "$maestro_bin"
+          dirname "$maestro_bin" >> "$GITHUB_PATH"
       - name: Capture iPhone and iPad from the native app
         run: |
           app=$(find native-build/Build/Products/Release-iphonesimulator -maxdepth 1 -name '*.app' -print -quit)
