@@ -66,7 +66,10 @@ public final class FungoSubscriptionModule: Module {
   @MainActor public static func verifiedEntitlement() async -> [String: Any] {
     // This app has one subscription product. The latest transaction may be
     // expired or revoked, so every access condition remains mandatory.
+    let diagnostic = Logger(subsystem: "it.fungoitalia.subscription", category: "StoreKit")
+    diagnostic.notice("Verifier Transaction.latest entered")
     let latest = await Transaction.latest(for: Self.annualID)
+    diagnostic.notice("Verifier Transaction.latest returned present=\(latest != nil, privacy: .public)")
     let now = Date()
     var selected: Transaction?
     if let latest, case .verified(let transaction) = latest,
