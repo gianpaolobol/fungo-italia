@@ -1,5 +1,5 @@
 # Privacy App Store — Fungo Italia
-15 ottobre 2026. Il titolare conferma che il questionario Apple non è ancora compilato. Non è stato modificato via API: questa funzione non è disponibile nell'API pubblica utilizzata.
+16 ottobre 2026. Il titolare conferma che il questionario Apple non è ancora compilato. Non è stato modificato via API: questa funzione non è disponibile nell'API pubblica utilizzata.
 
 Aprire https://appstoreconnect.apple.com/apps/6821140326/appPrivacy e scegliere “Inizia”. L'informativa è https://gianpaolobol.github.io/fungo-italia/privacy.html ; contatto approvato: gianpaolo.franceschini@gmail.com.
 
@@ -8,7 +8,8 @@ Aprire https://appstoreconnect.apple.com/apps/6821140326/appPrivacy e scegliere 
 - Foto dell'atlante: asset inclusi. L'app nativa attuale non espone importazione Foto o modifica amministrativa.
 - Mappe online: richieste a servizi cartografici esterni; non risulta accesso alla posizione GPS.
 - Aggiornamenti Expo: EAS-Client-ID, piattaforma, runtime, ID degli aggiornamenti; dopo errori di avvio può essere inviato Expo-Fatal-Error. Le richieste di rete espongono l'indirizzo IP al fornitore.
-- Non risultano SDK pubblicitari, account utente o acquisti in-app. Il pagamento dell'app è gestito da Apple.
+- Non risultano SDK pubblicitari o account utente dell’app. Su iOS/iPadOS l’abbonamento annuale è gestito da Apple tramite StoreKit 2: il dispositivo verifica prodotto, validità, revoca e scadenza. Il modulo non invia ricevute o identificativi delle transazioni a server dello sviluppatore e non espone tali identificativi a JavaScript; lo stato di accesso è mantenuto in memoria. Il pagamento e i dati finanziari sono gestiti da Apple.
+- L’eventuale storico acquisti da dichiarare va valutato secondo la definizione Apple di raccolta: la sola elaborazione sul dispositivo, senza invio fuori dal dispositivo allo sviluppatore o a partner per loro finalità, non equivale automaticamente a raccolta. Non dichiarare dati finanziari ricevuti dallo sviluppatore per il solo uso di StoreKit.
 
 Non selezionare automaticamente “Dati non raccolti”. Il questionario riguarda anche i partner e richiede di verificare l'effettiva conservazione/uso dei dati secondo le loro policy.
 
