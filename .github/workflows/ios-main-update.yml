@@ -1,35 +1,51 @@
-name: Publish current photo exam to TestFlight
+name: Publish verified iOS content updates
 on:
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/ios-main-update.yml']
+  workflow_run:
+    workflows: ['Expo Android and iOS']
+    types: [completed]
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: ios-production-update
   cancel-in-progress: false
 jobs:
   publish:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+      EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Reuse the exact dependencies and content verified by the native pipeline
+        uses: actions/download-artifact@v4
+        with:
+          name: Fungo-Italia-build-inputs
+          path: .
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
       - run: npm ci
-      - name: Validate current app
+      - name: Validate access policy and native compatibility configuration
         run: |
-          npm run prepare:data
           npm run typecheck
-          node --test scripts/*.test.mjs
-      - name: Verify compatibility with TestFlight build 5
+          node --test scripts/subscription-policy.test.mjs
+          npx expo config --type public --json > /tmp/production-expo-config.json
+          node -e 'const c=require("/tmp/production-expo-config.json");if(c.ios?.bundleIdentifier!=="it.fungoitalia.app"||c.runtimeVersion?.policy!=="fingerprint"||c.extra?.eas?.projectId!==process.env.EXPO_PROJECT_ID)throw Error("Unexpected production app identity or unsafe runtime policy");console.log("Production identity and fingerprint policy verified")'
+      - name: Publish compatible content to the installed iOS app
         run: |
-          npx expo-updates runtimeversion:resolve --platform ios > /tmp/runtime.json
-          node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync('/tmp/runtime.json','utf8'));if(r.runtimeVersion!=='9d5f0a507eaa68f99fc6794a7f063631362c38f8')throw Error('Runtime mismatch: rebuild required');console.log(r.runtimeVersion)"
-      - name: Publish current main to TestFlight production channel
-        run: npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Publish Studio Micologia logo alignment $GITHUB_SHA" --non-interactive --json
+          mkdir -p store-evidence
+          npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Verified native content ${{ github.event.workflow_run.head_sha }}" --non-interactive --json > store-evidence/production-update.json
+          cat store-evidence/production-update.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: iOS-production-update-receipt
+          path: store-evidence/production-update.json
+          retention-days: 30
