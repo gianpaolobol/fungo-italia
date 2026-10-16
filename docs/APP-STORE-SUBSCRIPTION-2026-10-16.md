@@ -24,8 +24,8 @@ Prezzo localizzato Apple, durata, rinnovo, ripristino, gestione dell’abbonamen
 ## Verifica tecnica
 - Compilazione Release iOS e navigazione/acquisizione nativa su iPhone e iPad superate: https://github.com/gianpaolobol/fungo-italia/actions/runs/38866436691 .
 - TypeScript e test della policy di accesso superati nelle preparazioni native.
-- La terza prova UI ha trovato il pulsante annuale abilitato ma nessuna transazione dopo il tocco; diagnostica e schermate conservate, rilascio firmato bloccato in attesa di correzione. Evidenza: https://github.com/gianpaolobol/fungo-italia/actions/runs/38871546919 .
-- Il test integrato è stato corretto per dichiarare la disponibilità iOS 17 della API XCTest; nuova esecuzione in corso: https://github.com/gianpaolobol/fungo-italia/actions/runs/38874175947 . La compatibilità minima dell’app non cambia.
+- La prova UI con diagnostica conferma ingresso nativo, prodotto già disponibile e controller di conferma visibile; l’attesa si trova nella chiamata Apple purchase. Nuova esecuzione con attese di stato fino a 120 secondi, senza modificare le condizioni di accesso: https://github.com/gianpaolobol/fungo-italia/actions/runs/38878214557 .
+- Test integrato della funzione di accesso StoreKit **superato**: acquisto verificato, rimborso e scadenza; un test reale, zero errori, 206 secondi. Evidenza: https://github.com/gianpaolobol/fungo-italia/actions/runs/38874957310 . La compatibilità minima dell’app resta invariata.
 - Il runtime 26.5 presenta un difetto di StoreKit Test. Il download 26.6 non è disponibile nel catalogo del runner; è stato installato il runtime Apple **18.6 (22G86)**. I test confermano il prezzo locale italiano della fixture.
 - La fixture StoreKit resta confinata ai target XCTest; non entra nell’app distribuita.
 - La build (7) non contiene gli acquisti. La nuova compilazione firmata e il caricamento TestFlight sono subordinati al successo delle prove UI.
