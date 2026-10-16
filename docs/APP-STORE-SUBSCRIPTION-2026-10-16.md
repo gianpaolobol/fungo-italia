@@ -10,7 +10,7 @@ La richiesta del titolare sostituisce la vendita una tantum a 9,99 € documenta
 - Italia **9,99 EUR / anno**; 175 prezzi territoriali equivalenti e 175 territori disponibili, nuovi territori abilitati.
 - Localizzazioni italiane di gruppo e prodotto salvate.
 - Sei screenshot nativi (tre iPhone, tre iPad) verificati visivamente e acquisiti dal codice annuale; elaborazione Apple **COMPLETE**.
-- Screenshot del paywall per App Review: **COMPLETE**. Stato del prodotto riletto **READY_TO_SUBMIT** il 16 ottobre alle 08:11 UTC.
+- Screenshot del paywall per App Review: **COMPLETE**. Stato del prodotto riletto **READY_TO_SUBMIT** il 16 ottobre alle 11:56 UTC.
 - Evidenza immagini e stato: https://github.com/gianpaolobol/fungo-italia/actions/runs/38871890407 .
 - Il simulatore della prima acquisizione usa lo storefront USA e mostra il relativo prezzo Apple di $8.99; il prezzo italiano verificato resta €9.99. Nessun prezzo è stato sovrascritto nelle immagini.
 
@@ -28,13 +28,29 @@ Prezzo localizzato Apple, durata, rinnovo, ripristino, gestione dell’abbonamen
 - Un'esecuzione UI iPhone ha superato il ciclo completo in 254,654 secondi, compresi acquisto dall'interfaccia, riapertura, esame premium, rimborso, secondo acquisto, disdetta del rinnovo senza perdita anticipata di accesso e scadenza. Lo stesso run non è complessivamente riuscito perché la prova iPad è fallita: https://github.com/gianpaolobol/fungo-italia/actions/runs/38878214557 . Non viene attestata una prova UI del tasto esplicito Ripristina acquisti.
 - Nella successiva esecuzione isolata, iPad ha completato l'acquisto verificato ma non l'accesso all'esame dopo la riapertura; iPhone è rimasto in attesa di purchase. Entrambe le prove sono fallite: https://github.com/gianpaolobol/fungo-italia/actions/runs/38882754510 .
 - Corretto un difetto concreto: il timeout UI scartava definitivamente risposte StoreKit tardive. Ora una risposta verificata viene applicata anche dopo il timeout se appartiene ancora alla generazione corrente; revoche, nuove verifiche e smontaggio invalidano le risposte precedenti, e la scadenza viene ricontrollata al momento dell'applicazione. La causa specifica del precedente fallimento iPad non viene ancora attribuita a questo difetto.
-- Nuove prove su runner separati iPhone e iPad con identificatori stabili dei tab, diagnostica del risultato di accesso e firma ad hoc del solo simulatore: https://github.com/gianpaolobol/fungo-italia/actions/runs/38888893682 . Nuova integrazione nativa sul medesimo codice: https://github.com/gianpaolobol/fungo-italia/actions/runs/38888893431 . Stato al momento dell'aggiornamento: in corso; nessun successo viene anticipato.
+- Il run UI c14bff45 è fallito: iPhone ha acquistato ma la verifica dopo la riapertura non è terminata entro il limite, mentre iPad è rimasto in attesa dell’acquisto: https://github.com/gianpaolobol/fungo-italia/actions/runs/38888893682 . Sullo stesso codice il test nativo è passato in 39,845 secondi: https://github.com/gianpaolobol/fungo-italia/actions/runs/38888893431 .
 - Il runtime 26.5 presenta un difetto di StoreKit Test. Il download 26.6 non è disponibile nel catalogo del runner; è stato installato il runtime Apple **18.6 (22G86)**. Le prove confermano il prezzo locale italiano della fixture. La fixture resta confinata ai target XCTest e non entra nell'app distribuita.
-- La correzione web che impedisce ai messaggi di stato di intercettare i tap è stata verificata. Tutti i **65 test PWA** sono passati anche sulla revisione c14bff45: https://github.com/gianpaolobol/fungo-italia/actions/runs/38888893564 .
+- La correzione web che impedisce ai messaggi di stato di intercettare i tap è stata verificata. Tutti i **65 test PWA** sono passati sulla revisione 1bacf13c: https://github.com/gianpaolobol/fungo-italia/actions/runs/38900517361 .
 - Pipeline Android, APK e prova nell'emulatore superate sulla revisione 8f35c9af: https://github.com/gianpaolobol/fungo-italia/actions/runs/38882754465 .
-- La build Apple (7) non contiene gli acquisti. Nessun nuovo binario annuale è ancora attestato. Compilazione firmata e caricamento TestFlight richiedono il successo UI di entrambi i dispositivi e il più recente test nativo corrispondente agli stessi input di billing, dipendenze e configurazione Expo.
+- La build Apple (7) non contiene gli acquisti. Nessun nuovo binario annuale è ancora attestato. Il percorso di produzione richiede il successo UI di entrambi i dispositivi e il più recente test nativo corrispondente agli stessi input di billing, dipendenze e configurazione Expo. Un percorso distinto può compilare e caricare un candidato diagnostico TestFlight dopo un fallimento UI soltanto se il test nativo corrispondente è superato: non seleziona il candidato per App Store e non dichiara risolto il fallimento UI.
 - L'associazione automatica alla versione 1.0 controlla numero reale del binario firmato, hash, sorgente e prova StoreKit; attende lo stato Apple VALID.
 - Aggiornamenti iOS di produzione subordinati alla pipeline nativa, al confronto delle sorgenti di billing con l'ultima prova StoreKit UI riuscita e al runtime fingerprint. Una conclusione verde con pubblicazione saltata non attesta un aggiornamento OTA.
+
+## Correzioni successive e prove correnti
+
+Il confronto con Xcode/runtime 26.4 ha fallito durante la preparazione StoreKit Test (storefront vuoto e errore della fixture), prima di verificare il billing. I workflow usano nuovamente Xcode 26.6 e runtime 18.6: non viene attribuita la causa dei blocchi a un disallineamento SDK.
+
+La verifica nativa del singolo prodotto annuale usa ora `Transaction.latest(for:)`, accettando soltanto una transazione verificata del prodotto annuale, non revocata, non aggiornata a un altro prodotto e con scadenza futura. Le transazioni mancanti, non verificate o scadute non concedono accesso.
+
+Il run UI 38896477391 ha rilevato un acquisto avviato mentre la verifica iniziale di accesso era ancora pendente. Sulla revisione 1bacf13c il pulsante Acquista resta disabilitato fino alla conclusione di una verifica corrente che confermi l’assenza di accesso. Ripristino e nuova verifica restano disponibili dopo un errore. I test nativi isolano il bootstrap JavaScript nel solo runner unitario; le prove UI avviano sempre l’app completa.
+
+Esiti della revisione 1bacf13c:
+- **Test nativo superato** in 371,630 secondi, un test e zero errori, con acquisto verificato, rimborso, secondo acquisto e scadenza: https://github.com/gianpaolobol/fungo-italia/actions/runs/38900517505 . L’isolamento rimuove soltanto il bootstrap React nel runner unitario e usa la funzione Swift effettiva di produzione.
+- **Prove UI iPhone e iPad fallite**: la verifica iniziale rimane pendente oltre 120 secondi; il pulsante Acquista resta disabilitato e non viene avviato un acquisto concorrente. Il prezzo locale di 9,99 € viene restituito correttamente. Non è dimostrata la causa del blocco nel processo app sotto UI test: https://github.com/gianpaolobol/fungo-italia/actions/runs/38900517531 . Il PASS unitario non sostituisce il test dell’interfaccia.
+- **Pipeline Android, emulatore e aggiornamento del canale di anteprima superati**: https://github.com/gianpaolobol/fungo-italia/actions/runs/38900517647 .
+- Candidato firmato TestFlight in compilazione, senza selezione App Store: https://github.com/gianpaolobol/fungo-italia/actions/runs/38904049950 . Non viene ancora attestato un caricamento o un nuovo binario valido Apple.
+
+Le build firmate preparano esplicitamente la chiave API Apple già autorizzata in un file temporaneo con permessi 0600, soltanto dopo la creazione dell’IPA; la eliminano al termine. Nessuna chiave entra nel repository o negli artifact.
 
 ## Passaggi di pubblicazione ancora aperti
 L’app resta PREPARE_FOR_SUBMISSION. Il titolare ha confermato vuoto il questionario Privacy: con gli strumenti disponibili richiede il portale Apple. Vedi [risposte tecniche preparate](APP-STORE-PRIVACY-WORKSHEET.md).
