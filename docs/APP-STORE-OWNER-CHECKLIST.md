@@ -32,3 +32,11 @@ Il primo abbonamento deve essere inviato con un binario tramite il portale; l’
 [Guida ufficiale Apple](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase/).
 
 Lo stato **READY_TO_SUBMIT** del prodotto significa pronto per l’invio, non approvato o già acquistabile. Anche una build disponibile su TestFlight non è pubblicazione sull’App Store. Il [registro tecnico](APP-STORE-SUBSCRIPTION-2026-10-16.md) distingue configurazione, prove eseguite e limiti ancora aperti.
+
+## Verifica del candidato annuale su iPhone
+
+Il candidato **1.0.0 (9)** è caricato ed è **VALID** su Apple al 16 ottobre, 13:23 UTC. Apri [TestFlight in App Store Connect](https://appstoreconnect.apple.com/apps/6821140326/testflight/ios) per controllare l’abilitazione del tuo account al test interno. L’installazione beta passa dall’app TestFlight; l’IPA App Store scaricato da GitHub non si installa direttamente da Safari. Non sono stati inviati inviti a tester né creati link pubblici.
+
+Questa sessione non controlla il tuo iPhone fisico. Sul dispositivo occorre verificare: prezzo e anteprima iniziale; acquisto sandbox; sblocco di Studio completo ed Esame; chiusura e riapertura; ripristino tramite il pulsante; rimborso/scadenza nel contesto di test e conseguente ritorno all’anteprima. Gli acquisti TestFlight usano il sandbox Apple; non attestano vendite reali.
+
+Il test nativo di acquisto, rimborso e scadenza è passato. L’ultima prova dell’interfaccia è passata su iPad ma è fallita su iPhone durante la verifica iniziale. Il candidato non è selezionato per la vendita e la disponibilità tecnica non attesta che il flusso iPhone sia già risolto. Conservare i preferiti e i progressi durante le prove; non cancellare i dati per simulare un ripristino.
