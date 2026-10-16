@@ -1,7 +1,7 @@
 import XCTest
 import StoreKit
 import StoreKitTest
-import FungoSubscription
+internal import FungoSubscription
 
 final class AnnualStoreKitTests: XCTestCase {
   let productID = "it.fungoitalia.premium.annual"
@@ -20,6 +20,7 @@ final class AnnualStoreKitTests: XCTestCase {
     let session = try SKTestSession(contentsOf: url)
     session.resetToDefaultState()
     session.disableDialogs = true
+    session.timeRate = .realTime
     session.locale = Locale(identifier: "it_IT")
     session.storefront = "ITA"
     XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session unavailable")
