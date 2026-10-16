@@ -24,9 +24,11 @@ test.resources_build_phase.add_file_reference(fixture)
 project.save
 scheme = Xcodeproj::XCScheme.new
 scheme.add_build_target(app)
+scheme.add_build_target(test, false)
 scheme.add_test_target(test)
+scheme.set_launch_target(app)
 scheme.test_action.build_configuration = 'Release'
-scheme.save_as(project.path.dirname, 'FungoItaliaStoreKit', true)
+scheme.save_as(project.path, 'FungoItaliaStoreKit', true)
 podfile = File.read('ios/Podfile')
 raise 'Unexpected Podfile layout' unless podfile.match?(/\nend\s*\z/)
 podfile = podfile.sub(/\nend\s*\z/, "\n  target 'AnnualStoreKitTests' do\n    inherit! :search_paths\n  end\nend\n")
