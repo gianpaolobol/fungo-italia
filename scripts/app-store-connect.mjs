@@ -66,7 +66,7 @@ export async function audit(){
  report.builds=builds.ok?builds.data.map(b=>({id:b.id,version:b.attributes.version,processingState:b.attributes.processingState,expired:b.attributes.expired,uploadedDate:b.attributes.uploadedDate,usesNonExemptEncryption:b.attributes.usesNonExemptEncryption,preReleaseVersion:builds.included?.find(i=>i.id===b.relationships?.preReleaseVersion?.data?.id)?.attributes.version})):builds;
  report.pricing=pricing;report.availability=availability;
  const points=await api('/v1/apps/'+APP+'/appPricePoints?filter[territory]=ITA&limit=200&include=territory');
- report.targetPricePoint=points.ok?points.data.find(p=>Number(p.attributes.customerPrice)===9.99)||null:points;
+ report.targetPricePoint=points.ok?points.data.find(p=>Number(p.attributes.customerPrice)===0)||null:points;
  if(pricing.ok){report.manualPrices=await api('/v1/appPriceSchedules/'+pricing.data.id+'/manualPrices?include=appPricePoint,territory&limit=200');}
  if(versions.ok)for(const v of versions.data){
   const [localizations,review,build]=await Promise.all([api('/v1/appStoreVersions/'+v.id+'/appStoreVersionLocalizations'),api('/v1/appStoreVersions/'+v.id+'/appStoreReviewDetail'),api('/v1/appStoreVersions/'+v.id+'/build')]);
@@ -83,7 +83,7 @@ export async function audit(){
  }else report.appInfosError=infos;
  if(process.argv.includes('--apply')){
   const config=JSON.parse(await readFile('store/it-IT.json','utf8'));
-  if(config.appId!==APP||config.price.baseTerritory!=='ITA'||config.price.customerPrice!=='9.99')throw Error('Unexpected listing configuration');
+  if(config.appId!==APP||config.price.baseTerritory!=='ITA'||config.price.customerPrice!=='0.00')throw Error('Unexpected listing configuration');
   for(const [field,max]of [['name',30],['subtitle',30],['keywords',100],['description',4000],['promotionalText',170]])if(typeof config[field]!=='string'||config[field].length>max)throw Error('Invalid store text '+field);
   const version=report.versions.find(v=>v.appStoreState==='PREPARE_FOR_SUBMISSION'),info=report.appInfos.find(i=>i.appStoreState==='PREPARE_FOR_SUBMISSION');
   if(!version||!info)throw Error('No editable initial App Store version; refusing to overwrite another release');
@@ -95,10 +95,10 @@ export async function audit(){
   const review=await api('/v1/appStoreVersions/'+version.id+'/appStoreReviewDetail');
   if(review.ok)await patch('appStoreReviewDetails',review.data.id,{demoAccountRequired:false,demoAccountName:null,demoAccountPassword:null,notes:config.reviewNotes});
   const point=report.targetPricePoint;
-  if(!point?.id||Number(point.attributes.customerPrice)!==9.99)throw Error('Exact Italian EUR9.99 Apple price point not found; price unchanged');
+  if(!point?.id||Number(point.attributes.customerPrice)!==0)throw Error('Free Apple download price point not found; price unchanged');
   const price=await api('/v1/appPriceSchedules',{method:'POST',body:{data:{type:'appPriceSchedules',relationships:{app:{data:{type:'apps',id:APP}},baseTerritory:{data:{type:'territories',id:'ITA'}},manualPrices:{data:[{type:'appPrices',id:'${italyPrice}'}]}}},included:[{type:'appPrices',id:'${italyPrice}',attributes:{startDate:null,endDate:null},relationships:{appPricePoint:{data:{type:'appPricePoints',id:point.id}}}}]}});
   if(!price.ok)throw Error('Price update failed HTTP '+price.status+' '+price.codes.join(',')+' '+price.sources.join(','));
-  console.log('APP_STORE_PRICE_SAVED Italy EUR 9.99');
+  console.log('APP_STORE_PRICE_SAVED Free download; subscription billed separately');
   report.applied={metadata:true,price:true};
  }
  if(process.argv.includes('--worldwide')){

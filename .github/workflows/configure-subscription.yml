@@ -2,7 +2,7 @@ name: Configure annual subscription
 on:
   push:
     branches: [main]
-    paths: ['scripts/configure-subscription.mjs','.github/workflows/configure-subscription.yml']
+    paths: ['scripts/configure-subscription.mjs','.github/workflows/configure-subscription.yml','store/it-IT.json']
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,3 +18,5 @@ jobs:
         with:
           node-version: '24'
       - run: node scripts/configure-subscription.mjs
+      - name: Apply free download listing and subscription disclosures
+        run: node scripts/app-store-connect.mjs --apply
