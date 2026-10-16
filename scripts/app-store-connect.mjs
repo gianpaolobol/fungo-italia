@@ -136,12 +136,14 @@ export async function audit(){
  report.subscriptions=[];
  if(groups.ok)for(const group of groups.data){
   const groupVersions=await api('/v1/subscriptionGroups/'+group.id+'/versions');
+  if(groupVersions.ok)for(const version of groupVersions.data){version.localizations=await api('/v1/subscriptionGroupVersions/'+version.id+'/localizations');}
   report.subscriptionGroupVersions||=[];report.subscriptionGroupVersions.push({groupId:group.id,...groupVersions});
   const products=await api('/v1/subscriptionGroups/'+group.id+'/subscriptions');
   if(!products.ok)continue;
   for(const product of products.data){
    const [prices,availability,screenshot]=await Promise.all([api('/v1/subscriptions/'+product.id+'/prices?include=subscriptionPricePoint,territory&limit=200'),api('/v1/subscriptions/'+product.id+'/subscriptionAvailability'),api('/v1/subscriptions/'+product.id+'/appStoreReviewScreenshot')]);
    const versions=await api('/v1/subscriptions/'+product.id+'/versions');
+   if(versions.ok)for(const version of versions.data){version.localizations=await api('/v1/subscriptionVersions/'+version.id+'/localizations');}
    const italy=prices.data?.find(p=>p.relationships?.territory?.data?.id==='ITA');
    const point=prices.included?.find(p=>p.type==='subscriptionPricePoints'&&p.id===italy?.relationships?.subscriptionPricePoint?.data?.id);
    const related=availability.data?.relationships?.availableTerritories?.links?.related;
@@ -151,6 +153,11 @@ export async function audit(){
  }
  const privacyProbe=await api('/v1/appDataUsages?filter[app]='+APP);
  report.privacyQuestionnaireAccess={ok:privacyProbe.ok,status:privacyProbe.status,codes:privacyProbe.codes||[],entries:Array.isArray(privacyProbe.data)?privacyProbe.data.length:null};
+ try{
+  const url='https://developer.apple.com/documentation/appstoreconnectapi/submitting-subscriptions-and-subscription-groups-for-app-review.md';
+  const response=await fetch(url,{signal:AbortSignal.timeout(20000)});
+  if(response.ok){const text=await response.text();report.firstSubscriptionReviewReference={url,checkedAt:new Date().toISOString(),excerpts:text.split('\n').filter(line=>/first|initial|important|binary|appstoreconnect.apple.com/i.test(line)).slice(0,8).map(line=>line.slice(0,1500))};}
+ }catch{report.firstSubscriptionReviewReference={retrieved:false};}
  try{
   const response=await fetch('https://expo.dev/privacy',{signal:AbortSignal.timeout(20000)});
   if(response.ok){const html=await response.text();const plain=html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');const excerpts=[];for(const match of plain.matchAll(/end.user|IP address|identifiers|retention|retain|device information/gi)){excerpts.push(plain.slice(Math.max(0,match.index-100),match.index+600));if(excerpts.length>=12)break;}report.expoPrivacyReference={url:'https://expo.dev/privacy',checkedAt:new Date().toISOString(),excerpts};}
