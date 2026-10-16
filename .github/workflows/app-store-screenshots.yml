@@ -16,6 +16,7 @@ jobs:
     env:
       CI: '1'
       MAESTRO_CLI_NO_ANALYTICS: '1'
+      MAESTRO_DRIVER_STARTUP_TIMEOUT: '600000'
       DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
@@ -31,7 +32,7 @@ jobs:
         id: native-cache
         with:
           path: native-build/Build/Products/Release-iphonesimulator/FungoItalia.app
-          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'package.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'hooks/**', 'lib/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'legacy/web/data/catalog/**', 'scripts/*.mjs') }}
+          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'package.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'hooks/**', 'lib/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'legacy/web/**', 'scripts/prepare*.mjs', 'scripts/generate-brand-assets.mjs') }}
       - name: Prepare actual native application
         if: steps.native-cache.outputs.cache-hit != 'true'
         run: |
