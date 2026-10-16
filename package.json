@@ -42,7 +42,8 @@
         "buildFromSource": [
           ".*"
         ]
-      }
+      },
+      "nativeModulesDir": "./modules"
     }
   }
 }

@@ -31,13 +31,14 @@ jobs:
         id: native-cache
         with:
           path: native-build/Build/Products/Release-iphonesimulator/FungoItalia.app
-          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'package.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'lib/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'legacy/web/data/catalog/**', 'scripts/*.mjs') }}
+          key: native-store-xcode266-${{ runner.arch }}-${{ hashFiles('package-lock.json', 'package.json', 'app.json', 'app.config.js', 'App.tsx', 'index.js', 'components/**', 'hooks/**', 'lib/**', 'src/**', 'modules/**', 'assets/**', 'web/public/images/**', 'legacy/web/data/catalog/**', 'scripts/*.mjs') }}
       - name: Prepare actual native application
         if: steps.native-cache.outputs.cache-hit != 'true'
         run: |
           npm ci
-          node --test scripts/brand-assets.test.mjs
+          node --test scripts/brand-assets.test.mjs scripts/subscription-policy.test.mjs
           npm run prepare:data
+          npm run typecheck
           npx expo prebuild --platform ios --no-install
           cd ios
           pod install
