@@ -1,0 +1,43 @@
+name: Inspect iPhone web test evidence
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/inspect-pwa-failure.yml']
+permissions:
+  actions: read
+  contents: write
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Read the actual failed offline exam context
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'JS'
+          import {readFile,writeFile,readdir} from 'node:fs/promises';
+          import {execFileSync} from 'node:child_process';
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
+          const headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'};
+          const r=await fetch(base+'/actions/artifacts/12035031613/zip',{headers});
+          if(!r.ok)throw Error('Evidence download failed');
+          await writeFile('/tmp/pwa-evidence.zip',Buffer.from(await r.arrayBuffer()));
+          execFileSync('unzip',['-q','/tmp/pwa-evidence.zip','-d','/tmp/pwa-evidence']);
+          const files=await readdir('/tmp/pwa-evidence',{recursive:true});
+          for(const path of files.filter(x=>x.endsWith('error-context.md')))console.log('PWA_ERROR_CONTEXT '+path+'\n'+(await readFile('/tmp/pwa-evidence/'+path,'utf8')).slice(0,14000));
+          for(const path of files.filter(x=>x.endsWith('trace.zip'))){
+            execFileSync('unzip',['-q','/tmp/pwa-evidence/'+path,'-d','/tmp/pwa-trace']);
+            const traceFiles=(await readdir('/tmp/pwa-trace',{recursive:true})).filter(x=>x.endsWith('.trace'));
+            for(const p of traceFiles){
+              const events=(await readFile('/tmp/pwa-trace/'+p,'utf8')).split('\n').filter(Boolean).map(x=>JSON.parse(x));
+              console.log('PWA_ACTION_TRACE '+JSON.stringify(events.filter(e=>e.type==='before'||e.type==='after').map(e=>({type:e.type,callId:e.callId,apiName:e.apiName,selector:e.params?.selector,error:e.error?.message})).slice(-35)));
+            }
+          }
+          for(const [index,path] of files.filter(x=>x.endsWith('test-failed-1.png')).entries()){
+            const bytes=await readFile('/tmp/pwa-evidence/'+path);
+            const r=await fetch(base+'/git/blobs',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({encoding:'base64',content:bytes.toString('base64')})});
+            if(!r.ok)throw Error('Evidence image staging failed');const blob=await r.json();
+            console.log('PWA_FAILURE_BLOB '+JSON.stringify({path:'review-pwa-failure/'+index+'.png',sha:blob.sha,bytes:bytes.length,width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20)}));
+          }
+          JS
