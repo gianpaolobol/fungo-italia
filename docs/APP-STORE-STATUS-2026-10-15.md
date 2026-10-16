@@ -1,5 +1,7 @@
 # Fungo Italia — stato App Store, 15 ottobre 2026
 
+> Documento storico: il 16 ottobre il titolare ha sostituito la vendita una tantum con un abbonamento annuale. Vedi [configurazione aggiornata](APP-STORE-SUBSCRIPTION-2026-10-16.md).
+
 Verificato direttamente con App Store Connect tramite la credenziale esistente di Expo. App `6821140326`, bundle `it.fungoitalia.app`.
 
 - Versione 1.0 in `PREPARE_FOR_SUBMISSION`: non pubblicata e non in revisione.
