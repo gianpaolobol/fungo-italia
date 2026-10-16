@@ -8,7 +8,7 @@ permissions:
   contents: read
 concurrency:
   group: native-store-screenshots
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   capture:
     runs-on: macos-26
@@ -77,8 +77,10 @@ jobs:
           xcrun simctl list devicetypes -j > /tmp/sim-types.json
           for family in iphone ipad; do
             device_type=$(FAMILY="$family" node -e 'const a=require("/tmp/sim-types.json").devicetypes;const pattern=process.env.FAMILY==="iphone"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error("Required App Store screenshot device unavailable");process.stdout.write(d.identifier)')
-            udid=$(xcrun simctl create "FungoStore-$family" "$device_type" "$runtime")
-            xcrun simctl boot "$udid"
+            xcrun simctl list devices available -j > /tmp/screenshot-devices.json
+            udid=$(DEVICE_TYPE="$device_type" DEVICE_RUNTIME="$runtime" node -e 'const devices=require("/tmp/screenshot-devices.json").devices[process.env.DEVICE_RUNTIME]||[];const d=devices.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')
+            if test -z "$udid"; then udid=$(xcrun simctl create "FungoStore-$family" "$device_type" "$runtime"); fi
+            xcrun simctl boot "$udid" || true
             xcrun simctl bootstatus "$udid" -b
             xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
             xcrun simctl install "$udid" "$app"

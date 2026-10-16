@@ -5,7 +5,7 @@ appId: it.fungoitalia.app
 - extendedWaitUntil:
     visible: "Studio"
     timeout: 60000
-- assertVisible: "Anteprima gratuita · 5 schede"
+- assertVisible: ".*Anteprima gratuita.*5 schede.*"
 - tapOn:
     text: "Apri .*"
     index: 0
