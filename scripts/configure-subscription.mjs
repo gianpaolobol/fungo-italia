@@ -13,22 +13,23 @@ const groupLoc=await all('/v1/subscriptionGroups/'+group.id+'/subscriptionGroupL
 if(!groupLoc.some(l=>l.attributes.locale==='it'))must(await api('/v1/subscriptionGroupLocalizations',{method:'POST',body:{data:{type:'subscriptionGroupLocalizations',attributes:{name:'Fungo Italia Premium',locale:'it'},relationships:{subscriptionGroup:{data:{type:'subscriptionGroups',id:group.id}}}}}}),'group localization');
 const loc=await all('/v1/subscriptions/'+subscription.id+'/subscriptionLocalizations');
 if(!loc.some(l=>l.attributes.locale==='it'))must(await api('/v1/subscriptionLocalizations',{method:'POST',body:{data:{type:'subscriptionLocalizations',attributes:{name:'Fungo Italia annuale',description:'Atlante completo, esami e aggiornamenti inclusi.',locale:'it'},relationships:{subscription:{data:{type:'subscriptions',id:subscription.id}}}}}}),'subscription localization');
+const territories=await all('/v1/territories?limit=200');
+let availability=await api('/v1/subscriptions/'+subscription.id+'/subscriptionAvailability');
+if(availability.status===404)availability=await api('/v1/subscriptionAvailabilities',{method:'POST',body:{data:{type:'subscriptionAvailabilities',attributes:{availableInNewTerritories:true},relationships:{subscription:{data:{type:'subscriptions',id:subscription.id}},availableTerritories:{data:territories.map(t=>({type:'territories',id:t.id}))}}}}});
+must(availability,'subscription availability');
+console.log('ANNUAL_AVAILABILITY '+JSON.stringify(availability));
+
 const italy=must(await api('/v1/subscriptions/'+subscription.id+'/pricePoints?filter[territory]=ITA&include=territory&limit=200'),'price points').data.find(p=>p.attributes.customerPrice==='9.99');
 if(!italy)throw Error('Exact EUR9.99 annual price missing');
 const eq=await all('/v1/subscriptionPricePoints/'+italy.id+'/equalizations?include=territory&limit=200');
 const points=[italy,...eq.filter(p=>p.relationships?.territory?.data?.id!=='ITA')];
 const existing=await all('/v1/subscriptions/'+subscription.id+'/prices?include=subscriptionPricePoint,territory&limit=200');
-const territories=await all('/v1/territories?limit=200');
 const seen=new Set();
 for(const p of points){const t=p.relationships?.territory?.data?.id;if(!t||seen.has(t))continue;seen.add(t);
  if(existing.some(e=>e.relationships?.territory?.data?.id===t&&e.relationships?.subscriptionPricePoint?.data?.id===p.id))continue;
  must(await api('/v1/subscriptionPrices',{method:'POST',body:{data:{type:'subscriptionPrices',attributes:{preserveCurrentPrice:false},relationships:{subscription:{data:{type:'subscriptions',id:subscription.id}},subscriptionPricePoint:{data:{type:'subscriptionPricePoints',id:p.id}}}}}}),'price '+t);
 }
 console.log('ANNUAL_PRICES_SAVED '+JSON.stringify({italy:'9.99 EUR / ONE_YEAR',territories:seen.size}));
-let availability=await api('/v1/subscriptions/'+subscription.id+'/subscriptionAvailability');
-if(availability.status===404)availability=await api('/v1/subscriptionAvailabilities',{method:'POST',body:{data:{type:'subscriptionAvailabilities',attributes:{availableInNewTerritories:true},relationships:{subscription:{data:{type:'subscriptions',id:subscription.id}},availableTerritories:{data:territories.map(t=>({type:'territories',id:t.id}))}}}}});
-must(availability,'subscription availability');
-console.log('ANNUAL_AVAILABILITY '+JSON.stringify(availability));
 const freePoints=must(await api('/v1/apps/'+APP+'/appPricePoints?filter[territory]=ITA&limit=200'),'app prices').data;
 const free=freePoints.find(p=>Number(p.attributes.customerPrice)===0);if(!free)throw Error('Free download price point missing');
 must(await api('/v1/appPriceSchedules',{method:'POST',body:{data:{type:'appPriceSchedules',relationships:{app:{data:{type:'apps',id:APP}},baseTerritory:{data:{type:'territories',id:'ITA'}},manualPrices:{data:[{type:'appPrices',id:'${freeDownload}'}]}}},included:[{type:'appPrices',id:'${freeDownload}',attributes:{startDate:null,endDate:null},relationships:{appPricePoint:{data:{type:'appPricePoints',id:free.id}}}}]}}),'free download');
