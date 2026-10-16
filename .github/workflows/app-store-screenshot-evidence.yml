@@ -46,6 +46,7 @@ jobs:
           for(const family of ['iphone','ipad'])for(const name of ['01-studio','02-aree','03-esame']){
             const bytes=await readFile('/tmp/native-screenshots/screenshots/'+family+'/'+name+'.png');
             if(bytes.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error('Not a PNG');
+            if(bytes[24]!==8||bytes[25]!==2)throw Error('Opaque RGB screenshot required');
             const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
             if(family==='iphone'&&(width!==1320||height!==2868))throw Error('Unexpected iPhone screenshot size');
             if(family==='ipad'&&(width!==2064||height!==2752))throw Error('Unexpected iPad screenshot size');
@@ -53,5 +54,17 @@ jobs:
             if(!r.ok)throw Error('Screenshot staging failed HTTP '+r.status);
             const blob=await r.json();
             console.log('SCREENSHOT_BLOB '+JSON.stringify({path:'store/screenshots/'+family+'/'+name+'.png',sha:blob.sha,byteLength:bytes.length,width,height,sha256:createHash('sha256').update(bytes).digest('hex'),sourceCommit:source}));
+            // GitHub Contents omits binary content above 1 MB. Preserve the original
+            // image as text chunks for visual inspection, without altering its pixels.
+            if(bytes.length>1000000){
+              const encoded=bytes.toString('base64');
+              for(let offset=0,index=0;offset<encoded.length;offset+=800000,index++){
+                const content=encoded.slice(offset,offset+800000);
+                const part=await fetch(base+'/git/blobs',{method:'POST',headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify({encoding:'utf-8',content})});
+                if(!part.ok)throw Error('Review chunk staging failed');
+                const value=await part.json();
+                console.log('SCREENSHOT_REVIEW_PART '+JSON.stringify({imagePath:'store/screenshots/'+family+'/'+name+'.png',path:'review-text/'+family+'-'+name+'-'+index+'.txt',index,sha:value.sha,length:content.length}));
+              }
+            }
           }
           JS
