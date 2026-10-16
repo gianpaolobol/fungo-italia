@@ -31,6 +31,7 @@ jobs:
             const traceFiles=(await readdir('/tmp/pwa-trace',{recursive:true})).filter(x=>x.endsWith('.trace'));
             for(const p of traceFiles){
               const events=(await readFile('/tmp/pwa-trace/'+p,'utf8')).split('\n').filter(Boolean).map(x=>JSON.parse(x));
+              console.log('PWA_CLICK_DIAGNOSTICS '+JSON.stringify(events.filter(e=>(e.type==='log'&&e.callId==='call@835')||e.type==='console'||(e.type==='event'&&/error/i.test(e.method||''))).map(e=>({type:e.type,time:e.time,message:e.message,text:e.text,method:e.method,error:e.params?.error})).slice(-45)));
               console.log('PWA_ACTION_TRACE '+JSON.stringify(events.filter(e=>e.type==='before'||e.type==='after').map(e=>({type:e.type,callId:e.callId,apiName:e.apiName,selector:e.params?.selector,error:e.error?.message})).slice(-35)));
             }
           }
