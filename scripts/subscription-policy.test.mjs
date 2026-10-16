@@ -1,0 +1,6 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {checkedAccess,expiryDelay,ANNUAL_ID} from '../lib/subscriptionPolicy.ts';
+const now=Date.parse('2026-10-16T00:00:00Z'),valid={active:true,productId:ANNUAL_ID,expiresAt:'2027-10-16T00:00:00Z',checkedAt:'2026-10-16T00:00:00Z'};
+test('an annual entitlement remains valid across long timer intervals',()=>{assert.equal(checkedAccess(valid,now).active,true);assert.equal(expiryDelay(valid.expiresAt,now),2147483647);assert.equal(checkedAccess(valid,now+2147483647).active,true);});
+test('expiry is exclusive and cancellation does not shorten a paid period',()=>{const end=Date.parse(valid.expiresAt);assert.equal(checkedAccess(valid,end-1).active,true);assert.equal(checkedAccess(valid,end).active,false);assert.equal(expiryDelay(valid.expiresAt,end+1),0);});
+test('revoked or absent native entitlement cannot be replaced by a local premium flag',()=>{assert.equal(checkedAccess({...valid,active:false},now).active,false);assert.equal(checkedAccess({...valid,expiresAt:null},now).active,false);assert.throws(()=>checkedAccess({premium:true},now));assert.throws(()=>checkedAccess({...valid,productId:'other.product'},now));assert.throws(()=>checkedAccess({...valid,expiresAt:'invalid'},now));});

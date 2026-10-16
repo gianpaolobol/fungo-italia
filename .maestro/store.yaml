@@ -5,10 +5,10 @@ appId: it.fungoitalia.app
 - extendedWaitUntil:
     visible: "Studio"
     timeout: 60000
-- tapOn: "Cerca nome scientifico, comune o sinonimo"
-- inputText: "Amanita caesarea"
-- hideKeyboard
-- tapOn: "Apri Amanita caesarea"
+- assertVisible: "Anteprima gratuita · 5 schede"
+- tapOn:
+    text: "Apri .*"
+    index: 0
 - waitForAnimationToEnd
 - takeScreenshot: 01-studio
 - tapOn: "Torna alle schede"
@@ -21,4 +21,11 @@ appId: it.fungoitalia.app
     text: "Esame"
     index: 0
 - waitForAnimationToEnd
+- assertVisible: "Fungo Italia completo"
 - takeScreenshot: 03-esame
+- scrollUntilVisible:
+    element:
+      text: "Ripristina acquisti"
+    direction: DOWN
+- assertVisible: "Ripristina acquisti"
+- assertNotVisible: "Inizia 15 casi"
