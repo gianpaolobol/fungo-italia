@@ -24,8 +24,8 @@ Prezzo localizzato Apple, durata, rinnovo, ripristino, gestione dell’abbonamen
 ## Verifica tecnica
 - Compilazione Release iOS e navigazione/acquisizione nativa su iPhone e iPad superate: https://github.com/gianpaolobol/fungo-italia/actions/runs/38866436691 .
 - TypeScript e test della policy di accesso superati nelle preparazioni native.
-- Test di acquisto, rientro nell’app, rimborso, annullamento rinnovo e scadenza in corso: https://github.com/gianpaolobol/fungo-italia/actions/runs/38871546919 .
-- Test integrati della funzione di verifica StoreKit in corso: https://github.com/gianpaolobol/fungo-italia/actions/runs/38871546868 .
+- La terza prova UI ha trovato il pulsante annuale abilitato ma nessuna transazione dopo il tocco; diagnostica e schermate conservate, rilascio firmato bloccato in attesa di correzione. Evidenza: https://github.com/gianpaolobol/fungo-italia/actions/runs/38871546919 .
+- Il test integrato è stato corretto per dichiarare la disponibilità iOS 17 della API XCTest; nuova esecuzione in corso: https://github.com/gianpaolobol/fungo-italia/actions/runs/38874175947 . La compatibilità minima dell’app non cambia.
 - Il runtime 26.5 presenta un difetto di StoreKit Test. Il download 26.6 non è disponibile nel catalogo del runner; è stato installato il runtime Apple **18.6 (22G86)**. I test confermano il prezzo locale italiano della fixture.
 - La fixture StoreKit resta confinata ai target XCTest; non entra nell’app distribuita.
 - La build (7) non contiene gli acquisti. La nuova compilazione firmata e il caricamento TestFlight sono subordinati al successo delle prove UI.
@@ -35,6 +35,10 @@ Prezzo localizzato Apple, durata, rinnovo, ripristino, gestione dell’abbonamen
 ## Passaggi di pubblicazione ancora aperti
 L’app resta PREPARE_FOR_SUBMISSION. Il titolare ha confermato vuoto il questionario Privacy: con gli strumenti disponibili richiede il portale Apple. Vedi [risposte tecniche preparate](APP-STORE-PRIVACY-WORKSHEET.md).
 
-Apple richiede che il primo abbonamento e il relativo gruppo siano sottoposti insieme a una nuova versione dell’app: https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase/ . Nessun invio alla revisione viene attestato da questo documento. Contratti per app a pagamento e dati fiscali/bancari restano non verificati dall’API usata.
+Apple richiede che il primo abbonamento e il relativo gruppo siano sottoposti insieme a una nuova versione dell’app attraverso il portale. Il riferimento API ufficiale riletto il 16 ottobre alle 08:16 UTC precisa: “Submit your first subscription together with an app binary submission through appstoreconnect.apple.com.” Le API descritte si applicano agli abbonamenti successivi. Riferimenti: https://developer.apple.com/documentation/appstoreconnectapi/submitting-subscriptions-and-subscription-groups-for-app-review e https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase/ . Nessun invio alla revisione viene attestato da questo documento.
+
+La lettura Apple del 16 ottobre alle 08:16 UTC segnala `TRADER_STATUS_NOT_PROVIDED` nei territori UE, Italia compresa: manca la dichiarazione DSA. In **Business → Agreements → Compliance → Digital Services Act**, Account Holder o Admin devono dichiarare lo stato effettivo e completare le verifiche richieste. Non si deve scegliere “non trader” per evitare la verifica. Guida: https://developer.apple.com/help/app-store-connect/manage-compliance-information/manage-european-union-digital-services-act-trader-requirements .
+
+In **Business → Agreements** controllare inoltre che Paid Apps sia **Active**, con dati fiscali e bancari richiesti completati. L’eventuale accettazione legale richiede l’Account Holder. Contratti e dati fiscali/bancari restano non verificati dall’API usata: lo stato generico `CANNOT_SELL` di un’app non ancora pubblicata non prova, da solo, accordi mancanti.
 
 Il gate di completezza scientifica rimane distinto dai test software. La revisione micologica indipendente è ancora pendente nelle attestazioni. Il report usa anche il catalogo pubblico, privo di alcuni metadati interni: i conteggi vanno letti insieme alla provenienza e alle evidenze conservate. Non sono state inventate attestazioni o rimosso il gate. La presentazione dell’app resta didattica e non certifica esemplari per il consumo.
