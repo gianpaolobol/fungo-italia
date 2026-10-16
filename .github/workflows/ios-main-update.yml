@@ -1,7 +1,7 @@
 name: Publish verified iOS content updates
 on:
   workflow_run:
-    workflows: ['Expo Android and iOS']
+    workflows: ['Expo Android and iOS', 'Verify StoreKit purchase interface']
     types: [completed]
 permissions:
   contents: read
@@ -18,33 +18,59 @@ jobs:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
     steps:
+      - name: Require native validation and current StoreKit evidence
+        id: evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'JS'
+          import {appendFileSync} from 'node:fs';
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
+          async function get(path){const r=await fetch(base+path,{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'}});if(!r.ok)throw Error('GitHub evidence unavailable: '+r.status);return r.json();}
+          const head=(await get('/git/ref/heads/main')).object.sha;
+          const native=(await get('/actions/workflows/pipeline.yml/runs?branch=main&head_sha='+head+'&event=push&per_page=10')).workflow_runs.find(r=>r.head_sha===head);
+          const storekit=(await get('/actions/workflows/subscription-storekit-ui.yml/runs?branch=main&status=success&event=push&per_page=1')).workflow_runs[0];
+          if(!native||native.status!=='completed'||native.conclusion!=='success'||!storekit){console.log('Waiting for successful native pipeline and StoreKit UI evidence; production update skipped.');process.exit(0);}
+          const trees=await Promise.all([get('/git/trees/'+storekit.head_sha+'?recursive=1'),get('/git/trees/'+head+'?recursive=1')]);
+          const critical=path=>['App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','components/SubscriptionGate.tsx'].includes(path)||path.startsWith('modules/fungo-subscription/');
+          const billingTree=t=>JSON.stringify(t.tree.filter(f=>f.type==='blob'&&critical(f.path)).map(f=>[f.path,f.sha,f.mode]).sort((a,b)=>a[0].localeCompare(b[0])));
+          if(trees.some(t=>t.truncated)||billingTree(trees[0])!==billingTree(trees[1])){console.log('StoreKit evidence is stale for the billing source; production update skipped until UI verification.');process.exit(0);}
+          appendFileSync(process.env.GITHUB_OUTPUT,'eligible=true\nsource_sha='+head+'\nnative_run_id='+native.id+'\n');
+          console.log('Verified native run '+native.id+'; StoreKit UI run '+storekit.id+'; source '+head);
+          JS
       - uses: actions/checkout@v4
+        if: steps.evidence.outputs.eligible == 'true'
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: ${{ steps.evidence.outputs.source_sha }}
       - uses: actions/setup-node@v4
+        if: steps.evidence.outputs.eligible == 'true'
         with:
           node-version: '24'
-      - name: Reuse the exact dependencies and content verified by the native pipeline
+      - if: steps.evidence.outputs.eligible == 'true'
+        name: Reuse the exact dependencies and content verified by the native pipeline
         uses: actions/download-artifact@v4
         with:
           name: Fungo-Italia-build-inputs
           path: .
           github-token: ${{ github.token }}
-          run-id: ${{ github.event.workflow_run.id }}
-      - run: npm ci
-      - name: Validate access policy and native compatibility configuration
+          run-id: ${{ steps.evidence.outputs.native_run_id }}
+      - if: steps.evidence.outputs.eligible == 'true'
+        run: npm ci
+      - if: steps.evidence.outputs.eligible == 'true'
+        name: Validate access policy and native compatibility configuration
         run: |
           npm run typecheck
           node --test scripts/subscription-policy.test.mjs
           npx expo config --type public --json > /tmp/production-expo-config.json
           node -e 'const c=require("/tmp/production-expo-config.json");if(c.ios?.bundleIdentifier!=="it.fungoitalia.app"||c.runtimeVersion?.policy!=="fingerprint"||c.extra?.eas?.projectId!==process.env.EXPO_PROJECT_ID)throw Error("Unexpected production app identity or unsafe runtime policy");console.log("Production identity and fingerprint policy verified")'
-      - name: Publish compatible content to the installed iOS app
+      - if: steps.evidence.outputs.eligible == 'true'
+        name: Publish compatible content to the installed iOS app
         run: |
           mkdir -p store-evidence
-          npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Verified native content ${{ github.event.workflow_run.head_sha }}" --non-interactive --json > store-evidence/production-update.json
+          npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Verified native content ${{ steps.evidence.outputs.source_sha }}" --non-interactive --json > store-evidence/production-update.json
           cat store-evidence/production-update.json
       - uses: actions/upload-artifact@v4
-        if: success()
+        if: success() && steps.evidence.outputs.eligible == 'true'
         with:
           name: iOS-production-update-receipt
           path: store-evidence/production-update.json
