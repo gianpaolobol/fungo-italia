@@ -18,10 +18,12 @@ export default function useSubscription(){
   const run=++generation.current,priceRun=++priceGeneration.current;
   setChecking(true);setError('');setPriceError('');
   // Offline access must not wait for a network request for the product price.
-  const access=timely(currentEntitlement()).then(value=>{
+  // Apply a late verified native response even if the UI deadline has elapsed.
+  // The generation guard still rejects responses superseded by refund or refresh events.
+  const access=timely(currentEntitlement().then(value=>{
    if(!mounted.current||run!==generation.current)return;
-   const state=verified(value);setEntitlement(state);setChecking(false);return state;
-  }).catch(()=>{
+   const state=verified(value);setEntitlement(state);setChecking(false);setError('');return state;
+  })).catch(()=>{
    if(mounted.current&&run===generation.current){setEntitlement(inactive);setChecking(false);setError('Abbonamento non verificabile. Riprova o ripristina gli acquisti.');}
   });
   const price=timely(getAnnualProduct()).then(value=>{

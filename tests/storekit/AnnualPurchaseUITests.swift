@@ -12,10 +12,18 @@ final class AnnualPurchaseUITests: XCTestCase {
   }
   @MainActor func require(_ item: XCUIElement, timeout: TimeInterval = 120, file: StaticString = #filePath, line: UInt = #line) async {
     let exists = await waitFor(item, timeout: timeout)
+    if !exists {
+      let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
+      print("REQUIRED_CONTROL_MISSING " + item.description)
+      print("REQUIRED_APP_TREE " + app.debugDescription)
+      try? capture(app, "failure-required-control")
+    }
     XCTAssertTrue(exists, "Required app control unavailable", file: file, line: line)
   }
   @MainActor func tap(_ app: XCUIApplication, _ label: String, file: StaticString = #filePath, line: UInt = #line) async {
-    let item = element(app, label)
+    let item = ["Studio", "Aree", "Esame", "Abbonamento"].contains(label)
+      ? app.descendants(matching: .any).matching(identifier: "tab-" + label.lowercased()).firstMatch
+      : element(app, label)
     await require(item, timeout: 60, file: file, line: line)
     item.tap()
   }
