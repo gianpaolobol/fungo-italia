@@ -104,9 +104,24 @@ jobs:
           name: Subscription-testflight-candidate-receipt
           path: ${{ runner.temp }}/subscription-build.json
           retention-days: 30
+      - name: Read current release automation without changing the tested app source
+        if: steps.release.outputs.eligible == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: .release-tools
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: scripts/app-store-connect.mjs
+      - name: Prepare the already authorized Apple key for this upload only
+        if: steps.release.outputs.eligible == 'true'
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './.release-tools/scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
       - name: Upload the candidate to TestFlight without selecting it for App Store
         if: steps.release.outputs.eligible == 'true'
         run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-italia-subscription.ipa" --non-interactive --wait
+      - name: Remove temporary Apple submit key
+        if: always()
+        run: node --input-type=module -e "import {rm} from 'node:fs/promises';if(!process.env.RUNNER_TEMP?.startsWith('/'))throw Error('Missing temporary directory');await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
