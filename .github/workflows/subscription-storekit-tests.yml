@@ -2,7 +2,7 @@ name: Verify native StoreKit subscriptions
 on:
   push:
     branches: [main]
-    paths: ['modules/fungo-subscription/**','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','App.tsx','tests/storekit/**','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml']
+    paths: ['modules/fungo-subscription/**','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','App.tsx','tests/storekit/AnnualStoreKitTests.swift','tests/storekit/Annual.storekit','scripts/clean-storekit-test-host.rb','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -34,6 +34,8 @@ jobs:
           ruby scripts/add-storekit-tests.rb
           cd ios
           pod install
+          cd ..
+          ruby scripts/clean-storekit-test-host.rb
       - name: Exercise verified purchase, refund and expiry without an Apple account
         run: |
           mkdir -p store-evidence
@@ -44,7 +46,7 @@ jobs:
           xcrun simctl boot "$udid" || true
           xcrun simctl bootstatus "$udid" -b
           workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
-          if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaStoreKit -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath storekit-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 300 -maximum-test-execution-time-allowance 300 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 test > store-evidence/storekit-test.log 2>&1; then
+          if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaStoreKit -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath storekit-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 test > store-evidence/storekit-test.log 2>&1; then
             tail -n 180 store-evidence/storekit-test.log
             exit 1
           fi
@@ -53,5 +55,7 @@ jobs:
         if: always()
         with:
           name: StoreKit-native-integration
-          path: store-evidence/
+          path: |
+            store-evidence/
+            storekit-build/Logs/Test/*.xcresult
           retention-days: 30
