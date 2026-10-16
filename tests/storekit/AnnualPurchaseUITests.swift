@@ -28,6 +28,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     let session = try SKTestSession(contentsOf: url)
     session.resetToDefaultState(); session.disableDialogs = true
     session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
+    XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session is not active; never fall back to the production store")
     let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
     defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
     app.launch()
@@ -35,6 +36,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     XCTAssertTrue(subscribe.waitForExistence(timeout: 60), "Localized StoreKit annual purchase button unavailable")
     XCTAssertTrue(subscribe.label.contains("/ anno"))
+    XCTAssertTrue(subscribe.label.contains("9,99") && subscribe.label.contains("€"), "Italian local StoreKit fixture must match the verified Apple Italy price")
     try capture(app, "03-esame")
     subscribe.tap()
     XCTAssertTrue(element(app, "Abbonamento attivo").waitForExistence(timeout: 30))

@@ -2,7 +2,7 @@ name: Verify StoreKit purchase interface
 on:
   push:
     branches: [main]
-    paths: ['App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
+    paths: ['App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,6 +22,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Select a compatible Apple StoreKit simulator runtime
+        run: bash scripts/prepare-storekit-runtime.sh
       - name: Prepare the actual app and Apple StoreKit UI test runner
         run: |
           npm ci
@@ -39,7 +41,7 @@ jobs:
           xcodebuild -list -json -workspace "$workspace" > store-evidence/test-schemes.json
           node -e 'const p=require("./store-evidence/test-schemes.json");if(!p.workspace.schemes.includes("FungoItaliaPurchaseUI"))throw Error("Purchase UI test scheme missing")'
           xcrun simctl list runtimes -j > /tmp/purchase-runtimes.json
-          runtime=$(node -e 'const a=require("/tmp/purchase-runtimes.json").runtimes.filter(r=>r.isAvailable&&r.identifier.includes(".iOS-"));a.sort((a,b)=>a.version.localeCompare(b.version,undefined,{numeric:true}));process.stdout.write(a.at(-1).identifier)')
+          runtime="$STOREKIT_TEST_RUNTIME"
           xcrun simctl list devicetypes -j > /tmp/purchase-types.json
           for family in iphone ipad; do
             type=$(FAMILY="$family" node -e 'const a=require("/tmp/purchase-types.json").devicetypes;const pattern=process.env.FAMILY==="iphone"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error("Screenshot device unavailable");process.stdout.write(d.identifier)')
@@ -49,7 +51,7 @@ jobs:
             xcrun simctl boot "$udid" || true
             xcrun simctl bootstatus "$udid" -b
             xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
-            if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 test > "store-evidence/purchase-ui-$family.log" 2>&1; then
+            if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 300 -maximum-test-execution-time-allowance 300 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 test > "store-evidence/purchase-ui-$family.log" 2>&1; then
               tail -n 180 "store-evidence/purchase-ui-$family.log"
               exit 1
             fi
