@@ -135,15 +135,18 @@ export async function audit(){
  const groups=await api('/v1/apps/'+APP+'/subscriptionGroups');
  report.subscriptions=[];
  if(groups.ok)for(const group of groups.data){
+  const groupVersions=await api('/v1/subscriptionGroups/'+group.id+'/versions');
+  report.subscriptionGroupVersions||=[];report.subscriptionGroupVersions.push({groupId:group.id,...groupVersions});
   const products=await api('/v1/subscriptionGroups/'+group.id+'/subscriptions');
   if(!products.ok)continue;
   for(const product of products.data){
    const [prices,availability,screenshot]=await Promise.all([api('/v1/subscriptions/'+product.id+'/prices?include=subscriptionPricePoint,territory&limit=200'),api('/v1/subscriptions/'+product.id+'/subscriptionAvailability'),api('/v1/subscriptions/'+product.id+'/appStoreReviewScreenshot')]);
+   const versions=await api('/v1/subscriptions/'+product.id+'/versions');
    const italy=prices.data?.find(p=>p.relationships?.territory?.data?.id==='ITA');
    const point=prices.included?.find(p=>p.type==='subscriptionPricePoints'&&p.id===italy?.relationships?.subscriptionPricePoint?.data?.id);
    const related=availability.data?.relationships?.availableTerritories?.links?.related;
    let selected=null;if(related){const url=new URL(related);if(url.origin==='https://api.appstoreconnect.apple.com'){const r=await api(url.pathname+url.search+(url.search?'&':'?')+'limit=200');if(r.ok&&!r.links?.next)selected=r.data.length;}}
-   report.subscriptions.push({id:product.id,groupId:group.id,...product.attributes,italyPrice:point?.attributes.customerPrice||null,configuredPrices:prices.data?.length||0,selectedTerritories:selected,availableInNewTerritories:availability.data?.attributes.availableInNewTerritories,reviewScreenshot:screenshot.ok?{id:screenshot.data?.id,fileName:screenshot.data?.attributes.fileName,state:screenshot.data?.attributes.assetDeliveryState?.state}:null});
+   report.subscriptions.push({id:product.id,groupId:group.id,...product.attributes,metadataVersions:versions,italyPrice:point?.attributes.customerPrice||null,configuredPrices:prices.data?.length||0,selectedTerritories:selected,availableInNewTerritories:availability.data?.attributes.availableInNewTerritories,reviewScreenshot:screenshot.ok?{id:screenshot.data?.id,fileName:screenshot.data?.attributes.fileName,state:screenshot.data?.attributes.assetDeliveryState?.state}:null});
   }
  }
  const privacyProbe=await api('/v1/appDataUsages?filter[app]='+APP);
