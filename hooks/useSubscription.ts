@@ -30,7 +30,7 @@ export default function useSubscription(){
    if(mounted.current&&priceRun===priceGeneration.current){setProduct(null);setPriceError('Prezzo non disponibile. Verifica la connessione allo Store.');}
   });
   const [result]=await Promise.allSettled([access,price]);
-  return result.status==='fulfilled'?result.value:undefined;
+  return run===generation.current&&result.status==='fulfilled'?result.value:undefined;
  },[]);
  useEffect(()=>{
   mounted.current=true;
@@ -62,8 +62,8 @@ export default function useSubscription(){
    const result=await purchaseAnnual();
    if(!mounted.current)return;
    // Read current StoreKit state again: an earlier purchase response must not undo a later revocation event.
-   await refresh();
-   if(mounted.current&&result.status==='pending')setError('Acquisto in attesa di approvazione Apple. L’accesso si attiverà dopo la conferma.');
+   const access=await refresh();
+   if(mounted.current&&access&&!access.active&&result.status==='pending')setError('Acquisto in attesa di approvazione Apple. L’accesso si attiverà dopo la conferma.');
   }catch{if(mounted.current){setEntitlement(inactive);setError('Acquisto non completato. Verifica il tuo account Apple e riprova.');}}
   finally{locked.current=false;if(mounted.current)setBusy(false);}
  },[refresh]);
