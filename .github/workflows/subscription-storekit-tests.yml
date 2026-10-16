@@ -1,0 +1,53 @@
+name: Verify native StoreKit subscriptions
+on:
+  push:
+    branches: [main]
+    paths: ['modules/fungo-subscription/**','tests/storekit/**','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: storekit-integration
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: macos-26
+    timeout-minutes: 45
+    env:
+      CI: '1'
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prepare real hosted StoreKit tests
+        run: |
+          npm ci
+          npm run prepare:data
+          npm run typecheck
+          node --test scripts/subscription-policy.test.mjs
+          npx expo prebuild --platform ios --no-install
+          ruby scripts/add-storekit-tests.rb
+          cd ios
+          pod install
+      - name: Exercise verified purchase, refund and expiry without an Apple account
+        run: |
+          mkdir -p store-evidence
+          xcrun simctl list devices available -j > /tmp/storekit-devices.json
+          udid=$(node -e 'const d=require("/tmp/storekit-devices.json");const a=Object.values(d.devices).flat();const p=a.find(x=>x.name==="iPhone 16 Pro Max")||a.find(x=>x.name.startsWith("iPhone"));if(!p)throw Error("No iPhone simulator");process.stdout.write(p.udid)')
+          xcrun simctl boot "$udid" || true
+          xcrun simctl bootstatus "$udid" -b
+          workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
+          if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaStoreKit -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath storekit-build -parallel-testing-enabled NO ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 test > store-evidence/storekit-test.log 2>&1; then
+            tail -n 180 store-evidence/storekit-test.log
+            exit 1
+          fi
+          grep -E 'Test Case|Executed|TEST SUCCEEDED' store-evidence/storekit-test.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: StoreKit-native-integration
+          path: store-evidence/
+          retention-days: 30

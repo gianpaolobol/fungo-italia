@@ -1,0 +1,40 @@
+{
+  "identifier": "F1A2026A",
+  "nonRenewingSubscriptions": [],
+  "products": [],
+  "settings": {},
+  "subscriptionGroups": [
+    {
+      "id": "F1A00001",
+      "localizations": [],
+      "name": "Fungo Italia Premium",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "9.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "F1A00002",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Atlante completo ed esame fotografico",
+              "displayName": "Fungo Italia annuale",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "it.fungoitalia.premium.annual",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "Fungo Italia annuale",
+          "subscriptionGroupID": "F1A00001",
+          "type": "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 2,
+    "minor": 0
+  }
+}
