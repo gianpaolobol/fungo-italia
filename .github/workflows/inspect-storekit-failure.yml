@@ -1,0 +1,51 @@
+name: Inspect StoreKit purchase failure
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/inspect-storekit-failure.yml']
+  workflow_run:
+    workflows: ['Verify StoreKit purchase interface']
+    types: [completed]
+permissions:
+  actions: read
+  contents: write
+jobs:
+  inspect:
+    if: github.event_name == 'push' || (github.event.workflow_run.conclusion == 'failure' && github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Preserve actual simulator failure evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CAPTURE_RUN: ${{ github.event.workflow_run.id || '38871546919' }}
+        run: |
+          node --input-type=module <<'JS'
+          import {readFile,writeFile,readdir} from 'node:fs/promises';
+          import {execFileSync} from 'node:child_process';
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
+          const headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'};
+          async function get(path){const r=await fetch(base+path,{headers});if(!r.ok)throw Error(path+' HTTP '+r.status);return r.json();}
+          const run=await get('/actions/runs/'+process.env.CAPTURE_RUN);
+          if(run.name!=='Verify StoreKit purchase interface'||run.conclusion!=='failure'||run.head_branch!=='main')throw Error('Not a failed local StoreKit UI run');
+          const a=(await get('/actions/runs/'+process.env.CAPTURE_RUN+'/artifacts')).artifacts.find(a=>a.name==='Native-App-Store-screenshots'&&!a.expired);
+          if(!a)throw Error('Failure artifact unavailable');
+          const zip=await fetch(a.archive_download_url,{headers});if(!zip.ok)throw Error('Download failed');
+          await writeFile('/tmp/failure.zip',Buffer.from(await zip.arrayBuffer()));
+          execFileSync('unzip',['-q','/tmp/failure.zip','-d','/tmp/failure']);
+          const files=(await readdir('/tmp/failure',{recursive:true})).filter(x=>x.endsWith('.png')).sort();
+          console.log('FAILURE_IMAGE_FILES '+JSON.stringify(files));
+          for(const [index,path] of files.slice(0,12).entries()){
+            const bytes=await readFile('/tmp/failure/'+path);
+            if(bytes.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error('Not PNG');
+            async function blob(content,encoding){const r=await fetch(base+'/git/blobs',{method:'POST',headers:{...headers,'Content-Type':'application/json'},body:JSON.stringify({content,encoding})});if(!r.ok)throw Error('Staging failed');return(await r.json()).sha;}
+            const encoded=bytes.toString('base64');
+            const sha=await blob(encoded,'base64');
+            const dest='review-failure/'+index+'.png';
+            console.log('FAILURE_IMAGE_BLOB '+JSON.stringify({path:dest,original:path,sha,bytes:bytes.length,width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20),runId:run.id,sourceCommit:run.head_sha}));
+            if(bytes.length>1000000)for(let offset=0,part=0;offset<encoded.length;offset+=800000,part++){
+              const content=encoded.slice(offset,offset+800000);
+              console.log('FAILURE_IMAGE_PART '+JSON.stringify({imagePath:dest,path:'review-failure/'+index+'-'+part+'.txt',index:part,sha:await blob(content,'utf-8')}));
+            }
+          }
+          JS
