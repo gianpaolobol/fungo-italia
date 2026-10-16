@@ -21,10 +21,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
+      - name: Check the corrected StoreKit integration pipeline
+        id: release
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';const s=fs.readFileSync('.github/workflows/subscription-storekit-tests.yml','utf8');fs.appendFileSync(process.env.GITHUB_OUTPUT,'eligible='+s.includes('group: verified-storekit-native-tests')+'\\n');"
       - uses: actions/setup-node@v4
+        if: steps.release.outputs.eligible == 'true'
         with:
           node-version: '24'
-      - run: npm ci
-      - run: npm run prepare:data && npm run typecheck
+      - if: steps.release.outputs.eligible == 'true'
+        run: npm ci
+      - if: steps.release.outputs.eligible == 'true'
+        run: npm run prepare:data && npm run typecheck
       - name: Queue the tested native source and upload to TestFlight
+        if: steps.release.outputs.eligible == 'true'
         run: npx eas-cli@24.8.0 build --platform ios --profile production --auto-submit --non-interactive --no-wait
