@@ -34,6 +34,11 @@ scheme.add_build_target(app)
 scheme.add_build_target(test, false)
 scheme.add_test_target(test)
 scheme.set_launch_target(app)
-scheme.launch_action.xml_element.add_element('StoreKitConfigurationFileReference', { 'identifier' => '../../tests/storekit/Annual.storekit' })
+# The UI test launches the app from TestAction, not only from LaunchAction.
+# Attach the StoreKit fixture to both actions so the app process can resolve
+# Product.products(for:) against the same local catalog as SKTestSession.
+storekit_ref = { 'identifier' => '../../tests/storekit/Annual.storekit' }
+scheme.launch_action.xml_element.add_element('StoreKitConfigurationFileReference', storekit_ref)
+scheme.test_action.xml_element.add_element('StoreKitConfigurationFileReference', storekit_ref)
 scheme.test_action.build_configuration = 'Release'
 scheme.save_as(project.path, 'FungoItaliaPurchaseUI', true)
