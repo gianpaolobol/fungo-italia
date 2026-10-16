@@ -3,19 +3,6 @@ name: iPhone Photo Library Build
 # Trigger after repository variable correction.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'App.tsx'
-      - 'components/**'
-      - 'src/**'
-      - '!src/data/admin-reference-images.json'
-      - 'app.json'
-      - 'app.config.js'
-      - 'eas.json'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/iphone-photo-library.yml'
 permissions:
   contents: read
 jobs:
