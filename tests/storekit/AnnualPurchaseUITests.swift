@@ -11,6 +11,21 @@ final class AnnualPurchaseUITests: XCTestCase {
     XCTAssertTrue(item.waitForExistence(timeout: 60), "Missing \(label)", file: file, line: line)
     item.tap()
   }
+  func readyToTap(_ item: XCUIElement) -> Bool {
+    let predicate = NSPredicate { object, _ in
+      guard let element = object as? XCUIElement else { return false }
+      return element.exists && element.isEnabled && element.isHittable
+    }
+    return XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: predicate, object: item)], timeout: 40) == .completed
+  }
+  @MainActor func diagnose(_ app: XCUIApplication, _ session: SKTestSession) {
+    print("PURCHASE_VISIBLE_TEXT " + String(describing: app.staticTexts.allElementsBoundByIndex.map { $0.label }))
+    print("PURCHASE_BUTTONS " + String(describing: app.buttons.allElementsBoundByIndex.map { $0.label }))
+    print("STOREKIT_TEST_PRODUCTS " + String(describing: session.allTransactions().map { $0.productIdentifier }))
+    let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+    print("PURCHASE_SYSTEM_TEXT " + String(describing: springboard.staticTexts.allElementsBoundByIndex.map { $0.label }))
+    try? capture(app, "failure-purchase")
+  }
   func capture(_ app: XCUIApplication, _ name: String) throws {
     let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("store-captures", isDirectory: true)
     try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
@@ -26,7 +41,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     continueAfterFailure = false
     let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
     let session = try SKTestSession(contentsOf: url)
-    session.resetToDefaultState(); session.disableDialogs = true
+    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
     session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
     XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session is not active; never fall back to the production store")
     let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
@@ -35,11 +50,16 @@ final class AnnualPurchaseUITests: XCTestCase {
     tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     XCTAssertTrue(subscribe.waitForExistence(timeout: 60), "Localized StoreKit annual purchase button unavailable")
+    let ready = readyToTap(subscribe)
+    if !ready { diagnose(app, session) }
+    XCTAssertTrue(ready, "Wait for entitlement verification before tapping the annual purchase button")
     XCTAssertTrue(subscribe.label.contains("/ anno"))
     XCTAssertTrue(subscribe.label.contains("9,99") && subscribe.label.contains("€"), "Italian local StoreKit fixture must match the verified Apple Italy price")
     try capture(app, "03-esame")
     subscribe.tap()
-    XCTAssertTrue(element(app, "Abbonamento attivo").waitForExistence(timeout: 30))
+    let activated = element(app, "Abbonamento attivo").waitForExistence(timeout: 30)
+    if !activated { diagnose(app, session) }
+    XCTAssertTrue(activated)
     // Reopening the app reads the verified StoreKit entitlement, not a persisted premium flag.
     app.terminate(); app.launch()
     tap(app, "Esame")
@@ -59,7 +79,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     waitForGate(app)
     session.clearTransactions()
     let buyAgain = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    XCTAssertTrue(buyAgain.waitForExistence(timeout: 30)); buyAgain.tap()
+    XCTAssertTrue(buyAgain.waitForExistence(timeout: 30)); XCTAssertTrue(readyToTap(buyAgain)); buyAgain.tap()
     XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 30))
     let renewed = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
     try session.disableAutoRenewForTransaction(identifier: renewed.identifier)

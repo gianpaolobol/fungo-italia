@@ -2,7 +2,7 @@ name: Verify StoreKit purchase interface
 on:
   push:
     branches: [main]
-    paths: ['App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
+    paths: ['components/SubscriptionGate.tsx','package.json','package-lock.json','app.config.js','app.json','eas.json','App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -65,6 +65,15 @@ jobs:
             xcrun simctl shutdown "$udid"
           done
           printf '%s\n' "$GITHUB_SHA" > store-evidence/screenshots/source-commit.txt
+      - name: Preserve UI failure screenshots and attachments
+        if: failure()
+        run: |
+          if test -d purchase-ui-build/Logs/Test; then
+            result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)
+            if test -n "$result"; then
+              xcrun xcresulttool export attachments --path "$result" --output-path store-evidence/attachments || true
+            fi
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
