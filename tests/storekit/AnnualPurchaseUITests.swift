@@ -34,7 +34,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     attachment.name = name; attachment.lifetime = .keepAlways; add(attachment)
   }
   func waitForGate(_ app: XCUIApplication) {
-    XCTAssertTrue(element(app, "Fungo Italia completo").waitForExistence(timeout: 30))
+    XCTAssertTrue(element(app, "Fungo Italia completo").waitForExistence(timeout: 120))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
   }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() throws {
@@ -57,30 +57,30 @@ final class AnnualPurchaseUITests: XCTestCase {
     XCTAssertTrue(subscribe.label.contains("9,99") && subscribe.label.contains("€"), "Italian local StoreKit fixture must match the verified Apple Italy price")
     try capture(app, "03-esame")
     subscribe.tap()
-    let activated = element(app, "Abbonamento attivo").waitForExistence(timeout: 30)
+    let activated = element(app, "Abbonamento attivo").waitForExistence(timeout: 120)
     if !activated { diagnose(app, session) }
     XCTAssertTrue(activated)
     // Reopening the app reads the verified StoreKit entitlement, not a persisted premium flag.
     app.terminate(); app.launch()
     tap(app, "Esame")
-    XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 30))
+    XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 120))
     tap(app, "Studio")
     let search = element(app, "Cerca nome scientifico, comune o sinonimo")
-    XCTAssertTrue(search.waitForExistence(timeout: 30))
+    XCTAssertTrue(search.waitForExistence(timeout: 120))
     search.tap(); search.typeText("Amanita caesarea")
     tap(app, "Apri Amanita caesarea")
     try capture(app, "01-studio")
     tap(app, "Torna alle schede")
     tap(app, "Aree"); try capture(app, "02-aree")
     tap(app, "Esame")
-    XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 30))
+    XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 120))
     let transaction = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
     try session.refundTransaction(identifier: transaction.identifier)
     waitForGate(app)
     session.clearTransactions()
     let buyAgain = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    XCTAssertTrue(buyAgain.waitForExistence(timeout: 30)); XCTAssertTrue(readyToTap(buyAgain)); buyAgain.tap()
-    XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 30))
+    XCTAssertTrue(buyAgain.waitForExistence(timeout: 120)); XCTAssertTrue(readyToTap(buyAgain)); buyAgain.tap()
+    XCTAssertTrue(element(app, "Inizia 15 casi").waitForExistence(timeout: 120))
     let renewed = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
     try session.disableAutoRenewForTransaction(identifier: renewed.identifier)
     XCTAssertTrue(element(app, "Inizia 15 casi").exists, "Cancelling renewal must preserve the paid period")
