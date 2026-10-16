@@ -1,25 +1,41 @@
 # Fungo Italia
-Apri l'app: https://gianpaolobol.github.io/fungo-italia/
-[Informativa sulla privacy](privacy/index.html) (pagina sorgente; pubblicazione Pages da verificare). GitHub Pages è il percorso pubblico operativo per smartphone e computer. Su iPhone: Safari → Condividi → Aggiungi alla schermata Home. Istruzioni: [docs/IPHONE.md](docs/IPHONE.md).
 
-## Funzioni disponibili
-148 unità minime e 66 schede di generi/gruppi; consultazione con tap e scrolling, ricerca per nome scientifico/comune/sinonimo, preferiti e ripresa dello studio. 71 macroaree in 20 regioni, filtro Amiata e mappa vettoriale nella PWA. Lo sfondo cartografico richiede rete; le macroaree sono centri indicativi, non fungaie o autorizzazioni.
-La PWA conserva sul dispositivo note e bozze, con backup e ripristino con anteprima. Dopo la preparazione della cache, catalogo e punti vettoriali sono consultabili offline. I dati locali possono essere rimossi dal browser: esportare il backup prima del viaggio.
-I contributori possono aprire il [modulo di proposta scientifica](https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml), indicando taxon, correzione e fonte precisa. Richiede account GitHub gratuito; le proposte sono pubbliche e non vengono approvate automaticamente. Nessuna bozza locale viene inviata senza azione dell'utente.
+[Apri l’app web](https://gianpaolobol.github.io/fungo-italia/) · [Assistenza](https://gianpaolobol.github.io/fungo-italia/support.html) · [Privacy](https://gianpaolobol.github.io/fungo-italia/privacy.html)
 
-## Copertura scientifica
-Nomi comuni documentati: 23/148 unità; habitat strutturati: 3/148; confronti bibliografici: 14/148. Solo 7/148 profili riportano riscontri esterni puntuali sui caratteri di campo. I riferimenti supplementari attestano il campo citato, non l'intero profilo.
-Mancano fotografie tassonomiche di riferimento validate e revisione micologica indipendente. Il catalogo non certifica determinazioni o commestibilità. Dettaglio: [audit del 6 ottobre](docs/AUDIT-2026-10-06.md) e [inventario per scheda e macroarea](docs/CONTENT-COVERAGE.md).
+Atlante didattico di micologia per consultazione e ripasso: 148 unità minime e 66 schede di generi/gruppi, con 71 macroaree in 20 regioni.
 
-## Android e sorgenti Expo
-[APK di anteprima verificato](https://github.com/gianpaolobol/fungo-italia/releases/download/native-preview/Fungo-Italia.apk). React Native/Expo per Android e iOS. La funzione Foto nativa indicizza i metadati autorizzati, raggruppa le immagini per data e conserva separatamente quelle senza data; permette la rimozione dalla bozza, senza cancellare originali. Non riconosce automaticamente specie o anatomia.
-La pipeline verifica catalogo, TypeScript, bozze e bundle iOS/Android; compila l'APK con Gradle e lo aggiorna solo dopo i test su emulatore. Il collaudo del 6 ottobre include foto datate EXIF, visualizzazione, rimozione manuale e conservazione dopo riavvio. La firma è quella debug del template Expo, non una chiave privata di produzione. [Limiti della preview](docs/ANDROID-PREVIEW.md).
+## Studio e consultazione
 
-## Verifiche e distribuzione
-19 test web Chromium/WebKit, interfaccia a 320 punti, backup, navigazione, mappe e consultazione offline. Dopo il deploy, un controllo apre il vero sito Pages e verifica la revisione pubblicata. Questi test non attestano una prova su iPhone fisico.
-Il repository è pubblico e Pages è configurato. Actions ed EAS possono applicare quote; nessuna gratuità illimitata è promessa. EAS Update richiede progetto/token Expo e compatibilità del runtime. Snack anonimo è solo una prova manuale opzionale, non un percorso verificato: il servizio ha risposto con un errore di quota.
-La distribuzione nativa iOS è bloccata dalle credenziali/team Apple; la PWA funziona senza account sviluppatore. Nessun QR Expo Go funzionante viene attestato.
+Ricerca per nome scientifico, nome comune e sinonimo; navigazione tra schede con tap e scrolling; fotografie disponibili di fianco, sopra e sotto con ingrandimento. Caratteri distintivi, confronti, habitat e fonti accompagnano le informazioni documentate su odore, sporata, classificazione alimentare e preparazione. Per Russula è previsto il riferimento alla scala della sporata I–IV.
 
-## Conservazione del progetto precedente
-Il progetto precedente era Next/React, non Flutter. È conservato in legacy/web e nei branch backup/pre-migration-flutter e backup/verified-web-readiness. Il servizio storico rimane facoltativo per gli account esistenti: https://fungo-italia-beta.gianpaolo-franceschi.chatgpt.site .
-La matrice ufficiale Expo58.0.2 abbina React19.3.0 e ReactNative0.88.0-rc.3; il pin override rende esplicito l'abbinamento per i peer delle librerie che escludono versioni prerelease.
+L’esame fotografico propone sessioni di 15 casi, correzioni e ripasso degli errori. Preferiti, ripresa dello studio e storico restano sul dispositivo. Le aree rappresentano territori e habitat indicativi: non sono fungaie garantite né autorizzazioni alla raccolta.
+
+Le immagini e la copertura delle singole viste dipendono dalle evidenze conservate per ogni scheda. La revisione micologica indipendente resta pendente nelle attestazioni: i test software non la sostituiscono. Il catalogo ha finalità didattiche e non certifica esemplari per il consumo. I documenti di provenienza e i controlli scientifici restano conservati nel progetto.
+
+## Smartphone e distribuzione
+
+- **Web/PWA:** GitHub Pages è il percorso pubblico operativo. Su iPhone: Safari → Condividi → Aggiungi alla schermata Home. Dopo la preparazione della cache, schede, immagini incluse ed esercizi sono disponibili offline. Mappe online e fonti esterne richiedono connessione. Note e bozze web prevedono backup e ripristino; il browser può eliminare i dati locali.
+- **Android:** [scarica l’APK di anteprima verificato](https://github.com/gianpaolobol/fungo-italia/releases/download/native-preview/Fungo-Italia.apk). La pipeline aggiorna l’APK dopo compilazione e prova nell’emulatore. La firma dell’anteprima è quella debug del template Expo; non è una distribuzione Google Play.
+- **iPhone/iPad nativi:** React Native/Expo con acquisto e ripristino StoreKit 2. Download gratuito, anteprima di cinque schede e Aree; abbonamento annuale a **9,99 € in Italia**, con rinnovo automatico, per atlante completo, esame e aggiornamenti pubblicati nel periodo attivo. Negli altri Paesi vale il prezzo locale Apple. Il prodotto è configurato in App Store Connect ma **l’app non è ancora pubblicata su App Store**. Stato del binario, prove e passaggi Apple: [registro di distribuzione](docs/APP-STORE-SUBSCRIPTION-2026-10-16.md) e [checklist del titolare](docs/APP-STORE-OWNER-CHECKLIST.md).
+
+L’accesso iOS dipende da transazioni Apple verificate, non revocate e non scadute. Non esiste un flag premium locale che sostituisca la verifica. Le fotografie incluse non richiedono accesso alla libreria Foto; la selezione e pubblicazione amministrativa delle immagini sono disponibili nella versione web. Non viene attestato un riconoscimento automatico delle fotografie.
+
+## Contributi e immagini
+
+I contributori possono aprire il [modulo scientifico GitHub](https://github.com/gianpaolobol/fungo-italia/issues/new?template=scientific-contribution.yml), indicando taxon, correzione e fonte puntuale. Le proposte sono pubbliche e richiedono revisione.
+
+La modalità amministrativa web permette di sostituire separatamente le viste fotografiche autorizzate. Le copie pubblicate entrano nel repository pubblico e negli asset dell’atlante. Gli aggiornamenti nativi richiedono validazione della pipeline e un runtime compatibile.
+
+## Verifiche tecniche
+
+La suite web comprende **65 test**, con navigazione a 320 punti, esame, fotografie offline, preferiti, note, importazione e pagine legali. Il controllo dopo la pubblicazione apre il sito Pages effettivo. Queste prove non attestano un test su iPhone fisico.
+
+La pipeline nativa controlla dati, TypeScript e bundle, compila Android e lo prova nell’emulatore. I test StoreKit separano integrazione nativa e acquisto dall’interfaccia su iPhone/iPad; il caricamento firmato richiede entrambe le evidenze sul codice corrispondente. Il registro di distribuzione distingue prove riuscite, fallite e ancora in corso.
+
+Gli aggiornamenti iOS di produzione verificano le sorgenti di billing e il runtime fingerprint. Le modifiche ai contenuti e alle immagini possono essere distribuite via EAS Update quando compatibili; nuove funzioni native richiedono un nuovo binario. Actions ed EAS possono applicare quote.
+
+## Sorgenti
+
+Node >=24.3.0; `npm ci`, `npm run prepare:data`, `npm run typecheck`. I workflow GitHub gestiscono compilazione e distribuzione. Expo 58.0.2 usa React 19.3.0 e React Native 0.88.0-rc.3, con override esplicito dei peer prerelease.
+
+Il progetto precedente Next/React è conservato in `legacy/web` e nei branch `backup/pre-migration-flutter` e `backup/verified-web-readiness`. Il percorso pubblico attuale è GitHub Pages.
