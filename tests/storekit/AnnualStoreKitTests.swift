@@ -22,6 +22,7 @@ final class AnnualStoreKitTests: XCTestCase {
     session.disableDialogs = true
     session.locale = Locale(identifier: "it_IT")
     session.storefront = "ITA"
+    XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session unavailable")
     session.clearTransactions()
     defer { session.clearTransactions(); session.resetToDefaultState() }
     try await waitForActive(false)

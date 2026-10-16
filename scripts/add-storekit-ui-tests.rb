@@ -34,5 +34,6 @@ scheme.add_build_target(app)
 scheme.add_build_target(test, false)
 scheme.add_test_target(test)
 scheme.set_launch_target(app)
+scheme.launch_action.xml_element.add_element('StoreKitConfigurationFileReference', { 'identifier' => '../../tests/storekit/Annual.storekit' })
 scheme.test_action.build_configuration = 'Release'
 scheme.save_as(project.path, 'FungoItaliaPurchaseUI', true)
