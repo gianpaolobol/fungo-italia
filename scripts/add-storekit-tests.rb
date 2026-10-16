@@ -9,6 +9,12 @@ test.add_dependency(app)
 test.build_configurations.each do |config|
   config.build_settings.merge!({
     'PRODUCT_BUNDLE_IDENTIFIER' => 'it.fungoitalia.app.StoreKitTests',
+    'PRODUCT_NAME' => 'AnnualStoreKitTests',
+    'PRODUCT_MODULE_NAME' => 'AnnualStoreKitTests',
+    'EXECUTABLE_NAME' => 'AnnualStoreKitTests',
+    'EXECUTABLE_EXTENSION' => '',
+    'WRAPPER_NAME' => 'AnnualStoreKitTests.xctest',
+    'MACH_O_TYPE' => 'mh_bundle',
     'GENERATE_INFOPLIST_FILE' => 'YES',
     'SWIFT_VERSION' => '5.9',
     'TEST_HOST' => '$(BUILT_PRODUCTS_DIR)/FungoItalia.app/FungoItalia',
