@@ -22,6 +22,20 @@ async function credential(){
  mask(key.keyP8);for(const line of key.keyP8.split(/\r?\n/))mask(line);
  return key;
 }
+export async function prepareSubmitCredentials(){
+ if(!process.env.RUNNER_TEMP?.startsWith('/'))throw Error('A runner temporary directory is required');
+ const config=JSON.parse(await readFile('eas.json','utf8'));
+ const ios=config.submit?.production?.ios;
+ if(ios?.ascAppId!==APP||ios.appleTeamId!==TEAM)throw Error('Unexpected submit app or team; no credentials written');
+ const key=await credential();
+ try{
+  const path=process.env.RUNNER_TEMP+'/fungo-asc-submit.p8';
+  await writeFile(path,key.keyP8,{mode:0o600,flag:'wx'});
+  Object.assign(ios,{ascApiKeyPath:path,ascApiKeyId:key.keyIdentifier,ascApiKeyIssuerId:key.issuerIdentifier});
+  await writeFile('eas.json',JSON.stringify(config,null,2)+'\n');
+  console.log('Authorized App Store submit credentials prepared only in the temporary runner checkout');
+ }finally{key.keyP8='';}
+}
 export function appleJwt(key,now=Math.floor(Date.now()/1000)){
  const b64=x=>Buffer.from(JSON.stringify(x)).toString('base64url');
  const body=b64({alg:'ES256',kid:key.keyIdentifier,typ:'JWT'})+'.'+b64({iss:key.issuerIdentifier,iat:now,exp:now+900,aud:'appstoreconnect-v1'});
