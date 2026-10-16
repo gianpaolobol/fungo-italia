@@ -1,6 +1,6 @@
 # Fungo Italia
 Apri l'app: https://gianpaolobol.github.io/fungo-italia/
-GitHub Pages è il percorso pubblico operativo per smartphone e computer. Su iPhone: Safari → Condividi → Aggiungi alla schermata Home. Istruzioni: [docs/IPHONE.md](docs/IPHONE.md).
+[Informativa sulla privacy](privacy/index.html) (pagina sorgente; pubblicazione Pages da verificare). GitHub Pages è il percorso pubblico operativo per smartphone e computer. Su iPhone: Safari → Condividi → Aggiungi alla schermata Home. Istruzioni: [docs/IPHONE.md](docs/IPHONE.md).
 
 ## Funzioni disponibili
 148 unità minime e 66 schede di generi/gruppi; consultazione con tap e scrolling, ricerca per nome scientifico/comune/sinonimo, preferiti e ripresa dello studio. 71 macroaree in 20 regioni, filtro Amiata e mappa vettoriale nella PWA. Lo sfondo cartografico richiede rete; le macroaree sono centri indicativi, non fungaie o autorizzazioni.
