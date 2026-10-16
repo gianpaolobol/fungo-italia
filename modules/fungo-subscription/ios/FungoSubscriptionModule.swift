@@ -56,7 +56,13 @@ public final class FungoSubscriptionModule: Module {
             "description": item.description, "localizedPrice": item.displayPrice,
             "subscriptionPeriod": ["unit": "year", "value": 1]]
   }
-  @MainActor private func entitlement() async -> [String: Any] { await Self.verifiedEntitlement() }
+  @MainActor private func entitlement() async -> [String: Any] {
+    logger.notice("Current entitlement lookup entered")
+    let state = await Self.verifiedEntitlement()
+    let active = state["active"] as? Bool ?? false
+    logger.notice("Current entitlement lookup returned active=\(active, privacy: .public)")
+    return state
+  }
   @MainActor public static func verifiedEntitlement() async -> [String: Any] {
     let now = Date()
     var selected: Transaction?
