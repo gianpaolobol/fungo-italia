@@ -66,13 +66,27 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     await require(subscribe, timeout: 60)
-    let ready = await readyToTap(subscribe)
-    if !ready { diagnose(app, session) }
-    XCTAssertTrue(ready, "Wait for entitlement verification before tapping the annual purchase button")
+    var ready = await readyToTap(subscribe)
+    // A fresh iPhone simulator can leave StoreKit entitlement enumeration pending
+    // on first launch even when the local product has loaded. Re-launch once
+    // with the same SKTestSession before failing; never bypass verification.
+    if !ready {
+      diagnose(app, session)
+      print("STOREKIT_RETRY Relaunching app after stalled initial entitlement verification")
+      app.terminate()
+      app.launch()
+      await tap(app, "Abbonamento")
+      let retriedSubscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
+      await require(retriedSubscribe, timeout: 60)
+      ready = await readyToTap(retriedSubscribe)
+      if !ready { diagnose(app, session) }
+    }
+    XCTAssertTrue(ready, "StoreKit entitlement verification must complete before purchase")
+    let purchaseButton = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     XCTAssertTrue(subscribe.label.contains("/ anno"))
     XCTAssertTrue(subscribe.label.contains("9,99") && subscribe.label.contains("€"), "Italian local StoreKit fixture must match the verified Apple Italy price")
     try capture(app, "03-esame")
-    subscribe.tap()
+    purchaseButton.tap()
     let activated = await waitFor(element(app, "Abbonamento attivo"))
     if !activated { diagnose(app, session) }
     XCTAssertTrue(activated)
