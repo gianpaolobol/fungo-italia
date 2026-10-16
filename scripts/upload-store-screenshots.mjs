@@ -53,7 +53,10 @@ for(const family of ['iphone','ipad']){
   selected.push({type:'appScreenshots',id:screenshot.id});results.push({id:screenshot.id,family,fileName,state:screenshot.attributes.assetDeliveryState?.state});
   console.log('APPLE_SCREENSHOT_VERIFIED '+JSON.stringify(results.at(-1)));
  }
- const retained=existing.filter(s=>!selected.some(x=>x.id===s.id)).map(s=>({type:'appScreenshots',id:s.id}));
+ // Replace only prior screenshots managed by this pipeline, after all new images are COMPLETE.
+ const obsolete=existing.filter(s=>s.attributes.fileName?.startsWith('fungo-italia-native-')&&!selected.some(x=>x.id===s.id));
+ for(const old of obsolete){must(await api('/v1/appScreenshots/'+old.id,{method:'DELETE'}),'Remove obsolete managed screenshot');console.log('APPLE_OLD_MANAGED_SCREENSHOT_REMOVED '+old.id);}
+ const retained=existing.filter(s=>!selected.some(x=>x.id===s.id)&&!obsolete.some(x=>x.id===s.id)).map(s=>({type:'appScreenshots',id:s.id}));
  must(await api('/v1/appScreenshotSets/'+set.id+'/relationships/appScreenshots',{method:'PATCH',body:{data:[...selected,...retained]}}),'Order screenshots');
 }
 await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/screenshot-upload.json',JSON.stringify({appId:APP,versionId:version.id,sourceCommit:manifest.sourceCommit,images:results},null,2)+'\n');

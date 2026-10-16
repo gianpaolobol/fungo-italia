@@ -19,6 +19,8 @@ jobs:
       NODE_OPTIONS: --max-old-space-size=6144
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
+      SOURCE_BUILD_COMMIT: ${{ github.event.workflow_run.head_sha }}
+      VERIFIED_STOREKIT_RUN: ${{ github.event.workflow_run.id }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,6 +48,20 @@ jobs:
           build_number=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$plist")
           echo "SUBSCRIPTION_IOS_BUILD_NUMBER $build_number"
           echo "EXPECTED_BUILD_NUMBER=$build_number" >> "$GITHUB_ENV"
+          short_version=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$plist")
+          BUILD_NUMBER="$build_number" BUILD_VERSION="$short_version" node --input-type=module <<'JS'
+          import {readFile,writeFile} from 'node:fs/promises';
+          import {createHash} from 'node:crypto';
+          const bytes=await readFile(process.env.RUNNER_TEMP+'/fungo-italia-subscription.ipa');
+          const receipt={appId:'6821140326',bundleId:'it.fungoitalia.app',productId:'it.fungoitalia.premium.annual',buildNumber:process.env.BUILD_NUMBER,version:process.env.BUILD_VERSION,sourceCommit:process.env.SOURCE_BUILD_COMMIT,storekitRunId:process.env.VERIFIED_STOREKIT_RUN,producerRunId:process.env.GITHUB_RUN_ID,createdAt:new Date().toISOString(),ipaSha256:createHash('sha256').update(bytes).digest('hex')};
+          await writeFile(process.env.RUNNER_TEMP+'/subscription-build.json',JSON.stringify(receipt,null,2)+'\n');
+          JS
+      - uses: actions/upload-artifact@v4
+        if: steps.release.outputs.eligible == 'true'
+        with:
+          name: Subscription-signed-build-receipt
+          path: ${{ runner.temp }}/subscription-build.json
+          retention-days: 30
       - name: Upload the signed binary to TestFlight
         if: steps.release.outputs.eligible == 'true'
         run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-italia-subscription.ipa" --non-interactive --wait
