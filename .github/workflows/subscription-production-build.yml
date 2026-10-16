@@ -15,7 +15,7 @@ jobs:
     runs-on: macos-26
     timeout-minutes: 60
     env:
-      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_26.4.1.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
