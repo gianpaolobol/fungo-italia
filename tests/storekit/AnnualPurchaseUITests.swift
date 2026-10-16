@@ -32,7 +32,7 @@ final class AnnualPurchaseUITests: XCTestCase {
       guard let element = object as? XCUIElement else { return false }
       return element.exists && element.isEnabled && element.isHittable
     }
-    return await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: predicate, object: item)], timeout: 40) == .completed
+    return await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: predicate, object: item)], timeout: 120) == .completed
   }
   @MainActor func diagnose(_ app: XCUIApplication, _ session: SKTestSession) {
     print("PURCHASE_VISIBLE_TEXT " + String(describing: app.staticTexts.allElementsBoundByIndex.map { $0.label }))

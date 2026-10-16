@@ -12,19 +12,22 @@ function verified(value:Entitlement):Entitlement{
 }
 export default function useSubscription(){
  const [product,setProduct]=useState<SubscriptionProduct|null>(null),[entitlement,setEntitlement]=useState<Entitlement>(inactive),[checking,setChecking]=useState(subscriptionAvailable),[busy,setBusy]=useState(false),[error,setError]=useState(''),[priceError,setPriceError]=useState('');
+ const [purchaseReady,setPurchaseReady]=useState(false);
+ const readyRef=useRef(false);
+ const markReady=useCallback((value:boolean)=>{readyRef.current=value;setPurchaseReady(value);},[]);
  const mounted=useRef(true),generation=useRef(0),priceGeneration=useRef(0),locked=useRef(false);
  const refresh=useCallback(async()=>{
   if(!subscriptionAvailable)return;
   const run=++generation.current,priceRun=++priceGeneration.current;
-  setChecking(true);setError('');setPriceError('');
+  markReady(false);setChecking(true);setError('');setPriceError('');
   // Offline access must not wait for a network request for the product price.
   // Apply a late verified native response even if the UI deadline has elapsed.
   // The generation guard still rejects responses superseded by refund or refresh events.
   const access=timely(currentEntitlement().then(value=>{
    if(!mounted.current||run!==generation.current)return;
-   const state=verified(value);setEntitlement(state);setChecking(false);setError('');return state;
+   const state=verified(value);markReady(!state.active);setEntitlement(state);setChecking(false);setError('');return state;
   })).catch(()=>{
-   if(mounted.current&&run===generation.current){setEntitlement(inactive);setChecking(false);setError('Abbonamento non verificabile. Riprova o ripristina gli acquisti.');}
+   if(mounted.current&&run===generation.current){markReady(false);setEntitlement(inactive);setChecking(false);setError('Abbonamento non verificabile. Riprova o ripristina gli acquisti.');}
   });
   const price=timely(getAnnualProduct()).then(value=>{
    if(mounted.current&&priceRun===priceGeneration.current)setProduct(value);
@@ -33,20 +36,20 @@ export default function useSubscription(){
   });
   const [result]=await Promise.allSettled([access,price]);
   return run===generation.current&&result.status==='fulfilled'?result.value:undefined;
- },[]);
+ },[markReady]);
  useEffect(()=>{
   mounted.current=true;
   if(!subscriptionAvailable){setChecking(false);return()=>{mounted.current=false;};}
   void refresh();
   const listener=observeEntitlement(value=>{
    if(!mounted.current)return;
-   ++generation.current;setEntitlement(verified(value));setChecking(false);setError('');
+   ++generation.current;const state=verified(value);markReady(!state.active);setEntitlement(state);setChecking(false);setError('');
   });
   const appState=AppState.addEventListener('change',state=>{
    if(state==='active'){setEntitlement(inactive);void refresh();}
   });
-  return()=>{mounted.current=false;++generation.current;++priceGeneration.current;listener.remove();appState.remove();};
- },[refresh]);
+  return()=>{mounted.current=false;readyRef.current=false;++generation.current;++priceGeneration.current;listener.remove();appState.remove();};
+ },[refresh,markReady]);
  useEffect(()=>{
   if(!entitlement.active||!entitlement.expiresAt)return;
   const expiry=entitlement.expiresAt;
@@ -58,23 +61,23 @@ export default function useSubscription(){
   arm();return()=>clearTimeout(timer);
  },[entitlement.active,entitlement.expiresAt,refresh]);
  const purchase=useCallback(async()=>{
-  if(!subscriptionAvailable||locked.current)return;
-  locked.current=true;++generation.current;setBusy(true);setError('');
+  if(!subscriptionAvailable||locked.current||!readyRef.current)return;
+  locked.current=true;markReady(false);++generation.current;setBusy(true);setError('');
   try{
    const result=await purchaseAnnual();
    if(!mounted.current)return;
    // Read current StoreKit state again: an earlier purchase response must not undo a later revocation event.
    const access=await refresh();
    if(mounted.current&&access&&!access.active&&result.status==='pending')setError('Acquisto in attesa di approvazione Apple. L’accesso si attiverà dopo la conferma.');
-  }catch{if(mounted.current){setEntitlement(inactive);setError('Acquisto non completato. Verifica il tuo account Apple e riprova.');}}
+  }catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError('Acquisto non completato. Verifica il tuo account Apple e riprova.');}}
   finally{locked.current=false;if(mounted.current)setBusy(false);}
- },[refresh]);
+ },[refresh,markReady]);
  const restore=useCallback(async()=>{
   if(!subscriptionAvailable||locked.current)return;
   locked.current=true;++generation.current;setBusy(true);setError('');
   try{await restoreAnnual();if(mounted.current){const state=await refresh();if(state&&!state.active)setError('Nessun abbonamento attivo trovato per questo account Apple.');}}
-  catch{if(mounted.current){setEntitlement(inactive);setError('Ripristino non riuscito. Verifica la connessione e riprova.');}}
+  catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError('Ripristino non riuscito. Verifica la connessione e riprova.');}}
   finally{locked.current=false;if(mounted.current)setBusy(false);}
- },[refresh]);
- return{product,active:entitlement.active,expiresAt:entitlement.expiresAt,checking,busy,error:error||(!entitlement.active?priceError:''),supported:subscriptionAvailable,purchase,restore,refresh:async()=>{await refresh();}};
+ },[refresh,markReady]);
+ return{product,purchaseReady,active:entitlement.active,expiresAt:entitlement.expiresAt,checking,busy,error:error||(!entitlement.active?priceError:''),supported:subscriptionAvailable,purchase,restore,refresh:async()=>{await refresh();}};
 }
