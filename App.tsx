@@ -1,5 +1,5 @@
 import React,{useEffect,useRef,useState} from 'react';
-import {ActivityIndicator,Pressable,StyleSheet,Text,View} from 'react-native';
+import {ActivityIndicator,Platform,Pressable,StyleSheet,Text,View} from 'react-native';
 import {SafeAreaProvider,SafeAreaView} from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {StatusBar} from 'expo-status-bar';
@@ -14,11 +14,12 @@ import groups from './src/data/groups.json';
 const allTaxa=[...catalog,...groups] as unknown as StudyTaxon[];
 type State={version:1;favoriteIds:string[];resumeId:string|null};
 const key='fungo-italia:study:v1';
-const tabs=['Studio','Aree','Esame','Abbonamento'] as const;
+const tabs=Platform.OS==='ios'?['Studio','Aree','Esame','Abbonamento'] as const:['Studio','Aree','Esame'] as const;
 const previewTaxa=allTaxa.filter(t=>t.kind!=='teaching-group').slice(0,5);
 export default function App(){
  const billing=useSubscription();
- const shownTaxa=billing.active?allTaxa:previewTaxa,shownIds=new Set(shownTaxa.map(t=>t.id));
+ const fullAccess=Platform.OS!=='ios'||billing.active;
+ const shownTaxa=fullAccess?allTaxa:previewTaxa,shownIds=new Set(shownTaxa.map(t=>t.id));
  const [tab,setTab]=useState<typeof tabs[number]>('Studio'),[state,setState]=useState<State>({version:1,favoriteIds:[],resumeId:null}),[ready,setReady]=useState(false),[error,setError]=useState('');
  const queue=useRef<Promise<void>>(Promise.resolve()),canSave=useRef(false);
  const allowed=new Set(allTaxa.map(t=>t.id));
@@ -28,9 +29,9 @@ export default function App(){
 
  const gate=<SubscriptionGate product={billing.product} active={billing.active} checking={billing.checking} busy={billing.busy} supported={billing.supported} expiresAt={billing.expiresAt} error={billing.error} privacyUrl="https://gianpaolobol.github.io/fungo-italia/privacy.html" onPurchase={billing.purchase} onRestore={billing.restore} onRetry={billing.refresh} onPreview={()=>setTab('Studio')}/>;
  return <SafeAreaProvider><SafeAreaView style={s.page}><StatusBar style="dark"/><View style={s.brand}><Text style={s.title}>Fungo Italia</Text></View>{!!error&&<View><Text accessibilityRole="alert" style={s.error}>{error}</Text>{canSave.current&&<Pressable accessibilityRole="button" onPress={()=>setError('')} style={s.tab}><Text style={s.label}>Riprova salvataggio</Text></Pressable>}</View>}<View style={s.body}>{!ready?<ActivityIndicator accessibilityLabel="Caricamento"/>:<>
-<View style={[s.body,tab!=='Studio'&&s.hidden]} accessibilityElementsHidden={tab!=='Studio'} importantForAccessibility={tab!=='Studio'?'no-hide-descendants':'auto'}>{!billing.active&&<Pressable accessibilityRole="button" onPress={()=>setTab('Abbonamento')} style={s.preview}><Text style={s.label}>Anteprima gratuita · 5 schede</Text><Text style={s.small}>Apri l’abbonamento per l’atlante completo e l’esame.</Text></Pressable>}<Studio key={billing.active?'full':'preview'} taxa={shownTaxa} favoriteIds={state.favoriteIds.filter(id=>shownIds.has(id))} onFavoriteIdsChange={favoriteIds=>setState(previous=>({...previous,favoriteIds:[...previous.favoriteIds.filter(id=>!shownIds.has(id)),...favoriteIds]}))} resumeId={state.resumeId&&shownIds.has(state.resumeId)?state.resumeId:null} onResumeChange={resumeId=>update({resumeId})}/></View>
+<View style={[s.body,tab!=='Studio'&&s.hidden]} accessibilityElementsHidden={tab!=='Studio'} importantForAccessibility={tab!=='Studio'?'no-hide-descendants':'auto'}>{!fullAccess&&<Pressable accessibilityRole="button" onPress={()=>setTab('Abbonamento')} style={s.preview}><Text style={s.label}>Anteprima gratuita · 5 schede</Text><Text style={s.small}>Apri l’abbonamento per l’atlante completo e l’esame.</Text></Pressable>}<Studio key={fullAccess?'full':'preview'} taxa={shownTaxa} favoriteIds={state.favoriteIds.filter(id=>shownIds.has(id))} onFavoriteIdsChange={favoriteIds=>setState(previous=>({...previous,favoriteIds:[...previous.favoriteIds.filter(id=>!shownIds.has(id)),...favoriteIds]}))} resumeId={state.resumeId&&shownIds.has(state.resumeId)?state.resumeId:null} onResumeChange={resumeId=>update({resumeId})}/></View>
 <View style={[s.body,tab!=='Aree'&&s.hidden]} accessibilityElementsHidden={tab!=='Aree'} importantForAccessibility={tab!=='Aree'?'no-hide-descendants':'auto'}><Areas areas={areas as unknown as Area[]}/></View>
-<View style={[s.body,tab!=='Esame'&&s.hidden]} accessibilityElementsHidden={tab!=='Esame'} importantForAccessibility={tab!=='Esame'?'no-hide-descendants':'auto'}>{billing.active?<PhotoExam/>:tab==='Esame'?gate:null}</View>
+<View style={[s.body,tab!=='Esame'&&s.hidden]} accessibilityElementsHidden={tab!=='Esame'} importantForAccessibility={tab!=='Esame'?'no-hide-descendants':'auto'}>{fullAccess?<PhotoExam/>:tab==='Esame'?gate:null}</View>
 <View style={[s.body,tab!=='Abbonamento'&&s.hidden]} accessibilityElementsHidden={tab!=='Abbonamento'} importantForAccessibility={tab!=='Abbonamento'?'no-hide-descendants':'auto'}>{tab==='Abbonamento'?gate:null}</View>
 </>}</View><View accessibilityRole="tablist" style={s.tabs}>{tabs.map(name=><Pressable key={name} accessibilityRole="tab" accessibilityState={{selected:tab===name}} onPress={()=>setTab(name)} style={[s.tab,tab===name&&s.active]}><Text style={tab===name?s.selected:s.label}>{name}</Text></Pressable>)}</View></SafeAreaView></SafeAreaProvider>;
 }
