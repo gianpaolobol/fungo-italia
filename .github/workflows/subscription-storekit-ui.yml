@@ -52,6 +52,8 @@ jobs:
             xcrun simctl bootstatus "$udid" -b
             xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
             if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 300 -maximum-test-execution-time-allowance 300 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO -jobs 3 test > "store-evidence/purchase-ui-$family.log" 2>&1; then
+              xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'subsystem == "it.fungoitalia.subscription"' > "store-evidence/storekit-native-$family.log" 2>&1 || true
+              cat "store-evidence/storekit-native-$family.log"
               tail -n 180 "store-evidence/purchase-ui-$family.log"
               exit 1
             fi
