@@ -7,7 +7,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: storekit-integration
+  group: verified-storekit-native-tests
   cancel-in-progress: true
 jobs:
   verify:
@@ -35,6 +35,9 @@ jobs:
       - name: Exercise verified purchase, refund and expiry without an Apple account
         run: |
           mkdir -p store-evidence
+          workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
+          xcodebuild -list -json -workspace "$workspace" > store-evidence/test-schemes.json
+          node -e 'const p=require("./store-evidence/test-schemes.json");if(!p.workspace.schemes.includes("FungoItaliaStoreKit"))throw Error("StoreKit test scheme missing")'
           xcrun simctl list devices available -j > /tmp/storekit-devices.json
           udid=$(node -e 'const d=require("/tmp/storekit-devices.json");const a=Object.values(d.devices).flat();const p=a.find(x=>x.name==="iPhone 16 Pro Max")||a.find(x=>x.name.startsWith("iPhone"));if(!p)throw Error("No iPhone simulator");process.stdout.write(p.udid)')
           xcrun simctl boot "$udid" || true
