@@ -74,5 +74,5 @@ export default function useSubscription(){
   catch{if(mounted.current){setEntitlement(inactive);setError('Ripristino non riuscito. Verifica la connessione e riprova.');}}
   finally{locked.current=false;if(mounted.current)setBusy(false);}
  },[refresh]);
- return{product,active:entitlement.active,expiresAt:entitlement.expiresAt,checking,busy,error:error||(!entitlement.active?priceError:''),supported:subscriptionAvailable,purchase,restore,refresh};
+ return{product,active:entitlement.active,expiresAt:entitlement.expiresAt,checking,busy,error:error||(!entitlement.active?priceError:''),supported:subscriptionAvailable,purchase,restore,refresh:async()=>{await refresh();}};
 }
