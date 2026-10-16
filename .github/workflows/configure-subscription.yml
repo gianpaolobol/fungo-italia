@@ -1,0 +1,20 @@
+name: Configure annual subscription
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/configure-subscription.mjs','.github/workflows/configure-subscription.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/configure-subscription.mjs
