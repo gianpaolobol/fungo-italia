@@ -59,7 +59,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     let session = try SKTestSession(contentsOf: url)
     session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
     session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
-    XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session is not active; never fall back to the production store")
+    guard session.storefront == "ITA" else { XCTFail("Local StoreKit session is not active; never fall back to the production store"); return }
     let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
     defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
     app.launch()

@@ -64,15 +64,17 @@ public final class FungoSubscriptionModule: Module {
     return state
   }
   @MainActor public static func verifiedEntitlement() async -> [String: Any] {
+    // This app has one subscription product. The latest transaction may be
+    // expired or revoked, so every access condition remains mandatory.
+    let latest = await Transaction.latest(for: Self.annualID)
     let now = Date()
     var selected: Transaction?
-    for await result in Transaction.currentEntitlements {
-      guard case .verified(let transaction) = result,
-            transaction.productID == Self.annualID,
-            transaction.productType == .autoRenewable,
-            transaction.revocationDate == nil, !transaction.isUpgraded,
-            let expiry = transaction.expirationDate, expiry > now else { continue }
-      if selected == nil || expiry > (selected?.expirationDate ?? .distantPast) { selected = transaction }
+    if let latest, case .verified(let transaction) = latest,
+       transaction.productID == Self.annualID,
+       transaction.productType == .autoRenewable,
+       transaction.revocationDate == nil, !transaction.isUpgraded,
+       let expiry = transaction.expirationDate, expiry > now {
+      selected = transaction
     }
     let iso = ISO8601DateFormatter()
     var expires: Any = NSNull()
