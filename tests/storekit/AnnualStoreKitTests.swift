@@ -3,6 +3,7 @@ import StoreKit
 import StoreKitTest
 internal import FungoSubscription
 
+@available(iOS 17.0, *)
 final class AnnualStoreKitTests: XCTestCase {
   let productID = "it.fungoitalia.premium.annual"
   @MainActor func waitForActive(_ expected: Bool, file: StaticString = #filePath, line: UInt = #line) async throws {
