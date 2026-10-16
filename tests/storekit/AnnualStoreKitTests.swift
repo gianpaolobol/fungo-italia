@@ -19,6 +19,7 @@ final class AnnualStoreKitTests: XCTestCase {
   @MainActor func testVerifiedPurchaseRefundAndExpiry() async throws {
     let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
     let session = try SKTestSession(contentsOf: url)
+    print("ANNUAL_NATIVE Session created")
     session.resetToDefaultState()
     session.disableDialogs = true
     session.timeRate = .realTime
@@ -27,27 +28,37 @@ final class AnnualStoreKitTests: XCTestCase {
     XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session unavailable")
     session.clearTransactions()
     defer { session.clearTransactions(); session.resetToDefaultState() }
+    print("ANNUAL_NATIVE Local fixture configured")
     try await waitForActive(false)
+    print("ANNUAL_NATIVE Initial access is inactive")
     let products = try await Product.products(for: [productID])
     let product = try XCTUnwrap(products.first)
     XCTAssertEqual(product.type, .autoRenewable)
     XCTAssertEqual(product.subscription?.subscriptionPeriod.unit, .year)
     XCTAssertEqual(product.subscription?.subscriptionPeriod.value, 1)
     XCTAssertFalse(product.displayPrice.isEmpty)
+    print("ANNUAL_NATIVE Buying first annual period")
     let purchase = try await session.buyProduct(identifier: productID, options: [])
     XCTAssertEqual(purchase.productID, productID)
+    print("ANNUAL_NATIVE First purchase returned")
     try await waitForActive(true)
+    print("ANNUAL_NATIVE First purchase verified")
     let initial = await FungoSubscriptionModule.verifiedEntitlement()
     XCTAssertNotNil(initial["expiresAt"] as? String)
     guard let transaction = session.allTransactions().last(where: { $0.productIdentifier == productID }) else {
       XCTFail("Missing StoreKit test transaction"); return
     }
+    print("ANNUAL_NATIVE Refunding annual transaction")
     try session.refundTransaction(identifier: transaction.identifier)
     try await waitForActive(false)
+    print("ANNUAL_NATIVE Refunded access is inactive")
     session.clearTransactions()
+    print("ANNUAL_NATIVE Buying a new annual period")
     _ = try await session.buyProduct(identifier: productID, options: [])
     try await waitForActive(true)
+    print("ANNUAL_NATIVE Second purchase verified; expiring")
     try session.expireSubscription(productIdentifier: productID)
     try await waitForActive(false)
+    print("ANNUAL_NATIVE Expired access is inactive")
   }
 }
