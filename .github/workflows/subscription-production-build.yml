@@ -5,6 +5,7 @@ on:
     types: [completed]
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: subscription-production-ios
   cancel-in-progress: false
@@ -41,7 +42,7 @@ jobs:
             return response.json();
           }
           const trees=new Map();
-          const explicit=new Set(['App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','tests/storekit/AnnualStoreKitTests.swift','tests/storekit/Annual.storekit','scripts/clean-storekit-test-host.rb','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml']);
+          const explicit=new Set(['package.json','package-lock.json','app.json','app.config.js','App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','tests/storekit/AnnualStoreKitTests.swift','tests/storekit/Annual.storekit','scripts/clean-storekit-test-host.rb','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml']);
           async function inputs(sha) {
             if(trees.has(sha))return trees.get(sha);
             const tree=await get('/git/trees/'+sha+'?recursive=1');
@@ -59,7 +60,8 @@ jobs:
             for(const run of runs.slice(0,12)) {
               if(await inputs(run.head_sha)!==expected)continue;
               if(run.conclusion==='success'){verified=run;break;}
-              if(run.status!=='completed')pending=true;
+              if(run.status!=='completed'){pending=true;break;}
+              throw Error('The latest matching native StoreKit run did not pass: '+run.id+' '+run.conclusion);
             }
             if(verified)break;
             if(!pending)throw Error('No successful native StoreKit run matches the tested production inputs');
