@@ -1,0 +1,30 @@
+name: Build verified subscription for TestFlight
+on:
+  workflow_run:
+    workflows: ['Verify native StoreKit subscriptions']
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: subscription-production-ios
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm run prepare:data && npm run typecheck
+      - name: Queue the tested native source and upload to TestFlight
+        run: npx eas-cli@24.8.0 build --platform ios --profile production --auto-submit --non-interactive --no-wait
