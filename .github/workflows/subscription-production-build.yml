@@ -12,9 +12,11 @@ concurrency:
 jobs:
   build:
     if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main'
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
+    runs-on: macos-26
+    timeout-minutes: 60
     env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
     steps:
@@ -33,6 +35,24 @@ jobs:
         run: npm ci
       - if: steps.release.outputs.eligible == 'true'
         run: npm run prepare:data && npm run typecheck
-      - name: Queue the tested native source and upload to TestFlight
+      - name: Build the tested source locally on the free GitHub runner
         if: steps.release.outputs.eligible == 'true'
-        run: npx eas-cli@24.8.0 build --platform ios --profile production --auto-submit --non-interactive --no-wait
+        run: npx eas-cli@24.8.0 build --platform ios --profile production --local --non-interactive --output "$RUNNER_TEMP/fungo-italia-subscription.ipa"
+      - name: Record the signed binary version
+        if: steps.release.outputs.eligible == 'true'
+        run: |
+          unzip -q "$RUNNER_TEMP/fungo-italia-subscription.ipa" -d "$RUNNER_TEMP/subscription-binary"
+          plist=$(find "$RUNNER_TEMP/subscription-binary/Payload" -maxdepth 2 -name Info.plist -print -quit)
+          build_number=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$plist")
+          echo "SUBSCRIPTION_IOS_BUILD_NUMBER $build_number"
+          echo "EXPECTED_BUILD_NUMBER=$build_number" >> "$GITHUB_ENV"
+      - name: Upload the signed binary to TestFlight
+        if: steps.release.outputs.eligible == 'true'
+        run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-italia-subscription.ipa" --non-interactive --wait
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Signed-subscription-iOS
+          path: ${{ runner.temp }}/fungo-italia-subscription.ipa
+          retention-days: 7
+          if-no-files-found: warn
