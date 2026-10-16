@@ -1,38 +1,36 @@
-name: Inspect oversized native screenshot
+name: Inspect subscription UI diagnostics
 on:
   push:
     branches: [main]
     paths: ['.github/workflows/inspect-native-screenshot.yml']
   workflow_dispatch:
 permissions:
+  actions: read
   contents: write
 jobs:
   inspect:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Expose the unmodified PNG in text chunks for visual review
+      - name: Read the failed simulator UI evidence
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           node --input-type=module <<'JS'
-          import {createHash} from 'node:crypto';
-          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
-          const headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'};
-          const source='2c26cbbddbb7feca35d5dfdb5c6f51a8b07b3b7b';
-          const response=await fetch(base+'/git/blobs/'+source,{headers});
-          if(!response.ok)throw Error('Source read failed');
-          const file=await response.json();
-          const bytes=Buffer.from(file.content,'base64');
-          if(bytes.length!==1965456||createHash('sha256').update(bytes).digest('hex')!=='c29364ef5ec38a2a8949aea32ff77e4c832ee617bc9d924a29c926527d823aa3')throw Error('Source mismatch');
-          if(bytes[25]!==2)throw Error('RGB PNG required');
-          console.log('ORIGINAL_PNG_VERIFIED '+JSON.stringify({width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20),colorType:bytes[25]}));
-          const encoded=bytes.toString('base64');
-          for(let offset=0,index=0;offset<encoded.length;offset+=900000,index++){
-            const content=encoded.slice(offset,offset+900000);
-            const r=await fetch(base+'/git/blobs',{method:'POST',headers,body:JSON.stringify({encoding:'utf-8',content})});
-            if(!r.ok)throw Error('Chunk staging failed');
-            const blob=await r.json();
-            console.log('REVIEW_CHUNK '+JSON.stringify({path:'screenshot-review/part-'+index+'.txt',sha:blob.sha,index,length:content.length}));
-          }
+          import {writeFile} from 'node:fs/promises';
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY,headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'};
+          const r=await fetch(base+'/actions/runs/38862121517/artifacts',{headers});if(!r.ok)throw Error('Cannot list evidence');
+          const artifact=(await r.json()).artifacts.find(a=>a.name==='Native-App-Store-screenshots');
+          const zip=await fetch(artifact.archive_download_url,{headers});if(!zip.ok)throw Error('Cannot download evidence');
+          await writeFile('/tmp/ui-evidence.zip',Buffer.from(await zip.arrayBuffer()));
+          JS
+          mkdir -p /tmp/ui-evidence
+          unzip -q /tmp/ui-evidence.zip -d /tmp/ui-evidence
+          node --input-type=module <<'JS'
+          import {readFile,readdir} from 'node:fs/promises';
+          const walk=async(dir)=>{const files=[];for(const f of await readdir(dir,{withFileTypes:true})){const p=dir+'/'+f.name;if(f.isDirectory())files.push(...await walk(p));else files.push(p);}return files;};
+          const files=await walk('/tmp/ui-evidence');console.log('UI_EVIDENCE_FILES '+JSON.stringify(files));
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY,headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'};
+          for(const f of files.filter(f=>/maestro/.test(f)&&/\.json$|\.xml$/.test(f))){const c=await readFile(f,'utf8');console.log('UI_DIAGNOSTIC '+f+' '+c.slice(0,35000));}
+          for(const f of files.filter(f=>/\.png$/.test(f)).slice(0,3)){const bytes=await readFile(f);const r=await fetch(base+'/git/blobs',{method:'POST',headers,body:JSON.stringify({encoding:'base64',content:bytes.toString('base64')})});if(!r.ok)throw Error('Cannot stage screenshot');const b=await r.json();console.log('UI_DIAGNOSTIC_BLOB '+JSON.stringify({path:'diagnostic/'+f.split('/').at(-1),sha:b.sha,bytes:bytes.length}));}
           JS
