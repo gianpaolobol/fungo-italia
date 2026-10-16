@@ -30,7 +30,7 @@ La modalità amministrativa web permette di sostituire separatamente le viste fo
 
 La suite web comprende **65 test**, con navigazione a 320 punti, esame, fotografie offline, preferiti, note, importazione e pagine legali. Il controllo dopo la pubblicazione apre il sito Pages effettivo. Queste prove non attestano un test su iPhone fisico.
 
-La pipeline nativa controlla dati, TypeScript e bundle, compila Android e lo prova nell’emulatore. I test StoreKit separano integrazione nativa e acquisto dall’interfaccia su iPhone/iPad; il caricamento firmato richiede entrambe le evidenze sul codice corrispondente. Il registro di distribuzione distingue prove riuscite, fallite e ancora in corso.
+La pipeline nativa controlla dati, TypeScript e bundle, compila Android e lo prova nell’emulatore. I test StoreKit separano integrazione nativa e acquisto dall’interfaccia su iPhone/iPad; il percorso di produzione richiede entrambe le evidenze sul codice corrispondente. Un candidato diagnostico separato può essere caricato su TestFlight con il solo test nativo corrispondente superato, senza selezione per App Store né attestazione del percorso UI. Il registro di distribuzione distingue prove riuscite, fallite e ancora in corso.
 
 Gli aggiornamenti iOS di produzione verificano le sorgenti di billing e il runtime fingerprint. Le modifiche ai contenuti e alle immagini possono essere distribuite via EAS Update quando compatibili; nuove funzioni native richiedono un nuovo binario. Actions ed EAS possono applicare quote.
 
