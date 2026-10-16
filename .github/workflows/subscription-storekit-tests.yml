@@ -30,6 +30,14 @@ jobs:
           npm run prepare:data
           npm run typecheck
           node --test scripts/subscription-policy.test.mjs
+          node --input-type=module <<'JS'
+          import {readFile,writeFile} from 'node:fs/promises';
+          if(process.env.EXPO_PROJECT_ID)throw Error('The isolated native test host must not load production OTA updates');
+          const pkg=JSON.parse(await readFile('package.json','utf8'));
+          if(pkg.main!=='index.js')throw Error('Unexpected native test entry');
+          await writeFile('index.js',"import {registerRootComponent} from 'expo';\nfunction NativeStoreKitTestHost(){return null;}\nregisterRootComponent(NativeStoreKitTestHost);\n");
+          console.log('NATIVE_STOREKIT_TEST_HOST_ISOLATED: production Swift verifier retained; React billing starts only in the separate full UI tests');
+          JS
           npx expo prebuild --platform ios --no-install
           ruby scripts/add-storekit-tests.rb
           cd ios
