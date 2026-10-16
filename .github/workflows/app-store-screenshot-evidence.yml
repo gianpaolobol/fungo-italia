@@ -1,7 +1,7 @@
 name: Stage native screenshot evidence
 on:
   workflow_run:
-    workflows: ['Capture native App Store screenshots']
+    workflows: ['Capture native App Store screenshots', 'Verify StoreKit purchase interface']
     types: [completed]
   workflow_dispatch:
 permissions:

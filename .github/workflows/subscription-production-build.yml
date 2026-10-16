@@ -1,7 +1,7 @@
 name: Build verified subscription for TestFlight
 on:
   workflow_run:
-    workflows: ['Verify native StoreKit subscriptions']
+    workflows: ['Verify StoreKit purchase interface']
     types: [completed]
   workflow_dispatch:
 permissions:
