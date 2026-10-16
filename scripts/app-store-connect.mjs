@@ -70,7 +70,7 @@ export async function audit(){
  if(pricing.ok){report.manualPrices=await api('/v1/appPriceSchedules/'+pricing.data.id+'/manualPrices?include=appPricePoint,territory&limit=200');}
  if(versions.ok)for(const v of versions.data){
   const [localizations,review,build]=await Promise.all([api('/v1/appStoreVersions/'+v.id+'/appStoreVersionLocalizations'),api('/v1/appStoreVersions/'+v.id+'/appStoreReviewDetail'),api('/v1/appStoreVersions/'+v.id+'/build')]);
-  const row={id:v.id,...v.attributes,build:build.ok?build.data?.id:null,localizations:[],reviewDetails:review.ok?{present:true,contactFirstName:!!review.data.attributes.contactFirstName,contactLastName:!!review.data.attributes.contactLastName,contactPhone:!!review.data.attributes.contactPhone,contactEmail:!!review.data.attributes.contactEmail,demoAccountRequired:review.data.attributes.demoAccountRequired,notesPresent:!!review.data.attributes.notes}:review};
+  const row={id:v.id,...v.attributes,relatedLinks:Object.fromEntries(Object.entries(v.relationships||{}).map(([name,r])=>[name,r.links?.related]).filter(([,url])=>url)),build:build.ok?build.data?.id:null,localizations:[],reviewDetails:review.ok?{present:true,contactFirstName:!!review.data.attributes.contactFirstName,contactLastName:!!review.data.attributes.contactLastName,contactPhone:!!review.data.attributes.contactPhone,contactEmail:!!review.data.attributes.contactEmail,demoAccountRequired:review.data.attributes.demoAccountRequired,notesPresent:!!review.data.attributes.notes}:review};
   if(localizations.ok)for(const l of localizations.data){
    const screenshots=await api('/v1/appStoreVersionLocalizations/'+l.id+'/appScreenshotSets?include=appScreenshots');
    row.localizations.push({id:l.id,...l.attributes,screenshots:screenshots.ok?screenshots.data.map(s=>({id:s.id,displayType:s.attributes.screenshotDisplayType,count:s.relationships.appScreenshots?.data?.length||0})):screenshots});
@@ -131,6 +131,20 @@ export async function audit(){
    if(!result.ok)throw Error('App category update rejected HTTP '+result.status+' '+result.codes.join(','));
    console.log('APP_STORE_CATEGORIES_SAVED Education / Reference');
   }else console.log('APP_STORE_CATEGORIES_ALREADY_PRESENT');
+ }
+ const groups=await api('/v1/apps/'+APP+'/subscriptionGroups');
+ report.subscriptions=[];
+ if(groups.ok)for(const group of groups.data){
+  const products=await api('/v1/subscriptionGroups/'+group.id+'/subscriptions');
+  if(!products.ok)continue;
+  for(const product of products.data){
+   const [prices,availability,screenshot]=await Promise.all([api('/v1/subscriptions/'+product.id+'/prices?include=subscriptionPricePoint,territory&limit=200'),api('/v1/subscriptions/'+product.id+'/subscriptionAvailability'),api('/v1/subscriptions/'+product.id+'/appStoreReviewScreenshot')]);
+   const italy=prices.data?.find(p=>p.relationships?.territory?.data?.id==='ITA');
+   const point=prices.included?.find(p=>p.type==='subscriptionPricePoints'&&p.id===italy?.relationships?.subscriptionPricePoint?.data?.id);
+   const related=availability.data?.relationships?.availableTerritories?.links?.related;
+   let selected=null;if(related){const url=new URL(related);if(url.origin==='https://api.appstoreconnect.apple.com'){const r=await api(url.pathname+url.search+(url.search?'&':'?')+'limit=200');if(r.ok&&!r.links?.next)selected=r.data.length;}}
+   report.subscriptions.push({id:product.id,groupId:group.id,...product.attributes,italyPrice:point?.attributes.customerPrice||null,configuredPrices:prices.data?.length||0,selectedTerritories:selected,availableInNewTerritories:availability.data?.attributes.availableInNewTerritories,reviewScreenshot:screenshot.ok?{id:screenshot.data?.id,fileName:screenshot.data?.attributes.fileName,state:screenshot.data?.attributes.assetDeliveryState?.state}:null});
+  }
  }
  const privacyProbe=await api('/v1/appDataUsages?filter[app]='+APP);
  report.privacyQuestionnaireAccess={ok:privacyProbe.ok,status:privacyProbe.status,codes:privacyProbe.codes||[],entries:Array.isArray(privacyProbe.data)?privacyProbe.data.length:null};
