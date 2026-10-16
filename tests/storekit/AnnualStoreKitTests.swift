@@ -25,7 +25,7 @@ final class AnnualStoreKitTests: XCTestCase {
     session.timeRate = .realTime
     session.locale = Locale(identifier: "it_IT")
     session.storefront = "ITA"
-    XCTAssertEqual(session.storefront, "ITA", "Local StoreKit session unavailable")
+    guard session.storefront == "ITA" else { XCTFail("Local StoreKit session unavailable"); return }
     session.clearTransactions()
     defer { session.clearTransactions(); session.resetToDefaultState() }
     print("ANNUAL_NATIVE Local fixture configured")
