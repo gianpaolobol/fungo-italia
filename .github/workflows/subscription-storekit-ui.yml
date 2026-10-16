@@ -11,10 +11,16 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family: [iphone, ipad]
     runs-on: macos-26
     timeout-minutes: 60
     env:
       CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
       DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
@@ -43,7 +49,7 @@ jobs:
           xcrun simctl list runtimes -j > /tmp/purchase-runtimes.json
           runtime="$STOREKIT_TEST_RUNTIME"
           xcrun simctl list devicetypes -j > /tmp/purchase-types.json
-          for family in iphone ipad; do
+          for family in "$SCREENSHOT_FAMILY"; do
             type=$(FAMILY="$family" node -e 'const a=require("/tmp/purchase-types.json").devicetypes;const pattern=process.env.FAMILY==="iphone"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error("Screenshot device unavailable");process.stdout.write(d.identifier)')
             xcrun simctl list devices available -j > /tmp/purchase-devices.json
             udid=$(DEVICE_TYPE="$type" DEVICE_RUNTIME="$runtime" node -e 'const a=require("/tmp/purchase-devices.json").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')
@@ -78,6 +84,22 @@ jobs:
           fi
       - uses: actions/upload-artifact@v4
         if: always()
+        with:
+          name: Native-App-Store-screenshots-${{ matrix.family }}
+          path: store-evidence/
+          retention-days: 30
+  evidence:
+    needs: verify
+    if: always() && (needs.verify.result == 'success' || needs.verify.result == 'failure')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: Native-App-Store-screenshots-*
+          merge-multiple: true
+          path: store-evidence/
+      - uses: actions/upload-artifact@v4
         with:
           name: Native-App-Store-screenshots
           path: store-evidence/
