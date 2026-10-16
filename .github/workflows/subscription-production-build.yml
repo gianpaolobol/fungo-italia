@@ -47,10 +47,11 @@ jobs:
             const tree=await get('/git/trees/'+sha+'?recursive=1');
             if(tree.truncated)throw Error('Incomplete source tree cannot prove billing equivalence');
             const entries=tree.tree.filter(x=>explicit.has(x.path)||x.path.startsWith('modules/fungo-subscription/')).map(x=>[x.path,x.mode,x.type,x.sha]).sort((a,b)=>a[0].localeCompare(b[0]));
-            for(const path of explicit)if(!entries.some(x=>x[0]===path))throw Error('Missing native test input: '+path);
+            for(const path of explicit)if(!entries.some(x=>x[0]===path)){trees.set(sha,null);return null;}
             const value=JSON.stringify(entries);trees.set(sha,value);return value;
           }
           const expected=await inputs(process.env.SOURCE_BUILD_COMMIT);
+          if(!expected)throw Error('The production source is missing required native test inputs');
           let verified;
           for(let attempt=0;attempt<18;attempt++) {
             const {workflow_runs:runs}=await get('/actions/workflows/subscription-storekit-tests.yml/runs?branch=main&per_page=30');
