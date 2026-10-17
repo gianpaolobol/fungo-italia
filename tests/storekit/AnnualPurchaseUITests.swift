@@ -81,6 +81,27 @@ final class AnnualPurchaseUITests: XCTestCase {
     await require(element(app, "Fungo Italia completo"))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
   }
+  // Diagnostic-only entry point: no purchase and no runner-identity StoreKit query.
+  // The workflow compares the normal app with a temporary observer-free build.
+  @MainActor func testColdLaunchEntitlementVerification() async throws {
+    continueAfterFailure = false
+    let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
+    let session = try SKTestSession(contentsOf: url)
+    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
+    session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
+    guard session.storefront == "ITA" else { XCTFail("Local StoreKit fixture unavailable"); return }
+    let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
+    defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
+    app.launch()
+    await tap(app, "Abbonamento")
+    let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
+    await require(subscribe, timeout: 60)
+    let ready = await verificationCompleted(subscribe)
+    if !ready { diagnose(app, session) }
+    XCTAssertTrue(ready, "Cold-launch entitlement verification must complete without buying or relaunching")
+    XCTAssertTrue(session.allTransactions().isEmpty, "The cold-start test must never create a purchase")
+    print("STOREKIT_COLD_START Verified no-purchase state through full app")
+  }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
     continueAfterFailure = false
     let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))

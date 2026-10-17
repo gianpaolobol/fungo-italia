@@ -3,6 +3,29 @@
 Status: **initial iPhone verification is not fixed or release-approved**.
 Base: `8bb2f0cc3165daca9103a2619e5d4b4878916de9`.
 
+## Update — 17 October 2026, 07:31 UTC
+
+This update supersedes the release/run status in the original report below.
+
+- Main advanced independently to `2c077e74e43f398f25d2430ed8e202e5197d6111`, replacing `latest(for:)` with verified `currentEntitlements`. The diagnostic branch now incorporates that change; it must not restore the old verifier on merge.
+- Native test `38914426911` retried successfully. The newer native run `38979804811` also passed for the changed verifier.
+- Main UI run `38980636163` failed on both iPhone and iPad at the initial verification gate. The API substitution alone has not resolved the issue.
+- Candidate run `38982998646` passed its native-evidence guard and uploaded **1.0.0 (11)**. Apple audit `38897130747`, refreshed 17 October 07:31 UTC, reports build `f15030a5-6079-4077-a09c-369431bd3547` as **VALID**, not expired. App Store version 1.0 remains PREPARE_FOR_SUBMISSION and still references build 7. VALID does not prove tester-group distribution or successful device testing.
+- The PR's completed diagnostic run `38942792729` confirmed `enabled=false`, `hittable=true` on iPhone. Thus that failure was not an off-screen purchase button. Its app `Transaction.latest` entered without returning during the test. The separate runner lookup also exceeded its 30 s deadline and returned only during teardown; its different bundle identity means that is not an app authorization result.
+- The retained service log shows concurrent unfinished-transaction and product-transaction queries, receipt synchronization, and `Did fail to synchronize due to missing response data`. A later `No active account` error belongs to the **UI runner bundle**, not the app; it must not be used to conclude the app needs an Apple login. These logs support a StoreKit service/client integration failure but do not establish that the app observer causes it.
+
+### Controlled observer experiment
+
+The separately named PR diagnostic workflow now runs two fresh iPhone jobs: **normal** and **disabled observer**. Both execute only `testColdLaunchEntitlementVerification`, without purchasing, prewarming via a runner-identity transaction query, or relaunching. The normal app retains the complete production observer. The disabled job temporarily replaces only the module's `OnCreate` listener block in its own runner checkout; it records the exact diff, base commit and observer mode in the artifact. The verifier, purchase implementation and UI authorization gate are identical between variants. No disabling flag or altered observer is saved to the production source or uploaded to Apple.
+
+This tests a specific hypothesis: whether starting `Transaction.updates` while the initial entitlement query is running contributes to the receipt-sync stall. A passing disabled-observer trial alone is **not** release evidence, does not validate refunds or renewal handling, and is not sufficient for a production change. If both fail, the listener hypothesis is not supported by that comparison. Repeat a decisive comparison before attributing causality; separate CI hosts introduce environmental variability.
+
+Local validation after incorporating main: TypeScript and six targeted tests passed. Workflow YAML parses, every shell block passes `bash -n`, and an explicit byte comparison confirms the temporary observer mutation leaves `OnDestroy`, bridge methods, verifier and purchase code unchanged. The new Swift cold-start test still requires macOS execution.
+
+---
+
+## Original evidence — 16 October
+
 ## Retrieved evidence
 
 | Run | Result | What it proves |

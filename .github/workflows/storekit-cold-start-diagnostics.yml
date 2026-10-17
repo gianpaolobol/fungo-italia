@@ -10,16 +10,17 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify:
-    name: verify-${{ matrix.family }}
+    name: startup-${{ matrix.observer }}
     strategy:
       fail-fast: false
       matrix:
-        family: [iphone, ipad]
+        observer: [normal, disabled]
     runs-on: macos-26
     timeout-minutes: 60
     env:
       CI: '1'
-      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      SCREENSHOT_FAMILY: iphone
+      STOREKIT_OBSERVER_DIAGNOSTIC: ${{ matrix.observer }}
       DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
@@ -35,11 +36,28 @@ jobs:
           npm run prepare:data
           npm run typecheck
           node --test scripts/subscription-policy.test.mjs
+          mkdir -p store-evidence
+          git rev-parse HEAD > store-evidence/source-commit.txt
+          printf '%s\n' "$STOREKIT_OBSERVER_DIAGNOSTIC" > store-evidence/observer-mode.txt
+          if test "$STOREKIT_OBSERVER_DIAGNOSTIC" = disabled; then
+            python3 - <<'PYDIAG'
+          from pathlib import Path
+          p = Path('modules/fungo-subscription/ios/FungoSubscriptionModule.swift')
+          s = p.read_text()
+          start = s.index('    OnCreate {\n')
+          end = s.index('    OnDestroy {', start)
+          block = s[start:end]
+          assert 'for await result in Transaction.updates' in block
+          s = s[:start] + '    OnCreate { self.logger.notice("DIAGNOSTIC ONLY: updates observer omitted") }\n' + s[end:]
+          p.write_text(s)
+          PYDIAG
+          fi
+          git diff -- modules/fungo-subscription/ios/FungoSubscriptionModule.swift > store-evidence/diagnostic-source.patch
           npx expo prebuild --platform ios --no-install
           ruby scripts/add-storekit-ui-tests.rb
           cd ios
           pod install
-      - name: Buy, reopen, refund and expire through the real app interface
+      - name: Verify cold-launch access without buying or restarting
         run: |
           mkdir -p store-evidence/screenshots
           workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
@@ -56,7 +74,7 @@ jobs:
             xcrun simctl boot "$udid" || true
             xcrun simctl bootstatus "$udid" -b
             xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
-            if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release -destination "platform=iOS Simulator,id=$udid" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test > "store-evidence/purchase-ui-$family.log" 2>&1; then
+            if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testColdLaunchEntitlementVerification -destination "platform=iOS Simulator,id=$udid" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test > "store-evidence/purchase-ui-$family.log" 2>&1; then
               xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'subsystem == "it.fungoitalia.subscription"' > "store-evidence/storekit-native-$family.log" 2>&1 || true
               xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'process == "storekitd" OR process == "appstoreagent" OR subsystem CONTAINS[c] "storekit"' > "store-evidence/storekit-service-$family.log" 2>&1 || true
               cat "store-evidence/storekit-native-$family.log"
@@ -64,12 +82,7 @@ jobs:
               exit 1
             fi
             xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'subsystem == "it.fungoitalia.subscription"' > "store-evidence/storekit-native-$family.log" 2>&1 || true
-            mkdir -p "store-evidence/screenshots/$family"
-            for name in 01-studio 02-aree 03-esame; do
-              source=$(find "$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application" -type f -path "*/Documents/store-captures/$name.png" -print -quit)
-              test -n "$source"
-              cp "$source" "store-evidence/screenshots/$family/$name.png"
-            done
+            grep -E 'Test Case .*testColdLaunchEntitlementVerification.*passed' "store-evidence/purchase-ui-$family.log"
             grep -E 'Test Case|Executed|TEST SUCCEEDED' "store-evidence/purchase-ui-$family.log"
             xcrun simctl shutdown "$udid"
           done
@@ -86,22 +99,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: Native-App-Store-screenshots-${{ matrix.family }}
-          path: store-evidence/
-          retention-days: 30
-  evidence:
-    needs: verify
-    if: always() && (needs.verify.result == 'success' || needs.verify.result == 'failure')
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: Native-App-Store-screenshots-*
-          merge-multiple: true
-          path: store-evidence/
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Native-App-Store-screenshots
+          name: StoreKit-cold-start-${{ matrix.observer }}
           path: store-evidence/
           retention-days: 30
