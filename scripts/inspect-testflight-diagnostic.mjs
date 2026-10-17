@@ -13,6 +13,7 @@ const [build,detail,assigned,groups,testers]=await Promise.all([
 function failure(r){return {ok:false,status:r.status,codes:r.codes};}
 function groupRows(r){return r.ok?{ok:true,groups:r.data.map(g=>({id:g.id,...g.attributes})),hasMore:!!r.links?.next}:failure(r);}
 const groupEvidence=[];
+const accountUsers=await api('/v1/users?limit=200');
 if(groups.ok){
  for(const group of groups.data){
   const [available,members]=await Promise.all([
@@ -22,7 +23,7 @@ if(groups.ok){
   const normalize=x=>String(x||'').normalize('NFKD').replace(/[^a-zA-Z]/g,'').toLowerCase();
   groupEvidence.push({id:group.id,name:group.attributes.name,isInternalGroup:group.attributes.isInternalGroup,
    builds:available.ok?{ok:true,rows:available.data.map(b=>({id:b.id,version:b.attributes.version,processingState:b.attributes.processingState})),hasMore:!!available.links?.next}:failure(available),
-   members:members.ok?{ok:true,count:members.data.length,candidateNames:group.attributes.isInternalGroup&&members.data.length===1?members.data.map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,attributeKeys:Object.keys(t.attributes)})):[],hasMore:!!members.links?.next,ownerMatches:members.data.filter(t=>(normalize(t.attributes.firstName+' '+t.attributes.lastName)==='gianpaolofranceschini'||String(t.attributes.email||'').toLowerCase()==='gianpaolo.franceschini@gmail.com')).map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,emailMatchesApprovedOwner:String(t.attributes.email||'').toLowerCase()==='gianpaolo.franceschini@gmail.com',state:t.attributes.state}))}:failure(members)});
+   members:members.ok?{ok:true,count:members.data.length,candidateNames:group.attributes.isInternalGroup&&members.data.length===1?members.data.map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,linkedAccountUsers:accountUsers.ok?accountUsers.data.filter(u=>String(u.attributes.username||'').toLowerCase()===String(t.attributes.email||'').toLowerCase()).map(u=>({id:u.id,firstName:u.attributes.firstName,lastName:u.attributes.lastName,roles:u.attributes.roles})):failure(accountUsers)})):[],hasMore:!!members.links?.next,ownerMatches:members.data.filter(t=>(normalize(t.attributes.firstName+' '+t.attributes.lastName)==='gianpaolofranceschini'||String(t.attributes.email||'').toLowerCase()==='gianpaolo.franceschini@gmail.com')).map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,emailMatchesApprovedOwner:String(t.attributes.email||'').toLowerCase()==='gianpaolo.franceschini@gmail.com',state:t.attributes.state}))}:failure(members)});
  }
 }
 const report={checkedAt:new Date().toISOString(),appId,buildId,readOnly:true,
