@@ -22,7 +22,7 @@ if(groups.ok){
   const normalize=x=>String(x||'').normalize('NFKD').replace(/[^a-zA-Z]/g,'').toLowerCase();
   groupEvidence.push({id:group.id,name:group.attributes.name,isInternalGroup:group.attributes.isInternalGroup,
    builds:available.ok?{ok:true,rows:available.data.map(b=>({id:b.id,version:b.attributes.version,processingState:b.attributes.processingState})),hasMore:!!available.links?.next}:failure(available),
-   members:members.ok?{ok:true,count:members.data.length,hasMore:!!members.links?.next,ownerMatches:members.data.filter(t=>normalize(t.attributes.firstName+' '+t.attributes.lastName)==='gianpaolofranceschini').map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,state:t.attributes.state}))}:failure(members)});
+   members:members.ok?{ok:true,count:members.data.length,candidateNames:group.attributes.isInternalGroup&&members.data.length===1?members.data.map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,attributeKeys:Object.keys(t.attributes)})):[],hasMore:!!members.links?.next,ownerMatches:members.data.filter(t=>(normalize(t.attributes.firstName+' '+t.attributes.lastName)==='gianpaolofranceschini'||String(t.attributes.email||'').toLowerCase()==='gianpaolo.franceschini@gmail.com')).map(t=>({id:t.id,firstName:t.attributes.firstName,lastName:t.attributes.lastName,emailMatchesApprovedOwner:String(t.attributes.email||'').toLowerCase()==='gianpaolo.franceschini@gmail.com',state:t.attributes.state}))}:failure(members)});
  }
 }
 const report={checkedAt:new Date().toISOString(),appId,buildId,readOnly:true,
