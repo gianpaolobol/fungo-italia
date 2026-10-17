@@ -70,7 +70,7 @@ The probe uses an unstructured task to avoid a structured task-group scope waiti
 ## Validation and decision procedure
 
 1. Local checks: `npm ci`, `npm run prepare:data`, `npm run typecheck`, then `node --test scripts/subscription-policy.test.mjs scripts/store-config.test.mjs scripts/ios-native-linking.test.mjs`. At patch preparation: TypeScript PASS, six targeted tests PASS. Swift compilation and UI execution require the macOS Actions runner; Linux checks do not prove them.
-2. Open the diagnostic PR. Its `Diagnose StoreKit cold-start verification` workflow must compile and execute both real UI jobs. Download the family artifacts, not only the aggregate summary. The initial purchase must remain blocked until the current verification returns inactive. Refund and expiry must close access; cancelling renewal must preserve the paid interval.
+2. Open the diagnostic PR. Its `Diagnose StoreKit cold-start verification` workflow now compiles two isolated iPhone observer variants and runs only the cold no-purchase test. Download both observer artifacts. Refund, expiry, cancellation and the actual purchase flow remain requirements of the separate production `Verify StoreKit purchase interface` workflow; the cold diagnostic does not validate them.
 3. Interpret the new evidence:
    - Enabled but off-screen button: assertion/layout issue; scrolling addresses it, while native completion must still be present.
    - App lookup stalls and runner lookup also times out: cross-process local StoreKit service/fixture failure is supported. Preserve service logs and reproduce on a fresh simulator before changing app logic.
