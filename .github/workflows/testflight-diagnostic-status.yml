@@ -1,0 +1,28 @@
+name: Inspect diagnostic TestFlight build 11
+on:
+  push:
+    branches: [fix/storekit-cold-start-diagnostics]
+    paths: ['.github/workflows/testflight-diagnostic-status.yml','scripts/inspect-testflight-diagnostic.mjs']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check scripts/inspect-testflight-diagnostic.mjs
+      - name: Read processing and beta distribution metadata without changing it
+        run: node scripts/inspect-testflight-diagnostic.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Diagnostic-TestFlight-status
+          path: store-evidence/testflight-diagnostic-status.json
+          retention-days: 14
