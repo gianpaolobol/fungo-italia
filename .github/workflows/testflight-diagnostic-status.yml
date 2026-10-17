@@ -1,8 +1,8 @@
-name: Inspect diagnostic TestFlight build 11
+name: Verify owner TestFlight candidate assignment
 on:
   push:
     branches: [chore/testflight-group-audit]
-    paths: ['.github/workflows/testflight-diagnostic-status.yml','scripts/inspect-testflight-diagnostic.mjs']
+    paths: ['.github/workflows/testflight-diagnostic-status.yml','scripts/inspect-testflight-diagnostic.mjs','scripts/testflight-owner-gate.mjs','scripts/testflight-owner-gate.test.mjs','scripts/assign-owner-diagnostic-build.mjs']
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,11 +18,16 @@ jobs:
         with:
           node-version: '24'
       - run: node --check scripts/inspect-testflight-diagnostic.mjs
+      - name: Validate the exact existing owner and diagnostic binary
+        run: node --test scripts/testflight-owner-gate.test.mjs
+      - name: Assign the diagnostic build only to the verified existing owner group
+        run: node scripts/assign-owner-diagnostic-build.mjs
       - name: Read processing and beta distribution metadata without changing it
+        if: always()
         run: node scripts/inspect-testflight-diagnostic.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: Diagnostic-TestFlight-status
-          path: store-evidence/testflight-diagnostic-status.json
+          path: store-evidence/*.json
           retention-days: 14
