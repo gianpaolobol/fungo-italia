@@ -1,7 +1,7 @@
 name: Inspect diagnostic TestFlight build 11
 on:
   push:
-    branches: [fix/storekit-cold-start-diagnostics]
+    branches: [chore/testflight-group-audit]
     paths: ['.github/workflows/testflight-diagnostic-status.yml','scripts/inspect-testflight-diagnostic.mjs']
   workflow_dispatch:
 permissions:
