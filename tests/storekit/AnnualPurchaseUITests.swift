@@ -1,6 +1,7 @@
 import XCTest
 import StoreKitTest
 
+@available(iOS 17.0, *)
 final class AnnualPurchaseUITests: XCTestCase {
   let productID = "it.fungoitalia.premium.annual"
   func element(_ app: XCUIApplication, _ label: String) -> XCUIElement {
@@ -85,6 +86,10 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Esame")
     await require(element(app, "Simulazione d’esame"))
     try capture(app, "03-esame")
+    await tap(app, "Studio")
+    try capture(app, "01-studio")
+    await tap(app, "Aree")
+    try capture(app, "02-aree")
     app.terminate(); app.launch()
     await tap(app, "Abbonamento")
     await tap(app, "Ripristina acquisti")
