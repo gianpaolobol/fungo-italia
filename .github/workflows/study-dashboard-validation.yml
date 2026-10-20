@@ -4,6 +4,7 @@ on:
     branches: [design/study-dashboard-v1-1]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:

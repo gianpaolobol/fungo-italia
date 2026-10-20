@@ -5,7 +5,7 @@ const files=['subscription-storekit-tests.yml','study-dashboard-validation.yml',
 async function get(file){
  const response=await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/actions/workflows/${file}/runs?head_sha=${sha}&per_page=30`,{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'},signal:AbortSignal.timeout(30000)});
  if(!response.ok)throw Error('Evidence query failed '+response.status);
- return (await response.json()).workflow_runs.filter(r=>r.head_sha===sha&&r.event==='push').sort((a,b)=>b.id-a.id)[0];
+ return (await response.json()).workflow_runs.filter(r=>r.head_sha===sha&&['push','workflow_dispatch'].includes(r.event)).sort((a,b)=>b.id-a.id)[0];
 }
 let runs;
 for(let attempt=0;attempt<90;attempt++){
