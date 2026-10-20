@@ -52,7 +52,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     attachment.name = name; attachment.lifetime = .keepAlways; add(attachment)
   }
   @MainActor func waitForGate(_ app: XCUIApplication) async {
-    await require(element(app, "Accesso completo annuale"))
+    await require(element(app, "Prova gratuita del test"))
     XCTAssertFalse(element(app, "Allenamento · 15 casi").exists)
   }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
@@ -67,6 +67,8 @@ final class AnnualPurchaseUITests: XCTestCase {
     app.launch()
     await require(element(app, "Ciao"))
     try capture(app, "00-dashboard")
+    await tap(app, "Esame")
+    await require(element(app, "Prova gratuita del test"))
     await tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     await require(subscribe)
@@ -84,7 +86,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     subscribe.tap()
     await require(element(app, "Abbonamento attivo"))
     await tap(app, "Esame")
-    await require(element(app, "Simulazione d’esame"))
+    await require(element(app, "Simulazione didattica"))
     try capture(app, "03-esame")
     await tap(app, "Studio")
     try capture(app, "01-studio")
@@ -98,15 +100,15 @@ final class AnnualPurchaseUITests: XCTestCase {
     try session.refundTransaction(identifier: annual.identifier)
     await tap(app, "Esame")
     await require(element(app, "Allenamento · 15 casi"))
-    let simulation = element(app, "Simulazione d’esame")
+    let simulation = element(app, "Simulazione didattica")
     let removed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: simulation)
     let removedResult = await XCTWaiter.fulfillment(of: [removed], timeout: 120)
     XCTAssertEqual(removedResult, .completed)
     // Verify expiration also preserves independently owned Base.
     _ = try await session.buyProduct(identifier: productID, options: [])
-    await require(element(app, "Simulazione d’esame"))
+    await require(element(app, "Simulazione didattica"))
     try session.expireSubscription(productIdentifier: productID)
-    let expired = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: element(app, "Simulazione d’esame"))
+    let expired = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: element(app, "Simulazione didattica"))
     let expiredResult = await XCTWaiter.fulfillment(of: [expired], timeout: 120)
     XCTAssertEqual(expiredResult, .completed)
     await require(element(app, "Allenamento · 15 casi"))

@@ -64,7 +64,7 @@ jobs:
               exit 1
             fi
             mkdir -p "store-evidence/screenshots/$family"
-            for name in 01-studio 02-aree 03-esame; do
+            for name in 00-dashboard 01-studio 02-aree 03-esame; do
               source=$(find "$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application" -type f -path "*/Documents/store-captures/$name.png" -print -quit)
               test -n "$source"
               cp "$source" "store-evidence/screenshots/$family/$name.png"

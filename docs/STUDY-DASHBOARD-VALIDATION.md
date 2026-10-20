@@ -31,3 +31,18 @@ Minori differiti: snapshot storico separato dell'indice e record personale massi
 Nome e progressi restano sul dispositivo; nessun nuovo account o servizio di sincronizzazione. La quota Base è locale, con il limite confermato dal titolare per reinstallazione/cancellazione dati/dispositivi diversi.
 Nessun prodotto Apple esistente, risposta fiscale o questionario privacy è stato modificato durante lo sviluppo.
 La versione App Store 1.0 è WAITING_FOR_REVIEW con build 9; TestFlight interno usa build 11. Vedere ALIGNMENT-2026-10-20.md.
+
+## Completamento approvato il 20 ottobre
+Il piano integrativo è `docs/superpowers/plans/2026-10-20-dashboard-completion.md` e supera le precedenti note sui minori differiti per nomi nelle lacune e confronto dei risultati.
+- Anteprima gratuita: cinque schede e tre casi guidati, senza salvataggio di quota o progressi.
+- Preparazione dimostrata distinta dalla copertura; il fungo mantiene l'indice complessivo prudente. Algoritmo derivato versione 2, senza riscrivere lo storico.
+- Nomi nelle lacune, ultima valutazione, miglior risultato e confronto separato fra allenamenti e simulazioni autonome concluse sulla banca corrente.
+- “Simulazione didattica” esplicita nell'interfaccia.
+- Inventario riproducibile `node scripts/study-coverage.mjs --write`, risultato in `docs/STUDY-COVERAGE.md`: 59 minimi esclusi (52 gruppi/denominazioni composite e 7 specie), 66 unità aggiuntive senza caso. La copertura scientifica completa resta aperta.
+- Verifiche locali: 124/124 test Node, TypeScript PASS, export iOS PASS (bundle caae3d2cd880b09e13c28f4181b346d3).
+- StoreKit nativo PASS: run 39383665613 sul precedente codice acquisti invariato. UI iPhone/iPad run39383665654 fallita durante compilazione del test (API iOS17); aggiunta disponibilità iOS17 alla sola classe di test e ripristinate acquisizioni richieste. Nuova verifica UI ancora necessaria.
+- Nessuna verifica fisica iPhone13mini o attestazione VoiceOver. Nessun nuovo binario distribuito e prodotto Base Apple ancora da configurare.
+
+### Revisione del completamento
+Revisione indipendente senza criticità nuove nella dimostrazione o negli indicatori. Individuato e corretto un difetto preesistente: la sessione Base ripresa sotto annuale aggiornava solo il checkpoint corrente; ora aggiorna anche quello Base prima di iniziare altre sessioni. Regressione osservata RED→GREEN; suite completa 125/125 e TypeScript PASS.
+Minori aperti: prova della dimostrazione intera su interfaccia/dispositivo; verifica iPhone mini/testo ingrandito/VoiceOver; ampliare filtri di attivazione dei test nativi alle future modifiche Dashboard; test specifici demo condizionati/mortali (la correzione usa già il motore comune).
