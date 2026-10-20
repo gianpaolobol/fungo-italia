@@ -6,6 +6,21 @@ internal import FungoSubscription
 @available(iOS 17.0, *)
 final class AnnualStoreKitTests: XCTestCase {
   let productID = "it.fungoitalia.premium.annual"
+  @MainActor func testAColdEmptyAccessBeforeProductLookup() async throws {
+    let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
+    let session = try SKTestSession(contentsOf: url)
+    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
+    session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
+    defer { session.clearTransactions(); session.resetToDefaultState() }
+    // Keep this first: no product lookup, transaction enumeration or purchase may warm the ledger.
+    print("COLD_NATIVE_EMPTY_ACCESS_ENTERED")
+    let state = await FungoSubscriptionModule.verifiedAccess()
+    XCTAssertEqual(state["baseOwned"] as? Bool, false)
+    XCTAssertEqual(state["annualActive"] as? Bool, false)
+    XCTAssertNil(state["annualExpiresAt"] as? String)
+    XCTAssertNotNil(state["checkedAt"] as? String)
+    print("COLD_NATIVE_EMPTY_ACCESS_RETURNED")
+  }
   @MainActor func waitForActive(_ expected: Bool, file: StaticString = #filePath, line: UInt = #line) async throws {
     var last = false
     for _ in 0..<100 {
