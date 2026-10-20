@@ -1,0 +1,38 @@
+{
+  "appId": "6821140326",
+  "locale": "it",
+  "name": "Fungo Italia",
+  "subtitle": "Atlante e studio micologico",
+  "keywords": "funghi,micologia,atlante,sporata,habitat,commestibilità,esame,studio,bosco",
+  "promotionalText": "Schede illustrate, caratteri diagnostici ed esercizi fotografici per studiare la micologia, ripassare e confrontare le specie.",
+  "description": "Studia la micologia con un percorso personale.\n\nCONSULTA LE SCHEDE\nCerca specie, generi e gruppi per nome scientifico, sinonimo o nome comune. Confronta le fotografie e consulta caratteri distintivi, habitat e informazioni documentate.\n\nSEGUI IL TUO PERCORSO\nLa Dashboard mostra preparazione dimostrata, copertura del programma, risultati e lacune. Il fungo cresce con l’avanzamento complessivo. Prima delle prove la preparazione resta da valutare; la banca non copre ancora tutte le schede e la stima è parziale. Il nome è facoltativo e resta sul dispositivo.\n\nALLENATI E VERIFICA\nAllenamento fotografico con correzione e ripetizione degli errori; simulazione didattica senza suggerimenti o correzioni durante la prova. Il percorso completo seleziona lacune, ripassi e nuovi argomenti. Lo storico resta consultabile dopo la scadenza dell’abbonamento.\n\nDOWNLOAD GRATUITO\nAnteprima di cinque schede, tre casi dimostrativi e consultazione delle aree. I casi dimostrativi non consumano la sessione Base e non modificano i progressi.\n\nBASE PERMANENTE\n9,99 € una volta sola in Italia: tutte le schede degli obiettivi minimi, Dashboard essenziale e una sessione di 15 casi, con pausa, ripresa e correzione degli errori. La quota della sessione e lo storico sono locali: non sono sincronizzati fra dispositivi e possono andare perduti cancellando i dati dell’app. Il ripristino degli acquisti recupera i diritti acquistati, non lo storico locale.\n\nACCESSO COMPLETO ANNUALE\nUlteriori 9,99 €/anno in Italia dopo l’acquisto Base: schede degli obiettivi auspicabili e approfondimenti, sessioni illimitate e percorso adattivo. Per i nuovi acquirenti, Base più annuale costano 19,98 € il primo anno; i rinnovi dell’annuale costano 9,99 €/anno. Gli annuali precedenti ancora validi mantengono il proprio accesso. Alla scadenza resta Base se acquistata. Negli altri Paesi vale il prezzo locale mostrato da Apple.\n\nIl pagamento viene addebitato all’account Apple alla conferma. L’annuale si rinnova automaticamente salvo disdetta almeno 24 ore prima della scadenza; il rinnovo è addebitato nelle 24 ore precedenti. Puoi gestire o annullare il rinnovo nelle impostazioni degli abbonamenti Apple. Nessun periodo di prova gratuito. Ripristino acquisti disponibile nell’app.\n\nFungo Italia è uno strumento didattico: la stima non garantisce il superamento di un esame e il riconoscimento fotografico non certifica un fungo per il consumo. Rivolgiti a un ispettorato micologico per il controllo alimentare. Le mappe online e i collegamenti alle fonti richiedono Internet.\n\nCondizioni d’uso: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\nPrivacy: https://gianpaolobol.github.io/fungo-italia/privacy.html",
+  "supportUrl": "https://gianpaolobol.github.io/fungo-italia/support.html",
+  "marketingUrl": "https://gianpaolobol.github.io/fungo-italia/",
+  "privacyPolicyUrl": "https://gianpaolobol.github.io/fungo-italia/privacy.html",
+  "price": {
+    "baseTerritory": "ITA",
+    "currency": "EUR",
+    "customerPrice": "0.00"
+  },
+  "reviewNotes": "Draft for next native release; not applied to the current 1.0 review. Free: five profiles, three demonstration cases and Areas. Base non-consumable it.fungoitalia.base.lifetime: minimum-objective profiles and one complete 15-case training session, resume and error correction. Additional annual it.fungoitalia.premium.annual requires Base for new purchases; existing active annuals restore without Base. Prices EUR9.99 each in Italy, localized through StoreKit. No app login or bypass. Name optional and local. Demo does not write history or quota. Study history and Base session quota are local, not synced across devices. On expiry independently purchased Base remains; all history is retained. Educational readiness is partial because the question bank does not cover the entire program. Test purchases with Apple sandbox after products and new binary are configured.",
+  "subscription": {
+    "productId": "it.fungoitalia.premium.annual",
+    "period": "ONE_YEAR",
+    "baseTerritory": "ITA",
+    "currency": "EUR",
+    "customerPrice": "9.99",
+    "autoRenewable": true
+  },
+  "status": "DRAFT_NOT_UPLOADED",
+  "version": "1.1",
+  "whatsNew": "Dashboard con fungo e avanzamento, preparazione distinta dalla copertura, lacune e confronto dei risultati. Anteprima guidata del test, Base permanente e accesso completo annuale. Allenamento adattivo e simulazione didattica.",
+  "basePurchase": {
+    "productId": "it.fungoitalia.base.lifetime",
+    "type": "NON_CONSUMABLE",
+    "customerPrice": "9.99",
+    "currency": "EUR",
+    "baseTerritory": "ITA",
+    "displayName": "Fungo Italia Base",
+    "description": "Obiettivi minimi e una sessione da 15 casi."
+  }
+}

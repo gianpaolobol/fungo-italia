@@ -29,3 +29,11 @@ La build 9 proviene dalla revisione 1bacf13c049554e2f6a42660ce8b0516adb5929b (wo
 
 ## Limiti
 Lo stato pubblico dello Store non è stato dedotto dalla sola ricerca web. Stato privacy e risposte DAC7 non sono leggibili dall'API usata. Nessun dato fiscale o credenziale è stato modificato.
+
+## Aggiornamento ore 17:22 Europe/Rome
+Nuovo controllo API in sola lettura, `checkedAt=2026-10-20T15:22:58.137Z`, job 118714356083 del workflow 38897130747.
+- Versione 1.0 ancora WAITING_FOR_REVIEW, build selezionata 9; nessuna pubblicazione avvenuta.
+- Build 11 ancora VALID. Nessun binario contenente Dashboard caricato.
+- Annuale `it.fungoitalia.premium.annual` ancora READY_TO_SUBMIT.
+- Per l'Italia l'API riporta `TRADER_STATUS_VERIFICATION_FAILED`, `CANNOT_SELL`, `AVAILABLE_FOR_SALE_UNRELEASED_APP`. La causa del fallimento della verifica dell'operatore non è esposta in questo report; occorre verificarla nella sezione Azienda di App Store Connect. Non attestare che DAC7 o privacy risolvano questo stato.
+- Ramo Dashboard aggiornato al commit f622962b95122900896d71a8562c630ba93d47f3; non integrato in main. Validazione Dashboard GitHub riuscita. Test nativi e UI in corso.

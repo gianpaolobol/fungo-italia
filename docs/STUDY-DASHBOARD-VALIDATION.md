@@ -46,3 +46,6 @@ Il piano integrativo è `docs/superpowers/plans/2026-10-20-dashboard-completion.
 ### Revisione del completamento
 Revisione indipendente senza criticità nuove nella dimostrazione o negli indicatori. Individuato e corretto un difetto preesistente: la sessione Base ripresa sotto annuale aggiornava solo il checkpoint corrente; ora aggiorna anche quello Base prima di iniziare altre sessioni. Regressione osservata RED→GREEN; suite completa 125/125 e TypeScript PASS.
 Minori aperti: prova della dimostrazione intera su interfaccia/dispositivo; verifica iPhone mini/testo ingrandito/VoiceOver; ampliare filtri di attivazione dei test nativi alle future modifiche Dashboard; test specifici demo condizionati/mortali (la correzione usa già il motore comune).
+- Export finale dopo il fix checkpoint: PASS, bundle d6e81dd260322949ffe2864079ea0be1.
+- Materiali commerciali del prossimo aggiornamento preparati separatamente in store/next-release; descrizione2700 caratteri e descrizione Base entro45. Nessun metadato Apple modificato.
+- Audit aggiornato ore17:22 Europe/Rome: versione1.0 ancora WAITING_FOR_REVIEW; per l'Italia Apple segnala TRADER_STATUS_VERIFICATION_FAILED. Dettagli in ALIGNMENT-2026-10-20.md.
