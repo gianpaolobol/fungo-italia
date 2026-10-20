@@ -2,22 +2,28 @@
 
 Inventario riproducibile da catalogo e banca effettiva.
 
-Minimi: 148/148 schede con caso (89 fotografici, 59 teorici).
+Minimi: 148/148 schede con caso (86 fotografici, 62 teorici).
 Percorso aggiuntivo: 66/66 schede con caso teorico.
-Nuove domande teoriche: 328.
+Nuove domande teoriche: 336.
 
-La copertura delle schede non equivale a copertura fotografica o a certificazione scientifica indipendente. I 59 minimi senza caso fotografico sono interrogati sui testi delle schede, senza inventare immagini, commestibilità o sindromi. I gruppi conservano integralmente limiti ed esempi nei testi. Ogni risposta è tracciata al campo canonico e al relativo hash; i riferimenti esterni sono riportati quando presenti nel campo. Il contenuto interno del catalogo conserva il proprio stato di revisione.
+La copertura delle schede non equivale a copertura fotografica o a certificazione scientifica indipendente. I 62 minimi senza caso fotografico sono interrogati sui testi delle schede, senza inventare immagini, commestibilità o sindromi. I gruppi conservano integralmente limiti ed esempi nei testi. Ogni risposta è tracciata al campo canonico e al relativo hash; i riferimenti esterni sono riportati quando presenti nel campo. Il contenuto interno del catalogo conserva il proprio stato di revisione.
 
 La preparazione conta soltanto le dimensioni realmente interrogate: una risposta teorica non genera evidenza di riconoscimento fotografico o commestibilità. La selezione Base esclude il percorso aggiuntivo.
 
+La rigenerazione di rilascio richiede tre fotografie valide per il caso fotografico. Tricholoma equestre, Ramaria formosa e Ramaria pallida passano alle domande teoriche documentate, mantenendo la copertura del programma.
+
 | Percorso | Scheda | Caso | Domande teoriche |
 |---|---|---|---|
+| Minimo | Agaricus sez. Xanthodermatei | Teorico sui testi | 3 |
 | Minimo | Agaricus bresadolanus | Fotografico | — |
+| Minimo | Agaricus sez. Arvenses | Teorico sui testi | 3 |
+| Minimo | Agaricus sez. Sanguinolenti | Teorico sui testi | 3 |
 | Minimo | Agaricus campestris | Fotografico | — |
 | Minimo | Agaricus bitorquis | Fotografico | — |
 | Minimo | Agaricus bisporus | Fotografico | — |
 | Minimo | Cyclocybe cylindracea | Fotografico | — |
 | Minimo | Amanita phalloides | Fotografico | — |
+| Minimo | Amanita verna / Amanita vidua | Teorico sui testi | 3 |
 | Minimo | Amanita virosa | Fotografico | — |
 | Minimo | Amanita proxima | Fotografico | — |
 | Minimo | Amanita ovoidea | Fotografico | — |
@@ -27,25 +33,40 @@ La preparazione conta soltanto le dimensioni realmente interrogate: una risposta
 | Minimo | Amanita gemmata | Fotografico | — |
 | Minimo | Amanita citrina | Fotografico | — |
 | Minimo | Amanita porphyria | Fotografico | — |
+| Minimo | Amanita excelsa s.l. (incl. A. spissa, A. franchetii) | Teorico sui testi | 3 |
 | Minimo | Amanita strobiliformis | Fotografico | — |
 | Minimo | Saproamanita vittadinii | Fotografico | — |
 | Minimo | Amanita rubescens | Fotografico | — |
+| Minimo | Amanita sez. Vaginatae | Teorico sui testi | 3 |
 | Minimo | Calocybe gambosa | Fotografico | — |
 | Minimo | Collybia phyllophila | Fotografico | — |
+| Minimo | Clitocybe dealbata / Collybia rivulosa | Teorico sui testi | 3 |
 | Minimo | Clitocybe nebularis | Fotografico | — |
 | Minimo | Infundibulicybe geotropa | Fotografico | — |
 | Minimo | Paralepistopsis amoenolens | Fotografico | — |
+| Minimo | Clitocybe gibba s.l. | Teorico sui testi | 3 |
+| Minimo | Clitopilus prunulus s.l. | Teorico sui testi | 3 |
 | Minimo | Rhodocollybia maculata | Fotografico | — |
 | Minimo | Gymnopus fusipes | Fotografico | — |
 | Minimo | Marasmius oreades | Fotografico | — |
+| Minimo | Coprinus atramentarius s.l. | Teorico sui testi | 3 |
 | Minimo | Coprinus comatus | Fotografico | — |
 | Minimo | Cortinarius orellanus | Fotografico | — |
+| Minimo | Cortinarius rubellus | Teorico sui testi | 4 |
+| Minimo | Cortinarius sottogenere Dermocybe | Teorico sui testi | 3 |
 | Minimo | Cortinarius praestans | Fotografico | — |
 | Minimo | Cortinarius cumatilis | Fotografico | — |
+| Minimo | Phlegmacium variiforme | Teorico sui testi | 3 |
 | Minimo | Cortinarius caperatus | Fotografico | — |
 | Minimo | Entoloma sinuatum | Fotografico | — |
+| Minimo | Entoloma rhodopolium s.l. | Teorico sui testi | 3 |
 | Minimo | Entoloma hirtipes | Fotografico | — |
 | Minimo | Entoloma vernum | Fotografico | — |
+| Minimo | Entoloma clypeatum s.l. | Teorico sui testi | 3 |
+| Minimo | Entoloma saundersii | Teorico sui testi | 3 |
+| Minimo | Flammulina velutipes s.l. | Teorico sui testi | 4 |
+| Minimo | Galerina marginata group | Teorico sui testi | 3 |
+| Minimo | Hygrocybe conica s.l. | Teorico sui testi | 3 |
 | Minimo | Hygrocybe punicea | Fotografico | — |
 | Minimo | Hygrophorus marzuolus | Fotografico | — |
 | Minimo | Hygrophorus russula | Fotografico | — |
@@ -56,71 +77,8 @@ La preparazione conta soltanto le dimensioni realmente interrogate: una risposta
 | Minimo | Lepiota subincarnata | Fotografico | — |
 | Minimo | Lepiota brunneoincarnata | Fotografico | — |
 | Minimo | Lepiota cristata | Fotografico | — |
-| Minimo | Chlorophyllum molybdites | Fotografico | — |
-| Minimo | Leucopaxillus gentianeus | Fotografico | — |
-| Minimo | Omphalotus olearius | Fotografico | — |
-| Minimo | Panaeolus cyanescens | Fotografico | — |
-| Minimo | Kuehneromyces mutabilis | Fotografico | — |
-| Minimo | Stropharia rugosoannulata | Fotografico | — |
-| Minimo | Tricholoma pardinum | Fotografico | — |
-| Minimo | Tricholoma filamentosum | Fotografico | — |
-| Minimo | Tricholoma josserandii | Fotografico | — |
-| Minimo | Tricholoma equestre | Fotografico | — |
-| Minimo | Tricholoma portentosum | Fotografico | — |
-| Minimo | Tricholoma terreum | Fotografico | — |
-| Minimo | Tricholoma columbetta | Fotografico | — |
-| Minimo | Tricholoma sejunctum | Fotografico | — |
-| Minimo | Tricholoma sulphureum | Fotografico | — |
-| Minimo | Volvopluteus gloiocephalus | Fotografico | — |
-| Minimo | Volvariella volvacea | Fotografico | — |
-| Minimo | Lactarius tesquorum | Fotografico | — |
-| Minimo | Rubroboletus satanas | Fotografico | — |
-| Minimo | Rubroboletus pulchrotinctus | Fotografico | — |
-| Minimo | Suillellus luridus | Fotografico | — |
-| Minimo | Caloboletus radicans | Fotografico | — |
-| Minimo | Caloboletus calopus | Fotografico | — |
-| Minimo | Gyroporus cyanescens | Fotografico | — |
-| Minimo | Hygrophoropsis aurantiaca | Fotografico | — |
-| Minimo | Imleria badia | Fotografico | — |
-| Minimo | Suillus luteus | Fotografico | — |
-| Minimo | Suillus granulatus | Fotografico | — |
-| Minimo | Tylopilus felleus | Fotografico | — |
-| Minimo | Craterellus lutescens | Fotografico | — |
-| Minimo | Craterellus tubaeformis | Fotografico | — |
-| Minimo | Craterellus cornucopioides | Fotografico | — |
-| Minimo | Gomphus clavatus | Fotografico | — |
-| Minimo | Hapalopilus rutilans | Fotografico | — |
-| Minimo | Albatrellopsis confluens | Fotografico | — |
-| Minimo | Scutiger pes-caprae | Fotografico | — |
-| Minimo | Fistulina hepatica | Fotografico | — |
-| Minimo | Grifola frondosa | Fotografico | — |
-| Minimo | Polyporus umbellatus | Fotografico | — |
-| Minimo | Meripilus giganteus | Fotografico | — |
-| Minimo | Cerioporus squamosus | Fotografico | — |
-| Minimo | Ramaria formosa | Fotografico | — |
-| Minimo | Ramaria pallida | Fotografico | — |
-| Minimo | Auricularia auricula-judae | Fotografico | — |
-| Minimo | Gyromitra esculenta | Fotografico | — |
-| Minimo | Agaricus sez. Xanthodermatei | Teorico sui testi | 3 |
-| Minimo | Agaricus sez. Arvenses | Teorico sui testi | 3 |
-| Minimo | Agaricus sez. Sanguinolenti | Teorico sui testi | 3 |
-| Minimo | Amanita verna / Amanita vidua | Teorico sui testi | 3 |
-| Minimo | Amanita excelsa s.l. (incl. A. spissa, A. franchetii) | Teorico sui testi | 3 |
-| Minimo | Amanita sez. Vaginatae | Teorico sui testi | 3 |
-| Minimo | Clitocybe dealbata / Collybia rivulosa | Teorico sui testi | 3 |
-| Minimo | Clitocybe gibba s.l. | Teorico sui testi | 3 |
-| Minimo | Clitopilus prunulus s.l. | Teorico sui testi | 3 |
-| Minimo | Coprinus atramentarius s.l. | Teorico sui testi | 3 |
-| Minimo | Cortinarius rubellus | Teorico sui testi | 4 |
-| Minimo | Cortinarius sottogenere Dermocybe | Teorico sui testi | 3 |
-| Minimo | Phlegmacium variiforme | Teorico sui testi | 3 |
-| Minimo | Entoloma rhodopolium s.l. | Teorico sui testi | 3 |
-| Minimo | Entoloma clypeatum s.l. | Teorico sui testi | 3 |
-| Minimo | Entoloma saundersii | Teorico sui testi | 3 |
-| Minimo | Flammulina velutipes s.l. | Teorico sui testi | 4 |
-| Minimo | Galerina marginata group | Teorico sui testi | 3 |
-| Minimo | Hygrocybe conica s.l. | Teorico sui testi | 3 |
 | Minimo | Lepiota elaiophylla | Teorico sui testi | 4 |
+| Minimo | Chlorophyllum molybdites | Fotografico | — |
 | Minimo | Echinoderma asperum s.l. | Teorico sui testi | 3 |
 | Minimo | Leucoagaricus leucothites s.l. | Teorico sui testi | 3 |
 | Minimo | Chlorophyllum rhacodes s.l. | Teorico sui testi | 3 |
@@ -128,37 +86,81 @@ La preparazione conta soltanto le dimensioni realmente interrogate: una risposta
 | Minimo | Lepista nuda s.l. | Teorico sui testi | 3 |
 | Minimo | Lepista flaccida s.l. | Teorico sui testi | 3 |
 | Minimo | Leucopaxillus giganteus s.l. | Teorico sui testi | 3 |
+| Minimo | Leucopaxillus gentianeus | Fotografico | — |
 | Minimo | Lyophyllum decastes s.l. | Teorico sui testi | 3 |
 | Minimo | Lyophyllum specie annerenti | Teorico sui testi | 3 |
 | Minimo | Leucocybe connata | Teorico sui testi | 4 |
 | Minimo | Mycena sez. Purae | Teorico sui testi | 3 |
+| Minimo | Omphalotus olearius | Fotografico | — |
+| Minimo | Panaeolus cyanescens | Fotografico | — |
+| Minimo | Kuehneromyces mutabilis | Fotografico | — |
 | Minimo | Pleurotus eryngii s.l. | Teorico sui testi | 3 |
 | Minimo | Pleurotus ostreatus | Teorico sui testi | 3 |
 | Minimo | Pleurotus cornucopiae / Pleurotus citrinopileatus | Teorico sui testi | 3 |
+| Minimo | Stropharia rugosoannulata | Fotografico | — |
+| Minimo | Tricholoma pardinum | Fotografico | — |
+| Minimo | Tricholoma filamentosum | Fotografico | — |
+| Minimo | Tricholoma josserandii | Fotografico | — |
+| Minimo | Tricholoma equestre | Teorico sui testi | 3 |
+| Minimo | Tricholoma portentosum | Fotografico | — |
+| Minimo | Tricholoma terreum | Fotografico | — |
 | Minimo | Tricholoma saponaceum s.l. | Teorico sui testi | 3 |
+| Minimo | Tricholoma columbetta | Fotografico | — |
 | Minimo | Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri) | Teorico sui testi | 3 |
 | Minimo | Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre) | Teorico sui testi | 3 |
 | Minimo | Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum) | Teorico sui testi | 3 |
+| Minimo | Tricholoma sejunctum | Fotografico | — |
+| Minimo | Tricholoma sulphureum | Fotografico | — |
 | Minimo | Tricholoma sez. Genuina (= gruppo Albobrunnei) | Teorico sui testi | 3 |
 | Minimo | Tricholoma acerbum s.l. | Teorico sui testi | 3 |
+| Minimo | Volvopluteus gloiocephalus | Fotografico | — |
+| Minimo | Volvariella volvacea | Fotografico | — |
 | Minimo | Lactarius sez. Deliciosi | Teorico sui testi | 3 |
 | Minimo | Lactarius porniniae | Teorico sui testi | 3 |
 | Minimo | Lactarius volemus s.l. | Teorico sui testi | 3 |
+| Minimo | Lactarius tesquorum | Fotografico | — |
 | Minimo | Russula Foetentinae | Teorico sui testi | 3 |
 | Minimo | Russula Compactae Nigricantinae | Teorico sui testi | 3 |
 | Minimo | Russula Compactae Lactarioides (= gruppo R. delica) | Teorico sui testi | 3 |
 | Minimo | Boletus edulis s.l. | Teorico sui testi | 3 |
 | Minimo | Boletus sez. Luridi | Teorico sui testi | 3 |
+| Minimo | Rubroboletus satanas | Fotografico | — |
+| Minimo | Rubroboletus pulchrotinctus | Fotografico | — |
 | Minimo | Boletus (Neoboletus) erythropus s.l. | Teorico sui testi | 3 |
+| Minimo | Suillellus luridus | Fotografico | — |
 | Minimo | Boletus queletii e specie vicine/intermedie | Teorico sui testi | 3 |
+| Minimo | Caloboletus radicans | Fotografico | — |
+| Minimo | Caloboletus calopus | Fotografico | — |
+| Minimo | Gyroporus cyanescens | Fotografico | — |
 | Minimo | Gyroporus castaneus s.l. | Teorico sui testi | 3 |
+| Minimo | Hygrophoropsis aurantiaca | Fotografico | — |
+| Minimo | Imleria badia | Fotografico | — |
+| Minimo | Suillus luteus | Fotografico | — |
+| Minimo | Suillus granulatus | Fotografico | — |
+| Minimo | Tylopilus felleus | Fotografico | — |
 | Minimo | Cantharellus cibarius complex | Teorico sui testi | 4 |
+| Minimo | Craterellus lutescens | Fotografico | — |
+| Minimo | Craterellus tubaeformis | Fotografico | — |
+| Minimo | Craterellus cornucopioides | Fotografico | — |
+| Minimo | Gomphus clavatus | Fotografico | — |
 | Minimo | Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens) | Teorico sui testi | 3 |
 | Minimo | Hericium spp. | Teorico sui testi | 3 |
 | Minimo | Sarcodon imbricatus s.l. (incl. S. squamosus) | Teorico sui testi | 3 |
+| Minimo | Hapalopilus rutilans | Fotografico | — |
 | Minimo | Laetiporus sulphureus s.l. | Teorico sui testi | 3 |
+| Minimo | Albatrellopsis confluens | Fotografico | — |
 | Minimo | Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus) | Teorico sui testi | 3 |
+| Minimo | Scutiger pes-caprae | Fotografico | — |
+| Minimo | Fistulina hepatica | Fotografico | — |
+| Minimo | Grifola frondosa | Fotografico | — |
+| Minimo | Polyporus umbellatus | Fotografico | — |
+| Minimo | Meripilus giganteus | Fotografico | — |
+| Minimo | Cerioporus squamosus | Fotografico | — |
+| Minimo | Ramaria formosa | Teorico sui testi | 3 |
+| Minimo | Ramaria pallida | Teorico sui testi | 2 |
 | Minimo | Ramaria botrytis s.l. | Teorico sui testi | 4 |
+| Minimo | Auricularia auricula-judae | Fotografico | — |
+| Minimo | Gyromitra esculenta | Fotografico | — |
 | Minimo | Sarcosphaera coronaria s.l. | Teorico sui testi | 3 |
 | Aggiuntivo | Agaricus | Teorico sui testi | 2 |
 | Aggiuntivo | Agrocybe + Cyclocybe | Teorico sui testi | 2 |

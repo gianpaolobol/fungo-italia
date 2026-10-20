@@ -1,4 +1,5 @@
 name: Publish study dashboard to TestFlight
+# Validate the regenerated, source-backed photo bank before every beta upload.
 on:
   push:
     branches: [design/study-dashboard-v1-1]

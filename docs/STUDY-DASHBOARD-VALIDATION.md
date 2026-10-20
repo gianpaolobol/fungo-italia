@@ -51,7 +51,7 @@ Minori aperti: prova della dimostrazione intera su interfaccia/dispositivo; veri
 - Audit aggiornato ore17:22 Europe/Rome: versione1.0 ancora WAITING_FOR_REVIEW; per l'Italia Apple segnala TRADER_STATUS_VERIFICATION_FAILED. Dettagli in ALIGNMENT-2026-10-20.md.
 
 ## Banca e UX richieste dal titolare — 20 ottobre, pomeriggio
-- Banca di214casi distinti per148schede minime e66aggiuntive:89fotografici invariati e125teorici. Le nuove domande teoriche sono328 (184minimi,144aggiuntive).
+- Banca di214casi distinti per148schede minime e66aggiuntive:86fotografici e128teorici. Le nuove domande teoriche sono336 (192minimi,144aggiuntive).
 - Ogni risposta teorica coincide con il testo del campo canonico; mantenuti esempi e limiti dei gruppi. Provenienza per campo/hash, con93domande prive di sourceIds esterni associati: questo inventario non attesta revisione scientifica indipendente.
 - Le domande teoriche non generano evidenza fotografica/alimentare. La simulazione conserva15casi fotografici; l'allenamento integra ripasso teorico. Nessuna riduzione dei requisiti della banca fotografica.
 - Migrazione del precedente checkpoint sul vecchio banco esatto e normalizzazione della sua evidenza. Accesso Base limita anche il ripristino: niente domande estese o simulazioni dopo scadenza; conservato l'altro checkpoint per l'accesso completo.
