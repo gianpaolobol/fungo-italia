@@ -14,13 +14,15 @@ Verifica Apple: 2026-10-20T06:42:16.421Z. Lettura tramite workflow autorizzato, 
 
 ## Esito
 I canali non sono completamente allineati: il candidato interno più recente è la build 11, ma la revisione App Store riguarda la build 9. La versione non è pubblicata: è WAITING_FOR_REVIEW.
-Lo stato READY_TO_SUBMIT dell'annuale non attesta che il prodotto sia incluso nella submission dell'app. L'audit corrente non legge gli elementi della review submission: inclusione da verificare separatamente prima di dichiarare che il prodotto sarà approvato con l'app.
+La lettura esplicita degli elementi della submission del 20 ottobre alle 07:04 UTC conferma un solo elemento: appStoreVersion f3a1168b-ada0-4e69-abc9-e66ee9718d81. Nessuna subscriptionVersion o subscriptionGroupVersion risulta inclusa. L'annuale è ancora READY_TO_SUBMIT: non è incluso nell'invio corrente. La submission 126bebb5-1470-4347-9e04-5f95e0391cab è stata inviata il 17 ottobre alle 14:01:03 UTC ed è WAITING_FOR_REVIEW. Prima di attestare la disponibilità commerciale dell'annuale va completato il suo invio insieme all'app nel portale Apple. Nessuna cancellazione della submission è stata eseguita.
 Il rilascio attuale è manuale: l'approvazione non comporterà automaticamente la pubblicazione senza il successivo comando di rilascio.
 Non sostituire automaticamente il binario durante la revisione e non trasferire sullo Store la build diagnostica senza i controlli StoreKit.
 
 ## Evidenze
 - https://github.com/gianpaolobol/fungo-italia/actions/runs/38897130747 (ultima esecuzione: 20 ottobre; job 118492701606).
 - https://github.com/gianpaolobol/fungo-italia/actions/runs/39026690376 (ultima esecuzione: 20 ottobre; job 118493080765).
+
+- https://github.com/gianpaolobol/fungo-italia/actions/runs/39384118049 (include esplicito delle risorse app/subscription/subscriptionGroup: presente soltanto appStoreVersion).
 
 ## Limiti
 Lo stato pubblico dello Store non è stato dedotto dalla sola ricerca web. Stato privacy e risposte DAC7 non sono leggibili dall'API usata. Nessun dato fiscale o credenziale è stato modificato.
