@@ -1,0 +1,30 @@
+{
+  "appId": "6821140326",
+  "bundleId": "it.fungoitalia.app",
+  "version": "1.1.0",
+  "buildNumber": "13",
+  "sourceCommit": "976702381e32d66893d8922e1a85e7a3300eceb3",
+  "ipaSha256": "33dd8d39eee73739b34a177d9ddc0d907e2ac43526baff2048547d1490bf6978",
+  "appleBuildId": "11d409c6-7e2b-4777-860f-213cae7ee299",
+  "processingState": "VALID",
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ],
+  "nativeStorekitRunId": "39474292310",
+  "dashboardRunId": 39474292088,
+  "storekitUIVerified": false,
+  "testFlightOnly": true,
+  "knownFailedUIRunId": 39467202425,
+  "knownFailedUISource": "1465acecd24bd104e63f46b49868f5ac9f73d484",
+  "cancelledDuplicateUIRunId": 39474292167,
+  "producerRunId": "39474292298",
+  "verificationRunId": "39482549230",
+  "uploadRoute": "EAS Submit",
+  "appStoreVersions": [
+    {
+      "version": "1.0",
+      "state": "WAITING_FOR_REVIEW"
+    }
+  ],
+  "verifiedAt": "2026-10-20T19:23:25.634Z"
+}
