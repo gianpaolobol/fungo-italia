@@ -1,0 +1,24 @@
+name: Audit App Store review items
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['scripts/review-alignment.mjs', '.github/workflows/review-alignment.yml']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/review-alignment.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Review-items-alignment
+          path: store-evidence/review-alignment.json
+          retention-days: 14
