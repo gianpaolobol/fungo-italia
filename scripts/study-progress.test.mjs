@@ -1,0 +1,11 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+const c=await import('../lib/study-progress.mjs').catch(()=>({}));
+const units=[{id:'a:name',taxonId:'a',scope:'minimum',dimension:'name',applicable:true}];
+const now=Date.parse('2026-10-20T00:00:00Z');
+const evidence=(patch={})=>({unitId:'a:name',taxonId:'a',bankRevision:'1',sessionId:'s',at:new Date(now).toISOString(),firstAttempt:true,correct:true,hinted:false,mode:'training',critical:false,...patch});
+function score(rows,other={}){assert.equal(typeof c.computeProgress,'function');return c.computeProgress({units,evidence:rows,bankRevision:'1',now,...other}).minimum;}
+test('first independent success yields 65, no evidence is unassessed',()=>{assert.equal(score([evidence()]).score,65);assert.equal(score([]).score,null);});
+test('corrections and incompatible or future records do not inflate readiness',()=>{assert.equal(score([evidence(),evidence({correct:false,firstAttempt:false})]).score,65);assert.equal(score([evidence({bankRevision:'old'})]).score,null);assert.equal(score([evidence({at:new Date(now+1).toISOString()})]).score,null);});
+test('consolidation requires 48h and autonomous separate sessions',()=>{const old=evidence({sessionId:'old',at:new Date(now-48*3600000).toISOString()});assert.equal(score([old,evidence()]).R,100);assert.equal(score([{...old,at:new Date(now-47*3600000).toISOString()},evidence()]).R,0);assert.equal(score([old,evidence({hinted:true})]).R,0);assert.equal(score([old,evidence({sessionId:'old'})]).R,0);});
+test('critical errors need two later spaced independent successes',()=>{const bad=evidence({correct:false,critical:true,sessionId:'bad',at:new Date(now-5*86400000).toISOString()}),good=evidence({sessionId:'good',at:new Date(now-3*86400000).toISOString()});assert.equal(score([bad,good]).criticalOpen,1);assert.equal(score([bad,good,evidence()]).criticalOpen,0);});
+test('unit averaging and minimum denominator resist oversampling',()=>{const more=[...units,{...units[0],id:'b:name',taxonId:'b'},{...units[0],id:'c:name',taxonId:'c',scope:'extended'},{...units[0],id:'a:skip',applicable:false}];const rows=[...Array.from({length:20},(_,i)=>evidence({sessionId:'x'+i})),evidence({unitId:'b:name',taxonId:'b',correct:false})];assert.equal(score(rows,{units:more}).A,50);assert.equal(score(rows,{units:more}).C,100);});

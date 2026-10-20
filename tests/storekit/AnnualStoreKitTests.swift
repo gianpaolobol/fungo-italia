@@ -61,4 +61,32 @@ final class AnnualStoreKitTests: XCTestCase {
     try await waitForActive(false)
     print("ANNUAL_NATIVE Expired access is inactive")
   }
+  @MainActor func testBaseSurvivesAnnualExpiryAndRefundRevokesBase() async throws {
+    let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
+    let session = try SKTestSession(contentsOf: url)
+    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
+    session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
+    defer { session.clearTransactions(); session.resetToDefaultState() }
+    let baseID = "it.fungoitalia.base.lifetime"
+    let products = try await Product.products(for: [baseID])
+    XCTAssertEqual(try XCTUnwrap(products.first).type, .nonConsumable)
+    _ = try await session.buyProduct(identifier: baseID, options: [])
+    var state = await FungoSubscriptionModule.verifiedAccess()
+    XCTAssertEqual(state["baseOwned"] as? Bool, true)
+    XCTAssertEqual(state["annualActive"] as? Bool, false)
+    _ = try await session.buyProduct(identifier: productID, options: [])
+    try await waitForActive(true)
+    try session.expireSubscription(productIdentifier: productID)
+    try await waitForActive(false)
+    state = await FungoSubscriptionModule.verifiedAccess()
+    XCTAssertEqual(state["baseOwned"] as? Bool, true)
+    let transaction = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == baseID }))
+    try session.refundTransaction(identifier: transaction.identifier)
+    for _ in 0..<100 {
+      state = await FungoSubscriptionModule.verifiedAccess()
+      if state["baseOwned"] as? Bool == false { break }
+      try await Task.sleep(nanoseconds: 100_000_000)
+    }
+    XCTAssertEqual(state["baseOwned"] as? Bool, false)
+  }
 }

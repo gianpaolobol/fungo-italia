@@ -2,6 +2,7 @@ import React,{useRef,useState} from 'react';
 import {ActivityIndicator,Linking,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 export type SubscriptionProduct={id:string;localizedPrice:string;subscriptionPeriod:{unit:string;value:number}};
 export type SubscriptionGateProps={
+ baseProduct?:{id:string;localizedPrice:string}|null;baseOwned?:boolean;onPurchaseBase?:()=>Promise<void>;
  product:SubscriptionProduct|null;active:boolean;checking:boolean;busy:boolean;purchaseReady:boolean;
  supported:boolean;expiresAt:string|null;error:string;privacyUrl:string;
  onPurchase:()=>Promise<void>;onRestore:()=>Promise<void>;onRetry:()=>Promise<void>;onPreview:()=>void;
@@ -16,15 +17,17 @@ export default function SubscriptionGate(p:SubscriptionGateProps){
  async function open(url:string){try{await Linking.openURL(url);}catch{setMessage('Collegamento non aperto. Verifica la connessione.');}}
  const button=(label:string,fn:()=>void,primary=false,off=false)=><Pressable accessibilityRole="button" accessibilityState={{disabled:off}} disabled={off} onPress={fn} style={[primary?s.primary:s.secondary,off&&s.disabled]}><Text style={primary?s.primaryText:s.secondaryText}>{label}</Text></Pressable>;
  return <ScrollView contentContainerStyle={s.page}>
-  <Text accessibilityRole="header" style={s.title}>Fungo Italia completo</Text>
+  <Text accessibilityRole="header" style={s.title}>Scegli il tuo percorso</Text>
+  <View style={s.card}><Text style={s.benefit}>Base permanente</Text><Text style={s.body}>Tutte le schede degli obiettivi minimi, una sessione completa e Dashboard essenziale. Quota del test conservata solo su questo dispositivo.</Text><Text style={s.price}>{p.baseOwned?'Base acquistata':p.baseProduct?.localizedPrice? p.baseProduct.localizedPrice+' · una tantum':'Prezzo Base non disponibile'}</Text>{!p.baseOwned&&p.onPurchaseBase&&button('Acquista Base permanente',()=>void run(p.onPurchaseBase!),true,disabled||!p.baseProduct||!p.purchaseReady)}</View>
+  <Text accessibilityRole="header" style={s.title}>Accesso completo annuale</Text>
   <Text style={s.body}>L’atlante completo e gli esercizi per il tuo studio micologico. Include gli aggiornamenti pubblicati durante l’abbonamento.</Text>
-  <View style={s.card}><Text style={s.benefit}>Tutte le schede di specie, generi e gruppi</Text><Text style={s.benefit}>Fotografie, confronti e caratteri di studio</Text><Text style={s.benefit}>Esame fotografico con correzione e ripasso</Text></View>
+  <View style={s.card}><Text style={s.benefit}>Obiettivi minimi, auspicabili e approfondimenti</Text><Text style={s.benefit}>Fotografie, confronti e caratteri di studio</Text><Text style={s.benefit}>Test illimitati, percorso adattivo e report dettagliati</Text></View>
   {p.busy&&<View accessibilityLiveRegion="polite" style={s.loading}><ActivityIndicator/><Text style={s.body}>Operazione App Store in corso…</Text></View>}
   {p.checking&&<View style={s.loading}><ActivityIndicator/><Text style={s.body}>Verifica dell’abbonamento…</Text></View>}
   {p.active?<><Text style={s.body}>Abbonamento attivo</Text>{p.expiresAt&&<Text style={s.small}>Accesso verificato fino al {new Date(p.expiresAt).toLocaleDateString('it-IT')}.</Text>}</>:p.supported?<><Text style={s.price}>{available?p.product!.localizedPrice+' / anno':'Prezzo non disponibile'}</Text><Text style={s.small}>Abbonamento annuale con rinnovo automatico. Nessun periodo di prova.</Text>{button(available?'Abbonati · '+p.product!.localizedPrice+' / anno':'Abbonamento non disponibile',()=>void run(p.onPurchase),true,disabled||!available||!p.purchaseReady)}<Text style={s.small}>Il pagamento viene addebitato al tuo account Apple alla conferma dell’acquisto. L’abbonamento si rinnova automaticamente, salvo disdetta almeno 24 ore prima della scadenza. Il costo del rinnovo viene addebitato nelle 24 ore precedenti la scadenza. Puoi gestire o annullare il rinnovo nelle impostazioni degli abbonamenti Apple.</Text></>:<Text style={s.body}>L’abbonamento è disponibile nella versione iPhone e iPad. Su questo dispositivo puoi consultare l’anteprima gratuita e le aree.</Text>}
   {p.supported&&button('Ripristina acquisti',()=>void run(p.onRestore),false,disabled)}
   {button(p.active?'Apri l’atlante':'Continua con l’anteprima gratuita',p.onPreview)}
-  {!p.active&&<Text style={s.small}>Nell’anteprima: 5 schede dell’atlante e consultazione delle aree. L’esame fotografico richiede l’abbonamento.</Text>}
+  {!p.active&&<Text style={s.small}>Anteprima gratuita: 5 schede e aree. Base: schede minime e una sessione. Completo: tutte le schede e test illimitati. Alla scadenza resta la Base solo se acquistata.</Text>}
   {!!(message||p.error)&&<Text accessibilityRole="alert" style={s.error}>{message||p.error}</Text>}
   {p.supported&&button('Aggiorna stato e prezzo',()=>void run(p.onRetry),false,disabled)}
   <View style={s.links}>{p.supported&&<Pressable accessibilityRole="link" style={s.link} onPress={()=>void open(manage)}><Text style={s.linkText}>Gestisci abbonamento</Text></Pressable>}<Pressable accessibilityRole="link" style={s.link} onPress={()=>void open(p.privacyUrl)}><Text style={s.linkText}>Privacy</Text></Pressable><Pressable accessibilityRole="link" style={s.link} onPress={()=>void open(terms)}><Text style={s.linkText}>Condizioni d’uso</Text></Pressable></View>

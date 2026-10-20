@@ -1,7 +1,23 @@
 {
   "identifier": "F1A2026A",
   "nonRenewingSubscriptions": [],
-  "products": [],
+  "products": [
+    {
+      "displayPrice": "9.99",
+      "familyShareable": false,
+      "internalID": "F1BASE01",
+      "localizations": [
+        {
+          "description": "Schede minime e una sessione test",
+          "displayName": "Fungo Italia Base",
+          "locale": "it_IT"
+        }
+      ],
+      "productID": "it.fungoitalia.base.lifetime",
+      "referenceName": "Fungo Italia Base",
+      "type": "NonConsumable"
+    }
+  ],
   "settings": {},
   "subscriptionGroups": [
     {

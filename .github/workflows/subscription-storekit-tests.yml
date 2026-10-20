@@ -1,13 +1,13 @@
 name: Verify native StoreKit subscriptions
 on:
   push:
-    branches: [main]
+    branches: [main, design/study-dashboard-v1-1]
     paths: ['modules/fungo-subscription/**','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','App.tsx','tests/storekit/AnnualStoreKitTests.swift','tests/storekit/Annual.storekit','scripts/clean-storekit-test-host.rb','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml']
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: verified-storekit-native-tests
+  group: verified-storekit-native-tests-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   verify:

@@ -50,8 +50,8 @@ final class AnnualPurchaseUITests: XCTestCase {
     attachment.name = name; attachment.lifetime = .keepAlways; add(attachment)
   }
   @MainActor func waitForGate(_ app: XCUIApplication) async {
-    await require(element(app, "Fungo Italia completo"))
-    XCTAssertFalse(element(app, "Inizia 15 casi").exists)
+    await require(element(app, "Accesso completo annuale"))
+    XCTAssertFalse(element(app, "Allenamento · 15 casi").exists)
   }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
     continueAfterFailure = false
@@ -66,6 +66,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     await require(subscribe, timeout: 60)
+    for _ in 0..<5 { if subscribe.isHittable { break }; app.swipeUp() }
     var ready = await readyToTap(subscribe)
     // A fresh iPhone simulator can leave StoreKit entitlement enumeration pending
     // on first launch even when the local product has loaded. Re-launch once
@@ -91,10 +92,12 @@ final class AnnualPurchaseUITests: XCTestCase {
     if !activated { diagnose(app, session) }
     XCTAssertTrue(activated)
     print("ANNUAL_UI Purchase exposes verified access")
+    await tap(app, "Ripristina acquisti")
+    await require(element(app, "Abbonamento attivo"))
     // Reopening reads verified StoreKit state, not a persisted premium flag.
     app.terminate(); app.launch()
     await tap(app, "Esame")
-    await require(element(app, "Inizia 15 casi"))
+    await require(element(app, "Allenamento · 15 casi"))
     print("ANNUAL_UI Reopened app restores access")
     await tap(app, "Studio")
     let search = element(app, "Cerca nome scientifico, comune o sinonimo")
@@ -105,7 +108,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Torna alle schede")
     await tap(app, "Aree"); try capture(app, "02-aree")
     await tap(app, "Esame")
-    await require(element(app, "Inizia 15 casi"))
+    await require(element(app, "Allenamento · 15 casi"))
     let transaction = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
     try session.refundTransaction(identifier: transaction.identifier)
     await waitForGate(app)
@@ -116,10 +119,10 @@ final class AnnualPurchaseUITests: XCTestCase {
     let readyAgain = await readyToTap(buyAgain)
     XCTAssertTrue(readyAgain)
     buyAgain.tap()
-    await require(element(app, "Inizia 15 casi"))
+    await require(element(app, "Allenamento · 15 casi"))
     let renewed = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
     try session.disableAutoRenewForTransaction(identifier: renewed.identifier)
-    XCTAssertTrue(element(app, "Inizia 15 casi").exists, "Cancelling renewal must preserve the paid period")
+    XCTAssertTrue(element(app, "Allenamento · 15 casi").exists, "Cancelling renewal must preserve the paid period")
     try session.expireSubscription(productIdentifier: productID)
     await waitForGate(app)
     print("ANNUAL_UI Expiry closes premium access")

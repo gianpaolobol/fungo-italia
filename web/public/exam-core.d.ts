@@ -6,8 +6,8 @@ export type TrainingAnswer={name:string;category:string;choices:Record<string,st
 export type DetailQuestion={id:string;title:string;multiple:boolean;options:{id:string;label:string}[];correct:string[]};
 export type TrainingGrade={name:boolean;category:boolean;detail:boolean;danger:boolean;passed:boolean;details:{id:string;title:string;correct:boolean}[]};
 export type Attempt={caseId:string;caseName:string;answer:TrainingAnswer;grade:TrainingGrade;at:string;round:number};
-export type Training={version:number;id:string;startedAt:string;signature:string;ids:string[];queue:string[];pending:string[];phase:'initial'|'retry'|'complete';round:number;first:Attempt[];attempts:Attempt[];feedback:Attempt|null;draft:TrainingAnswer;completedAt:string|null};
-export type TrainingSummary={id:string;startedAt:string;completedAt:string|null;signature:string;total:number;correct:number;names:number;categories:number;details:number;preparationTotal:number;preparationCorrect:number;toxicologyTotal:number;toxicologyCorrect:number;danger:number;assisted:number;retries:number;errors:{id:string;name:string;nameError:boolean;categoryError:boolean;detailErrors:string[];danger:boolean}[];attempts:Attempt[]};
+export type Training={mode?:'training'|'simulation';version:number;id:string;startedAt:string;signature:string;ids:string[];queue:string[];pending:string[];phase:'initial'|'retry'|'complete';round:number;first:Attempt[];attempts:Attempt[];feedback:Attempt|null;draft:TrainingAnswer;completedAt:string|null};
+export type TrainingSummary={mode?:'training'|'simulation';id:string;startedAt:string;completedAt:string|null;signature:string;total:number;correct:number;names:number;categories:number;details:number;preparationTotal:number;preparationCorrect:number;toxicologyTotal:number;toxicologyCorrect:number;danger:number;assisted:number;retries:number;errors:{id:string;name:string;nameError:boolean;categoryError:boolean;detailErrors:string[];danger:boolean}[];attempts:Attempt[]};
 export const trainingKey:string;
 export const trainingHistoryKey:string;
 export const foodColors:Record<string,string>;
