@@ -62,8 +62,11 @@ public final class FungoSubscriptionModule: Module {
     let now = Date(), iso = ISO8601DateFormatter()
     var base = false
     var expiry: Date?
-    for await result in Transaction.currentEntitlements {
-      guard case .verified(let transaction) = result, transaction.revocationDate == nil else { continue }
+    // Query the two owned products directly: the global entitlement sequence can
+    // remain open in the full Expo host even with no transactions in the account.
+    for productID in [Self.baseID, Self.annualID] {
+      guard let result = await Transaction.currentEntitlement(for: productID),
+        case .verified(let transaction) = result, transaction.revocationDate == nil else { continue }
       if transaction.productID == Self.baseID && transaction.productType == .nonConsumable { base = true }
       if transaction.productID == Self.annualID && transaction.productType == .autoRenewable,
         !transaction.isUpgraded, let end = transaction.expirationDate, end > now,

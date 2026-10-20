@@ -39,6 +39,10 @@
       "ios": {
         "simulator": false
       }
+    },
+    "study-beta": {
+      "extends": "production",
+      "channel": "study-dashboard"
     }
   },
   "submit": {
