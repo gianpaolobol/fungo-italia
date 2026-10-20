@@ -18,6 +18,9 @@ La lettura esplicita degli elementi della submission del 20 ottobre alle 07:04 U
 Il rilascio attuale è manuale: l'approvazione non comporterà automaticamente la pubblicazione senza il successivo comando di rilascio.
 Non sostituire automaticamente il binario durante la revisione e non trasferire sullo Store la build diagnostica senza i controlli StoreKit.
 
+## Provenienza dei binari
+La build 9 proviene dalla revisione 1bacf13c049554e2f6a42660ce8b0516adb5929b (workflow 38904049950). La build 11 proviene dalla revisione main 2c077e74e43f398f25d2430ed8e202e5197d6111 (workflow 38982998646). La revisione più recente del verificatore StoreKit su main non è quindi nel binario 9 in coda.
+
 ## Evidenze
 - https://github.com/gianpaolobol/fungo-italia/actions/runs/38897130747 (ultima esecuzione: 20 ottobre; job 118492701606).
 - https://github.com/gianpaolobol/fungo-italia/actions/runs/39026690376 (ultima esecuzione: 20 ottobre; job 118493080765).
@@ -26,4 +29,3 @@ Non sostituire automaticamente il binario durante la revisione e non trasferire 
 
 ## Limiti
 Lo stato pubblico dello Store non è stato dedotto dalla sola ricerca web. Stato privacy e risposte DAC7 non sono leggibili dall'API usata. Nessun dato fiscale o credenziale è stato modificato.
-
