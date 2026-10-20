@@ -75,7 +75,13 @@ final class AnnualPurchaseUITests: XCTestCase {
     XCTAssertFalse(subscribe.isEnabled, "A new annual purchase requires permanent Base")
     let base = element(app, "Acquista Base permanente")
     await require(base)
-    let baseReady = await readyToTap(base)
+    var baseReady = await readyToTap(base)
+    if !baseReady {
+      diagnose(app, session)
+      await tap(app, "Aggiorna stato e prezzo")
+      for _ in 0..<6 { if base.isHittable { break }; app.swipeDown() }
+      baseReady = await readyToTap(base)
+    }
     XCTAssertTrue(baseReady, "Verified StoreKit state required before Base purchase")
     base.tap()
     await require(element(app, "Base acquistata"))

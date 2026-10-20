@@ -2,7 +2,7 @@ name: Verify StoreKit purchase interface
 on:
   push:
     branches: [main, design/study-dashboard-v1-1]
-    paths: ['components/SubscriptionGate.tsx','package.json','package-lock.json','app.config.js','app.json','eas.json','App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
+    paths: ['components/SubscriptionGate.tsx','components/Study*.tsx','components/PhotoExam.tsx','components/ExamPreview.tsx','hooks/useStudy.ts','lib/study*','src/data/**','web/public/exam-core*','package.json','package-lock.json','app.config.js','app.json','eas.json','App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
   workflow_dispatch:
 permissions:
   contents: read

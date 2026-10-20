@@ -52,7 +52,12 @@ public final class FungoSubscriptionModule: Module {
     }
     return item
   }
-  @MainActor private func allAccess() async -> [String: Any] { await Self.verifiedAccess() }
+  @MainActor private func allAccess() async -> [String: Any] {
+    logger.notice("Access lookup entered")
+    let access = await Self.verifiedAccess()
+    logger.notice("Access lookup returned")
+    return access
+  }
   @MainActor public static func verifiedAccess() async -> [String: Any] {
     let now = Date(), iso = ISO8601DateFormatter()
     var base = false
