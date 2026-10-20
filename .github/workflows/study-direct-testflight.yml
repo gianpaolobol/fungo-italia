@@ -1,0 +1,142 @@
+name: Deliver the verified study binary directly to Apple
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['.github/workflows/study-direct-testflight.yml']
+permissions:
+  contents: read
+  actions: read
+jobs:
+  secure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: Subscription-testflight-candidate-receipt
+          run-id: 39474292298
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}
+      - name: Secure the identical signed IPA before any submission cancellation
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';import {createHash} from 'node:crypto';
+          const receipt=JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP+'/subscription-build.json'));
+          const source='976702381e32d66893d8922e1a85e7a3300eceb3',hash='33dd8d39eee73739b34a177d9ddc0d907e2ac43526baff2048547d1490bf6978';
+          if(receipt.sourceCommit!==source||receipt.ipaSha256!==hash||receipt.version!=='1.1.0'||receipt.buildNumber!=='13'||receipt.appId!=='6821140326'||receipt.testFlightOnly!==true||receipt.storekitUIVerified!==false||receipt.nativeStorekitRunId!=='39474292310')throw Error('Signed receipt mismatch');
+          const r=await fetch('https://api.github.com/repos/gianpaolobol/fungo-italia/actions/runs/39474292310',{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'}});if(!r.ok)throw Error('Native proof unavailable');const native=await r.json();
+          if(native.head_sha!==source||native.path!=='.github/workflows/subscription-storekit-tests.yml'||native.status!=='completed'||native.conclusion!=='success')throw Error('Exact native proof failed');
+          async function graph(query){const r=await fetch('https://api.expo.dev/graphql',{method:'POST',headers:{Authorization:'Bearer '+process.env.EXPO_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({query}),signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error('Expo lookup failed '+r.status);const j=await r.json();if(j.errors||!j.data)throw Error('Expo lookup refused');return j.data;}
+          const id='71cbd209-7aea-4e43-a5df-ff9397ad83c6';
+          const data=await graph('query{submissions{byId(submissionId:"'+id+'"){id platform app{id} iosConfig{ascAppIdentifier} archiveUrl}}}');const s=data.submissions.byId;
+          if(s.id!==id||s.platform!=='IOS'||s.app.id!=='b65af584-739f-4ef0-8fe5-6c0ba692c088'||s.iosConfig.ascAppIdentifier!=='6821140326')throw Error('Submission identity mismatch');
+          const url=(await graph('mutation{submission{generateSubmissionArchiveDownloadUrl(submissionId:"'+id+'")}}')).submission.generateSubmissionArchiveDownloadUrl;
+          if(new URL(url).protocol!=='https:')throw Error('Archive must use HTTPS');
+          const archive=await fetch(url,{signal:AbortSignal.timeout(180000)});if(!archive.ok)throw Error('Archive download failed '+archive.status);const bytes=Buffer.from(await archive.arrayBuffer());
+          if(createHash('sha256').update(bytes).digest('hex')!==hash)throw Error('Downloaded IPA differs from signed candidate');
+          fs.writeFileSync(process.env.RUNNER_TEMP+'/fungo-italia-subscription.ipa',bytes);console.log('SIGNED_BUILD_13_SECURED '+hash);
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Secured-signed-study-build-13
+          path: |
+            ${{ runner.temp }}/fungo-italia-subscription.ipa
+            ${{ runner.temp }}/subscription-build.json
+          retention-days: 7
+  upload:
+    needs: secure
+    runs-on: macos-26
+    timeout-minutes: 45
+    concurrency:
+      group: study-build-13-direct-apple-upload
+      cancel-in-progress: false
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      EXPECTED_BUILD_NUMBER: '13'
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 976702381e32d66893d8922e1a85e7a3300eceb3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: Secured-signed-study-build-13
+          path: ${{ runner.temp }}
+      - name: Verify the binary and official uploader on this Mac
+        run: |
+          python3 - <<'PY'
+          import os,zipfile,plistlib,hashlib
+          path=os.environ['RUNNER_TEMP']+'/fungo-italia-subscription.ipa'
+          if hashlib.sha256(open(path,'rb').read()).hexdigest()!='33dd8d39eee73739b34a177d9ddc0d907e2ac43526baff2048547d1490bf6978': raise ValueError('IPA hash mismatch')
+          with zipfile.ZipFile(path) as z:
+              paths=[n for n in z.namelist() if n.startswith('Payload/') and n.endswith('.app/Info.plist') and n.count('/')==2]
+              if len(paths)!=1: raise ValueError('Unexpected main bundle')
+              info=plistlib.loads(z.read(paths[0]))
+          if (info['CFBundleIdentifier'],info['CFBundleShortVersionString'],str(info['CFBundleVersion']))!=('it.fungoitalia.app','1.1.0','13'): raise ValueError('Binary identity mismatch')
+          PY
+          node --input-type=module <<'JS'
+          import {spawnSync} from 'node:child_process';
+          const r=spawnSync('xcrun',['altool','--help'],{encoding:'utf8'}),help=(r.stdout||'')+(r.stderr||'');
+          for(const option of ['--upload-app','--apiKey','--apiIssuer'])if(!help.includes(option))throw Error('Official uploader option unavailable '+option);
+          console.log('APPLE_UPLOADER_OPTIONS_VERIFIED');
+          JS
+      - name: Prepare the existing authorized Apple API key
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      - name: Reconcile Apple and stop only the still-queued EAS duplicate
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';import {createAppleApi} from './scripts/app-store-connect.mjs';
+          const api=await createAppleApi();
+          const nativeResponse=await fetch('https://api.github.com/repos/gianpaolobol/fungo-italia/actions/runs/39474292310',{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'}});if(!nativeResponse.ok)throw Error('Native proof lookup failed');const native=await nativeResponse.json();
+          if(native.head_sha!=='976702381e32d66893d8922e1a85e7a3300eceb3'||native.status!=='completed'||native.conclusion!=='success')throw Error('Mandatory native success missing');
+          async function graph(query){const r=await fetch('https://api.expo.dev/graphql',{method:'POST',headers:{Authorization:'Bearer '+process.env.EXPO_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({query}),signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error('Submission request failed '+r.status);const j=await r.json();if(j.errors||!j.data)throw Error('Submission request refused');return j.data;}
+          const id='71cbd209-7aea-4e43-a5df-ff9397ad83c6';
+          async function submission(){const d=await graph('query{submissions{byId(submissionId:"'+id+'"){id status app{id} platform iosConfig{ascAppIdentifier}}}}');const s=d.submissions.byId;if(s.id!==id||s.app.id!=='b65af584-739f-4ef0-8fe5-6c0ba692c088'||s.platform!=='IOS'||s.iosConfig.ascAppIdentifier!=='6821140326')throw Error('Submission identity mismatch');return s;}
+          const initial=await submission();let cancelledQueued=false;
+          if(initial.status==='IN_QUEUE'){
+            const d=await graph('mutation{submission{cancelSubmission(submissionId:"'+id+'"){id status}}}');if(d.submission.cancelSubmission.id!==id)throw Error('Cancellation identity mismatch');
+            for(let attempt=0;attempt<12;attempt++){const s=await submission();if(s.status==='CANCELED'){cancelledQueued=true;break;}if(['FINISHED','IN_PROGRESS'].includes(s.status))break;await new Promise(r=>setTimeout(r,5000));}
+          }
+          const builds=await api('/v1/builds?filter[app]=6821140326&filter[version]=13&include=preReleaseVersion&limit=10');if(!builds.ok)throw Error('Apple pre-upload lookup failed');
+          const existing=builds.data.find(b=>builds.included?.some(v=>v.id===b.relationships.preReleaseVersion?.data?.id&&v.attributes.version==='1.1.0'));
+          if(existing&&['INVALID','FAILED'].includes(existing.attributes.processingState))throw Error('Apple rejected the existing candidate');
+          const allowed=cancelledQueued&&!existing;
+          if(!allowed&&!existing&&!['FINISHED','IN_PROGRESS'].includes((await submission()).status))throw Error('No confirmed exclusive upload route');
+          fs.appendFileSync(process.env.GITHUB_ENV,'DIRECT_UPLOAD_ALLOWED='+String(allowed)+'\n');
+          const path=process.env.RUNNER_TEMP+'/subscription-build.json',receipt=JSON.parse(fs.readFileSync(path));Object.assign(receipt,{deliveryRunId:process.env.GITHUB_RUN_ID,uploadRoute:allowed?'Apple altool':'Original EAS submission reconciliation',priorEasSubmissionId:id,queuedSubmissionCancelled:cancelledQueued});fs.writeFileSync(path,JSON.stringify(receipt,null,2)+'\n');
+          console.log('APPLE_UPLOAD_ROUTE '+JSON.stringify({directUploadAllowed:allowed,queuedSubmissionCancelled:cancelledQueued,existingAppleBuild:Boolean(existing)}));
+          JS
+      - name: Upload the identical build directly with Apple altool
+        if: env.DIRECT_UPLOAD_ALLOWED == 'true'
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';import {spawnSync} from 'node:child_process';
+          const c=JSON.parse(fs.readFileSync('eas.json')).submit.production.ios;
+          const dir=process.env.RUNNER_TEMP+'/apple-private-keys';fs.mkdirSync(dir,{mode:0o700});const key=dir+'/AuthKey_'+c.ascApiKeyId+'.p8';fs.copyFileSync(c.ascApiKeyPath,key);fs.chmodSync(key,0o600);
+          const result=spawnSync('xcrun',['altool','--upload-app','--type','ios','--file',process.env.RUNNER_TEMP+'/fungo-italia-subscription.ipa','--apiKey',c.ascApiKeyId,'--apiIssuer',c.ascApiKeyIssuerId],{stdio:'inherit',env:{...process.env,API_PRIVATE_KEYS_DIR:dir},timeout:1200000});
+          if(result.error||result.status!==0)throw Error('Official Apple uploader did not confirm success');
+          console.log('APPLE_DIRECT_BUILD_13_UPLOAD_SUCCEEDED');
+          JS
+      - name: Confirm Apple processing and assign existing internal test groups
+        run: node scripts/verify-study-testflight.mjs
+      - name: Remove temporary Apple key files
+        if: always()
+        run: node --input-type=module -e "import {rm} from 'node:fs/promises';await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});await rm(process.env.RUNNER_TEMP+'/apple-private-keys',{force:true,recursive:true});"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Study-direct-Apple-TestFlight-evidence
+          path: |
+            ${{ runner.temp }}/subscription-build.json
+            store-evidence/study-testflight.json
+          retention-days: 30
