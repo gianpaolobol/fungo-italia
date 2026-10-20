@@ -61,3 +61,15 @@ Minori aperti: prova della dimostrazione intera su interfaccia/dispositivo; veri
 - Verifica finale:144/144test Node, TypeScript PASS, export iOS PASS. Controllo visivo dei componenti reali via RNweb a320/375/768px: nessun errore JS, nessun overflow, CTA visibile e storico espandibile. Anteprima con dati fittizi in docs/previews.
 - StoreKit nativo sul commit precedente f622962 PASS. UIiPhone di quel commit FAIL durante la verifica iniziale dei diritti: aggiunti log, gestione dell'omissione di scadenza quando annuale esplicitamente inattivo e riprova tramite il vero pulsante di aggiornamento. Nessun annuale attivo con scadenza assente viene concesso. Nuova CI ancora da verificare.
 - Rilascio ancora separato: niente modifica alla1.0, nessun nuovo binario distribuito, prova fisica iPhone13mini/VoiceOver/testo ingrandito e configurazione Base Apple pendenti.
+
+
+### Verifica nativa durante la pubblicazione TestFlight del 20/10/2026
+
+Sorgente dell’app: `1465acecd24bd104e63f46b49868f5ac9f73d484`, run UI `39467202425`. Lo screenshot autentico iPhone iniziale è in `docs/previews/dashboard-study-native-iphone.png`: Ciao, CTA Inizia lo studio, fungo, stato Da valutare e copertura iniziale risultano visibili. Il primo avvio non presenta un punteggio inventato.
+
+Il collaudo acquisti iPhone e iPad fallisce prima dell’acquisto Base: il log mostra l’ingresso nella lettura dei diritti StoreKit senza il ritorno, anche interrogando i singoli prodotti. La modifica dell’accessore non risolve il blocco sul simulatore. La beta resta diagnostica, senza apertura del rilascio App Store. Il nome della scheda Abbonamento va a capo su iPhone; è una rifinitura da correggere prima del rilascio definitivo.
+
+Il prodotto Base Apple `6825025102` ha prezzo 9,99 €, tipo NON_CONSUMABLE e metadati `READY_TO_SUBMIT` dopo il caricamento dello screenshot autentico della schermata acquisti (asset `c6e396fd-663e-4aa3-9f7d-c68245068136`, COMPLETE). Non è una prova di acquisto riuscito e non è stato inviato in revisione.
+
+
+La query puntuale sperimentale è stata ripristinata all’accessore `Transaction.currentEntitlements` del sorgente `a07d8b7a`: è il codice che ha superato entrambe le prove native nel run39454153800. Per la nuova beta diagnostica si confrontano esattamente gli input nativi, ammettendo soltanto la versione marketing1.0.0→1.1.0 e i filtri di attivazione del workflow; dipendenze, codice, test e comandi di esecuzione restano vincolanti. La ricevuta conserva il riferimento originale e il digest degli input. Questo riuso non attesta il funzionamento dell’interfaccia completa e un nuovo fallimento nativo del candidato blocca l’upload.

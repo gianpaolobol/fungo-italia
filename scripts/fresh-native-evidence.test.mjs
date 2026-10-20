@@ -1,0 +1,7 @@
+import{test}from'node:test';import assert from'node:assert/strict';import{awaitSuccessfulFreshNative as wait}from'./fresh-native-evidence.mjs';
+const sha='candidate',run=(id,status,conclusion)=>({id,head_sha:sha,status,conclusion});
+test('pending rerun cannot hide an earlier candidate failure and later fail after upload',async()=>{let reads=0;await assert.rejects(wait({sha,pause:async()=>{},readRuns:async()=>++reads===1?[run(2,'queued',null),run(1,'completed','failure')]:[run(2,'completed','failure')]}),/did not pass/);assert.equal(reads,2);});
+test('only a completed successful rerun supersedes the failed candidate',async()=>{let reads=0,pauses=0;const result=await wait({sha,pause:async()=>{pauses++;},readRuns:async()=>++reads<3?[run(2,'in_progress',null),run(1,'completed','failure')]:[run(2,'completed','success'),run(1,'completed','failure')]});assert.equal(result.conclusion,'success');assert.equal(reads,3);assert.equal(pauses,2);});
+test('an indefinitely pending test refuses upload',async()=>{await assert.rejects(wait({sha,attempts:2,pause:async()=>{},readRuns:async()=>[run(1,'queued',null)]}),/upload refused/);});
+test('cancelled and timed-out fresh checks never count as evidence',async()=>{for(const conclusion of ['cancelled','timed_out'])await assert.rejects(wait({sha,readRuns:async()=>[run(1,'completed',conclusion)]}),/did not pass/);});
+test('unrelated source failures do not replace the separately verified baseline',async()=>{assert.equal(await wait({sha,readRuns:async()=>[{...run(1,'completed','failure'),head_sha:'different'}]}),null);});

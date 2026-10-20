@@ -1,0 +1,113 @@
+name: Publish study beta with verified native baseline
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['.github/workflows/study-baseline-testflight.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test scripts/native-evidence-equivalence.test.mjs
+      - run: node scripts/verify-baseline-native-beta.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Matched-native-baseline-evidence
+          path: ${{ runner.temp }}/study-native-evidence.json
+          retention-days: 30
+  beta:
+    needs: evidence
+    concurrency:
+      group: subscription-production-ios
+      cancel-in-progress: false
+    runs-on: macos-26
+    timeout-minutes: 100
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
+      SOURCE_BUILD_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Require the isolated next-version profile
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const app=JSON.parse(fs.readFileSync('app.json')),eas=JSON.parse(fs.readFileSync('eas.json'));
+          if(app.expo.version!=='1.1.0'||eas.build['study-beta'].channel!=='study-dashboard')throw Error('Unexpected beta version/channel');
+          JS
+      - run: npm ci
+      - run: npm run prepare:data && npm run typecheck && node --test scripts/*.test.mjs
+      - name: Build the isolated study beta
+        run: npx eas-cli@24.8.0 build --platform ios --profile study-beta --local --non-interactive --output "$RUNNER_TEMP/fungo-italia-subscription.ipa"
+      - uses: actions/download-artifact@v4
+        with:
+          name: Matched-native-baseline-evidence
+          path: ${{ runner.temp }}
+      - name: Refuse a fresh native failure for this exact candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/require-no-candidate-native-failure.mjs
+      - name: Record source, signed binary and actual test evidence
+        run: |
+          unzip -q "$RUNNER_TEMP/fungo-italia-subscription.ipa" -d "$RUNNER_TEMP/subscription-binary"
+          plist=$(find "$RUNNER_TEMP/subscription-binary/Payload" -maxdepth 2 -name Info.plist -print -quit)
+          build_number=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" "$plist")
+          echo "SUBSCRIPTION_TESTFLIGHT_CANDIDATE_BUILD_NUMBER $build_number"
+          echo "EXPECTED_BUILD_NUMBER=$build_number" >> "$GITHUB_ENV"
+          short_version=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$plist")
+          BUILD_NUMBER="$build_number" BUILD_VERSION="$short_version" node --input-type=module <<'JS'
+          import {readFile,writeFile} from 'node:fs/promises';
+          import {createHash} from 'node:crypto';
+          const bytes=await readFile(process.env.RUNNER_TEMP+'/fungo-italia-subscription.ipa');
+          const proof=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/study-native-evidence.json','utf8'));
+          const receipt={nativeEvidence:proof,appId:'6821140326',bundleId:'it.fungoitalia.app',productId:'it.fungoitalia.premium.annual',buildNumber:process.env.BUILD_NUMBER,version:process.env.BUILD_VERSION,sourceCommit:process.env.SOURCE_BUILD_COMMIT,storekitRunId:String(proof.knownFailedUIRunId),nativeStorekitRunId:String(proof.freshCandidateNativeRun?.conclusion==='success'?proof.freshCandidateNativeRun.id:proof.nativeRunId),producerRunId:process.env.GITHUB_RUN_ID,storekitUIVerified:false,testFlightOnly:true,createdAt:new Date().toISOString(),ipaSha256:createHash('sha256').update(bytes).digest('hex')};
+          await writeFile(process.env.RUNNER_TEMP+'/subscription-build.json',JSON.stringify(receipt,null,2)+'\n');
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Subscription-testflight-candidate-receipt
+          path: ${{ runner.temp }}/subscription-build.json
+          retention-days: 30
+      - name: Prepare the already authorized Apple key for this upload only
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      - name: Upload to TestFlight without changing App Store review
+        run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-italia-subscription.ipa" --non-interactive --wait
+      - name: Confirm Apple processing and attach existing internal test groups
+        run: node scripts/verify-study-testflight.mjs
+      - name: Remove temporary Apple submit key
+        if: always()
+        run: node --input-type=module -e "import {rm} from 'node:fs/promises';await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Study-baseline-TestFlight-evidence
+          path: |
+            ${{ runner.temp }}/subscription-build.json
+            ${{ runner.temp }}/study-native-evidence.json
+            store-evidence/study-testflight.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Signed-study-baseline-TestFlight-candidate
+          path: ${{ runner.temp }}/fungo-italia-subscription.ipa
+          retention-days: 7
+          if-no-files-found: warn
