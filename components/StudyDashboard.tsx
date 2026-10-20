@@ -37,6 +37,7 @@ export default function StudyDashboard({study,complete,onStudy,onTraining,onAcce
    <Pressable accessibilityRole="button" accessibilityState={{expanded:showDetails}} onPress={()=>setShowDetails(!showDetails)} style={s.outline}><Text style={s.link}>{showDetails?'Nascondi dettagli e storico':'Dettagli della preparazione e storico'}</Text></Pressable>
    {showDetails&&<><View style={s.card}>
     <Text accessibilityRole="header" style={s.heading}>Per consolidare il percorso</Text>
+    <Text style={s.body}>{p.goals.index?'✓':'○'} Portare l’indice complessivo almeno all’85%</Text>
     <Text style={s.body}>{p.goals.coverage?'✓':'○'} Verificare almeno l’80% delle competenze</Text>
     <Text style={s.body}>{p.goals.retention?'✓':'○'} Consolidare almeno l’80% con ripassi a distanza · {Math.round(p.R)}% consolidate</Text>
     <Text style={s.body}>{p.goals.simulations?'✓':'○'} Tre simulazioni autonome con risultati stabili · {Math.min(3,p.simulationCount)}/3</Text>

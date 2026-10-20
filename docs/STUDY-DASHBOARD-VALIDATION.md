@@ -49,3 +49,15 @@ Minori aperti: prova della dimostrazione intera su interfaccia/dispositivo; veri
 - Export finale dopo il fix checkpoint: PASS, bundle d6e81dd260322949ffe2864079ea0be1.
 - Materiali commerciali del prossimo aggiornamento preparati separatamente in store/next-release; descrizione2700 caratteri e descrizione Base entro45. Nessun metadato Apple modificato.
 - Audit aggiornato ore17:22 Europe/Rome: versione1.0 ancora WAITING_FOR_REVIEW; per l'Italia Apple segnala TRADER_STATUS_VERIFICATION_FAILED. Dettagli in ALIGNMENT-2026-10-20.md.
+
+## Banca e UX richieste dal titolare — 20 ottobre, pomeriggio
+- Banca di214casi distinti per148schede minime e66aggiuntive:89fotografici invariati e125teorici. Le nuove domande teoriche sono328 (184minimi,144aggiuntive).
+- Ogni risposta teorica coincide con il testo del campo canonico; mantenuti esempi e limiti dei gruppi. Provenienza per campo/hash, con93domande prive di sourceIds esterni associati: questo inventario non attesta revisione scientifica indipendente.
+- Le domande teoriche non generano evidenza fotografica/alimentare. La simulazione conserva15casi fotografici; l'allenamento integra ripasso teorico. Nessuna riduzione dei requisiti della banca fotografica.
+- Migrazione del precedente checkpoint sul vecchio banco esatto e normalizzazione della sua evidenza. Accesso Base limita anche il ripristino: niente domande estese o simulazioni dopo scadenza; conservato l'altro checkpoint per l'accesso completo.
+- Fungo a riempimento continuo con percentuale e valore accessibile; CTA subito visibile; andamento nel tempo ricostruito sulla banca attuale; dettagli e storico espandibili. Preparazione e copertura distinte, stato critico prioritario.
+- Confronto dei risultati solo fra modalità e composizioni equivalenti. Checklist e consolidamento condividono predicati: indice85%, copertura80%, mantenimento distanziato80%, tre simulazioni autonome stabili, nessun errore critico aperto. Sono criteri didattici, non soglie ufficiali d'esame.
+- Revisione indipendente: riprodotti e corretti i due problemi importanti (coerenza checklist e ripristino dopo scadenza); rimossa anche la vecchia comparazione foto/misto nel menu del test.
+- Verifica finale:144/144test Node, TypeScript PASS, export iOS PASS. Controllo visivo dei componenti reali via RNweb a320/375/768px: nessun errore JS, nessun overflow, CTA visibile e storico espandibile. Anteprima con dati fittizi in docs/previews.
+- StoreKit nativo sul commit precedente f622962 PASS. UIiPhone di quel commit FAIL durante la verifica iniziale dei diritti: aggiunti log, gestione dell'omissione di scadenza quando annuale esplicitamente inattivo e riprova tramite il vero pulsante di aggiornamento. Nessun annuale attivo con scadenza assente viene concesso. Nuova CI ancora da verificare.
+- Rilascio ancora separato: niente modifica alla1.0, nessun nuovo binario distribuito, prova fisica iPhone13mini/VoiceOver/testo ingrandito e configurazione Base Apple pendenti.
