@@ -1,0 +1,80 @@
+name: Diagnose local StoreKit catalog and initial access
+permissions:
+  contents: read
+concurrency:
+  group: study-local-catalog-probe
+  cancel-in-progress: false
+jobs:
+  verify:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+        - iphone
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: 976702381e32d66893d8922e1a85e7a3300eceb3
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Use distinctive local prices without changing production code
+      run: 'python3 - <<''PYPROBE''
+
+        import json
+
+        from pathlib import Path
+
+        p=Path(''tests/storekit/Annual.storekit'');f=json.loads(p.read_text());f[''products''][0][''displayPrice'']=''2.31'';f[''subscriptionGroups''][0][''subscriptions''][0][''displayPrice'']=''3.47'';p.write_text(json.dumps(f,indent=2)+''\n'')
+
+        Path(''tests/storekit/AnnualPurchaseUITests.swift'').write_text(''import XCTest\nimport StoreKitTest\n\n@available(iOS 17.0, *)\nfinal class AnnualPurchaseUITests: XCTestCase {\n  @MainActor func testLocalCatalogAndInitialAccess() async throws {\n    continueAfterFailure = false\n    let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))\n    let session = try SKTestSession(contentsOf: url)\n    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime\n    session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()\n    let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")\n    defer {\n      let shot = XCTAttachment(screenshot: app.screenshot()); shot.name = "local-catalog-probe"; shot.lifetime = .keepAlways; add(shot)\n      print("LOCAL_CATALOG_APP_TREE " + app.debugDescription)\n      app.terminate(); session.clearTransactions(); session.resetToDefaultState()\n    }\n    app.launch()\n    let tab = app.descendants(matching: .any).matching(identifier: "tab-abbonamento").firstMatch\n    let found = await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true"), object: tab)], timeout: 120)\n    XCTAssertEqual(found, .completed); tab.tap()\n    let text = app.descendants(matching: .any).matching(NSPredicate(format: "label CONTAINS %@", "2,31")).firstMatch\n    let localPrice = await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true"), object: text)], timeout: 90)\n    XCTAssertEqual(localPrice, .completed, "The real app must resolve the distinctive LOCAL Base price, never the production catalog")\n    print("LOCAL_CATALOG_DISTINCTIVE_BASE_PRICE_CONFIRMED")\n    let base = app.buttons.matching(NSPredicate(format: "label == %@", "Acquista Base permanente")).firstMatch\n    let ready = await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == true AND enabled == true"), object: base)], timeout: 120)\n    XCTAssertEqual(ready, .completed, "The real app must finish its native initial entitlement query before purchase")\n    print("LOCAL_CATALOG_INITIAL_ACCESS_CONFIRMED")\n  }\n}\n'')
+
+        print(''Diagnostic fixture only: Base2.31 annual3.47; production source unchanged'')
+
+        PYPROBE'
+    - name: Select a compatible Apple StoreKit simulator runtime
+      run: bash scripts/prepare-storekit-runtime.sh
+    - name: Prepare the actual app and Apple StoreKit UI test runner
+      run: 'npm ci
+
+        npm run prepare:data
+
+        npm run typecheck
+
+        node --test scripts/subscription-policy.test.mjs
+
+        npx expo prebuild --platform ios --no-install
+
+        ruby scripts/add-storekit-ui-tests.rb
+
+        cd ios
+
+        pod install
+
+        '
+    - name: Verify the actual app reads local catalog and finishes initial entitlement lookup
+      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"))throw Error(\"Purchase UI test scheme missing\")'\nxcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"$SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available -j > /tmp/purchase-devices.json\n  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"$runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n  if test -z \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n  xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun simctl status_bar \"$udid\" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n  if ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test > \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\n    exit 1\n  fi\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\n  xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n  xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n"
+    - name: Preserve diagnostic screenshots, generated test configuration and attachments
+      if: always()
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)\n  if test -n \"$result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path store-evidence/attachments || true\n  fi\nfi\n\nmkdir -p store-evidence/test-configuration\nfind purchase-ui-build/Build/Products -maxdepth 1 -name \"*.xctestrun\" -exec cp {} store-evidence/test-configuration/ \\; || true\ncp ios/*.xcodeproj/xcshareddata/xcschemes/FungoItaliaPurchaseUI.xcscheme store-evidence/test-configuration/ || true\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Local-StoreKit-catalog-probe-${{ matrix.family }}
+        path: store-evidence/
+        retention-days: 30
+'on':
+  push:
+    branches:
+    - design/study-dashboard-v1-1
+    paths:
+    - .github/workflows/study-local-catalog-probe.yml
+  workflow_dispatch: null

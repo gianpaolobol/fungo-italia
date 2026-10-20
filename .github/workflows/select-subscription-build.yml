@@ -20,23 +20,37 @@ jobs:
       PRODUCER_RUN_ID: ${{ github.event.workflow_run.id }}
     steps:
       - uses: actions/checkout@v4
+      - name: Keep next-version TestFlight separate from the initial App Store selection
+        id: version
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const legacy=JSON.parse(fs.readFileSync('app.json','utf8')).expo.version==='1.0.0';
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,'eligible='+legacy+'\n');
+          if(!legacy)console.log('No App Store build selection for the isolated study beta.');
+          JS
       - uses: actions/setup-node@v4
+        if: steps.version.outputs.eligible == 'true'
         with:
           node-version: '24'
       - uses: actions/download-artifact@v4
+        if: steps.version.outputs.eligible == 'true'
         with:
           name: Subscription-signed-build-receipt
           path: store-evidence
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
       - name: Check release selection script
+        if: steps.version.outputs.eligible == 'true'
         run: node --check scripts/select-subscription-build.mjs
       - name: Associate the tested signed binary after Apple processing
+        if: steps.version.outputs.eligible == 'true'
         run: node scripts/select-subscription-build.mjs
       - name: Read final App Store state
+        if: steps.version.outputs.eligible == 'true'
         run: node scripts/app-store-connect.mjs
       - uses: actions/upload-artifact@v4
-        if: success()
+        if: success() && steps.version.outputs.eligible == 'true'
         with:
           name: Selected-subscription-App-Store-build
           path: |

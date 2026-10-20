@@ -1,0 +1,72 @@
+name: Verify StoreKit UI using preinstalled destination artifacts
+permissions:
+  contents: read
+concurrency:
+  group: study-destination-ui-probe
+  cancel-in-progress: false
+jobs:
+  verify:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+        - iphone
+        - ipad
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: 976702381e32d66893d8922e1a85e7a3300eceb3
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Select a compatible Apple StoreKit simulator runtime
+      run: bash scripts/prepare-storekit-runtime.sh
+    - name: Prepare the actual app and Apple StoreKit UI test runner
+      run: 'npm ci
+
+        npm run prepare:data
+
+        npm run typecheck
+
+        node --test scripts/subscription-policy.test.mjs
+
+        npx expo prebuild --platform ios --no-install
+
+        ruby scripts/add-storekit-ui-tests.rb
+
+        cd ios
+
+        pod install
+
+        '
+    - name: Use documented destination artifacts to preserve registration during StoreKit setup
+      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"))throw Error(\"Purchase UI test scheme missing\")'\nxcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"$SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available -j > /tmp/purchase-devices.json\n  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"\
+        $runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n  if test -z \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n  xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun simctl status_bar \"$udid\" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n  xcodebuild -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-'\
+        \ CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 build-for-testing > \"store-evidence/build-ui-$family.log\" 2>&1 || { tail -n 100 \"store-evidence/build-ui-$family.log\"; exit 1; }\n  xcrun simctl install \"$udid\" purchase-ui-build/Build/Products/Release-iphonesimulator/FungoItalia.app\n  xcrun simctl get_app_container \"$udid\" it.fungoitalia.app app > \"store-evidence/registered-app-$family.txt\"\n  xcrun simctl install \"$udid\" purchase-ui-build/Build/Products/Release-iphonesimulator/AnnualPurchaseUITests-Runner.app\n  xcrun simctl get_app_container \"$udid\" it.fungoitalia.app.PurchaseUITests.xctrunner app > \"store-evidence/registered-runner-$family.txt\"\n  python3 - <<'PYDEST'\nimport os,plistlib\nfrom pathlib import Path\nproducts=Path('purchase-ui-build/Build/Products')\nfiles=list(products.glob('FungoItaliaPurchaseUI_*.xctestrun'))\nassert len(files)==1, 'Exactly one original scheme test configuration required'\ns=plistlib.loads(files[0].read_bytes())\n\
+        assert s['__xctestrun_metadata__']['FormatVersion']==1\nt=s['AnnualPurchaseUITests']\nassert t['IsUITestBundle'] is True\nassert t['TestHostBundleIdentifier']=='it.fungoitalia.app.PurchaseUITests.xctrunner'\nassert t['TestBundlePath']=='__TESTHOST__/PlugIns/AnnualPurchaseUITests.xctest'\nt['UseDestinationArtifacts']=True\nt['TestBundleDestinationRelativePath']=t.pop('TestBundlePath')\nt['UITargetAppBundleIdentifier']='it.fungoitalia.app'\nt.pop('TestHostPath');t.pop('UITargetAppPath')\np=products/('FungoDestination-'+os.environ['SCREENSHOT_FAMILY']+'.xctestrun')\np.write_bytes(plistlib.dumps(s))\nprint('DESTINATION_ARTIFACTS_TEST_CONFIG '+str(p))\nPYDEST\n  mkdir -p store-evidence/test-configuration\n  find purchase-ui-build/Build/Products -maxdepth 1 -name \"*.xctestrun\" -exec cp {} store-evidence/test-configuration/ \\;\n  mkdir -p purchase-ui-build/Logs/Test\n  if ! xcodebuild -xctestrun \"purchase-ui-build/Build/Products/FungoDestination-$family.xctestrun\" -destination \"platform=iOS\
+        \ Simulator,id=$udid\" -resultBundlePath \"purchase-ui-build/Logs/Test/Destination-$family.xcresult\" -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 test-without-building > \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n    xcrun simctl spawn \"$udid\" log show --style compact --last 15m --predicate 'process == \"storekitd\" OR subsystem CONTAINS[c] \"storekit\"' > \"store-evidence/storekit-service-$family.log\" 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\n    exit 1\n  fi\n  mkdir -p \"store-evidence/screenshots/$family\"\n  for name in 00-dashboard 01-studio 02-aree 03-esame; do\n    source=$(find \"$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application\"\
+        \ -type f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\" \"store-evidence/screenshots/$family/$name.png\"\n  done\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\n  xcrun simctl spawn \"$udid\" log show --style compact --last 15m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n  xcrun simctl spawn \"$udid\" log show --style compact --last 15m --predicate 'process == \"storekitd\" OR subsystem CONTAINS[c] \"storekit\"' > \"store-evidence/storekit-service-$family.log\" 2>&1 || true\n  xcrun simctl shutdown \"$udid\"\ndone\ngit rev-parse HEAD > store-evidence/screenshots/source-commit.txt\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/workflow-commit.txt\n"
+    - name: Preserve UI failure screenshots and attachments
+      if: always()
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)\n  if test -n \"$result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path store-evidence/attachments || true\n  fi\nfi\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: StoreKit-destination-artifacts-UI-${{ matrix.family }}
+        path: store-evidence/
+        retention-days: 30
+'on':
+  push:
+    branches:
+    - design/study-dashboard-v1-1
+    paths:
+    - .github/workflows/study-destination-ui-probe.yml
+  workflow_dispatch: null

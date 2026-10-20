@@ -1,0 +1,57 @@
+import React,{useState} from 'react';
+import {ActivityIndicator,Pressable,ScrollView,StyleSheet,Text,TextInput,View} from 'react-native';
+import useStudy from '../hooks/useStudy';
+import StudyMushroom from './StudyMushroom';import StudyTimeline from './StudyTimeline';
+import {dashboardModel,visibleSessions} from '../lib/study-dashboard-model.mjs';
+import {preparationStatus} from '../lib/study-timeline.mjs';
+const dimensions:Record<string,string>={name:'Riconoscimento fotografico',category:'Commestibilità',preparation:'Preparazione',label:'Sindrome',latency:'Latenza',severity:'Manifestazioni',characters:'Caratteri della scheda',habitat:'Habitat',sporePrint:'Sporata',odor:'Odore'};
+export default function StudyDashboard({study,complete,onStudy,onTraining,onAccess}:{study:ReturnType<typeof useStudy>;complete:boolean;onStudy:()=>void;onTraining:()=>void;onAccess:()=>void}){
+ const [showDetails,setShowDetails]=useState(false),[expanded,setExpanded]=useState(false),[detail,setDetail]=useState<string|null>(null),[edit,setEdit]=useState(false),[name,setName]=useState(''),[saving,setSaving]=useState(false);
+ const p=study.progress.minimum,m=dashboardModel({profile:study.profile,progress:p}),status=preparationStatus(p);
+ async function save(){setSaving(true);if(await study.setName(name))setEdit(false);setSaving(false);}
+ const button=(label:string,action:()=>void,secondary=false)=><Pressable accessibilityRole="button" onPress={action} disabled={!study.ready} style={secondary?s.outline:s.button}><Text style={secondary?s.link:s.buttonText}>{label}</Text></Pressable>;
+ return <ScrollView contentContainerStyle={s.page}>
+  <View style={s.header}><Text style={s.eyebrow}>IL TUO PERCORSO</Text><Text accessibilityRole="header" style={s.greeting}>{m.greeting}</Text><Pressable accessibilityRole="button" onPress={()=>{setName(study.profile.name);setEdit(!edit);}} style={s.nameButton}><Text style={s.link}>{study.profile.name?'Modifica il nome':'Come ti chiami? (facoltativo)'}</Text></Pressable>{button(m.cta,onStudy)}</View>
+  {edit&&<View style={s.card}><Text style={s.body}>Il nome resta su questo dispositivo. Puoi lasciarlo vuoto.</Text><TextInput accessibilityLabel="Il tuo nome" value={name} onChangeText={setName} maxLength={120} autoCorrect={false} style={s.input}/><Pressable accessibilityRole="button" disabled={saving} onPress={()=>void save()} style={s.button}><Text style={s.buttonText}>Salva nome</Text></Pressable></View>}
+  {!!study.storageError&&<Text accessibilityRole="alert" style={s.error}>{study.storageError}</Text>}
+  {!study.ready&&!study.storageError?<ActivityIndicator/>:<>
+   <View style={s.hero}>
+    <Text style={s.eyebrow}>AVANZAMENTO DELLO STUDIO · MINIMI</Text>
+    <StudyMushroom stage={m.stage} score={p.score}/>
+    <Text accessibilityRole="header" style={s.status}>{status.title}</Text><Text style={s.body}>{status.detail}</Text>
+    {p.criticalOpen>0&&<Text accessibilityRole="alert" style={s.error}>{p.criticalOpen} {p.criticalOpen===1?'competenza con errore critico ancora da consolidare':'competenze con errori critici ancora da consolidare'}</Text>}
+    <View style={s.metrics}>
+     <View style={s.metric}><Text style={s.metricValue}>{p.assessedScore===null?'—':p.assessedScore+'%'}</Text><Text style={s.metricLabel}>Preparazione dimostrata</Text><Text style={s.small}>Sugli argomenti valutati</Text></View>
+     <View style={s.metric}><Text style={s.metricValue}>{p.coveragePercent}%</Text><Text style={s.metricLabel}>Copertura dello studio</Text><Text style={s.small}>{p.covered}/{p.total} competenze verificate</Text></View>
+    </View>
+    <Text style={s.note}>Il fungo combina risultati, copertura, ripassi a distanza e simulazioni. La percentuale non è una probabilità di superamento dell’esame.</Text>
+    {p.confidence==='initial'&&p.score!==null&&<Text style={s.note}>Stima iniziale: servono altre prove autonome per renderla più solida.</Text>}
+    {p.lastAssessmentAt&&<Text style={s.small}>Aggiornato: {new Date(p.lastAssessmentAt).toLocaleString('it-IT')}</Text>}
+   </View>
+   <View style={s.card}>
+    <Text accessibilityRole="header" style={s.heading}>Il prossimo passo</Text>
+    <Text style={s.body}>{complete&&study.gaps[0]?'Ripassa '+study.gaps[0].name+' · '+(dimensions[study.gaps[0].dimension]||study.gaps[0].dimension)+'.':'Studia una scheda, poi verifica ciò che hai imparato.'}</Text>
+    {button(complete?'Avvia un allenamento mirato':'Apri il test',onTraining)}
+   </View>
+   <View style={s.card}><Text accessibilityRole="header" style={s.heading}>I tuoi progressi nel tempo</Text><StudyTimeline points={study.timeline}/></View>
+   <Pressable accessibilityRole="button" accessibilityState={{expanded:showDetails}} onPress={()=>setShowDetails(!showDetails)} style={s.outline}><Text style={s.link}>{showDetails?'Nascondi dettagli e storico':'Dettagli della preparazione e storico'}</Text></Pressable>
+   {showDetails&&<><View style={s.card}>
+    <Text accessibilityRole="header" style={s.heading}>Per consolidare il percorso</Text>
+    <Text style={s.body}>{p.goals.index?'✓':'○'} Portare l’indice complessivo almeno all’85%</Text>
+    <Text style={s.body}>{p.goals.coverage?'✓':'○'} Verificare almeno l’80% delle competenze</Text>
+    <Text style={s.body}>{p.goals.retention?'✓':'○'} Consolidare almeno l’80% con ripassi a distanza · {Math.round(p.R)}% consolidate</Text>
+    <Text style={s.body}>{p.goals.simulations?'✓':'○'} Tre simulazioni autonome con risultati stabili · {Math.min(3,p.simulationCount)}/3</Text>
+    <Text style={s.body}>{p.goals.critical?'✓':'○'} Recuperare gli errori critici</Text>
+    <Text style={s.note}>Obiettivi del percorso didattico nell’app. Il riconoscimento fotografico e il ripasso teorico misurano competenze diverse.</Text>
+   </View>
+   {complete&&<View style={s.card}><Text accessibilityRole="header" style={s.heading}>Dove concentrare lo studio</Text>{study.gaps.length?study.gaps.map(g=><View key={g.unitId} style={s.gap}><Text style={s.gapName}>{g.name}</Text><Text style={g.critical?s.error:s.body}>{dimensions[g.dimension]||g.dimension} · {g.critical?'errore critico':g.unseen?'da valutare':g.errors+' errori recenti'}</Text></View>):<Text style={s.body}>Continua con una simulazione e verifica la stabilità nel tempo.</Text>}</View>}
+   {[study.trend,study.simulationTrend].map((t,i)=>t.latest!==null&&<View key={i} style={s.card}><Text style={s.heading}>{i?'Simulazioni didattiche':'Allenamenti'} · risultati autonomi</Text><Text style={s.body}>Ultimo: {t.latest}/{t.total} · Migliore: {t.best}/{t.total}</Text>{t.previous!==null&&<Text style={s.body}>Precedente: {t.previous}/{t.total} · {t.delta!>0?'+':''}{t.delta} casi corretti</Text>}<Text style={s.note}>Sessioni concluse, senza suggerimenti e sulla stessa banca. Allenamenti e simulazioni sono confrontati separatamente.</Text></View>)}
+   <View style={s.card}><Text accessibilityRole="header" style={s.heading}>Le tue sessioni</Text>{study.recentSessions.length===0?<Text style={s.body}>Le prime risposte daranno forma al tuo percorso.</Text>:visibleSessions(study.recentSessions,expanded).map(h=><Pressable accessibilityRole="button" accessibilityState={{expanded:detail===h.id}} key={h.id} style={s.result} onPress={()=>setDetail(detail===h.id?null:h.id)}><Text style={s.body}>{h.mode==='simulation'?'Simulazione didattica':'Allenamento'} · {new Date(h.startedAt).toLocaleDateString('it-IT')}</Text><Text style={s.heading}>{h.correct}/{h.total} al primo tentativo</Text>{detail===h.id&&<><Text style={s.body}>{h.assisted||0} risposte assistite · {h.retries||0} ripassi</Text>{(h.errors||[]).map((e:{id:string;name:string})=><Text key={e.id} style={s.note}>{e.name} · da ripassare</Text>)}</>}</Pressable>)}{study.recentSessions.length>5&&button(expanded?'Mostra recenti':'Mostra tutto lo storico',()=>setExpanded(!expanded),true)}</View>
+   {complete?<View style={s.card}><Text style={s.heading}>Percorso esteso</Text><Text style={s.body}>{study.progress.extended.assessedScore===null?'Da valutare':study.progress.extended.assessedScore+'% · preparazione dimostrata'}</Text><Text style={s.note}>Copertura: {study.progress.extended.coveragePercent}% delle competenze del percorso completo.</Text></View>:button('Scopri il percorso completo',onAccess,true)}
+   <View style={s.card}><Text style={s.heading}>Che cosa comprende la banca</Text><Text style={s.body}>Obiettivi minimi: {study.bankCoverage.minimum.photo} casi fotografici e {study.bankCoverage.minimum.theory} casi teorici, su {study.bankCoverage.minimum.total} schede.</Text><Text style={s.note}>Le schede senza caso fotografico sono verificate con domande teoriche sui testi disponibili. Non equivalgono a una prova di riconoscimento fotografico. Il percorso aggiuntivo comprende {study.bankCoverage.extended.theory} schede teoriche.</Text></View>
+   </>}
+   <Text style={s.note}>Nome e progressi restano sul dispositivo. Le prove sono didattiche e non certificano funghi per il consumo.</Text>
+  </>}
+ </ScrollView>;
+}
+const s=StyleSheet.create({page:{padding:18,gap:18,paddingBottom:36},header:{gap:5},eyebrow:{fontSize:11,lineHeight:17,letterSpacing:1.5,color:'#586e50',fontWeight:'700'},greeting:{fontSize:32,color:'#193e2b',fontWeight:'800'},nameButton:{minHeight:44,justifyContent:'center',alignSelf:'flex-start'},hero:{padding:18,gap:14,backgroundColor:'#edf2e6',borderRadius:24,borderWidth:1,borderColor:'#d6e0cc'},status:{fontSize:23,lineHeight:30,fontWeight:'800',color:'#193e2b',textAlign:'center'},heading:{fontSize:19,lineHeight:26,fontWeight:'700',color:'#193e2b'},body:{fontSize:15,lineHeight:23,color:'#3c5141'},note:{fontSize:13,lineHeight:20,color:'#586655'},small:{fontSize:12,lineHeight:18,color:'#586655'},card:{backgroundColor:'#fff',padding:18,borderRadius:18,gap:12},metrics:{flexDirection:'row',flexWrap:'wrap',gap:10},metric:{flex:1,flexBasis:105,padding:12,borderRadius:14,backgroundColor:'#f9fbf5',gap:5},metricValue:{fontSize:28,lineHeight:36,fontWeight:'800',color:'#193e2b',fontVariant:['tabular-nums']},metricLabel:{fontSize:13,lineHeight:19,fontWeight:'700',color:'#193e2b'},button:{minHeight:52,padding:16,borderRadius:14,backgroundColor:'#214e36',alignItems:'center',justifyContent:'center'},buttonText:{fontSize:16,lineHeight:23,fontWeight:'700',color:'#fff',textAlign:'center'},outline:{minHeight:48,padding:14,borderWidth:1,borderColor:'#a2b398',borderRadius:14,alignItems:'center',justifyContent:'center'},link:{fontSize:14,lineHeight:21,color:'#214e36',fontWeight:'600',textAlign:'center'},input:{padding:12,borderWidth:1,borderColor:'#81937a',borderRadius:10,fontSize:17},error:{color:'#922923',fontWeight:'600',lineHeight:23},result:{gap:5,borderBottomWidth:1,borderBottomColor:'#edf0e8',paddingVertical:10,minHeight:48},gap:{gap:5,paddingBottom:10,borderBottomWidth:1,borderBottomColor:'#edf0e8'},gapName:{fontSize:16,lineHeight:24,fontWeight:'700',color:'#193e2b'}});

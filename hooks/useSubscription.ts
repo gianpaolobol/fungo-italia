@@ -1,83 +1,22 @@
 import {useCallback,useEffect,useRef,useState} from 'react';
 import {AppState} from 'react-native';
-import {getAnnualProduct,currentEntitlement,purchaseAnnual,restoreAnnual,observeEntitlement,subscriptionAvailable} from '../modules/fungo-subscription';
+import {getAnnualProduct,getBaseProduct,currentAccess,purchaseAnnual,purchaseBase,restoreAccess,observeAccess,subscriptionAvailable} from '../modules/fungo-subscription';
+import {deriveAccess,canPurchaseAnnual,checkedStudyAccess,type AccessState} from '../lib/study-access.mjs';
 import {expiryDelay} from '../lib/subscriptionPolicy';
 import type {SubscriptionProduct} from '../components/SubscriptionGate';
-type Entitlement={active:boolean;expiresAt:string|null};
-const inactive:Entitlement={active:false,expiresAt:null};
-async function timely<T>(promise:Promise<T>):Promise<T>{let timer:ReturnType<typeof setTimeout>|undefined;try{return await Promise.race([promise,new Promise<T>((_,reject)=>{timer=setTimeout(()=>reject(new Error('Store timeout')),20000);})]);}finally{if(timer)clearTimeout(timer);}}
-function verified(value:Entitlement):Entitlement{
- const expires=typeof value?.expiresAt==='string'?Date.parse(value.expiresAt):NaN;
- return value?.active===true&&Number.isFinite(expires)&&expires>Date.now()?{active:true,expiresAt:value.expiresAt}:inactive;
-}
+const empty=():AccessState=>({baseOwned:false,annualActive:false,annualExpiresAt:null,checkedAt:new Date().toISOString()});
+function timely<T>(p:Promise<T>):Promise<T>{let timer:ReturnType<typeof setTimeout>;return Promise.race([p,new Promise<T>((_,reject)=>{timer=setTimeout(()=>reject(Error('Store timeout')),20000);})]).finally(()=>clearTimeout(timer));}
 export default function useSubscription(){
- const [product,setProduct]=useState<SubscriptionProduct|null>(null),[entitlement,setEntitlement]=useState<Entitlement>(inactive),[checking,setChecking]=useState(subscriptionAvailable),[busy,setBusy]=useState(false),[error,setError]=useState(''),[priceError,setPriceError]=useState('');
- const [purchaseReady,setPurchaseReady]=useState(false);
- const readyRef=useRef(false);
- const markReady=useCallback((value:boolean)=>{readyRef.current=value;setPurchaseReady(value);},[]);
- const mounted=useRef(true),generation=useRef(0),priceGeneration=useRef(0),locked=useRef(false);
- const refresh=useCallback(async()=>{
-  if(!subscriptionAvailable)return;
-  const run=++generation.current,priceRun=++priceGeneration.current;
-  markReady(false);setChecking(true);setError('');setPriceError('');
-  // Offline access must not wait for a network request for the product price.
-  // Apply a late verified native response even if the UI deadline has elapsed.
-  // The generation guard still rejects responses superseded by refund or refresh events.
-  const access=timely(currentEntitlement().then(value=>{
-   if(!mounted.current||run!==generation.current)return;
-   const state=verified(value);markReady(!state.active);setEntitlement(state);setChecking(false);setError('');return state;
-  })).catch(()=>{
-   if(mounted.current&&run===generation.current){markReady(false);setEntitlement(inactive);setChecking(false);setError('Abbonamento non verificabile. Riprova o ripristina gli acquisti.');}
-  });
-  const price=timely(getAnnualProduct()).then(value=>{
-   if(mounted.current&&priceRun===priceGeneration.current)setProduct(value);
-  }).catch(()=>{
-   if(mounted.current&&priceRun===priceGeneration.current){setProduct(null);setPriceError('Prezzo non disponibile. Verifica la connessione allo Store.');}
-  });
-  const [result]=await Promise.allSettled([access,price]);
-  return run===generation.current&&result.status==='fulfilled'?result.value:undefined;
- },[markReady]);
- useEffect(()=>{
-  mounted.current=true;
-  if(!subscriptionAvailable){setChecking(false);return()=>{mounted.current=false;};}
-  void refresh();
-  const listener=observeEntitlement(value=>{
-   if(!mounted.current)return;
-   ++generation.current;const state=verified(value);markReady(!state.active);setEntitlement(state);setChecking(false);setError('');
-  });
-  const appState=AppState.addEventListener('change',state=>{
-   if(state==='active'){setEntitlement(inactive);void refresh();}
-  });
-  return()=>{mounted.current=false;readyRef.current=false;++generation.current;++priceGeneration.current;listener.remove();appState.remove();};
- },[refresh,markReady]);
- useEffect(()=>{
-  if(!entitlement.active||!entitlement.expiresAt)return;
-  const expiry=entitlement.expiresAt;
-  let timer:ReturnType<typeof setTimeout>;
-  function arm(){timer=setTimeout(()=>{
-   if(Date.parse(expiry)>Date.now()){arm();return;}
-   setEntitlement(inactive);void refresh();
-  },expiryDelay(expiry));}
-  arm();return()=>clearTimeout(timer);
- },[entitlement.active,entitlement.expiresAt,refresh]);
- const purchase=useCallback(async()=>{
-  if(!subscriptionAvailable||locked.current||!readyRef.current)return;
-  locked.current=true;markReady(false);++generation.current;setBusy(true);setError('');
-  try{
-   const result=await purchaseAnnual();
-   if(!mounted.current)return;
-   // Read current StoreKit state again: an earlier purchase response must not undo a later revocation event.
-   const access=await refresh();
-   if(mounted.current&&access&&!access.active&&result.status==='pending')setError('Acquisto in attesa di approvazione Apple. L’accesso si attiverà dopo la conferma.');
-  }catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError('Acquisto non completato. Verifica il tuo account Apple e riprova.');}}
-  finally{locked.current=false;if(mounted.current)setBusy(false);}
- },[refresh,markReady]);
- const restore=useCallback(async()=>{
-  if(!subscriptionAvailable||locked.current)return;
-  locked.current=true;++generation.current;setBusy(true);setError('');
-  try{await restoreAnnual();if(mounted.current){const state=await refresh();if(state&&!state.active)setError('Nessun abbonamento attivo trovato per questo account Apple.');}}
-  catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError('Ripristino non riuscito. Verifica la connessione e riprova.');}}
-  finally{locked.current=false;if(mounted.current)setBusy(false);}
- },[refresh,markReady]);
- return{product,purchaseReady,active:entitlement.active,expiresAt:entitlement.expiresAt,checking,busy,error:error||(!entitlement.active?priceError:''),supported:subscriptionAvailable,purchase,restore,refresh:async()=>{await refresh();}};
+ const [access,setAccess]=useState(empty),[product,setProduct]=useState<SubscriptionProduct|null>(null),[baseProduct,setBaseProduct]=useState<{id:string;localizedPrice:string}|null>(null),[checking,setChecking]=useState(subscriptionAvailable),[busy,setBusy]=useState(false),[purchaseReady,setPurchaseReady]=useState(false),[error,setError]=useState('');
+ const mounted=useRef(true),generation=useRef(0),priceGeneration=useRef(0),locked=useRef(false),ready=useRef(false);
+ const apply=useCallback((v:AccessState)=>{const valid=checkedStudyAccess(v);setAccess(valid);setChecking(false);setPurchaseReady(true);ready.current=true;setError('');return valid;},[]);
+ const refresh=useCallback(async()=>{if(!subscriptionAvailable)return;const run=++generation.current,priceRun=++priceGeneration.current;setChecking(true);setPurchaseReady(false);ready.current=false;
+  const state=timely(currentAccess().then(v=>{if(!mounted.current||run!==generation.current)return;return apply(v);})).catch(()=>{if(mounted.current&&run===generation.current){setAccess(empty());setChecking(false);setPurchaseReady(false);ready.current=false;setError('Acquisti non verificabili. Riprova o ripristina.');}});
+  void timely(getAnnualProduct()).then(v=>{if(mounted.current&&priceRun===priceGeneration.current)setProduct(v);}).catch(()=>{if(mounted.current&&priceRun===priceGeneration.current)setProduct(null);});
+  void timely(getBaseProduct()).then(v=>{if(mounted.current&&priceRun===priceGeneration.current)setBaseProduct(v);}).catch(()=>{if(mounted.current&&priceRun===priceGeneration.current)setBaseProduct(null);});return state;
+ },[apply]);
+ useEffect(()=>{mounted.current=true;if(!subscriptionAvailable){setChecking(false);return()=>{mounted.current=false;};}void refresh();const listener=observeAccess(v=>{if(!mounted.current)return;++generation.current;apply(v);});const app=AppState.addEventListener('change',s=>{if(s==='active')void refresh();});return()=>{mounted.current=false;++generation.current;ready.current=false;listener.remove();app.remove();};},[refresh,apply]);
+ useEffect(()=>{if(!access.annualActive||!access.annualExpiresAt)return;let timer:ReturnType<typeof setTimeout>;const expiry=access.annualExpiresAt;const arm=()=>{timer=setTimeout(()=>{if(Date.parse(expiry)>Date.now())arm();else{setAccess(v=>({...v,annualActive:false}));void refresh();}},expiryDelay(expiry));};arm();return()=>clearTimeout(timer);},[access.annualActive,access.annualExpiresAt,refresh]);
+ const run=useCallback(async(kind:'annual'|'base'|'restore')=>{if(!subscriptionAvailable||locked.current||(kind!=='restore'&&!ready.current))return;if(kind==='annual'&&!canPurchaseAnnual(access)){setError('Acquista prima la Base permanente.');return;}locked.current=true;setBusy(true);setError('');ready.current=false;setPurchaseReady(false);++generation.current;try{let status='';if(kind==='annual')status=(await purchaseAnnual()).status;else if(kind==='base')status=(await purchaseBase()).status;else await restoreAccess();await refresh();if(status==='pending'&&mounted.current)setError('Acquisto in attesa di approvazione Apple.');}catch{if(mounted.current)setError('Operazione non completata. Riprova o ripristina gli acquisti.');}finally{locked.current=false;if(mounted.current)setBusy(false);}},[refresh,access]);
+ return {product,baseProduct,purchaseReady,baseOwned:access.baseOwned,active:deriveAccess(access).extended,access:deriveAccess(access),expiresAt:access.annualExpiresAt,checking,busy,error,supported:subscriptionAvailable,purchase:()=>run('annual'),purchaseBase:()=>run('base'),restore:()=>run('restore'),refresh:async()=>{await refresh();}};
 }

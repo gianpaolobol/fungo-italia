@@ -1,0 +1,29 @@
+name: Configure approved Base purchase
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['.github/workflows/configure-study-base.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: configure-study-base
+  cancel-in-progress: false
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/configure-base-purchase.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Base-purchase-configuration
+          path: store-evidence/base-purchase.json
+          retention-days: 30

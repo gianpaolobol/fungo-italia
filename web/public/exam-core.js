@@ -80,6 +80,7 @@ function distinctDistractor(c,b,field){
  return /amatossin|ibotenic|muscimol|orellanin|acromel|poliporic|giromitrin|psilocibin|norleucin|colinergic/i.test(b.syndrome.severity);
 }
 export function detailQuestions(c,bank){
+ if(c.questionKind==='profile')return c.questions||[];
  if(c.detailKind==='preparation'){
   const correct=[...new Set(c.preparation)],options=orderedOptions([...correct,'Nessuna delle precauzioni elencate è necessaria.'],c.id);
   return [{id:'preparation',title:'Preparazione: seleziona tutte le precauzioni richieste dalla scheda',multiple:true,options,correct:options.filter(o=>correct.includes(o.label)).map(o=>o.id)}];
@@ -94,7 +95,7 @@ export function detailQuestions(c,bank){
  });
 }
 export function gradeResponse(c,answer={},bank=[]){
- const base=gradeAnswer(c,answer),details=detailQuestions(c,bank).map(q=>{
+ const base=c.questionKind==='profile'?{name:true,category:true,detail:null,danger:false,profile:true}:gradeAnswer(c,answer),details=detailQuestions(c,bank).map(q=>{
   const selected=answer.choices?.[q.id]||[];
   return {id:q.id,title:q.title,correct:Array.isArray(selected)&&new Set(selected).size===selected.length&&selected.length===q.correct.length&&q.correct.every(id=>selected.includes(id))};
  });
@@ -119,8 +120,8 @@ export function advanceTraining(state){
  return {...state,queue,pending,phase,round,feedback:null,draft:{name:'',category:'',choices:{},assisted:false},completedAt:phase==='complete'?new Date().toISOString():null};
 }
 export function trainingSummary(s){
- const rows=s.first;
- return {id:s.id,startedAt:s.startedAt,completedAt:s.completedAt,signature:s.signature,total:rows.length,correct:rows.filter(r=>r.grade.passed).length,names:rows.filter(r=>r.grade.name).length,categories:rows.filter(r=>r.grade.category).length,details:rows.filter(r=>r.grade.detail).length,preparationTotal:rows.filter(r=>r.grade.details.some(d=>d.id==='preparation')).length,preparationCorrect:rows.filter(r=>r.grade.details.some(d=>d.id==='preparation')&&r.grade.detail).length,toxicologyTotal:rows.filter(r=>r.grade.details.some(d=>d.id==='label')).length,toxicologyCorrect:rows.filter(r=>r.grade.details.some(d=>d.id==='label')&&r.grade.detail).length,danger:rows.filter(r=>r.grade.danger).length,assisted:rows.filter(r=>r.answer.assisted).length,retries:s.attempts.length-rows.length,errors:rows.filter(r=>!r.grade.passed).map(r=>({id:r.caseId,name:r.caseName,nameError:!r.grade.name,categoryError:!r.grade.category,detailErrors:r.grade.details.filter(d=>!d.correct).map(d=>d.title),danger:r.grade.danger})),attempts:s.attempts};
+ const rows=s.first,photos=rows.filter(r=>!r.grade.profile),theory=rows.filter(r=>r.grade.profile);
+ return {mode:s.mode||'training',id:s.id,startedAt:s.startedAt,completedAt:s.completedAt,signature:s.signature,total:rows.length,correct:rows.filter(r=>r.grade.passed).length,names:photos.filter(r=>r.grade.name).length,namesTotal:photos.length,categories:photos.filter(r=>r.grade.category).length,categoriesTotal:photos.length,theoryTotal:theory.length,theoryCorrect:theory.filter(r=>r.grade.passed).length,details:rows.filter(r=>r.grade.detail).length,preparationTotal:rows.filter(r=>r.grade.details.some(d=>d.id==='preparation')).length,preparationCorrect:rows.filter(r=>r.grade.details.some(d=>d.id==='preparation')&&r.grade.detail).length,toxicologyTotal:rows.filter(r=>r.grade.details.some(d=>d.id==='label')).length,toxicologyCorrect:rows.filter(r=>r.grade.details.some(d=>d.id==='label')&&r.grade.detail).length,danger:rows.filter(r=>r.grade.danger).length,assisted:rows.filter(r=>r.answer.assisted).length,retries:s.attempts.length-rows.length,errors:rows.filter(r=>!r.grade.passed).map(r=>({id:r.caseId,name:r.caseName,nameError:!r.grade.profile&&!r.grade.name,categoryError:!r.grade.profile&&!r.grade.category,detailErrors:r.grade.details.filter(d=>!d.correct).map(d=>d.title),danger:r.grade.danger})),attempts:s.attempts};
 }
 export function restoreTraining(raw,bank){
  try{

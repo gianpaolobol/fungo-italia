@@ -37,6 +37,7 @@ jobs:
         run: |
           node --input-type=module <<'JS'
           import fs from 'node:fs';
+          if(JSON.parse(fs.readFileSync('app.json','utf8')).expo.version!=='1.0.0'){console.log('The study release uses its isolated TestFlight workflow; legacy automatic upload skipped.');process.exit(0);}
           const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
           async function get(path) {
             const response=await fetch(base+path,{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'}});

@@ -1,0 +1,5 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {gradeResponse} from '../web/public/exam-core.js';
+const c=await import('../lib/study-preview.mjs').catch(()=>({}));
+const bank=JSON.parse(readFileSync(new URL('../src/data/exam-bank.json',import.meta.url)));
+test('free demonstration selects three distinct documented cases across food categories',()=>{assert.equal(typeof c.previewCases,'function');const before=JSON.stringify(bank),cases=c.previewCases(bank);assert.equal(cases.length,3);assert.equal(new Set(cases.map(x=>x.id)).size,3);assert.deepEqual(cases.map(x=>x.category),['free','conditional','deadly']);assert.ok(cases.every(x=>bank.includes(x)&&x.photos.length===3));assert.equal(JSON.stringify(bank),before);});
+test('demo uses real grading and does not create a training session or history',()=>{assert.equal(typeof c.previewCases,'function');const item=c.previewCases(bank)[0];const result=gradeResponse(item,{name:item.acceptedNames[0],category:item.category,choices:{}},bank);assert.equal(result.passed,true);assert.equal(Object.hasOwn(item,'sessionId'),false);});

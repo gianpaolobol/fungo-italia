@@ -1,13 +1,13 @@
 export const foodLabels: Record<string, string>;
 export function selectCases<T extends {id:string;category:string}>(bank:T[],count?:number,rng?:()=>number):T[];
 export function gradeAnswer(c:{acceptedNames:string[];category:string},answer:{name?:string;category?:string;detail?:string}):{name:boolean;category:boolean;detail:null;danger:boolean};
-export type ExamCase={id:string;name:string;acceptedNames:string[];category:string;detailKind:string|null;preparation:string[];syndrome:{label:string;latency:string;severity:string}|null;photos:{src:string;view:string}[]};
+export type ExamCase={id:string;name:string;acceptedNames:string[];category:string;detailKind:string|null;questionKind?:'profile';scope?:'minimum'|'extended';questions?:DetailQuestion[];preparation:string[];syndrome:{label:string;latency:string;severity:string}|null;photos:{src:string;view:string}[]};
 export type TrainingAnswer={name:string;category:string;choices:Record<string,string[]>;assisted:boolean};
 export type DetailQuestion={id:string;title:string;multiple:boolean;options:{id:string;label:string}[];correct:string[]};
-export type TrainingGrade={name:boolean;category:boolean;detail:boolean;danger:boolean;passed:boolean;details:{id:string;title:string;correct:boolean}[]};
+export type TrainingGrade={profile?:boolean;name:boolean;category:boolean;detail:boolean;danger:boolean;passed:boolean;details:{id:string;title:string;correct:boolean}[]};
 export type Attempt={caseId:string;caseName:string;answer:TrainingAnswer;grade:TrainingGrade;at:string;round:number};
-export type Training={version:number;id:string;startedAt:string;signature:string;ids:string[];queue:string[];pending:string[];phase:'initial'|'retry'|'complete';round:number;first:Attempt[];attempts:Attempt[];feedback:Attempt|null;draft:TrainingAnswer;completedAt:string|null};
-export type TrainingSummary={id:string;startedAt:string;completedAt:string|null;signature:string;total:number;correct:number;names:number;categories:number;details:number;preparationTotal:number;preparationCorrect:number;toxicologyTotal:number;toxicologyCorrect:number;danger:number;assisted:number;retries:number;errors:{id:string;name:string;nameError:boolean;categoryError:boolean;detailErrors:string[];danger:boolean}[];attempts:Attempt[]};
+export type Training={mode?:'training'|'simulation';version:number;id:string;startedAt:string;signature:string;ids:string[];queue:string[];pending:string[];phase:'initial'|'retry'|'complete';round:number;first:Attempt[];attempts:Attempt[];feedback:Attempt|null;draft:TrainingAnswer;completedAt:string|null};
+export type TrainingSummary={mode?:'training'|'simulation';id:string;startedAt:string;completedAt:string|null;signature:string;total:number;correct:number;names:number;categories:number;namesTotal?:number;categoriesTotal?:number;theoryTotal?:number;theoryCorrect?:number;details:number;preparationTotal:number;preparationCorrect:number;toxicologyTotal:number;toxicologyCorrect:number;danger:number;assisted:number;retries:number;errors:{id:string;name:string;nameError:boolean;categoryError:boolean;detailErrors:string[];danger:boolean}[];attempts:Attempt[]};
 export const trainingKey:string;
 export const trainingHistoryKey:string;
 export const foodColors:Record<string,string>;

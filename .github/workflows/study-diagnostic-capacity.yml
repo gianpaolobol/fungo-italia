@@ -1,0 +1,48 @@
+name: Free capacity for diagnostic study beta signing
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['.github/workflows/study-diagnostic-capacity.yml']
+permissions:
+  contents: read
+  actions: write
+jobs:
+  stop-duplicate-ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Stop only the duplicate UI run; preserve mandatory native verification
+        run: |
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          if(process.env.GITHUB_REPOSITORY!=='gianpaolobol/fungo-italia')throw Error('Unexpected repository');
+          const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
+          const headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'};
+          async function get(id){const r=await fetch(base+'/actions/runs/'+id,{headers});if(!r.ok)throw Error('Run lookup failed '+r.status);return r.json();}
+          const [prior,native,current]=await Promise.all([get(39467202425),get(39474292310),get(39474292167)]);
+          const source='976702381e32d66893d8922e1a85e7a3300eceb3';
+          if(prior.head_sha!=='1465acecd24bd104e63f46b49868f5ac9f73d484'||prior.path!=='.github/workflows/subscription-storekit-ui.yml'||prior.conclusion!=='failure')throw Error('Prior failed UI evidence mismatch');
+          if(native.head_sha!==source||native.path!=='.github/workflows/subscription-storekit-tests.yml')throw Error('Required native run mismatch');
+          if(native.status==='completed'&&native.conclusion!=='success')throw Error('Native verification failed; preserve current UI run');
+          if(current.head_sha!==source||current.path!=='.github/workflows/subscription-storekit-ui.yml')throw Error('Duplicate UI run mismatch');
+          let requested=false;
+          if(current.status!=='completed'){
+            const r=await fetch(base+'/actions/runs/39474292167/cancel',{method:'POST',headers});
+            if(r.status!==202)throw Error('Cancellation was not accepted '+r.status);
+            requested=true;
+          }
+          const report={candidateSource:source,duplicateUIRunId:current.id,cancellationRequested:requested,priorFailedUIRunId:prior.id,nativeRunId:native.id,nativeRunStatus:native.status,nativeRunUntouched:true,storekitUIVerified:false,testFlightOnly:true,createdAt:new Date().toISOString()};
+          fs.mkdirSync('store-evidence',{recursive:true});fs.writeFileSync('store-evidence/diagnostic-ui-cancellation.json',JSON.stringify(report,null,2)+'\n');
+          console.log('DIAGNOSTIC_UI_CAPACITY '+JSON.stringify(report));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Diagnostic-UI-capacity-evidence
+          path: store-evidence/diagnostic-ui-cancellation.json
+          retention-days: 30

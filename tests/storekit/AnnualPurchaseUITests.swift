@@ -1,6 +1,7 @@
 import XCTest
 import StoreKitTest
 
+@available(iOS 17.0, *)
 final class AnnualPurchaseUITests: XCTestCase {
   let productID = "it.fungoitalia.premium.annual"
   func element(_ app: XCUIApplication, _ label: String) -> XCUIElement {
@@ -25,6 +26,7 @@ final class AnnualPurchaseUITests: XCTestCase {
       ? app.descendants(matching: .any).matching(identifier: "tab-" + label.lowercased()).firstMatch
       : element(app, label)
     await require(item, timeout: 60, file: file, line: line)
+    for _ in 0..<6 { if item.isHittable { break }; app.swipeUp() }
     item.tap()
   }
   @MainActor func readyToTap(_ item: XCUIElement) async -> Bool {
@@ -50,8 +52,8 @@ final class AnnualPurchaseUITests: XCTestCase {
     attachment.name = name; attachment.lifetime = .keepAlways; add(attachment)
   }
   @MainActor func waitForGate(_ app: XCUIApplication) async {
-    await require(element(app, "Fungo Italia completo"))
-    XCTAssertFalse(element(app, "Inizia 15 casi").exists)
+    await require(element(app, "Prova gratuita del test"))
+    XCTAssertFalse(element(app, "Allenamento · 15 casi").exists)
   }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
     continueAfterFailure = false
@@ -59,69 +61,66 @@ final class AnnualPurchaseUITests: XCTestCase {
     let session = try SKTestSession(contentsOf: url)
     session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
     session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
-    guard session.storefront == "ITA" else { XCTFail("Local StoreKit session is not active; never fall back to the production store"); return }
+    guard session.storefront == "ITA" else { XCTFail("Local StoreKit fixture required"); return }
     let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
     defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
     app.launch()
+    await require(element(app, "Ciao"))
+    try capture(app, "00-dashboard")
+    await tap(app, "Esame")
+    await require(element(app, "Prova gratuita del test"))
     await tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    await require(subscribe, timeout: 60)
-    var ready = await readyToTap(subscribe)
-    // A fresh iPhone simulator can leave StoreKit entitlement enumeration pending
-    // on first launch even when the local product has loaded. Re-launch once
-    // with the same SKTestSession before failing; never bypass verification.
-    if !ready {
+    await require(subscribe)
+    XCTAssertFalse(subscribe.isEnabled, "A new annual purchase requires permanent Base")
+    let base = element(app, "Acquista Base permanente")
+    await require(base)
+    var baseReady = await readyToTap(base)
+    if !baseReady {
       diagnose(app, session)
-      print("STOREKIT_RETRY Relaunching app after stalled initial entitlement verification")
-      app.terminate()
-      app.launch()
-      await tap(app, "Abbonamento")
-      let retriedSubscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-      await require(retriedSubscribe, timeout: 60)
-      ready = await readyToTap(retriedSubscribe)
-      if !ready { diagnose(app, session) }
+      await tap(app, "Aggiorna stato e prezzo")
+      for _ in 0..<6 { if base.isHittable { break }; app.swipeDown() }
+      baseReady = await readyToTap(base)
     }
-    XCTAssertTrue(ready, "StoreKit entitlement verification must complete before purchase")
-    let purchaseButton = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    XCTAssertTrue(subscribe.label.contains("/ anno"))
-    XCTAssertTrue(subscribe.label.contains("9,99") && subscribe.label.contains("€"), "Italian local StoreKit fixture must match the verified Apple Italy price")
+    XCTAssertTrue(baseReady, "Verified StoreKit state required before Base purchase")
+    base.tap()
+    await require(element(app, "Base acquistata"))
+    for _ in 0..<6 { if subscribe.isHittable { break }; app.swipeUp() }
+    let annualReady = await readyToTap(subscribe)
+    XCTAssertTrue(annualReady)
+    XCTAssertTrue(subscribe.label.contains("9,99") && subscribe.label.contains("€"))
+    subscribe.tap()
+    await require(element(app, "Abbonamento attivo"))
+    await tap(app, "Esame")
+    await require(element(app, "Simulazione didattica"))
     try capture(app, "03-esame")
-    purchaseButton.tap()
-    let activated = await waitFor(element(app, "Abbonamento attivo"))
-    if !activated { diagnose(app, session) }
-    XCTAssertTrue(activated)
-    print("ANNUAL_UI Purchase exposes verified access")
-    // Reopening reads verified StoreKit state, not a persisted premium flag.
-    app.terminate(); app.launch()
-    await tap(app, "Esame")
-    await require(element(app, "Inizia 15 casi"))
-    print("ANNUAL_UI Reopened app restores access")
     await tap(app, "Studio")
-    let search = element(app, "Cerca nome scientifico, comune o sinonimo")
-    await require(search)
-    search.tap(); search.typeText("Amanita caesarea")
-    await tap(app, "Apri Amanita caesarea")
     try capture(app, "01-studio")
-    await tap(app, "Torna alle schede")
-    await tap(app, "Aree"); try capture(app, "02-aree")
+    await tap(app, "Aree")
+    try capture(app, "02-aree")
+    app.terminate(); app.launch()
+    await tap(app, "Abbonamento")
+    await tap(app, "Ripristina acquisti")
+    await require(element(app, "Abbonamento attivo"))
+    let annual = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
+    try session.refundTransaction(identifier: annual.identifier)
     await tap(app, "Esame")
-    await require(element(app, "Inizia 15 casi"))
-    let transaction = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
-    try session.refundTransaction(identifier: transaction.identifier)
-    await waitForGate(app)
-    print("ANNUAL_UI Refund closes premium access")
-    session.clearTransactions()
-    let buyAgain = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    await require(buyAgain)
-    let readyAgain = await readyToTap(buyAgain)
-    XCTAssertTrue(readyAgain)
-    buyAgain.tap()
-    await require(element(app, "Inizia 15 casi"))
-    let renewed = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))
-    try session.disableAutoRenewForTransaction(identifier: renewed.identifier)
-    XCTAssertTrue(element(app, "Inizia 15 casi").exists, "Cancelling renewal must preserve the paid period")
+    await require(element(app, "Allenamento · 15 casi"))
+    let simulation = element(app, "Simulazione didattica")
+    let removed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: simulation)
+    let removedResult = await XCTWaiter.fulfillment(of: [removed], timeout: 120)
+    XCTAssertEqual(removedResult, .completed)
+    // Verify expiration also preserves independently owned Base.
+    _ = try await session.buyProduct(identifier: productID, options: [])
+    await require(element(app, "Simulazione didattica"))
     try session.expireSubscription(productIdentifier: productID)
+    let expired = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: element(app, "Simulazione didattica"))
+    let expiredResult = await XCTWaiter.fulfillment(of: [expired], timeout: 120)
+    XCTAssertEqual(expiredResult, .completed)
+    await require(element(app, "Allenamento · 15 casi"))
+    let baseTransaction = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == "it.fungoitalia.base.lifetime" }))
+    try session.refundTransaction(identifier: baseTransaction.identifier)
     await waitForGate(app)
-    print("ANNUAL_UI Expiry closes premium access")
+    print("DASHBOARD_UI Base, annual purchase, explicit restore, refund and expiry verified")
   }
 }

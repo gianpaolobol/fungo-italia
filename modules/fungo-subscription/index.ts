@@ -1,3 +1,4 @@
+import {checkedStudyAccess, type AccessState} from '../../lib/study-access.mjs';
 import {requireOptionalNativeModule} from 'expo';
 import {checkedAccess} from '../../lib/subscriptionPolicy';
 export const ANNUAL_PRODUCT_ID='it.fungoitalia.premium.annual';
@@ -7,6 +8,8 @@ export type PurchaseResult={status:'purchased'|'pending'|'cancelled';entitlement
 type SubscriptionListener={remove():void};
 type NativeAPI={
  product():Promise<AnnualProduct>;currentEntitlement():Promise<Entitlement>;purchase():Promise<PurchaseResult>;restore():Promise<Entitlement>;
+ baseProduct():Promise<{id:string;displayName:string;localizedPrice:string}>;currentAccess():Promise<AccessState>;purchaseBase():Promise<{status:'purchased'|'pending'|'cancelled';access:AccessState}>;restoreAccess():Promise<AccessState>;
+ addListener(event:'accessChanged',listener:(value:AccessState)=>void):SubscriptionListener;
  addListener(event:'entitlementChanged',listener:(value:Entitlement)=>void):SubscriptionListener;
 };
 const native=requireOptionalNativeModule<NativeAPI>('FungoSubscription');
@@ -27,3 +30,10 @@ export async function restoreAnnual():Promise<Entitlement>{return checked(await 
 export function observeEntitlement(listener:(state:Entitlement)=>void):SubscriptionListener{
  return module().addListener('entitlementChanged',value=>{try{listener(checked(value));}catch{listener({active:false,productId:ANNUAL_PRODUCT_ID,expiresAt:null,checkedAt:new Date().toISOString()});}});
 }
+
+export const BASE_PRODUCT_ID='it.fungoitalia.base.lifetime';
+export async function getBaseProduct(){const p=await module().baseProduct();if(p.id!==BASE_PRODUCT_ID||!p.localizedPrice?.trim())throw Error('Base non disponibile');return p;}
+export async function currentAccess(){return checkedStudyAccess(await module().currentAccess());}
+export async function purchaseBase(){const r=await module().purchaseBase();if(!['purchased','pending','cancelled'].includes(r.status))throw Error('Risposta acquisto non valida');return {...r,access:checkedStudyAccess(r.access)};}
+export async function restoreAccess(){return checkedStudyAccess(await module().restoreAccess());}
+export function observeAccess(listener:(v:AccessState)=>void){return module().addListener('accessChanged',v=>{try{listener(checkedStudyAccess(v));}catch{listener({baseOwned:false,annualActive:false,annualExpiresAt:null,checkedAt:new Date().toISOString()});}});}

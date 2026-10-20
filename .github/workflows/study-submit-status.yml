@@ -1,0 +1,28 @@
+name: Inspect diagnostic study submission status
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['.github/workflows/study-submit-status.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Read submission queue without changing builds or Apple records
+        run: |
+          node --input-type=module <<'JS'
+          const query='query($appId:String!){app{byId(appId:$appId){id submissions(filter:{},offset:0,limit:5){id status platform createdAt completedAt iosConfig{ascAppIdentifier} error{errorCode}}}}}';
+          const r=await fetch('https://api.expo.dev/graphql',{method:'POST',headers:{Authorization:'Bearer '+process.env.EXPO_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({query,variables:{appId:'b65af584-739f-4ef0-8fe5-6c0ba692c088'}}),signal:AbortSignal.timeout(30000)});
+          if(!r.ok)throw Error('Submission status lookup failed '+r.status);
+          const data=await r.json();if(data.errors||data.data?.app?.byId?.id!=='b65af584-739f-4ef0-8fe5-6c0ba692c088')throw Error('Submission lookup identity/schema failed');
+          const submissions=data.data.app.byId.submissions.filter(s=>s.platform==='IOS'&&s.iosConfig?.ascAppIdentifier==='6821140326');
+          console.log('STUDY_SUBMISSION_STATUS '+JSON.stringify({checkedAt:new Date().toISOString(),submissions:submissions.map(({id,status,createdAt,completedAt,error})=>({id,status,createdAt,completedAt,errorCode:error?.errorCode??null}))}));
+          JS

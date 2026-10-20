@@ -1,0 +1,113 @@
+name: Verify complete StoreKit UI with ordered startup control
+permissions:
+  contents: read
+concurrency:
+  group: study-ordered-full-ui-probe
+  cancel-in-progress: false
+jobs:
+  verify:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+        - iphone
+        - ipad
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: 976702381e32d66893d8922e1a85e7a3300eceb3
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Use distinctive local prices without changing production code
+      run: 'python3 - <<''PYPROBE''
+
+        import json
+
+        from pathlib import Path
+
+        p=Path(''tests/storekit/Annual.storekit'');f=json.loads(p.read_text());f[''products''][0][''displayPrice'']=''2.31'';f[''subscriptionGroups''][0][''subscriptions''][0][''displayPrice'']=''3.47'';p.write_text(json.dumps(f,indent=2)+''\n'')
+
+        p=Path(''tests/storekit/AnnualPurchaseUITests.swift'');s=p.read_text();assert ''subscribe.label.contains("9,99")'' in s;s=s.replace(''subscribe.label.contains("9,99")'',''subscribe.label.contains("3,47")'');p.write_text(s)
+
+
+        print(''Diagnostic fixture only: Base2.31 annual3.47; production source unchanged'')
+
+        PYPROBE'
+    - name: Change only startup query ordering for the controlled comparison
+      run: 'python3 - <<''PYORDER''
+
+        from pathlib import Path
+
+        p=Path(''hooks/useSubscription.ts'');s=p.read_text()
+
+        a=s.index(''  const state=timely(currentAccess()'');b=s.index(''  void timely(getAnnualProduct())'',a);c=s.index(''  void timely(getBaseProduct())'',b);d=s.index(''return state;'',c)
+
+        state=s[a:b];annual=s[b:c].replace(''  void timely'',''  const annual=timely'',1);base=s[c:d].replace(''  void timely'',''  const base=timely'',1)
+
+        state=state.replace(''currentAccess().then('', ''Promise.allSettled([annual,base]).then(()=>currentAccess()).then('',1)
+
+        p.write_text(s[:a]+annual+base+''\n''+state+''  ''+s[d:])
+
+        p=Path(''tests/storekit/AnnualPurchaseUITests.swift'');s=p.read_text()
+
+        s=s.replace(''XCTAssertEqual(found, .completed); tab.tap()'', ''guard found == .completed else { XCTFail("Purchase tab unavailable"); return }; tab.tap()'')
+
+        s=s.replace(''XCTAssertEqual(localPrice, .completed, "The real app must resolve the distinctive LOCAL Base price, never the production catalog")'', ''guard localPrice == .completed else { XCTFail("Distinctive local Base price unavailable"); return }'')
+
+        s=s.replace(''XCTAssertEqual(ready, .completed, "The real app must finish its native initial entitlement query before purchase")'', ''guard ready == .completed else { XCTFail("Initial native entitlement query did not finish"); return }'')
+
+        p.write_text(s)
+
+        print(''Controlled diagnostic change: finish both real product lookups before starting currentAccess; same entitlement verifier'')
+
+        PYORDER'
+    - name: Select a compatible Apple StoreKit simulator runtime
+      run: bash scripts/prepare-storekit-runtime.sh
+    - name: Prepare the actual app and Apple StoreKit UI test runner
+      run: 'npm ci
+
+        npm run prepare:data
+
+        npm run typecheck
+
+        node --test scripts/subscription-policy.test.mjs
+
+        npx expo prebuild --platform ios --no-install
+
+        ruby scripts/add-storekit-ui-tests.rb
+
+        cd ios
+
+        pod install
+
+        '
+    - name: Verify full real UI purchase restore refund and expiry with ordered startup
+      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"))throw Error(\"Purchase UI test scheme missing\")'\nxcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"$SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available -j > /tmp/purchase-devices.json\n  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"\
+        $runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n  if test -z \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n  xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun simctl status_bar \"$udid\" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n  if ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-'\
+        \ CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test > \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n    xcrun simctl spawn \"$udid\" log show --style compact --last 15m --predicate 'process == \"storekitd\" OR subsystem CONTAINS[c] \"storekit\"' > \"store-evidence/storekit-service-$family.log\" 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\n    exit 1\n  fi\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\n  xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n  xcrun simctl shutdown \"$udid\"\
+        \ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n"
+    - name: Preserve diagnostic screenshots, generated test configuration and attachments
+      if: always()
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)\n  if test -n \"$result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path store-evidence/attachments || true\n  fi\nfi\n\nmkdir -p store-evidence/test-configuration\nfind purchase-ui-build/Build/Products -maxdepth 1 -name \"*.xctestrun\" -exec cp {} store-evidence/test-configuration/ \\; || true\ncp ios/*.xcodeproj/xcshareddata/xcschemes/FungoItaliaPurchaseUI.xcscheme store-evidence/test-configuration/ || true\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: StoreKit-ordered-full-UI-${{ matrix.family }}
+        path: store-evidence/
+        retention-days: 30
+'on':
+  push:
+    branches:
+    - design/study-dashboard-v1-1
+    paths:
+    - .github/workflows/study-ordered-full-ui-probe.yml
+  workflow_dispatch: null
