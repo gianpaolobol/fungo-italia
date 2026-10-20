@@ -1,0 +1,29 @@
+name: Upload actual Base review screenshot
+on:
+  push:
+    branches: [design/study-dashboard-v1-1]
+    paths: ['.github/workflows/base-review-screenshot.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: upload-study-base-screenshot
+  cancel-in-progress: false
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node scripts/upload-base-review.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Base-review-screenshot-evidence
+          path: store/next-release/base-review.json
+          retention-days: 30
