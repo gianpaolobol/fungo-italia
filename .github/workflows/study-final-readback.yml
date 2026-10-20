@@ -1,0 +1,61 @@
+name: Read current study beta and retire unsupported diagnostic
+'on':
+  push:
+    branches:
+    - design/study-dashboard-v1-1
+    paths:
+    - .github/workflows/study-final-readback.yml
+  workflow_dispatch: null
+permissions:
+  contents: read
+jobs:
+  retire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+    - uses: actions/github-script@v7
+      with:
+        script: 'const runId=39513407690;
+
+          const args={owner:context.repo.owner,repo:context.repo.repo,run_id:runId};
+
+          const {data:run}=await github.rest.actions.getWorkflowRun(args);
+
+          if(run.head_sha!==''69318aef4f8938cf91f65c371d7f84c7fe97c583''||run.head_branch!==''design/study-dashboard-v1-1''||run.name!==''Verify StoreKit UI using preinstalled destination artifacts'')throw Error(''Unexpected diagnostic identity; nothing cancelled'');
+
+          if(run.status===''completed''){core.notice(''Diagnostic already completed; no action'');return;}
+
+          const {data}=await github.rest.actions.listJobsForWorkflowRun(args);
+
+          const phone=data.jobs.find(j=>j.name===''verify-iphone'');
+
+          if(phone?.conclusion!==''failure'')throw Error(''Expected unsupported simulator failure not confirmed; nothing cancelled'');
+
+          await github.rest.actions.cancelWorkflowRun(args);
+
+          core.notice(''Cancellation requested only for obsolete unsupported simulator diagnostic ''+runId);
+
+          '
+  apple:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Confirm TestFlight and App Store state using GET requests only
+      run: "node --input-type=module <<'JS'\nimport {readFile,mkdir,writeFile} from 'node:fs/promises';\nimport {createAppleApi} from './scripts/app-store-connect.mjs';\nconst receipt=JSON.parse(await readFile('store/releases/study-1.1.0-build13.json','utf8'));\nif(receipt.appId!=='6821140326'||receipt.buildNumber!=='13'||receipt.appleBuildId!=='11d409c6-7e2b-4777-860f-213cae7ee299')throw Error('Unexpected diagnostic receipt');\nconst api=await createAppleApi();\nasync function get(path){const r=await api(path);if(!r.ok)throw Error('Read-only Apple query failed '+r.status+' '+r.codes.join(','));return r;}\nconst [builds,group,versions,beta]=await Promise.all([\n get('/v1/builds?filter[app]=6821140326&filter[version]=13&include=preReleaseVersion&limit=10'),\n get('/v1/betaGroups/f642807c-e4b2-43d4-a32a-d9fd087fdfe3/builds?limit=200'),\n get('/v1/apps/6821140326/appStoreVersions?filter[platform]=IOS&limit=20'),\n api('/v1/builds/'+receipt.appleBuildId+'/buildBetaDetail')]);\nfor(const [name,result]\
+        \ of Object.entries({builds,group,versions})){if(result.links?.next)throw Error('Incomplete Apple pagination for '+name);}\nconst b=builds.data.find(b=>b.id===receipt.appleBuildId);\nif(!b)throw Error('Expected uploaded build13 missing from Apple');\nconst version=builds.included?.find(v=>v.id===b.relationships?.preReleaseVersion?.data?.id)?.attributes.version;\nconst assigned=group.data.some(x=>x.id===b.id);\nconst appStore=[];\nfor(const v of versions.data){const r=await api('/v1/appStoreVersions/'+v.id+'/build');appStore.push({id:v.id,version:v.attributes.versionString,state:v.attributes.appStoreState,selectedBuildId:r.ok?(r.data?.id??null):null,selectedBuildLookup:r.ok?{ok:true}:{ok:false,status:r.status,codes:r.codes}});}\nconst report={checkedAt:new Date().toISOString(),sourceCommit:process.env.GITHUB_SHA,binarySourceCommit:receipt.sourceCommit,appId:receipt.appId,build:{id:b.id,version,buildNumber:b.attributes.version,processingState:b.attributes.processingState,expired:b.attributes.expired,internalGroupAssigned:assigned,betaDetail:beta.ok?{ok:true,attributes:beta.data?.attributes??null}:{ok:false,status:beta.status,codes:beta.codes}},appStoreVersions:appStore,storekitUIVerified:false,testFlightOnlyObserved:appStore.every(v=>v.selectedBuildLookup.ok)?!appStore.some(v=>v.selectedBuildId===b.id):null,appleWriteOperations:0};\n\
+        await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/study-current-apple-readback.json',JSON.stringify(report,null,2));\nconsole.log('STUDY_CURRENT_APPLE_READBACK '+JSON.stringify(report));\nif(version!=='1.1.0'||b.attributes.processingState!=='VALID'||b.attributes.expired||!assigned)throw Error('TestFlight diagnostic availability does not match the receipt');\nJS\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Study-current-Apple-readback
+        path: store-evidence/study-current-apple-readback.json
+        retention-days: 30
