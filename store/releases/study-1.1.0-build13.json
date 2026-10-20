@@ -22,10 +22,11 @@
   "appStoreVersions": [
     {
       "version": "1.0",
-      "state": "WAITING_FOR_REVIEW"
+      "state": "WAITING_FOR_REVIEW",
+      "selectedBuildId": "abed149c-5df8-4291-b752-c080548f8fa6"
     }
   ],
-  "verifiedAt": "2026-10-20T19:23:25.634Z",
+  "verifiedAt": "2026-10-20T23:48:59.479Z",
   "previousFailedUIRun": {
     "id": 39467202425,
     "source": "1465acecd24bd104e63f46b49868f5ac9f73d484"
@@ -47,5 +48,27 @@
     "ipad": "failure-before-Base",
     "productionFixEstablished": false
   },
-  "validationUpdatedAt": "2026-10-20T23:01:23.448908+00:00"
+  "validationUpdatedAt": "2026-10-20T23:48:59.479Z",
+  "additionalUIControls": {
+    "preinstalledApp": {
+      "runId": 39510885513,
+      "iphone": "failure-before-Base",
+      "ipad": "failure-before-Base",
+      "limitation": "XCTest reinstalled app after session configuration"
+    },
+    "destinationArtifacts": {
+      "runId": 39513407690,
+      "result": "unsupported-on-simulator",
+      "applicationUITestExecuted": false
+    },
+    "referenceRuntime": {
+      "runId": 39516723202,
+      "runtime": "iOS 26.1",
+      "result": "unavailable-for-download",
+      "applicationUITestExecuted": false
+    }
+  },
+  "productionFixEstablished": false,
+  "physicalDeviceUIValidation": "pending",
+  "currentAppleReadbackRunId": 39517405710
 }
