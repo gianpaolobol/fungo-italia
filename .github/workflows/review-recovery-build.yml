@@ -1,0 +1,93 @@
+name: Build tested initial App Review recovery
+on:
+  push:
+    branches: [fix/app-review-20261021]
+    paths: ['.github/workflows/review-recovery-build.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: initial-review-recovery-build
+  cancel-in-progress: false
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const args={owner:context.repo.owner,repo:context.repo.repo};
+            const source='f7a9c88276bf5525b576cc581fc49158ca775812';
+            const expected=[{id:39616737149,sha:'bdb9a4f7ba4e7bc5da30a1f9b615648799deb222',name:'Verify native StoreKit subscriptions'},{id:39617082178,sha:source,name:'Verify StoreKit purchase interface'}];
+            const comparison=(await github.rest.repos.compareCommits({...args,base:expected[0].sha,head:source})).data;
+            if(comparison.files?.length!==2||comparison.files.some(f=>!['tests/storekit/AnnualPurchaseUITests.swift','.maestro/store.yaml'].includes(f.filename)))throw Error('Native verification source differs in application inputs');
+            for(let attempt=0;attempt<90;attempt++){
+              let complete=true;
+              for(const e of expected){const r=(await github.rest.actions.getWorkflowRun({...args,run_id:e.id})).data;
+                if(r.head_sha!==e.sha||r.name!==e.name||r.head_branch!=='fix/app-review-20261021')throw Error('Unexpected evidence identity');
+                if(r.status!=='completed'){complete=false;continue;}
+                if(r.conclusion!=='success')throw Error('Required evidence failed: '+e.id+' '+r.conclusion);
+              }
+              if(complete){core.notice('Native and full iPhone/iPad UI passed for matching application inputs');return;}
+              core.info('Waiting for required native and UI evidence; no binary upload authorized by this gate yet');
+              await new Promise(resolve=>setTimeout(resolve,30000));
+            }
+            throw Error('Evidence still pending; no binary built');
+  build:
+    needs: evidence
+    runs-on: macos-26
+    timeout-minutes: 70
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
+      SOURCE_BUILD_COMMIT: f7a9c88276bf5525b576cc581fc49158ca775812
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: f7a9c88276bf5525b576cc581fc49158ca775812
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm run prepare:data && npm run typecheck && node --test scripts/*.test.mjs
+      - name: Build the exact tested 1.0 source with a new build number
+        run: |
+          node -e "if(require('./app.json').expo.version!=='1.0.0')throw Error('Wrong marketing version')"
+          npx eas-cli@24.8.0 build --platform ios --profile production --local --non-interactive --output "$RUNNER_TEMP/fungo-review-recovery.ipa"
+      - name: Record signed binary identity
+        run: |
+          unzip -q "$RUNNER_TEMP/fungo-review-recovery.ipa" -d "$RUNNER_TEMP/recovery-binary"
+          plist=$(find "$RUNNER_TEMP/recovery-binary/Payload" -maxdepth 2 -name Info.plist -print -quit)
+          export BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$plist")
+          export BUILD_VERSION=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$plist")
+          node --input-type=module <<'JS'
+          import {readFile,writeFile,mkdir} from 'node:fs/promises';
+          import {createHash} from 'node:crypto';
+          if(process.env.BUILD_VERSION!=='1.0.0'||!/^\d+$/.test(process.env.BUILD_NUMBER)||Number(process.env.BUILD_NUMBER)<=13)throw Error('Unexpected signed binary version');
+          const bytes=await readFile(process.env.RUNNER_TEMP+'/fungo-review-recovery.ipa');
+          const r={appId:'6821140326',bundleId:'it.fungoitalia.app',version:process.env.BUILD_VERSION,buildNumber:process.env.BUILD_NUMBER,sourceCommit:process.env.SOURCE_BUILD_COMMIT,ipaSha256:createHash('sha256').update(bytes).digest('hex'),nativeRunId:39616737149,uiRunId:39617082178,storekitUIVerified:true,annualProductId:'it.fungoitalia.premium.annual',italyAnnualPrice:'19.99',producerRunId:process.env.GITHUB_RUN_ID,createdAt:new Date().toISOString(),reviewSubmitted:false};
+          await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/review-recovery-binary.json',JSON.stringify(r,null,2));console.log('REVIEW_RECOVERY_SIGNED '+JSON.stringify(r));
+          JS
+      - name: Prepare existing authorized submit credentials
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      - name: Upload only the tested new 1.0 binary
+        run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-review-recovery.ipa" --non-interactive --wait
+      - name: Remove temporary Apple key
+        if: always()
+        run: node --input-type=module -e "import {rm} from 'node:fs/promises';if(!process.env.RUNNER_TEMP?.startsWith('/'))throw Error('Missing runner temp');await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Initial-review-tested-binary-evidence
+          path: store-evidence/
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: Initial-review-tested-signed-IPA
+          path: ${{ runner.temp }}/fungo-review-recovery.ipa
+          retention-days: 7

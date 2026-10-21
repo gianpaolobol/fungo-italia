@@ -115,3 +115,23 @@
 - Data: 2026-10-21; agente: ChatGPT; branch: `docs/handoff`.
 - Fatto: revisione documentale dei tre file di coordinamento; lettura di configurazione, entrypoint, componenti, generatori e dataset; nessuna modifica al codice.
 - Test eseguiti: **nessuno**. Stato PR e SHA: fare riferimento alla PR GitHub.
+
+## Aggiornamento operativo: correzione review del 21 ottobre 2026
+
+Branch `fix/app-review-20261021`, PR112, separato dalla beta 1.1 / PR107. Apple ha respinto 1.0(9), submission `126bebb5-1470-4347-9e04-5f95e0391cab`, per prezzi negli screenshot pubblici e annuale non inviato; richiede un nuovo binario. La lettura Apple delle 14:11 UTC conferma REJECTED, annuale READY_TO_SUBMIT e screenshot privato COMPLETE.
+
+Il titolare ha sostituito il precedente modello: download gratuito, otto schede didattiche Agaricus (sette catalogo e genere), quattro specie nel test demo ripetibile; unico completo annuale EUR19.99. Nessuna Base permanente né acquisto preliminare. Le Aree fanno parte del completo. Storico completo e demo salvati separatamente, senza cancellazione a scadenza. Dashboard resta nel branch 1.1 e prima della sua release va riallineata a questa decisione.
+
+Implementazione locale: filtro demo per nome primario, test breve con conteggio esplicito e ripresa, nomi suggeriti limitati alla demo, gate annuale nativo preservato, testo Store e fixture EUR19.99, esclusione pubblica dei paywall e conservazione screenshot privato IAP. Non equivale a nuovo binario pubblicato né a review inviata.
+
+Controlli locali: 97 test sorgente passati e typecheck passato. Export iOS e prove native/UI: leggere i successivi esiti CI; non attribuire a questo candidato i test della build13. Workflow review-recovery applica soltanto correzioni screenshot/prezzo/metadati e inventario delle versioni prodotto; non invia automaticamente una review né seleziona un binario diagnostico.
+
+### Esito successivo delle correzioni e blocco residuo
+
+- Run39616737319 **successo**: eliminate da Apple le due immagini pubbliche con prezzi; restano quattro immagini. Annuale Italia nuovi iscritti **19,99 €** dal21/10; vecchio prezzo9,99preservato per eventuali iscritti precedenti; 175territori configurati, download gratuito. Descrizione e note demo Agaricus applicate e rilette.
+- Accesso browser Apple riuscito tramite modulo sicuro; **annuale e gruppo aggiunti alla medesima bozza**, entrambi Ready for Review, due elementi. **Submission non inviata**: l'app/versione con nuovo binario non è ancora aggiunta. Non inviare la vecchia build9.
+- **Blocco nativo**: run39616737149 fallito, timeout10min dopo l'avvio del rimborso; primo acquisto verificato. Non attribuire alla nuova versione il vecchio risultato nativo positivo.
+- **Blocco UI**: run39617082178 fallito iPhone e iPad prima dell'acquisto, controllo entitlement non completato. Anche testdemo fallito perché cercava l'etichetta breve invece dell'etichetta accessibile combinata del pulsante: selettore corretto dopo lettura dell'albero UI reale. Run dedicato demo39624804385 pending; non è una prova degli acquisti.
+- Workflow compilazione39617809231 ha correttamente fermato la build per nativo fallito: **nessuna nuova IPA caricata, nessun reinvio Apple**. Gate non allentato.
+- Screenshot privato annuale originale ancora presente e COMPLETE, ma contiene il prezzo precedente: sostituirlo con una cattura autentica aggiornata prima del reinvio; se necessario rimuovere temporaneamente l'annuale dalla bozza per consentirne la modifica e poi riaggiungerlo alla stessa bozza. Non generare screenshot fittizi.
+- Evidenza durevole `store/releases/initial-review-recovery-20261021.json`. La beta1.1(13) resta riferita al vecchio piano Base+annuale e non è il candidato di questa correzione. PR107 richiede migrazione prima del rilascio.
