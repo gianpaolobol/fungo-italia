@@ -10,6 +10,10 @@ Verifiche locali del consolidamento:153test Node riusciti, TypeScript riuscito, 
 
 Prove del nuovo candidato: riferirsi esclusivamente ai run sullo SHA consolidato. `consolidated-testflight.yml` produce soltanto beta diagnostica su canale isolato, richiede demo riuscita e prove native/UI completate; eventuali fallimenti billing sono riportati e non equivalgono a readiness App Store. Upload e selezione App Store/OTA produzione non partono più automaticamente dal pushmain. Nessuna revisione scientifica indipendente attestata.
 
+Aggiornamento prove del candidato `38a7a85`: Android, demo iPhone/iPad e ciclo StoreKit nativo acquisto/rimborso/scadenza riusciti. UI acquisti fallita su entrambe le famiglie: il prodotto19,99€ viene caricato ma la lettura iniziale degli entitlement non termina; nessuna transazione di test avviata. Replica del solo test annuale su iPad (run39641922252) riproduce il blocco: non attribuirlo alla precedente demo senza altre evidenze. Beta diagnostica, non pronta per App Review.
+
+Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGroups` restituisce403; usare `/v1/builds/{id}?include=betaGroups` e validare ID del build, tipo/ID dell'unico gruppo, completezza della relazione e assenza di tester individuali. Test di integrazione con risposta403 riprodotta prima della correzione e casi di assegnazioni ampliate/incomplete rifiutati; suite completa155test riusciti. Revisione indipendente senza P0/P1 e conferma autenticata del nuovo GET con HTTP200 e relazione completa sul build13 storico (run39646393017). Nessun cambiamento al codice eseguito dall'app in questa correzione: il binario del candidato resta costruito dal sorgente38a7a85. L'esito dell'upload e i numeri del nuovo build vanno letti dalla ricevuta firmata e da Apple, non dedotti dal build13 storico.
+
 ---
 
 ## Handoff precedente (storico superato)
