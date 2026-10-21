@@ -33,8 +33,8 @@ jobs:
           for(const b of builds.data){
            const detail=await api('/v1/builds/'+b.id+'/buildBetaDetail');
            const groups=await api('/v1/builds/'+b.id+'/betaGroups?limit=200');
-           if(!detail.ok||!groups.ok||groups.links?.next)throw Error('Apple beta detail lookup incomplete');
-           rows.push({id:b.id,build:b.attributes.version,version:builds.included?.find(v=>v.id===b.relationships.preReleaseVersion?.data?.id)?.attributes.version,processingState:b.attributes.processingState,uploadedDate:b.attributes.uploadedDate,expired:b.attributes.expired,beta:detail.data.attributes,groupIds:groups.data.map(g=>g.id)});
+           if(groups.links?.next)throw Error('Apple group pagination incomplete');
+           rows.push({id:b.id,build:b.attributes.version,version:builds.included?.find(v=>v.id===b.relationships.preReleaseVersion?.data?.id)?.attributes.version,processingState:b.attributes.processingState,uploadedDate:b.attributes.uploadedDate,expired:b.attributes.expired,betaStatus:detail.status,beta:detail.ok?detail.data?.attributes:null,groupStatus:groups.status,groupIds:groups.ok?groups.data.map(g=>g.id):[]});
           }
           console.log('CONSOLIDATION_APPLE_BETA_STATUS '+JSON.stringify(rows));
           
