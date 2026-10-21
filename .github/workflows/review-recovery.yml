@@ -2,7 +2,7 @@ name: Inspect rejected initial App Store submission
 on:
   push:
     branches: [fix/app-review-20261021]
-    paths: ['scripts/inspect-review-recovery.mjs', '.github/workflows/review-recovery.yml']
+    paths: ['scripts/inspect-review-recovery.mjs', 'scripts/apply-review-recovery.mjs', '.github/workflows/review-recovery.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -28,4 +28,33 @@ jobs:
         with:
           name: Initial-App-Review-recovery-inspection
           path: store-evidence/review-recovery-inspection.json
+          retention-days: 30
+
+  correct-metadata:
+    needs: inspect
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Validate recovery scripts
+        run: |
+          node --check scripts/configure-subscription.mjs
+          node --check scripts/upload-store-screenshots.mjs
+          node --check scripts/apply-review-recovery.mjs
+      - name: Remove pricing screenshots from public gallery and retain private review image
+        run: node scripts/upload-store-screenshots.mjs
+      - name: Configure the approved single annual price, preserving existing subscriber prices
+        run: node scripts/configure-subscription.mjs
+      - name: Apply the Agaricus demo listing and inspect review product versions
+        run: node scripts/apply-review-recovery.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Initial-App-Review-corrections
+          path: store-evidence/
           retention-days: 30

@@ -1,13 +1,13 @@
 name: Verify StoreKit purchase interface
 on:
   push:
-    branches: [main]
+    branches: [main, fix/app-review-20261021]
     paths: ['components/SubscriptionGate.tsx','package.json','package-lock.json','app.config.js','app.json','eas.json','App.tsx','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','modules/fungo-subscription/**','tests/storekit/AnnualPurchaseUITests.swift','tests/storekit/Annual.storekit','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-ui-tests.rb','.github/workflows/subscription-storekit-ui.yml']
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: storekit-purchase-ui
+  group: storekit-purchase-ui-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   verify:

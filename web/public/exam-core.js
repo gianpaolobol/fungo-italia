@@ -101,8 +101,9 @@ export function gradeResponse(c,answer={},bank=[]){
  return {...base,detail:details.every(d=>d.correct),details,passed:base.name&&base.category&&details.every(d=>d.correct)};
 }
 export function bankSignature(bank){let h=2166136261;for(const ch of 'questions-v2.1:'+JSON.stringify(bank))h=Math.imul(h^ch.charCodeAt(0),16777619);return String(h>>>0);}
-export function startTraining(bank,rng=Math.random){
- const ids=selectCases(bank,15,rng).map(c=>c.id);
+export function startTraining(bank,rng=Math.random,count=15){
+ if(!Number.isInteger(count)||count<1||count>15)throw Error('Numero di casi non valido');
+ const ids=selectCases(bank,count,rng).map(c=>c.id);
  return {version:2,id:Date.now().toString(36)+'-'+Math.random().toString(36).slice(2),startedAt:new Date().toISOString(),signature:bankSignature(bank),ids,queue:[...ids],pending:[],phase:'initial',round:0,first:[],attempts:[],feedback:null,draft:{name:'',category:'',choices:{},assisted:false},completedAt:null};
 }
 export function submitTraining(state,answer,bank){
@@ -122,17 +123,18 @@ export function trainingSummary(s){
  const rows=s.first;
  return {id:s.id,startedAt:s.startedAt,completedAt:s.completedAt,signature:s.signature,total:rows.length,correct:rows.filter(r=>r.grade.passed).length,names:rows.filter(r=>r.grade.name).length,categories:rows.filter(r=>r.grade.category).length,details:rows.filter(r=>r.grade.detail).length,preparationTotal:rows.filter(r=>r.grade.details.some(d=>d.id==='preparation')).length,preparationCorrect:rows.filter(r=>r.grade.details.some(d=>d.id==='preparation')&&r.grade.detail).length,toxicologyTotal:rows.filter(r=>r.grade.details.some(d=>d.id==='label')).length,toxicologyCorrect:rows.filter(r=>r.grade.details.some(d=>d.id==='label')&&r.grade.detail).length,danger:rows.filter(r=>r.grade.danger).length,assisted:rows.filter(r=>r.answer.assisted).length,retries:s.attempts.length-rows.length,errors:rows.filter(r=>!r.grade.passed).map(r=>({id:r.caseId,name:r.caseName,nameError:!r.grade.name,categoryError:!r.grade.category,detailErrors:r.grade.details.filter(d=>!d.correct).map(d=>d.title),danger:r.grade.danger})),attempts:s.attempts};
 }
-export function restoreTraining(raw,bank){
+export function restoreTraining(raw,bank,count=15){
+ if(!Number.isInteger(count)||count<1||count>15)return null;
  try{
   const s=JSON.parse(raw),ids=new Set(bank.map(c=>c.id));
-  if(s?.version!==2||s.signature!==bankSignature(bank)||typeof s.id!=='string'||typeof s.startedAt!=='string'||!['initial','retry','complete'].includes(s.phase)||!Number.isInteger(s.round)||s.round<0||!Array.isArray(s.ids)||s.ids.length!==15||new Set(s.ids).size!==15||!s.ids.every(id=>ids.has(id)))return null;
+  if(s?.version!==2||s.signature!==bankSignature(bank)||typeof s.id!=='string'||typeof s.startedAt!=='string'||!['initial','retry','complete'].includes(s.phase)||!Number.isInteger(s.round)||s.round<0||!Array.isArray(s.ids)||s.ids.length!==count||new Set(s.ids).size!==count||!s.ids.every(id=>ids.has(id)))return null;
   for(const key of ['queue','pending'])if(!Array.isArray(s[key])||new Set(s[key]).size!==s[key].length||!s[key].every(id=>s.ids.includes(id)))return null;
   if(s.queue.some(id=>s.pending.includes(id))||s.phase==='complete'&&(s.queue.length||s.pending.length)||s.phase!=='complete'&&!s.queue.length)return null;
-  if(!Array.isArray(s.first)||s.first.length>15||!Array.isArray(s.attempts)||s.attempts.length>10000||!s.first.every(r=>s.ids.includes(r.caseId))||new Set(s.first.map(r=>r.caseId)).size!==s.first.length)return null;
+  if(!Array.isArray(s.first)||s.first.length>count||!Array.isArray(s.attempts)||s.attempts.length>10000||!s.first.every(r=>s.ids.includes(r.caseId))||new Set(s.first.map(r=>r.caseId)).size!==s.first.length)return null;
   const validAnswer=a=>a&&typeof a.name==='string'&&a.name.length<=200&&typeof a.category==='string'&&(a.category===''||Object.hasOwn(foodLabels,a.category))&&a.choices&&typeof a.choices==='object'&&!Array.isArray(a.choices)&&Object.values(a.choices).every(v=>Array.isArray(v)&&v.length<=100&&v.every(x=>typeof x==='string'));
   const validRow=r=>r&&s.ids.includes(r.caseId)&&validAnswer(r.answer)&&r.grade&&typeof r.grade.passed==='boolean'&&Array.isArray(r.grade.details);
   if(!validAnswer(s.draft)||!s.attempts.every(validRow)||!s.first.every(validRow)||s.feedback&&(!validRow(s.feedback)||s.feedback.caseId!==s.queue[0]))return null;
-  if(s.phase!=='initial'&&s.first.length!==15)return null;
+  if(s.phase!=='initial'&&s.first.length!==count)return null;
   return s;
  }catch{return null;}
 }

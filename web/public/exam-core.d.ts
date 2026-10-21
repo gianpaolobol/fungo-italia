@@ -15,8 +15,8 @@ export function suggestNames(bank:{acceptedNames?:string[];scientificName?:strin
 export function detailQuestions(c:ExamCase,bank:ExamCase[]):DetailQuestion[];
 export function gradeResponse(c:ExamCase,a:Partial<TrainingAnswer>,bank:ExamCase[]):TrainingGrade;
 export function bankSignature(bank:ExamCase[]):string;
-export function startTraining(bank:ExamCase[],rng?:()=>number):Training;
+export function startTraining(bank:ExamCase[],rng?:()=>number,count?:number):Training;
 export function submitTraining(s:Training,a:TrainingAnswer,bank:ExamCase[]):Training;
 export function advanceTraining(s:Training):Training;
-export function restoreTraining(raw:string,bank:ExamCase[]):Training|null;
+export function restoreTraining(raw:string,bank:ExamCase[],count?:number):Training|null;
 export function trainingSummary(s:Training):TrainingSummary;
