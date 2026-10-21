@@ -3,6 +3,7 @@ name: Verify free Agaricus demo interface
   push:
     branches:
     - main
+    - feat/continuous-mushroom-navigation-20261021
     paths:
     - App.tsx
     - components/**
