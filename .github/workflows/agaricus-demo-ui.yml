@@ -13,6 +13,7 @@ name: Verify free Agaricus demo interface
     - tests/storekit/Annual.storekit
     - .github/workflows/agaricus-demo-ui.yml
     - .github/workflows/consolidated-testflight.yml
+    - .github/workflows/branch-native-proof-trigger.yml
   workflow_dispatch: null
 permissions:
   contents: read
