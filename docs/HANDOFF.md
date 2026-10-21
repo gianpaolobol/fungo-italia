@@ -1,5 +1,25 @@
 # Handoff corrente
 
+## Percorso, abbonamento e release accoppiate — 21 ottobre 2026
+
+Build Apple realmente confermato precedente: **1.1.0 (14)**, sorgente `38a7a85ac96803a5dca18bf5c6a39264bcc99444`, Apple ID `a8152729-e1a2-47a9-9884-ef577d0436a2`, `VALID` / `IN_BETA_TESTING`, solo gruppo interno del titolare. Conferma CI corretta run39647612363. UI acquisto non ancora qualificata: questa è beta diagnostica, non autorizzazione App Review.
+
+Nuova modifica richiesta: quattro tab **Percorso, Studio, Esame, Aree**; accesso abbonamento globale con fungo in alto a destra e nessun tab Acquisti. Restano download/demo Agaricus gratuiti e unico annuale completo19,99€. Nessun bypass degli entitlement o modifica ai dati scientifici.
+
+Prima dello stesso aggiornamento la Pages pubblica aveva sorgente `78a27af8a4507be189f86dc4dee9e4bcb3d828d0`, UI legacy separata; i bytes dell’icona erano già identici all’app nativa (SHA256 `77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9`). Non dedurre che l’icona conservata sul telefono sia già aggiornata. La superficie non-TestFlight usata dal titolare non è stata identificata con certezza; verificare anche Floot ed eventuali vecchie anteprime Expo Go.
+
+Ora la build web usa **lo stesso App.tsx e componenti nativi** tramite Expo Web. Gli strumenti personali precedenti restano sotto `/strumenti/`, con storage conservato. Safari/Expo Go espongono demo e apertura dell’app installata, senza simulare acquisti Apple. Asset dell’icona versionati; nuovo service worker a cache coerente, nessun reload automatico durante esercizi. Un worker della stessa sorgente già in esecuzione può attivarsi dopo avere completato la cache; una versione successiva richiede aggiornamento esplicito.
+
+Controllo release: stamp pubblico `extra.release`; verifica a avvio/foreground/rete di `release.json` con sorgente, versione, numero build, icona, manifest hash e disponibilità Apple. Stato offline/malformato/dirty = non verificato, mai falso allineamento. App nativa invita ad aprire TestFlight; browser offre aggiornamento esplicito. Il sistema non installa forzatamente versioni Apple e non sincronizza acquisti/progressi fra origini o dispositivi.
+
+Pubblicazione esclusiva `consolidated-testflight.yml`: candidate immutabile e manifest completo; prove native/UI/demo sullo stesso SHA (demo obbligatoriamente riuscita); build firmata con lettura del sorgente incorporato `EXConstants.bundle/app.config`; Apple processing e audience owner-only verificati; `buildBetaDetail` letto da Apple; soltanto dopo viene pubblicata la medesima web. Hash e ogni file pubblicato verificati. Entrambi gli entrypoint manuali richiedono release accoppiata; nessun deploy Pages indipendente. I quattro workflow hanno i medesimi trigger runtime per impedire prove mancanti alle modifiche future.
+
+Diagnosi separata del blocco iniziale StoreKit: workflow `subscription-entitlement-probe.yml`, run39690288182 sullo SHA `b3696fa3ce5b483916e225c0271e0606447e88d8`, confronta baseline e sola disattivazione dell’observer simulator. Nessun acquisto e nessun diritto premium; non vale come prova di prodotto. Attendere risultati effettivi prima di una correzione causale.
+
+Verifiche locali del nuovo aggiornamento: **172 test Node riusciti**, **65 test Chromium riusciti** dopo correzione degli asset relativi nei tool; TypeScript, esportazione iOS, export web, manifest completo e smoke unificato con riapertura offline riusciti. WebKit da verificare su CI: dipendenze di sistema non disponibili nel container locale. Revisione indipendente: risolti bypass del deploy legacy e route degli strumenti.
+
+Le prove locali e gli esiti CI del nuovo candidato devono essere letti dai run dello SHA finale; non riusare build14 come prova dei cambiamenti UI. Gate scientifico indipendente resta pendente. Non inviare ad App Review senza verifiche acquisti reali e screenshot di review autentico.
+
 ## Consolidamento annuale/demo — 21 ottobre 2026
 
 Decisione corrente: download gratuito; tutte le schede Agaricus (7 minime + 1 genere) e test4casi ripetibile; unico abbonamento completo a19,99€/anno. Nessun Base permanente. Dashboard a fungo e storico/ripasso integrati da107 con adattamento demo/annuale; icona106 e audit111 qualificato. Inventario168branch e motivazioni in [audit/BRANCH-SELECTION-2026-10-21.md](audit/BRANCH-SELECTION-2026-10-21.md).

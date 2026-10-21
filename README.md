@@ -2,6 +2,8 @@
 
 [Apri l’app web](https://gianpaolobol.github.io/fungo-italia/) · [Assistenza](https://gianpaolobol.github.io/fungo-italia/support.html) · [Privacy](https://gianpaolobol.github.io/fungo-italia/privacy.html)
 
+L’anteprima corrente usa lo stesso `App.tsx` della versione iPhone/iPad. La pubblicazione web avviene dopo la conferma su TestFlight dello stesso sorgente e della stessa icona; dal fungo in alto a destra puoi verificare la versione. Acquisto e ripristino Apple richiedono l’app installata da TestFlight/App Store. Vecchi Snack Expo Go e il servizio storico Floot non sono la versione di test corrente. Note e strumenti web precedenti sono conservati nella sezione [strumenti personali](https://gianpaolobol.github.io/fungo-italia/strumenti/).
+
 Atlante didattico di micologia per consultazione e ripasso: 148 unità minime e 66 schede di generi/gruppi, con 71 macroaree in 20 regioni.
 
 ## Studio e consultazione

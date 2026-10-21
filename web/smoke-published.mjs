@@ -1,8 +1,8 @@
 import {chromium,webkit,expect} from '@playwright/test';
 import {mkdir,writeFile} from 'node:fs/promises';
-const url='https://gianpaolobol.github.io/fungo-italia/';
+const root='https://gianpaolobol.github.io/fungo-italia/',url=root+'strumenti/';
 await mkdir('published-evidence',{recursive:true});
-const metadata=await (await fetch(url+'build.json?verify='+Date.now())).json();
+const metadata=await (await fetch(root+'build.json?verify='+Date.now())).json();
 if(metadata.sourceCommit!==process.env.GITHUB_SHA)throw Error('Published revision mismatch: '+metadata.sourceCommit);
 const results=[];
 for(const [name,engine] of [['chromium',chromium],['webkit',webkit]]){

@@ -1,5 +1,4 @@
-# Fresh exact-source proofs after fixing the compact Android smoke scroll gesture.
-name: Consolidated diagnostic TestFlight
+name: Paired web and diagnostic TestFlight
 permissions:
   contents: read
   actions: read
@@ -15,6 +14,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
     - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.sha }}
     - uses: actions/setup-node@v4
       with:
         node-version: 24.3.0
@@ -22,7 +23,7 @@ jobs:
     - name: Verify all consolidated source and deterministic data
       run: 'npm run prepare:data
 
-        git diff --exit-code -- src/data
+        git diff --exit-code
 
         npm run typecheck
 
@@ -31,8 +32,55 @@ jobs:
         npx expo export --platform ios --output-dir /tmp/consolidated-export
 
         '
+    - name: Install deterministic browser dependencies
+      run: npm ci --prefix web
+    - name: Build one immutable web candidate from shared application
+      run: 'node web/build.mjs
+
+        node scripts/release-parity.mjs candidate dist-ios
+
+        '
+    - name: Verify legacy workflows in both engines and unified smartphone app
+      run: 'cd web
+
+        npx playwright install --with-deps chromium webkit
+
+        npm test
+
+        npx playwright test --browser=chromium
+
+        node smoke-unified.mjs
+
+        '
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Paired-web-candidate
+        path: dist-ios/
+        include-hidden-files: true
+        if-no-files-found: error
+        retention-days: 30
     - name: Require actual current native, purchase UI and successful demo proofs
       run: node scripts/consolidated-evidence.mjs
+    - name: Bind web and native source proof before signing
+      run: 'node --input-type=module <<''JS''
+
+        import {readFile,writeFile} from ''node:fs/promises'';
+
+        const path=process.env.RUNNER_TEMP+''/consolidated-build.json'';
+
+        const receipt=JSON.parse(await readFile(path,''utf8''));
+
+        const build=JSON.parse(await readFile(''dist-ios/build.json'',''utf8''));
+
+        if(receipt.sourceCommit!==build.sourceCommit||receipt.version!==build.version)throw Error(''Native/web source identity differs'');
+
+        Object.assign(receipt,{iconSha256:build.iconSha256,webContentHash:build.webContentHash});
+
+        await writeFile(path,JSON.stringify(receipt,null,2)+''\n'');
+
+        JS
+
+        '
     - uses: actions/upload-artifact@v4
       with:
         name: Consolidated-source-proof
@@ -50,6 +98,8 @@ jobs:
       GH_TOKEN: ${{ github.token }}
     steps:
     - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.sha }}
     - uses: actions/setup-node@v4
       with:
         node-version: 24.3.0
@@ -58,6 +108,26 @@ jobs:
       with:
         name: Consolidated-source-proof
         path: ${{ runner.temp }}
+    - name: Bind verified source into the isolated EAS build environment
+      run: 'git diff --exit-code
+
+        node --input-type=module <<''JS''
+
+        import {readFile,writeFile} from ''node:fs/promises'';
+
+        const source=process.env.GITHUB_SHA;
+
+        if(!/^[a-f0-9]{40}$/.test(source))throw Error(''Exact source required'');
+
+        const config=JSON.parse(await readFile(''eas.json'',''utf8''));
+
+        config.build[''consolidated-beta''].env={...config.build[''consolidated-beta''].env,GITHUB_SHA:source,FUNGO_VERIFIED_SOURCE:source};
+
+        await writeFile(''eas.json'',JSON.stringify(config,null,2)+''\n'');
+
+        JS
+
+        '
     - name: Build isolated beta channel with remote build increment
       run: npx eas-cli@24.8.0 build --platform ios --profile consolidated-beta --local --non-interactive --output "$RUNNER_TEMP/fungo-consolidated.ipa"
     - name: Record signed binary provenance
@@ -90,6 +160,12 @@ jobs:
         test "$main" = "$GITHUB_SHA"
 
         '
+    - name: Verify source inside the signed native app before upload
+      run: 'export BUILD_VERSION=$(node -p "require(process.env.RUNNER_TEMP+''/consolidated-build.json'').version")
+
+        node scripts/verify-native-source.mjs "$RUNNER_TEMP/consolidated-binary/Payload"
+
+        '
     - name: Preflight existing beta audience before any upload
       run: node scripts/consolidated-beta-audience.mjs
     - name: Prepare authorized Apple submit key
@@ -98,18 +174,26 @@ jobs:
       run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-consolidated.ipa" --non-interactive --wait
     - name: Confirm Apple processing and confirmed owner group
       run: node scripts/verify-consolidated-testflight.mjs
+    - name: Confirm actual Apple internal beta availability
+      run: node scripts/release-parity.mjs beta-state
     - name: Remove temporary submit key
       if: always()
       run: node --input-type=module -e "import {rm} from 'node:fs/promises';await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});"
+    - name: Stage exact native receipts
+      if: always()
+      run: 'mkdir -p "$RUNNER_TEMP/paired-beta-evidence"
+
+        if test -f "$RUNNER_TEMP/consolidated-build.json"; then cp "$RUNNER_TEMP/consolidated-build.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
+
+        if test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json "$RUNNER_TEMP/paired-beta-evidence/"; fi
+
+        '
     - uses: actions/upload-artifact@v4
       if: always()
       with:
         name: Consolidated-TestFlight-evidence
-        path: '${{ runner.temp }}/consolidated-build.json
-
-          store-evidence/consolidated-testflight.json
-
-          '
+        path: ${{ runner.temp }}/paired-beta-evidence/
+        if-no-files-found: error
         retention-days: 30
     - uses: actions/upload-artifact@v4
       if: always()
@@ -119,10 +203,114 @@ jobs:
         retention-days: 7
         if-no-files-found: warn
     needs: source
+  promote-public-web:
+    if: github.ref == 'refs/heads/main'
+    needs:
+    - source
+    - beta
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: paired-public-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.sha }}
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24.3.0
+    - uses: actions/download-artifact@v4
+      with:
+        name: Paired-web-candidate
+        path: dist-ios
+    - uses: actions/download-artifact@v4
+      with:
+        name: Consolidated-TestFlight-evidence
+        path: ${{ runner.temp }}/paired-beta-evidence
+    - name: Validate every original web byte against confirmed native receipt
+      run: node scripts/release-parity.mjs promote dist-ios "$RUNNER_TEMP/paired-beta-evidence/consolidated-testflight.json"
+    - uses: actions/configure-pages@v5
+    - uses: actions/upload-pages-artifact@v3
+      with:
+        path: dist-ios
+    - name: Reject stale candidate immediately before public promotion
+      run: 'main=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+
+        test "$main" = "$GITHUB_SHA" || { echo ''::error::Main advanced; fresh paired release required''; exit 1; }
+
+        '
+    - name: Promote the original paired candidate
+      id: deployment
+      uses: actions/deploy-pages@v4
+  published-smoke:
+    needs:
+    - source
+    - beta
+    - promote-public-web
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.sha }}
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24.3.0
+    - uses: actions/download-artifact@v4
+      with:
+        name: Paired-web-candidate
+        path: dist-ios
+    - uses: actions/download-artifact@v4
+      with:
+        name: Consolidated-TestFlight-evidence
+        path: ${{ runner.temp }}/paired-beta-evidence
+    - name: Verify uncached deployed release, icon, manifest and every asset against native receipt
+      run: node scripts/release-parity.mjs published dist-ios "$RUNNER_TEMP/paired-beta-evidence/consolidated-testflight.json" "${{ needs.promote-public-web.outputs.page_url }}"
+    - name: Verify published smartphone application
+      run: 'npm ci --prefix web
+
+        cd web
+
+        npx playwright install --with-deps chromium
+
+        UNIFIED_BASE_URL="${{ needs.promote-public-web.outputs.page_url }}" node smoke-unified.mjs
+
+        '
 'on':
   push:
     branches:
     - main
     paths:
+    - App.tsx
+    - index.js
+    - app.json
+    - app.config.js
+    - package.json
+    - package-lock.json
+    - eas.json
+    - assets/**
+    - components/**
+    - hooks/**
+    - lib/**
+    - modules/**
+    - src/data/**
+    - tests/storekit/**
+    - scripts/**
+    - web/**
     - .github/workflows/consolidated-testflight.yml
+    - .github/workflows/subscription-storekit-tests.yml
+    - .github/workflows/subscription-storekit-ui.yml
+    - .github/workflows/agaricus-demo-ui.yml
   workflow_dispatch: null

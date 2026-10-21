@@ -7,3 +7,10 @@ artifacts/
 *.jks
 *.keystore
 .env*
+
+/dist-ios/
+/dist-shared-web/
+/web/unified-phone.png
+
+/web/playwright-report/
+/web/test-results/

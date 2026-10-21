@@ -1,29 +1,4 @@
-name: iPhone PWA and Expo Go
-on:
-  push:
-    branches: [main, feat/admin-photo-editor, feat/commercialization-labels, feat/complete-reference-triplets, feat/external-reference-photos, feat/study-layout-oct07, feat/ios-pwa, feat/profile-readiness-oct06, feat/phone-photo-import-oct06, feat/study-completion-oct06]
-    paths:
-      - 'web/**'
-      - 'components/**'
-      - 'App.tsx'
-      - 'src/data/**'
-      - 'docs/reference-image-delivery.md'
-      - 'scripts/course-literature.mjs'
-      - 'scripts/validate-reference-images.mjs'
-      - 'scripts/admin-reference-images.mjs'
-      - 'scripts/admin-reference-images.test.mjs'
-      - 'scripts/admin-photo-core.test.mjs'
-      - 'scripts/validate-admin-reference-images.mjs'
-      - 'scripts/commercialization.mjs'
-      - 'scripts/commercialization.test.mjs'
-      - 'scripts/study-profiles.mjs'
-      - 'scripts/study-profiles.test.mjs'
-      - 'scripts/atlas-content.mjs'
-      - 'scripts/prepare-mobile-data.mjs'
-      - 'scripts/validate-mobile-data.mjs'
-      - 'assets/icon.png'
-      - '.github/workflows/ios-pwa.yml'
-  workflow_dispatch:
+name: Validate shared web candidate
 permissions:
   contents: read
 concurrency:
@@ -32,168 +7,92 @@ concurrency:
 jobs:
   build-test:
     permissions:
-      contents: write
+      contents: read
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - name: Install isolated web dependencies
-        working-directory: web
-        run: |
-          if test -f package-lock.json; then npm ci; else npm install; fi
-      - name: Validate browser code and build offline package
-        run: |
-          node --check web/public/app.js
-          node --check web/public/admin-photos.js
-          node --check web/public/admin-photo-core.js
-          node --test scripts/study-profiles.test.mjs scripts/commercialization.test.mjs scripts/admin-reference-images.test.mjs scripts/admin-photo-core.test.mjs
-          node --check web/public/importa-foto.js
-          node --check web/public/photo-core.js
-          node --check web/public/sw.js
-          python3 -m py_compile tools/validate-photo-library.py
-          node scripts/validate-reference-images.mjs
-          node scripts/validate-admin-reference-images.mjs
-          node web/build.mjs
-      - name: Verify iPhone workflows at 320 points
-        working-directory: web
-        run: npm test
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Fungo-Italia-iPhone-test-evidence
-          path: |
-            web/test-results
-            web/playwright-report
-          retention-days: 30
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Fungo-Italia-iPhone-PWA
-          path: dist-ios/
-          if-no-files-found: error
-          retention-days: 30
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist-ios/
-      - name: Lock tested web dependencies
-        if: github.ref == 'refs/heads/feat/ios-pwa'
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add web/package-lock.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Lock tested iPhone PWA dependencies [skip ci]"
-          git push origin HEAD:feat/ios-pwa
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Install shared app dependencies
+      run: npm ci
+    - name: Install isolated web dependencies
+      working-directory: web
+      run: 'npm ci
+
+        '
+    - name: Validate browser code and build offline package
+      run: 'node --check web/public/app.js
+
+        node --check web/public/admin-photos.js
+
+        node --check web/public/admin-photo-core.js
+
+        node --test scripts/study-profiles.test.mjs scripts/commercialization.test.mjs scripts/admin-reference-images.test.mjs scripts/admin-photo-core.test.mjs
+
+        node --check web/public/importa-foto.js
+
+        node --check web/public/photo-core.js
+
+        node --check web/public/sw.js
+
+        python3 -m py_compile tools/validate-photo-library.py
+
+        node scripts/validate-reference-images.mjs
+
+        node scripts/validate-admin-reference-images.mjs
+
+        node web/build.mjs
+
+        '
+    - name: Verify iPhone workflows at 320 points
+      working-directory: web
+      run: npm test
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Fungo-Italia-iPhone-test-evidence
+        path: 'web/test-results
+
+          web/playwright-report
+
+          '
+        retention-days: 30
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Fungo-Italia-iPhone-PWA
+        path: dist-ios/
+        if-no-files-found: error
+        retention-days: 30
   native-source-check:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - run: npm ci
-      - run: npm run prepare:data
-      - run: node scripts/validate-mobile-data.mjs
-      - run: npm run typecheck
-      - run: node scripts/test-review-readiness.mjs
-      - run: python3 -m py_compile scripts/android-smoke.py
-  expo-go-preview:
-    if: github.event_name == 'workflow_dispatch' && vars.ENABLE_SNACK_PREVIEW == 'true'
-    continue-on-error: true
-    permissions:
-      contents: write
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - name: Install preview tooling
-        working-directory: web
-        run: npm install
-      - name: Publish compatible anonymous Expo Go preview
-        working-directory: web
-        run: node snack-publish.mjs
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Fungo-Italia-iPhone-Expo-Go
-          path: iphone-preview/
-          if-no-files-found: error
-          retention-days: 30
-  publish:
-    if: github.ref == 'refs/heads/main'
-    needs: [build-test, native-source-check]
-    permissions:
-      pages: write
-      id-token: write
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/configure-pages@v5
-      - name: Publish verified iPhone PWA
-        id: deployment
-        uses: actions/deploy-pages@v4
-  promote-tested-version:
-    if: github.ref == 'refs/heads/feat/ios-pwa'
-    needs: [build-test, expo-go-preview]
-    permissions:
-      contents: write
-      actions: write
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Promote verified source without overwriting newer changes
-        env:
-          TESTED_SHA: ${{ github.sha }}
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git fetch origin main feat/ios-pwa
-          candidate=$(git rev-parse origin/feat/ios-pwa)
-          if test "$candidate" != "$TESTED_SHA"; then
-            parent=$(git rev-parse "$candidate^")
-            changed=$(git diff --name-only "$TESTED_SHA" "$candidate")
-            if test "$parent" != "$TESTED_SHA" || test "$changed" != "web/package-lock.json"; then
-              echo "::error::Branch changed after validation. Refusing to promote untested source."
-              exit 1
-            fi
-          fi
-          git merge-base --is-ancestor origin/main "$candidate"
-          git push origin "$candidate:refs/heads/main"
-          gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/pipeline.yml/dispatches" -f ref=main
-          gh api --method POST "repos/$GITHUB_REPOSITORY/actions/workflows/ios-pwa.yml/dispatches" -f ref=main
-
-  published-smoke:
-    if: github.ref == 'refs/heads/main'
-    needs: publish
-    permissions:
-      contents: read
-    runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.56.1-noble
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-      - name: Install verification tools
-        working-directory: web
-        run: npm ci
-      - name: Verify published Pages revision, smartphone navigation and offline map
-        working-directory: web
-        run: node smoke-published.mjs
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: Fungo-Italia-published-site-evidence
-          path: web/published-evidence/
-          retention-days: 30
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - run: npm ci
+    - run: npm run prepare:data
+    - run: node scripts/validate-mobile-data.mjs
+    - run: npm run typecheck
+    - run: node scripts/test-review-readiness.mjs
+    - run: python3 -m py_compile scripts/android-smoke.py
+'on':
+  push:
+    branches:
+    - main
+    paths:
+    - App.tsx
+    - app.*
+    - package*.json
+    - components/**
+    - hooks/**
+    - lib/**
+    - src/data/**
+    - web/**
+    - assets/**
+    - .github/workflows/ios-pwa.yml
+  workflow_dispatch: null

@@ -5,13 +5,25 @@ name: Verify free Agaricus demo interface
     - main
     paths:
     - App.tsx
+    - index.js
+    - app.json
+    - app.config.js
+    - package.json
+    - package-lock.json
+    - eas.json
+    - assets/**
     - components/**
-    - lib/**
     - hooks/**
-    - tests/storekit/AnnualPurchaseUITests.swift
-    - tests/storekit/Annual.storekit
-    - .github/workflows/agaricus-demo-ui.yml
+    - lib/**
+    - modules/**
+    - src/data/**
+    - tests/storekit/**
+    - scripts/**
+    - web/**
     - .github/workflows/consolidated-testflight.yml
+    - .github/workflows/subscription-storekit-tests.yml
+    - .github/workflows/subscription-storekit-ui.yml
+    - .github/workflows/agaricus-demo-ui.yml
   workflow_dispatch: null
 permissions:
   contents: read
@@ -60,27 +72,13 @@ jobs:
 
         '
     - name: Verify free Agaricus study and four-case test
-      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\n\
-        node -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"))throw Error(\"Purchase UI test scheme missing\")'\n\
-        xcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"\
-        $SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"?/^iPhone\
-        \ 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun\
-        \ simctl list devices available -j > /tmp/purchase-devices.json\n  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"$runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\"\
-        ).devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n  if test -z\
-        \ \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n  xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\"\
-        \ -b\n  xcrun simctl status_bar \"$udid\" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n  if ! xcodebuild\
-        \ -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -parallel-testing-enabled\
-        \ NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES\
-        \ CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testAFreeAgaricusDemoWithoutPurchase\
-        \ test > \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"\
-        ' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\
-        \n    exit 1\n  fi\n  mkdir -p \"store-evidence/screenshots/$family\"\n  for name in demo-01-studio demo-02-test; do\n    source=$(find \"$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application\"\
-        \ -type f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\" \"store-evidence/screenshots/$family/$name.png\"\n  done\n\
-        \  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\n  xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n"
+      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"))throw Error(\"Purchase UI test scheme missing\")'\nxcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"$SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available -j > /tmp/purchase-devices.json\n  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"\
+        $runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n  if test -z \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n  xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun simctl status_bar \"$udid\" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n  if ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-'\
+        \ CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testAFreeAgaricusDemoWithoutPurchase test > \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\" 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\n    exit 1\n  fi\n  mkdir -p \"store-evidence/screenshots/$family\"\n  for name in demo-01-studio demo-02-test; do\n    source=$(find \"$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application\" -type f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\" \"store-evidence/screenshots/$family/$name.png\"\n  done\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"\
+        store-evidence/purchase-ui-$family.log\"\n  xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n"
     - name: Preserve UI failure screenshots and attachments
       if: failure()
-      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)\n  if test -n \"$result\"; then\n \
-        \   xcrun xcresulttool export attachments --path \"$result\" --output-path store-evidence/attachments || true\n  fi\nfi\n"
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)\n  if test -n \"$result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path store-evidence/attachments || true\n  fi\nfi\n"
     - uses: actions/upload-artifact@v4
       if: always()
       with:

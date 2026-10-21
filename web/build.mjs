@@ -1,57 +1,59 @@
-import {buildExamBank} from './public/exam-core.js';
-import {applyReviewedMatrix,readReviewedMatrix} from '../scripts/reviewed-matrix.mjs';
-import {applyApprovedExternalStudyEvidence} from '../scripts/approved-external-study-evidence.mjs';
-import {applyToxicologySyndromes} from '../scripts/toxicology-syndromes.mjs';
-import {applyAdminReferenceImages} from '../scripts/admin-reference-images.mjs';
-import {applyCommercialization} from '../scripts/commercialization.mjs';
-import {applyStudyProfiles,applyReferenceImages} from '../scripts/study-profiles.mjs';
-import {mkdir,readFile,writeFile,cp,rm} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {readFile,writeFile,mkdir,cp,readdir,rm} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {fileURLToPath} from 'node:url';
 import path from 'node:path';
-const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),web=path.join(root,'web'),output=path.join(root,'dist-ios');
-const readJSON=async name=>JSON.parse(await readFile(path.join(root,'src/data',name+'.json'),'utf8'));
-const [catalog,groups,areas]=await Promise.all(['catalog','groups','areas'].map(readJSON));
-function assert(condition,message){if(!condition)throw Error(message);}
-assert(catalog.length>=148&&groups.length>=66&&areas.length>=71,'Baseline content removed');
-assert(new Set([...catalog,...groups].map(t=>t.id)).size===catalog.length+groups.length,'Duplicate taxon IDs');
-assert(new Set(areas.map(a=>a.region)).size===20,'Region count changed');
-assert(catalog.every(t=>t.characters.length===3&&typeof t.differentiatingCharacter==='string'&&t.differentiatingCharacter.trim()&&t.curriculum?.documentId==='S1-obiettivi-tassonomici-v4-2026-06-09'&&t.curriculum.sourcePage>0),'Scientific provenance missing');
-assert(areas.every(a=>Array.isArray(a.center)&&a.center.length===2&&a.center.every(Number.isFinite)&&Math.abs(a.center[0])<=90&&Math.abs(a.center[1])<=180),'Invalid centroid');
-const amiata=areas.find(a=>a.name.includes('Amiata'));
-assert(amiata&&amiata.center[0]>42&&amiata.center[0]<44&&amiata.center[1]>10&&amiata.center[1]<13,'Amiata latitude/longitude inverted');
-const studyProfiles=await readJSON('study-profiles');
-const referenceImages=await readJSON('reference-images');
-const sourceRegistry=await readJSON('course-sources');
-applyStudyProfiles([...catalog,...groups],studyProfiles,sourceRegistry);
-applyToxicologySyndromes([...catalog,...groups],await readJSON('toxicology-syndromes'));
-applyApprovedExternalStudyEvidence([...catalog,...groups],await readJSON('external-study-evidence-candidates'));
-applyReferenceImages([...catalog,...groups],referenceImages);
-const adminImages=await readJSON('admin-reference-images');
-applyAdminReferenceImages([...catalog,...groups],adminImages);
-applyCommercialization([...catalog,...groups],await readJSON('commercialization'));
-const matrixIntegration=applyReviewedMatrix([...catalog,...groups],await readReviewedMatrix(),studyProfiles);
-for(const asset of [...referenceImages.images,...adminImages.images]){await readFile(path.join(web,'public',asset.src));}
-const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages','commercialization'];
-const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
-const bibliography=await readJSON('bibliography');
-const foundations=await readJSON('internal-foundations');
-assert(foundations.documents.length===2&&foundations.documents.every(s=>s.visibility==='internal')&&foundations.rules.foodClaimsRequirePointwiseGuideEvidence,'Missing internal foundations');
-assert(!bibliography.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)),'Internal reference in public bibliography');
-const examBank=buildExamBank(catalog,studyProfiles);
-assert(examBank.length>=15,'Not enough documented examination cases');
-const data={matrixIntegration,examBank,bibliography,version:1,catalog:catalog.map(t=>pick(t,taxonKeys)),groups:groups.map(t=>pick(t,taxonKeys)),areas:areas.map(a=>pick(a,['id','name','region','center','habitat','evidenceSources','elevationRangeM']))};
-await rm(output,{recursive:true,force:true});await mkdir(output,{recursive:true});await cp(path.join(web,'public'),output,{recursive:true});
-await writeFile(path.join(output,'data.json'),JSON.stringify(data));
-await cp(path.join(root,'assets/icon.png'),path.join(output,'icon.png'));
-const vendor=path.join(output,'vendor');await mkdir(vendor,{recursive:true});
-for(const name of ['leaflet.js','leaflet.css','images'])await cp(path.join(web,'node_modules/leaflet/dist',name),path.join(vendor,name),{recursive:true});
-await cp(path.join(web,'node_modules/leaflet/LICENSE'),path.join(vendor,'LEAFLET-LICENSE.txt'));
-const files=['index.html','privacy.html','support.html','admin-photos.html','admin-photos-entry.js','app.js','exam-core.js','exam-ui.js','app.css','gallery-cleanup.css','importa-foto.html','importa-foto.js','importa-foto.css','photo-core.js','admin-photo-core.js','admin-photos.js','admin-photos.css','data.json','manifest.webmanifest','icon.png','sw.js','vendor/leaflet.js','vendor/leaflet.css'];
-const imageFiles=[...new Set([...referenceImages.images,...adminImages.images].map(asset=>asset.src))];
-files.push(...imageFiles);
-const hash=createHash('sha256');for(const file of files)hash.update(await readFile(path.join(output,file)));
-const version=hash.digest('hex').slice(0,20),sw=await readFile(path.join(output,'sw.js'),'utf8');
-await writeFile(path.join(output,'sw.js'),sw.replace('__BUILD_VERSION__',version).replace("const FILES=[",'const FILES=['+imageFiles.map(src=>JSON.stringify('./'+src)+',').join('')));
-await writeFile(path.join(output,'build.json'),JSON.stringify({version,sourceCommit:process.env.GITHUB_SHA||null,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length},null,2));
-console.log(JSON.stringify({output,version,catalogUnits:catalog.length,groupCards:groups.length,macroareas:areas.length}));
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const output=path.join(root,'dist-ios'),expoOutput=path.join(root,'dist-shared-web');
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const sourceCommit=process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
+if(!/^[a-f0-9]{40}$/i.test(sourceCommit))throw Error('Invalid source commit');
+// Keep the existing private notes, photo import and backup tools under a stable route.
+execFileSync(process.execPath,['web/build-legacy.mjs'],{cwd:root,stdio:'inherit'});
+await mkdir(path.join(output,'strumenti'),{recursive:true});
+const legacyHtml=(await readFile(path.join(output,'index.html'),'utf8')).replace('<head>','<head><base href="../">');
+await writeFile(path.join(output,'strumenti/index.html'),legacyHtml);
+for(const file of ['privacy.html','support.html','admin-photos.html','importa-foto.html','data.json']){const bytes=await readFile(path.join(output,file));await writeFile(path.join(output,'strumenti',file),file.endsWith('.html')?bytes.toString().replace('<head>','<head><base href="../">'):bytes);}
+await rm(expoOutput,{recursive:true,force:true});
+execFileSync('npx',['expo','export','--platform','web','--output-dir',expoOutput],{cwd:root,env:{...process.env,CI:'1',GITHUB_SHA:sourceCommit},stdio:'inherit'});
+await cp(expoOutput,output,{recursive:true});
+const icon=await readFile(path.join(root,'assets/icon.png')),iconSha256=sha(icon),iconName=`icon-${iconSha256.slice(0,16)}.png`;
+await writeFile(path.join(output,iconName),icon);
+await writeFile(path.join(output,'icon.png'),icon);
+const manifest={name:'Fungo Italia',short_name:'Fungo Italia',id:'/fungo-italia/',start_url:'./',scope:'./',display:'standalone',background_color:'#f4f7f2',theme_color:'#174f2b',icons:[{src:'./'+iconName,sizes:'1024x1024',type:'image/png',purpose:'any'}]};
+await writeFile(path.join(output,'manifest.webmanifest'),JSON.stringify(manifest,null,2));
+// Activate only a fully cached worker built from the already-running source.
+// A later release stays waiting until the user finishes the exercise and updates.
+const runtime=`const SOURCE=${JSON.stringify(sourceCommit)};
+function sourceOf(worker){return new Promise(resolve=>{const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(null);},1500);channel.port1.onmessage=event=>{clearTimeout(timer);channel.port1.close();resolve(event.data?.sourceCommit);};worker.postMessage({type:'SOURCE_ID'},[channel.port2]);});}
+async function activateMatching(reg){const waiting=reg.waiting;try{if(waiting&&await sourceOf(waiting)===SOURCE&&waiting.state==='installed')waiting.postMessage({type:'ACTIVATE_UPDATE'});}catch{/* Worker replacement is retried on the next foreground check. */}}
+if('serviceWorker'in navigator)window.addEventListener('load',()=>{navigator.serviceWorker.register('/fungo-italia/sw.js',{scope:'/fungo-italia/',updateViaCache:'none'}).then(reg=>{void activateMatching(reg);reg.addEventListener('updatefound',()=>{const worker=reg.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed')void activateMatching(reg);});});void reg.update();}).catch(()=>{});});
+`;
+await writeFile(path.join(output,'pwa-runtime.js'),runtime);
+let html=await readFile(path.join(output,'index.html'),'utf8');
+html=html.replace('</head>',`<meta name="application-name" content="Fungo Italia"><meta name="theme-color" content="#174f2b"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="/fungo-italia/manifest.webmanifest"><link rel="apple-touch-icon" href="/fungo-italia/${iconName}"></head>`).replace('</body>','<script src="/fungo-italia/pwa-runtime.js" defer></script></body>');
+await writeFile(path.join(output,'index.html'),html);
+async function list(dir,prefix=''){const files=[];for(const item of await readdir(dir,{withFileTypes:true})){const name=prefix+item.name;if(item.isDirectory())files.push(...await list(path.join(dir,item.name),name+'/'));else if(item.isFile()&&!item.name.startsWith('.')&&!['build.json','file-manifest.json','release.json'].includes(name))files.push(name);}return files;}
+const files=(await list(output)).filter(file=>file!=='sw.js').sort();
+const entries=await Promise.all(files.map(async file=>{const bytes=await readFile(path.join(output,file));return {path:file,sha256:sha(bytes),bytes:bytes.length};}));
+const webContentHash=sha(JSON.stringify(entries));
+// Atomic shell cache; new HTML can never pair with the previous generation of JS.
+let worker=await readFile(path.join(root,'web/public/sw.js'),'utf8');
+worker="const SOURCE_COMMIT="+JSON.stringify(sourceCommit)+";\n"+worker;
+worker=worker.replace("self.addEventListener('message',event=>{","self.addEventListener('message',event=>{if(event.data?.type==='SOURCE_ID'&&event.ports[0])event.ports[0].postMessage({sourceCommit:SOURCE_COMMIT});");
+worker=worker.replace('__BUILD_VERSION__',webContentHash).replace(/const FILES=\[[^;]+;/,`const FILES=${JSON.stringify(files.map(file=>'./'+file))};`);
+worker=worker.replace("await self.skipWaiting();",'');
+worker=worker.replace("||file==='./icon.png'||file.startsWith('./vendor/')", "||file==='./icon.png'||file.startsWith('./icon-')||file.startsWith('./assets/assets/icon.')||file.startsWith('./vendor/')");
+worker=worker.replace(" const path=url.pathname;", " const path=url.pathname;\n if(path===new URL('./strumenti/',scope).pathname||path===new URL('./strumenti/index.html',scope).pathname)return './strumenti/index.html';\n if(path.startsWith(new URL('./strumenti/',scope).pathname)){const name=path.split('/').pop();if(['privacy.html','support.html','admin-photos.html','importa-foto.html'].includes(name))return './strumenti/'+name;}");
+worker=worker.replace("try{return await fetchFreshHtml(event.request,cache,cacheUrl);}","try{const shell=await cache.match(cacheUrl);if(shell)return shell;return await fetchFreshHtml(event.request,cache,cacheUrl);}");
+// A previous page can finish its exercise after activation without a forced reload.
+worker=worker.replace(".filter(key=>key.startsWith(PREFIX)&&key!==CACHE)",".filter(key=>key.startsWith(PREFIX)&&key!==CACHE).slice(0,-1)");
+await writeFile(path.join(output,'sw.js'),worker);
+const workerBytes=Buffer.from(worker);entries.push({path:'sw.js',sha256:sha(workerBytes),bytes:workerBytes.length});entries.sort((a,b)=>a.path.localeCompare(b.path,'en'));
+// Use the same lexical ordering as the independent promotion guard.
+entries.sort((a,b)=>a.path<b.path?-1:a.path>b.path?1:0);
+await writeFile(path.join(output,'file-manifest.json'),JSON.stringify({schemaVersion:1,sourceCommit,webContentHash,files:entries},null,2));
+const version=JSON.parse(await readFile(path.join(root,'app.json'),'utf8')).expo.version;
+await writeFile(path.join(output,'build.json'),JSON.stringify({schemaVersion:1,sourceCommit,version,iconSha256,webContentHash},null,2));
+await rm(expoOutput,{recursive:true,force:true});
+console.log(JSON.stringify({sourceCommit,version,iconSha256,webContentHash,files:entries.length}));

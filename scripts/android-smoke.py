@@ -91,6 +91,10 @@ def main():
     tap('Torna alle schede')
     tap('Aree')
     wait_text('Fungo Italia completo')
+    tap('Percorso')
+    wait_text('Ciao')
+    tap('subscription-access')
+    wait_text('Fungo Italia completo')
     launch()
     tap('Studio')
     wait_text('1 preferito')
@@ -105,7 +109,7 @@ def main():
     wait_text('Test Agaricus gratuito')
     wait_text('Inizia 4 casi')
     print('PASS: free four-case Agaricus test is accessible; Areas remain gated.')
-    print('PASS: Dashboard cold start offline, Agaricus search/detail and favorites persist after restart.')
+    print('PASS: Percorso cold start offline, Agaricus search/detail and favorites persist after restart.')
 try:
     main()
 finally:
