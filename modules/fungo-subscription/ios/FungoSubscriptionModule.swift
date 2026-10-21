@@ -67,6 +67,8 @@ public final class FungoSubscriptionModule: Module {
     // Only verified, currently entitled Apple transactions may unlock access.
     // Avoid Transaction.latest(for:) during initial simulator startup: on iPhone
     // its request can stall before the first account state is returned.
+    let diagnostic = Logger(subsystem: "it.fungoitalia.subscription", category: "StoreKit")
+    diagnostic.notice("Verifier currentEntitlements entered")
     let now = Date()
     var selected: Transaction?
     for await result in Transaction.currentEntitlements {
@@ -80,6 +82,7 @@ public final class FungoSubscriptionModule: Module {
         selected = transaction
       }
     }
+    diagnostic.notice("Verifier currentEntitlements completed")
     let iso = ISO8601DateFormatter()
     var expires: Any = NSNull()
     if let expiry = selected?.expirationDate { expires = iso.string(from: expiry) }

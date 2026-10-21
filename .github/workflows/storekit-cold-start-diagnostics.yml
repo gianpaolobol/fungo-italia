@@ -1,0 +1,104 @@
+name: Diagnose StoreKit cold-start verification
+on:
+  pull_request:
+    paths: ['modules/fungo-subscription/**','hooks/useSubscription.ts','components/SubscriptionGate.tsx','tests/storekit/**','scripts/add-storekit-ui-tests.rb','.github/workflows/storekit-cold-start-diagnostics.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: storekit-diagnostics-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    name: startup-${{ matrix.observer }}
+    strategy:
+      fail-fast: false
+      matrix:
+        observer: [normal, disabled]
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      SCREENSHOT_FAMILY: iphone
+      STOREKIT_OBSERVER_DIAGNOSTIC: ${{ matrix.observer }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Select a compatible Apple StoreKit simulator runtime
+        run: bash scripts/prepare-storekit-runtime.sh
+      - name: Prepare the actual app and Apple StoreKit UI test runner
+        run: |
+          npm ci
+          npm run prepare:data
+          npm run typecheck
+          node --test scripts/subscription-policy.test.mjs
+          mkdir -p store-evidence
+          git rev-parse HEAD > store-evidence/source-commit.txt
+          printf '%s\n' "$STOREKIT_OBSERVER_DIAGNOSTIC" > store-evidence/observer-mode.txt
+          if test "$STOREKIT_OBSERVER_DIAGNOSTIC" = disabled; then
+            python3 - <<'PYDIAG'
+          from pathlib import Path
+          p = Path('modules/fungo-subscription/ios/FungoSubscriptionModule.swift')
+          s = p.read_text()
+          start = s.index('    OnCreate {\n')
+          end = s.index('    OnDestroy {', start)
+          block = s[start:end]
+          assert 'for await result in Transaction.updates' in block
+          s = s[:start] + '    OnCreate { self.logger.notice("DIAGNOSTIC ONLY: updates observer omitted") }\n' + s[end:]
+          p.write_text(s)
+          PYDIAG
+          fi
+          git diff -- modules/fungo-subscription/ios/FungoSubscriptionModule.swift > store-evidence/diagnostic-source.patch
+          npx expo prebuild --platform ios --no-install
+          ruby scripts/add-storekit-ui-tests.rb
+          cd ios
+          pod install
+      - name: Verify cold-launch access without buying or restarting
+        run: |
+          mkdir -p store-evidence/screenshots
+          workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
+          xcodebuild -list -json -workspace "$workspace" > store-evidence/test-schemes.json
+          node -e 'const p=require("./store-evidence/test-schemes.json");if(!p.workspace.schemes.includes("FungoItaliaPurchaseUI"))throw Error("Purchase UI test scheme missing")'
+          xcrun simctl list runtimes -j > /tmp/purchase-runtimes.json
+          runtime="$STOREKIT_TEST_RUNTIME"
+          xcrun simctl list devicetypes -j > /tmp/purchase-types.json
+          for family in "$SCREENSHOT_FAMILY"; do
+            type=$(FAMILY="$family" node -e 'const a=require("/tmp/purchase-types.json").devicetypes;const pattern=process.env.FAMILY==="iphone"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error("Screenshot device unavailable");process.stdout.write(d.identifier)')
+            xcrun simctl list devices available -j > /tmp/purchase-devices.json
+            udid=$(DEVICE_TYPE="$type" DEVICE_RUNTIME="$runtime" node -e 'const a=require("/tmp/purchase-devices.json").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')
+            if test -z "$udid"; then udid=$(xcrun simctl create "FungoPurchase-$family" "$type" "$runtime"); fi
+            xcrun simctl boot "$udid" || true
+            xcrun simctl bootstatus "$udid" -b
+            xcrun simctl status_bar "$udid" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
+            if ! xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testColdLaunchEntitlementVerification -destination "platform=iOS Simulator,id=$udid" -derivedDataPath purchase-ui-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test > "store-evidence/purchase-ui-$family.log" 2>&1; then
+              xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'subsystem == "it.fungoitalia.subscription"' > "store-evidence/storekit-native-$family.log" 2>&1 || true
+              xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'process == "storekitd" OR process == "appstoreagent" OR subsystem CONTAINS[c] "storekit"' > "store-evidence/storekit-service-$family.log" 2>&1 || true
+              cat "store-evidence/storekit-native-$family.log"
+              tail -n 180 "store-evidence/purchase-ui-$family.log"
+              exit 1
+            fi
+            xcrun simctl spawn "$udid" log show --style compact --last 10m --predicate 'subsystem == "it.fungoitalia.subscription"' > "store-evidence/storekit-native-$family.log" 2>&1 || true
+            grep -E 'Test Case .*testColdLaunchEntitlementVerification.*passed' "store-evidence/purchase-ui-$family.log"
+            grep -E 'Test Case|Executed|TEST SUCCEEDED' "store-evidence/purchase-ui-$family.log"
+            xcrun simctl shutdown "$udid"
+          done
+          printf '%s\n' "$GITHUB_SHA" > store-evidence/screenshots/source-commit.txt
+      - name: Preserve UI failure screenshots and attachments
+        if: failure()
+        run: |
+          if test -d purchase-ui-build/Logs/Test; then
+            result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)
+            if test -n "$result"; then
+              xcrun xcresulttool export attachments --path "$result" --output-path store-evidence/attachments || true
+            fi
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: StoreKit-cold-start-${{ matrix.observer }}
+          path: store-evidence/
+          retention-days: 30
