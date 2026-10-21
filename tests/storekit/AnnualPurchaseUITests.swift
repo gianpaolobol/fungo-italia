@@ -21,7 +21,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     XCTAssertTrue(exists, "Required app control unavailable", file: file, line: line)
   }
   @MainActor func tap(_ app: XCUIApplication, _ label: String, file: StaticString = #filePath, line: UInt = #line) async {
-    let item = ["Dashboard", "Studio", "Aree", "Esame", "Abbonamento"].contains(label)
+    let item = ["Percorso", "Studio", "Aree", "Esame"].contains(label)
       ? app.descendants(matching: .any).matching(identifier: "tab-" + label.lowercased()).firstMatch
       : element(app, label)
     await require(item, timeout: 60, file: file, line: line)
@@ -51,7 +51,7 @@ final class AnnualPurchaseUITests: XCTestCase {
   }
   @MainActor func waitForGate(_ app: XCUIApplication) async {
     await require(element(app, "Inizia 4 casi"))
-    await tap(app, "Abbonamento")
+    await tap(app, "Abbonamento e sblocco completo")
     await require(element(app, "Fungo Italia completo"))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
   }
@@ -91,7 +91,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Esame")
     await require(element(app, "Inizia 4 casi"))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
-    await tap(app, "Abbonamento")
+    await tap(app, "Abbonamento e sblocco completo")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
     await require(subscribe, timeout: 60)
     var ready = await readyToTap(subscribe)
@@ -103,7 +103,7 @@ final class AnnualPurchaseUITests: XCTestCase {
       print("STOREKIT_RETRY Relaunching app after stalled initial entitlement verification")
       app.terminate()
       app.launch()
-      await tap(app, "Abbonamento")
+      await tap(app, "Abbonamento e sblocco completo")
       let retriedSubscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
       await require(retriedSubscribe, timeout: 60)
       ready = await readyToTap(retriedSubscribe)
@@ -124,7 +124,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Esame")
     await require(element(app, "Inizia 15 casi"))
     print("ANNUAL_UI Reopened app restores access")
-    await tap(app, "Abbonamento")
+    await tap(app, "Abbonamento e sblocco completo")
     await tap(app, "Ripristina acquisti")
     await require(element(app, "Abbonamento attivo"))
     await tap(app, "Esame")

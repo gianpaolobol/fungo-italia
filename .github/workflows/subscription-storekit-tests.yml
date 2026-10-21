@@ -1,8 +1,8 @@
 name: Verify native StoreKit subscriptions
 on:
   push:
-    branches: [main, fix/app-review-20261021]
-    paths: ['modules/fungo-subscription/**','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','App.tsx','tests/storekit/AnnualStoreKitTests.swift','tests/storekit/Annual.storekit','scripts/clean-storekit-test-host.rb','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml','.github/workflows/consolidated-testflight.yml']
+    branches: [main, fix/app-review-20261021, feat/continuous-mushroom-navigation-20261021]
+    paths: ['modules/fungo-subscription/**','hooks/useSubscription.ts','lib/subscriptionPolicy.ts','App.tsx','tests/storekit/AnnualStoreKitTests.swift','tests/storekit/Annual.storekit','scripts/clean-storekit-test-host.rb','scripts/prepare-storekit-runtime.sh','scripts/add-storekit-tests.rb','.github/workflows/subscription-storekit-tests.yml','.github/workflows/consolidated-testflight.yml','.github/workflows/branch-native-proof-trigger.yml']
   workflow_dispatch:
 permissions:
   contents: read
