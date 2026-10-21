@@ -3,7 +3,7 @@ import {Pressable,StyleSheet,View} from 'react-native';
 
 /** Shared native/web drawing keeps the subscription entry independent of emoji fonts. */
 export default function MushroomAccess({selected,onPress}:{selected:boolean;onPress:()=>void}){
- return <Pressable testID="subscription-access" accessibilityRole="button" accessibilityLabel="subscription-access" accessibilityHint="Apri o gestisci l’abbonamento annuale" accessibilityState={{expanded:selected}} onPress={onPress} style={[s.button,selected&&s.selected]}>
+ return <Pressable testID="subscription-access" accessibilityRole="button" accessibilityLabel="Abbonamento" accessibilityHint="Apri o gestisci l’abbonamento annuale" accessibilityState={{expanded:selected}} onPress={onPress} style={[s.button,selected&&s.selected]}>
   <View accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants" style={s.mushroom}>
    <View style={s.stem}/><View style={s.cap}><View style={[s.spot,s.left]}/><View style={[s.spot,s.top]}/><View style={[s.spot,s.right]}/></View>
   </View>

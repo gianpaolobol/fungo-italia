@@ -93,7 +93,7 @@ def main():
     wait_text('Fungo Italia completo')
     tap('Percorso')
     wait_text('Ciao')
-    tap('subscription-access')
+    tap('Abbonamento')
     wait_text('Fungo Italia completo')
     launch()
     tap('Studio')

@@ -1,4 +1,5 @@
 import {chromium,expect} from '@playwright/test';
+import {readFile} from 'node:fs/promises';
 import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 const base=process.env.UNIFIED_BASE_URL||'http://127.0.0.1:4173/fungo-italia/';
@@ -9,14 +10,16 @@ try{
  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  // Existing tool data survives the shared-app launch and navigation.
- await page.addInitScript(()=>{localStorage.setItem('parity-preserve-existing-notes','kept');});
+ const catalog=JSON.parse(await readFile(new URL('../src/data/catalog.json',import.meta.url),'utf8'));const agaricus=catalog.find(t=>t.scientificName.startsWith('Agaricus '));
+ await page.addInitScript(id=>{if(!localStorage.getItem('fungo-italia:study:v1'))localStorage.setItem('fungo-italia:pwa:study:v1',JSON.stringify({version:1,favoriteIds:[id],resumeId:id}));localStorage.setItem('parity-preserve-existing-notes','kept');},agaricus.id);
  await page.goto(base);await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree']);
  await expect(page.getByTestId('subscription-access')).toBeVisible();
  await page.getByTestId('subscription-access').click();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toBeVisible();
  await expect(page.getByText('19,99 € / anno',{exact:true})).toBeVisible();
  await expect(page.getByRole('button',{name:'Apri l’app installata',exact:true})).toBeVisible();
  await expect(page.getByRole('button',{name:'Ripristina acquisti',exact:true})).toHaveCount(0);
- await page.getByRole('tab',{name:'Studio',exact:true}).click();await expect(page.getByText('Demo gratuita · Agaricus',{exact:true})).toBeVisible();
+ await page.getByRole('tab',{name:'Studio',exact:true}).click();await expect(page.getByText('Demo gratuita · Agaricus',{exact:true})).toBeVisible();await expect(page.getByText(/1 preferito/)).toBeVisible();
+ await expect.poll(()=>page.evaluate(()=>{const previous=JSON.parse(localStorage.getItem('fungo-italia:pwa:study:v1'));const next=JSON.parse(localStorage.getItem('fungo-italia:study:v1'));return JSON.stringify(previous)===JSON.stringify(next);})).toBe(true);
  await page.getByRole('tab',{name:'Esame',exact:true}).click();await expect(page.getByText(/Test Agaricus/).first()).toBeVisible();
  await page.getByRole('tab',{name:'Aree',exact:true}).click();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toBeVisible();
  await page.getByRole('tab',{name:'Percorso',exact:true}).click();
