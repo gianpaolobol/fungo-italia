@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleSheet,Text,View} from 'react-native';
 import {mushroomFill} from '../lib/study-timeline.mjs';
-const labels=['Le prime basi','Il percorso prende forma','Continua a crescere','Consolida lo studio','Verso un percorso stabile'];
-export default function StudyMushroom({stage,score}:{stage:number;score:number|null}){
+export default function StudyMushroom({score}:{score:number|null}){
  const fill=mushroomFill(score);
  return <View accessible accessibilityRole="progressbar" accessibilityLabel="Avanzamento dello studio" accessibilityValue={score===null?{text:'Da valutare'}:{min:0,max:100,now:fill.percent,text:fill.percent+' per cento'}} style={s.garden}>
   <View style={s.picture}><View style={s.halo}/>
