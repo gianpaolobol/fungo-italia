@@ -14,11 +14,11 @@ concurrency:
   cancel-in-progress: true
 jobs:
   probe:
-    name: ipad-${{ matrix.mode }}
+    name: ipad-${{ matrix.mode }}-preinstalled
     strategy:
       fail-fast: false
       matrix:
-        mode: [baseline, without-updates]
+        mode: [baseline]
     runs-on: macos-26
     timeout-minutes: 60
     env:
@@ -64,7 +64,7 @@ jobs:
           mkdir -p store-evidence
           printf '%s\n' "$GITHUB_SHA" > store-evidence/source-commit.txt
           printf '%s\n' "$FUNGO_STOREKIT_PROBE_MODE" > store-evidence/diagnostic-mode.txt
-          printf '%s\n' 'Diagnostic only; no purchase; not release verification.' > store-evidence/scope.txt
+          printf '%s\n' 'Diagnostic only; no purchase; not release verification.' 'preinstalled-before-session' > store-evidence/scope.txt
           workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
           xcrun simctl list devicetypes -j > "$RUNNER_TEMP/entitlement-probe-types.json"
           type=$(node -e 'const a=require(process.argv[1]).devicetypes;const d=a.find(d=>/^iPad Pro 13-inch.*M4/.test(d.name));if(!d)throw Error("iPad device unavailable");process.stdout.write(d.identifier)' "$RUNNER_TEMP/entitlement-probe-types.json")
@@ -72,16 +72,35 @@ jobs:
           printf '%s\n' "$udid" > store-evidence/simulator-id.txt
           xcrun simctl boot "$udid"
           xcrun simctl bootstatus "$udid" -b
+          xcode_args=(
+            -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release
+            -destination "platform=iOS Simulator,id=$udid" -derivedDataPath entitlement-probe-build
+            -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testEntitlementStartupProbe
+            -parallel-testing-enabled NO -test-timeouts-enabled YES
+            -default-test-execution-time-allowance 360 -maximum-test-execution-time-allowance 360
+            ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES
+            CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=- CODE_SIGN_STYLE=Manual
+            DEVELOPMENT_TEAM= PROVISIONING_PROFILE_SPECIFIER= -jobs 3
+          )
+          # XCTest normally installs the target lazily at XCUIApplication.launch().
+          # Register it before the test runner can construct SKTestSession, without
+          # launching the app or changing the production billing implementation.
+          xcodebuild "${xcode_args[@]}" build-for-testing > store-evidence/build-for-testing.log 2>&1
+          target_app=entitlement-probe-build/Build/Products/Release-iphonesimulator/FungoItalia.app
+          test -d "$target_app"
+          target_bundle_id=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$target_app/Info.plist")
+          test "$target_bundle_id" = it.fungoitalia.app
+          date -u '+PREINSTALL_STARTED %Y-%m-%dT%H:%M:%SZ' > store-evidence/preinstall.log
+          printf 'TARGET_APP %s\nTARGET_BUNDLE_ID %s\n' "$target_app" "$target_bundle_id" >> store-evidence/preinstall.log
+          xcrun simctl install "$udid" "$target_app" >> store-evidence/preinstall.log 2>&1
+          xcrun simctl get_app_container "$udid" "$target_bundle_id" app > store-evidence/preinstalled-app-container.txt
+          test -s store-evidence/preinstalled-app-container.txt
+          cat store-evidence/preinstalled-app-container.txt >> store-evidence/preinstall.log
+          date -u '+PREINSTALL_VERIFIED_BEFORE_TEST_SESSION %Y-%m-%dT%H:%M:%SZ' >> store-evidence/preinstall.log
+          cat store-evidence/preinstall.log
           set +e
-          xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release \
-            -destination "platform=iOS Simulator,id=$udid" -derivedDataPath entitlement-probe-build \
-            -resultBundlePath store-evidence/entitlement-probe.xcresult \
-            -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testEntitlementStartupProbe \
-            -parallel-testing-enabled NO -test-timeouts-enabled YES \
-            -default-test-execution-time-allowance 360 -maximum-test-execution-time-allowance 360 \
-            ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES \
-            CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual \
-            DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test \
+          xcodebuild "${xcode_args[@]}" \
+            -resultBundlePath store-evidence/entitlement-probe.xcresult test-without-building \
             > store-evidence/entitlement-probe.log 2>&1
           probe_status=$?
           set -e
@@ -104,6 +123,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: StoreKit-entitlement-probe-ipad-${{ matrix.mode }}
+          name: StoreKit-entitlement-probe-ipad-${{ matrix.mode }}-preinstalled
           path: store-evidence/
           retention-days: 14
