@@ -93,6 +93,7 @@ jobs:
   push:
     branches:
     - main
+    - feat/continuous-mushroom-navigation-20261021
     paths:
     - components/SubscriptionGate.tsx
     - package.json
