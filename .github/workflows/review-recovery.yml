@@ -20,7 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - run: node --check scripts/inspect-review-recovery.mjs
+      - name: Validate read-only inspection
+        run: node --check scripts/inspect-review-recovery.mjs
       - run: node scripts/inspect-review-recovery.mjs
       - uses: actions/upload-artifact@v4
         if: always()
