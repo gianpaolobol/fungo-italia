@@ -1,0 +1,14 @@
+name: Branch native proof trigger
+on:
+  push:
+    branches:
+      - feat/continuous-mushroom-navigation-20261021
+    paths:
+      - .github/workflows/branch-native-proof-trigger.yml
+permissions:
+  contents: read
+jobs:
+  trigger-receipt:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Native StoreKit, purchase UI, and demo workflows should be triggered by this file change at the same source SHA."
