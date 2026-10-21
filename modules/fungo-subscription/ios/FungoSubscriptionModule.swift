@@ -13,9 +13,30 @@ public final class FungoSubscriptionModule: Module {
     Name("FungoSubscription")
     Events("entitlementChanged")
     OnCreate {
+      self.logger.notice("Subscription module created")
+      #if targetEnvironment(simulator)
+      // Diagnostic launches isolate StoreKit's observer from the bridge lookup.
+      // These switches cannot affect a device or a distributed TestFlight build,
+      // never synthesize an entitlement, and must not be used for release evidence.
+      let diagnostic = ProcessInfo.processInfo.environment["FUNGO_STOREKIT_DIAGNOSTIC"]
+      if diagnostic == "direct-snapshot" {
+        Task { @MainActor [weak self] in
+          self?.logger.notice("Diagnostic direct snapshot entered")
+          let state = await Self.verifiedEntitlement()
+          let active = state["active"] as? Bool ?? false
+          self?.logger.notice("Diagnostic direct snapshot returned active=\(active, privacy: .public)")
+        }
+      }
+      if diagnostic == "without-updates" {
+        self.logger.notice("Diagnostic transaction updates disabled")
+        return
+      }
+      #endif
       self.updates?.cancel()
       self.updates = Task { [weak self] in
+        self?.logger.notice("Transaction updates listener entered")
         for await result in Transaction.updates {
+          self?.logger.notice("Transaction updates listener received a result")
           if Task.isCancelled { return }
           guard case .verified(let transaction) = result,
                 transaction.productID == Self.annualID else { continue }
@@ -69,7 +90,25 @@ public final class FungoSubscriptionModule: Module {
     // its request can stall before the first account state is returned.
     let now = Date()
     var selected: Transaction?
-    for await result in Transaction.currentEntitlements {
+    // Keep the asynchronous iterator boundaries visible: entering the verifier
+    // alone cannot distinguish sequence creation from a stalled first next().
+    // No transaction identifiers, receipts, or account data are logged.
+    let trace = Logger(subsystem: "it.fungoitalia.subscription", category: "StoreKit")
+    let lookup = UUID().uuidString
+    trace.notice("Entitlement \(lookup, privacy: .public) sequence requested main=\(Thread.isMainThread, privacy: .public)")
+    let sequence = Transaction.currentEntitlements
+    trace.notice("Entitlement \(lookup, privacy: .public) sequence created")
+    var iterator = sequence.makeAsyncIterator()
+    trace.notice("Entitlement \(lookup, privacy: .public) iterator created")
+    var resultCount = 0
+    while true {
+      trace.notice("Entitlement \(lookup, privacy: .public) next requested index=\(resultCount, privacy: .public)")
+      guard let result = await iterator.next() else {
+        trace.notice("Entitlement \(lookup, privacy: .public) sequence ended count=\(resultCount, privacy: .public)")
+        break
+      }
+      resultCount += 1
+      trace.notice("Entitlement \(lookup, privacy: .public) next returned index=\(resultCount, privacy: .public)")
       guard case .verified(let transaction) = result,
             transaction.productID == Self.annualID,
             transaction.productType == .autoRenewable,

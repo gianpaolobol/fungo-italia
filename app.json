@@ -7,7 +7,8 @@
     "userInterfaceStyle": "light",
     "platforms": [
       "ios",
-      "android"
+      "android",
+      "web"
     ],
     "scheme": "fungoitalia",
     "ios": {
@@ -43,6 +44,14 @@
           "isAccessMediaLocationEnabled": false
         }
       ]
-    ]
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/icon.png"
+    },
+    "experiments": {
+      "baseUrl": "/fungo-italia"
+    }
   }
 }

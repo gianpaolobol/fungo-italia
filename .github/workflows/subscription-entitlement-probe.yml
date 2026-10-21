@@ -1,0 +1,109 @@
+name: Diagnose StoreKit entitlement startup
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/percorso-parity-subscriptions-20261021]
+    paths:
+      - .github/workflows/subscription-entitlement-probe.yml
+      - modules/fungo-subscription/ios/FungoSubscriptionModule.swift
+      - tests/storekit/AnnualPurchaseUITests.swift
+permissions:
+  contents: read
+concurrency:
+  group: storekit-entitlement-probe-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  probe:
+    name: ipad-${{ matrix.mode }}
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [baseline, without-updates]
+    runs-on: macos-26
+    timeout-minutes: 60
+    env:
+      CI: '1'
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+      FUNGO_STOREKIT_PROBE_MODE: ${{ matrix.mode }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Select the same compatible StoreKit runtime as the purchase UI tests
+        run: bash scripts/prepare-storekit-runtime.sh
+      - name: Prepare the actual app and isolated diagnostic test selection
+        run: |
+          npm ci
+          npm run prepare:data
+          npm run typecheck
+          node --test scripts/subscription-policy.test.mjs
+          npx expo prebuild --platform ios --no-install
+          ruby scripts/add-storekit-ui-tests.rb
+          ruby <<'RUBY'
+          require 'rexml/document'
+          path = Dir['ios/*.xcodeproj/xcshareddata/xcschemes/FungoItaliaPurchaseUI.xcscheme'].first
+          raise 'Missing purchase UI scheme' unless path
+          document = REXML::Document.new(File.read(path))
+          action = document.elements['Scheme/TestAction']
+          raise 'Missing test action' unless action
+          action.attributes['shouldUseLaunchSchemeArgsEnv'] = 'NO'
+          variables = action.add_element('EnvironmentVariables')
+          variables.add_element('EnvironmentVariable', {
+            'key' => 'FUNGO_STOREKIT_PROBE_MODE',
+            'value' => ENV.fetch('FUNGO_STOREKIT_PROBE_MODE'),
+            'isEnabled' => 'YES'
+          })
+          File.write(path, document.to_s)
+          RUBY
+          cd ios
+          pod install
+      - name: Observe initial entitlement readiness without attempting a purchase
+        run: |
+          mkdir -p store-evidence
+          printf '%s\n' "$GITHUB_SHA" > store-evidence/source-commit.txt
+          printf '%s\n' "$FUNGO_STOREKIT_PROBE_MODE" > store-evidence/diagnostic-mode.txt
+          printf '%s\n' 'Diagnostic only; no purchase; not release verification.' > store-evidence/scope.txt
+          workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
+          xcrun simctl list devicetypes -j > "$RUNNER_TEMP/entitlement-probe-types.json"
+          type=$(node -e 'const a=require(process.argv[1]).devicetypes;const d=a.find(d=>/^iPad Pro 13-inch.*M4/.test(d.name));if(!d)throw Error("iPad device unavailable");process.stdout.write(d.identifier)' "$RUNNER_TEMP/entitlement-probe-types.json")
+          udid=$(xcrun simctl create "FungoEntitlementProbe-$FUNGO_STOREKIT_PROBE_MODE" "$type" "$STOREKIT_TEST_RUNTIME")
+          printf '%s\n' "$udid" > store-evidence/simulator-id.txt
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid" -b
+          set +e
+          xcodebuild -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release \
+            -destination "platform=iOS Simulator,id=$udid" -derivedDataPath entitlement-probe-build \
+            -resultBundlePath store-evidence/entitlement-probe.xcresult \
+            -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testEntitlementStartupProbe \
+            -parallel-testing-enabled NO -test-timeouts-enabled YES \
+            -default-test-execution-time-allowance 360 -maximum-test-execution-time-allowance 360 \
+            ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES \
+            CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual \
+            DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 test \
+            > store-evidence/entitlement-probe.log 2>&1
+          probe_status=$?
+          set -e
+          xcrun simctl spawn "$udid" log show --style compact --last 15m \
+            --predicate 'subsystem == "it.fungoitalia.subscription"' \
+            > store-evidence/storekit-native.log 2>&1 || true
+          xcrun simctl spawn "$udid" log show --style compact --last 15m \
+            --predicate 'process == "storekitd" OR process == "storekitagent" OR subsystem CONTAINS[c] "storekit"' \
+            > store-evidence/storekit-system.log 2>&1 || true
+          cat store-evidence/storekit-native.log
+          tail -n 120 store-evidence/entitlement-probe.log
+          xcrun simctl shutdown "$udid" || true
+          exit "$probe_status"
+      - name: Preserve diagnostic screenshots on success or failure
+        if: always()
+        run: |
+          if test -d store-evidence/entitlement-probe.xcresult; then
+            xcrun xcresulttool export attachments --path store-evidence/entitlement-probe.xcresult --output-path store-evidence/attachments || true
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: StoreKit-entitlement-probe-ipad-${{ matrix.mode }}
+          path: store-evidence/
+          retention-days: 14

@@ -21,9 +21,15 @@ final class AnnualPurchaseUITests: XCTestCase {
     XCTAssertTrue(exists, "Required app control unavailable", file: file, line: line)
   }
   @MainActor func tap(_ app: XCUIApplication, _ label: String, file: StaticString = #filePath, line: UInt = #line) async {
-    let item = ["Dashboard", "Studio", "Aree", "Esame", "Abbonamento"].contains(label)
-      ? app.descendants(matching: .any).matching(identifier: "tab-" + label.lowercased()).firstMatch
-      : element(app, label)
+    let item: XCUIElement
+    if label == "Abbonamento" {
+      item = app.descendants(matching: .any).matching(identifier: "subscription-access").firstMatch
+    } else if ["Dashboard", "Percorso", "Studio", "Aree", "Esame"].contains(label) {
+      let tabName = label == "Percorso" ? "Dashboard" : label
+      item = app.descendants(matching: .any).matching(identifier: "tab-" + tabName.lowercased()).firstMatch
+    } else {
+      item = element(app, label)
+    }
     await require(item, timeout: 60, file: file, line: line)
     item.tap()
   }
@@ -54,6 +60,43 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Abbonamento")
     await require(element(app, "Fungo Italia completo"))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
+  }
+  // Opt-in startup diagnostic only: never buys, never provides release evidence.
+  @MainActor func testEntitlementStartupProbe() async throws {
+    #if !targetEnvironment(simulator)
+    throw XCTSkip("The entitlement startup probe requires a simulator")
+    #else
+    guard let mode = ProcessInfo.processInfo.environment["FUNGO_STOREKIT_PROBE_MODE"] else {
+      throw XCTSkip("Run only from the dedicated entitlement diagnostic workflow")
+    }
+    guard ["baseline", "without-updates"].contains(mode) else {
+      XCTFail("Unexpected entitlement diagnostic mode"); return
+    }
+    continueAfterFailure = false
+    let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
+    let session = try SKTestSession(contentsOf: url)
+    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
+    session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
+    guard session.storefront == "ITA" else {
+      XCTFail("Local StoreKit session unavailable; diagnostic must never use the production store"); return
+    }
+    let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
+    // Explicitly clear the baseline so the only variable is observer startup.
+    app.launchEnvironment["FUNGO_STOREKIT_DIAGNOSTIC"] = mode == "without-updates" ? mode : ""
+    defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
+    print("ENTITLEMENT_STARTUP_PROBE mode=\(mode) diagnostic-only no-purchase")
+    app.launch()
+    await tap(app, "Abbonamento")
+    let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
+    await require(subscribe, timeout: 60)
+    XCTAssertTrue(subscribe.label.contains("19,99") && subscribe.label.contains("€"), "Probe must load the Italian annual fixture")
+    let ready = await readyToTap(subscribe)
+    print("ENTITLEMENT_STARTUP_PROBE mode=\(mode) ready=\(ready) transactions=\(session.allTransactions().count)")
+    diagnose(app, session)
+    try capture(app, "entitlement-startup-\(mode)")
+    XCTAssertTrue(session.allTransactions().isEmpty, "Readiness diagnostic must not create a transaction")
+    XCTAssertTrue(ready, "Initial verified inactive entitlement must return before purchase becomes ready")
+    #endif
   }
   @MainActor func testAFreeAgaricusDemoWithoutPurchase() async throws {
     continueAfterFailure = false
