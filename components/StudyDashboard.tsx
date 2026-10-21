@@ -19,7 +19,7 @@ export default function StudyDashboard({study,complete,onStudy,onTraining,onAcce
   {!study.ready&&!study.storageError?<ActivityIndicator/>:<>
    <View style={s.hero}>
     <Text style={s.eyebrow}>{study.demo?'PROGRESSI DEMO · 4 CASI FOTOGRAFICI':'AVANZAMENTO DELLO STUDIO · MINIMI'}</Text>
-    <StudyMushroom stage={m.stage} score={p.score}/>
+    <StudyMushroom score={p.score}/>
     <Text accessibilityRole="header" style={s.status}>{status.title}</Text><Text style={s.body}>{status.detail}</Text>
     {p.criticalOpen>0&&<Text accessibilityRole="alert" style={s.error}>{p.criticalOpen} {p.criticalOpen===1?'competenza con errore critico ancora da consolidare':'competenze con errori critici ancora da consolidare'}</Text>}
     <View style={s.metrics}>
