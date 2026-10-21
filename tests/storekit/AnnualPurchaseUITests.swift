@@ -55,6 +55,26 @@ final class AnnualPurchaseUITests: XCTestCase {
     await require(element(app, "Fungo Italia completo"))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
   }
+  @MainActor func testAFreeAgaricusDemoWithoutPurchase() async throws {
+    continueAfterFailure = false
+    let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
+    app.launch()
+    defer { app.terminate() }
+    await require(element(app, "Demo gratuita · Agaricus"))
+    await tap(app, "Apri Agaricus sez. Xanthodermatei")
+    try capture(app, "demo-01-studio")
+    await tap(app, "Esame")
+    await require(element(app, "Test Agaricus gratuito"))
+    await require(element(app, "Inizia 4 casi"))
+    XCTAssertFalse(element(app, "Inizia 15 casi").exists)
+    try capture(app, "demo-02-test")
+    await tap(app, "Inizia 4 casi")
+    await require(element(app, "Caso 1 / 4"))
+    await tap(app, "Torna al menu del test")
+    await tap(app, "Aree")
+    await require(element(app, "Fungo Italia completo"))
+    print("AGARICUS_DEMO_UI Free profiles and four-case test, paid Areas gated")
+  }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
     continueAfterFailure = false
     let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
