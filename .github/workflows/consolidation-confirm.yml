@@ -1,0 +1,89 @@
+name: Confirm consolidated beta after queued upload
+on:
+  push:
+    branches: [ci/consolidation-cleanup-20261021]
+    paths: ['.github/workflows/consolidation-confirm.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: confirm-consolidated-38a7a85
+  cancel-in-progress: false
+jobs:
+  confirm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 3662a3accc3845194e7a0fdb5e99948fe8024b75
+      - name: Wait for the identified original signed binary upload
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run_id=39633124301;
+            for(let i=0;i<270;i++){
+              const main=await github.rest.repos.getBranch({...context.repo,branch:'main'});
+              if(main.data.commit.sha!=='3662a3accc3845194e7a0fdb5e99948fe8024b75')throw Error('Main changed; preserve candidate identity for review');
+              const {data:r}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});
+              if(r.head_sha!=='38a7a85ac96803a5dca18bf5c6a39264bcc99444'||r.path!=='.github/workflows/consolidated-testflight.yml'||r.event!=='push'||r.head_branch!=='main')throw Error('Unexpected original producer');
+              if(r.status==='completed'){
+                const {data:j}=await github.rest.actions.listJobsForWorkflowRun({...context.repo,run_id,per_page:100});
+                const upload=j.jobs.find(j=>j.name==='beta')?.steps.find(s=>s.name==='Upload diagnostic binary to TestFlight only');
+                if(upload?.conclusion!=='success')throw Error('Original Apple upload did not succeed; no inferred beta confirmation');
+                return;
+              }
+              if(i%10===0)core.info('Waiting for queued Expo submission and original producer '+run_id);
+              await new Promise(resolve=>setTimeout(resolve,20000));
+            }
+            throw Error('Original upload remains pending');
+      - uses: actions/download-artifact@v4
+        with:
+          name: Consolidated-TestFlight-evidence
+          run-id: 39633124301
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/signed-proof
+      - name: Preserve and validate original binary receipt
+        run: |
+          node --input-type=module <<'JS'
+          import {readdir,readFile,copyFile} from 'node:fs/promises';
+          import {join,basename} from 'node:path';
+          const root=process.env.RUNNER_TEMP+'/signed-proof';
+          const matches=(await readdir(root,{recursive:true})).filter(p=>basename(p)==='consolidated-build.json');
+          if(matches.length!==1)throw Error('Unambiguous signed binary receipt required');
+          const source=join(root,matches[0]),r=JSON.parse(await readFile(source,'utf8'));
+          if(r.sourceCommit!=='38a7a85ac96803a5dca18bf5c6a39264bcc99444'||r.producerRunId!=='39633124301'||r.appId!=='6821140326'||r.version!=='1.1.0'||r.productId!=='it.fungoitalia.premium.annual'||r.testFlightOnly!==true||r.diagnosticOnly!==true||r.appStoreReady!==false||r.nativeStorekitVerified!==true||r.storekitUIVerified!==false||!/^[0-9]+$/.test(r.buildNumber)||!/^[a-f0-9]{64}$/.test(r.ipaSha256))throw Error('Unexpected original signed candidate receipt');
+          if(r.evidence.native.id!==39633124465||r.evidence.ui.id!==39633124366||r.evidence.demo.id!==39633124324)throw Error('Unexpected original proof runs');
+          await copyFile(source,process.env.RUNNER_TEMP+'/consolidated-build.json');
+          console.log('Preserved original source, build number and IPA hash; no binary rebuilt or uploaded');
+          JS
+      - name: Confirm actual Apple processing and owner-only group with corrected reader
+        run: node scripts/verify-consolidated-testflight.mjs
+      - name: Confirm internal beta availability without App Store submission
+        run: |
+          node --input-type=module <<'JS'
+          import {readFile,writeFile} from 'node:fs/promises';
+          import {createAppleApi} from './scripts/app-store-connect.mjs';
+          const file='store-evidence/consolidated-testflight.json',r=JSON.parse(await readFile(file,'utf8')),api=await createAppleApi();
+          let detail;
+          for(let i=0;i<20;i++){
+            const out=await api('/v1/builds/'+r.appleBuildId+'/buildBetaDetail');
+            if(!out.ok)throw Error('Actual internal beta state unavailable '+out.status);
+            detail=out.data.attributes;
+            if(['IN_BETA_TESTING','READY_FOR_BETA_TESTING'].includes(detail.internalBuildState))break;
+            if(i===19)throw Error('Internal beta is not ready');
+            await new Promise(resolve=>setTimeout(resolve,5000));
+          }
+          Object.assign(r,{betaDetail:detail,verificationCommit:'3662a3accc3845194e7a0fdb5e99948fe8024b75',confirmationRunId:process.env.GITHUB_RUN_ID});
+          await writeFile(file,JSON.stringify(r,null,2)+'\n');
+          console.log('CONSOLIDATED_INTERNAL_BETA_CONFIRMED '+JSON.stringify(r));
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Consolidated-TestFlight-confirmed
+          path: store-evidence/consolidated-testflight.json
+          retention-days: 30
+          if-no-files-found: warn
