@@ -1,20 +1,20 @@
 import React,{useState} from 'react';
-import {ActivityIndicator,Pressable,ScrollView,StyleSheet,Text,TextInput,View} from 'react-native';
+import {ActivityIndicator,Pressable,ScrollView,StyleSheet,Text,View} from 'react-native';
 import useStudy from '../hooks/useStudy';
 import StudyMushroom from './StudyMushroom';import StudyTimeline from './StudyTimeline';
 import {dashboardModel,visibleSessions} from '../lib/study-dashboard-model.mjs';
 import {preparationStatus} from '../lib/study-timeline.mjs';
 const dimensions:Record<string,string>={name:'Riconoscimento fotografico',category:'Commestibilità',preparation:'Preparazione',label:'Sindrome',latency:'Latenza',severity:'Manifestazioni',characters:'Caratteri della scheda',habitat:'Habitat',sporePrint:'Sporata',odor:'Odore'};
 export default function StudyDashboard({study,complete,onStudy,onTraining,onAccess}:{study:ReturnType<typeof useStudy>;complete:boolean;onStudy:()=>void;onTraining:()=>void;onAccess:()=>void}){
- const [showDetails,setShowDetails]=useState(false),[expanded,setExpanded]=useState(false),[detail,setDetail]=useState<string|null>(null),[edit,setEdit]=useState(false),[name,setName]=useState(''),[saving,setSaving]=useState(false);
+ const [showDetails,setShowDetails]=useState(false),[expanded,setExpanded]=useState(false),[detail,setDetail]=useState<string|null>(null);
  const p=study.progress.minimum,m=dashboardModel({profile:study.profile,progress:p}),status=preparationStatus(p);
- async function save(){setSaving(true);if(await study.setName(name))setEdit(false);setSaving(false);}
+
  const button=(label:string,action:()=>void,secondary=false)=><Pressable accessibilityRole="button" onPress={action} disabled={!study.ready} style={secondary?s.outline:s.button}><Text style={secondary?s.link:s.buttonText}>{label}</Text></Pressable>;
  return <ScrollView contentContainerStyle={s.page}>
   <View style={s.header}><Text style={s.eyebrow}>{study.demo?'DEMO GRATUITA · AGARICUS':'IL TUO PERCORSO'}</Text><Text accessibilityRole="header" style={s.greeting}>{m.greeting}</Text>{button(m.cta,onStudy)}</View>
   {study.demo&&<Text style={s.note}>Queste metriche riguardano soltanto i quattro casi fotografici della demo Agaricus. La demo è ripetibile senza limiti; i risultati del percorso completo restano separati.</Text>}
   {study.demo&&study.archivedSessions.length>0&&<View style={s.card}><Text accessibilityRole="header" style={s.heading}>Storico del percorso completo</Text><Text style={s.note}>I risultati precedenti restano consultabili anche dopo la scadenza dell’abbonamento.</Text>{visibleSessions(study.archivedSessions,expanded).map(h=><Pressable key={'full:'+h.id} accessibilityRole="button" accessibilityState={{expanded:detail==='full:'+h.id}} onPress={()=>setDetail(detail==='full:'+h.id?null:'full:'+h.id)} style={s.result}><Text style={s.body}>{h.mode==='simulation'?'Simulazione didattica':'Allenamento'} · {new Date(h.startedAt).toLocaleDateString('it-IT')}</Text><Text style={s.heading}>{h.correct}/{h.total} al primo tentativo</Text>{detail==='full:'+h.id&&<><Text style={s.body}>{h.assisted||0} risposte assistite · {h.retries||0} ripassi</Text>{(h.errors||[]).map((e:{id:string;name:string})=><Text key={e.id} style={s.note}>{e.name} · da ripassare</Text>)}</>}</Pressable>)}{study.archivedSessions.length>5&&button(expanded?'Mostra recenti':'Mostra tutto lo storico',()=>setExpanded(!expanded),true)}</View>}
-  {false&&edit&&<View style={s.card}><Text style={s.body}>Il nome resta su questo dispositivo. Puoi lasciarlo vuoto.</Text><TextInput accessibilityLabel="Il tuo nome" value={name} onChangeText={setName} maxLength={120} autoCorrect={false} style={s.input}/><Pressable accessibilityRole="button" disabled={saving} onPress={()=>void save()} style={s.button}><Text style={s.buttonText}>Salva nome</Text></Pressable></View>}
+
   {!!study.storageError&&<Text accessibilityRole="alert" style={s.error}>{study.storageError}</Text>}
   {!study.ready&&!study.storageError?<ActivityIndicator/>:<>
    <View style={s.hero}>
