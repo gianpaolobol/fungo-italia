@@ -1,0 +1,35 @@
+name: Stop superseded consolidation checks
+on:
+  push:
+    branches: [ci/consolidation-cleanup-20261021]
+    paths: ['.github/workflows/consolidation-cleanup.yml']
+permissions:
+  contents: read
+  actions: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const expectedMain='38a7a85ac96803a5dca18bf5c6a39264bcc99444';
+            const obsolete='1bc9436e2d3f0dbe8836c723b126bf3bb944787d';
+            if(context.repo.owner!=='gianpaolobol'||context.repo.repo!=='fungo-italia')throw Error('Unexpected repository');
+            const main=await github.rest.repos.getBranch({...context.repo,branch:'main'});
+            if(main.data.commit.sha!==expectedMain)throw Error('Main changed; preserve all runs for investigation');
+            const targets=[
+              [39630199072,'.github/workflows/subscription-storekit-tests.yml'],
+              [39630198927,'.github/workflows/subscription-storekit-ui.yml'],
+              [39630198974,'.github/workflows/agaricus-demo-ui.yml'],
+              [39630199067,'.github/workflows/consolidated-testflight.yml']
+            ];
+            for(const [run_id,path] of targets){
+              const {data:run}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});
+              if(run.head_sha!==obsolete||run.head_branch!=='main'||run.event!=='push'||run.path!==path)throw Error('Unexpected run identity '+run_id);
+              if(run.status==='completed'){core.info('Already complete '+run_id);continue;}
+              try{await github.rest.actions.cancelWorkflowRun({...context.repo,run_id});core.info('Cancellation requested for superseded '+run_id);}
+              catch(error){const {data:again}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});if(again.status!=='completed')throw error;}
+            }
+            await core.summary.addRaw('Only explicitly identified obsolete 1bc9436 checks stopped. Current 38a7a85 native, purchase UI and demo proofs remain mandatory and untouched.').write();
