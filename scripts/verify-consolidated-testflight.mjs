@@ -31,11 +31,15 @@ for(const group of internal){
   if(!r.ok)throw Error('Internal beta assignment failed '+r.status+' '+r.codes.join(','));
  }
 }
-const assigned=await api('/v1/builds/'+build.id+'/betaGroups?limit=200'),individual=await api('/v1/builds/'+build.id+'/individualTesters?limit=200');
-if(!assigned.ok||assigned.links?.next||assigned.data.length!==1||assigned.data[0].id!==ownerGroup)throw Error('Actual Apple beta groups differ from owner-only selection');
-if(!individual.ok||individual.links?.next||individual.data.length!==0)throw Error('Unexpected individual beta assignments');
+// Apple exposes this linkage through build information, not a related betaGroups GET.
+const assigned=await api('/v1/builds/'+build.id+'?include=betaGroups'),individual=await api('/v1/builds/'+build.id+'/individualTesters?limit=200');
+const linkage=assigned.data?.relationships?.betaGroups,actualGroups=linkage?.data;
+if(!assigned.ok||assigned.data?.id!==build.id||!Array.isArray(actualGroups)||linkage.links?.next||
+ (linkage.meta?.paging?.total!==undefined&&linkage.meta.paging.total!==actualGroups.length)||
+ actualGroups.length!==1||actualGroups[0].type!=='betaGroups'||actualGroups[0].id!==ownerGroup)throw Error('Actual Apple beta groups differ from owner-only selection');
+if(!individual.ok||individual.links?.next||!Array.isArray(individual.data)||individual.data.length!==0)throw Error('Unexpected individual beta assignments');
 const versions=await api('/v1/apps/6821140326/appStoreVersions?filter[platform]=IOS&limit=20');
 if(!versions.ok)throw Error('App Store review status lookup failed');
-const report={...receipt,appleBuildId:build.id,processingState:build.attributes.processingState,internalGroupIds:assigned.data.map(g=>g.id),appStoreVersions:versions.data.map(v=>({version:v.attributes.versionString,state:v.attributes.appStoreState})),verifiedAt:new Date().toISOString()};
+const report={...receipt,appleBuildId:build.id,processingState:build.attributes.processingState,internalGroupIds:actualGroups.map(g=>g.id),appStoreVersions:versions.data.map(v=>({version:v.attributes.versionString,state:v.attributes.appStoreState})),verifiedAt:new Date().toISOString()};
 await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/consolidated-testflight.json',JSON.stringify(report,null,2)+'\n');
 console.log('CONSOLIDATED_TESTFLIGHT_CONFIRMED '+JSON.stringify(report));

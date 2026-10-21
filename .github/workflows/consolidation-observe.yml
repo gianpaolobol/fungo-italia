@@ -32,9 +32,9 @@ jobs:
           const rows=[];
           for(const b of builds.data){
            const detail=await api('/v1/builds/'+b.id+'/buildBetaDetail');
-           const groups=await api('/v1/builds/'+b.id+'/betaGroups?limit=200');
+           const groups=await api('/v1/builds/'+b.id+'?include=betaGroups');
            if(groups.links?.next)throw Error('Apple group pagination incomplete');
-           rows.push({id:b.id,build:b.attributes.version,version:builds.included?.find(v=>v.id===b.relationships.preReleaseVersion?.data?.id)?.attributes.version,processingState:b.attributes.processingState,uploadedDate:b.attributes.uploadedDate,expired:b.attributes.expired,betaStatus:detail.status,beta:detail.ok?detail.data?.attributes:null,groupStatus:groups.status,groupIds:groups.ok?groups.data.map(g=>g.id):[]});
+           rows.push({id:b.id,build:b.attributes.version,version:builds.included?.find(v=>v.id===b.relationships.preReleaseVersion?.data?.id)?.attributes.version,processingState:b.attributes.processingState,uploadedDate:b.attributes.uploadedDate,expired:b.attributes.expired,betaStatus:detail.status,beta:detail.ok?detail.data?.attributes:null,groupStatus:groups.status,groupIds:groups.ok?(groups.data?.relationships?.betaGroups?.data||[]).map(g=>g.id):[],groupLinkage:groups.data?.relationships?.betaGroups});
           }
           console.log('CONSOLIDATION_APPLE_BETA_STATUS '+JSON.stringify(rows));
           
