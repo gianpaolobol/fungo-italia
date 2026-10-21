@@ -111,4 +111,5 @@ jobs:
     - scripts/add-storekit-ui-tests.rb
     - .github/workflows/subscription-storekit-ui.yml
     - .github/workflows/consolidated-testflight.yml
+    - .github/workflows/branch-native-proof-trigger.yml
   workflow_dispatch: null
