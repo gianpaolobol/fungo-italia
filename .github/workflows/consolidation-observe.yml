@@ -1,0 +1,41 @@
+name: Observe consolidation upload status
+on:
+  push:
+    branches: [ci/consolidation-cleanup-20261021]
+    paths: ['.github/workflows/consolidation-observe.yml']
+permissions:
+  contents: read
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: f58320db0ab33cc12f75005f26b6e7fc93746f54
+      - name: Read Expo submission and Apple beta states without mutations
+        run: |
+          node --input-type=module <<'JS'
+          import {createAppleApi} from './scripts/app-store-connect.mjs';
+          const q='query($appId:String!){app{byId(appId:$appId){submissions(filter:{platform:IOS},offset:0,limit:5){id status platform createdAt completedAt iosConfig{ascAppIdentifier} error{errorCode}}}}}';
+          const response=await fetch('https://api.expo.dev/graphql',{method:'POST',headers:{Authorization:'Bearer '+process.env.EXPO_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({query:q,variables:{appId:'b65af584-739f-4ef0-8fe5-6c0ba692c088'}}),signal:AbortSignal.timeout(45000)});
+          if(!response.ok)throw Error('Expo status lookup HTTP '+response.status);
+          const payload=await response.json();if(payload.errors?.length)throw Error('Expo status query unavailable');
+          const submissions=payload.data.app.byId.submissions;
+          if(submissions.some(s=>s.iosConfig?.ascAppIdentifier!=='6821140326'))throw Error('Unexpected submission app');
+          console.log('CONSOLIDATION_EXPO_SUBMISSIONS '+JSON.stringify(submissions));
+          const api=await createAppleApi();
+          const builds=await api('/v1/builds?filter[app]=6821140326&sort=-uploadedDate&limit=3&include=preReleaseVersion');
+          if(!builds.ok)throw Error('Apple build status lookup HTTP '+builds.status);
+          const rows=[];
+          for(const b of builds.data){
+           const detail=await api('/v1/builds/'+b.id+'/buildBetaDetail');
+           const groups=await api('/v1/builds/'+b.id+'/betaGroups?limit=200');
+           if(!detail.ok||!groups.ok||groups.links?.next)throw Error('Apple beta detail lookup incomplete');
+           rows.push({id:b.id,build:b.attributes.version,version:builds.included?.find(v=>v.id===b.relationships.preReleaseVersion?.data?.id)?.attributes.version,processingState:b.attributes.processingState,uploadedDate:b.attributes.uploadedDate,expired:b.attributes.expired,beta:detail.data.attributes,groupIds:groups.data.map(g=>g.id)});
+          }
+          console.log('CONSOLIDATION_APPLE_BETA_STATUS '+JSON.stringify(rows));
+          
+          JS
