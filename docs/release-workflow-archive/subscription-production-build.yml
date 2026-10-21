@@ -1,3 +1,4 @@
+# ARCHIVIATO: questo documento non viene eseguito da GitHub Actions.
 name: Build verified subscription for TestFlight
 on:
   workflow_run:

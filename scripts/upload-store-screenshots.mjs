@@ -7,7 +7,7 @@ if(!/^[a-f0-9]{40}$/.test(manifest.sourceCommit)||manifest.images?.length!==6)th
 const api=await createAppleApi();
 const must=(r,operation)=>{if(!r.ok)throw Error(operation+' HTTP '+r.status+' '+(r.codes||[]).join(',')+' '+(r.details||[]).join(';'));return r;};
 const versions=must(await api('/v1/apps/'+APP+'/appStoreVersions?filter[platform]=IOS'),'Read app version');
-const version=versions.data.find(v=>v.attributes.appStoreState==='PREPARE_FOR_SUBMISSION');
+const version=versions.data.find(v=>v.attributes.versionString==='1.0'&&['PREPARE_FOR_SUBMISSION','REJECTED','METADATA_REJECTED'].includes(v.attributes.appStoreState));
 if(!version)throw Error('No editable initial version; refusing screenshot changes');
 const loc=must(await api('/v1/appStoreVersions/'+version.id+'/appStoreVersionLocalizations'),'Read localizations').data.find(l=>l.attributes.locale==='it');
 if(!loc)throw Error('Italian listing missing');
@@ -18,8 +18,10 @@ for(const family of ['iphone','ipad']){
  let set=sets.find(s=>s.attributes.screenshotDisplayType===displayType);
  if(!set)set=must(await api('/v1/appScreenshotSets',{method:'POST',body:{data:{type:'appScreenshotSets',attributes:{screenshotDisplayType:displayType},relationships:{appStoreVersionLocalization:{data:{type:'appStoreVersionLocalizations',id:loc.id}}}}}}),'Create '+family+' screenshot set').data;
  let existing=must(await api('/v1/appScreenshotSets/'+set.id+'/appScreenshots'),'Read screenshots').data;
+ const publicImages=manifest.images.filter(i=>i.family===family&&i.publicStoreImage===true);
+ if(publicImages.length!==2||publicImages.some(i=>!/0[12]-(studio|aree)\.png$/.test(i.path)))throw Error('Only visually reviewed non-pricing public images are permitted');
  const selected=[];
- for(const image of manifest.images.filter(i=>i.family===family).sort((a,b)=>a.path.localeCompare(b.path))){
+ for(const image of manifest.images.filter(i=>i.family===family&&i.publicStoreImage===true).sort((a,b)=>a.path.localeCompare(b.path))){
   if(!/^store\/screenshots\/(iphone|ipad)\/0[123]-(studio|aree|esame)\.png$/.test(image.path))throw Error('Unexpected screenshot path');
   const bytes=await readFile(image.path);
   if(bytes.length!==image.byteLength||createHash('sha256').update(bytes).digest('hex')!==image.sha256||bytes.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error('Screenshot content mismatch');

@@ -1,0 +1,1394 @@
+[
+  {
+    "branch": "audit/claude-full-review-20261021",
+    "sha": "88c3597725f193e5d42316b6a76a643f95ebf776",
+    "date": "2026-10-21T14:17:48+02:00",
+    "behind": 0,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 6
+  },
+  {
+    "branch": "backup/main-before-photo-framing-merge-20261008",
+    "sha": "b89e4b175fad718ed35557dd3662f35c8f6a89af",
+    "date": "2026-10-08T01:51:39+02:00",
+    "behind": 411,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/main-pre-beta-publish-20261009",
+    "sha": "277466878a64f6c49eecb691ecd9c6fb595ef41a",
+    "date": "2026-10-08T08:04:33+02:00",
+    "behind": 391,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-admin-photo-editor-2026-10-07",
+    "sha": "54df1a24483edf2c32e04e7e9beb98d60c579bc4",
+    "date": "2026-10-07T21:12:03+02:00",
+    "behind": 443,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-atlas-data-cleanup-oct07",
+    "sha": "8d4b4ecb138c52490f8d9e0349a2b3e97022607e",
+    "date": "2026-10-07T02:10:28+02:00",
+    "behind": 542,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-clean-study-ui-oct07",
+    "sha": "80598ad800e25ced7e3a2693437135c93cf55d58",
+    "date": "2026-10-07T01:22:28+02:00",
+    "behind": 546,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-complete-reference-triplets-2026-10-07",
+    "sha": "75eda31798171fc146c3d66a6d919d1a09b16ca2",
+    "date": "2026-10-07T14:47:05+02:00",
+    "behind": 480,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-course-integration-2026-10-07",
+    "sha": "949b302a2ec480b495732023485f2f76fda5521e",
+    "date": "2026-10-07T03:13:24+02:00",
+    "behind": 537,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-external-reference-photos-2026-10-07",
+    "sha": "a0def5bf64a6a9a64b928e4fdfcf0eaf92bd75b7",
+    "date": "2026-10-07T12:00:25+02:00",
+    "behind": 489,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-migration-flutter",
+    "sha": "68fce519e93a4646218ce360811bb174d241a032",
+    "date": "2026-10-02T04:17:42+02:00",
+    "behind": 672,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-phone-photo-import",
+    "sha": "c0562166a2f50b7fc95b597f42ef12919fd16618",
+    "date": "2026-10-06T10:05:32+02:00",
+    "behind": 561,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-reference-photos-2026-10-07",
+    "sha": "1546ae8ac150b3fdb88bab9f9dd0b0802b956da1",
+    "date": "2026-10-07T09:01:00+02:00",
+    "behind": 522,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-study-completion-oct06",
+    "sha": "d7e9622ac9e5494156d712f8d89fbfceb1e994f4",
+    "date": "2026-10-06T10:51:23+02:00",
+    "behind": 555,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/pre-study-profiles-2026-10-07",
+    "sha": "4298a85d98934ea45ee655fe76aca740b227dd73",
+    "date": "2026-10-07T04:12:12+02:00",
+    "behind": 528,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/reference-images-reviewed-2026-10-07",
+    "sha": "c4279d00bcb57874bc94e4f46a8b08216047a974",
+    "date": "2026-10-07T17:11:32+02:00",
+    "behind": 477,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "backup/verified-web-readiness",
+    "sha": "e3b9ca01bd43ec87d3630ab954c45229b2ba15e1",
+    "date": "2026-10-02T13:35:19+02:00",
+    "behind": 656,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "beta-primary-preview",
+    "sha": "4265e58156b73bfd2c805a689cb2c65201eede88",
+    "date": "2026-10-09T01:37:25+02:00",
+    "behind": 237,
+    "ahead": 3,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 3
+  },
+  {
+    "branch": "chore/testflight-group-audit",
+    "sha": "0a3ece03440b37d365e34cc0c6293ec8336348c1",
+    "date": "2026-10-17T13:02:40+02:00",
+    "behind": 5,
+    "ahead": 9,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 10
+  },
+  {
+    "branch": "chore/verify-store-privacy-access",
+    "sha": "7340b3dbf4d5ab62332b78e77a5b3c37dad2a179",
+    "date": "2026-10-15T13:29:21+02:00",
+    "behind": 123,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/free-runner-signed-subscription-build",
+    "sha": "f32176dc52d5b5671322a240bc09c10007c87ddb",
+    "date": "2026-10-16T08:50:01+02:00",
+    "behind": 85,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/ignore-superseded-storekit-release-runs",
+    "sha": "8c6f514c57b8f07efe58ea269a3c0cf9c594a43a",
+    "date": "2026-10-16T08:47:47+02:00",
+    "behind": 87,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/ipad-driver-startup-and-native-cache",
+    "sha": "349f27f1dd22278acc94659c99ab5d04fd043d8a",
+    "date": "2026-10-16T09:18:55+02:00",
+    "behind": 67,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/original-screenshot-review-chunks",
+    "sha": "bfc5ef2b5bcc18718373b9d73856d699a6aade9c",
+    "date": "2026-10-16T09:07:18+02:00",
+    "behind": 71,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/reuse-authorized-apple-submit-key",
+    "sha": "6e1639b39fb05826b16e52216ea8e1b687af79c9",
+    "date": "2026-10-16T13:55:34+02:00",
+    "behind": 15,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/subscription-build-efficiency",
+    "sha": "31a93fa4938994a5978c26756908858f81d7868e",
+    "date": "2026-10-16T08:44:23+02:00",
+    "behind": 91,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ci/testflight-only-subscription-candidate",
+    "sha": "5c80b1d2c017716896da0b266dd72e9b5e236ee8",
+    "date": "2026-10-16T13:51:50+02:00",
+    "behind": 17,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "design/study-dashboard-v1-1",
+    "sha": "2c893c60db17f492b926be316321445bcb28040b",
+    "date": "2026-10-21T11:39:54+01:00",
+    "behind": 5,
+    "ahead": 36,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 108
+  },
+  {
+    "branch": "docs/annual-storekit-privacy-20261016",
+    "sha": "96b3a1f973ebf3f3fee7a14cd78674c76003d4ea",
+    "date": "2026-10-16T09:25:56+02:00",
+    "behind": 65,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "docs/annual-subscription-verified-status",
+    "sha": "f976b680c6d9e77008a41c1bece56135eb99e4e6",
+    "date": "2026-10-16T14:59:56+02:00",
+    "behind": 11,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "docs/apple-valid-annual-candidate-9",
+    "sha": "a39ef8b4794e0669e25a4de0d15994389eee66de",
+    "date": "2026-10-16T15:31:03+02:00",
+    "behind": 8,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "docs/handoff",
+    "sha": "a0b45c36886921119ba2c030a222af6264f37b22",
+    "date": "2026-10-21T01:19:32+01:00",
+    "behind": 1,
+    "ahead": 2,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 2
+  },
+  {
+    "branch": "docs/store-final-verified-status",
+    "sha": "bf92364abc931f70212ee245a889c5ee7792434d",
+    "date": "2026-10-15T14:11:05+02:00",
+    "behind": 110,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "docs/store-owner-privacy-status",
+    "sha": "4f61e4f9d0473efe2f6638a8e1a1f02e932c4241",
+    "date": "2026-10-15T14:02:00+02:00",
+    "behind": 116,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "docs/verified-annual-subscription-status",
+    "sha": "8f1b64565bec515bb08ae1d1bbea81a107741bd7",
+    "date": "2026-10-16T10:15:59+02:00",
+    "behind": 49,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "docs/verified-paid-store-status",
+    "sha": "0145963a6967cf2a5c79cf1d6df8de79f7da07cc",
+    "date": "2026-10-15T13:17:24+02:00",
+    "behind": 129,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/admin-photo-browser-tests",
+    "sha": "78f31944ce9b07f03fff138c4fa14f699c7e1cb6",
+    "date": "2026-10-07T23:26:48+02:00",
+    "behind": 439,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/admin-photo-core-integration-draft",
+    "sha": "3d6ffd95663fbfaeca060585b503fa30bfed3109",
+    "date": "2026-10-07T22:59:51+02:00",
+    "behind": 441,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/admin-photo-editor",
+    "sha": "bf788f0cc63e1cc4d08aa51c97560a93f6ae7281",
+    "date": "2026-10-07T23:57:57+02:00",
+    "behind": 428,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/admin-photo-integration-draft",
+    "sha": "e9340bb98e9e2f2edea60d7e3b397626259f84ac",
+    "date": "2026-10-07T22:37:39+02:00",
+    "behind": 442,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/app-store-italian-paid-listing",
+    "sha": "8a5304c7098f7f491ec00a0c39c322bdb5536e86",
+    "date": "2026-10-15T12:55:38+02:00",
+    "behind": 143,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/app-store-paid-release",
+    "sha": "9f9b18977bc568d61e3d2de53bf58edca38b256d",
+    "date": "2026-10-15T12:50:50+02:00",
+    "behind": 148,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/beta-content-gate-oct08",
+    "sha": "f84781c77b74e48b3c3eaf66c084d28374dcbc78",
+    "date": "2026-10-08T07:52:23+02:00",
+    "behind": 398,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/cloudflare-production",
+    "sha": "4f982fa187cd23f8f4070a77c2dbe6780b7656af",
+    "date": "2026-09-24T10:29:13+02:00",
+    "behind": 684,
+    "ahead": 24,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 22
+  },
+  {
+    "branch": "feat/commercialization-labels",
+    "sha": "45435c10a862e2d712d18697206c585d0149b3e1",
+    "date": "2026-10-07T21:05:01+02:00",
+    "behind": 444,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/complete-minimum-3plus1-web-evidence-v1",
+    "sha": "322be116e5c72ab5f3aed558d4616e17e16e153d",
+    "date": "2026-09-29T17:10:25+02:00",
+    "behind": 684,
+    "ahead": 35,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 28
+  },
+  {
+    "branch": "feat/complete-reference-triplets",
+    "sha": "87e20f47ac6d74ea2c94c6dc0184218cbea0dc2e",
+    "date": "2026-10-07T18:33:44Z",
+    "behind": 448,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/evidence-claims-v1",
+    "sha": "0d156d5d9a599126028a134f9f5395b61097bb9b",
+    "date": "2026-09-21T14:57:50+02:00",
+    "behind": 825,
+    "ahead": 17,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 12
+  },
+  {
+    "branch": "feat/expo-migration",
+    "sha": "ac277bd30b25f21dbdb492603a4be53956696e56",
+    "date": "2026-10-02T13:52:26Z",
+    "behind": 647,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/external-reference-photos",
+    "sha": "75eda31798171fc146c3d66a6d919d1a09b16ca2",
+    "date": "2026-10-07T14:47:05+02:00",
+    "behind": 480,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/floot-migration",
+    "sha": "52ef692f647608d2151b3cfd5e9987fc2d29b8ff",
+    "date": "2026-09-24T09:16:26+02:00",
+    "behind": 684,
+    "ahead": 6,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 3
+  },
+  {
+    "branch": "feat/foraging-symbols-v1",
+    "sha": "ddf695d385659f06691b17ef7bd37b8362c7de54",
+    "date": "2026-09-30T00:44:02+02:00",
+    "behind": 673,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1
+  },
+  {
+    "branch": "feat/ios-pwa",
+    "sha": "f67d43e828b83b02cf3e90390af2a85b9ae090e5",
+    "date": "2026-10-05T21:38:39Z",
+    "behind": 629,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/iphone-shortcut-export",
+    "sha": "098ecf3c13fb0fd9d69aa20d9f0588315e2b0eec",
+    "date": "2026-10-06T11:56:32+02:00",
+    "behind": 555,
+    "ahead": 3,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 7
+  },
+  {
+    "branch": "feat/minimum-edibility-v1",
+    "sha": "739e41426b7337d94ce9b587453694741e134c69",
+    "date": "2026-09-21T15:55:11+02:00",
+    "behind": 825,
+    "ahead": 28,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 19
+  },
+  {
+    "branch": "feat/minimum-profiles-v1",
+    "sha": "739e41426b7337d94ce9b587453694741e134c69",
+    "date": "2026-09-21T15:55:11+02:00",
+    "behind": 825,
+    "ahead": 28,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 19
+  },
+  {
+    "branch": "feat/native-store-screenshots",
+    "sha": "f923ea2842a76faf3874d5c6743d9bef9b60251b",
+    "date": "2026-10-15T12:59:14+02:00",
+    "behind": 139,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/phone-photo-import-oct06",
+    "sha": "d7e9622ac9e5494156d712f8d89fbfceb1e994f4",
+    "date": "2026-10-06T10:51:23+02:00",
+    "behind": 555,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/photo-framing-verified-oct08",
+    "sha": "c0ed54f6dc84cbe5589c840d57c1baf7bd22720a",
+    "date": "2026-10-08T07:57:32+02:00",
+    "behind": 392,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/production-readiness-20261002",
+    "sha": "e3b9ca01bd43ec87d3630ab954c45229b2ba15e1",
+    "date": "2026-10-02T13:35:19+02:00",
+    "behind": 656,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/profile-readiness-oct06",
+    "sha": "d55c29c5deea35b5787d85ebd340d728411c87d0",
+    "date": "2026-10-06T09:41:08+02:00",
+    "behind": 562,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/release-readiness-gate-oct08",
+    "sha": "91c4da2f397bd615250cfececf2a079cfd73808f",
+    "date": "2026-10-08T01:02:44+02:00",
+    "behind": 424,
+    "ahead": 4,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 4
+  },
+  {
+    "branch": "feat/research-forecast-v2",
+    "sha": "5e4ea8ac05a344f83ea6fd241f1e18b32c1ec2c2",
+    "date": "2026-09-29T21:49:09+02:00",
+    "behind": 679,
+    "ahead": 17,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 17
+  },
+  {
+    "branch": "feat/schede-summary-design",
+    "sha": "ee9630f9b37f9d9817eeac50cb7e0081de29afad",
+    "date": "2026-10-02T04:15:24+02:00",
+    "behind": 673,
+    "ahead": 42,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 26
+  },
+  {
+    "branch": "feat/scientific-profile-coverage-oct08",
+    "sha": "1225d2b8e0d653a1b53ff937b2b68b93943fabc9",
+    "date": "2026-10-08T13:50:22+02:00",
+    "behind": 341,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/scientific-review-workbench-v1",
+    "sha": "4326e4f8cd98337defd44d46b1b01b21929fab50",
+    "date": "2026-09-22T11:48:45+02:00",
+    "behind": 684,
+    "ahead": 8,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 7
+  },
+  {
+    "branch": "feat/source-enrichment-2026-09-29",
+    "sha": "ca35c675402ca2c7b6d80bec3cc9c7402e1791ad",
+    "date": "2026-09-29T20:45:19+02:00",
+    "behind": 683,
+    "ahead": 6,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 6
+  },
+  {
+    "branch": "feat/stable-learning-taxonomy-v1",
+    "sha": "54be658bd610420c7854778526626d75eed3ddc0",
+    "date": "2026-09-22T02:21:46+02:00",
+    "behind": 688,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/store-screenshot-evidence",
+    "sha": "0ef66bd5e022f733de548e65e20896e4fcdcc8f5",
+    "date": "2026-10-15T13:04:39+02:00",
+    "behind": 135,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/study-completion-oct06",
+    "sha": "8d4b4ecb138c52490f8d9e0349a2b3e97022607e",
+    "date": "2026-10-07T02:10:28+02:00",
+    "behind": 542,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/study-layout-oct07",
+    "sha": "a0def5bf64a6a9a64b928e4fdfcf0eaf92bd75b7",
+    "date": "2026-10-07T12:00:25+02:00",
+    "behind": 489,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/territorial-forecast-v3",
+    "sha": "a85daec8463320bd25eb699289421b944b0d432f",
+    "date": "2026-09-29T22:30:00+02:00",
+    "behind": 675,
+    "ahead": 16,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 8
+  },
+  {
+    "branch": "feat/verified-native-screenshot-upload",
+    "sha": "4ac68d5aa361f353ce835efb46ed04f2795b748c",
+    "date": "2026-10-15T13:25:33+02:00",
+    "behind": 125,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feat/worldwide-app-store-availability",
+    "sha": "ec54e29784160b7e0a89f0d8a3682d9a08e0e620",
+    "date": "2026-10-15T13:08:10+02:00",
+    "behind": 133,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "feature/native-annual-subscription",
+    "sha": "3a85b955c65b08b47d75ef546f693460af6487a3",
+    "date": "2026-10-16T08:35:49+02:00",
+    "behind": 99,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-browser-container-python",
+    "sha": "5ab4f126dbf21c471de9eb36b5e7583281bbdce0",
+    "date": "2026-10-07T23:51:29+02:00",
+    "behind": 433,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-genus-photo-label-tests",
+    "sha": "9beebea996e6681e22552b06d4e864e3eb8b7b27",
+    "date": "2026-10-07T23:37:15+02:00",
+    "behind": 437,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-password-test-completion",
+    "sha": "82570af427daae4b26e700c809dda6efe9c163ec",
+    "date": "2026-10-08T00:05:14+02:00",
+    "behind": 426,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-photo-api-simulation-routing",
+    "sha": "1b34a0a2769206cc9aaaa222d053fa55bcc051f5",
+    "date": "2026-10-07T23:57:43+02:00",
+    "behind": 429,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-photo-error-diagnostics",
+    "sha": "3785d9a6cae197d2b671595109b63c68d9eb13bd",
+    "date": "2026-10-07T23:52:22+02:00",
+    "behind": 431,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-photo-lifecycle-verification",
+    "sha": "451ce773c7cff67bcc0c53e566de9beb6bdc72d3",
+    "date": "2026-10-07T23:49:12+02:00",
+    "behind": 435,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/admin-photo-native-updates-and-status",
+    "sha": "0aa5b0f07da344a15fc6f2f2a8d2f619aea7778c",
+    "date": "2026-10-16T12:59:13+02:00",
+    "behind": 23,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/app-review-20261021",
+    "sha": "d065840811e78434b0b65eb26ac9025c0edf9582",
+    "date": "2026-10-21T16:24:24+01:00",
+    "behind": 0,
+    "ahead": 7,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 26
+  },
+  {
+    "branch": "fix/app-store-italian-price-resource",
+    "sha": "a92755298783ff687462ae57d2f8bef57f3a54d5",
+    "date": "2026-10-15T12:57:30+02:00",
+    "behind": 141,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/app-store-key-team-metadata",
+    "sha": "48c471002adc447a3303c24850951e17d4b0065d",
+    "date": "2026-10-15T12:51:59+02:00",
+    "behind": 146,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/apple-storekit-simulator-runtime",
+    "sha": "dd1b69418879d054aa8a5eaed0d4b7f1b9031be1",
+    "date": "2026-10-16T09:34:27+02:00",
+    "behind": 61,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/approved-iphone-icon",
+    "sha": "5b415422edb8df820d61a4f019f330621b539384",
+    "date": "2026-10-17T12:59:50+02:00",
+    "behind": 5,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1
+  },
+  {
+    "branch": "fix/hosted-storekit-provider-isolation",
+    "sha": "11e694504d3b55e04b1801997ee76d933d7a6722",
+    "date": "2026-10-16T11:40:53+02:00",
+    "behind": 33,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/inspect-exam-click-timing",
+    "sha": "85a3d3f0c4a77228174d1b5b7c1a350624883e32",
+    "date": "2026-10-16T11:13:26+02:00",
+    "behind": 37,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/inspect-storekit-purchase-evidence",
+    "sha": "11299e1c7de787f35e15d8d10aad171f28a04ee9",
+    "date": "2026-10-16T10:34:11+02:00",
+    "behind": 45,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/ios-native-evidence-complete",
+    "sha": "2bbe43188dbc07b03d98a1a041ed994bc32bf523",
+    "date": "2026-10-16T12:08:54+02:00",
+    "behind": 27,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/ios-require-native-storekit-pass",
+    "sha": "33fd54af6c6b3c2e628132c3cdbc6c260abe6edd",
+    "date": "2026-10-16T12:07:27+02:00",
+    "behind": 28,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/isolated-async-storekit-ui",
+    "sha": "d720d2cc65332e10693686f586a325ef10317d29",
+    "date": "2026-10-16T11:46:19+02:00",
+    "behind": 31,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/native-capture-source-cache",
+    "sha": "4414c680dc05739f316b911da0e2e42b89947117",
+    "date": "2026-10-15T13:41:35+02:00",
+    "behind": 120,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/native-icon-png-integrity",
+    "sha": "ada6c2a4702a6a78edc497b070a1bb91756d0954",
+    "date": "2026-10-15T13:02:22+02:00",
+    "behind": 137,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/native-screenshot-output-directory",
+    "sha": "e395816e0666aae41589b0245d5635cc9d1ec151",
+    "date": "2026-10-15T13:40:32+02:00",
+    "behind": 121,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/offline-subscription-access",
+    "sha": "1d575c3403c8cd27d612bf6d7df8d4695cdf25f7",
+    "date": "2026-10-16T08:52:55+02:00",
+    "behind": 83,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/offline-toast-touch-through",
+    "sha": "0ff1d0d32d9a7fec5501fcbc011e4abc71379dc8",
+    "date": "2026-10-16T11:15:56+02:00",
+    "behind": 35,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/read-mobile-exam-failure-evidence",
+    "sha": "20e5e34b0b93547071b22450e68cca301dceb100",
+    "date": "2026-10-16T11:10:34+02:00",
+    "behind": 39,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/require-storekit-evidence-for-ios-updates",
+    "sha": "9bbf8ca9f1c6f1b648f93ade8275dd26705054ad",
+    "date": "2026-10-16T09:48:50+02:00",
+    "behind": 57,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/safari-admin-cache-images-oct08",
+    "sha": "500238079cd99b80301cb9f60295f588ec629594",
+    "date": "2026-10-08T01:09:40+02:00",
+    "behind": 423,
+    "ahead": 5,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 4
+  },
+  {
+    "branch": "fix/single-sku-verified-annual-access",
+    "sha": "665a0801cdf70ea560afb7c470fb4ebacf0e0623",
+    "date": "2026-10-16T13:50:22+02:00",
+    "behind": 19,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/store-categories-and-current-xcode",
+    "sha": "b0ba7b55208fe776c8ebcea6d840589beff5d3c0",
+    "date": "2026-10-15T13:21:18+02:00",
+    "behind": 127,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/store-legal-page-offline-routing",
+    "sha": "09bc5833e9fdab5e61b70f3a3e46ceb89db13f3e",
+    "date": "2026-10-15T13:44:49+02:00",
+    "behind": 118,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/store-native-toolchain-and-territories",
+    "sha": "0073d3bb1df49d443de6a4fecc8c73789303e596",
+    "date": "2026-10-15T13:10:49+02:00",
+    "behind": 131,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-cold-start-diagnostics",
+    "sha": "899602520a14296260343a1702b2e680f1e48207",
+    "date": "2026-10-17T09:34:57+02:00",
+    "behind": 5,
+    "ahead": 4,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 6
+  },
+  {
+    "branch": "fix/storekit-late-verification-and-ui-diagnostics",
+    "sha": "3b47d1cf632ff22a7a604ba2abb9623fb496c9b8",
+    "date": "2026-10-16T12:40:59+02:00",
+    "behind": 25,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-test-availability-20261016",
+    "sha": "e670bbf23a4cf71da6af3074b63dbeb2f7fcd719",
+    "date": "2026-10-16T10:30:32+02:00",
+    "behind": 47,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-test-bundle-and-platform-scope",
+    "sha": "c5b7189ecd70a54157cb3f62b244055244698876",
+    "date": "2026-10-16T09:06:06+02:00",
+    "behind": 73,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-test-readiness-and-imports",
+    "sha": "6d92e7817034034bae8e97a2fc5653654e97bf90",
+    "date": "2026-10-16T10:06:18+02:00",
+    "behind": 53,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-test-shared-scheme",
+    "sha": "3f89aecb174dd221be0da61abe304f9e4200936c",
+    "date": "2026-10-16T08:43:24+02:00",
+    "behind": 93,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-ui-simulator-latency",
+    "sha": "06121eb7ed21efc8458753033b19f9f9c15f4cb6",
+    "date": "2026-10-16T11:06:35+02:00",
+    "behind": 41,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/storekit-visible-purchase-context",
+    "sha": "852a6c2f0229d10751711ac38a8faf0f15ed0773",
+    "date": "2026-10-16T10:37:33+02:00",
+    "behind": 43,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/subscription-availability-before-prices",
+    "sha": "5d1024aa554669ef486b935995afcc8c65a820a3",
+    "date": "2026-10-16T08:32:45+02:00",
+    "behind": 101,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/subscription-feedback-order",
+    "sha": "92fa0a6bb36667375898c47747dfa21f5adf8661",
+    "date": "2026-10-16T08:54:23+02:00",
+    "behind": 81,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/subscription-refresh-callback-type",
+    "sha": "a216b75116a244d73a836f39b436e21ae1d1254c",
+    "date": "2026-10-16T08:56:37+02:00",
+    "behind": 79,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "fix/verified-purchase-readiness-and-native-test-host",
+    "sha": "59767ceb7672836c0ad13a94c542f119fc440d8e",
+    "date": "2026-10-16T14:25:25+02:00",
+    "behind": 13,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "main",
+    "sha": "6aa68489c7b29582be6bcddae56f2a46fb29d10e",
+    "date": "2026-10-21T12:48:49+01:00",
+    "behind": 0,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ops/read-versioned-subscription-metadata",
+    "sha": "9830f222c4adac99a455a220ff4e52430764cc69",
+    "date": "2026-10-16T09:26:46+02:00",
+    "behind": 63,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ops/select-verified-annual-subscription-build",
+    "sha": "a25c7551c6661f52c8324a6449f88053bbf21351",
+    "date": "2026-10-16T09:57:30+02:00",
+    "behind": 55,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "ops/verified-production-content-updates",
+    "sha": "82166d71ebde6999bdb0bae04c71355bb74eba31",
+    "date": "2026-10-16T09:43:20+02:00",
+    "behind": 59,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "photo-library",
+    "sha": "4b8090c729342bcceabae6eea40d5869fa236c58",
+    "date": "2026-10-06T10:53:57+02:00",
+    "behind": 555,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1
+  },
+  {
+    "branch": "release/beta-primary-review-20261008",
+    "sha": "8f54dd2f3f5fd9fe718fa5304175eeaee5f03eb8",
+    "date": "2026-10-09T01:35:10+02:00",
+    "behind": 237,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1
+  },
+  {
+    "branch": "research/course-photo-extraction",
+    "sha": "2aac83840a189c78f4f397cd60a3ca1e4704164d",
+    "date": "2026-10-07T09:46:54Z",
+    "behind": 522,
+    "ahead": 10,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 299
+  },
+  {
+    "branch": "research/external-reference-photos",
+    "sha": "c6672138e3b2dd3ed66a3e101a9663bc137fc6f2",
+    "date": "2026-10-07T15:06:34Z",
+    "behind": 489,
+    "ahead": 25,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 187
+  },
+  {
+    "branch": "research/focused-reference-v11",
+    "sha": "0edb0d77ce66c7e49018a58acbcba24bb2457977",
+    "date": "2026-10-07T19:53:32+02:00",
+    "behind": 489,
+    "ahead": 37,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1152
+  },
+  {
+    "branch": "research/large-course-archives",
+    "sha": "06f4b96832b7a613c92abbd8e7085eb2526a8111",
+    "date": "2026-10-07T04:00:54+02:00",
+    "behind": 532,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 2
+  },
+  {
+    "branch": "research/primary-reference-photos",
+    "sha": "bdd59dfea2008b5f37b703dda364b2a766e93ae6",
+    "date": "2026-10-07T17:12:18+02:00",
+    "behind": 489,
+    "ahead": 27,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 188
+  },
+  {
+    "branch": "research/primary-reference-v2",
+    "sha": "00c9fa88812d0359b7a116f9a8b3f8a4a2c14116",
+    "date": "2026-10-07T15:45:06Z",
+    "behind": 489,
+    "ahead": 29,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 242
+  },
+  {
+    "branch": "research/primary-reference-v3",
+    "sha": "2b7575fa4c972b4f97f6b38333a71dff656d5379",
+    "date": "2026-10-07T16:09:00Z",
+    "behind": 489,
+    "ahead": 31,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 565
+  },
+  {
+    "branch": "research/primary-reference-v4",
+    "sha": "bd6298720dd9598b2b0bea0565918049292bc4f5",
+    "date": "2026-10-07T16:30:48Z",
+    "behind": 489,
+    "ahead": 33,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 861
+  },
+  {
+    "branch": "research/primary-reference-v5",
+    "sha": "2935e43310897716275828e4b0c366a34ea59e42",
+    "date": "2026-10-07T16:26:24Z",
+    "behind": 489,
+    "ahead": 33,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 629
+  },
+  {
+    "branch": "research/primary-reference-v6",
+    "sha": "d0cc219bc2ef9b4db696550d1c3175a3242bb9a3",
+    "date": "2026-10-07T16:29:50Z",
+    "behind": 489,
+    "ahead": 33,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 615
+  },
+  {
+    "branch": "research/primary-reference-v7",
+    "sha": "008cdbdfe859f4db8869430b958a78c157b9ced6",
+    "date": "2026-10-07T16:34:32Z",
+    "behind": 489,
+    "ahead": 35,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 621
+  },
+  {
+    "branch": "research/primary-reference-v8",
+    "sha": "89a7e5a436a4bf83d4ab136b8fb0ee0be5850499",
+    "date": "2026-10-07T18:45:50+02:00",
+    "behind": 489,
+    "ahead": 34,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 862
+  },
+  {
+    "branch": "research/primary-reference-v9",
+    "sha": "4a4ae7c10a313e9729b43c79feba4b6187d2c81d",
+    "date": "2026-10-07T19:36:08+02:00",
+    "behind": 489,
+    "ahead": 35,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 862
+  },
+  {
+    "branch": "research/reviewed-community-4ee8a77301d6",
+    "sha": "4ee8a77301d63852a2a23f3c4f5ecae4020d26ef",
+    "date": "2026-10-07T18:04:41Z",
+    "behind": 489,
+    "ahead": 38,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1410
+  },
+  {
+    "branch": "research/reviewed-community-5403b5a64602",
+    "sha": "5403b5a646025f1502a8ec06bb924420ef229984",
+    "date": "2026-10-07T17:47:26Z",
+    "behind": 489,
+    "ahead": 36,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1152
+  },
+  {
+    "branch": "research/reviewed-community-721fa6349343",
+    "sha": "721fa6349343450e54128598f9845e9d129b3319",
+    "date": "2026-10-07T17:46:12Z",
+    "behind": 489,
+    "ahead": 37,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 931
+  },
+  {
+    "branch": "research/targeted-reference-v10",
+    "sha": "b40163815b601d0f4d0cc52d8c2fc39800707837",
+    "date": "2026-10-07T19:43:11+02:00",
+    "behind": 489,
+    "ahead": 36,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 863
+  },
+  {
+    "branch": "review/47-verified-anatomical-views",
+    "sha": "2941c78a6a571f56dd41d6a0923e611d575c0685",
+    "date": "2026-10-07T18:47:38+02:00",
+    "behind": 471,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/87-verified-specimen-views",
+    "sha": "88e0f3db7e354afeeb0911b56a3c3897e6ad6c47",
+    "date": "2026-10-07T18:18:37+02:00",
+    "behind": 474,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/actual-612-view-coverage",
+    "sha": "5e66bfa1699535a0e542022a3e38f907748aeca1",
+    "date": "2026-10-07T19:37:30+02:00",
+    "behind": 468,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/annual-free-preview",
+    "sha": "49659d26f28e125a78b202b36f1c94dae263486d",
+    "date": "2026-10-16T09:01:18+02:00",
+    "behind": 76,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1
+  },
+  {
+    "branch": "review/annual-native-screens-20261016",
+    "sha": "f74a432861cb20f17b5602fdb8d9fde507fb3c72",
+    "date": "2026-10-16T09:51:29+02:00",
+    "behind": 56,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 12
+  },
+  {
+    "branch": "review/commercialization-genus-scope",
+    "sha": "ed92ba5db4dc55e56ff76092f11fb0ffda3881a3",
+    "date": "2026-10-07T21:04:47+02:00",
+    "behind": 445,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/deduplicate-final-photo-records",
+    "sha": "404f4ddd828d15aaa985d127b5cf8d97d74f3135",
+    "date": "2026-10-07T20:33:10+02:00",
+    "behind": 450,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/eleven-primary-anatomical-views",
+    "sha": "4345e3d34bafb99469b02a67a215bb096be2144f",
+    "date": "2026-10-07T19:56:28+02:00",
+    "behind": 463,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/final-630-view-delivery",
+    "sha": "1a5044b9be7d6e9cece365c9dabb97e8322efb27",
+    "date": "2026-10-07T20:14:29+02:00",
+    "behind": 454,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/final-focused-photographs",
+    "sha": "095e17863d619030c5f3aba2278686fc0088ab40",
+    "date": "2026-10-07T20:30:51+02:00",
+    "behind": 452,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/final-three-triplets-and-clear-agaricus",
+    "sha": "1a08ce9731b28f7a97b54fad6c966a8e5349c804",
+    "date": "2026-10-07T20:11:15+02:00",
+    "behind": 457,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/four-additional-oblique-views",
+    "sha": "0988e40efcc9776830d905d060fbb1a362805151",
+    "date": "2026-10-07T19:40:40+02:00",
+    "behind": 466,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/ipad-original-screenshot",
+    "sha": "eef1f2dce093fc0ac0499e9d6997e49f7b10a856",
+    "date": "2026-10-15T14:08:24+02:00",
+    "behind": 113,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 3
+  },
+  {
+    "branch": "review/isolated-storekit-failures-20261016",
+    "sha": "6967b72210737d940853449459898a2b6862e671",
+    "date": "2026-10-16T12:40:01+02:00",
+    "behind": 26,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 2
+  },
+  {
+    "branch": "review/photo-adaptation-credits-and-sterile-surface",
+    "sha": "be10ef0ac5d7325458a735d9b0017dfc72730a9f",
+    "date": "2026-10-07T20:04:26+02:00",
+    "behind": 460,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "review/pwa-exam-click-20261016",
+    "sha": "74e648ee51429ae69f9a2dbe657fdb49e2cb0da5",
+    "date": "2026-10-16T11:15:08+02:00",
+    "behind": 36,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 1
+  },
+  {
+    "branch": "review/storekit-third-failure",
+    "sha": "bfd54ddbc6d27068703b693e230a84c12835fb8e",
+    "date": "2026-10-16T10:34:53+02:00",
+    "behind": 44,
+    "ahead": 1,
+    "classification": "requires-selection",
+    "changedPathsFromMergeBase": 2
+  },
+  {
+    "branch": "store/annual-listing-and-terms",
+    "sha": "7fcd2c4782ebd5f466b4439458d0350421f195a0",
+    "date": "2026-10-16T08:36:48+02:00",
+    "behind": 97,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/annual-pricing-worldwide",
+    "sha": "d1a8c2a6f693873c336002ab00a5056e58c7a43e",
+    "date": "2026-10-16T08:31:37+02:00",
+    "behind": 103,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/annual-readback-audit",
+    "sha": "5d1898284d03896816a51d753b466ee6923153bc",
+    "date": "2026-10-16T09:03:16+02:00",
+    "behind": 75,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/annual-review-assets-and-support",
+    "sha": "09505e787678666fe6060fb81a8ded2d1139449d",
+    "date": "2026-10-16T08:46:43+02:00",
+    "behind": 89,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/annual-subscription-setup",
+    "sha": "789ae21014a161b919766219b97cc084cadf8641",
+    "date": "2026-10-16T08:29:52+02:00",
+    "behind": 105,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/inspect-original-ipad-screenshot",
+    "sha": "776f7076a43f43e11a00d493daaf678f1a5c8c3d",
+    "date": "2026-10-15T14:07:31+02:00",
+    "behind": 114,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/native-screenshots-2026-10-15",
+    "sha": "be6f2f9a7442e3452dd29effc52e547f50a87e7c",
+    "date": "2026-10-15T14:04:50+02:00",
+    "behind": 114,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "store/reviewed-annual-subscription-screenshots",
+    "sha": "6628e5d502c63ef1cd3bf8290a614a6f9bc5d842",
+    "date": "2026-10-16T10:09:46+02:00",
+    "behind": 51,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "test/storekit-matched-xcode-runtime-26-4",
+    "sha": "dd67570b6d96da2a037877fda9c7b81cdfcc6537",
+    "date": "2026-10-16T13:31:03+02:00",
+    "behind": 21,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "test/storekit-real-purchase-interface",
+    "sha": "cecb67dbf48eff39dd11c2c4d90fc9a2119bf3c0",
+    "date": "2026-10-16T09:14:50+02:00",
+    "behind": 69,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "test/storekit-verified-entitlements",
+    "sha": "076c144482af20c62d38122c7f1fd7856378fb9e",
+    "date": "2026-10-16T08:42:00+02:00",
+    "behind": 95,
+    "ahead": 0,
+    "classification": "already-in-main"
+  },
+  {
+    "branch": "test/subscription-preview-accessibility-selector",
+    "sha": "8b3874ad0a98e0ece0f1088e3bf68e33ae6a3d29",
+    "date": "2026-10-16T09:00:31+02:00",
+    "behind": 77,
+    "ahead": 0,
+    "classification": "already-in-main"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "updatedAt": "2026-10-21T15:23:52.175836+00:00",
+  "initialReviewId": "126bebb5-1470-4347-9e04-5f95e0391cab",
+  "initialReviewedVersion": "1.0 (9)",
+  "applicationSourceCommit": "bdb9a4f7ba4e7bc5da30a1f9b615648799deb222",
+  "correctionsRunId": 39616737319,
+  "appleCorrections": {
+    "publicScreenshots": 4,
+    "publicPricingScreenshotsRemoved": 2,
+    "freeDownloadConfirmed": true,
+    "italyAnnualNewSubscriberPrice": "19.99",
+    "preservedPriorSubscriberPrice": "9.99",
+    "priceEffectiveDate": "2026-10-21",
+    "listingDemo": "Agaricus profiles and repeatable Agaricus test"
+  },
+  "draftObservedInAppleUI": {
+    "platform": "IOS",
+    "annual": "Ready for Review",
+    "group": "Ready for Review",
+    "items": 2,
+    "appVersionAdded": false,
+    "submitted": false
+  },
+  "privateSubscriptionScreenshot": {
+    "retained": true,
+    "updatedToNewPrice": false,
+    "requiresFreshCaptureBeforeSubmission": true
+  },
+  "sourceValidation": {
+    "localTestsPassed": 97,
+    "typecheck": "passed",
+    "iosExport": "passed"
+  },
+  "nativeValidation": {
+    "runId": 39616737149,
+    "result": "failure",
+    "detail": "Purchase verified; native test exceeded ten-minute allowance after refund began"
+  },
+  "fullUIValidation": {
+    "runId": 39617082178,
+    "iphone": "failure-before-purchase-entitlement-lookup",
+    "ipad": "failure-before-purchase-entitlement-lookup",
+    "demoTest": "failed on exact accessibility label; selector corrected; new dedicated verification pending"
+  },
+  "newDemoUIRunId": 39624804385,
+  "gatedBinaryRunId": 39617809231,
+  "gatedBinaryResult": "blocked-by-failed-native-evidence",
+  "newBinaryUploaded": false,
+  "reviewResubmitted": false,
+  "study11BetaObsoleteForThisPricingModel": true
+}

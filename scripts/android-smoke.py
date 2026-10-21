@@ -52,7 +52,7 @@ def tap(label,prefix=False):
 def launch():
     adb('shell','am','force-stop','it.fungoitalia.app')
     adb('shell','am','start','-W','-n','it.fungoitalia.app/.MainActivity')
-    wait_text('Studio e atlante',90)
+    wait_text('Ciao',90)
 
 def scroll_top():
     size=adb('shell','wm','size')
@@ -72,39 +72,38 @@ def main():
     adb('shell','svc','wifi','disable')
     adb('shell','svc','data','disable')
     launch()
+    tap('Studio')
     wait_text('Studio e atlante')
+    wait_text('Demo gratuita · Agaricus')
     tap('Cerca nome scientifico, comune o sinonimo')
-    adb('shell','input','text','Amanita')
+    adb('shell','input','text','Agaricus')
     adb('shell','input','keyevent','KEYCODE_BACK')
     time.sleep(2)
-    tap('Apri Amanita',prefix=True)
+    tap('Apri Agaricus',prefix=True)
     scroll_top()
-    wait_text('Specie')
+    wait_text('Caratteri di studio')
     scroll_top()
     tap('Salva preferito')
     wait_text('Rimuovi preferito')
     wait_text('Caratteri di studio')
     tap('Torna alle schede')
     tap('Aree')
-    wait_text('71 macroaree')
-    tap('Monte Amiata')
-    wait_text('1 area corrispondente')
-    time.sleep(2)
+    wait_text('Fungo Italia completo')
     launch()
-    root=wait_text('1 preferito')
-    assert 'Studio e atlante' in text_of(root),'Offline study screen unavailable after restart'
+    tap('Studio')
+    wait_text('1 preferito')
+    wait_text('Demo gratuita · Agaricus')
     os.makedirs('artifacts/smoke',exist_ok=True)
     with open('artifacts/smoke/android-offline.png','wb') as f:
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
     with open('artifacts/smoke/ui.xml','w') as f:
         f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
-    # The current product navigation intentionally contains only Studio, Aree and Esame.
-    # Photo-library/3+1 flows are not accessible tabs; do not test removed UI.
+    # Android has no verified billing implementation: only the free Agaricus demo is accessible.
     tap('Esame')
-    wait_text('Esame fotografico')
-    wait_text('Inizia 15 casi')
-    print('PASS: exam tab is accessible from the current three-tab navigation.')
-    print('PASS: native APK cold-start offline, catalog search, detail, favorite persistence after process restart and Amiata macroarea.')
+    wait_text('Test Agaricus gratuito')
+    wait_text('Inizia 4 casi')
+    print('PASS: free four-case Agaricus test is accessible; Areas remain gated.')
+    print('PASS: Dashboard cold start offline, Agaricus search/detail and favorites persist after restart.')
 try:
     main()
 finally:

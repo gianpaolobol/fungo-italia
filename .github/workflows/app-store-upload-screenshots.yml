@@ -1,9 +1,6 @@
 name: Upload verified native App Store screenshots
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['store/screenshots/manifest.json']
 permissions:
   contents: read
 concurrency:

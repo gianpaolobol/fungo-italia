@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-21",
+  "baseCommit": "6aa68489c7b29582be6bcddae56f2a46fb29d10e",
+  "branchesAudited": 168,
+  "branchesAlreadyAncestors": 120,
+  "branchesContentReviewed": 48,
+  "nodeTests": {
+    "passed": 153,
+    "failed": 0
+  },
+  "typecheck": true,
+  "iosBundleExport": true,
+  "dataRegenerationDeterministic": true,
+  "activeWorkflowSyntaxChecks": 34,
+  "scientificGatePassed": false,
+  "nativeStorekitVerified": false,
+  "storekitUIVerified": false,
+  "testFlightUploadConfirmed": false,
+  "appStoreSubmitted": false,
+  "note": "Local source checks only. Final signed source SHA, real native/UI outcomes and Apple build confirmation are recorded in the exact-source Consolidated-TestFlight-evidence workflow artifact."
+}

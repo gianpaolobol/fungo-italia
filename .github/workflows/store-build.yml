@@ -3,13 +3,10 @@ on:
   workflow_dispatch:
     inputs:
       platform:
-        description: Platform to build after configuring signing credentials in Expo
+        description: Platform to build
         required: true
         type: choice
         options: [android, ios, all]
-  push:
-    branches: [main]
-    paths: ['.github/workflows/store-build.yml']
 permissions:
   contents: read
 jobs:

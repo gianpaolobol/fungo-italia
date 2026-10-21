@@ -1,3 +1,4 @@
+import {sourceExportCommit} from './export-provenance.mjs';
 import {applyApprovedExternalStudyEvidence} from './approved-external-study-evidence.mjs';
 import {buildExamBank} from '../web/public/exam-core.js';
 import {applyReviewedMatrix,readReviewedMatrix} from './reviewed-matrix.mjs';
@@ -11,6 +12,7 @@ import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {join} from 'node:path';
 const input='legacy/web/artifacts/floot-readiness',output='src/data';
+const previousProvenance=await readFile(join(output,'provenance.json'),'utf8').then(JSON.parse).catch(error=>{if(error.code==='ENOENT')return null;throw error;});
 const manifest=JSON.parse(await readFile(join(input,'manifest.json'),'utf8'));
 async function read(name){const expected=manifest.files.find(f=>f.name===name);if(!expected)throw Error('Missing manifest entry '+name);const bytes=await readFile(join(input,name));if(bytes.length!==expected.bytes||createHash('sha256').update(bytes).digest('hex')!==expected.sha256)throw Error('Checksum mismatch '+name);return JSON.parse(bytes.toString('utf8'));}
 const [taxa,meta,baseline,evidence,sourceRecords,areas]=await Promise.all(['study-atlas-taxa.json','catalog-data.json','scientific-baseline.json','field-profile-evidence.json','catalog-sources.json','areas.json'].map(read));
@@ -66,7 +68,7 @@ for(const record of areaLiterature.records){
 }
 
 await mkdir(output,{recursive:true});
-await Promise.all([writeFile(join(output,'internal-foundations.json'),JSON.stringify(internalFoundations(sourceRecords),null,2)+'\n'),writeFile(join(output,'groups.json'),JSON.stringify(teachingGroups.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'catalog.json'),JSON.stringify(catalog.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'areas.json'),JSON.stringify(mobileAreas,null,2)+'\n'),writeFile(join(output,'provenance.json'),JSON.stringify({schemaVersion:1,legacySnapshotCommit:'e3b9ca01bd43ec87d3630ab954c45229b2ba15e1',sourceExportCommit:manifest.commit??null,canonicalUnits:148,areas:mobileAreas.length,independentReviewComplete:false,pendingScientificClaims:manifest.pendingScientificClaims,supplementaryLiterature:{file:'supplementary-literature.json',sha256:createHash('sha256').update(supplementaryBytes).digest('hex'),reviewStatus:supplementary.reviewStatus},sourceFileChecksums:manifest.files},null,2)+'\n')]);
+await Promise.all([writeFile(join(output,'internal-foundations.json'),JSON.stringify(internalFoundations(sourceRecords),null,2)+'\n'),writeFile(join(output,'groups.json'),JSON.stringify(teachingGroups.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'catalog.json'),JSON.stringify(catalog.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'areas.json'),JSON.stringify(mobileAreas,null,2)+'\n'),writeFile(join(output,'provenance.json'),JSON.stringify({schemaVersion:1,legacySnapshotCommit:'e3b9ca01bd43ec87d3630ab954c45229b2ba15e1',sourceExportCommit:sourceExportCommit(manifest,previousProvenance),canonicalUnits:148,areas:mobileAreas.length,independentReviewComplete:false,pendingScientificClaims:manifest.pendingScientificClaims,supplementaryLiterature:{file:'supplementary-literature.json',sha256:createHash('sha256').update(supplementaryBytes).digest('hex'),reviewStatus:supplementary.reviewStatus},sourceFileChecksums:manifest.files},null,2)+'\n')]);
 console.log(JSON.stringify({canonicalUnits:catalog.length,areas:mobileAreas.length,independentReviewComplete:false}));
 
 const imageAssetModule="import type {ImageSourcePropType} from 'react-native';\nexport const referenceImageAssets:Record<string,ImageSourcePropType>={\n"+[...new Set([...referenceImages.images,...adminImages.images].map(image=>image.src))].map(src=>JSON.stringify(src)+':require('+JSON.stringify('../../web/public/'+src)+'),').join('\n')+'\n};\n';

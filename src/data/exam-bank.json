@@ -7,6 +7,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
+        "view": "lateral",
+        "credit": "ÖkopatóPál, CC0 1.0 · ritaglio",
+        "subjectTaxon": "Agaricus bresadolanus",
+        "sourceUrl": "https://www.inaturalist.org/observations/318836697",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      {
         "src": "images/reference/agaricus-bresadolanus-top-83.jpg",
         "view": "top",
         "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 15. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
@@ -17,14 +25,6 @@
         "view": "underside",
         "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 16. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
         "subjectTaxon": "Agaricus bresadolanus"
-      },
-      {
-        "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg",
-        "view": "lateral",
-        "credit": "ÖkopatóPál, CC0 1.0 · ritaglio",
-        "subjectTaxon": "Agaricus bresadolanus",
-        "sourceUrl": "https://www.inaturalist.org/observations/318836697",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
       }
     ],
     "category": "toxic",
@@ -183,18 +183,18 @@
     ],
     "photos": [
       {
-        "src": "images/reference/agaricus-bisporus-top-72.jpg",
-        "view": "top",
-        "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 11. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata.",
-        "subjectTaxon": "Agaricus bisporus"
-      },
-      {
         "src": "images/reference/external-agaricus-bisporus-lateral.jpg",
         "view": "lateral",
         "credit": "Lucian Clanet, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Agaricus bisporus",
         "sourceUrl": "https://www.inaturalist.org/observations/406107181",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/agaricus-bisporus-top-72.jpg",
+        "view": "top",
+        "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 11. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata.",
+        "subjectTaxon": "Agaricus bisporus"
       },
       {
         "src": "images/reference/external-agaricus-bisporus-underside.jpg",
@@ -351,15 +351,15 @@
         "subjectTaxon": "Amanita virosa"
       },
       {
-        "src": "images/reference/amanita-virosa-underside-80.jpg",
-        "view": "underside",
-        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
-        "subjectTaxon": "Amanita virosa"
-      },
-      {
         "src": "images/reference/amanita-virosa-top-80.jpg",
         "view": "top",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
+        "subjectTaxon": "Amanita virosa"
+      },
+      {
+        "src": "images/reference/amanita-virosa-underside-80.jpg",
+        "view": "underside",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 20. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
         "subjectTaxon": "Amanita virosa"
       }
     ],
@@ -499,16 +499,16 @@
         "subjectTaxon": "Amanita ovoidea"
       },
       {
-        "src": "images/reference/external-amanita-ovoidea-underside.jpg",
-        "view": "underside",
+        "src": "images/reference/external-amanita-ovoidea-top.jpg",
+        "view": "top",
         "credit": "Lucian Clanet, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Amanita ovoidea",
         "sourceUrl": "https://www.inaturalist.org/observations/329076323",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-amanita-ovoidea-top.jpg",
-        "view": "top",
+        "src": "images/reference/external-amanita-ovoidea-underside.jpg",
+        "view": "underside",
         "credit": "Lucian Clanet, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Amanita ovoidea",
         "sourceUrl": "https://www.inaturalist.org/observations/329076323",
@@ -813,10 +813,12 @@
     ],
     "photos": [
       {
-        "src": "images/reference/amanita-porphyria-underside-170.jpg",
-        "view": "underside",
-        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 42. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
-        "subjectTaxon": "Amanita porphyria"
+        "src": "images/reference/external-amanita-porphyria-lateral.jpg",
+        "view": "lateral",
+        "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Amanita porphyria",
+        "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
         "src": "images/reference/amanita-porphyria-top-170.jpg",
@@ -825,12 +827,10 @@
         "subjectTaxon": "Amanita porphyria"
       },
       {
-        "src": "images/reference/external-amanita-porphyria-lateral.jpg",
-        "view": "lateral",
-        "credit": "Frode Ødegaard / NTNU Vitenskapsmuseet · CC BY 4.0 · ritaglio/ridimensionamento",
-        "subjectTaxon": "Amanita porphyria",
-        "sourceUrl": "https://artsdatabanken.no/arter/takson/34971",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+        "src": "images/reference/amanita-porphyria-underside-170.jpg",
+        "view": "underside",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 42. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita porphyria"
       }
     ],
     "category": "inedible",
@@ -894,6 +894,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-saproamanita-vittadinii-lateral.jpg",
+        "view": "lateral",
+        "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Saproamanita vittadinii",
+        "sourceUrl": "https://www.inaturalist.org/observations/324211086",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/saproamanita-vittadinii-top-277.jpg",
         "view": "top",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
@@ -904,14 +912,6 @@
         "view": "underside",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 70. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
         "subjectTaxon": "Amanita vittadinii"
-      },
-      {
-        "src": "images/reference/external-saproamanita-vittadinii-lateral.jpg",
-        "view": "lateral",
-        "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Saproamanita vittadinii",
-        "sourceUrl": "https://www.inaturalist.org/observations/324211086",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "discouraged",
@@ -941,15 +941,15 @@
         "subjectTaxon": "Amanita rubescens"
       },
       {
-        "src": "images/reference/amanita-rubescens-underside-250.jpg",
-        "view": "underside",
-        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
-        "subjectTaxon": "Amanita rubescens"
-      },
-      {
         "src": "images/reference/amanita-rubescens-top-254.jpg",
         "view": "top",
         "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 64. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
+        "subjectTaxon": "Amanita rubescens"
+      },
+      {
+        "src": "images/reference/amanita-rubescens-underside-250.jpg",
+        "view": "underside",
+        "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 63. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
         "subjectTaxon": "Amanita rubescens"
       }
     ],
@@ -1017,6 +1017,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-collybia-phyllophila-lateral.jpg",
+        "view": "lateral",
+        "credit": "Andrey Polstianoi, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Collybia phyllophila",
+        "sourceUrl": "https://www.inaturalist.org/observations/320121594",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/external-collybia-phyllophila-top.jpg",
         "view": "top",
         "credit": "Strobilomyces · CC BY-SA 3.0 · ritaglio/ridimensionamento",
@@ -1031,14 +1039,6 @@
         "subjectTaxon": "Clitocybe phyllophila",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clitocybe_phyllophila_20121111wb.JPG",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
-      },
-      {
-        "src": "images/reference/external-collybia-phyllophila-lateral.jpg",
-        "view": "lateral",
-        "credit": "Andrey Polstianoi, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Collybia phyllophila",
-        "sourceUrl": "https://www.inaturalist.org/observations/320121594",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "toxic",
@@ -1611,12 +1611,12 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-entoloma-sinuatum-underside.jpg",
-        "view": "underside",
-        "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
+        "src": "images/reference/external-entoloma-sinuatum-lateral.jpg",
+        "view": "lateral",
+        "credit": "Eugene Popov, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Entoloma sinuatum",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+        "sourceUrl": "https://www.inaturalist.org/observations/34492154",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
         "src": "images/reference/external-entoloma-sinuatum-top.jpg",
@@ -1627,12 +1627,12 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-entoloma-sinuatum-lateral.jpg",
-        "view": "lateral",
-        "credit": "Eugene Popov, CC BY 4.0 · ritaglio",
+        "src": "images/reference/external-entoloma-sinuatum-underside.jpg",
+        "view": "underside",
+        "credit": "Gerhard Koller · CC BY-SA 3.0 · ritaglio/ridimensionamento",
         "subjectTaxon": "Entoloma sinuatum",
-        "sourceUrl": "https://www.inaturalist.org/observations/34492154",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entoloma_sinuatum_40542.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
     "category": "toxic",
@@ -1753,16 +1753,16 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-entoloma-vernum-top.jpg",
-        "view": "top",
+        "src": "images/reference/external-entoloma-vernum-lateral.jpg",
+        "view": "lateral",
         "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Entoloma vernum",
         "sourceUrl": "https://www.inaturalist.org/observations/26436965",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-entoloma-vernum-lateral.jpg",
-        "view": "lateral",
+        "src": "images/reference/external-entoloma-vernum-top.jpg",
+        "view": "top",
         "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Entoloma vernum",
         "sourceUrl": "https://www.inaturalist.org/observations/26436965",
@@ -1833,6 +1833,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-hygrocybe-punicea-lateral.jpg",
+        "view": "lateral",
+        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Hygrocybe punicea",
+        "sourceUrl": "https://www.inaturalist.org/observations/406014874",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/external-hygrocybe-punicea-top.jpg",
         "view": "top",
         "credit": "GLJIVARSKO DRUSTVO NIS · CC BY 2.0 · ritaglio/ridimensionamento",
@@ -1847,14 +1855,6 @@
         "subjectTaxon": "Hygrocybe punicea",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:HYGROCYBE_PUNICEA_(Fr._Fr.)Kummer_(6667872329).jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
-      },
-      {
-        "src": "images/reference/external-hygrocybe-punicea-lateral.jpg",
-        "view": "lateral",
-        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Hygrocybe punicea",
-        "sourceUrl": "https://www.inaturalist.org/observations/406014874",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "free",
@@ -1956,6 +1956,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-hygrophorus-penarioides-lateral.jpg",
+        "view": "lateral",
+        "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Hygrophorus penarioides",
+        "sourceUrl": "https://www.inaturalist.org/observations/5650190",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/external-hygrophorus-penarioides-top.jpg",
         "view": "top",
         "credit": "Irene Andersson · CC BY-SA 3.0 · ritaglio dall’originale",
@@ -1970,14 +1978,6 @@
         "subjectTaxon": "Hygrophorus penarioides",
         "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hygrophorus_penarioides.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
-      },
-      {
-        "src": "images/reference/external-hygrophorus-penarioides-lateral.jpg",
-        "view": "lateral",
-        "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Hygrophorus penarioides",
-        "sourceUrl": "https://www.inaturalist.org/observations/5650190",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "free",
@@ -2001,16 +2001,16 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-hypholoma-fasciculare-top.jpg",
-        "view": "top",
+        "src": "images/reference/external-hypholoma-fasciculare-lateral.jpg",
+        "view": "lateral",
         "credit": "Nina Filippova, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Hypholoma fasciculare",
         "sourceUrl": "https://www.inaturalist.org/observations/13580849",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-hypholoma-fasciculare-lateral.jpg",
-        "view": "lateral",
+        "src": "images/reference/external-hypholoma-fasciculare-top.jpg",
+        "view": "top",
         "credit": "Nina Filippova, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Hypholoma fasciculare",
         "sourceUrl": "https://www.inaturalist.org/observations/13580849",
@@ -2514,16 +2514,16 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-panaeolus-cyanescens-top.jpg",
-        "view": "top",
+        "src": "images/reference/external-panaeolus-cyanescens-lateral.jpg",
+        "view": "lateral",
         "credit": "Alan Rockefeller, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Panaeolus cyanescens",
         "sourceUrl": "https://www.inaturalist.org/observations/18585344",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-panaeolus-cyanescens-lateral.jpg",
-        "view": "lateral",
+        "src": "images/reference/external-panaeolus-cyanescens-top.jpg",
+        "view": "top",
         "credit": "Alan Rockefeller, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Panaeolus cyanescens",
         "sourceUrl": "https://www.inaturalist.org/observations/18585344",
@@ -2743,6 +2743,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-tricholoma-filamentosum-lateral.jpg",
+        "view": "lateral",
+        "credit": "Inger-Lise Fonneland, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Tricholoma filamentosum",
+        "sourceUrl": "https://naturvernforbundet.no/content/uploads/sites/11/2023/10/Rodlistede-markboende-sopp-i-kalkbarskoger-1.pdf",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/external-tricholoma-filamentosum-top.jpg",
         "view": "top",
         "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
@@ -2756,14 +2764,6 @@
         "credit": "İsmail Şen & Hakan Allı · CC BY 4.0 · ritaglio/ridimensionamento",
         "subjectTaxon": "Tricholoma filamentosum",
         "sourceUrl": "https://doi.org/10.3906/bot-1812-52",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      {
-        "src": "images/reference/external-tricholoma-filamentosum-lateral.jpg",
-        "view": "lateral",
-        "credit": "Inger-Lise Fonneland, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Tricholoma filamentosum",
-        "sourceUrl": "https://naturvernforbundet.no/content/uploads/sites/11/2023/10/Rodlistede-markboende-sopp-i-kalkbarskoger-1.pdf",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -2856,54 +2856,6 @@
     ]
   },
   {
-    "id": "minimum-card-objective-tricholoma--04--tricholoma-equestre",
-    "name": "Tricholoma equestre",
-    "acceptedNames": [
-      "Tricholoma equestre"
-    ],
-    "photos": [
-      {
-        "src": "images/reference/external-tricholoma-equestre-lateral.jpg",
-        "view": "lateral",
-        "credit": "Veeti Varjo, CC0 1.0 · ritaglio",
-        "subjectTaxon": "Tricholoma equestre",
-        "sourceUrl": "https://www.inaturalist.org/observations/183837798",
-        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
-      }
-    ],
-    "category": "discouraged",
-    "detailKind": null,
-    "preparation": [
-      "La Guida (2021) documenta il divieto italiano di raccolta, consumo e commercializzazione; non destinare al consumo."
-    ],
-    "syndrome": {
-      "label": "Sindrome rabdomiolitica",
-      "latency": "Possibile comparsa ritardata, dopo consumi ripetuti",
-      "severity": "Potenzialmente grave o mortale; danno muscolare con possibile insufficienza renale"
-    },
-    "characters": [
-      "Cappello giallo limone poi giallo-bruno/miele, viscido e lucido da umido, con fini squamule brune aderenti.",
-      "Lamelle nettamente gialle e smarginate.",
-      "Gambo giallo-paglierino o giallo vivo, privo di anello."
-    ],
-    "differentiatingCharacter": "Micorriza tipica con Pinus su suoli poveri e sabbiosi.",
-    "diagnosticNote": "",
-    "sources": [
-      {
-        "sourceId": "TOX-tricholoma-equestre",
-        "title": "Fonte tossicologica istituzionale",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/11556299/",
-        "location": "Bedry et al., Wild-mushroom intoxication as a cause of rhabdomyolysis, New England Journal of Medicine (2001), abstract: casi associati a Tricholoma equestre",
-        "fields": [
-          "syndrome"
-        ],
-        "supportedClaim": "Sindrome rabdomiolitica",
-        "reviewScope": "toxicology-literature",
-        "reviewStatus": "source-mapped-not-independently-reviewed"
-      }
-    ]
-  },
-  {
     "id": "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
     "name": "Tricholoma portentosum",
     "acceptedNames": [
@@ -2952,6 +2904,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-tricholoma-terreum-lateral.jpg",
+        "view": "lateral",
+        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Tricholoma terreum",
+        "sourceUrl": "https://www.inaturalist.org/observations/331098978",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/tricholoma-terreum-top-174.jpg",
         "view": "top",
         "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
@@ -2962,14 +2922,6 @@
         "view": "underside",
         "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 42. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
         "subjectTaxon": "Tricholoma terreum"
-      },
-      {
-        "src": "images/reference/external-tricholoma-terreum-lateral.jpg",
-        "view": "lateral",
-        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Tricholoma terreum",
-        "sourceUrl": "https://www.inaturalist.org/observations/331098978",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "free",
@@ -3036,6 +2988,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-tricholoma-sejunctum-lateral.jpg",
+        "view": "lateral",
+        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Tricholoma sejunctum",
+        "sourceUrl": "https://www.inaturalist.org/observations/329855255",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/tricholoma-sejunctum-top-45.jpg",
         "view": "top",
         "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
@@ -3046,14 +3006,6 @@
         "view": "underside",
         "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 10. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
         "subjectTaxon": "Tricholoma sejunctum"
-      },
-      {
-        "src": "images/reference/external-tricholoma-sejunctum-lateral.jpg",
-        "view": "lateral",
-        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Tricholoma sejunctum",
-        "sourceUrl": "https://www.inaturalist.org/observations/329855255",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "discouraged",
@@ -3161,16 +3113,16 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-volvariella-volvacea-top.jpg",
-        "view": "top",
+        "src": "images/reference/external-volvariella-volvacea-lateral.jpg",
+        "view": "lateral",
         "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
         "subjectTaxon": "Volvariella volvacea",
         "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-volvariella-volvacea-lateral.jpg",
-        "view": "lateral",
+        "src": "images/reference/external-volvariella-volvacea-top.jpg",
+        "view": "top",
         "credit": "Bao et al.2013 · CC BY 4.0 · ritaglio/ridimensionamento",
         "subjectTaxon": "Volvariella volvacea",
         "sourceUrl": "https://plos.figshare.com/articles/figure/_Life_cycle_and_the_fruiting_body_of_Volvariella_volvacea_/655575",
@@ -3206,14 +3158,6 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-lactarius-tesquorum-underside.jpg",
-        "view": "underside",
-        "credit": "Davide Puddu · CC BY-SA 3.0 · ritaglio dall’originale",
-        "subjectTaxon": "Lactarius tesquorum",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_tesquorum_Malençon_399418.jpg",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
-      },
-      {
         "src": "images/reference/external-lactarius-tesquorum-lateral.jpg",
         "view": "lateral",
         "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
@@ -3228,6 +3172,14 @@
         "subjectTaxon": "Lactarius tesquorum",
         "sourceUrl": "https://www.inaturalist.org/observations/9367882",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-lactarius-tesquorum-underside.jpg",
+        "view": "underside",
+        "credit": "Davide Puddu · CC BY-SA 3.0 · ritaglio dall’originale",
+        "subjectTaxon": "Lactarius tesquorum",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lactarius_tesquorum_Malençon_399418.jpg",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       }
     ],
     "category": "conditional",
@@ -3417,18 +3369,18 @@
     ],
     "photos": [
       {
-        "src": "images/reference/caloboletus-radicans-top-205.jpg",
-        "view": "top",
-        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 51. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
-        "subjectTaxon": "Caloboletus radicans"
-      },
-      {
         "src": "images/reference/external-caloboletus-radicans-lateral.jpg",
         "view": "lateral",
         "credit": "Lucian Clanet, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Caloboletus radicans",
         "sourceUrl": "https://www.inaturalist.org/observations/194984296",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/caloboletus-radicans-top-205.jpg",
+        "view": "top",
+        "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 51. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
+        "subjectTaxon": "Caloboletus radicans"
       },
       {
         "src": "images/reference/external-caloboletus-radicans-underside.jpg",
@@ -3538,6 +3490,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-gyroporus-cyanescens-lateral.jpg",
+        "view": "lateral",
+        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Gyroporus cyanescens",
+        "sourceUrl": "https://www.inaturalist.org/observations/232719197",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/gyroporus-cyanescens-top-197.jpg",
         "view": "top",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 35; fotografo individuale non indicato.",
@@ -3548,14 +3508,6 @@
         "view": "underside",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 35; fotografo individuale non indicato.",
         "subjectTaxon": "Gyroporus cyanescens"
-      },
-      {
-        "src": "images/reference/external-gyroporus-cyanescens-lateral.jpg",
-        "view": "lateral",
-        "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Gyroporus cyanescens",
-        "sourceUrl": "https://www.inaturalist.org/observations/232719197",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
     "category": "conditional",
@@ -3668,6 +3620,12 @@
     ],
     "photos": [
       {
+        "src": "images/reference/suillus-luteus-lateral-461.jpg",
+        "view": "lateral",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
+        "subjectTaxon": "Suillus luteus"
+      },
+      {
         "src": "images/reference/suillus-luteus-top-461.jpg",
         "view": "top",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
@@ -3676,12 +3634,6 @@
       {
         "src": "images/reference/suillus-luteus-underside-461.jpg",
         "view": "underside",
-        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
-        "subjectTaxon": "Suillus luteus"
-      },
-      {
-        "src": "images/reference/suillus-luteus-lateral-461.jpg",
-        "view": "lateral",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 93; fotografo individuale non indicato.",
         "subjectTaxon": "Suillus luteus"
       }
@@ -3752,6 +3704,12 @@
     ],
     "photos": [
       {
+        "src": "images/reference/tylopilus-felleus-lateral-547.jpg",
+        "view": "lateral",
+        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
+        "subjectTaxon": "Tylopilus felleus"
+      },
+      {
         "src": "images/reference/tylopilus-felleus-top-546.jpg",
         "view": "top",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
@@ -3760,12 +3718,6 @@
       {
         "src": "images/reference/tylopilus-felleus-underside-546.jpg",
         "view": "underside",
-        "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
-        "subjectTaxon": "Tylopilus felleus"
-      },
-      {
-        "src": "images/reference/tylopilus-felleus-lateral-547.jpg",
-        "view": "lateral",
         "credit": "Fonte didattica: Davide Palumbo, Boletacee Lagonegro, ottobre 2025, p. 114; fotografo individuale non indicato.",
         "subjectTaxon": "Tylopilus felleus"
       }
@@ -3836,6 +3788,14 @@
     ],
     "photos": [
       {
+        "src": "images/reference/external-craterellus-tubaeformis-lateral.jpg",
+        "view": "lateral",
+        "credit": "Eugene Popov, CC BY 4.0 · ritaglio",
+        "subjectTaxon": "Craterellus tubaeformis",
+        "sourceUrl": "https://www.inaturalist.org/observations/394695867",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
         "src": "images/reference/external-craterellus-tubaeformis-top.jpg",
         "view": "top",
         "credit": "Wouter Koch · CC BY 4.0 · ritaglio dall’originale",
@@ -3849,14 +3809,6 @@
         "credit": "Lucian Clanet, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Craterellus tubaeformis",
         "sourceUrl": "https://www.inaturalist.org/observations/247459433",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      {
-        "src": "images/reference/external-craterellus-tubaeformis-lateral.jpg",
-        "view": "lateral",
-        "credit": "Eugene Popov, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Craterellus tubaeformis",
-        "sourceUrl": "https://www.inaturalist.org/observations/394695867",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -3889,17 +3841,17 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-craterellus-cornucopioides-underside.jpg",
-        "view": "underside",
-        "credit": "Nina Filippova, CC BY 4.0 · copia JPEG rielaborata",
+        "src": "images/reference/external-craterellus-cornucopioides-top.jpg",
+        "view": "top",
+        "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Craterellus cornucopioides",
         "sourceUrl": "https://www.inaturalist.org/observations/89664683",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-craterellus-cornucopioides-top.jpg",
-        "view": "top",
-        "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
+        "src": "images/reference/external-craterellus-cornucopioides-underside.jpg",
+        "view": "underside",
+        "credit": "Nina Filippova, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Craterellus cornucopioides",
         "sourceUrl": "https://www.inaturalist.org/observations/89664683",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
@@ -3934,16 +3886,16 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
       },
       {
-        "src": "images/reference/external-gomphus-clavatus-underside.jpg",
-        "view": "underside",
+        "src": "images/reference/external-gomphus-clavatus-top.jpg",
+        "view": "top",
         "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Gomphus clavatus",
         "sourceUrl": "https://www.inaturalist.org/observations/57458865",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-gomphus-clavatus-top.jpg",
-        "view": "top",
+        "src": "images/reference/external-gomphus-clavatus-underside.jpg",
+        "view": "underside",
         "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Gomphus clavatus",
         "sourceUrl": "https://www.inaturalist.org/observations/57458865",
@@ -3971,18 +3923,18 @@
     ],
     "photos": [
       {
-        "src": "images/reference/hapalopilus-rutilans-top-379.jpg",
-        "view": "top",
-        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 97. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
-        "subjectTaxon": "Hapalopilus rutilans"
-      },
-      {
         "src": "images/reference/external-hapalopilus-rutilans-lateral.jpg",
         "view": "lateral",
         "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Hapalopilus rutilans",
         "sourceUrl": "https://www.inaturalist.org/observations/46398375",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/hapalopilus-rutilans-top-379.jpg",
+        "view": "top",
+        "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (1 ottobre 2025), p. 97. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
+        "subjectTaxon": "Hapalopilus rutilans"
       },
       {
         "src": "images/reference/external-hapalopilus-rutilans-underside.jpg",
@@ -4080,11 +4032,11 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-scutiger-pes-caprae-underside.jpg",
-        "view": "underside",
-        "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
+        "src": "images/reference/external-scutiger-pes-caprae-lateral.jpg",
+        "view": "lateral",
+        "credit": "Lorenzo Emanuele Labate, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Scutiger pes-caprae",
-        "sourceUrl": "https://www.inaturalist.org/observations/5650495",
+        "sourceUrl": "https://www.inaturalist.org/observations/245808041",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
@@ -4096,11 +4048,11 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       },
       {
-        "src": "images/reference/external-scutiger-pes-caprae-lateral.jpg",
-        "view": "lateral",
-        "credit": "Lorenzo Emanuele Labate, CC BY 4.0 · ritaglio",
+        "src": "images/reference/external-scutiger-pes-caprae-underside.jpg",
+        "view": "underside",
+        "credit": "Davide Puddu, CC BY 4.0 · ritaglio",
         "subjectTaxon": "Scutiger pes-caprae",
-        "sourceUrl": "https://www.inaturalist.org/observations/245808041",
+        "sourceUrl": "https://www.inaturalist.org/observations/5650495",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -4219,14 +4171,6 @@
     ],
     "photos": [
       {
-        "src": "images/reference/external-polyporus-umbellatus-underside.jpg",
-        "view": "underside",
-        "credit": "Nina Filippova · CC BY 4.0 · ritaglio/ridimensionamento",
-        "subjectTaxon": "Polyporus umbellatus",
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      {
         "src": "images/reference/external-polyporus-umbellatus-lateral.jpg",
         "view": "lateral",
         "credit": "Zhao H.; Yuan H.-S.; Cui Y.-J.; Wang K.; Wu F.; Dai Y.-C.; Yuan Y., CC BY 4.0 · ritaglio",
@@ -4240,6 +4184,14 @@
         "credit": "Nina Filippova, CC BY 4.0 · copia JPEG rielaborata",
         "subjectTaxon": "Polyporus umbellatus",
         "sourceUrl": "https://www.inaturalist.org/observations/41896329",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      {
+        "src": "images/reference/external-polyporus-umbellatus-underside.jpg",
+        "view": "underside",
+        "credit": "Nina Filippova · CC BY 4.0 · ritaglio/ridimensionamento",
+        "subjectTaxon": "Polyporus umbellatus",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polyporus_umbellatus_66485178.jpg",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
       }
     ],
@@ -4344,114 +4296,6 @@
     "differentiatingCharacter": "Lignicolo su latifoglie.",
     "diagnosticNote": "",
     "sources": []
-  },
-  {
-    "id": "minimum-card-objective-ramaria--01--ramaria-formosa",
-    "name": "Ramaria formosa",
-    "acceptedNames": [
-      "Ramaria formosa"
-    ],
-    "photos": [
-      {
-        "src": "images/reference/ramaria-formosa-lateral-303.jpg",
-        "view": "lateral",
-        "credit": "Fonte: Claudia Perini, Perini classificazione.pdf, p. 37; fotografo non specificato nella pagina della fonte.",
-        "subjectTaxon": "Ramaria formosa"
-      },
-      {
-        "src": "images/reference/external-ramaria-formosa-top.jpg",
-        "view": "top",
-        "credit": "Egil Bendiksen, CC BY 4.0 · ritaglio",
-        "subjectTaxon": "Ramaria formosa",
-        "sourceUrl": "https://biodiversity.no/Pages/233020/",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
-      }
-    ],
-    "category": "toxic",
-    "detailKind": "toxicology",
-    "preparation": [],
-    "syndrome": {
-      "label": "Sindrome gastrointestinale",
-      "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
-      "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
-      "references": []
-    },
-    "characters": [
-      "Base e tronco principali biancastri, massicci e carnosi.",
-      "Rami giovani nettamente rosa-salmone o arancio-salmone.",
-      "Apici giovani giallo-limone o giallo vivo."
-    ],
-    "differentiatingCharacter": "Rami principali grossi e relativamente paralleli/eretti; la tricoloria è più affidabile nei giovani freschi.",
-    "diagnosticNote": "Negli esemplari maturi o scoloriti i colori convergono verso toni ocra e la specie fine richiede maggiore cautela.",
-    "sources": [
-      {
-        "sourceId": "TOX-ramaria-formosa",
-        "title": "Fonte tossicologica istituzionale",
-        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
-        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 276 (pagina PDF 275); quadro gastroenterico p. 19 (PDF 18)",
-        "fields": [
-          "syndrome"
-        ],
-        "supportedClaim": "Sindrome gastrointestinale",
-        "reviewScope": "toxicology-literature",
-        "reviewStatus": "source-mapped-not-independently-reviewed"
-      }
-    ]
-  },
-  {
-    "id": "minimum-card-objective-ramaria--02--ramaria-pallida",
-    "name": "Ramaria pallida",
-    "acceptedNames": [
-      "Ramaria pallida"
-    ],
-    "photos": [
-      {
-        "src": "images/reference/external-ramaria-pallida-lateral.jpg",
-        "view": "lateral",
-        "credit": "Egil Bendiksen / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
-        "subjectTaxon": "Ramaria pallida",
-        "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
-      },
-      {
-        "src": "images/reference/external-ramaria-pallida-top.jpg",
-        "view": "top",
-        "credit": "Katriina Bendiksen / Naturhistorisk museum, Universitetet i Oslo · CC BY 4.0 · ritaglio dall’originale",
-        "subjectTaxon": "Ramaria pallida",
-        "sourceUrl": "https://artsdatabanken.no/arter/takson/88451",
-        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
-      }
-    ],
-    "category": "toxic",
-    "detailKind": "toxicology",
-    "preparation": [],
-    "syndrome": {
-      "label": "Sindrome gastrointestinale",
-      "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
-      "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
-      "references": []
-    },
-    "characters": [
-      "Basidioma medio-grande, massiccio e molto ramificato, con tronco basale biancastro.",
-      "Colorazione generale molto pallida: bianco-crema, grigio-beige o crema-ocraceo.",
-      "Nei giovani compaiono tenui sfumature rosa-lilacine soprattutto verso gli apici."
-    ],
-    "differentiatingCharacter": "Carne biancastra e sostanzialmente immutabile; riconoscimento più forte nei giovani tipici.",
-    "diagnosticNote": "Negli esemplari vecchi i toni ocracei riducono la capacità discriminante del solo macro.",
-    "sources": [
-      {
-        "sourceId": "TOX-ramaria-pallida",
-        "title": "Fonte tossicologica istituzionale",
-        "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
-        "location": "AUSL Bologna, Atlante dei funghi velenosi, p. stampata 278 (pagina PDF 277); quadro gastroenterico p. 19 (PDF 18)",
-        "fields": [
-          "syndrome"
-        ],
-        "supportedClaim": "Sindrome gastrointestinale",
-        "reviewScope": "toxicology-literature",
-        "reviewStatus": "source-mapped-not-independently-reviewed"
-      }
-    ]
   },
   {
     "id": "minimum-card-objective-auricularia--01--auricularia-auricula-judae",

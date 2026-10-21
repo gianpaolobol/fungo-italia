@@ -1,3 +1,19 @@
+# Handoff corrente
+
+## Consolidamento annuale/demo — 21 ottobre 2026
+
+Decisione corrente: download gratuito; tutte le schede Agaricus (7 minime + 1 genere) e test4casi ripetibile; unico abbonamento completo a19,99€/anno. Nessun Base permanente. Dashboard a fungo e storico/ripasso integrati da107 con adattamento demo/annuale; icona106 e audit111 qualificato. Inventario168branch e motivazioni in [audit/BRANCH-SELECTION-2026-10-21.md](audit/BRANCH-SELECTION-2026-10-21.md).
+
+Apple:1.0(9) respinta per prezzi negli screenshot e prodotti non inviati. Correzioni di listing/prezzo/screenshot applicate dalla recovery112; annuale e gruppo aggiunti a nuova bozza, senza appversion aggiornata. Non risottomessa. Build13 TestFlight appartiene al vecchio modello e non prova il consolidamento.
+
+Verifiche locali del consolidamento:153test Node riusciti, TypeScript riuscito, esportazione iOS riuscita; rigenerazione src/data senza drift, YAML/shell dei34workflow validi. Revisione indipendente ha trovato e fatto correggere la perdita dello storico dopo errore transitorio di lettura; nuova prova dedicata. Il gate scientifico strict resta bloccato per revisione indipendente/fonti mancanti. Questi esiti non attestano esecuzione UI nativa.
+
+Prove del nuovo candidato: riferirsi esclusivamente ai run sullo SHA consolidato. `consolidated-testflight.yml` produce soltanto beta diagnostica su canale isolato, richiede demo riuscita e prove native/UI completate; eventuali fallimenti billing sono riportati e non equivalgono a readiness App Store. Upload e selezione App Store/OTA produzione non partono più automaticamente dal pushmain. Nessuna revisione scientifica indipendente attestata.
+
+---
+
+## Handoff precedente (storico superato)
+
 # Handoff completo — Fungo Italia
 
 **Fotografia di main: 21 ottobre 2026.** Fonti lette: `package.json`, `app.json`, `app.config.js`, `eas.json`, `App.tsx`, componenti nativi, `scripts/prepare-mobile-data.mjs`, JSON generati, README e registri Apple. L'audit dovrà ricontrollare HEAD e CI. **Nessun test è stato eseguito per questa PR documentale.**

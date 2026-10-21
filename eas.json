@@ -39,6 +39,13 @@
       "ios": {
         "simulator": false
       }
+    },
+    "consolidated-beta": {
+      "extends": "production",
+      "channel": "consolidated-beta",
+      "ios": {
+        "image": "latest"
+      }
     }
   },
   "submit": {

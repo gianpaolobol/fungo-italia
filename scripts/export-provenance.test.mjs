@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {sourceExportCommit} from './export-provenance.mjs';
+const file={name:'catalog.json',bytes:42,sha256:'a'};
+test('unchanged canonical bytes retain real prior provenance across local and CI rebuilds',()=>{const previous={sourceExportCommit:'original-export',sourceFileChecksums:[file]};assert.equal(sourceExportCommit({commit:null,files:[file]},previous),'original-export');assert.equal(sourceExportCommit({commit:'ci-run',files:[file]},previous),'original-export');});
+test('changed canonical bytes use actual new export commit, never retain false provenance',()=>{assert.equal(sourceExportCommit({commit:'new-export',files:[{...file,sha256:'b'}]},{sourceExportCommit:'old',sourceFileChecksums:[file]}),'new-export');assert.equal(sourceExportCommit({commit:null,files:[file]},null),null);});

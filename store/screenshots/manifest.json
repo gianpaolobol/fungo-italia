@@ -4,7 +4,7 @@
   "billingProduct": "it.fungoitalia.premium.annual",
   "subscriptionReviewImage": "store/screenshots/iphone/03-esame.png",
   "captureStorefront": "USA",
-  "visualReview": "All six original native captures inspected on 2026-10-16; local Apple price shown for the capture storefront.",
+  "visualReview": "Public gallery: Studio and Areas screenshots, inspected 21 October 2026, no prices. Paywall captures retained only for private subscription review.",
   "images": [
     {
       "path": "store/screenshots/iphone/01-studio.png",
@@ -12,7 +12,8 @@
       "width": 1320,
       "height": 2868,
       "byteLength": 1082257,
-      "sha256": "d0f74d148a7b23fa2101618b2b9d5694fd7ef247786d6bdde7f0c830d2097645"
+      "sha256": "d0f74d148a7b23fa2101618b2b9d5694fd7ef247786d6bdde7f0c830d2097645",
+      "publicStoreImage": true
     },
     {
       "path": "store/screenshots/iphone/02-aree.png",
@@ -20,7 +21,8 @@
       "width": 1320,
       "height": 2868,
       "byteLength": 248246,
-      "sha256": "70f511bb4daed54de0653b6cc8a17eff37f0a20ba372046ed3aa95696ff29f87"
+      "sha256": "70f511bb4daed54de0653b6cc8a17eff37f0a20ba372046ed3aa95696ff29f87",
+      "publicStoreImage": true
     },
     {
       "path": "store/screenshots/iphone/03-esame.png",
@@ -28,7 +30,8 @@
       "width": 1320,
       "height": 2868,
       "byteLength": 288648,
-      "sha256": "cc80978be293c0834db174dc6026eac85d8f5b36a9dd451007fbbb39af8859fc"
+      "sha256": "cc80978be293c0834db174dc6026eac85d8f5b36a9dd451007fbbb39af8859fc",
+      "publicStoreImage": false
     },
     {
       "path": "store/screenshots/ipad/01-studio.png",
@@ -36,7 +39,8 @@
       "width": 2064,
       "height": 2752,
       "byteLength": 2287462,
-      "sha256": "083cc1c0a5b7d9d8912ee53be71bf70a1f955379fb8edd19e023fa801e831220"
+      "sha256": "083cc1c0a5b7d9d8912ee53be71bf70a1f955379fb8edd19e023fa801e831220",
+      "publicStoreImage": true
     },
     {
       "path": "store/screenshots/ipad/02-aree.png",
@@ -44,7 +48,8 @@
       "width": 2064,
       "height": 2752,
       "byteLength": 328611,
-      "sha256": "1477a6d660cb14ce409818aeac3e4ff02f6581f9b1dc1d3d5932585c39f1afaa"
+      "sha256": "1477a6d660cb14ce409818aeac3e4ff02f6581f9b1dc1d3d5932585c39f1afaa",
+      "publicStoreImage": true
     },
     {
       "path": "store/screenshots/ipad/03-esame.png",
@@ -52,7 +57,8 @@
       "width": 2064,
       "height": 2752,
       "byteLength": 266027,
-      "sha256": "c896c45420a1f3c52e5545de65d33dc55376daa28265abb97b50b06fcab699d4"
+      "sha256": "c896c45420a1f3c52e5545de65d33dc55376daa28265abb97b50b06fcab699d4",
+      "publicStoreImage": false
     }
   ]
 }

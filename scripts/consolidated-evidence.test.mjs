@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {candidateReceipt} from './consolidated-evidence.mjs';
+const sha='a'.repeat(40),run=(file,conclusion='success')=>({id:1,head_sha:sha,path:'.github/workflows/'+file,event:'push',head_branch:'main',status:'completed',conclusion});
+const proofs=()=>({sha,native:run('subscription-storekit-tests.yml'),ui:run('subscription-storekit-ui.yml'),demo:run('agaricus-demo-ui.yml')});
+test('diagnostic receipts retain actual failures without claiming App Store readiness',()=>{const p=proofs();p.native.conclusion='failure';p.ui.conclusion='timed_out';const r=candidateReceipt(p);assert.equal(r.nativeStorekitVerified,false);assert.equal(r.storekitUIVerified,false);assert.equal(r.appStoreReady,false);assert.equal(r.evidence.native.conclusion,'failure');assert.equal(r.testFlightOnly,true);});
+test('stale source, cancellation, missing and failed demo cannot authorize candidate',()=>{for(const mutate of [p=>p.native.head_sha='b'.repeat(40),p=>p.ui.conclusion='cancelled',p=>p.native=undefined,p=>p.demo.conclusion='failure']){const p=proofs();mutate(p);assert.throws(()=>candidateReceipt(p));}});

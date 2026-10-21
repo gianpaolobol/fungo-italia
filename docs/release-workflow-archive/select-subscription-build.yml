@@ -1,3 +1,4 @@
+# ARCHIVIATO: questo documento non viene eseguito da GitHub Actions.
 name: Select verified subscription binary for App Store
 on:
   workflow_run:

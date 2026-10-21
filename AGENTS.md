@@ -14,7 +14,7 @@
 - Navigazione: tab **custom** in `App.tsx` tramite `useState`; Expo Router e React Navigation: **non presenti tra le dipendenze**.
 - Stato: React hooks; preferiti/ripresa studio con AsyncStorage (`fungo-italia:study:v1`); esame e storico con AsyncStorage; StoreKit 2 nativo per entitlement iOS.
 - Config: `app.json` + `app.config.js` (progetto EAS, aggiornamenti e runtime fingerprint quando `EXPO_PROJECT_ID` è definito); `eas.json`.
-- ID piattaforme: `it.fungoitalia.app`; Android `versionCode: 1` in `app.json`, versione EAS da sorgente remota; versione app `1.0.0`.
+- ID piattaforme: `it.fungoitalia.app`; Android `versionCode: 1` in `app.json`, versione EAS da sorgente remota; versione app `1.1.0`.
 - iOS tablet supportato; Android senza permessi camera/microfono/geolocalizzazione; modulo Foto dichiarato in `app.json`.
 - UI nativa non equivale alla PWA: i relativi percorsi e gate di distribuzione sono differenti.
 
@@ -81,6 +81,7 @@ npm run export
 - Submit: `npx eas-cli submit --platform ios --profile production` / `--platform android --profile production`; configurazione Google Play `internal`, `draft`; **non significa pubblicato**.
 - Verificare sempre app version, build number remoto EAS, commit SHA, workflow, binario TestFlight e versione selezionata in App Store Connect prima di affermare allineamento.
 - OTA: `expo-updates` con runtime fingerprint quando configurato; non distribuire modifiche native come soli OTA.
+- Prodotto corrente: download gratuito; demo tutte le schede Agaricus + test4casi ripetibile; unico annuale19,99€. Nessun Base. Android demo-only. Dashboard/progressi separati dai diritti StoreKit.
 - StoreKit annuale attuale: `lib/subscriptionPolicy.ts`, `hooks/useSubscription.ts`, `modules/fungo-subscription/`; nessun acquisto Base permanente implementato nel codice letto.
 
 ## Convenzioni e sicurezza

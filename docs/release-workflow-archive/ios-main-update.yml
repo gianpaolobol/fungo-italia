@@ -1,3 +1,4 @@
+# ARCHIVIATO: questo documento non viene eseguito da GitHub Actions.
 name: Publish verified iOS content updates
 on:
   workflow_run:

@@ -5,7 +5,9 @@ appId: it.fungoitalia.app
 - extendedWaitUntil:
     visible: "Studio"
     timeout: 60000
-- assertVisible: ".*Anteprima gratuita.*5 schede.*"
+- tapOn:
+    id: "tab-studio"
+- assertVisible: ".*Demo gratuita.*Agaricus.*"
 - tapOn:
     text: "Apri .*"
     index: 0
@@ -13,13 +15,15 @@ appId: it.fungoitalia.app
 - takeScreenshot: 01-studio
 - tapOn: "Torna alle schede"
 - tapOn:
-    text: "Aree"
-    index: 0
-- waitForAnimationToEnd
-- takeScreenshot: 02-aree
-- tapOn:
     text: "Esame"
     index: 0
+- waitForAnimationToEnd
+- assertVisible: "Test Agaricus gratuito"
+- assertVisible: "Inizia 4 casi"
+# Legacy artifact basename; this capture now shows the free Agaricus test.
+- takeScreenshot: 02-aree
+- tapOn:
+    id: "tab-abbonamento"
 - waitForAnimationToEnd
 - assertVisible: "Fungo Italia completo"
 - takeScreenshot: 03-esame
