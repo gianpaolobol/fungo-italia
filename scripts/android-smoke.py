@@ -63,7 +63,9 @@ def scroll_top():
         if current==previous:
             break
         previous=current
-        adb('shell','input','swipe',str(width//2),str(height//4),str(width//2),str(height*4//5),'250')
+        # The detail header occupies the upper third on the compact emulator.
+        # Start within the scrollable body, not on its fixed navigation controls.
+        adb('shell','input','swipe',str(width//2),str(height*3//5),str(width//2),str(height*4//5),'250')
         time.sleep(.3)
 def main():
     adb('install','-r','artifacts/android/app-release.apk')
