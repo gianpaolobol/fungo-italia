@@ -1,47 +1,85 @@
-name: Stop superseded consolidation checks
-on:
-  push:
-    branches: [ci/consolidation-cleanup-20261021]
-    paths: ['.github/workflows/consolidation-cleanup.yml']
+name: Diagnose isolated annual purchase UI
 permissions:
   contents: read
-  actions: write
+concurrency:
+  group: isolated-annual-purchase-diagnostic
+  cancel-in-progress: false
 jobs:
-  cleanup:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/github-script@v7
-        with:
-          script: |
-            const expectedMain='38a7a85ac96803a5dca18bf5c6a39264bcc99444';
-            const obsolete='1bc9436e2d3f0dbe8836c723b126bf3bb944787d';
-            if(context.repo.owner!=='gianpaolobol'||context.repo.repo!=='fungo-italia')throw Error('Unexpected repository');
-            const main=await github.rest.repos.getBranch({...context.repo,branch:'main'});
-            if(main.data.commit.sha!==expectedMain)throw Error('Main changed; preserve all runs for investigation');
-            const targets=[
-              [39630199072,'.github/workflows/subscription-storekit-tests.yml'],
-              [39630198927,'.github/workflows/subscription-storekit-ui.yml'],
-              [39630198974,'.github/workflows/agaricus-demo-ui.yml'],
-              [39630199067,'.github/workflows/consolidated-testflight.yml']
-            ];
-            for(const [run_id,path] of targets){
-              const {data:run}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});
-              if(run.head_sha!==obsolete||run.head_branch!=='main'||run.event!=='push'||run.path!==path)throw Error('Unexpected run identity '+run_id);
-              if(run.status==='completed'){core.info('Already complete '+run_id);continue;}
-              try{await github.rest.actions.cancelWorkflowRun({...context.repo,run_id});core.info('Cancellation requested for superseded '+run_id);}
-              catch(error){const {data:again}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});if(again.status!=='completed')throw error;}
-            }
-            await core.summary.addRaw('Only explicitly identified obsolete 1bc9436 checks stopped. Current 38a7a85 native, purchase UI and demo proofs remain mandatory and untouched.').write();
-
-  audience:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: read
+  verify:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+        - ipad
+    runs-on: macos-26
+    timeout-minutes: 60
     env:
-      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
     steps:
-      - uses: actions/checkout@v4
-      - name: Read-only preflight of the existing owner beta audience
-        run: node scripts/consolidated-beta-audience.mjs
+    - uses: actions/checkout@v4
+      with:
+        ref: 38a7a85ac96803a5dca18bf5c6a39264bcc99444
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Select a compatible Apple StoreKit simulator runtime
+      run: bash scripts/prepare-storekit-runtime.sh
+    - name: Prepare the actual app and Apple StoreKit UI test runner
+      run: 'npm ci
+
+        npm run prepare:data
+
+        npm run typecheck
+
+        node --test scripts/subscription-policy.test.mjs
+
+        npx expo prebuild --platform ios --no-install
+
+        ruby scripts/add-storekit-ui-tests.rb
+
+        cd ios
+
+        pod install
+
+        '
+    - name: Buy, reopen, refund and expire through the real app interface
+      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\"\
+        \ > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"\
+        ))throw Error(\"Purchase UI test scheme missing\")'\nxcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun\
+        \ simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"$SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"\
+        /tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw\
+        \ Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available -j > /tmp/purchase-devices.json\n \
+        \ udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"$runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\").devices[process.env.DEVICE_RUNTIME]||[];const\
+        \ d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n  if test -z \"$udid\"; then udid=$(xcrun\
+        \ simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n  xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun\
+        \ simctl status_bar \"$udid\" override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n  if ! xcodebuild\
+        \ -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build\
+        \ -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname\
+        \ -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER=''\
+        \ -jobs 3 -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testAnnualPurchaseRestoreAccessRefundAndExpiry test > \"store-evidence/purchase-ui-$family.log\"\
+        \ 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\"\
+        \ 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\n    exit 1\n  fi\n  mkdir\
+        \ -p \"store-evidence/screenshots/$family\"\n  for name in 01-studio 02-aree 03-esame; do\n    source=$(find \"$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application\"\
+        \ -type f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\" \"store-evidence/screenshots/$family/$name.png\"\
+        \n  done\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\n  xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\\
+        n' \"$(git rev-parse HEAD)\" > store-evidence/screenshots/source-commit.txt\n"
+    - name: Preserve UI failure screenshots and attachments
+      if: failure()
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult' -print -quit)\n  if test -n \"\
+        $result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path store-evidence/attachments || true\n  fi\nfi\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Isolated-annual-UI-${{ matrix.family }}
+        path: store-evidence/
+        retention-days: 30
+'on':
+  push:
+    branches:
+    - ci/consolidation-cleanup-20261021
+    paths:
+    - .github/workflows/consolidation-cleanup.yml
