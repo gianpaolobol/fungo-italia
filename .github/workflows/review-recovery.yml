@@ -1,0 +1,30 @@
+name: Inspect rejected initial App Store submission
+on:
+  push:
+    branches: [fix/app-review-20261021]
+    paths: ['scripts/inspect-review-recovery.mjs', '.github/workflows/review-recovery.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: app-store-connect-administration
+  cancel-in-progress: false
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check scripts/inspect-review-recovery.mjs
+      - run: node scripts/inspect-review-recovery.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Initial-App-Review-recovery-inspection
+          path: store-evidence/review-recovery-inspection.json
+          retention-days: 30
