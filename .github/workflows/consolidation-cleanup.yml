@@ -33,3 +33,15 @@ jobs:
               catch(error){const {data:again}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});if(again.status!=='completed')throw error;}
             }
             await core.summary.addRaw('Only explicitly identified obsolete 1bc9436 checks stopped. Current 38a7a85 native, purchase UI and demo proofs remain mandatory and untouched.').write();
+
+  audience:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read-only preflight of the existing owner beta audience
+        run: node scripts/consolidated-beta-audience.mjs
