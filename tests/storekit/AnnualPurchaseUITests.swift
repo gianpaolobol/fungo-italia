@@ -60,7 +60,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
     app.launch()
     defer { app.terminate() }
-    await require(element(app, "Demo gratuita · Agaricus"))
+    await require(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "Demo gratuita · Agaricus")).firstMatch)
     await tap(app, "Apri Agaricus sez. Xanthodermatei")
     try capture(app, "demo-01-studio")
     await tap(app, "Esame")
