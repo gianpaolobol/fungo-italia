@@ -21,4 +21,5 @@ export const studyBankCoverage={minimum:{total:catalog.length,photo:photoBank.le
 // Every navigable atlas card must be represented by a documented photo or theory case.
 const atlasIds=[...catalog,...groups].map(t=>t.id);
 const caseIds=studyBank.map(c=>c.id);
+for(const entry of studyBank){if(entry.questionKind==='profile'&&(!Array.isArray(entry.questions)||entry.questions.length===0||entry.questions.some(q=>!Array.isArray(q.options)||q.options.length<3||!Array.isArray(q.correct)||q.correct.length===0||q.correct.some(id=>!q.options.some(o=>o.id===id)))))throw Error('Domande teoriche incomplete per '+entry.id);}
 if(new Set(atlasIds).size!==atlasIds.length||new Set(caseIds).size!==caseIds.length||atlasIds.length!==caseIds.length||atlasIds.some(id=>!caseIds.includes(id)))throw Error('Atlante e banca di esame non allineati: schede mancanti, duplicate o inattese');
