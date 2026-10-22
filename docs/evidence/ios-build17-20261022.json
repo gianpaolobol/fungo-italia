@@ -1,0 +1,59 @@
+{
+  "appId": "6821140326",
+  "bundleId": "it.fungoitalia.app",
+  "productId": "it.fungoitalia.premium.annual",
+  "version": "1.1.0",
+  "sourceCommit": "d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34",
+  "testFlightOnly": true,
+  "diagnosticOnly": true,
+  "appStoreReady": false,
+  "nativeStorekitVerified": true,
+  "storekitUIVerified": true,
+  "evidence": {
+    "native": {
+      "id": 39807794256,
+      "path": ".github/workflows/subscription-storekit-tests.yml",
+      "sourceCommit": "d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794256"
+    },
+    "ui": {
+      "id": 39807794269,
+      "path": ".github/workflows/subscription-storekit-ui.yml",
+      "sourceCommit": "d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794269"
+    },
+    "demo": {
+      "id": 39807794237,
+      "path": ".github/workflows/agaricus-demo-ui.yml",
+      "sourceCommit": "d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794237"
+    }
+  },
+  "createdAt": "2026-10-22T16:31:31.285Z",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "webContentHash": "ba406d4f11af6a5dd9dbcb35730abfdcc72ef1fe8e9ed680780a6c275e766e96",
+  "buildNumber": "17",
+  "producerRunId": "39807794183",
+  "ipaSha256": "9f4c123ba05d9d0a90c5ccf94a4b3ab34e974bfd892d4b8842846a5bcdd779f5",
+  "appleBuildId": "b044cabf-2895-4c4a-b905-36332e8bae98",
+  "processingState": "VALID",
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ],
+  "appStoreVersions": [
+    {
+      "version": "1.0",
+      "state": "REJECTED"
+    }
+  ],
+  "verifiedAt": "2026-10-22T17:17:23.852Z",
+  "internalBuildState": "IN_BETA_TESTING",
+  "betaDetailId": "b044cabf-2895-4c4a-b905-36332e8bae98",
+  "betaStateVerifiedAt": "2026-10-22T17:17:24.889Z"
+}

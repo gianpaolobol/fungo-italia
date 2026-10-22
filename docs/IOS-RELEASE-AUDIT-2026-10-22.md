@@ -12,9 +12,9 @@ Tutti i run main sotto riportati appartengono a d2c8b650. La ricerca iniziale ob
 
 | Workflow | Run ID | Evento | Job ed esito osservato |
 |---|---:|---|---|
-| Paired web and diagnostic TestFlight #11 | [39809526311](https://github.com/gianpaolobol/fungo-italia/actions/runs/39809526311) | workflow_dispatch, main | WAITING dietro #9; non ancora una prova |
+| Paired web and diagnostic TestFlight #11 | [39809526311](https://github.com/gianpaolobol/fungo-italia/actions/runs/39809526311) | workflow_dispatch, main | CANCELLED in questa sessione dopo SUCCESS completo di #9 sullo stesso SHA; nessuna seconda build avviata |
 | Paired web and diagnostic TestFlight #10 | [39808749400](https://github.com/gianpaolobol/fungo-italia/actions/runs/39808749400) | workflow_dispatch, main | CANCELLED prima di questa sessione |
-| Paired web and diagnostic TestFlight #9 | [39807794183](https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794183) | push, main | source119925567793 SUCCESS; beta119950377248: build/firma e verifica sorgente SUCCESS, invio EAS in corso; gli altri job non avviati |
+| Paired web and diagnostic TestFlight #9 | [39807794183](https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794183) | push, main | SUCCESS: source119925567793, beta119950377248, promote-public-web119973166637 e published-smoke119973690540 |
 | Verify native StoreKit subscriptions | [39807794256](https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794256) | push, main | verify119925575226 SUCCESS |
 | Verify StoreKit purchase interface | [39807794269](https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794269) | push, main | iPad119925567705, iPhone119925568449, evidence119937305143 SUCCESS |
 | Verify free Agaricus demo interface | [39807794237](https://github.com/gianpaolobol/fungo-italia/actions/runs/39807794237) | push, main | iPhone119925568188 e iPad119925568535 SUCCESS |
@@ -55,6 +55,14 @@ Le prove locali non attestano esecuzione nativa nel container Linux né acquisti
 | Controlla e analizza foto selezionate | **RINVIATA dal titolare il22 ottobre:** conservare PhotoLibrary e modulo Vision nelle versioni successive, senza renderli accessibili dall’app. Non è un requisito di questa pubblicazione |
 
 Decisione successiva del titolare: caricamento e analisi Foto personali restano disattivati. Codice e test devono essere conservati nelle prossime versioni; nessun ingresso, deep link o richiesta di permessi viene aggiunto. Il precedente blocco per mancata esposizione è quindi rimosso per modifica esplicita del requisito, senza attestare la funzione come disponibile. Vedere PHOTO-LIBRARY-DEFERRED.md. La proposta locale di attivazione è stata ritirata prima di push/build/distribuzione.
+
+## Distribuzione diagnostica completata
+
+La submission EAS2cc40b80-e3f4-4d6d-9a30-6107d5a98531 è **Succeeded**, inviata alle17:14UTC dopo29minuti di coda. Alle17:17:24UTC la ricevuta conferma **1.1.0(17)**, ApplebuildID`b044cabf-2895-4c4a-b905-36332e8bae98`, processing`VALID`, internalBuildState`IN_BETA_TESTING`, solo gruppo`f642807c-e4b2-43d4-a32a-d9fd087fdfe3` (Proprietario — prova iPhone). Il browser Apple mostra build17, gruppo interno con1tester e1invito; nessuna installazione ancora registrata al momento della lettura. Non è stata dichiarata una prova sul dispositivo fisico.
+
+L’artefatto `Consolidated-TestFlight-evidence`12443544891 è stato scaricato e verificato con digestSHA256`d665823f89ab980ea63c49da1e82443307e763de4f0313747d7ca3475bc2b681`. La ricevuta originale è conservata in `docs/evidence/ios-build17-20261022.json`; collega sorgented2c8b650 e IPA`9f4c123ba05d9d0a90c5ccf94a4b3ab34e974bfd892d4b8842846a5bcdd779f5`. Flag diagnostici conservati. Il run39807794183 è interamente SUCCESS, inclusa verifica uncached di tutti i byte web e smoke sul sito pubblicato. Il duplicato manuale39809526311 è stato annullato dopo quel risultato, mentre eseguiva solo source, per evitare una seconda build identica; nessun gate del run riuscito è stato omesso.
+
+Le note italiane What to Test descrivono verifiche StoreKit, demo/navigazione e conservazione dati, chiarendo il rinvio delle Foto personali e il carattere diagnostico.
 
 ## EAS e Apple: stato realmente letto
 
@@ -110,9 +118,22 @@ La proposta di attivazione Foto è stata ritirata e non è stata trasmessa al re
 
 ## Passi obbligatori rimasti
 
-1. Leggere l'esito finale #9 e #11; conservare receipt,hash IPA,Applebuild ID,gruppo e disponibilità effettiva per ogni nuovo build diagnostico.
+1. Distribuzione diagnostica17 completata e ricevuta conservata. Verificare le nuove prove della PR117, integrare soltanto dopo i risultati richiesti e ripetere i controlli sul nuovo main SHA.
 2. Completare revisione micologica indipendente,fonti puntuali e licenze. Il software non può attestare autonomamente il lavoro di un revisore indipendente.
 3. Conservare il rinvio Foto esplicito nelle versioni successive; non riattivare senza nuova richiesta e prove dedicate.
 4. Privacy tecnica pubblicata e verificata; risolvereDSARejected con dichiarazione del titolare.
 5. Verificare e integrare i controlli production proposti nella PR117, poi qualificare firma/provenienza del binario e promozione Apple seguendo PRODUCTION-IOS-PROMOTION.md. Il preflight di sorgente non completa da solo il processo production.
 6. Solo dopo: EAS production firmata,verifica del codice incorporato,upload,processing Apple,gruppo tester previsto e lettura disponibilità TestFlight. Poi metadati/screenshot autentici e nuova bozzaApp Review; invio pubblico ancora vietato finché non idonea.
+
+## Prove della proposta di controlli production
+
+Sul commit di codice `ead9f5ef5bbfa750bed87c201c653d8c47d249b8`, branch docs/ios-release-audit-20261022, sono stati richiesti via browser workflow_dispatch senza commit artificiali:
+
+| Workflow | Run | Esito alla richiesta |
+|---|---:|---|
+| Native StoreKit |39821203400|IN_PROGRESS, job119972646452|
+| UI acquisti iPhone/iPad |39821359250|IN_PROGRESS, job119973188366/119973188788|
+| Demo iPhone/iPad |39821444229|IN_PROGRESS, job119973480103/119973480715|
+| Scientific generator +191 regressioni +PWA/provenienza |39821565384|SUCCESS; strict scientifico **saltato perché branch non-main**, non certificazione editoriale|
+
+Queste sono prove del branch, non prove push del futuro SHA main. I successivi aggiornamenti documentali non modificano il codice applicativo. La PR resta in bozza finché le prove richieste e lo stato remoto della PR non sono affidabilmente verificati.
