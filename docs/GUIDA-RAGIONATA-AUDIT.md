@@ -42,3 +42,13 @@ La cartella è accessibile e al 22/10/2026 presenta due sottocartelle:
 **Precedenza inderogabile:** la *Guida ragionata alla commestibilità dei funghi* resta il documento fondante per categoria di commestibilità e preparazioni obbligatorie. In caso di divergenze o informazioni non sovrapponibili, la scheda e il quesito alimentare rimangono da verificare; questi PDF non sovrascrivono automaticamente la classificazione fondata sulla Guida.
 
 Per i test, copiare soltanto nozioni supportate da pagine effettivamente consultate. Non attribuire a un'intera sezione la commestibilità di una singola specie; nessuna scheda o immagine va marcata come indipendentemente revisionata per semplice presenza nella cartella.
+
+## Regola fondante — provenienza certificata dal corso di micologia
+
+**Decisione del titolare (22 ottobre 2026).** I materiali didattici contenuti nelle cartelle Google Drive condivise dal titolare come provenienti dal corso di micologia sono riconosciuti dal progetto come **fonti formative certificate per provenienza**, approvate per la raccolta e il popolamento dei dati dell'Atlante e delle banche d'esame. Non occorre richiedere una nuova autorizzazione del titolare o una seconda verifica generica della loro provenienza per ogni estrazione.
+
+Questo riconoscimento riguarda la **provenienza dichiarata e l'ammissibilità editoriale** delle fonti, non equivale a revisione scientifica indipendente di ciascuna affermazione né certifica l'identificazione di esemplari o la sicurezza del consumo. Resta obbligatorio riportare nome del file, autore, pagina, tasson e affermazione pertinente, mantenendo tracciabilità e corretta interpretazione. Nessuna fonte può generare automaticamente `independentReviewStatus: reviewed` o `attested` in assenza del relativo processo attestato.
+
+**Gerarchia fondante:** per commestibilità, divieti e condizioni di preparazione prevale la *Guida ragionata alla commestibilità dei funghi*. Gli altri documenti del corso sono fonti formative approvate per morfologia, nomenclatura, ecologia, fotografie se utilizzabili e contenuti didattici, senza sovrascrivere automaticamente la Guida. Eventuali discrepanze sono registrate e segnalate per valutazione specifica.
+
+**Perimetro della certificazione di provenienza:** documenti effettivamente contenuti nelle cartelle Google Drive fornite dal titolare, con identificativo, percorso e versione del file tracciati. Nuovi file possono essere ammessi come materiali del corso nel medesimo perimetro, previa verifica che appartengano davvero alla cartella; link esterni riportati *dentro* i PDF non diventano automaticamente fonti certificate. La licenza delle immagini e i diritti di riutilizzo per un'app distribuita restano da accertare separatamente.
