@@ -2,7 +2,7 @@ name: Diagnose StoreKit entitlement startup
 on:
   workflow_dispatch:
   push:
-    branches: [feat/percorso-parity-subscriptions-20261021]
+    branches: [fix/storekit-scheme-only-20261022]
     paths:
       - .github/workflows/subscription-entitlement-probe.yml
       - modules/fungo-subscription/ios/FungoSubscriptionModule.swift
@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mode: [baseline]
+        mode: [scheme-only]
     runs-on: macos-26
     timeout-minutes: 60
     env:
@@ -64,7 +64,7 @@ jobs:
           mkdir -p store-evidence
           printf '%s\n' "$GITHUB_SHA" > store-evidence/source-commit.txt
           printf '%s\n' "$FUNGO_STOREKIT_PROBE_MODE" > store-evidence/diagnostic-mode.txt
-          printf '%s\n' 'Diagnostic only; no purchase; not release verification.' 'preinstalled-before-session' > store-evidence/scope.txt
+          printf '%s\n' 'Diagnostic only; no purchase; not release verification.' 'preinstalled-scheme-only-no-session' > store-evidence/scope.txt
           workspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)
           xcrun simctl list devicetypes -j > "$RUNNER_TEMP/entitlement-probe-types.json"
           type=$(node -e 'const a=require(process.argv[1]).devicetypes;const d=a.find(d=>/^iPad Pro 13-inch.*M4/.test(d.name));if(!d)throw Error("iPad device unavailable");process.stdout.write(d.identifier)' "$RUNNER_TEMP/entitlement-probe-types.json")
@@ -75,7 +75,7 @@ jobs:
           xcode_args=(
             -workspace "$workspace" -scheme FungoItaliaPurchaseUI -configuration Release
             -destination "platform=iOS Simulator,id=$udid" -derivedDataPath entitlement-probe-build
-            -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testEntitlementStartupProbe
+            -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testSchemeOnlyEntitlementStartupProbe
             -parallel-testing-enabled NO -test-timeouts-enabled YES
             -default-test-execution-time-allowance 360 -maximum-test-execution-time-allowance 360
             ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES
