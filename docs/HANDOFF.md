@@ -1,5 +1,13 @@
 # Handoff corrente
 
+## Runtime StoreKit qualificato — 22 ottobre 2026
+
+**Soluzione infrastruttura: Xcode26.6(17F113) + iOS26.2**, preinstallato sul runner `macos-26`. Prova isolata PR116, run39782343636, job119836522769: NativeLifecycle exit0, acquisto/rimborso/scadenza con il verificatore reale copiato verbatim (test4,723s); Startup exit0, sessione italiana, `ready active=false price=19,99€` e0transazioni (test14,543s). Log confermano entrambi `TEST SUCCEEDED`. Le asserzioni del ciclo nativo sono quelle originali, cambia solo l'import del modulo del piccolo host. Evidenza di compatibilità runtime, **non** sostituisce la suite completa.
+
+Il vincolo precedente su26.6 era una deduzione dalle note di rilascio, non condizione necessaria dimostrata; ora la scelta deriva dalle prove.26.1 non è scaricabile sul runner;27.0 è disponibile ma non qualificato: in full app native currentEntitlements resta vuoto dopo acquisto, entrambe le startup UI falliscono nella sessione locale (SKServiceErrorDomain2/SKInternalErrorDomain4), UI iPhone fallita. Nessuna correzione permissiva al verificatore Apple.
+
+PR115 aggiorna i quattro workflow completi a26.6/26.2 e mantiene la selezione esatta fail-closed. `-collect-test-diagnostics never` evita solo il timeout600s di raccolta automatica dopo fallimenti; tutte le asserzioni, log espliciti e xcresult restano. Verifiche locali183test Node con env26.2 e TypeScript riusciti; YAML/shell validi. Esiti full-app da leggere sullo SHA finale della PR, senza usare la qualifica isolata come readinessproduction. Nessuna nuova build TestFlight ancora attestata.
+
 ## Qualificazione runtime alternativo — 22 ottobre 2026
 
 PR115: il run39777450999 ha confermato che il download esplicito26.6 è assente e il default Xcode26.6 esporta26.5(23F77); entrambi i job iPad falliti prima dell'app, log/inventario preservati. Documentazione ufficiale GitHub: https://github.com/actions/runner-images/issues/14404 e `images/macos/xcode-27-arm64-Readme.md`: runner **xcode-27**, Xcode27.0(27A266a), alias `/Applications/Xcode_27.0.app`, runtime iOS27.0 preinstallato. Si qualifica questa combinazione, senza affermarne l'idoneità prima degli esiti reali.

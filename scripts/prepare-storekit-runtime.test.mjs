@@ -56,3 +56,7 @@ test('rejects unqualified runtime version overrides',()=>{
 test('does not substitute 26.6 for an explicit iOS 27.0 qualification',()=>{
   const r=run({version:'26.6',target:'27.0'});assert.notEqual(r.status,0);assert.equal(r.env,'');
 });
+
+test('selects the iOS 26.2 candidate qualified by both standalone lifecycle and UI startup',()=>{
+  const r=run({version:'26.2',target:'26.2'});assert.equal(r.status,0,r.stdout+r.stderr);assert.match(r.env,/iOS-26-2/);assert.doesNotMatch(r.calls,/-downloadPlatform/);
+});

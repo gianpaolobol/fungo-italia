@@ -6,12 +6,12 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify:
-    runs-on: xcode-27
+    runs-on: macos-26
     timeout-minutes: 45
     env:
-      STOREKIT_RUNTIME_VERSION: '27.0'
+      STOREKIT_RUNTIME_VERSION: '26.2'
       CI: '1'
-      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
     - uses: actions/checkout@v4
@@ -59,7 +59,7 @@ jobs:
 
         '
     - name: Exercise verified purchase, refund and expiry without an Apple account
-      run: "mkdir -p store-evidence\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaStoreKit\"))throw Error(\"StoreKit test scheme missing\")'\nudid=$(xcrun simctl create FungoAnnualStoreKit com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max \"$STOREKIT_TEST_RUNTIME\")\nxcrun simctl boot \"$udid\" || true\nxcrun simctl bootstatus \"$udid\" -b\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nif ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaStoreKit -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath storekit-build -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO\
+      run: "mkdir -p store-evidence\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaStoreKit\"))throw Error(\"StoreKit test scheme missing\")'\nudid=$(xcrun simctl create FungoAnnualStoreKit com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max \"$STOREKIT_TEST_RUNTIME\")\nxcrun simctl boot \"$udid\" || true\nxcrun simctl bootstatus \"$udid\" -b\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nif ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaStoreKit -configuration Release -destination \"platform=iOS Simulator,id=$udid\" -derivedDataPath storekit-build -collect-test-diagnostics never -parallel-testing-enabled NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=NO\
         \ -jobs 3 test > store-evidence/storekit-test.log 2>&1; then\n  tail -n 180 store-evidence/storekit-test.log\n  exit 1\nfi\ngrep -E 'Test Case|Executed|TEST SUCCEEDED' store-evidence/storekit-test.log\n"
     - uses: actions/upload-artifact@v4
       if: always()

@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# Apple fixes the Simulator StoreKit session connection in iOS 26.6 (174738526).
-# Older iOS 18.6 runners reproduced a hanging Transaction.currentEntitlements
-# iterator in both iPhone and iPad, with or without Transaction.updates.
-# iOS 27.0 is an explicit qualification candidate on the xcode-27 runner.
-# Availability alone is not purchase proof; all StoreKit tests must still pass.
-# Never silently substitute another runtime for the requested version.
+# Runtime qualification is behavioral: availability or a release-note fix alone
+# is not proof. The standalone lifecycle + UI startup probe qualified iOS 26.2
+# on Xcode 26.6; the mandatory full-application suites must still pass.
+# 26.6/27.0 remain explicit diagnostic candidates, never silent fallbacks.
+# Never replace Apple transaction verification with runtime assumptions.
 mkdir -p store-evidence
 exec > >(tee store-evidence/runtime-selection.log) 2>&1
-storekit_version="${STOREKIT_RUNTIME_VERSION:-26.6}"
+storekit_version="${STOREKIT_RUNTIME_VERSION:-26.2}"
 case "$storekit_version" in
-  26.6|27.0) ;;
+  26.2|26.6|27.0) ;;
   *) echo "::error::Unqualified StoreKit runtime version: $storekit_version"; exit 1 ;;
 esac
 xcodebuild -version

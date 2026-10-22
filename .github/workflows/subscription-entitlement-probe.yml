@@ -26,12 +26,12 @@ jobs:
       fail-fast: false
       matrix:
         mode: [baseline, without-updates]
-    runs-on: xcode-27
+    runs-on: macos-26
     timeout-minutes: 60
     env:
-      STOREKIT_RUNTIME_VERSION: '27.0'
+      STOREKIT_RUNTIME_VERSION: '26.2'
       CI: '1'
-      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
       FUNGO_STOREKIT_PROBE_MODE: ${{ matrix.mode }}
     steps:
@@ -87,7 +87,7 @@ jobs:
             -destination "platform=iOS Simulator,id=$udid" -derivedDataPath entitlement-probe-build \
             -resultBundlePath store-evidence/entitlement-probe.xcresult \
             -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testEntitlementStartupProbe \
-            -parallel-testing-enabled NO -test-timeouts-enabled YES \
+            -collect-test-diagnostics never -parallel-testing-enabled NO -test-timeouts-enabled YES \
             -default-test-execution-time-allowance 360 -maximum-test-execution-time-allowance 360 \
             ARCHS="$(uname -m)" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES \
             CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual \
