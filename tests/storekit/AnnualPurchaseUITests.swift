@@ -61,6 +61,32 @@ final class AnnualPurchaseUITests: XCTestCase {
     await require(element(app, "Fungo Italia completo"))
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
   }
+  // Scheme-only diagnostic: no SKTestSession construction or mutations.
+  @MainActor func testSchemeOnlyEntitlementStartupProbe() async throws {
+    #if !targetEnvironment(simulator)
+    throw XCTSkip("The entitlement startup probe requires a simulator")
+    #else
+    guard ProcessInfo.processInfo.environment["FUNGO_STOREKIT_PROBE_MODE"] == "scheme-only" else {
+      throw XCTSkip("Run only from the scheme-only diagnostic workflow")
+    }
+    continueAfterFailure = false
+    let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
+    app.launchEnvironment["FUNGO_STOREKIT_DIAGNOSTIC"] = ""
+    defer { app.terminate() }
+    print("ENTITLEMENT_SCHEME_ONLY_PROBE no-session no-reset no-clear no-purchase")
+    app.launch()
+    await tap(app, "Abbonamento")
+    let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
+    await require(subscribe, timeout: 60)
+    let ready = await readyToTap(subscribe)
+    print("ENTITLEMENT_SCHEME_ONLY_PROBE ready=\(ready) productLabel=\(subscribe.label)")
+    print("PROBE_VISIBLE_TEXT " + String(describing: app.staticTexts.allElementsBoundByIndex.map { $0.label }))
+    try capture(app, "entitlement-startup-scheme-only")
+    // Routing must independently be confirmed as XcodeTest in the system log.
+    // Price/storefront remain whatever the unchanged scheme fixture supplies.
+    XCTAssertTrue(ready, "Scheme-only initial entitlement must return before purchase becomes ready")
+    #endif
+  }
   // Opt-in startup diagnostic only: never buys, never provides release evidence.
   @MainActor func testEntitlementStartupProbe() async throws {
     #if !targetEnvironment(simulator)
