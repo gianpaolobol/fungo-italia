@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "scope": "second-pass targeted source search for eight records with incomplete photographic evidence",
+  "status": "candidates-only-not-published",
+  "sourcesPriority": [
+    "course-Drive documents",
+    "funghiitaliani.it",
+    "cmcalore.it",
+    "Wikimedia Commons image-page license where available"
+  ],
+  "entries": [
+    {
+      "name": "Phlegmacium variiforme",
+      "urls": [],
+      "status": "NO_EXACT_RELIABLE_PHOTO_FOUND",
+      "note": "Search of exact name and historic Cortinarius combination not enough to assert identity. Require specialist source and 3 separate views."
+    },
+    {
+      "name": "Entoloma saundersii",
+      "urls": [
+        "https://commons.wikimedia.org/wiki/Category:Entoloma_in_the_Netherlands"
+      ],
+      "status": "CANDIDATE_SINGLE_COMMONS_IMAGE",
+      "note": "Wikimedia Commons lists Entoloma saundersii 515187.jpg; image page must be checked for precise license, identification and perspectives."
+    },
+    {
+      "name": "Ramaria formosa",
+      "urls": [
+        "https://www.funghiitaliani.it/topic/15273-ramaria-formosa-pers-fr-qu%C3%A9l-1888/"
+      ],
+      "status": "CANDIDATE_MULTIPLE_ATTRIBUTED_IMAGES",
+      "note": "AMINT lists various photos by named authors, including branch colour closeups. Verify photo rights and three distinct useful views."
+    },
+    {
+      "name": "Ramaria pallida",
+      "urls": [
+        "https://www.funghiitaliani.it/topic/15322-ramaria-pallida-schaeff-ricken-1920/"
+      ],
+      "status": "CANDIDATE_MULTIPLE_ATTRIBUTED_IMAGES",
+      "note": "AMINT lists several named photographers and observations. Verify photograph-specific license and specimen determination."
+    },
+    {
+      "name": "Ramaria botrytis s.l.",
+      "urls": [
+        "https://www.funghiitaliani.it/topic/16784-ramaria-botrytis-pers-fr-ricken-1918/",
+        "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda129.pdf"
+      ],
+      "status": "CANDIDATE_DOCUMENTED_TAXON_IMAGES",
+      "note": "Multiple photos and diagnostic text. Guide ragionata remains governing authority for food class/preparation."
+    },
+    {
+      "name": "Ramaria",
+      "urls": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=1622"
+      ],
+      "status": "CANDIDATE_GROUP_COMPARATIVE_IMAGERY",
+      "note": "Genus-level photos depict different Ramaria species, make explicit grouped-identification task without assigning one edibility to all."
+    },
+    {
+      "name": "Morchella",
+      "urls": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=1279"
+      ],
+      "status": "CANDIDATE_COMPARATIVE_GENUS_REFERENCE",
+      "note": "Comparison includes Morchella and Verpa, attachment differences. Genus case needs representative species labeling, not pretend one specimen proves genus."
+    },
+    {
+      "name": "Verpa",
+      "urls": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=1279",
+        "https://www.bioimages.org.uk/html/Verpa.htm"
+      ],
+      "status": "CANDIDATE_COMPARATIVE_GENUS_REFERENCE",
+      "note": "BioImages CC BY-NC-SA restrictions are not suitable by default for commercially distributed app. Use as research only pending permission."
+    }
+  ],
+  "rightsPolicy": "Do not download, copy, republish images without explicit compatible license or permission; source presence never proves reuse rights.",
+  "foodPolicy": "No reclassification; use Guida ragionata and separately documented preparation."
+}
