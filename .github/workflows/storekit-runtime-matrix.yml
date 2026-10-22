@@ -1,0 +1,90 @@
+name: Qualify available Apple StoreKit runtimes
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/storekit-runtime-matrix.yml
+      - scripts/probe-storekit-runtime.rb
+permissions:
+  contents: read
+concurrency:
+  group: storekit-runtime-matrix-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  qualify:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-26
+            xcode: '26.6'
+            runtime: '26.1'
+          - runner: macos-26
+            xcode: '26.6'
+            runtime: '26.2'
+          - runner: xcode-27
+            xcode: '27.0'
+            runtime: '27.0'
+    name: StoreKit-${{ matrix.xcode }}-iOS-${{ matrix.runtime }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 25
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer
+      RUNTIME_VERSION: ${{ matrix.runtime }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Generate minimal hosts with the unchanged real verifier and lifecycle assertions
+        run: |
+          mkdir -p runtime-evidence
+          printf '%s\n' "$GITHUB_SHA" > runtime-evidence/source-commit.txt
+          printf '%s\n' 'Infrastructure qualification only; never release proof.' > runtime-evidence/scope.txt
+          ruby scripts/probe-storekit-runtime.rb | tee runtime-evidence/generation.log
+      - name: Provision exact candidate runtime and record environment
+        run: |
+          xcodebuild -version | tee runtime-evidence/xcode-version.txt
+          xcrun simctl list runtimes -j > runtime-evidence/runtimes-before.json
+          select_runtime() {
+            node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1])).runtimes.find(r=>r.isAvailable&&r.version===process.env.RUNTIME_VERSION&&r.identifier.includes(".iOS-"));if(r)process.stdout.write(r.identifier)' "$1"
+          }
+          runtime=$(select_runtime runtime-evidence/runtimes-before.json)
+          if test -z "$runtime"; then
+            xcodebuild -downloadPlatform iOS -buildVersion "$RUNTIME_VERSION" 2>&1 | tee runtime-evidence/download.log
+          fi
+          xcrun simctl list runtimes -j > runtime-evidence/runtimes-after.json
+          runtime=$(select_runtime runtime-evidence/runtimes-after.json)
+          test -n "$runtime"
+          udid=$(xcrun simctl create RuntimeQualification com.apple.CoreSimulator.SimDeviceType.iPhone-16-Pro-Max "$runtime")
+          echo "QUALIFICATION_UDID=$udid" >> "$GITHUB_ENV"
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid" -b
+      - name: Execute unchanged native lifecycle and separate app startup qualification
+        run: |
+          overall=0
+          for scheme in NativeLifecycle Startup; do
+            set +e
+            xcodebuild -project runtime-probe/RuntimeProbe.xcodeproj -scheme "$scheme" -configuration Release \
+              -destination "platform=iOS Simulator,id=$QUALIFICATION_UDID" -derivedDataPath runtime-build \
+              -resultBundlePath "runtime-evidence/$scheme.xcresult" -parallel-testing-enabled NO \
+              -test-timeouts-enabled YES -maximum-test-execution-time-allowance 180 -collect-test-diagnostics never \
+              CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-' CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' \
+              -jobs 3 test > "runtime-evidence/$scheme.log" 2>&1
+            result=$?
+            set -e
+            echo "$scheme exit=$result" | tee -a runtime-evidence/results.txt
+            tail -n 100 "runtime-evidence/$scheme.log"
+            if test "$result" -ne 0; then overall=1; fi
+          done
+          exit "$overall"
+      - name: Record StoreKit system diagnostics
+        if: always() && env.QUALIFICATION_UDID != ''
+        run: |
+          xcrun simctl spawn "$QUALIFICATION_UDID" log show --style compact --last 15m --predicate 'subsystem CONTAINS[c] "storekit"' > runtime-evidence/storekit-system.log 2>&1 || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Runtime-qualification-${{ matrix.xcode }}-${{ matrix.runtime }}
+          path: runtime-evidence/
+          retention-days: 14
