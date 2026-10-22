@@ -1,5 +1,6 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
-import {dirname} from 'node:path';
+import {dirname,resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
 
 export const normalize = v => String(v??'').normalize('NFKC').trim().replace(/\s+/g,' ').toLowerCase();
 export function auditPhotoCoverage(catalog,groups,bank) {
@@ -32,7 +33,7 @@ export function auditPhotoCoverage(catalog,groups,bank) {
  return {totalAtlas:catalog.length,totalGroups:groups.length,totalRequired:records.length,totalPhotoCases:bank.length,covered:rows.filter(r=>r.reasons.length===0).length,missing:rows.filter(r=>r.reasons.length),rows,errors};
 }
 
-if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href) {
+if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href) {
  const data=await Promise.all(['src/data/catalog.json','src/data/groups.json','src/data/exam-bank.json'].map(f=>readFile(f,'utf8').then(JSON.parse)));
  const result=auditPhotoCoverage(...data);
  const out='artifacts/photo-exam-coverage.json';await mkdir(dirname(out),{recursive:true});await writeFile(out,JSON.stringify(result,null,2)+'\n');
