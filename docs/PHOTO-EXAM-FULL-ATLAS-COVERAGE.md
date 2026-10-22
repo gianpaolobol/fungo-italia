@@ -21,3 +21,9 @@ node scripts/audit-photo-exam-coverage.mjs --strict
 Le sessioni rimangono composte da 15 quesiti: **copertura della banca** non significa mostrare 214 casi in una singola sessione. La selezione tra sessioni dovrà consentire nel tempo di incontrare ogni voce, verificando bilanciamento e rotazione senza ripetere soltanto le specie più comuni.
 
 Non integrare su `main` un banco ampliato finché la documentazione fotografica, le fonti di commestibilità e le condizioni di preparazione non risultano controllate, inclusa la revisione indipendente richiesta dal gate scientifico.
+
+## Risultato del controllo rigoroso di attribuzione fotografica (22/10/2026)
+
+Il conteggio grezzo delle viste presenti nei metadati **non dimostra** che ciascuna vista rappresenti il taxon della scheda. Il confronto esatto di `referenceImages[].subjectTaxon` con `scientificName` per le 128 voci mancanti ha trovato **solo 5 triadi con attribuzione testuale coincidente**: *Agaricus* sez. Xanthodermatei, *Lepiota elaiophylla*, *Lyophyllum decastes* s.l., *Tricholoma saponaceum* s.l., *Tricholoma acerbum* s.l. Di queste, *Lepiota elaiophylla* è priva di categoria alimentare nello schema corrente. Pertanto le restanti 123 voci richiedono riconciliazione dei soggetti fotografici o acquisizione di immagini attribuite; e anche le quattro candidate con categoria non possono essere dichiarate approvate senza verifica delle fonti e dei casi di gruppo.
+
+Non creare casi d'esame per semplici conteggi di foto e non sostituire la risposta con il nome della scheda se le immagini sono attribuite ad altri taxa: la domanda sarebbe fuorviante. Questo controllo è più severo del precedente inventario «120 voci con tre viste registrate», che rimane solo un conteggio materiale.
