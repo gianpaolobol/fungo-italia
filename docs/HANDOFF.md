@@ -4,6 +4,7 @@ Candidato main: `d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34`. [Report completo](IO
 
 - Prove **push su main** riuscite: StoreKit nativo `39807794256`; UI acquisti iPhone/iPad `39807794269`; demo iPhone/iPad `39807794237`. Non sono i vecchi run della PR #115.
 - Run manuale TestFlight recuperato nel browser: **39809526311**, in coda al push **39807794183**, stesso SHA. Il log source conferma 65 test WebKit, 65 Chromium e lo smoke offline riusciti, con ricevuta dello stesso SHA. Source119925567793 SUCCESS; beta119950377248 ha completato build firmata e verifica del sorgente. Submission EAS2cc40b80-e3f4-4d6d-9a30-6107d5a98531 in corso; disponibilità Apple non ancora attestata.
+- Binario diagnostico firmato:1.1.0(17), profilo consolidated-beta, IPA SHA2569f4c123ba05d9d0a90c5ccf94a4b3ab34e974bfd892d4b8842846a5bcdd779f5, sorgented2c8b650. Non production App Store.
 - Locale: TypeScript,188 test Node, rigenerazione senza drift ed export iOS riusciti. Gate editoriale strict: exit1,148 record bloccati,0 revisioni indipendenti. Riprodotto anche in CI sullo SHA main: run 39814751806, job generator 119950197965, exit 1 nel log delle 16:31:47 UTC.
 - Audit Apple readonly avviato e riuscito: `39811751393`, job `119939578200`. Apple1.1.0(16) VALID, ancora il candidato precedente; browser conferma gruppo interno Proprietario — prova iPhone e un'installazione. App Store1.0 resta REJECTED/build 9.
 - Prezzo effettivo nuovi abbonati verificato nel portale:19,99 €/anno Italia. Il9,99 del report API è un primo record di prezzo senza selezione temporale, non il prezzo corrente.

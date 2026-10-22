@@ -72,6 +72,10 @@ Lettura API Apple autenticata22 ottobre 16:11:01 UTC, artefatto App-Store-status
 
 La pipeline corrente genera `consolidated-beta`, con ricevuta `testFlightOnly:true`, `diagnosticOnly:true`, `appStoreReady:false`. Questi flag sono stati preservati. Nessuna buildproduction nuova avviata con gate scientifico fallito. Un'esecuzione locale EAS non necessariamente produce un nuovo Build ID cloud: registrare hash IPA,producerRunId,build number e submission effettivi dalle ricevute.
 
+
+
+Ricevuta firmata letta nel job beta119950377248: **1.1.0(17)**, profilo `consolidated-beta`, producerRunId39807794183, sourceCommitd2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34, IPA SHA256 `9f4c123ba05d9d0a90c5ccf94a4b3ab34e974bfd892d4b8842846a5bcdd779f5`. La ricevuta mantiene testFlightOnly=true, diagnosticOnly=true, appStoreReady=false. Build locale EAS, non un nuovo ID cloud production. Submission2cc40b80-e3f4-4d6d-9a30-6107d5a98531 ancora in coda al momento della verifica.
+
 ## Privacy, accordi e DSA
 
 Il portale App Privacy inizialmente mostrava9 tipi raccolti e tracking pubblicitario per contatti,pagamenti,posizione. Il codice non contiene flussi GPS/contatti/SDK pubblicitari; StoreKit non trasmette ricevute a server dello sviluppatore. Le dipendenze Expo58 verificate inviano EAS-Client-ID e, dopo un errore fatale,Expo-Fatal-Error. Le mappe richiedono risorseOSM/unpkg e il controllo versione contattaGitHubPages.
