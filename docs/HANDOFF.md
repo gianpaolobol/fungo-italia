@@ -1,5 +1,43 @@
 # Handoff corrente
 
+## Digitazione controllata del test UI — 22 ottobre 2026
+
+Sul candidato2b79637: StoreKit nativo **PASS** (3,254s), startupbaseline **PASS** (`ready=true transactions=0`,46,533s), without-updates **PASS**, demo iPhone/iPad **PASS**. UI iPhone119855236120: acquisto nativo verificato e entitlementactive=true; riapertura e ripristino confermanoactive=true. Fallisce poi alla riga179, prima di rimborso/scadenza, perché la tastiera XCTest ha inserito **Aita caesarea**, non Amanita caesarea (AXtree completo in artefatto12430343916). La ricerca mostra correttamente0schede; il taxon esiste nel catalogominimo, feedfalse.
+
+Il test ora invia i caratteri con tastiera reale, aspettando l'esatto valoreprefix dopo ogni carattere (deadline10s); fallisce esplicitamente al primo disallineamento, controlla infine l'intera query e chiude la tastiera. Nessun acquisto/entitlement/assert sul ciclo rimosso. Solo l'automatismo PR della diagnostica senzaacquisti, introdotto durante l'indagine, è ritirato: manuale e pushmain restano, entrambe le modalità sono già superate sullo stesso codiceapp. Rimangono automatici nellePR i5job obbligatori: nativeStoreKit, UIiPhone/iPad, demoiPhone/iPad; si evita che2diagnostiche opzionali occupino slot davanti ai testacquisti. Nuovi esiti finali da leggere nella PR115.188testNode/TypeScript e YAML locali **PASS**.
+
+## Risposta tardiva prezzo StoreKit — 22 ottobre 2026
+
+Su76051a4/iOS26.2: run39783622705 native StoreKit **PASS** (test3,881s); run39783622793 baseline **PASS** (`ready=true transactions=0`,21,585s), without-updates **PASS** (31,186s); demo iPhone119841970311 **PASS**. Nessun difetto di runtime nei percorsi completati.
+
+UI iPad119841296171 fallisce alla riga139 prima di acquistare: lookup prodotto entra13:24:07Z e torna13:25:10Z, oltre il limite60s del test. Il codice `timely(getAnnualProduct()).then(...)` scartava definitivamente il prezzo dopo20s. È un bug distinto dal runtime, dimostrato con il vero hook:2regressioni falliscono prima della correzione. Ora la risposta prezzo viene applicata all'interno del Promise nativo, con gli stessi guard mounted/priceGeneration; solo l'errore prezzo viene cancellato. Non modifica entitlement/purchaseReady/validazione Apple.5test verificano recupero tardivo, nessuna abilitazione con entitlement sconosciuto, refresh superseded, unmount e risposta simultanea al timeout. Quest’ultimo caso è stato riprodotto prima del guard priceReceived, che impedisce al catch già accodato di cancellare un prodotto accettato. Suite188test Node e TypeScript **PASS**. L'attesa UI prodotto viene allineata a120s (come readyToTap); prezzo italiano, transazione verificata e ciclo completo restano obbligatori. Nuovi esiti CI richiesti sullo SHA finale; non riusare i PASS76051a4 come prova della modifica al hook.
+
+## Runtime StoreKit qualificato — 22 ottobre 2026
+
+**Soluzione infrastruttura: Xcode26.6(17F113) + iOS26.2**, preinstallato sul runner `macos-26`. Prova isolata PR116, run39782343636, job119836522769: NativeLifecycle exit0, acquisto/rimborso/scadenza con il verificatore reale copiato verbatim (test4,723s); Startup exit0, sessione italiana, `ready active=false price=19,99€` e0transazioni (test14,543s). Log confermano entrambi `TEST SUCCEEDED`. Le asserzioni del ciclo nativo sono quelle originali, cambia solo l'import del modulo del piccolo host. Evidenza di compatibilità runtime, **non** sostituisce la suite completa.
+
+Il vincolo precedente su26.6 era una deduzione dalle note di rilascio, non condizione necessaria dimostrata; ora la scelta deriva dalle prove.26.1 non è scaricabile sul runner;27.0 è disponibile ma non qualificato: in full app native currentEntitlements resta vuoto dopo acquisto, entrambe le startup UI falliscono nella sessione locale (SKServiceErrorDomain2/SKInternalErrorDomain4), UI iPhone fallita. Nessuna correzione permissiva al verificatore Apple.
+
+PR115 aggiorna i quattro workflow completi a26.6/26.2 e mantiene la selezione esatta fail-closed. `-collect-test-diagnostics never` evita solo il timeout600s di raccolta automatica dopo fallimenti; tutte le asserzioni, log espliciti e xcresult restano. Verifiche locali183test Node con env26.2 e TypeScript riusciti; YAML/shell validi. Esiti full-app da leggere sullo SHA finale della PR, senza usare la qualifica isolata come readinessproduction. Nessuna nuova build TestFlight ancora attestata.
+
+## Qualificazione runtime alternativo — 22 ottobre 2026
+
+PR115: il run39777450999 ha confermato che il download esplicito26.6 è assente e il default Xcode26.6 esporta26.5(23F77); entrambi i job iPad falliti prima dell'app, log/inventario preservati. Documentazione ufficiale GitHub: https://github.com/actions/runner-images/issues/14404 e `images/macos/xcode-27-arm64-Readme.md`: runner **xcode-27**, Xcode27.0(27A266a), alias `/Applications/Xcode_27.0.app`, runtime iOS27.0 preinstallato. Si qualifica questa combinazione, senza affermarne l'idoneità prima degli esiti reali.
+
+I quattro workflow test (startup, native StoreKit, acquisti UI, demo) sono vincolati a questa coppia. Provisioning accetta solo le versioni esplicitamente ammesse26.6/27.0 e deve trovare quella richiesta esatta; nessun runtime vecchio o futuro scelto implicitamente. I tre workflow obbligatori sono eseguiti anche nelle PR che modificano il provisioning. Nessuna modifica al binario o al verificatore transazioni; build/upload TestFlight resta separata dalla qualifica dei simulatori. Verifiche locali182test Node e TypeScript riusciti, shell/YAML validi;3nuove regressioni fallite prima della modifica. Esiti CI da registrare nella PR115 prima di merge.
+
+Lettura Apple autenticata2026-10-22T12:20:46Z (run39664667124, job119820241511):1.1.0(16) `VALID`, non scaduta; sorgente `d08affd456f74a6126f8e027bd3184b0e1425e05` nelle ricevute firmate. Non confondere con il candidato della PR. Store listing1.0 ancora `REJECTED` con build9. Gate editoriale strict ancora exit1,148record bloccati,0revisioni indipendenti. Nessuna readiness production attestata.
+
+## Diagnosi runtime StoreKit — 22 ottobre 2026
+
+- Esecuzione richiesta: **#5, run39775660780**, SHA `f05314e740bcccdfdbbb8708a734c86effbf45bc`. Job originari: `ipad-baseline`119815772705 e `ipad-without-updates`119815772284. Entrambi falliscono nel provisioning: `iOS 26.6 is not available for download.` App e test StoreKit non avviati; nessun artefatto xcresult prodotto. Stato iniziale del run cancellato da esecuzioni successive.
+- Rilanciato baseline tramite API: nuovo job119818739208, fallito nello stesso step. Il secondo job resta cancellato. Nessuna prova di difetto del verificatore Apple ricavabile da questi run.
+- Branch `fix/storekit-runtime-download-20261022`: tentativo alternativo di download del runtime predefinito di Xcode dopo fallimento dell'alias26.6; revalidazione invariata su26.6 disponibile, blocco esplicito se assente. Log provisioning e inventario preservati anche prima dei test. Nessuna modifica al billing, transazioni, entitlement, soglie di acquisto o verifiche production.
+- Cinque regressioni eseguono lo script shell con strumenti macOS sostituiti: runtime presente, download esplicito, recupero tramite download predefinito, runtime vecchio rifiutato, entrambi download falliti. Prima della correzione:3 fallimenti; dopo:5 riusciti. Suite completa dopo `npm ci`:179 test Node riusciti; TypeScript e sintassi shell riusciti. Le prove simulate non attestano disponibilità reale del runtime Apple.
+- Diagnostica abilitata sulle PR che cambiano provisioning/workflow, senza segreti e senza acquisti; non sostituisce i gate nativi/UI obbligatori.
+- Ricevute CI lette dal run39691851983, job beta119553646013: **1.1.0(16)**, SHA `d08affd456f74a6126f8e027bd3184b0e1425e05`, Apple build `c72ecb8f-7267-4ca0-93ad-14689db4dfda`, processing `VALID`, gruppo interno verificato alle2026-10-22T00:07:00Z. `nativeStorekitVerified:true`, `storekitUIVerified:false`, `appStoreReady:false`. È evidenza storica della beta diagnostica, non verifica live Apple né prova sul nuovo SHA.
+- **Production bloccata**: provisioning26.6 da verificare sui runner reali; test acquisti UI iPhone/iPad e altre prove obbligatorie devono passare sul candidato; verificare binario firmato e stato Apple per lo stesso sorgente. Non aggirare il gate scientifico indipendente.
+
 ## Percorso, abbonamento e release accoppiate — 21 ottobre 2026
 
 Build Apple realmente confermato precedente: **1.1.0 (14)**, sorgente `38a7a85ac96803a5dca18bf5c6a39264bcc99444`, Apple ID `a8152729-e1a2-47a9-9884-ef577d0436a2`, `VALID` / `IN_BETA_TESTING`, solo gruppo interno del titolare. Conferma CI corretta run39647612363. UI acquisto non ancora qualificata: questa è beta diagnostica, non autorizzazione App Review.

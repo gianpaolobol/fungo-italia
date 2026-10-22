@@ -12,7 +12,7 @@ export default function SubscriptionGate(p:SubscriptionGateProps){
  const [message,setMessage]=useState(''),[running,setRunning]=useState(false),lock=useRef(false);
  const disabled=p.busy||p.checking||running;
  const available=p.supported&&p.product?.subscriptionPeriod.unit==='year'&&p.product.subscriptionPeriod.value===1&&!!p.product.localizedPrice;
- async function run(fn:()=>Promise<void>){if(lock.current||p.busy)return;lock.current=true;setRunning(true);setMessage('');try{await fn();}catch{setMessage('Operazione non completata. Riprova.');}finally{lock.current=false;setRunning(false);}}
+ async function run(fn:()=>Promise<void>){console.info('STOREKIT_UI gate press received',JSON.stringify({locked:lock.current,busy:p.busy,checking:p.checking,purchaseReady:p.purchaseReady,active:p.active}));if(lock.current||p.busy){console.info('STOREKIT_UI gate blocked');return;}lock.current=true;setRunning(true);setMessage('');try{await fn();}catch{setMessage('Operazione non completata. Riprova.');}finally{lock.current=false;setRunning(false);}}
  async function open(url:string){try{await Linking.openURL(url);}catch{setMessage('Collegamento non aperto. Verifica la connessione.');}}
  const button=(label:string,fn:()=>void,primary=false,off=false)=><Pressable accessibilityRole="button" accessibilityState={{disabled:off}} disabled={off} onPress={fn} style={[primary?s.primary:s.secondary,off&&s.disabled]}><Text style={primary?s.primaryText:s.secondaryText}>{label}</Text></Pressable>;
  return <ScrollView contentContainerStyle={s.page}>
