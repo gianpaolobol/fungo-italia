@@ -1,0 +1,5774 @@
+{
+  "schemaVersion": 1,
+  "sourceDocuments": [
+    "S1-obiettivi-tassonomici-v4-2026-06-09",
+    "Guida ragionata alla commestibilità dei funghi",
+    "https://drive.google.com/drive/folders/1sgmK0p5GJmgbvqpIzNi7RNJZetxy7UHQ"
+  ],
+  "scope": {
+    "minimum": 148,
+    "extended": 66,
+    "photoExisting": 86,
+    "photoMissing": 128
+  },
+  "entries": [
+    {
+      "id": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "name": "Agaricus sez. Xanthodermatei",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus sez. Xanthodermatei",
+          "src": "images/reference/agaricus-sez-xanthodermatei-lateral-112.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus sez. Xanthodermatei",
+          "src": "images/reference/agaricus-sez-xanthodermatei-top-113.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus sez. Xanthodermatei",
+          "src": "images/reference/agaricus-sez-xanthodermatei-underside-112.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-agaricus--02--agaricus-bresadolanus",
+      "name": "Agaricus bresadolanus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus bresadolanus",
+          "src": "images/reference/agaricus-bresadolanus-top-83.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus bresadolanus",
+          "src": "images/reference/agaricus-bresadolanus-underside-86.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus bresadolanus",
+          "src": "images/reference/external-agaricus-bresadolanus-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--03--agaricus-sez-arvenses",
+      "name": "Agaricus sez. Arvenses",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus arvensis s.l.",
+          "src": "images/reference/agaricus-sez-arvenses-lateral-99.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus arvensis s.l.",
+          "src": "images/reference/agaricus-sez-arvenses-top-99.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus arvensis s.l.",
+          "src": "images/reference/agaricus-sez-arvenses-underside-99.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "name": "Agaricus sez. Sanguinolenti",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus benesii",
+          "src": "images/reference/agaricus-sez-sanguinolenti-lateral-91.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus sylvaticus",
+          "src": "images/reference/agaricus-sez-sanguinolenti-top-94.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus sylvaticus",
+          "src": "images/reference/agaricus-sez-sanguinolenti-underside-94.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-agaricus--05--agaricus-campestris",
+      "name": "Agaricus campestris",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus campestris",
+          "src": "images/reference/agaricus-campestris-lateral-64.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus campestris",
+          "src": "images/reference/agaricus-campestris-top-64.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus campestris",
+          "src": "images/reference/agaricus-campestris-underside-64.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--06--agaricus-bitorquis",
+      "name": "Agaricus bitorquis",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus bitorquis",
+          "src": "images/reference/agaricus-bitorquis-lateral-69.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus bitorquis",
+          "src": "images/reference/external-agaricus-bitorquis-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus bitorquis",
+          "src": "images/reference/external-agaricus-bitorquis-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--07--agaricus-bisporus",
+      "name": "Agaricus bisporus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus bisporus",
+          "src": "images/reference/agaricus-bisporus-top-72.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus bisporus",
+          "src": "images/reference/external-agaricus-bisporus-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus bisporus",
+          "src": "images/reference/external-agaricus-bisporus-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "name": "Cyclocybe cylindracea",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cyclocybe cylindracea",
+          "src": "images/reference/cyclocybe-cylindracea-lateral-103.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cyclocybe cylindracea",
+          "src": "images/reference/cyclocybe-cylindracea-top-98.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cyclocybe cylindracea",
+          "src": "images/reference/external-cyclocybe-cylindracea-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "name": "Amanita phalloides",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita phalloides",
+          "src": "images/reference/amanita-phalloides-lateral-58.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita phalloides",
+          "src": "images/reference/amanita-phalloides-top-58.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita phalloides",
+          "src": "images/reference/amanita-phalloides-underside-58.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+      "name": "Amanita verna / Amanita vidua",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita verna",
+          "src": "images/reference/amanita-verna-amanita-vidua-lateral-74.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita verna",
+          "src": "images/reference/amanita-verna-amanita-vidua-underside-75.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita verna",
+          "src": "images/reference/amanita-verna-amanita-vidua-top-75.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-amanita--03--amanita-virosa",
+      "name": "Amanita virosa",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita virosa",
+          "src": "images/reference/amanita-virosa-lateral-79.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita virosa",
+          "src": "images/reference/amanita-virosa-underside-80.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita virosa",
+          "src": "images/reference/amanita-virosa-top-80.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--04--amanita-proxima",
+      "name": "Amanita proxima",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita proxima",
+          "src": "images/reference/amanita-proxima-lateral-123.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita proxima",
+          "src": "images/reference/amanita-proxima-top-123.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita proxima",
+          "src": "images/reference/amanita-proxima-underside-123.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--05--amanita-ovoidea",
+      "name": "Amanita ovoidea",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita ovoidea",
+          "src": "images/reference/amanita-ovoidea-lateral-117.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita ovoidea",
+          "src": "images/reference/external-amanita-ovoidea-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita ovoidea",
+          "src": "images/reference/external-amanita-ovoidea-top.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "name": "Amanita pantherina",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita pantherina",
+          "src": "images/reference/amanita-pantherina-lateral-193.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita pantherina",
+          "src": "images/reference/amanita-pantherina-top-197.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita pantherina",
+          "src": "images/reference/external-amanita-pantherina-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--07--amanita-muscaria",
+      "name": "Amanita muscaria",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita muscaria",
+          "src": "images/reference/amanita-muscaria-lateral-177.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita muscaria",
+          "src": "images/reference/external-amanita-muscaria-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita muscaria",
+          "src": "images/reference/external-amanita-muscaria-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "name": "Amanita caesarea",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita caesarea",
+          "src": "images/reference/amanita-caesarea-lateral-460.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita caesarea",
+          "src": "images/reference/amanita-caesarea-top-460.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita caesarea",
+          "src": "images/reference/external-amanita-caesarea-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--09--amanita-gemmata",
+      "name": "Amanita gemmata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita gemmata",
+          "src": "images/reference/amanita-gemmata-lateral-227.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita gemmata",
+          "src": "images/reference/amanita-gemmata-top-227.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita gemmata",
+          "src": "images/reference/amanita-gemmata-underside-227.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--10--amanita-citrina",
+      "name": "Amanita citrina",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita citrina",
+          "src": "images/reference/amanita-citrina-lateral-166.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita citrina",
+          "src": "images/reference/amanita-citrina-top-166.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita citrina",
+          "src": "images/reference/amanita-citrina-underside-166.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--11--amanita-porphyria",
+      "name": "Amanita porphyria",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita porphyria",
+          "src": "images/reference/amanita-porphyria-underside-170.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita porphyria",
+          "src": "images/reference/amanita-porphyria-top-170.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita porphyria",
+          "src": "images/reference/external-amanita-porphyria-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+      "name": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita excelsa (= A. spissa)",
+          "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-underside-258.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita franchetii",
+          "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-lateral-262.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita excelsa (= A. spissa)",
+          "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-top-258.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "name": "Amanita strobiliformis",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita strobiliformis",
+          "src": "images/reference/amanita-strobiliformis-lateral-269.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita strobiliformis",
+          "src": "images/reference/amanita-strobiliformis-top-269.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita strobiliformis",
+          "src": "images/reference/amanita-strobiliformis-underside-269.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--14--amanita-vittadinii",
+      "name": "Saproamanita vittadinii",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita vittadinii",
+          "src": "images/reference/saproamanita-vittadinii-top-277.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita vittadinii",
+          "src": "images/reference/saproamanita-vittadinii-underside-277.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Saproamanita vittadinii",
+          "src": "images/reference/external-saproamanita-vittadinii-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--15--amanita-rubescens",
+      "name": "Amanita rubescens",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita rubescens",
+          "src": "images/reference/amanita-rubescens-lateral-249.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita rubescens",
+          "src": "images/reference/amanita-rubescens-underside-250.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita rubescens",
+          "src": "images/reference/amanita-rubescens-top-254.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--16--amanita-sez-vaginatae",
+      "name": "Amanita sez. Vaginatae",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita vaginata s.l.",
+          "src": "images/reference/amanita-sez-vaginatae-lateral-143.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita vaginata s.l.",
+          "src": "images/reference/amanita-sez-vaginatae-top-143.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita vaginata s.l.",
+          "src": "images/reference/amanita-sez-vaginatae-underside-143.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-calocybe--01--calocybe-gambosa",
+      "name": "Calocybe gambosa",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Calocybe gambosa",
+          "src": "images/reference/calocybe-gambosa-lateral-277.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Calocybe gambosa",
+          "src": "images/reference/calocybe-gambosa-top-277.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Calocybe gambosa",
+          "src": "images/reference/calocybe-gambosa-underside-277.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+      "name": "Collybia phyllophila",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Clitocybe phyllophila",
+          "src": "images/reference/external-collybia-phyllophila-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Clitocybe phyllophila",
+          "src": "images/reference/external-collybia-phyllophila-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Collybia phyllophila",
+          "src": "images/reference/external-collybia-phyllophila-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "name": "Clitocybe dealbata / Collybia rivulosa",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Clitocybe dealbata",
+          "src": "images/reference/clitocybe-dealbata-collybia-rivulosa-lateral-233.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Clitocybe dealbata",
+          "src": "images/reference/clitocybe-dealbata-collybia-rivulosa-top-233.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Clitocybe dealbata",
+          "src": "images/reference/clitocybe-dealbata-collybia-rivulosa-underside-233.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "name": "Clitocybe nebularis",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Clitocybe nebularis",
+          "src": "images/reference/clitocybe-nebularis-lateral-241.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Clitocybe nebularis",
+          "src": "images/reference/clitocybe-nebularis-top-237.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Clitocybe nebularis",
+          "src": "images/reference/clitocybe-nebularis-underside-241.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+      "name": "Infundibulicybe geotropa",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Infundibulicybe geotropa",
+          "src": "images/reference/infundibulicybe-geotropa-lateral-257.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Infundibulicybe geotropa",
+          "src": "images/reference/infundibulicybe-geotropa-top-257.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Infundibulicybe geotropa",
+          "src": "images/reference/external-infundibulicybe-geotropa-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+      "name": "Paralepistopsis amoenolens",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Paralepistopsis amoenolens",
+          "src": "images/reference/paralepistopsis-amoenolens-lateral-221.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Paralepistopsis amoenolens",
+          "src": "images/reference/paralepistopsis-amoenolens-top-221.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Paralepistopsis amoenolens",
+          "src": "images/reference/paralepistopsis-amoenolens-underside-221.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "name": "Clitocybe gibba s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Infundibulicybe gibba s.l.",
+          "src": "images/reference/clitocybe-gibba-s-l--top-253.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Infundibulicybe gibba s.l.",
+          "src": "images/reference/clitocybe-gibba-s-l--underside-253.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Infundibulicybe gibba",
+          "src": "images/reference/external-clitocybe-gibba-s-l-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "name": "Clitopilus prunulus s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Clitopilus prunulus",
+          "src": "images/reference/external-clitopilus-prunulus-s-l-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Clitopilus prunulus",
+          "src": "images/reference/external-clitopilus-prunulus-s-l-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Clitopilus prunulus",
+          "src": "images/reference/external-clitopilus-prunulus-s-l-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "name": "Rhodocollybia maculata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Rhodocollybia maculata",
+          "src": "images/reference/rhodocollybia-maculata-lateral-99.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Rhodocollybia maculata",
+          "src": "images/reference/rhodocollybia-maculata-top-99.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Rhodocollybia maculata",
+          "src": "images/reference/rhodocollybia-maculata-underside-99.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "name": "Gymnopus fusipes",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gymnopus fusipes",
+          "src": "images/reference/gymnopus-fusipes-lateral-91.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Gymnopus fusipes",
+          "src": "images/reference/gymnopus-fusipes-top-95.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gymnopus fusipes",
+          "src": "images/reference/gymnopus-fusipes-underside-91.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+      "name": "Marasmius oreades",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Marasmius oreades",
+          "src": "images/reference/marasmius-oreades-lateral-55.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Marasmius oreades",
+          "src": "images/reference/marasmius-oreades-top-51.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Marasmius oreades",
+          "src": "images/reference/marasmius-oreades-underside-55.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "name": "Coprinus atramentarius s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Coprinopsis atramentaria",
+          "src": "images/reference/coprinus-atramentarius-s-l--lateral-340.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Coprinopsis atramentaria",
+          "src": "images/reference/external-coprinus-atramentarius-s-l-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Coprinopsis atramentaria",
+          "src": "images/reference/external-coprinus-atramentarius-s-l-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+      "name": "Coprinus comatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Coprinus comatus",
+          "src": "images/reference/coprinus-comatus-lateral-180.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Coprinus comatus",
+          "src": "images/reference/external-coprinus-comatus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Coprinus comatus",
+          "src": "images/reference/external-coprinus-comatus-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "name": "Cortinarius orellanus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius orellanus",
+          "src": "images/reference/cortinarius-orellanus-lateral-110.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius orellanus",
+          "src": "images/reference/cortinarius-orellanus-top-110.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius orellanus",
+          "src": "images/reference/cortinarius-orellanus-underside-110.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "name": "Cortinarius rubellus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius orellanoides (= C. speciosissimus, C. rubellus)",
+          "src": "images/reference/cortinarius-rubellus-lateral-114.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius orellanoides (= C. speciosissimus, C. rubellus)",
+          "src": "images/reference/cortinarius-rubellus-top-114.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius orellanoides (= C. speciosissimus, C. rubellus)",
+          "src": "images/reference/cortinarius-rubellus-underside-114.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+      "name": "Cortinarius sottogenere Dermocybe",
+      "level": "minimum",
+      "rank": "subgenus",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius uliginosus",
+          "src": "images/reference/cortinarius-sottogenere-dermocybe-lateral-35.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius sanguineus s.l.",
+          "src": "images/reference/cortinarius-sottogenere-dermocybe-top-43.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius croceus",
+          "src": "images/reference/cortinarius-sottogenere-dermocybe-underside-44.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--04--cortinarius-praestans",
+      "name": "Cortinarius praestans",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius praestans",
+          "src": "images/reference/external-cortinarius-praestans-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius praestans",
+          "src": "images/reference/external-cortinarius-praestans-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius praestans",
+          "src": "images/reference/external-cortinarius-praestans-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--05--cortinarius-cumatilis",
+      "name": "Cortinarius cumatilis",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius cumatilis",
+          "src": "images/reference/cortinarius-cumatilis-lateral-59.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius cumatilis",
+          "src": "images/reference/cortinarius-cumatilis-top-59.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius cumatilis",
+          "src": "images/reference/cortinarius-cumatilis-underside-59.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--06--cortinarius-variiformis",
+      "name": "Phlegmacium variiforme",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "name": "Cortinarius caperatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius caperatus",
+          "src": "images/reference/cortinarius-caperatus-lateral-32.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius caperatus",
+          "src": "images/reference/cortinarius-caperatus-top-32.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius caperatus",
+          "src": "images/reference/cortinarius-caperatus-underside-32.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "name": "Entoloma sinuatum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Entoloma sinuatum",
+          "src": "images/reference/external-entoloma-sinuatum-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Entoloma sinuatum",
+          "src": "images/reference/external-entoloma-sinuatum-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Entoloma sinuatum",
+          "src": "images/reference/external-entoloma-sinuatum-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "name": "Entoloma rhodopolium s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Entoloma rhodopolium",
+          "src": "images/reference/external-entoloma-rhodopolium-s-l-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Entoloma rhodopolium",
+          "src": "images/reference/external-entoloma-rhodopolium-s-l-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Entoloma rhodopolium",
+          "src": "images/reference/external-entoloma-rhodopolium-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-entoloma--03--entoloma-hirtipes",
+      "name": "Entoloma hirtipes",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Entoloma hirtipes",
+          "src": "images/reference/external-entoloma-hirtipes-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Entoloma hirtipes",
+          "src": "images/reference/external-entoloma-hirtipes-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Entoloma hirtipes",
+          "src": "images/reference/external-entoloma-hirtipes-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--04--entoloma-vernum",
+      "name": "Entoloma vernum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Entoloma vernum",
+          "src": "images/reference/external-entoloma-vernum-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Entoloma vernum",
+          "src": "images/reference/external-entoloma-vernum-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Entoloma vernum",
+          "src": "images/reference/external-entoloma-vernum-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "name": "Entoloma clypeatum s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Entoloma clypeatum",
+          "src": "images/reference/external-entoloma-clypeatum-s-l-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Entoloma clypeatum",
+          "src": "images/reference/external-entoloma-clypeatum-s-l-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Entoloma clypeatum",
+          "src": "images/reference/external-entoloma-clypeatum-s-l-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-entoloma--06--entoloma-saundersii",
+      "name": "Entoloma saundersii",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "name": "Flammulina velutipes s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Flammulina velutipes",
+          "src": "images/reference/flammulina-velutipes-lateral-149.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Flammulina velutipes",
+          "src": "images/reference/flammulina-velutipes-top-149.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Flammulina velutipes",
+          "src": "images/reference/flammulina-velutipes-underside-149.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-galerina--01--galerina-marginata-group",
+      "name": "Galerina marginata group",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Galerina marginata",
+          "src": "images/reference/galerina-marginata-top-370.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Galerina marginata",
+          "src": "images/reference/galerina-marginata-underside-370.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Galerina marginata",
+          "src": "images/reference/external-galerina-marginata-group-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "name": "Hygrocybe conica s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrocybe conica",
+          "src": "images/reference/external-hygrocybe-conica-s-l-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrocybe conica",
+          "src": "images/reference/external-hygrocybe-conica-s-l-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrocybe conica",
+          "src": "images/reference/external-hygrocybe-conica-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "name": "Hygrocybe punicea",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrocybe punicea",
+          "src": "images/reference/external-hygrocybe-punicea-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrocybe punicea",
+          "src": "images/reference/external-hygrocybe-punicea-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrocybe punicea",
+          "src": "images/reference/external-hygrocybe-punicea-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "name": "Hygrophorus marzuolus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrophorus marzuolus",
+          "src": "images/reference/hygrophorus-marzuolus-lateral-85.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrophorus marzuolus",
+          "src": "images/reference/hygrophorus-marzuolus-top-85.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrophorus marzuolus",
+          "src": "images/reference/hygrophorus-marzuolus-underside-82.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "name": "Hygrophorus russula",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrophorus russula",
+          "src": "images/reference/hygrophorus-russula-lateral-518.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrophorus russula",
+          "src": "images/reference/hygrophorus-russula-top-518.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrophorus russula",
+          "src": "images/reference/hygrophorus-russula-underside-518.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+      "name": "Hygrophorus penarioides",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrophorus penarioides",
+          "src": "images/reference/external-hygrophorus-penarioides-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrophorus penarioides",
+          "src": "images/reference/external-hygrophorus-penarioides-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrophorus penarioides",
+          "src": "images/reference/external-hygrophorus-penarioides-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "name": "Hypholoma fasciculare",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Hypholoma fasciculare",
+          "src": "images/reference/external-hypholoma-fasciculare-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hypholoma fasciculare",
+          "src": "images/reference/external-hypholoma-fasciculare-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hypholoma fasciculare",
+          "src": "images/reference/external-hypholoma-fasciculare-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--02--hypholoma-lateritium",
+      "name": "Hypholoma lateritium",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hypholoma lateritium",
+          "src": "images/reference/hypholoma-lateritium-lateral-111.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hypholoma lateritium",
+          "src": "images/reference/hypholoma-lateritium-top-111.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hypholoma lateritium",
+          "src": "images/reference/hypholoma-lateritium-underside-111.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lentinula--01--lentinula-edodes",
+      "name": "Lentinula edodes",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lentinula edodes",
+          "src": "images/reference/lentinula-edodes-lateral-173.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lentinula edodes",
+          "src": "images/reference/lentinula-edodes-top-173.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lentinula edodes",
+          "src": "images/reference/external-lentinula-edodes-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+      "name": "Lepiota subincarnata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepiota subincarnata",
+          "src": "images/reference/lepiota-subincarnata-lateral-85.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepiota subincarnata",
+          "src": "images/reference/lepiota-subincarnata-top-85.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepiota subincarnata",
+          "src": "images/reference/lepiota-subincarnata-underside-85.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "name": "Lepiota brunneoincarnata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepiota brunneoincarnata",
+          "src": "images/reference/lepiota-brunneoincarnata-lateral-369.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepiota brunneoincarnata",
+          "src": "images/reference/lepiota-brunneoincarnata-top-369.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepiota brunneoincarnata",
+          "src": "images/reference/lepiota-brunneoincarnata-underside-369.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+      "name": "Lepiota cristata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepiota cristata",
+          "src": "images/reference/external-lepiota-cristata-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepiota cristata",
+          "src": "images/reference/external-lepiota-cristata-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepiota cristata",
+          "src": "images/reference/external-lepiota-cristata-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+      "name": "Lepiota elaiophylla",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepiota elaiophylla",
+          "src": "images/reference/external-lepiota-elaiophylla-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepiota elaiophylla",
+          "src": "images/reference/external-lepiota-elaiophylla-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepiota elaiophylla",
+          "src": "images/reference/external-lepiota-elaiophylla-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+      "name": "Chlorophyllum molybdites",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Chlorophyllum molybdites",
+          "src": "images/reference/external-chlorophyllum-molybdites-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Chlorophyllum molybdites",
+          "src": "images/reference/external-chlorophyllum-molybdites-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Chlorophyllum molybdites",
+          "src": "images/reference/external-chlorophyllum-molybdites-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "name": "Echinoderma asperum s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Echinoderma asperum",
+          "src": "images/reference/external-echinoderma-asperum-s-l-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Echinoderma asperum",
+          "src": "images/reference/external-echinoderma-asperum-s-l-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Echinoderma asperum",
+          "src": "images/reference/external-echinoderma-asperum-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "name": "Leucoagaricus leucothites s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Leucocoprinus leucothites",
+          "src": "images/reference/external-leucoagaricus-leucothites-s-l-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leucocoprinus leucothites",
+          "src": "images/reference/external-leucoagaricus-leucothites-s-l-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leucocoprinus leucothites",
+          "src": "images/reference/external-leucoagaricus-leucothites-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "name": "Chlorophyllum rhacodes s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Chlorophyllum brunneum",
+          "src": "images/reference/chlorophyllum-rhacodes-s-l--lateral-138.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Chlorophyllum brunneum",
+          "src": "images/reference/chlorophyllum-rhacodes-s-l--top-138.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Chlorophyllum brunneum",
+          "src": "images/reference/chlorophyllum-rhacodes-s-l--underside-138.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "name": "Macrolepiota procera s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Macrolepiota procera",
+          "src": "images/reference/macrolepiota-procera-s-l--lateral-280.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Macrolepiota procera",
+          "src": "images/reference/external-macrolepiota-procera-s-l-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Macrolepiota procera",
+          "src": "images/reference/external-macrolepiota-procera-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "name": "Lepista nuda s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepista nuda",
+          "src": "images/reference/lepista-nuda-s-l--lateral-318.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepista nuda",
+          "src": "images/reference/lepista-nuda-s-l--top-318.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepista nuda",
+          "src": "images/reference/lepista-nuda-s-l--underside-318.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
+      "name": "Lepista flaccida s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepista flaccida",
+          "src": "images/reference/lepista-flaccida-s-l--lateral-330.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepista flaccida",
+          "src": "images/reference/lepista-flaccida-s-l--top-334.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepista flaccida",
+          "src": "images/reference/lepista-flaccida-s-l--underside-334.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "name": "Leucopaxillus giganteus s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leucopaxillus giganteus",
+          "src": "images/reference/leucopaxillus-giganteus-s-l--lateral-346.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Leucopaxillus giganteus",
+          "src": "images/reference/leucopaxillus-giganteus-s-l--top-346.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leucopaxillus giganteus",
+          "src": "images/reference/leucopaxillus-giganteus-s-l--underside-350.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+      "name": "Leucopaxillus gentianeus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leucopaxillus gentianeus",
+          "src": "images/reference/leucopaxillus-gentianeus-lateral-354.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Leucopaxillus gentianeus",
+          "src": "images/reference/leucopaxillus-gentianeus-top-354.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leucopaxillus gentianeus",
+          "src": "images/reference/leucopaxillus-gentianeus-underside-354.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+      "name": "Lyophyllum decastes s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lyophyllum decastes s.l.",
+          "src": "images/reference/lyophyllum-decastes-s-l--lateral-303.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lyophyllum decastes s.l.",
+          "src": "images/reference/lyophyllum-decastes-s-l--top-303.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lyophyllum decastes s.l.",
+          "src": "images/reference/lyophyllum-decastes-s-l--underside-303.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "name": "Lyophyllum specie annerenti",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "mixed",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lyophyllum rhopalopodium",
+          "src": "images/reference/lyophyllum-annerenti-lateral-307.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lyophyllum rhopalopodium",
+          "src": "images/reference/lyophyllum-annerenti-top-307.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lyophyllum rhopalopodium",
+          "src": "images/reference/lyophyllum-annerenti-underside-307.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+      "name": "Leucocybe connata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leucocybe connata (Lyophyllum connatum)",
+          "src": "images/reference/leucocybe-connata-lateral-311.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Leucocybe connata (Lyophyllum connatum)",
+          "src": "images/reference/leucocybe-connata-top-311.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leucocybe connata (Lyophyllum connatum)",
+          "src": "images/reference/leucocybe-connata-underside-311.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "name": "Mycena sez. Purae",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Mycena pura",
+          "src": "images/reference/mycena-sez-purae-lateral-126.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Mycena pura",
+          "src": "images/reference/mycena-sez-purae-top-126.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Mycena pura",
+          "src": "images/reference/mycena-sez-purae-underside-126.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-omphalotus--01--omphalotus-olearius",
+      "name": "Omphalotus olearius",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Omphalotus olearius",
+          "src": "images/reference/omphalotus-olearius-lateral-177.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Omphalotus olearius",
+          "src": "images/reference/omphalotus-olearius-top-177.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Omphalotus olearius",
+          "src": "images/reference/omphalotus-olearius-underside-177.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+      "name": "Panaeolus cyanescens",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Panaeolus cyanescens",
+          "src": "images/reference/external-panaeolus-cyanescens-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Panaeolus cyanescens",
+          "src": "images/reference/external-panaeolus-cyanescens-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Panaeolus cyanescens",
+          "src": "images/reference/external-panaeolus-cyanescens-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+      "name": "Kuehneromyces mutabilis",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Kuehneromyces mutabilis",
+          "src": "images/reference/kuehneromyces-mutabilis-lateral-121.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Kuehneromyces mutabilis",
+          "src": "images/reference/external-kuehneromyces-mutabilis-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Kuehneromyces mutabilis",
+          "src": "images/reference/external-kuehneromyces-mutabilis-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+      "name": "Pleurotus eryngii s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Pleurotus eryngii var. ferulae",
+          "src": "images/reference/pleurotus-eryngii-top-135.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Pleurotus eryngii s.l.",
+          "src": "images/reference/pleurotus-eryngii-s-l--lateral-459.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Pleurotus eryngii",
+          "src": "images/reference/external-pleurotus-eryngii-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "name": "Pleurotus ostreatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+          "src": "images/reference/external-pleurotus-ostreatus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+          "src": "images/reference/external-pleurotus-ostreatus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
+          "src": "images/reference/external-pleurotus-ostreatus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "name": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "mixed",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Pleurotus citrinopileatus",
+          "src": "images/reference/pleurotus-citrinopileatus-lateral-129.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Pleurotus citrinopileatus",
+          "src": "images/reference/pleurotus-citrinopileatus-top-132.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Pleurotus citrinopileatus",
+          "src": "images/reference/pleurotus-citrinopileatus-underside-132.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+      "name": "Stropharia rugosoannulata",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Stropharia rugosoannulata",
+          "src": "images/reference/external-stropharia-rugosoannulata-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Stropharia rugosoannulata",
+          "src": "images/reference/external-stropharia-rugosoannulata-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Stropharia rugosoannulata",
+          "src": "images/reference/external-stropharia-rugosoannulata-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--01--tricholoma-pardinum",
+      "name": "Tricholoma pardinum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma pardinum",
+          "src": "images/reference/tricholoma-pardinum-lateral-162.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma pardinum",
+          "src": "images/reference/tricholoma-pardinum-top-165.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma pardinum",
+          "src": "images/reference/tricholoma-pardinum-underside-161.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "name": "Tricholoma filamentosum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma filamentosum",
+          "src": "images/reference/external-tricholoma-filamentosum-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma filamentosum",
+          "src": "images/reference/external-tricholoma-filamentosum-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma filamentosum",
+          "src": "images/reference/external-tricholoma-filamentosum-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--03--tricholoma-josserandii",
+      "name": "Tricholoma josserandii",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma josserandii",
+          "src": "images/reference/tricholoma-josserandii-lateral-216.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma josserandii",
+          "src": "images/reference/tricholoma-josserandii-top-216.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma josserandii",
+          "src": "images/reference/tricholoma-josserandii-underside-216.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--04--tricholoma-equestre",
+      "name": "Tricholoma equestre",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma equestre s.l.",
+          "src": "images/reference/tricholoma-equestre-top-75.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma equestre s.l.",
+          "src": "images/reference/tricholoma-equestre-underside-75.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma equestre",
+          "src": "images/reference/external-tricholoma-equestre-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
+      "name": "Tricholoma portentosum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma portentosum",
+          "src": "images/reference/tricholoma-portentosum-lateral-211.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma portentosum",
+          "src": "images/reference/tricholoma-portentosum-top-212.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma portentosum",
+          "src": "images/reference/tricholoma-portentosum-underside-208.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "name": "Tricholoma terreum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma terreum",
+          "src": "images/reference/tricholoma-terreum-top-174.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma terreum",
+          "src": "images/reference/tricholoma-terreum-underside-173.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma terreum",
+          "src": "images/reference/external-tricholoma-terreum-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "name": "Tricholoma saponaceum s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma saponaceum s.l.",
+          "src": "images/reference/tricholoma-saponaceum-s-l-lateral-41.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma saponaceum s.l.",
+          "src": "images/reference/tricholoma-saponaceum-s-l-top-36.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma saponaceum s.l.",
+          "src": "images/reference/tricholoma-saponaceum-s-l-underside-42.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
+      "name": "Tricholoma columbetta",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma columbetta",
+          "src": "images/reference/tricholoma-columbetta-lateral-59.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma columbetta",
+          "src": "images/reference/tricholoma-columbetta-top-59.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma columbetta",
+          "src": "images/reference/tricholoma-columbetta-underside-59.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "name": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma gruppo album",
+          "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-lateral-63.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma gruppo album",
+          "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-top-62.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma gruppo album",
+          "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-underside-62.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "name": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma scalpturatum",
+          "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-lateral-180.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma scalpturatum",
+          "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-top-179.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma scalpturatum",
+          "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-underside-182.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "name": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma sciodes",
+          "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-lateral-201.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma bresadolanum",
+          "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-top-204.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma bresadolanum",
+          "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-underside-205.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--12--tricholoma-sejunctum",
+      "name": "Tricholoma sejunctum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma sejunctum",
+          "src": "images/reference/tricholoma-sejunctum-top-45.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma sejunctum",
+          "src": "images/reference/tricholoma-sejunctum-underside-45.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma sejunctum",
+          "src": "images/reference/external-tricholoma-sejunctum-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--13--tricholoma-sulphureum",
+      "name": "Tricholoma sulphureum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma sulphureum",
+          "src": "images/reference/tricholoma-sulphureum-lateral-78.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma sulphureum",
+          "src": "images/reference/tricholoma-sulphureum-top-81.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma sulphureum",
+          "src": "images/reference/tricholoma-sulphureum-underside-81.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "name": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "mixed",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma gruppo Albobrunnei",
+          "src": "images/reference/tricholoma-sez-genuina-gruppo-albobrunnei--top-132.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma gruppo Albobrunnei",
+          "src": "images/reference/tricholoma-sez-genuina-gruppo-albobrunnei--underside-133.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma imbricatum",
+          "src": "images/reference/external-tricholoma-sez-genuina-gruppo-albobrunnei-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "name": "Tricholoma acerbum s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma acerbum s.l.",
+          "src": "images/reference/tricholoma-acerbum-s-l-lateral-104.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma acerbum s.l.",
+          "src": "images/reference/tricholoma-acerbum-s-l-top-105.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma acerbum s.l.",
+          "src": "images/reference/tricholoma-acerbum-s-l-underside-106.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+      "name": "Volvopluteus gloiocephalus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Volvopluteus gloiocephalus",
+          "src": "images/reference/external-volvopluteus-gloiocephalus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Volvopluteus gloiocephalus",
+          "src": "images/reference/external-volvopluteus-gloiocephalus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Volvopluteus gloiocephalus",
+          "src": "images/reference/external-volvopluteus-gloiocephalus-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea",
+      "name": "Volvariella volvacea",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Volvariella volvacea",
+          "src": "images/reference/external-volvariella-volvacea-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Volvariella volvacea",
+          "src": "images/reference/external-volvariella-volvacea-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Volvariella volvacea",
+          "src": "images/reference/external-volvariella-volvacea-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+      "name": "Lactarius sez. Deliciosi",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lactarius deliciosus group (North America)",
+          "src": "images/reference/external-lactarius-sez-deliciosi-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lactarius deliciosus group (North America)",
+          "src": "images/reference/external-lactarius-sez-deliciosi-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lactarius deliciosus group (North America)",
+          "src": "images/reference/external-lactarius-sez-deliciosi-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+      "name": "Lactarius porniniae",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lactarius porninsis",
+          "src": "images/reference/external-lactarius-porniniae-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lactarius porninsis",
+          "src": "images/reference/external-lactarius-porniniae-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lactarius porninsis",
+          "src": "images/reference/external-lactarius-porniniae-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+      "name": "Lactarius volemus s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lactifluus volemus",
+          "src": "images/reference/external-lactarius-volemus-s-l-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lactifluus volemus",
+          "src": "images/reference/external-lactarius-volemus-s-l-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lactifluus volemus",
+          "src": "images/reference/external-lactarius-volemus-s-l-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+      "name": "Lactarius tesquorum",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Lactarius tesquorum",
+          "src": "images/reference/external-lactarius-tesquorum-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lactarius tesquorum",
+          "src": "images/reference/external-lactarius-tesquorum-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lactarius tesquorum",
+          "src": "images/reference/external-lactarius-tesquorum-top.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-russula--01--russula-foetentinae",
+      "name": "Russula Foetentinae",
+      "level": "minimum",
+      "rank": "subsection",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Russula foetens",
+          "src": "images/reference/russula-foetentinae-top-182.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Russula foetens",
+          "src": "images/reference/russula-foetentinae-underside-182.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Russula laurocerasi",
+          "src": "images/reference/external-russula-foetentinae-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
+      "name": "Russula Compactae Nigricantinae",
+      "level": "minimum",
+      "rank": "subsection",
+      "photoCaseAvailable": false,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Russula adusta",
+          "src": "images/reference/russula-nigricantinae-lateral-134.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Russula nigricans",
+          "src": "images/reference/russula-nigricantinae-top-130.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Russula nigricans",
+          "src": "images/reference/russula-nigricantinae-underside-130.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "name": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Russula delica",
+          "src": "images/reference/russula-lactarioides-top-152.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Russula chloroides",
+          "src": "images/reference/russula-lactarioides-underside-156.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Russula delica",
+          "src": "images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l",
+      "name": "Boletus edulis s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Boletus edulis",
+          "src": "images/reference/boletus-edulis-s-l-lateral-40.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Boletus edulis",
+          "src": "images/reference/boletus-edulis-s-l-top-48.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Boletus edulis",
+          "src": "images/reference/boletus-edulis-s-l-underside-44.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "name": "Boletus sez. Luridi",
+      "level": "minimum",
+      "rank": "section",
+      "photoCaseAvailable": false,
+      "edibility": "mixed",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Suillellus luridus",
+          "src": "images/reference/boletus-luridi-lateral-278.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Suillellus luridus",
+          "src": "images/reference/boletus-luridi-top-278.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Suillellus luridus",
+          "src": "images/reference/boletus-luridi-underside-274.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+      "name": "Rubroboletus satanas",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Rubroboletus satanas",
+          "src": "images/reference/rubroboletus-satanas-lateral-305.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Rubroboletus satanas",
+          "src": "images/reference/rubroboletus-satanas-top-305.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Rubroboletus satanas",
+          "src": "images/reference/external-rubroboletus-satanas-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+      "name": "Rubroboletus pulchrotinctus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Rubroboletus pulchrotinctus",
+          "src": "images/reference/rubroboletus-pulchrotinctus-lateral-134.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Rubroboletus pulchrotinctus",
+          "src": "images/reference/external-rubroboletus-pulchrotinctus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Rubroboletus pulchrotinctus",
+          "src": "images/reference/external-rubroboletus-pulchrotinctus-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "name": "Boletus (Neoboletus) erythropus s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Neoboletus erythropus s.l.",
+          "src": "images/reference/boletus-neoboletus-erythropus-s-l--lateral-290.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Neoboletus erythropus s.l.",
+          "src": "images/reference/boletus-neoboletus-erythropus-s-l--top-290.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Neoboletus erythropus s.l.",
+          "src": "images/reference/boletus-neoboletus-erythropus-s-l--underside-290.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "name": "Suillellus luridus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Suillellus luridus",
+          "src": "images/reference/suillellus-luridus-lateral-278.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Suillellus luridus",
+          "src": "images/reference/suillellus-luridus-top-278.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Suillellus luridus",
+          "src": "images/reference/suillellus-luridus-underside-274.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "name": "Boletus queletii e specie vicine/intermedie",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Suillellus queletii",
+          "src": "images/reference/boletus-queletii-e-specie-vicine-intermedie-lateral-286.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Suillellus queletii",
+          "src": "images/reference/boletus-queletii-e-specie-vicine-intermedie-top-286.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Suillellus queletii",
+          "src": "images/reference/boletus-queletii-e-specie-vicine-intermedie-underside-286.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-caloboletus--01--caloboletus-radicans",
+      "name": "Caloboletus radicans",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Caloboletus radicans",
+          "src": "images/reference/caloboletus-radicans-top-205.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Caloboletus radicans",
+          "src": "images/reference/external-caloboletus-radicans-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Caloboletus radicans",
+          "src": "images/reference/external-caloboletus-radicans-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-caloboletus--02--caloboletus-calopus",
+      "name": "Caloboletus calopus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Caloboletus calopus",
+          "src": "images/reference/caloboletus-calopus-lateral-209.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Caloboletus calopus",
+          "src": "images/reference/external-caloboletus-calopus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Caloboletus calopus",
+          "src": "images/reference/external-caloboletus-calopus-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--01--gyroporus-cyanescens",
+      "name": "Gyroporus cyanescens",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Gyroporus cyanescens",
+          "src": "images/reference/gyroporus-cyanescens-top-197.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gyroporus cyanescens",
+          "src": "images/reference/gyroporus-cyanescens-underside-197.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gyroporus cyanescens",
+          "src": "images/reference/external-gyroporus-cyanescens-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "name": "Gyroporus castaneus s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Gyroporus castaneus",
+          "src": "images/reference/gyroporus-castaneus-s-l--top-193.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gyroporus castaneus",
+          "src": "images/reference/gyroporus-castaneus-s-l--underside-193.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gyroporus castaneus",
+          "src": "images/reference/gyroporus-castaneus-s-l--lateral-193.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+      "name": "Hygrophoropsis aurantiaca",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrophoropsis aurantiaca",
+          "src": "images/reference/external-hygrophoropsis-aurantiaca-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrophoropsis aurantiaca",
+          "src": "images/reference/external-hygrophoropsis-aurantiaca-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrophoropsis aurantiaca",
+          "src": "images/reference/external-hygrophoropsis-aurantiaca-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-imleria--01--imleria-badia",
+      "name": "Imleria badia",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Imleria badia",
+          "src": "images/reference/imleria-badia-lateral-194.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Imleria badia",
+          "src": "images/reference/imleria-badia-top-198.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Imleria badia",
+          "src": "images/reference/imleria-badia-underside-198.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus",
+      "name": "Suillus luteus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Suillus luteus",
+          "src": "images/reference/suillus-luteus-top-461.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Suillus luteus",
+          "src": "images/reference/suillus-luteus-underside-461.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Suillus luteus",
+          "src": "images/reference/suillus-luteus-lateral-461.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "name": "Suillus granulatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Suillus granulatus",
+          "src": "images/reference/suillus-granulatus-lateral-334.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Suillus granulatus",
+          "src": "images/reference/suillus-granulatus-top-330.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Suillus granulatus",
+          "src": "images/reference/suillus-granulatus-underside-330.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "name": "Tylopilus felleus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "inedible",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tylopilus felleus",
+          "src": "images/reference/tylopilus-felleus-top-546.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tylopilus felleus",
+          "src": "images/reference/tylopilus-felleus-underside-546.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tylopilus felleus",
+          "src": "images/reference/tylopilus-felleus-lateral-547.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "name": "Cantharellus cibarius complex",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cantharellus cibarius",
+          "src": "images/reference/cantharellus-cibarius-complex-lateral-456.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cantharellus cibarius",
+          "src": "images/reference/cantharellus-cibarius-complex-top-456.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cantharellus cibarius",
+          "src": "images/reference/cantharellus-cibarius-complex-underside-456.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-craterellus--01--craterellus-lutescens",
+      "name": "Craterellus lutescens",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Craterellus lutescens",
+          "src": "images/reference/external-craterellus-lutescens-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Craterellus lutescens",
+          "src": "images/reference/external-craterellus-lutescens-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Craterellus lutescens",
+          "src": "images/reference/external-craterellus-lutescens-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-craterellus--02--craterellus-tubaeformis",
+      "name": "Craterellus tubaeformis",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Craterellus tubaeformis",
+          "src": "images/reference/external-craterellus-tubaeformis-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Craterellus tubaeformis",
+          "src": "images/reference/external-craterellus-tubaeformis-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Craterellus tubaeformis",
+          "src": "images/reference/external-craterellus-tubaeformis-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "name": "Craterellus cornucopioides",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Craterellus cornucopioides",
+          "src": "images/reference/external-craterellus-cornucopioides-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Craterellus cornucopioides",
+          "src": "images/reference/external-craterellus-cornucopioides-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Craterellus cornucopioides",
+          "src": "images/reference/external-craterellus-cornucopioides-top.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-gomphus--01--gomphus-clavatus",
+      "name": "Gomphus clavatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gomphus clavatus",
+          "src": "images/reference/external-gomphus-clavatus-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gomphus clavatus",
+          "src": "images/reference/external-gomphus-clavatus-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Gomphus clavatus",
+          "src": "images/reference/external-gomphus-clavatus-top.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "name": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hydnum repandum",
+          "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--lateral-214.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hydnum repandum",
+          "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--top-214.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hydnum repandum",
+          "src": "images/reference/hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens--underside-295.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
+      "name": "Hericium spp.",
+      "level": "minimum",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hericium erinaceus",
+          "src": "images/reference/external-hericium-spp-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hericium erinaceus",
+          "src": "images/reference/external-hericium-spp-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hericium coralloides",
+          "src": "images/reference/external-hericium-spp-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+      "name": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Sarcodon imbricatus",
+          "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Sarcodon imbricatus",
+          "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Sarcodon imbricatus",
+          "src": "images/reference/external-sarcodon-imbricatus-s-l-incl-s-squamosus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+      "name": "Hapalopilus rutilans",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Hapalopilus rutilans",
+          "src": "images/reference/hapalopilus-rutilans-top-379.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hapalopilus rutilans",
+          "src": "images/reference/external-hapalopilus-rutilans-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hapalopilus rutilans",
+          "src": "images/reference/external-hapalopilus-rutilans-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "name": "Laetiporus sulphureus s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "conditional",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Laetiporus sulphureus s.l.",
+          "src": "images/reference/laetiporus-sulphureus-s-l--top-217.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Laetiporus sulphureus s.l.",
+          "src": "images/reference/laetiporus-sulphureus-s-l--lateral-217.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Laetiporus sulphureus",
+          "src": "images/reference/external-laetiporus-sulphureus-s-l-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--03--albatrellus-confluens",
+      "name": "Albatrellopsis confluens",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Albatrellus confluens",
+          "src": "images/reference/external-albatrellopsis-confluens-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Albatrellus confluens",
+          "src": "images/reference/external-albatrellopsis-confluens-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Albatrellus confluens",
+          "src": "images/reference/external-albatrellopsis-confluens-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "name": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Albatrellus subrubescens",
+          "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--lateral-475.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Albatrellus subrubescens",
+          "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--top-476.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Albatrellus subrubescens",
+          "src": "images/reference/albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus--underside-477.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "name": "Scutiger pes-caprae",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Scutiger pes-caprae",
+          "src": "images/reference/external-scutiger-pes-caprae-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Scutiger pes-caprae",
+          "src": "images/reference/external-scutiger-pes-caprae-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Scutiger pes-caprae",
+          "src": "images/reference/external-scutiger-pes-caprae-lateral.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "name": "Fistulina hepatica",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Fistulina hepatica",
+          "src": "images/reference/external-fistulina-hepatica-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Fistulina hepatica",
+          "src": "images/reference/external-fistulina-hepatica-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Fistulina hepatica",
+          "src": "images/reference/external-fistulina-hepatica-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--07--grifola-frondosa",
+      "name": "Grifola frondosa",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Grifola frondosa",
+          "src": "images/reference/external-grifola-frondosa-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Grifola frondosa",
+          "src": "images/reference/external-grifola-frondosa-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Grifola frondosa",
+          "src": "images/reference/external-grifola-frondosa-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--08--polyporus-umbellatus",
+      "name": "Polyporus umbellatus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Polyporus umbellatus",
+          "src": "images/reference/external-polyporus-umbellatus-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Polyporus umbellatus",
+          "src": "images/reference/external-polyporus-umbellatus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Polyporus umbellatus",
+          "src": "images/reference/external-polyporus-umbellatus-top.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--09--meripilus-giganteus",
+      "name": "Meripilus giganteus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Meripilus giganteus",
+          "src": "images/reference/external-meripilus-giganteus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Meripilus giganteus",
+          "src": "images/reference/external-meripilus-giganteus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Meripilus giganteus",
+          "src": "images/reference/external-meripilus-giganteus-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--10--polyporus-squamosus",
+      "name": "Cerioporus squamosus",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cerioporus squamosus",
+          "src": "images/reference/cerioporus-squamosus-lateral-151.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cerioporus squamosus",
+          "src": "images/reference/cerioporus-squamosus-top-151.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cerioporus squamosus",
+          "src": "images/reference/cerioporus-squamosus-underside-151.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-ramaria--01--ramaria-formosa",
+      "name": "Ramaria formosa",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Ramaria formosa",
+          "src": "images/reference/ramaria-formosa-lateral-303.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Ramaria formosa",
+          "src": "images/reference/external-ramaria-formosa-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-ramaria--02--ramaria-pallida",
+      "name": "Ramaria pallida",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": false,
+      "edibility": "toxic",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Ramaria pallida",
+          "src": "images/reference/external-ramaria-pallida-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Ramaria pallida",
+          "src": "images/reference/external-ramaria-pallida-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "name": "Ramaria botrytis s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Ramaria botrytis coll.",
+          "src": "images/reference/external-ramaria-botrytis-s-l-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Ramaria botrytis coll.",
+          "src": "images/reference/external-ramaria-botrytis-s-l-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-auricularia--01--auricularia-auricula-judae",
+      "name": "Auricularia auricula-judae",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "free",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Auricularia auricula-judae",
+          "src": "images/reference/auricularia-auricula-judae-lateral-306.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Auricularia auricula-judae",
+          "src": "images/reference/external-auricularia-auricula-judae-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Auricularia auricula-judae",
+          "src": "images/reference/external-auricularia-auricula-judae-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "name": "Gyromitra esculenta",
+      "level": "minimum",
+      "rank": "species",
+      "photoCaseAvailable": true,
+      "edibility": "deadly",
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gyromitra esculenta",
+          "src": "images/reference/gyromitra-esculenta-lateral-720.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Gyromitra esculenta",
+          "src": "images/reference/external-gyromitra-esculenta-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gyromitra esculenta",
+          "src": "images/reference/external-gyromitra-esculenta-underside.jpg"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "name": "Sarcosphaera coronaria s.l.",
+      "level": "minimum",
+      "rank": "speciesGroup",
+      "photoCaseAvailable": false,
+      "edibility": "discouraged",
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Sarcosphaera coronaria",
+          "src": "images/reference/sarcosphaera-coronaria-s-l--top-44.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Sarcosphaera coronaria",
+          "src": "images/reference/external-sarcosphaera-coronaria-s-l-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Sarcosphaera coronaria",
+          "src": "images/reference/external-sarcosphaera-coronaria-s-l-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-agaricus",
+      "name": "Agaricus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Agaricus campestris",
+          "src": "images/reference/agaricus-lateral-64.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Agaricus campestris",
+          "src": "images/reference/agaricus-top-64.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Agaricus campestris",
+          "src": "images/reference/agaricus-underside-64.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-agrocybe-cyclocybe",
+      "name": "Agrocybe + Cyclocybe",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cyclocybe cylindracea",
+          "src": "images/reference/agrocybe-cyclocybe-lateral-103.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cyclocybe cylindracea",
+          "src": "images/reference/agrocybe-cyclocybe-top-98.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cyclocybe cylindracea",
+          "src": "images/reference/external-agrocybe-cyclocybe-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-amanita",
+      "name": "Amanita",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Amanita rubescens",
+          "src": "images/reference/amanita-lateral-249.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Amanita rubescens",
+          "src": "images/reference/amanita-underside-250.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Amanita rubescens",
+          "src": "images/reference/amanita-top-254.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-armillaria-desarmillaria",
+      "name": "Armillaria + Desarmillaria",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Armillaria ostoyae",
+          "src": "images/reference/armillaria-desarmillaria-lateral-161.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Armillaria mellea",
+          "src": "images/reference/armillaria-desarmillaria-top-153.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Armillaria ostoyae",
+          "src": "images/reference/armillaria-desarmillaria-underside-161.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-calocybe",
+      "name": "Calocybe",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Calocybe gambosa",
+          "src": "images/reference/calocybe-genere-lateral-277.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Calocybe gambosa",
+          "src": "images/reference/calocybe-genere-top-277.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Calocybe gambosa",
+          "src": "images/reference/calocybe-genere-underside-277.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "name": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Clitocybe nebularis",
+          "src": "images/reference/clitocybe-genere-lateral-241.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Clitocybe nebularis",
+          "src": "images/reference/clitocybe-genere-top-237.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Clitocybe nebularis",
+          "src": "images/reference/clitocybe-genere-underside-241.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-clitopilus",
+      "name": "Clitopilus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Clitopilus prunulus",
+          "src": "images/reference/external-clitopilus-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Clitopilus prunulus",
+          "src": "images/reference/external-clitopilus-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Clitopilus prunulus",
+          "src": "images/reference/external-clitopilus-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "name": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Marasmius oreades",
+          "src": "images/reference/collybioidi-marasmioidi-lateral-55.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Marasmius oreades",
+          "src": "images/reference/collybioidi-marasmioidi-top-51.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Marasmius oreades",
+          "src": "images/reference/collybioidi-marasmioidi-underside-55.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "name": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Coprinopsis atramentaria",
+          "src": "images/reference/coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-e-lateral-340.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Coprinopsis atramentaria",
+          "src": "images/reference/external-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Coprinopsis atramentaria",
+          "src": "images/reference/external-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-cortinarius",
+      "name": "Cortinarius",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cortinarius caperatus",
+          "src": "images/reference/cortinarius-lateral-32.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cortinarius caperatus",
+          "src": "images/reference/cortinarius-top-32.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cortinarius caperatus",
+          "src": "images/reference/cortinarius-underside-32.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-entoloma",
+      "name": "Entoloma",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Entoloma hirtipes",
+          "src": "images/reference/external-entoloma-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Entoloma hirtipes",
+          "src": "images/reference/external-entoloma-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Entoloma hirtipes",
+          "src": "images/reference/external-entoloma-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-flammulina",
+      "name": "Flammulina",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Flammulina velutipes",
+          "src": "images/reference/flammulina-genere-lateral-149.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Flammulina velutipes",
+          "src": "images/reference/flammulina-genere-top-149.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Flammulina velutipes",
+          "src": "images/reference/flammulina-genere-underside-149.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-galerina",
+      "name": "Galerina",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Galerina marginata",
+          "src": "images/reference/galerina-genere-top-370.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Galerina marginata",
+          "src": "images/reference/galerina-genere-underside-370.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Galerina marginata",
+          "src": "images/reference/external-galerina-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-hebeloma",
+      "name": "Hebeloma",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hebeloma incarnatulum",
+          "src": "images/reference/external-hebeloma-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hebeloma incarnatulum",
+          "src": "images/reference/external-hebeloma-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hebeloma mesophaeum",
+          "src": "images/reference/external-hebeloma-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "name": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrocybe punicea",
+          "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrocybe punicea",
+          "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrocybe punicea",
+          "src": "images/reference/external-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-hygrophorus-cuphophyllus",
+      "name": "Hygrophorus + Cuphophyllus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrophorus marzuolus",
+          "src": "images/reference/hygrophorus-cuphophyllus-lateral-85.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrophorus marzuolus",
+          "src": "images/reference/hygrophorus-cuphophyllus-top-85.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrophorus marzuolus",
+          "src": "images/reference/hygrophorus-cuphophyllus-underside-82.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-hypholoma",
+      "name": "Hypholoma",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hypholoma lateritium",
+          "src": "images/reference/hypholoma-genere-lateral-111.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hypholoma lateritium",
+          "src": "images/reference/hypholoma-genere-top-111.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hypholoma lateritium",
+          "src": "images/reference/hypholoma-genere-underside-111.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "name": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Inocybe rimosa",
+          "src": "images/reference/inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma--lateral-245.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Inocybe rimosa",
+          "src": "images/reference/inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma--top-245.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Inocybe rimosa",
+          "src": "images/reference/inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma--underside-245.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-laccaria",
+      "name": "Laccaria",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Laccaria amethystina",
+          "src": "images/reference/laccaria-genere-lateral-376.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Laccaria amethystina",
+          "src": "images/reference/laccaria-genere-top-380.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Laccaria amethystina",
+          "src": "images/reference/laccaria-genere-underside-376.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-lentinula",
+      "name": "Lentinula",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lentinula edodes",
+          "src": "images/reference/lentinula-lateral-173.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lentinula edodes",
+          "src": "images/reference/lentinula-top-173.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lentinula edodes",
+          "src": "images/reference/external-lentinula-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "name": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepiota brunneoincarnata",
+          "src": "images/reference/lepiotoidi-lateral-369.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepiota brunneoincarnata",
+          "src": "images/reference/lepiotoidi-top-369.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepiota brunneoincarnata",
+          "src": "images/reference/lepiotoidi-underside-369.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-lepista",
+      "name": "Lepista",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lepista nuda",
+          "src": "images/reference/lepista-genere-lateral-318.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lepista nuda",
+          "src": "images/reference/lepista-genere-top-318.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lepista nuda",
+          "src": "images/reference/lepista-genere-underside-318.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+      "name": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leucopaxillus giganteus",
+          "src": "images/reference/leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-lateral-346.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Leucopaxillus giganteus",
+          "src": "images/reference/leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-top-346.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leucopaxillus giganteus",
+          "src": "images/reference/leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-underside-350.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-limacella-inclusi-limacellopsis-zhuliangomyces",
+      "name": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Limacella furnacea",
+          "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Limacella furnacea",
+          "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Limacella furnacea",
+          "src": "images/reference/external-limacella-inclusi-limacellopsis-zhuliangomyces-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "name": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lyophyllum decastes s.l.",
+          "src": "images/reference/lyophyllum-genere-lateral-303.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lyophyllum decastes s.l.",
+          "src": "images/reference/lyophyllum-genere-top-303.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lyophyllum decastes s.l.",
+          "src": "images/reference/lyophyllum-genere-underside-303.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-melanoleuca",
+      "name": "Melanoleuca",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Melanoleuca cognata",
+          "src": "images/reference/melanoleuca-genere-lateral-368.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Melanoleuca cognata",
+          "src": "images/reference/melanoleuca-genere-top-368.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Melanoleuca cognata",
+          "src": "images/reference/melanoleuca-genere-underside-368.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-mycena",
+      "name": "Mycena",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Mycena pura",
+          "src": "images/reference/mycena-genere-lateral-126.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Mycena pura",
+          "src": "images/reference/mycena-genere-top-126.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Mycena pura",
+          "src": "images/reference/mycena-genere-underside-126.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-omphalotus",
+      "name": "Omphalotus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Omphalotus olearius",
+          "src": "images/reference/omphalotus-genere-lateral-177.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Omphalotus olearius",
+          "src": "images/reference/omphalotus-genere-top-177.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Omphalotus olearius",
+          "src": "images/reference/omphalotus-genere-underside-177.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+      "name": "Panaeolus (inclusi Copelandia, Panaeolina)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Panaeolus cyanescens",
+          "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Panaeolus cyanescens",
+          "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Panaeolus cyanescens",
+          "src": "images/reference/external-panaeolus-inclusi-copelandia-panaeolina-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "name": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Kuehneromyces mutabilis",
+          "src": "images/reference/pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--lateral-121.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Kuehneromyces mutabilis",
+          "src": "images/reference/external-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Kuehneromyces mutabilis",
+          "src": "images/reference/external-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "name": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Pleurotus citrinopileatus",
+          "src": "images/reference/pleurotus-genere-lateral-129.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Pleurotus citrinopileatus",
+          "src": "images/reference/pleurotus-genere-top-132.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Pleurotus citrinopileatus",
+          "src": "images/reference/pleurotus-genere-underside-132.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-pluteus",
+      "name": "Pluteus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Pluteus conformis",
+          "src": "images/reference/external-pluteus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Pluteus conformis",
+          "src": "images/reference/external-pluteus-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Pluteus cervinus",
+          "src": "images/reference/external-pluteus-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-la",
+      "name": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Psathyrella candolleana",
+          "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Psathyrella candolleana",
+          "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Psathyrella squarrosa",
+          "src": "images/reference/external-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-lacrymaria-olotia-typhrasa-e-coprinopsis-melanthina-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-psilocybe-s-l-incluso-deconica",
+      "name": "Psilocybe s.l. (incluso Deconica)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Psilocybe striata",
+          "src": "images/reference/external-psilocybe-s-l-incluso-deconica-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Psilocybe striata",
+          "src": "images/reference/external-psilocybe-s-l-incluso-deconica-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Psilocybe striata",
+          "src": "images/reference/external-psilocybe-s-l-incluso-deconica-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+      "name": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Stropharia aeruginosa",
+          "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Stropharia aeruginosa",
+          "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Stropharia aeruginosa",
+          "src": "images/reference/external-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-tricholoma",
+      "name": "Tricholoma",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tricholoma saponaceum s.l.",
+          "src": "images/reference/tricholoma-lateral-41.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Tricholoma saponaceum s.l.",
+          "src": "images/reference/tricholoma-top-36.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tricholoma saponaceum s.l.",
+          "src": "images/reference/tricholoma-underside-42.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-volvariella-volvopluteus",
+      "name": "Volvariella + Volvopluteus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Volvariella volvacea",
+          "src": "images/reference/external-volvariella-volvopluteus-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Volvariella volvacea",
+          "src": "images/reference/external-volvariella-volvopluteus-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Volvopluteus gloiocephalus",
+          "src": "images/reference/external-volvariella-volvopluteus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-lactarius-incluso-lactifluus",
+      "name": "Lactarius (incluso Lactifluus)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Lactarius deliciosus group (North America)",
+          "src": "images/reference/external-lactarius-incluso-lactifluus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Lactarius deliciosus group (North America)",
+          "src": "images/reference/external-lactarius-incluso-lactifluus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Lactarius deliciosus group (North America)",
+          "src": "images/reference/external-lactarius-incluso-lactifluus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-russula",
+      "name": "Russula",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Russula delica",
+          "src": "images/reference/russula-genere-top-152.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Russula chloroides",
+          "src": "images/reference/russula-genere-underside-156.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Russula laurocerasi",
+          "src": "images/reference/external-russula-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-boletus-s-str",
+      "name": "Boletus s. str.",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Boletus edulis",
+          "src": "images/reference/boletus-s-str-lateral-40.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Boletus edulis",
+          "src": "images/reference/boletus-s-str-top-48.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Boletus edulis",
+          "src": "images/reference/boletus-s-str-underside-44.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-butyriboletus",
+      "name": "Butyriboletus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Butyriboletus fechtneri",
+          "src": "images/reference/butyriboletus-lateral-213.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Butyriboletus regius",
+          "src": "images/reference/butyriboletus-top-221.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Butyriboletus appendiculatus",
+          "src": "images/reference/butyriboletus-underside-217.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-caloboletus",
+      "name": "Caloboletus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Caloboletus calopus",
+          "src": "images/reference/caloboletus-lateral-209.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Caloboletus radicans",
+          "src": "images/reference/caloboletus-top-205.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Caloboletus radicans",
+          "src": "images/reference/external-caloboletus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-chroogomphus",
+      "name": "Chroogomphus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Chroogomphus pakistanicus",
+          "src": "images/reference/external-chroogomphus-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Chroogomphus pakistanicus",
+          "src": "images/reference/external-chroogomphus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Chroogomphus rutilus",
+          "src": "images/reference/external-chroogomphus-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-gomphidius",
+      "name": "Gomphidius",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "underside",
+          "subjectTaxon": "Gomphidius glutinosus",
+          "src": "images/reference/external-gomphidius-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Gomphidius glutinosus",
+          "src": "images/reference/external-gomphidius-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gomphidius glutinosus",
+          "src": "images/reference/external-gomphidius-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-gyroporus",
+      "name": "Gyroporus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Gyroporus castaneus",
+          "src": "images/reference/gyroporus-top-193.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gyroporus castaneus",
+          "src": "images/reference/gyroporus-underside-193.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gyroporus castaneus",
+          "src": "images/reference/gyroporus-lateral-193.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-hemileccinum",
+      "name": "Hemileccinum",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hemileccinum depilatum",
+          "src": "images/reference/hemileccinum-lateral-183.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hemileccinum impolitum",
+          "src": "images/reference/hemileccinum-top-179.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hemileccinum impolitum",
+          "src": "images/reference/hemileccinum-underside-179.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-hygrophoropsis",
+      "name": "Hygrophoropsis",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Hygrophoropsis aurantiaca",
+          "src": "images/reference/external-hygrophoropsis-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Hygrophoropsis aurantiaca",
+          "src": "images/reference/external-hygrophoropsis-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Hygrophoropsis aurantiaca",
+          "src": "images/reference/external-hygrophoropsis-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-imleria",
+      "name": "Imleria",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Imleria badia",
+          "src": "images/reference/imleria-lateral-194.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Imleria badia",
+          "src": "images/reference/imleria-top-198.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Imleria badia",
+          "src": "images/reference/imleria-underside-198.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-leccinellum",
+      "name": "Leccinellum",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leccinellum crocipodium",
+          "src": "images/reference/leccinellum-lateral-369.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Leccinellum corsicum",
+          "src": "images/reference/leccinellum-top-365.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leccinellum corsicum",
+          "src": "images/reference/leccinellum-underside-365.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-leccinum",
+      "name": "Leccinum",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Leccinum duriusculum",
+          "src": "images/reference/leccinum-lateral-381.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Leccinum duriusculum",
+          "src": "images/reference/leccinum-top-381.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Leccinum duriusculum",
+          "src": "images/reference/leccinum-underside-381.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-paxillus",
+      "name": "Paxillus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Paxillus involutus s.l.",
+          "src": "images/reference/paxillus-lateral-348.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Paxillus involutus s.l.",
+          "src": "images/reference/paxillus-top-348.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Paxillus involutus s.l.",
+          "src": "images/reference/paxillus-underside-348.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-suillus-incluso-boletinus",
+      "name": "Suillus (incluso Boletinus)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Suillus granulatus",
+          "src": "images/reference/suillus-incluso-boletinus-lateral-334.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Suillus granulatus",
+          "src": "images/reference/suillus-incluso-boletinus-top-330.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Suillus granulatus",
+          "src": "images/reference/suillus-incluso-boletinus-underside-330.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-tylopilus",
+      "name": "Tylopilus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Tylopilus felleus",
+          "src": "images/reference/tylopilus-top-546.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Tylopilus felleus",
+          "src": "images/reference/tylopilus-underside-546.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Tylopilus felleus",
+          "src": "images/reference/tylopilus-lateral-547.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbaribo",
+      "name": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Xerocomus pruinatus",
+          "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-lateral-172.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Xerocomus subtomentosus",
+          "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-top-164.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Xerocomus ferrugineus",
+          "src": "images/reference/xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbariboletus-xerocomellus-underside-168.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-cantharellus",
+      "name": "Cantharellus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Cantharellus cibarius",
+          "src": "images/reference/cantharellus-cibarius-genere-lateral-456.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Cantharellus cibarius",
+          "src": "images/reference/cantharellus-cibarius-genere-top-456.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Cantharellus cibarius",
+          "src": "images/reference/cantharellus-cibarius-genere-underside-456.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-craterellus",
+      "name": "Craterellus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Craterellus lutescens",
+          "src": "images/reference/external-craterellus-lateral.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Craterellus lutescens",
+          "src": "images/reference/external-craterellus-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Craterellus lutescens",
+          "src": "images/reference/external-craterellus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-gomphus",
+      "name": "Gomphus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gomphus clavatus",
+          "src": "images/reference/external-gomphus-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gomphus clavatus",
+          "src": "images/reference/external-gomphus-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Gomphus clavatus",
+          "src": "images/reference/external-gomphus-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-ramaria",
+      "name": "Ramaria",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Ramaria formosa",
+          "src": "images/reference/ramaria-lateral-303.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Ramaria luteoliparva",
+          "src": "images/reference/external-ramaria-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-pisolithus",
+      "name": "Pisolithus",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Pisolithus albus",
+          "src": "images/reference/external-pisolithus-top.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Pisolithus albus",
+          "src": "images/reference/external-pisolithus-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Pisolithus albus",
+          "src": "images/reference/external-pisolithus-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-scleroderma",
+      "name": "Scleroderma",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Scleroderma spp.",
+          "src": "images/reference/scleroderma-top-142.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Scleroderma verrucosum",
+          "src": "images/reference/external-scleroderma-lateral.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Scleroderma citrinum",
+          "src": "images/reference/external-scleroderma-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-auricularia",
+      "name": "Auricularia",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Auricularia auricula-judae",
+          "src": "images/reference/auricularia-lateral-306.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Auricularia auricula-judae",
+          "src": "images/reference/external-auricularia-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Auricularia auricula-judae",
+          "src": "images/reference/external-auricularia-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-gyromitra-incluso-discina",
+      "name": "Gyromitra (incluso Discina)",
+      "level": "extended",
+      "rank": "operationalGroup",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Gyromitra esculenta",
+          "src": "images/reference/gyromitra-genere-lateral-720.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Gyromitra esculenta",
+          "src": "images/reference/external-gyromitra-incluso-discina-top.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Gyromitra esculenta",
+          "src": "images/reference/external-gyromitra-incluso-discina-underside.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-helvella",
+      "name": "Helvella",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Helvella spadicea",
+          "src": "images/reference/helvella-lateral-296.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Helvella orentitomentosa",
+          "src": "images/reference/external-helvella-underside.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Helvella orentitomentosa",
+          "src": "images/reference/external-helvella-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-morchella",
+      "name": "Morchella",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Morchella esculenta s.l.",
+          "src": "images/reference/morchella-genere-lateral-718.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Morchella esculenta",
+          "src": "images/reference/external-morchella-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-sarcosphaera",
+      "name": "Sarcosphaera",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "top",
+          "subjectTaxon": "Sarcosphaera sp.",
+          "src": "images/reference/sarcosphaera-top-128.jpg"
+        },
+        {
+          "view": "underside",
+          "subjectTaxon": "Sarcosphaera coronaria",
+          "src": "images/reference/external-sarcosphaera-underside.jpg"
+        },
+        {
+          "view": "lateral",
+          "subjectTaxon": "Sarcosphaera coronaria",
+          "src": "images/reference/external-sarcosphaera-lateral.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    },
+    {
+      "id": "minimum-genus-card-verpa",
+      "name": "Verpa",
+      "level": "extended",
+      "rank": "genus",
+      "photoCaseAvailable": false,
+      "edibility": null,
+      "images": [
+        {
+          "view": "lateral",
+          "subjectTaxon": "Verpa conica",
+          "src": "images/reference/verpa-lateral-19.jpg"
+        },
+        {
+          "view": "top",
+          "subjectTaxon": "Verpa bohemica",
+          "src": "images/reference/external-verpa-top.jpg"
+        }
+      ],
+      "unresolved": [
+        "missing-authenticated-photographic-exam-case"
+      ]
+    }
+  ]
+}
