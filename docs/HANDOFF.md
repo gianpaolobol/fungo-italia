@@ -1,5 +1,13 @@
 # Handoff corrente
 
+## Qualificazione runtime alternativo — 22 ottobre 2026
+
+PR115: il run39777450999 ha confermato che il download esplicito26.6 è assente e il default Xcode26.6 esporta26.5(23F77); entrambi i job iPad falliti prima dell'app, log/inventario preservati. Documentazione ufficiale GitHub: https://github.com/actions/runner-images/issues/14404 e `images/macos/xcode-27-arm64-Readme.md`: runner **xcode-27**, Xcode27.0(27A266a), alias `/Applications/Xcode_27.0.app`, runtime iOS27.0 preinstallato. Si qualifica questa combinazione, senza affermarne l'idoneità prima degli esiti reali.
+
+I quattro workflow test (startup, native StoreKit, acquisti UI, demo) sono vincolati a questa coppia. Provisioning accetta solo le versioni esplicitamente ammesse26.6/27.0 e deve trovare quella richiesta esatta; nessun runtime vecchio o futuro scelto implicitamente. I tre workflow obbligatori sono eseguiti anche nelle PR che modificano il provisioning. Nessuna modifica al binario o al verificatore transazioni; build/upload TestFlight resta separata dalla qualifica dei simulatori. Verifiche locali182test Node e TypeScript riusciti, shell/YAML validi;3nuove regressioni fallite prima della modifica. Esiti CI da registrare nella PR115 prima di merge.
+
+Lettura Apple autenticata2026-10-22T12:20:46Z (run39664667124, job119820241511):1.1.0(16) `VALID`, non scaduta; sorgente `d08affd456f74a6126f8e027bd3184b0e1425e05` nelle ricevute firmate. Non confondere con il candidato della PR. Store listing1.0 ancora `REJECTED` con build9. Gate editoriale strict ancora exit1,148record bloccati,0revisioni indipendenti. Nessuna readiness production attestata.
+
 ## Diagnosi runtime StoreKit — 22 ottobre 2026
 
 - Esecuzione richiesta: **#5, run39775660780**, SHA `f05314e740bcccdfdbbb8708a734c86effbf45bc`. Job originari: `ipad-baseline`119815772705 e `ipad-without-updates`119815772284. Entrambi falliscono nel provisioning: `iOS 26.6 is not available for download.` App e test StoreKit non avviati; nessun artefatto xcresult prodotto. Stato iniziale del run cancellato da esecuzioni successive.

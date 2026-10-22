@@ -6,11 +6,12 @@ concurrency:
   cancel-in-progress: true
 jobs:
   verify:
-    runs-on: macos-26
+    runs-on: xcode-27
     timeout-minutes: 45
     env:
+      STOREKIT_RUNTIME_VERSION: '27.0'
       CI: '1'
-      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
     steps:
     - uses: actions/checkout@v4
@@ -71,6 +72,13 @@ jobs:
           '
         retention-days: 30
 'on':
+  pull_request:
+    paths:
+      - scripts/prepare-storekit-runtime*
+      - .github/workflows/subscription-entitlement-probe.yml
+      - .github/workflows/subscription-storekit-tests.yml
+      - .github/workflows/subscription-storekit-ui.yml
+      - .github/workflows/agaricus-demo-ui.yml
   push:
     branches:
     - main

@@ -26,11 +26,12 @@ jobs:
       fail-fast: false
       matrix:
         mode: [baseline, without-updates]
-    runs-on: macos-26
+    runs-on: xcode-27
     timeout-minutes: 60
     env:
+      STOREKIT_RUNTIME_VERSION: '27.0'
       CI: '1'
-      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
       NODE_OPTIONS: --max-old-space-size=6144
       FUNGO_STOREKIT_PROBE_MODE: ${{ matrix.mode }}
     steps:
