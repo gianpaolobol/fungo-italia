@@ -40,6 +40,25 @@ final class AnnualPurchaseUITests: XCTestCase {
     }
     return await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: predicate, object: item)], timeout: 120) == .completed
   }
+  @MainActor func enterAndConfirm(_ text: String, into field: XCUIElement, file: StaticString = #filePath, line: UInt = #line) async {
+    // XCTest's bulk typing lost characters while the controlled RN field
+    // reconciled its value ("Aita caesarea" instead of "Amanita caesarea").
+    // Confirm each real keyboard input before sending the next one.
+    var expected = ""
+    field.tap()
+    for character in text {
+      field.typeText(String(character))
+      expected.append(character)
+      let predicate = NSPredicate(format: "value == %@", expected)
+      let result = await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(predicate: predicate, object: field)], timeout: 10)
+      guard result == .completed else {
+        XCTFail("Search input differs from typed query: expected \(expected), received \(String(describing: field.value))", file: file, line: line)
+        return
+      }
+    }
+    XCTAssertEqual(field.value as? String, text, file: file, line: line)
+    field.typeText("\n")
+  }
   @MainActor func diagnose(_ app: XCUIApplication, _ session: SKTestSession) {
     print("PURCHASE_VISIBLE_TEXT " + String(describing: app.staticTexts.allElementsBoundByIndex.map { $0.label }))
     print("PURCHASE_BUTTONS " + String(describing: app.buttons.allElementsBoundByIndex.map { $0.label }))
@@ -175,7 +194,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Studio")
     let search = element(app, "Cerca nome scientifico, comune o sinonimo")
     await require(search)
-    search.tap(); search.typeText("Amanita caesarea")
+    await enterAndConfirm("Amanita caesarea", into: search)
     await tap(app, "Apri Amanita caesarea")
     try capture(app, "01-studio")
     await tap(app, "Torna alle schede")

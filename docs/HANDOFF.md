@@ -1,5 +1,11 @@
 # Handoff corrente
 
+## Digitazione controllata del test UI — 22 ottobre 2026
+
+Sul candidato2b79637: StoreKit nativo **PASS** (3,254s), startupbaseline **PASS** (`ready=true transactions=0`,46,533s), without-updates **PASS**, demo iPhone/iPad **PASS**. UI iPhone119855236120: acquisto nativo verificato e entitlementactive=true; riapertura e ripristino confermanoactive=true. Fallisce poi alla riga179, prima di rimborso/scadenza, perché la tastiera XCTest ha inserito **Aita caesarea**, non Amanita caesarea (AXtree completo in artefatto12430343916). La ricerca mostra correttamente0schede; il taxon esiste nel catalogominimo, feedfalse.
+
+Il test ora invia i caratteri con tastiera reale, aspettando l'esatto valoreprefix dopo ogni carattere (deadline10s); fallisce esplicitamente al primo disallineamento, controlla infine l'intera query e chiude la tastiera. Nessun acquisto/entitlement/assert sul ciclo rimosso. Solo l'automatismo PR della diagnostica senzaacquisti, introdotto durante l'indagine, è ritirato: manuale e pushmain restano, entrambe le modalità sono già superate sullo stesso codiceapp. Rimangono automatici nellePR i5job obbligatori: nativeStoreKit, UIiPhone/iPad, demoiPhone/iPad; si evita che2diagnostiche opzionali occupino slot davanti ai testacquisti. Nuovi esiti finali da leggere nella PR115.188testNode/TypeScript e YAML locali **PASS**.
+
 ## Risposta tardiva prezzo StoreKit — 22 ottobre 2026
 
 Su76051a4/iOS26.2: run39783622705 native StoreKit **PASS** (test3,881s); run39783622793 baseline **PASS** (`ready=true transactions=0`,21,585s), without-updates **PASS** (31,186s); demo iPhone119841970311 **PASS**. Nessun difetto di runtime nei percorsi completati.

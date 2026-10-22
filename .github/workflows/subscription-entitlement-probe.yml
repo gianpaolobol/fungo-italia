@@ -1,11 +1,6 @@
 name: Diagnose StoreKit entitlement startup
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - .github/workflows/subscription-entitlement-probe.yml
-      - scripts/prepare-storekit-runtime.sh
-      - scripts/prepare-storekit-runtime.test.mjs
   push:
     branches: [main, feat/percorso-parity-subscriptions-20261021]
     paths:
