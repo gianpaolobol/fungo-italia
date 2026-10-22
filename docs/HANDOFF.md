@@ -1,3 +1,19 @@
+# Verifica operativa del 22 ottobre 2026 — Work
+
+Candidato main: `d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34`. [Report completo](IOS-RELEASE-AUDIT-2026-10-22.md). Questo aggiornamento è documentale: non è una nuova release applicativa.
+
+- Prove **push su main** riuscite: StoreKit nativo `39807794256`; UI acquisti iPhone/iPad `39807794269`; demo iPhone/iPad `39807794237`. Non sono i vecchi run della PR115.
+- Run manuale TestFlight recuperato nel browser: **39809526311**, in coda al push **39807794183**, stesso SHA. L'ultimo controllo vede ancora il job source nei download delle dipendenze Playwright; beta, upload e disponibilità del nuovo binario non attestati.
+- Locale: TypeScript,188 test Node, rigenerazione senza drift ed export iOS riusciti. Gate editoriale strict: exit1,148record bloccati,0revisioni indipendenti.
+- Audit Apple readonly avviato e riuscito: `39811751393`, job `119939578200`. Apple1.1.0(16) VALID, ancora il candidato precedente; browser conferma gruppo interno Proprietario — prova iPhone e un'installazione. App Store1.0 resta REJECTED/build9.
+- Prezzo effettivo nuovi abbonati verificato nel portale:19,99€/anno Italia. Il9,99 del report API è un primo record di prezzo senza selezione temporale, non il prezzo corrente.
+- Blocco funzionale: PhotoLibrary.tsx esiste ma non è raggiungibile da App.tsx. Non attestare la funzione di analisi Foto come integrata nella release.
+- Privacy: selezione di quattro tipi tecnici preparata ma **non pubblicata**, setup incompleto. Revisione automatica ha bloccato la classificazione DeviceID collegato all'identità per evidenza insufficiente; editor annullato, preview pubblicato precedente conservato. Non aggirare scegliendo l'opposto. Servono riscontri/approvazione specifici.
+- Business: Paid Apps e Free Apps Active; **DSA Rejected**. Stato trader/non-trader da dichiarare dal titolare; nessuna nuova dichiarazione inviata.
+- Nessun prezzo, entitlement, flag diagnostico o controllo Apple modificato. Nessuna nuova buildproduction avviata con gate scientifico fallito. Non integrare documentazione su main durante la pipeline dello SHA precedente: ne impedirebbe la promozione per candidato obsoleto.
+
+---
+
 # Handoff corrente
 
 ## Digitazione controllata del test UI — 22 ottobre 2026
