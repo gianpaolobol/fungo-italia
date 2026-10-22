@@ -88,7 +88,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     app.launch()
     await tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    await require(subscribe, timeout: 60)
+    await require(subscribe, timeout: 120)
     XCTAssertTrue(subscribe.label.contains("19,99") && subscribe.label.contains("€"), "Probe must load the Italian annual fixture")
     let ready = await readyToTap(subscribe)
     print("ENTITLEMENT_STARTUP_PROBE mode=\(mode) ready=\(ready) transactions=\(session.allTransactions().count)")
@@ -136,7 +136,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     XCTAssertFalse(element(app, "Inizia 15 casi").exists)
     await tap(app, "Abbonamento")
     let subscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-    await require(subscribe, timeout: 60)
+    await require(subscribe, timeout: 120)
     var ready = await readyToTap(subscribe)
     // A fresh iPhone simulator can leave StoreKit entitlement enumeration pending
     // on first launch even when the local product has loaded. Re-launch once
@@ -148,7 +148,7 @@ final class AnnualPurchaseUITests: XCTestCase {
       app.launch()
       await tap(app, "Abbonamento")
       let retriedSubscribe = app.descendants(matching: .any).matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch
-      await require(retriedSubscribe, timeout: 60)
+      await require(retriedSubscribe, timeout: 120)
       ready = await readyToTap(retriedSubscribe)
       if !ready { diagnose(app, session) }
     }

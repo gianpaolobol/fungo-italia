@@ -1,5 +1,11 @@
 # Handoff corrente
 
+## Risposta tardiva prezzo StoreKit — 22 ottobre 2026
+
+Su76051a4/iOS26.2: run39783622705 native StoreKit **PASS** (test3,881s); run39783622793 baseline **PASS** (`ready=true transactions=0`,21,585s), without-updates **PASS** (31,186s); demo iPhone119841970311 **PASS**. Nessun difetto di runtime nei percorsi completati.
+
+UI iPad119841296171 fallisce alla riga139 prima di acquistare: lookup prodotto entra13:24:07Z e torna13:25:10Z, oltre il limite60s del test. Il codice `timely(getAnnualProduct()).then(...)` scartava definitivamente il prezzo dopo20s. È un bug distinto dal runtime, dimostrato con il vero hook:2regressioni falliscono prima della correzione. Ora la risposta prezzo viene applicata all'interno del Promise nativo, con gli stessi guard mounted/priceGeneration; solo l'errore prezzo viene cancellato. Non modifica entitlement/purchaseReady/validazione Apple.5test verificano recupero tardivo, nessuna abilitazione con entitlement sconosciuto, refresh superseded, unmount e risposta simultanea al timeout. Quest’ultimo caso è stato riprodotto prima del guard priceReceived, che impedisce al catch già accodato di cancellare un prodotto accettato. Suite188test Node e TypeScript **PASS**. L'attesa UI prodotto viene allineata a120s (come readyToTap); prezzo italiano, transazione verificata e ciclo completo restano obbligatori. Nuovi esiti CI richiesti sullo SHA finale; non riusare i PASS76051a4 come prova della modifica al hook.
+
 ## Runtime StoreKit qualificato — 22 ottobre 2026
 
 **Soluzione infrastruttura: Xcode26.6(17F113) + iOS26.2**, preinstallato sul runner `macos-26`. Prova isolata PR116, run39782343636, job119836522769: NativeLifecycle exit0, acquisto/rimborso/scadenza con il verificatore reale copiato verbatim (test4,723s); Startup exit0, sessione italiana, `ready active=false price=19,99€` e0transazioni (test14,543s). Log confermano entrambi `TEST SUCCEEDED`. Le asserzioni del ciclo nativo sono quelle originali, cambia solo l'import del modulo del piccolo host. Evidenza di compatibilità runtime, **non** sostituisce la suite completa.

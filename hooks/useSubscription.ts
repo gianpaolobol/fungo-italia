@@ -29,10 +29,13 @@ export default function useSubscription(){
   })).catch(()=>{
    if(mounted.current&&run===generation.current){markReady(false);setEntitlement(inactive);setChecking(false);setError('Abbonamento non verificabile. Riprova o ripristina gli acquisti.');}
   });
-  const price=timely(getAnnualProduct()).then(value=>{
-   if(mounted.current&&priceRun===priceGeneration.current)setProduct(value);
-  }).catch(()=>{
-   if(mounted.current&&priceRun===priceGeneration.current){setProduct(null);setPriceError('Prezzo non disponibile. Verifica la connessione allo Store.');}
+  // A price timeout is a UI deadline, not cancellation of the Apple request.
+  // Apply its eventual response only while this refresh is still current.
+  let priceReceived=false;
+  const price=timely(getAnnualProduct().then(value=>{
+   if(mounted.current&&priceRun===priceGeneration.current){priceReceived=true;setProduct(value);setPriceError('');}
+  })).catch(()=>{
+   if(mounted.current&&priceRun===priceGeneration.current&&!priceReceived){setProduct(null);setPriceError('Prezzo non disponibile. Verifica la connessione allo Store.');}
   });
   const [result]=await Promise.allSettled([access,price]);
   return run===generation.current&&result.status==='fulfilled'?result.value:undefined;
