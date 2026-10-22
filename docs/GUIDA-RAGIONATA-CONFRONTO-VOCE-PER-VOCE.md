@@ -2,13 +2,13 @@
 
 Fonte primaria: [Guida ragionata alla commestibilità dei funghi (Regione Piemonte, 2021)](https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf). Numerazione delle pagine riportata nella guida, che può differire dalla pagina PDF visualizzata.
 
-**Il prospetto copre tutte le 148 voci dell'atlante e tutti i 66 gruppi.** «NON VERIFICATO» indica che la categoria specifica non è ancora stata riconciliata con il testo analitico della voce; non equivale a conferma. «MATCH» è il confronto con il prospetto illustrativo della Guida o con un suo passo testuale espressamente individuato, non una revisione indipendente. La separazione supplementare «tossico mortale» dell'app non può essere equiparata automaticamente alla categoria «tossico» della Guida: richiede evidenza specialistica sulla gravità.
+**Il prospetto copre tutte le 148 voci dell'atlante e tutti i 66 gruppi.** «NON VERIFICATO» indica che la categoria specifica non è ancora stata riconciliata con il testo analitico della voce; non equivale a conferma. «SUBCATEGORY_NEEDS_EVIDENCE» significa che la Guida classifica tossico, mentre l’app distingue la gravità mortale, che deve essere fondata su prova specifica; non è automaticamente un errore. «MATCH» è il confronto con il prospetto illustrativo della Guida o con un suo passo testuale espressamente individuato, non una revisione indipendente. La separazione supplementare «tossico mortale» dell'app non può essere equiparata automaticamente alla categoria «tossico» della Guida: richiede evidenza specialistica sulla gravità.
 
 ## Risultati
 
 - Voci censite: **214** (148 atlante, 66 gruppi)
 - Casi fotografici confrontati con la scheda sorgente: **86**, disallineati: **0**
-- Riferimenti individuali Guida confrontati: **19**; concordanze: **16**; divergenze: **3**
+- Riferimenti individuali Guida confrontati: **19**; concordanze: **16**; sotto-classificazioni di gravità da documentare: **3**; divergenze categoriali accertate: **0**
 - Voci senza attribuzione individuale verificata: **195**
 
 ## Rilievi specifici
@@ -30,7 +30,7 @@ Fonte primaria: [Guida ragionata alla commestibilità dei funghi (Regione Piemon
 | Agaricus bitorquis | free |  |  | NOT_VERIFIED | 1 |  |
 | Agaricus bisporus | free |  |  | NOT_VERIFIED | 1 |  |
 | Cyclocybe cylindracea | conditional | conditional | 30 | MATCH | 1 | Eliminare le parti fibrose dei gambi, conservando solo le parti tenerissime.; È obbligatoria la cottura completa. |
-| Amanita phalloides | deadly | toxic | 25 | CONFLICT | 1 |  |
+| Amanita phalloides | deadly | toxic | 25 | SUBCATEGORY_NEEDS_EVIDENCE | 1 |  |
 | Amanita verna / Amanita vidua | deadly |  |  | NOT_VERIFIED | 0 | La Guida usa A. verna e il gruppo Phalloideae; la scheda mantiene separate le denominazioni A. verna e A. vidua. |
 | Amanita virosa | deadly |  |  | NOT_VERIFIED | 1 |  |
 | Amanita proxima | deadly |  |  | NOT_VERIFIED | 1 |  |
@@ -59,7 +59,7 @@ Fonte primaria: [Guida ragionata alla commestibilità dei funghi (Regione Piemon
 | Marasmius oreades | free |  |  | NOT_VERIFIED | 1 | Controllare tutti gli esemplari: possibile confusione con specie prative pericolose di piccole dimensioni. |
 | Coprinus atramentarius s.l. | inedible | inedible | 47 | MATCH | 0 | Il consumo associato ad alcol può provocare sindrome coprinica; la Guida mantiene il giudizio non commestibile. |
 | Coprinus comatus | free |  |  | NOT_VERIFIED | 1 | Utilizzare solo esemplari con lamelle completamente bianche.; Cuocere preferibilmente il giorno della raccolta; conservazione in frigorifero allo stato crudo per non più di una notte. |
-| Cortinarius orellanus | deadly | toxic | 25 | CONFLICT | 1 |  |
+| Cortinarius orellanus | deadly | toxic | 25 | SUBCATEGORY_NEEDS_EVIDENCE | 1 |  |
 | Cortinarius rubellus | deadly |  |  | NOT_VERIFIED | 0 |  |
 | Cortinarius sottogenere Dermocybe | toxic |  |  | NOT_VERIFIED | 0 | La Guida distingue questa sospetta nefrotossicità dalla sindrome orellanica. |
 | Cortinarius praestans | free |  |  | NOT_VERIFIED | 1 | La Guida raccomanda la cottura completa; non documenta per queste specie un obbligo dovuto a tossine termolabili. |
@@ -168,7 +168,7 @@ Fonte primaria: [Guida ragionata alla commestibilità dei funghi (Regione Piemon
 | Ramaria pallida | toxic |  |  | NOT_VERIFIED | 0 |  |
 | Ramaria botrytis s.l. | free |  |  | NOT_VERIFIED | 0 | Limitare la raccolta agli esemplari riconoscibili, giovani o medio-maturi. |
 | Auricularia auricula-judae | free |  |  | NOT_VERIFIED | 1 | Evitare consumo ripetuto in numerosi pasti consecutivi.; La Guida sconsiglia il consumo alle persone che assumono anticoagulanti. |
-| Gyromitra esculenta | deadly | toxic | 25 | CONFLICT | 1 |  |
+| Gyromitra esculenta | deadly | toxic | 25 | SUBCATEGORY_NEEDS_EVIDENCE | 1 |  |
 | Sarcosphaera coronaria s.l. | discouraged | discouraged | 24 | MATCH | 0 |  |
 | Agaricus | not assigned |  |  | NOT_VERIFIED | 0 |  |
 | Agrocybe + Cyclocybe | not assigned |  |  | NOT_VERIFIED | 0 |  |
