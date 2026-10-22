@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "provenance": "corso nazionale di formazione per micologo, materiali Edoardo Suriano, ottobre 2026",
+  "edibilityAuthority": "Guida ragionata alla commestibilità dei funghi (non sovrascritta da questo file)",
+  "entries": [
+    {
+      "taxon": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "source": {
+        "title": "Alcune integrazioni dell’allegato 1 degne di nota.pdf",
+        "author": "Edoardo Suriano",
+        "url": "https://drive.google.com/file/d/1P_hsXHcao_7zJjFXTGcPkDpnJ3f7qqBH/view"
+      },
+      "claims": [
+        {
+          "field": "currentAcceptedNames",
+          "value": "Russula delica s.l.; Russula chloroides, specie affine descritta nei materiali",
+          "reviewScope": "course-certified-provenance"
+        },
+        {
+          "field": "lookalikes",
+          "value": "Confronto con Lactifluus acri: presenza di lattice nei Lactifluus, assente nelle Russula",
+          "reviewScope": "course-certified-provenance"
+        }
+      ]
+    },
+    {
+      "taxon": "Lactarius sez. Deliciosi",
+      "source": {
+        "title": "Alcune integrazioni dell’allegato 1 degne di nota.pdf",
+        "author": "Edoardo Suriano",
+        "url": "https://drive.google.com/file/d/1P_hsXHcao_7zJjFXTGcPkDpnJ3f7qqBH/view"
+      },
+      "claims": [
+        {
+          "field": "taxonomy",
+          "value": "La sezione include L. deliciosus, L. sanguifluus, L. semisanguifluus e L. salmonicolor, discussi per impiego tradizionale e separabilità commerciale",
+          "reviewScope": "course-certified-provenance"
+        }
+      ]
+    },
+    {
+      "taxon": "Agaricus bisporus",
+      "source": {
+        "title": "Trattazione delle principali specie di funghi epigei ammesse.pdf",
+        "author": "Edoardo Suriano",
+        "url": "https://drive.google.com/file/d/1g8-jIiUaEpsTzHxAtwXg6iN1g9YYt9Vp/view"
+      },
+      "claims": [
+        {
+          "field": "synonyms",
+          "value": "Il materiale discute la duplicazione storica nel DPR 376/95 dei nomi Agaricus bisporus, Psalliota bispora e Psalliota hortensis",
+          "reviewScope": "course-certified-provenance"
+        }
+      ]
+    }
+  ]
+}
