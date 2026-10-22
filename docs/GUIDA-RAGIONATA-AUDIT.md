@@ -1,0 +1,29 @@
+# Audit della Guida ragionata — commestibilità e preparazione
+
+Fonte primaria vincolante: **Sitta N., Davoli P., Floriani M., Suriano E. (2021)**, *Guida ragionata alla commestibilità dei funghi*, Regione Piemonte.
+- [Guida ufficiale](https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf)
+- [Tabella di raccordo ufficiale](https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2022-08/guida_ragionata_-_tabella_di_raccordo_sintetica.pdf)
+
+## Tassonomia normativa editoriale
+I valori dell'app sono `free` (libera), `conditional` (condizionata), `discouraged` (sconsigliato), `no-food-value` (privo di valore alimentare), `inedible` (non commestibile), `toxic` (tossico), `deadly` (tossico mortale). Distinguere rigorosamente **privo di valore alimentare** da **non commestibile**. La guida usa la categoria più generale di velenoso/tossico; l'ulteriore distinzione di gravità mortale va documentata separatamente, non dedotta in automatico.
+
+Un alimento a commestibilità **libera** richiede generalmente verifica del buono stato e, di base, cottura. La categoria **condizionata** richiede invece *specifici trattamenti obbligatori* riportati esattamente nella scheda e nelle domande d'esame. Non attribuire sicurezza alimentare senza determinazione esperta.
+
+## Audit ripetibile
+`node scripts/audit-guida-ragionata.mjs` genera `artifacts/guida-ragionata-audit.json`, non altera le schede e può segnalare:
+- disallineamenti categorie e preparazioni fra banca fotografica degli esami e atlante;
+- categorie non riconosciute o miste di gruppo che necessitano revisione per specie;
+- condizioni di trattamento mancanti o contraddittorie;
+- assenza di riferimento puntuale alla Guida nella singola scheda;
+- difformità rispetto agli esempi espliciti della tabella ufficiale.
+
+**Un confronto meccanico non è una certificazione scientifica.** La revisione di tutti i taxa richiede lettura della voce originale nella Guida, pagina/sezione, identificazione di sinonimi, decisione del micologo responsabile e documentazione dell'eventuale trattamento. Non usare il passaggio di questo script per segnare `independentReviewStatus: reviewed` o sbloccare `validate:release`.
+
+## Protocollo di correzione
+1. Per ciascun taxon, annotare voce/sinonimo e pagina esatta della Guida, categoria, istruzioni di preparazione, eventuali divieti e motivazione.
+2. In caso di discordanza, prevale la Guida; se il taxon non è trattato o la corrispondenza è ambigua, mantenere lo stato **da verificare**, senza promuovere a categoria commestibile.
+3. Aggiornare `src/data/catalog.json`, `src/data/groups.json` e le fonti, mantenendo categorie e precauzioni collegate alla medesima evidenza.
+4. Rigenerare `src/data/exam-bank.json` attraverso la procedura dati del progetto; verificare anche gli esercizi teorici generati da `lib/study-curriculum-bank.mjs` e tutte le scelte di preparazione.
+5. Testare categorie, preparazione, feedback e casi pericolosi; non correggere silenziosamente lo storico esami dell'utente, ma gestire revisioni compatibili.
+
+**Stato di questo intervento:** inserita infrastruttura di audit su branch isolato; non ancora completata la revisione manuale di tutte le 148 schede + 66 gruppi.
