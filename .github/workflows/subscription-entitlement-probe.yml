@@ -2,9 +2,10 @@ name: Diagnose StoreKit entitlement startup
 on:
   workflow_dispatch:
   push:
-    branches: [feat/percorso-parity-subscriptions-20261021]
+    branches: [main, feat/percorso-parity-subscriptions-20261021]
     paths:
       - .github/workflows/subscription-entitlement-probe.yml
+      - scripts/prepare-storekit-runtime.sh
       - modules/fungo-subscription/ios/FungoSubscriptionModule.swift
       - tests/storekit/AnnualPurchaseUITests.swift
 permissions:
