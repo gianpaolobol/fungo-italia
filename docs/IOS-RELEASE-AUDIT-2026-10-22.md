@@ -92,6 +92,10 @@ Documentazione pubblicata nella [PR #117 in bozza](https://github.com/gianpaolob
 - Ispezionati screenshotStudio, Aree e paywall iPhone e Studio/Aree iPad.03-esame.png è intenzionalmente il paywall privato di review; il manifest esclude le immagini prezzo dal gallery pubblico. Le nuove catture mostrano ancora il banner di differenza conTestFlight 16: non promuoverle automaticamente come assetsApp Storedefinitivi.
 - Nessuna nuova correzione StoreKit necessaria sulla base dei cicli acquisti riusciti. Nessuna asserzione rimossa,nessun entitlement artificiale,nessuna approvazione scientifica inventata.
 
+## Servizio GitHub: limite esterno osservato
+
+Alle 18:40 circa, ora italiana, il job beta resta `Queued / Starting job`. La [pagina ufficiale GitHub Status](https://www.githubstatus.com/incidents/wq8305lppdc2), consultata durante questa verifica, segnala un incidente attivo iniziato alle 15:28 UTC che coinvolge anche Actions; la pagina generale mostra Actions Degraded Performance. Il precedente incidente distinto sugli Actions Results è stato dichiarato risolto alle 15:18 UTC. La coincidenza con coda e ritardi dei riepiloghi è compatibile con un problema di servizio, ma non dimostra la causa del singolo job. Nessun runner alternativo non qualificato è stato scelto e nessun risultato pendente è stato convertito in successo.
+
 ## Passi obbligatori rimasti
 
 1. Leggere l'esito finale #9 e #11; conservare receipt,hash IPA,Applebuild ID,gruppo e disponibilità effettiva per ogni nuovo build diagnostico.
