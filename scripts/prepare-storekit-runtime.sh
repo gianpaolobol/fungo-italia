@@ -7,7 +7,7 @@ set -euo pipefail
 storekit_list="$RUNNER_TEMP/storekit-runtimes.json"
 select_runtime() {
   xcrun simctl list runtimes -j > "$storekit_list"
-  node -e 'const a=require(process.argv[1]).runtimes.filter(r=>r.isAvailable&&r.identifier.includes(".iOS-"));const r=a.find(r=>/^26\\.6(?:\\.|$)/.test(r.version));if(r)process.stdout.write(r.identifier)' "$storekit_list"
+  node -e 'const a=require(process.argv[1]).runtimes.filter(r=>r.isAvailable&&r.identifier.includes(".iOS-"));const r=a.find(r=>/^26\.6(?:\.|$)/.test(r.version));if(r)process.stdout.write(r.identifier)' "$storekit_list"
 }
 download_runtime() {
   local storekit_export="$RUNNER_TEMP/storekit-runtime-26.6"
