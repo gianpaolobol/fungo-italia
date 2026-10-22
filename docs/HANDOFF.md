@@ -1,5 +1,15 @@
 # Handoff corrente
 
+## Diagnosi runtime StoreKit — 22 ottobre 2026
+
+- Esecuzione richiesta: **#5, run39775660780**, SHA `f05314e740bcccdfdbbb8708a734c86effbf45bc`. Job originari: `ipad-baseline`119815772705 e `ipad-without-updates`119815772284. Entrambi falliscono nel provisioning: `iOS 26.6 is not available for download.` App e test StoreKit non avviati; nessun artefatto xcresult prodotto. Stato iniziale del run cancellato da esecuzioni successive.
+- Rilanciato baseline tramite API: nuovo job119818739208, fallito nello stesso step. Il secondo job resta cancellato. Nessuna prova di difetto del verificatore Apple ricavabile da questi run.
+- Branch `fix/storekit-runtime-download-20261022`: tentativo alternativo di download del runtime predefinito di Xcode dopo fallimento dell'alias26.6; revalidazione invariata su26.6 disponibile, blocco esplicito se assente. Log provisioning e inventario preservati anche prima dei test. Nessuna modifica al billing, transazioni, entitlement, soglie di acquisto o verifiche production.
+- Cinque regressioni eseguono lo script shell con strumenti macOS sostituiti: runtime presente, download esplicito, recupero tramite download predefinito, runtime vecchio rifiutato, entrambi download falliti. Prima della correzione:3 fallimenti; dopo:5 riusciti. Suite completa dopo `npm ci`:179 test Node riusciti; TypeScript e sintassi shell riusciti. Le prove simulate non attestano disponibilità reale del runtime Apple.
+- Diagnostica abilitata sulle PR che cambiano provisioning/workflow, senza segreti e senza acquisti; non sostituisce i gate nativi/UI obbligatori.
+- Ricevute CI lette dal run39691851983, job beta119553646013: **1.1.0(16)**, SHA `d08affd456f74a6126f8e027bd3184b0e1425e05`, Apple build `c72ecb8f-7267-4ca0-93ad-14689db4dfda`, processing `VALID`, gruppo interno verificato alle2026-10-22T00:07:00Z. `nativeStorekitVerified:true`, `storekitUIVerified:false`, `appStoreReady:false`. È evidenza storica della beta diagnostica, non verifica live Apple né prova sul nuovo SHA.
+- **Production bloccata**: provisioning26.6 da verificare sui runner reali; test acquisti UI iPhone/iPad e altre prove obbligatorie devono passare sul candidato; verificare binario firmato e stato Apple per lo stesso sorgente. Non aggirare il gate scientifico indipendente.
+
 ## Percorso, abbonamento e release accoppiate — 21 ottobre 2026
 
 Build Apple realmente confermato precedente: **1.1.0 (14)**, sorgente `38a7a85ac96803a5dca18bf5c6a39264bcc99444`, Apple ID `a8152729-e1a2-47a9-9884-ef577d0436a2`, `VALID` / `IN_BETA_TESTING`, solo gruppo interno del titolare. Conferma CI corretta run39647612363. UI acquisto non ancora qualificata: questa è beta diagnostica, non autorizzazione App Review.

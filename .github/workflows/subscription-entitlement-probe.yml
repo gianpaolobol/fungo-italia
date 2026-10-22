@@ -1,11 +1,17 @@
 name: Diagnose StoreKit entitlement startup
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/subscription-entitlement-probe.yml
+      - scripts/prepare-storekit-runtime.sh
+      - scripts/prepare-storekit-runtime.test.mjs
   push:
     branches: [main, feat/percorso-parity-subscriptions-20261021]
     paths:
       - .github/workflows/subscription-entitlement-probe.yml
       - scripts/prepare-storekit-runtime.sh
+      - scripts/prepare-storekit-runtime.test.mjs
       - modules/fungo-subscription/ios/FungoSubscriptionModule.swift
       - tests/storekit/AnnualPurchaseUITests.swift
 permissions:
@@ -32,6 +38,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Verify runtime provisioning and fail-closed regression cases
+        run: node --test scripts/prepare-storekit-runtime.test.mjs
       - name: Select the same compatible StoreKit runtime as the purchase UI tests
         run: bash scripts/prepare-storekit-runtime.sh
       - name: Prepare the actual app and isolated diagnostic test selection

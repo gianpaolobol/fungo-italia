@@ -4,7 +4,11 @@ set -euo pipefail
 # Older iOS 18.6 runners reproduced a hanging Transaction.currentEntitlements
 # iterator in both iPhone and iPad, with or without Transaction.updates.
 # Release verification must use the fixed runtime or fail closed.
+mkdir -p store-evidence
+exec > >(tee store-evidence/runtime-selection.log) 2>&1
+xcodebuild -version
 storekit_list="$RUNNER_TEMP/storekit-runtimes.json"
+trap 'if test -f "$storekit_list"; then cp "$storekit_list" store-evidence/runtime-inventory.json; fi' EXIT
 select_runtime() {
   xcrun simctl list runtimes -j > "$storekit_list"
   node -e 'const a=require(process.argv[1]).runtimes.filter(r=>r.isAvailable&&r.identifier.includes(".iOS-"));const r=a.find(r=>/^26\.6(?:\.|$)/.test(r.version));if(r)process.stdout.write(r.identifier)' "$storekit_list"
@@ -12,7 +16,13 @@ select_runtime() {
 download_runtime() {
   local storekit_export="$RUNNER_TEMP/storekit-runtime-26.6"
   mkdir -p "$storekit_export"
-  xcodebuild -downloadPlatform iOS -buildVersion 26.6 -exportPath "$storekit_export" || return 1
+  # Apple's catalog may not resolve the marketing-version alias. Ask the
+  # selected Xcode for its default only after the explicit request fails.
+  # Selection below still requires 26.6; a downloaded 26.5 never qualifies.
+  if ! xcodebuild -downloadPlatform iOS -buildVersion 26.6 -exportPath "$storekit_export"; then
+    echo "::warning::Explicit iOS 26.6 download unavailable; trying selected Xcode's default runtime, then revalidating."
+    xcodebuild -downloadPlatform iOS -exportPath "$storekit_export" || return 1
+  fi
   local storekit_image
   storekit_image=$(find "$storekit_export" -type f -name '*.dmg' -print -quit)
   if test -n "$storekit_image"; then xcodebuild -importPlatform "$storekit_image" || return 1; fi
@@ -20,7 +30,9 @@ download_runtime() {
 storekit_runtime_id=$(select_runtime)
 if test -z "$storekit_runtime_id"; then
   echo "Requesting iOS 26.6 runtime with Apple's StoreKit Simulator connection fix"
-  download_runtime
+  if ! download_runtime; then
+    echo "::warning::Xcode could not download/import the required StoreKit runtime."
+  fi
   storekit_runtime_id=$(select_runtime)
 fi
 if test -z "$storekit_runtime_id"; then
