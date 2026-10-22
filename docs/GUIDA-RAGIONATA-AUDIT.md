@@ -52,3 +52,16 @@ Questo riconoscimento riguarda la **provenienza dichiarata e l'ammissibilità ed
 **Gerarchia fondante:** per commestibilità, divieti e condizioni di preparazione prevale la *Guida ragionata alla commestibilità dei funghi*. Gli altri documenti del corso sono fonti formative approvate per morfologia, nomenclatura, ecologia, fotografie se utilizzabili e contenuti didattici, senza sovrascrivere automaticamente la Guida. Eventuali discrepanze sono registrate e segnalate per valutazione specifica.
 
 **Perimetro della certificazione di provenienza:** documenti effettivamente contenuti nelle cartelle Google Drive fornite dal titolare, con identificativo, percorso e versione del file tracciati. Nuovi file possono essere ammessi come materiali del corso nel medesimo perimetro, previa verifica che appartengano davvero alla cartella; link esterni riportati *dentro* i PDF non diventano automaticamente fonti certificate. La licenza delle immagini e i diritti di riutilizzo per un'app distribuita restano da accertare separatamente.
+
+## Documento fondante — obiettivi formativi del corso
+
+**Decisione del titolare (22 ottobre 2026).** Il documento ufficiale del corso che stabilisce **obiettivi minimi, obiettivi auspicabili e approfondimenti** è la fonte primaria e vincolante per il **perimetro e la progressione didattica** di Fungo Italia.
+
+Il repository fa già riferimento a un curriculum con identificativo `S1-obiettivi-tassonomici-v4-2026-06-09`, per esempio tramite i campi `curriculum.documentId`, `sourcePage` e `learningUnitId` delle schede. L'identificativo è un riferimento interno esistente: il file originale e la sua versione devono essere verificati prima di sostenere che corrispondano esattamente al documento ufficiale del titolare.
+
+**Regole operative:**
+1. Tutte le voci esplicitamente richieste dal curriculum vanno censite, senza omissioni, con un livello `minimo`, `auspicabile` o `approfondimento` tracciato al punto del documento.
+2. Atlante, Percorso/Studio ed Esame devono utilizzare lo stesso censimento. Ogni voce visibile nell'atlante deve poter essere esaminata; una carenza di fotografie o classificazione va segnalata, non nascosta o colmata con dati inventati.
+3. La suddivisione in livelli influenza la progressione e i filtri didattici, **non** cambia la categoria di commestibilità.
+4. In caso di discordanza sul **programma didattico** prevale il documento degli obiettivi; su **commestibilità, divieti e preparazioni** prevale la *Guida ragionata alla commestibilità dei funghi*; sui caratteri micologici valgono le fonti certificate del corso, con citazione puntuale.
+5. Ogni aggiornamento del curriculum richiede verifica di copertura per schede, gruppi e banca d'esame, oltre a test di regressione. Nessun record può essere segnato come indipendentemente revisionato per il solo fatto di essere nel programma.
