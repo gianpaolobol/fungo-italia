@@ -27,7 +27,7 @@ while test "$#" -gt 0; do
   shift
 done
 `,{mode:0o755});
-    const result=spawnSync('bash',[resolve('scripts/prepare-storekit-runtime.sh')],{cwd:dir,encoding:'utf8',env:{...process.env,PATH:dir+':'+process.env.PATH,RUNNER_TEMP:dir,GITHUB_ENV:join(dir,'env'),PINNED:pinned?'1':'0',LATEST:latest?'1':'0',...(target?{STOREKIT_RUNTIME_VERSION:target}:{})}});
+    const result=spawnSync('bash',[resolve('scripts/prepare-storekit-runtime.sh')],{cwd:dir,encoding:'utf8',env:{...process.env,PATH:dir+':'+process.env.PATH,RUNNER_TEMP:dir,GITHUB_ENV:join(dir,'env'),PINNED:pinned?'1':'0',LATEST:latest?'1':'0',STOREKIT_RUNTIME_VERSION:target||'26.6'}});
     return {...result,env:existsSync(join(dir,'env'))?readFileSync(join(dir,'env'),'utf8'):'',calls:existsSync(join(dir,'calls'))?readFileSync(join(dir,'calls'),'utf8'):'',evidence:existsSync(join(dir,'store-evidence/runtime-selection.log'))};
   } finally {rmSync(dir,{recursive:true,force:true});}
 }
