@@ -1,42 +1,26 @@
-# Fungo Italia — ultimi passaggi nel portale Apple
+# Fungo Italia — prerequisiti Apple verificati il 22 ottobre 2026
 
-Configurazione richiesta: download gratuito; abbonamento annuale a rinnovo automatico **9,99 € in Italia**, con prezzi locali negli altri territori. Questo documento non attesta l’approvazione o la pubblicazione.
+**NON PRONTA PER PUBBLICAZIONE.** [Report e prove esatte](IOS-RELEASE-AUDIT-2026-10-22.md).
 
-## 1. Privacy dell’app
-Apri https://appstoreconnect.apple.com/apps/6821140326/appPrivacy .
-Compila il questionario usando i [riscontri tecnici](APP-STORE-PRIVACY-WORKSHEET.md), salva e premi **Pubblica**. Il questionario era ancora vuoto secondo l’ultima conferma del titolare. Le API collegate a questa sessione non lo leggono e non lo modificano.
+## Stato commerciale letto nel portale
 
-Non scegliere automaticamente “nessun dato raccolto”: occorre considerare gli aggiornamenti Expo e i relativi dati tecnici secondo le definizioni Apple. Gli acquisti StoreKit vengono verificati sul dispositivo; lo sviluppatore non riceve le ricevute su un proprio server.
+Download gratuito; unico abbonamento `it.fungoitalia.premium.annual`,annuale. Il prezzo corrente per nuovi abbonati in Italia è **19,99€**, letto in Subscriptions → Fungo Italia Premium → Fungo Italia annuale → Current Pricing for New Subscribers → Europe → Italy. Nessun prezzo è stato modificato durante l'audit. Non usare il primo recordITA della risposta API come prova del prezzo effettivo: possono esserci più periodi.
 
-## 2. Dichiarazione DSA
-Apri App Store Connect → **Business → Agreements → Compliance → Digital Services Act**.
-Scegli lo stato che corrisponde effettivamente alla tua attività e completa i recapiti e le verifiche eventualmente richiesti. La lettura Apple del 16 ottobre segnala **TRADER_STATUS_NOT_PROVIDED** nei territori UE. La dichiarazione può essere completata da Account Holder o Admin; la scelta dello stato legale non può essere inventata dall’assistente.
+Accordi Free Apps e Paid Apps: **Active**. Dati fiscali e conto di pagamento: **Active**. Questi stati sono stati letti; non sono stati accettati nuovi contratti né modificati dati bancari.
 
-[Guida ufficiale Apple](https://developer.apple.com/help/app-store-connect/manage-compliance-information/manage-european-union-digital-services-act-trader-requirements).
+## Blocchi che richiedono il titolare e revisori
 
-## 3. Accordo per vendite e abbonamenti
-In **Business → Agreements**, verifica che **Paid Apps** risulti **Active**, con le informazioni fiscali e bancarie richieste completate. Serve anche quando il download dell’app è gratuito ma contiene acquisti. L’eventuale accettazione dell’accordo richiede l’Account Holder.
+1. **DSA Rejected** per27territori. In [Business](https://appstoreconnect.apple.com/business), completare Compliance → Digital Services Act con lo stato trader/non-trader effettivo e le prove eventualmente richieste. L'agente non ha inventato né trasmesso una nuova dichiarazione.
+2. **Privacy:** [pagina attuale](https://appstoreconnect.apple.com/apps/6821140326/distribution/privacy). Il questionario pubblicato contiene dichiarazioni da riconciliare con i flussi reali. È stata preparata una selezioneDeviceID,CrashData,OtherDiagnosticData,OtherDataTypes ancora non pubblicata e non completata. La revisione automatica ha rifiutato l'asserzioneDeviceID collegato all'identità senza prova sufficiente sui token casuali di installazione. Completare il confronto con fornitore/definizioniApple e ottenere approvazione specifica; non scegliere automaticamente né anonimato né nessun dato raccolto. I flussi tecnici e la fonte del blocco sono nel report; la precedente worksheet è storica.
+3. **Revisione scientifica indipendente:**148schede bloccate e zero revisioni attestate dal gate. Completare fonti puntuali,verifica dei contenuti e diritti immagini con un revisore qualificato. Nessun test software certifica queste approvazioni.
 
-Questa sessione non ha verificato lo stato dell’accordo. `CANNOT_SELL` su un’app non pubblicata non dimostra, da solo, un contratto mancante. Non condividere password Apple, codici di verifica o dati bancari nella chat.
+## Condizioni tecniche da completare prima della nuova review
 
-[Guida ufficiale Apple](https://developer.apple.com/help/app-store-connect/manage-agreements/sign-and-update-agreements/).
+- Portare la funzione Foto nel flusso applicativo con PR dedicata e test,oppure mantenere esplicito il requisito non soddisfatto.
+- Portare a termine la pipeline diagnostica dello SHA esatto e verificare ricevute firmate,processingApple e gruppo tester. Non confondere la precedente1.1.0(16) con un nuovo candidato.
+- Soddisfare gate editoriali e tutti i controlli obbligatori sullo SHA definitivo,poi usare un percorso **production** qualificato,con firma e verifica del sorgente nel binario.
+- Verificare acquisto sandbox,ripristino,riapertura e conservazione dati sul dispositivo fisico del titolare. I test localiStoreKit su iPhone/iPad simulati sono riusciti su main; non attestano da soli il flusso sandboxTestFlight.
+- Aggiornare screenshot e metadati autentici del candidato. Nessuna immagine pubblica con prezzi; screenshotpaywall soltanto nel materiale privato del prodotto.
+- La versione App Store1.0 è ancora REJECTED e seleziona build9. Gruppo/prodottoannuale sono nella bozzaReady for Review,non approvati. Includere app,gruppo e prodotto nella stessa nuova submission quando la release sarà idonea. Non inviare prima di avere chiuso i blocchi.
 
-## 4. Prima revisione dell’abbonamento insieme all’app
-Solo dopo la verifica tecnica del nuovo binario e il completamento dei punti precedenti:
-- In Fungo Italia → **Monetization → Subscriptions**, aggiungi alla revisione il prodotto **Fungo Italia annuale** e il relativo gruppo.
-- Nella stessa bozza di invio includi la versione **1.0**, con il nuovo binario verificato che contiene StoreKit; la vecchia build **7** non contiene gli acquisti.
-- Controlla che app, gruppo e abbonamento siano nella medesima submission, poi invia alla revisione.
-
-Il primo abbonamento deve essere inviato con un binario tramite il portale; l’automazione API per sottoscrizioni successive non sostituisce questo passaggio iniziale.
-
-[Guida ufficiale Apple](https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase/).
-
-Lo stato **READY_TO_SUBMIT** del prodotto significa pronto per l’invio, non approvato o già acquistabile. Anche una build disponibile su TestFlight non è pubblicazione sull’App Store. Il [registro tecnico](APP-STORE-SUBSCRIPTION-2026-10-16.md) distingue configurazione, prove eseguite e limiti ancora aperti.
-
-## Verifica del candidato annuale su iPhone
-
-Il candidato **1.0.0 (9)** è caricato ed è **VALID** su Apple al 16 ottobre, 13:23 UTC. Apri [TestFlight in App Store Connect](https://appstoreconnect.apple.com/apps/6821140326/testflight/ios) per controllare l’abilitazione del tuo account al test interno. L’installazione beta passa dall’app TestFlight; l’IPA App Store scaricato da GitHub non si installa direttamente da Safari. Non sono stati inviati inviti a tester né creati link pubblici.
-
-Questa sessione non controlla il tuo iPhone fisico. Sul dispositivo occorre verificare: prezzo e anteprima iniziale; acquisto sandbox; sblocco di Studio completo ed Esame; chiusura e riapertura; ripristino tramite il pulsante; rimborso/scadenza nel contesto di test e conseguente ritorno all’anteprima. Gli acquisti TestFlight usano il sandbox Apple; non attestano vendite reali.
-
-Il test nativo di acquisto, rimborso e scadenza è passato. L’ultima prova dell’interfaccia è passata su iPad ma è fallita su iPhone durante la verifica iniziale. Il candidato non è selezionato per la vendita e la disponibilità tecnica non attesta che il flusso iPhone sia già risolto. Conservare i preferiti e i progressi durante le prove; non cancellare i dati per simulare un ripristino.
+L'app può essere distribuita internamente a fini diagnostici secondo la pipeline autorizzata; questo non costituisce approvazione per la vendita o idoneità alla pubblicazione.
