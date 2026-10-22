@@ -64,7 +64,10 @@ export default function useSubscription(){
   arm();return()=>clearTimeout(timer);
  },[entitlement.active,entitlement.expiresAt,refresh]);
  const purchase=useCallback(async()=>{
-  if(!subscriptionAvailable||locked.current||!readyRef.current)return;
+  // Trace only control flow, never Apple account identifiers or receipts.
+  console.info('STOREKIT_UI purchase handler entered',JSON.stringify({supported:subscriptionAvailable,locked:locked.current,verifiedReady:readyRef.current}));
+  if(!subscriptionAvailable||locked.current||!readyRef.current){console.info('STOREKIT_UI purchase blocked by guard');return;}
+  console.info('STOREKIT_UI invoking native purchase');
   locked.current=true;markReady(false);++generation.current;setBusy(true);setError('');
   try{
    const result=await purchaseAnnual();
