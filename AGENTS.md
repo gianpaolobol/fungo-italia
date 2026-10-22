@@ -84,6 +84,12 @@ npm run export
 - Prodotto corrente: download gratuito; demo tutte le schede Agaricus + test4casi ripetibile; unico annuale19,99€. Nessun Base. Android demo-only. Dashboard/progressi separati dai diritti StoreKit.
 - StoreKit annuale attuale: `lib/subscriptionPolicy.ts`, `hooks/useSubscription.ts`, `modules/fungo-subscription/`; nessun acquisto Base permanente implementato nel codice letto.
 
+## Funzione Foto rinviata — decisione del titolare, 22/10/2026
+- Mantenere caricamento e analisi delle foto **non accessibili dall’app**: nessun ingresso, deep link o richiesta permessi nel flusso corrente.
+- Conservare e portare nelle versioni successive PhotoLibrary, il modulo FungoPhotoFilter, logica, archiviazione e test correlati; non eliminarli perché attualmente non montati.
+- La funzione rinviata non è un requisito della pubblicazione corrente. Riattivarla soltanto su nuova richiesta esplicita, con prove dedicate e riconciliazione privacy/metadati.
+- Specifica e inventario: `docs/PHOTO-LIBRARY-DEFERRED.md`.
+
 ## Convenzioni e sicurezza
 - Componenti React/TSX PascalCase; hook `use...`; funzioni/script JS camelCase; ID catalogo stabili in kebab-case. Conservare convenzioni specifiche di file esistenti.
 - TypeScript `strict` (`tsconfig.json`). Non introdurre dipendenze senza giustificazione e compatibilità SDK 58.

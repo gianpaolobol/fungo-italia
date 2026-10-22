@@ -16,7 +16,7 @@ Accordi Free Apps e Paid Apps: **Active**. Dati fiscali e conto di pagamento: **
 
 ## Condizioni tecniche da completare prima della nuova review
 
-- Portare la funzione Foto nel flusso applicativo con PR dedicata e test,oppure mantenere esplicito il requisito non soddisfatto.
+- Foto personali rinviate per decisione esplicita del titolare: conservare codice, modulo e test senza accesso nell’app. Non è un blocco della release corrente. Non descrivere la funzione come disponibile nei metadati.
 - Portare a termine la pipeline diagnostica dello SHA esatto e verificare ricevute firmate,processing Apple e gruppo tester. Non confondere la precedente1.1.0(16) con un nuovo candidato.
 - Soddisfare gate editoriali e tutti i controlli obbligatori sullo SHA definitivo,poi usare un percorso **production** qualificato,con firma e verifica del sorgente nel binario.
 - Verificare acquisto sandbox,ripristino,riapertura e conservazione dati sul dispositivo fisico del titolare. I test locali StoreKit su iPhone/iPad simulati sono riusciti su main; non attestano da soli il flusso sandbox TestFlight.

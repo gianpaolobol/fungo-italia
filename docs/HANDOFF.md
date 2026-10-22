@@ -1,3 +1,14 @@
+# Decisione Foto e verifiche di rilascio — 22 ottobre 2026
+
+Il titolare ha richiesto esplicitamente di **mantenere disattivati e non accessibili dall’app il caricamento e l’analisi delle foto**. La funzionalità è rinviata: la sua assenza dall’interfaccia non è un blocco di questa release. Non aggiungere pulsanti, tab, deep link o richieste di accesso Foto. Conservare nei prossimi aggiornamenti componenti, modulo nativo, logica, archiviazione e test; non eliminarli come codice inutilizzato. La riattivazione richiederà una nuova richiesta esplicita e le prove descritte in [PHOTO-LIBRARY-DEFERRED.md](PHOTO-LIBRARY-DEFERRED.md).
+
+La proposta locale di ingresso da Studio è stata ritirata prima di qualsiasi push, build o distribuzione. App.tsx e test UI StoreKit sono identici al candidato main d2c8b650. Nuova regressione sul vero App.tsx verifica assenza dell’analisi Foto su iOS, Android e web, navigando i quattro tab. I test dei lotti20, pausa/ripresa e persistenza restano conservati. Estesi i filtri pull_request dei tre workflow obbligatori ai sorgenti applicativi e inclusi src/** anche su pushmain/pipeline consolidata: nessuna asserzione acquisti rimossa.
+
+Restano distinti il gate scientifico (148 schede,0 revisioni indipendenti), DSA Rejected e la futura build production. Privacy tecnica pubblicata dopo approvazione specifica del titolare (PR117). Build diagnostica17 da d2c8b650, submission EAS2cc40b80-e3f4-4d6d-9a30-6107d5a98531 in coda all’ultima verifica. Non integrare prima della conclusione della distribuzione corrente.
+
+
+---
+
 # Verifica operativa del 22 ottobre 2026 — Work
 
 Candidato main: `d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34`. [Report completo](IOS-RELEASE-AUDIT-2026-10-22.md). Questo aggiornamento è documentale: non è una nuova release applicativa.
@@ -8,7 +19,7 @@ Candidato main: `d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34`. [Report completo](IO
 - Locale: TypeScript,188 test Node, rigenerazione senza drift ed export iOS riusciti. Gate editoriale strict: exit1,148 record bloccati,0 revisioni indipendenti. Riprodotto anche in CI sullo SHA main: run 39814751806, job generator 119950197965, exit 1 nel log delle 16:31:47 UTC.
 - Audit Apple readonly avviato e riuscito: `39811751393`, job `119939578200`. Apple1.1.0(16) VALID, ancora il candidato precedente; browser conferma gruppo interno Proprietario — prova iPhone e un'installazione. App Store1.0 resta REJECTED/build 9.
 - Prezzo effettivo nuovi abbonati verificato nel portale:19,99 €/anno Italia. Il9,99 del report API è un primo record di prezzo senza selezione temporale, non il prezzo corrente.
-- Blocco funzionale: PhotoLibrary.tsx esiste ma non è raggiungibile da App.tsx. Non attestare la funzione di analisi Foto come integrata nella release.
+- Foto personali: rinviate dal titolare il22 ottobre; mantenere codice, modulo e test ma nessun accesso nell’app. La mancata esposizione non blocca questa release.
 - Privacy: dopo approvazione specifica del titolare, **pubblicati e verificati** Device ID, Crash Data, Other Diagnostic Data e Other Data Types: App Functionality, collegati al dispositivo/installazione, senza tracking. Nessun setup incompleto nel riepilogo. Le vecchie categorie contatti/pagamenti/posizione rimosse.
 - Business: Paid Apps e Free Apps Active; **DSA Rejected**. Stato trader/non-trader da dichiarare dal titolare; nessuna nuova dichiarazione inviata.
 - Nessun prezzo, entitlement, flag diagnostico o controllo Apple modificato. Nessuna nuova buildproduction avviata con gate scientifico fallito. Non integrare documentazione su main durante la pipeline dello SHA precedente: ne impedirebbe la promozione per candidato obsoleto.

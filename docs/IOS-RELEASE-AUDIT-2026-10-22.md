@@ -52,9 +52,9 @@ Le prove locali non attestano esecuzione nativa nel container Linux né acquisti
 | Autocompletamento dopo tre lettere | suggestNames senza limite artificiale; test exam-training con tutte le corrispondenze e Amanita rubescens riusciti |
 | Ripetizione errori e storico | advanceTraining, study-exam e study-store; regressioni riuscite |
 | Conservazione preferiti e progressi | ID e chiavi persistenti, letture protette e test di recovery; non ancora verificata la migrazione su iPhone fisico del titolare |
-| Controlla e analizza foto selezionate | **BLOCCO:** componente PhotoLibrary.tsx e modulo Vision presenti, ma App.tsx non importa/monta PhotoLibrary e nessun altro componente lo raggiunge. Non attestare disponibilità nella release corrente |
+| Controlla e analizza foto selezionate | **RINVIATA dal titolare il22 ottobre:** conservare PhotoLibrary e modulo Vision nelle versioni successive, senza renderli accessibili dall’app. Non è un requisito di questa pubblicazione |
 
-Per il filtro Foto serve una PR dedicata, una collocazione raggiungibile nel flusso corrente, test di accesso limitato/ripresa20 foto e nuove prove native sul nuovo SHA. Questo audit sceglie di segnalare il blocco, come previsto dal mandato, senza inserire una funzione non verificata nel candidato già in validazione.
+Decisione successiva del titolare: caricamento e analisi Foto personali restano disattivati. Codice e test devono essere conservati nelle prossime versioni; nessun ingresso, deep link o richiesta di permessi viene aggiunto. Il precedente blocco per mancata esposizione è quindi rimosso per modifica esplicita del requisito, senza attestare la funzione come disponibile. Vedere PHOTO-LIBRARY-DEFERRED.md. La proposta locale di attivazione è stata ritirata prima di push/build/distribuzione.
 
 ## EAS e Apple: stato realmente letto
 
@@ -71,8 +71,6 @@ Lettura API Apple autenticata22 ottobre 16:11:01 UTC, artefatto App-Store-status
 - Acquisti TestFlight usano il sandbox Apple; i test simulatore utilizzano SKTestSession locale. Non sono acquisti di produzione e non è stato effettuato alcun acquisto reale.
 
 La pipeline corrente genera `consolidated-beta`, con ricevuta `testFlightOnly:true`, `diagnosticOnly:true`, `appStoreReady:false`. Questi flag sono stati preservati. Nessuna buildproduction nuova avviata con gate scientifico fallito. Un'esecuzione locale EAS non necessariamente produce un nuovo Build ID cloud: registrare hash IPA,producerRunId,build number e submission effettivi dalle ricevute.
-
-
 
 Ricevuta firmata letta nel job beta119950377248: **1.1.0(17)**, profilo `consolidated-beta`, producerRunId39807794183, sourceCommitd2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34, IPA SHA256 `9f4c123ba05d9d0a90c5ccf94a4b3ab34e974bfd892d4b8842846a5bcdd779f5`. La ricevuta mantiene testFlightOnly=true, diagnosticOnly=true, appStoreReady=false. Build locale EAS, non un nuovo ID cloud production. Submission2cc40b80-e3f4-4d6d-9a30-6107d5a98531 ancora in coda al momento della verifica.
 
@@ -104,7 +102,7 @@ Alle 18:40 circa, ora italiana, il job beta risultava `Queued / Starting job`. L
 
 1. Leggere l'esito finale #9 e #11; conservare receipt,hash IPA,Applebuild ID,gruppo e disponibilità effettiva per ogni nuovo build diagnostico.
 2. Completare revisione micologica indipendente,fonti puntuali e licenze. Il software non può attestare autonomamente il lavoro di un revisore indipendente.
-3. Risolvere accesso al filtroFoto con PR e prove dedicate; consolidare nuovoSHA con tutti i controlli obbligatori.
+3. Conservare il rinvio Foto esplicito nelle versioni successive; non riattivare senza nuova richiesta e prove dedicate.
 4. Privacy tecnica pubblicata e verificata; risolvereDSARejected con dichiarazione del titolare.
 5. Implementare/qualificare un processo production distinto che richieda gate editoriale e proveSUCCESS dello stesso SHA; non utilizzare indiscriminatamente store-build.yml (auto-submit) né il vecchio store-submit-ios.yml con ID hardcoded.
 6. Solo dopo: EAS production firmata,verifica del codice incorporato,upload,processing Apple,gruppo tester previsto e lettura disponibilità TestFlight. Poi metadati/screenshot autentici e nuova bozzaApp Review; invio pubblico ancora vietato finché non idonea.
