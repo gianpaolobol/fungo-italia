@@ -27,3 +27,18 @@ Un alimento a commestibilità **libera** richiede generalmente verifica del buon
 5. Testare categorie, preparazione, feedback e casi pericolosi; non correggere silenziosamente lo storico esami dell'utente, ma gestire revisioni compatibili.
 
 **Stato di questo intervento:** inserita infrastruttura di audit su branch isolato; non ancora completata la revisione manuale di tutte le 148 schede + 66 gruppi.
+
+## Nuova fonte autorizzata — materiali Palumbo e Suriano
+
+Cartella Google Drive fornita dal titolare: https://drive.google.com/drive/folders/1sgmK0p5GJmgbvqpIzNi7RNJZetxy7UHQ
+
+La cartella è accessibile e al 22/10/2026 presenta due sottocartelle:
+
+- **Palumbo**: *funghi clitocyboidi Palumbo.pdf*; *generi lepiotoidi.pdf*.
+- **Suriano**: *Trattazione delle principali specie di funghi epigei ammesse.pdf*; *SECONDA PARTE.pdf*; *Durabilità e stato di conservazione dei funghi freschi.pdf*; *Alcune integrazioni dell’allegato 1 degne di nota.pdf*.
+
+**Uso consentito:** integrare caratteri diagnostici, denominazioni, sinonimi, habitat, confronti con specie simili, documentazione di studio e domande teoriche o fotografiche, attribuendo a ogni affermazione file, autore e pagina. Non riutilizzare fotografie nel prodotto distribuito senza verificare licenza o autorizzazione specifica: l'accesso Drive non equivale a licenza pubblica.
+
+**Precedenza inderogabile:** la *Guida ragionata alla commestibilità dei funghi* resta il documento fondante per categoria di commestibilità e preparazioni obbligatorie. In caso di divergenze o informazioni non sovrapponibili, la scheda e il quesito alimentare rimangono da verificare; questi PDF non sovrascrivono automaticamente la classificazione fondata sulla Guida.
+
+Per i test, copiare soltanto nozioni supportate da pagine effettivamente consultate. Non attribuire a un'intera sezione la commestibilità di una singola specie; nessuna scheda o immagine va marcata come indipendentemente revisionata per semplice presenza nella cartella.
