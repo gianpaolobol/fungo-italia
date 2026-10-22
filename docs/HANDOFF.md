@@ -4,6 +4,8 @@ Il titolare ha richiesto esplicitamente di **mantenere disattivati e non accessi
 
 La proposta locale di ingresso da Studio è stata ritirata prima di qualsiasi push, build o distribuzione. App.tsx e test UI StoreKit sono identici al candidato main d2c8b650. Nuova regressione sul vero App.tsx verifica assenza dell’analisi Foto su iOS, Android e web, navigando i quattro tab. I test dei lotti20, pausa/ripresa e persistenza restano conservati. Estesi i filtri pull_request dei tre workflow obbligatori ai sorgenti applicativi e inclusi src/** anche su pushmain/pipeline consolidata: nessuna asserzione acquisti rimossa.
 
+Proposti nella PR117: preflight production con esecuzione dei gate scientifici strict e prove native/UI/demo/scientifiche dello stesso main SHA, nessun auto-submit e attesa/metadati EAS. I percorsi storici non verificati vengono fermati prima della distribuzione. Native/UI/demo e verifica scientifica eseguite su ogni pushmain; regressionitest191/191 e YAML validi. Revisione separata ha rilevato e visto correggere il caso dei commit solo documentali. Il preflight reale sul catalogo attuale esce1 prima di build/API per il gate scientifico. Qualificazione binario e Apple production ancora da completare: docs/PRODUCTION-IOS-PROMOTION.md.
+
 Restano distinti il gate scientifico (148 schede,0 revisioni indipendenti), DSA Rejected e la futura build production. Privacy tecnica pubblicata dopo approvazione specifica del titolare (PR117). Build diagnostica17 da d2c8b650, submission EAS2cc40b80-e3f4-4d6d-9a30-6107d5a98531 in coda all’ultima verifica. Non integrare prima della conclusione della distribuzione corrente.
 
 

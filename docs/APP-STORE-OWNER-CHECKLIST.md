@@ -24,3 +24,5 @@ Accordi Free Apps e Paid Apps: **Active**. Dati fiscali e conto di pagamento: **
 - La versione App Store1.0 è ancora REJECTED e seleziona build 9. Gruppo/prodotto annuale sono nella bozza Ready for Review,non approvati. Includere app,gruppo e prodotto nella stessa nuova submission quando la release sarà idonea. Non inviare prima di avere chiuso i blocchi.
 
 L'app può essere distribuita internamente a fini diagnostici secondo la pipeline autorizzata; questo non costituisce approvazione per la vendita o idoneità alla pubblicazione.
+
+Il processo production e i percorsi storici bloccati sono descritti in [PRODUCTION-IOS-PROMOTION.md](PRODUCTION-IOS-PROMOTION.md). Il gate scientifico reale resta fallito; nessuna buildproduction nuova qualificata da questo aggiornamento.

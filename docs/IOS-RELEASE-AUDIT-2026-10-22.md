@@ -98,11 +98,21 @@ Documentazione pubblicata nella [PR #117 in bozza](https://github.com/gianpaolob
 
 Alle 18:40 circa, ora italiana, il job beta risultava `Queued / Starting job`. La [pagina ufficiale GitHub Status](https://www.githubstatus.com/incidents/wq8305lppdc2), consultata durante questa verifica, segnala un incidente attivo iniziato alle 15:28 UTC che coinvolge anche Actions; la pagina generale mostra Actions Degraded Performance. Il precedente incidente distinto sugli Actions Results è stato dichiarato risolto alle 15:18 UTC. La coincidenza con coda e ritardi dei riepiloghi è compatibile con un problema di servizio, ma non dimostra la causa del singolo job. Successivamente il job beta è partito e ha completato la compilazione; restano da attestare upload Apple e disponibilità. Nessun runner alternativo non qualificato è stato scelto e nessun risultato pendente è stato convertito in successo.
 
+## Correzioni successive per la preparazione production
+
+La PR117 aggiunge `scripts/production-preflight.mjs`: esegue il vero gate scientifico strict e l’audit tossicologico strict, richiede main corrente e run native/UI/demo/scientifici conclusi SUCCESS sullo stesso SHA. I tre workflow nativi e quello scientifico si avviano su ogni pushmain, così anche una modifica documentale può ottenere prove senza commit artificiali. Il workflow scientifico esegue inoltre l’intera suite Node nelle PR.
+
+Store production build richiede il preflight, conserva la ricevuta, usa il profilo production, attende EAS e conserva metadati, senza auto-submit. Le vecchie scorciatoie di submit con ID hardcoded, auto-submit launch fix, OTA layout production e release Foto vengono fermate esplicitamente prima della distribuzione. La pipeline diagnostica conserva i suoi gate/flag e trigger originari, senza duplicazioni.
+
+Verifiche:191 test Node riusciti; tutti gli YAML workflow analizzati; App.tsx, modulo Foto e test UI StoreKit identici alla base. Il preflight eseguito realmente con refs/heads/main sul catalogo attuale si ferma con exit1 al gate scientifico, prima di chiamare API o avviare build. Una revisione separata del diff non ha rilevato problemi importanti dopo la correzione dei trigger. Non è una qualifica end-to-end production: firma/provenienza del nuovo binario, Apple e promozione restano da verificare dopo il superamento scientifico.
+
+La proposta di attivazione Foto è stata ritirata e non è stata trasmessa al repository remoto. È stata conservata soltanto la decisione di rinvio con codice invariato e regressione di assenza dell’accesso.
+
 ## Passi obbligatori rimasti
 
 1. Leggere l'esito finale #9 e #11; conservare receipt,hash IPA,Applebuild ID,gruppo e disponibilità effettiva per ogni nuovo build diagnostico.
 2. Completare revisione micologica indipendente,fonti puntuali e licenze. Il software non può attestare autonomamente il lavoro di un revisore indipendente.
 3. Conservare il rinvio Foto esplicito nelle versioni successive; non riattivare senza nuova richiesta e prove dedicate.
 4. Privacy tecnica pubblicata e verificata; risolvereDSARejected con dichiarazione del titolare.
-5. Implementare/qualificare un processo production distinto che richieda gate editoriale e proveSUCCESS dello stesso SHA; non utilizzare indiscriminatamente store-build.yml (auto-submit) né il vecchio store-submit-ios.yml con ID hardcoded.
+5. Verificare e integrare i controlli production proposti nella PR117, poi qualificare firma/provenienza del binario e promozione Apple seguendo PRODUCTION-IOS-PROMOTION.md. Il preflight di sorgente non completa da solo il processo production.
 6. Solo dopo: EAS production firmata,verifica del codice incorporato,upload,processing Apple,gruppo tester previsto e lettura disponibilità TestFlight. Poi metadati/screenshot autentici e nuova bozzaApp Review; invio pubblico ancora vietato finché non idonea.

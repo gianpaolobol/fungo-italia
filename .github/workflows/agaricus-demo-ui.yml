@@ -26,27 +26,6 @@ name: Verify free Agaricus demo interface
   push:
     branches:
     - main
-    paths:
-    - App.tsx
-    - index.js
-    - app.json
-    - app.config.js
-    - package.json
-    - package-lock.json
-    - eas.json
-    - assets/**
-    - components/**
-    - hooks/**
-    - lib/**
-    - modules/**
-    - src/**
-    - tests/storekit/**
-    - scripts/**
-    - web/**
-    - .github/workflows/consolidated-testflight.yml
-    - .github/workflows/subscription-storekit-tests.yml
-    - .github/workflows/subscription-storekit-ui.yml
-    - .github/workflows/agaricus-demo-ui.yml
   workflow_dispatch: null
 permissions:
   contents: read

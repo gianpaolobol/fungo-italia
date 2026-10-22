@@ -19,8 +19,7 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - name: Upload signed build to TestFlight
+      - name: Refuse unverified historical binary submission
         run: |
-          test -n "$EXPO_TOKEN"
-          test -n "$EXPO_PROJECT_ID"
-          npx eas-cli@24.8.0 submit --platform ios --profile production --id 1fdc27d4-cec2-4b9d-bddd-511f1407a5dc --non-interactive --wait
+          echo '::error::This historical submit path has no exact-source binary provenance. Use the paired diagnostic workflow or a separately qualified production promotion; never submit the previous hardcoded build.'
+          exit 1
