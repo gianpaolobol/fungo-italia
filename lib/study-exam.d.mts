@@ -2,7 +2,7 @@ import type {Training,TrainingAnswer,TrainingSummary,ExamCase} from '../web/publ
 export function startStudyExam(bank:ExamCase[],options?:{mode?:'training'|'simulation';taxonIds?:string[];count?:number}):Training;
 export function submitStudyAnswer(state:Training,answer:TrainingAnswer,bank:ExamCase[]):Training;
 export function historyEvidence(history:TrainingSummary[],options?:{bankRevision?:string;compatibleRevisions?:string[];bank?:ExamCase[]}):Evidence[];
-export function examUnits(bank:ExamCase[],extraTaxa?:{id:string;kind?:string}[]):Unit[];
+export function examUnits(bank:ExamCase[],extraTaxa?:{id:string;kind?:string;curriculum?:{level?:string}}[]):Unit[];
 export function bankSignature(bank:ExamCase[]):string;
 
 export function restoreStudyExam(raw:string,bank:ExamCase[],legacyBank?:ExamCase[],options?:{count?:number;compatibleRevisions?:string[]}):Training|null;

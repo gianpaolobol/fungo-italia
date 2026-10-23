@@ -41,3 +41,5 @@ Le precedenti automazioni OTA/submit iOS sono archiviate in `docs/release-workfl
 Node >=24.3.0; `npm ci`, `npm run prepare:data`, `npm run typecheck`. I workflow GitHub gestiscono compilazione e distribuzione. Expo 58.0.2 usa React 19.3.0 e React Native 0.88.0-rc.3, con override esplicito dei peer prerelease.
 
 Il progetto precedente Next/React è conservato in `legacy/web` e nei branch `backup/pre-migration-flutter` e `backup/verified-web-readiness`. Il percorso pubblico attuale è GitHub Pages.
+
+Aggiornamento curricolare23/10/2026:218 schede e218 casi (86 fotografici,132 teorici,421 quesiti teorici);150 immagini supplementari collegate dalla chat,50 solo fonte. [Recupero e limiti](docs/RECOVERY-2026-10-23.md).

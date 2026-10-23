@@ -4,10 +4,16 @@ import {readFileSync} from 'node:fs';
 const data=name=>JSON.parse(readFileSync(new URL('../src/data/'+name,import.meta.url),'utf8'));
 const catalog=data('catalog.json'),groups=data('groups.json'),review=data('atlas-field-review-20261009.json');
 const profile=name=>catalog.find(r=>r.scientificName===name)?.studyProfile;
-test('all 214 cards have a matching review and regenerated field coverage',()=>{
- assert.equal(catalog.length,148);assert.equal(groups.length,66);assert.equal(review.records.length,214);
+test('historical review covers its 214 cards and does not attest the four completion groups',()=>{
+ assert.equal(catalog.length,148);assert.equal(groups.length,70);assert.equal(review.records.length,214);
  assert.equal(new Set(review.records.map(r=>r.scientificName)).size,214);
- for(const card of [...catalog,...groups]){
+ const reviewedNames=new Set(review.records.map(r=>r.scientificName));
+ const historical=[...catalog,...groups].filter(r=>reviewedNames.has(r.scientificName));
+ assert.equal(historical.length,214);
+ const completion=groups.filter(r=>!reviewedNames.has(r.scientificName));
+ assert.equal(completion.length,4);
+ for(const card of completion){assert(card.curriculumObjective);assert.equal(card.studyProfile,undefined);assert.deepEqual(card.sources,[]);}
+ for(const card of historical){
   const row=review.records.find(r=>r.scientificName===card.scientificName);assert(row,card.scientificName);
   for(const field of ['odor','sporePrint'])assert.equal(Boolean(card.studyProfile?.[field]),row.fields[field]==='documented',card.scientificName+' '+field);
  }

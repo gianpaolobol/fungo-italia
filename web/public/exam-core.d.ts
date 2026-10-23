@@ -1,7 +1,7 @@
 export const foodLabels: Record<string, string>;
 export function selectCases<T extends {id:string;category:string}>(bank:T[],count?:number,rng?:()=>number):T[];
 export function gradeAnswer(c:{acceptedNames:string[];category:string},answer:{name?:string;category?:string;detail?:string}):{name:boolean;category:boolean;detail:null;danger:boolean};
-export type ExamCase={id:string;name:string;acceptedNames:string[];category:string;detailKind:string|null;questionKind?:'profile';scope?:'minimum'|'extended';questions?:DetailQuestion[];preparation:string[];syndrome:{label:string;latency:string;severity:string}|null;photos:{src:string;view:string}[]};
+export type ExamCase={id:string;name:string;acceptedNames:string[];category:string;detailKind:string|null;questionKind?:'profile';scope?:'minimum'|'extended';questions?:DetailQuestion[];preparation:string[];syndrome:{label:string;latency:string;severity:string}|null;coursePhotos?:{src:string;view?:string;subjectTaxon?:string;credit?:string;sourceId?:string;caseId?:string}[];photos:{src:string;view:string}[]};
 export type TrainingAnswer={name:string;category:string;choices:Record<string,string[]>;assisted:boolean};
 export type DetailQuestion={id:string;title:string;multiple:boolean;options:{id:string;label:string}[];correct:string[]};
 export type TrainingGrade={profile?:boolean;name:boolean;category:boolean;detail:boolean;danger:boolean;passed:boolean;details:{id:string;title:string;correct:boolean}[]};

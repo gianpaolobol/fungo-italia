@@ -1,3 +1,9 @@
+## Recupero e pubblicazione autorizzata — 23/10/2026
+
+Il titolare autorizza «pubblica questi aggiornamenti e fai commit e push su main», poi richiede il recupero completo dell’ultimo stato dopo la manutenzione automatica. Baseline main d2c8b650;218 schede e86 casi fotografici coincidono con la cache;132 casi teorici e421 quesiti coincidono con il banco recuperato;200 foto identiche agli asset precedenti.150 collegate,50 solo fonte;76 casi con foto del corso.147 profili alimentari documentati esercitati;4 gruppi minimi senza attestazioni inventate. Generatori e registri ricostruiti, non identità dei vecchi commit. [Dettagli e limiti](RECOVERY-2026-10-23.md).
+
+La precedente sospensione è superata dall’autorizzazione esplicita, inclusa pubblicazione delle foto nel repository pubblico. Restano perimetroS1, prevalenza alimentareS2, matrice storica214, blocco foto personali/analisi, verifiche Apple e pipeline abbinata web/TestFlight. Gate scientifico strict ancora bloccato; nessuna revisione indipendente attestata.
+
 # Handoff corrente
 
 ## Digitazione controllata del test UI — 22 ottobre 2026

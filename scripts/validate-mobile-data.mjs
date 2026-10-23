@@ -2,8 +2,16 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const catalog=JSON.parse(await readFile('src/data/catalog.json','utf8'));
 const groups=JSON.parse(await readFile('src/data/groups.json','utf8'));
-assert.equal(groups.length,66);
-assert.equal(new Set([...catalog,...groups].map(t=>t.id)).size,214);
+assert.equal(groups.length,70);
+assert.equal(new Set([...catalog,...groups].map(t=>t.id)).size,218);
+const {applyCurriculumScope,curriculumCompletionCards}=await import('./curriculum-scope.mjs');
+const curriculumScope=JSON.parse(await readFile('src/data/curriculum-scope.json','utf8'));
+const curriculumObjectives=JSON.parse(await readFile('legacy/web/data/taxonomic-objectives.json','utf8'));
+const scoped=structuredClone([...catalog,...groups]);
+applyCurriculumScope(scoped,curriculumScope,curriculumObjectives);
+for(const record of [...catalog,...groups]){const expected=scoped.find(r=>r.id===record.id);assert.deepEqual(record.curriculum,expected.curriculum,'Curriculum metadata lost');assert.equal(record.deepMorphologyRequired,expected.deepMorphologyRequired,'Curriculum morphology requirement lost');}
+const completionIds=new Set(curriculumCompletionCards(curriculumScope,curriculumObjectives).map(r=>r.id));
+for(const card of curriculumCompletionCards(curriculumScope,curriculumObjectives))assert.deepEqual(groups.find(r=>r.id===card.id),card,'Completion group acquired unsupported scientific data');
 const areas=JSON.parse(await readFile('src/data/areas.json','utf8'));
 assert.equal(catalog.length,148);
 assert.equal(new Set(catalog.map(t=>t.id)).size,148);
@@ -66,7 +74,7 @@ console.log('Course integrations, pointwise references and corrections survive r
 const studyProfiles=JSON.parse(await readFile('src/data/study-profiles.json','utf8'));
 const referenceImages=JSON.parse(await readFile('src/data/reference-images.json','utf8'));
 const {applyStudyProfiles,applyReferenceImages}=await import('./study-profiles.mjs');
-const expected=[...catalog,...groups].map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
+const expected=[...catalog,...groups].filter(r=>!completionIds.has(r.id)).map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
 applyStudyProfiles(expected,studyProfiles,courseRegistry);
 const {applyToxicologySyndromes}=await import('./toxicology-syndromes.mjs');
 applyToxicologySyndromes(expected,JSON.parse(await readFile('src/data/toxicology-syndromes.json','utf8')));
@@ -77,7 +85,7 @@ const {applyAdminReferenceImages}=await import('./admin-reference-images.mjs');
 applyAdminReferenceImages(expected,JSON.parse(await readFile('src/data/admin-reference-images.json','utf8')));
 const {applyReviewedMatrix,readReviewedMatrix}=await import('./reviewed-matrix.mjs');
 applyReviewedMatrix(expected,await readReviewedMatrix(),studyProfiles);
-for(const t of [...catalog,...groups]){const e=expected.find(row=>row.id===t.id);assert.deepEqual(t.studyProfile,e.studyProfile);assert.deepEqual(t.referenceImages,e.referenceImages);}
+for(const t of [...catalog,...groups].filter(r=>!completionIds.has(r.id))){const e=expected.find(row=>row.id===t.id);assert.deepEqual(t.studyProfile,e.studyProfile);assert.deepEqual(t.referenceImages,e.referenceImages);}
 console.log('Pointwise study profiles and authorized reference galleries survive canonical regeneration.');
 
 const {applyCommercialization}=await import('./commercialization.mjs');
