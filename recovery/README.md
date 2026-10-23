@@ -1,0 +1,1 @@
+Runtime cache recovered on 23 October 2026 after workspace pruning. Contains exact generated 148 catalog +70 group JSON and Metro compiled module evidence. Reassemble: cat runtime-cache.tar.gz.part* > runtime-cache.tar.gz. This backup is evidence, not a released application. Baseline d2c8b650. Private course chat and original books are excluded.
