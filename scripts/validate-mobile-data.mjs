@@ -25,7 +25,18 @@ assert(catalog.find(t=>t.scientificName==='Boletus edulis s.l.').commonNames.inc
 console.log('Supplementary names, habitats and comparison pointers survive canonical data regeneration without changing independent review status.');
 
 const foundations=JSON.parse(await readFile('src/data/internal-foundations.json','utf8'));
-assert.deepEqual(foundations.documents.map(d=>d.sourceId),['S1-obiettivi-tassonomici-v4-2026-06-09','S2-guida-ragionata-commestibilita-2021']);
+const requiredFoundationIds=['S1-obiettivi-tassonomici-v4-2026-06-09','S2-guida-ragionata-commestibilita-2021'];
+const foundationIds=foundations.documents.map(d=>d.sourceId);
+assert.equal(new Set(foundationIds).size,foundationIds.length,'Duplicate founding source IDs');
+assert.deepEqual(foundationIds.slice(0,2),requiredFoundationIds,'Core curriculum and edibility sources must remain first');
+const toxicologyIds=Array.from({length:8},(_,index)=>'COURSE-TOX-20261024-'+(9848+index));
+assert.deepEqual(foundationIds.slice(2),toxicologyIds,'Unexpected or missing certified course toxicology sources');
+for(const source of foundations.documents.slice(2)){
+ assert.equal(source.foundingSource,true,'Course toxicology source is not designated foundational');
+ assert.equal(source.ownerCertification?.status,'certified-course-source-by-project-owner','Missing owner authorization');
+ assert.equal(source.independentReviewStatus,'not-attested','Do not imply independent scientific review');
+ assert.equal(source.rights?.originalPublished,false,'Course image redistribution must remain blocked');
+}
 assert(foundations.documents.every(d=>d.visibility==='internal'));
 assert.equal(foundations.scientificStatus.independentReviewComplete,false);
 assert.equal(foundations.scientificStatus.edibilityAssessment,'source-attributed-partial');
