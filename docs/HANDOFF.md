@@ -1,5 +1,15 @@
 # Handoff corrente
 
+## Sindromi di corso — 24 ottobre 2026
+
+Richiesta del titolare: acquisire le otto immagini IMG_9848–IMG_9855 come fonti fondanti e certificate di Fungo Italia, ricostruire tutte le sindromi e completare rabdomiolitica/norleucinica con fonti esterne. Registrate 8 fonti con identità, hash SHA-256, provenienza dichiarata e certificazione del titolare; revisione scientifica indipendente non attestata. Intestazione AMB visibile soltanto nelle prime due; autore/editoria delle altre non inventati. Originali non ripubblicati.
+
+`src/data/course-syndrome-foundations.json` conserva 15 quadri con latenze distinte per fonte, organi, taxa come stampati, sintomi, meccanismi/terapie quando presenti, lacune e controversie. Ricostruzione leggibile: `docs/sources/SINDROMI-CORSO-2026-10-24.md`. Documenti collegati a `course-sources.json` e al registro generato `internal-foundations.json`; 21 schede esistenti ricevono riferimenti puntuali tramite `toxicology-syndromes.json`. Rabdomiolitica: 24–72 ore dall’ultimo pasto ripetuto; norleucinica: esordio GI 2–24 ore distinto dal danno renale, possibile gravità/dialisi, identità tossinica di A. proxima non data per certa. Evidenze primarie 2002/2009, Mancini2015, Kirchmair2012 e Adibelli2024; elenco e portata nel registro.
+
+Nessuna espansione curricolare: restano 148 unità,66 gruppi e86 casi d’esame generati come prima; non significa copertura d’esame completa di tutte le unità. IDs, ordine, curriculum, categorie, giudizi e precauzioni alimentari invariati rispetto al baseline. Nessuna attribuzione certa propagata a Mycena pura, Coprinus comatus, Dermocybe o Auricularia; nessun nuovo taxon per la sola presenza nella fonte. Emolitica e paxillica distinte. Le terapie storiche rimangono documentazione, non istruzioni di automedicazione; il consiglio storico di reiezione non è adottato.
+
+Verifiche locali: export canonico e rigenerazione mobile riusciti; test `course-syndrome-foundations`, `toxicology-syndromes`, `toxicology-coverage`, `approved-external-study-evidence`, `export-provenance` riusciti; confronto IDs/curriculum/commestibilità e hash degli8originali riuscito; `git diff --check` riuscito. Nessuna prova nativa o certificazione indipendente ricavata da questi test. Modifica su branch dedicato e PR; nessuna build TestFlight, deploy web o pubblicazione App Store attestata.
+
 ## Digitazione controllata del test UI — 22 ottobre 2026
 
 Sul candidato2b79637: StoreKit nativo **PASS** (3,254s), startupbaseline **PASS** (`ready=true transactions=0`,46,533s), without-updates **PASS**, demo iPhone/iPad **PASS**. UI iPhone119855236120: acquisto nativo verificato e entitlementactive=true; riapertura e ripristino confermanoactive=true. Fallisce poi alla riga179, prima di rimborso/scadenza, perché la tastiera XCTest ha inserito **Aita caesarea**, non Amanita caesarea (AXtree completo in artefatto12430343916). La ricerca mostra correttamente0schede; il taxon esiste nel catalogominimo, feedfalse.

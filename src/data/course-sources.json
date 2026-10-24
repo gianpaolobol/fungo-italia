@@ -910,6 +910,246 @@
       },
       "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
       "analysisSummary": "Alimenta 2/2023, articolo Ferrari et al. pp. stampate 283–353. Studio delle contaminazioni entomatiche; non prova di caratteri tassonomici o commestibilità."
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9848",
+      "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+      "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+      "libraryFileId": "libfile_b9326074d71c8191a083207efd519e36",
+      "originalFilename": "IMG_9848.jpeg",
+      "fileHashSha256": "0574f44d0c4e03541193157cee9a9149056997b91347503329487cd8e604e260",
+      "bytes": 505571,
+      "authors": [],
+      "publisher": "Associazione Micologica Bresadola (intestazione visibile)",
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9849",
+      "title": "AMB — Continuazione giromitrica e sindrome paxillica",
+      "url": "https://chatgpt.com/library?file_id=libfile_c4ea5fe24f948191944ec9b9227c0038&account_id=personal",
+      "libraryFileId": "libfile_c4ea5fe24f948191944ec9b9227c0038",
+      "originalFilename": "IMG_9849.jpeg",
+      "fileHashSha256": "43d1c6be66a5001f82de5135d788bc120aae44be20a8e2111507c3ccb3e6dd15",
+      "bytes": 1045888,
+      "authors": [],
+      "publisher": "Associazione Micologica Bresadola (intestazione visibile)",
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9850",
+      "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+      "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+      "libraryFileId": "libfile_868f77da90f08191b0e690424b25d551",
+      "originalFilename": "IMG_9850.jpeg",
+      "fileHashSha256": "db9176fa6c51268a3f3720c6113bcf3dd0a13a6cc110d133623a3b9aef862389",
+      "bytes": 875766,
+      "authors": [],
+      "publisher": null,
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9851",
+      "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+      "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+      "libraryFileId": "libfile_92b41ad10bf081919eb863ea9eae7d38",
+      "originalFilename": "IMG_9851.jpeg",
+      "fileHashSha256": "cf53eb42f8e76800d6d3011b06ffbd887aebd41848dcff78495af035b9b74c61",
+      "bytes": 948223,
+      "authors": [],
+      "publisher": null,
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9852",
+      "title": "Elenco delle principali sindromi: continuazione coprinica",
+      "url": "https://chatgpt.com/library?file_id=libfile_50f173b4a8f08191bb80008fe07ca5a9&account_id=personal",
+      "libraryFileId": "libfile_50f173b4a8f08191bb80008fe07ca5a9",
+      "originalFilename": "IMG_9852.jpeg",
+      "fileHashSha256": "c044eb4136ca6ca8d75028174ac2266e46d01772ecec9adeb853a4bedc133c89",
+      "bytes": 652570,
+      "authors": [],
+      "publisher": null,
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9853",
+      "title": "I tipi di sindrome — tabella delle forme potenzialmente mortali",
+      "url": "https://chatgpt.com/library?file_id=libfile_35e0f8823e4c8191ae60a2f21c25892c&account_id=personal",
+      "libraryFileId": "libfile_35e0f8823e4c8191ae60a2f21c25892c",
+      "originalFilename": "IMG_9853.jpeg",
+      "fileHashSha256": "6042b6b37e3bc34bc401e255dbc0bad51a81c8f40a97e7ea329d3d37d571acc3",
+      "bytes": 1047206,
+      "authors": [],
+      "publisher": null,
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9854",
+      "title": "Messaggio di corso — integrazione rabdomiolitica e norleucinica",
+      "url": "https://chatgpt.com/library?file_id=libfile_dd0219d4cec88191a9a75e7eaebcff53&account_id=personal",
+      "libraryFileId": "libfile_dd0219d4cec88191a9a75e7eaebcff53",
+      "originalFilename": "IMG_9854.jpeg",
+      "fileHashSha256": "6e140ec79ade56a256fb2d02c2a8fb6839542cf7192d986d2f844ba99ecf1aa6",
+      "bytes": 140976,
+      "authors": [],
+      "publisher": null,
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-message",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
+    },
+    {
+      "sourceId": "COURSE-TOX-20261024-9855",
+      "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+      "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+      "libraryFileId": "libfile_3f6ac1c320bc8191bab6c6444825106a",
+      "originalFilename": "IMG_9855.jpeg",
+      "fileHashSha256": "239dbdd0d8828c7421abcc8252fde13a10cd5a1402dca06143290dbd30d11b67",
+      "bytes": 1047476,
+      "authors": [],
+      "publisher": null,
+      "publicationYear": null,
+      "pageCount": 1,
+      "analysisStatus": "extracted-text-reviewed",
+      "reviewedAt": "2026-10-24",
+      "sourceType": "course-image",
+      "role": "toxicology-reference",
+      "visibility": "internal",
+      "foundingSource": true,
+      "ownerCertification": {
+        "status": "certified-course-source-by-project-owner",
+        "date": "2026-10-24",
+        "scope": "Fonte fondante tossicologica autorizzata dal titolare; non certificazione indipendente di ogni affermazione."
+      },
+      "independentReviewStatus": "not-attested",
+      "provenanceNote": "Materiale fornito dal titolare come proveniente dal corso. Autore, data ed edizione non visibili; non attribuire a tutti i fogli la testata AMB delle prime due immagini.",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      }
     }
   ],
   "blockedFolders": [

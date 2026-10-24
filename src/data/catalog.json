@@ -1241,6 +1241,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-phalloides",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -1356,6 +1369,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -1421,6 +1441,19 @@
         "sourcePage": 75
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: di solito 6–12 ore, anche oltre. Gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La fonte tratta A. verna, senza separare modernamente A. vidua.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-verna-amanita-vidua",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
@@ -1459,7 +1492,15 @@
           "label": "Sindrome falloidea (amatossinica); A. verna nel senso della fonte",
           "latency": "Lunga: di solito 6–12 ore, anche oltre.",
           "severity": "Gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La fonte tratta A. verna, senza separare modernamente A. vidua.",
-          "references": []
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Lieve da giovane, sgradevole in vecchiaia; descrizione riferita ad A. verna nel senso della fonte, senza estenderla alla distinzione moderna con A. vidua.",
@@ -1534,6 +1575,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-amanita-virosa",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.epicentro.iss.it/ben/2015/giugno/1",
@@ -1567,6 +1621,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -1684,7 +1745,56 @@
         "fields": [
           "syndrome"
         ],
-        "supportedClaim": "Variabile: circa 4–8 ore per l’esordio gastrointestinale, anche fino a 48 ore. Nausea, vomito e dolori addominali seguiti da insufficienza renale acuta, con possibile interessamento epatico; può richiedere dialisi.",
+        "supportedClaim": "Variabile: esordio gastrointestinale riportato tra 2 e 24 ore; il danno renale può manifestarsi successivamente. La dicitura didattica «breve latenza» non esclude esordi oltre 6 ore. Amanita proxima: nausea, vomito, diarrea e possibile interessamento epatico, seguiti da insufficienza renale acuta anche grave e necessità di dialisi. Recupero possibile, ma non sempre rapido né garantito. Non classificare come normalmente benigna. L’identità della tossina di A. proxima e la sua equivalenza con quella di A. smithiana restano da distinguere.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "COURSE-TOX-20261024-9855",
+        "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+        "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+        "location": "IMG_9855.jpeg — Sindrome norleucinica (nefrotossica da Amanita proxima); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile: esordio gastrointestinale riportato tra 2 e 24 ore; il danno renale può manifestarsi successivamente. La dicitura didattica «breve latenza» non esclude esordi oltre 6 ore. Amanita proxima: nausea, vomito, diarrea e possibile interessamento epatico, seguiti da insufficienza renale acuta anche grave e necessità di dialisi. Recupero possibile, ma non sempre rapido né garantito. Non classificare come normalmente benigna. L’identità della tossina di A. proxima e la sua equivalenza con quella di A. smithiana restano da distinguere.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-CLINICAL-amanita-proxima-2",
+        "title": "Fonte del quadro clinico",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26252264/",
+        "location": "Mancini et al. — Insufficienza renale acuta dopo Amanita proxima (2015) — Abstract, caso clinico",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile: esordio gastrointestinale riportato tra 2 e 24 ore; il danno renale può manifestarsi successivamente. La dicitura didattica «breve latenza» non esclude esordi oltre 6 ore. Amanita proxima: nausea, vomito, diarrea e possibile interessamento epatico, seguiti da insufficienza renale acuta anche grave e necessità di dialisi. Recupero possibile, ma non sempre rapido né garantito. Non classificare come normalmente benigna. L’identità della tossina di A. proxima e la sua equivalenza con quella di A. smithiana restano da distinguere.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-CLINICAL-amanita-proxima-3",
+        "title": "Fonte del quadro clinico",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21965588/",
+        "location": "Kirchmair et al. — Amanita poisonings resulting in acute, reversible renal failure (2012) — Abstract, Methods/Results",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile: esordio gastrointestinale riportato tra 2 e 24 ore; il danno renale può manifestarsi successivamente. La dicitura didattica «breve latenza» non esclude esordi oltre 6 ore. Amanita proxima: nausea, vomito, diarrea e possibile interessamento epatico, seguiti da insufficienza renale acuta anche grave e necessità di dialisi. Recupero possibile, ma non sempre rapido né garantito. Non classificare come normalmente benigna. L’identità della tossina di A. proxima e la sua equivalenza con quella di A. smithiana restano da distinguere.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-CLINICAL-amanita-proxima-4",
+        "title": "Fonte del quadro clinico",
+        "url": "https://journals.sagepub.com/doi/10.1177/09603271241304368",
+        "location": "Adibelli, Bas Sermenli, Alphan Uc — Outbreaks of mushroom poisoning associated with acute kidney injury (2024) — Results, Table 1 e Discussion",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile: esordio gastrointestinale riportato tra 2 e 24 ore; il danno renale può manifestarsi successivamente. La dicitura didattica «breve latenza» non esclude esordi oltre 6 ore. Amanita proxima: nausea, vomito, diarrea e possibile interessamento epatico, seguiti da insufficienza renale acuta anche grave e necessità di dialisi. Recupero possibile, ma non sempre rapido né garantito. Non classificare come normalmente benigna. L’identità della tossina di A. proxima e la sua equivalenza con quella di A. smithiana restano da distinguere.",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
@@ -1716,12 +1826,31 @@
         "category": "deadly",
         "syndrome": {
           "label": "Sindrome nefrotossica da Amanita proxima (norleucinica)",
-          "latency": "Variabile: circa 4–8 ore per l’esordio gastrointestinale, anche fino a 48 ore.",
-          "severity": "Nausea, vomito e dolori addominali seguiti da insufficienza renale acuta, con possibile interessamento epatico; può richiedere dialisi.",
+          "latency": "Variabile: esordio gastrointestinale riportato tra 2 e 24 ore; il danno renale può manifestarsi successivamente. La dicitura didattica «breve latenza» non esclude esordi oltre 6 ore.",
+          "severity": "Amanita proxima: nausea, vomito, diarrea e possibile interessamento epatico, seguiti da insufficienza renale acuta anche grave e necessità di dialisi. Recupero possibile, ma non sempre rapido né garantito. Non classificare come normalmente benigna. L’identità della tossina di A. proxima e la sua equivalenza con quella di A. smithiana restano da distinguere.",
           "references": [
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome norleucinica, p. 30 (PDF 29)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+              "location": "IMG_9855.jpeg — Sindrome norleucinica (nefrotossica da Amanita proxima); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9855",
+              "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/26252264/",
+              "location": "Mancini et al. — Insufficienza renale acuta dopo Amanita proxima (2015) — Abstract, caso clinico"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/21965588/",
+              "location": "Kirchmair et al. — Amanita poisonings resulting in acute, reversible renal failure (2012) — Abstract, Methods/Results"
+            },
+            {
+              "url": "https://journals.sagepub.com/doi/10.1177/09603271241304368",
+              "location": "Adibelli, Bas Sermenli, Alphan Uc — Outbreaks of mushroom poisoning associated with acute kidney injury (2024) — Results, Table 1 e Discussion"
             }
           ]
         }
@@ -1959,7 +2088,20 @@
         "fields": [
           "syndrome"
         ],
-        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica. Muscimolo e acido ibotenico hanno meccanismi recettoriali differenti; non sono entrambi semplicemente GABAergici.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "COURSE-TOX-20261024-9851",
+        "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+        "location": "IMG_9851.jpeg — Sindrome panterinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica. Muscimolo e acido ibotenico hanno meccanismi recettoriali differenti; non sono entrambi semplicemente GABAergici.",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
@@ -1992,11 +2134,18 @@
         "syndrome": {
           "label": "Sindrome panterinica",
           "latency": "Breve: circa 15–30 minuti fino a 2–3 ore.",
-          "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+          "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica. Muscimolo e acido ibotenico hanno meccanismi recettoriali differenti; non sono entrambi semplicemente GABAergici.",
           "references": [
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome panterinica, p. 32 (PDF 31)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+              "location": "IMG_9851.jpeg — Sindrome panterinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9851",
+              "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -2123,7 +2272,20 @@
         "fields": [
           "syndrome"
         ],
-        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica. Muscimolo e acido ibotenico hanno meccanismi recettoriali differenti; non sono entrambi semplicemente GABAergici.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "COURSE-TOX-20261024-9851",
+        "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+        "location": "IMG_9851.jpeg — Sindrome panterinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Breve: circa 15–30 minuti fino a 2–3 ore. Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica. Muscimolo e acido ibotenico hanno meccanismi recettoriali differenti; non sono entrambi semplicemente GABAergici.",
         "reviewScope": "toxicology-literature",
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
@@ -2169,11 +2331,18 @@
         "syndrome": {
           "label": "Sindrome panterinica",
           "latency": "Breve: circa 15–30 minuti fino a 2–3 ore.",
-          "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica.",
+          "severity": "Acido ibotenico / muscimolo: disturbi gastrointestinali e neurologici, ebbrezza o agitazione, allucinazioni e poi sonnolenza. Nei casi gravi convulsioni o coma; non è la sindrome muscarinica. Muscimolo e acido ibotenico hanno meccanismi recettoriali differenti; non sono entrambi semplicemente GABAergici.",
           "references": [
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome panterinica, p. 32 (PDF 31)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+              "location": "IMG_9851.jpeg — Sindrome panterinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9851",
+              "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -3503,6 +3672,19 @@
         ]
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9850",
+        "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+        "location": "IMG_9850.jpeg — Sindrome muscarinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Breve latenza Intossicazione colinergica potenzialmente grave",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-clitocybe-dealbata-collybia-rivulosa",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
@@ -3537,7 +3719,16 @@
         "syndrome": {
           "label": "Sindrome muscarinica",
           "latency": "Breve latenza",
-          "severity": "Intossicazione colinergica potenzialmente grave"
+          "severity": "Intossicazione colinergica potenzialmente grave",
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+              "location": "IMG_9850.jpeg — Sindrome muscarinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9850",
+              "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Dolciastro ma poco caratteristico. Dato riferito a Clitocybe rivulosa; non descrive necessariamente tutte le componenti della scheda.",
@@ -3883,6 +4074,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9855",
+        "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+        "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+        "location": "IMG_9855.jpeg — Sindrome acromelalgica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Esordio ritardato; l’intervallo preciso non è stabilito dalla fonte qui riportata. Dolore intenso alle estremità, soprattutto piedi, edema e arrossamento; quadro diverso dalla comune gastroenterite. Le fonti riportano acromelalgia / eritromelalgia.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-paralepistopsis-amoenolens",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
@@ -3919,6 +4123,13 @@
             {
               "url": "https://dergipark.org.tr/en/download/article-file/396432",
               "location": "Çolak, Kaygusuz e Battistin (2017), introduzione: edema e dolore alle estremità"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+              "location": "IMG_9855.jpeg — Sindrome acromelalgica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9855",
+              "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -4499,6 +4710,19 @@
         ]
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9851",
+        "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+        "location": "IMG_9851.jpeg — Sindrome coprinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente entro minuti–2 ore dall'assunzione di alcol; interazione possibile anche nei giorni successivi al fungo Intossicazione da interazione con alcol: flushing, cefalea, tachicardia, nausea e possibile ipotensione",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-coprinus-atramentarius-s-l-",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
@@ -4530,7 +4754,16 @@
         "syndrome": {
           "label": "Sindrome coprinica (reazione disulfiram-simile con etanolo)",
           "latency": "Generalmente entro minuti–2 ore dall'assunzione di alcol; interazione possibile anche nei giorni successivi al fungo",
-          "severity": "Intossicazione da interazione con alcol: flushing, cefalea, tachicardia, nausea e possibile ipotensione"
+          "severity": "Intossicazione da interazione con alcol: flushing, cefalea, tachicardia, nausea e possibile ipotensione",
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_92b41ad10bf081919eb863ea9eae7d38&account_id=personal",
+              "location": "IMG_9851.jpeg — Sindrome coprinica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9851",
+              "title": "Elenco delle principali sindromi: muscarinica, panterinica e coprinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Poco caratteristico. Dato riferito a Coprinopsis atramentaria; non descrive necessariamente tutte le componenti della scheda.",
@@ -4708,6 +4941,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome orellanica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni. Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-cortinarius-orellanus",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -4771,6 +5017,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome orellanica, p. 31 (PDF 30)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome orellanica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -4879,6 +5132,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome orellanica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: possibili disturbi iniziali entro 12–76 ore; danno renale anche dopo 4–17 giorni. Orellanina: grave danno renale, oliguria o anuria; possibile insufficienza renale permanente, necessità di dialisi e morte.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-cortinarius-rubellus",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -4945,6 +5211,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome orellanica, p. 31 (PDF 30)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome orellanica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -5444,6 +5717,19 @@
     "habitat": [],
     "sources": [
       {
+        "sourceId": "COURSE-TOX-20261024-9850",
+        "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+        "location": "IMG_9850.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente breve latenza Intossicazione gastrointestinale",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-entoloma-sinuatum",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_opuscoliPoster_149_allegato.pdf",
@@ -5511,7 +5797,16 @@
         "syndrome": {
           "label": "Sindrome gastrointestinale",
           "latency": "Generalmente breve latenza",
-          "severity": "Intossicazione gastrointestinale"
+          "severity": "Intossicazione gastrointestinale",
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+              "location": "IMG_9850.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9850",
+              "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Farinaceo, di farina fresca; può diventare sgradevole o rancido con l'età.",
@@ -6245,6 +6540,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-galerina-marginata-group",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK431052/",
@@ -6280,6 +6588,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -6974,6 +7289,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9850",
+        "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+        "location": "IMG_9850.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Variabile; descritti anche esordi a 5–10 ore, quindi non esclusivamente breve. Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-hypholoma-fasciculare",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -7007,6 +7335,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome da Hypholoma, p. 22 (PDF 21)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+              "location": "IMG_9850.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9850",
+              "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -7451,6 +7786,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9853",
+        "title": "I tipi di sindrome — tabella delle forme potenzialmente mortali",
+        "url": "https://chatgpt.com/library?file_id=libfile_35e0f8823e4c8191ae60a2f21c25892c&account_id=personal",
+        "location": "IMG_9853.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, anche oltre. Amatossine: gastroenterite iniziale, possibile apparente miglioramento, poi grave danno epatico; possibile insufficienza renale e morte. La cottura non elimina il rischio.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-lepiota-brunneoincarnata",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -7484,6 +7832,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Quadro della sindrome falloidea, p. 17 (PDF 16)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_35e0f8823e4c8191ae60a2f21c25892c&account_id=personal",
+              "location": "IMG_9853.jpeg — Sindrome falloidea; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9853",
+              "title": "I tipi di sindrome — tabella delle forme potenzialmente mortali",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
@@ -9088,6 +9443,19 @@
         ]
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9855",
+        "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+        "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+        "location": "IMG_9855.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente breve; variabile secondo specie e quantità Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-omphalotus-olearius",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK537111/",
@@ -9116,7 +9484,16 @@
         "syndrome": {
           "label": "Sindrome gastrointestinale a tossicità costante",
           "latency": "Generalmente breve; variabile secondo specie e quantità",
-          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+              "location": "IMG_9855.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9855",
+              "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Piuttosto intenso ma gradevole nella descrizione di First Nature.",
@@ -9868,6 +10245,19 @@
         "sourcePage": 313
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9855",
+        "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+        "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+        "location": "IMG_9855.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente breve; variabile secondo specie e quantità Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-tricholoma-pardinum",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf",
@@ -9932,7 +10322,16 @@
         "syndrome": {
           "label": "Sindrome gastrointestinale a tossicità costante",
           "latency": "Generalmente breve; variabile secondo specie e quantità",
-          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave"
+          "severity": "Vomito, diarrea, dolori addominali; possibile disidratazione grave",
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+              "location": "IMG_9855.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9855",
+              "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Farinaceo, più o meno pronunciato.",
@@ -10095,6 +10494,19 @@
         "sourcePage": 311
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9855",
+        "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+        "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+        "location": "IMG_9855.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona. Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-tricholoma-josserandii",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
@@ -10124,7 +10536,15 @@
           "label": "Sindrome gastrointestinale intensa e prolungata",
           "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
           "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
-          "references": []
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_3f6ac1c320bc8191bab6c6444825106a&account_id=personal",
+              "location": "IMG_9855.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9855",
+              "title": "Tabella sindromi — muscarinica, panterinica, psicotropa, coprinica, gastroenterica, emolitica, norleucinica, acromelalgica, Szechwan",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Complesso, con note di farina, cimice e talvolta liquirizia.",
@@ -10189,6 +10609,43 @@
           "lookalikes"
         ],
         "sourcePage": 16
+      },
+      {
+        "sourceId": "COURSE-TOX-20261024-9853",
+        "title": "I tipi di sindrome — tabella delle forme potenzialmente mortali",
+        "url": "https://chatgpt.com/library?file_id=libfile_35e0f8823e4c8191ae60a2f21c25892c&account_id=personal",
+        "location": "IMG_9853.jpeg — Sindrome rabdomiolitica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: 24–72 ore dall’ultimo pasto, tipicamente dopo consumi abbondanti e ripetuti di Tricholoma equestre. Danno della muscolatura scheletrica con astenia, debolezza, mialgie, possibile sudorazione e urine scure; CK elevata. Possibili complicanze renali e respiratorie e decesso. Il meccanismo e la tossina specifica non sono definitivamente chiariti; l’associazione clinica non definisce una dose sicura.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-CLINICAL-tricholoma-equestre-1",
+        "title": "Fonte del quadro clinico",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12184017/",
+        "location": "Chodorowski, Waldman, Sein Anand — Acute poisoning with Tricholoma equestre (2002) — Abstract, due casi clinici",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: 24–72 ore dall’ultimo pasto, tipicamente dopo consumi abbondanti e ripetuti di Tricholoma equestre. Danno della muscolatura scheletrica con astenia, debolezza, mialgie, possibile sudorazione e urine scure; CK elevata. Possibili complicanze renali e respiratorie e decesso. Il meccanismo e la tossina specifica non sono definitivamente chiariti; l’associazione clinica non definisce una dose sicura.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
+        "sourceId": "TOX-CLINICAL-tricholoma-equestre-2",
+        "title": "Fonte del quadro clinico",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19788144/",
+        "location": "Sein Anand, Chwaluk, Sut — Acute poisoning with Tricholoma equestre (2009) — Abstract, quattro casi clinici",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: 24–72 ore dall’ultimo pasto, tipicamente dopo consumi abbondanti e ripetuti di Tricholoma equestre. Danno della muscolatura scheletrica con astenia, debolezza, mialgie, possibile sudorazione e urine scure; CK elevata. Possibili complicanze renali e respiratorie e decesso. Il meccanismo e la tossina specifica non sono definitivamente chiariti; l’associazione clinica non definisce una dose sicura.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
         "sourceId": "TOX-tricholoma-equestre",
@@ -10257,8 +10714,25 @@
         "category": "discouraged",
         "syndrome": {
           "label": "Sindrome rabdomiolitica",
-          "latency": "Possibile comparsa ritardata, dopo consumi ripetuti",
-          "severity": "Potenzialmente grave o mortale; danno muscolare con possibile insufficienza renale"
+          "latency": "Lunga: 24–72 ore dall’ultimo pasto, tipicamente dopo consumi abbondanti e ripetuti di Tricholoma equestre.",
+          "severity": "Danno della muscolatura scheletrica con astenia, debolezza, mialgie, possibile sudorazione e urine scure; CK elevata. Possibili complicanze renali e respiratorie e decesso. Il meccanismo e la tossina specifica non sono definitivamente chiariti; l’associazione clinica non definisce una dose sicura.",
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_35e0f8823e4c8191ae60a2f21c25892c&account_id=personal",
+              "location": "IMG_9853.jpeg — Sindrome rabdomiolitica; nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9853",
+              "title": "I tipi di sindrome — tabella delle forme potenzialmente mortali",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/12184017/",
+              "location": "Chodorowski, Waldman, Sein Anand — Acute poisoning with Tricholoma equestre (2002) — Abstract, due casi clinici"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/19788144/",
+              "location": "Sein Anand, Chwaluk, Sut — Acute poisoning with Tricholoma equestre (2009) — Abstract, quattro casi clinici"
+            }
+          ]
         }
       },
       "odor": "Leggero e gradevole, farinaceo (talora floreale).",
@@ -12944,6 +13418,19 @@
         ]
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9850",
+        "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+        "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+        "location": "IMG_9850.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona. Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-rubroboletus-satanas",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
@@ -12976,7 +13463,15 @@
           "label": "Sindrome gastrointestinale",
           "latency": "Generalmente breve; la latenza non è un criterio assoluto e varia con specie, pasto e persona.",
           "severity": "Nausea, vomito, diarrea e dolori addominali; apparato gastrointestinale. Possibili disidratazione e squilibri elettrolitici, soprattutto nei quadri intensi.",
-          "references": []
+          "references": [
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_868f77da90f08191b0e690424b25d551&account_id=personal",
+              "location": "IMG_9850.jpeg — Sindrome gastrointestinale (gastroenterica / resinoide); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9850",
+              "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
+              "ownerCertification": "certified-course-source-by-project-owner"
+            }
+          ]
         }
       },
       "odor": "Lieve da giovane; intenso e sgradevole, putrido, negli esemplari vecchi.",
@@ -16772,6 +17267,19 @@
         "reviewStatus": "source-mapped-not-independently-reviewed"
       },
       {
+        "sourceId": "COURSE-TOX-20261024-9848",
+        "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+        "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+        "location": "IMG_9848.jpeg — Sindrome giromitrica (o elvellica, nel testo storico); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+        "ownerCertification": "certified-course-source-by-project-owner",
+        "fields": [
+          "syndrome"
+        ],
+        "supportedClaim": "Lunga: generalmente 6–12 ore, talvolta oltre. Giromitrina e metaboliti: disturbi gastrointestinali, possibili lesioni epatiche e renali, disturbi neurologici e emolisi; quadro potenzialmente mortale.",
+        "reviewScope": "toxicology-literature",
+        "reviewStatus": "source-mapped-not-independently-reviewed"
+      },
+      {
         "sourceId": "TOX-gyromitra-esculenta",
         "title": "Fonte tossicologica istituzionale",
         "url": "https://www.salute.gov.it/imgs/C_17_pubblicazioni_2537_allegato.pdf",
@@ -16896,6 +17404,13 @@
             {
               "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
               "location": "Sindrome giromitrica, p. 27 (PDF 26)"
+            },
+            {
+              "url": "https://chatgpt.com/library?file_id=libfile_b9326074d71c8191a083207efd519e36&account_id=personal",
+              "location": "IMG_9848.jpeg — Sindrome giromitrica (o elvellica, nel testo storico); nomi e portata della fonte conservati; vedere course-syndrome-foundations.json",
+              "sourceId": "COURSE-TOX-20261024-9848",
+              "title": "AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica",
+              "ownerCertification": "certified-course-source-by-project-owner"
             }
           ]
         }
