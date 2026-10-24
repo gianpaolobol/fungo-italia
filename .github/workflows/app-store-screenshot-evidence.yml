@@ -43,6 +43,30 @@ jobs:
           const base='https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY;
           const source=(await readFile('/tmp/native-screenshots/screenshots/source-commit.txt','utf8')).trim();
           if(source!==process.env.CAPTURE_COMMIT)throw Error('Capture provenance mismatch');
+          const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+          async function stageBlob(payload,label){
+            const headers={Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'};
+            for(let attempt=1;attempt<=6;attempt++){
+              let response;
+              try{
+                response=await fetch(base+'/git/blobs',{method:'POST',headers,body:JSON.stringify(payload),signal:AbortSignal.timeout(45000)});
+              }catch(error){
+                if(attempt===6)throw Error(label+' network failure after retries: '+error.message);
+                console.warn(label+' network issue; retry '+attempt+'/6');
+                await pause(Math.min(1000*2**(attempt-1),16000));
+                continue;
+              }
+              if(response.ok)return await response.json();
+              const status=response.status;
+              const detail=(await response.text()).slice(0,300);
+              if(![429,500,502,503,504].includes(status)||attempt===6)
+                throw Error(label+' failed HTTP '+status+' after '+attempt+' attempt(s): '+detail);
+              const retryAfter=Number(response.headers.get('retry-after'));
+              const waitMs=Number.isFinite(retryAfter)&&retryAfter>0?Math.min(retryAfter*1000,30000):Math.min(1000*2**(attempt-1),16000);
+              console.warn(label+' transient HTTP '+status+'; retry '+attempt+'/6 after '+waitMs+'ms');
+              await pause(waitMs);
+            }
+          }
           for(const family of ['iphone','ipad'])for(const name of ['01-studio','02-aree','03-esame']){
             const bytes=await readFile('/tmp/native-screenshots/screenshots/'+family+'/'+name+'.png');
             if(bytes.toString('hex',0,8)!=='89504e470d0a1a0a')throw Error('Not a PNG');
@@ -50,9 +74,7 @@ jobs:
             const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);
             if(family==='iphone'&&(width!==1320||height!==2868))throw Error('Unexpected iPhone screenshot size');
             if(family==='ipad'&&(width!==2064||height!==2752))throw Error('Unexpected iPad screenshot size');
-            const r=await fetch(base+'/git/blobs',{method:'POST',headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify({encoding:'base64',content:bytes.toString('base64')})});
-            if(!r.ok)throw Error('Screenshot staging failed HTTP '+r.status);
-            const blob=await r.json();
+            const blob=await stageBlob({encoding:'base64',content:bytes.toString('base64')},'Screenshot '+family+'/'+name);
             console.log('SCREENSHOT_BLOB '+JSON.stringify({path:'store/screenshots/'+family+'/'+name+'.png',sha:blob.sha,byteLength:bytes.length,width,height,sha256:createHash('sha256').update(bytes).digest('hex'),sourceCommit:source}));
             // GitHub Contents omits binary content above 1 MB. Preserve the original
             // image as text chunks for visual inspection, without altering its pixels.
@@ -60,9 +82,7 @@ jobs:
               const encoded=bytes.toString('base64');
               for(let offset=0,index=0;offset<encoded.length;offset+=800000,index++){
                 const content=encoded.slice(offset,offset+800000);
-                const part=await fetch(base+'/git/blobs',{method:'POST',headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json','Content-Type':'application/json'},body:JSON.stringify({encoding:'utf-8',content})});
-                if(!part.ok)throw Error('Review chunk staging failed');
-                const value=await part.json();
+                const value=await stageBlob({encoding:'utf-8',content},'Review chunk '+family+'/'+name+'/'+index);
                 console.log('SCREENSHOT_REVIEW_PART '+JSON.stringify({imagePath:'store/screenshots/'+family+'/'+name+'.png',path:'review-text/'+family+'-'+name+'-'+index+'.txt',index,sha:value.sha,length:content.length}));
               }
             }
