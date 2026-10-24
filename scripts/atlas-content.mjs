@@ -1,4 +1,10 @@
 const foundationIds=new Set(['S1-obiettivi-tassonomici-v4-2026-06-09','S2-guida-ragionata-commestibilita-2021']);
+export function hasRequiredInternalFoundations(foundations){
+ const documents=foundations?.documents;
+ if(!Array.isArray(documents)||!foundations.rules?.foodClaimsRequirePointwiseGuideEvidence)return false;
+ if(new Set(documents.map(s=>s?.sourceId)).size!==documents.length||!documents.every(s=>s?.visibility==='internal'))return false;
+ return [...foundationIds].every(id=>documents.some(s=>s.sourceId===id&&s.role===(id.startsWith('S1-')?'curriculum':'edibility-reference')));
+}
 export function internalSource(source){return foundationIds.has(source.sourceId)||/^(AUDIT-|EDITORIAL-)/.test(source.sourceId??'');}
 export function cleanAtlasRecord(record){
  const t=structuredClone(record),objective=t.sources.find(s=>s.sourceId==='S1-obiettivi-tassonomici-v4-2026-06-09');

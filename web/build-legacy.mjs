@@ -1,4 +1,5 @@
 import {buildExamBank} from './public/exam-core.js';
+import {hasRequiredInternalFoundations} from '../scripts/atlas-content.mjs';
 import {applyReviewedMatrix,readReviewedMatrix} from '../scripts/reviewed-matrix.mjs';
 import {applyApprovedExternalStudyEvidence} from '../scripts/approved-external-study-evidence.mjs';
 import {applyToxicologySyndromes} from '../scripts/toxicology-syndromes.mjs';
@@ -36,7 +37,7 @@ const taxonKeys=['id','scientificName','commonNames','summary','characters','loo
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
 const bibliography=await readJSON('bibliography');
 const foundations=await readJSON('internal-foundations');
-assert(foundations.documents.length===2&&foundations.documents.every(s=>s.visibility==='internal')&&foundations.rules.foodClaimsRequirePointwiseGuideEvidence,'Missing internal foundations');
+assert(hasRequiredInternalFoundations(foundations),'Missing internal foundations');
 assert(!bibliography.some(s=>/^(S1-|S2-|AUDIT-|EDITORIAL-)/.test(s.sourceId)),'Internal reference in public bibliography');
 const examBank=buildExamBank(catalog,studyProfiles);
 assert(examBank.length>=15,'Not enough documented examination cases');

@@ -9,7 +9,7 @@ Il documento degli obiettivi resta l’unica autorità sul perimetro di atlante 
 | Immagine | Contenuto | Identità visibile |
 |---|---|---|
 | IMG_9848.jpeg | AMB — Sindromi a lunga latenza: falloidea, orellanica, giromitrica | Associazione Micologica Bresadola (intestazione visibile) |
-| IMG_9849.jpeg | AMB — Continuazione giromitrica e sindrome paxillica | Associazione Micologica Bresadola (intestazione visibile) |
+| IMG_9849.jpeg | AMB — Continuazione giromitrica e sindrome paxillica | AMB per continuità con IMG_9848; intestazione non visibile in questa foto |
 | IMG_9850.jpeg | Elenco delle principali sindromi: gastrointestinale e muscarinica | Autore/editore non visibile |
 | IMG_9851.jpeg | Elenco delle principali sindromi: muscarinica, panterinica e coprinica | Autore/editore non visibile |
 | IMG_9852.jpeg | Elenco delle principali sindromi: continuazione coprinica | Autore/editore non visibile |
@@ -261,7 +261,7 @@ I paragrafi seguenti sono una trascrizione strutturata e una sintesi fedele, non
 
 ## Note di lettura trasversali
 
-- Le prime due pagine hanno intestazione AMB; nessuna evidenza attribuisce allo stesso editore le altre pagine o il messaggio.
+- IMG_9848 ha intestazione AMB; IMG_9849 ne è la continuazione, senza intestazione visibile. Nessuna evidenza attribuisce allo stesso editore le altre pagine o il messaggio.
 - IMG_9853 contrappone potenzialmente mortali e normalmente benigne: mantenere come classificazione della fonte, non garanzia di sicurezza.
 - IMG_9849 raccomanda aiuti alla reiezione del materiale fungino e astensione da alcol/sostanze attive sul SNC; questa prima indicazione non è trasferita come consiglio operativo. Indicazioni attuali: non indurre vomito, rivolgersi ai sanitari.
 - IMG_9849 ricorda la collaborazione a Brescia tra micologo Renato Tomasi e 1° Centro di Rianimazione e Terapia Intensiva dell’Ospedale Civile, auspicando stretta collaborazione medico-micologo.
