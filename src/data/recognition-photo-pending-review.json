@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "status": "scientific-review-required",
+  "rules": [
+    "Non modificare subjectTaxon o attribuzione delle immagini per far coincidere i nomi.",
+    "Non derivare lo status alimentare del gruppo dalla singola foto o viceversa.",
+    "Non rendere esaminabili foto prive di identificazione verificabile.",
+    "Non considerare i 168 collegamenti documentali equivalenti a 168 determinazioni scientifiche indipendenti."
+  ],
+  "items": [
+    {
+      "taxon": "Chlorophyllum rhacodes s.l.",
+      "reason": "Le immagini sono determinate come Chlorophyllum brunneum, mentre la scheda collettiva ha status alimentare da non trasferire automaticamente a questa specie; richiede controllo S1/S2 e revisione del soggetto.",
+      "scientificApproval": false
+    },
+    {
+      "taxon": "Lactarius sez. Deliciosi",
+      "reason": "Le fotografie sono attribuite a Lactarius deliciosus group (North America). Il gruppo nordamericano non deve essere equiparato automaticamente ai taxa europei della sezione: occorre verifica tassonomica e di rappresentatività.",
+      "scientificApproval": false
+    },
+    {
+      "taxon": "Lactarius porniniae",
+      "reason": "Le fotografie sono attribuite a Lactarius porninsis; la corrispondenza nomenclaturale con Lactarius porniniae non è stata certificata. Verificare nome accettato, autore e sinonimia in fonte tassonomica.",
+      "scientificApproval": false
+    },
+    {
+      "taxon": "Phlegmacium variiforme",
+      "reason": "La scheda non presenta fotografie di riferimento nel catalogo corrente. Servono fotografie di esemplari identificati con provenienza e licenza.",
+      "scientificApproval": false
+    },
+    {
+      "taxon": "Entoloma saundersii",
+      "reason": "La scheda non presenta fotografie di riferimento nel catalogo corrente. Servono fotografie di esemplari identificati con provenienza e licenza.",
+      "scientificApproval": false
+    }
+  ]
+}
