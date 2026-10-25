@@ -20,7 +20,7 @@ Le immagini e la copertura delle singole viste dipendono dalle evidenze conserva
 - **Android:** la versione nativa corrente consente la demo Agaricus; acquisti non implementati su questa piattaforma. [scarica l’APK di anteprima verificato](https://github.com/gianpaolobol/fungo-italia/releases/download/native-preview/Fungo-Italia.apk). La pipeline aggiorna l’APK dopo compilazione e prova nell’emulatore. La firma dell’anteprima è quella debug del template Expo; non è una distribuzione Google Play.
 - **iPhone/iPad nativi:** download gratuito, demo con tutte le schede Agaricus e test dedicato ripetibile di4casi. Unico abbonamento completo a **19,99€/anno in Italia**, con prezzo locale Apple negli altri Paesi. Dashboard a fungo, storico, lacune e ripasso adattivo; preparazione stimata, non garanzia di superamento. Nessun acquisto Base. App Store non ancora pubblicata; nuovo candidato TestFlight diagnostico da verificare sullo SHA consolidato. [Selezione branch e stato](docs/audit/BRANCH-SELECTION-2026-10-21.md).
 
-L’accesso iOS dipende da transazioni Apple verificate, non revocate e non scadute. Non esiste un flag premium locale che sostituisca la verifica. Le fotografie incluse non richiedono accesso alla libreria Foto; la selezione e pubblicazione amministrativa delle immagini sono disponibili nella versione web. Non viene attestato un riconoscimento automatico delle fotografie.
+L’accesso iOS dipende da transazioni Apple verificate, non revocate e non scadute. Non esiste un flag premium locale che sostituisca la verifica. Per decisione del titolare del22 ottobre2026, il caricamento e l’analisi locale delle foto restano disattivati e non accessibili dall’app. Il codice viene conservato per versioni future: [stato e condizioni di riattivazione](docs/PHOTO-LIBRARY-DEFERRED.md). Le fotografie incluse non richiedono accesso alla libreria Foto; la selezione e pubblicazione amministrativa delle immagini sono disponibili nella versione web. Non viene attestato un riconoscimento automatico delle fotografie.
 
 ## Contributi e immagini
 
@@ -41,3 +41,5 @@ Le precedenti automazioni OTA/submit iOS sono archiviate in `docs/release-workfl
 Node >=24.3.0; `npm ci`, `npm run prepare:data`, `npm run typecheck`. I workflow GitHub gestiscono compilazione e distribuzione. Expo 58.0.2 usa React 19.3.0 e React Native 0.88.0-rc.3, con override esplicito dei peer prerelease.
 
 Il progetto precedente Next/React è conservato in `legacy/web` e nei branch `backup/pre-migration-flutter` e `backup/verified-web-readiness`. Il percorso pubblico attuale è GitHub Pages.
+
+Il [percorso production iOS](docs/PRODUCTION-IOS-PROMOTION.md) distingue le prove di sorgente, la build firmata e le verifiche Apple ancora necessarie.

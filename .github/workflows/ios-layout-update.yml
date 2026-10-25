@@ -29,4 +29,6 @@ jobs:
           npx expo-updates runtimeversion:resolve --platform ios > /tmp/runtime.json
           node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync('/tmp/runtime.json','utf8'));if(r.runtimeVersion!=='29a60ac4b6192d029d49078ef7ccd2c3f35415db')throw Error('Runtime mismatch: rebuild required');console.log(r.runtimeVersion)"
       - name: Publish layout correction to installed iOS app
-        run: npx eas-cli@24.8.0 update --platform ios --channel production --environment production --message "Fix iPhone atlas safe areas, food label wrapping and photo thumbnails" --non-interactive
+        run: |
+          echo '::error::This historical production OTA path is retired. A new production update requires exact-source scientific, native and binary/runtime evidence.'
+          exit 1

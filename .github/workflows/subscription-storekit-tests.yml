@@ -74,15 +74,7 @@ jobs:
 'on':
   pull_request:
     paths:
-      - scripts/prepare-storekit-runtime*
-      - .github/workflows/subscription-entitlement-probe.yml
-      - .github/workflows/subscription-storekit-tests.yml
-      - .github/workflows/subscription-storekit-ui.yml
-      - .github/workflows/agaricus-demo-ui.yml
-  push:
-    branches:
-    - main
-    paths:
+    - .github/workflows/subscription-entitlement-probe.yml
     - App.tsx
     - index.js
     - app.json
@@ -95,7 +87,7 @@ jobs:
     - hooks/**
     - lib/**
     - modules/**
-    - src/data/**
+    - src/**
     - tests/storekit/**
     - scripts/**
     - web/**
@@ -103,4 +95,7 @@ jobs:
     - .github/workflows/subscription-storekit-tests.yml
     - .github/workflows/subscription-storekit-ui.yml
     - .github/workflows/agaricus-demo-ui.yml
+  push:
+    branches:
+    - main
   workflow_dispatch: null

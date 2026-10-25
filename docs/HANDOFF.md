@@ -1,3 +1,34 @@
+# Decisione Foto e verifiche di rilascio — 22 ottobre 2026
+
+Il titolare ha richiesto esplicitamente di **mantenere disattivati e non accessibili dall’app il caricamento e l’analisi delle foto**. La funzionalità è rinviata: la sua assenza dall’interfaccia non è un blocco di questa release. Non aggiungere pulsanti, tab, deep link o richieste di accesso Foto. Conservare nei prossimi aggiornamenti componenti, modulo nativo, logica, archiviazione e test; non eliminarli come codice inutilizzato. La riattivazione richiederà una nuova richiesta esplicita e le prove descritte in [PHOTO-LIBRARY-DEFERRED.md](PHOTO-LIBRARY-DEFERRED.md).
+
+La proposta locale di ingresso da Studio è stata ritirata prima di qualsiasi push, build o distribuzione. App.tsx e test UI StoreKit sono identici al candidato main d2c8b650. Nuova regressione sul vero App.tsx verifica assenza dell’analisi Foto su iOS, Android e web, navigando i quattro tab. I test dei lotti20, pausa/ripresa e persistenza restano conservati. Estesi i filtri pull_request dei tre workflow obbligatori ai sorgenti applicativi e inclusi src/** anche su pushmain/pipeline consolidata: nessuna asserzione acquisti rimossa.
+
+Proposti nella PR117: preflight production con esecuzione dei gate scientifici strict e prove native/UI/demo/scientifiche dello stesso main SHA, nessun auto-submit e attesa/metadati EAS. I percorsi storici non verificati vengono fermati prima della distribuzione. Native/UI/demo e verifica scientifica eseguite su ogni pushmain; regressionitest191/191 e YAML validi. Revisione separata ha rilevato e visto correggere il caso dei commit solo documentali. Il preflight reale sul catalogo attuale esce1 prima di build/API per il gate scientifico. Qualificazione binario e Apple production ancora da completare: docs/PRODUCTION-IOS-PROMOTION.md.
+
+Restano distinti il gate scientifico (148 schede,0 revisioni indipendenti), DSA Rejected e la futura build production. Privacy tecnica pubblicata dopo approvazione specifica del titolare (PR117). Build diagnostica17 da d2c8b650 ora disponibile: Apple VALID/IN_BETA_TESTING, IDb044cabf-2895-4c4a-b905-36332e8bae98, gruppo interno Proprietario — prova iPhone. Run39807794183 interamente SUCCESS; duplicato39809526311 annullato prima della build. Ricevuta originale in docs/evidence/ios-build17-20261022.json. Prove branch ead9f5e avviate: native39821203400, UI39821359250, demo39821444229 in corso; scientific39821565384 SUCCESS tecnico, strict saltato sul branch non-main. Verificare esiti prima dell’integrazione e ripetere prove sul nuovo main SHA.
+
+
+---
+
+# Verifica operativa del 22 ottobre 2026 — Work
+
+Candidato main: `d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34`. [Report completo](IOS-RELEASE-AUDIT-2026-10-22.md). Questo aggiornamento è documentale: non è una nuova release applicativa.
+
+- Prove **push su main** riuscite: StoreKit nativo `39807794256`; UI acquisti iPhone/iPad `39807794269`; demo iPhone/iPad `39807794237`. Non sono i vecchi run della PR #115.
+- Run manuale TestFlight recuperato nel browser: **39809526311**, in coda al push **39807794183**, stesso SHA. Il log source conferma 65 test WebKit, 65 Chromium e lo smoke offline riusciti, con ricevuta dello stesso SHA. Source119925567793 SUCCESS; beta119950377248 ha completato build firmata e verifica del sorgente. Submission EAS2cc40b80-e3f4-4d6d-9a30-6107d5a98531 in corso; disponibilità Apple non ancora attestata.
+- Binario diagnostico firmato:1.1.0(17), profilo consolidated-beta, IPA SHA2569f4c123ba05d9d0a90c5ccf94a4b3ab34e974bfd892d4b8842846a5bcdd779f5, sorgented2c8b650. Non production App Store.
+- Locale: TypeScript,188 test Node, rigenerazione senza drift ed export iOS riusciti. Gate editoriale strict: exit1,148 record bloccati,0 revisioni indipendenti. Riprodotto anche in CI sullo SHA main: run 39814751806, job generator 119950197965, exit 1 nel log delle 16:31:47 UTC.
+- Audit Apple readonly avviato e riuscito: `39811751393`, job `119939578200`. Apple1.1.0(16) VALID, ancora il candidato precedente; browser conferma gruppo interno Proprietario — prova iPhone e un'installazione. App Store1.0 resta REJECTED/build 9.
+- Prezzo effettivo nuovi abbonati verificato nel portale:19,99 €/anno Italia. Il9,99 del report API è un primo record di prezzo senza selezione temporale, non il prezzo corrente.
+- Foto personali: rinviate dal titolare il22 ottobre; mantenere codice, modulo e test ma nessun accesso nell’app. La mancata esposizione non blocca questa release.
+- Privacy: dopo approvazione specifica del titolare, **pubblicati e verificati** Device ID, Crash Data, Other Diagnostic Data e Other Data Types: App Functionality, collegati al dispositivo/installazione, senza tracking. Nessun setup incompleto nel riepilogo. Le vecchie categorie contatti/pagamenti/posizione rimosse.
+- Business: Paid Apps e Free Apps Active; **DSA Rejected**. Stato trader/non-trader da dichiarare dal titolare; nessuna nuova dichiarazione inviata.
+- Nessun prezzo, entitlement, flag diagnostico o controllo Apple modificato. Nessuna nuova buildproduction avviata con gate scientifico fallito. Non integrare documentazione su main durante la pipeline dello SHA precedente: ne impedirebbe la promozione per candidato obsoleto.
+
+
+---
+
 # Handoff corrente
 
 ## Sindromi di corso — 24 ottobre 2026

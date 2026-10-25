@@ -24,8 +24,7 @@ jobs:
           npm run prepare:data
           npm run typecheck
           node --test scripts/*.test.mjs
-      - name: Rebuild and upload iOS launch fix
+      - name: Refuse the historical auto-submit path
         run: |
-          test -n "$EXPO_TOKEN"
-          test -n "$EXPO_PROJECT_ID"
-          npx eas-cli@24.8.0 build --platform ios --profile production --non-interactive --clear-cache --auto-submit --wait
+          echo '::error::Use Store production build with strict exact-source gates; this historical auto-submit path is retired.'
+          exit 1

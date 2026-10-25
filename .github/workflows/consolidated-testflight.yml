@@ -305,7 +305,7 @@ jobs:
     - hooks/**
     - lib/**
     - modules/**
-    - src/data/**
+    - src/**
     - tests/storekit/**
     - scripts/**
     - web/**

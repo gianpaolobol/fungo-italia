@@ -1,4 +1,11 @@
 # Privacy App Store — Fungo Italia
+
+## Stato verificato il 22 ottobre 2026
+
+Questionario completato e pubblicato nel portale dopo approvazione specifica del titolare sul collegamento dell’ID Expo all’installazione. Quattro tipi: Device ID, Crash Data, Other Diagnostic Data, Other Data Types; tutti App Functionality, collegati al dispositivo/installazione e non usati per tracking. Il riepilogo Apple riletto mostra Diagnostics, Identifiers e Other Data in Data Linked to You; nessun avviso di setup incompleto e nessuna categoria pubblicitaria, contatti, pagamenti o posizione. Vedere [audit del 22 ottobre](IOS-RELEASE-AUDIT-2026-10-22.md). Le istruzioni seguenti documentano la precedente analisi, non indicano un questionario ancora da iniziare.
+
+## Analisi precedente
+
 16 ottobre 2026. Il titolare conferma che il questionario Apple non è ancora compilato. Non è stato modificato via API: questa funzione non è disponibile nell'API pubblica utilizzata.
 
 Aprire https://appstoreconnect.apple.com/apps/6821140326/appPrivacy e scegliere “Inizia”. L'informativa è https://gianpaolobol.github.io/fungo-italia/privacy.html ; contatto approvato: gianpaolo.franceschini@gmail.com.

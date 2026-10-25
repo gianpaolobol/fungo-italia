@@ -2,15 +2,7 @@ name: Verify free Agaricus demo interface
 'on':
   pull_request:
     paths:
-      - scripts/prepare-storekit-runtime*
-      - .github/workflows/subscription-entitlement-probe.yml
-      - .github/workflows/subscription-storekit-tests.yml
-      - .github/workflows/subscription-storekit-ui.yml
-      - .github/workflows/agaricus-demo-ui.yml
-  push:
-    branches:
-    - main
-    paths:
+    - .github/workflows/subscription-entitlement-probe.yml
     - App.tsx
     - index.js
     - app.json
@@ -23,7 +15,7 @@ name: Verify free Agaricus demo interface
     - hooks/**
     - lib/**
     - modules/**
-    - src/data/**
+    - src/**
     - tests/storekit/**
     - scripts/**
     - web/**
@@ -31,6 +23,9 @@ name: Verify free Agaricus demo interface
     - .github/workflows/subscription-storekit-tests.yml
     - .github/workflows/subscription-storekit-ui.yml
     - .github/workflows/agaricus-demo-ui.yml
+  push:
+    branches:
+    - main
   workflow_dispatch: null
 permissions:
   contents: read

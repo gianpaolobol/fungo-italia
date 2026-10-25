@@ -24,8 +24,7 @@ jobs:
           npm run prepare:data
           npm run typecheck
           node --test scripts/*.test.mjs
-      - name: Build and upload local photo filter
+      - name: Refuse the deferred photo release path
         run: |
-          test -n "$EXPO_TOKEN"
-          test -n "$EXPO_PROJECT_ID"
-          npx eas-cli@24.8.0 build --platform ios --profile production --non-interactive --clear-cache --auto-submit --wait
+          echo '::error::Personal-photo upload and analysis are deferred by the owner. Preserve the code; use the qualified release process without enabling this feature.'
+          exit 1
