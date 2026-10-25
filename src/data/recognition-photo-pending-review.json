@@ -9,18 +9,8 @@
   ],
   "items": [
     {
-      "taxon": "Chlorophyllum rhacodes s.l.",
-      "reason": "Le immagini sono determinate come Chlorophyllum brunneum, mentre la scheda collettiva ha status alimentare da non trasferire automaticamente a questa specie; richiede controllo S1/S2 e revisione del soggetto.",
-      "scientificApproval": false
-    },
-    {
       "taxon": "Lactarius sez. Deliciosi",
       "reason": "Le fotografie sono attribuite a Lactarius deliciosus group (North America). Il gruppo nordamericano non deve essere equiparato automaticamente ai taxa europei della sezione: occorre verifica tassonomica e di rappresentatività.",
-      "scientificApproval": false
-    },
-    {
-      "taxon": "Lactarius porniniae",
-      "reason": "Le fotografie sono attribuite a Lactarius porninsis; la corrispondenza nomenclaturale con Lactarius porniniae non è stata certificata. Verificare nome accettato, autore e sinonimia in fonte tassonomica.",
       "scientificApproval": false
     },
     {
@@ -33,5 +23,11 @@
       "reason": "La scheda non presenta fotografie di riferimento nel catalogo corrente. Servono fotografie di esemplari identificati con provenienza e licenza.",
       "scientificApproval": false
     }
+  ],
+  "notes": [
+    "Lactarius porniniae: variante ortografica 'porninsis' verificata con Index Fungorum, senza validare la determinazione fotografica.",
+    "Chlorophyllum brunneum: relazione con gruppo C. rhacodes documentata nella Guida ragionata S2; resta distinta l'identificazione fotografica della specie.",
+    "Lactarius deliciosus group (North America): non equiparare automaticamente a specie europee della sezione Deliciosi.",
+    "Restano due taxa privi di fotografie di riferimento nel catalogo canonico."
   ]
 }
