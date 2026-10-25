@@ -6,12 +6,12 @@
     "underside"
   ],
   "summary": {
-    "cards": 214,
+    "cards": 218,
     "images": 630,
     "completeTriplets": 206,
     "partialCards": 6,
-    "withoutImages": 2,
-    "missingViews": 12,
+    "withoutImages": 6,
+    "missingViews": 24,
     "imageBytes": 166114838
   },
   "cards": [
@@ -1944,6 +1944,42 @@
         "top"
       ],
       "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Clathraceae e Phallaceae",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Geastraceae + Astraeus",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Lycoperdaceae",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "scientificName": "Pezizaceae s.l. (funghi epigei a coppa o disco)",
+      "availableViews": [],
+      "missingViews": [
+        "lateral",
+        "top",
         "underside"
       ]
     }
