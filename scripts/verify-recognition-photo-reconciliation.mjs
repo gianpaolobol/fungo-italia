@@ -9,7 +9,7 @@ const register=JSON.parse(readFileSync('src/data/recognition-photo-reconciliatio
 const indexed=new Map(atlas.map(u=>[u.id,u])),covered=new Set(bank.map(x=>x.id));
 assert.equal(register.schemaVersion,1);
 assert.equal(register.records.length,atlas.filter(x=>!covered.has(x.id)).length);
-const validRelations=new Set(['explicit-label','name-in-curriculum-label','needs-course-review']);
+const validRelations=new Set(['explicit-label','name-in-curriculum-label','curriculum-explicit-member','needs-course-review']);
 for(const row of register.records){
  assert(!covered.has(row.id),'Reconciliation includes an already covered record');
  const u=indexed.get(row.id);assert(u,'Missing catalog record '+row.id);
@@ -20,6 +20,7 @@ for(const row of register.records){
   const photo=row.photos[i],original=u.referenceImages[i];
   assert(validRelations.has(photo.relation),'Unknown relationship status');
   for(const k of ['src','subjectTaxon','credit'])assert.equal(photo[k],original[k],'Provenance drift '+row.id+' '+k);
+  if(photo.relation==='curriculum-explicit-member')assert(typeof photo.relationEvidence==='string'&&photo.relationEvidence.length>20,'Missing course relationship explanation');
   if(photo.relation==='needs-course-review')continue;
   assert(photo.credit&&photo.src&&photo.subjectTaxon,'Incomplete provenance');
  }
