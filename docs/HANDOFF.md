@@ -1,4 +1,61 @@
-# Handoff corrente
+# Handoff corrente — aggiornato il 25 ottobre 2026
+
+## Stato operativo e decisioni correnti
+
+Questa sezione prevale sui resoconti storici sottostanti. Base documentale letta: main `279d50e842a95c6a7d8e3499806b3fd5c42996e7`, `AGENTS.md`, `CLAUDE.md`, questo handoff, workflow accoppiato, ricevuta e log del run del 24 ottobre. L'aggiornamento è solo documentale: non produce un nuovo binario né estende le prove della beta a un nuovo SHA.
+
+- **Modello commerciale corrente:** download gratuito; demo con tutte le schede Agaricus (7 minime + 1 genere) e test di 4 casi ripetibile; unico annuale completo **19,99 €/anno**, prodotto `it.fungoitalia.premium.annual`. Nessun Base permanente. Android demo-only. Il precedente Base 9,99 € + Completo 9,99 €/anno è superato, non è un requisito di implementazione o migrazione.
+- **Foto personali:** caricamento e analisi restano inaccessibili dall'app per decisione del titolare. Conservare codice, modulo e documentazione per versioni future; non aggiungere tab, pulsanti o percorsi di accesso. La loro attivazione non è una condizione per chiudere questa beta.
+- **PR [117](https://github.com/gianpaolobol/fungo-italia/pull/117):** letta il 25 ottobre, ancora aperta e in bozza; branch `docs/ios-release-audit-20261022`, head `5acb9fbecd988d47f19d6467c6122368b5fe0342`. Contiene lavoro separato sui gate production e sulla conservazione delle Foto disattivate. Non è integrata in main: non attribuirne codice, documenti o garanzie alla beta 19. Questa modifica non effettua merge, rebase o risoluzioni dei suoi conflitti; al futuro riallineamento conservare sia le prove qui registrate sia il lavoro della PR.
+- **Perimetro scientifico:** atlante e test restano vincolati ai documenti degli obiettivi minimi, auspicabili e approfondimenti. Le fonti di corso riconosciute dal titolare non attestano da sole revisione micologica indipendente, diritti delle immagini o approvazione Apple.
+
+## Beta 19 — prove del 24 ottobre 2026
+
+**Distribuita su TestFlight interno e web; non pronta né pubblicata su App Store.**
+
+| Ambito | Prova verificata | Portata |
+|---|---|---|
+| Identità | Versione **1.1.0 (19)**, SHA `279d50e842a95c6a7d8e3499806b3fd5c42996e7`; run [40122020361](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361) | Job `source`, `beta`, `promote-public-web`, `published-smoke` tutti SUCCESS |
+| StoreKit nativo | [40122020378](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020378), SUCCESS sullo stesso SHA | Ricevuta: `nativeStorekitVerified=true`; non ripetere la precedente diagnosi già superata |
+| Interfaccia acquisti | [40122020360](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020360), SUCCESS sullo stesso SHA | Ricevuta: `storekitUIVerified=true`; prova CI distinta dal sandbox sul telefono fisico |
+| Demo Agaricus | [40122020376](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020376), SUCCESS sullo stesso SHA | Demo verificata come prerequisito della distribuzione |
+| TestFlight | Ricevuta `CONSOLIDATED_TESTFLIGHT_CONFIRMED`, **24 ottobre 19:14:29.258 UTC** (21:14 in Italia) | Apple `VALID`, build ID `5e5211e9-8eef-48d7-8ce7-6677b210b574`; unico gruppo interno `f642807c-e4b2-43d4-a32a-d9fd087fdfe3` (Proprietario — prova iPhone); successivo step di disponibilità interna SUCCESS |
+| Web | [Job published-smoke](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361/job/120962811874): **19:16:17 UTC**, “Published web bytes match confirmed TestFlight receipt”; **19:16:43 UTC**, `unifiedSmoke=passed` | [Sito](https://gianpaolobol.github.io/fungo-italia/) verificato rispetto a ricevuta, icona, manifest e asset; tab Percorso/Studio/Esame/Aree. Attestazione al momento del controllo, non garanzia di cache aggiornata su ogni telefono |
+| App Store | Ricevuta: `testFlightOnly=true`, `diagnosticOnly=true`, `appStoreReady=false`; versione store **1.0 REJECTED** | `VALID` riguarda il processing del binario, non approvazione App Review, abbonamento o vendita |
+
+### Tracciabilità delle prove
+
+La [copia JSON della ricevuta](evidence/ios-build19-20261024.json) è estratta senza modifiche dal log del [job beta](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361/job/120959327506), riga `CONSOLIDATED_TESTFLIGHT_CONFIRMED` delle 19:14:29 UTC. È una ricevuta della pipeline, non un'approvazione scientifica o una decisione App Review.
+
+- Artefatto originale [Consolidated-TestFlight-evidence, 12571619896](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361/artifacts/12571619896), conservazione CI 30 giorni.
+- Prova sorgente [12572511356](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361/artifacts/12572511356); IPA [12571839606](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361/artifacts/12571839606), conservazione CI 7 giorni. Gli artefatti possono scadere; la ricevuta conserva identità e hash.
+- SHA-256 IPA: `4c30bb90c6a4b79e05465ce01adeed4ff0629ae69cf57b2d505c2b913cfb4f5d`.
+- Hash contenuto web: `eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527`.
+- SHA-256 icona: `77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9`.
+
+La disponibilità nel gruppo non dimostra installazione o collaudo della build 19 sul dispositivo fisico del titolare. Non riusare queste prove come attestazione di un diverso SHA o di una futura build production.
+
+## Condizioni ancora da documentare per App Store
+
+1. **Revisione scientifica e diritti:** attestare la revisione micologica indipendente, fonti puntuali e licenze/permessi degli asset; superare il gate editoriale strict sul candidato definitivo. I test software e l'integrazione delle sindromi non certificano questi requisiti. Nessun nuovo conteggio di schede approvate è prodotto da questo aggiornamento.
+2. **Percorso production:** qualificare il candidato e il relativo binario con gate obbligatori e provenienza dello stesso SHA. La pipeline letta distribuisce `consolidated-beta`: la beta 19 resta diagnostica; non cambiare i flag per dichiararla idonea. La proposta di gate production della PR 117 resta separata e non integrata.
+3. **Prove sul dispositivo:** registrare acquisto sandbox, ripristino, riapertura e conservazione di progressi/preferiti su TestFlight del titolare. Non sono attestati dalla ricevuta i risultati di queste prove fisiche.
+4. **Conformità e configurazione Apple:** verificare lo stato aggiornato di privacy, DSA, accordi e prodotto/gruppo annuale prima della submission. Il resoconto del 22 ottobre nella PR 117 indica DSA Rejected e accordi Active, con successivi aggiornamenti privacy nella stessa PR; sono riscontri datati e separati, non una nuova lettura del portale del 25 ottobre. La ricevuta beta 19 non certifica la chiusura di questi punti.
+5. **App Review:** selezionare un candidato idoneo, riconciliare screenshot e metadati autentici con il modello corrente, includere app/gruppo/primo abbonamento nella submission pertinente e ottenere gli esiti Apple. La ricevuta del 24 ottobre riporta ancora store 1.0 REJECTED, senza attestare nuova approvazione o pubblicazione.
+
+`APP-STORE-OWNER-CHECKLIST.md`, `APP-STORE-SUBSCRIPTION-2026-10-16.md` e `CODEX_HANDOFF.md` contengono fotografie storiche: prezzi 9,99 €, build precedenti e fallimenti StoreKit non sono lo stato corrente. Usarli solo per contesto e procedure da riconfermare, con priorità alle decisioni e prove qui sopra.
+
+## Passaggio operativo successivo
+
+Proseguire dai requisiti production/editoriali/Apple effettivamente mancanti e dal lavoro separato della PR 117, senza riaprire la diagnosi StoreKit superata. Un nuovo sorgente applicativo richiede prove riferite al proprio SHA. Nessuna attivazione Foto, modifica commerciale o promozione App Store è autorizzata da questo aggiornamento documentale.
+
+Verifica di questo aggiornamento: confronto dei soli file documentali, controllo formattazione/diff e coerenza fra ricevuta, SHA, run, modello commerciale e rimandi. Nessun test applicativo, build, deploy o operazione Apple rilanciato.
+
+---
+
+# Cronologia — resoconti precedenti, non istruzioni correnti
+
+Le voci seguenti descrivono lo stato osservato alla loro data. “Attendere”, “da leggere”, vecchi prezzi, blocker e prossimi passi non vanno eseguiti senza confrontarli con lo stato corrente sopra. La sezione sindromi descrive il lavoro e la CI della PR 118: la sua frase sull'assenza di distribuzione vale per quel resoconto, poi superato dalla beta 19. Il materiale storico è conservato per tracciabilità.
 
 ## Sindromi di corso — 24 ottobre 2026
 
@@ -84,7 +141,9 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 
 ---
 
-## Handoff precedente (storico superato)
+## Archivio del 21 ottobre 2026 — interamente superato come piano operativo
+
+**Non è il piano corrente.** Le istruzioni Base + annuale, migrazione, dashboard da realizzare e diagnosi StoreKit qui sotto sono conservate come cronologia; prevalgono le decisioni e le prove in apertura.
 
 # Handoff completo — Fungo Italia
 
@@ -101,7 +160,7 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 | Android acquisti | Non presente nel codice letto | `App.tsx` concede accesso completo alle piattaforme diverse da iOS |
 | Dashboard fungo/progresso | Non presente nelle schermate principali lette | Requisito prodotto da implementare/testare, non dichiarare esistente |
 | Login Apple/profilo utente | Non presente nel flusso nativo letto | Personalizzazione futura; preferiti ed esami sono locali |
-| Base permanente 9,99 € | Non presente nel billing letto | Requisito successivo: download gratuito + Base a 9,99 € una tantum + Completo a 9,99 €/anno aggiuntivi |
+| Base permanente 9,99 € (proposta storica superata) | Non presente nel billing letto | Non implementare: sostituito da demo Agaricus + unico annuale 19,99 € |
 | Web/PWA | Documentato come operativo | `legacy/web/`, `web/public/`, GitHub Pages; stato live da ricontrollare |
 | Certificazione scientifica indipendente | Non attestata | `app.json` segnala `pending-independent-review` |
 
@@ -127,7 +186,7 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 5. Preferiti, ripresa e storico su AsyncStorage: funzionamento senza account; contro: perdita o assenza di sincronizzazione tra dispositivi.
 6. Aree aggregate e OSM: riduzione rischio privacy/fungaie puntuali; niente previsione di raccolta.
 7. Gate StoreKit da entitlement verificato, non flag locale: prevenire sblocco improprio. Non introdurre fallback insicuri.
-8. Prezzi concordati successivamente col titolare: download gratuito, **Base permanente €9,99**, **Completo ulteriori €9,99/anno**; non già implementati. Le condizioni su altri store e acquisti precedenti richiedono una proposta di migrazione esplicita.
+8. Proposta commerciale storica **superata**: Base permanente €9,99 + Completo €9,99/anno. Non è il modello corrente e non richiede implementazione o migrazione; vedere la decisione demo Agaricus + unico annuale 19,99 € in apertura.
 
 ## Debito tecnico e problemi noti
 - `App.tsx`, `SubscriptionGate.tsx`, `hooks/useSubscription.ts`, `lib/subscriptionPolicy.ts`, `modules/fungo-subscription/`: gate annuale precedente; StoreKit UI talvolta si blocca/non ripristina entro deadline, test iPhone/iPad storicamente discordanti. Leggere `docs/APP-STORE-SUBSCRIPTION-2026-10-16.md`.
@@ -144,7 +203,7 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 ## Pubblicazione: rischi e prove mancanti
 - Apple: alla data del registro 16/10 candidata **1.0.0 (9) VALID** ma non selezionata; versioni successive/TestFlight/review devono essere riletti da Apple, non inferiti da GitHub. Il flusso StoreKit iPhone/iPad non aveva successo ripetibile sincronizzato.
 - Apple: privacy in App Store Connect, DSA UE, accordi Paid Apps e prima submission del prodotto con app; controllare `docs/APP-STORE-OWNER-CHECKLIST.md`.
-- Nuovo modello acquisti richiede nuovi prodotti e policy di entitlement, migrazione utente, testi, screenshot, test sandbox e verifica Apple/Google: **non** cambiare il billing durante questo audit.
+- Nota storica superata: la proposta Base + annuale non richiede nuovi prodotti o migrazione. Il modello corrente è indicato in apertura; questo aggiornamento non cambia il billing.
 - Google Play: AAB production configurato, submit internal draft; stato approvazione/pubblicazione, Data safety, target API, test e billing da verificare sul portale.
 - Diritti foto, tossicologia non revisionata, accuratezza della scheda prodotto e affermazioni offline/privacy sono rischi di review.
 - Verificare GitHub Pages reale, artefatto e service worker/caching: un workflow verde non garantisce app aggiornata su Safari.
@@ -168,7 +227,7 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 - Quale modello stabile garantisce lo storico e misura **preparazione reale**, non solo percentuale di schede viste? Dashboard fungo e curva progressi basati su recupero spaziato e rischio errori?
 - Qual è la tassonomia più affidabile per rank, sinonimi e gruppi senza falsi determinismi? Quali affermazioni necessitano subito di controllo indipendente?
 - Come rendere legalmente sostenibile l'intero set immagini, conservando le tre viste senza falsi crediti?
-- Come migrare dagli abbonamenti annuali esistenti a Base permanente + Completo annuale su entrambi gli store evitando doppie fatturazioni o perdita di accesso?
+- Domanda storica ritirata: migrazione a Base permanente + annuale; non applicabile al modello corrente senza una nuova decisione del titolare.
 - Quali test end-to-end deterministici possono isolare i blocchi StoreKit simulatore da difetti dell'app?
 - Conviene unificare web/native su un solo schema dati e motore quiz versionato con regressioni multipiattaforma?
 
@@ -188,7 +247,7 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 5. `test/exam-scoring`: test punteggi per campo, `Marasmius oreades`, ripetizioni e salvataggio.
 6. `fix/catalog-missing-fields`: colmare **solo con fonti verificate** i 2+1+5 gap censiti (lotti più piccoli se necessario).
 7. `test/storekit-lifecycle`: prove ripetibili su iPhone/iPad, rinnovo, ripristino, foreground, errore e scadenza.
-8. `docs/monetization-migration`: specifica completa Base €9,99 + Completo €9,99/anno, diritti preesistenti e policy Apple/Google; nessun codice.
+8. **Attività storica ritirata:** `docs/monetization-migration` per Base + annuale; non avviare, modello sostituito da demo Agaricus + unico annuale 19,99 €.
 9. `feat/study-dashboard-model`: schema e test del progresso per competenza, senza UI iniziale.
 10. `feat/study-dashboard-ui`: fungo percentuale e andamento temporale su misure validate, accessibilità.
 11. `test/mobile-a11y`: test 320pt, lettori schermo, font scaling e gallerie.
