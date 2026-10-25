@@ -4,8 +4,8 @@
   "provenance": "Existing catalog referenceImages and explicitly stated objective labels; relation is NOT an independently certified mushroom identification",
   "stats": {
     "uncovered": 62,
-    "explicitPhotoLinks": 101,
-    "reviewRequiredPhotoLinks": 76,
+    "explicitPhotoLinks": 139,
+    "reviewRequiredPhotoLinks": 38,
     "missingAnyPhotos": [
       "Phlegmacium variiforme",
       "Entoloma saundersii"
@@ -13,32 +13,20 @@
     "reviewRequiredTaxa": [
       "Agaricus sez. Arvenses",
       "Agaricus sez. Sanguinolenti",
-      "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
       "Amanita sez. Vaginatae",
-      "Clitocybe gibba s.l.",
-      "Cortinarius rubellus",
       "Cortinarius sottogenere Dermocybe",
       "Chlorophyllum rhacodes s.l.",
       "Lyophyllum specie annerenti",
-      "Leucocybe connata",
       "Mycena sez. Purae",
-      "Pleurotus eryngii s.l.",
-      "Pleurotus ostreatus",
-      "Tricholoma equestre",
-      "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
-      "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
-      "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
       "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
       "Lactarius sez. Deliciosi",
       "Lactarius porniniae",
       "Russula Foetentinae",
       "Russula Compactae Nigricantinae",
       "Russula Compactae Lactarioides (= gruppo R. delica)",
-      "Boletus sez. Luridi",
-      "Boletus (Neoboletus) erythropus s.l.",
-      "Hericium spp.",
-      "Ramaria botrytis s.l."
-    ]
+      "Boletus sez. Luridi"
+    ],
+    "curriculumMemberLinks": 38
   },
   "records": [
     {
@@ -163,21 +151,24 @@
           "subjectTaxon": "Amanita excelsa (= A. spissa)",
           "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 65. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-lateral-262.jpg",
           "subjectTaxon": "Amanita franchetii",
           "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 66. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/amanita-excelsa-s-l-incl-a-spissa-a-franchetii-top-258.jpg",
           "subjectTaxon": "Amanita excelsa (= A. spissa)",
           "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 65. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -247,14 +238,16 @@
           "subjectTaxon": "Infundibulicybe gibba s.l.",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 62. Autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/clitocybe-gibba-s-l--underside-253.jpg",
           "subjectTaxon": "Infundibulicybe gibba s.l.",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae, p. 62. Autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-clitocybe-gibba-s-l-lateral.jpg",
@@ -331,21 +324,24 @@
           "subjectTaxon": "Cortinarius orellanoides (= C. speciosissimus, C. rubellus)",
           "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 1 ottobre 2025, p. 28. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/cortinarius-rubellus-top-114.jpg",
           "subjectTaxon": "Cortinarius orellanoides (= C. speciosissimus, C. rubellus)",
           "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 1 ottobre 2025, p. 28. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/cortinarius-rubellus-underside-114.jpg",
           "subjectTaxon": "Cortinarius orellanoides (= C. speciosissimus, C. rubellus)",
           "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata, 1 ottobre 2025, p. 28. Fotografie: Sitta, Floriani, Suriano, Verzolla, Angelini, Panata, Iannotti; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -819,21 +815,24 @@
           "subjectTaxon": "Leucocybe connata (Lyophyllum connatum)",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 76. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/leucocybe-connata-top-311.jpg",
           "subjectTaxon": "Leucocybe connata (Lyophyllum connatum)",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 76. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/leucocybe-connata-underside-311.jpg",
           "subjectTaxon": "Leucocybe connata (Lyophyllum connatum)",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 76. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -875,7 +874,8 @@
           "subjectTaxon": "Pleurotus eryngii var. ferulae",
           "credit": "Fonte: Edoardo Suriano, PRIMAVERILI (2), Amiata 11 maggio 2026, p. 51. Fotografie: E. Suriano, M. Filippa, M. Floriani, N. Oppicelli; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/pleurotus-eryngii-s-l--lateral-459.jpg",
@@ -903,21 +903,24 @@
           "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
           "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
           "sourceUrl": "https://doi.org/10.3390/jof8070652",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-pleurotus-ostreatus-top.jpg",
           "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
           "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
           "sourceUrl": "https://doi.org/10.3390/jof8070652",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-pleurotus-ostreatus-underside.jpg",
           "subjectTaxon": "Pleurotus ostreatus (coltivato, ceppo PH11)",
           "credit": "Lin, Zhang, Yang, Li, Zhang, Guo, Yu e Yu (2022) · CC BY 4.0 · ritaglio dall’originale",
           "sourceUrl": "https://doi.org/10.3390/jof8070652",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -959,14 +962,16 @@
           "subjectTaxon": "Tricholoma equestre s.l.",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 17. Fotografie: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-equestre-underside-75.jpg",
           "subjectTaxon": "Tricholoma equestre s.l.",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 17. Fotografie: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-tricholoma-equestre-lateral.jpg",
@@ -1015,21 +1020,24 @@
           "subjectTaxon": "Tricholoma gruppo album",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-top-62.jpg",
           "subjectTaxon": "Tricholoma gruppo album",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri-underside-62.jpg",
           "subjectTaxon": "Tricholoma gruppo album",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 15. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -1043,21 +1051,24 @@
           "subjectTaxon": "Tricholoma scalpturatum",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-top-179.jpg",
           "subjectTaxon": "Tricholoma scalpturatum",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre-underside-182.jpg",
           "subjectTaxon": "Tricholoma scalpturatum",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 43. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -1071,21 +1082,24 @@
           "subjectTaxon": "Tricholoma sciodes",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-top-204.jpg",
           "subjectTaxon": "Tricholoma bresadolanum",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum-underside-205.jpg",
           "subjectTaxon": "Tricholoma bresadolanum",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 50. Archivio fotografico del corso: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -1099,14 +1113,16 @@
           "subjectTaxon": "Tricholoma gruppo Albobrunnei",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 32. Fotografie: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/tricholoma-sez-genuina-gruppo-albobrunnei--underside-133.jpg",
           "subjectTaxon": "Tricholoma gruppo Albobrunnei",
           "credit": "Fonte: Nicola Sitta, Il genere Tricholoma (2026), p. 32. Fotografie: Sitta, Floriani, Angelini, Golzio, Suriano, De Ruvo, Marcacci; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-tricholoma-sez-genuina-gruppo-albobrunnei-lateral.jpg",
@@ -1295,7 +1311,8 @@
           "subjectTaxon": "Russula delica",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 41. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/russula-lactarioides-underside-156.jpg",
@@ -1309,7 +1326,8 @@
           "subjectTaxon": "Russula delica",
           "credit": "Carminda Santos, CC BY 4.0 · ritaglio",
           "sourceUrl": "https://www.inaturalist.org/observations/96701730",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -1379,21 +1397,24 @@
           "subjectTaxon": "Neoboletus erythropus s.l.",
           "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 74. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/boletus-neoboletus-erythropus-s-l--top-290.jpg",
           "subjectTaxon": "Neoboletus erythropus s.l.",
           "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 74. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/boletus-neoboletus-erythropus-s-l--underside-290.jpg",
           "subjectTaxon": "Neoboletus erythropus s.l.",
           "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 74. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -1519,21 +1540,24 @@
           "subjectTaxon": "Hericium erinaceus",
           "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
           "sourceUrl": "https://www.inaturalist.org/observations/95048953",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-hericium-spp-top.jpg",
           "subjectTaxon": "Hericium erinaceus",
           "credit": "Nina Filippova, CC BY 4.0 · ritaglio",
           "sourceUrl": "https://www.inaturalist.org/observations/95048953",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-hericium-spp-underside.jpg",
           "subjectTaxon": "Hericium coralloides",
           "credit": "Sigitas Juzėnas, CC BY 4.0 · ritaglio",
           "sourceUrl": "https://www.inaturalist.org/observations/72438785",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
@@ -1673,14 +1697,16 @@
           "subjectTaxon": "Ramaria botrytis coll.",
           "credit": "Tor Erik Brandrud / Norsk institutt for naturforskning · CC BY 4.0 · ritaglio dall’originale",
           "sourceUrl": "https://artsdatabanken.no/node/719717",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         },
         {
           "src": "images/reference/external-ramaria-botrytis-s-l-top.jpg",
           "subjectTaxon": "Ramaria botrytis coll.",
           "credit": "Kristin Brandrud · CC BY 4.0 · ritaglio dall’originale",
           "sourceUrl": "https://artsdatabanken.no/node/719717",
-          "relation": "needs-course-review"
+          "relation": "curriculum-explicit-member",
+          "relationEvidence": "Fotografia con soggetto identificato nella fonte; il taxon o il gruppo figura esplicitamente nell'etichetta S1 della scheda. Associazione didattica, non revisione scientifica indipendente."
         }
       ]
     },
