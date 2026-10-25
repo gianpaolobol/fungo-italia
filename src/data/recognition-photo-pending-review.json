@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "status": "scientific-review-required",
+  "rules": [
+    "Non modificare subjectTaxon o attribuzione delle immagini per far coincidere i nomi.",
+    "Non derivare lo status alimentare del gruppo dalla singola foto o viceversa.",
+    "Non rendere esaminabili foto prive di identificazione verificabile.",
+    "Non considerare i 168 collegamenti documentali equivalenti a 168 determinazioni scientifiche indipendenti."
+  ],
+  "items": [
+    {
+      "taxon": "Lactarius sez. Deliciosi",
+      "reason": "Le fotografie sono attribuite a Lactarius deliciosus group (North America). Il gruppo nordamericano non deve essere equiparato automaticamente ai taxa europei della sezione: occorre verifica tassonomica e di rappresentatività.",
+      "scientificApproval": false
+    },
+    {
+      "taxon": "Phlegmacium variiforme",
+      "reason": "La scheda non presenta fotografie di riferimento nel catalogo corrente. Servono fotografie di esemplari identificati con provenienza e licenza.",
+      "scientificApproval": false
+    },
+    {
+      "taxon": "Entoloma saundersii",
+      "reason": "La scheda non presenta fotografie di riferimento nel catalogo corrente. Servono fotografie di esemplari identificati con provenienza e licenza.",
+      "scientificApproval": false
+    }
+  ],
+  "notes": [
+    "Lactarius porniniae: variante ortografica 'porninsis' verificata con Index Fungorum, senza validare la determinazione fotografica.",
+    "Chlorophyllum brunneum: relazione con gruppo C. rhacodes documentata nella Guida ragionata S2; resta distinta l'identificazione fotografica della specie.",
+    "Lactarius deliciosus group (North America): non equiparare automaticamente a specie europee della sezione Deliciosi.",
+    "Restano due taxa privi di fotografie di riferimento nel catalogo canonico."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "readyForPublication": false,
+  "entries": [
+    {
+      "taxon": "Phlegmacium variiforme",
+      "sourceTaxon": "Cortinarius variiformis",
+      "sourceUrl": "https://www.asturnatura.com/fotografia-naturaleza/especie/cortinarius-variiformis",
+      "sourceDescription": "Archivio fotografico asturnatura: 2 fotografie attribuite a Enrique Rubio Domínguez.",
+      "status": "candidate-only",
+      "requiredChecks": [
+        "Licenza di ogni fotografia e permesso per utilizzo nell'app",
+        "Verifica scientifica della determinazione e sinonimia con Phlegmacium variiforme",
+        "Raccolta di almeno tre viste adeguate, non necessariamente tre foto distinte se protocollo approvato"
+      ]
+    },
+    {
+      "taxon": "Entoloma saundersii",
+      "sourceTaxon": "Entoloma saundersii",
+      "sourceUrl": "https://www.micologiabf.org/funghi/entoloma-saundersii-fr-sacc/",
+      "sourceDescription": "Associazione Micologica Bassa Friulana: scheda fotografica di Giuliano Ferisin.",
+      "status": "candidate-only",
+      "requiredChecks": [
+        "Licenza o autorizzazione del fotografo per l'app",
+        "Verifica scientifica dell'identificazione",
+        "Disponibilità di viste sufficienti e metadata di provenienza"
+      ]
+    }
+  ],
+  "policy": "Non scaricare, incorporare o pubblicare immagini finché permessi, attribuzione e identificazione non sono verificati."
+}
