@@ -15,8 +15,16 @@ export async function readReviewedMatrix(){
 }
 export function applyReviewedMatrix(records,matrix,profiles){
  assert(matrix.edibilityPolicy?.authoritativeSourceId===guide&&matrix.edibilityPolicy.otherSourcesMayOverride===false,'La Guida deve essere prevalente');
- assert.equal(records.length,214);assert.equal(matrix.taxa.length,214);
- const taxa=new Map(records.map(t=>[t.id,t]));assert.equal(taxa.size,214);
+ assert.equal(records.length,218,'Expected the 214 reviewed units plus four curriculum-only teaching groups');assert.equal(matrix.taxa.length,214);
+ const taxa=new Map(records.map(t=>[t.id,t]));assert.equal(taxa.size,218);
+ const reviewedIds=new Set(matrix.taxa.map(t=>t.id));
+ const curriculumOnly=records.filter(t=>!reviewedIds.has(t.id));
+ const allowedCurriculumOnly=new Set(['minimum-group-card-clathraceae-e-phallaceae','minimum-group-card-geastraceae-astraeus','minimum-group-card-lycoperdaceae','minimum-group-card-pezizaceae-s-l-funghi-epigei-a-coppa-o-disco']);
+ assert.equal(curriculumOnly.length,allowedCurriculumOnly.size,'Unexpected unreviewed curriculum units');
+ for(const t of curriculumOnly){
+  assert(allowedCurriculumOnly.has(t.id)&&t.kind==='teaching-group'&&t.curriculum?.level==='minimum'&&[19,21].includes(t.curriculum.sourcePage),'Unauthorized extra unit');
+  assert(!t.studyProfile?.edibility,'Curriculum-only groups must not receive an unreviewed edibility judgment');
+ }
  assert.equal(new Set(matrix.taxa.map(t=>t.id)).size,214);
  const foodProfiles=new Map(profiles.records.map(t=>[t.scientificName,t]));
  const registry=new Map(matrix.sourceRegistry.map(s=>[s.sourceId,s]));
