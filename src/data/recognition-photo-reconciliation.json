@@ -5,20 +5,20 @@
   "stats": {
     "uncovered": 62,
     "explicitPhotoLinks": 139,
-    "reviewRequiredPhotoLinks": 9,
+    "reviewRequiredPhotoLinks": 3,
     "missingAnyPhotos": [
       "Phlegmacium variiforme",
       "Entoloma saundersii"
     ],
     "reviewRequiredTaxa": [
-      "Chlorophyllum rhacodes s.l.",
-      "Lactarius sez. Deliciosi",
-      "Lactarius porniniae"
+      "Lactarius sez. Deliciosi"
     ],
     "curriculumMemberLinks": 38,
     "courseRepresentativeCandidateLinks": 29,
-    "documentaryReconciledLinks": 168,
-    "independentlyCertifiedLinks": null
+    "documentaryReconciledLinks": 174,
+    "independentlyCertifiedLinks": null,
+    "nomenclatureVerifiedLinks": 3,
+    "S2GroupVerifiedLinks": 3
   },
   "records": [
     {
@@ -623,21 +623,27 @@
           "subjectTaxon": "Chlorophyllum brunneum",
           "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "S2-group-verified",
+          "relationEvidence": "Guida ragionata alla commestibilità (Regione Piemonte, 2021): C. brunneum è trattato nel gruppo C. rhacodes, che nel suo insieme è sconsigliato e non commercializzabile in Italia. Non equiparare la specie a C. rhacodes s.str. e non certificare l'identità della foto.",
+          "relationSourceUrl": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf"
         },
         {
           "src": "images/reference/chlorophyllum-rhacodes-s-l--top-138.jpg",
           "subjectTaxon": "Chlorophyllum brunneum",
           "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "S2-group-verified",
+          "relationEvidence": "Guida ragionata alla commestibilità (Regione Piemonte, 2021): C. brunneum è trattato nel gruppo C. rhacodes, che nel suo insieme è sconsigliato e non commercializzabile in Italia. Non equiparare la specie a C. rhacodes s.str. e non certificare l'identità della foto.",
+          "relationSourceUrl": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf"
         },
         {
           "src": "images/reference/chlorophyllum-rhacodes-s-l--underside-138.jpg",
           "subjectTaxon": "Chlorophyllum brunneum",
           "credit": "Fonte: Nicola Sitta, Micotossicologia Amiata (2 ottobre 2025), p. 35. Fotografie: Sitta, Floriani, Suriano, Angelini, Verzolla, Scano; autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "S2-group-verified",
+          "relationEvidence": "Guida ragionata alla commestibilità (Regione Piemonte, 2021): C. brunneum è trattato nel gruppo C. rhacodes, che nel suo insieme è sconsigliato e non commercializzabile in Italia. Non equiparare la specie a C. rhacodes s.str. e non certificare l'identità della foto.",
+          "relationSourceUrl": "https://www.regione.piemonte.it/web/sites/default/files/media/documenti/2021-09/guida_commestibilita_funghi_isbn_979-12-200-9297-5.pdf"
         }
       ]
     },
@@ -1210,21 +1216,27 @@
           "subjectTaxon": "Lactarius porninsis",
           "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
-          "relation": "needs-course-review"
+          "relation": "nomenclature-verified",
+          "relationEvidence": "Index Fungorum record 637370: Lactarius porniniae Rolland [as 'porninsis']; variante ortografica storica del medesimo nome tassonomico. Questa verifica non determina indipendentemente la fotografia.",
+          "relationSourceUrl": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=637370"
         },
         {
           "src": "images/reference/external-lactarius-porniniae-top.jpg",
           "subjectTaxon": "Lactarius porninsis",
           "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
-          "relation": "needs-course-review"
+          "relation": "nomenclature-verified",
+          "relationEvidence": "Index Fungorum record 637370: Lactarius porniniae Rolland [as 'porninsis']; variante ortografica storica del medesimo nome tassonomico. Questa verifica non determina indipendentemente la fotografia.",
+          "relationSourceUrl": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=637370"
         },
         {
           "src": "images/reference/external-lactarius-porniniae-underside.jpg",
           "subjectTaxon": "Lactarius porninsis",
           "credit": "Andreas Kunze · CC BY-SA 3.0 · ritaglio dall’originale",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007-09-23_Lactarius_porninsis_1.jpg",
-          "relation": "needs-course-review"
+          "relation": "nomenclature-verified",
+          "relationEvidence": "Index Fungorum record 637370: Lactarius porniniae Rolland [as 'porninsis']; variante ortografica storica del medesimo nome tassonomico. Questa verifica non determina indipendentemente la fotografia.",
+          "relationSourceUrl": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=637370"
         }
       ]
     },
