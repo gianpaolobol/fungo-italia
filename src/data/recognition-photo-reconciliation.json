@@ -4,29 +4,19 @@
   "provenance": "Existing catalog referenceImages and explicitly stated objective labels; relation is NOT an independently certified mushroom identification",
   "stats": {
     "uncovered": 62,
-    "explicitPhotoLinks": 139,
-    "reviewRequiredPhotoLinks": 38,
+    "explicitPhotoLinks": 168,
+    "reviewRequiredPhotoLinks": 9,
     "missingAnyPhotos": [
       "Phlegmacium variiforme",
       "Entoloma saundersii"
     ],
     "reviewRequiredTaxa": [
-      "Agaricus sez. Arvenses",
-      "Agaricus sez. Sanguinolenti",
-      "Amanita sez. Vaginatae",
-      "Cortinarius sottogenere Dermocybe",
       "Chlorophyllum rhacodes s.l.",
-      "Lyophyllum specie annerenti",
-      "Mycena sez. Purae",
-      "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
       "Lactarius sez. Deliciosi",
-      "Lactarius porniniae",
-      "Russula Foetentinae",
-      "Russula Compactae Nigricantinae",
-      "Russula Compactae Lactarioides (= gruppo R. delica)",
-      "Boletus sez. Luridi"
+      "Lactarius porniniae"
     ],
-    "curriculumMemberLinks": 38
+    "curriculumMemberLinks": 38,
+    "courseRepresentativeCandidateLinks": 29
   },
   "records": [
     {
@@ -67,21 +57,24 @@
           "subjectTaxon": "Agaricus arvensis s.l.",
           "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 21. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/agaricus-sez-arvenses-top-99.jpg",
           "subjectTaxon": "Agaricus arvensis s.l.",
           "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 21. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/agaricus-sez-arvenses-underside-99.jpg",
           "subjectTaxon": "Agaricus arvensis s.l.",
           "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 21. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -95,21 +88,24 @@
           "subjectTaxon": "Agaricus benesii",
           "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 18. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/agaricus-sez-sanguinolenti-top-94.jpg",
           "subjectTaxon": "Agaricus sylvaticus",
           "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 19. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/agaricus-sez-sanguinolenti-underside-94.jpg",
           "subjectTaxon": "Agaricus sylvaticus",
           "credit": "Fonte: Edoardo Suriano, Inquadramento schematico del genere Agaricus (16/10/2025), p. 19. Foto accreditate a E. Suriano, L. A. Parra, M. Faraoni; attribuzione individuale non specificata. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -182,21 +178,24 @@
           "subjectTaxon": "Amanita vaginata s.l.",
           "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/amanita-sez-vaginatae-top-143.jpg",
           "subjectTaxon": "Amanita vaginata s.l.",
           "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/amanita-sez-vaginatae-underside-143.jpg",
           "subjectTaxon": "Amanita vaginata s.l.",
           "credit": "Fonte: Nicola Sitta, Genere Amanita (30/09/2025), p. 35. Fotografie accreditate in copertina a Sitta, Suriano, Floriani, Angelini, Golzio e Panata; autore individuale non specificato. Ritaglio della fotografia originale.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -355,21 +354,24 @@
           "subjectTaxon": "Cortinarius uliginosus",
           "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 10. Fotografia: Federico Calledda.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/cortinarius-sottogenere-dermocybe-top-43.jpg",
           "subjectTaxon": "Cortinarius sanguineus s.l.",
           "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 12. Fotografia: Federico Calledda.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/cortinarius-sottogenere-dermocybe-underside-44.jpg",
           "subjectTaxon": "Cortinarius croceus",
           "credit": "Fonte: Cortinarius 2026 — Baselga di Piné, settembre 2026, p. 12. Fotografia: Federico Calledda.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -787,21 +789,24 @@
           "subjectTaxon": "Lyophyllum rhopalopodium",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 75. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/lyophyllum-annerenti-top-307.jpg",
           "subjectTaxon": "Lyophyllum rhopalopodium",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 75. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/lyophyllum-annerenti-underside-307.jpg",
           "subjectTaxon": "Lyophyllum rhopalopodium",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 75. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -846,21 +851,24 @@
           "subjectTaxon": "Mycena pura",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 31. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/mycena-sez-purae-top-126.jpg",
           "subjectTaxon": "Mycena pura",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 31. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/mycena-sez-purae-underside-126.jpg",
           "subjectTaxon": "Mycena pura",
           "credit": "Fonte: Nicola Sitta, Tricholomataceae (3 ottobre 2025), p. 31. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -1129,7 +1137,8 @@
           "subjectTaxon": "Tricholoma imbricatum",
           "credit": "Patrick Bayan, CC BY 4.0 · ritaglio",
           "sourceUrl": "https://www.inaturalist.org/observations/321606464",
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -1255,21 +1264,24 @@
           "subjectTaxon": "Russula foetens",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 51. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/russula-foetentinae-underside-182.jpg",
           "subjectTaxon": "Russula foetens",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 51. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/external-russula-foetentinae-lateral.jpg",
           "subjectTaxon": "Russula laurocerasi",
           "credit": "Amadej Trnkoczy · CC BY-SA 3.0 · ritaglio dall’originale",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-09-06_Russula_laurocerasi_Melzer_122166.jpg",
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -1283,21 +1295,24 @@
           "subjectTaxon": "Russula adusta",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 36. Fotografia: M. Donini.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/russula-nigricantinae-top-130.jpg",
           "subjectTaxon": "Russula nigricans",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 35. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/russula-nigricantinae-underside-130.jpg",
           "subjectTaxon": "Russula nigricans",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 35. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
@@ -1319,7 +1334,8 @@
           "subjectTaxon": "Russula chloroides",
           "credit": "Fonte: Marco Floriani, Il genere Russula, p. 42. Autore della singola fotografia non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/external-russula-compactae-lactarioides-gruppo-r-delica-lateral.jpg",
@@ -1369,21 +1385,24 @@
           "subjectTaxon": "Suillellus luridus",
           "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 71. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/boletus-luridi-top-278.jpg",
           "subjectTaxon": "Suillellus luridus",
           "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 71. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         },
         {
           "src": "images/reference/boletus-luridi-underside-274.jpg",
           "subjectTaxon": "Suillellus luridus",
           "credit": "Fonte: Nicola Sitta, 1a Boletales, 26 gennaio 2026, p. 70. Archivio fotografico: Angelini, De Ruvo, Donini, Floriani, Golzio, Lezzi, Lupo, Pini, Sotgiu, Suriano; autore individuale non specificato.",
           "sourceUrl": null,
-          "relation": "needs-course-review"
+          "relation": "course-representative-candidate",
+          "relationEvidence": "Soggetto fotografico dichiarato nella fonte e presentato nell'atlante come esempio del raggruppamento didattico. Corrispondenza per l'esercizio al rango collettivo, da confermare sul materiale originale prima dell'attivazione; non equivale a determinazione indipendente o commestibilità della singola specie."
         }
       ]
     },
