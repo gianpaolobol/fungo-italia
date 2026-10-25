@@ -4,7 +4,7 @@
   "provenance": "Existing catalog referenceImages and explicitly stated objective labels; relation is NOT an independently certified mushroom identification",
   "stats": {
     "uncovered": 62,
-    "explicitPhotoLinks": 168,
+    "explicitPhotoLinks": 139,
     "reviewRequiredPhotoLinks": 9,
     "missingAnyPhotos": [
       "Phlegmacium variiforme",
@@ -16,7 +16,9 @@
       "Lactarius porniniae"
     ],
     "curriculumMemberLinks": 38,
-    "courseRepresentativeCandidateLinks": 29
+    "courseRepresentativeCandidateLinks": 29,
+    "documentaryReconciledLinks": 168,
+    "independentlyCertifiedLinks": null
   },
   "records": [
     {
