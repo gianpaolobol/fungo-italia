@@ -1,3 +1,5 @@
+import {applyCourseChatImages} from './course-chat-images.mjs';
+import {applyCurriculumScope,curriculumCompletionCards} from './curriculum-scope.mjs';
 import {sourceExportCommit} from './export-provenance.mjs';
 import {applyApprovedExternalStudyEvidence} from './approved-external-study-evidence.mjs';
 import {buildExamBank} from '../web/public/exam-core.js';
@@ -54,6 +56,14 @@ const adminImages=JSON.parse(await readFile(join(output,'admin-reference-images.
 applyAdminReferenceImages([...catalog,...teachingGroups],adminImages);
 applyCommercialization([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'commercialization.json'),'utf8')));
 applyReviewedMatrix([...catalog,...teachingGroups],await readReviewedMatrix(),studyProfiles);
+const curriculumScope=JSON.parse(await readFile(join(output,'curriculum-scope.json'),'utf8'));
+const curriculumObjectives=JSON.parse(await readFile('legacy/web/data/taxonomic-objectives.json','utf8'));
+// The historical review covers the original 214 records only. Completion groups
+// are curriculum objectives, without inferred morphology, food assessments or images.
+teachingGroups.push(...curriculumCompletionCards(curriculumScope,curriculumObjectives));
+applyCurriculumScope([...catalog,...teachingGroups],curriculumScope,curriculumObjectives);
+const courseChat=JSON.parse(await readFile(join(output,'course-chat-images.json'),'utf8'));
+applyCourseChatImages([...catalog,...teachingGroups],courseChat,curriculumScope);
 const nativeExamBank=buildExamBank(catalog,studyProfiles);
 if(nativeExamBank.length<15)throw Error('Insufficient native exam cases');
 await writeFile(join(output,'exam-bank.json'),JSON.stringify(nativeExamBank,null,2)+'\n');
@@ -72,5 +82,5 @@ await mkdir(output,{recursive:true});
 await Promise.all([writeFile(join(output,'internal-foundations.json'),JSON.stringify(internalFoundations(sourceRecords,courseSyndromeFoundations.documents),null,2)+'\n'),writeFile(join(output,'groups.json'),JSON.stringify(teachingGroups.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'catalog.json'),JSON.stringify(catalog.map(cleanAtlasRecord),null,2)+'\n'),writeFile(join(output,'areas.json'),JSON.stringify(mobileAreas,null,2)+'\n'),writeFile(join(output,'provenance.json'),JSON.stringify({schemaVersion:1,legacySnapshotCommit:'e3b9ca01bd43ec87d3630ab954c45229b2ba15e1',sourceExportCommit:sourceExportCommit(manifest,previousProvenance),canonicalUnits:148,areas:mobileAreas.length,independentReviewComplete:false,pendingScientificClaims:manifest.pendingScientificClaims,supplementaryLiterature:{file:'supplementary-literature.json',sha256:createHash('sha256').update(supplementaryBytes).digest('hex'),reviewStatus:supplementary.reviewStatus},sourceFileChecksums:manifest.files},null,2)+'\n')]);
 console.log(JSON.stringify({canonicalUnits:catalog.length,areas:mobileAreas.length,independentReviewComplete:false}));
 
-const imageAssetModule="import type {ImageSourcePropType} from 'react-native';\nexport const referenceImageAssets:Record<string,ImageSourcePropType>={\n"+[...new Set([...referenceImages.images,...adminImages.images].map(image=>image.src))].map(src=>JSON.stringify(src)+':require('+JSON.stringify('../../web/public/'+src)+'),').join('\n')+'\n};\n';
+const imageAssetModule="import type {ImageSourcePropType} from 'react-native';\nexport const referenceImageAssets:Record<string,ImageSourcePropType>={\n"+[...new Set([...referenceImages.images,...adminImages.images,...courseChat.images.filter(image=>image.links.length)].map(image=>image.src))].map(src=>JSON.stringify(src)+':require('+JSON.stringify('../../web/public/'+src)+'),').join('\n')+'\n};\n';
 await writeFile(join(output,'reference-image-assets.ts'),imageAssetModule);

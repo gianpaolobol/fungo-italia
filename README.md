@@ -4,7 +4,7 @@
 
 L’anteprima corrente usa lo stesso `App.tsx` della versione iPhone/iPad. La pubblicazione web avviene dopo la conferma su TestFlight dello stesso sorgente e della stessa icona; dal fungo in alto a destra puoi verificare la versione. Acquisto e ripristino Apple richiedono l’app installata da TestFlight/App Store. Vecchi Snack Expo Go e il servizio storico Floot non sono la versione di test corrente. Note e strumenti web precedenti sono conservati nella sezione [strumenti personali](https://gianpaolobol.github.io/fungo-italia/strumenti/).
 
-Atlante didattico di micologia per consultazione e ripasso: 148 unità minime e 66 schede di generi/gruppi, con 71 macroaree in 20 regioni.
+Atlante didattico di micologia per consultazione e ripasso: 148 unità minime e 70 schede di generi/gruppi, con 71 macroaree in 20 regioni.
 
 ## Studio e consultazione
 
@@ -41,3 +41,5 @@ Le precedenti automazioni OTA/submit iOS sono archiviate in `docs/release-workfl
 Node >=24.3.0; `npm ci`, `npm run prepare:data`, `npm run typecheck`. I workflow GitHub gestiscono compilazione e distribuzione. Expo 58.0.2 usa React 19.3.0 e React Native 0.88.0-rc.3, con override esplicito dei peer prerelease.
 
 Il progetto precedente Next/React è conservato in `legacy/web` e nei branch `backup/pre-migration-flutter` e `backup/verified-web-readiness`. Il percorso pubblico attuale è GitHub Pages.
+
+Aggiornamento curricolare23/10/2026:218 schede e218 casi (86 fotografici,132 teorici,421 quesiti teorici);150 immagini supplementari collegate dalla chat,50 solo fonte. [Recupero e limiti](docs/RECOVERY-2026-10-23.md).

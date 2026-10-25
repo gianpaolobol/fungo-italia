@@ -1,3 +1,15 @@
+## Integrazione del recupero sul main corrente — 25/10/2026
+
+Integrati il recupero curricolare/MicoLab e il main279d50e (sindromi del24/10, già distribuito come1.1.0 build19). Conservati gli8 documenti e15 quadri delle sindromi, le fonti/attribuzioni alle21 schede e tutte le pipeline correnti. Ripristinate218 unità minime (148+70),218 casi (86+132),421 domande teoriche,200 immagini conhash identici agli asset originali (150collegate,50solo fonte). Nessuna delle12 domande teoriche sulle sindromi cambia rispetto al banco recuperato: il registro nuovo non genera quiz automaticamente. Matrice storica limitata214.
+
+209testNode, TypeScript, rigenerazione e importazione asset superati. Export e stato della distribuzione da verificare sul nuovo commit. Il commit e la distribuzione del24/10 non includevano ancora questo recupero; non sovrascriverli con lo snapshot del23/10. Foto personali e analisi restano disabilitati; nessun cambiamento a verifiche Apple o attribuzioni di revisione indipendente.
+
+## Recupero e pubblicazione autorizzata — 23/10/2026
+
+Il titolare autorizza «pubblica questi aggiornamenti e fai commit e push su main», poi richiede il recupero completo dell’ultimo stato dopo la manutenzione automatica. Baseline main d2c8b650;218 schede e86 casi fotografici coincidono con la cache;132 casi teorici e421 quesiti coincidono con il banco recuperato;200 foto identiche agli asset precedenti.150 collegate,50 solo fonte;76 casi con foto del corso.147 profili alimentari documentati esercitati;4 gruppi minimi senza attestazioni inventate. Generatori e registri ricostruiti, non identità dei vecchi commit. [Dettagli e limiti](RECOVERY-2026-10-23.md).
+
+La precedente sospensione è superata dall’autorizzazione esplicita, inclusa pubblicazione delle foto nel repository pubblico. Restano perimetroS1, prevalenza alimentareS2, matrice storica214, blocco foto personali/analisi, verifiche Apple e pipeline abbinata web/TestFlight. Gate scientifico strict ancora bloccato; nessuna revisione indipendente attestata.
+
 # Handoff corrente
 
 ## Sindromi di corso — 24 ottobre 2026

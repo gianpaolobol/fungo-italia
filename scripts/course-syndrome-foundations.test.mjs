@@ -21,7 +21,7 @@ for(const s of foundations.syndromes){
  assert.equal(s.curriculumEffect,'none');
  assert.equal(s.reviewStatus,'source-mapped-not-independently-reviewed');
 }
-assert.equal(catalog.length,148);assert.equal(groups.length,66);
+assert.equal(catalog.length,148);assert.equal(groups.length,70);
 assert.equal(internal.curriculum.requiredMinimumUnits,148);
 assert.equal(internal.scientificStatus.independentReviewComplete,false);
 assert.equal(internal.rules.ownerCertificationIsNotIndependentReview,true);

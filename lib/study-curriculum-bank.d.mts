@@ -1,3 +1,3 @@
 import type {ExamCase} from '../web/public/exam-core';
-export type CurriculumTaxon={id:string;scientificName:string;characters?:string[];habitat?:string[];studyProfile?:{sporePrint?:{label?:string};odor?:string};sources?:{sourceId:string;fields?:string[]}[]};
+export type CurriculumTaxon={id:string;scientificName:string;characters?:string[];habitat?:string[];studyProfile?:{sporePrint?:{label?:string};odor?:string;edibility?:{category?:string;precautions?:string[];syndrome?:{label?:string}}};curriculumObjective?:string;curriculum?:{level?:string;documentId?:string;sourcePage?:number};edibilityEvidence?:{sourceId:string;page?:number}[];courseImages?:{src:string;view:string;credit?:string;subjectTaxon?:string;sourceId?:string;caseId?:string}[];sources?:{sourceId:string;fields?:string[]}[]};
 export function buildCurriculumBank(minimum:CurriculumTaxon[],extended:CurriculumTaxon[],photo:ExamCase[]):ExamCase[];

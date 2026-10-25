@@ -6,6 +6,17 @@
 - Separare sempre **implementato**, **testato**, **documentato**, **approvato scientificamente** e **pubblicato**.
 - Branch dedicato `feat/...`, `fix/...`, `audit/...`, `docs/...`; PR verso `main`; non sovrascrivere lavori di un altro agente. Aggiornare l'handoff al termine.
 
+## Perimetro curricolare fondante (vincolo esplicito del titolare, 23/10/2026)
+
+- Il documento degli obiettivi tassonomici **minimi, auspicabili e approfondimenti** è l’elenco vincolante delle unità ammesse nell’atlante. Nessuna specie, genere, sezione o gruppo assente da quel documento può diventare una scheda dell’atlante.
+- Rispettare il livello e il rango previsti dal documento. La presenza di un genere non autorizza ad aggiungere automaticamente le sue specie come schede autonome; la presenza di un gruppo non autorizza ad ampliarne il perimetro per inferenza.
+- Sono ammessi raccordi con nomi aggiornati o sinonimi solo se documentati e riferiti alla medesima unità curricolare: non costituiscono nuove unità ammesse.
+- **I test dipendono dall’atlante: nessun taxon assente dall’atlante può essere un caso o una risposta-obiettivo autonoma del test.** Tutte le schede dell’atlante devono essere coperte dai test secondo il loro livello didattico, senza introdurre unità esterne per aumentare la copertura.
+- Chat del corso, fotografie, Guida ragionata e altre fonti documentano le unità ammesse; non ampliano l’elenco curricolare. La Guida resta prevalente per i giudizi alimentari delle unità ammesse.
+- Materiale fuori perimetro eventualmente conservato nel registro delle fonti non è una scheda, un caso d’esame o una lacuna da colmare nell’atlante. Non mostrarlo come nuovo contenuto tassonomico di studio. Qualsiasi confronto pertinente deve restare subordinato alla scheda ammessa, senza creare un nuovo obiettivo di riconoscimento.
+- Prima di proporre importazioni, completamenti o correzioni: verificare l’ammissione in quel documento e registrare pagina, livello, rango e unità corrispondente. Se manca la corrispondenza, escludere l’unità dall’atlante e dai test; non trattarla come un obiettivo incompleto.
+- Questo vincolo prevale su precedenti proposte di estensione basate sulla sola disponibilità di foto, determinazioni dei docenti o riscontri bibliografici. Le proposte dell’audit MicoLab devono essere filtrate con questo criterio prima di qualsiasi applicazione.
+
 ## Stack verificato su main (21/10/2026)
 - Node: `>=24.3.0`; EAS Node `24.3.0`.
 - JavaScript (script `.mjs`, `index.js`, `app.config.js`), TypeScript/TSX (app mobile), JSON (dataset).
@@ -35,7 +46,7 @@
 
 ## Dataset e significato dei campi
 - Sorgente canonica di generazione: `legacy/web/artifacts/floot-readiness/` (manifest con SHA-256), integrata da `src/data/supplementary-literature.json` e trasformazioni in `scripts/prepare-mobile-data.mjs`.
-- **Output generato**: `src/data/catalog.json` (148 unità didattiche, non 148 specie tassonomiche), `groups.json` (66 gruppi/generi), `areas.json` (71 macroaree), `exam-bank.json`.
+- **Output generato**: `src/data/catalog.json` (148 unità didattiche, non 148 specie tassonomiche), `groups.json` (70 gruppi/generi: 66 canonici più 4 raggruppamenti minimi integrati dal documento S1), `areas.json` (71 macroaree), `exam-bank.json`.
 - `id`: identificatore stabile; `scientificName`: etichetta tassonomica; `rank`: specie/sezione/gruppo ecc.; `kind`: ruolo, es. `teaching-group`.
 - `commonNames`, `aliases`, `currentAcceptedNames`: nomi comuni, sinonimi/alternative, nomi accettati (non intercambiabili).
 - `characters`: tre caratteri del 3+1; `differentiatingCharacter`: quarto carattere differenziale; `lookalikes`: confronti; `habitat`: contesto ecologico.
@@ -48,7 +59,7 @@
 
 ## Aggiunta o correzione di un taxon
 1. Identificare l'unità curricolare e il suo rango: non inserire manualmente un record nel solo JSON generato.
-2. Modificare la fonte canonica/registro di evidenze e la trasformazione appropriata in `scripts/`, preservando ID, manifest e checksum.
+2. Verificare `src/data/curriculum-scope.json` (ammissione, livello, rango e pagina); i completamenti dei quattro raggruppamenti minimi sono vincolati a S1 tramite questo registro. Modificare la fonte canonica/registro di evidenze e la trasformazione appropriata in `scripts/`, preservando ID, manifest e checksum.
 3. Annotare fonti puntuali per ogni carattere; mai propagare un carattere di genere come certo per una specie.
 4. Verificare triade anatomica, identità del soggetto, autore, licenza e diritti commerciali; se assenti, lasciare il dato non documentato.
 5. Rigenerare con `npm run prepare:data`; verificare `catalog.json`, `exam-bank.json` e mappatura asset.

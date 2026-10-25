@@ -1,0 +1,3433 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "S1-obiettivi-tassonomici-v4-2026-06-09",
+  "policy": "Explicit nominal minimum units only; a genus objective does not admit all species.",
+  "units": [
+    {
+      "id": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-agaricus--02--agaricus-bresadolanus",
+      "scientificName": "Agaricus bresadolanus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--02--agaricus-bresadolanus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-agaricus--03--agaricus-sez-arvenses",
+      "scientificName": "Agaricus sez. Arvenses",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--03--agaricus-sez-arvenses",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-agaricus--05--agaricus-campestris",
+      "scientificName": "Agaricus campestris",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--05--agaricus-campestris",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-agaricus--06--agaricus-bitorquis",
+      "scientificName": "Agaricus bitorquis",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--06--agaricus-bitorquis",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-agaricus--07--agaricus-bisporus",
+      "scientificName": "Agaricus bisporus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agaricus--07--agaricus-bisporus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "scientificName": "Cyclocybe cylindracea",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-agrocybe-cyclocybe",
+      "sourcePage": 4,
+      "learningUnitId": "objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "scientificName": "Amanita phalloides",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--01--amanita-phalloides",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+      "scientificName": "Amanita verna / Amanita vidua",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--02--amanita-verna-inclusa-a-vidua",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--03--amanita-virosa",
+      "scientificName": "Amanita virosa",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--03--amanita-virosa",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--04--amanita-proxima",
+      "scientificName": "Amanita proxima",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--04--amanita-proxima",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--05--amanita-ovoidea",
+      "scientificName": "Amanita ovoidea",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--05--amanita-ovoidea",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "scientificName": "Amanita pantherina",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--06--amanita-pantherina",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--07--amanita-muscaria",
+      "scientificName": "Amanita muscaria",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--07--amanita-muscaria",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "scientificName": "Amanita caesarea",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--08--amanita-caesarea",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-amanita--09--amanita-gemmata",
+      "scientificName": "Amanita gemmata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--09--amanita-gemmata",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--10--amanita-citrina",
+      "scientificName": "Amanita citrina",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--10--amanita-citrina",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--11--amanita-porphyria",
+      "scientificName": "Amanita porphyria",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--11--amanita-porphyria",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+      "scientificName": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "scientificName": "Amanita strobiliformis",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--13--amanita-strobiliformis",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--14--amanita-vittadinii",
+      "scientificName": "Saproamanita vittadinii",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--14--amanita-vittadinii",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--15--amanita-rubescens",
+      "scientificName": "Amanita rubescens",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--15--amanita-rubescens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-amanita--16--amanita-sez-vaginatae",
+      "scientificName": "Amanita sez. Vaginatae",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4,
+      "learningUnitId": "objective-amanita--16--amanita-sez-vaginatae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-calocybe--01--calocybe-gambosa",
+      "scientificName": "Calocybe gambosa",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-calocybe",
+      "sourcePage": 5,
+      "learningUnitId": "objective-calocybe--01--calocybe-gambosa",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+      "scientificName": "Collybia phyllophila",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "scientificName": "Clitocybe nebularis",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+      "scientificName": "Infundibulicybe geotropa",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+      "scientificName": "Paralepistopsis amoenolens",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "scientificName": "Clitocybe gibba s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "scientificName": "Clitopilus prunulus s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-clitopilus",
+      "sourcePage": 5,
+      "learningUnitId": "objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "scientificName": "Rhodocollybia maculata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "sourcePage": 6,
+      "learningUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "scientificName": "Gymnopus fusipes",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "sourcePage": 6,
+      "learningUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+      "scientificName": "Marasmius oreades",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "sourcePage": 6,
+      "learningUnitId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "scientificName": "Coprinus atramentarius s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "sourcePage": 6,
+      "learningUnitId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+      "scientificName": "Coprinus comatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "sourcePage": 6,
+      "learningUnitId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "scientificName": "Cortinarius orellanus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--01--cortinarius-orellanus",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "scientificName": "Cortinarius rubellus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+      "scientificName": "Cortinarius sottogenere Dermocybe",
+      "rank": "subgenus",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--04--cortinarius-praestans",
+      "scientificName": "Cortinarius praestans",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--04--cortinarius-praestans",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--05--cortinarius-cumatilis",
+      "scientificName": "Cortinarius cumatilis",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--05--cortinarius-cumatilis",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--06--cortinarius-variiformis",
+      "scientificName": "Phlegmacium variiforme",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--06--cortinarius-variiformis",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "scientificName": "Cortinarius caperatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6,
+      "learningUnitId": "objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "scientificName": "Entoloma sinuatum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--01--entoloma-sinuatum",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-entoloma--03--entoloma-hirtipes",
+      "scientificName": "Entoloma hirtipes",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--03--entoloma-hirtipes",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-entoloma--04--entoloma-vernum",
+      "scientificName": "Entoloma vernum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--04--entoloma-vernum",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "scientificName": "Entoloma clypeatum s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--05--entoloma-clypeatum-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-entoloma--06--entoloma-saundersii",
+      "scientificName": "Entoloma saundersii",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7,
+      "learningUnitId": "objective-entoloma--06--entoloma-saundersii",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "scientificName": "Flammulina velutipes s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-flammulina",
+      "sourcePage": 7,
+      "learningUnitId": "objective-flammulina--01--flammulina-velutipes-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-galerina--01--galerina-marginata-group",
+      "scientificName": "Galerina marginata group",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-galerina",
+      "sourcePage": 7,
+      "learningUnitId": "objective-galerina--01--galerina-marginata-group",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "scientificName": "Hygrocybe conica s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "scientificName": "Hygrocybe punicea",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "scientificName": "Hygrophorus marzuolus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hygrophorus-cuphophyllus",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "scientificName": "Hygrophorus russula",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hygrophorus-cuphophyllus",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+      "scientificName": "Hygrophorus penarioides",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hygrophorus-cuphophyllus",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "scientificName": "Hypholoma fasciculare",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hypholoma",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hypholoma--01--hypholoma-fasciculare",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--02--hypholoma-lateritium",
+      "scientificName": "Hypholoma lateritium",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hypholoma",
+      "sourcePage": 8,
+      "learningUnitId": "objective-hypholoma--02--hypholoma-lateritium",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lentinula--01--lentinula-edodes",
+      "scientificName": "Lentinula edodes",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lentinula",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lentinula--01--lentinula-edodes",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+      "scientificName": "Lepiota subincarnata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "scientificName": "Lepiota brunneoincarnata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+      "scientificName": "Lepiota cristata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+      "scientificName": "Lepiota elaiophylla",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+      "scientificName": "Chlorophyllum molybdites",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "scientificName": "Echinoderma asperum s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "scientificName": "Macrolepiota procera s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "scientificName": "Lepista nuda s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepista",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepista--01--lepista-nuda-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
+      "scientificName": "Lepista flaccida s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepista",
+      "sourcePage": 9,
+      "learningUnitId": "objective-lepista--02--lepista-flaccida-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+      "sourcePage": 10,
+      "learningUnitId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+      "scientificName": "Leucopaxillus gentianeus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+      "sourcePage": 10,
+      "learningUnitId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+      "scientificName": "Lyophyllum decastes s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "sourcePage": 10,
+      "learningUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "scientificName": "Lyophyllum specie annerenti",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "sourcePage": 10,
+      "learningUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+      "scientificName": "Leucocybe connata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "sourcePage": 10,
+      "learningUnitId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "scientificName": "Mycena sez. Purae",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-mycena",
+      "sourcePage": 10,
+      "learningUnitId": "objective-mycena--01--mycena-sez-purae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-omphalotus--01--omphalotus-olearius",
+      "scientificName": "Omphalotus olearius",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-omphalotus",
+      "sourcePage": 11,
+      "learningUnitId": "objective-omphalotus--01--omphalotus-olearius",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+      "scientificName": "Panaeolus cyanescens",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-panaeolus-inclusi-copelandia-panaeolina",
+      "sourcePage": 11,
+      "learningUnitId": "objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+      "scientificName": "Kuehneromyces mutabilis",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+      "scientificName": "Pleurotus eryngii s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "scientificName": "Pleurotus ostreatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "sourcePage": 11,
+      "learningUnitId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+      "scientificName": "Stropharia rugosoannulata",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+      "sourcePage": 12,
+      "learningUnitId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--01--tricholoma-pardinum",
+      "scientificName": "Tricholoma pardinum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--01--tricholoma-pardinum",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "scientificName": "Tricholoma filamentosum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--02--tricholoma-filamentosum",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--03--tricholoma-josserandii",
+      "scientificName": "Tricholoma josserandii",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--03--tricholoma-josserandii",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--04--tricholoma-equestre",
+      "scientificName": "Tricholoma equestre",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--04--tricholoma-equestre",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
+      "scientificName": "Tricholoma portentosum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--05--tricholoma-portentosum",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "scientificName": "Tricholoma terreum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--06--tricholoma-terreum",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
+      "scientificName": "Tricholoma columbetta",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--08--tricholoma-columbetta",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--12--tricholoma-sejunctum",
+      "scientificName": "Tricholoma sejunctum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--12--tricholoma-sejunctum",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--13--tricholoma-sulphureum",
+      "scientificName": "Tricholoma sulphureum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--13--tricholoma-sulphureum",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "scientificName": "Tricholoma acerbum s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12,
+      "learningUnitId": "objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+      "scientificName": "Volvopluteus gloiocephalus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-volvariella-volvopluteus",
+      "sourcePage": 13,
+      "learningUnitId": "objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea",
+      "scientificName": "Volvariella volvacea",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-volvariella-volvopluteus",
+      "sourcePage": 13,
+      "learningUnitId": "objective-volvariella-volvopluteus--02--volvariella-volvacea",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+      "scientificName": "Lactarius sez. Deliciosi",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-lactarius-incluso-lactifluus",
+      "sourcePage": 13,
+      "learningUnitId": "objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+      "scientificName": "Lactarius porniniae",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lactarius-incluso-lactifluus",
+      "sourcePage": 13,
+      "learningUnitId": "objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+      "scientificName": "Lactarius volemus s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lactarius-incluso-lactifluus",
+      "sourcePage": 13,
+      "learningUnitId": "objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+      "scientificName": "Lactarius tesquorum",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-lactarius-incluso-lactifluus",
+      "sourcePage": 13,
+      "learningUnitId": "objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-russula--01--russula-foetentinae",
+      "scientificName": "Russula Foetentinae",
+      "rank": "subsection",
+      "level": "minimum",
+      "objectiveId": "objective-russula",
+      "sourcePage": 14,
+      "learningUnitId": "objective-russula--01--russula-foetentinae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
+      "scientificName": "Russula Compactae Nigricantinae",
+      "rank": "subsection",
+      "level": "minimum",
+      "objectiveId": "objective-russula",
+      "sourcePage": 14,
+      "learningUnitId": "objective-russula--02--russula-compactae-nigricantinae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-russula",
+      "sourcePage": 14,
+      "learningUnitId": "objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l",
+      "scientificName": "Boletus edulis s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-s-str",
+      "sourcePage": 14,
+      "learningUnitId": "objective-boletus-s-str--01--boletus-edulis-s-l",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "scientificName": "Boletus sez. Luridi",
+      "rank": "section",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+      "sourcePage": 15,
+      "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+      "scientificName": "Rubroboletus satanas",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+      "sourcePage": 15,
+      "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+      "scientificName": "Rubroboletus pulchrotinctus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+      "sourcePage": 15,
+      "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+      "sourcePage": 15,
+      "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "scientificName": "Suillellus luridus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+      "sourcePage": 15,
+      "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus-",
+      "sourcePage": 15,
+      "learningUnitId": "objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-caloboletus--01--caloboletus-radicans",
+      "scientificName": "Caloboletus radicans",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-caloboletus",
+      "sourcePage": 15,
+      "learningUnitId": "objective-caloboletus--01--caloboletus-radicans",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-caloboletus--02--caloboletus-calopus",
+      "scientificName": "Caloboletus calopus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-caloboletus",
+      "sourcePage": 15,
+      "learningUnitId": "objective-caloboletus--02--caloboletus-calopus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--01--gyroporus-cyanescens",
+      "scientificName": "Gyroporus cyanescens",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-gyroporus",
+      "sourcePage": 16,
+      "learningUnitId": "objective-gyroporus--01--gyroporus-cyanescens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "scientificName": "Gyroporus castaneus s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-gyroporus",
+      "sourcePage": 16,
+      "learningUnitId": "objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+      "scientificName": "Hygrophoropsis aurantiaca",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-hygrophoropsis",
+      "sourcePage": 16,
+      "learningUnitId": "objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-imleria--01--imleria-badia",
+      "scientificName": "Imleria badia",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-imleria",
+      "sourcePage": 16,
+      "learningUnitId": "objective-imleria--01--imleria-badia",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus",
+      "scientificName": "Suillus luteus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-suillus-incluso-boletinus",
+      "sourcePage": 17,
+      "learningUnitId": "objective-suillus-incluso-boletinus--01--suillus-luteus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "scientificName": "Suillus granulatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-suillus-incluso-boletinus",
+      "sourcePage": 17,
+      "learningUnitId": "objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "scientificName": "Tylopilus felleus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-tylopilus",
+      "sourcePage": 17,
+      "learningUnitId": "objective-tylopilus--01--tylopilus-felleus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "scientificName": "Cantharellus cibarius complex",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-cantharellus",
+      "sourcePage": 17,
+      "learningUnitId": "objective-cantharellus--01--cantharellus-cibarius-complex",
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-card-objective-craterellus--01--craterellus-lutescens",
+      "scientificName": "Craterellus lutescens",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-craterellus",
+      "sourcePage": 18,
+      "learningUnitId": "objective-craterellus--01--craterellus-lutescens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-craterellus--02--craterellus-tubaeformis",
+      "scientificName": "Craterellus tubaeformis",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-craterellus",
+      "sourcePage": 18,
+      "learningUnitId": "objective-craterellus--02--craterellus-tubaeformis",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "scientificName": "Craterellus cornucopioides",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-craterellus",
+      "sourcePage": 18,
+      "learningUnitId": "objective-craterellus--03--craterellus-cornucopioides",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-gomphus--01--gomphus-clavatus",
+      "scientificName": "Gomphus clavatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-gomphus",
+      "sourcePage": 18,
+      "learningUnitId": "objective-gomphus--01--gomphus-clavatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-hydnaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
+      "scientificName": "Hericium spp.",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-hydnaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-hydnaceae-s-l--02--hericium-spp",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+      "scientificName": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-hydnaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+      "scientificName": "Hapalopilus rutilans",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--03--albatrellus-confluens",
+      "scientificName": "Albatrellopsis confluens",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--03--albatrellus-confluens",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "scientificName": "Scutiger pes-caprae",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "scientificName": "Fistulina hepatica",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--07--grifola-frondosa",
+      "scientificName": "Grifola frondosa",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--07--grifola-frondosa",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--08--polyporus-umbellatus",
+      "scientificName": "Polyporus umbellatus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--08--polyporus-umbellatus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--09--meripilus-giganteus",
+      "scientificName": "Meripilus giganteus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--09--meripilus-giganteus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--10--polyporus-squamosus",
+      "scientificName": "Cerioporus squamosus",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-polyporaceae-s-l",
+      "sourcePage": 18,
+      "learningUnitId": "objective-polyporaceae-s-l--10--polyporus-squamosus",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-ramaria--01--ramaria-formosa",
+      "scientificName": "Ramaria formosa",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-ramaria",
+      "sourcePage": 19,
+      "learningUnitId": "objective-ramaria--01--ramaria-formosa",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-ramaria--02--ramaria-pallida",
+      "scientificName": "Ramaria pallida",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-ramaria",
+      "sourcePage": 19,
+      "learningUnitId": "objective-ramaria--02--ramaria-pallida",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "scientificName": "Ramaria botrytis s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-ramaria",
+      "sourcePage": 19,
+      "learningUnitId": "objective-ramaria--03--ramaria-botrytis-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-auricularia--01--auricularia-auricula-judae",
+      "scientificName": "Auricularia auricula-judae",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-auricularia",
+      "sourcePage": 20,
+      "learningUnitId": "objective-auricularia--01--auricularia-auricula-judae",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "scientificName": "Gyromitra esculenta",
+      "rank": "species",
+      "level": "minimum",
+      "objectiveId": "objective-gyromitra-incluso-discina",
+      "sourcePage": 21,
+      "learningUnitId": "objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "rank": "speciesGroup",
+      "level": "minimum",
+      "objectiveId": "objective-sarcosphaera",
+      "sourcePage": 21,
+      "learningUnitId": "objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "deepMorphologyRequired": false
+    },
+    {
+      "id": "minimum-genus-card-agaricus",
+      "scientificName": "Agaricus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-agaricus",
+      "sourcePage": 4
+    },
+    {
+      "id": "minimum-genus-card-agrocybe-cyclocybe",
+      "scientificName": "Agrocybe + Cyclocybe",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-agrocybe-cyclocybe",
+      "sourcePage": 4
+    },
+    {
+      "id": "minimum-genus-card-amanita",
+      "scientificName": "Amanita",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-amanita",
+      "sourcePage": 4
+    },
+    {
+      "id": "minimum-genus-card-armillaria-desarmillaria",
+      "scientificName": "Armillaria + Desarmillaria",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-armillaria-desarmillaria",
+      "sourcePage": 5,
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-genus-card-calocybe",
+      "scientificName": "Calocybe",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-calocybe",
+      "sourcePage": 5
+    },
+    {
+      "id": "minimum-genus-card-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "scientificName": "Clitocybe s.l. (inclusi Ampulloclitocybe, Atractosporocybe, Bonomyces, Clitopaxillus, Harmajaea, Hygrophorocybe, Infundibulicybe, Leucocybe p.p., Musumecia, Paralepistopsis, Pseudoclitocybe, Rhizocybe, Singerocybe, Spodocybe)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "sourcePage": 5
+    },
+    {
+      "id": "minimum-genus-card-clitopilus",
+      "scientificName": "Clitopilus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-clitopilus",
+      "sourcePage": 5
+    },
+    {
+      "id": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "scientificName": "Collybioidi e Marasmioidi (Collybia s.l. inclusi Dendrocollybia, Gymnopus, Rhodocollybia, più Strobilurus e Marasmius).",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "sourcePage": 6
+    },
+    {
+      "id": "minimum-genus-card-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "scientificName": "Coprinus s.l. (inclusi Coprinellus, Coprinopsis, Narcissea, Parasola, Ephemerocybe)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "sourcePage": 6
+    },
+    {
+      "id": "minimum-genus-card-cortinarius",
+      "scientificName": "Cortinarius",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-cortinarius",
+      "sourcePage": 6
+    },
+    {
+      "id": "minimum-genus-card-entoloma",
+      "scientificName": "Entoloma",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-entoloma",
+      "sourcePage": 7
+    },
+    {
+      "id": "minimum-genus-card-flammulina",
+      "scientificName": "Flammulina",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-flammulina",
+      "sourcePage": 7
+    },
+    {
+      "id": "minimum-genus-card-galerina",
+      "scientificName": "Galerina",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-galerina",
+      "sourcePage": 7
+    },
+    {
+      "id": "minimum-genus-card-hebeloma",
+      "scientificName": "Hebeloma",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-hebeloma",
+      "sourcePage": 7
+    },
+    {
+      "id": "minimum-genus-card-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "scientificName": "Hygrocybe (inclusi Gliophorus, Gloioxanthomyces, Neohygrocybe, Porpolomopsis)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "sourcePage": 8
+    },
+    {
+      "id": "minimum-genus-card-hygrophorus-cuphophyllus",
+      "scientificName": "Hygrophorus + Cuphophyllus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-hygrophorus-cuphophyllus",
+      "sourcePage": 8
+    },
+    {
+      "id": "minimum-genus-card-hypholoma",
+      "scientificName": "Hypholoma",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-hypholoma",
+      "sourcePage": 8
+    },
+    {
+      "id": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "scientificName": "Inocybe s.l. (inclusi Mallocybe, Inosperma, Pseudosperma)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "sourcePage": 8,
+      "deepMorphologyRequired": true
+    },
+    {
+      "id": "minimum-genus-card-laccaria",
+      "scientificName": "Laccaria",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-laccaria",
+      "sourcePage": 8
+    },
+    {
+      "id": "minimum-genus-card-lentinula",
+      "scientificName": "Lentinula",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-lentinula",
+      "sourcePage": 9
+    },
+    {
+      "id": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "scientificName": "Lepiotoidi: Lepiota (inclusi Chamaemyces, Cystolepiota, Pulverolepiota), Echinoderma, Leucoagaricus, Macrolepiota, Chlorophyllum, Leucocoprinus.",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "sourcePage": 9
+    },
+    {
+      "id": "minimum-genus-card-lepista",
+      "scientificName": "Lepista",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-lepista",
+      "sourcePage": 9
+    },
+    {
+      "id": "minimum-genus-card-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+      "scientificName": "Leucopaxillus (inclusi Aspropaxillus, Pseudoclitopilus, Pogonoloma p.p.)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p",
+      "sourcePage": 10
+    },
+    {
+      "id": "minimum-genus-card-limacella-inclusi-limacellopsis-zhuliangomyces",
+      "scientificName": "Limacella (inclusi Limacellopsis, Zhuliangomyces)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-limacella-inclusi-limacellopsis-zhuliangomyces",
+      "sourcePage": 10
+    },
+    {
+      "id": "minimum-genus-card-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "scientificName": "Lyophyllum (inclusi Leucocybe p.p., Myochromella, Sagaranella, Sphagnurus, Tephrocybe)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe",
+      "sourcePage": 10
+    },
+    {
+      "id": "minimum-genus-card-melanoleuca",
+      "scientificName": "Melanoleuca",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-melanoleuca",
+      "sourcePage": 10
+    },
+    {
+      "id": "minimum-genus-card-mycena",
+      "scientificName": "Mycena",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-mycena",
+      "sourcePage": 10
+    },
+    {
+      "id": "minimum-genus-card-omphalotus",
+      "scientificName": "Omphalotus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-omphalotus",
+      "sourcePage": 11
+    },
+    {
+      "id": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+      "scientificName": "Panaeolus (inclusi Copelandia, Panaeolina)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-panaeolus-inclusi-copelandia-panaeolina",
+      "sourcePage": 11
+    },
+    {
+      "id": "minimum-genus-card-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "scientificName": "Pholiota + Kuehneromyces (inclusi Flammula, Hemipholiota, Pyrrhulomyces)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "sourcePage": 11
+    },
+    {
+      "id": "minimum-genus-card-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "scientificName": "Pleurotus (inclusi altri generi pleurotoidi, sebbene anche distanti da Pleurotus a livello di collocazione sistematica: Hypsizygus, Ossicaulis, Panellus, Phyllotopsis, Pleurocybella, Sarcomyxa)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "sourcePage": 11
+    },
+    {
+      "id": "minimum-genus-card-pluteus",
+      "scientificName": "Pluteus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-pluteus",
+      "sourcePage": 11
+    },
+    {
+      "id": "minimum-genus-card-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-la",
+      "scientificName": "Psathyrella s.l. (inclusi Britzelmayria, Candolleomyces, Cystoagaricus, Homophron, Kauffmania, Lacrymaria, Olotia, Typhrasa e Coprinopsis melanthina)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-psathyrella-s-l-inclusi-britzelmayria-candolleomyces-cystoagaricus-homophron-kauffmania-la",
+      "sourcePage": 12
+    },
+    {
+      "id": "minimum-genus-card-psilocybe-s-l-incluso-deconica",
+      "scientificName": "Psilocybe s.l. (incluso Deconica)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-psilocybe-s-l-incluso-deconica",
+      "sourcePage": 12
+    },
+    {
+      "id": "minimum-genus-card-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+      "scientificName": "Stropharia s.l. (inclusi Hemistropharia, Leratiomyces, Protostropharia)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia",
+      "sourcePage": 12
+    },
+    {
+      "id": "minimum-genus-card-tricholoma",
+      "scientificName": "Tricholoma",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-tricholoma",
+      "sourcePage": 12
+    },
+    {
+      "id": "minimum-genus-card-volvariella-volvopluteus",
+      "scientificName": "Volvariella + Volvopluteus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-volvariella-volvopluteus",
+      "sourcePage": 13
+    },
+    {
+      "id": "minimum-genus-card-lactarius-incluso-lactifluus",
+      "scientificName": "Lactarius (incluso Lactifluus)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-lactarius-incluso-lactifluus",
+      "sourcePage": 13
+    },
+    {
+      "id": "minimum-genus-card-russula",
+      "scientificName": "Russula",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-russula",
+      "sourcePage": 14
+    },
+    {
+      "id": "minimum-genus-card-boletus-s-str",
+      "scientificName": "Boletus s. str.",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-boletus-s-str",
+      "sourcePage": 14
+    },
+    {
+      "id": "minimum-genus-card-butyriboletus",
+      "scientificName": "Butyriboletus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-butyriboletus",
+      "sourcePage": 15
+    },
+    {
+      "id": "minimum-genus-card-caloboletus",
+      "scientificName": "Caloboletus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-caloboletus",
+      "sourcePage": 15
+    },
+    {
+      "id": "minimum-genus-card-chroogomphus",
+      "scientificName": "Chroogomphus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-chroogomphus",
+      "sourcePage": 15
+    },
+    {
+      "id": "minimum-genus-card-gomphidius",
+      "scientificName": "Gomphidius",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-gomphidius",
+      "sourcePage": 15
+    },
+    {
+      "id": "minimum-genus-card-gyroporus",
+      "scientificName": "Gyroporus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-gyroporus",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-hemileccinum",
+      "scientificName": "Hemileccinum",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-hemileccinum",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-hygrophoropsis",
+      "scientificName": "Hygrophoropsis",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-hygrophoropsis",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-imleria",
+      "scientificName": "Imleria",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-imleria",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-leccinellum",
+      "scientificName": "Leccinellum",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-leccinellum",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-leccinum",
+      "scientificName": "Leccinum",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-leccinum",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-paxillus",
+      "scientificName": "Paxillus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-paxillus",
+      "sourcePage": 16
+    },
+    {
+      "id": "minimum-genus-card-suillus-incluso-boletinus",
+      "scientificName": "Suillus (incluso Boletinus)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-suillus-incluso-boletinus",
+      "sourcePage": 17
+    },
+    {
+      "id": "minimum-genus-card-tylopilus",
+      "scientificName": "Tylopilus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-tylopilus",
+      "sourcePage": 17
+    },
+    {
+      "id": "minimum-genus-card-xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbaribo",
+      "scientificName": "Xerocomus s.l. (inclusi Alessioporus, Hortiboletus, Pseudoboletus, Pulchroboletus, Rheubarbariboletus, Xerocomellus)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-xerocomus-s-l-inclusi-alessioporus-hortiboletus-pseudoboletus-pulchroboletus-rheubarbaribo",
+      "sourcePage": 17
+    },
+    {
+      "id": "minimum-genus-card-cantharellus",
+      "scientificName": "Cantharellus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-cantharellus",
+      "sourcePage": 17
+    },
+    {
+      "id": "minimum-genus-card-craterellus",
+      "scientificName": "Craterellus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-craterellus",
+      "sourcePage": 18
+    },
+    {
+      "id": "minimum-genus-card-gomphus",
+      "scientificName": "Gomphus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-gomphus",
+      "sourcePage": 18
+    },
+    {
+      "id": "minimum-genus-card-ramaria",
+      "scientificName": "Ramaria",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-ramaria",
+      "sourcePage": 19
+    },
+    {
+      "id": "minimum-genus-card-pisolithus",
+      "scientificName": "Pisolithus",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-pisolithus",
+      "sourcePage": 19
+    },
+    {
+      "id": "minimum-genus-card-scleroderma",
+      "scientificName": "Scleroderma",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-scleroderma",
+      "sourcePage": 20
+    },
+    {
+      "id": "minimum-genus-card-auricularia",
+      "scientificName": "Auricularia",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-auricularia",
+      "sourcePage": 20
+    },
+    {
+      "id": "minimum-genus-card-gyromitra-incluso-discina",
+      "scientificName": "Gyromitra (incluso Discina)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-gyromitra-incluso-discina",
+      "sourcePage": 21
+    },
+    {
+      "id": "minimum-genus-card-helvella",
+      "scientificName": "Helvella",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-helvella",
+      "sourcePage": 21
+    },
+    {
+      "id": "minimum-genus-card-morchella",
+      "scientificName": "Morchella",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-morchella",
+      "sourcePage": 21
+    },
+    {
+      "id": "minimum-genus-card-sarcosphaera",
+      "scientificName": "Sarcosphaera",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-sarcosphaera",
+      "sourcePage": 21
+    },
+    {
+      "id": "minimum-genus-card-verpa",
+      "scientificName": "Verpa",
+      "rank": "genus",
+      "level": "minimum",
+      "objectiveId": "objective-verpa",
+      "sourcePage": 21
+    },
+    {
+      "id": "minimum-group-card-clathraceae-e-phallaceae",
+      "scientificName": "Clathraceae e Phallaceae",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-clathraceae-e-phallaceae",
+      "sourcePage": 19,
+      "curriculumObjective": "Riconoscere gli esemplari immaturi ancora chiusi come Phallaceae; distinguere negli esemplari maturi i generi Phallus, Clathrus e Mutinus.",
+      "completionCard": true
+    },
+    {
+      "id": "minimum-group-card-geastraceae-astraeus",
+      "scientificName": "Geastraceae + Astraeus",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-geastraceae-astraeus",
+      "sourcePage": 19,
+      "curriculumObjective": "Riconoscere il raggruppamento Geastraceae + Astraeus al livello minimo; la distinzione dei generi Geastrum e Astraeus è prevista al livello auspicabile.",
+      "completionCard": true
+    },
+    {
+      "id": "minimum-group-card-lycoperdaceae",
+      "scientificName": "Lycoperdaceae",
+      "rank": "family",
+      "level": "minimum",
+      "objectiveId": "objective-lycoperdaceae",
+      "sourcePage": 19,
+      "curriculumObjective": "Riconoscere il raggruppamento come famiglia Lycoperdaceae; la distinzione dei principali generi e delle singole specie appartiene agli approfondimenti.",
+      "completionCard": true
+    },
+    {
+      "id": "minimum-group-card-pezizaceae-s-l-funghi-epigei-a-coppa-o-disco",
+      "scientificName": "Pezizaceae s.l. (funghi epigei a coppa o disco)",
+      "rank": "operationalGroup",
+      "level": "minimum",
+      "objectiveId": "objective-pezizaceae-s-l-funghi-epigei-a-coppa-o-disco",
+      "sourcePage": 21,
+      "curriculumObjective": "Riconoscere il raggruppamento didattico dei funghi epigei a coppa o disco (Pezizaceae s.l.); le determinazioni dei taxa elencati in S1 appartengono ai livelli auspicabile e approfondimento.",
+      "completionCard": true
+    }
+  ],
+  "coursePhotoLinks": [
+    {
+      "src": "images/course-chat/micolab-49.jpg",
+      "atlasId": "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l",
+      "subjectTaxon": "Boletus edulis",
+      "caseId": "CTX-020926-EDULIS"
+    },
+    {
+      "src": "images/course-chat/micolab-49.jpg",
+      "atlasId": "minimum-genus-card-boletus-s-str",
+      "subjectTaxon": "Boletus edulis",
+      "caseId": "CTX-020926-EDULIS"
+    },
+    {
+      "src": "images/course-chat/micolab-61.jpg",
+      "atlasId": "minimum-genus-card-laccaria",
+      "subjectTaxon": "Laccaria amethystina",
+      "caseId": "CTX-020926-LACCARIA"
+    },
+    {
+      "src": "images/course-chat/micolab-62.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma inamoenum",
+      "caseId": "CTX-020926-INAMOENUM"
+    },
+    {
+      "src": "images/course-chat/micolab-70.jpg",
+      "atlasId": "minimum-card-objective-amanita--15--amanita-rubescens",
+      "subjectTaxon": "Amanita rubescens",
+      "caseId": "CTX-020926-RUBESCENS"
+    },
+    {
+      "src": "images/course-chat/micolab-70.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita rubescens",
+      "caseId": "CTX-020926-RUBESCENS"
+    },
+    {
+      "src": "images/course-chat/micolab-82.jpg",
+      "atlasId": "minimum-genus-card-laccaria",
+      "subjectTaxon": "Laccaria amethystina",
+      "caseId": "CTX-020926-LACCARIA"
+    },
+    {
+      "src": "images/course-chat/micolab-89.jpg",
+      "atlasId": "minimum-card-objective-amanita--15--amanita-rubescens",
+      "subjectTaxon": "Amanita rubescens",
+      "caseId": "CTX-020926-RUBESCENS"
+    },
+    {
+      "src": "images/course-chat/micolab-89.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita rubescens",
+      "caseId": "CTX-020926-RUBESCENS"
+    },
+    {
+      "src": "images/course-chat/micolab-100.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma inamoenum",
+      "caseId": "CTX-020926-INAMOENUM"
+    },
+    {
+      "src": "images/course-chat/micolab-105.jpg",
+      "atlasId": "minimum-genus-card-suillus-incluso-boletinus",
+      "subjectTaxon": "Suillus grevillei",
+      "caseId": "VM-030926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-121.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Lepiota",
+      "caseId": "VM-030926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-161.jpg",
+      "atlasId": "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+      "subjectTaxon": "Kuehneromyces mutabilis",
+      "caseId": "AF-030926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-161.jpg",
+      "atlasId": "minimum-genus-card-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "subjectTaxon": "Kuehneromyces mutabilis",
+      "caseId": "AF-030926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-178.jpg",
+      "atlasId": "minimum-genus-card-leccinum",
+      "subjectTaxon": "Leccinum",
+      "caseId": "CTX-040926-LECCINUM"
+    },
+    {
+      "src": "images/course-chat/micolab-200.jpg",
+      "atlasId": "minimum-genus-card-pluteus",
+      "subjectTaxon": "Pluteus atromarginatus",
+      "caseId": "AF-040926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-201.jpg",
+      "atlasId": "minimum-genus-card-pluteus",
+      "subjectTaxon": "Pluteus atromarginatus",
+      "caseId": "AF-040926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-210.jpg",
+      "atlasId": "minimum-genus-card-paxillus",
+      "subjectTaxon": "Paxillus",
+      "caseId": "AF-040926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-213.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma",
+      "caseId": "AF-040926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-214.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma",
+      "caseId": "AF-040926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-216.jpg",
+      "atlasId": "minimum-card-objective-amanita--16--amanita-sez-vaginatae",
+      "subjectTaxon": "Amanita sez. Vaginatae",
+      "caseId": "AF-040926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-216.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita sez. Vaginatae",
+      "caseId": "AF-040926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-263.jpg",
+      "atlasId": "minimum-genus-card-cortinarius",
+      "subjectTaxon": "Cortinarius trivialis",
+      "caseId": "AF-130926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-268.jpg",
+      "atlasId": "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "subjectTaxon": "Cortinarius caperatus",
+      "caseId": "AF-130926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-268.jpg",
+      "atlasId": "minimum-genus-card-cortinarius",
+      "subjectTaxon": "Cortinarius caperatus",
+      "caseId": "AF-130926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-327.jpg",
+      "atlasId": "minimum-genus-card-armillaria-desarmillaria",
+      "subjectTaxon": "Armillaria ostoyae",
+      "caseId": "AF-140926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-328.jpg",
+      "atlasId": "minimum-genus-card-suillus-incluso-boletinus",
+      "subjectTaxon": "Suillus grevillei",
+      "caseId": "AF-140926-04"
+    },
+    {
+      "src": "images/course-chat/micolab-330.jpg",
+      "atlasId": "minimum-genus-card-leccinum",
+      "subjectTaxon": "Leccinum",
+      "caseId": "AF-140926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-332.jpg",
+      "atlasId": "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "subjectTaxon": "Suillus granulatus",
+      "caseId": "AF-140926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-332.jpg",
+      "atlasId": "minimum-genus-card-suillus-incluso-boletinus",
+      "subjectTaxon": "Suillus granulatus",
+      "caseId": "AF-140926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-333.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "subjectTaxon": "Tricholoma terreum",
+      "caseId": "AF-140926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-333.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma terreum",
+      "caseId": "AF-140926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-372.jpg",
+      "atlasId": "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "subjectTaxon": "Suillus granulatus",
+      "caseId": "AF-200926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-372.jpg",
+      "atlasId": "minimum-genus-card-suillus-incluso-boletinus",
+      "subjectTaxon": "Suillus granulatus",
+      "caseId": "AF-200926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-373.jpg",
+      "atlasId": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "subjectTaxon": "Inocybe",
+      "caseId": "AF-200926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-381.jpg",
+      "atlasId": "minimum-genus-card-lactarius-incluso-lactifluus",
+      "subjectTaxon": "Lactarius pallidus",
+      "caseId": "AF-200926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-383.jpg",
+      "atlasId": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "subjectTaxon": "Marasmius collinus",
+      "caseId": "AF-200926-10"
+    },
+    {
+      "src": "images/course-chat/micolab-405.jpg",
+      "atlasId": "minimum-genus-card-lactarius-incluso-lactifluus",
+      "subjectTaxon": "Lactarius pallidus",
+      "caseId": "AF-200926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-479.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Lepiota",
+      "caseId": "CTX-230926-LEPIOTA"
+    },
+    {
+      "src": "images/course-chat/micolab-480.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Lepiota",
+      "caseId": "CTX-230926-LEPIOTA"
+    },
+    {
+      "src": "images/course-chat/micolab-481.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Lepiota",
+      "caseId": "CTX-230926-LEPIOTA"
+    },
+    {
+      "src": "images/course-chat/micolab-483.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita sezione Vaginatae",
+      "caseId": "CTX-230926-VAGINATAE"
+    },
+    {
+      "src": "images/course-chat/micolab-484.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita sezione Vaginatae",
+      "caseId": "CTX-230926-VAGINATAE"
+    },
+    {
+      "src": "images/course-chat/micolab-485.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita sezione Vaginatae",
+      "caseId": "CTX-230926-VAGINATAE"
+    },
+    {
+      "src": "images/course-chat/micolab-486.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita sezione Vaginatae",
+      "caseId": "CTX-230926-VAGINATAE"
+    },
+    {
+      "src": "images/course-chat/micolab-489.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Leucoagaricus",
+      "caseId": "CTX-230926-LEUCOAGARICUS"
+    },
+    {
+      "src": "images/course-chat/micolab-490.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Leucoagaricus",
+      "caseId": "CTX-230926-LEUCOAGARICUS"
+    },
+    {
+      "src": "images/course-chat/micolab-491.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Leucoagaricus",
+      "caseId": "CTX-230926-LEUCOAGARICUS"
+    },
+    {
+      "src": "images/course-chat/micolab-492.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Leucoagaricus",
+      "caseId": "CTX-230926-LEUCOAGARICUS"
+    },
+    {
+      "src": "images/course-chat/micolab-496.jpg",
+      "atlasId": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+      "subjectTaxon": "Panaeolus",
+      "caseId": "CTX-230926-PANAEOLUS"
+    },
+    {
+      "src": "images/course-chat/micolab-497.jpg",
+      "atlasId": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+      "subjectTaxon": "Panaeolus",
+      "caseId": "CTX-230926-PANAEOLUS"
+    },
+    {
+      "src": "images/course-chat/micolab-498.jpg",
+      "atlasId": "minimum-genus-card-panaeolus-inclusi-copelandia-panaeolina",
+      "subjectTaxon": "Panaeolus",
+      "caseId": "CTX-230926-PANAEOLUS"
+    },
+    {
+      "src": "images/course-chat/micolab-524.jpg",
+      "atlasId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "caseId": "CTX-250926-FISTULINA"
+    },
+    {
+      "src": "images/course-chat/micolab-525.jpg",
+      "atlasId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "caseId": "CTX-250926-FISTULINA"
+    },
+    {
+      "src": "images/course-chat/micolab-526.jpg",
+      "atlasId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "caseId": "CTX-250926-FISTULINA"
+    },
+    {
+      "src": "images/course-chat/micolab-527.jpg",
+      "atlasId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "caseId": "CTX-250926-FISTULINA"
+    },
+    {
+      "src": "images/course-chat/micolab-528.jpg",
+      "atlasId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "caseId": "CTX-250926-FISTULINA"
+    },
+    {
+      "src": "images/course-chat/micolab-529.jpg",
+      "atlasId": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "subjectTaxon": "Fistulina hepatica",
+      "caseId": "CTX-250926-FISTULINA"
+    },
+    {
+      "src": "images/course-chat/micolab-538.jpg",
+      "atlasId": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "subjectTaxon": "Cyclocybe cylindracea",
+      "caseId": "CTX-250926-CYCLOCYBE"
+    },
+    {
+      "src": "images/course-chat/micolab-538.jpg",
+      "atlasId": "minimum-genus-card-agrocybe-cyclocybe",
+      "subjectTaxon": "Cyclocybe cylindracea",
+      "caseId": "CTX-250926-CYCLOCYBE"
+    },
+    {
+      "src": "images/course-chat/micolab-563.jpg",
+      "atlasId": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "subjectTaxon": "Tylopilus felleus",
+      "caseId": "AF-260926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-563.jpg",
+      "atlasId": "minimum-genus-card-tylopilus",
+      "subjectTaxon": "Tylopilus felleus",
+      "caseId": "AF-260926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-564.jpg",
+      "atlasId": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "subjectTaxon": "Tylopilus felleus",
+      "caseId": "AF-260926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-564.jpg",
+      "atlasId": "minimum-genus-card-tylopilus",
+      "subjectTaxon": "Tylopilus felleus",
+      "caseId": "AF-260926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-565.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "AF-260926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-565.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "AF-260926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-567.jpg",
+      "atlasId": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "subjectTaxon": "Entoloma rhodopolium",
+      "caseId": "AF-260926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-567.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma rhodopolium",
+      "caseId": "AF-260926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-568.jpg",
+      "atlasId": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "subjectTaxon": "Entoloma rhodopolium",
+      "caseId": "AF-260926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-568.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma rhodopolium",
+      "caseId": "AF-260926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-569.jpg",
+      "atlasId": "minimum-genus-card-cortinarius",
+      "subjectTaxon": "Cortinarius",
+      "caseId": "AF-260926-04"
+    },
+    {
+      "src": "images/course-chat/micolab-570.jpg",
+      "atlasId": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "subjectTaxon": "Collybia maculata",
+      "caseId": "AF-260926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-570.jpg",
+      "atlasId": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "subjectTaxon": "Collybia maculata",
+      "caseId": "AF-260926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-576.jpg",
+      "atlasId": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "subjectTaxon": "Cortinarius speciosissimus",
+      "caseId": "AF-260926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-576.jpg",
+      "atlasId": "minimum-genus-card-cortinarius",
+      "subjectTaxon": "Cortinarius speciosissimus",
+      "caseId": "AF-260926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-577.jpg",
+      "atlasId": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "subjectTaxon": "Cortinarius speciosissimus",
+      "caseId": "AF-260926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-577.jpg",
+      "atlasId": "minimum-genus-card-cortinarius",
+      "subjectTaxon": "Cortinarius speciosissimus",
+      "caseId": "AF-260926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-578.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "AF-260926-09"
+    },
+    {
+      "src": "images/course-chat/micolab-578.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "AF-260926-09"
+    },
+    {
+      "src": "images/course-chat/micolab-607.jpg",
+      "atlasId": "minimum-genus-card-leccinum",
+      "subjectTaxon": "Leccinum",
+      "caseId": "AF-270926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-609.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides / Amanita citrina",
+      "caseId": "AF-270926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-609.jpg",
+      "atlasId": "minimum-card-objective-amanita--10--amanita-citrina",
+      "subjectTaxon": "Amanita phalloides / Amanita citrina",
+      "caseId": "AF-270926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-609.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides / Amanita citrina",
+      "caseId": "AF-270926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-610.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides / Amanita citrina",
+      "caseId": "AF-270926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-610.jpg",
+      "atlasId": "minimum-card-objective-amanita--10--amanita-citrina",
+      "subjectTaxon": "Amanita phalloides / Amanita citrina",
+      "caseId": "AF-270926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-610.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides / Amanita citrina",
+      "caseId": "AF-270926-02"
+    },
+    {
+      "src": "images/course-chat/micolab-611.jpg",
+      "atlasId": "minimum-genus-card-gomphidius",
+      "subjectTaxon": "Gomphidius glutinosus",
+      "caseId": "AF-270926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-612.jpg",
+      "atlasId": "minimum-genus-card-chroogomphus",
+      "subjectTaxon": "Chroogomphus",
+      "caseId": "AF-270926-04"
+    },
+    {
+      "src": "images/course-chat/micolab-613.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "caseId": "AF-270926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-613.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "caseId": "AF-270926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-615.jpg",
+      "atlasId": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "subjectTaxon": "Laccaria amethystina / Mycena pura",
+      "caseId": "AF-270926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-615.jpg",
+      "atlasId": "minimum-genus-card-laccaria",
+      "subjectTaxon": "Laccaria amethystina / Mycena pura",
+      "caseId": "AF-270926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-615.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Laccaria amethystina / Mycena pura",
+      "caseId": "AF-270926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-616.jpg",
+      "atlasId": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "subjectTaxon": "Laccaria amethystina / Mycena pura",
+      "caseId": "AF-270926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-616.jpg",
+      "atlasId": "minimum-genus-card-laccaria",
+      "subjectTaxon": "Laccaria amethystina / Mycena pura",
+      "caseId": "AF-270926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-616.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Laccaria amethystina / Mycena pura",
+      "caseId": "AF-270926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-617.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Lepiota ignivolvata",
+      "caseId": "AF-270926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-621.jpg",
+      "atlasId": "minimum-genus-card-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces",
+      "subjectTaxon": "Pholiota squarrosa",
+      "caseId": "AF-270926-11"
+    },
+    {
+      "src": "images/course-chat/micolab-673.jpg",
+      "atlasId": "minimum-genus-card-russula",
+      "subjectTaxon": "Russula badia",
+      "caseId": "AF-290926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-674.jpg",
+      "atlasId": "minimum-genus-card-russula",
+      "subjectTaxon": "Russula badia",
+      "caseId": "AF-290926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-677.jpg",
+      "atlasId": "minimum-genus-card-hebeloma",
+      "subjectTaxon": "Hebeloma",
+      "caseId": "AF-290926-04"
+    },
+    {
+      "src": "images/course-chat/micolab-680.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita porphyria / Amanita pantherina",
+      "caseId": "AF-290926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-680.jpg",
+      "atlasId": "minimum-card-objective-amanita--11--amanita-porphyria",
+      "subjectTaxon": "Amanita porphyria / Amanita pantherina",
+      "caseId": "AF-290926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-680.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita porphyria / Amanita pantherina",
+      "caseId": "AF-290926-07"
+    },
+    {
+      "src": "images/course-chat/micolab-683.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Mycena / Inocybe",
+      "caseId": "AF-290926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-684.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Mycena / Inocybe",
+      "caseId": "AF-290926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-687.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma colossus",
+      "caseId": "AF-290926-10"
+    },
+    {
+      "src": "images/course-chat/micolab-688.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma colossus",
+      "caseId": "AF-290926-10"
+    },
+    {
+      "src": "images/course-chat/micolab-731.jpg",
+      "atlasId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "subjectTaxon": "Suillellus luridus / Boletus aestivalis / Rubroboletus rhodoxanthus",
+      "caseId": "ES-300926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-731.jpg",
+      "atlasId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "subjectTaxon": "Suillellus luridus / Boletus aestivalis / Rubroboletus rhodoxanthus",
+      "caseId": "ES-300926-01"
+    },
+    {
+      "src": "images/course-chat/micolab-735.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "ES-300926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-735.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "ES-300926-03"
+    },
+    {
+      "src": "images/course-chat/micolab-737.jpg",
+      "atlasId": "minimum-genus-card-hemileccinum",
+      "subjectTaxon": "Hemileccinum impolitum",
+      "caseId": "ES-300926-04"
+    },
+    {
+      "src": "images/course-chat/micolab-739.jpg",
+      "atlasId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "ES-300926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-739.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "ES-300926-05"
+    },
+    {
+      "src": "images/course-chat/micolab-741.jpg",
+      "atlasId": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "subjectTaxon": "Pleurotus ostreatus",
+      "caseId": "ES-300926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-741.jpg",
+      "atlasId": "minimum-genus-card-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d",
+      "subjectTaxon": "Pleurotus ostreatus",
+      "caseId": "ES-300926-06"
+    },
+    {
+      "src": "images/course-chat/micolab-755.jpg",
+      "atlasId": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "subjectTaxon": "Inocybe",
+      "caseId": "ES-300926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-756.jpg",
+      "atlasId": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "subjectTaxon": "Inocybe",
+      "caseId": "ES-300926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-757.jpg",
+      "atlasId": "minimum-genus-card-inocybe-s-l-inclusi-mallocybe-inosperma-pseudosperma",
+      "subjectTaxon": "Inocybe",
+      "caseId": "ES-300926-08"
+    },
+    {
+      "src": "images/course-chat/micolab-759.jpg",
+      "atlasId": "minimum-genus-card-russula",
+      "subjectTaxon": "Russula aurea",
+      "caseId": "ES-300926-09"
+    },
+    {
+      "src": "images/course-chat/micolab-761.jpg",
+      "atlasId": "minimum-genus-card-agaricus",
+      "subjectTaxon": "Agaricus crocodilinus",
+      "caseId": "ES-300926-10"
+    },
+    {
+      "src": "images/course-chat/micolab-851.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "subjectTaxon": "Tricholoma sciodes",
+      "caseId": "FG-021026-SCIODES"
+    },
+    {
+      "src": "images/course-chat/micolab-851.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma sciodes",
+      "caseId": "FG-021026-SCIODES"
+    },
+    {
+      "src": "images/course-chat/micolab-852.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "subjectTaxon": "Tricholoma sciodes",
+      "caseId": "FG-021026-SCIODES"
+    },
+    {
+      "src": "images/course-chat/micolab-852.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma sciodes",
+      "caseId": "FG-021026-SCIODES"
+    },
+    {
+      "src": "images/course-chat/micolab-858.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "AF-021026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-858.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "AF-021026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-859.jpg",
+      "atlasId": "minimum-genus-card-cortinarius",
+      "subjectTaxon": "Cortinarius",
+      "caseId": "AF-021026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-860.jpg",
+      "atlasId": "minimum-genus-card-gomphidius",
+      "subjectTaxon": "Gomphidius glutinosus",
+      "caseId": "AF-021026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-861.jpg",
+      "atlasId": "minimum-genus-card-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe",
+      "subjectTaxon": "Coprinus disseminatus",
+      "caseId": "AF-021026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-863.jpg",
+      "atlasId": "minimum-genus-card-pluteus",
+      "subjectTaxon": "Pluteus salicinus",
+      "caseId": "AF-021026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-864.jpg",
+      "atlasId": "minimum-genus-card-pluteus",
+      "subjectTaxon": "Pluteus salicinus",
+      "caseId": "AF-021026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-866.jpg",
+      "atlasId": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "subjectTaxon": "Hygrocybe punicea",
+      "caseId": "AF-021026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-866.jpg",
+      "atlasId": "minimum-genus-card-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis",
+      "subjectTaxon": "Hygrocybe punicea",
+      "caseId": "AF-021026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-868.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita pantherina / Amanita strobiliformis",
+      "caseId": "AF-021026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-868.jpg",
+      "atlasId": "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "subjectTaxon": "Amanita pantherina / Amanita strobiliformis",
+      "caseId": "AF-021026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-868.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita pantherina / Amanita strobiliformis",
+      "caseId": "AF-021026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-869.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita pantherina / Amanita strobiliformis",
+      "caseId": "AF-021026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-869.jpg",
+      "atlasId": "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "subjectTaxon": "Amanita pantherina / Amanita strobiliformis",
+      "caseId": "AF-021026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-869.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita pantherina / Amanita strobiliformis",
+      "caseId": "AF-021026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-873.jpg",
+      "atlasId": "minimum-genus-card-lactarius-incluso-lactifluus",
+      "subjectTaxon": "Lactarius sezione Deliciosi / Lactarius sezione Scrobiculati",
+      "caseId": "AF-021026-10"
+    },
+    {
+      "src": "images/course-chat/micolab-878.jpg",
+      "atlasId": "minimum-genus-card-russula",
+      "subjectTaxon": "Russula olivacea",
+      "caseId": "AF-021026-13"
+    },
+    {
+      "src": "images/course-chat/micolab-934.jpg",
+      "atlasId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "CTX-031026-CAESAREA"
+    },
+    {
+      "src": "images/course-chat/micolab-934.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "CTX-031026-CAESAREA"
+    },
+    {
+      "src": "images/course-chat/micolab-935.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "CTX-031026-PANTHERINA"
+    },
+    {
+      "src": "images/course-chat/micolab-935.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "CTX-031026-PANTHERINA"
+    },
+    {
+      "src": "images/course-chat/micolab-936.jpg",
+      "atlasId": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "subjectTaxon": "Gymnopus fusipes",
+      "caseId": "CTX-031026-FUSIPES"
+    },
+    {
+      "src": "images/course-chat/micolab-936.jpg",
+      "atlasId": "minimum-genus-card-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s",
+      "subjectTaxon": "Gymnopus fusipes",
+      "caseId": "CTX-031026-FUSIPES"
+    },
+    {
+      "src": "images/course-chat/micolab-937.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita gemmata s.l.",
+      "caseId": "CTX-031026-GEMMATA"
+    },
+    {
+      "src": "images/course-chat/micolab-963.jpg",
+      "atlasId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "subjectTaxon": "Echinoderma asperum",
+      "caseId": "CTX-111026-ECHINODERMA"
+    },
+    {
+      "src": "images/course-chat/micolab-963.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Echinoderma asperum",
+      "caseId": "CTX-111026-ECHINODERMA"
+    },
+    {
+      "src": "images/course-chat/micolab-975.jpg",
+      "atlasId": "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "subjectTaxon": "Hypholoma fasciculare",
+      "caseId": "ES-121026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-975.jpg",
+      "atlasId": "minimum-genus-card-hypholoma",
+      "subjectTaxon": "Hypholoma fasciculare",
+      "caseId": "ES-121026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-978.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-978.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-979.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-979.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-980.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-980.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-981.jpg",
+      "atlasId": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-981.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita phalloides",
+      "caseId": "ES-121026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-984.jpg",
+      "atlasId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "ES-121026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-984.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "ES-121026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-985.jpg",
+      "atlasId": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "ES-121026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-985.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita caesarea",
+      "caseId": "ES-121026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-987.jpg",
+      "atlasId": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "subjectTaxon": "Entoloma sinuatum",
+      "caseId": "ES-121026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-987.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma sinuatum",
+      "caseId": "ES-121026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-988.jpg",
+      "atlasId": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "subjectTaxon": "Entoloma sinuatum",
+      "caseId": "ES-121026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-988.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma sinuatum",
+      "caseId": "ES-121026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-990.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma lividoalbum",
+      "caseId": "ES-121026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-991.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma lividoalbum",
+      "caseId": "ES-121026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-993.jpg",
+      "atlasId": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "subjectTaxon": "Entoloma sinuatum / Entoloma lividoalbum / Entoloma rhodopolium s.l.",
+      "caseId": "ES-121026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-993.jpg",
+      "atlasId": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "subjectTaxon": "Entoloma sinuatum / Entoloma lividoalbum / Entoloma rhodopolium s.l.",
+      "caseId": "ES-121026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-993.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma sinuatum / Entoloma lividoalbum / Entoloma rhodopolium s.l.",
+      "caseId": "ES-121026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-994.jpg",
+      "atlasId": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "subjectTaxon": "Cyclocybe cylindracea",
+      "caseId": "ES-121026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-994.jpg",
+      "atlasId": "minimum-genus-card-agrocybe-cyclocybe",
+      "subjectTaxon": "Cyclocybe cylindracea",
+      "caseId": "ES-121026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-996.jpg",
+      "atlasId": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "subjectTaxon": "Clitocybe nebularis",
+      "caseId": "ES-121026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-996.jpg",
+      "atlasId": "minimum-genus-card-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea-",
+      "subjectTaxon": "Clitocybe nebularis",
+      "caseId": "ES-121026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-999.jpg",
+      "atlasId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+      "subjectTaxon": "Rubroboletus satanas",
+      "caseId": "ES-121026-09"
+    },
+    {
+      "src": "images/course-chat/micolab-1004.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
+      "subjectTaxon": "Tricholoma columbetta",
+      "caseId": "FG-141026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1004.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma columbetta",
+      "caseId": "FG-141026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1005.jpg",
+      "atlasId": "minimum-genus-card-paxillus",
+      "subjectTaxon": "Paxillus involutus",
+      "caseId": "FG-141026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1007.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--13--tricholoma-sulphureum",
+      "subjectTaxon": "Tricholoma sulphureum",
+      "caseId": "FG-141026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-1007.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma sulphureum",
+      "caseId": "FG-141026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-1015.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Mycena pelianthina",
+      "caseId": "FG-141026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-1016.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Mycena pelianthina",
+      "caseId": "FG-141026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-1017.jpg",
+      "atlasId": "minimum-genus-card-mycena",
+      "subjectTaxon": "Mycena pelianthina",
+      "caseId": "FG-141026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-1030.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "subjectTaxon": "Tricholoma scalpturatum",
+      "caseId": "ES-161026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1030.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma scalpturatum",
+      "caseId": "ES-161026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1032.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--03--tricholoma-josserandii",
+      "subjectTaxon": "Tricholoma josserandii",
+      "caseId": "ES-161026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1032.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma josserandii",
+      "caseId": "ES-161026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1034.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "caseId": "ES-161026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-1034.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma filamentosum",
+      "caseId": "ES-161026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-1036.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma orirubens",
+      "caseId": "ES-161026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-1038.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--12--tricholoma-sejunctum",
+      "subjectTaxon": "Tricholoma sejunctum",
+      "caseId": "ES-161026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-1038.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma sejunctum",
+      "caseId": "ES-161026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-1040.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
+      "subjectTaxon": "Tricholoma portentosum",
+      "caseId": "ES-161026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-1040.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma portentosum",
+      "caseId": "ES-161026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-1042.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma equestre s.l.",
+      "caseId": "ES-161026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-1044.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma terreum s.l.",
+      "caseId": "ES-161026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-1046.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "subjectTaxon": "Tricholoma acerbum s.l.",
+      "caseId": "ES-161026-09"
+    },
+    {
+      "src": "images/course-chat/micolab-1046.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma acerbum s.l.",
+      "caseId": "ES-161026-09"
+    },
+    {
+      "src": "images/course-chat/micolab-1048.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "subjectTaxon": "Tricholoma imbricatum",
+      "caseId": "ES-161026-10"
+    },
+    {
+      "src": "images/course-chat/micolab-1048.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma imbricatum",
+      "caseId": "ES-161026-10"
+    },
+    {
+      "src": "images/course-chat/micolab-1096.jpg",
+      "atlasId": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "subjectTaxon": "Agaricus sez. Sanguinolenti",
+      "caseId": "NS-171026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1096.jpg",
+      "atlasId": "minimum-genus-card-agaricus",
+      "subjectTaxon": "Agaricus sez. Sanguinolenti",
+      "caseId": "NS-171026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1098.jpg",
+      "atlasId": "minimum-card-objective-amanita--16--amanita-sez-vaginatae",
+      "subjectTaxon": "Amanita sez. Vaginatae",
+      "caseId": "NS-171026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1098.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita sez. Vaginatae",
+      "caseId": "NS-171026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1100.jpg",
+      "atlasId": "minimum-genus-card-volvariella-volvopluteus",
+      "subjectTaxon": "Volvariella gloiocephala",
+      "caseId": "NS-171026-03"
+    },
+    {
+      "src": "images/course-chat/micolab-1102.jpg",
+      "atlasId": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "subjectTaxon": "Cyclocybe cylindracea",
+      "caseId": "NS-171026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-1102.jpg",
+      "atlasId": "minimum-genus-card-agrocybe-cyclocybe",
+      "subjectTaxon": "Cyclocybe cylindracea",
+      "caseId": "NS-171026-04"
+    },
+    {
+      "src": "images/course-chat/micolab-1104.jpg",
+      "atlasId": "minimum-genus-card-hygrophorus-cuphophyllus",
+      "subjectTaxon": "Hygrophorus",
+      "caseId": "NS-171026-05"
+    },
+    {
+      "src": "images/course-chat/micolab-1106.jpg",
+      "atlasId": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "subjectTaxon": "Entoloma sinuatum",
+      "caseId": "NS-171026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-1106.jpg",
+      "atlasId": "minimum-genus-card-entoloma",
+      "subjectTaxon": "Entoloma sinuatum",
+      "caseId": "NS-171026-06"
+    },
+    {
+      "src": "images/course-chat/micolab-1108.jpg",
+      "atlasId": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "subjectTaxon": "Chlorophyllum rhacodes s.l.",
+      "caseId": "NS-171026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-1108.jpg",
+      "atlasId": "minimum-genus-card-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric",
+      "subjectTaxon": "Chlorophyllum rhacodes s.l.",
+      "caseId": "NS-171026-07"
+    },
+    {
+      "src": "images/course-chat/micolab-1110.jpg",
+      "atlasId": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "NS-171026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-1110.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita pantherina",
+      "caseId": "NS-171026-08"
+    },
+    {
+      "src": "images/course-chat/micolab-1112.jpg",
+      "atlasId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "subjectTaxon": "Suillellus luridus",
+      "caseId": "NS-171026-09"
+    },
+    {
+      "src": "images/course-chat/micolab-1112.jpg",
+      "atlasId": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "subjectTaxon": "Suillellus luridus",
+      "caseId": "NS-171026-09"
+    },
+    {
+      "src": "images/course-chat/micolab-1114.jpg",
+      "atlasId": "minimum-card-objective-caloboletus--02--caloboletus-calopus",
+      "subjectTaxon": "Caloboletus calopus",
+      "caseId": "NS-171026-10"
+    },
+    {
+      "src": "images/course-chat/micolab-1114.jpg",
+      "atlasId": "minimum-genus-card-caloboletus",
+      "subjectTaxon": "Caloboletus calopus",
+      "caseId": "NS-171026-10"
+    },
+    {
+      "src": "images/course-chat/micolab-1118.jpg",
+      "atlasId": "minimum-card-objective-amanita--04--amanita-proxima",
+      "subjectTaxon": "Amanita proxima",
+      "caseId": "FG-181026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1118.jpg",
+      "atlasId": "minimum-genus-card-amanita",
+      "subjectTaxon": "Amanita proxima",
+      "caseId": "FG-181026-01"
+    },
+    {
+      "src": "images/course-chat/micolab-1120.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "subjectTaxon": "Tricholoma saponaceum",
+      "caseId": "FG-181026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1120.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma saponaceum",
+      "caseId": "FG-181026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1121.jpg",
+      "atlasId": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "subjectTaxon": "Tricholoma saponaceum",
+      "caseId": "FG-181026-02"
+    },
+    {
+      "src": "images/course-chat/micolab-1121.jpg",
+      "atlasId": "minimum-genus-card-tricholoma",
+      "subjectTaxon": "Tricholoma saponaceum",
+      "caseId": "FG-181026-02"
+    }
+  ]
+}

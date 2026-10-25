@@ -5,7 +5,8 @@ import {applyReviewedMatrix,readReviewedMatrix} from './reviewed-matrix.mjs';
 const read=name=>JSON.parse(readFileSync(new URL('../src/data/'+name+'.json',import.meta.url)));
 const profiles=read('study-profiles');
 const matrix=await readReviewedMatrix();
-const records=()=>[...read('catalog'),...read('groups')];
+const historicalIds=new Set(matrix.taxa.map(r=>r.id));
+const records=()=>[...read('catalog'),...read('groups')].filter(r=>historicalIds.has(r.id));
 test('matrix import preserves guide categories and imports the documented ISPRA fields',()=>{
  const rows=records();applyReviewedMatrix(rows,matrix,profiles);
  for(const row of matrix.taxa){const t=rows.find(t=>t.id===row.id);assert.equal(t.studyProfile.odor,row.values.odor);}
@@ -22,4 +23,12 @@ test('an alternative source or matrix edit cannot override the founding guide',(
 test('groups and the unmentioned species do not inherit edibility',()=>{
  const rows=records();applyReviewedMatrix(rows,matrix,profiles);
  for(const t of rows.filter(t=>t.kind==='teaching-group'||t.scientificName==='Lepiota elaiophylla'))assert.equal(t.studyProfile.edibility,undefined);
+});
+
+test('the historical matrix rejects adding the four unreviewed curriculum completion groups',async()=>{
+ const {curriculumCompletionCards}=await import('./curriculum-scope.mjs');
+ const objectives=JSON.parse(readFileSync(new URL('../legacy/web/data/taxonomic-objectives.json',import.meta.url)));
+ const completion=curriculumCompletionCards(read('curriculum-scope'),objectives);
+ assert.throws(()=>applyReviewedMatrix([...records(),...completion],matrix,profiles));
+ assert(completion.every(r=>r.studyProfile===undefined&&r.sources.length===0));
 });

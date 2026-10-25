@@ -30,7 +30,8 @@ export function buildExamBank(taxa,profiles={records:[]}){
   const detailKind=food.category==='conditional'?'preparation':['toxic','deadly'].includes(food.category)?'toxicology':null;
   if(detailKind==='preparation'&&!food.precautions?.length)return [];
   if(detailKind==='toxicology'&&(!food.syndrome?.label||!food.syndrome?.latency||!food.syndrome?.severity||!t.sources.some(s=>s.fields?.includes('syndrome'))))return [];
-  return [{id:t.id,name:t.scientificName,acceptedNames:names,photos:photos.map(p=>({src:p.src,view:p.view,credit:p.credit||'',subjectTaxon:p.subjectTaxon,sourceUrl:p.sourceUrl,licenseUrl:p.licenseUrl})),category:food.category,detailKind,preparation:food.precautions||[],syndrome:food.syndrome||null,characters:t.characters||[],differentiatingCharacter:t.differentiatingCharacter||'',diagnosticNote:t.diagnosticNote||'',sources:t.sources.filter(s=>s.fields?.some(f=>['edibility','precautions','syndrome','characters'].includes(f)))}];
+  const coursePhotos=(t.courseImages||[]).filter(p=>p.identificationEligible===true&&names.some(n=>normalizeName(n)===normalizeName(p.subjectTaxon))).map(({src,view,credit,subjectTaxon,sourceId,caseId})=>({src,view,credit,subjectTaxon,sourceId,caseId}));
+  return [{id:t.id,name:t.scientificName,acceptedNames:names,...(coursePhotos.length?{coursePhotos}:{}),photos:photos.map(p=>({src:p.src,view:p.view,credit:p.credit||'',subjectTaxon:p.subjectTaxon,sourceUrl:p.sourceUrl,licenseUrl:p.licenseUrl})),category:food.category,detailKind,preparation:food.precautions||[],syndrome:food.syndrome||null,characters:t.characters||[],differentiatingCharacter:t.differentiatingCharacter||'',diagnosticNote:t.diagnosticNote||'',sources:t.sources.filter(s=>s.fields?.some(f=>['edibility','precautions','syndrome','characters'].includes(f)))}];
  });
 }
 function shuffle(values,rng){const a=[...values];for(let i=a.length-1;i>0;i--){const j=Math.min(i,Math.max(0,Math.floor(rng()*(i+1))));[a[i],a[j]]=[a[j],a[i]];}return a;}
@@ -99,6 +100,8 @@ export function gradeResponse(c,answer={},bank=[]){
   const selected=answer.choices?.[q.id]||[];
   return {id:q.id,title:q.title,correct:Array.isArray(selected)&&new Set(selected).size===selected.length&&selected.length===q.correct.length&&q.correct.every(id=>selected.includes(id))};
  });
+ const foodChoice=answer.choices?.edibility,expectedFood=c.questions?.find(q=>q.id==='edibility')?.correct?.[0];
+ if(base.profile&&Array.isArray(foodChoice)&&foodChoice.length===1&&['free','conditional'].includes(foodChoice[0])&&expectedFood)base.danger=!['free','conditional'].includes(expectedFood)||expectedFood==='conditional'&&foodChoice[0]==='free';
  return {...base,detail:details.every(d=>d.correct),details,passed:base.name&&base.category&&details.every(d=>d.correct)};
 }
 export function bankSignature(bank){let h=2166136261;for(const ch of 'questions-v2.1:'+JSON.stringify(bank))h=Math.imul(h^ch.charCodeAt(0),16777619);return String(h>>>0);}

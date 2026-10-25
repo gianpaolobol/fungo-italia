@@ -8,7 +8,7 @@ import type {ExamCase} from '../web/public/exam-core';
 export const photoBank=photoData as unknown as ExamCase[];
 export const studyBank:ExamCase[]=[...photoBank,...buildCurriculumBank(catalog,groups,photoBank)];
 export const studyBankRevision=bankSignature(studyBank);
-export const compatibleStudyRevisions=[bankSignature(photoBank),'3821490181'];
+export const compatibleStudyRevisions=[bankSignature(photoBank),'3821490181','2885761559'];
 export const demoBank=agaricusOnly(photoBank);
 export const demoUnits=examUnits(demoBank);
 export const demoBankRevision=bankSignature(demoBank);
@@ -16,4 +16,4 @@ export const demoBankRevision=bankSignature(demoBank);
 export const compatibleDemoRevisions=['3491070309'];
 export const studyUnits=examUnits(studyBank,[...catalog,...groups]);
 
-export const studyBankCoverage={minimum:{total:catalog.length,photo:photoBank.length,theory:studyBank.filter(c=>c.questionKind==='profile'&&c.scope==='minimum').length},extended:{total:groups.length,theory:studyBank.filter(c=>c.scope==='extended').length}};
+export const studyBankCoverage={minimum:{total:[...catalog,...groups].filter(t=>t.curriculum?.level==='minimum').length,photo:photoBank.length,theory:studyBank.filter(c=>c.questionKind==='profile'&&c.scope==='minimum').length},extended:{total:[...catalog,...groups].filter(t=>t.curriculum?.level!=='minimum').length,theory:studyBank.filter(c=>c.scope==='extended').length}};

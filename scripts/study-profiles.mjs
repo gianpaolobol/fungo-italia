@@ -42,6 +42,7 @@ export function applyStudyProfiles(records,integration,registry){
     else check(Number.isInteger(evidence.page)&&evidence.page>0&&Number.isInteger(source.pageCount)&&evidence.page<=source.pageCount,'Invalid study source page');
     check(!evidence.fields.includes('edibility'),'Food claim needs pointwise founding guide evidence');
    }
+   if(evidence.sourceId===foodSource&&evidence.fields.includes('edibility')){taxon.edibilityEvidence??=[];taxon.edibilityEvidence.push({sourceId:foodSource,page:evidence.page});}
    evidence.fields.forEach(field=>covered.add(field));
    if(evidence.sourceId!==foodSource){
     const source=refs.get(evidence.sourceId),location=evidence.page===null?evidence.locator:'p. '+evidence.page;

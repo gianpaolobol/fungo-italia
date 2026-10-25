@@ -8,7 +8,7 @@ export function hasRequiredInternalFoundations(foundations){
 export function internalSource(source){return foundationIds.has(source.sourceId)||/^(AUDIT-|EDITORIAL-)/.test(source.sourceId??'');}
 export function cleanAtlasRecord(record){
  const t=structuredClone(record),objective=t.sources.find(s=>s.sourceId==='S1-obiettivi-tassonomici-v4-2026-06-09');
- if(objective)t.curriculum={documentId:objective.sourceId,sourcePage:Number(objective.location.match(/\d+/)?.[0]),...(t.learningUnitId?{learningUnitId:t.learningUnitId}:{})};
+ if(objective&&!t.curriculum)t.curriculum={documentId:objective.sourceId,sourcePage:Number(objective.location.match(/\d+/)?.[0]),...(t.learningUnitId?{learningUnitId:t.learningUnitId}:{})};
  t.sources=t.sources.filter(s=>!internalSource(s));
  if(t.summary?.startsWith('Unità didattica al rango ')||t.summary?.startsWith('Obiettivo didattico di genere o gruppo.'))delete t.summary;
  for(const key of ['reviewStatus','reviewScope','independentReviewStatus','edibility','publishedDatabaseChangesIncluded','lookalikesStatus','learningUnitId'])delete t[key];
@@ -26,5 +26,5 @@ export function cleanBibliography(sources){
 }
 export function internalFoundations(sources,courseToxicologyDocuments=[]){
  const documents=[...foundationIds].map(id=>{const source=sources.find(s=>s.sourceId===id);if(!source)throw Error('Missing founding document '+id);return {...source,role:id.startsWith('S1-')?'curriculum':'edibility-reference',visibility:'internal'};});
- return {schemaVersion:1,documents:[...documents,...courseToxicologyDocuments],curriculum:{requiredMinimumUnits:148,requiredTeachingGroups:66,objectiveSourceId:documents[0].sourceId},scientificStatus:{independentReviewComplete:false,edibilityAssessment:'source-attributed-partial'},rules:{foodClaimsRequirePointwiseGuideEvidence:true,internalAuditIsNotExternalEvidence:true,courseToxicologyDoesNotExpandCurriculum:true,ownerCertificationIsNotIndependentReview:true}};
+ return {schemaVersion:1,documents:[...documents,...courseToxicologyDocuments],curriculum:{requiredMinimumUnits:148,requiredTeachingGroups:70,objectiveSourceId:documents[0].sourceId},scientificStatus:{independentReviewComplete:false,edibilityAssessment:'source-attributed-partial'},rules:{foodClaimsRequirePointwiseGuideEvidence:true,internalAuditIsNotExternalEvidence:true,courseToxicologyDoesNotExpandCurriculum:true,ownerCertificationIsNotIndependentReview:true}};
 }

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-23",
+  "baselineCommit": "d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34",
+  "previousLocalCommits": [
+    "6f7b70f",
+    "0121bba",
+    "a65a667cef088157184a18ab7d3d4f88d791d3f4"
+  ],
+  "cacheBackupCommit": "e96cc0c56d35aedf1938d1cd564b4911a2813b31",
+  "dataComparisons": {
+    "catalog": {
+      "records": 148,
+      "canonicalSha256": "f537603d3af4ab714bbdbc9defc1faa1e836d7354dcfde346cf16a580bba900e",
+      "recoveredMatchesGenerated": true
+    },
+    "groups": {
+      "records": 70,
+      "canonicalSha256": "053c4f655d8f97261d6eae02113aa3c7eb525edda65e7522909ee2e56a9a8bc6",
+      "recoveredMatchesGenerated": true
+    },
+    "exam-bank": {
+      "records": 86,
+      "canonicalSha256": "ba1d6ea9b10070cb0708f0aeedbb4792180275ab29c2d677e9d94eeb7789bb50",
+      "recoveredMatchesGenerated": true
+    }
+  },
+  "images": {
+    "registered": 200,
+    "active": 150,
+    "sourceOnly": 50,
+    "bytes": 58444044,
+    "all200MatchPreviousAssetMd5": true,
+    "integrityManifest": "src/data/course-chat-images.json"
+  },
+  "study": {
+    "atlasUnits": 218,
+    "photoCases": 86,
+    "theoryCases": 132,
+    "theoryQuestions": 421,
+    "foodQuestionsAdded": 61,
+    "preparationQuestionsAdded": 8,
+    "syndromeQuestionsAdded": 12,
+    "coursePhotoCases": 76,
+    "legacyCompatibleRevision": "2885761559"
+  },
+  "verification": {
+    "nodeTestsPassed": 206,
+    "nodeTestsFailed": 0,
+    "typecheck": "passed",
+    "prepareData": "passed",
+    "expoIosWebExport": "passed",
+    "auditedImporterReproduction": "passed",
+    "independentScientificReview": false,
+    "strictScientificGate": "blocked-preexisting",
+    "signedBuildVerified": false,
+    "publicDeployment": "pending"
+  },
+  "sourceIdentity": "Exact recovered data; generator/source reconstruction; new commit identities",
+  "integration20261025": {
+    "baseMain": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+    "recoveredSourceBackup": "3e656f571482c92344c55abfc6950a97bfd75171",
+    "preservedCourseSyndromeDocuments": 8,
+    "preservedSyndromeRecords": 15,
+    "syndromeTheoryQuestionsChanged": 0,
+    "nodeTestsPassed": 209,
+    "nodeTestsFailed": 0,
+    "typecheck": "passed",
+    "prepareData": "passed",
+    "release": "pending",
+    "expoIosWebExport": "passed",
+    "technicalIntegrationReview": "No Critical/Important findings;scientific fields and sources of214 existing units and86 photographic cases preserved;12 focused tests passed"
+  }
+}
