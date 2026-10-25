@@ -1,3 +1,15 @@
+## Esito CI e audit Apple — 26 ottobre 2026
+
+Sorgente applicativo verificato: `e158000eba9beb7e5d90e27d5b3d8948cfd06faa`. Il successivo aggiornamento di questa nota modifica soltanto i due handoff; non è una nuova build dell'app.
+
+- [Pipeline abbinata 40244558779](https://github.com/gianpaolobol/fungo-italia/actions/runs/40244558779/job/121323273871): job `source` fallito allo step «Require scientific release readiness before signing or TestFlight upload», exit1; 148 schede bloccate, 0 revisioni indipendenti attestate, 0 release-ready. `beta`, promozione web e controllo pubblicato saltati. Nessuna firma/upload autorizzata da questo risultato.
+- Sullo stesso SHA: rigenerazione senza drift, TypeScript, 212 test Node, build web condivisa/legacy, 65 test WebKit, 65 Chromium e smoke unificato/offline superati localmente. Questi risultati non attestano verifica nativa del runner Swift aggiornato.
+- [Audit Apple di sola lettura 40244865480](https://github.com/gianpaolobol/fungo-italia/actions/runs/40244865480), job121324190427: riuscito sullo SHA e158000; rapporto `App-Store-status` conservato negli artefatti. Verificata identità app6821140326 / it.fungoitalia.app. Ultimo binario Apple:1.1.0 build19, VALID, caricato24/10; nessuna nuova build riferibile alle correzioni correnti. Il record App Store1.0 è REJECTED ed è associato alla build9, non alla19.
+- Privacy URL e supporto presenti, categoria EDUCATION, screenshot2 iPhone e2 iPad. Contatti revisione presenti e nessun account demo richiesto. Il questionario privacy non è verificabile dal relativo probe API (404 PATH_ERROR): questo non attesta né completezza né mancanza del questionario; serve verifica nell'interfaccia Apple prima dell'invio.
+- Abbonamento it.fungoitalia.premium.annual: ONE_YEAR, READY_TO_SUBMIT; versione metadati READY_FOR_REVIEW, quindi nessuna approvazione attestata. Il report restituisce `italyPrice=9.99` mentre configurazione locale e note Apple dichiarano19.99: verificare date, eventuali prezzi programmati e territorio del punto prezzo. Il codice dell'audit seleziona il primo record ITA nella prima pagina; non prova da solo quale tariffa sia attiva oggi. Non cambiare prezzi senza autorizzazione specifica.
+
+Nessun accesso diretto Apple completato dal browser (pagina di login); l'audit corrente è stato ottenuto dalle credenziali già autorizzate nel workflow, senza acquisire nuove credenziali o modificare l'account. Prima di un invio definitivo restano da risolvere i blocker scientifici effettivi, confermare tutti i test nativi sullo SHA candidato, correggere il disallineamento del record App Store dopo piena validazione e verificare il prezzo effettivo. Non usare la build19 o il successo dell'audit come prova di readiness production.
+
 ## Validazione esecutiva production — 26 ottobre 2026
 
 Base effettiva recuperata: `fc333fc380a8208075bff6221d25e932e1d3209a`, successiva a `fd32289`. Nessun contenuto scientifico, prezzo o verifica Apple rimosso. La matrice storica resta di 214 unità; i quattro completamenti S1 restano distinti, senza dati alimentari o fotografie inventati. Rigenerazione deterministica senza differenze nei dati tracciati.
