@@ -1,0 +1,32 @@
+name: Scientific gap evidence
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/data/**'
+      - 'scripts/release-readiness.mjs'
+      - 'scripts/export-scientific-gap-register.mjs'
+      - '.github/workflows/scientific-gap-evidence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export-gaps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Regenerate canonical data
+        run: npm run prepare:data
+      - name: Export scientific gap register
+        run: node scripts/export-scientific-gap-register.mjs release-evidence
+      - name: Upload per-taxon gap evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: scientific-gap-register-${{ github.sha }}
+          path: release-evidence/
+          retention-days: 30
+      - name: Require scientific release readiness
+        run: node scripts/release-readiness.mjs --strict
