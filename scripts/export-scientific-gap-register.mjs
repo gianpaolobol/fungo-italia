@@ -12,7 +12,7 @@ const columns=['id','scientificName','rank','gaps','missingViews',...categories]
 const rows=report.profileRows.map(r=>[r.id,r.scientificName,r.rank,r.gaps.join('; '),r.imageCompleteness.missingViews.join('; '),...categories.map(key=>r.gaps.some(g=>g===key||g.startsWith(key+':'))?'BLOCKED':'')]);
 const csv=[columns.map(esc).join(','),...rows.map(row=>row.map(esc).join(','))].join('\n')+'\n';
 const summary={schemaVersion:1,source:'scripts/release-readiness.mjs',checked:report.totals.checked,blocked:report.totals.blocked,ready:report.totals.releaseReady,counts:Object.fromEntries(categories.map(k=>[k,count(k)])),items:report.profileRows.map(r=>({id:r.id,name:r.scientificName,gaps:r.gaps,missingViews:r.imageCompleteness.missingViews}))};
-const dest=process.argv[2]||'release-evidence';
+const dest=process.argv.slice(2).find(arg=>!arg.startsWith('--'))||'release-evidence';
 await mkdir(dest,{recursive:true});
 await Promise.all([writeFile(join(dest,'scientific-gap-register.csv'),csv),writeFile(join(dest,'scientific-gap-register.json'),JSON.stringify(summary,null,2)+'\n')]);
 console.log(JSON.stringify({destination:dest,checked:summary.checked,blocked:summary.blocked,counts:summary.counts},null,2));
