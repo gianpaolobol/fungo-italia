@@ -9,6 +9,10 @@ function asArray(value) {
 }
 
 function hasFieldEvidence(taxon, fieldName) {
+  // Founding-guide citations are intentionally kept out of public sources.
+  // Their per-taxon page references remain in the generated internal record.
+  if (fieldName === 'edibility' && asArray(taxon.edibilityEvidence).some(evidence =>
+    evidence?.sourceId === 'S2-guida-ragionata-commestibilita-2021' && Number.isInteger(evidence.page) && evidence.page > 0)) return true;
   return asArray(taxon.sources).some((source) => {
     if (Array.isArray(source.fields) && source.fields.includes(fieldName)) return true;
     const claim = String(source.supportedClaim ?? '').toLowerCase();

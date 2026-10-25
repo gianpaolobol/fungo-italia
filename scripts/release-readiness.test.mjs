@@ -65,7 +65,6 @@ const completeTaxon = {
   assert.match(markdown, /missing-reference-views:top,underside/);
 }
 
-console.log('release-readiness tests passed');
 
 {
   const noStudy = {...completeTaxon, studyProfile: {}};
@@ -86,3 +85,21 @@ console.log('release-readiness tests passed');
   assert.ok(gaps.includes('spore-print-without-pointwise-evidence'));
   assert.ok(gaps.includes('edibility-without-pointwise-evidence'));
 }
+
+// Mobile generation keeps the founding guide private and exposes its pointwise
+// references separately from public sources. The gate must inspect both paths.
+{
+  const guideTaxon = {...completeTaxon,
+    sources: [{fields:['habitat','odor','sporePrint']}],
+    edibilityEvidence: [{sourceId:'S2-guida-ragionata-commestibilita-2021',page:28}],
+    independentReviewStatus:'not-attested'};
+  const gaps = buildReleaseReadinessReport([guideTaxon]).blockers[0].gaps;
+  assert.ok(!gaps.includes('edibility-without-pointwise-evidence'));
+  assert.ok(gaps.includes('independent-review-not-attested'));
+  for (const evidence of [[],[{sourceId:'unknown',page:28}],[{sourceId:'S2-guida-ragionata-commestibilita-2021'}],[{sourceId:'S2-guida-ragionata-commestibilita-2021',page:0}],[{sourceId:'S2-guida-ragionata-commestibilita-2021',page:'28'}]]) {
+    const invalid = buildReleaseReadinessReport([{...guideTaxon,edibilityEvidence:evidence}]).blockers[0].gaps;
+    assert.ok(invalid.includes('edibility-without-pointwise-evidence'));
+  }
+}
+
+console.log('release-readiness tests passed');

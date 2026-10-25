@@ -59,6 +59,10 @@ jobs:
         include-hidden-files: true
         if-no-files-found: error
         retention-days: 30
+    - name: Require scientific release readiness before signing or TestFlight upload
+      run: |
+        npm run validate:release
+        node scripts/audit-toxicology-release.mjs --strict
     - name: Require actual current native, purchase UI and successful demo proofs
       run: node scripts/consolidated-evidence.mjs
     - name: Bind web and native source proof before signing

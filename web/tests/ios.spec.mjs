@@ -1,5 +1,9 @@
 import {test,expect,chromium} from '@playwright/test';
 import {readFile} from 'node:fs/promises';
+const readData=async name=>JSON.parse(await readFile(new URL('../../src/data/'+name+'.json',import.meta.url),'utf8'));
+const scope=await readData('curriculum-scope'),canonicalCatalog=await readData('catalog'),canonicalGroups=await readData('groups');
+const identities=rows=>rows.map(({id,scientificName,rank})=>({id,scientificName,rank})).sort((a,b)=>a.id.localeCompare(b.id));
+const completionUnits=scope.units.filter(u=>u.completionCard);
 const adminImages=JSON.parse(await readFile(new URL('../../src/data/admin-reference-images.json',import.meta.url),'utf8')).images;
 const overridden=(name,view)=>adminImages.find(image=>image.scientificName===name&&image.view===view);
 const studyKey='fungo-italia:pwa:study:v1',notesKey='fungo-italia:pwa:notes:v1';
@@ -59,7 +63,7 @@ test('private draft survives reload; JSON excludes coordinates unless opted in; 
 });
 test('malformed storage is preserved; scrolling catalog and group sources remain reachable',async({page})=>{
  await page.addInitScript(({studyKey,notesKey})=>{localStorage.setItem(studyKey,'{broken-study');localStorage.setItem(notesKey,'{broken-notes');},{studyKey,notesKey});
- await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText('66 schede');
+ await ready(page);await page.locator('#layer').selectOption('groups');await expect(page.locator('#catalog-count')).toContainText(canonicalGroups.length+' schede');
  await page.getByRole('button',{name:'Elenco',exact:true}).click();await expect(page.getByRole('button',{name:'Lettura continua',exact:true})).toBeVisible();
  await page.getByRole('heading',{name:'Schede collegate'}).first().scrollIntoViewIfNeeded();await expect(page.getByRole('heading',{name:'Schede collegate'}).first()).toBeInViewport();
  await page.locator('#cards').getByRole('button',{name:'Salva preferito',exact:true}).first().click();
@@ -85,7 +89,7 @@ test('current concept names find canonical learning units and diagnostic conditi
  await page.getByRole('button',{name:'Apri Agaricus',exact:true}).click();await page.getByRole('button',{name:'Torna',exact:true}).click();
  await page.reload();await expect(page.locator('#catalog-count')).toContainText('148 schede');
  await page.getByRole('button',{name:'Riprendi Agaricus',exact:true}).click();
- await expect(page.locator('#position')).toContainText('1 / 66');
+ await expect(page.locator('#position')).toContainText('1 / '+canonicalGroups.length);
  await expect(page.getByRole('button',{name:'Successiva →',exact:true})).toBeEnabled();
 });
 test('failed storage keeps unsaved draft visible and private backup includes in-memory changes',async({page})=>{
@@ -247,12 +251,14 @@ test('Amiata shows regional source and Tenerife creates a private observation',a
  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).drafts.length,notesKey)).toBe(1);
 });
 test('catalog growth loads with dynamic counts',async({page,context})=>{
+ let expectedCatalog,expectedTotal;
  await page.route('**/data.json',async route=>{
   const response=await route.fetch(),data=await response.json();
   data.catalog.push({...data.catalog[0],id:'future-learning-unit',scientificName:'Future learning unit'});
+  expectedCatalog=data.catalog.length;expectedTotal=data.catalog.length+data.groups.length;
   await route.fulfill({response,json:data});
  });
- await ready(page);await expect(page.locator('#catalog-count')).toContainText('149 schede');await expect(page.locator('#layer option[value="all"]')).toHaveText('Tutte · 215');
+ await ready(page);await expect(page.locator('#catalog-count')).toContainText(expectedCatalog+' schede');await expect(page.locator('#layer option[value="all"]')).toHaveText('Tutte · '+expectedTotal);
 });
 
 test('malformed optional taxon fields fail without erasing local notes',async({page})=>{
@@ -289,7 +295,17 @@ test('public atlas excludes founding documents while field safety checks stay av
  const raw=JSON.stringify(payload);
  for(const text of ['S1-obiettivi-tassonomici','S2-guida-ragionata','Scientific Baseline','EDITORIAL-minimum','Obiettivi tassonomici nella formazione'])expect(raw).not.toContain(text);
  // A legitimate public citation may name the scientific edibility guide; the internal source IDs and records must stay excluded.
- expect(payload.catalog).toHaveLength(148);expect(payload.groups).toHaveLength(66);
+ expect(identities(payload.catalog)).toEqual(identities(canonicalCatalog));
+ expect(identities(payload.groups)).toEqual(identities(canonicalGroups));
+ expect(identities([...payload.catalog,...payload.groups])).toEqual(identities(scope.units));
+ // All four S1-only groups remain identifiable, with no inferred food verdict or photos.
+ expect(completionUnits).toHaveLength(4);
+ for(const unit of completionUnits){
+  const card=payload.groups.find(t=>t.id===unit.id);
+  expect(card).toBeDefined();expect(card.scientificName).toBe(unit.scientificName);expect(card.rank).toBe(unit.rank);
+  expect(card.studyProfile).toBeUndefined();expect(card.referenceImages??[]).toEqual([]);
+  expect(card.characters).toEqual([]);expect(card.sources).toEqual([]);
+ }
  await ready(page);await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Kuehneromyces mutabilis');
  await page.getByRole('button',{name:'Apri Kuehneromyces mutabilis',exact:true}).click();
  await expect(page.locator('#detail-body')).toContainText('Escludere Galerina marginata group');

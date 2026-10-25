@@ -31,6 +31,14 @@ final class AnnualPurchaseUITests: XCTestCase {
       item = element(app, label)
     }
     await require(item, timeout: 60, file: file, line: line)
+    let hittable = await readyToTap(item)
+    guard hittable else {
+      print("REQUIRED_CONTROL_NOT_HITTABLE " + item.description)
+      print("REQUIRED_APP_TREE " + app.debugDescription)
+      try? capture(app, "failure-unhittable-control")
+      XCTFail("Required app control cannot be tapped", file: file, line: line)
+      return
+    }
     item.tap()
   }
   @MainActor func readyToTap(_ item: XCUIElement) async -> Bool {
@@ -198,6 +206,14 @@ final class AnnualPurchaseUITests: XCTestCase {
     await tap(app, "Apri Amanita caesarea")
     try capture(app, "01-studio")
     await tap(app, "Torna alle schede")
+    let detailClosed = await XCTWaiter.fulfillment(of: [XCTNSPredicateExpectation(
+      predicate: NSPredicate(format: "exists == false"), object: element(app, "Torna alle schede"))], timeout: 30)
+    guard detailClosed == .completed else {
+      print("STUDY_DETAIL_DID_NOT_CLOSE " + app.debugDescription)
+      try? capture(app, "failure-study-detail-dismissal")
+      XCTFail("Study detail must close before accessing the Areas tab")
+      return
+    }
     await tap(app, "Aree"); try capture(app, "02-aree")
     await tap(app, "Esame")
     await require(element(app, "Inizia 15 casi"))
