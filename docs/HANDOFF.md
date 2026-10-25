@@ -1,3 +1,9 @@
+## Correzione del rilascio recuperato — 26/10/2026
+
+Recupero completo salvato su main9d3254c (218unità/218casi/421quesiti;200immagini originali) e branch recovery/final-integrated-20261025; backup sorgenti/cache disponibili. Il rilascio40226474248 e il successivo40241735435 sulmain11599be si sono fermati nella compilazione web prima di nuova build Apple/deploy: build-legacy passava218record alla matrice limitata correttamente214.
+
+Il nuovo confine reviewed-curriculum valida tutte218unità e l’identità esatta dei4completamenti curricolari privi di dati scientifici, quindi applica la matrice solo214unità storiche. Nessuna estensione o deroga alla matrice. Regressione riprodotta218!=214, poi2test passati;211testNode/TypeScript/buildweb legacy e condivisa superati. Nessuna nuova attestazione scientifica o modifica StoreKit. La distribuzione richiede esito della nuova pipeline sul commitcorretto; build19 del24/10 resta l’ultima distribuzione confermata finché non arriva nuova ricevuta.
+
 ## Integrazione del recupero sul main corrente — 25/10/2026
 
 Integrati il recupero curricolare/MicoLab e il main279d50e (sindromi del24/10, già distribuito come1.1.0 build19). Conservati gli8 documenti e15 quadri delle sindromi, le fonti/attribuzioni alle21 schede e tutte le pipeline correnti. Ripristinate218 unità minime (148+70),218 casi (86+132),421 domande teoriche,200 immagini conhash identici agli asset originali (150collegate,50solo fonte). Nessuna delle12 domande teoriche sulle sindromi cambia rispetto al banco recuperato: il registro nuovo non genera quiz automaticamente. Matrice storica limitata214.

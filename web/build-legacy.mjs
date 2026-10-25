@@ -1,6 +1,7 @@
 import {buildExamBank} from './public/exam-core.js';
 import {hasRequiredInternalFoundations} from '../scripts/atlas-content.mjs';
-import {applyReviewedMatrix,readReviewedMatrix} from '../scripts/reviewed-matrix.mjs';
+import {readReviewedMatrix} from '../scripts/reviewed-matrix.mjs';
+import {applyReviewedCurriculum} from '../scripts/reviewed-curriculum.mjs';
 import {applyApprovedExternalStudyEvidence} from '../scripts/approved-external-study-evidence.mjs';
 import {applyToxicologySyndromes} from '../scripts/toxicology-syndromes.mjs';
 import {applyAdminReferenceImages} from '../scripts/admin-reference-images.mjs';
@@ -31,7 +32,9 @@ applyReferenceImages([...catalog,...groups],referenceImages);
 const adminImages=await readJSON('admin-reference-images');
 applyAdminReferenceImages([...catalog,...groups],adminImages);
 applyCommercialization([...catalog,...groups],await readJSON('commercialization'));
-const matrixIntegration=applyReviewedMatrix([...catalog,...groups],await readReviewedMatrix(),studyProfiles);
+const scope=await readJSON('curriculum-scope');
+const objectives=JSON.parse(await readFile(path.join(root,'legacy/web/data/taxonomic-objectives.json'),'utf8'));
+const matrixIntegration=applyReviewedCurriculum([...catalog,...groups],await readReviewedMatrix(),studyProfiles,scope,objectives);
 for(const asset of [...referenceImages.images,...adminImages.images]){await readFile(path.join(web,'public',asset.src));}
 const taxonKeys=['id','scientificName','commonNames','summary','characters','lookalikes','habitat','sources','aliases','rank','currentAcceptedNames','currentGenera','kind','relatedIds','deepMorphologyRequired','authorship','family','diagnosticStatus','diagnosticNote','safetyCheck','differentiatingCharacter','studyProfile','referenceImages','commercialization'];
 const pick=(object,keys)=>Object.fromEntries(keys.filter(key=>key in object).map(key=>[key,object[key]]));
