@@ -2,6 +2,10 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Correzione dell'asserzione di attribuzione della mappa
+
+Revisione tecnica separata del commit326c5d4: lo smoke richiedeva un link OpenStreetMap che la mappa non contiene, perché l'attribuzione configurata in Areas.tsx è testo. Il controllo ora richiede quel testo nel controllo Leaflet; restano intatti il caricamento reale della tessera OSM, naturalWidth, filtri e tutti gli altri test. Nessuna modifica all'app, ai contenuti scientifici o alle policy di rilascio. La nuova pipeline resta necessaria sullo SHA esatto prima di firma, upload e promozione pubblica.
+
 ## Ripresa allineamento Aree — 26 ottobre 2026
 
 Baseline `0bc4a4224b11f55524b9b47e386dfdf140d3b98b`. Web letto dal dominio: 1.1.0(19), sorgente `279d50e842a95c6a7d8e3499806b3fd5c42996e7`; TestFlight21 resta storico, privo della correzione Aree. Run40400178249/source121844006651 fallisce sullo smoke obsoleto che richiedeva il paywall Aree. Anche il test demo XCTest conserva quella vecchia aspettativa: aggiornati entrambi alla consultazione gratuita condivisa, con71macroaree, filtroAmiata e habitat; web aggiunge ricerca/regione/mappa e smoke WebKit obbligatorio. Acquisti/ripristino/rimborso/scadenza invariati.

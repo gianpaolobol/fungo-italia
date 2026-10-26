@@ -49,7 +49,7 @@ try{
  // Require the real OSM layer (not a simulated map or an iframe placeholder).
  await expect(frame.locator('img.leaflet-tile').first()).toBeVisible({timeout:30000});
  await expect.poll(()=>frame.locator('img.leaflet-tile').first().evaluate(img=>img.complete&&img.naturalWidth>0),{timeout:30000}).toBe(true);
- await expect(frame.getByRole('link',{name:'OpenStreetMap'})).toBeVisible();
+ await expect(frame.locator('.leaflet-control-attribution')).toContainText('© OpenStreetMap contributors');
  await page.getByRole('button',{name:'Elenco offline',exact:true}).click();
  await page.getByRole('tab',{name:'Percorso',exact:true}).click();
  await page.waitForFunction(()=>navigator.serviceWorker?.controller!==null);
