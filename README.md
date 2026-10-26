@@ -1,3 +1,5 @@
+Stato operativo e rapporto del consolidamento: [MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Ultima baseline applicativa consolidata `20c42bab7ec7c448072ebe50a9966eadb9ff6c75`; 218 unità, 86 casi fotografici e 132 profili con 424 quesiti. Produzione bloccata da revisione scientifica e suite native da riconfermare; beta19 resta una distribuzione storica distinta.
+
 # Fungo Italia
 
 [Apri l’app web](https://gianpaolobol.github.io/fungo-italia/) · [Assistenza](https://gianpaolobol.github.io/fungo-italia/support.html) · [Privacy](https://gianpaolobol.github.io/fungo-italia/privacy.html)
@@ -42,4 +44,4 @@ Node >=24.3.0; `npm ci`, `npm run prepare:data`, `npm run typecheck`. I workflow
 
 Il progetto precedente Next/React è conservato in `legacy/web` e nei branch `backup/pre-migration-flutter` e `backup/verified-web-readiness`. Il percorso pubblico attuale è GitHub Pages.
 
-Aggiornamento curricolare23/10/2026:218 schede e218 casi (86 fotografici,132 teorici,421 quesiti teorici);150 immagini supplementari collegate dalla chat,50 solo fonte. [Recupero e limiti](docs/RECOVERY-2026-10-23.md).
+Aggiornamento curricolare23/10/2026:218 schede e218 casi (86 fotografici,132 teorici,424 quesiti teorici);150 immagini supplementari collegate dalla chat,50 solo fonte. [Recupero e limiti](docs/RECOVERY-2026-10-23.md).

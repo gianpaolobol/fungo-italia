@@ -1,3 +1,7 @@
+# Coordinamento corrente
+
+Riferimento unico: [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md). Usare la baseline e la roadmap lì registrate, rileggere main prima di ogni push e aggiornare il master dopo il lavoro. Le sezioni seguenti sono storico e non attestano lo stato attuale né sostituiscono le verifiche sullo SHA candidato.
+
 ## Esito CI e audit Apple — 26 ottobre 2026
 
 Sorgente applicativo verificato: `e158000eba9beb7e5d90e27d5b3d8948cfd06faa`. Il successivo aggiornamento di questa nota modifica soltanto i due handoff; non è una nuova build dell'app.

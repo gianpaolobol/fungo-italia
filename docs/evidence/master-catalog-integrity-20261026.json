@@ -1,0 +1,131 @@
+{
+  "changedCount": 13,
+  "changes": [
+    {
+      "id": "minimum-card-objective-amanita--11--amanita-porphyria",
+      "name": "Amanita porphyria",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "name": "Clitocybe nebularis",
+      "fields": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "name": "Clitocybe gibba s.l.",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "name": "Rhodocollybia maculata",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "name": "Coprinus atramentarius s.l.",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+      "name": "Coprinus comatus",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "name": "Cortinarius caperatus",
+      "fields": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "name": "Entoloma rhodopolium s.l.",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-entoloma--04--entoloma-vernum",
+      "name": "Entoloma vernum",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "name": "Flammulina velutipes s.l.",
+      "fields": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "name": "Hygrophorus russula",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+      "name": "Hygrophorus penarioides",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "name": "Hypholoma fasciculare",
+      "fields": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    }
+  ],
+  "preservedFields": [
+    "id",
+    "scientificName",
+    "rank",
+    "curriculum",
+    "edibilityEvidence",
+    "referenceImages",
+    "courseImages",
+    "independentReview",
+    "studyProfile"
+  ],
+  "catalogSha256": "c9b4d181507f5405a3d34cd06b5f7d04ffe3a02611aa1ee5ec1da8fcb90f9855"
+}

@@ -1,0 +1,1377 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "baseline": "3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c",
+  "pullRequests": [
+    {
+      "number": 123,
+      "title": "Science: include founding curriculum traceability in gap register",
+      "head": "e1918faff08ddd104aae3c1f5a5d8cc9c079fed9",
+      "branch": "fix/science-gap-curriculum-triage-20261026",
+      "draft": true,
+      "state": "open",
+      "base": "c72fe8cf35eb16c9f2fb9f5329346d0be950a867",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/123"
+    },
+    {
+      "number": 120,
+      "title": "WIP: audit copertura doppio esame e preparazione test teorico",
+      "head": "6ce90860025f528d4eb296175ae15b53bab523c9",
+      "branch": "feature/theory-exam-preparation-20261026",
+      "draft": true,
+      "state": "open",
+      "base": "1e6a7e37fad25355610a70ac7766cc770529b043",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/120"
+    },
+    {
+      "number": 119,
+      "title": "docs: attest beta 19 and clarify current release decisions",
+      "head": "b9c8cd2b40fc8702797c09960757de73f2ba8a90",
+      "branch": "docs/beta19-handoff-evidence-20261025",
+      "draft": false,
+      "state": "open",
+      "base": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/119"
+    },
+    {
+      "number": 117,
+      "title": "Gate production releases and preserve deferred personal-photo code",
+      "head": "5acb9fbecd988d47f19d6467c6122368b5fe0342",
+      "branch": "docs/ios-release-audit-20261022",
+      "draft": true,
+      "state": "open",
+      "base": "d2c8b650f3c3e4e5c6e8c6254d8f836c60d83d34",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/117"
+    },
+    {
+      "number": 116,
+      "title": "Qualify StoreKit runtime candidates before full React Native validation",
+      "head": "b43045b9668565040b43a42fb9e19a62d374ce2a",
+      "branch": "audit/storekit-runtime-matrix-20261022",
+      "draft": true,
+      "state": "open",
+      "base": "f05314e740bcccdfdbbb8708a734c86effbf45bc",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/116"
+    },
+    {
+      "number": 114,
+      "title": "WIP: navigazione Percorso, accesso abbonamento e pulizia dashboard",
+      "head": "1d0ef93ec92cfef16df327d07519f11b11d4cf29",
+      "branch": "feat/continuous-mushroom-navigation-20261021",
+      "draft": true,
+      "state": "open",
+      "base": "3662a3accc3845194e7a0fdb5e99948fe8024b75",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/114"
+    },
+    {
+      "number": 112,
+      "title": "Versione 1.0: demo Agaricus, unico annuale 19,99 € e correzioni App Review",
+      "head": "d065840811e78434b0b65eb26ac9025c0edf9582",
+      "branch": "fix/app-review-20261021",
+      "draft": true,
+      "state": "open",
+      "base": "6aa68489c7b29582be6bcddae56f2a46fb29d10e",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/112"
+    },
+    {
+      "number": 111,
+      "title": "docs(audit): audit completo Claude 2026-10-21",
+      "head": "88c3597725f193e5d42316b6a76a643f95ebf776",
+      "branch": "audit/claude-full-review-20261021",
+      "draft": false,
+      "state": "open",
+      "base": "6aa68489c7b29582be6bcddae56f2a46fb29d10e",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/111"
+    },
+    {
+      "number": 107,
+      "title": "Versione 1.1: Dashboard a fungo, percorso di studio e Base permanente",
+      "head": "2c893c60db17f492b926be316321445bcb28040b",
+      "branch": "design/study-dashboard-v1-1",
+      "draft": false,
+      "state": "open",
+      "base": "2c077e74e43f398f25d2430ed8e202e5197d6111",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/107"
+    },
+    {
+      "number": 106,
+      "title": "Replace the old mushroom icon with the approved readable iPhone artwork",
+      "head": "5b415422edb8df820d61a4f019f330621b539384",
+      "branch": "fix/approved-iphone-icon",
+      "draft": false,
+      "state": "open",
+      "base": "2c077e74e43f398f25d2430ed8e202e5197d6111",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/106"
+    },
+    {
+      "number": 105,
+      "title": "Isolate StoreKit observer startup and verify diagnostic TestFlight availability",
+      "head": "899602520a14296260343a1702b2e680f1e48207",
+      "branch": "fix/storekit-cold-start-diagnostics",
+      "draft": true,
+      "state": "open",
+      "base": "2c077e74e43f398f25d2430ed8e202e5197d6111",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/105"
+    },
+    {
+      "number": 35,
+      "title": "Beta primary review — release candidate (owner approved, checks pending)",
+      "head": "8f54dd2f3f5fd9fe718fa5304175eeaee5f03eb8",
+      "branch": "release/beta-primary-review-20261008",
+      "draft": true,
+      "state": "open",
+      "base": "277466878a64f6c49eecb691ecd9c6fb595ef41a",
+      "url": "https://github.com/gianpaolobol/fungo-italia/pull/35"
+    }
+  ],
+  "runs": [
+    {
+      "id": 40301473220,
+      "name": "Expo Android and iOS",
+      "sha": "3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40301473220",
+      "created": "2026-10-26T09:41:16Z"
+    },
+    {
+      "id": 40301473171,
+      "name": "Atlas genus search regression",
+      "sha": "3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40301473171",
+      "created": "2026-10-26T09:41:16Z"
+    },
+    {
+      "id": 40300777828,
+      "name": "Inspect StoreKit purchase failure",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300777828",
+      "created": "2026-10-26T09:35:48Z"
+    },
+    {
+      "id": 40300777746,
+      "name": "Stage native screenshot evidence",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300777746",
+      "created": "2026-10-26T09:35:48Z"
+    },
+    {
+      "id": 40300557150,
+      "name": "Stage native screenshot evidence",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300557150",
+      "created": "2026-10-26T09:34:05Z"
+    },
+    {
+      "id": 40300557065,
+      "name": "Inspect StoreKit purchase failure",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300557065",
+      "created": "2026-10-26T09:34:04Z"
+    },
+    {
+      "id": 40300548993,
+      "name": "Paired web and diagnostic TestFlight",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548993",
+      "created": "2026-10-26T09:34:01Z"
+    },
+    {
+      "id": 40300548920,
+      "name": "Validate shared web candidate",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548920",
+      "created": "2026-10-26T09:34:01Z"
+    },
+    {
+      "id": 40300548882,
+      "name": "Verify native StoreKit subscriptions",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548882",
+      "created": "2026-10-26T09:34:01Z"
+    },
+    {
+      "id": 40300548865,
+      "name": "Verify free Agaricus demo interface",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548865",
+      "created": "2026-10-26T09:34:01Z"
+    },
+    {
+      "id": 40300548864,
+      "name": "Verify StoreKit purchase interface",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548864",
+      "created": "2026-10-26T09:34:01Z"
+    },
+    {
+      "id": 40300548859,
+      "name": "Expo Android and iOS",
+      "sha": "7b0081a170580cf131df52e812e4fbad29c33b15",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548859",
+      "created": "2026-10-26T09:34:01Z"
+    }
+  ],
+  "jobs": [
+    {
+      "run": 40300548864,
+      "jobs": [
+        {
+          "id": 121497806166,
+          "name": "verify-ipad",
+          "status": "completed",
+          "conclusion": "failure",
+          "run_id": 40300548864,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Select a compatible Apple StoreKit simulator runtime",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Prepare the actual app and Apple StoreKit UI test runner",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Buy, reopen, refund and expire through the real app interface",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 6
+            },
+            {
+              "name": "Preserve UI failure screenshots and attachments",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 121497806684,
+          "name": "verify-iphone",
+          "status": "completed",
+          "conclusion": "failure",
+          "run_id": 40300548864,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Select a compatible Apple StoreKit simulator runtime",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Prepare the actual app and Apple StoreKit UI test runner",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Buy, reopen, refund and expire through the real app interface",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 6
+            },
+            {
+              "name": "Preserve UI failure screenshots and attachments",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 121508414038,
+          "name": "evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40300548864,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": 40300548865,
+      "jobs": [
+        {
+          "id": 121498211627,
+          "name": "verify-iphone",
+          "status": "completed",
+          "conclusion": "failure",
+          "run_id": 40300548865,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Select a compatible Apple StoreKit simulator runtime",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Prepare the actual app and Apple StoreKit UI test runner",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Verify free Agaricus study and four-case test",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 6
+            },
+            {
+              "name": "Preserve UI failure screenshots and attachments",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 121498212017,
+          "name": "verify-ipad",
+          "status": "completed",
+          "conclusion": "failure",
+          "run_id": 40300548865,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Select a compatible Apple StoreKit simulator runtime",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Prepare the actual app and Apple StoreKit UI test runner",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Verify free Agaricus study and four-case test",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 6
+            },
+            {
+              "name": "Preserve UI failure screenshots and attachments",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": 40300548993,
+      "jobs": [
+        {
+          "id": 121497106698,
+          "name": "source",
+          "status": "completed",
+          "conclusion": "failure",
+          "run_id": 40300548993,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run npm ci",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Verify all consolidated source and deterministic data",
+              "status": "completed",
+              "conclusion": "failure",
+              "number": 5
+            },
+            {
+              "name": "Install deterministic browser dependencies",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 6
+            },
+            {
+              "name": "Build one immutable web candidate from shared application",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 7
+            },
+            {
+              "name": "Verify legacy workflows in both engines and unified smartphone app",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 9
+            },
+            {
+              "name": "Require scientific release readiness before signing or TestFlight upload",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 10
+            },
+            {
+              "name": "Require actual current native, purchase UI and successful demo proofs",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 11
+            },
+            {
+              "name": "Bind web and native source proof before signing",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 12
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 13
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 25
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 26
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 27
+            }
+          ]
+        },
+        {
+          "id": 121497313836,
+          "name": "beta",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 40300548993,
+          "logs_url": null,
+          "steps": null
+        },
+        {
+          "id": 121497315511,
+          "name": "promote-public-web",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 40300548993,
+          "logs_url": null,
+          "steps": null
+        },
+        {
+          "id": 121497315890,
+          "name": "published-smoke",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 40300548993,
+          "logs_url": null,
+          "steps": null
+        }
+      ]
+    },
+    {
+      "run": 40301473220,
+      "jobs": [
+        {
+          "id": 121500277869,
+          "name": "android",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40301473220,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/setup-java@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run android-actions/setup-android@v3",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Install and lock dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Prepare canonical offline content",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Check TypeScript",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Verify draft integrity and review boundaries",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Export both native bundles",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Generate Android native project",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Run gradle/actions/setup-gradle@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Build installable preview APK locally",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Preserve generated catalog and dependency lock",
+              "status": "completed",
+              "conclusion": "skipped",
+              "number": 17
+            },
+            {
+              "name": "Post Run gradle/actions/setup-gradle@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 31
+            },
+            {
+              "name": "Post Run actions/setup-java@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 32
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 33
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 34
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 35
+            }
+          ]
+        },
+        {
+          "id": 121504438150,
+          "name": "android-smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40301473220,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Install gallery fixture tooling",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Enable hardware acceleration",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run reactivecircus/android-emulator-runner@v2",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Register native screenshot for review",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 121504441333,
+          "name": "expo-update",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 40301473220,
+          "logs_url": null,
+          "steps": null
+        },
+        {
+          "id": 121506364234,
+          "name": "android-release",
+          "status": "completed",
+          "conclusion": "skipped",
+          "run_id": 40301473220,
+          "logs_url": null,
+          "steps": null
+        }
+      ]
+    },
+    {
+      "run": 40122020361,
+      "jobs": [
+        {
+          "id": 120955452125,
+          "name": "source",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40122020361,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run npm ci",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Verify all consolidated source and deterministic data",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Install deterministic browser dependencies",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Build one immutable web candidate from shared application",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Verify legacy workflows in both engines and unified smartphone app",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Require actual current native, purchase UI and successful demo proofs",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Bind web and native source proof before signing",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 23
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 24
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 25
+            }
+          ]
+        },
+        {
+          "id": 120959327506,
+          "name": "beta",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40122020361,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run npm ci",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Bind verified source into the isolated EAS build environment",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Build isolated beta channel with remote build increment",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Record signed binary provenance",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Verify source inside the signed native app before upload",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Preflight existing beta audience before any upload",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Prepare authorized Apple submit key",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Upload diagnostic binary to TestFlight only",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Confirm Apple processing and confirmed owner group",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Confirm actual Apple internal beta availability",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Remove temporary submit key",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Stage exact native receipts",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 18
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 35
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 36
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 37
+            }
+          ]
+        },
+        {
+          "id": 120962628097,
+          "name": "promote-public-web",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40122020361,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Validate every original web byte against confirmed native receipt",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Run actions/configure-pages@v5",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-pages-artifact@v3",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Reject stale candidate immediately before public promotion",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            },
+            {
+              "name": "Promote the original paired candidate",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 10
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 19
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 20
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 21
+            }
+          ]
+        },
+        {
+          "id": 120962811874,
+          "name": "published-smoke",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 40122020361,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Verify uncached deployed release, icon, manifest and every asset against native receipt",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Verify published smartphone application",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 14
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "beta19": "Historical only: source279d50e, VALID/internal beta, diagnosticOnly, appStoreReady=false",
+    "recentNativeUI": "Annual lifecycle test logged PASS in both jobs, but full UI jobs FAILURE because demo test failed. Do not treat lifecycle subtest as successful complete suite.",
+    "recentPaired": "40300548993 failed deterministic regeneration at source step before strict science; regenerated catalog change reproduced locally",
+    "localScience": "148 catalog records blocked; no independent review. Catalog-only denominator, distinct from218 units"
+  }
+}

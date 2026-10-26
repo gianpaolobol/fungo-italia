@@ -1,3 +1,22 @@
+# Punto di ingresso corrente
+
+Leggere [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md): baseline consolidata, rapporto completo del primo ciclo, inventario di 12 PR/186 branch, 235 test Node e stato reale dei blocchi. Recuperati catalogo di 13 schede, exporter curricolare PR123, patch audit prezzi e ricevuta storica beta19 PR119. Nessun merge integrale delle PR, nuova build o release attestata.
+
+## Archivio degli handoff precedenti
+
+Le sezioni seguenti conservano gli stati alle rispettive date e SHA, inclusa la consegna locale della patch prima del recupero. Non sono lo stato corrente. Le istruzioni incompatibili con il master sono superate.
+
+## Patch locale audit prezzi — 26 ottobre 2026
+
+Preparata sullo SHA `64082923baf64885d5577895edaa95021e034d52`, branch locale `fix/subscription-price-audit`. Consegna come patch da revisionare; nessun push, workflow Apple o nuova interrogazione autenticata Apple eseguiti.
+
+- Sostituito il primo record ITA con lettura completa delle pagine `/subscriptions/{id}/prices`, unione degli inclusi e controllo di completezza. Errori, cicli, link estranei, totali incoerenti o risorse confliggenti impediscono di ricavare un prezzo corrente.
+- `italyPricing` espone data/istante di osservazione, politica Europe/Rome, piani distinti, corrente da calendario, programmati, preservati, storici e motivi di indeterminatezza. `italyPrice` resta compatibile ma vale solo per un unico piano risolto; altrimenti è `null`. È un dato di configurazione, non una prova della tariffa effettivamente attiva nello storefront.
+- `startDate:null` è la baseline esplicita; data mancante/invalida non è una baseline. Il prezzo standard decorso più recente prevale; i record `preserved:true` restano separati per i possibili abbonati esistenti. Nessuna deduzione su clienti effettivi, consensi, rinnovi o offerte. Il giorno stesso di decorrenza resta indeterminato perché la data API non specifica l'istante di attivazione. Piani o flag ignoti e punti prezzo mancanti/incoerenti sono espliciti.
+- Test offline: 19/19 dedicati; suite `node --test scripts/*.test.mjs` 231/231; controlli sintattici e whitespace superati. La prima esecuzione della suite completa senza dipendenze aveva quattro fallimenti ambientali (TypeScript/autolinking); dopo `npm ci --ignore-scripts` la suite è verde. Nessuna verifica di rilascio modificata o dichiarata superata da questi test.
+
+Dettagli e riproduzione: [APP-STORE-PRICE-AUDIT-PATCH.md](APP-STORE-PRICE-AUDIT-PATCH.md). La discrepanza storica 9,99/19,99 € resta aperta: nessun nuovo riscontro Apple autorizzato è stato acquisito. Prezzi, prodotti, StoreKit e configurazione commerciale invariati.
+
 ## Esito CI e audit Apple — 26 ottobre 2026
 
 Sorgente applicativo verificato: `e158000eba9beb7e5d90e27d5b3d8948cfd06faa`. Il successivo aggiornamento di questa nota modifica soltanto i due handoff; non è una nuova build dell'app.

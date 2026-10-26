@@ -1,0 +1,32 @@
+{
+  "previousQuestions": 421,
+  "currentQuestions": 424,
+  "previousCorrectAnswersPreserved": true,
+  "added": [
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "name": "Clitocybe gibba s.l.",
+      "question": "habitat",
+      "sources": [
+        "LIT-ATLAS-320461b445bd0aac"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "name": "Coprinus atramentarius s.l.",
+      "question": "habitat",
+      "sources": [
+        "LIT-ATLAS-b48cdd65baca5163"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "name": "Entoloma rhodopolium s.l.",
+      "question": "habitat",
+      "sources": [
+        "LIT-ATLAS-f6834c2f9ad06113"
+      ]
+    }
+  ],
+  "photoCasesPreserved": 86
+}

@@ -1,0 +1,138 @@
+# Fungo Italia — stato master operativo
+
+Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
+
+## Identità della baseline
+
+- Main letto all'inizio e ricontrollato prima del consolidamento:`3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c`.
+- **Baseline applicativa consolidata e verificata:**[`20c42bab7ec7c448072ebe50a9966eadb9ff6c75`](https://github.com/gianpaolobol/fungo-italia/commit/20c42bab7ec7c448072ebe50a9966eadb9ff6c75). Il commit documentale che contiene questo master segue questa baseline; il suo SHA si ricava da `git log -1 --format=%H -- docs/MASTER_PROJECT_STATUS.md`. Il main vivo va sempre riletto da `git ls-remote origin refs/heads/main`: questo documento non può contenere il proprio hash.
+- **Produzione bloccata.** Nessun nuovo binario TestFlight o deploy pubblico attribuito a questa baseline. Nessuna conferma sul dispositivo fisico.
+- Questo è il riferimento operativo corrente. I due handoff conservano la cronologia; indicazioni storiche incompatibili con le decisioni sotto sono superate. Ogni agente aggiorna questo documento e collega le prove dello SHA esatto, senza rietichettare risultati precedenti.
+
+## Decisioni definitive
+
+1. S1, Obiettivi tassonomici V4 del9 giugno 2026, controlla ammissione, pagina, rango e livello. Un genere non autorizza tutte le sue specie. Esami e risposte-obiettivo dipendono dall'atlante.
+2. S2, Guida ragionata 2021, prevale per la commestibilità. Sei categorie ufficiali:Libera/verde;Condizionata/verde chiaro;Sconsigliato/giallo;Privo di valore/bianco;Tossico/arancione;Tossico mortale/rosso. Categorie aggiuntive restano distinte, senza conversioni arbitrarie.
+3. Fonti del corso autorizzate e bibliografia puntuale sostengono i campi dichiarati. Approvazione amministrativa, attribuzione a un docente, concordanza bibliografica e test software non equivalgono a revisione micologica indipendente.
+4. Foto personali:codice, modulo e test conservati; caricamento/analisi **inaccessibili dall'app pubblica**, anche nelle prossime versioni, fino a nuova autorizzazione. Non riattivare vecchi workflow.
+5. Prodotto corrente:demo gratuita Agaricus; unico annuale completo; prezzo nominale Italia19,99€/anno. Vecchio Base permanente superato. Android resta demo-only. Nessuna modifica al prezzo Apple eseguita in questo ciclo.
+6. Quattro tab:Percorso,Studio,Esame,Aree; abbonamento dal fungo in testata. Saluto con nome solo se legittimamente disponibile e con consenso necessario; altrimenti«Ciao». La richiesta facoltativa del nome ancora nel sorgente va rimossa, senza inferire il nome dal proprietario del telefono.
+7. Nessun force push, cancellazione di sviluppi, revisione/diritto fotografico inventato o indebolimento dei gate. Release pubblica solo dopo prove complete sullo stesso SHA.
+
+## Architettura e sorgenti
+
+Expo 58.0.2,React 19.3.0,React Native 0.88.0-rc.3,Node >=24.3.0. `index.js` registra `App.tsx`; navigazione custom, AsyncStorage per studio/esami; StoreKit 2 nativo per entitlement. `components/` contiene studio,esami,dashboard,aree e accessi; `lib/` policy,ricerca,banche e modello di apprendimento; `hooks/` stato e ciclo acquisti; `modules/` integrazione nativa.
+
+`legacy/web/artifacts/floot-readiness/` e registri `src/data/` alimentano `scripts/prepare-data.mjs`/`prepare-mobile-data.mjs`. Il catalogo generato non è la fonte da modificare isolatamente. `web/build.mjs` produce legacy e app condivisa; le pipeline di pubblicazione abbinano SHA,icona e hash al binario TestFlight. `app.json`,`app.config.js`,`eas.json` fissano versione 1.1.0,identità `it.fungoitalia.app`,incremento build remoto. Il build number di un nuovo candidato non va dedotto da19.
+
+## Lavori recuperati e integrazione del primo ciclo
+
+| Lavoro | Riscontro e azione |
+|---|---|
+|20 lotti scientifici recenti |Tutti presenti in `course-literature.json`,85 record/126 evidenze.13 schede del catalogo non erano sincronizzate; rigenerate.|
+|Regressioni ricerca |SHA completi e cronologia su main; Limacella,Paxillus,Geastrum coperti dal test centralizzato. Nessuna prova che siano nella build19.|
+|Patch prezzi esterna a GitHub |Recuperata `FungoItalia_Prezzi_Apple.patch`; integrato lettore GET paginato con date,preservazione,piani e indeterminatezza. Corretti due casi malformati emersi dalla revisione separata.|
+|PR123 |Recuperato esclusivamente exporter curricolare da46e15b2821605feaa633011c7a6f31a101e9b80a; prova subprocess aggiunta. Non importate fonti duplicate o nuove attestazioni.|
+|PR119 |Ricevuta beta19 recuperata e confrontata con `CONSOLIDATED_TESTFLIGHT_CONFIRMED` del job originale120959327506. Documentazione storica preservata senza sostituire gli handoff correnti.|
+|Recupero MicoLab e sindromi |Già presenti su main:200 foto,15 quadri da8 documenti,attribuzioni alle21 schede; conservati. Nessun asset o collegamento eliminato.|
+|Esami |Conservati tutti 421 quesiti precedenti con le stesse risposte corrette; aggiunte3 domande habitat derivate dalle fonti già registrate. Nessuna nuova foto o specie inserita.|
+
+Le13 schede sincronizzate sono Amanita porphyria,Cortinarius caperatus,Clitocybe gibba s.l.,Coprinus comatus,Clitocybe nebularis,Flammulina velutipes s.l.,Coprinus atramentarius s.l.,Rhodocollybia maculata,Hypholoma fasciculare,Entoloma vernum,Entoloma rhodopolium s.l.,Hygrophorus russula,Hygrophorus penarioides. Cambiano solo habitat,confronti e fonti; identità,giudizi S2,foto e stato di revisione restano identici.
+
+Prove:[integrità catalogo](evidence/master-catalog-integrity-20261026.json),[integrità esami](evidence/master-exam-integrity-20261026.json),[inventario PR/CI](evidence/master-audit-20261026.json),[inventario branch](evidence/master-branch-inventory-20261026.json). L'inventario comprende186 branch remoti,61con commit fuori dalla storia di main. Questa cardinalità non significa che ogni differenza sia nuova: recuperi e squash rendono insufficiente la sola ancestry. Tutti preservati; non si attesta revisione integrale di ogni branch storico.
+
+## PR esaminate e lasciate aperte
+
+Nessuna PR è stata unita integralmente o chiusa in questo ciclo. Le integrazioni sono selettive e tracciate sopra; non dichiarare le rispettive PR«merged».
+
+| PR | Stato/disposizione verificata |
+|---|---|
+|[123](https://github.com/gianpaolobol/fungo-italia/pull/123) |Bozza. Exporter recuperato. Fonti concorrenti duplicate escluse; confronti C.orellanus/G.esculenta e habitat nominale G.marginata da riverificare prima del recupero.|
+|[120](https://github.com/gianpaolobol/fungo-italia/pull/120) |Bozza.15 file nuovi di audit/riconciliazione, nessuna implementazione del doppio esame. Checker riconoscimento volutamente fallisce; eligibility preliminare non verifica da sola viste/diritti. Conservata sul branch.|
+|[119](https://github.com/gianpaolobol/fungo-italia/pull/119) |Ricevuta recuperata. Restanti sostituzioni documentali obsolete rispetto al recupero successivo:non importate.|
+|[117](https://github.com/gianpaolobol/fungo-italia/pull/117) |Bozza storica. Main ha già blocco foto e gate scientifico nella pipeline abbinata; ripristinare l'intero documento potrebbe reintrodurre indicazioni obsolete di accessibilità Foto.|
+|[116](https://github.com/gianpaolobol/fungo-italia/pull/116) |Bozza diagnostica runtime. Matrice/host isolato conservati; non necessari al percorso corrente Xcode26.6/iOS26.2 e non sono prove di release.|
+|[114](https://github.com/gianpaolobol/fungo-italia/pull/114) |Bozza. Alcuni hunk utili di riempimento continuo/rimozione linee e nome non recuperati ancora; restore completo regredirebbe migrazioni,asset,release-status e classificazione minima dei70 gruppi.|
+|[112](https://github.com/gianpaolobol/fungo-italia/pull/112) |Bozza.12/26 file identici a main, modello annuale/demo recuperato. Non riattivare vecchie automazioni di build.|
+|[111](https://github.com/gianpaolobol/fungo-italia/pull/111) |Audit Claude già presente; differenze solo banner storici aggiunti su main. Nessun recupero necessario.|
+|[107](https://github.com/gianpaolobol/fungo-italia/pull/107) |Sviluppo storico dashboard/Base.108 file interessati,12identici; Base e pipeline precedenti superati. Nessun merge globale.|
+|[106](https://github.com/gianpaolobol/fungo-italia/pull/106) |Icona approvata byte-identica a main. Nessun recupero necessario; nuova installazione richiede nuovo binario.|
+|[105](https://github.com/gianpaolobol/fungo-italia/pull/105) |Bozza. Verificatore già equivalente, diagnostica corrente più avanzata. Non ripristinare vecchi esperimenti observer.|
+|[35](https://github.com/gianpaolobol/fungo-italia/pull/35) |Bozza storica beta. Workflow148/66 e preview superati da70 gruppi/pipeline abbinata. Conservata, esclusa dal consolidamento.|
+
+Branch attivi da coordinare:`feature/theory-exam-preparation-20261026`,`fix/science-gap-curriculum-triage-20261026`. I loro SHA esaminati sono nel JSON PR. Qualsiasi aggiornamento successivo richiede nuovo confronto; nessuna riscrittura di questi branch.
+
+## Catalogo, fonti e revisione scientifica
+
+| Misura | Esito corrente | Limite |
+|---|---|---|
+|Catalogo/gruppi |148+70=218 |218 corrispondenze nel registro S1,con pagine/ranghi/livello; tutte attualmente `minimum`. Non significa copertura integrale degli auspicabili/approfondimenti.|
+|Matrice storica |214 |Quattro completamenti S1 separati,senza dati scientifici inventati.|
+|Habitat presenti |48/148,prima37 |100mancanti;97senza evidenza habitat puntuale secondo il gate.|
+|Confronti presenti |63/148,prima51 |85mancanti; presenza non equivale a validazione scientifica.|
+|Odore/sporata/giudizi alimentari |148/146/147 su148 |2 sporate e1 giudizio mancanti; non riempire per inferenza.|
+|Triadi catalogo |143/148 |Presenza e metadati minimi; non prova identità o licenza indipendentemente verificata.|
+|Revisione indipendente |0/148 |148 bloccate,0release-ready.|
+
+Il gate predefinito e l'exporter controllano **148 schede di catalogo**, non tutti218 record. Una lettura aggiuntiva `includeGroups:true` conserva218bloccati,206 triadi,214 odori,212 sporate e147 giudizi. Non attribuire una categoria alimentare unica ai gruppi eterogenei per rendere verde una metrica.
+
+Fascicolo operativo aggiornato:[CSV per 148 schede](reviews/master-20261026/scientific-gap-register.csv),[JSON con pagina/livello/rango/blocchi](reviews/master-20261026/scientific-gap-register.json),[protocollo revisore](INDEPENDENT-MYCOLOGY-REVIEW-PROTOCOL.md). Il fascicolo è una preparazione documentale,senza firma o certificazione indipendente. Seguono i blocchi [121](https://github.com/gianpaolobol/fungo-italia/issues/121) e[124](https://github.com/gianpaolobol/fungo-italia/issues/124).
+
+## Fotografie e riconoscimento
+
+`reference-image-coverage.json`:630 riferimenti,206/218 triadi complete,6 parziali,6 unità senza immagini,24 viste mancanti. Mancano triadi complete per Phlegmacium variiforme,Entoloma saundersii e i 4 completamenti S1; manca underside per tre Ramaria e i gruppi Ramaria,Morchella,Verpa.
+
+Registro chat separato:200 fotografie,150collegate,50solo fonte,229 relazioni a79 schede.76 casi usano foto supplementari:27 fotografici e49teorici. Le foto del corso non diventano automaticamente nuove triadi diagnostiche. Autorizzazione del titolare e attribuzioni ai docenti sono registrate; non attestano proprietà/licenza o revisione indipendente non documentate. Nessuna nuova pubblicazione fotografica in questo ciclo.
+
+## Esami e apprendimento
+
+| Requisito | Implementazione verificata | Aperto |
+|---|---|---|
+|Riconoscimento |86 casi fotografici su148catalogo (58,1%);86/218 unità totali (39,4%). Sessioni15,autocomplete3lettere,feedback per campo,ripasso errori. |62 schede catalogo senza caso fotografico;70 gruppi senza caso fotografico autonomo. Applicabilità fotografica per rango da definire,senza inventare identità.|
+|Copertura dei casi curricolari |86 foto+132profili=218/218 |È copertura di casi misti,non100%riconoscimento.|
+|Teoria corrente |424 quesiti nei132 casi integrativi;421precedenti preservati,3 habitat nuovi con fonti. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
+|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero424non dimostra100%.|
+|Regressioni |Marasmius oreades:identità/commestibilità separate;Amanita rubescens:autocomplete;feedback e ripasso nei test locali |Conferma fisica della nuova build ancora assente.|
+|Percorso e storico |Quattro tab,progressi,ripresa,lacune e sessioni adattive presenti;revisioni compatibili conservate |UI nome facoltativo e riempimento/linee fungo ancora da riconciliare conPR114.|
+
+## Test del ciclo
+
+| Controllo | Esito |
+|---|---|
+|Installazioni lockfile root/web |PASS |
+|Rigenerazione ripetuta |PASS;stesso SHA256 catalogo `c9b4d181507f5405a3d34cd06b5f7d04ffe3a02611aa1ee5ec1da8fcb90f9855` |
+|`node --test scripts/*.test.mjs lib/*.test.mjs` |235/235 PASS,0skip |
+|Prezzi |21/21 PASS;2regressioni malformate primaRED poiGREEN |
+|Exporter |TestRED prima del recupero,poiPASS;strict mantiene exit1 |
+|TypeScript,sintassi script,whitespace |PASS |
+|`node web/build.mjs` |PASS,legacy e app condivisa;artefatto locale con sorgente non ancora firmato |
+|WebKit/Chromium |65/65 PASS ciascuno |
+|`node web/smoke-unified.mjs` |PASS,4 tab e offline |
+|`npm run validate:release` |FAIL atteso:148 bloccate,0 revisioni indipendenti |
+|`node scripts/audit-toxicology-release.mjs --strict` |FAIL,attestazioni tossicologiche indipendenti mancanti |
+|Revisione tecnica separata |Difetto dati malformati prezzi corretto con due regressioni;nessun ulteriore blocco concreto rilevato. Non è revisione micologica.|
+
+## CI,StoreKit e distribuzione
+
+- Ricerca e TypeScript su 3e87d95:[40301473171](https://github.com/gianpaolobol/fungo-italia/actions/runs/40301473171)SUCCESS. Pipeline Android sullo stesso SHA:[40301473220](https://github.com/gianpaolobol/fungo-italia/actions/runs/40301473220)SUCCESS con build/smoke;pubblicazioneAndroid saltata. Non è nuova prova iOS.
+- Su 7b0081a:[native40300548882](https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548882)SUCCESS;[UI40300548864](https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548864)FAIL iPhone/iPad;[demo40300548865](https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548865)FAIL entrambi. I log UI attestano PASS del singolo ciclo annuale,ma il fallimento demo rende rossa l'intera suite. Nessun successo globale dedotto da quel sottotest.
+- Demo iPhone,job121498211627:riga146«Torna al menu del test»esiste ma non è hittable. L'esame attivo è unaScrollView lunga;il runner aspetta ma non scorre. Diagnosi coerente con log/sorgente,geometria precisa da confermare con artefatti. Prossima correzione:scroll mirato e limitato,poi tap rigoroso e verifica menu;non rimuovere assert Apple.
+- [Pipeline abbinata40300548993](https://github.com/gianpaolobol/fungo-italia/actions/runs/40300548993)FAIL già allo step rigenerazione senza drift:catalogo obsoleto. Riprodotto e corretto in questo ciclo;il gate scientifico rimane bloccante anche dopo tale correzione.
+- Le prove locali riguardano il contenuto consolidato;nessuna nuova esecuzione nativa macOS sulloSHA consolidato è attestata in questo documento. MacOS/Xcode26.6/iOS26.2 restano l'ambiente qualificato;acquisto,riapertura,ripristino,rimborso,scadenza/revoca ed entitlement/UI restano obbligatori su entrambi i dispositivi simulati.
+
+Ultima distribuzione storica verificata:[run40122020361](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361),sorgente279d50e842a95c6a7d8e3499806b3fd5c42996e7,versione 1.1.0(19),AppleVALID e gruppo interno;web promosso e smoke riuscito. [Ricevuta esatta](evidence/ios-build19-20261024.json):`diagnosticOnly=true`,`appStoreReady=false`. Non contiene il recupero successivo o le correzioni ricerca e non qualifica questa baseline.
+
+Ultimo audit Apple disponibile dagli handoff:[40244865480](https://github.com/gianpaolobol/fungo-italia/actions/runs/40244865480),26ottobre:sorgentee158000,AppStore1.0REJECTED associata alla9;annualeREADY_TO_SUBMIT,metadatiREADY_FOR_REVIEW. È riscontro datato,non nuova lettura del portale in questo ciclo. Privacy tecnica da verificare nell'interfaccia Apple;probeAPI404non prova assenza/completezza.
+
+Prezzo:il vecchio9,99€derivava dal primoITA della prima pagina. Il nuovo audit legge calendario completo,preservati,piani e transizioni,fallisce chiuso su dati ambigui e non determina il prezzo di un singolo abbonato. Nessun nuovo prezzo attivo attestato qui. Un push del nuovo script attiva il workflow di lettura autorizzato;il risultato va letto e registrato prima di modificare metadati o affermare una tariffa Apple effettiva.
+
+## Roadmap eseguibile e blocchi
+
+1. **P0 consegnato in questo ciclo:**inventario,recuperi selettivi,catalogo sincronizzato,regressioni,master e dossier;PR/branch incompleti preservati. Rileggere sempre main/PR prima di riprendere per evitare sovrascritture concorrenti.
+2. **P1 prossimo:**lavorare sul CSV delle148 schede,completare100 habitat/85 confronti e le evidenze mancanti;riverificare le3proposte scientifiche residuePR123 con le fonti originali;triadi/diritti e revisore qualificato restano blocchi reali.
+3. **P2:**separare i due esami senza perdere storico,creare matrice programma↔quesiti,risolvere96 provenienze vuote e62 casi fotografici mancanti quando le prove lo consentono.
+4. **P3:**recupero miratoPR114,nome e fungo continuo;confermare ricerca su nuovo iPhone/TestFlight e paritàweb.
+5. **P4:**correzione runner demo con scroll,prove completeiPhone/iPad e audit prezzi aggiornato;non usare iPASSstorici per nuovoSHA.
+6. **P5:**solo dopo tutti i gate,congelareSHA,buildEASproduction,legameSHA/binario,upload,processing,disponibilitàTestFlight epreparazioneAppStore. La pubblicazione definitiva rimane vietata finché manca una condizione.
+
+Nessun token,chiave o attestazione professionale aggiunto. I lavori che richiedono fonti/diritti o revisione esterna restano esplicitamente irrisolti;il completamento del consolidamento non chiude tali blocchi.

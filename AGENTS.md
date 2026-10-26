@@ -1,3 +1,7 @@
+## Riferimento operativo unico — 26 ottobre 2026
+
+Leggere prima [docs/MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Contiene baseline applicativa, decisioni attuali, recuperi selettivi, PR, test e blocchi. Aggiornarlo dopo ogni intervento. Gli handoff precedenti sono cronologia: non ripristinare istruzioni superate. Il completamento P0 non autorizza release con gate scientifici o Apple falliti.
+
 # Fungo Italia — istruzioni per agenti AI
 
 ## Identità e vincoli

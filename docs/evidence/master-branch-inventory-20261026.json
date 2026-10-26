@@ -1,0 +1,1308 @@
+{
+  "baseline": "3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c",
+  "count": 186,
+  "branches": [
+    {
+      "branch": "origin",
+      "sha": "3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c",
+      "behindMain": 0,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "audit/claude-full-review-20261021",
+      "sha": "88c3597725f193e5d42316b6a76a643f95ebf776",
+      "behindMain": 50,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "audit/guida-ragionata-commestibilita-20261022",
+      "sha": "af33f650bd321e423c9de54c8283f3ab49e62b42",
+      "behindMain": 39,
+      "aheadOfMain": 17,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "audit/storekit-runtime-matrix-20261022",
+      "sha": "b43045b9668565040b43a42fb9e19a62d374ce2a",
+      "behindMain": 40,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "backup/main-before-consolidation-20261021",
+      "sha": "6aa68489c7b29582be6bcddae56f2a46fb29d10e",
+      "behindMain": 50,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/main-before-photo-framing-merge-20261008",
+      "sha": "b89e4b175fad718ed35557dd3662f35c8f6a89af",
+      "behindMain": 461,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/main-pre-beta-publish-20261009",
+      "sha": "277466878a64f6c49eecb691ecd9c6fb595ef41a",
+      "behindMain": 441,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-admin-photo-editor-2026-10-07",
+      "sha": "54df1a24483edf2c32e04e7e9beb98d60c579bc4",
+      "behindMain": 493,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-atlas-data-cleanup-oct07",
+      "sha": "8d4b4ecb138c52490f8d9e0349a2b3e97022607e",
+      "behindMain": 592,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-clean-study-ui-oct07",
+      "sha": "80598ad800e25ced7e3a2693437135c93cf55d58",
+      "behindMain": 596,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-complete-reference-triplets-2026-10-07",
+      "sha": "75eda31798171fc146c3d66a6d919d1a09b16ca2",
+      "behindMain": 530,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-course-integration-2026-10-07",
+      "sha": "949b302a2ec480b495732023485f2f76fda5521e",
+      "behindMain": 587,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-external-reference-photos-2026-10-07",
+      "sha": "a0def5bf64a6a9a64b928e4fdfcf0eaf92bd75b7",
+      "behindMain": 539,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-migration-flutter",
+      "sha": "68fce519e93a4646218ce360811bb174d241a032",
+      "behindMain": 722,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-phone-photo-import",
+      "sha": "c0562166a2f50b7fc95b597f42ef12919fd16618",
+      "behindMain": 611,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-reference-photos-2026-10-07",
+      "sha": "1546ae8ac150b3fdb88bab9f9dd0b0802b956da1",
+      "behindMain": 572,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-study-completion-oct06",
+      "sha": "d7e9622ac9e5494156d712f8d89fbfceb1e994f4",
+      "behindMain": 605,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/pre-study-profiles-2026-10-07",
+      "sha": "4298a85d98934ea45ee655fe76aca740b227dd73",
+      "behindMain": 578,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/recovered-runtime-20261023",
+      "sha": "e96cc0c56d35aedf1938d1cd564b4911a2813b31",
+      "behindMain": 39,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "backup/recovered-source-20261023",
+      "sha": "3e656f571482c92344c55abfc6950a97bfd75171",
+      "behindMain": 38,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/reference-images-reviewed-2026-10-07",
+      "sha": "c4279d00bcb57874bc94e4f46a8b08216047a974",
+      "behindMain": 527,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "backup/verified-web-readiness",
+      "sha": "e3b9ca01bd43ec87d3630ab954c45229b2ba15e1",
+      "behindMain": 706,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "beta-primary-preview",
+      "sha": "4265e58156b73bfd2c805a689cb2c65201eede88",
+      "behindMain": 287,
+      "aheadOfMain": 3,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "chore/testflight-group-audit",
+      "sha": "0a3ece03440b37d365e34cc0c6293ec8336348c1",
+      "behindMain": 55,
+      "aheadOfMain": 9,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "chore/verify-store-privacy-access",
+      "sha": "7340b3dbf4d5ab62332b78e77a5b3c37dad2a179",
+      "behindMain": 173,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/consolidation-cleanup-20261021",
+      "sha": "78c68961d6d11080cf650c17dd735772b5a406ee",
+      "behindMain": 47,
+      "aheadOfMain": 7,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "ci/free-runner-signed-subscription-build",
+      "sha": "f32176dc52d5b5671322a240bc09c10007c87ddb",
+      "behindMain": 135,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/ignore-superseded-storekit-release-runs",
+      "sha": "8c6f514c57b8f07efe58ea269a3c0cf9c594a43a",
+      "behindMain": 137,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/ipad-driver-startup-and-native-cache",
+      "sha": "349f27f1dd22278acc94659c99ab5d04fd043d8a",
+      "behindMain": 117,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/original-screenshot-review-chunks",
+      "sha": "bfc5ef2b5bcc18718373b9d73856d699a6aade9c",
+      "behindMain": 121,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/reuse-authorized-apple-submit-key",
+      "sha": "6e1639b39fb05826b16e52216ea8e1b687af79c9",
+      "behindMain": 65,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/subscription-build-efficiency",
+      "sha": "31a93fa4938994a5978c26756908858f81d7868e",
+      "behindMain": 141,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ci/testflight-only-subscription-candidate",
+      "sha": "5c80b1d2c017716896da0b266dd72e9b5e236ee8",
+      "behindMain": 67,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "design/study-dashboard-v1-1",
+      "sha": "2c893c60db17f492b926be316321445bcb28040b",
+      "behindMain": 55,
+      "aheadOfMain": 36,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "docs/annual-storekit-privacy-20261016",
+      "sha": "96b3a1f973ebf3f3fee7a14cd78674c76003d4ea",
+      "behindMain": 115,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "docs/annual-subscription-verified-status",
+      "sha": "f976b680c6d9e77008a41c1bece56135eb99e4e6",
+      "behindMain": 61,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "docs/apple-valid-annual-candidate-9",
+      "sha": "a39ef8b4794e0669e25a4de0d15994389eee66de",
+      "behindMain": 58,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "docs/beta19-handoff-evidence-20261025",
+      "sha": "b9c8cd2b40fc8702797c09960757de73f2ba8a90",
+      "behindMain": 35,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "docs/handoff",
+      "sha": "a0b45c36886921119ba2c030a222af6264f37b22",
+      "behindMain": 51,
+      "aheadOfMain": 2,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "docs/ios-release-audit-20261022",
+      "sha": "95a3b95c58f68b9ee823d204c0947e3cf2a162e7",
+      "behindMain": 39,
+      "aheadOfMain": 8,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "docs/store-final-verified-status",
+      "sha": "bf92364abc931f70212ee245a889c5ee7792434d",
+      "behindMain": 160,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "docs/store-owner-privacy-status",
+      "sha": "4f61e4f9d0473efe2f6638a8e1a1f02e932c4241",
+      "behindMain": 166,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "docs/verified-annual-subscription-status",
+      "sha": "8f1b64565bec515bb08ae1d1bbea81a107741bd7",
+      "behindMain": 99,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "docs/verified-paid-store-status",
+      "sha": "0145963a6967cf2a5c79cf1d6df8de79f7da07cc",
+      "behindMain": 179,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/admin-photo-browser-tests",
+      "sha": "78f31944ce9b07f03fff138c4fa14f699c7e1cb6",
+      "behindMain": 489,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/admin-photo-core-integration-draft",
+      "sha": "3d6ffd95663fbfaeca060585b503fa30bfed3109",
+      "behindMain": 491,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/admin-photo-editor",
+      "sha": "bf788f0cc63e1cc4d08aa51c97560a93f6ae7281",
+      "behindMain": 478,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/admin-photo-integration-draft",
+      "sha": "e9340bb98e9e2f2edea60d7e3b397626259f84ac",
+      "behindMain": 492,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/app-store-italian-paid-listing",
+      "sha": "8a5304c7098f7f491ec00a0c39c322bdb5536e86",
+      "behindMain": 193,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/app-store-paid-release",
+      "sha": "9f9b18977bc568d61e3d2de53bf58edca38b256d",
+      "behindMain": 198,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/beta-content-gate-oct08",
+      "sha": "f84781c77b74e48b3c3eaf66c084d28374dcbc78",
+      "behindMain": 448,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/cloudflare-production",
+      "sha": "4f982fa187cd23f8f4070a77c2dbe6780b7656af",
+      "behindMain": 734,
+      "aheadOfMain": 24,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/commercialization-labels",
+      "sha": "45435c10a862e2d712d18697206c585d0149b3e1",
+      "behindMain": 494,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/complete-minimum-3plus1-web-evidence-v1",
+      "sha": "322be116e5c72ab5f3aed558d4616e17e16e153d",
+      "behindMain": 734,
+      "aheadOfMain": 35,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/complete-reference-triplets",
+      "sha": "87e20f47ac6d74ea2c94c6dc0184218cbea0dc2e",
+      "behindMain": 498,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/continuous-mushroom-navigation-20261021",
+      "sha": "1d0ef93ec92cfef16df327d07519f11b11d4cf29",
+      "behindMain": 46,
+      "aheadOfMain": 20,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/course-syndromes-20261024",
+      "sha": "a5aa27f896bc1cd431c983ad0686f2ae1e9fa475",
+      "behindMain": 39,
+      "aheadOfMain": 2,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/evidence-claims-v1",
+      "sha": "0d156d5d9a599126028a134f9f5395b61097bb9b",
+      "behindMain": 875,
+      "aheadOfMain": 17,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/expo-migration",
+      "sha": "ac277bd30b25f21dbdb492603a4be53956696e56",
+      "behindMain": 697,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/external-reference-photos",
+      "sha": "75eda31798171fc146c3d66a6d919d1a09b16ca2",
+      "behindMain": 530,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/floot-migration",
+      "sha": "52ef692f647608d2151b3cfd5e9987fc2d29b8ff",
+      "behindMain": 734,
+      "aheadOfMain": 6,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/foraging-symbols-v1",
+      "sha": "ddf695d385659f06691b17ef7bd37b8362c7de54",
+      "behindMain": 723,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/ios-pwa",
+      "sha": "f67d43e828b83b02cf3e90390af2a85b9ae090e5",
+      "behindMain": 679,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/iphone-shortcut-export",
+      "sha": "098ecf3c13fb0fd9d69aa20d9f0588315e2b0eec",
+      "behindMain": 605,
+      "aheadOfMain": 3,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/minimum-edibility-v1",
+      "sha": "739e41426b7337d94ce9b587453694741e134c69",
+      "behindMain": 875,
+      "aheadOfMain": 28,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/minimum-profiles-v1",
+      "sha": "739e41426b7337d94ce9b587453694741e134c69",
+      "behindMain": 875,
+      "aheadOfMain": 28,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/native-store-screenshots",
+      "sha": "f923ea2842a76faf3874d5c6743d9bef9b60251b",
+      "behindMain": 189,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/percorso-parity-subscriptions-20261021",
+      "sha": "0175a3781e373d3f1c91ca6588e283d1b9450944",
+      "behindMain": 43,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/phone-photo-import-oct06",
+      "sha": "d7e9622ac9e5494156d712f8d89fbfceb1e994f4",
+      "behindMain": 605,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/photo-framing-verified-oct08",
+      "sha": "c0ed54f6dc84cbe5589c840d57c1baf7bd22720a",
+      "behindMain": 442,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/production-readiness-20261002",
+      "sha": "e3b9ca01bd43ec87d3630ab954c45229b2ba15e1",
+      "behindMain": 706,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/profile-readiness-oct06",
+      "sha": "d55c29c5deea35b5787d85ebd340d728411c87d0",
+      "behindMain": 612,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/release-readiness-gate-oct08",
+      "sha": "91c4da2f397bd615250cfececf2a079cfd73808f",
+      "behindMain": 474,
+      "aheadOfMain": 4,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/research-forecast-v2",
+      "sha": "5e4ea8ac05a344f83ea6fd241f1e18b32c1ec2c2",
+      "behindMain": 729,
+      "aheadOfMain": 17,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/schede-summary-design",
+      "sha": "ee9630f9b37f9d9817eeac50cb7e0081de29afad",
+      "behindMain": 723,
+      "aheadOfMain": 42,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/scientific-profile-coverage-oct08",
+      "sha": "1225d2b8e0d653a1b53ff937b2b68b93943fabc9",
+      "behindMain": 391,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/scientific-review-workbench-v1",
+      "sha": "4326e4f8cd98337defd44d46b1b01b21929fab50",
+      "behindMain": 734,
+      "aheadOfMain": 8,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/source-enrichment-2026-09-29",
+      "sha": "ca35c675402ca2c7b6d80bec3cc9c7402e1791ad",
+      "behindMain": 733,
+      "aheadOfMain": 6,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/stable-learning-taxonomy-v1",
+      "sha": "54be658bd610420c7854778526626d75eed3ddc0",
+      "behindMain": 738,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/store-screenshot-evidence",
+      "sha": "0ef66bd5e022f733de548e65e20896e4fcdcc8f5",
+      "behindMain": 185,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/study-completion-oct06",
+      "sha": "8d4b4ecb138c52490f8d9e0349a2b3e97022607e",
+      "behindMain": 592,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/study-layout-oct07",
+      "sha": "a0def5bf64a6a9a64b928e4fdfcf0eaf92bd75b7",
+      "behindMain": 539,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/territorial-forecast-v3",
+      "sha": "a85daec8463320bd25eb699289421b944b0d432f",
+      "behindMain": 725,
+      "aheadOfMain": 16,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "feat/verified-native-screenshot-upload",
+      "sha": "4ac68d5aa361f353ce835efb46ed04f2795b748c",
+      "behindMain": 175,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feat/worldwide-app-store-availability",
+      "sha": "ec54e29784160b7e0a89f0d8a3682d9a08e0e620",
+      "behindMain": 183,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feature/native-annual-subscription",
+      "sha": "3a85b955c65b08b47d75ef546f693460af6487a3",
+      "behindMain": 149,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "feature/theory-exam-preparation-20261026",
+      "sha": "6ce90860025f528d4eb296175ae15b53bab523c9",
+      "behindMain": 30,
+      "aheadOfMain": 25,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/admin-browser-container-python",
+      "sha": "5ab4f126dbf21c471de9eb36b5e7583281bbdce0",
+      "behindMain": 483,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/admin-genus-photo-label-tests",
+      "sha": "9beebea996e6681e22552b06d4e864e3eb8b7b27",
+      "behindMain": 487,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/admin-password-test-completion",
+      "sha": "82570af427daae4b26e700c809dda6efe9c163ec",
+      "behindMain": 476,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/admin-photo-api-simulation-routing",
+      "sha": "1b34a0a2769206cc9aaaa222d053fa55bcc051f5",
+      "behindMain": 479,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/admin-photo-error-diagnostics",
+      "sha": "3785d9a6cae197d2b671595109b63c68d9eb13bd",
+      "behindMain": 481,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/admin-photo-lifecycle-verification",
+      "sha": "451ce773c7cff67bcc0c53e566de9beb6bdc72d3",
+      "behindMain": 485,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/admin-photo-native-updates-and-status",
+      "sha": "0aa5b0f07da344a15fc6f2f2a8d2f619aea7778c",
+      "behindMain": 73,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/app-review-20261021",
+      "sha": "d065840811e78434b0b65eb26ac9025c0edf9582",
+      "behindMain": 50,
+      "aheadOfMain": 7,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/app-store-italian-price-resource",
+      "sha": "a92755298783ff687462ae57d2f8bef57f3a54d5",
+      "behindMain": 191,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/app-store-key-team-metadata",
+      "sha": "48c471002adc447a3303c24850951e17d4b0065d",
+      "behindMain": 196,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/apple-storekit-simulator-runtime",
+      "sha": "dd1b69418879d054aa8a5eaed0d4b7f1b9031be1",
+      "behindMain": 111,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/approved-iphone-icon",
+      "sha": "5b415422edb8df820d61a4f019f330621b539384",
+      "behindMain": 55,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/hosted-storekit-provider-isolation",
+      "sha": "11e694504d3b55e04b1801997ee76d933d7a6722",
+      "behindMain": 83,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/inspect-exam-click-timing",
+      "sha": "85a3d3f0c4a77228174d1b5b7c1a350624883e32",
+      "behindMain": 87,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/inspect-storekit-purchase-evidence",
+      "sha": "11299e1c7de787f35e15d8d10aad171f28a04ee9",
+      "behindMain": 95,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/ios-native-evidence-complete",
+      "sha": "2bbe43188dbc07b03d98a1a041ed994bc32bf523",
+      "behindMain": 77,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/ios-require-native-storekit-pass",
+      "sha": "33fd54af6c6b3c2e628132c3cdbc6c260abe6edd",
+      "behindMain": 78,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/isolated-async-storekit-ui",
+      "sha": "d720d2cc65332e10693686f586a325ef10317d29",
+      "behindMain": 81,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/native-capture-source-cache",
+      "sha": "4414c680dc05739f316b911da0e2e42b89947117",
+      "behindMain": 170,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/native-icon-png-integrity",
+      "sha": "ada6c2a4702a6a78edc497b070a1bb91756d0954",
+      "behindMain": 187,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/native-screenshot-output-directory",
+      "sha": "e395816e0666aae41589b0245d5635cc9d1ec151",
+      "behindMain": 171,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/offline-subscription-access",
+      "sha": "1d575c3403c8cd27d612bf6d7df8d4695cdf25f7",
+      "behindMain": 133,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/offline-toast-touch-through",
+      "sha": "0ff1d0d32d9a7fec5501fcbc011e4abc71379dc8",
+      "behindMain": 85,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/read-mobile-exam-failure-evidence",
+      "sha": "20e5e34b0b93547071b22450e68cca301dceb100",
+      "behindMain": 89,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/require-storekit-evidence-for-ios-updates",
+      "sha": "9bbf8ca9f1c6f1b648f93ade8275dd26705054ad",
+      "behindMain": 107,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/safari-admin-cache-images-oct08",
+      "sha": "500238079cd99b80301cb9f60295f588ec629594",
+      "behindMain": 473,
+      "aheadOfMain": 5,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/science-gap-curriculum-triage-20261026",
+      "sha": "e1918faff08ddd104aae3c1f5a5d8cc9c079fed9",
+      "behindMain": 23,
+      "aheadOfMain": 10,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/single-sku-verified-annual-access",
+      "sha": "665a0801cdf70ea560afb7c470fb4ebacf0e0623",
+      "behindMain": 69,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/store-categories-and-current-xcode",
+      "sha": "b0ba7b55208fe776c8ebcea6d840589beff5d3c0",
+      "behindMain": 177,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/store-legal-page-offline-routing",
+      "sha": "09bc5833e9fdab5e61b70f3a3e46ceb89db13f3e",
+      "behindMain": 168,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/store-native-toolchain-and-territories",
+      "sha": "0073d3bb1df49d443de6a4fecc8c73789303e596",
+      "behindMain": 181,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-cold-start-diagnostics",
+      "sha": "899602520a14296260343a1702b2e680f1e48207",
+      "behindMain": 55,
+      "aheadOfMain": 4,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/storekit-late-verification-and-ui-diagnostics",
+      "sha": "3b47d1cf632ff22a7a604ba2abb9623fb496c9b8",
+      "behindMain": 75,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-runtime-download-20261022",
+      "sha": "ba9a01cce752390deb7d58e685bff3f6f1e54ee6",
+      "behindMain": 40,
+      "aheadOfMain": 8,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/storekit-scheme-only-20261022",
+      "sha": "70b70c5338c1b4b30713f5425c9b94096176ef54",
+      "behindMain": 43,
+      "aheadOfMain": 3,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "fix/storekit-test-availability-20261016",
+      "sha": "e670bbf23a4cf71da6af3074b63dbeb2f7fcd719",
+      "behindMain": 97,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-test-bundle-and-platform-scope",
+      "sha": "c5b7189ecd70a54157cb3f62b244055244698876",
+      "behindMain": 123,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-test-readiness-and-imports",
+      "sha": "6d92e7817034034bae8e97a2fc5653654e97bf90",
+      "behindMain": 103,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-test-shared-scheme",
+      "sha": "3f89aecb174dd221be0da61abe304f9e4200936c",
+      "behindMain": 143,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-ui-simulator-latency",
+      "sha": "06121eb7ed21efc8458753033b19f9f9c15f4cb6",
+      "behindMain": 91,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/storekit-visible-purchase-context",
+      "sha": "852a6c2f0229d10751711ac38a8faf0f15ed0773",
+      "behindMain": 93,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/subscription-availability-before-prices",
+      "sha": "5d1024aa554669ef486b935995afcc8c65a820a3",
+      "behindMain": 151,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/subscription-feedback-order",
+      "sha": "92fa0a6bb36667375898c47747dfa21f5adf8661",
+      "behindMain": 131,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/subscription-refresh-callback-type",
+      "sha": "a216b75116a244d73a836f39b436e21ae1d1254c",
+      "behindMain": 129,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/verified-purchase-readiness-and-native-test-host",
+      "sha": "59767ceb7672836c0ad13a94c542f119fc440d8e",
+      "behindMain": 63,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "fix/web-curriculum-matrix-20261026",
+      "sha": "fc333fc380a8208075bff6221d25e932e1d3209a",
+      "behindMain": 29,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "main",
+      "sha": "3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c",
+      "behindMain": 0,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ops/read-versioned-subscription-metadata",
+      "sha": "9830f222c4adac99a455a220ff4e52430764cc69",
+      "behindMain": 113,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ops/select-verified-annual-subscription-build",
+      "sha": "a25c7551c6661f52c8324a6449f88053bbf21351",
+      "behindMain": 105,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "ops/verified-production-content-updates",
+      "sha": "82166d71ebde6999bdb0bae04c71355bb74eba31",
+      "behindMain": 109,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "photo-library",
+      "sha": "4b8090c729342bcceabae6eea40d5869fa236c58",
+      "behindMain": 605,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "recovery/final-integrated-20261025",
+      "sha": "9d3254c7fb157c8fd51cf014e9da394d7191f9f1",
+      "behindMain": 33,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "release/beta-primary-review-20261008",
+      "sha": "8f54dd2f3f5fd9fe718fa5304175eeaee5f03eb8",
+      "behindMain": 287,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/course-photo-extraction",
+      "sha": "2aac83840a189c78f4f397cd60a3ca1e4704164d",
+      "behindMain": 572,
+      "aheadOfMain": 10,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/external-reference-photos",
+      "sha": "c6672138e3b2dd3ed66a3e101a9663bc137fc6f2",
+      "behindMain": 539,
+      "aheadOfMain": 25,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/focused-reference-v11",
+      "sha": "0edb0d77ce66c7e49018a58acbcba24bb2457977",
+      "behindMain": 539,
+      "aheadOfMain": 37,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/large-course-archives",
+      "sha": "06f4b96832b7a613c92abbd8e7085eb2526a8111",
+      "behindMain": 582,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-photos",
+      "sha": "bdd59dfea2008b5f37b703dda364b2a766e93ae6",
+      "behindMain": 539,
+      "aheadOfMain": 27,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v2",
+      "sha": "00c9fa88812d0359b7a116f9a8b3f8a4a2c14116",
+      "behindMain": 539,
+      "aheadOfMain": 29,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v3",
+      "sha": "2b7575fa4c972b4f97f6b38333a71dff656d5379",
+      "behindMain": 539,
+      "aheadOfMain": 31,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v4",
+      "sha": "bd6298720dd9598b2b0bea0565918049292bc4f5",
+      "behindMain": 539,
+      "aheadOfMain": 33,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v5",
+      "sha": "2935e43310897716275828e4b0c366a34ea59e42",
+      "behindMain": 539,
+      "aheadOfMain": 33,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v6",
+      "sha": "d0cc219bc2ef9b4db696550d1c3175a3242bb9a3",
+      "behindMain": 539,
+      "aheadOfMain": 33,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v7",
+      "sha": "008cdbdfe859f4db8869430b958a78c157b9ced6",
+      "behindMain": 539,
+      "aheadOfMain": 35,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v8",
+      "sha": "89a7e5a436a4bf83d4ab136b8fb0ee0be5850499",
+      "behindMain": 539,
+      "aheadOfMain": 34,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/primary-reference-v9",
+      "sha": "4a4ae7c10a313e9729b43c79feba4b6187d2c81d",
+      "behindMain": 539,
+      "aheadOfMain": 35,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/reviewed-community-4ee8a77301d6",
+      "sha": "4ee8a77301d63852a2a23f3c4f5ecae4020d26ef",
+      "behindMain": 539,
+      "aheadOfMain": 38,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/reviewed-community-5403b5a64602",
+      "sha": "5403b5a646025f1502a8ec06bb924420ef229984",
+      "behindMain": 539,
+      "aheadOfMain": 36,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/reviewed-community-721fa6349343",
+      "sha": "721fa6349343450e54128598f9845e9d129b3319",
+      "behindMain": 539,
+      "aheadOfMain": 37,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "research/targeted-reference-v10",
+      "sha": "b40163815b601d0f4d0cc52d8c2fc39800707837",
+      "behindMain": 539,
+      "aheadOfMain": 36,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "review/47-verified-anatomical-views",
+      "sha": "2941c78a6a571f56dd41d6a0923e611d575c0685",
+      "behindMain": 521,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/87-verified-specimen-views",
+      "sha": "88e0f3db7e354afeeb0911b56a3c3897e6ad6c47",
+      "behindMain": 524,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/actual-612-view-coverage",
+      "sha": "5e66bfa1699535a0e542022a3e38f907748aeca1",
+      "behindMain": 518,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/annual-free-preview",
+      "sha": "49659d26f28e125a78b202b36f1c94dae263486d",
+      "behindMain": 126,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "review/annual-native-screens-20261016",
+      "sha": "f74a432861cb20f17b5602fdb8d9fde507fb3c72",
+      "behindMain": 106,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "review/commercialization-genus-scope",
+      "sha": "ed92ba5db4dc55e56ff76092f11fb0ffda3881a3",
+      "behindMain": 495,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/deduplicate-final-photo-records",
+      "sha": "404f4ddd828d15aaa985d127b5cf8d97d74f3135",
+      "behindMain": 500,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/eleven-primary-anatomical-views",
+      "sha": "4345e3d34bafb99469b02a67a215bb096be2144f",
+      "behindMain": 513,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/final-630-view-delivery",
+      "sha": "1a5044b9be7d6e9cece365c9dabb97e8322efb27",
+      "behindMain": 504,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/final-focused-photographs",
+      "sha": "095e17863d619030c5f3aba2278686fc0088ab40",
+      "behindMain": 502,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/final-three-triplets-and-clear-agaricus",
+      "sha": "1a08ce9731b28f7a97b54fad6c966a8e5349c804",
+      "behindMain": 507,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/four-additional-oblique-views",
+      "sha": "0988e40efcc9776830d905d060fbb1a362805151",
+      "behindMain": 516,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/ipad-original-screenshot",
+      "sha": "eef1f2dce093fc0ac0499e9d6997e49f7b10a856",
+      "behindMain": 163,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "review/isolated-storekit-failures-20261016",
+      "sha": "6967b72210737d940853449459898a2b6862e671",
+      "behindMain": 76,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "review/photo-adaptation-credits-and-sterile-surface",
+      "sha": "be10ef0ac5d7325458a735d9b0017dfc72730a9f",
+      "behindMain": 510,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "review/pwa-exam-click-20261016",
+      "sha": "74e648ee51429ae69f9a2dbe657fdb49e2cb0da5",
+      "behindMain": 86,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "review/storekit-third-failure",
+      "sha": "bfd54ddbc6d27068703b693e230a84c12835fb8e",
+      "behindMain": 94,
+      "aheadOfMain": 1,
+      "ancestorOfMain": false
+    },
+    {
+      "branch": "store/annual-listing-and-terms",
+      "sha": "7fcd2c4782ebd5f466b4439458d0350421f195a0",
+      "behindMain": 147,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/annual-pricing-worldwide",
+      "sha": "d1a8c2a6f693873c336002ab00a5056e58c7a43e",
+      "behindMain": 153,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/annual-readback-audit",
+      "sha": "5d1898284d03896816a51d753b466ee6923153bc",
+      "behindMain": 125,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/annual-review-assets-and-support",
+      "sha": "09505e787678666fe6060fb81a8ded2d1139449d",
+      "behindMain": 139,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/annual-subscription-setup",
+      "sha": "789ae21014a161b919766219b97cc084cadf8641",
+      "behindMain": 155,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/inspect-original-ipad-screenshot",
+      "sha": "776f7076a43f43e11a00d493daaf678f1a5c8c3d",
+      "behindMain": 164,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/native-screenshots-2026-10-15",
+      "sha": "be6f2f9a7442e3452dd29effc52e547f50a87e7c",
+      "behindMain": 164,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "store/reviewed-annual-subscription-screenshots",
+      "sha": "6628e5d502c63ef1cd3bf8290a614a6f9bc5d842",
+      "behindMain": 101,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "test/storekit-matched-xcode-runtime-26-4",
+      "sha": "dd67570b6d96da2a037877fda9c7b81cdfcc6537",
+      "behindMain": 71,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "test/storekit-real-purchase-interface",
+      "sha": "cecb67dbf48eff39dd11c2c4d90fc9a2119bf3c0",
+      "behindMain": 119,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "test/storekit-verified-entitlements",
+      "sha": "076c144482af20c62d38122c7f1fd7856378fb9e",
+      "behindMain": 145,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    },
+    {
+      "branch": "test/subscription-preview-accessibility-selector",
+      "sha": "8b3874ad0a98e0ece0f1088e3bf68e33ae6a3d29",
+      "behindMain": 127,
+      "aheadOfMain": 0,
+      "ancestorOfMain": true
+    }
+  ]
+}

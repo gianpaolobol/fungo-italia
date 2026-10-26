@@ -1,0 +1,56 @@
+{
+  "appId": "6821140326",
+  "bundleId": "it.fungoitalia.app",
+  "productId": "it.fungoitalia.premium.annual",
+  "version": "1.1.0",
+  "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+  "testFlightOnly": true,
+  "diagnosticOnly": true,
+  "appStoreReady": false,
+  "nativeStorekitVerified": true,
+  "storekitUIVerified": true,
+  "evidence": {
+    "native": {
+      "id": 40122020378,
+      "path": ".github/workflows/subscription-storekit-tests.yml",
+      "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020378"
+    },
+    "ui": {
+      "id": 40122020360,
+      "path": ".github/workflows/subscription-storekit-ui.yml",
+      "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020360"
+    },
+    "demo": {
+      "id": 40122020376,
+      "path": ".github/workflows/agaricus-demo-ui.yml",
+      "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020376"
+    }
+  },
+  "createdAt": "2026-10-24T19:00:28.680Z",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "webContentHash": "eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+  "buildNumber": "19",
+  "producerRunId": "40122020361",
+  "ipaSha256": "4c30bb90c6a4b79e05465ce01adeed4ff0629ae69cf57b2d505c2b913cfb4f5d",
+  "appleBuildId": "5e5211e9-8eef-48d7-8ce7-6677b210b574",
+  "processingState": "VALID",
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ],
+  "appStoreVersions": [
+    {
+      "version": "1.0",
+      "state": "REJECTED"
+    }
+  ],
+  "verifiedAt": "2026-10-24T19:14:29.258Z"
+}
