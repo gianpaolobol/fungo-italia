@@ -13,7 +13,7 @@ try{
  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
  // Existing tool data survives the shared-app launch and navigation.
  const catalog=JSON.parse(await readFile(new URL('../src/data/catalog.json',import.meta.url),'utf8'));const agaricus=catalog.find(t=>t.scientificName.startsWith('Agaricus '));
- await page.addInitScript(id=>{if(!localStorage.getItem('fungo-italia:study:v1'))localStorage.setItem('fungo-italia:pwa:study:v1',JSON.stringify({version:1,favoriteIds:[id],resumeId:id}))},agaricus.id);
+ await page.addInitScript(id=>{if(window!==window.top)return;if(!localStorage.getItem('fungo-italia:study:v1'))localStorage.setItem('fungo-italia:pwa:study:v1',JSON.stringify({version:1,favoriteIds:[id],resumeId:id}))},agaricus.id);
  await page.goto(base);
  await page.evaluate(()=>localStorage.setItem('parity-preserve-existing-notes','kept'));
  await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree']);

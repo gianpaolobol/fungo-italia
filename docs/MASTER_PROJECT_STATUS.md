@@ -2,6 +2,10 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Fixture browser limitato al documento principale
+
+Run40402924277/source121853868101:65/65 WebKit e65/65 Chromium riusciti; mappa OSM, tessera reale e attribuzione passano nello smoke Chromium, ma il controllo finale degli errori rileva SecurityError dal fixture localStorage iniettato anche nell'iframe sandbox. Il fixture di migrazione preferiti ora opera soltanto su window.top. La sandbox `allow-scripts` rimane invariata, nessun `allow-same-origin` aggiunto e nessun errore ignorato. Il controllo finale errori vuoti resta obbligatorio. La nuova sorgente deve superare tutte le prove prima della firma.
+
 ## Correzione dell'asserzione di attribuzione della mappa
 
 Revisione tecnica separata del commit326c5d4: lo smoke richiedeva un link OpenStreetMap che la mappa non contiene, perché l'attribuzione configurata in Areas.tsx è testo. Il controllo ora richiede quel testo nel controllo Leaflet; restano intatti il caricamento reale della tessera OSM, naturalWidth, filtri e tutti gli altri test. Nessuna modifica all'app, ai contenuti scientifici o alle policy di rilascio. La nuova pipeline resta necessaria sullo SHA esatto prima di firma, upload e promozione pubblica.
