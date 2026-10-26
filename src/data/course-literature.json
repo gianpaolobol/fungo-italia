@@ -1986,6 +1986,71 @@
           "supportedClaim": "Nella specie nominale Flammulina velutipes il confronto con Kuehneromyces mutabilis distingue lamelle più scure e sporata marrone di quest'ultimo; non generalizzare al complesso s.l."
         }
       ]
+    },
+    {
+      "scientificName": "Coprinus atramentarius s.l.",
+      "additions": {
+        "habitat": [
+          "Per Coprinopsis atramentaria (= Coprinus atramentarius) in senso stretto: saprotrofa su ceppaie o legno interrato di latifoglie, anche in parchi e ai margini di sentieri; non estendere automaticamente all'intero complesso s.l."
+        ],
+        "lookalikes": [
+          "Per la specie nominale: Coprinellus micaceus è generalmente più piccolo e rossiccio, con frammenti del velo simili a granuli scintillanti sul cappello giovane."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-b48cdd65baca5163",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Coprinopsis atramentaria s.str.: saprotrofa, su ceppaie, legno interrato di latifoglie, presso sentieri e parchi; portata limitata alla specie nominale."
+        },
+        {
+          "sourceId": "LIT-ATLAS-b48cdd65baca5163",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "C. atramentaria s.str. confrontata con Coprinellus micaceus, più piccolo, più rossiccio e con residui di velo micacei sul cappello giovane."
+        }
+      ]
+    },
+    {
+      "scientificName": "Rhodocollybia maculata",
+      "additions": {
+        "habitat": [
+          "Saprotrofa nella lettiera di aghi, su suolo ricco di lignina o legno interrato molto decomposto, prevalentemente sotto conifere e occasionalmente in boschi di latifoglie."
+        ],
+        "lookalikes": [
+          "Rhodocollybia distorta: cappello asciutto rossastro, base del gambo rigonfia e ritorta; lamelle prive delle tipiche macchie rossastre.",
+          "Rhodocollybia butyracea: cappello generalmente più scuro e molto untuoso, con lamelle senza macchie rossastre."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-e5e308c3375a81af",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Saprotrofa su aghi, suolo ricco di lignina e legno interrato decomposto, soprattutto sotto conifere."
+        },
+        {
+          "sourceId": "LIT-ATLAS-e5e308c3375a81af",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronti con Rhodocollybia distorta (gambo ritorto/base rigonfia) e R. butyracea (cappello untuoso); entrambe prive di lamelle macchiate."
+        }
+      ]
     }
   ]
 }
