@@ -1,0 +1,48 @@
+name: Retry stalled public demo21 runner
+on:
+  push:
+    branches: [audit/retry-public-demo21-runner-20261026]
+    paths: [.github/workflows/retry-public-demo21-runner.yml]
+permissions:
+  contents: read
+  actions: write
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Interrupt only a stale pre-deployment browser installer
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {writeFile} from 'node:fs/promises';
+          const base='https://api.github.com/repos/gianpaolobol/fungo-italia';
+          async function api(path,method='GET'){const r=await fetch(base+path,{method,headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'},signal:AbortSignal.timeout(45000)});assert(r.ok,'GitHub retry HTTP '+r.status);return r.status===202?{}:r.json();}
+          for(let attempt=0;attempt<12;attempt++){
+           const run=await api('/actions/runs/40397887837');
+           assert.equal(run.head_sha,'d1bfc9ad1d6ed0cf291edc07b62799aaf1961f75');assert.equal(run.path,'.github/workflows/publish-public-demo21.yml');
+           if(run.status==='completed'){console.log('Original run completed; no cancellation');break;}
+           const job=(await api('/actions/runs/40397887837/jobs?per_page=100')).jobs.find(j=>j.id===121835676046);assert(job);
+           const install=job.steps.find(s=>s.name==='Install deterministic browser test tools'),deploy=job.steps.find(s=>s.name==='Publish the immutable candidate paired with TestFlight21');
+           if(install?.status!=='in_progress'){console.log('Installer advanced; no cancellation');break;}
+           assert.equal(deploy?.status,'pending','Never cancel a deployment that has started');
+           if(Date.now()-Date.parse(install.started_at)>=600000){
+            await api('/actions/runs/40397887837/cancel','POST');
+            const proof={runId:40397887837,jobId:job.id,sourceCommit:run.head_sha,reason:'Browser installer exceeded ten minutes before deployment',installStartedAt:install.started_at,interruptedAt:new Date().toISOString()};
+            await writeFile('/tmp/public-demo21-runner-retry.json',JSON.stringify(proof,null,2)+'\n');console.log('SAFE_PREDEPLOY_RETRY '+JSON.stringify(proof));break;
+           }
+           await new Promise(done=>setTimeout(done,15000));
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Public-demo21-runner-retry
+          path: /tmp/public-demo21-runner-retry.json
+          if-no-files-found: warn
+          retention-days: 30
