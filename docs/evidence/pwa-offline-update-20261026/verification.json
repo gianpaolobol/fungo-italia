@@ -1,0 +1,32 @@
+{
+  "scope": "PWA automatic worker-update rejection only; new delivery still pending",
+  "observed": {
+    "runId": 40412201281,
+    "jobId": 121885453996,
+    "error": "TypeError: Script http://127.0.0.1:4173/fungo-italia/sw.js load failed",
+    "phase": "strict WebKit page-error check after actual origin shutdown and successful cached reload"
+  },
+  "rootCause": "register() rejection already handled; void reg.update() promise rejection escaped when offline",
+  "regression": {
+    "method": "execute actual web/build.mjs runtime template in Node VM and reject real update promise",
+    "before": {
+      "passed": 2,
+      "failed": 1,
+      "reason": "unhandledRejection"
+    },
+    "after": {
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0
+    },
+    "preserved": [
+      "active controller",
+      "future updatefound listener",
+      "no unregister or storage clearing"
+    ]
+  },
+  "technicalReview": "separate read-only reviewer reran3tests; no blocker",
+  "actualBrowserAfterFix": "pending",
+  "appStoreReady": false,
+  "independentReviewComplete": false
+}
