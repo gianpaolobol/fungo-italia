@@ -11716,6 +11716,33 @@
         }
       },
       {
+        "sourceId": "PRIMARY-PHYTOCHEM-2022-LEPIOTA-ELAIOPHYLLA",
+        "reviewScope": "supplementary-literature",
+        "title": "Sarawi et al. (2022), Occurrence and chemotaxonomical analysis of amatoxins in Lepiota spp., Phytochemistry 195:113069",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34965486/",
+        "authors": [
+          "Sepas Sarawi",
+          "Yan-Ni Shi",
+          "Hermine Lotz-Winter",
+          "Kai Reschke",
+          "Helge B. Bode",
+          "Meike Piepenbring"
+        ],
+        "location": "Abstract; UHPLC-QTOF-MS/MS results",
+        "fields": [
+          "toxicology"
+        ],
+        "supportedClaim": "Nella specie campionata Lepiota elaiophylla sono state rilevate alfa-amanitina e beta-amanitina; non costituisce assegnazione della categoria S2 di commestibilità né attestazione di revisione indipendente.",
+        "consultedAt": "2026-10-26",
+        "reviewStatus": "source-consulted-pending-independent-review",
+        "authority": {
+          "entity": "Phytochemistry (studio primario sottoposto a peer review)",
+          "type": "ricerca primaria chimico-micologica",
+          "evidenceUrl": "https://doi.org/10.1016/j.phytochem.2021.113069",
+          "basis": "Risultati analitici specifici per L. elaiophylla riportati nell'abstract indicizzato PubMed."
+        }
+      },
+      {
         "sourceId": "LIT-ATLAS-7dc2065705bfd0e5",
         "reviewScope": "course-material",
         "title": "AUSL Bologna — Atlante dei funghi velenosi (2023)",
@@ -17034,6 +17061,29 @@
         }
       },
       {
+        "sourceId": "MUSE-FLORIANI-TRICHOLOMA-STIPAROPHYLLUM-20261026",
+        "reviewScope": "supplementary-literature",
+        "title": "MUSE — Censimento dei macromiceti, Tricholoma stiparophyllum (testo di Marco Floriani)",
+        "authors": [
+          "Marco Floriani"
+        ],
+        "url": "https://www2.muse.it/bresadola/map_det.asp?ar=tv&sp=183528",
+        "location": "Scheda tassonomica, paragrafo ecologia e confronto con T. album e T. lascivum",
+        "fields": [
+          "habitat",
+          "lookalikes"
+        ],
+        "supportedClaim": "Per tre componenti nominate: T. stiparophyllum associato soprattutto a Betula, eccezionalmente Picea; T. album associato a Quercus; T. lascivum simbionte di Fagus. Differenze nel margine pileico e tendenza a ingrigire sono circoscritte a questi nomi, senza estensione agli «altri» del gruppo S1.",
+        "consultedAt": "2026-10-26",
+        "reviewStatus": "source-consulted-pending-independent-review",
+        "authority": {
+          "entity": "MUSE — Museo delle Scienze, progetto Censimento dei macromiceti",
+          "type": "museo scientifico; scheda micologica firmata",
+          "evidenceUrl": "https://www2.muse.it/bresadola/map_det.asp?ar=tv&sp=183528",
+          "basis": "Descrizione micologica attribuita esplicitamente a Marco Floriani, con confronto delle specie nominate."
+        }
+      },
+      {
         "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
         "reviewScope": "course-material",
         "title": "Sitta - genere Tricholoma schematico 2026.pdf",
@@ -17283,6 +17333,26 @@
           "type": "primary-taxonomic-revision",
           "evidenceUrl": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
           "basis": "Revisione basata su raccolte fresche ed erbari; autori e metodi a p.295."
+        }
+      },
+      {
+        "sourceId": "PRIMARY-TRICHOLOMA-NORTHERN-EUROPE-2017-SCOPE",
+        "reviewScope": "supplementary-literature",
+        "title": "Taxonomy of Tricholoma in northern Europe based on ITS sequence data and morphological characters (2017)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5645187/",
+        "authors": [],
+        "location": "Section Atrosquamosa",
+        "fields": [
+          "taxonomicScope"
+        ],
+        "supportedClaim": "Cinque specie europee circoscritte nella sezione Atrosquamosa: T. atrosquamosum, T. orirubens, T. basirubens, T. squarrulosum e T. olivaceotinctum. L'unità didattica gruppo terreum non coincide automaticamente con questa sezione: la fonte chiarisce il limite tassonomico e non certifica habitat o confronti di tutte le sue componenti.",
+        "reviewStatus": "source-consulted-pending-independent-review",
+        "consultedAt": "2026-10-26",
+        "authority": {
+          "entity": "Pubblicazione tassonomica primaria",
+          "type": "ricerca filogenetica e morfologica",
+          "evidenceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5645187/",
+          "basis": "Sezione tassonomica esplicita nel testo integrale."
         }
       },
       {
@@ -23836,6 +23906,30 @@
         "supportedClaim": "Diagnosi comparative esplicite delle due componenti a spore ovoidi rispetto ai campioni rufescens-like a spore globose."
       },
       {
+        "sourceId": "PRIMARY-HYDNUM-NISKANEN-2018-SCOPE",
+        "reviewScope": "supplementary-literature",
+        "title": "Niskanen et al. 2018, Identifying and naming the currently known diversity of the genus Hydnum, Mycologia 110(5):890–918",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30215579/",
+        "authors": [
+          "Tuula Niskanen",
+          "Kare Liimatainen",
+          "Jorinde Nuytinck"
+        ],
+        "location": "Abstract; taxonomic scope and typifications",
+        "fields": [
+          "taxonomicScope"
+        ],
+        "supportedClaim": "La revisione riconosce 49 specie di Hydnum nel mondo, 22 nuove e designa epitypi per H. repandum e H. rufescens. Non autorizza l'applicazione indistinta di confronti nominali a tutte le specie dei complessi e non attribuisce automaticamente nuovi taxa al programma S1.",
+        "reviewStatus": "source-consulted-pending-independent-review",
+        "consultedAt": "2026-10-26",
+        "authority": {
+          "entity": "Mycologia",
+          "type": "rivista scientifica peer-reviewed",
+          "evidenceUrl": "https://doi.org/10.1080/00275514.2018.1477004",
+          "basis": "Studio tassonomico primario indicizzato PubMed."
+        }
+      },
+      {
         "sourceId": "LIT-ATLAS-022d08ab54f925d6",
         "reviewScope": "course-material",
         "title": "www.first-nature.com — hydnum-repandum.php",
@@ -24988,6 +25082,28 @@
         "supportedClaim": "Nota esplicita: edulis ed ellisii si distinguono da pes-caprae per la superficie giallastra o giallo verdastra anziché bruna."
       },
       {
+        "sourceId": "MICOPONTE-MATTEUCCI-2011-P27-SPOREPRINT",
+        "reviewScope": "supplementary-literature",
+        "title": "Sergio Matteucci, Il genere Albatrellus, MicoPonte n. 5 (2011), p. 27",
+        "authors": [
+          "Sergio Matteucci"
+        ],
+        "url": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+        "location": "p. stampata 27 (PDF pagina 27, indice 26), Principali caratteri microscopici",
+        "fields": [
+          "sporePrint"
+        ],
+        "supportedClaim": "Per Albatrellus pes-caprae (= Scutiger pes-caprae) è dichiarato esplicitamente che le spore sono bianche in massa; distingue la sporata massiva dalle singole spore ialine.",
+        "consultedAt": "2026-10-26",
+        "reviewStatus": "source-consulted-pending-independent-review",
+        "authority": {
+          "entity": "Gruppo Micologico Massimiliano Danesi, MicoPonte",
+          "type": "bollettino micologico firmato con comitato di lettura",
+          "evidenceUrl": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+          "basis": "Testo originale e immagine della pagina controllati, autore nominato; non equivalente ad attestazione indipendente della scheda."
+        }
+      },
+      {
         "sourceId": "LIT-ATLAS-7e21263cd7b636b7",
         "reviewScope": "course-material",
         "title": "www.micoponte.it — Scutiger_pes-caprae.html",
@@ -25020,7 +25136,10 @@
         "label": "Commestibilità libera",
         "precautions": []
       },
-      "odor": "Gradevole, fungino; alcune descrizioni riportano una nota di nocciola."
+      "odor": "Gradevole, fungino; alcune descrizioni riportano una nota di nocciola.",
+      "sporePrint": {
+        "label": "Bianca"
+      }
     },
     "referenceImages": [
       {

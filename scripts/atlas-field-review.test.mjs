@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {buildReleaseReadinessReport} from './release-readiness.mjs';
 const data=name=>JSON.parse(readFileSync(new URL('../src/data/'+name,import.meta.url),'utf8'));
 const catalog=data('catalog.json'),groups=data('groups.json'),review=data('atlas-field-review-20261009.json');
 const profile=name=>catalog.find(r=>r.scientificName===name)?.studyProfile;
@@ -15,7 +16,12 @@ test('historical review covers its 214 cards and does not attest the four comple
  for(const card of completion){assert(card.curriculumObjective);assert.equal(card.studyProfile,undefined);assert.deepEqual(card.sources,[]);}
  for(const card of historical){
   const row=review.records.find(r=>r.scientificName===card.scientificName);assert(row,card.scientificName);
-  for(const field of ['odor','sporePrint'])assert.equal(Boolean(card.studyProfile?.[field]),row.fields[field]==='documented',card.scientificName+' '+field);
+  for(const field of ['odor','sporePrint']){
+   // The October 9 snapshot stays immutable; only this later, source-linked
+   // addition may fill a field absent from that historical snapshot.
+   const laterPrint=card.scientificName==='Scutiger pes-caprae'&&field==='sporePrint';
+   assert.equal(Boolean(card.studyProfile?.[field]),row.fields[field]==='documented'||laterPrint,card.scientificName+' '+field);
+  }
  }
  assert.deepEqual(review.records.filter(r=>r.missingFields.length).map(r=>r.scientificName).sort(),['Ramaria pallida','Scutiger pes-caprae']);
 });
@@ -40,7 +46,20 @@ test('all newly reviewed fields have read-source evidence; no added source grant
 test('reported prints, gasteromycete powder and unresolved observations retain their limits',()=>{
  assert.match(profile('Lactarius porniniae').sporePrint.label,/non ottenuta/);
  assert.match(groups.find(r=>r.scientificName==='Pisolithus').studyProfile.sporePrint.label,/gleba/);
- assert.equal(profile('Scutiger pes-caprae').sporePrint,undefined);
+ const scutiger=catalog.find(r=>r.scientificName==='Scutiger pes-caprae');
+ assert.deepEqual(scutiger.studyProfile.sporePrint,{label:'Bianca'});
+ const evidence=scutiger.sources.filter(s=>s.sourceId==='MICOPONTE-MATTEUCCI-2011-P27-SPOREPRINT');
+ assert.equal(evidence.length,1);
+ assert.deepEqual(evidence[0].fields,['sporePrint']);
+ assert.match(evidence[0].supportedClaim,/bianche in massa/);
+ assert.match(evidence[0].location,/27/);
+ assert.equal(evidence[0].reviewStatus,'source-consulted-pending-independent-review');
+ const readiness=buildReleaseReadinessReport([scutiger],[]);
+ assert.equal(readiness.releaseReady,false);
+ assert.equal(readiness.totals.independentlyReviewed,0);
+ assert(readiness.blockers[0].gaps.includes('independent-review-not-attested'));
+ assert.equal(data('provenance.json').independentReviewComplete,false);
+ assert.equal(review.records.find(r=>r.scientificName===scutiger.scientificName).fields.sporePrint,'not-documented');
  assert.equal(profile('Ramaria pallida').sporePrint,undefined);
  assert.match(catalog.find(r=>r.scientificName==='Lepiota elaiophylla').diagnosticNote,/amanitina/);
 });

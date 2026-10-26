@@ -1,0 +1,40 @@
+{
+  "sourceBaseline": "e81708bd50db8284143eef88c92c310de3b4dc00",
+  "scope": "TestFlight owner internal only; no App Store release",
+  "tests": {
+    "node": {
+      "passed": 241,
+      "failed": 0,
+      "skipped": 0
+    },
+    "typecheck": "PASS",
+    "iosBundleExport": "PASS (not native build)",
+    "webBuild": "PASS",
+    "regeneration": "PASS repeat hashes identical",
+    "scientificStrict": {
+      "exitCode": 1,
+      "catalog": 148,
+      "independentlyReviewed": 0,
+      "blocked": 148,
+      "triads": 143,
+      "sporePrint": 147,
+      "edibility": 147
+    },
+    "toxicologyStrict": {
+      "exitCode": 1,
+      "errors": 0,
+      "reason": "independent review pending"
+    },
+    "nativeCurrentSHA": "not yet executed",
+    "webRuntime": "initial attempt blocked: browser executable absent; installation retry ongoing"
+  },
+  "newBuildNumber": null,
+  "easBuild": null,
+  "appleReceipt": null,
+  "testflightAvailable": false,
+  "gateChanged": false,
+  "hashes": {
+    "src/data/catalog.json": "8dbc32f22b2642dc5f2f64524343a8d96e901a552c4a1d844b3cd5aaa9f7ad3e",
+    "src/data/provenance.json": "fca4893dfc9fba9f30889aee9850ecb6f9f4b1edd9193de13ebf1dcbf47f1f6e"
+  }
+}

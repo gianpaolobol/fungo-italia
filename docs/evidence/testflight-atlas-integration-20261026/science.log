@@ -1,0 +1,176 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> fungo-italia@1.1.0 validate:release
+> node scripts/release-readiness.mjs --strict
+
+# Fungo Italia release readiness
+
+Checked at: 2026-10-26T15:40:04.832Z
+Scope: catalog
+
+| Metric | Value |
+|---|---:|
+| Catalog records | 148 |
+| Groups | 70 |
+| Checked records | 148 |
+| Complete image triplets | 143 |
+| Odor present | 148 |
+| Spore print present | 147 |
+| Edibility present | 147 |
+| Independently reviewed | 0 |
+| Release-ready records | 0 |
+| Blocked records | 148 |
+
+## Blockers
+
+| ID | Scientific name | Gaps |
+|---|---|---|
+| minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei | Agaricus sez. Xanthodermatei | independent-review-not-attested |
+| minimum-card-objective-agaricus--02--agaricus-bresadolanus | Agaricus bresadolanus | independent-review-not-attested |
+| minimum-card-objective-agaricus--03--agaricus-sez-arvenses | Agaricus sez. Arvenses | independent-review-not-attested |
+| minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti | Agaricus sez. Sanguinolenti | independent-review-not-attested |
+| minimum-card-objective-agaricus--05--agaricus-campestris | Agaricus campestris | independent-review-not-attested |
+| minimum-card-objective-agaricus--06--agaricus-bitorquis | Agaricus bitorquis | independent-review-not-attested |
+| minimum-card-objective-agaricus--07--agaricus-bisporus | Agaricus bisporus | independent-review-not-attested |
+| minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea | Cyclocybe cylindracea | independent-review-not-attested |
+| minimum-card-objective-amanita--01--amanita-phalloides | Amanita phalloides | independent-review-not-attested |
+| minimum-card-objective-amanita--02--amanita-verna-inclusa-a-vidua | Amanita verna / Amanita vidua | independent-review-not-attested |
+| minimum-card-objective-amanita--03--amanita-virosa | Amanita virosa | independent-review-not-attested |
+| minimum-card-objective-amanita--04--amanita-proxima | Amanita proxima | independent-review-not-attested |
+| minimum-card-objective-amanita--05--amanita-ovoidea | Amanita ovoidea | independent-review-not-attested |
+| minimum-card-objective-amanita--06--amanita-pantherina | Amanita pantherina | independent-review-not-attested |
+| minimum-card-objective-amanita--07--amanita-muscaria | Amanita muscaria | independent-review-not-attested |
+| minimum-card-objective-amanita--08--amanita-caesarea | Amanita caesarea | independent-review-not-attested |
+| minimum-card-objective-amanita--09--amanita-gemmata | Amanita gemmata | independent-review-not-attested |
+| minimum-card-objective-amanita--10--amanita-citrina | Amanita citrina | independent-review-not-attested |
+| minimum-card-objective-amanita--11--amanita-porphyria | Amanita porphyria | independent-review-not-attested |
+| minimum-card-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii | Amanita excelsa s.l. (incl. A. spissa, A. franchetii) | independent-review-not-attested |
+| minimum-card-objective-amanita--13--amanita-strobiliformis | Amanita strobiliformis | independent-review-not-attested |
+| minimum-card-objective-amanita--14--amanita-vittadinii | Saproamanita vittadinii | independent-review-not-attested |
+| minimum-card-objective-amanita--15--amanita-rubescens | Amanita rubescens | independent-review-not-attested |
+| minimum-card-objective-amanita--16--amanita-sez-vaginatae | Amanita sez. Vaginatae | independent-review-not-attested |
+| minimum-card-objective-calocybe--01--calocybe-gambosa | Calocybe gambosa | independent-review-not-attested |
+| minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila | Collybia phyllophila | independent-review-not-attested |
+| minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa | Clitocybe dealbata / Collybia rivulosa | independent-review-not-attested |
+| minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis | Clitocybe nebularis | independent-review-not-attested |
+| minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa | Infundibulicybe geotropa | independent-review-not-attested |
+| minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens | Paralepistopsis amoenolens | independent-review-not-attested |
+| minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l | Clitocybe gibba s.l. | independent-review-not-attested |
+| minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l | Clitopilus prunulus s.l. | independent-review-not-attested |
+| minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata | Rhodocollybia maculata | independent-review-not-attested |
+| minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes | Gymnopus fusipes | independent-review-not-attested |
+| minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades | Marasmius oreades | independent-review-not-attested |
+| minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l | Coprinus atramentarius s.l. | independent-review-not-attested |
+| minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus | Coprinus comatus | independent-review-not-attested |
+| minimum-card-objective-cortinarius--01--cortinarius-orellanus | Cortinarius orellanus | independent-review-not-attested |
+| minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus | Cortinarius rubellus | independent-review-not-attested |
+| minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe | Cortinarius sottogenere Dermocybe | independent-review-not-attested |
+| minimum-card-objective-cortinarius--04--cortinarius-praestans | Cortinarius praestans | independent-review-not-attested |
+| minimum-card-objective-cortinarius--05--cortinarius-cumatilis | Cortinarius cumatilis | independent-review-not-attested |
+| minimum-card-objective-cortinarius--06--cortinarius-variiformis | Phlegmacium variiforme | missing-reference-views:lateral,top,underside; independent-review-not-attested |
+| minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus | Cortinarius caperatus | independent-review-not-attested |
+| minimum-card-objective-entoloma--01--entoloma-sinuatum | Entoloma sinuatum | independent-review-not-attested |
+| minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l | Entoloma rhodopolium s.l. | independent-review-not-attested |
+| minimum-card-objective-entoloma--03--entoloma-hirtipes | Entoloma hirtipes | independent-review-not-attested |
+| minimum-card-objective-entoloma--04--entoloma-vernum | Entoloma vernum | independent-review-not-attested |
+| minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l | Entoloma clypeatum s.l. | independent-review-not-attested |
+| minimum-card-objective-entoloma--06--entoloma-saundersii | Entoloma saundersii | missing-reference-views:lateral,top,underside; independent-review-not-attested |
+| minimum-card-objective-flammulina--01--flammulina-velutipes-s-l | Flammulina velutipes s.l. | independent-review-not-attested |
+| minimum-card-objective-galerina--01--galerina-marginata-group | Galerina marginata group | independent-review-not-attested |
+| minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l | Hygrocybe conica s.l. | independent-review-not-attested |
+| minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea | Hygrocybe punicea | independent-review-not-attested |
+| minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus | Hygrophorus marzuolus | independent-review-not-attested |
+| minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula | Hygrophorus russula | independent-review-not-attested |
+| minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides | Hygrophorus penarioides | independent-review-not-attested |
+| minimum-card-objective-hypholoma--01--hypholoma-fasciculare | Hypholoma fasciculare | independent-review-not-attested |
+| minimum-card-objective-hypholoma--02--hypholoma-lateritium | Hypholoma lateritium | independent-review-not-attested |
+| minimum-card-objective-lentinula--01--lentinula-edodes | Lentinula edodes | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii | Lepiota subincarnata | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata | Lepiota brunneoincarnata | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata | Lepiota cristata | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla | Lepiota elaiophylla | missing-edibility; independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites | Chlorophyllum molybdites | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l | Echinoderma asperum s.l. | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l | Leucoagaricus leucothites s.l. | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l | Chlorophyllum rhacodes s.l. | independent-review-not-attested |
+| minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l | Macrolepiota procera s.l. | independent-review-not-attested |
+| minimum-card-objective-lepista--01--lepista-nuda-s-l | Lepista nuda s.l. | independent-review-not-attested |
+| minimum-card-objective-lepista--02--lepista-flaccida-s-l | Lepista flaccida s.l. | independent-review-not-attested |
+| minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l | Leucopaxillus giganteus s.l. | independent-review-not-attested |
+| minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus | Leucopaxillus gentianeus | independent-review-not-attested |
+| minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l | Lyophyllum decastes s.l. | independent-review-not-attested |
+| minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti | Lyophyllum specie annerenti | independent-review-not-attested |
+| minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum | Leucocybe connata | independent-review-not-attested |
+| minimum-card-objective-mycena--01--mycena-sez-purae | Mycena sez. Purae | independent-review-not-attested |
+| minimum-card-objective-omphalotus--01--omphalotus-olearius | Omphalotus olearius | independent-review-not-attested |
+| minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens | Panaeolus cyanescens | independent-review-not-attested |
+| minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis | Kuehneromyces mutabilis | independent-review-not-attested |
+| minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l | Pleurotus eryngii s.l. | independent-review-not-attested |
+| minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus | Pleurotus ostreatus | independent-review-not-attested |
+| minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus | Pleurotus cornucopiae / Pleurotus citrinopileatus | independent-review-not-attested |
+| minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata | Stropharia rugosoannulata | independent-review-not-attested |
+| minimum-card-objective-tricholoma--01--tricholoma-pardinum | Tricholoma pardinum | independent-review-not-attested |
+| minimum-card-objective-tricholoma--02--tricholoma-filamentosum | Tricholoma filamentosum | independent-review-not-attested |
+| minimum-card-objective-tricholoma--03--tricholoma-josserandii | Tricholoma josserandii | independent-review-not-attested |
+| minimum-card-objective-tricholoma--04--tricholoma-equestre | Tricholoma equestre | independent-review-not-attested |
+| minimum-card-objective-tricholoma--05--tricholoma-portentosum | Tricholoma portentosum | independent-review-not-attested |
+| minimum-card-objective-tricholoma--06--tricholoma-terreum | Tricholoma terreum | independent-review-not-attested |
+| minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l | Tricholoma saponaceum s.l. | independent-review-not-attested |
+| minimum-card-objective-tricholoma--08--tricholoma-columbetta | Tricholoma columbetta | independent-review-not-attested |
+| minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri | Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri) | independent-review-not-attested |
+| minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre | Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre) | independent-review-not-attested |
+| minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum | Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum) | independent-review-not-attested |
+| minimum-card-objective-tricholoma--12--tricholoma-sejunctum | Tricholoma sejunctum | independent-review-not-attested |
+| minimum-card-objective-tricholoma--13--tricholoma-sulphureum | Tricholoma sulphureum | independent-review-not-attested |
+| minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei | Tricholoma sez. Genuina (= gruppo Albobrunnei) | independent-review-not-attested |
+| minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l | Tricholoma acerbum s.l. | independent-review-not-attested |
+| minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus | Volvopluteus gloiocephalus | independent-review-not-attested |
+| minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea | Volvariella volvacea | independent-review-not-attested |
+| minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi | Lactarius sez. Deliciosi | independent-review-not-attested |
+| minimum-card-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae | Lactarius porniniae | independent-review-not-attested |
+| minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l | Lactarius volemus s.l. | independent-review-not-attested |
+| minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum | Lactarius tesquorum | independent-review-not-attested |
+| minimum-card-objective-russula--01--russula-foetentinae | Russula Foetentinae | independent-review-not-attested |
+| minimum-card-objective-russula--02--russula-compactae-nigricantinae | Russula Compactae Nigricantinae | independent-review-not-attested |
+| minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica | Russula Compactae Lactarioides (= gruppo R. delica) | independent-review-not-attested |
+| minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l | Boletus edulis s.l. | independent-review-not-attested |
+| minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi | Boletus sez. Luridi | independent-review-not-attested |
+| minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas | Rubroboletus satanas | independent-review-not-attested |
+| minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus | Rubroboletus pulchrotinctus | independent-review-not-attested |
+| minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l | Boletus (Neoboletus) erythropus s.l. | independent-review-not-attested |
+| minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus | Suillellus luridus | independent-review-not-attested |
+| minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie | Boletus queletii e specie vicine/intermedie | independent-review-not-attested |
+| minimum-card-objective-caloboletus--01--caloboletus-radicans | Caloboletus radicans | independent-review-not-attested |
+| minimum-card-objective-caloboletus--02--caloboletus-calopus | Caloboletus calopus | independent-review-not-attested |
+| minimum-card-objective-gyroporus--01--gyroporus-cyanescens | Gyroporus cyanescens | independent-review-not-attested |
+| minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l | Gyroporus castaneus s.l. | independent-review-not-attested |
+| minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca | Hygrophoropsis aurantiaca | independent-review-not-attested |
+| minimum-card-objective-imleria--01--imleria-badia | Imleria badia | independent-review-not-attested |
+| minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus | Suillus luteus | independent-review-not-attested |
+| minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus | Suillus granulatus | independent-review-not-attested |
+| minimum-card-objective-tylopilus--01--tylopilus-felleus | Tylopilus felleus | independent-review-not-attested |
+| minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex | Cantharellus cibarius complex | independent-review-not-attested |
+| minimum-card-objective-craterellus--01--craterellus-lutescens | Craterellus lutescens | independent-review-not-attested |
+| minimum-card-objective-craterellus--02--craterellus-tubaeformis | Craterellus tubaeformis | independent-review-not-attested |
+| minimum-card-objective-craterellus--03--craterellus-cornucopioides | Craterellus cornucopioides | independent-review-not-attested |
+| minimum-card-objective-gomphus--01--gomphus-clavatus | Gomphus clavatus | independent-review-not-attested |
+| minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens | Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens) | independent-review-not-attested |
+| minimum-card-objective-hydnaceae-s-l--02--hericium-spp | Hericium spp. | independent-review-not-attested |
+| minimum-card-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus | Sarcodon imbricatus s.l. (incl. S. squamosus) | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--01--hapalopilus-rutilans | Hapalopilus rutilans | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l | Laetiporus sulphureus s.l. | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--03--albatrellus-confluens | Albatrellopsis confluens | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus | Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus) | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae | Scutiger pes-caprae | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica | Fistulina hepatica | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--07--grifola-frondosa | Grifola frondosa | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--08--polyporus-umbellatus | Polyporus umbellatus | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--09--meripilus-giganteus | Meripilus giganteus | independent-review-not-attested |
+| minimum-card-objective-polyporaceae-s-l--10--polyporus-squamosus | Cerioporus squamosus | independent-review-not-attested |
+| minimum-card-objective-ramaria--01--ramaria-formosa | Ramaria formosa | missing-reference-views:underside; independent-review-not-attested |
+| minimum-card-objective-ramaria--02--ramaria-pallida | Ramaria pallida | missing-spore-print; missing-reference-views:underside; independent-review-not-attested |
+| minimum-card-objective-ramaria--03--ramaria-botrytis-s-l | Ramaria botrytis s.l. | missing-reference-views:underside; independent-review-not-attested |
+| minimum-card-objective-auricularia--01--auricularia-auricula-judae | Auricularia auricula-judae | independent-review-not-attested |
+| minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta | Gyromitra esculenta | independent-review-not-attested |
+| minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l | Sarcosphaera coronaria s.l. | independent-review-not-attested |
+

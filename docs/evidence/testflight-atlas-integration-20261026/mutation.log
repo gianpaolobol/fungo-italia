@@ -1,0 +1,35 @@
+✔ historical review covers its 214 cards and does not attest the four completion groups (3.236091ms)
+✔ the uploaded lot remains species-scoped inside named complexes (0.505583ms)
+✔ all newly reviewed fields have read-source evidence; no added source grants edibility (5.534129ms)
+✖ reported prints, gasteromycete powder and unresolved observations retain their limits (1.137897ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 120.037852
+
+✖ failing tests:
+
+test at scripts/atlas-field-review.test.mjs:46:1
+✖ reported prints, gasteromycete powder and unresolved observations retain their limits (1.137897ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/atlas-field-review.test.mjs:52:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -2,6 +2,16 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Verifica TestFlight del titolare — integrazione corrente
+
+Baseline esaminata: `e81708bd50db8284143eef88c92c310de3b4dc00`. Il commit di questa sezione corregge due test obsoleti sulla sporata di Scutiger e sincronizza catalogo/provenance con le fonti già presenti su main. La revisione storica del 9 ottobre resta immutata. La fonte MicoPonte p.27 resta bibliografia con revisione indipendente pendente; il nuovo test verifica che il gate continui a bloccare la scheda. Mutazione senza fonte: test fallisce; ripristino: passa.
+
+241 test Node, TypeScript, export bundle iOS, build web e rigenerazione ripetuta superati localmente. Questi non attestano una compilazione nativa né TestFlight. [Log e risultati](evidence/testflight-atlas-integration-20261026/verification.json). I test browser locali iniziali sono bloccati dall’assenza dell’eseguibile WebKit; nessun PASS attribuito a quell’esecuzione.
+
+Gate scientifico strict: exit1,148 schede bloccate,0 revisioni indipendenti,143 triadi,147 sporate e147 giudizi su148. Audit tossicologico strict: exit1 per revisioni indipendenti mancanti,0 errori strutturali. Il workflow attuale impone entrambi prima della firma/upload TestFlight: nessuna eccezione introdotta per il gruppo interno. Nessuna nuova build EAS/Apple o disponibilità TestFlight attestata. Nessun invio App Store.
+
+Gestione revisori invariata: esclusiva dell’amministratore come da istruzione del titolare; nessuna nuova interfaccia o invio pubblico aggiunto. Non registrare firme o decisioni assenti. La pubblicazione resta bloccata finché i gate esistenti non passano.
+
 ## Identità della baseline
 
 - Main letto all'inizio e ricontrollato prima del consolidamento:`3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c`.
