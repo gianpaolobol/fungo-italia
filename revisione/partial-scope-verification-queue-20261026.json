@@ -20,7 +20,15 @@
         "partial-nominal-evidence: Habitat utile soltanto per A. xanthodermus; resta priva di sintesi ecologica generale l’intera sezione."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "verifiedSource": "Kerrigan et al. (2005), Mycologia 97(6):1292-1315, PMID 16722221",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16722221/",
+        "finding": "21 entità filogenetiche, caratteri sezionali condivisi; la presenza di un quadro di sezione non dimostra habitat uniforme delle singole entità.",
+        "next": "Riconciliare le specie curricolari S1 con le 21 entità e relative ecologie prima di chiudere habitat.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
@@ -143,7 +151,15 @@
         "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "verifiedSource": "Mycosphere (2026), Morphological and molecular analyses reveal 28 new macrofungal species in China",
+        "url": "https://doi.org/10.48130/mycosphere-0026-0007",
+        "finding": "La sottosezione del complesso conica comprende taxa annerenti distinguibili con dati morfologici/molecolari; habitat di prateria e bosco non descrivono ogni segregato.",
+        "next": "Confrontare i componenti europei S1 e descrizioni specifiche, evitando trasferimenti geografici.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
@@ -160,7 +176,15 @@
         "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "verifiedSource": "Mycosphere (2026), Morphological and molecular analyses reveal 28 new macrofungal species in China",
+        "url": "https://doi.org/10.48130/mycosphere-0026-0007",
+        "finding": "La sottosezione del complesso conica comprende taxa annerenti distinguibili con dati morfologici/molecolari; habitat di prateria e bosco non descrivono ogni segregato.",
+        "next": "Confrontare i componenti europei S1 e descrizioni specifiche, evitando trasferimenti geografici.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
@@ -177,7 +201,15 @@
         "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "verifiedSource": "Sarawi, Piepenbring & Reschke (2025), Fungal Systematics and Evolution 15:235–263",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11952186/",
+        "finding": "E. asperum nel senso corrente risulta un complesso con almeno quattro cladi distinti; la microstruttura della pileipellis è diagnostica.",
+        "next": "Separare i cladi dalle identificazioni nominali e non attribuire habitat/sosia a tutto il complesso senza prova.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
@@ -194,7 +226,15 @@
         "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "verifiedSource": "Sarawi, Piepenbring & Reschke (2025), Fungal Systematics and Evolution 15:235–263",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11952186/",
+        "finding": "E. asperum nel senso corrente risulta un complesso con almeno quattro cladi distinti; la microstruttura della pileipellis è diagnostica.",
+        "next": "Separare i cladi dalle identificazioni nominali e non attribuire habitat/sosia a tutto il complesso senza prova.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
@@ -767,5 +807,11 @@
     "scopeResolved": 0,
     "sourceAddedToCatalog": 0,
     "notes": "Riesame di componenti e locatori delle fonti già associate; nessuna certificazione e nessuna estensione artificiale."
+  },
+  "latestTargetedPass": {
+    "date": "2026-10-26",
+    "fieldsExamined": 5,
+    "scopeResolved": 0,
+    "notes": "Tre fonti tassonomiche primarie per Xanthodermatei, Hygrocybe conica ed Echinoderma asperum; altre unità restano da verificare, senza downgrade dei gate."
   }
 }
