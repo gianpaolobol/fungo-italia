@@ -56,7 +56,16 @@ try{
  await expect.poll(()=>page.evaluate(()=>localStorage.getItem('parity-preserve-existing-notes'))).toBe('kept');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  const icon=await page.locator('link[rel="apple-touch-icon"]').getAttribute('href');expect(icon).toMatch(/icon-[a-f0-9]{16}\.png$/);
- if(!process.env.UNIFIED_BASE_URL){await context.setOffline(true);await page.reload();await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree']);await page.getByTestId('subscription-access').click();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toBeVisible();await expect.poll(()=>page.evaluate(()=>localStorage.getItem('parity-preserve-existing-notes'))).toBe('kept');await context.setOffline(false);}
+ if(!process.env.UNIFIED_BASE_URL){
+  // WebKit offline emulation breaks service workers. Cut the real local origin,
+  // as the existing legacy WebKit suite does; require a fresh SW-served document.
+  if(engine==='webkit'){const r=await fetch('http://127.0.0.1:4174/?state=stop');expect(r.ok).toBe(true);}else await context.setOffline(true);
+  try{
+   const response=await page.reload({waitUntil:'domcontentloaded'});expect(response.status()).toBe(200);expect(response.fromServiceWorker()).toBe(true);
+   if(engine==='webkit'){const probe=await browser.newContext();try{await expect((await probe.newPage()).goto(base,{timeout:15000})).rejects.toThrow();}finally{await probe.close();}}
+   await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree']);await page.getByTestId('subscription-access').click();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toBeVisible();await expect.poll(()=>page.evaluate(()=>localStorage.getItem('parity-preserve-existing-notes'))).toBe('kept');
+  }finally{if(engine==='webkit'){const r=await fetch('http://127.0.0.1:4174/?state=start');expect(r.ok).toBe(true);}else await context.setOffline(false);}
+ }
  expect(errors).toEqual([]);
  await page.screenshot({path:fileURLToPath(new URL('./unified-phone.png',import.meta.url)),fullPage:true});
  console.log(JSON.stringify({unifiedSmoke:'passed',browser:engine,url:base,tabs:['Percorso','Studio','Esame','Aree'],offline:!process.env.UNIFIED_BASE_URL}));

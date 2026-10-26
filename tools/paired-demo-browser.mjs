@@ -3,6 +3,7 @@ import {createRequire} from 'node:module';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
+import {createNetworkGate} from './paired-demo-network.mjs';
 import {demoStudyKey} from '../lib/study-store.mjs';
 import {assertBrowserProgress,progressFixture} from './public-demo21-progress.mjs';
 const {chromium,webkit,expect}=createRequire(new URL('../web/package.json',import.meta.url))('@playwright/test');
@@ -22,8 +23,10 @@ async function controllerSource(page){return page.evaluate(async()=>{
 }).catch(()=>null);}
 const reports=[];
 for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
- const context=await browser.launchPersistentContext(join(directory,name),{headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
+ const gate=await createNetworkGate();
+ let context;
  try{
+ context=await browser.launchPersistentContext(join(directory,name),{proxy:{server:gate.url},headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
   if(mode==='capture')await context.addInitScript(({favorite,probe,notes})=>{
    if(window.top!==window)return;
    if(!localStorage.getItem(probe)){const state=JSON.stringify({version:1,favoriteIds:[favorite],resumeId:favorite});localStorage.setItem('fungo-italia:study:v1',state);localStorage.setItem('fungo-italia:pwa:study:v1',state);localStorage.setItem('fungo-italia:pwa:notes:v1',JSON.stringify(notes));localStorage.setItem(probe,'keep-existing-notes');}
@@ -59,7 +62,19 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
   }
   const readProgress=()=>page.evaluate(probe=>({note:localStorage.getItem(probe),study:JSON.parse(localStorage.getItem('fungo-italia:study:v1')||'null'),notes:JSON.parse(localStorage.getItem('fungo-italia:pwa:notes:v1')||'null')}),probe);
+  async function verifyOffline(){
+   await page.evaluate(()=>{window.__preOfflineDocument=true;});gate.block();
+   try{
+    const probe=await context.browser().newContext({proxy:{server:gate.url}});try{await expect((await probe.newPage()).goto(base,{timeout:15000})).rejects.toThrow();}finally{await probe.close();}
+    const response=await page.reload({waitUntil:'domcontentloaded'});assert.equal(response.status(),200);assert(response.fromServiceWorker(),'Offline document must come from actual installed worker');
+    assert.equal(await page.evaluate(()=>window.__preOfflineDocument),undefined,'Offline navigation must create a new document');
+    await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:30000});
+    assertBrowserProgress(await readProgress());assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam state changed offline');
+   }finally{gate.allow();}
+  }
   assertBrowserProgress(await readProgress());
+  const captureOffline=mode==='capture'&&process.env.PAIRED_PREFLIGHT_OFFLINE==='1';
+  if(captureOffline){await verifyOffline();assert.equal(await controllerSource(page),before);await page.getByRole('tab',{name:'Esame',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione',exact:true}).click();await expect(page.getByRole('textbox',{name:'Nome scientifico della risposta'})).toHaveValue('Agaricus');await page.screenshot({path:join(directory,name+'-offline-preflight.png'),fullPage:true});}
   if(mode==='upgrade'){
    assert.equal(await controllerSource(page),SOURCE);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam checkpoint/history changed during upgrade');
@@ -73,13 +88,12 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await expect(page.getByText('È disponibile una versione diversa, verificata su TestFlight.',{exact:true})).toHaveCount(0);
    await page.getByRole('tab',{name:'Studio',exact:true}).click();await expect(page.getByText('Demo gratuita · Agaricus',{exact:true})).toBeVisible();await expect(page.getByText(/1 preferito/)).toBeVisible();
    await page.getByRole('tab',{name:'Aree',exact:true}).click();await expect(page.getByText('Aree e habitat',{exact:true})).toBeVisible();await expect(page.getByText(/^71 macroaree in /)).toBeVisible();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toHaveCount(0);
-   await context.setOffline(true);await page.reload({waitUntil:'domcontentloaded'});await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:30000});
-   assertBrowserProgress(await readProgress());assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam state changed offline');await context.setOffline(false);
+   await verifyOffline();
    await page.screenshot({path:join(directory,name+'-verified.png'),fullPage:true});
   }
   assert.deepEqual(errors,[]);
-  reports.push({browser:name,mode,sourceBefore:before,sourceAfter:await controllerSource(page),method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'});
- }finally{await context.close();}
+  reports.push({browser:name,mode,sourceBefore:before,sourceAfter:await controllerSource(page),method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'||captureOffline});
+ }finally{await context?.close();await gate.close();}
 }
 await writeFile(join(directory,mode+'-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),reports},null,2)+'\n');
 console.log('PAIRED_DEMO_BROWSER '+JSON.stringify(reports));

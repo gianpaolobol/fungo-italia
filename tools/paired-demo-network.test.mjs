@@ -1,0 +1,18 @@
+import test from 'node:test';import assert from 'node:assert/strict';import net from 'node:net';
+import {createNetworkGate} from './paired-demo-network.mjs';
+async function tunnel(url,target){
+ const proxy=new URL(url),socket=net.connect(Number(proxy.port),proxy.hostname);await new Promise((ok,bad)=>{socket.once('connect',ok);socket.once('error',bad);});
+ const response=new Promise((ok,bad)=>{socket.once('data',b=>ok(b.toString()));socket.once('error',bad);});socket.write('CONNECT '+target+' HTTP/1.1\r\nHost: '+target+'\r\n\r\n');return {socket,response:await response};
+}
+test('network gate cuts real connections, rejects fresh access and restores the same allowed endpoint',async()=>{
+ const server=net.createServer(s=>s.pipe(s));await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
+ const port=server.address().port,gate=await createNetworkGate({host:'127.0.0.1',port});
+ try{
+  const first=await tunnel(gate.url,'127.0.0.1:'+port);assert.match(first.response,/200 Connection Established/);
+  const echo=new Promise(ok=>first.socket.once('data',b=>ok(b.toString())));first.socket.write('real-data');assert.equal(await echo,'real-data');
+  const closed=new Promise(ok=>first.socket.once('close',ok));gate.block();await closed;
+  const blocked=await tunnel(gate.url,'127.0.0.1:'+port);assert.match(blocked.response,/503/);blocked.socket.destroy();
+  gate.allow();const again=await tunnel(gate.url,'127.0.0.1:'+port);assert.match(again.response,/200 Connection Established/);again.socket.destroy();
+  const denied=await tunnel(gate.url,'example.com:443');assert.match(denied.response,/403/);denied.socket.destroy();
+ }finally{await gate.close();await new Promise(ok=>server.close(ok));}
+});

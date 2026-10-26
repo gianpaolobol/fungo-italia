@@ -29,11 +29,13 @@ jobs:
 
         npm run typecheck
 
-        node --test scripts/*.test.mjs
+        node --test scripts/*.test.mjs tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs
 
         npx expo export --platform ios --output-dir /tmp/consolidated-export
 
         '
+    - name: Require browser image matching the exact lockfile
+      run: node -e "if(require('./web/package-lock.json').packages['node_modules/@playwright/test'].version!=='1.56.1')throw Error('Browser image/lockfile mismatch')"
     - name: Install deterministic browser dependencies
       run: npm ci --prefix web
     - name: Build one immutable web candidate from shared application
@@ -44,8 +46,6 @@ jobs:
         '
     - name: Verify legacy workflows in both engines and unified smartphone app
       run: 'cd web
-
-        npx playwright install --with-deps chromium webkit
 
         npm test
 
@@ -101,6 +101,7 @@ jobs:
         path: ${{ runner.temp }}/consolidated-build.json
         if-no-files-found: error
         retention-days: 30
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
   beta:
     runs-on: macos-26
     timeout-minutes: 100
@@ -181,6 +182,19 @@ jobs:
 
         node scripts/verify-native-source.mjs "$RUNNER_TEMP/consolidated-binary/Payload"
 
+
+        app=$(find "$RUNNER_TEMP/consolidated-binary/Payload" -maxdepth 1 -name ''*.app'' -print -quit)
+
+        test -n "$app"
+
+        codesign --verify --deep --strict "$app"
+
+        codesign -d --verbose=4 "$app" 2> "$RUNNER_TEMP/native-signature.txt"
+
+        grep -qx ''TeamIdentifier=BX9MDXAHKG'' "$RUNNER_TEMP/native-signature.txt"
+
+        test "$(/usr/libexec/PlistBuddy -c ''Print :CFBundleIdentifier'' "$app/Info.plist")" = ''it.fungoitalia.app''
+
         '
     - name: Revalidate owner review immediately before upload
       run: node scripts/internal-beta-science.mjs --verify-receipt
@@ -189,25 +203,17 @@ jobs:
     - name: Prepare authorized Apple submit key
       run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
     - name: Upload diagnostic binary to TestFlight only
-      run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-consolidated.ipa" --non-interactive --wait
+      run: node scripts/upload-consolidated-apple.mjs
     - name: Confirm Apple processing and confirmed owner group
       run: node scripts/verify-consolidated-testflight.mjs
     - name: Confirm actual Apple internal beta availability
       run: node scripts/release-parity.mjs beta-state
     - name: Remove temporary submit key
       if: always()
-      run: node --input-type=module -e "import {rm} from 'node:fs/promises';await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});"
+      run: node --input-type=module -e "import {rm} from 'node:fs/promises';for(const p of ['/fungo-asc-submit.p8','/private_keys'])await rm(process.env.RUNNER_TEMP+p,{force:true,recursive:true});"
     - name: Stage exact native receipts
       if: always()
-      run: 'mkdir -p "$RUNNER_TEMP/paired-beta-evidence"
-
-        if test -f "$RUNNER_TEMP/consolidated-build.json"; then cp "$RUNNER_TEMP/consolidated-build.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
-
-        if test -f "$RUNNER_TEMP/internal-beta-science.json"; then cp "$RUNNER_TEMP/internal-beta-science.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
-
-        if test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json "$RUNNER_TEMP/paired-beta-evidence/"; fi
-
-        '
+      run: "mkdir -p \"$RUNNER_TEMP/paired-beta-evidence\"\nif test -f \"$RUNNER_TEMP/consolidated-build.json\"; then cp \"$RUNNER_TEMP/consolidated-build.json\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\nif test -f \"$RUNNER_TEMP/internal-beta-science.json\"; then cp \"$RUNNER_TEMP/internal-beta-science.json\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\nif test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\n\nfor file in apple-upload.log native-signature.txt; do\n  if test -f \"$RUNNER_TEMP/$file\"; then cp \"$RUNNER_TEMP/$file\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\ndone\n"
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -266,14 +272,19 @@ jobs:
       with:
         path: dist-ios
     - name: Reject stale candidate immediately before public promotion
-      run: 'main=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+      run: 'node --input-type=module <<''JS''
 
-        test "$main" = "$GITHUB_SHA" || { echo ''::error::Main advanced; fresh paired release required''; exit 1; }
+        const r=await fetch(''https://api.github.com/repos/''+process.env.GITHUB_REPOSITORY+''/git/ref/heads/main'',{headers:{Authorization:''Bearer ''+process.env.GH_TOKEN,Accept:''application/vnd.github+json''}});
+
+        if(!r.ok||(await r.json()).object.sha!==process.env.GITHUB_SHA)throw Error(''Main advanced; fresh paired release required'');
+
+        JS
 
         '
     - name: Promote the original paired candidate
       id: deployment
       uses: actions/deploy-pages@v4
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
   published-smoke:
     needs:
     - source
@@ -303,13 +314,12 @@ jobs:
 
         cd web
 
-        npx playwright install --with-deps chromium webkit
-
         UNIFIED_BASE_URL="${{ needs.promote-public-web.outputs.page_url }}" node smoke-unified.mjs
 
         UNIFIED_BASE_URL="${{ needs.promote-public-web.outputs.page_url }}" UNIFIED_BROWSER=webkit node smoke-unified.mjs
 
         '
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
 'on':
   push:
     branches:
