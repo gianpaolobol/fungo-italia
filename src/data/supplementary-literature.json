@@ -5300,6 +5300,33 @@
             "evidenceUrl": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
             "basis": "Atlante ufficiale AUSL, 141 schede descrittive di entità fungine; presentazione istituzionale attribuisce il lavoro ai micologi AUSL."
           }
+        },
+        {
+          "sourceId": "PRIMARY-PHYTOCHEM-2022-LEPIOTA-ELAIOPHYLLA",
+          "reviewScope": "supplementary-literature",
+          "title": "Sarawi et al. (2022), Occurrence and chemotaxonomical analysis of amatoxins in Lepiota spp., Phytochemistry 195:113069",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34965486/",
+          "authors": [
+            "Sepas Sarawi",
+            "Yan-Ni Shi",
+            "Hermine Lotz-Winter",
+            "Kai Reschke",
+            "Helge B. Bode",
+            "Meike Piepenbring"
+          ],
+          "location": "Abstract; UHPLC-QTOF-MS/MS results",
+          "fields": [
+            "toxicology"
+          ],
+          "supportedClaim": "Nella specie campionata Lepiota elaiophylla sono state rilevate alfa-amanitina e beta-amanitina; non costituisce assegnazione della categoria S2 di commestibilità né attestazione di revisione indipendente.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Phytochemistry (studio primario sottoposto a peer review)",
+            "type": "ricerca primaria chimico-micologica",
+            "evidenceUrl": "https://doi.org/10.1016/j.phytochem.2021.113069",
+            "basis": "Risultati analitici specifici per L. elaiophylla riportati nell'abstract indicizzato PubMed."
+          }
         }
       ]
     },
