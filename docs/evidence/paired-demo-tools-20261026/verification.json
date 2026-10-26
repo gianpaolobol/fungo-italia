@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-26",
+  "sourceBaseline": "cc2a34d004485f1c834d1b9ecb523ef318517c55",
+  "node": {
+    "tests": 294,
+    "passed": 294,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typescript": "passed",
+  "webBuild": "passed",
+  "iosBundleExport": "passed",
+  "chromiumLegacyAndSandbox": {
+    "tests": 66,
+    "passed": 66
+  },
+  "localUnifiedSmoke": "blocked by CDN browser network; source CI verifies map",
+  "localWebKit": "system libraries unavailable",
+  "sandboxRegression": {
+    "red": "SecurityError from injected localStorage access in sandbox frame",
+    "green": "top-level guard; 1 browser test passed; sandbox allow-scripts unchanged"
+  },
+  "policyMetadataRegression": {
+    "red": "missing IPA digest accepted",
+    "green": "IPA digest and Apple beta detail timestamp required"
+  },
+  "technicalReview": "Separate read-only reviewer; no remaining blockers after final changes",
+  "publicAuthorization": "not granted for new candidate",
+  "independentScientificReview": "pending; no source review fields changed",
+  "newAppleDelivery": "not yet verified",
+  "newWebDelivery": "not yet published"
+}

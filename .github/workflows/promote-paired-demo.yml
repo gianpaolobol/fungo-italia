@@ -1,0 +1,110 @@
+name: Promote explicitly authorized paired public demo
+on:
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Exact application SHA already available on owner-only TestFlight
+        required: true
+        type: string
+      authorization_sha256:
+        description: Canonical SHA-256 of the distinct approved public demo declaration
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: paired-public-pages
+  cancel-in-progress: false
+jobs:
+  promote:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      PAIRED_SOURCE: ${{ inputs.source_commit }}
+      PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - name: Resolve only the exact separately approved candidate
+        id: approved
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';import {readFile,appendFile} from 'node:fs/promises';import {authorizationDigest} from './tools/paired-demo-policy.mjs';
+          const source=process.env.PAIRED_SOURCE;assert(/^[a-f0-9]{40}$/.test(source||''));
+          const a=JSON.parse(await readFile('revisione/public-demo-authorizations/'+source+'.json','utf8'));
+          assert.equal(a.sourceCommit,source);assert.equal(a.status,'approved');assert.equal(a.scope,'public-demo-beta');
+          assert.equal(authorizationDigest(a),process.env.PUBLIC_AUTHORIZATION_SHA256);assert(Number.isSafeInteger(a.candidateProducerRunId)&&a.candidateProducerRunId>0);
+          await appendFile(process.env.GITHUB_OUTPUT,'producer='+a.candidateProducerRunId+'\n');
+          JS
+      - uses: actions/download-artifact@v4
+        with:
+          name: Consolidated-TestFlight-evidence
+          run-id: ${{ steps.approved.outputs.producer }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/paired-beta-evidence
+      - name: Validate policy and all mandatory release guards
+        run: node --test tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs scripts/release-parity.test.mjs scripts/internal-beta-science.test.mjs scripts/consolidated-evidence.test.mjs
+      - name: Download original candidate by artifact ID and verify full ZIP before extraction
+        run: node tools/paired-demo.mjs artifact
+      - name: Require exact bytes, current native proofs, scientific snapshot and live owner-only Apple availability
+        run: node tools/paired-demo.mjs promote
+      - name: Install both browser engines for actual PWA upgrade
+        run: |
+          npm ci --prefix web --ignore-scripts
+          cd web
+          npx playwright install --with-deps chromium webkit
+      - name: Capture actual previous public PWA and private synthetic progress
+        run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-demo-browser"
+      - name: Preserve previous public bytes and native receipt before any deployment
+        run: node tools/paired-demo-snapshot.mjs "$RUNNER_TEMP/paired-previous-web"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Paired-previous-web-rollback-snapshot
+          path: ${{ runner.temp }}/paired-previous-web/
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-ios
+      - name: Repeat live Apple and exact-source guards immediately before deployment
+        run: node tools/paired-demo.mjs promote
+      - name: Deploy original bytes paired with confirmed owner-only TestFlight
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify every actually served file against immutable native and web receipts
+        run: node tools/paired-demo.mjs published
+      - name: Verify real Chromium and WebKit PWA upgrade and preserved local data
+        run: node tools/paired-demo-browser.mjs upgrade "$RUNNER_TEMP/paired-demo-browser"
+      - name: Preserve exact public receipts and browser evidence
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/paired-demo-evidence"
+          for file in paired-demo-native-proof.json paired-demo-verification.json paired-previous-web-proof.json; do
+            if test -f "$RUNNER_TEMP/$file"; then cp "$RUNNER_TEMP/$file" "$RUNNER_TEMP/paired-demo-evidence/"; fi
+          done
+          if test -f dist-ios/release.json; then cp dist-ios/release.json "$RUNNER_TEMP/paired-demo-evidence/"; fi
+          for file in capture-report.json upgrade-report.json chromium-verified.png webkit-verified.png; do
+            if test -f "$RUNNER_TEMP/paired-demo-browser/$file"; then cp "$RUNNER_TEMP/paired-demo-browser/$file" "$RUNNER_TEMP/paired-demo-evidence/"; fi
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Paired-public-demo-verification
+          path: ${{ runner.temp }}/paired-demo-evidence
+          retention-days: 90
+          if-no-files-found: warn

@@ -39,3 +39,7 @@ Execution: inline, autonomous, as explicitly requested. Fresh clone on fix/paire
 ## Ledger
 - Diagnosis: browser smoke line24 and native free demo expected the old paid Areas gate. Shared App.tsx already renders Areas independently of billing.
 - Scope: this handoff conditions new public promotion on a separate explicit authorization; the build21 authorization is insufficient.
+
+- Technical review found tile visibility insufficient; now decoded pixels required. Existing sentinel no longer recreated on reload.
+- Preserved parallel main cc9730e attribution correction; its source CI reproduced initScript storage access inside isolated map, fixed via top-level-only seed with real browser RED→GREEN regression.
+- Generic publisher prepared with explicit per-snapshot approval, successful producer/native/Apple readbacks, end-of-proof main guard, full previous web archive and real exam/PWA state checks. No approved public declaration exists.

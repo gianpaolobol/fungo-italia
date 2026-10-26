@@ -2,6 +2,12 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Publisher abbinato con consenso per singolo candidato — predisposizione
+
+Sorgente applicativa corrente letta: `cc2a34d004485f1c834d1b9ecb523ef318517c55`; comprende il guard del fixture browser top-level introdotto in parallelo. Preservato senza sovrascritture. La regressione locale isolata riproduce lo stesso SecurityError prima del guard e passa dopo; nessun permesso sandbox allentato.
+
+Predisposto publisher generico con consenso pubblico separato vincolato a SHA/artefatto/IPA/ricevuta, nessun consenso approvato creato. Rifiuta vecchia autorizzazione21, documenti pendenti, prove native negative e differenze applicative dopo la firma. Rilegge main alla fine dei controlli Apple. Il workflow resta manuale; conserva ogni byte della precedente web prima del deploy e verifica la nuova PWA in Chromium/WebKit con note/preferiti e sessione/storico esame creati dalla UI. [Procedura e rollback abbinato non distruttivo](PAIRED-RELEASE-RUNBOOK.md). Prove policy/archivio e regressioni locali nel [registro](evidence/paired-demo-tools-20261026/verification.json). Nuova build Apple, upgrade remoto e autorizzazione della nuova demo restano da acquisire: nessuna distribuzione o certificazione scientifica attestata.
+
 ## Fixture browser limitato al documento principale
 
 Run40402924277/source121853868101:65/65 WebKit e65/65 Chromium riusciti; mappa OSM, tessera reale e attribuzione passano nello smoke Chromium, ma il controllo finale degli errori rileva SecurityError dal fixture localStorage iniettato anche nell'iframe sandbox. Il fixture di migrazione preferiti ora opera soltanto su window.top. La sandbox `allow-scripts` rimane invariata, nessun `allow-same-origin` aggiunto e nessun errore ignorato. Il controllo finale errori vuoti resta obbligatorio. La nuova sorgente deve superare tutte le prove prima della firma.
