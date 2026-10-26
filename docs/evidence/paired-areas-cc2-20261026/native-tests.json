@@ -1,0 +1,49 @@
+{
+  "sourceCommit": "cc2a34d004485f1c834d1b9ecb523ef318517c55",
+  "scope": "native simulator tests only; no new TestFlight or Pages availability asserted",
+  "runtime": "iOS 26.2 / Xcode 26.6",
+  "demoIphone": {
+    "runId": 40403908066,
+    "jobId": 121857836886,
+    "conclusion": "success",
+    "artifactId": 12690463533,
+    "artifactZipSha256": "ec1c997b4e7b2183eb95f3c19417cdce3cdaee76d39d21e91d51179611187b04",
+    "screenshotSha256": "5414df00d1100fa08238192ab2c703fd2e7378b0bfbf3c774aa35c04d7a04baf",
+    "checks": [
+      "free Agaricus study",
+      "four-case demo exam",
+      "Areas without purchase",
+      "71 macroareas",
+      "Amiata filter",
+      "habitat detail",
+      "no involuntary subscription screen"
+    ]
+  },
+  "purchaseUI": {
+    "runId": 40403907630,
+    "iphoneJobId": 121856683314,
+    "ipadJobId": 121856683578,
+    "evidenceJobId": 121868128564,
+    "conclusion": "success",
+    "checks": [
+      "purchase",
+      "reopen",
+      "restore",
+      "verified entitlement",
+      "refund",
+      "expiry",
+      "premium study and exam",
+      "Areas after purchase"
+    ]
+  },
+  "independentScientificReview": "pending and unchanged",
+  "remaining": [
+    "isolated native StoreKit suite",
+    "dedicated iPad demo workflow",
+    "web source proof",
+    "signed IPA",
+    "new Apple owner-only availability",
+    "new public authorization",
+    "public PWA upgrade"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "runId": 40405025571,
+  "artifactId": 12689653801,
+  "artifactSha256": "7624350dadc957d8b23c5431fef702305aa21832261ae1f9af0d0029ba99f550",
+  "scope": "capture-preflight-only-no-upgrade-or-deployment",
+  "reports": [
+    {
+      "browser": "chromium",
+      "mode": "capture",
+      "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "sourceAfter": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "method": "already-current",
+      "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-26T21:32:30.568Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvprvt2k-f755qoycl1\",\"startedAt\":\"2026-10-26T21:32:30.572Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"queue\":[\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"pending\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-26T21:32:30.667Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-26T21:32:30.667Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvprvt2k-f755qoycl1\",\"startedAt\":\"2026-10-26T21:32:30.572Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":1,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":1,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":0,\"toxicologyCorrect\":0,\"danger\":0,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"name\":\"Agaricus campestris\",\"nameError\":true,\"categoryError\":false,\"detailErrors\":[],\"danger\":false}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-26T21:32:30.667Z\",\"round\":0}]}]}}",
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": false
+    },
+    {
+      "browser": "webkit",
+      "mode": "capture",
+      "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "sourceAfter": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "method": "already-current",
+      "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-26T21:32:36.736Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvprvxty-wqy5zt26cd\",\"startedAt\":\"2026-10-26T21:32:36.742Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"queue\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"pending\":[\"minimum-card-objective-agaricus--07--agaricus-bisporus\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"caseName\":\"Agaricus bisporus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-26T21:32:36.930Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"caseName\":\"Agaricus bisporus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-26T21:32:36.930Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvprvxty-wqy5zt26cd\",\"startedAt\":\"2026-10-26T21:32:36.742Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":1,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":1,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":0,\"toxicologyCorrect\":0,\"danger\":0,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"name\":\"Agaricus bisporus\",\"nameError\":true,\"categoryError\":false,\"detailErrors\":[],\"danger\":false}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"caseName\":\"Agaricus bisporus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-26T21:32:36.930Z\",\"round\":0}]}]}}",
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": false
+    }
+  ]
+}

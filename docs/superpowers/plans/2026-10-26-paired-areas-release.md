@@ -33,7 +33,7 @@ Execution: inline, autonomous, as explicitly requested. Fresh clone on fix/paire
 - [ ] Prepare generalized publisher with a pinned, explicit authorization for the exact immutable release.
 - [ ] Verify original artifact ZIP, every file, native receipt, live Apple state and audience.
 - [ ] Prepare real Chromium/WebKit PWA capture/upgrade with storage preservation.
-- [ ] Request only the missing distinct public authorization, once the exact result is reviewable.
+- [ ] Bind the already-confirmed public non-certified beta scope to the exact qualified candidate; ask again only for an actually changed scope.
 - [ ] After authorization deploy, verify served bytes and PWA; retain previous receipt/artifact for verified rollback.
 
 ## Ledger
@@ -43,3 +43,6 @@ Execution: inline, autonomous, as explicitly requested. Fresh clone on fix/paire
 - Technical review found tile visibility insufficient; now decoded pixels required. Existing sentinel no longer recreated on reload.
 - Preserved parallel main cc9730e attribution correction; its source CI reproduced initScript storage access inside isolated map, fixed via top-level-only seed with real browser RED→GREEN regression.
 - Generic publisher prepared with explicit per-snapshot approval, successful producer/native/Apple readbacks, end-of-proof main guard, full previous web archive and real exam/PWA state checks. No approved public declaration exists.
+
+- Active-session owner response «confermo» confirms public non-certified beta synchronization with technical controls and App Store block retained. Exact-snapshot declaration remains pending the qualified Apple receipt; no signature or independent certification inferred.
+- Browser upgrade now also requires aligned release text and absence of the obsolete TestFlight mismatch card in both engines; final live execution pending.

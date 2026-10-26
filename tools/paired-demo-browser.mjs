@@ -68,6 +68,9 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    assert.equal(await page.locator('script[src*="/_expo/static/js/web/index-"]').getAttribute('src'),expected,'Running page still contains previous app code');
    const icon=await page.locator('link[rel="apple-touch-icon"]').getAttribute('href');assert.equal(icon,'/fungo-italia/icon-'+build.iconSha256.slice(0,16)+'.png');
    const response=await page.request.get(new URL(icon,base).href);assert(response.ok());assert.equal(createHash('sha256').update(await response.body()).digest('hex'),build.iconSha256);
+   await page.getByTestId('subscription-access').click();
+   await expect(page.getByText('Questa versione corrisponde alla versione TestFlight verificata.',{exact:true})).toBeVisible({timeout:30000});
+   await expect(page.getByText('È disponibile una versione diversa, verificata su TestFlight.',{exact:true})).toHaveCount(0);
    await page.getByRole('tab',{name:'Studio',exact:true}).click();await expect(page.getByText('Demo gratuita · Agaricus',{exact:true})).toBeVisible();await expect(page.getByText(/1 preferito/)).toBeVisible();
    await page.getByRole('tab',{name:'Aree',exact:true}).click();await expect(page.getByText('Aree e habitat',{exact:true})).toBeVisible();await expect(page.getByText(/^71 macroaree in /)).toBeVisible();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toHaveCount(0);
    await context.setOffline(true);await page.reload({waitUntil:'domcontentloaded'});await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:30000});

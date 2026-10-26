@@ -10,6 +10,7 @@ permissions:
 jobs:
   capture:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 30
     env:
       PAIRED_SOURCE: 6dfb92656ec94485d94aecba72543930c2759d17
@@ -30,7 +31,13 @@ jobs:
         run: |
           npm ci --prefix web --ignore-scripts
           cd web
-          npx playwright install --with-deps chromium webkit
+          node -e "const p=require('./package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.56.1')throw Error('Browser image and lockfile differ')"
+          if ! command -v unzip >/dev/null || ! command -v zipinfo >/dev/null; then
+            apt-get update -qq
+            apt-get install -y --no-install-recommends unzip
+          fi
+          unzip -v
+          zipinfo -h
       - name: Capture real currently published PWA and synthetic exam checkpoint and history
         run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-preflight"
       - name: Preserve diagnostic report only

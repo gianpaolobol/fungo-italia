@@ -1,0 +1,15 @@
+{
+  "state": "prepared; actual container preflight pending",
+  "browserImage": "mcr.microsoft.com/playwright:v1.56.1-noble",
+  "lockfilePlaywrightVersion": "1.56.1",
+  "existingVerifiedWorkflow": ".github/workflows/ios-pwa.yml",
+  "reason": "119 MB Ubuntu browser dependency install stalled on Azure mirror; use the same complete browser image as existing web CI",
+  "preservedControls": [
+    "full immutable ZIP and file verification",
+    "source and live Apple audience checks",
+    "real Chromium and WebKit capture/upgrade",
+    "notes/favorites/exam history and offline checks",
+    "no iframe sandbox or TLS change"
+  ],
+  "archiveTools": "require unzip and zipinfo before candidate extraction; install unzip with normal signed apt repositories if absent"
+}
