@@ -1956,9 +1956,38 @@
       "Gambo bianco nettamente lanoso-fioccoso o squamuloso.",
       "Anello sottile, fragile o lacerato, con volva bianca sacciforme alla base."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Amanita citrina var. alba: residui del velo sul cappello più persistenti e odore di patata cruda; questi caratteri non autorizzano il consumo.",
+      "Agaricus sylvicola: lamelle inizialmente rosate e poi brune, mentre Amanita virosa conserva lamelle bianche."
+    ],
+    "habitat": [
+      "Ai margini di boschi di latifoglie o misti, più frequente in ambienti montani."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-426c9e8aa0a57396",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — amanita-virosa.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/amanita-virosa.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Ai margini di boschi di latifoglie o misti, più diffusa a quota elevata.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-426c9e8aa0a57396",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — amanita-virosa.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/amanita-virosa.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronto con Amanita citrina var. alba e Agaricus sylvicola, in particolare lamelle bianche contro rosate-brune.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-426c9e8aa0a57396",
         "reviewScope": "course-material",
@@ -3521,9 +3550,38 @@
       "Odore caratteristico di patata cruda o rafano.",
       "Base del gambo con grosso bulbo marginato e volva aderente, non sacciforme."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Amanita virosa: cappello con residui velari meno persistenti e odore diverso; specie mortale.",
+      "Amanita phalloides: residui velari sul cappello generalmente assenti e odore dolciastro negli esemplari maturi; specie mortale."
+    ],
+    "habitat": [
+      "Ectomicorrizica con latifoglie e conifere, spesso sotto faggio nei boschi misti su suoli neutri o alcalini."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-9940578ef661b588",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — amanita-citrina.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/amanita-citrina.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Ectomicorrizica con latifoglie e conifere, più spesso faggio in boschi misti neutri o alcalini.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-9940578ef661b588",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — amanita-citrina.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/amanita-citrina.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronto con Amanita virosa e Amanita phalloides, entrambe mortali, per residui velari ed odore.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-9940578ef661b588",
         "reviewScope": "course-material",
@@ -4156,9 +4214,38 @@
       "Cappello bruno-rossastro con verruche grigiastre, mai bianco puro su rosso vivo.",
       "Anello ampio con pagina superiore striata."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Amanita pantherina: carne non arrossante alle lesioni; il solo colore del cappello non è diagnostico.",
+      "Amanita excelsa s.l.: specie simili, ma la carne non assume il caratteristico arrossamento di Amanita rubescens."
+    ],
+    "habitat": [
+      "Micorrizica con latifoglie e conifere; frequente anche nei boschi di conifere su terreni acidi e poveri."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-3d6106937e6d51a0",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — amanita-rubescens.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/amanita-rubescens.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Micorrizica con latifoglie e conifere; presente anche su terreni acidi poveri nei boschi di conifere.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-3d6106937e6d51a0",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — amanita-rubescens.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/amanita-rubescens.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronto con Amanita pantherina e Amanita excelsa: differenza dell'arrossamento della carne dopo lesione.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-3d6106937e6d51a0",
         "reviewScope": "course-material",
@@ -6749,8 +6836,22 @@
       "Lamelle giovani pallide, biancastre o violetto-grigiastre, poi ruggine."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "Ectomicorrizico soprattutto con latifoglie, più raramente con conifere, in aree con substrato calcareo."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-427e024f1be59bd5",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — cortinarius-praestans.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/cortinarius-praestans.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Ectomicorrizico con latifoglie, meno frequentemente conifere, in aree gessose o calcaree.",
+        "fields": [
+          "habitat"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-427e024f1be59bd5",
         "reviewScope": "course-material",
@@ -7150,9 +7251,42 @@
       "Lamelle smarginate, crema-giallastre nel giovane e poi nettamente rosa-salmone.",
       "Gambo spesso, bianco, pieno e privo di anello."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Calocybe gambosa: lamelle bianche e odore nettamente farinoso; diversa fenologia tipicamente primaverile.",
+      "Clitocybe nebularis: specie pallida, distinguibile anche con caratteri delle lamelle e dell'odore."
+    ],
+    "habitat": [
+      "In boschi di latifoglie; descritto prevalentemente come saprotrofo, con possibili associazioni micorriziche segnalate con salici non definitivamente accertate."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-EXT-ENTOLOMA-SINUATUM-20261026",
+        "reviewScope": "course-material",
+        "title": "First Nature — Entoloma sinuatum",
+        "authors": [
+          "Pat O'Reilly"
+        ],
+        "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Mainly saprobic in broadleaf woodland, possible reported association with willows.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-EXT-ENTOLOMA-SINUATUM-20261026",
+        "reviewScope": "course-material",
+        "title": "First Nature — Entoloma sinuatum",
+        "authors": [
+          "Pat O'Reilly"
+        ],
+        "url": "https://www.first-nature.com/fungi/entoloma-sinuatum.php",
+        "location": "Similar species",
+        "supportedClaim": "Comparison with Calocybe gambosa (white gills, mealy odour, spring fruiting) and Clitocybe nebularis (gill colour and odour).",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "COURSE-TOX-20261024-9850",
         "title": "Elenco delle principali sindromi: gastrointestinale e muscarinica",
@@ -16656,9 +16790,38 @@
       "Pori arancio-rossi o rosso-mattone con forte viraggio blu.",
       "Gambo giallo-arancio con vistoso reticolo rosso a maglie grandi e allungate."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Rubroboletus satanas: cappello molto pallido e gambo ingrossato con reticolo rosso; distinguere dalle caratteristiche di Suillellus luridus.",
+      "Neoboletus luridiformis: gambo punteggiato di rosso, senza il reticolo tipico di Suillellus luridus."
+    ],
+    "habitat": [
+      "Specie ectomicorrizica, frequente sotto faggio su suoli calcarei; segnalata anche sotto quercia e più raramente tiglio."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-bc1e8c9dfd295936",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — suillellus-luridus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/suillellus-luridus.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Ectomicorrizico soprattutto con faggio su suolo calcareo, anche quercia e occasionalmente tiglio.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-bc1e8c9dfd295936",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — suillellus-luridus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/suillellus-luridus.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronto con Rubroboletus satanas (cappello biancastro e gambo a reticolo rosso) e Neoboletus luridiformis (puntini rossi sul gambo invece del reticolo).",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-bc1e8c9dfd295936",
         "reviewScope": "course-material",
@@ -16885,9 +17048,39 @@
       "Pori giallo-limone che virano intensamente al blu.",
       "Gambo giallastro, senza evidenti tonalità rosse, spesso attenuato o radicante alla base."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Suillellus luridus: cappello più scuro e carne aranciata alla base del gambo.",
+      "Rubroboletus satanas: cappello biancastro e pori arancio-rossi a maturità.",
+      "Caloboletus calopus: base del gambo con reticolo rosso."
+    ],
+    "habitat": [
+      "Specie ectomicorrizica su terreno prevalentemente neutro o alcalino, soprattutto sotto querce, talvolta sotto faggi."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-292b62a9cd8e88d3",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — caloboletus-radicans.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/caloboletus-radicans.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Ectomicorrizico soprattutto sotto quercia su suoli neutri o alcalini, occasionalmente con faggio.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-292b62a9cd8e88d3",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — caloboletus-radicans.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/caloboletus-radicans.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronto con Suillellus luridus, Rubroboletus satanas e Caloboletus calopus secondo colore del cappello, dei pori e reticolo sul gambo.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-292b62a9cd8e88d3",
         "reviewScope": "course-material",
