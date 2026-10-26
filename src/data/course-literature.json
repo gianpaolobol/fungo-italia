@@ -2148,6 +2148,71 @@
           "supportedClaim": "Per E. rhodopolium nominale, confronto con Rhodocollybia butyracea prima che le lamelle diventino rosate."
         }
       ]
+    },
+    {
+      "scientificName": "Hygrophorus russula",
+      "additions": {
+        "habitat": [
+          "Micorrizico con querce e altre latifoglie; fruttifica isolato o gregario, talora in archi o cerchi, soprattutto tra fine estate e autunno."
+        ],
+        "lookalikes": [
+          "Hygrophorus erubescens: specie simile più associata a conifere, con lamelle più spaziate e ingiallimento più evidente.",
+          "Hygrophorus purpurascens: specie simile con velo parziale negli esemplari giovani."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-1f1ff482941e6501",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Ecology",
+          "supportedClaim": "Mycorrhizal with oaks and other hardwoods, scattered or gregarious, sometimes rings/arcs, late summer and fall."
+        },
+        {
+          "sourceId": "LIT-ATLAS-1f1ff482941e6501",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Introduction, comparison paragraph before Description",
+          "supportedClaim": "H. erubescens has more distant gills and pronounced yellow bruising; H. purpurascens has a partial veil when young."
+        }
+      ]
+    },
+    {
+      "scientificName": "Hygrophorus penarioides",
+      "additions": {
+        "habitat": [
+          "Segnalato in bosco di latifoglie; raccolta documentata a Parchiule (PU), 17 ottobre 2009."
+        ],
+        "lookalikes": [
+          "Rispetto ad altri Hygrophorus bianchi, combinazione di taglia robusta, cappello presto asciutto, gambo affusolato e odore di latte bollito; la fonte non identifica singole specie sosia."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-28a4137b4cfe1173",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat; Luogo e data di raccolta",
+          "supportedClaim": "Habitat latifoglia; Parchiule (PU), 17-10-2009."
+        },
+        {
+          "sourceId": "LIT-ATLAS-28a4137b4cfe1173",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Note",
+          "supportedClaim": "Cappello asciutto, taglia, carnosità, gambo affusolato e odore distinguono dagli altri Hygrophorus bianchi; nessuna specie sosia specificata."
+        }
+      ]
     }
   ]
 }
