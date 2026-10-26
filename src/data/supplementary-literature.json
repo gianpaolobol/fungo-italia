@@ -4648,6 +4648,28 @@
             "lookalikes"
           ],
           "supportedClaim": "Nota esplicita: edulis ed ellisii si distinguono da pes-caprae per la superficie giallastra o giallo verdastra anziché bruna."
+        },
+        {
+          "sourceId": "MICOPONTE-MATTEUCCI-2011-P27-SPOREPRINT",
+          "reviewScope": "supplementary-literature",
+          "title": "Sergio Matteucci, Il genere Albatrellus, MicoPonte n. 5 (2011), p. 27",
+          "authors": [
+            "Sergio Matteucci"
+          ],
+          "url": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+          "location": "p. stampata 27 (PDF pagina 27, indice 26), Principali caratteri microscopici",
+          "fields": [
+            "sporePrint"
+          ],
+          "supportedClaim": "Per Albatrellus pes-caprae (= Scutiger pes-caprae) è dichiarato esplicitamente che le spore sono bianche in massa; distingue la sporata massiva dalle singole spore ialine.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Gruppo Micologico Massimiliano Danesi, MicoPonte",
+            "type": "bollettino micologico firmato con comitato di lettura",
+            "evidenceUrl": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+            "basis": "Testo originale e immagine della pagina controllati, autore nominato; non equivalente ad attestazione indipendente della scheda."
+          }
         }
       ]
     },
