@@ -1,0 +1,61 @@
+{
+  "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+  "mainFrozen": true,
+  "producerRun": 40414345353,
+  "nativeRun": 40414345899,
+  "purchaseUiRun": 40414345724,
+  "demoRun": 40414345397,
+  "browserPreflight": {
+    "run": 40413648238,
+    "job": 121890371963,
+    "source": "0ceeb493bbc43a64a0345a2a979e08d3253de968",
+    "conclusion": "success",
+    "artifact": 12694881098,
+    "zipSha256": "e9fe54209ae0bb913fdf5a51462c607e00e35a4078160e50c33f28f7d6109f64"
+  },
+  "newAppleDelivery": "pending",
+  "newPublicDelivery": "pending distinct snapshot approval and actual Apple proof",
+  "candidate": {
+    "artifactId": 12695390804,
+    "zipSha256": "ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d",
+    "bytes": 433834692,
+    "source": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+    "producer": 40414345353,
+    "webContentHash": "5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d"
+  },
+  "additionalNativeAreasAudit": {
+    "runId": 40415217045,
+    "orchestrator": "acdb810c520e0fcd77b1ce77e4ac1779c2529dd9",
+    "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+    "status": "in_progress",
+    "scope": "Generated test harness only; no main/app edits, signing or upload. Free/paid search, region intersection, native OSM screenshots, source embed."
+  },
+  "sourceStatus": "success",
+  "sourceJob": 121892755693,
+  "nativeStatus": "success",
+  "purchaseUiStatus": "success on both iPhone and iPad",
+  "demoStatus": "success on both iPhone and iPad",
+  "nativeDetails": {
+    "nativeStorekit": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "purchaseUi": {
+      "requiredFunctionalTestsPerDevice": 2,
+      "passedRequiredPerDevice": 2,
+      "optionalStartupProbe": "Existing opt-in diagnostic disabled by its own design; 1 XCTSkip per device, no mandatory test skipped or relaxed"
+    },
+    "demo": {
+      "testsPerDevice": 1,
+      "passedPerDevice": 1
+    }
+  },
+  "sourceProofArtifact": {
+    "id": 12695513286,
+    "zipSha256": "782dbb9f9d8a8a2c9344433140ce4645d2c39d1e013b8e12fa0374fb7ccf0ef8",
+    "originalFileSha256": "fffaff068c4095d1f1f54dabeea5b4e1df9811fa9e6943b9f64ad1417ac497f1"
+  },
+  "betaJob": 121901317007,
+  "betaStatus": "Building isolated beta channel with remote build increment"
+}
