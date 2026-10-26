@@ -1827,6 +1827,92 @@
           "supportedClaim": "Ectomicorrizico con latifoglie, meno frequentemente conifere, in aree gessose o calcaree."
         }
       ]
+    },
+    {
+      "scientificName": "Amanita porphyria",
+      "additions": {
+        "habitat": [
+          "Specie micorrizica soprattutto con conifere, più raramente con latifoglie, su suoli acidi; segnalata anche nelle brughiere."
+        ],
+        "lookalikes": [
+          "Amanita pantherina: residui del velo sul cappello bianchi invece che grigio-violacei.",
+          "Amanita rubescens: la carne tende ad arrossare al taglio o alla lacerazione.",
+          "Amanita excelsa: spore maggiori, lamelle più fitte e anello più robusto."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-df28c90d08f6d84d",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Micorrizica principalmente con conifere, più raramente latifoglie su suoli acidi; segnalazioni in brughiere."
+        },
+        {
+          "sourceId": "LIT-ATLAS-df28c90d08f6d84d",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronti con A. pantherina (velo bianco), A. rubescens (carne arrossante), A. excelsa (spore maggiori, lamelle fitte, anello robusto)."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius caperatus",
+      "additions": {
+        "habitat": [
+          "Specie ectomicorrizica associata a conifere, faggi e alcune Ericaceae (erica, brugo, mirtillo)."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-dbc167797895e0a0",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Ectomicorrizica con conifere, faggio e alcune Ericaceae."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe gibba s.l.",
+      "additions": {
+        "habitat": [
+          "Per Clitocybe gibba in senso stretto: saprotrofa nella lettiera sotto siepi, nei boschi di latifoglie e nelle brughiere; dato di specie rappresentativa, non automaticamente valido per tutto il gruppo s.l."
+        ],
+        "lookalikes": [
+          "Per Clitocybe gibba in senso stretto: Lepista flaccida presenta cappello più grande e bruno-rossastro, lamelle che virano al fulvo e spore più piccole, arrotondate e finemente verrucose; confronto non generalizzabile a tutte le entità s.l."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-320461b445bd0aac",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Per C. gibba s.str., saprotrofa in lettiera sotto siepi, latifoglie e brughiere; non estendere senza verifica all'intero s.l."
+        },
+        {
+          "sourceId": "LIT-ATLAS-320461b445bd0aac",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Per C. gibba s.str., confronto con Lepista flaccida; limitato alla specie rappresentativa e non generalizzato al gruppo s.l."
+        }
+      ]
     }
   ]
 }
