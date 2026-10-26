@@ -25,7 +25,7 @@
     "green": "IPA digest and Apple beta detail timestamp required"
   },
   "technicalReview": "Separate read-only reviewer; no remaining blockers after final changes",
-  "publicAuthorization": "not granted for new candidate",
+  "publicAuthorization": "public non-certified beta scope confirmed by owner in active session; distinct exact-snapshot record pending qualified Apple receipt",
   "independentScientificReview": "pending; no source review fields changed",
   "newAppleDelivery": "not yet verified",
   "newWebDelivery": "not yet published",
@@ -39,5 +39,6 @@
     "liveSource": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
     "historyRecordsPerBrowser": 1,
     "scope": "capture only; no upgrade, new release parity or deployment"
-  }
+  },
+  "obsoleteBannerCheck": "required after actual upgrade on both engines; not executed yet"
 }
