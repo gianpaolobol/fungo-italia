@@ -127,7 +127,7 @@ jobs:
            const config=JSON.parse(await readFile('eas.json','utf8')).submit.production.ios;
            const keys=process.env.RUNNER_TEMP+'/private_keys';await fsMkdir(keys);const target=keys+'/AuthKey_'+config.ascApiKeyId+'.p8';await (await import('node:fs/promises')).copyFile(config.ascApiKeyPath,target);await (await import('node:fs/promises')).chmod(target,0o600);
            const flags=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/altool-flags.json','utf8'));
-           const result=spawnSync('xcrun',['altool','--upload-app','--type','ios','--file',process.env.RUNNER_TEMP+'/fungo-consolidated.ipa',flags.key,config.ascApiKeyId,flags.issuer,config.ascApiKeyIssuerId],{cwd:process.env.RUNNER_TEMP,env:{...process.env,API_PRIVATE_KEYS_DIR:keys},encoding:'utf8',timeout:20*60000,maxBuffer:10*1024*1024});
+           const result=spawnSync('xcrun',['altool',flags.command,process.env.RUNNER_TEMP+'/fungo-consolidated.ipa',flags.key,config.ascApiKeyId,flags.issuer,config.ascApiKeyIssuerId,flags.p8,target],{cwd:process.env.RUNNER_TEMP,env:{...process.env,API_PRIVATE_KEYS_DIR:keys},encoding:'utf8',timeout:20*60000,maxBuffer:10*1024*1024});
            await writeFile(process.env.RUNNER_TEMP+'/apple-upload.log',(result.stdout||'')+'\n'+(result.stderr||''));console.log(result.stdout||'');console.log(result.stderr||'');assert(!result.error&&result.status===0,'Apple uploader failed; inspect retained log');
           }
           async function fsMkdir(path){await (await import('node:fs/promises')).mkdir(path,{recursive:true,mode:0o700});}
@@ -135,8 +135,19 @@ jobs:
           node --input-type=module <<'JS'
           import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {writeFile} from 'node:fs/promises';
           const p=spawnSync('xcrun',['altool','--help'],{encoding:'utf8',timeout:60000});assert(!p.error&&p.status===0,'Apple uploader unavailable before cancellation');const text=(p.stdout||'')+(p.stderr||'');console.log('ALTOOL_RUNTIME_HELP\n'+text);
-          const flags={key:text.includes('--apiKey')?'--apiKey':text.includes('--api-key')?'--api-key':null,issuer:text.includes('--apiIssuer')?'--apiIssuer':text.includes('--api-issuer')?'--api-issuer':null};
-          assert(flags.key&&flags.issuer&&text.includes('--upload-app')&&text.includes('--file')&&text.includes('--type'),'Supported uploader API-key flags unavailable; leave original delivery untouched');await writeFile(process.env.RUNNER_TEMP+'/altool-flags.json',JSON.stringify(flags));console.log('Apple command and API-key support verified before cancellation');
+          const flags={command:'--upload-package',key:'--api-key',issuer:'--api-issuer',p8:'--p8-file-path'};
+          assert(Object.values(flags).every(flag=>text.includes(flag))&&text.includes('--list-providers'),'Supported uploader API-key flags unavailable; leave original delivery untouched');await writeFile(process.env.RUNNER_TEMP+'/altool-flags.json',JSON.stringify(flags));console.log('Apple command and API-key support verified before cancellation');
+          JS
+      - name: Prepare existing authorized Apple credentials only in the temporary runner
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      - name: Verify Apple command authentication without changing any delivery
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';import {readFile,mkdir,copyFile,chmod} from 'node:fs/promises';import {spawnSync} from 'node:child_process';
+          const c=JSON.parse(await readFile('eas.json','utf8')).submit.production.ios,flags=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/altool-flags.json','utf8'));
+          const keys=process.env.RUNNER_TEMP+'/private_keys';await mkdir(keys,{recursive:true,mode:0o700});const key=keys+'/AuthKey_'+c.ascApiKeyId+'.p8';await copyFile(c.ascApiKeyPath,key);await chmod(key,0o600);
+          const p=spawnSync('xcrun',['altool','--list-providers',flags.key,c.ascApiKeyId,flags.issuer,c.ascApiKeyIssuerId,flags.p8,key],{cwd:process.env.RUNNER_TEMP,env:{...process.env,API_PRIVATE_KEYS_DIR:keys},encoding:'utf8',timeout:120000});
+          assert(!p.error&&p.status===0,'Apple uploader authentication unavailable; original delivery untouched');console.log('Actual Apple uploader authentication verified; provider/contact output omitted');
           JS
       - name: Cancel only the exact stale queued EAS submission after all preflights
         id: queue
@@ -163,9 +174,6 @@ jobs:
         run: |
           unzip -q "$RUNNER_TEMP/fungo-consolidated.ipa" -d "$RUNNER_TEMP/recovered-native"
           node --input-type=module -e "const r=await import('file://'+process.env.RUNNER_TEMP+'/owner-recovery.mjs');await r.verifySigned();"
-      - name: Prepare existing authorized Apple credentials only in the temporary runner
-        if: steps.queue.outputs.recover == 'true'
-        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
       - name: Upload the same EAS-signed IPA directly to Apple after confirmed cancellation
         if: steps.queue.outputs.recover == 'true'
         run: node --input-type=module -e "const r=await import('file://'+process.env.RUNNER_TEMP+'/owner-recovery.mjs');await r.upload();"
