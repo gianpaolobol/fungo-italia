@@ -2664,6 +2664,29 @@
             "evidenceUrl": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
             "basis": "Articolo tassonomico originale, Persoonia 17(2), 1999, pp.295–317; autori e affiliazioni a p.295."
           }
+        },
+        {
+          "sourceId": "MUSE-FLORIANI-TRICHOLOMA-STIPAROPHYLLUM-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "MUSE — Censimento dei macromiceti, Tricholoma stiparophyllum (testo di Marco Floriani)",
+          "authors": [
+            "Marco Floriani"
+          ],
+          "url": "https://www2.muse.it/bresadola/map_det.asp?ar=tv&sp=183528",
+          "location": "Scheda tassonomica, paragrafo ecologia e confronto con T. album e T. lascivum",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Per tre componenti nominate: T. stiparophyllum associato soprattutto a Betula, eccezionalmente Picea; T. album associato a Quercus; T. lascivum simbionte di Fagus. Differenze nel margine pileico e tendenza a ingrigire sono circoscritte a questi nomi, senza estensione agli «altri» del gruppo S1.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "MUSE — Museo delle Scienze, progetto Censimento dei macromiceti",
+            "type": "museo scientifico; scheda micologica firmata",
+            "evidenceUrl": "https://www2.muse.it/bresadola/map_det.asp?ar=tv&sp=183528",
+            "basis": "Descrizione micologica attribuita esplicitamente a Marco Floriani, con confronto delle specie nominate."
+          }
         }
       ]
     },
