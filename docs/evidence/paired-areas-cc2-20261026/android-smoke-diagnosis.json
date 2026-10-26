@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "cc2a34d004485f1c834d1b9ecb523ef318517c55",
+  "runId": 40403907790,
+  "buildJobId": 121857183270,
+  "buildConclusion": "success",
+  "smokeJobId": 121863189639,
+  "smokeConclusion": "failure",
+  "observedError": "UI text unavailable: Fungo Italia completo after opening Areas",
+  "actualUI": "Areas list visible with macroarea names and habitats; old assertion scrolled while searching nonexistent paywall",
+  "failureArtifactId": 12690698253,
+  "failureArtifactZipSha256": "71d949e94d78667f1aee787dc3617013c51c6999b27ac5cde9c5657476f4ef3d",
+  "correctedContract": [
+    "free Areas title and71macroareas/20regions",
+    "Amiata filter andonearea",
+    "realhabitatdetailandclose",
+    "four-case demo remains accessible",
+    "15-case premium exam remains inaccessible",
+    "cold-startoffline/favoritepersistenceandexplicitSubscriptionGatechecksretained"
+  ],
+  "pythonSyntax": "passed",
+  "technicalReview": "separate review; controls match actual Areas component; no blocker",
+  "newSourceEmulatorExecution": "pending; no pass claimed"
+}

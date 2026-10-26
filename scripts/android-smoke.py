@@ -90,7 +90,15 @@ def main():
     wait_text('Caratteri di studio')
     tap('Torna alle schede')
     tap('Aree')
-    wait_text('Fungo Italia completo')
+    scroll_top()
+    areas=wait_text('Aree e habitat')
+    assert 'Fungo Italia completo' not in text_of(areas), 'Free Areas must not open the subscription screen'
+    wait_text('71 macroaree in 20 regioni')
+    tap('Monte Amiata')
+    wait_text('1 area corrispondente')
+    tap('Consulta Monte Amiata')
+    wait_text('Faggeta · Castagneto · Querceto')
+    tap('Chiudi dettaglio')
     tap('Percorso')
     wait_text('Ciao')
     tap('Abbonamento')
@@ -104,11 +112,12 @@ def main():
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
     with open('artifacts/smoke/ui.xml','w') as f:
         f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
-    # Android has no verified billing implementation: only the free Agaricus demo is accessible.
+    # Android has no verified billing: free Areas do not unlock the premium exam.
     tap('Esame')
     wait_text('Test Agaricus gratuito')
-    wait_text('Inizia 4 casi')
-    print('PASS: free four-case Agaricus test is accessible; Areas remain gated.')
+    exam=wait_text('Inizia 4 casi')
+    assert 'Inizia 15 casi' not in text_of(exam), 'Premium exam must remain inaccessible without verified billing'
+    print('PASS: free four-case Agaricus test and Areas/habitats are accessible; premium exam remains gated.')
     print('PASS: Percorso cold start offline, Agaricus search/detail and favorites persist after restart.')
 try:
     main()
