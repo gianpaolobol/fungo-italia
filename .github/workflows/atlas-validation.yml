@@ -1,0 +1,45 @@
+name: Atlas regeneration and scientific gate
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'src/data/**'
+      - 'revisione/**'
+      - '.github/workflows/atlas-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  atlas-regeneration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+          cache: npm
+      - run: npm ci
+      - name: Regenerate and validate the full canonical atlas
+        run: npm run prepare:data
+      - name: TypeScript
+        run: npm run typecheck
+      - name: Scientific regression tests
+        run: node --test scripts/*.test.mjs
+      - name: Require generated source artifacts to be committed
+        run: git diff --exit-code -- src/data
+      - name: Check strict independent scientific release gate (must not bypass)
+        run: npm run validate:release
+      - name: Save diagnostic artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-validation-${{ github.sha }}
+          if-no-files-found: warn
+          path: |
+            docs/RELEASE-READINESS.md
+            src/data/provenance.json
+            src/data/catalog.json
