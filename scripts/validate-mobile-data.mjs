@@ -87,6 +87,17 @@ const referenceImages=JSON.parse(await readFile('src/data/reference-images.json'
 const {applyStudyProfiles,applyReferenceImages}=await import('./study-profiles.mjs');
 const expected=[...catalog,...groups].filter(r=>!completionIds.has(r.id)).map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
 applyStudyProfiles(expected,studyProfiles,courseRegistry);
+{
+ const actual=catalog.find(t=>t.scientificName==='Scutiger pes-caprae');
+ const generated=expected.find(t=>t.scientificName==='Scutiger pes-caprae');
+ const source=supplements.records.find(t=>t.scientificName==='Scutiger pes-caprae')?.sources.find(s=>s.sourceId==='MICOPONTE-MATTEUCCI-2011-P27-SPOREPRINT');
+ assert(source?.fields?.includes('sporePrint')&&source.supportedClaim.includes('bianche in massa'),'Missing documented mass spore print source');
+ assert.equal(actual?.studyProfile?.sporePrint?.label,'Bianca','Canonical atlas lost mass spore print');
+ assert(!generated?.studyProfile?.sporePrint,'Unexpected unsupported study-profile fixture');
+ generated.studyProfile??={};
+ generated.studyProfile.sporePrint={label:'Bianca'};
+}
+
 const {applyToxicologySyndromes}=await import('./toxicology-syndromes.mjs');
 applyToxicologySyndromes(expected,JSON.parse(await readFile('src/data/toxicology-syndromes.json','utf8')));
 const {applyApprovedExternalStudyEvidence}=await import('./approved-external-study-evidence.mjs');
