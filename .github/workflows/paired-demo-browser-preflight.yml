@@ -1,0 +1,43 @@
+name: Preflight public PWA preservation without deployment
+on:
+  push:
+    branches: [audit/paired-demo-browser-preflight-20261026]
+    paths: [.github/workflows/paired-demo-browser-preflight.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PAIRED_SOURCE: 6dfb92656ec94485d94aecba72543930c2759d17
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - uses: actions/download-artifact@v4
+        with:
+          name: Paired-web-candidate
+          run-id: 40380720179
+          github-token: ${{ github.token }}
+          path: dist-ios
+      - name: Verify publisher policy and previous-snapshot unit regressions
+        run: node --test tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs
+      - name: Install browser engines
+        run: |
+          npm ci --prefix web --ignore-scripts
+          cd web
+          npx playwright install --with-deps chromium webkit
+      - name: Capture real currently published PWA and synthetic exam checkpoint and history
+        run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-preflight"
+      - name: Preserve diagnostic report only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Paired-PWA-capture-preflight
+          path: ${{ runner.temp }}/paired-preflight/capture-report.json
+          if-no-files-found: warn
+          retention-days: 30
