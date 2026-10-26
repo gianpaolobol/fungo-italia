@@ -565,6 +565,33 @@
           "reviewStatus": "source-consulted-pending-independent-review"
         }
       ]
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "commonNames": [],
+      "habitat": [
+        "Boschi di latifoglie; osservato dalla primavera all'autunno, su suoli argillosi o calcarei (Provincia di Cuneo, scheda Entoloma sinuatum)."
+      ],
+      "lookalikes": [
+        "Clitocybe nebularis: confronto riportato dalla Provincia di Cuneo; le lamelle cambiano colore con la maturazione e il solo aspetto generale non consente identificazione sicura.",
+        "Lyophyllum decastes: confronto segnalato dalla Provincia di Cuneo; non determinare dalla sola somiglianza del cappello."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-ENTOLOMA-SINUATUM-CUNEO-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Natura e prodotti tipici: Entoloma sinuatum",
+          "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/entoloma-sinuatum/",
+          "location": "Sezioni Habitat e Osservazioni della scheda Entoloma sinuatum",
+          "supportedClaim": "Habitat boschi di latifoglie e confronti con Clitocybe nebularis e Lyophyllum decastes; non si usa per modificare la classificazione alimentare fondata su S2.",
+          "notes": "Fonte istituzionale verificata il 2026-10-26. Integrazione bibliografica, revisione micologica indipendente non attestata. I sosia sono confronti interni alla scheda, non nuove unità curricolari.",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ]
+        }
+      ]
     }
   ]
 }
