@@ -1,0 +1,693 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-26",
+  "source": "revisione/habitat-comparison-completion-20261026.json",
+  "purpose": "Matrice operativa per delimitazione dei 40 campi parziali. Evidence IDs non costituiscono revisioni indipendenti.",
+  "count": 40,
+  "items": [
+    {
+      "id": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "name": "Agaricus sez. Xanthodermatei",
+      "field": "habitat",
+      "rank": "section",
+      "s1Page": 4,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-054c651d35fe05",
+        "EXT-R2-509588b1d1da02"
+      ],
+      "documentedLimitations": [
+        "partial-nominal-evidence: Habitat utile soltanto per A. xanthodermus; resta priva di sintesi ecologica generale l’intera sezione."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "name": "Agaricus sez. Sanguinolenti",
+      "field": "lookalikes",
+      "rank": "section",
+      "s1Page": 4,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-d9272291d92a56",
+        "EXT-R2-ddb41a7a1b2bd6"
+      ],
+      "documentedLimitations": [
+        "partial-nominal-evidence: Confronto limitato alla specie rappresentativa A. sylvaticus; nessuna diagnosi differenziale complessiva della sezione trovata."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "name": "Clitocybe dealbata / Collybia rivulosa",
+      "field": "habitat",
+      "rank": "species",
+      "s1Page": 5,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+        "EXT-R2-7dfd577dc929ef"
+      ],
+      "documentedLimitations": [
+        "Nelle fonti autorevoli consultate non reperito un dato esplicito alla scala dell’intera unità; escluse inferenze dal genere e confronti costruiti da descrizioni indipendenti."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "name": "Clitopilus prunulus s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 5,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-5defe86b728b6f84",
+        "EXT-R2-15dfdae3aed022"
+      ],
+      "documentedLimitations": [
+        "Dato nominale; non esteso alle altre specie dell’unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "name": "Clitopilus prunulus s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 5,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-CHAT-TEXT-MICOLAB-20261022",
+        "EXT-SCOPE-5defe86b728b6f84",
+        "EXT-R2-15dfdae3aed022"
+      ],
+      "documentedLimitations": [
+        "Confronto nominale, non documentazione di tutte le componenti s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "name": "Entoloma clypeatum s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 7,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-7a9d73ca70f47a92",
+        "EXT-R2-68fa298a863473"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "name": "Hygrocybe conica s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 8,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-f12798fee7546047",
+        "EXT-R2-263d81828a04d1"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "name": "Hygrocybe conica s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 8,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-f12798fee7546047",
+        "EXT-R2-263d81828a04d1"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "name": "Echinoderma asperum s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-956ec94377023ef0",
+        "EXT-R2-67502a023ecc7a"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "name": "Echinoderma asperum s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-10da5c47fd87037d",
+        "EXT-R2-67502a023ecc7a"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "name": "Leucoagaricus leucothites s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-397dc4c1825ad9bf"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "name": "Chlorophyllum rhacodes s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-e6058da0f5b364cd",
+        "EXT-R2-ef00c3e72d5cfb"
+      ],
+      "documentedLimitations": [
+        "Evidenza esterna solo parziale per la specie nominale; non estesa all’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "name": "Lepista nuda s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-e8e23ac03d28b21d",
+        "EXT-R2-250b9df382b0c7"
+      ],
+      "documentedLimitations": [
+        "Scheda nominale; l’ecologia delle altre componenti s.l. resta distinta."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "name": "Lepista nuda s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-CHAT-TEXT-MICOLAB-20261022",
+        "EXT-SCOPE-e8e23ac03d28b21d",
+        "EXT-R2-250b9df382b0c7"
+      ],
+      "documentedLimitations": [
+        "Confronto nominale; non esteso indiscriminatamente al gruppo s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
+      "name": "Lepista flaccida s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 9,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-5f1d7f3e0a572a9d"
+      ],
+      "documentedLimitations": [
+        "Confronto della sola P. flaccida nominale; non prova l’intero perimetro s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "name": "Leucopaxillus giganteus s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 10,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-5660b3a220d066ab"
+      ],
+      "documentedLimitations": [
+        "Habitat della sola specie nominale; non esteso a componenti ulteriori s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "name": "Leucopaxillus giganteus s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 10,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-e300cb4ce52bc8a2",
+        "EXT-R2-d7629c3896c6ec"
+      ],
+      "documentedLimitations": [
+        "Confronto nominale; non dimostra copertura dell’intera unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "name": "Lyophyllum specie annerenti",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 10,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-ac1888e7712bbf8d",
+        "EXT-R2-7b7ecd9f82a756"
+      ],
+      "documentedLimitations": [
+        "Documentata la sola componente L. rhopalopodium, non tutti gli annerenti."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "name": "Lyophyllum specie annerenti",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 10,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-ac1888e7712bbf8d",
+        "EXT-R2-7b7ecd9f82a756"
+      ],
+      "documentedLimitations": [
+        "Confronto di due componenti; altre specie annerenti non coperte."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "name": "Mycena sez. Purae",
+      "field": "habitat",
+      "rank": "section",
+      "s1Page": 10,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-90f3e01b090c5455",
+        "EXT-R2-e55016886fdf65",
+        "EXT-R2-77ce8ce44e3923"
+      ],
+      "documentedLimitations": [
+        "Osservazioni locali per tre specie; nessuna estensione a tutta la sezione."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "name": "Mycena sez. Purae",
+      "field": "lookalikes",
+      "rank": "section",
+      "s1Page": 10,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-c0e814a8b2443fa4",
+        "EXT-R2-e55016886fdf65"
+      ],
+      "documentedLimitations": [
+        "Confronto della sola M. pura; non copre tutti i membri della sezione."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "name": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 12,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-e369d90214cf7100"
+      ],
+      "documentedLimitations": [
+        "Copertura di quattro componenti nominate; eventuali altri inclusi dall’unità aperta non sono automaticamente coperti."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "name": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 12,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-e369d90214cf7100",
+        "EXT-SCOPE-5a6cd3fb70d369f3",
+        "EXT-SCOPE-8e8ae85f3118bf72",
+        "EXT-R2-TRICH1999-TERREUM"
+      ],
+      "documentedLimitations": [
+        "Ecologie riportate per componenti esplicite, senza estensione alle altre non nominate."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "name": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 12,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+        "EXT-SCOPE-5a6cd3fb70d369f3",
+        "EXT-SCOPE-8e8ae85f3118bf72"
+      ],
+      "documentedLimitations": [
+        "Confronti per componenti nominate; nessun criterio universale per tutte le altre."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "name": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "field": "habitat",
+      "rank": "section",
+      "s1Page": 12,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+        "EXT-R2-AMINT-CEDRETORUM"
+      ],
+      "documentedLimitations": [
+        "Nelle fonti autorevoli consultate non reperito un dato esplicito alla scala dell’intera unità; escluse inferenze dal genere e confronti costruiti da descrizioni indipendenti."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "name": "Tricholoma acerbum s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 12,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-e300cb4ce52bc8a2",
+        "EXT-R2-IUCN-ROSEOACERBUM"
+      ],
+      "documentedLimitations": [
+        "Dato nominale; non esteso ad altre componenti del complesso."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "name": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 14,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-90f3e01b090c5455",
+        "EXT-R2-AMINT-CHLOROIDES"
+      ],
+      "documentedLimitations": [
+        "Dato di R. delica nominale; non ricopre tutte le Lactarioides."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "name": "Boletus sez. Luridi",
+      "field": "habitat",
+      "rank": "section",
+      "s1Page": 15,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-R2-suillellus-luridus",
+        "EXT-R2-suillellus-rubrosanguineus"
+      ],
+      "documentedLimitations": [
+        "Consultata la fonte AMB nazionale per B. luridus e schede editoriali di componenti della ex sezione; non individuata copertura dell’intera unità eterogenea. Nessun habitat universale né confronto esterno esteso al gruppo è inferito dalle singole specie."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "name": "Boletus sez. Luridi",
+      "field": "lookalikes",
+      "rank": "section",
+      "s1Page": 15,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-R2-suillellus-rubrosanguineus",
+        "EXT-R2-suillellus-queletii"
+      ],
+      "documentedLimitations": [
+        "Consultata la fonte AMB nazionale per B. luridus e schede editoriali di componenti della ex sezione; non individuata copertura dell’intera unità eterogenea. Nessun habitat universale né confronto esterno esteso al gruppo è inferito dalle singole specie."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "name": "Boletus (Neoboletus) erythropus s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 15,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+        "EXT-SCOPE-f5bba9f808c8",
+        "EXT-R2-assyov-2020-neoboletus"
+      ],
+      "documentedLimitations": [
+        "Fonti AMINT consultate coprono singole interpretazioni di N. luridiformis/praestigiator; ambito s.l. e corrispondenza tassonomica restano parziali."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "name": "Boletus (Neoboletus) erythropus s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 15,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-f5bba9f808c8",
+        "EXT-R2-assyov-2020-neoboletus"
+      ],
+      "documentedLimitations": [
+        "Fonti AMINT consultate coprono singole interpretazioni di N. luridiformis/praestigiator; ambito s.l. e corrispondenza tassonomica restano parziali."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "name": "Boletus queletii e specie vicine/intermedie",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 15,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+        "EXT-SCOPE-0458b5b598a8",
+        "EXT-R2-suillellus-queletii"
+      ],
+      "documentedLimitations": [
+        "Fonti consultate riferite a S. queletii nominale; nessuna delimitazione e copertura documentata di tutte le specie vicine/intermedie."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "name": "Boletus queletii e specie vicine/intermedie",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 15,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-0458b5b598a8",
+        "EXT-R2-suillellus-queletii"
+      ],
+      "documentedLimitations": [
+        "Fonti consultate riferite a S. queletii nominale; nessuna delimitazione e copertura documentata di tutte le specie vicine/intermedie."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "name": "Gyroporus castaneus s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 16,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-663878a847c3",
+        "EXT-R2-castro-freire-1995"
+      ],
+      "documentedLimitations": [
+        "Evidenza utile ma soltanto nominale; la fonte non delimita e non copre tutte le componenti dell’unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "name": "Gyroporus castaneus s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 16,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-663878a847c3",
+        "EXT-R2-castro-freire-1995"
+      ],
+      "documentedLimitations": [
+        "Evidenza utile ma soltanto nominale; la fonte non delimita e non copre tutte le componenti dell’unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "name": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 18,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-389d4dd7969051b1",
+        "EXT-R2-b9a1dff7e996d87d"
+      ],
+      "documentedLimitations": [
+        "Evidenza utile ma rappresentativa di H. repandum nominale; manca una copertura esplicita di tutte le specie dell’unità Hydnum spp./complessi repandum e rufescens."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "name": "Laetiporus sulphureus s.l.",
+      "field": "habitat",
+      "rank": "speciesGroup",
+      "s1Page": 18,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-62241e5d42eaa424",
+        "EXT-R2-851401027abf288f"
+      ],
+      "documentedLimitations": [
+        "Evidenza relativa al concetto europeo di L. sulphureus della scheda AMINT, che segnala un complesso non revisionato; manca copertura esplicita di tutti i segregati dell’unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "name": "Laetiporus sulphureus s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 18,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-62241e5d42eaa424",
+        "EXT-R2-851401027abf288f"
+      ],
+      "documentedLimitations": [
+        "Evidenza relativa al concetto europeo di L. sulphureus della scheda AMINT, che segnala un complesso non revisionato; manca copertura esplicita di tutti i segregati dell’unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "name": "Ramaria botrytis s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 19,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-b5ef203e2dae96fc",
+        "EXT-R2-5daf7eebaac79cf8"
+      ],
+      "documentedLimitations": [
+        "Confronto documentato per R. botrytis nominale; non dimostrata la validità per tutte le componenti dell’unità s.l."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    },
+    {
+      "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "name": "Sarcosphaera coronaria s.l.",
+      "field": "lookalikes",
+      "rank": "speciesGroup",
+      "s1Page": 21,
+      "scopeComplete": false,
+      "existingEvidenceIds": [
+        "EXT-SCOPE-073db50e89d11753",
+        "EXT-R2-14a2e07e4e53db36"
+      ],
+      "documentedLimitations": [
+        "Scheda storica con S. crassa sinonimizzata: dati utili ma manca verifica dell’ambito completo del complesso dopo le revisioni recenti."
+      ],
+      "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
+      "professionalReview": "not-attested"
+    }
+  ]
+}
