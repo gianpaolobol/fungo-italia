@@ -28,5 +28,16 @@
   "publicAuthorization": "not granted for new candidate",
   "independentScientificReview": "pending; no source review fields changed",
   "newAppleDelivery": "not yet verified",
-  "newWebDelivery": "not yet published"
+  "newWebDelivery": "not yet published",
+  "remoteCapturePreflight": {
+    "runId": 40405025571,
+    "conclusion": "success",
+    "browsers": [
+      "chromium",
+      "webkit"
+    ],
+    "liveSource": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+    "historyRecordsPerBrowser": 1,
+    "scope": "capture only; no upgrade, new release parity or deployment"
+  }
 }
