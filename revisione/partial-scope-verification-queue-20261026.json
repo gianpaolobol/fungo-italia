@@ -71,7 +71,17 @@
         "Dato nominale; non esteso alle altre specie dell’unità s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "C. prunulus nominale",
+          "C. abprunulus (confronto differenziale; NON inclusione curricolare automaticamente dimostrata)"
+        ],
+        "basis": "Jian et al., Mycological Progress 19 (2020), pp. 811–812, DOI 10.1007/s11557-020-01603-6: habitat latifoglie per C. abprunulus; gambo eccentrico, trama lamellare e basidiospore separano il segregato dal nominale.",
+        "missing": "Definire l'insieme di specie incluso dal s.l. in S1; non estendere l'ecologia del segregato all'intero complesso.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
@@ -89,7 +99,17 @@
         "Confronto nominale, non documentazione di tutte le componenti s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "C. prunulus nominale",
+          "C. abprunulus (confronto differenziale; NON inclusione curricolare automaticamente dimostrata)"
+        ],
+        "basis": "Jian et al., Mycological Progress 19 (2020), pp. 811–812, DOI 10.1007/s11557-020-01603-6: habitat latifoglie per C. abprunulus; gambo eccentrico, trama lamellare e basidiospore separano il segregato dal nominale.",
+        "missing": "Definire l'insieme di specie incluso dal s.l. in S1; non estendere l'ecologia del segregato all'intero complesso.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
@@ -224,7 +244,16 @@
         "Scheda nominale; l’ecologia delle altre componenti s.l. resta distinta."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "L. nuda nominale"
+        ],
+        "basis": "Scheda nominale AMINT e confronto nominale esistenti nelle evidenze EXT-SCOPE-e8e23ac03d28b21d.",
+        "missing": "Documentare componenti ulteriori ammesse da S1 con fonti nominative.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
@@ -242,7 +271,16 @@
         "Confronto nominale; non esteso indiscriminatamente al gruppo s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "L. nuda nominale"
+        ],
+        "basis": "Scheda nominale AMINT e confronto nominale esistenti nelle evidenze EXT-SCOPE-e8e23ac03d28b21d.",
+        "missing": "Documentare componenti ulteriori ammesse da S1 con fonti nominative.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
@@ -481,7 +519,18 @@
         "Consultata la fonte AMB nazionale per B. luridus e schede editoriali di componenti della ex sezione; non individuata copertura dell’intera unità eterogenea. Nessun habitat universale né confronto esterno esteso al gruppo è inferito dalle singole specie."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "Suillellus luridus",
+          "Suillellus rubrosanguineus",
+          "Suillellus queletii"
+        ],
+        "basis": "Erbario AMB Pesaro, evidenze EXT-R2-suillellus-luridus, EXT-R2-suillellus-rubrosanguineus, EXT-R2-suillellus-queletii.",
+        "missing": "Delimitare ex sezione Luridi secondo S1; nessuna proprietà universale della sezione dalle tre specie.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
@@ -498,7 +547,18 @@
         "Consultata la fonte AMB nazionale per B. luridus e schede editoriali di componenti della ex sezione; non individuata copertura dell’intera unità eterogenea. Nessun habitat universale né confronto esterno esteso al gruppo è inferito dalle singole specie."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "Suillellus luridus",
+          "Suillellus rubrosanguineus",
+          "Suillellus queletii"
+        ],
+        "basis": "Erbario AMB Pesaro, evidenze EXT-R2-suillellus-luridus, EXT-R2-suillellus-rubrosanguineus, EXT-R2-suillellus-queletii.",
+        "missing": "Delimitare ex sezione Luridi secondo S1; nessuna proprietà universale della sezione dalle tre specie.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
@@ -670,7 +730,17 @@
         "Confronto documentato per R. botrytis nominale; non dimostrata la validità per tutte le componenti dell’unità s.l."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "R. botrytis nominale",
+          "R. rubripermanens nel confronto europeo"
+        ],
+        "basis": "Mycologia Bavarica 17 (2016) e scheda AMINT già tracciate; revisione con riserve su equivalenza europea/americana.",
+        "missing": "Verificare ulteriori componenti s.l., caratteri microscopici e trasferibilità geografica.",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
@@ -689,5 +759,13 @@
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
       "professionalReview": "not-attested"
     }
-  ]
+  ],
+  "targetedPass": {
+    "date": "2026-10-26",
+    "fieldsExamined": 7,
+    "unitsExamined": 4,
+    "scopeResolved": 0,
+    "sourceAddedToCatalog": 0,
+    "notes": "Riesame di componenti e locatori delle fonti già associate; nessuna certificazione e nessuna estensione artificiale."
+  }
 }
