@@ -454,7 +454,20 @@
         "Copertura di quattro componenti nominate; eventuali altri inclusi dall’unità aperta non sono automaticamente coperti."
       ],
       "nextVerification": "Confrontare il perimetro del taxon/gruppo S1 con le componenti nominate dalle fonti, documentare la corrispondenza campo per campo e richiedere conferma micologica indipendente.",
-      "professionalReview": "not-attested"
+      "professionalReview": "not-attested",
+      "targetedReview": {
+        "components": [
+          "T. album — Quercus",
+          "T. stiparophyllum — prevalentemente Betula, eccezionalmente Picea",
+          "T. lascivum — Fagus"
+        ],
+        "sourceId": "MUSE-FLORIANI-TRICHOLOMA-STIPAROPHYLLUM-20261026",
+        "sourceUrl": "https://www2.muse.it/bresadola/map_det.asp?ar=tv&sp=183528",
+        "qualification": "Scheda MUSE attribuita a Marco Floriani, habitat differenziati per componenti nominate.",
+        "missing": "Altri taxa non esplicitamente delimitati nell'obiettivo S1; impossibile attestare copertura completa",
+        "verificationStatus": "partial-evidence-only",
+        "reviewerAttestation": "not-attested"
+      }
     },
     {
       "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
@@ -810,8 +823,8 @@
   },
   "latestTargetedPass": {
     "date": "2026-10-26",
-    "fieldsExamined": 5,
+    "fieldsExamined": 1,
     "scopeResolved": 0,
-    "notes": "Tre fonti tassonomiche primarie per Xanthodermatei, Hygrocybe conica ed Echinoderma asperum; altre unità restano da verificare, senza downgrade dei gate."
+    "notes": "Verifica MUSE sul complesso Tricholoma album. Leucoagaricus e altre unità necessitano ancora riscontri specifici."
   }
 }
