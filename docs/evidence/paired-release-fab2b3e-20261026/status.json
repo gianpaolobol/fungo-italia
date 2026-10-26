@@ -14,7 +14,7 @@
     "zipSha256": "e9fe54209ae0bb913fdf5a51462c607e00e35a4078160e50c33f28f7d6109f64"
   },
   "newAppleDelivery": "VALID + IN_BETA_TESTING; owner group only",
-  "newPublicDelivery": "pending distinct snapshot approval and actual Apple proof",
+  "newPublicDelivery": "pending distinct snapshot approval, fresh Apple revalidation at promotion, Pages deployment and actual public PWA upgrade",
   "candidate": {
     "artifactId": 12695390804,
     "zipSha256": "ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d",
@@ -41,8 +41,24 @@
     "recoveryRun": 40418678224,
     "recoveryOrchestrator": "e154aa39a23b57f2fd1cdef2e319ca441eb23798",
     "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
-    "status": "in_progress",
-    "scope": "Only generated test driver changes; clean application pinned to fab. Preserve initial map failure and six areas/no paywall; at most one actual Riprova mappa; strict final OSM/no-alerts; visual tile inspection required. No root cause presumed."
+    "status": "success",
+    "scope": "Only generated test driver changes; clean application pinned to fab. Preserve initial map failure and six areas/no paywall; at most one actual Riprova mappa; strict final OSM/no-alerts; visual tile inspection required. No root cause presumed.",
+    "result": "Both devices passed2 functional tests; actual OSM tiles visually confirmed free and paid; no retry needed in V2; retry recovery not claimed",
+    "resultsFile": "native-areas-v2-results.json",
+    "jobs": [
+      121909077632,
+      121909077770
+    ],
+    "artifacts": [
+      {
+        "id": 12697558900,
+        "sha256": "6b4bb5d7e89ad5808ca1ecb672d66f57acfc822cf1443719228b785f306b9fcf"
+      },
+      {
+        "id": 12696749707,
+        "sha256": "6d4d3c40d67ec80831723b614237775e6b0eae729ac5171cb5134ad5e6f1523e"
+      }
+    ]
   },
   "sourceStatus": "success",
   "sourceJob": 121892755693,
@@ -119,6 +135,10 @@
     "iphone-map-free-v1.png": "f29c471307c8417cc555b4ae226d3568e27c8bb6b5f0ce9a9cc7495a345cef38",
     "ipad-map-paid-v1.png": "79cb23f2fbfab1173ffd0d3a81c26f31c38ec2be56af8fb9b6221822b72f2c67",
     "ipad-map-initial-failure-v1.png": "6bc40f2d7e74a0b9dc66cdb400bff590ffc7f84f0803ac2b90efa5b2677f2d86",
-    "audit-v1-cancelled.jpg": "b4eb8e4e457701e28de44df6be5e2ab7958399569f72472e64d7af8503ee91e7"
+    "audit-v1-cancelled.jpg": "b4eb8e4e457701e28de44df6be5e2ab7958399569f72472e64d7af8503ee91e7",
+    "iphone-map-free-v2.png": "4c503ecea1c4a802a4e95c3bed7c2c4df1a2276a6b9148a24b93dfd22dcd19b3",
+    "iphone-map-paid-v2.png": "4c503ecea1c4a802a4e95c3bed7c2c4df1a2276a6b9148a24b93dfd22dcd19b3",
+    "ipad-map-free-v2.png": "4f62bac0e52c4d0d7abcce1ef97c677a1ac33c5f4bc05eb7d180fd9765388a3b",
+    "ipad-map-paid-v2.png": "4f62bac0e52c4d0d7abcce1ef97c677a1ac33c5f4bc05eb7d180fd9765388a3b"
   }
 }

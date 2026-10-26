@@ -1,0 +1,78 @@
+{
+  "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+  "orchestrator": "e154aa39a23b57f2fd1cdef2e319ca441eb23798",
+  "runId": 40418678224,
+  "conclusion": "success",
+  "scope": "Generated test harness only; actual app pinned to clean application source; no source changes after IPA signing.",
+  "devices": [
+    {
+      "family": "iphone",
+      "jobId": 121909077632,
+      "status": "success",
+      "functionalTests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "embeddedSourceVerified": true,
+      "explicitRetry": {
+        "free": false,
+        "paid": false
+      },
+      "decodedOsmTilesVisuallyConfirmed": {
+        "free": true,
+        "paid": true
+      },
+      "artifactId": 12697558900,
+      "artifactZipSha256": "6b4bb5d7e89ad5808ca1ecb672d66f57acfc822cf1443719228b785f306b9fcf",
+      "screenshots": {
+        "free": {
+          "file": "iphone-map-free-v2.png",
+          "sha256": "4c503ecea1c4a802a4e95c3bed7c2c4df1a2276a6b9148a24b93dfd22dcd19b3"
+        },
+        "paid": {
+          "file": "iphone-map-paid-v2.png",
+          "sha256": "4c503ecea1c4a802a4e95c3bed7c2c4df1a2276a6b9148a24b93dfd22dcd19b3"
+        }
+      },
+      "actualMarkers": [
+        "NATIVE_AREAS_MAP extended-free-map source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false",
+        "NATIVE_AREAS_MAP extended-paid-map source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false"
+      ]
+    },
+    {
+      "family": "ipad",
+      "jobId": 121909077770,
+      "status": "success",
+      "functionalTests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "embeddedSourceVerified": true,
+      "explicitRetry": {
+        "free": false,
+        "paid": false
+      },
+      "decodedOsmTilesVisuallyConfirmed": {
+        "free": true,
+        "paid": true
+      },
+      "artifactId": 12696749707,
+      "artifactZipSha256": "6d4d3c40d67ec80831723b614237775e6b0eae729ac5171cb5134ad5e6f1523e",
+      "screenshots": {
+        "free": {
+          "file": "ipad-map-free-v2.png",
+          "sha256": "4f62bac0e52c4d0d7abcce1ef97c677a1ac33c5f4bc05eb7d180fd9765388a3b"
+        },
+        "paid": {
+          "file": "ipad-map-paid-v2.png",
+          "sha256": "4f62bac0e52c4d0d7abcce1ef97c677a1ac33c5f4bc05eb7d180fd9765388a3b"
+        }
+      },
+      "actualMarkers": [
+        "NATIVE_AREAS_MAP extended-free-map source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false",
+        "NATIVE_AREAS_MAP extended-paid-map source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false"
+      ]
+    }
+  ],
+  "firstAttemptFailureHistory": "V1iPad free initial map failed; retained in status.json and original screenshot. Cause not isolated. V2 did not reproduce it; explicit retry branch was not exercised, so recovery is not claimed."
+}

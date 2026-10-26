@@ -8,7 +8,7 @@ Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo
 
 Il sito effettivamente letto serve ancora1.1.0(19), SHA279d50e842a95c6a7d8e3499806b3fd5c42996e7. Il web candidato della22 è già prodotto dallo stesso sorgente dell'IPA. La promozione ordinaria resta correttamente bloccata dalla readiness indipendente falsa. La nuova dichiarazione pubblica è **pendente**, senza conferma/data inventate e senza riusare il consenso della21. Pubblicazione e upgrade remoto non ancora eseguiti.
 
-Audit aggiuntivo Aree/mappa: primo caricamento iPad gratuito fallito, lista/filtri conservati; percorso acquistato e schermate OSM iPhone positivi. Seconda prova40418678224 in corso con un solo Riprova reale e prova rigorosa finale, stesso sorgente applicativo. Nessuna affidabilità del primo caricamento o causa di rete presunta. Questo limite non viene nascosto dal successo della consegna TestFlight.
+Audit aggiuntivo Aree/mappa: primo caricamento iPad gratuito fallito, lista/filtri conservati; percorso acquistato e schermate OSM iPhone positivi. Seconda prova40418678224 riuscita su iPhone/iPad, gratuito e acquistato, stesso sorgente incorporato; tessere OSM ispezionate. Nessun Riprova necessario nei quattro casi: il recupero non è dichiarato provato. Nessuna affidabilità del primo caricamento o causa di rete presunta. Questo limite non viene nascosto dal successo della consegna TestFlight.
 
 Snapshot scientifico invariato:867 file, manifest79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499. Zero revisioni indipendenti attestate e nessuna certificazione/App Store. Per pubblicare restano obbligatori consenso distinto, controlli effettivi Apple/artefatti/Pages/PWA e conservazione dati.
 

@@ -6,9 +6,9 @@ Leggere [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md) e il [rapporto dell
 
 Tutti i controlli obbligatori sono riusciti sullo SHA della22, inclusi StoreKit, acquisti/ripristino e demo su iPhone/iPad,299 Node, TypeScript, rigenerazione e browser reali. IPA e candidato web condividono provenienza e hash registrati nelle ricevute originali. Corretto anche il rigetto automatico `reg.update()` offline, con regressione RED→GREEN e nessun errore browser filtrato.
 
-L'audit supplementare40418678224 è in corso sul medesimo sorgente: verifica mappa e filtri con/senza acquisto e recupero tramite un solo Riprova. Prima prova iPad gratuito fallita, prove/mappe acquistato e iPhone positive; cronologia negativa conservata, affidabilità del primo caricamento non presunta.
+L'audit supplementare40418678224 è riuscito su entrambi i dispositivi, gratuito e acquistato, sul medesimo sorgente: ricerca/filtri, mappe OSM reali e sorgente incorporato verificati. Nessun Riprova necessario nei quattro casi V2; il recupero non è dichiarato provato. Prima prova iPad gratuito fallita, cronologia negativa conservata e causa non isolata, affidabilità assoluta del primo caricamento non presunta.
 
-Completare questo audit, poi presentare al titolare il candidato pubblico concreto della22. La nuova autorizzazione è pendente e richiede la conferma distinta prevista dall'handoff, senza riutilizzare owner-public-demo21. Dopo approvazione usare promote-paired-demo.yml e richiedere rilettura Apple, integrità ZIP/ogni byte, archivio precedente, Pages e upgrade reale Chromium/WebKit con dati conservati. Nessun nuovo source applicativo prima di una nuova build abbinata. Revisioni indipendenti e App Store restano bloccati; nessuna estensione TestFlight.
+Presentare al titolare il candidato pubblico concreto della22, ora tecnicamente qualificato per il collaudo interno. La nuova autorizzazione è pendente e richiede la conferma distinta prevista dall'handoff, senza riutilizzare owner-public-demo21. Dopo approvazione usare promote-paired-demo.yml e richiedere rilettura Apple, integrità ZIP/ogni byte, archivio precedente, Pages e upgrade reale Chromium/WebKit con dati conservati. Nessun nuovo source applicativo prima di una nuova build abbinata. Revisioni indipendenti e App Store restano bloccati; nessuna estensione TestFlight.
 
 ## Archivio degli handoff precedenti
 

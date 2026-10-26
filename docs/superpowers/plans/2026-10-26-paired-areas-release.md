@@ -51,3 +51,5 @@ Execution: inline, autonomous, as explicitly requested. Fresh clone on fix/paire
 
 - Final application sourcefab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03: all mandatorysource/native/UI/demo passed; TestFlight1.1.0(22) actualVALID/IN_BETA_TESTING owner-only23:18:33UTC. Original receipt and hash history in docs/evidence/paired-release-fab2b3e-20261026. Public recordpending, originalwebcandidate12695390804 retained.
 - Additional native map auditV1 preserves actual first-free-iPad failure and later paid/iPhone drawn maps. V2run40418678224 inprogress with at most one actual UIretry and guarded final proof. No application changes after signed source; no presumed networking cause.
+
+- Additional V2 native Areas/filter/map audit40418678224SUCCESS on iPhone and iPad:2 functional cases/device,0fail/skip,embeddedcleanappsourcefab, actualdecodedtilesvisuallyconfirmed free+paid. explicitRetry=false inall4cases; retrybranchNOTexercised, no recoveryclaim. V1first-free-iPadnegative remains recorded withunknowncause. Allauthorizedtechnical/internaldeliveryworkcomplete; exactpublicapproval/promotion/servedbyte/PWAupgradechecksremainpending.
