@@ -1708,6 +1708,39 @@
           "supportedClaim": "Confronto con Amanita pantherina e Amanita excelsa: differenza dell'arrossamento della carne dopo lesione."
         }
       ]
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "additions": {
+        "habitat": [
+          "In boschi di latifoglie; descritto prevalentemente come saprotrofo, con possibili associazioni micorriziche segnalate con salici non definitivamente accertate."
+        ],
+        "lookalikes": [
+          "Calocybe gambosa: lamelle bianche e odore nettamente farinoso; diversa fenologia tipicamente primaverile.",
+          "Clitocybe nebularis: specie pallida, distinguibile anche con caratteri delle lamelle e dell'odore."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-EXT-ENTOLOMA-SINUATUM-20261026",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Mainly saprobic in broadleaf woodland, possible reported association with willows."
+        },
+        {
+          "sourceId": "LIT-EXT-ENTOLOMA-SINUATUM-20261026",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Comparison with Calocybe gambosa (white gills, mealy odour, spring fruiting) and Clitocybe nebularis (gill colour and odour)."
+        }
+      ]
     }
   ]
 }
