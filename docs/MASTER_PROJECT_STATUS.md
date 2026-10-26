@@ -2,6 +2,14 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Ripresa allineamento Aree — 26 ottobre 2026
+
+Baseline `0bc4a4224b11f55524b9b47e386dfdf140d3b98b`. Web letto dal dominio: 1.1.0(19), sorgente `279d50e842a95c6a7d8e3499806b3fd5c42996e7`; TestFlight21 resta storico, privo della correzione Aree. Run40400178249/source121844006651 fallisce sullo smoke obsoleto che richiedeva il paywall Aree. Anche il test demo XCTest conserva quella vecchia aspettativa: aggiornati entrambi alla consultazione gratuita condivisa, con71macroaree, filtroAmiata e habitat; web aggiunge ricerca/regione/mappa e smoke WebKit obbligatorio. Acquisti/ripristino/rimborso/scadenza invariati.
+
+La promozione ordinaria viene ulteriormente ristretta: native/UI/demo devono tutti riuscire, anche al controllo finale della ricevuta; regressione RED→GREEN. Nessuna modifica ai867file scientifici, ai giudizi o ai gate indipendenti. Dichiarazione titolare ancora limitata alla beta interna; la nuova demo pubblica richiede un'autorizzazione distinta riferita al candidato concreto, ancora da acquisire. Non riusare owner-public-demo21.
+
+Verifiche locali iniziali:274testNode senza skip/fallimenti, TypeScript, rigenerazione deterministica, buildweb e gate beta titolare riusciti; strict indipendenti ancora bloccanti. Nuovo smoke locale arriva alla mappa ma il browser non raggiunge il CDN Leaflet; WebKit manca di librerie di sistema. Non attestati PASS per quei controlli: restano obbligatori in CI. Nuova build firmata/Apple e nuovo deploy **non ancora attestati**. Piano e registro: [allineamento Aree](superpowers/plans/2026-10-26-paired-areas-release.md).
+
 ## Autorizzazione della demo GitHub pubblica della21 — 26 ottobre 2026
 
 Il titolare ha confermato esplicitamente l'estensione della distribuzione alla demo GitHub pubblica come beta non certificata, mantenendo i controlli tecnici e il blocco App Store. [Autorizzazione distinta](../revisione/owner-public-demo21-20261026.json), SHA-256 canonico `e7460fb4dc1f579e6f7ca849a87a12f260087ed6f467d7503a808bddfa3a3aea`, limitata al candidato dello SHA6dfb92656ec94485d94aecba72543930c2759d17 e TestFlight1.1.0(21). La precedente dichiarazione scientifica privata non è alterata: publicWebAllowed=false su quella ricevuta, zero revisioni indipendenti e App Store bloccato. La nuova autorizzazione riguarda soltanto la distribuzione della demo beta di questo snapshot.

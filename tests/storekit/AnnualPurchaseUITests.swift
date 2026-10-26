@@ -154,8 +154,16 @@ final class AnnualPurchaseUITests: XCTestCase {
     await require(element(app, "Caso 1 / 4"))
     await tap(app, "Torna al menu del test")
     await tap(app, "Aree")
-    await require(element(app, "Fungo Italia completo"))
-    print("AGARICUS_DEMO_UI Free profiles and four-case test, paid Areas gated")
+    await require(element(app, "Aree e habitat"))
+    await require(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "71 macroaree in ")).firstMatch)
+    XCTAssertFalse(element(app, "Fungo Italia completo").exists)
+    await tap(app, "Monte Amiata")
+    await require(element(app, "1 area corrispondente"))
+    await tap(app, "Consulta Monte Amiata")
+    await require(element(app, "Faggeta · Castagneto · Querceto"))
+    await tap(app, "Chiudi dettaglio")
+    try capture(app, "demo-03-aree")
+    print("AGARICUS_DEMO_UI Free profiles, four-case test and Areas/habitats available without purchase")
   }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
     continueAfterFailure = false
@@ -223,7 +231,11 @@ final class AnnualPurchaseUITests: XCTestCase {
       XCTFail("Study detail must close before accessing the Areas tab")
       return
     }
-    await tap(app, "Aree"); try capture(app, "02-aree")
+    await tap(app, "Aree")
+    await require(element(app, "Aree e habitat"))
+    await require(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "71 macroaree in ")).firstMatch)
+    XCTAssertFalse(element(app, "Fungo Italia completo").exists)
+    try capture(app, "02-aree")
     await tap(app, "Esame")
     await require(element(app, "Inizia 15 casi"))
     let transaction = try XCTUnwrap(session.allTransactions().last(where: { $0.productIdentifier == productID }))

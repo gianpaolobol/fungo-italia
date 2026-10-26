@@ -58,7 +58,7 @@ export async function createRelease({dir,receipt,expectedSha,iconPath}){
   requireThat(evidence?.sourceCommit===expectedSha&&evidence.path==='.github/workflows/'+path&&Number.isSafeInteger(evidence.id)&&evidence.id>0,'Missing exact-source '+key+' proof');
   requireThat(['success','failure','timed_out'].includes(evidence.conclusion)&&evidence.verified===(evidence.conclusion==='success'),'Misreported '+key+' proof');
  }
- requireThat(receipt.evidence.demo.verified===true,'Demo must pass');
+ for(const key of ['native','ui','demo'])requireThat(receipt.evidence[key].verified===true,key+' must pass before public promotion');
  requireThat(receipt.nativeStorekitVerified===receipt.evidence.native.verified&&receipt.storekitUIVerified===receipt.evidence.ui.verified,'Proof flags differ from actual results');
  const release={schemaVersion:1,...Object.fromEntries(['sourceCommit','version','buildNumber','iconSha256','webContentHash','appleBuildId','processingState','internalBuildState','betaDetailId','betaStateVerifiedAt','diagnosticOnly','testFlightOnly','ipaSha256','producerRunId','nativeStorekitVerified','storekitUIVerified','appStoreReady','evidence','internalGroupIds'].map(key=>[key,receipt[key]]))};
  requireThat(validateRelease(release),'Apple beta is not confirmed available');

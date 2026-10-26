@@ -14,13 +14,13 @@ async function fixture(fn){
  const build={schemaVersion:1,sourceCommit:sha,version:'1.1.0',iconSha256:hash('icon'),webContentHash};
  const manifest={schemaVersion:1,sourceCommit:sha,webContentHash,files};
  await Promise.all([writeFile(join(dir,'icon.png'),'icon'),writeFile(join(dir,'index.html'),'app'),writeFile(join(dir,'sw.js'),'worker'),writeFile(join(dir,'build.json'),JSON.stringify(build)),writeFile(join(dir,'file-manifest.json'),JSON.stringify(manifest))]);
- const evidence=Object.fromEntries([['native','subscription-storekit-tests.yml'],['ui','subscription-storekit-ui.yml'],['demo','agaricus-demo-ui.yml']].map(([key,path],i)=>[key,{id:i+1,path:'.github/workflows/'+path,sourceCommit:sha,conclusion:key==='ui'?'failure':'success',verified:key!=='ui'}]));
- const receipt={...build,appId:'6821140326',bundleId:'it.fungoitalia.app',buildNumber:'17',producerRunId:'123',ipaSha256:hash('ipa'),appleBuildId:'12345678-abcd-abcd-abcd-123456789abc',processingState:'VALID',internalBuildState:'IN_BETA_TESTING',betaDetailId:'beta-detail-id',betaStateVerifiedAt:'2026-10-21T12:00:00.000Z',internalGroupIds:[owner],testFlightOnly:true,diagnosticOnly:true,appStoreReady:false,nativeStorekitVerified:true,storekitUIVerified:false,evidence};
+ const evidence=Object.fromEntries([['native','subscription-storekit-tests.yml'],['ui','subscription-storekit-ui.yml'],['demo','agaricus-demo-ui.yml']].map(([key,path],i)=>[key,{id:i+1,path:'.github/workflows/'+path,sourceCommit:sha,conclusion:'success',verified:true}]));
+ const receipt={...build,appId:'6821140326',bundleId:'it.fungoitalia.app',buildNumber:'17',producerRunId:'123',ipaSha256:hash('ipa'),appleBuildId:'12345678-abcd-abcd-abcd-123456789abc',processingState:'VALID',internalBuildState:'IN_BETA_TESTING',betaDetailId:'beta-detail-id',betaStateVerifiedAt:'2026-10-21T12:00:00.000Z',internalGroupIds:[owner],testFlightOnly:true,diagnosticOnly:true,appStoreReady:false,nativeStorekitVerified:true,storekitUIVerified:true,evidence};
  try{await fn({dir,build,manifest,receipt});}finally{await rm(dir,{recursive:true,force:true});}
 }
-test('promotion pairs exact bytes and actual beta receipt while preserving failed purchase proof',()=>fixture(async({dir,receipt})=>{
+test('promotion pairs exact bytes and actual beta receipt with successful purchase proofs',()=>fixture(async({dir,receipt})=>{
  const release=await createRelease({dir,receipt,expectedSha:sha,iconPath:join(dir,'icon.png')});
- assert.equal(release.storekitUIVerified,false);assert.equal(release.evidence.ui.conclusion,'failure');assert.equal(release.appleBuildId,receipt.appleBuildId);assert.equal(release.ipaSha256,receipt.ipaSha256);
+ assert.equal(release.storekitUIVerified,true);assert.equal(release.evidence.ui.conclusion,'success');assert.equal(release.appleBuildId,receipt.appleBuildId);assert.equal(release.ipaSha256,receipt.ipaSha256);
 }));
 test('candidate rejects mutated bytes, unlisted files, symlinks and missing entries',async()=>{
  for(const mode of ['bytes','extra','link','missing'])await fixture(async({dir})=>{
@@ -38,7 +38,7 @@ test('manifest cannot escape artifact or duplicate a path or omit service-worker
  });
 });
 test('promotion refuses cross-source, icon, content, unprocessed, absent proof and invented success receipts',async()=>{
- for(const mutate of [r=>r.sourceCommit='b'.repeat(40),r=>r.iconSha256='b'.repeat(64),r=>r.webContentHash='b'.repeat(64),r=>r.processingState='PROCESSING',r=>r.internalBuildState='PROCESSING',r=>r.internalGroupIds.push('other'),r=>r.evidence.demo.verified=false,r=>r.evidence.ui.sourceCommit='b'.repeat(40),r=>r.storekitUIVerified=true,r=>delete r.ipaSha256,r=>delete r.producerRunId,r=>delete r.betaDetailId,r=>delete r.betaStateVerifiedAt])await fixture(async({dir,receipt})=>{
+ for(const mutate of [r=>r.sourceCommit='b'.repeat(40),r=>r.iconSha256='b'.repeat(64),r=>r.webContentHash='b'.repeat(64),r=>r.processingState='PROCESSING',r=>r.internalBuildState='PROCESSING',r=>r.internalGroupIds.push('other'),r=>r.evidence.demo.verified=false,r=>r.evidence.ui.sourceCommit='b'.repeat(40),r=>r.storekitUIVerified=false,r=>delete r.ipaSha256,r=>delete r.producerRunId,r=>delete r.betaDetailId,r=>delete r.betaStateVerifiedAt])await fixture(async({dir,receipt})=>{
   mutate(receipt);await assert.rejects(createRelease({dir,receipt,expectedSha:sha,iconPath:join(dir,'icon.png')}));
  });
 });
@@ -80,3 +80,13 @@ test('owner review receipt cannot promote content to public web',()=>fixture(asy
  receipt.scientificReview={approvalScope:'owner-internal-testflight',independentReleaseReady:false,publicWebAllowed:false};
  await assert.rejects(createRelease({dir,receipt,expectedSha:sha,iconPath:join(dir,'icon.png')}));
 }));
+
+test('all native purchase proofs must succeed before public promotion',async()=>{
+ for(const key of ['native','ui'])for(const conclusion of ['failure','timed_out'])await fixture(async({dir,receipt})=>{
+  for(const p of Object.values(receipt.evidence)){p.conclusion='success';p.verified=true;}
+  receipt.nativeStorekitVerified=receipt.storekitUIVerified=true;
+  receipt.evidence[key].conclusion=conclusion;receipt.evidence[key].verified=false;
+  receipt[key==='native'?'nativeStorekitVerified':'storekitUIVerified']=false;
+  await assert.rejects(createRelease({dir,receipt,expectedSha:sha,iconPath:join(dir,'icon.png')}),/must pass/);
+ });
+});
