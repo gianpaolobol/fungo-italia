@@ -37,3 +37,6 @@ FUNGO_RELEASE_READINESS_REPORT=docs/RELEASE-READINESS.md
 ## Nota scientifica
 
 Il validatore non sostituisce la revisione micologica qualificata. È un gate tecnico/editoriale: segnala assenze, incompletezze e metadati insufficienti. Una scheda può passare il gate tecnico solo quando i dati dichiarano revisione indipendente, ma resta necessaria una verifica effettiva delle fonti e delle fotografie.
+
+## Beta interna con dichiarazione del titolare — 26 ottobre 2026
+`node scripts/internal-beta-science.mjs` applica la distinta autorizzazione esplicita del titolare per il suo solo gruppo interno TestFlight. Esegue i validator strict, conserva gli esiti e verifica il registro di dichiarazione con hash fissato nel codice, il contenuto scientifico e le lacune note. Modifiche, errori strutturali o platea più ampia sono bloccanti. `validate:release` resta strict e continua a fallire finché non esistono i requisiti indipendenti; il suo esito non viene rinominato PASS. Il gate beta può essere positivo per il collaudo interno mentre `independentReleaseReady=false` e `appStoreReady=false`. Nessuna certificazione indipendente deriva dalla dichiarazione del titolare.

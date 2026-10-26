@@ -24,3 +24,6 @@ Dataset versionato del catalogo (148 unità), profili di commestibilità dalla G
 
 ## Gate
 Nessun campo independentReviewStatus va impostato a reviewed/attested prima della firma e della riconciliazione delle correzioni. Un'approvazione parziale non autorizza a certificare le altre schede. Le attestazioni GitHub riguardano solo provenienza del software, non validità micologica.
+
+## Dichiarazione del titolare per beta interna (26 ottobre 2026)
+La dichiarazione esplicita del titolare è registrata separatamente in `revisione/owner-internal-beta-review-20261026.json`. Autorizza il collaudo nel suo solo gruppo interno TestFlight sul contenuto indicato dagli hash e con le lacune documentate. Non compila i campi firmabili dal revisore indipendente e non rende il dataset pronto per App Store o web pubblico. La gestione degli invii e delle risposte dei revisori resta esclusiva dell’amministratore, fuori dall’app degli utenti.

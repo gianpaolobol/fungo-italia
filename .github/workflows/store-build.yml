@@ -27,6 +27,8 @@ jobs:
         run: |
           npm run prepare:data
           npm run typecheck
+          npm run validate:release
+          node scripts/audit-toxicology-release.mjs --strict
           node --test scripts/*.test.mjs
       - name: Queue signed store build and App Store submit
         run: |

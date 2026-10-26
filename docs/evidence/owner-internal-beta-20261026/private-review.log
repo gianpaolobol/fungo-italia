@@ -1,0 +1,8 @@
+(node:930) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///workspace/scratch/acbecc795d15/fungo-italia/src/photoObservations.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /workspace/scratch/acbecc795d15/fungo-italia/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Draft completeness does not assign confidence; empty evidence stays incomplete.
+Shared photo/review transactions preserve additions and edits, recover after failures and never overwrite corrupt storage.
+Retry reads each pending draft at execution time and cannot overwrite a newer edit with a stale snapshot.
+Undated gallery assets remain separate observations instead of disappearing from the review queue.

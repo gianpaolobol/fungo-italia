@@ -1,0 +1,14 @@
+✔ real owner declaration permits only internal beta and preserves incomplete independent science (3.908416ms)
+✔ missing, changed or self-upgraded declarations fail closed (0.770823ms)
+✔ owner-only scope cannot authorize public web, external testing, App Store or another group (0.737824ms)
+✔ changed, removed or added scientific bytes require a new declaration (0.302357ms)
+✔ additional gaps, missing gap records and structural toxicology errors stay blocking (0.516219ms)
+✔ invalid manifest paths, digests, duplicate entries and source identities are rejected (0.309697ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 108.121224

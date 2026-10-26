@@ -2,6 +2,18 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Revisione dichiarata dal titolare per TestFlight interno — 26 ottobre 2026
+
+Il titolare ha dichiarato: «per ora attesto io come revisione e mi riservo di inviare ad altri revisori successivamente». Questa è l’autorizzazione corrente per il solo gruppo interno del titolare. **Non è revisione indipendente, firma professionale o certificazione micologica.** La dichiarazione effettiva, il suo perimetro, gli867 file esaminabili e gli hash sono nel [registro del titolare](../revisione/owner-internal-beta-review-20261026.json). Nessun campo delle schede è stato promosso a revisione indipendente.
+
+Il nuovo gate beta esegue entrambi i controlli strict e ne conserva gli esiti, ma distingue l’autorizzazione del titolare per il collaudo interno dalla readiness pubblica. Blocca modifiche al contenuto scientifico, lacune nuove, errori tossicologici strutturali, attestazioni cambiate o platea diversa. Le lacune attuali restano documentate:148 schede senza revisione indipendente,143 triadi,147 sporate e147 giudizi su148. Il dato mancante non diventa certificato o completo per la dichiarazione del titolare.
+
+App Store e promozione web pubblica non sono autorizzati da questa dichiarazione. I validator indipendenti non sono modificati; i vecchi percorsi production richiedono esplicitamente i gate strict. La pipeline interna mantiene successo obbligatorio di StoreKit nativo, UI acquisti iPhone/iPad e demo sullo SHA esatto; ricontrolla la scienza prima della firma e prima dell’upload; mantiene preflight e readback del solo gruppo account-holder, nessun invito o tester individuale. La conferma finale richiede `IN_BETA_TESTING`, non il solo `VALID` o `READY_FOR_BETA_TESTING`.
+
+Verifiche locali:272 test Node,0fallimenti/skip; TypeScript, rigenerazione senza drift, transazioni private di revisione, YAML e ordine firma/upload superati. Revisione tecnica separata: corretto il mancato salvataggio degli esiti negativi con due regressioni CLI RED→GREEN e suite completa verde. [Log e risultati](evidence/owner-internal-beta-20261026/verification.json). Non è revisione micologica.
+
+Stato al push: implementazione testata; nuova compilazione e disponibilità TestFlight ancora da verificare sullo SHA pubblicato. Nessun numero build inventato. Le sezioni precedenti che bloccavano anche il TestFlight del titolare per mancanza di revisione indipendente sono storiche e superate da questa decisione limitata alla beta interna. Per App Store resta il requisito indipendente reale.
+
 ## Controllo obbligatorio StoreKit prima della firma — 26 ottobre 2026
 
 Baseline `a706f3654b1c544b63332d1c2f1c537e8fe1b4d8`. Il produttore della ricevuta diagnostica accettava risultati `failure`/`timed_out` per StoreKit nativo e UI acquisti, conservandoli come false, e richiedeva successo soltanto alla demo. Corretto per rispettare il mandato attuale: **tutti e tre i workflow devono riuscire sullo SHA esatto** prima della ricevuta utilizzata per firmare/caricare. Il risultato del workflow UI include entrambe le famiglie iPhone/iPad; un fallimento di una famiglia blocca l’intero workflow. Le ricevute storiche non sono riscritte e restano diagnostiche.

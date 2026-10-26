@@ -21,3 +21,17 @@ test('every mandatory proof rejects stale source, missing, running and non-main 
   p=>p[proof].event='pull_request',p=>p[proof].path='.github/workflows/unrelated.yml'
  ]){const p=proofs();mutate(p);assert.throws(()=>candidateReceipt(p));}
 });
+
+test('owner beta receipt binds the actual science decision without independent approval claims',async()=>{
+ const {verifyOwnerBetaScience}=await import('./internal-beta-science.mjs');
+ const {ownerCandidateReceipt}=await import('./consolidated-evidence.mjs');
+ const science=await verifyOwnerBetaScience(sha);
+ const r=ownerCandidateReceipt(proofs(),science);
+ assert.equal(r.scientificReview.ownerReview.reviewType,'owner-review');
+ assert.equal(r.scientificReview.independentReleaseReady,false);
+ assert.equal(r.appStoreReady,false);
+ for(const mutate of [s=>s.sourceCommit='b'.repeat(40),s=>s.ownerGroupId='other',s=>s.appStoreReady=true,s=>s.ownerReview.declarationSha256='b'.repeat(64)]){
+  const changed=structuredClone(science);mutate(changed);assert.throws(()=>ownerCandidateReceipt(proofs(),changed));
+ }
+ assert.throws(()=>ownerCandidateReceipt(proofs(),undefined));
+});

@@ -45,6 +45,7 @@ export async function validateCandidate({dir,expectedSha,iconPath}){
  return {build,manifest};
 }
 export async function createRelease({dir,receipt,expectedSha,iconPath}){
+ requireThat(!receipt.scientificReview||receipt.scientificReview.independentReleaseReady===true,'Owner-reviewed internal beta cannot promote public web');
  const {build}=await validateCandidate({dir,expectedSha,iconPath});
  for(const field of ['sourceCommit','version','iconSha256','webContentHash'])requireThat(receipt[field]===build[field],'Native/web identity mismatch: '+field);
  requireThat(receipt.appId==='6821140326'&&receipt.bundleId==='it.fungoitalia.app'&&receipt.testFlightOnly===true&&receipt.diagnosticOnly===true&&receipt.appStoreReady===false,'Unexpected native release scope');
@@ -65,7 +66,7 @@ export async function createRelease({dir,receipt,expectedSha,iconPath}){
 }
 export async function confirmBetaState(receipt,api){
  const response=await api('/v1/builds/'+encodeURIComponent(receipt.appleBuildId)+'/buildBetaDetail');
- requireThat(response.ok&&response.data?.type==='buildBetaDetails'&&typeof response.data.id==='string'&&['IN_BETA_TESTING','READY_FOR_BETA_TESTING'].includes(response.data.attributes?.internalBuildState),'Apple internal beta availability not confirmed');
+ requireThat(response.ok&&response.data?.type==='buildBetaDetails'&&typeof response.data.id==='string'&&response.data.attributes?.internalBuildState==='IN_BETA_TESTING','Apple internal beta availability not confirmed');
  return {...receipt,internalBuildState:response.data.attributes.internalBuildState,betaDetailId:response.data.id,betaStateVerifiedAt:new Date().toISOString()};
 }
 export async function verifyPublished({baseURL,dir,receipt,expectedSha,iconPath,fetcher=fetch}){

@@ -1,0 +1,52 @@
+✔ real owner declaration permits only internal beta and preserves incomplete independent science (3.371376ms)
+✔ missing, changed or self-upgraded declarations fail closed (0.581728ms)
+✔ owner-only scope cannot authorize public web, external testing, App Store or another group (0.60969ms)
+✔ changed, removed or added scientific bytes require a new declaration (0.275716ms)
+✔ additional gaps, missing gap records and structural toxicology errors stay blocking (1.038737ms)
+✔ invalid manifest paths, digests, duplicate entries and source identities are rejected (0.254955ms)
+✖ failed CLI revalidation overwrites stale success with strict diagnostics and a negative decision (679.953051ms)
+✖ receipt mismatch preserves a fresh failed report instead of prior successful proof (1529.020211ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2309.19936
+
+✖ failing tests:
+
+test at scripts/internal-beta-science.test.mjs:49:1
+✖ failed CLI revalidation overwrites stale success with strict diagnostics and a negative decision (679.953051ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/internal-beta-science.test.mjs:59:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/internal-beta-science.test.mjs:64:1
+✖ receipt mismatch preserves a fresh failed report instead of prior successful proof (1529.020211ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/internal-beta-science.test.mjs:78:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

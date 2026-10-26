@@ -19,6 +19,11 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
+      - name: Require independent readiness for the legacy production submit path
+        run: |
+          npm run prepare:data
+          npm run validate:release
+          node scripts/audit-toxicology-release.mjs --strict
       - name: Upload signed build to TestFlight
         run: |
           test -n "$EXPO_TOKEN"

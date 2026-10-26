@@ -4,9 +4,11 @@ permissions:
   actions: read
 concurrency:
   group: subscription-production-ios
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   source:
+    outputs:
+      independent_ready: ${{ steps.science.outputs.independent_ready }}
     runs-on: ubuntu-latest
     timeout-minutes: 110
     env:
@@ -59,10 +61,16 @@ jobs:
         include-hidden-files: true
         if-no-files-found: error
         retention-days: 30
-    - name: Require scientific release readiness before signing or TestFlight upload
-      run: |
-        npm run validate:release
-        node scripts/audit-toxicology-release.mjs --strict
+    - name: Require pinned owner review and strict scientific diagnostics for internal beta
+      id: science
+      run: node scripts/internal-beta-science.mjs
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Internal-beta-scientific-proof
+        path: ${{ runner.temp }}/internal-beta-science.json
+        if-no-files-found: error
+        retention-days: 30
     - name: Require actual current native, purchase UI and successful demo proofs
       run: node scripts/consolidated-evidence.mjs
     - name: Bind web and native source proof before signing
@@ -112,6 +120,8 @@ jobs:
       with:
         name: Consolidated-source-proof
         path: ${{ runner.temp }}
+    - name: Revalidate owner science proof before signing
+      run: node scripts/internal-beta-science.mjs --verify-receipt
     - name: Bind verified source into the isolated EAS build environment
       run: 'git diff --exit-code
 
@@ -170,6 +180,8 @@ jobs:
         node scripts/verify-native-source.mjs "$RUNNER_TEMP/consolidated-binary/Payload"
 
         '
+    - name: Revalidate owner review immediately before upload
+      run: node scripts/internal-beta-science.mjs --verify-receipt
     - name: Preflight existing beta audience before any upload
       run: node scripts/consolidated-beta-audience.mjs
     - name: Prepare authorized Apple submit key
@@ -188,6 +200,8 @@ jobs:
       run: 'mkdir -p "$RUNNER_TEMP/paired-beta-evidence"
 
         if test -f "$RUNNER_TEMP/consolidated-build.json"; then cp "$RUNNER_TEMP/consolidated-build.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
+
+        if test -f "$RUNNER_TEMP/internal-beta-science.json"; then cp "$RUNNER_TEMP/internal-beta-science.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
 
         if test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json "$RUNNER_TEMP/paired-beta-evidence/"; fi
 
@@ -208,7 +222,7 @@ jobs:
         if-no-files-found: warn
     needs: source
   promote-public-web:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && needs.source.outputs.independent_ready == 'true'
     needs:
     - source
     - beta

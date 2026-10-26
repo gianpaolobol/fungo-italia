@@ -31,8 +31,8 @@ jobs:
         run: node --test scripts/*.test.mjs
       - name: Require generated source artifacts to be committed
         run: git diff --exit-code -- src/data
-      - name: Check strict independent scientific release gate (must not bypass)
-        run: npm run validate:release
+      - name: Validate owner-only beta review and preserve independent App Store blockers
+        run: node scripts/internal-beta-science.mjs
       - name: Save diagnostic artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -43,3 +43,4 @@ jobs:
             docs/RELEASE-READINESS.md
             src/data/provenance.json
             src/data/catalog.json
+            ${{ runner.temp }}/internal-beta-science.json

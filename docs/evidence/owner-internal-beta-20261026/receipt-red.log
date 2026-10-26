@@ -1,0 +1,64 @@
+✔ successful native, purchase UI and demo proofs authorize only an internal diagnostic receipt (2.085468ms)
+✔ native failure cannot authorize signing or TestFlight (0.413113ms)
+✔ native timed_out cannot authorize signing or TestFlight (0.233683ms)
+✔ native cancelled cannot authorize signing or TestFlight (0.149295ms)
+✔ native skipped cannot authorize signing or TestFlight (0.285922ms)
+✔ native neutral cannot authorize signing or TestFlight (0.149836ms)
+✔ native action_required cannot authorize signing or TestFlight (0.164208ms)
+✔ native null cannot authorize signing or TestFlight (0.135705ms)
+✔ ui failure cannot authorize signing or TestFlight (0.235506ms)
+✔ ui timed_out cannot authorize signing or TestFlight (0.335716ms)
+✔ ui cancelled cannot authorize signing or TestFlight (0.154323ms)
+✔ ui skipped cannot authorize signing or TestFlight (0.115775ms)
+✔ ui neutral cannot authorize signing or TestFlight (0.25881ms)
+✔ ui action_required cannot authorize signing or TestFlight (0.124679ms)
+✔ ui null cannot authorize signing or TestFlight (0.127904ms)
+✔ demo failure cannot authorize signing or TestFlight (0.257558ms)
+✔ demo timed_out cannot authorize signing or TestFlight (0.150267ms)
+✔ demo cancelled cannot authorize signing or TestFlight (0.128904ms)
+✔ demo skipped cannot authorize signing or TestFlight (0.118999ms)
+✔ demo neutral cannot authorize signing or TestFlight (0.088334ms)
+✔ demo action_required cannot authorize signing or TestFlight (0.081052ms)
+✔ demo null cannot authorize signing or TestFlight (0.087352ms)
+✔ every mandatory proof rejects stale source, missing, running and non-main executions (0.523881ms)
+✖ owner beta receipt binds the actual science decision without independent approval claims (731.335167ms)
+✔ promotion pairs exact bytes and actual beta receipt while preserving failed purchase proof (17.017625ms)
+✔ candidate rejects mutated bytes, unlisted files, symlinks and missing entries (28.684929ms)
+✔ manifest cannot escape artifact or duplicate a path or omit service-worker integrity (24.694106ms)
+✔ promotion refuses cross-source, icon, content, unprocessed, absent proof and invented success receipts (64.686545ms)
+✔ live beta state is read from Apple and rejects pending or malformed responses (1.234563ms)
+✔ published verification fetches uncached bytes, compares release receipt and rejects corrupted deployment (18.888519ms)
+✔ published full-byte verification uses at most eight concurrent requests and checks every file (55.47698ms)
+✖ owner review receipt cannot promote content to public web (4.751262ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 30
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 847.143916
+
+✖ failing tests:
+
+test at scripts/consolidated-evidence.test.mjs:25:1
+✖ owner beta receipt binds the actual science decision without independent approval claims (731.335167ms)
+  TypeError [Error]: ownerCandidateReceipt is not a function
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/consolidated-evidence.test.mjs:29:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at scripts/release-parity.test.mjs:79:1
+✖ owner review receipt cannot promote content to public web (4.751262ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/release-parity.test.mjs:81:2
+      at async fixture (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/release-parity.test.mjs:19:6)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

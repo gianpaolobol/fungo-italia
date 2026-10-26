@@ -1,0 +1,30 @@
+{
+  "baseline": "1b4d2e7ba1cebd67ac45440faa78220844d278fe",
+  "ownerDeclaration": {
+    "path": "revisione/owner-internal-beta-review-20261026.json",
+    "type": "owner-review",
+    "date": "2026-10-26",
+    "contentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+    "files": 867,
+    "independentReviewComplete": false
+  },
+  "localVerification": {
+    "nodeTestsPassed": 272,
+    "nodeTestsFailed": 0,
+    "skipped": 0,
+    "typecheck": "PASS",
+    "regenerationNoDataDrift": "PASS",
+    "ownerGate": "PASS",
+    "privateReviewTransactions": "PASS",
+    "yamlAndSigningOrder": "PASS"
+  },
+  "technicalReview": {
+    "finding": "Failed revalidation could retain stale successful diagnostics",
+    "fixed": "Two real CLI regressions RED then GREEN; fresh negative reports persisted",
+    "mycologicalReview": false
+  },
+  "appStoreReady": false,
+  "newBuildNumber": null,
+  "testflightAvailable": false,
+  "nativeVerification": "Await exact-source GitHub workflows after push"
+}

@@ -1,0 +1,32 @@
+✔ promotion pairs exact bytes and actual beta receipt while preserving failed purchase proof (14.25584ms)
+✔ candidate rejects mutated bytes, unlisted files, symlinks and missing entries (12.628041ms)
+✔ manifest cannot escape artifact or duplicate a path or omit service-worker integrity (12.140619ms)
+✔ promotion refuses cross-source, icon, content, unprocessed, absent proof and invented success receipts (44.849052ms)
+✖ live beta state is read from Apple and rejects pending or malformed responses (1.362436ms)
+✔ published verification fetches uncached bytes, compares release receipt and rejects corrupted deployment (16.456242ms)
+✔ published full-byte verification uses at most eight concurrent requests and checks every file (44.352313ms)
+✔ owner review receipt cannot promote content to public web (1.615127ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 243.721553
+
+✖ failing tests:
+
+test at scripts/release-parity.test.mjs:45:1
+✖ live beta state is read from Apple and rejects pending or malformed responses (1.362436ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/release-parity.test.mjs:48:32)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'rejects',
+    diff: 'simple'
+  }

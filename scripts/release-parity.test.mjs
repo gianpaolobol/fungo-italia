@@ -45,7 +45,7 @@ test('promotion refuses cross-source, icon, content, unprocessed, absent proof a
 test('live beta state is read from Apple and rejects pending or malformed responses',async()=>{
  for(const state of ['IN_BETA_TESTING','READY_FOR_BETA_TESTING','PROCESSING']){
   const receipt={appleBuildId:'build-id'};const api=async path=>{assert.equal(path,'/v1/builds/build-id/buildBetaDetail');return {ok:true,data:{type:'buildBetaDetails',id:'detail',attributes:{internalBuildState:state}}};};
-  if(state==='PROCESSING')await assert.rejects(confirmBetaState(receipt,api));else assert.equal((await confirmBetaState(receipt,api)).internalBuildState,state);
+  if(state!=='IN_BETA_TESTING')await assert.rejects(confirmBetaState(receipt,api));else assert.equal((await confirmBetaState(receipt,api)).internalBuildState,state);
  }
  for(const data of [null,{type:'builds',id:'wrong',attributes:{internalBuildState:'IN_BETA_TESTING'}},{type:'buildBetaDetails',attributes:{internalBuildState:'IN_BETA_TESTING'}}])await assert.rejects(confirmBetaState({appleBuildId:'build-id'},async()=>({ok:true,data})));
 });
@@ -74,4 +74,9 @@ test('published full-byte verification uses at most eight concurrent requests an
  await verifyPublished({baseURL:'https://example.test/app/',dir,receipt,expectedSha:sha,iconPath:join(dir,'icon.png'),fetcher});
  assert.ok(peak>1,'full verification must parallelize large published artifacts');assert.ok(peak<=8,'bounded request pressure');
  assert.deepEqual(seen.sort(),[...manifest.files.map(file=>file.path),'release.json','build.json','file-manifest.json'].sort());
+}));
+
+test('owner review receipt cannot promote content to public web',()=>fixture(async({dir,receipt})=>{
+ receipt.scientificReview={approvalScope:'owner-internal-testflight',independentReleaseReady:false,publicWebAllowed:false};
+ await assert.rejects(createRelease({dir,receipt,expectedSha:sha,iconPath:join(dir,'icon.png')}));
 }));

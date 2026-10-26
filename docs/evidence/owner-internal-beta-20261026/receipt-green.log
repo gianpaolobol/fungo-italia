@@ -1,0 +1,46 @@
+✔ successful native, purchase UI and demo proofs authorize only an internal diagnostic receipt (2.2535ms)
+✔ native failure cannot authorize signing or TestFlight (0.321475ms)
+✔ native timed_out cannot authorize signing or TestFlight (0.102335ms)
+✔ native cancelled cannot authorize signing or TestFlight (0.087622ms)
+✔ native skipped cannot authorize signing or TestFlight (0.140232ms)
+✔ native neutral cannot authorize signing or TestFlight (0.256877ms)
+✔ native action_required cannot authorize signing or TestFlight (0.101082ms)
+✔ native null cannot authorize signing or TestFlight (0.07295ms)
+✔ ui failure cannot authorize signing or TestFlight (1.276827ms)
+✔ ui timed_out cannot authorize signing or TestFlight (3.658529ms)
+✔ ui cancelled cannot authorize signing or TestFlight (2.727445ms)
+✔ ui skipped cannot authorize signing or TestFlight (0.064787ms)
+✔ ui neutral cannot authorize signing or TestFlight (0.154362ms)
+✔ ui action_required cannot authorize signing or TestFlight (0.057287ms)
+✔ ui null cannot authorize signing or TestFlight (0.086711ms)
+✔ demo failure cannot authorize signing or TestFlight (0.111278ms)
+✔ demo timed_out cannot authorize signing or TestFlight (0.052439ms)
+✔ demo cancelled cannot authorize signing or TestFlight (0.077347ms)
+✔ demo skipped cannot authorize signing or TestFlight (0.045478ms)
+✔ demo neutral cannot authorize signing or TestFlight (0.043465ms)
+✔ demo action_required cannot authorize signing or TestFlight (0.077417ms)
+✔ demo null cannot authorize signing or TestFlight (0.061502ms)
+✔ every mandatory proof rejects stale source, missing, running and non-main executions (0.380664ms)
+✔ owner beta receipt binds the actual science decision without independent approval claims (660.737555ms)
+✔ real owner declaration permits only internal beta and preserves incomplete independent science (3.44691ms)
+✔ missing, changed or self-upgraded declarations fail closed (0.969923ms)
+✔ owner-only scope cannot authorize public web, external testing, App Store or another group (0.72238ms)
+✔ changed, removed or added scientific bytes require a new declaration (0.535248ms)
+✔ additional gaps, missing gap records and structural toxicology errors stay blocking (1.234112ms)
+✔ invalid manifest paths, digests, duplicate entries and source identities are rejected (0.361636ms)
+✔ promotion pairs exact bytes and actual beta receipt while preserving failed purchase proof (22.973578ms)
+✔ candidate rejects mutated bytes, unlisted files, symlinks and missing entries (18.115239ms)
+✔ manifest cannot escape artifact or duplicate a path or omit service-worker integrity (15.984039ms)
+✔ promotion refuses cross-source, icon, content, unprocessed, absent proof and invented success receipts (45.737623ms)
+✔ live beta state is read from Apple and rejects pending or malformed responses (1.33862ms)
+✔ published verification fetches uncached bytes, compares release receipt and rejects corrupted deployment (15.93479ms)
+✔ published full-byte verification uses at most eight concurrent requests and checks every file (49.633174ms)
+✔ owner review receipt cannot promote content to public web (1.657731ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 768.587498

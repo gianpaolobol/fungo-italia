@@ -1,6 +1,12 @@
 ## Riferimento operativo unico — 26 ottobre 2026
 
-Leggere prima [docs/MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Contiene baseline applicativa, decisioni attuali, recuperi selettivi, PR, test e blocchi. Aggiornarlo dopo ogni intervento. Gli handoff precedenti sono cronologia: non ripristinare istruzioni superate. Il completamento P0 non autorizza release con gate scientifici o Apple falliti.
+Leggere prima [docs/MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Contiene baseline applicativa, decisioni attuali, recuperi selettivi, PR, test e blocchi. Aggiornarlo dopo ogni intervento. Gli handoff precedenti sono cronologia: non ripristinare istruzioni superate. Il completamento P0 non autorizza release pubbliche con gate scientifici o Apple falliti. Per la sola beta interna del titolare vale la decisione esplicita sotto; tutti i gate tecnici Apple restano obbligatori.
+
+## Revisione del titolare per beta interna — 26 ottobre 2026
+
+Il titolare ha dichiarato in sessione: «per ora attesto io come revisione e mi riservo di inviare ad altri revisori successivamente». Per il solo gruppo interno del titolare il gate beta accetta questa dichiarazione esplicita, vincolata agli hash del contenuto scientifico e alle lacune note in `revisione/owner-internal-beta-review-20261026.json`. Non è una revisione indipendente, una firma professionale o una certificazione micologica. Non cambiare `independentReviewStatus` sulla base di questa dichiarazione.
+
+`node scripts/internal-beta-science.mjs` esegue e conserva i gate strict, controlla la dichiarazione e blocca contenuto/lacune diversi, errori tossicologici strutturali o platea più ampia. Tutti i test nativi/StoreKit/UI/demo sullo SHA esatto restano obbligatori. Nessuna promozione web pubblica o invio App Store deriva dalla beta del titolare. Per quei rilasci resta obbligatoria la revisione indipendente reale. Il protocollo dei revisori resta amministrativo, non accessibile agli utenti.
 
 # Fungo Italia — istruzioni per agenti AI
 
