@@ -759,6 +759,26 @@
             "evidenceUrl": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
             "basis": "Revisione basata su raccolte fresche ed erbari; autori e metodi a p.295."
           }
+        },
+        {
+          "sourceId": "PRIMARY-TRICHOLOMA-NORTHERN-EUROPE-2017-SCOPE",
+          "reviewScope": "supplementary-literature",
+          "title": "Taxonomy of Tricholoma in northern Europe based on ITS sequence data and morphological characters (2017)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5645187/",
+          "authors": [],
+          "location": "Section Atrosquamosa",
+          "fields": [
+            "taxonomicScope"
+          ],
+          "supportedClaim": "Cinque specie europee circoscritte nella sezione Atrosquamosa: T. atrosquamosum, T. orirubens, T. basirubens, T. squarrulosum e T. olivaceotinctum. L'unità didattica gruppo terreum non coincide automaticamente con questa sezione: la fonte chiarisce il limite tassonomico e non certifica habitat o confronti di tutte le sue componenti.",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "consultedAt": "2026-10-26",
+          "authority": {
+            "entity": "Pubblicazione tassonomica primaria",
+            "type": "ricerca filogenetica e morfologica",
+            "evidenceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5645187/",
+            "basis": "Sezione tassonomica esplicita nel testo integrale."
+          }
         }
       ]
     },
@@ -3517,6 +3537,30 @@
             "lookalikes"
           ],
           "supportedClaim": "Diagnosi comparative esplicite delle due componenti a spore ovoidi rispetto ai campioni rufescens-like a spore globose."
+        },
+        {
+          "sourceId": "PRIMARY-HYDNUM-NISKANEN-2018-SCOPE",
+          "reviewScope": "supplementary-literature",
+          "title": "Niskanen et al. 2018, Identifying and naming the currently known diversity of the genus Hydnum, Mycologia 110(5):890–918",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30215579/",
+          "authors": [
+            "Tuula Niskanen",
+            "Kare Liimatainen",
+            "Jorinde Nuytinck"
+          ],
+          "location": "Abstract; taxonomic scope and typifications",
+          "fields": [
+            "taxonomicScope"
+          ],
+          "supportedClaim": "La revisione riconosce 49 specie di Hydnum nel mondo, 22 nuove e designa epitypi per H. repandum e H. rufescens. Non autorizza l'applicazione indistinta di confronti nominali a tutte le specie dei complessi e non attribuisce automaticamente nuovi taxa al programma S1.",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "consultedAt": "2026-10-26",
+          "authority": {
+            "entity": "Mycologia",
+            "type": "rivista scientifica peer-reviewed",
+            "evidenceUrl": "https://doi.org/10.1080/00275514.2018.1477004",
+            "basis": "Studio tassonomico primario indicizzato PubMed."
+          }
         }
       ]
     },
