@@ -689,6 +689,58 @@
           "reviewStatus": "source-consulted-pending-independent-review"
         }
       ]
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "commonNames": [],
+      "habitat": [
+        "Boschi di latifoglie e di conifere, da fine estate all'autunno."
+      ],
+      "lookalikes": [
+        "Amanita pantherina: per il confronto, A. rubescens arrossa nelle parti lesionate, mentre A. pantherina presenta carne immutabile; considerare anche volva, anello e margine pileico."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-OCT26-AMANITA-RUBESCENS",
+          "reviewScope": "supplementary-literature",
+          "title": "Gruppo Micologico Ancona — Amanita rubescens",
+          "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/amanita-rubescens.html",
+          "location": "Habitat; Note; descrizione di carne, gambo e cappello",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Ecologia e confronto morfologico circoscritti alla scheda nominale; non modifica commestibilità S2.",
+          "notes": "Revisione bibliografica, non attestazione micologica indipendente; confronto non diventa obiettivo autonomo.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "commonNames": [],
+      "habitat": [
+        "Luoghi erbosi e concimati, parchi, margini stradali e pascoli, dalla primavera all'autunno."
+      ],
+      "lookalikes": [
+        "Coprinopsis atramentaria (Coprinus atramentarius nelle fonti): confronto didattico con un fungo che presenta cappello più liscio e grigio; non basarsi sulla sola somiglianza del cappello."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-OCT26-COPRINUS-COMATUS",
+          "reviewScope": "supplementary-literature",
+          "title": "I funghi della Campania — Scheda 46 Coprinus comatus",
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda046.pdf",
+          "location": "Scheda 46, HABITAT e morfologia",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Ecologia e confronto morfologico circoscritti alla scheda nominale; non modifica commestibilità S2.",
+          "notes": "Revisione bibliografica, non attestazione micologica indipendente; confronto non diventa obiettivo autonomo.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
     }
   ]
 }
