@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-26T20:15:16.626Z",
+  "readOnly": true,
+  "repository": "gianpaolobol/fungo-italia",
+  "main": "aeb33ebd91e8d2ebb01afb494d37888993c8383f",
+  "publicURL": "https://gianpaolobol.github.io/fungo-italia/",
+  "publicWeb": {
+    "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+    "version": "1.1.0",
+    "pairedBuild": "19",
+    "webContentHash": "eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+    "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+    "appleTouchIcon": "/fungo-italia/icon-77274660b0a1a450.png"
+  },
+  "verifiedTestFlight": {
+    "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+    "version": "1.1.0",
+    "buildNumber": "21",
+    "internalBuildState": "IN_BETA_TESTING",
+    "webContentHash": "c7a71234870e23d0af16ffaff0751ae8fed0d65db182c5d1f18df9071e19533e",
+    "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+    "publicWebAllowed": false,
+    "independentReleaseReady": false
+  },
+  "candidate": {
+    "producerRunId": 40380720179,
+    "artifactId": 12677552815,
+    "name": "Paired-web-candidate",
+    "artifactDigest": "sha256:2852c1eed7ca098633e6ebcb1fe45f056f9c341425d88620b42967d0f07114bd",
+    "validatedOnExactSource": true
+  },
+  "sameIconBytes": true,
+  "userClarification": "nell’icona dell’app che non è testflight ma allineata con GitHub senza testflight",
+  "publicGate": {
+    "script": "scripts/release-parity.mjs",
+    "actualError": "Owner-reviewed internal beta cannot promote public web",
+    "changed": false
+  },
+  "deploymentPerformed": false
+}
