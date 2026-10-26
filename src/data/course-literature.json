@@ -1945,6 +1945,47 @@
           "supportedClaim": "Young Coprinopsis picacea may resemble Coprinus comatus; white scales against dark brown cap at maturity."
         }
       ]
+    },
+    {
+      "scientificName": "Clitocybe nebularis",
+      "additions": {
+        "lookalikes": [
+          "Lepista nuda: lamelle con tonalità lilla pallido, diversamente dalle lamelle biancastre o crema di Clitocybe nebularis.",
+          "Entoloma sinuatum: lamelle giallastre a maturità e sporata rosata, a differenza della sporata biancastra-crema di Clitocybe nebularis; specie tossica."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-2d88aa9bd7a9071c",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronti descritti con Lepista nuda (lamelle lilla pallido) ed Entoloma sinuatum (lamelle giallastre e spore rosate), quest'ultima tossica."
+        }
+      ]
+    },
+    {
+      "scientificName": "Flammulina velutipes s.l.",
+      "additions": {
+        "lookalikes": [
+          "Per Flammulina velutipes nominale: Kuehneromyces mutabilis può avere cappello simile, ma presenta lamelle più scure e sporata bruna; confronto riferito alla specie nominale, non automaticamente all'intero complesso s.l."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-b424e3043a9faf02",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Nella specie nominale Flammulina velutipes il confronto con Kuehneromyces mutabilis distingue lamelle più scure e sporata marrone di quest'ultimo; non generalizzare al complesso s.l."
+        }
+      ]
     }
   ]
 }
