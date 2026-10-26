@@ -1,0 +1,70 @@
+{
+  "baseline": "e5a4612f286010f8af26338316d47bbe749d4359",
+  "updatedAt": "2026-10-26",
+  "scope": "Final working tree for the follow-up; remote staged-tree identity checked separately before main update.",
+  "checks": {
+    "prepareData": {
+      "exitCode": 0
+    },
+    "nodeTests": {
+      "exitCode": 0,
+      "passed": 241
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "webBuild": {
+      "exitCode": 0
+    },
+    "webkit": {
+      "exitCode": 0,
+      "passed": 65
+    },
+    "chromium": {
+      "exitCode": 0,
+      "passed": 65
+    },
+    "unifiedOfflineSmoke": {
+      "exitCode": 0,
+      "offline": true,
+      "tabs": [
+        "Percorso",
+        "Studio",
+        "Esame",
+        "Aree"
+      ]
+    },
+    "strictScientific": {
+      "exitCode": 1,
+      "blocked": 148,
+      "ready": 0,
+      "missingHabitat": 0,
+      "missingLookalikes": 0
+    },
+    "strictToxicology": {
+      "exitCode": 1,
+      "releaseBlocked": true
+    }
+  },
+  "targetedReview": {
+    "independentAgent": true,
+    "professionalMycologicalApproval": false,
+    "resolved": [
+      "Unverified Leucoagaricus subcretaceus membership excluded.",
+      "Disputed new Neoboletus comparison replaced with directly checked primary Assyov2020 text."
+    ],
+    "scopeLimits": [
+      "Russula coverage restricted to the8 names illustrated in course, not the worldwide subsection.",
+      "Hericium comparisons restricted to European teaching concepts.",
+      "Scutiger international comparators do not attest Italian lookalikes.",
+      "Boletus Luridi examples remain partial."
+    ]
+  },
+  "bibliographicCoverage": {
+    "originalFields": 179,
+    "supported": 139,
+    "partial": 40,
+    "empty": 0
+  },
+  "release": "No new Apple distribution verified in this content-research cycle."
+}

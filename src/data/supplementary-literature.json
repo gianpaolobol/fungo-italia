@@ -397,10 +397,12 @@
         "Prugnoli"
       ],
       "habitat": [
-        "Per C. prunulus nominale: boschi di latifoglie e conifere, in estate-autunno. Copertura dell’intera unità non attestata."
+        "Per C. prunulus nominale: boschi di latifoglie e conifere, in estate-autunno. Copertura dell’intera unità non attestata.",
+        "Per C. abprunulus, segregato europeo già identificato come C. prunulus: su terreno in boschi di latifoglie con Fagus, Quercus, Populus e Tilia. Dato circoscritto al segregato, senza estensione all’intera unità s.l."
       ],
       "lookalikes": [
-        "C. prunulus nominale rispetto a Clitocybe rivulosa, C. dealbata e C. cerussata: lamelle rosate a maturità e carne fragile, anziché lamelle bianche-crema e carne tenace-fibrosa. Copertura dell’intera unità non attestata."
+        "C. prunulus nominale rispetto a Clitocybe rivulosa, C. dealbata e C. cerussata: lamelle rosate a maturità e carne fragile, anziché lamelle bianche-crema e carne tenace-fibrosa. Copertura dell’intera unità non attestata.",
+        "Confronto C. prunulus–C. abprunulus, segregato già confuso con prunulus: abprunulus ha gambo eccentrico, cellule rigonfie nella trama lamellare e spore più piccole, largamente fusiformi-ellissoidali; prunulus ha trama a ife filamentose e spore maggiori."
       ],
       "sources": [
         {
@@ -455,6 +457,33 @@
             "type": "association-editorial",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/15085-clitopilus-prunulus-scop-fr-quel-1871/",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-15dfdae3aed022",
+          "reviewScope": "supplementary-literature",
+          "title": "Clitopilus abprunulus, a new species from North Macedonia with notes on C. ravus and pleuromutilin producing taxa",
+          "url": "https://www.researchgate.net/publication/343569872_Clitopilus_abprunulus_a_new_species_from_North_Macedonia_with_notes_on_C_ravus_and_pleuromutilin_producing_taxa",
+          "authors": [
+            "Si-Peng Jian",
+            "Mitko Karadelev",
+            "Pan-Meng Wang",
+            "Wang-Qiu Deng",
+            "Zhu L. Yang"
+          ],
+          "location": "Mycological Progress 19:805–816; C. abprunulus Diagnosis, Ecology and distribution, Notes, pp. 811–812; Discussion p.814",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Per C. abprunulus, segregato europeo già identificato come C. prunulus: su terreno in boschi di latifoglie con Fagus, Quercus, Populus e Tilia. Dato circoscritto al segregato, senza estensione all’intera unità s.l. Confronto C. prunulus–C. abprunulus, segregato già confuso con prunulus: abprunulus ha gambo eccentrico, cellule rigonfie nella trama lamellare e spore più piccole, largamente fusiformi-ellissoidali; prunulus ha trama a ife filamentose e spore maggiori.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "German Mycological Society / Mycological Progress",
+            "type": "articolo primario di micologia",
+            "evidenceUrl": "https://www.researchgate.net/publication/343569872_Clitopilus_abprunulus_a_new_species_from_North_Macedonia_with_notes_on_C_ravus_and_pleuromutilin_producing_taxa",
+            "basis": "DOI 10.1007/s11557-020-01603-6; autori Kunming Institute of Botany e università di Skopje; discussione esplicita del tipo e delle sequenze."
           }
         }
       ]
@@ -530,7 +559,9 @@
         "Moretta",
         "Morette"
       ],
-      "habitat": [],
+      "habitat": [
+        "Ectomicorrizico soprattutto con Pinus, più raramente Abies, Picea o Fagus, su terreni sabbiosi o limosi più o meno calcarei."
+      ],
       "lookalikes": [],
       "sources": [
         {
@@ -542,6 +573,29 @@
           "supportedClaim": "Associazione lessicale dei nomi comuni; incluse varianti flessionali per la ricerca.",
           "notes": "Questo riferimento riguarda soltanto commonNames. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata. Il nome riguarda il gruppo terreum nella fonte e non identifica da solo la specie.",
           "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "EXT-R2-TRICH1999-TERREUM",
+          "reviewScope": "supplementary-literature",
+          "title": "Notulae ad Floram agaricinam neerlandicam — XXXVI. Tricholoma",
+          "url": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+          "authors": [
+            "Morten Christensen",
+            "Machiel E. Noordeloos"
+          ],
+          "location": "p.304 (PDF10), T. terreum, Habitat & distribution",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Pinus prevalente; citate Abies, Picea, Fagus.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Christensen & Noordeloos / Persoonia",
+            "type": "primary-taxonomic-revision",
+            "evidenceUrl": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+            "basis": "Revisione basata su raccolte fresche ed erbari; autori e metodi a p.295."
+          }
         }
       ]
     },
@@ -554,7 +608,8 @@
       "habitat": [
         "T. scalpturatum: soprattutto con Quercus, Fagus, Tilia o Populus, più raramente Pinus, su suoli argillosi o sabbiosi ricchi. Copertura dell’intera unità non attestata.",
         "T. orirubens: preferenza per boschi di latifoglie, presente anche presso conifere. Copertura dell’intera unità non attestata.",
-        "T. squarrulosum: boschi temperati di latifoglie, con fruttificazione tardiva. Copertura dell’intera unità non attestata."
+        "T. squarrulosum: boschi temperati di latifoglie, con fruttificazione tardiva. Copertura dell’intera unità non attestata.",
+        "Per T. terreum: soprattutto Pinus, più raramente Abies, Picea o Fagus, su terreni sabbiosi o limosi più o meno calcarei; altre componenti conservano ecologie proprie."
       ],
       "lookalikes": [
         "Per T. orirubens rispetto a T. basirubens: base talvolta bluastra e lamelle arrossanti; T. basirubens ha base rosata e lamelle non arrossanti. Copertura dell’intera unità non attestata.",
@@ -680,6 +735,29 @@
             "type": "association-editorial",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/15670-tricholoma-squarrulosum-bres-1892/",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-TRICH1999-TERREUM",
+          "reviewScope": "supplementary-literature",
+          "title": "Notulae ad Floram agaricinam neerlandicam — XXXVI. Tricholoma",
+          "url": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+          "authors": [
+            "Morten Christensen",
+            "Machiel E. Noordeloos"
+          ],
+          "location": "p.304 (PDF10), T. terreum, Habitat & distribution",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Pinus prevalente; citate Abies, Picea, Fagus.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Christensen & Noordeloos / Persoonia",
+            "type": "primary-taxonomic-revision",
+            "evidenceUrl": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+            "basis": "Revisione basata su raccolte fresche ed erbari; autori e metodi a p.295."
           }
         }
       ]
@@ -1038,7 +1116,8 @@
       "scientificName": "Agaricus sez. Xanthodermatei",
       "commonNames": [],
       "habitat": [
-        "Per la specie rappresentativa A. xanthodermus: lettiera o erba, con maggiore frequenza in prati arricchiti e ambienti antropizzati per il carattere nitrofilo. Copertura dell’intera unità non attestata."
+        "Per la specie rappresentativa A. xanthodermus: lettiera o erba, con maggiore frequenza in prati arricchiti e ambienti antropizzati per il carattere nitrofilo. Copertura dell’intera unità non attestata.",
+        "Esempi distinti della sezione: A. menieri è documentato su dune e suolo sabbioso con vegetazione rada; A. moelleri lungo strade e presso Alnus, Salix, Fraxinus, Robinia, Sambucus e Carpinus. Sono habitat delle raccolte studiate, non una preferenza uniforme di tutta la sezione."
       ],
       "lookalikes": [],
       "sources": [
@@ -1067,6 +1146,32 @@
             "type": "articolo primario di micologia",
             "evidenceUrl": "https://www.researchgate.net/publication/295673842_Agaricus_section_Xanthodermatei_in_Iran",
             "basis": "Autori e affiliazioni (fra cui INRA, Mycologie et Sécurité des Aliments) e DOI 10.11646/phytotaxa.247.3.2 presenti nel testo."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-509588b1d1da02",
+          "reviewScope": "supplementary-literature",
+          "title": "Agaricus section Xanthodermatei: a phylogenetic reconstruction with commentary on taxa",
+          "url": "https://www.researchgate.net/publication/7060965_Agaricus_section_Xanthodermatei_A_phylogenetic_reconstruction_with_commentary_on_taxa",
+          "authors": [
+            "Richard W. Kerrigan",
+            "Philippe Callac",
+            "Jacques Guinberteau",
+            "Michael P. Challen",
+            "Luis A. Parra"
+          ],
+          "location": "Mycologia 97(6), Table I, pp. 1294–1295; collections CA141/162/199, LAPAG237, CA156/31/209/210",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Esempi distinti della sezione: A. menieri è documentato su dune e suolo sabbioso con vegetazione rada; A. moelleri lungo strade e presso Alnus, Salix, Fraxinus, Robinia, Sambucus e Carpinus. Sono habitat delle raccolte studiate, non una preferenza uniforme di tutta la sezione.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Mycologia / Mycological Society of America",
+            "type": "articolo primario di micologia",
+            "evidenceUrl": "https://www.researchgate.net/publication/7060965_Agaricus_section_Xanthodermatei_A_phylogenetic_reconstruction_with_commentary_on_taxa",
+            "basis": "DOI 10.3852/mycologia.97.6.1292; autori e affiliazioni INRA MYCSA / Warwick nel testo; tabella di raccolte con voucher."
           }
         }
       ]
@@ -1144,7 +1249,8 @@
       "commonNames": [],
       "habitat": [],
       "lookalikes": [
-        "Per il rappresentante A. sylvaticus, il confronto con Agaricus langei var. silvaticoides richiede l’esame microscopico: quest’ultimo ha spore più grandi. Copertura dell’intera unità non attestata."
+        "Per il rappresentante A. sylvaticus, il confronto con Agaricus langei var. silvaticoides richiede l’esame microscopico: quest’ultimo ha spore più grandi. Copertura dell’intera unità non attestata.",
+        "Confronto fra componenti: nella raccolta studiata A. langei rispetto ad A. sylvaticus presenta lamelle giovani rosa anziché grigie, base non bulbosa e cheilocistidi sferopeduncolati anziché cilindrici e settati. La stessa fonte segnala variabilità del bulbo e confondibilità: il solo aspetto macroscopico non risolve ogni raccolta."
       ],
       "sources": [
         {
@@ -1167,6 +1273,29 @@
             "type": "associazione micologica; scheda editoriale",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/15456-agaricus-sylvaticus-schaeff-1774/",
             "basis": "Attribuzione nominativa e revisione CLR Micologico dichiarate nella scheda."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-ddb41a7a1b2bd6",
+          "reviewScope": "supplementary-literature",
+          "title": "Agaricus langei (F.H. Möll.) F.H. Möll. 1952",
+          "url": "https://www.funghiitaliani.it/topic/16392-agaricus-langei-fh-m%C3%B6ll-fh%C2%A0m%C3%B6ll-1952/",
+          "authors": [
+            "Tomaso Lezzi",
+            "Mauro Cittadini"
+          ],
+          "location": "Foto e Descrizioni, raccolta Umbria novembre 2021; commento Cittadini 30 marzo 2022",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto fra componenti: nella raccolta studiata A. langei rispetto ad A. sylvaticus presenta lamelle giovani rosa anziché grigie, base non bulbosa e cheilocistidi sferopeduncolati anziché cilindrici e settati. La stessa fonte segnala variabilità del bulbo e confondibilità: il solo aspetto macroscopico non risolve ogni raccolta.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "AMINT",
+            "type": "scheda archivio micologico con commenti nominativi",
+            "evidenceUrl": "https://www.funghiitaliani.it/topic/16392-agaricus-langei-fh-m%C3%B6ll-fh%C2%A0m%C3%B6ll-1952/",
+            "basis": "Archivio AMINT CSM; raccolta Lezzi e confronto espressi nel testo; commento nominativo Cittadini sui limiti macroscopici."
           }
         }
       ]
@@ -1779,7 +1908,9 @@
       "habitat": [
         "Lignicolo presso latifoglie, frequentemente alla base di tronchi o ceppaie, spesso cespitoso."
       ],
-      "lookalikes": [],
+      "lookalikes": [
+        "Confronto con Desarmillaria tabescens, citata come Armillaria tabescens: G. fusipes presenta carne fibrosa ed elastica e gambo terminante a fuso."
+      ],
       "sources": [
         {
           "sourceId": "EXT-SCOPE-dcc3091c9f6b256a",
@@ -1802,6 +1933,29 @@
             "evidenceUrl": "https://enciclopedia.funghiitaliani.it/termine.php?show=862",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
           }
+        },
+        {
+          "sourceId": "EXT-R2-GYMNOPUS-GALVANIN-2012",
+          "reviewScope": "supplementary-literature",
+          "title": "Quando il chiodino perde l’anello… Armillaria tabescens — Funghi e Natura 1/2012",
+          "url": "https://www.ambpadova.it/wp-content/uploads/2017/09/notiziario11.pdf",
+          "authors": [
+            "Federico Galvanin"
+          ],
+          "location": "p. 9, Note: confronto con Gymnopus (ex Collybia) fusipes; articolo pp. 7–9",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto con Desarmillaria tabescens, citata come Armillaria tabescens: G. fusipes presenta carne fibrosa ed elastica e gambo terminante a fuso.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Associazione Micologica Bresadola, Gruppo di Padova",
+            "type": "notiziario micologico associativo con articolo firmato",
+            "evidenceUrl": "https://www.ambpadova.it/wp-content/uploads/2017/09/notiziario11.pdf",
+            "basis": "Colophon p. 2: realizzazione AMB Gruppo di Padova, comitato di lettura; sommario e firma attribuiscono il contributo a Federico Galvanin. Non equivale ad approvazione scientifica indipendente della scheda dell’app."
+          },
+          "sourcePdfSha256": "c8152861434db2d88fc327eb23267f44520b39cd770f3ed078a0a343eab9c64f"
         }
       ]
     },
@@ -1809,10 +1963,12 @@
       "scientificName": "Lepista nuda s.l.",
       "commonNames": [],
       "habitat": [
-        "Per L. nuda nominale: boschi umidi ricchi di humus, di latifoglie o conifere e loro margini; crescita tardiva autunnale. Copertura dell’intera unità non attestata."
+        "Per L. nuda nominale: boschi umidi ricchi di humus, di latifoglie o conifere e loro margini; crescita tardiva autunnale. Copertura dell’intera unità non attestata.",
+        "Per L. glaucocana, componente del gruppo didattico: la fonte indica habitat sovrapponibile a L. nuda. Non è una descrizione autonoma di tutte le componenti del gruppo."
       ],
       "lookalikes": [
-        "L. nuda nominale rispetto a Cortinarius violaceus e Cortinarius simili: nei Cortinarius le lamelle diventano bruno-ruggine e il gambo può conservare residui bruni di cortina. Copertura dell’intera unità non attestata."
+        "L. nuda nominale rispetto a Cortinarius violaceus e Cortinarius simili: nei Cortinarius le lamelle diventano bruno-ruggine e il gambo può conservare residui bruni di cortina. Copertura dell’intera unità non attestata.",
+        "Confronto interno L. glaucocana–L. nuda: glaucocana mostra toni violetti più pallidi, odore debole di terriccio o foglie marcescenti e micelio basale biancastro; nuda è descritta con odore fortemente aromatico e micelio blu-violetto alla base."
       ],
       "sources": [
         {
@@ -1858,6 +2014,29 @@
             "evidenceUrl": "https://www.funghiitaliani.it/topic/15260-lepista-nuda-bull-fr-cooke-1871/",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
           }
+        },
+        {
+          "sourceId": "EXT-R2-250b9df382b0c7",
+          "reviewScope": "supplementary-literature",
+          "title": "Glaucocana / Glaucocanum: glauca e canuta; verde-bluastro e biancastra",
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=902",
+          "authors": [
+            "Alessandro Francolini"
+          ],
+          "location": "Paragrafo Lepista glaucocana; confronto esplicito con Lepista nuda",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Per L. glaucocana, componente del gruppo didattico: la fonte indica habitat sovrapponibile a L. nuda. Non è una descrizione autonoma di tutte le componenti del gruppo. Confronto interno L. glaucocana–L. nuda: glaucocana mostra toni violetti più pallidi, odore debole di terriccio o foglie marcescenti e micelio basale biancastro; nuda è descritta con odore fortemente aromatico e micelio blu-violetto alla base.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "AMINT",
+            "type": "glossario micologico editoriale con autore nominativo",
+            "evidenceUrl": "https://enciclopedia.funghiitaliani.it/termine.php?show=902",
+            "basis": "Voce enciclopedica AMINT attribuita ad Alessandro Francolini; confronto testuale nominato, non dedotto da foto."
+          }
         }
       ]
     },
@@ -1868,7 +2047,8 @@
         "Per L. giganteus nominale: prati e margini boschivi, in gruppi, spesso in cerchi. Copertura dell’intera unità non attestata."
       ],
       "lookalikes": [
-        "L. giganteus nominale rispetto a L. candidus: quest’ultimo ha cappello più chiaro e lamelle più fitte. Copertura dell’intera unità non attestata."
+        "L. giganteus nominale rispetto a L. candidus: quest’ultimo ha cappello più chiaro e lamelle più fitte. Copertura dell’intera unità non attestata.",
+        "Per L. giganteus nominale rispetto a L. candidus: la scheda comparativa segnala dimensioni maggiori, margine del cappello scanalato e odore differente; L. candidus della raccolta descritta presenta invece odore spermatico-farinoso. Non è una diagnosi di ogni segregato s.l."
       ],
       "sources": [
         {
@@ -1915,6 +2095,29 @@
             "type": "institutional-publication",
             "evidenceUrl": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
             "basis": "PDF istituzionale, copertina e colophon pp. PDF 2–3 attribuiscono testi agli autori e Dipartimento di Arboricoltura, Botanica e Patologia vegetale."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-d7629c3896c6ec",
+          "reviewScope": "supplementary-literature",
+          "title": "Leucopaxillus candidus (Bres.) Singer 1939",
+          "url": "https://www.funghiitaliani.it/topic/15741-leucopaxillus-candidus-bres-singer-1939/",
+          "authors": [
+            "Tomaso Lezzi",
+            "Luigi Minciarelli"
+          ],
+          "location": "Foto e Descrizioni; Osservazioni sulla sezione Aspropaxillus; raccolta Trentino-Alto Adige settembre 2010",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Per L. giganteus nominale rispetto a L. candidus: la scheda comparativa segnala dimensioni maggiori, margine del cappello scanalato e odore differente; L. candidus della raccolta descritta presenta invece odore spermatico-farinoso. Non è una diagnosi di ogni segregato s.l.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "AMINT",
+            "type": "scheda archivio micologico con commenti nominativi",
+            "evidenceUrl": "https://www.funghiitaliani.it/topic/15741-leucopaxillus-candidus-bres-singer-1939/",
+            "basis": "Commento attribuito a Tomaso Lezzi e Luigi Minciarelli; archivio AMINT CSM; confronto esplicito con L. giganteus."
           }
         }
       ]
@@ -1983,10 +2186,12 @@
       "scientificName": "Lyophyllum specie annerenti",
       "commonNames": [],
       "habitat": [
-        "Per L. rhopalopodium: raccolte in boschi misti di latifoglie con Quercia, Leccio, Acero, Corbezzolo ed Erica. Copertura dell’intera unità non attestata."
+        "Per L. rhopalopodium: raccolte in boschi misti di latifoglie con Quercia, Leccio, Acero, Corbezzolo ed Erica. Copertura dell’intera unità non attestata.",
+        "Per la componente L. semitale: in gruppi o piccoli cespi sotto conifere; le fonti europee citate comprendono anche ontaneti e aree cespugliose presso Picea, Alnus, Betula e Fraxinus, soprattutto montane. Copertura limitata a questa componente."
       ],
       "lookalikes": [
-        "Confronto interno: L. rhopalopodium ha taglia maggiore e gambo obeso; L. transforme ha taglia media e gambo più cilindrico. La separazione richiede anche caratteri microscopici. Copertura dell’intera unità non attestata."
+        "Confronto interno: L. rhopalopodium ha taglia maggiore e gambo obeso; L. transforme ha taglia media e gambo più cilindrico. La separazione richiede anche caratteri microscopici. Copertura dell’intera unità non attestata.",
+        "Confronto interno L. semitale–L. chamaeleon: entrambi possono virare prima al giallastro e poi al bluastro sulle lamelle; chamaeleon tende a diventare meno scuro alla fine e non presenta margine del cappello striato per trasparenza."
       ],
       "sources": [
         {
@@ -2032,6 +2237,29 @@
             "evidenceUrl": "https://www.funghiitaliani.it/topic/24463-lyophyllum-rhopalopodium-cl%C3%A9men%C3%A7on-1982/",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
           }
+        },
+        {
+          "sourceId": "EXT-R2-7b7ecd9f82a756",
+          "reviewScope": "supplementary-literature",
+          "title": "Lyophyllum semitale — E-Flora BC",
+          "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lyophyllum%20semitale",
+          "authors": [
+            "Ian Gibson"
+          ],
+          "location": "Habitat and Range: Similar Species; Habitat",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Per la componente L. semitale: in gruppi o piccoli cespi sotto conifere; le fonti europee citate comprendono anche ontaneti e aree cespugliose presso Picea, Alnus, Betula e Fraxinus, soprattutto montane. Copertura limitata a questa componente. Confronto interno L. semitale–L. chamaeleon: entrambi possono virare prima al giallastro e poi al bluastro sulle lamelle; chamaeleon tende a diventare meno scuro alla fine e non presenta margine del cappello striato per trasparenza.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "University of British Columbia / E-Flora BC",
+            "type": "atlante universitario micologico, autore nominativo",
+            "evidenceUrl": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lyophyllum%20semitale",
+            "basis": "Species account author Ian Gibson; bibliografia micologica esplicita (Smith, Breitenbach, Hansen, Moser); scheda ospitata su dominio UBC."
+          }
         }
       ]
     },
@@ -2039,10 +2267,13 @@
       "scientificName": "Mycena sez. Purae",
       "commonNames": [],
       "habitat": [
-        "Componenti documentate a Collestrada: M. pura su suolo o lettiera in carpineti; M. rosea in cerrete; M. pelianthina su suolo e lettiera di Quercus petraea. Copertura dell’intera unità non attestata."
+        "Componenti documentate a Collestrada: M. pura su suolo o lettiera in carpineti; M. rosea in cerrete; M. pelianthina su suolo e lettiera di Quercus petraea. Copertura dell’intera unità non attestata.",
+        "Per M. rosea: crescita isolata o sparsa, preferibilmente sotto quercia e faggio, spesso su suolo calcareo, dall’estate all’autunno. Indicazione di una componente della sezione didattica.",
+        "Per M. pelianthina: su residui vegetali sotto latifoglie e anche aghi caduti in peccete su terreno calcareo; in Europa tipicamente sotto faggio, mentre la fonte segnala soprattutto ontano nelle precedenti raccolte norvegesi."
       ],
       "lookalikes": [
-        "Per M. pura rispetto a Laccaria amethystina: cappello liscio e striato per trasparenza, lamelle biancastre appena violette e netto odore rafanoide. Copertura dell’intera unità non attestata."
+        "Per M. pura rispetto a Laccaria amethystina: cappello liscio e striato per trasparenza, lamelle biancastre appena violette e netto odore rafanoide. Copertura dell’intera unità non attestata.",
+        "Confronto M. rosea–M. pura: rosea presenta colorazione rosa più uniforme e portamento più robusto, con base del gambo allargata. La fonte sottolinea la variabilità di pura e l’assenza di differenze microscopiche utili fra le due."
       ],
       "sources": [
         {
@@ -2090,6 +2321,51 @@
             "type": "association-editorial",
             "evidenceUrl": "https://enciclopedia.funghiitaliani.it/termine.php?show=87",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-e55016886fdf65",
+          "reviewScope": "supplementary-literature",
+          "title": "Mycena rosea (Schumach.) Gramberg",
+          "url": "https://mycena.no/rosea.htm",
+          "authors": [
+            "Arne Aronsen"
+          ],
+          "location": "Descrizione ecologica iniziale; paragrafo finale di confronto con M. pura",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Per M. rosea: crescita isolata o sparsa, preferibilmente sotto quercia e faggio, spesso su suolo calcareo, dall’estate all’autunno. Indicazione di una componente della sezione didattica. Confronto M. rosea–M. pura: rosea presenta colorazione rosa più uniforme e portamento più robusto, con base del gambo allargata. La fonte sottolinea la variabilità di pura e l’assenza di differenze microscopiche utili fra le due.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Arne Aronsen / Mycena of Northern Europe",
+            "type": "trattamento specialistico micologico nominativo",
+            "evidenceUrl": "https://mycena.no/",
+            "basis": "Pagina specialistica con descrizione micro-macroscopica e citazione Maas Geesteranus 1989b; autore Aronsen, coautore con Læssøe di The Genus Mycena s.l. La corrispondenza Purae didattico/Calodontes non è ampliata automaticamente. Homepage consultata: copyright Arne Aronsen e volume specialistico Aronsen & Læssøe 2016, 373pp."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-77ce8ce44e3923",
+          "reviewScope": "supplementary-literature",
+          "title": "Mycena pelianthina (Fr.) Quél.",
+          "url": "https://mycena.no/pelianthina.htm",
+          "authors": [
+            "Arne Aronsen"
+          ],
+          "location": "Descrizione ecologica iniziale",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Per M. pelianthina: su residui vegetali sotto latifoglie e anche aghi caduti in peccete su terreno calcareo; in Europa tipicamente sotto faggio, mentre la fonte segnala soprattutto ontano nelle precedenti raccolte norvegesi.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Arne Aronsen / Mycena of Northern Europe",
+            "type": "trattamento specialistico micologico nominativo",
+            "evidenceUrl": "https://mycena.no/",
+            "basis": "Autore specialista del genere; descrizione ecologica e micro-macroscopica puntuale; sito collega i trattamenti tassonomici. Pelianthina è nella sezione didattica del corso, ma in subsect. Marginatae nel trattamento moderno della fonte. Homepage consultata: copyright Arne Aronsen e volume specialistico Aronsen & Læssøe 2016, 373pp."
           }
         }
       ]
@@ -2250,7 +2526,8 @@
       "scientificName": "Tricholoma saponaceum s.l.",
       "commonNames": [],
       "habitat": [
-        "Per T. saponaceum nel senso della scheda: boschi di latifoglie e aghifoglie, anche prati, dall’estate all’inizio dell’inverno. Copertura dell’intera unità non attestata."
+        "Per T. saponaceum nel senso della scheda: boschi di latifoglie e aghifoglie, anche prati, dall’estate all’inizio dell’inverno. Copertura dell’intera unità non attestata.",
+        "Il complesso didattico comprende associazioni con latifoglie e conifere: nelle raccolte studiate T. saponaceum e T. boudieri erano associati a latifoglie, T. rapipes e T. sudum a conifere. Gli autori non ritengono dimostrata una stretta esclusività di queste preferenze e segnalano possibile diversità ancora nascosta."
       ],
       "lookalikes": [],
       "sources": [
@@ -2274,6 +2551,31 @@
             "type": "association-editorial",
             "evidenceUrl": "https://enciclopedia.funghiitaliani.it/termine.php?show=1709",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-TRICH2017-CONTEXTOCUTIS",
+          "reviewScope": "supplementary-literature",
+          "title": "Taxonomy of Tricholoma in northern Europe based on ITS sequence data and morphological characters",
+          "url": "https://repository.naturalis.nl/pub/614530/PERS2017038001003.pdf",
+          "authors": [
+            "Jacob Heilmann-Clausen",
+            "Morten Christensen",
+            "Tobias G. Frøslev",
+            "Rasmus Kjøller"
+          ],
+          "location": "p.52 (PDF15), Section Contextocutis (= section Rigida)",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Saponaceum/boudieri: latifoglie; rapipes/sudum: conifere. Preferenze delle raccolte, non esclusività dimostrata.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Heilmann-Clausen et al. / Persoonia",
+            "type": "primary-molecular-taxonomic-revision",
+            "evidenceUrl": "https://repository.naturalis.nl/pub/614530/PERS2017038001003.pdf",
+            "basis": "Analisi ITS e morfologia, autori universitari e affiliazioni sul frontespizio."
           }
         }
       ]
@@ -2451,7 +2753,8 @@
       "scientificName": "Tricholoma acerbum s.l.",
       "commonNames": [],
       "habitat": [
-        "Per T. acerbum nominale: boschi di latifoglie su calcare. Copertura dell’intera unità non attestata."
+        "Per T. acerbum nominale: boschi di latifoglie su calcare. Copertura dell’intera unità non attestata.",
+        "Per T. roseoacerbum, affine del complesso acerbum: ectomicorrize con Pinus in vecchie pinete secche, sabbiose o ghiaiose del Nord Europa; nell’Europa meridionale segnalato con Picea, Castanea e Quercus in condizioni secche. L’ecologia resta poco conosciuta e l’identità fra popolazioni settentrionali e meridionali richiede verifica. Il dato integra quello nominale di T. acerbum senza definire tutte le possibili componenti s.l."
       ],
       "lookalikes": [],
       "sources": [
@@ -2477,6 +2780,28 @@
             "type": "institutional-publication",
             "evidenceUrl": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
             "basis": "PDF istituzionale, copertina e colophon pp. PDF 2–3 attribuiscono testi agli autori e Dipartimento di Arboricoltura, Botanica e Patologia vegetale."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-IUCN-ROSEOACERBUM",
+          "reviewScope": "supplementary-literature",
+          "title": "Tricholoma roseoacerbum — IUCN Red List assessment",
+          "url": "https://redlist.info/iucn/species_view/107348/",
+          "authors": [
+            "Anders Dahlberg"
+          ],
+          "location": "Habitat and Ecology; Taxonomic notes; assessor/reviewer",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia e incertezza della componente roseoacerbum.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Anders Dahlberg / IUCN SSC",
+            "type": "institutional-fungal-assessment",
+            "evidenceUrl": "https://redlist.info/iucn/species_view/107348/",
+            "basis": "Pagina dichiara assessment pubblicato, assessor Anders Dahlberg e reviewer Gregory Mueller."
           }
         }
       ]
@@ -2636,10 +2961,18 @@
       "scientificName": "Russula Foetentinae",
       "commonNames": [],
       "habitat": [
-        "Per R. foetens: boschi umidi di conifere o latifoglie, dalla pianura alla montagna, in estate-autunno. Copertura dell’intera unità non attestata."
+        "Per R. foetens: boschi umidi di conifere o latifoglie, dalla pianura alla montagna, in estate-autunno. Copertura dell’intera unità non attestata.",
+        "Nella revisione britannica, R. illota cresce sul suolo con latifoglie o conifere; R. foetens in vecchi boschi di latifoglie con Fagus o Quercus, talvolta Betula; R. grata con Fagus, Betula e Quercus; R. fragrantissima in boschi misti di latifoglie; R. subfoetens con Fagus, Quercus e meno spesso Corylus. La revisione britannica da sola non tratta tutti i taxa della serie pectinata illustrati nel corso.",
+        "Per la serie pectinata: R. recondita cresce ai margini di boschi di latifoglie o conifere, anche in parchi e spazi erbosi, su suoli preferibilmente leggeri; non osservata con querce sempreverdi, pini mediterranei o Cistus.",
+        "R. sororia è documentata in boschi continentali e mediterranei.",
+        "Per completare le componenti della serie foetens illustrate nel corso: R. putida è associata alle pinete litoranee. Le ecologie delle componenti descrivono un intervallo di ambienti, non un ospite comune obbligato."
       ],
       "lookalikes": [
-        "R. farinipes: sporata bianca; le Foetentinae simili considerate dalla scheda hanno sporata crema. Copertura dell’intera unità non attestata."
+        "R. farinipes: sporata bianca; le Foetentinae simili considerate dalla scheda hanno sporata crema. Copertura dell’intera unità non attestata.",
+        "Confronti nella revisione britannica: R. illota presenta filo lamellare nero-violaceo, mentre R. foetens ha grandi spore a verruche isolate; R. grata mostra ali sporali fino a 2 µm, più sviluppate rispetto a R. fragrantissima (fino a 1 µm). R. subfoetens ha spore minori e reazione positiva al KOH, R. foetens non reagisce. La distinzione richiede verifiche microscopiche; questa fonte da sola non copre l’intera serie pectinata del corso.",
+        "La chiave britannica contrappone la serie pectinata (es. R. amoenolens), con spore senza ali evidenti, alla serie foetens (es. R. grata), nella quale l’ornamentazione può essere alata.",
+        "R. sororia, rispetto a R. consobrina, presenta taglia più massiccia, margine scanalato-tubercolato e spore con verruche isolate anziché un reticolo ben delineato.",
+        "R. recondita, rispetto alla mediterranea R. praetervisa, presenta verruche sporali da isolate a brevemente connesse, più raramente con connessioni evidenti. R. putida si distingue da R. praetervisa anche per l’assenza costante della macchia rossa alla base del gambo."
       ],
       "sources": [
         {
@@ -2684,6 +3017,149 @@
             "type": "association-editorial",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/90119-russula-farinipes-romell-1893/",
             "basis": "Scheda o voce editoriale firmata; attribuzione e responsabilità editoriale dichiarate nella pagina. Non equivale ad accreditamento normativo."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-BAZZICALUPO-FOETENTINAE-H",
+          "reviewScope": "supplementary-literature",
+          "title": "A key to Russula subsections Foetentinae and Pectinatae",
+          "url": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+          "authors": [
+            "Anna Bazzicalupo"
+          ],
+          "location": "Foetentinae Species Notes, Ecology 1–6",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologie specifiche nella revisione britannica.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Anna Bazzicalupo / RBGE MSc revision",
+            "type": "primary-taxonomic-study",
+            "evidenceUrl": "https://www.kew.org/science/our-science/people/anna-bazzicalupo",
+            "basis": "Studio MSc RBGE 2011 presentato con Stephan Helfer; profilo Kew conferma specializzazione nella delimitazione di Russula."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-BAZZICALUPO-FOETENTINAE-L",
+          "reviewScope": "supplementary-literature",
+          "title": "A key to Russula subsections Foetentinae and Pectinatae",
+          "url": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+          "authors": [
+            "Anna Bazzicalupo"
+          ],
+          "location": "Foetentinae Species Notes, Diagnostic notes 1–6",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronti fra specie; limiti della copertura curricolare.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Anna Bazzicalupo / RBGE MSc revision",
+            "type": "primary-taxonomic-study",
+            "evidenceUrl": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae/russula-pectinatae-and-foetentinae---introduction",
+            "basis": "Studio originale con ornamentazione sporale e analisi molecolare preliminare; delimitazione britannica esplicita."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-BAZZICALUPO-PECTINATAE",
+          "reviewScope": "supplementary-literature",
+          "title": "A key to Russula subsections Foetentinae and Pectinatae",
+          "url": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+          "authors": [
+            "Anna Bazzicalupo"
+          ],
+          "location": "Chiave iniziale I–II; original DOC scaricato e letto",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Serie pectinata senza ali sporali evidenti; serie foetens con ornamentazione anche alata.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Anna Bazzicalupo / RBGE",
+            "type": "primary-taxonomic-study",
+            "evidenceUrl": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+            "basis": "Studio MSc RBGE; competenza già verificata nel profilo istituzionale Kew. Il DOC originale conferma identico contenuto: nessuna nota ecologica Pectinatae aggiuntiva."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-MELERA-RECONDITA",
+          "reviewScope": "supplementary-literature",
+          "title": "Analysis of morphological, ecological and molecular characters of Russula pectinatoides Peck and Russula praetervisa Sarnari, with a description of the new taxon Russula recondita Melera & Ostellari",
+          "url": "https://aris.supsi.ch/server/api/core/bitstreams/420f4069-f763-4b35-ba65-4d93cac59dd3/content",
+          "authors": [
+            "Sacha Melera",
+            "Carlo Ostellari",
+            "Neria Roemer",
+            "Peter G. Avis",
+            "Mauro Tonolla",
+            "François Barja",
+            "Barbara Narduzzi-Wicht"
+          ],
+          "location": "PDF14, Habitat di R. recondita; DOI10.1007/s11557-016-1256-y",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Recondita: suoli leggeri a margini boschivi e parchi; non osservata con querce sempreverdi, pini mediterranei o Cistus.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Melera et al. / Mycological Progress",
+            "type": "primary-taxonomic-revision",
+            "evidenceUrl": "https://aris.supsi.ch/server/api/core/bitstreams/420f4069-f763-4b35-ba65-4d93cac59dd3/content",
+            "basis": "Articolo originale, metodi morfologici/molecolari, autore del taxon e affiliazioni museo/università; repository istituzionale SUPSI."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-AMINT-SORORIA-CONSOBRINA",
+          "reviewScope": "supplementary-literature",
+          "title": "Russula consobrina (Fr. : Fr.) Fr. 1825",
+          "url": "https://www.funghiitaliani.it/topic/65269-russula-consobrina-fr-fr-fr-1825/",
+          "authors": [
+            "Massimo Biraghi"
+          ],
+          "location": "Habitat; Microscopia; Specie simili; attribuzione CLR",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Sororia in boschi continentali e mediterranei; rispetto a consobrina più massiccia, margine scanalato-tubercolato e spore a verruche isolate.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Massimo Biraghi / AMINT CLR Micologico",
+            "type": "attributed-mycological-editorial-account",
+            "evidenceUrl": "https://www.funghiitaliani.it/topic/65269-russula-consobrina-fr-fr-fr-1825/",
+            "basis": "Autore personale e revisione CLR espliciti; Specie simili colloca sororia nella serie Pectinata e ne descrive differenze macroscopiche e microscopiche."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-AMER118-FOETENTINAE",
+          "reviewScope": "supplementary-literature",
+          "title": "Russula rare o interessanti della Sardegna (Italia). 8 — RMR118:11–24",
+          "url": "https://www.ameronlus.it/RMR/2023/boll_118/boll_118.pdf",
+          "authors": [
+            "Alberto Mua",
+            "Marco Casula",
+            "Massimo Sanna",
+            "Luisa Rita Atzei"
+          ],
+          "location": "p.19 (PDF20), Osservazioni; DOI10.57624/AMER.2023.08",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Putida: pinete litoranee e assenza di macchia rossa basale; recondita/praetervisa differiscono per ornamentazione sporale.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Mua et al. / Rivista Micologica Romana",
+            "type": "primary-mycological-article",
+            "evidenceUrl": "https://www.ameronlus.it/RMR/2023/boll_118/boll_118.pdf",
+            "basis": "Articolo primario sul periodico AMER con autori, DOI, metodi microscopici e raccolte d’erbario; testo p.19 scaricato, estratto e render verificato."
           }
         }
       ]
@@ -2732,7 +3208,8 @@
       "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
       "commonNames": [],
       "habitat": [
-        "Per R. delica: documentata su suolo in bosco di Quercus farnetto a Collestrada. Copertura dell’intera unità non attestata."
+        "Per R. delica: documentata su suolo in bosco di Quercus farnetto a Collestrada. Copertura dell’intera unità non attestata.",
+        "Per R. chloroides: crescita gregaria dalla tarda estate all’autunno inoltrato, soprattutto nei boschi subalpini di conifere, anche con Fagus, Quercus e Castanea nell’area mediterranea, con preferenza per suoli calcarei. Si aggiunge all’ecologia nominale di R. delica; le altre Lactarioides non sono tutte documentate."
       ],
       "lookalikes": [
         "Nigricantinae: carne virante al rosso o nero; Lactarioides/Plorantinae bianche e immutabili."
@@ -2785,6 +3262,28 @@
             "type": "institutional-publication",
             "evidenceUrl": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
             "basis": "PDF istituzionale, copertina e colophon pp. PDF 2–3 attribuiscono testi agli autori e Dipartimento di Arboricoltura, Botanica e Patologia vegetale."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-AMINT-CHLOROIDES",
+          "reviewScope": "supplementary-literature",
+          "title": "Russula chloroides (Krombh.) Bres.1900",
+          "url": "https://www.funghiitaliani.it/topic/15566-russula-chloroides-krombh-bres1900/",
+          "authors": [
+            "Stefano Rocchi"
+          ],
+          "location": "Habitat; attribuzione autore e CLR",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia della componente chloroides.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Stefano Rocchi / AMINT CLR Micologico",
+            "type": "attributed-mycological-editorial-account",
+            "evidenceUrl": "https://www.funghiitaliani.it/topic/15566-russula-chloroides-krombh-bres1900/",
+            "basis": "Scheda firmata Rocchi, approvazione e revisione del CLR micologico dichiarate; tassonomia Lactarioides esplicita."
           }
         }
       ]
@@ -2934,7 +3433,8 @@
         "Le specie del genere Hydnum sono ectomicorriziche con alberi, fra cui Pinaceae e Fagales; il dato è riferito esplicitamente all’intero genere nello studio tassonomico."
       ],
       "lookalikes": [
-        "Per H. repandum nel senso della scheda: Cantharellus cibarius ha pliche anziché aculei; Albatrellopsis confluens (citato come Albatrellus confluens) ha invece pori. Confronti non generalizzati a tutti i taxa di Hydnum. Copertura dell’intera unità non attestata."
+        "Per H. repandum nel senso della scheda: Cantharellus cibarius ha pliche anziché aculei; Albatrellopsis confluens (citato come Albatrellus confluens) ha invece pori. Confronti non generalizzati a tutti i taxa di Hydnum. Copertura dell’intera unità non attestata.",
+        "Nel complesso rufescens, H. ovoideisporum e H. vesterholtii hanno spore ovoidi o largamente ellissoidali, mentre altri campioni rufescens-like hanno spore globose. H. ovoideisporum ha cappello arancio intenso; H. vesterholtii ocraceo o ocraceo chiaro. Confronto di componenti, non chiave completa di Hydnum."
       ],
       "sources": [
         {
@@ -2992,6 +3492,31 @@
             "evidenceUrl": "https://doi.org/10.1080/00275514.2018.1477004",
             "basis": "Articolo originale di revisione del genere, autore e pubblicazione verificati nella pagina editoriale e in PubMed; testo primario consultato nella copia PDF."
           }
+        },
+        {
+          "sourceId": "EXT-R2-b9a1dff7e996d87d",
+          "reviewScope": "supplementary-literature",
+          "title": "Two new species of Hydnum with ovoid basidiospores: H. ovoideisporum and H. vesterholtii (2012)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22684286/",
+          "authors": [
+            "Ibai Olariaga",
+            "Tine Grebenc",
+            "Isabel Salcedo",
+            "María P. Martín"
+          ],
+          "location": "Abstract; Mycologia 104(6):1443–1455, DOI 10.3852/11-378",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Mycologia / University of the Basque Country, Slovenian Forestry Institute, RJB-CSIC",
+            "type": "ricerca-micologica-primaria",
+            "evidenceUrl": "https://pubmed.ncbi.nlm.nih.gov/22684286/",
+            "basis": "PubMed e pagina editore attestano autori, affiliazioni e articolo originale."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Diagnosi comparative esplicite delle due componenti a spore ovoidi rispetto ai campioni rufescens-like a spore globose."
         }
       ]
     },
@@ -3166,7 +3691,8 @@
       "commonNames": [],
       "habitat": [],
       "lookalikes": [
-        "Per R. botrytis nominale: R. formosa ha rami salmone e apici giallastri, anziché rami biancastri con apici rosa-vinosi. Questo confronto non copre tutti i segregati del complesso botrytis. Copertura dell’intera unità non attestata."
+        "Per R. botrytis nominale: R. formosa ha rami salmone e apici giallastri, anziché rami biancastri con apici rosa-vinosi. Questo confronto non copre tutti i segregati del complesso botrytis. Copertura dell’intera unità non attestata.",
+        "Nel complesso europeo discusso da Christan, R. botrytis, R. rubripermanens s.auct.europ. e R. rubrievanescens s.auct.europ. sono molto simili. La carne del tronco di botrytis reagisce debolmente o lentamente al Melzer, le altre due rapidamente; occorre conferma microscopica. Rubripermanens ha spore più piccole e strette; rubrievanescens più larghe rispetto a rubripermanens."
       ],
       "sources": [
         {
@@ -3190,6 +3716,28 @@
             "evidenceUrl": "https://www.funghiitaliani.it/topic/16784-ramaria-botrytis-pers-fr-ricken-1918/",
             "basis": "Scheda AMINT da Tutto Funghi con integrazioni attribuite a Mario Iannotti; foto, descrizione e microscopia nominate."
           }
+        },
+        {
+          "sourceId": "EXT-R2-5daf7eebaac79cf8",
+          "reviewScope": "supplementary-literature",
+          "title": "Zur Verbreitung von Ramaria botrytis und Ramaria rubripermanens in Bayern (2016)",
+          "url": "https://mycologia-bavarica.de/wp-content/uploads/2023/06/Mycologia-Bavarica-17-Heft.pdf",
+          "authors": [
+            "Josef Christan"
+          ],
+          "location": "Mycologia Bavarica17:47–64, pp.47–48,60–64; tabella1 p.64 (PDF66)",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Mycologia Bavarica / Verein für Pilzkunde München e.V.; Bayerische Mykologische Gesellschaft",
+            "type": "ricerca-micologica-primaria",
+            "evidenceUrl": "https://mycologia-bavarica.de/wp-content/uploads/2023/06/Mycologia-Bavarica-17-Heft.pdf",
+            "basis": "Indagine originale firmata, confronto di reperti e tipi, tabella diagnostica; editori e redazione nel colophon PDF2."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto esplicito dei tre concetti europei per reazione della carne, spore e necessità della microscopia."
         }
       ]
     },
@@ -3232,7 +3780,8 @@
         "Per le due componenti europee riconosciute, S. coronaria e S. crassa: suoli prevalentemente su rocce calcaree o sedimenti ricchi di calcio, presso alberi ectomicorrizici; le preferenze d’ospite variano e non sono diagnostiche."
       ],
       "lookalikes": [
-        "Per il taxon nel senso storico della scheda: Geopora sumneriana ha superficie esterna brunastra e pelosa ed è associata ai cedri; Peziza ammophila ha colori brunastri e habitat sabbioso. Copertura dell’intera unità non attestata."
+        "Per il taxon nel senso storico della scheda: Geopora sumneriana ha superficie esterna brunastra e pelosa ed è associata ai cedri; Peziza ammophila ha colori brunastri e habitat sabbioso. Copertura dell’intera unità non attestata.",
+        "Il concetto europeo comprende almeno S. coronaria e S. crassa. Le spore di coronaria risultano mediamente minori, ma parte delle misure di crassa si sovrappone; colori e taglia non separano univocamente le due. Per una distinzione certa la revisione richiede il codice ITS. Questo confronto interno non valida i vecchi sosia per l’intero complesso mondiale."
       ],
       "sources": [
         {
@@ -3288,6 +3837,38 @@
             "evidenceUrl": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
             "basis": "Revisione tassonomica originale2024 con dati molecolari ed ecologici, firmata da micologi e disponibile integralmente."
           }
+        },
+        {
+          "sourceId": "EXT-R2-14a2e07e4e53db36",
+          "reviewScope": "supplementary-literature",
+          "title": "Taxonomic revision of the genus Sarcosphaera (Ascomycota: Pezizales) in Europe and North America revealed unexpected diversity (2024)",
+          "url": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+          "authors": [
+            "Jan Borovička",
+            "Miroslav Kolařík",
+            "Viktorie Halasů",
+            "Claudia Perini",
+            "Andrew D. Parker",
+            "Milan Gryndler",
+            "Joseph D. Cohen",
+            "Hana Hršelová",
+            "Ron Pastorino",
+            "Anna Žigová",
+            "Luis Alberto Parra Sánchez"
+          ],
+          "location": "Taxonomy, Differentiation from S. crassa; Discussion, Ecology and morphology; Mycological Progress23:69",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Mycological Progress / Czech Academy of Sciences; University of Siena",
+            "type": "ricerca-micologica-primaria",
+            "evidenceUrl": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+            "basis": "Articolo originale con autori, affiliazioni, metodi e dati; confronto di collezioni europee, incluso materiale italiano."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto diretto coronaria/crassa: sovrapposizione sporale, assenza di macrocaratteri univoci, identificazione tramite ITS."
         }
       ]
     },
@@ -3398,10 +3979,12 @@
       "scientificName": "Gyroporus castaneus s.l.",
       "commonNames": [],
       "habitat": [
-        "Per G. castaneus nominale: boschi di latifoglie, presso querce, castagni e faggi, più raramente conifere; anche radure e viottoli a terra nuda. Non esteso all’intero complesso s.l. Copertura dell’intera unità non attestata."
+        "Per G. castaneus nominale: boschi di latifoglie, presso querce, castagni e faggi, più raramente conifere; anche radure e viottoli a terra nuda. Non esteso all’intero complesso s.l. Copertura dell’intera unità non attestata.",
+        "La componente G. ammophilus, inclusa nel gruppo dal corso, amplia l’habitat alle dune consolidate e ai boschi di pino su sabbie basiche della costa atlantica iberica; il dato è geograficamente circoscritto."
       ],
       "lookalikes": [
-        "Per G. castaneus nominale, Tylopilus felleus si distingue per gambo pieno e reticolato e pori che diventano rosati a maturità. Confronto non generalizzato a tutte le componenti s.l. Copertura dell’intera unità non attestata."
+        "Per G. castaneus nominale, Tylopilus felleus si distingue per gambo pieno e reticolato e pori che diventano rosati a maturità. Confronto non generalizzato a tutte le componenti s.l. Copertura dell’intera unità non attestata.",
+        "Confronto interno documentato: G. castaneus ha carne bianco-crema immutabile; G. ammophilus carne salmone o crema rosata, che può diventare azzurra negli esemplari maturi. La sola somiglianza esterna non distingue queste componenti."
       ],
       "sources": [
         {
@@ -3426,6 +4009,30 @@
             "evidenceUrl": "https://www.funghiitaliani.it/topic/16733-gyroporus-castaneus-bull-fr-qu%C3%A9l-1886/",
             "basis": "Scheda principale dell’Archivio Micologico AMINT con attribuzione editoriale esplicita; responsabilità e autori verificati nel testo, senza presumere accreditamento formale."
           }
+        },
+        {
+          "sourceId": "EXT-R2-castro-freire-1995",
+          "reviewScope": "supplementary-literature",
+          "title": "Gyroporus ammophilus, a new poisonous bolete from the Iberian Peninsula",
+          "url": "https://repository.naturalis.nl/document/569718",
+          "authors": [
+            "M. L. Castro",
+            "L. Freire"
+          ],
+          "location": "pp. 123 e 125; Table I; Habitat & Distribution",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Ammophilus: dune/pini su sabbie basiche atlantiche iberiche; carne salmone, blu a maturità, contro carne immutabile bianco-crema di castaneus.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "M. L. Castro e L. Freire — Persoonia",
+            "type": "pubblicazione-micologica-primaria",
+            "evidenceUrl": "https://repository.naturalis.nl/document/569718",
+            "basis": "Articolo primario in Persoonia 16(1):123–126 (1995), pubblicato da Rijksherbarium/Hortus Botanicus Leiden; autrice affiliata all’Universidade de Vigo. Descrizione e tabella comparativa originali."
+          }
         }
       ]
     },
@@ -3433,10 +4040,12 @@
       "scientificName": "Boletus queletii e specie vicine/intermedie",
       "commonNames": [],
       "habitat": [
-        "Per Suillellus queletii nominale: boschi caldi di latifoglie, fra querce, castagni e faggi, dall’estate all’autunno. Non esteso alle specie vicine/intermedie. Copertura dell’intera unità non attestata."
+        "Per Suillellus queletii nominale: boschi caldi di latifoglie, fra querce, castagni e faggi, dall’estate all’autunno. Non esteso alle specie vicine/intermedie. Copertura dell’intera unità non attestata.",
+        "Per S. queletii nominale la scheda AMB aggiunge radure e margini boschivi, dalla pianura alla montagna, con preferenza per querce, carpini e noccioli. Non documenta un habitat comune a tutte le specie vicine/intermedie."
       ],
       "lookalikes": [
-        "Per S. queletii nominale, Suillellus luridus presenta un marcato reticolo scuro a maglie allungate e carne sotto i tubuli arancio-rossa; S. queletii ha gambo privo di reticolo e subimenio giallastro. Copertura dell’intera unità non attestata."
+        "Per S. queletii nominale, Suillellus luridus presenta un marcato reticolo scuro a maglie allungate e carne sotto i tubuli arancio-rossa; S. queletii ha gambo privo di reticolo e subimenio giallastro. Copertura dell’intera unità non attestata.",
+        "Nel confronto interno alle forme di S. queletii, AMB descrive espressioni completamente gialle e altre più pallide con pori ancora gialli a maturità; la forma storicamente detta lateritius ha invece cappello rosso mattone o vinoso. Questi cromatismi non delimitano le specie vicine/intermedie."
       ],
       "sources": [
         {
@@ -3461,6 +4070,27 @@
             "evidenceUrl": "https://www.funghiitaliani.it/topic/16810-suillellus-queletii-schulzer-vizzini-simonini-gelardi-2014/",
             "basis": "Scheda principale dell’Archivio Micologico AMINT con attribuzione editoriale esplicita; responsabilità e autori verificati nel testo, senza presumere accreditamento formale."
           }
+        },
+        {
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "reviewScope": "supplementary-literature",
+          "title": "suillellus queletii — erbario AMB Pesaro",
+          "url": "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/",
+          "authors": [],
+          "location": "Habitat; Note sulle variazioni cromatiche",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "S. queletii: margini e radure, pianura-montagna, querce/carpini/noccioli; forme gialle o pallide e forma lateritius rosso mattone-vinoso.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Associazione Micologica Bresadola — Gruppo di Pesaro",
+            "type": "associazione-micologica",
+            "evidenceUrl": "https://www.ambpesaro.it/sample-page/",
+            "basis": "Pagina Chi siamo: gruppo micologico fondato nel 1973 e aderente ad AMB dal 1974; schede con exsiccatum e determinatore Maletti M. Nessun accreditamento formale attribuito."
+          }
         }
       ]
     },
@@ -3468,10 +4098,12 @@
       "scientificName": "Boletus (Neoboletus) erythropus s.l.",
       "commonNames": [],
       "habitat": [
-        "Per N. luridiformis nel senso della scheda: latifoglie in ambiente mesofilo, circa 200–1000 m, estate-autunno. La fonte separa i ritrovamenti sotto conifere e segnala controversie nomenclaturali; non generalizzare all’unità s.l. Copertura dell’intera unità non attestata."
+        "Per N. luridiformis nel senso della scheda: latifoglie in ambiente mesofilo, circa 200–1000 m, estate-autunno. La fonte separa i ritrovamenti sotto conifere e segnala controversie nomenclaturali; non generalizzare all’unità s.l. Copertura dell’intera unità non attestata.",
+        "Per N. erythropus nell’interpretazione di Assyov (2020), le raccolte dell’Europa sudorientale provengono da ambienti montani oltre 1000 m, con conifere e faggio. Questo risultato regionale non delimita né descrive tutto il gruppo curricolare s.l."
       ],
       "lookalikes": [
-        "Per N. luridiformis nel senso della scheda, Suillellus queletii presenta carne color barbabietola alla base del gambo e gambo liscio o con granulazioni poco sviluppate. Confronto limitato a questa componente nominata. Copertura dell’intera unità non attestata."
+        "Per N. luridiformis nel senso della scheda, Suillellus queletii presenta carne color barbabietola alla base del gambo e gambo liscio o con granulazioni poco sviluppate. Confronto limitato a questa componente nominata. Copertura dell’intera unità non attestata.",
+        "Confronto N. erythropus–N. xanthopus secondo Assyov (2020): nel primo la pileipellis ha ife erette o quasi e subparallele, nel secondo intrecciate; i pleurocistidi a fiasco sono comuni nel primo e rari nel secondo. I caratteri possono sovrapporsi: nessuno, da solo, separa sempre le due specie."
       ],
       "sources": [
         {
@@ -3495,6 +4127,29 @@
             "type": "associazione micologica; scheda editoriale",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/100203-neoboletus-luridiformis-rostk-gelardi-simonini-vizzini-2014/",
             "basis": "Scheda principale dell’Archivio Micologico AMINT con attribuzione editoriale esplicita; responsabilità e autori verificati nel testo, senza presumere accreditamento formale."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-assyov-2020-neoboletus",
+          "reviewScope": "supplementary-literature",
+          "title": "Neoboletus xanthopus — additional data and iconography of a widespread, but frequently neglected species",
+          "url": "https://www.researchgate.net/publication/347886094_Neoboletus_xanthopus_-_additional_data_and_iconography_of_a_widespread_but_frequently_neglected_species_Neoboletus_xanthopus_-_Datos_adicionales_e_iconografia_de_una_especie_muy_extendida_pero_frecuen",
+          "authors": [
+            "Boris Assyov"
+          ],
+          "location": "Yesca 32:77–118 (2020); pp.107–108, Discussion: Morphological variability and distinction from N. erythropus (testo integrale caricato dall’autore)",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Nell’Europa sudorientale erythropus è montano con conifere e faggio; xanthopus ha pileipellis intrecciata e rari pleurocistidi lageniformi, erythropus ife erette/subparallele e pleurocistidi lageniformi comuni; nessun carattere isolato è conclusivo.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Boris Assyov — Institute of Biodiversity and Ecosystem Research, Bulgarian Academy of Sciences",
+            "type": "pubblicazione-micologica-primaria",
+            "evidenceUrl": "https://www.researchgate.net/publication/347886094_Neoboletus_xanthopus_-_additional_data_and_iconography_of_a_widespread_but_frequently_neglected_species_Neoboletus_xanthopus_-_Datos_adicionales_e_iconografia_de_una_especie_muy_extendida_pero_frecuen",
+            "basis": "Intestazione del contributo Yesca 32:77–118 (2020) con autore e affiliazione; materiali e metodo dichiarano raccolte studiate, confronto di exsiccata e deposito SOMF. Testo integrale caricato dall’autore Boris Assyov il 25 dicembre 2020. Non attribuito un accreditamento formale."
           }
         }
       ]
@@ -3874,7 +4529,9 @@
       "habitat": [
         "Terricolo nelle zone umide dei boschi di latifoglie, soprattutto faggio e castagno; da inizio estate all’autunno."
       ],
-      "lookalikes": [],
+      "lookalikes": [
+        "Nel confronto internazionale della revisione, Albatrellus edulis e A. ellisii condividono con pes-caprae cappello squamoso e spore a lacrima, ma hanno superficie pileica giallo camoscio o giallo verdastra; pes-caprae ha cappello bruno. Sono comparatori extraeuropei, non sosia attestati nei boschi italiani."
+      ],
       "sources": [
         {
           "sourceId": "EXT-SCOPE-fe9050d0e9a787e0",
@@ -3897,6 +4554,33 @@
             "habitat"
           ],
           "supportedClaim": "Terricolo nelle zone umide dei boschi di latifoglie, soprattutto faggio e castagno; da inizio estate all’autunno."
+        },
+        {
+          "sourceId": "EXT-R2-8bbe73371f8eb993",
+          "reviewScope": "supplementary-literature",
+          "title": "Diversity, divergence time, and biogeography of the genus Albatrellus (Agaricomycetes, Russulales) (2024)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096695/",
+          "authors": [
+            "Hong-Min Zhou",
+            "Yu-Cheng Dai",
+            "Lu-Sen Bian",
+            "Hong-Gao Liu",
+            "Josef Vlasák",
+            "Yuan Yuan"
+          ],
+          "location": "Taxonomy, Albatrellus pes-caprae, Notes; Mycology16(2):738–776; DOI10.1080/21501203.2024.2386021",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Mycology / Beijing Forestry University, Chinese Academy of Forestry, Czech Academy of Sciences",
+            "type": "ricerca-micologica-primaria",
+            "evidenceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096695/",
+            "basis": "Articolo originale con affiliazioni e confronto esplicito nella nota tassonomica; consultato prima del successivo captcha."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Nota esplicita: edulis ed ellisii si distinguono da pes-caprae per la superficie giallastra o giallo verdastra anziché bruna."
         }
       ]
     },
@@ -3905,7 +4589,8 @@
       "commonNames": [],
       "habitat": [],
       "lookalikes": [
-        "Per la componente A. subrubescens, la fonte indica Hydnum albidum come possibile sosia nello stesso habitat: Hydnum ha aculei, mentre A. subrubescens ha imenoforo poroide. Copertura dell’intera unità non attestata."
+        "Per la componente A. subrubescens, la fonte indica Hydnum albidum come possibile sosia nello stesso habitat: Hydnum ha aculei, mentre A. subrubescens ha imenoforo poroide. Copertura dell’intera unità non attestata.",
+        "Confronto delle tre componenti: A. citrinus è associato a Picea e suoli ricchi di calcare; A. subrubescens a Pinus, senza preferenza per suoli basici. A. ovinus ha spore inamiloidi o solo debolmente amiloidi, diversamente dalle altre due. Con KOH nella carne, ovinus vira da giallo a olivastro, citrinus da giallo a bruno."
       ],
       "sources": [
         {
@@ -3929,6 +4614,28 @@
             "lookalikes"
           ],
           "supportedClaim": "Per la componente A. subrubescens, la fonte indica Hydnum albidum come possibile sosia nello stesso habitat: Hydnum ha aculei, mentre A. subrubescens ha imenoforo poroide."
+        },
+        {
+          "sourceId": "EXT-R2-79f37c3f7752feb6",
+          "reviewScope": "supplementary-literature",
+          "title": "Albatrellus citrinus versus Albatrellus ovinus / A. subrubescens",
+          "url": "https://www.myk.univie.ac.at/wp-content/uploads/2016/11/Albatrellus.pdf",
+          "authors": [
+            "Gernot Friebes"
+          ],
+          "location": "pp.1–2, confronto fra le tre specie",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Österreichische Mykologische Gesellschaft / Gernot Friebes",
+            "type": "nota-micologica-firmata",
+            "evidenceUrl": "https://www.museum-joanneum.at/naturkundemuseum/ueber-uns/team/friebes-gernot",
+            "basis": "Nota comparativa firmata ÖMG; qualificazione dell’autore documentata dal museo Joanneum."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto esplicito ecologico, sporale e della reazione con KOH di ovinus/citrinus/subrubescens."
         }
       ]
     },
@@ -3936,10 +4643,12 @@
       "scientificName": "Laetiporus sulphureus s.l.",
       "commonNames": [],
       "habitat": [
-        "Nell’accezione europea della scheda, L. sulphureus cresce come parassita o saprotrofo su legno di latifoglie e anche di conifere; fruttifica dalla tarda primavera. Copertura dell’intera unità non attestata."
+        "Nell’accezione europea della scheda, L. sulphureus cresce come parassita o saprotrofo su legno di latifoglie e anche di conifere; fruttifica dalla tarda primavera. Copertura dell’intera unità non attestata.",
+        "Per la componente europea L. montanus: legno di conifere, soprattutto abete rosso e larice, in quota. L. sulphureus s.str. può crescere anche su larice: il solo ospite non separa le due componenti."
       ],
       "lookalikes": [
-        "Nel confronto della scheda europea: Meripilus giganteus ha cappelli più scuri e superficie scagliosa, non vellutata; Cerioporus squamosus, riportato come Polyporus squamosus, ha grandi squame brune su fondo ocraceo. Copertura dell’intera unità non attestata."
+        "Nel confronto della scheda europea: Meripilus giganteus ha cappelli più scuri e superficie scagliosa, non vellutata; Cerioporus squamosus, riportato come Polyporus squamosus, ha grandi squame brune su fondo ocraceo. Copertura dell’intera unità non attestata.",
+        "Nel complesso europeo, L. montanus e L. sulphureus s.str. non si distinguono con i soli caratteri macroscopici; L. montanus presenta basidiospore un poco più grandi. L’ospite conifera non è esclusivo, poiché sono documentati L. sulphureus s.str. su larice."
       ],
       "sources": [
         {
@@ -3985,6 +4694,50 @@
             "lookalikes"
           ],
           "supportedClaim": "Nel confronto della scheda europea: Meripilus giganteus ha cappelli più scuri e superficie scagliosa, non vellutata; Cerioporus squamosus, riportato come Polyporus squamosus, ha grandi squame brune su fondo ocraceo."
+        },
+        {
+          "sourceId": "EXT-R2-851401027abf288f",
+          "reviewScope": "supplementary-literature",
+          "title": "Laetiporus sulphureus versus Laetiporus montanus (7.9.2015)",
+          "url": "https://www.univie.ac.at/oemykges/wp-content/uploads/2016/11/Laetiporus.pdf",
+          "authors": [
+            "Gernot Friebes"
+          ],
+          "location": "pp.1–2, testo comparativo e bibliografia",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Österreichische Mykologische Gesellschaft / Gernot Friebes",
+            "type": "nota-micologica-firmata",
+            "evidenceUrl": "https://www.museum-joanneum.at/naturkundemuseum/ueber-uns/team/friebes-gernot",
+            "basis": "Nota firmata sul sito ÖMG; il profilo istituzionale documenta Friebes come curatore di micologia e ricercatore."
+          },
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "La nota documenta montanus montano su conifere e reperti di sulphureus s.str. su larice."
+        },
+        {
+          "sourceId": "EXT-R2-851401027abf288f",
+          "reviewScope": "supplementary-literature",
+          "title": "Laetiporus sulphureus versus Laetiporus montanus (7.9.2015)",
+          "url": "https://www.univie.ac.at/oemykges/wp-content/uploads/2016/11/Laetiporus.pdf",
+          "authors": [
+            "Gernot Friebes"
+          ],
+          "location": "pp.1–2, testo comparativo e bibliografia",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Österreichische Mykologische Gesellschaft / Gernot Friebes",
+            "type": "nota-micologica-firmata",
+            "evidenceUrl": "https://www.museum-joanneum.at/naturkundemuseum/ueber-uns/team/friebes-gernot",
+            "basis": "Nota firmata sul sito ÖMG; il profilo istituzionale documenta Friebes come curatore di micologia e ricercatore."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Differenza sporale esplicita e limite della separazione macroscopica e per ospite."
         }
       ]
     },
@@ -3994,7 +4747,9 @@
       "habitat": [
         "Genere lignicolo saprotrofo, con specie responsabili di carie bianca del legno."
       ],
-      "lookalikes": [],
+      "lookalikes": [
+        "Confronti interni europei: H. erinaceus ha corpo non ramificato, globoso, con lunghi aculei; H. cirrhatum forma mensole sottili spesso sovrapposte con aculei più corti. H. coralloides ha ramificazione aperta con piccoli aculei anche sotto i rami; H. alpestre è più compatto, con rami corti e aculei terminali più lunghi, e spore maggiori rispetto a H. coralloides."
+      ],
       "sources": [
         {
           "sourceId": "EXT-SCOPE-b216795997435662",
@@ -4022,6 +4777,30 @@
             "habitat"
           ],
           "supportedClaim": "Genere lignicolo saprotrofo, con specie responsabili di carie bianca del legno."
+        },
+        {
+          "sourceId": "EXT-R2-f72d02496dd2ce32",
+          "reviewScope": "supplementary-literature",
+          "title": "A multilocus phylogeny of Hericium (Hericiaceae, Russulales) (2025)",
+          "url": "https://www.persoonia.org/images/Volume55/Persoonia55Art4.pdf",
+          "authors": [
+            "J. Koga",
+            "R. G. Thorn",
+            "E. Langer"
+          ],
+          "location": "p.149 (PDF9), Notes H. alpestre; p.153 (PDF13), Key to species, coppie1–4 e note extralimitali; DOI10.3114/persoonia.2025.55.04",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Persoonia / Westerdijk Fungal Biodiversity Institute; University of Western Ontario; University of Kassel",
+            "type": "ricerca-micologica-primaria",
+            "evidenceUrl": "https://www.persoonia.org/images/Volume55/Persoonia55Art4.pdf",
+            "basis": "Articolo originale, autori e affiliazioni sul frontespizio; chiave e note esplicitamente includono taxa europei."
+          },
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "La chiave distingue forme globose, mensoliformi e ramificate; le note separano esplicitamente alpestre e coralloides."
         }
       ]
     },
@@ -4121,7 +4900,8 @@
       "scientificName": "Entoloma clypeatum s.l.",
       "commonNames": [],
       "habitat": [
-        "Per E. clypeatum nominale: boschi, parchi e giardini associati a Rosaceae, in particolare prugnolo, con segnalazioni anche presso olmi. Dato non esteso all’intera unità s.l. Copertura dell’intera unità non attestata."
+        "Per E. clypeatum nominale: boschi, parchi e giardini associati a Rosaceae, in particolare prugnolo, con segnalazioni anche presso olmi. Dato non esteso all’intera unità s.l. Copertura dell’intera unità non attestata.",
+        "Per la componente affine E. sepium: crescita primaverile sotto Rosaceae; può condividere ambiente e periodo con E. clypeatum ed E. saundersii. Indicazione circoscritta a queste componenti, senza generalizzazione a ogni Entoloma primaverile."
       ],
       "lookalikes": [],
       "sources": [
@@ -4145,6 +4925,29 @@
             "type": "associazione micologica; scheda editoriale",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/18070-entoloma-clypeatum-l-fr-p-kumm-1871/",
             "basis": "Scheda editoriale dell’Archivio Micologico con autore o responsabilità collettiva CLR dichiarata; non risposta libera del forum."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-68fa298a863473",
+          "reviewScope": "supplementary-literature",
+          "title": "Sepium: attinente alle siepi",
+          "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1762",
+          "authors": [
+            "Alessandro Francolini",
+            "Tomaso Lezzi"
+          ],
+          "location": "Entoloma sepium; paragrafi iniziali e commento Lezzi",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Per la componente affine E. sepium: crescita primaverile sotto Rosaceae; può condividere ambiente e periodo con E. clypeatum ed E. saundersii. Indicazione circoscritta a queste componenti, senza generalizzazione a ogni Entoloma primaverile.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "AMINT",
+            "type": "glossario micologico editoriale con autore nominativo",
+            "evidenceUrl": "https://enciclopedia.funghiitaliani.it/termine.php?show=1762",
+            "basis": "Pagina AMINT attribuita ad Alessandro Francolini; commento nominativo Tomaso Lezzi; crescita e confronti testuali espliciti."
           }
         }
       ]
@@ -4207,10 +5010,12 @@
       "scientificName": "Hygrocybe conica s.l.",
       "commonNames": [],
       "habitat": [
-        "Per H. conica nel senso della scheda: soprattutto prati, talvolta terreni sabbiosi o argillosi e raramente boschi, fino a circa 2000 m. Non esteso ad ogni possibile segregato del complesso. Copertura dell’intera unità non attestata."
+        "Per H. conica nel senso della scheda: soprattutto prati, talvolta terreni sabbiosi o argillosi e raramente boschi, fino a circa 2000 m. Non esteso ad ogni possibile segregato del complesso. Copertura dell’intera unità non attestata.",
+        "Per H. conica var. conicoides (= H. conicoides nel trattamento della fonte): ambiente sabbioso tipicamente retrodunale. È un dato della componente citata, non di ogni segregato del complesso."
       ],
       "lookalikes": [
-        "Per H. conica nel senso della scheda, confronto con Hygrocybe acutoconica: quest’ultima può mostrare soltanto un leggero ingrigimento alla base del gambo, mentre H. conica annerisce nelle diverse parti. Copertura dell’intera unità non attestata."
+        "Per H. conica nel senso della scheda, confronto con Hygrocybe acutoconica: quest’ultima può mostrare soltanto un leggero ingrigimento alla base del gambo, mentre H. conica annerisce nelle diverse parti. Copertura dell’intera unità non attestata.",
+        "Confronto fra H. conica var. conicoides e var. conica: conicoides ha lamelle con tonalità rosato-rosse, spore più allungate e annerimento più lento; anche da secco conserva tonalità rosse in gambo e lamelle."
       ],
       "sources": [
         {
@@ -4255,6 +5060,29 @@
             "type": "associazione micologica; scheda editoriale",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/15299-hygrocybe-conica-schaeff-fr-p-kumm-1871/",
             "basis": "Scheda editoriale dell’Archivio Micologico con autore o responsabilità collettiva CLR dichiarata; non risposta libera del forum."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-263d81828a04d1",
+          "reviewScope": "supplementary-literature",
+          "title": "Hygrocybe conica var. conicoides (P.D. Orton) Boertm. 1995",
+          "url": "https://www.funghiitaliani.it/topic/45404-hygrocybe-conica-var-conicoides-pd-orton-boertm-1995/",
+          "authors": [
+            "Tomaso Lezzi"
+          ],
+          "location": "Foto e Descrizioni; testo e commenti nominativi Lezzi, raccolta Lazio ottobre 2007",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Per H. conica var. conicoides (= H. conicoides nel trattamento della fonte): ambiente sabbioso tipicamente retrodunale. È un dato della componente citata, non di ogni segregato del complesso. Confronto fra H. conica var. conicoides e var. conica: conicoides ha lamelle con tonalità rosato-rosse, spore più allungate e annerimento più lento; anche da secco conserva tonalità rosse in gambo e lamelle.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "AMINT",
+            "type": "scheda archivio micologico e commento nominativo",
+            "evidenceUrl": "https://www.funghiitaliani.it/topic/45404-hygrocybe-conica-var-conicoides-pd-orton-boertm-1995/",
+            "basis": "Archivio AMINT CSM; didascalie testuali con confronto e attribuzione Tomaso Lezzi, senza inferenze dalle fotografie."
           }
         }
       ]
@@ -4599,7 +5427,8 @@
       "scientificName": "Chlorophyllum rhacodes s.l.",
       "commonNames": [],
       "habitat": [
-        "Per C. rhacodes nominale: parchi, giardini e boschi, spesso di conifere, dalla fine dell’estate all’autunno; dato non esteso a tutte le entità vicine del complesso. Copertura dell’intera unità non attestata."
+        "Per C. rhacodes nominale: parchi, giardini e boschi, spesso di conifere, dalla fine dell’estate all’autunno; dato non esteso a tutte le entità vicine del complesso. Copertura dell’intera unità non attestata.",
+        "Per la componente C. olivieri: boschi montani, soprattutto di conifere. La fonte la colloca espressamente nel complesso C. rhacodes; il dato non si estende alle altre componenti."
       ],
       "lookalikes": [
         "Chlorophyllum molybdites: le lamelle mature diventano verdastre; nelle tre componenti C. rhacodes, C. brunneum e C. olivieri trattate dal lavoro rimangono bianche."
@@ -4652,6 +5481,28 @@
             "evidenceUrl": "https://www.funghiitaliani.it/topic/20010-chlorophyllum-rhacodes%C2%A0vittad-vellinga-2002/",
             "basis": "Scheda editoriale dell’Archivio Micologico con autore o responsabilità collettiva CLR dichiarata; non risposta libera del forum."
           }
+        },
+        {
+          "sourceId": "EXT-R2-ef00c3e72d5cfb",
+          "reviewScope": "supplementary-literature",
+          "title": "Chlorophyllum olivieri (Barla) Vellinga",
+          "url": "https://www2.muse.it/bresadola/galleria_sp.asp?sp=374428",
+          "authors": [
+            "Marco Floriani"
+          ],
+          "location": "Galleria, descrizione ecologica e posizione nel complesso C. rhacodes",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Per la componente C. olivieri: boschi montani, soprattutto di conifere. La fonte la colloca espressamente nel complesso C. rhacodes; il dato non si estende alle altre componenti.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Gruppo Micologico Giacomo Bresadola Trento / MUSE",
+            "type": "scheda micologica istituzionale con autore nominativo",
+            "evidenceUrl": "https://www2.muse.it/bresadola/galleria_sp.asp?sp=374428",
+            "basis": "Testo attribuito a Marco Floriani; sito ospitato dal MUSE, gruppo AMB con sede presso Museo delle Scienze di Trento."
+          }
         }
       ]
     },
@@ -4659,10 +5510,12 @@
       "scientificName": "Echinoderma asperum s.l.",
       "commonNames": [],
       "habitat": [
-        "Per E. asperum nominale, trattato come Lepiota aspera: boschi misti, giardini e parchi pubblici, in estate e autunno. Copertura dell’intera unità non attestata."
+        "Per E. asperum nominale, trattato come Lepiota aspera: boschi misti, giardini e parchi pubblici, in estate e autunno. Copertura dell’intera unità non attestata.",
+        "Nel complesso molecolare E. asperum, raccolte dei cladi europei I e IV sono documentate su suolo: rispettivamente in Germania a 150 e 1100 m, e a 110 e 820 m. Dati di raccolte identificate nello studio, non ecologia generale dei quattro cladi."
       ],
       "lookalikes": [
-        "Per E. asperum nominale (= Lepiota aspera), confronto con Lepiota echinacea: taglia maggiore e anello ampio e membranoso; la fonte segnala inoltre spore fino a 8–9 µm. Copertura dell’intera unità non attestata."
+        "Per E. asperum nominale (= Lepiota aspera), confronto con Lepiota echinacea: taglia maggiore e anello ampio e membranoso; la fonte segnala inoltre spore fino a 8–9 µm. Copertura dell’intera unità non attestata.",
+        "E. perplexum si distingue da E. asperum per sporomi e basidiospore più piccoli. Nel complesso E. asperum i cladi europei I e IV non sono separabili con affidabilità in base alla sola forcatura delle lamelle; la revisione respinge questo criterio tradizionale."
       ],
       "sources": [
         {
@@ -4706,6 +5559,31 @@
             "type": "associazione micologica; scheda editoriale",
             "evidenceUrl": "https://www.funghiitaliani.it/topic/27704-lepiota-echinacea-je-lange-1940/",
             "basis": "Scheda editoriale dell’Archivio Micologico con autore o responsabilità collettiva CLR dichiarata; non risposta libera del forum."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-67502a023ecc7a",
+          "reviewScope": "supplementary-literature",
+          "title": "Phylogenetic and taxonomic re-assessment of the genera Echinoderma and Lepiota",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11952186/",
+          "authors": [
+            "Sepas Sarawi",
+            "Meike Piepenbring",
+            "Kai Reschke"
+          ],
+          "location": "Fungal Systematics and Evolution 15:235–263; Taxonomy: E. asperum, p. 245; E. perplexum, p. 246",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Nel complesso molecolare E. asperum, raccolte dei cladi europei I e IV sono documentate su suolo: rispettivamente in Germania a 150 e 1100 m, e a 110 e 820 m. Dati di raccolte identificate nello studio, non ecologia generale dei quattro cladi. E. perplexum si distingue da E. asperum per sporomi e basidiospore più piccoli. Nel complesso E. asperum i cladi europei I e IV non sono separabili con affidabilità in base alla sola forcatura delle lamelle; la revisione respinge questo criterio tradizionale.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Westerdijk Fungal Biodiversity Institute / Fungal Systematics and Evolution",
+            "type": "articolo primario di micologia",
+            "evidenceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11952186/",
+            "basis": "DOI 10.3114/fuse.2025.15.11; Mycology Working Group Goethe University; confronto di voucher e filogenesi multilocus. Testo integrale consultato anche nel deposito ResearchGate dell’autore https://www.researchgate.net/publication/389661281_Phylogenetic_and_taxonomic_re-assessment_of_the_genera_Echinoderma_and_Lepiota ."
           }
         }
       ]
@@ -5076,6 +5954,179 @@
             "type": "pubblicazione micologica primaria",
             "evidenceUrl": "https://www.ammbiol.com/fileadmin/user_upload/08ANTONIN_AmmSB97_2.pdf",
             "basis": "Articolo tassonomico Acta Musei Moraviae97(2):87–99,2012; autore del dipartimento di botanica del Museo moravo."
+          }
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "commonNames": [],
+      "habitat": [
+        "Per C. dealbata nell’interpretazione di Lamoure, ricondotta da alcuni autori a C. rivulosa: su terreno, in gruppi, in prati, campi, radure erbose e parchi urbani. La fonte distingue questa interpretazione da quella di Moser; non dimostra identità ecologica di tutti i concetti storici dei due nomi."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "EXT-R2-7dfd577dc929ef",
+          "reviewScope": "supplementary-literature",
+          "title": "Clitocybe dealbata",
+          "url": "https://ambbresadola.it/funghi_tossici/clitocybe-dealbata-2/",
+          "authors": [
+            "Associazione Micologica Bresadola"
+          ],
+          "location": "HABITAT; NOTE",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Per C. dealbata nell’interpretazione di Lamoure, ricondotta da alcuni autori a C. rivulosa: su terreno, in gruppi, in prati, campi, radure erbose e parchi urbani. La fonte distingue questa interpretazione da quella di Moser; non dimostra identità ecologica di tutti i concetti storici dei due nomi.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Associazione Micologica Bresadola",
+            "type": "associazione micologica; scheda editoriale ufficiale",
+            "evidenceUrl": "https://ambbresadola.it/funghi_tossici/clitocybe-dealbata-2/",
+            "basis": "Sito ufficiale AMB, sezione schede; note esplicite sulle interpretazioni Lamoure/Moser e rapporto con C. rivulosa."
+          }
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "commonNames": [],
+      "habitat": [
+        "Nel gruppo Albobrunnei gli ospiti variano fra le componenti: T. cedretorum sotto Cedrus, con crescita gregaria e interrata nella lettiera di aghi; T. populinum sotto pioppi; T. pessundatum e T. fracticum sotto conifere. Questi esempi ampliano la copertura, senza attestare l’ecologia di tutta la sezione."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "EXT-R2-AMINT-CEDRETORUM",
+          "reviewScope": "supplementary-literature",
+          "title": "Tricholoma cedretorum (Bon) A. Riva 2000",
+          "url": "https://www.funghiitaliani.it/topic/56970-tricholoma-cedretorum-bon-a-riva-2000/",
+          "authors": [
+            "Tomaso Lezzi",
+            "Luigi Minciarelli"
+          ],
+          "location": "Habitat; Specie simili; attribuzione CLR",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ospiti differenziati di quattro componenti Albobrunnei.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "AMINT CLR Micologico",
+            "type": "attributed-mycological-editorial-account",
+            "evidenceUrl": "https://www.funghiitaliani.it/topic/56970-tricholoma-cedretorum-bon-a-riva-2000/",
+            "basis": "Scheda firmata Lezzi e Minciarelli, esplicitamente revisionata dal CLR micologico; appartenenza alla sezione Albobrunnea indicata in tassonomia."
+          }
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "commonNames": [],
+      "habitat": [
+        "Il raggruppamento comprende ambienti diversi: Suillellus luridus cresce sotto latifoglie e anche conifere; Rubroboletus rubrosanguineus è documentato in boschi montani di conifere, comprese abetaie miste a faggio. Sono esempi della gamma ecologica, non un habitat identico per ogni componente."
+      ],
+      "lookalikes": [
+        "Confronti interni: Rubroboletus rubrosanguineus e R. legaliae sono molto simili; il primo è montano di conifere e più intensamente rosso, il secondo termofilo di latifoglie. Suillellus queletii differisce da S. luridus per assenza di reticolo e carne sotto i tubuli gialla."
+      ],
+      "sources": [
+        {
+          "sourceId": "EXT-R2-suillellus-luridus",
+          "reviewScope": "supplementary-literature",
+          "title": "suillellus luridus — erbario AMB Pesaro",
+          "url": "https://www.ambpesaro.it/portfolio-item/suillellus-luridus/",
+          "authors": [],
+          "location": "Habitat",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "S. luridus è documentato sotto latifoglie e anche conifere.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Associazione Micologica Bresadola — Gruppo di Pesaro",
+            "type": "associazione-micologica",
+            "evidenceUrl": "https://www.ambpesaro.it/sample-page/",
+            "basis": "Pagina Chi siamo: gruppo micologico fondato nel 1973 e aderente ad AMB dal 1974; schede con exsiccatum e determinatore Maletti M. Nessun accreditamento formale attribuito."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-suillellus-rubrosanguineus",
+          "reviewScope": "supplementary-literature",
+          "title": "suillellus rubrosanguineus — erbario AMB Pesaro",
+          "url": "https://www.ambpesaro.it/portfolio-item/suillellus-rubrosanguineus/",
+          "authors": [],
+          "location": "Habitat; Note",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "R. rubrosanguineus: conifere montane, anche abete con faggio; rispetto a R. legaliae, termofilo di latifoglie, rosso più intenso.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Associazione Micologica Bresadola — Gruppo di Pesaro",
+            "type": "associazione-micologica",
+            "evidenceUrl": "https://www.ambpesaro.it/sample-page/",
+            "basis": "Pagina Chi siamo: gruppo micologico fondato nel 1973 e aderente ad AMB dal 1974; schede con exsiccatum e determinatore Maletti M. Nessun accreditamento formale attribuito."
+          }
+        },
+        {
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "reviewScope": "supplementary-literature",
+          "title": "suillellus queletii — erbario AMB Pesaro",
+          "url": "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/",
+          "authors": [],
+          "location": "Note",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "S. queletii rispetto a S. luridus: assenza di reticolo, subimenio giallo.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Associazione Micologica Bresadola — Gruppo di Pesaro",
+            "type": "associazione-micologica",
+            "evidenceUrl": "https://www.ambpesaro.it/sample-page/",
+            "basis": "Pagina Chi siamo: gruppo micologico fondato nel 1973 e aderente ad AMB dal 1974; schede con exsiccatum e determinatore Maletti M. Nessun accreditamento formale attribuito."
+          }
+        }
+      ]
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Confronto interno: P. citrinopileatus ha tipicamente cappello giallo brillante o dorato, mentre P. cornucopiae è solitamente grigio-brunastro. Il primo può sbiadire a beige o quasi bianco con l’età e il secondo talvolta appare giallo-bruno: il colore non è una prova univoca d’identità."
+      ],
+      "sources": [
+        {
+          "sourceId": "EXT-R2-WSL-PLEUROTUS-2025",
+          "reviewScope": "supplementary-literature",
+          "title": "Pleuroto dorato e i rischi dei funghi coltivati inselvatichiti — Schede informative sui Neomiceti, WSL (2025)",
+          "url": "https://www.dora.lib4ri.ch/wsl/dload/wsl:38812/PDF/Auf_der_Maur-2025-Pleuroto_dorato_e_i_rischi-(published_version).pdf",
+          "authors": [
+            "Bruno Auf der Maur",
+            "Jonas Brännhage",
+            "Alan Oggier",
+            "Andrin Gross"
+          ],
+          "location": "p.1 Caratteristiche; p.2 Rischi di confusione, confronto diretto con Pleurotus cornucopiae",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Citrinopileatus tipicamente giallo-dorato, cornucopiae perlopiù grigio-brunastro; possibili sbiadimento del primo e tonalità giallo-brune del secondo. Distinzione cromatica indicativa, non esclusiva.",
+          "consultedAt": "2026-10-26",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "authority": {
+            "entity": "Istituto federale di ricerca WSL — SwissFungi",
+            "type": "scheda micologica istituzionale firmata",
+            "evidenceUrl": "https://www.waldwissen.net/it/economia-forestale/gestione-dei-danni/specie-invasive/pleuroto-dorato-e-i-rischi-dei-funghi-coltivati-inselvatichiti",
+            "basis": "Documento originale nella raccolta WSL/DORA, con quattro autori nominati e intestazione SwissFungi. Pagina istituzionale attribuisce redazione a WSL e contatti alla ricerca Biodiversità/ecologia della conservazione. Non è approvazione indipendente dei dati dell’app."
           }
         }
       ]

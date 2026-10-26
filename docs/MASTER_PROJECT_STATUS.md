@@ -10,7 +10,34 @@ Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo
 - **Produzione bloccata.** Nessun nuovo binario TestFlight o deploy pubblico attribuito a questa baseline. Nessuna conferma sul dispositivo fisico.
 - Questo è il riferimento operativo corrente. I due handoff conservano la cronologia; indicazioni storiche incompatibili con le decisioni sotto sono superate. Ogni agente aggiorna questo documento e collega le prove dello SHA esatto, senza rietichettare risultati precedenti.
 
-## Completamento habitat e confronti — ciclo corrente
+## Ricontrollo delle49 lacune — ciclo corrente
+
+Baseline precedente: [`e5a4612f286010f8af26338316d47bbe749d4359`](https://github.com/gianpaolobol/fungo-italia/commit/e5a4612f286010f8af26338316d47bbe749d4359). Lo SHA dell’integrazione corrente si ricava da `git log -1 --format=%H -- revisione/habitat-comparison-followup-20261026.json`; il main remoto va riletto. Nessuna distribuzione è attestata da questo registro.
+
+Tutti49 campi ancora parziali o vuoti sono stati ricontrollati nelle fonti interne prima delle nuove ricerche esterne. **45 campi arricchiti con nuove evidenze; nessun habitat o confronto resta vuoto:148/148 per entrambi.** Questo non significa che tutte le unità abbiano copertura scientifica completa.
+
+|179 campi iniziali |Interni sostenuti |Esterni sostenuti |Parziali |Vuoti |
+|---|---:|---:|---:|---:|
+|Habitat96 |10 |65 |21 |0 |
+|Confronti83 |9 |55 |19 |0 |
+|Totale179 |19 |120 |40 |0 |
+
+Le9 coperture bibliografiche aggiuntive sono: habitat T.terreum,T.saponaceum s.l.,Russula Foetentinae; confronti Gymnopus fusipes,Hericium spp.,Albatrellus ovinus s.l.,Scutiger pes-caprae,Russula Foetentinae e Pleurotus cornucopiae/citrinopileatus. Per Russula il perimetro è quello degli8 nomi illustrati dal corso,non tutta la sottosezione mondiale; Hericium conserva il perimetro europeo della chiave; Scutiger mantiene esplicito che i comparatori della revisione sono extraeuropei. Gli esempi di habitat e le coppie interne della sezione Luridi riempiono i due campi,ma rimangono parziali: non è stata inventata una circoscrizione esaustiva della sezione.
+
+Nuovi confronti interni verificati nelle dispense: Tricholoma grigi opachi,p.37; Albatrellus,p.126. Integrati lavori primari e materiali istituzionali di Persoonia,Mycological Progress,Mycology,Yesca,AMER,WSL/SwissFungi e schede micologiche attribuite. La provenienza e la qualificazione sono registrate per fonte,senza inventare accreditamento formale o approvazione professionale.
+
+Revisione separata mirata: escluso il candidato L.subcretaceus perché l’appartenenza al gruppo curricolare leucothites non è provata; sostituita la nuova coppia nomenclaturale controversa N.praestigiator/luridiformis con il confronto primario erythropus/xanthopus di Assyov2020,con limiti regionali e microscopici. Esclusa una pagina oggi commerciale pur indicizzata come micologica. Nessuna nuova scheda,foto,categoria alimentare o revisione indipendente.
+
+Prove correnti:
+
+- [Registro delle49 verifiche e dei9 completamenti](../revisione/habitat-comparison-followup-20261026.json), [registro generale179](../revisione/habitat-comparison-completion-20261026.json), [controlli sulle nuove fonti](../revisione/habitat-comparison-followup-source-checks-20261026.json).
+- [Preservazione del catalogo e degli esami](evidence/habitat-comparison-followup-integrity-20261026.json): mantenuti identità,S1/S2,foto e tutti i dati precedenti.455 quesiti conservano risposta corretta identica;20 risposte habitat sono ampliate con tutte le frasi precedenti e nuovo hash coerente;1 quesito aggiunto. Totale476 nei132 casi integrativi;86 casi foto invariati. Non dichiarare tutte475 risposte testuali identiche dopo l’ampliamento.
+- [Fascicolo aggiornato](reviews/habitat-comparisons-followup-20261026/scientific-gap-register.json):0 campi vuoti habitat/confronti,ma148 schede bloccate,0 pronte. Persistono40 coperture parziali nel registro179,2 sporate,1 giudizio e5 triadi incomplete,oltre all’assenza di revisione indipendente su tutte148.
+- Rigenerazione,241 test Node,TypeScript e build web condivisa/legacy superati. 65 WebKit,65 Chromium e smoke offline superati. [Esiti del ciclo](evidence/habitat-comparison-followup-verification-20261026.json), [rapporto](reviews/habitat-comparisons-followup-20261026/README.md). I gate scientifico e tossicologico strict restano exit1; nessun gate o test Apple disabilitato.
+
+Prossima attività: risolvere i40 ambiti parziali con corrispondenze tassonomiche e fonti riferite alle componenti effettive del corso; far attestare la revisione professionale sul fascicolo completo. Nessuna completezza tassonomica mondiale inferita da esempi rappresentativi. P2 e release restano subordinate ai rispettivi controlli,senza attribuire una nuova build all’arricchimento del catalogo.
+
+## Primo ciclo habitat e confronti — storico e5a4612
 
 Baseline sorgente: [`c89d0a231106f3828b66da8125c73f6015edba50`](https://github.com/gianpaolobol/fungo-italia/commit/c89d0a231106f3828b66da8125c73f6015edba50). Il commit corrente comprende questo registro e i dati generati; ricavare lo SHA da `git log -1 --format=%H -- revisione/habitat-comparison-completion-20261026.json` e confrontare con il main remoto. Non è una nuova distribuzione.
 
@@ -97,8 +124,8 @@ Branch attivi da coordinare:`feature/theory-exam-preparation-20261026`,`fix/scie
 |---|---|---|
 |Catalogo/gruppi |148+70=218 |218 corrispondenze nel registro S1,con pagine/ranghi/livello; tutte attualmente `minimum`. Non significa copertura integrale degli auspicabili/approfondimenti.|
 |Matrice storica |214 |Quattro completamenti S1 separati,senza dati scientifici inventati.|
-|Habitat presenti |147/148, prima52 |1 vuoto;23 nuovi campi parziali,vedere registro179.|
-|Confronti presenti |144/148, prima65 |4 vuoti;21 nuovi campi parziali; presenza non equivale a validazione scientifica.|
+|Habitat presenti |148/148, prima147 |21 campi ancora parziali nel registro179.|
+|Confronti presenti |148/148, prima144 |19 campi ancora parziali; presenza non equivale a validazione scientifica.|
 |Odore/sporata/giudizi alimentari |148/146/147 su148 |2 sporate e1 giudizio mancanti; non riempire per inferenza.|
 |Triadi catalogo |143/148 |Presenza e metadati minimi; non prova identità o licenza indipendentemente verificata.|
 |Revisione indipendente |0/148 |148 bloccate,0release-ready.|
@@ -119,8 +146,8 @@ Registro chat separato:200 fotografie,150collegate,50solo fonte,229 relazioni a7
 |---|---|---|
 |Riconoscimento |86 casi fotografici su148catalogo (58,1%);86/218 unità totali (39,4%). Sessioni15,autocomplete3lettere,feedback per campo,ripasso errori. |62 schede catalogo senza caso fotografico;70 gruppi senza caso fotografico autonomo. Applicabilità fotografica per rango da definire,senza inventare identità.|
 |Copertura dei casi curricolari |86 foto+132 profili=218/218 |È copertura di casi misti,non100%riconoscimento.|
-|Teoria corrente |475 quesiti nei132 casi integrativi;425 precedenti preservati nel ciclo habitat/confronti. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
-|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero475 non dimostra100%.|
+|Teoria corrente |476 quesiti nei132 casi integrativi;455 risposte precedenti identiche,20 habitat ampliati e1 quesito nuovo nel ricontrollo. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
+|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero476 non dimostra100%.|
 |Regressioni |Marasmius oreades:identità/commestibilità separate;Amanita rubescens:autocomplete;feedback e ripasso nei test locali |Conferma fisica della nuova build ancora assente.|
 |Percorso e storico |Quattro tab,progressi,ripresa,lacune e sessioni adattive presenti;revisioni compatibili conservate |UI nome facoltativo e riempimento/linee fungo ancora da riconciliare conPR114.|
 

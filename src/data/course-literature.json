@@ -2514,7 +2514,8 @@
       "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
       "additions": {
         "lookalikes": [
-          "Per la componente T. scalpturatum: il gruppo T. pardinum ha portamento robusto e gambo pieno; il gruppo T. scalpturatum è esile, con gambo fistoloso fragile e carne tendente a ingiallire. Il confronto non è esteso alle altre componenti dell’unità. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+          "Per la componente T. scalpturatum: il gruppo T. pardinum ha portamento robusto e gambo pieno; il gruppo T. scalpturatum è esile, con gambo fistoloso fragile e carne tendente a ingiallire. Il confronto non è esteso alle altre componenti dell’unità. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata.",
+          "Nello schema dei grigi opachi, il gruppo T. atrosquamosum ha fitta squamosità scura, gambo fistoloso e odore farinoso-speziato; il gruppo T. pardinum è robusto con gambo pieno, il gruppo T. scalpturatum è esile con squamettatura più lieve e carne ingiallente. È un confronto fra gruppi pratici, non una chiave esaustiva di tutte le specie."
         ]
       },
       "replacements": {},
@@ -2527,6 +2528,15 @@
           "page": 37,
           "locator": "p. 37; I Tricholoma grigi opachi",
           "supportedClaim": "Per la componente T. scalpturatum: il gruppo T. pardinum ha portamento robusto e gambo pieno; il gruppo T. scalpturatum è esile, con gambo fistoloso fragile e carne tendente a ingiallire. Il confronto non è esteso alle altre componenti dell’unità."
+        },
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 37,
+          "locator": "p.37, I Tricholoma grigi opachi, punti1,3,4; immagine renderizzata tricholoma-mu37.png verificata",
+          "supportedClaim": "Nello schema dei grigi opachi, il gruppo T. atrosquamosum ha fitta squamosità scura, gambo fistoloso e odore farinoso-speziato; il gruppo T. pardinum è robusto con gambo pieno, il gruppo T. scalpturatum è esile con squamettatura più lieve e carne ingiallente. È un confronto fra gruppi pratici, non una chiave esaustiva di tutte le specie."
         }
       ]
     },
@@ -2703,6 +2713,9 @@
       "additions": {
         "habitat": [
           "Boschi di conifere: la lezione associa A. citrinus agli abeti e A. subrubescens ai pini, e documenta la raccolta di A. subrubescens insieme ad A. ovinus nei boschi misti di conifere del Trentino. Le associazioni indicate si riferiscono alle singole componenti nominate."
+        ],
+        "lookalikes": [
+          "A. ovinus s.l. comprende A. citrinus e A. subrubescens, molto simili; la lezione distingue citrinus sotto abeti da subrubescens sotto pini, segnalando i limiti della distinzione morfologica per i raccoglitori."
         ]
       },
       "replacements": {},
@@ -2715,6 +2728,15 @@
           "page": 126,
           "locator": "p. 126; Il caso di Albatrellus subrubescens",
           "supportedClaim": "Boschi di conifere: la lezione associa A. citrinus agli abeti e A. subrubescens ai pini, e documenta la raccolta di A. subrubescens insieme ad A. ovinus nei boschi misti di conifere del Trentino. Le associazioni indicate si riferiscono alle singole componenti nominate."
+        },
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 126,
+          "locator": "p.126; Il caso di Albatrellus subrubescens; rendering r2-albatrellus.png verificato",
+          "supportedClaim": "A. ovinus s.l. comprende A. citrinus e A. subrubescens, molto simili; la lezione distingue citrinus sotto abeti da subrubescens sotto pini, segnalando i limiti della distinzione morfologica per i raccoglitori."
         }
       ]
     },

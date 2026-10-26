@@ -24,6 +24,12 @@
           "sourceId": "EXT-SCOPE-054c651d35fe05",
           "locator": "Agaricus xanthodermus — Habit, habitat and distribution; Notes",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-509588b1d1da02",
+          "locator": "Mycologia 97(6), Table I, pp. 1294–1295; collections CA141/162/199, LAPAG237, CA156/31/209/210",
+          "page": null
         }
       ],
       "research": [
@@ -36,7 +42,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-agaricus--02--agaricus-bresadolanus",
@@ -119,6 +133,12 @@
           "sourceId": "EXT-SCOPE-d9272291d92a56",
           "locator": "Osservazioni; Specie simili — Agaricus langei var. silvaticoides",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-ddb41a7a1b2bd6",
+          "locator": "Foto e Descrizioni, raccolta Umbria novembre 2021; commento Cittadini 30 marzo 2022",
+          "page": null
         }
       ],
       "research": [
@@ -131,7 +151,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-agaricus--07--agaricus-bisporus",
@@ -340,6 +368,12 @@
           "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
           "locator": "p. 59; Clitocybe dealbata: confondibilità",
           "page": 59
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-7dfd577dc929ef",
+          "locator": "HABITAT; NOTE",
+          "page": null
         }
       ],
       "research": [
@@ -352,7 +386,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova fonte AMB amplia e precisa habitat, ma dichiara concetti Lamoure/Moser differenti: non basta per tutti i concetti storici dell’unità doppia."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
@@ -429,6 +471,12 @@
           "sourceId": "EXT-SCOPE-5defe86b728b6f84",
           "locator": "Habitat",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-15dfdae3aed022",
+          "locator": "Mycological Progress 19:805–816; C. abprunulus Diagnosis, Ecology and distribution, Notes, pp. 811–812; Discussion p.814",
+          "page": null
         }
       ],
       "research": [
@@ -440,7 +488,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo segregato europeo C. abprunulus trattato nel paper come precedentemente identificato C. prunulus; habitat e confronto esplicito documentati. Non prova tutte le componenti del s.l.; non crea una scheda autonoma."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
@@ -463,6 +519,12 @@
           "sourceId": "EXT-SCOPE-5defe86b728b6f84",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-15dfdae3aed022",
+          "locator": "Mycological Progress 19:805–816; C. abprunulus Diagnosis, Ecology and distribution, Notes, pp. 811–812; Discussion p.814",
+          "page": null
         }
       ],
       "research": [
@@ -474,7 +536,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo segregato europeo C. abprunulus trattato nel paper come precedentemente identificato C. prunulus; habitat e confronto esplicito documentati. Non prova tutte le componenti del s.l.; non crea una scheda autonoma."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
@@ -502,10 +572,17 @@
       "rank": "species",
       "curriculumPage": 6,
       "field": "lookalikes",
-      "status": "unresolved",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
-      "evidence": [],
+      "evidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-GYMNOPUS-GALVANIN-2012",
+          "locator": "p. 9, Note: confronto con Gymnopus (ex Collybia) fusipes; articolo pp. 7–9",
+          "page": null
+        }
+      ],
       "research": [
         {
           "stage": "external",
@@ -526,7 +603,14 @@
         }
       ],
       "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
-      "reason": "Nessuna evidenza adeguata all’intera unità e a un contenuto pubblicabile; vedere ricerche registrate."
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "unresolved",
+          "status": "external-supported",
+          "reason": "Confronto esplicito con taxon nominato e caratteri distintivi, verificato nella pagina originale dell’articolo firmato."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
@@ -723,6 +807,12 @@
           "sourceId": "EXT-SCOPE-7a9d73ca70f47a92",
           "locator": "Habitat; Osservazioni",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-68fa298a863473",
+          "locator": "Entoloma sepium; paragrafi iniziali e commento Lezzi",
+          "page": null
         }
       ],
       "research": [
@@ -734,7 +824,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
@@ -811,6 +909,12 @@
           "sourceId": "EXT-SCOPE-f12798fee7546047",
           "locator": "Habitat",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-263d81828a04d1",
+          "locator": "Foto e Descrizioni; testo e commenti nominativi Lezzi, raccolta Lazio ottobre 2007",
+          "page": null
         }
       ],
       "research": [
@@ -822,7 +926,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
@@ -839,6 +951,12 @@
           "sourceId": "EXT-SCOPE-f12798fee7546047",
           "locator": "Specie simili; Gambo",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-263d81828a04d1",
+          "locator": "Foto e Descrizioni; testo e commenti nominativi Lezzi, raccolta Lazio ottobre 2007",
+          "page": null
         }
       ],
       "research": [
@@ -850,7 +968,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
@@ -1093,6 +1219,12 @@
           "sourceId": "EXT-SCOPE-956ec94377023ef0",
           "locator": "68) Lepiota aspera",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-67502a023ecc7a",
+          "locator": "Fungal Systematics and Evolution 15:235–263; Taxonomy: E. asperum, p. 245; E. perplexum, p. 246",
+          "page": null
         }
       ],
       "research": [
@@ -1105,7 +1237,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
@@ -1122,6 +1262,12 @@
           "sourceId": "EXT-SCOPE-10da5c47fd87037d",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-67502a023ecc7a",
+          "locator": "Fungal Systematics and Evolution 15:235–263; Taxonomy: E. asperum, p. 245; E. perplexum, p. 246",
+          "page": null
         }
       ],
       "research": [
@@ -1134,7 +1280,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
@@ -1183,7 +1337,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Contributo L. subcretaceus escluso: inclusione nel raggruppamento curricolare non dimostrata."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
@@ -1200,6 +1362,12 @@
           "sourceId": "EXT-SCOPE-e6058da0f5b364cd",
           "locator": "Habitat",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-ef00c3e72d5cfb",
+          "locator": "Galleria, descrizione ecologica e posizione nel complesso C. rhacodes",
+          "page": null
         }
       ],
       "research": [
@@ -1212,7 +1380,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
@@ -1249,6 +1425,12 @@
           "sourceId": "EXT-SCOPE-e8e23ac03d28b21d",
           "locator": "Habitat",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-250b9df382b0c7",
+          "locator": "Paragrafo Lepista glaucocana; confronto esplicito con Lepista nuda",
+          "page": null
         }
       ],
       "research": [
@@ -1260,7 +1442,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
@@ -1283,6 +1473,12 @@
           "sourceId": "EXT-SCOPE-e8e23ac03d28b21d",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-250b9df382b0c7",
+          "locator": "Paragrafo Lepista glaucocana; confronto esplicito con Lepista nuda",
+          "page": null
         }
       ],
       "research": [
@@ -1294,7 +1490,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
@@ -1349,7 +1553,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Riesaminati materiali interni e ricerca esterna: nessun dato nuovo adottabile per l’intera unità oltre ai contenuti già consolidati."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
@@ -1378,7 +1590,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Riesaminati materiali interni e ricerca esterna: nessun dato nuovo adottabile per l’intera unità oltre ai contenuti già consolidati."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
@@ -1395,6 +1615,12 @@
           "sourceId": "EXT-SCOPE-e300cb4ce52bc8a2",
           "locator": "p.206 (PDF 207), scheda 104, Note",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-d7629c3896c6ec",
+          "locator": "Foto e Descrizioni; Osservazioni sulla sezione Aspropaxillus; raccolta Trentino-Alto Adige settembre 2010",
+          "page": null
         }
       ],
       "research": [
@@ -1407,7 +1633,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
@@ -1484,6 +1718,12 @@
           "sourceId": "EXT-SCOPE-ac1888e7712bbf8d",
           "locator": "Raccolte Regione Umbria Novembre 2009",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-7b7ecd9f82a756",
+          "locator": "Habitat and Range: Similar Species; Habitat",
+          "page": null
         }
       ],
       "research": [
@@ -1495,7 +1735,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
@@ -1512,6 +1760,12 @@
           "sourceId": "EXT-SCOPE-ac1888e7712bbf8d",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-7b7ecd9f82a756",
+          "locator": "Habitat and Range: Similar Species; Habitat",
+          "page": null
         }
       ],
       "research": [
@@ -1523,7 +1777,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
@@ -1540,6 +1802,18 @@
           "sourceId": "EXT-SCOPE-90f3e01b090c5455",
           "locator": "p.10 (PDF 10), elenco specie 94,96,97",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-e55016886fdf65",
+          "locator": "Descrizione ecologica iniziale; paragrafo finale di confronto con M. pura",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-77ce8ce44e3923",
+          "locator": "Descrizione ecologica iniziale",
+          "page": null
         }
       ],
       "research": [
@@ -1552,7 +1826,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
@@ -1569,6 +1851,12 @@
           "sourceId": "EXT-SCOPE-c0e814a8b2443fa4",
           "locator": "Laccaria amethystina; estratto Tutto Funghi scheda 60",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-e55016886fdf65",
+          "locator": "Descrizione ecologica iniziale; paragrafo finale di confronto con M. pura",
+          "page": null
         }
       ],
       "research": [
@@ -1581,7 +1869,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-omphalotus--01--omphalotus-olearius",
@@ -1769,8 +2065,8 @@
       "rank": "species",
       "curriculumPage": 11,
       "field": "lookalikes",
-      "status": "partial-scope",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
       "evidence": [
         {
@@ -1778,6 +2074,12 @@
           "sourceId": "COURSE-1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot-atzeni-entry-1",
           "locator": "Salerni. Microscopia Corso Amiata 12 Maggio 2026.pdf; p. 66 Diagnostica: Pleurotus cornucopiae / Omphalotus olearius",
           "page": 66
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-WSL-PLEUROTUS-2025",
+          "locator": "p.1 Caratteristiche; p.2 Rischi di confusione, confronto diretto con Pleurotus cornucopiae",
+          "page": null
         }
       ],
       "research": [
@@ -1789,7 +2091,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "external-supported",
+          "reason": "Confronto esplicito fra entrambe le due componenti nominali chiuse dell’unità S1, con differenza documentata e suoi limiti cromatici. Completa il precedente confronto interno riferito soltanto a cornucopiae."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
@@ -2023,8 +2333,8 @@
       "rank": "species",
       "curriculumPage": 12,
       "field": "habitat",
-      "status": "partial-scope",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
       "evidence": [
         {
@@ -2038,10 +2348,24 @@
           "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
           "locator": "p. 62; Inocybe spp. a cappello bruno o grigio",
           "page": 62
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-TRICH1999-TERREUM",
+          "locator": "p.304 (PDF10), T. terreum, Habitat & distribution",
+          "page": null
         }
       ],
       "research": [],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "external-supported",
+          "reason": "Revisione primaria riferita a T. terreum, supera il limite dei soli dati interni s.l."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
@@ -2049,14 +2373,20 @@
       "rank": "speciesGroup",
       "curriculumPage": 12,
       "field": "habitat",
-      "status": "partial-scope",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
       "evidence": [
         {
           "kind": "external",
           "sourceId": "EXT-SCOPE-cc8b2e55b96bf339",
           "locator": "Tricholoma saponaceum; estratto Tutto Funghi p.166, scheda62",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-TRICH2017-CONTEXTOCUTIS",
+          "locator": "p.52 (PDF15), Section Contextocutis (= section Rigida)",
           "page": null
         }
       ],
@@ -2069,7 +2399,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "external-supported",
+          "reason": "La revisione tratta le quattro componenti esplicitamente incluse nella lezione: saponaceum,boudieri,rapipes,sudum. Copertura del range ecologico, non un ospite universale."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
@@ -2117,7 +2455,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "La revisione1999 già copre album,stiparophyllum,lascivum,sulphurescens. Nessuna nuova componente del perimetro aperto «e altri» verificata: nessun cambio artificiale di stato."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
@@ -2146,6 +2492,12 @@
           "sourceId": "EXT-SCOPE-8e8ae85f3118bf72",
           "locator": "Commento firmato Alessandro Francolini, Regione Toscana novembre2009",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-TRICH1999-TERREUM",
+          "locator": "p.304 (PDF10), T. terreum, Habitat & distribution",
+          "page": null
         }
       ],
       "research": [
@@ -2159,7 +2511,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Aggiunta ecologia di terreum o confronto interno dei gruppi pratici; unità aperta «e altre» e componenti non tutte circoscritte."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
@@ -2188,6 +2548,12 @@
           "sourceId": "EXT-SCOPE-8e8ae85f3118bf72",
           "locator": "Commento firmato Alessandro Francolini, Regione Toscana novembre2009",
           "page": null
+        },
+        {
+          "kind": "internal",
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "locator": "p.37, I Tricholoma grigi opachi, punti1,3,4; immagine renderizzata tricholoma-mu37.png verificata",
+          "page": 37
         }
       ],
       "research": [
@@ -2201,7 +2567,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Aggiunta ecologia di terreum o confronto interno dei gruppi pratici; unità aperta «e altre» e componenti non tutte circoscritte."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
@@ -2298,6 +2672,12 @@
           "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
           "locator": "p. 21; Tricholoma BRUNI, ramo T. populinum",
           "page": 21
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-CEDRETORUM",
+          "locator": "Habitat; Specie simili; attribuzione CLR",
+          "page": null
         }
       ],
       "research": [
@@ -2310,7 +2690,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovi ospiti per più componenti, ma la sezione curricolare non coincide automaticamente con tutte le circoscrizioni molecolari moderne."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
@@ -2347,6 +2735,12 @@
           "sourceId": "EXT-SCOPE-e300cb4ce52bc8a2",
           "locator": "p.257 (PDF 258), scheda155, Habitat",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-IUCN-ROSEOACERBUM",
+          "locator": "Habitat and Ecology; Taxonomic notes; assessor/reviewer",
+          "page": null
         }
       ],
       "research": [
@@ -2358,7 +2752,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuova ecologia di roseoacerbum, ma confini del complesso s.l. e conspecificità delle popolazioni non definitivamente risolti."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
@@ -2586,14 +2988,38 @@
       "rank": "subsection",
       "curriculumPage": 14,
       "field": "habitat",
-      "status": "partial-scope",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
       "evidence": [
         {
           "kind": "external",
           "sourceId": "EXT-SCOPE-59bf7706e3cd452c",
           "locator": "Habitat",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-BAZZICALUPO-FOETENTINAE-H",
+          "locator": "Foetentinae Species Notes, Ecology 1–6",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-MELERA-RECONDITA",
+          "locator": "PDF14, Habitat di R. recondita; DOI10.1007/s11557-016-1256-y",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-SORORIA-CONSOBRINA",
+          "locator": "Habitat; Microscopia; Specie simili; attribuzione CLR",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMER118-FOETENTINAE",
+          "locator": "p.19 (PDF20), Osservazioni; DOI10.57624/AMER.2023.08",
           "page": null
         }
       ],
@@ -2607,7 +3033,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "external-supported",
+          "reason": "Copertura riferita al perimetro della lezione Floriani: p.48 due serie; p.50 foetens,putida,subfoetens,illota,grata,fragrantissima; pp.55–57 sororia,recondita. Le evidenze precedenti per la serie foetens sono integrate da ecologia e confronti delle componenti pectinata e dall’habitat mancante di putida. Nessuna richiesta di coprire tutti i lignaggi mondiali; restano visibili incertezze tassonomiche e necessità di microscopia."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-russula--01--russula-foetentinae",
@@ -2615,8 +3049,8 @@
       "rank": "subsection",
       "curriculumPage": 14,
       "field": "lookalikes",
-      "status": "partial-scope",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
       "evidence": [
         {
@@ -2630,6 +3064,30 @@
           "sourceId": "EXT-SCOPE-701286824c9ec3a8",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-BAZZICALUPO-FOETENTINAE-L",
+          "locator": "Foetentinae Species Notes, Diagnostic notes 1–6",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-BAZZICALUPO-PECTINATAE",
+          "locator": "Chiave iniziale I–II; original DOC scaricato e letto",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-SORORIA-CONSOBRINA",
+          "locator": "Habitat; Microscopia; Specie simili; attribuzione CLR",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMER118-FOETENTINAE",
+          "locator": "p.19 (PDF20), Osservazioni; DOI10.57624/AMER.2023.08",
+          "page": null
         }
       ],
       "research": [
@@ -2642,7 +3100,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "external-supported",
+          "reason": "Copertura riferita al perimetro della lezione Floriani: p.48 due serie; p.50 foetens,putida,subfoetens,illota,grata,fragrantissima; pp.55–57 sororia,recondita. Le evidenze precedenti per la serie foetens sono integrate da ecologia e confronti delle componenti pectinata e dall’habitat mancante di putida. Nessuna richiesta di coprire tutti i lignaggi mondiali; restano visibili incertezze tassonomiche e necessità di microscopia."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
@@ -2699,6 +3165,12 @@
           "sourceId": "EXT-SCOPE-90f3e01b090c5455",
           "locator": "p.11 (PDF 11), specie110",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-CHLOROIDES",
+          "locator": "Habitat; attribuzione autore e CLR",
+          "page": null
         }
       ],
       "research": [
@@ -2711,7 +3183,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Aggiunta componente chloroides; ulteriori Lactarioides non tutte coperte."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
@@ -2771,10 +3251,23 @@
       "rank": "section",
       "curriculumPage": 15,
       "field": "habitat",
-      "status": "unresolved",
+      "status": "partial-scope",
       "scopeComplete": false,
       "independentReviewStatus": "not-attested",
-      "evidence": [],
+      "evidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-luridus",
+          "locator": "Habitat",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-rubrosanguineus",
+          "locator": "Habitat; Note",
+          "page": null
+        }
+      ],
       "research": [
         {
           "stage": "external",
@@ -2789,7 +3282,14 @@
         }
       ],
       "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
-      "reason": "Nessuna evidenza adeguata all’intera unità e a un contenuto pubblicabile; vedere ricerche registrate."
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "unresolved",
+          "status": "partial-scope",
+          "reason": "Aggiunte gamma ecologica e coppie diagnostiche di componenti nominate; la circoscrizione/copertura dell’intera sezione curricolare non è attestata."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
@@ -2797,10 +3297,23 @@
       "rank": "section",
       "curriculumPage": 15,
       "field": "lookalikes",
-      "status": "unresolved",
+      "status": "partial-scope",
       "scopeComplete": false,
       "independentReviewStatus": "not-attested",
-      "evidence": [],
+      "evidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-rubrosanguineus",
+          "locator": "Habitat; Note",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "locator": "Note",
+          "page": null
+        }
+      ],
       "research": [
         {
           "stage": "external",
@@ -2815,7 +3328,14 @@
         }
       ],
       "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
-      "reason": "Nessuna evidenza adeguata all’intera unità e a un contenuto pubblicabile; vedere ricerche registrate."
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "unresolved",
+          "status": "partial-scope",
+          "reason": "Aggiunte gamma ecologica e coppie diagnostiche di componenti nominate; la circoscrizione/copertura dell’intera sezione curricolare non è attestata."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
@@ -2898,6 +3418,12 @@
           "sourceId": "EXT-SCOPE-f5bba9f808c8",
           "locator": "Scheda principale, Habitat; Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-assyov-2020-neoboletus",
+          "locator": "Yesca 32:77–118 (2020); pp.107–108, Discussion: Morphological variability and distinction from N. erythropus (testo integrale caricato dall’autore)",
+          "page": null
         }
       ],
       "research": [
@@ -2910,7 +3436,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Sostituisce integralmente la nuova aggiunta AMINT contestata con dati primari sotto i nomi e nell’ambito regionale esplicitamente usati da Assyov; nessuna equazione luridiformis=xanthopus né delimitazione esaustiva del gruppo. Copertura baseline parziale preservata."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
@@ -2927,6 +3461,12 @@
           "sourceId": "EXT-SCOPE-f5bba9f808c8",
           "locator": "Scheda principale, Habitat; Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-assyov-2020-neoboletus",
+          "locator": "Yesca 32:77–118 (2020); pp.107–108, Discussion: Morphological variability and distinction from N. erythropus (testo integrale caricato dall’autore)",
+          "page": null
         }
       ],
       "research": [
@@ -2939,7 +3479,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Sostituisce integralmente la nuova aggiunta AMINT contestata con dati primari sotto i nomi e nell’ambito regionale esplicitamente usati da Assyov; nessuna equazione luridiformis=xanthopus né delimitazione esaustiva del gruppo. Copertura baseline parziale preservata."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
@@ -2962,6 +3510,12 @@
           "sourceId": "EXT-SCOPE-0458b5b598a8",
           "locator": "Scheda principale, Habitat; Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "locator": "Habitat; Note sulle variazioni cromatiche",
+          "page": null
         }
       ],
       "research": [
@@ -2974,7 +3528,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
@@ -2991,6 +3553,12 @@
           "sourceId": "EXT-SCOPE-0458b5b598a8",
           "locator": "Scheda principale, Habitat; Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "locator": "Habitat; Note sulle variazioni cromatiche",
+          "page": null
         }
       ],
       "research": [
@@ -3003,7 +3571,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-caloboletus--02--caloboletus-calopus",
@@ -3100,6 +3676,12 @@
           "sourceId": "EXT-SCOPE-663878a847c3",
           "locator": "Scheda principale, Habitat; Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-castro-freire-1995",
+          "locator": "pp. 123 e 125; Table I; Habitat & Distribution",
+          "page": null
         }
       ],
       "research": [
@@ -3112,7 +3694,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
@@ -3129,6 +3719,12 @@
           "sourceId": "EXT-SCOPE-663878a847c3",
           "locator": "Scheda principale, Habitat; Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-castro-freire-1995",
+          "locator": "pp. 123 e 125; Table I; Habitat & Distribution",
+          "page": null
         }
       ],
       "research": [
@@ -3141,7 +3737,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
@@ -3458,6 +4062,12 @@
           "sourceId": "EXT-SCOPE-389d4dd7969051b1",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-b9a1dff7e996d87d",
+          "locator": "Abstract; Mycologia 104(6):1443–1455, DOI 10.3852/11-378",
+          "page": null
         }
       ],
       "research": [
@@ -3469,7 +4079,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Estensione concreta dal solo repandum a due componenti rufescens-like; restano altre linee criptiche senza chiave esaustiva. Il paper Niskanen 2018 pp.890–891 conferma sovrapposizione morfologica e diagnosi difficile/impossibile soprattutto nel complesso rufescens."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
@@ -3497,10 +4115,17 @@
       "rank": "genus",
       "curriculumPage": 18,
       "field": "lookalikes",
-      "status": "unresolved",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
-      "evidence": [],
+      "evidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-f72d02496dd2ce32",
+          "locator": "p.149 (PDF9), Notes H. alpestre; p.153 (PDF13), Key to species, coppie1–4 e note extralimitali; DOI10.3114/persoonia.2025.55.04",
+          "page": null
+        }
+      ],
       "research": [
         {
           "stage": "external",
@@ -3512,7 +4137,14 @@
         }
       ],
       "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
-      "reason": "Nessuna evidenza adeguata all’intera unità e a un contenuto pubblicabile; vedere ricerche registrate."
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "unresolved",
+          "status": "external-supported",
+          "reason": "Confronti diagnostici interni pertinenti alla scheda di genere, con copertura esplicita dei quattro taxa europei trattati: erinaceus, cirrhatum, coralloides e alpestre. Non pretende una chiave delle specie mondiali; nessuna nuova scheda autonoma."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
@@ -3589,6 +4221,12 @@
           "sourceId": "EXT-SCOPE-62241e5d42eaa424",
           "locator": "Habitat; Specie simili; Osservazioni",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-851401027abf288f",
+          "locator": "pp.1–2, testo comparativo e bibliografia",
+          "page": null
         }
       ],
       "research": [
@@ -3600,7 +4238,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Estende la precedente evidenza europea indistinta a montanus e sulphureus s.str., con limite diagnostico esplicito. Non copre tutti i segregati mondiali del concetto s.l. Primary Mycotaxon2008 identificata ma testo integrale BHL/cybertruffle non recuperato: nessuna adozione da testo non visto."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
@@ -3617,6 +4263,12 @@
           "sourceId": "EXT-SCOPE-62241e5d42eaa424",
           "locator": "Habitat; Specie simili; Osservazioni",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-851401027abf288f",
+          "locator": "pp.1–2, testo comparativo e bibliografia",
+          "page": null
         }
       ],
       "research": [
@@ -3628,7 +4280,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Estende la precedente evidenza europea indistinta a montanus e sulphureus s.str., con limite diagnostico esplicito. Non copre tutti i segregati mondiali del concetto s.l. Primary Mycotaxon2008 identificata ma testo integrale BHL/cybertruffle non recuperato: nessuna adozione da testo non visto."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-polyporaceae-s-l--03--albatrellus-confluens",
@@ -3696,14 +4356,26 @@
       "rank": "speciesGroup",
       "curriculumPage": 18,
       "field": "lookalikes",
-      "status": "partial-scope",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
       "evidence": [
         {
           "kind": "external",
           "sourceId": "EXT-SCOPE-fe9050d0e9a787e0",
           "locator": "p. 29 (PDF 29), A. subrubescens, Confronto con specie simili",
+          "page": null
+        },
+        {
+          "kind": "internal",
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "locator": "p.126; Il caso di Albatrellus subrubescens; rendering r2-albatrellus.png verificato",
+          "page": 126
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-79f37c3f7752feb6",
+          "locator": "pp.1–2, confronto fra le tre specie",
           "page": null
         }
       ],
@@ -3716,7 +4388,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "external-supported",
+          "reason": "Copertura esplicita di tutte e tre le componenti nominate da S1; non soltanto subrubescens. Esclusi gusto e giudizi alimentari. L’abstract primario Ryman et al.2003 conferma citrinus/subrubescens per ecologia, ingiallimento e spore."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
@@ -3744,10 +4424,17 @@
       "rank": "species",
       "curriculumPage": 18,
       "field": "lookalikes",
-      "status": "unresolved",
-      "scopeComplete": false,
+      "status": "external-supported",
+      "scopeComplete": true,
       "independentReviewStatus": "not-attested",
-      "evidence": [],
+      "evidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-8bbe73371f8eb993",
+          "locator": "Taxonomy, Albatrellus pes-caprae, Notes; Mycology16(2):738–776; DOI10.1080/21501203.2024.2386021",
+          "page": null
+        }
+      ],
       "research": [
         {
           "stage": "external",
@@ -3759,7 +4446,14 @@
         }
       ],
       "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
-      "reason": "Nessuna evidenza adeguata all’intera unità e a un contenuto pubblicabile; vedere ricerche registrate."
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "unresolved",
+          "status": "external-supported",
+          "reason": "Primo confronto nominativo con differenza esplicita per la specie, dal sinonimo Albatrellus pes-caprae. Ambito internazionale dichiarato: edulis trattato da materiale asiatico, ellisii nordamericano; non presunta co-occorrenza italiana. Non ricavato da “inconfondibile”."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
@@ -4022,6 +4716,12 @@
           "sourceId": "EXT-SCOPE-b5ef203e2dae96fc",
           "locator": "Specie simili; Basidiocarpo",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-5daf7eebaac79cf8",
+          "locator": "Mycologia Bavarica17:47–64, pp.47–48,60–64; tabella1 p.64 (PDF66)",
+          "page": null
         }
       ],
       "research": [
@@ -4033,7 +4733,15 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Copre ora tre componenti/confronti del gruppo europeo, superando botrytis nominale. L’autore avverte possibili differenze genetiche tra rubripermanens europeo e tipo americano; la reazione al Melzer necessita ulteriore conferma. Non esteso a tutto il complesso mondiale."
+        }
+      ]
     },
     {
       "id": "minimum-card-objective-auricularia--01--auricularia-auricula-judae",
@@ -4110,6 +4818,12 @@
           "sourceId": "EXT-SCOPE-073db50e89d11753",
           "locator": "Specie simili",
           "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-14a2e07e4e53db36",
+          "locator": "Taxonomy, Differentiation from S. crassa; Discussion, Ecology and morphology; Mycological Progress23:69",
+          "page": null
         }
       ],
       "research": [
@@ -4121,13 +4835,23 @@
           ]
         }
       ],
-      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs."
+      "internalSearch": "Scoped pass: 39 course PDFs plus teacher-attributed MicoLab transcript; no inference from images or unsupported occurrence graphs.",
+      "history": [
+        {
+          "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+          "previousStatus": "partial-scope",
+          "status": "partial-scope",
+          "reason": "Nuovo confronto interno dei due taxa europei ora distinti; nomenclatura crassa, non cretacea. Resta aperta l’estensione dei confronti storici ai numerosi segregati nordamericani e alle linee non descritte."
+        }
+      ]
     }
   ],
   "summary": {
-    "partial-scope": 44,
-    "external-supported": 111,
+    "partial-scope": 40,
+    "external-supported": 120,
     "internal-supported": 19,
-    "unresolved": 5
-  }
+    "unresolved": 0
+  },
+  "latestFollowup": "revisione/habitat-comparison-followup-20261026.json",
+  "completionMeaning": "Copertura bibliografica del perimetro didattico documentato; non revisione scientifica indipendente né esaustività di tutti i lignaggi mondiali."
 }

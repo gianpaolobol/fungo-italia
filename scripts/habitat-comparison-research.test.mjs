@@ -34,3 +34,16 @@ test('new supplementary evidence retains explicit mycological authority and poin
   assert.equal(source.reviewStatus,'source-consulted-pending-independent-review');
  }
 });
+test('follow-up accounts for each of the49 previously partial or unresolved fields and requires new evidence for closure',()=>{
+ const followup=read('revisione/habitat-comparison-followup-20261026.json');
+ const ledger=read('revisione/habitat-comparison-completion-20261026.json');
+ assert.equal(followup.baselineCommit,'e5a4612f286010f8af26338316d47bbe749d4359');
+ assert.equal(followup.items.length,49);assert.equal(new Set(followup.items.map(x=>x.id+':'+x.field)).size,49);
+ for(const item of followup.items){
+  assert.ok(['partial-scope','unresolved'].includes(item.previousStatus));
+  const current=ledger.items.find(x=>x.id===item.id&&x.field===item.field);assert.ok(current);assert.equal(item.status,current.status);
+  assert.ok(item.internalSearch.length>0);assert.ok(item.reason);
+  if(item.status.endsWith('-supported')){assert.ok(item.newEvidence.length>0);assert.ok(item.scopeBasis);}
+  for(const e of item.newEvidence)assert.ok(current.evidence.some(x=>x.sourceId===e.sourceId&&x.locator===e.locator));
+ }
+});

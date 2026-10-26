@@ -1,0 +1,1295 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-26",
+  "baselineCommit": "e5a4612f286010f8af26338316d47bbe749d4359",
+  "method": "All49 remaining fields rechecked internally before qualified external sources. Named-component ranges retained as partial when whole curricular scope remains unbounded. Internal component comparisons allowed; international comparators explicitly qualified.",
+  "summary": {
+    "partial-scope": 40,
+    "external-supported": 9,
+    "internal-supported": 0,
+    "unresolved": 0
+  },
+  "items": [
+    {
+      "id": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "scientificName": "Agaricus sez. Xanthodermatei",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-509588b1d1da02",
+          "locator": "Mycologia 97(6), Table I, pp. 1294–1295; collections CA141/162/199, LAPAG237, CA156/31/209/210",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.researchgate.net/publication/7060965_Agaricus_section_Xanthodermatei_A_phylogenetic_reconstruction_with_commentary_on_taxa"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "scientificName": "Agaricus sez. Sanguinolenti",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-ddb41a7a1b2bd6",
+          "locator": "Foto e Descrizioni, raccolta Umbria novembre 2021; commento Cittadini 30 marzo 2022",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/16392-agaricus-langei-fh-m%C3%B6ll-fh%C2%A0m%C3%B6ll-1952/"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "scientificName": "Clitocybe dealbata / Collybia rivulosa",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-7dfd577dc929ef",
+          "locator": "HABITAT; NOTE",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://ambbresadola.it/funghi_tossici/clitocybe-dealbata-2/"
+      ],
+      "reason": "Nuova fonte AMB amplia e precisa habitat, ma dichiara concetti Lamoure/Moser differenti: non basta per tutti i concetti storici dell’unità doppia.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "scientificName": "Clitopilus prunulus s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-15dfdae3aed022",
+          "locator": "Mycological Progress 19:805–816; C. abprunulus Diagnosis, Ecology and distribution, Notes, pp. 811–812; Discussion p.814",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.researchgate.net/publication/343569872_Clitopilus_abprunulus_a_new_species_from_North_Macedonia_with_notes_on_C_ravus_and_pleuromutilin_producing_taxa"
+      ],
+      "reason": "Nuovo segregato europeo C. abprunulus trattato nel paper come precedentemente identificato C. prunulus; habitat e confronto esplicito documentati. Non prova tutte le componenti del s.l.; non crea una scheda autonoma.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "scientificName": "Clitopilus prunulus s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-15dfdae3aed022",
+          "locator": "Mycological Progress 19:805–816; C. abprunulus Diagnosis, Ecology and distribution, Notes, pp. 811–812; Discussion p.814",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.researchgate.net/publication/343569872_Clitopilus_abprunulus_a_new_species_from_North_Macedonia_with_notes_on_C_ravus_and_pleuromutilin_producing_taxa"
+      ],
+      "reason": "Nuovo segregato europeo C. abprunulus trattato nel paper come precedentemente identificato C. prunulus; habitat e confronto esplicito documentati. Non prova tutte le componenti del s.l.; non crea una scheda autonoma.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "scientificName": "Gymnopus fusipes",
+      "field": "lookalikes",
+      "previousStatus": "unresolved",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-GYMNOPUS-GALVANIN-2012",
+          "locator": "p. 9, Note: confronto con Gymnopus (ex Collybia) fusipes; articolo pp. 7–9",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        {
+          "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+          "pages": [
+            22,
+            23
+          ],
+          "result": "Due tavole intitolate alla specie; nessun confronto testuale."
+        },
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "pages": [
+            54
+          ],
+          "result": "Elenco tossicologico; nessuna distinzione morfologica."
+        },
+        {
+          "sourceId": "COURSE-CHAT-TEXT-MICOLAB-20261022",
+          "result": "Nessun nuovo confronto docente attribuito alla specie."
+        }
+      ],
+      "externalSearch": [
+        "https://www.ambpadova.it/wp-content/uploads/2017/09/notiziario11.pdf",
+        "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/gymnopus-fusipes.html"
+      ],
+      "reason": "Confronto esplicito con taxon nominato e caratteri distintivi, verificato nella pagina originale dell’articolo firmato.",
+      "outcome": "full",
+      "scopeBasis": "Confronto esplicito con taxon nominato e caratteri distintivi, verificato nella pagina originale dell’articolo firmato."
+    },
+    {
+      "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "scientificName": "Entoloma clypeatum s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-68fa298a863473",
+          "locator": "Entoloma sepium; paragrafi iniziali e commento Lezzi",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=1762"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "scientificName": "Hygrocybe conica s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-263d81828a04d1",
+          "locator": "Foto e Descrizioni; testo e commenti nominativi Lezzi, raccolta Lazio ottobre 2007",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/45404-hygrocybe-conica-var-conicoides-pd-orton-boertm-1995/"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "scientificName": "Hygrocybe conica s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-263d81828a04d1",
+          "locator": "Foto e Descrizioni; testo e commenti nominativi Lezzi, raccolta Lazio ottobre 2007",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/45404-hygrocybe-conica-var-conicoides-pd-orton-boertm-1995/"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "scientificName": "Echinoderma asperum s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-67502a023ecc7a",
+          "locator": "Fungal Systematics and Evolution 15:235–263; Taxonomy: E. asperum, p. 245; E. perplexum, p. 246",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11952186/"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "scientificName": "Echinoderma asperum s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-67502a023ecc7a",
+          "locator": "Fungal Systematics and Evolution 15:235–263; Taxonomy: E. asperum, p. 245; E. perplexum, p. 246",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC11952186/"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://amsaccardo.it/wp-content/uploads/2014/06/QUI-SACCARDO-N%C2%B0-39-Anno-19%C2%B0.pdf"
+      ],
+      "reason": "Contributo L. subcretaceus escluso: inclusione nel raggruppamento curricolare non dimostrata.",
+      "outcome": "no-new-evidence"
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "scientificName": "Chlorophyllum rhacodes s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-ef00c3e72d5cfb",
+          "locator": "Galleria, descrizione ecologica e posizione nel complesso C. rhacodes",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www2.muse.it/bresadola/galleria_sp.asp?sp=374428"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "scientificName": "Lepista nuda s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-250b9df382b0c7",
+          "locator": "Paragrafo Lepista glaucocana; confronto esplicito con Lepista nuda",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=902"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "scientificName": "Lepista nuda s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-250b9df382b0c7",
+          "locator": "Paragrafo Lepista glaucocana; confronto esplicito con Lepista nuda",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=902"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
+      "scientificName": "Lepista flaccida s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/15081-infundibulicybe-gibba-pers-fr-harmaja-2003/",
+        "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf"
+      ],
+      "reason": "Riesaminati materiali interni e ricerca esterna: nessun dato nuovo adottabile per l’intera unità oltre ai contenuti già consolidati.",
+      "outcome": "no-new-evidence"
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://enciclopedia.funghiitaliani.it/termine.php?show=889",
+        "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf"
+      ],
+      "reason": "Riesaminati materiali interni e ricerca esterna: nessun dato nuovo adottabile per l’intera unità oltre ai contenuti già consolidati.",
+      "outcome": "no-new-evidence"
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "scientificName": "Leucopaxillus giganteus s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-d7629c3896c6ec",
+          "locator": "Foto e Descrizioni; Osservazioni sulla sezione Aspropaxillus; raccolta Trentino-Alto Adige settembre 2010",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/15741-leucopaxillus-candidus-bres-singer-1939/"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "scientificName": "Lyophyllum specie annerenti",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-7b7ecd9f82a756",
+          "locator": "Habitat and Range: Similar Species; Habitat",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lyophyllum%20semitale"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "scientificName": "Lyophyllum specie annerenti",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-7b7ecd9f82a756",
+          "locator": "Habitat and Range: Similar Species; Habitat",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Lyophyllum%20semitale"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "scientificName": "Mycena sez. Purae",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-e55016886fdf65",
+          "locator": "Descrizione ecologica iniziale; paragrafo finale di confronto con M. pura",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-77ce8ce44e3923",
+          "locator": "Descrizione ecologica iniziale",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://mycena.no/rosea.htm",
+        "https://mycena.no/pelianthina.htm"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "scientificName": "Mycena sez. Purae",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-e55016886fdf65",
+          "locator": "Descrizione ecologica iniziale; paragrafo finale di confronto con M. pura",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricerca nominale/sinonimi nei 39 PDF del corso, indici index/extra-index/last-index e chat-9.txt; controllo contesto; nessuna deduzione da foto o grafici.",
+        "Riletti draft e supplementary-literature per esclusione duplicati."
+      ],
+      "externalSearch": [
+        "https://mycena.no/rosea.htm"
+      ],
+      "reason": "Nuova evidenza circoscritta a componenti o interpretazioni nominate; non dimostra copertura integrale dell’unità curricolare.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-WSL-PLEUROTUS-2025",
+          "locator": "p.1 Caratteristiche; p.2 Rischi di confusione, confronto diretto con Pleurotus cornucopiae",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti match Pleurotus nelle39 dispense e chat; PRIMAVERILI p48 e microscopia Atzeni/Salerni p66 già registrate: il confronto Omphalotus riguarda solo cornucopiae, nessun nuovo dato interno per la coppia."
+      ],
+      "externalSearch": [
+        "https://www.dora.lib4ri.ch/wsl/dload/wsl:38812/PDF/Auf_der_Maur-2025-Pleuroto_dorato_e_i_rischi-(published_version).pdf",
+        "https://www.micologiabf.org/funghi/pleurotus-cornucopiae-paulet-rolland/"
+      ],
+      "reason": "Confronto esplicito fra entrambe le due componenti nominali chiuse dell’unità S1, con differenza documentata e suoi limiti cromatici. Completa il precedente confronto interno riferito soltanto a cornucopiae.",
+      "outcome": "full",
+      "scopeBasis": "Confronto esplicito fra entrambe le due componenti nominali chiuse dell’unità S1, con differenza documentata e suoi limiti cromatici. Completa il precedente confronto interno riferito soltanto a cornucopiae."
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "scientificName": "Tricholoma terreum",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-TRICH1999-TERREUM",
+          "locator": "p.304 (PDF10), T. terreum, Habitat & distribution",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf"
+      ],
+      "reason": "Revisione primaria riferita a T. terreum, supera il limite dei soli dati interni s.l.",
+      "outcome": "full",
+      "scopeBasis": "Revisione primaria riferita a T. terreum, supera il limite dei soli dati interni s.l."
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "scientificName": "Tricholoma saponaceum s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-TRICH2017-CONTEXTOCUTIS",
+          "locator": "p.52 (PDF15), Section Contextocutis (= section Rigida)",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/pub/614530/PERS2017038001003.pdf"
+      ],
+      "reason": "La revisione tratta le quattro componenti esplicitamente incluse nella lezione: saponaceum,boudieri,rapipes,sudum. Copertura del range ecologico, non un ospite universale.",
+      "outcome": "full",
+      "scopeBasis": "La revisione tratta le quattro componenti esplicitamente incluse nella lezione: saponaceum,boudieri,rapipes,sudum. Copertura del range ecologico, non un ospite universale."
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "scientificName": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf"
+      ],
+      "reason": "La revisione1999 già copre album,stiparophyllum,lascivum,sulphurescens. Nessuna nuova componente del perimetro aperto «e altri» verificata: nessun cambio artificiale di stato.",
+      "outcome": "no-new-evidence"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-TRICH1999-TERREUM",
+          "locator": "p.304 (PDF10), T. terreum, Habitat & distribution",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf"
+      ],
+      "reason": "Aggiunta ecologia di terreum o confronto interno dei gruppi pratici; unità aperta «e altre» e componenti non tutte circoscritte.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "internal",
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "locator": "p.37, I Tricholoma grigi opachi, punti1,3,4; immagine renderizzata tricholoma-mu37.png verificata",
+          "page": 37
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf"
+      ],
+      "reason": "Aggiunta ecologia di terreum o confronto interno dei gruppi pratici; unità aperta «e altre» e componenti non tutte circoscritte.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-CEDRETORUM",
+          "locator": "Habitat; Specie simili; attribuzione CLR",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/56970-tricholoma-cedretorum-bon-a-riva-2000/"
+      ],
+      "reason": "Nuovi ospiti per più componenti, ma la sezione curricolare non coincide automaticamente con tutte le circoscrizioni molecolari moderne.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "scientificName": "Tricholoma acerbum s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-IUCN-ROSEOACERBUM",
+          "locator": "Habitat and Ecology; Taxonomic notes; assessor/reviewer",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://redlist.info/iucn/species_view/107348/"
+      ],
+      "reason": "Nuova ecologia di roseoacerbum, ma confini del complesso s.l. e conspecificità delle popolazioni non definitivamente risolti.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-russula--01--russula-foetentinae",
+      "scientificName": "Russula Foetentinae",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-BAZZICALUPO-FOETENTINAE-H",
+          "locator": "Foetentinae Species Notes, Ecology 1–6",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-MELERA-RECONDITA",
+          "locator": "PDF14, Habitat di R. recondita; DOI10.1007/s11557-016-1256-y",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-SORORIA-CONSOBRINA",
+          "locator": "Habitat; Microscopia; Specie simili; attribuzione CLR",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMER118-FOETENTINAE",
+          "locator": "p.19 (PDF20), Osservazioni; DOI10.57624/AMER.2023.08",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Floriani PDF originale pp.48,50,55–57: testo riletto; render PyMuPDF pp.48,55,56 verificati. Nessuna ecologia dedotta dalle fotografie.",
+        "Componenti visibili: sei nomi nello schema foetens; sororia e recondita nelle pagine della serie pectinata."
+      ],
+      "externalSearch": [
+        "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+        "https://aris.supsi.ch/server/api/core/bitstreams/420f4069-f763-4b35-ba65-4d93cac59dd3/content",
+        "https://www.ameronlus.it/RMR/2023/boll_118/boll_118.pdf",
+        "https://www.funghiitaliani.it/topic/65269-russula-consobrina-fr-fr-fr-1825/"
+      ],
+      "reason": "Copertura riferita al perimetro della lezione Floriani: p.48 due serie; p.50 foetens,putida,subfoetens,illota,grata,fragrantissima; pp.55–57 sororia,recondita. Le evidenze precedenti per la serie foetens sono integrate da ecologia e confronti delle componenti pectinata e dall’habitat mancante di putida. Nessuna richiesta di coprire tutti i lignaggi mondiali; restano visibili incertezze tassonomiche e necessità di microscopia.",
+      "outcome": "full",
+      "scopeBasis": "Copertura riferita al perimetro della lezione Floriani: p.48 due serie; p.50 foetens,putida,subfoetens,illota,grata,fragrantissima; pp.55–57 sororia,recondita. Le evidenze precedenti per la serie foetens sono integrate da ecologia e confronti delle componenti pectinata e dall’habitat mancante di putida. Nessuna richiesta di coprire tutti i lignaggi mondiali; restano visibili incertezze tassonomiche e necessità di microscopia."
+    },
+    {
+      "id": "minimum-card-objective-russula--01--russula-foetentinae",
+      "scientificName": "Russula Foetentinae",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-BAZZICALUPO-FOETENTINAE-L",
+          "locator": "Foetentinae Species Notes, Diagnostic notes 1–6",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-BAZZICALUPO-PECTINATAE",
+          "locator": "Chiave iniziale I–II; original DOC scaricato e letto",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-SORORIA-CONSOBRINA",
+          "locator": "Habitat; Microscopia; Specie simili; attribuzione CLR",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMER118-FOETENTINAE",
+          "locator": "p.19 (PDF20), Osservazioni; DOI10.57624/AMER.2023.08",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Floriani PDF originale pp.48,50,55–57: testo riletto; render PyMuPDF pp.48,55,56 verificati. Nessuna ecologia dedotta dalle fotografie.",
+        "Componenti visibili: sei nomi nello schema foetens; sororia e recondita nelle pagine della serie pectinata."
+      ],
+      "externalSearch": [
+        "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+        "https://aris.supsi.ch/server/api/core/bitstreams/420f4069-f763-4b35-ba65-4d93cac59dd3/content",
+        "https://www.ameronlus.it/RMR/2023/boll_118/boll_118.pdf",
+        "https://www.funghiitaliani.it/topic/65269-russula-consobrina-fr-fr-fr-1825/"
+      ],
+      "reason": "Copertura riferita al perimetro della lezione Floriani: p.48 due serie; p.50 foetens,putida,subfoetens,illota,grata,fragrantissima; pp.55–57 sororia,recondita. Le evidenze precedenti per la serie foetens sono integrate da ecologia e confronti delle componenti pectinata e dall’habitat mancante di putida. Nessuna richiesta di coprire tutti i lignaggi mondiali; restano visibili incertezze tassonomiche e necessità di microscopia.",
+      "outcome": "full",
+      "scopeBasis": "Copertura riferita al perimetro della lezione Floriani: p.48 due serie; p.50 foetens,putida,subfoetens,illota,grata,fragrantissima; pp.55–57 sororia,recondita. Le evidenze precedenti per la serie foetens sono integrate da ecologia e confronti delle componenti pectinata e dall’habitat mancante di putida. Nessuna richiesta di coprire tutti i lignaggi mondiali; restano visibili incertezze tassonomiche e necessità di microscopia."
+    },
+    {
+      "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "scientificName": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-AMINT-CHLOROIDES",
+          "locator": "Habitat; attribuzione autore e CLR",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti39 estratti PDF originali indicizzati da index.json,extra-index.json,last-index.json e chat-9.txt; ricerche per nomi e componenti.",
+        "Sitta Tricholoma pp.7–8,21–29,37–43; Floriani Russula sezioni Lactarioides e Ingratae incluse serie foetens e pectinata.",
+        "Nessun habitat nuovo adottabile; per confronto grigi opachi verificato render p.37."
+      ],
+      "externalSearch": [
+        "https://www.funghiitaliani.it/topic/15566-russula-chloroides-krombh-bres1900/"
+      ],
+      "reason": "Aggiunta componente chloroides; ulteriori Lactarioides non tutte coperte.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "scientificName": "Boletus sez. Luridi",
+      "field": "habitat",
+      "previousStatus": "unresolved",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-luridus",
+          "locator": "Habitat",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-rubrosanguineus",
+          "locator": "Habitat; Note",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricontrollati tutti i match in 39 PDF estratti e chat-9.txt: boletacee pp.33–34,57–75; boletales pp.35–36,57–74; boletus 79p (porcini); tossicologia1/2; Salerni Comunità fungine pp.10,12; chat 30/09–01/10 e NS9.",
+        "Luridi p57 descrive eterogeneità/viraggio e forme xantoidi, non habitat. Tavole queletii-luridus p73/72 e castaneus p34/36 sono foto/caption, senza differenza diagnostica testuale adottabile. Tossicologia2 p54 include ammophilus nel castaneus s.l.; nessun contenuto alimentare importato.",
+        "Habitat Salerni già adottati: nessun doppio inserimento; nessuna inferenza da grafici o immagini."
+      ],
+      "externalSearch": [
+        "https://www.ambpesaro.it/portfolio-item/suillellus-luridus/",
+        "https://www.ambpesaro.it/portfolio-item/suillellus-rubrosanguineus/",
+        "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/"
+      ],
+      "reason": "Aggiunte gamma ecologica e coppie diagnostiche di componenti nominate; la circoscrizione/copertura dell’intera sezione curricolare non è attestata.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "scientificName": "Boletus sez. Luridi",
+      "field": "lookalikes",
+      "previousStatus": "unresolved",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-rubrosanguineus",
+          "locator": "Habitat; Note",
+          "page": null
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "locator": "Note",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricontrollati tutti i match in 39 PDF estratti e chat-9.txt: boletacee pp.33–34,57–75; boletales pp.35–36,57–74; boletus 79p (porcini); tossicologia1/2; Salerni Comunità fungine pp.10,12; chat 30/09–01/10 e NS9.",
+        "Luridi p57 descrive eterogeneità/viraggio e forme xantoidi, non habitat. Tavole queletii-luridus p73/72 e castaneus p34/36 sono foto/caption, senza differenza diagnostica testuale adottabile. Tossicologia2 p54 include ammophilus nel castaneus s.l.; nessun contenuto alimentare importato.",
+        "Habitat Salerni già adottati: nessun doppio inserimento; nessuna inferenza da grafici o immagini."
+      ],
+      "externalSearch": [
+        "https://www.ambpesaro.it/portfolio-item/suillellus-luridus/",
+        "https://www.ambpesaro.it/portfolio-item/suillellus-rubrosanguineus/",
+        "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/"
+      ],
+      "reason": "Aggiunte gamma ecologica e coppie diagnostiche di componenti nominate; la circoscrizione/copertura dell’intera sezione curricolare non è attestata.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-assyov-2020-neoboletus",
+          "locator": "Yesca 32:77–118 (2020); pp.107–108, Discussion: Morphological variability and distinction from N. erythropus (testo integrale caricato dall’autore)",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Resta valida la ricognizione interna precedente:39 PDF+chat-9; Salerni p12 già adottata, nessun nuovo habitat/confronto interno."
+      ],
+      "externalSearch": [
+        "https://ucrisportal.univie.ac.at/en/publications/neoboletus-xanthopus-a-sibling-species-of-neoboletus-luridiformis/",
+        "https://www.sydowia.at/syd67/T17-Urban.htm",
+        "https://www.verlag-berger.at/detailview?no=2207",
+        "https://www.researchgate.net/publication/347886094_Neoboletus_xanthopus_-_additional_data_and_iconography_of_a_widespread_but_frequently_neglected_species_Neoboletus_xanthopus_-_Datos_adicionales_e_iconografia_de_una_especie_muy_extendida_pero_frecuen"
+      ],
+      "reason": "Sostituisce integralmente la nuova aggiunta AMINT contestata con dati primari sotto i nomi e nell’ambito regionale esplicitamente usati da Assyov; nessuna equazione luridiformis=xanthopus né delimitazione esaustiva del gruppo. Copertura baseline parziale preservata.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-assyov-2020-neoboletus",
+          "locator": "Yesca 32:77–118 (2020); pp.107–108, Discussion: Morphological variability and distinction from N. erythropus (testo integrale caricato dall’autore)",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Resta valida la ricognizione interna precedente:39 PDF+chat-9; Salerni p12 già adottata, nessun nuovo habitat/confronto interno."
+      ],
+      "externalSearch": [
+        "https://ucrisportal.univie.ac.at/en/publications/neoboletus-xanthopus-a-sibling-species-of-neoboletus-luridiformis/",
+        "https://www.sydowia.at/syd67/T17-Urban.htm",
+        "https://www.verlag-berger.at/detailview?no=2207",
+        "https://www.researchgate.net/publication/347886094_Neoboletus_xanthopus_-_additional_data_and_iconography_of_a_widespread_but_frequently_neglected_species_Neoboletus_xanthopus_-_Datos_adicionales_e_iconografia_de_una_especie_muy_extendida_pero_frecuen"
+      ],
+      "reason": "Sostituisce integralmente la nuova aggiunta AMINT contestata con dati primari sotto i nomi e nell’ambito regionale esplicitamente usati da Assyov; nessuna equazione luridiformis=xanthopus né delimitazione esaustiva del gruppo. Copertura baseline parziale preservata.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "locator": "Habitat; Note sulle variazioni cromatiche",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricontrollati tutti i match in 39 PDF estratti e chat-9.txt: boletacee pp.33–34,57–75; boletales pp.35–36,57–74; boletus 79p (porcini); tossicologia1/2; Salerni Comunità fungine pp.10,12; chat 30/09–01/10 e NS9.",
+        "Luridi p57 descrive eterogeneità/viraggio e forme xantoidi, non habitat. Tavole queletii-luridus p73/72 e castaneus p34/36 sono foto/caption, senza differenza diagnostica testuale adottabile. Tossicologia2 p54 include ammophilus nel castaneus s.l.; nessun contenuto alimentare importato.",
+        "Habitat Salerni già adottati: nessun doppio inserimento; nessuna inferenza da grafici o immagini."
+      ],
+      "externalSearch": [
+        "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/"
+      ],
+      "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-suillellus-queletii",
+          "locator": "Habitat; Note sulle variazioni cromatiche",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricontrollati tutti i match in 39 PDF estratti e chat-9.txt: boletacee pp.33–34,57–75; boletales pp.35–36,57–74; boletus 79p (porcini); tossicologia1/2; Salerni Comunità fungine pp.10,12; chat 30/09–01/10 e NS9.",
+        "Luridi p57 descrive eterogeneità/viraggio e forme xantoidi, non habitat. Tavole queletii-luridus p73/72 e castaneus p34/36 sono foto/caption, senza differenza diagnostica testuale adottabile. Tossicologia2 p54 include ammophilus nel castaneus s.l.; nessun contenuto alimentare importato.",
+        "Habitat Salerni già adottati: nessun doppio inserimento; nessuna inferenza da grafici o immagini."
+      ],
+      "externalSearch": [
+        "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/"
+      ],
+      "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "scientificName": "Gyroporus castaneus s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-castro-freire-1995",
+          "locator": "pp. 123 e 125; Table I; Habitat & Distribution",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricontrollati tutti i match in 39 PDF estratti e chat-9.txt: boletacee pp.33–34,57–75; boletales pp.35–36,57–74; boletus 79p (porcini); tossicologia1/2; Salerni Comunità fungine pp.10,12; chat 30/09–01/10 e NS9.",
+        "Luridi p57 descrive eterogeneità/viraggio e forme xantoidi, non habitat. Tavole queletii-luridus p73/72 e castaneus p34/36 sono foto/caption, senza differenza diagnostica testuale adottabile. Tossicologia2 p54 include ammophilus nel castaneus s.l.; nessun contenuto alimentare importato.",
+        "Habitat Salerni già adottati: nessun doppio inserimento; nessuna inferenza da grafici o immagini."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/document/569718"
+      ],
+      "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "scientificName": "Gyroporus castaneus s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-castro-freire-1995",
+          "locator": "pp. 123 e 125; Table I; Habitat & Distribution",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Ricontrollati tutti i match in 39 PDF estratti e chat-9.txt: boletacee pp.33–34,57–75; boletales pp.35–36,57–74; boletus 79p (porcini); tossicologia1/2; Salerni Comunità fungine pp.10,12; chat 30/09–01/10 e NS9.",
+        "Luridi p57 descrive eterogeneità/viraggio e forme xantoidi, non habitat. Tavole queletii-luridus p73/72 e castaneus p34/36 sono foto/caption, senza differenza diagnostica testuale adottabile. Tossicologia2 p54 include ammophilus nel castaneus s.l.; nessun contenuto alimentare importato.",
+        "Habitat Salerni già adottati: nessun doppio inserimento; nessuna inferenza da grafici o immagini."
+      ],
+      "externalSearch": [
+        "https://repository.naturalis.nl/document/569718"
+      ],
+      "reason": "Nuovo contenuto puntuale aggiunto alla copertura precedente; resta parziale la delimitazione/copertura dell’intero raggruppamento curricolare, non definita nelle fonti.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-b9a1dff7e996d87d",
+          "locator": "Abstract; Mycologia 104(6):1443–1455, DOI 10.3852/11-378",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://pubmed.ncbi.nlm.nih.gov/22684286/",
+        "https://nlmushrooms.ca/science/2018%20Identifying%20and%20naming%20the%20currently%20known.pdf"
+      ],
+      "reason": "Estensione concreta dal solo repandum a due componenti rufescens-like; restano altre linee criptiche senza chiave esaustiva. Il paper Niskanen 2018 pp.890–891 conferma sovrapposizione morfologica e diagnosi difficile/impossibile soprattutto nel complesso rufescens.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
+      "scientificName": "Hericium spp.",
+      "field": "lookalikes",
+      "previousStatus": "unresolved",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-f72d02496dd2ce32",
+          "locator": "p.149 (PDF9), Notes H. alpestre; p.153 (PDF13), Key to species, coppie1–4 e note extralimitali; DOI10.3114/persoonia.2025.55.04",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://www.persoonia.org/images/Volume55/Persoonia55Art4.pdf"
+      ],
+      "reason": "Confronti diagnostici interni pertinenti alla scheda di genere, con copertura esplicita dei quattro taxa europei trattati: erinaceus, cirrhatum, coralloides e alpestre. Non pretende una chiave delle specie mondiali; nessuna nuova scheda autonoma.",
+      "outcome": "full",
+      "scopeBasis": "Confronti diagnostici interni pertinenti alla scheda di genere, con copertura esplicita dei quattro taxa europei trattati: erinaceus, cirrhatum, coralloides e alpestre. Non pretende una chiave delle specie mondiali; nessuna nuova scheda autonoma."
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "field": "habitat",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-851401027abf288f",
+          "locator": "pp.1–2, testo comparativo e bibliografia",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://www.univie.ac.at/oemykges/wp-content/uploads/2016/11/Laetiporus.pdf",
+        "https://www.biodiversitylibrary.org/partpdf/414243",
+        "https://www.cybertruffle.org.uk/cyberliber/59575/0106/0289.htm"
+      ],
+      "reason": "Estende la precedente evidenza europea indistinta a montanus e sulphureus s.str., con limite diagnostico esplicito. Non copre tutti i segregati mondiali del concetto s.l. Primary Mycotaxon2008 identificata ma testo integrale BHL/cybertruffle non recuperato: nessuna adozione da testo non visto.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-851401027abf288f",
+          "locator": "pp.1–2, testo comparativo e bibliografia",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://www.univie.ac.at/oemykges/wp-content/uploads/2016/11/Laetiporus.pdf",
+        "https://www.biodiversitylibrary.org/partpdf/414243",
+        "https://www.cybertruffle.org.uk/cyberliber/59575/0106/0289.htm"
+      ],
+      "reason": "Estende la precedente evidenza europea indistinta a montanus e sulphureus s.str., con limite diagnostico esplicito. Non copre tutti i segregati mondiali del concetto s.l. Primary Mycotaxon2008 identificata ma testo integrale BHL/cybertruffle non recuperato: nessuna adozione da testo non visto.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "internal",
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "locator": "p.126; Il caso di Albatrellus subrubescens; rendering r2-albatrellus.png verificato",
+          "page": 126
+        },
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-79f37c3f7752feb6",
+          "locator": "pp.1–2, confronto fra le tre specie",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://www.myk.univie.ac.at/wp-content/uploads/2016/11/Albatrellus.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/14635772/"
+      ],
+      "reason": "Copertura esplicita di tutte e tre le componenti nominate da S1; non soltanto subrubescens. Esclusi gusto e giudizi alimentari. L’abstract primario Ryman et al.2003 conferma citrinus/subrubescens per ecologia, ingiallimento e spore.",
+      "outcome": "full",
+      "scopeBasis": "Copertura esplicita di tutte e tre le componenti nominate da S1; non soltanto subrubescens. Esclusi gusto e giudizi alimentari. L’abstract primario Ryman et al.2003 conferma citrinus/subrubescens per ecologia, ingiallimento e spore."
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "scientificName": "Scutiger pes-caprae",
+      "field": "lookalikes",
+      "previousStatus": "unresolved",
+      "status": "external-supported",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-8bbe73371f8eb993",
+          "locator": "Taxonomy, Albatrellus pes-caprae, Notes; Mycology16(2):738–776; DOI10.1080/21501203.2024.2386021",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096695/",
+        "https://www.tandfonline.com/doi/full/10.1080/21501203.2024.2386021"
+      ],
+      "reason": "Primo confronto nominativo con differenza esplicita per la specie, dal sinonimo Albatrellus pes-caprae. Ambito internazionale dichiarato: edulis trattato da materiale asiatico, ellisii nordamericano; non presunta co-occorrenza italiana. Non ricavato da “inconfondibile”.",
+      "outcome": "full",
+      "scopeBasis": "Primo confronto nominativo con differenza esplicita per la specie, dal sinonimo Albatrellus pes-caprae. Ambito internazionale dichiarato: edulis trattato da materiale asiatico, ellisii nordamericano; non presunta co-occorrenza italiana. Non ricavato da “inconfondibile”."
+    },
+    {
+      "id": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "scientificName": "Ramaria botrytis s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-5daf7eebaac79cf8",
+          "locator": "Mycologia Bavarica17:47–64, pp.47–48,60–64; tabella1 p.64 (PDF66)",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://mycologia-bavarica.de/wp-content/uploads/2023/06/Mycologia-Bavarica-17-Heft.pdf",
+        "https://www.fs.usda.gov/pnw/pubs/gtr572/gtr572.pdf"
+      ],
+      "reason": "Copre ora tre componenti/confronti del gruppo europeo, superando botrytis nominale. L’autore avverte possibili differenze genetiche tra rubripermanens europeo e tipo americano; la reazione al Melzer necessita ulteriore conferma. Non esteso a tutto il complesso mondiale.",
+      "outcome": "partial"
+    },
+    {
+      "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "field": "lookalikes",
+      "previousStatus": "partial-scope",
+      "status": "partial-scope",
+      "newEvidence": [
+        {
+          "kind": "external",
+          "sourceId": "EXT-R2-14a2e07e4e53db36",
+          "locator": "Taxonomy, Differentiation from S. crassa; Discussion, Ecology and morphology; Mycological Progress23:69",
+          "page": null
+        }
+      ],
+      "internalSearch": [
+        "Riletti index.json (13), extra-index.json (20), last-index.json (6): ricerca testuale nei 39 PDF/estratti e chat-9.txt per Hydnum, Hericium, Laetiporus, Albatrellus, Scutiger, Ramaria, Sarcosphaera e sinonimi.",
+        "Occorrenze in elenchi, didascalie e identificazioni fotografiche non adottate come confronti; Hydnum nel PDF Perini/classificazione p.36 escluso perché non visibile nel rendering."
+      ],
+      "externalSearch": [
+        "https://link.springer.com/article/10.1007/s11557-024-02006-7"
+      ],
+      "reason": "Nuovo confronto interno dei due taxa europei ora distinti; nomenclatura crassa, non cretacea. Resta aperta l’estensione dei confronti storici ai numerosi segregati nordamericani e alle linee non descritte.",
+      "outcome": "partial"
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "scientificName": "Leucoagaricus leucothites s.l.",
+      "reason": "Unverified membership of L. subcretaceus in curricular group; source candidate retained in follow-up search audit, not catalog."
+    }
+  ],
+  "completionMeaning": "Copertura bibliografica del perimetro didattico documentato; non revisione scientifica indipendente né esaustività di tutti i lignaggi mondiali."
+}

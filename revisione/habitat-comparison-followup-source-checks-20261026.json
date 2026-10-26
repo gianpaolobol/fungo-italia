@@ -1,0 +1,239 @@
+{
+  "updatedAt": "2026-10-26",
+  "checks": [
+    {
+      "source": "39 PDF corso + chat-9.txt",
+      "method": "Ricerca interna prima di ricerca web; tutte le occorrenze pertinenti nei testi estratti rilette; nessuna nuova aggiunta interna.",
+      "physicalPagesInspected": [
+        "Salerni. Microscopia Corso Amiata 12 Maggio 2026.pdf, p.66"
+      ],
+      "result": "Confronto Pleurotus già registrato, escluso come duplicato."
+    },
+    {
+      "source": "External checks",
+      "method": "Aperti e letti testi espliciti; fonti con retrieval fallito non adottate. Ricerca system1 dopo system2 per verifica.",
+      "limitations": "Copertura integrale s.l./sezione non attestata; tutti i testi bibliografici restano pending independent review. Eventuali fonti non AMB/AMINT adottate solo come trattamenti specialistici o atlanti universitari."
+    },
+    {
+      "url": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+      "status": "consulted",
+      "consultedAt": "2026-10-26",
+      "limitation": "Copertura specifica come nei locator; nessuna attestazione indipendente delle schede app."
+    },
+    {
+      "url": "https://repository.naturalis.nl/pub/614530/PERS2017038001003.pdf",
+      "status": "consulted",
+      "consultedAt": "2026-10-26",
+      "limitation": "Copertura specifica come nei locator; nessuna attestazione indipendente delle schede app."
+    },
+    {
+      "url": "https://redlist.info/iucn/species_view/107348/",
+      "status": "consulted",
+      "consultedAt": "2026-10-26",
+      "limitation": "Copertura specifica come nei locator; nessuna attestazione indipendente delle schede app."
+    },
+    {
+      "url": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+      "status": "consulted",
+      "consultedAt": "2026-10-26",
+      "limitation": "Copertura specifica come nei locator; nessuna attestazione indipendente delle schede app."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15566-russula-chloroides-krombh-bres1900/",
+      "status": "consulted",
+      "consultedAt": "2026-10-26",
+      "limitation": "Copertura specifica come nei locator; nessuna attestazione indipendente delle schede app."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/56970-tricholoma-cedretorum-bon-a-riva-2000/",
+      "status": "consulted",
+      "consultedAt": "2026-10-26",
+      "limitation": "Copertura specifica come nei locator; nessuna attestazione indipendente delle schede app."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5645187/",
+      "status": "fallback-used",
+      "reason": "open restituisce reCAPTCHA; usato PDF ufficiale Naturalis integralmente consultabile."
+    },
+    {
+      "url": "https://www.micoponte.it/SchedeFunghi/Tricholoma_saponaceum.html",
+      "status": "consulted-not-adopted",
+      "reason": "Conferma rapipes montano di conifera, preferita revisione primaria2017 che copre tutte quattro componenti."
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "sourceId": "EXT-R2-suillellus-luridus",
+      "url": "https://www.ambpesaro.it/portfolio-item/suillellus-luridus/",
+      "status": "consulted-directly",
+      "authorityVerified": true,
+      "consultedAt": "2026-10-26",
+      "note": "Habitat e differenze letti nel testo; tabella Persoonia p125 verificata anche visivamente. Nessun dato alimentare o immagine importati."
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "sourceId": "EXT-R2-suillellus-rubrosanguineus",
+      "url": "https://www.ambpesaro.it/portfolio-item/suillellus-rubrosanguineus/",
+      "status": "consulted-directly",
+      "authorityVerified": true,
+      "consultedAt": "2026-10-26",
+      "note": "Habitat e differenze letti nel testo; tabella Persoonia p125 verificata anche visivamente. Nessun dato alimentare o immagine importati."
+    },
+    {
+      "scientificName": "Boletus sez. Luridi",
+      "sourceId": "EXT-R2-suillellus-queletii",
+      "url": "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/",
+      "status": "consulted-directly",
+      "authorityVerified": true,
+      "consultedAt": "2026-10-26",
+      "note": "Habitat e differenze letti nel testo; tabella Persoonia p125 verificata anche visivamente. Nessun dato alimentare o immagine importati."
+    },
+    {
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "sourceId": "EXT-R2-praestigiator",
+      "url": "https://www.funghiitaliani.it/topic/16779-neoboletus-praestigiator/",
+      "status": "consulted-directly",
+      "authorityVerified": true,
+      "consultedAt": "2026-10-26",
+      "note": "Habitat e differenze letti nel testo; tabella Persoonia p125 verificata anche visivamente. Nessun dato alimentare o immagine importati."
+    },
+    {
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "sourceId": "EXT-R2-suillellus-queletii",
+      "url": "https://www.ambpesaro.it/portfolio-item/suillellus-queletii/",
+      "status": "consulted-directly",
+      "authorityVerified": true,
+      "consultedAt": "2026-10-26",
+      "note": "Habitat e differenze letti nel testo; tabella Persoonia p125 verificata anche visivamente. Nessun dato alimentare o immagine importati."
+    },
+    {
+      "scientificName": "Gyroporus castaneus s.l.",
+      "sourceId": "EXT-R2-castro-freire-1995",
+      "url": "https://repository.naturalis.nl/document/569718",
+      "status": "consulted-directly",
+      "authorityVerified": true,
+      "consultedAt": "2026-10-26",
+      "note": "Habitat e differenze letti nel testo; tabella Persoonia p125 verificata anche visivamente. Nessun dato alimentare o immagine importati."
+    },
+    {
+      "sourceId": "EXT-R2-assyov-2020-neoboletus",
+      "url": "https://www.researchgate.net/publication/347886094_Neoboletus_xanthopus_-_additional_data_and_iconography_of_a_widespread_but_frequently_neglected_species_Neoboletus_xanthopus_-_Datos_adicionales_e_iconografia_de_una_especie_muy_extendida_pero_frecuen",
+      "status": "full-text-consulted",
+      "consultedAt": "2026-10-26",
+      "authorityVerified": true,
+      "note": "Letti intestazione, materiali/metodo, descrizione e Discussion pp107–108 nel testo integrale autore. I tratti adottati sono prosa esplicita, non estrazione di tabella o inferenza da foto. Realpair: N. erythropus/N. xanthopus distinti nel lavoro. Nessun sinonimo trasformato in distinto comparatore."
+    },
+    {
+      "url": "https://ucrisportal.univie.ac.at/en/publications/neoboletus-xanthopus-a-sibling-species-of-neoboletus-luridiformis/",
+      "status": "abstract-only-consulted",
+      "consultedAt": "2026-10-26",
+      "note": "Confermati autori, journal Sydowia67:175–187, DOI e habitat di xanthopus. Il full text2015 non era accessibile attraverso l’università o la pagina editoriale; nessun tratto morfologico attribuito a questo abstract."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16779-neoboletus-praestigiator/",
+      "status": "rejected-for-new-data",
+      "consultedAt": "2026-10-26",
+      "note": "Escluse entrambe le aggiunte del precedente round2: mappatura nomenclaturale confliggente con lavori primari; preservare soltanto contenuto baseline già separatamente approvato per integrazione."
+    },
+    {
+      "scientificName": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "field": "lookalikes",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22684286/",
+      "locator": "Abstract; Mycologia 104(6):1443–1455, DOI 10.3852/11-378",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-b9a1dff7e996d87d"
+    },
+    {
+      "scientificName": "Hericium spp.",
+      "field": "lookalikes",
+      "url": "https://www.persoonia.org/images/Volume55/Persoonia55Art4.pdf",
+      "locator": "p.149 (PDF9), Notes H. alpestre; p.153 (PDF13), Key to species, coppie1–4 e note extralimitali; DOI10.3114/persoonia.2025.55.04",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-f72d02496dd2ce32"
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "field": "habitat",
+      "url": "https://www.univie.ac.at/oemykges/wp-content/uploads/2016/11/Laetiporus.pdf",
+      "locator": "pp.1–2, testo comparativo e bibliografia",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-851401027abf288f"
+    },
+    {
+      "scientificName": "Laetiporus sulphureus s.l.",
+      "field": "lookalikes",
+      "url": "https://www.univie.ac.at/oemykges/wp-content/uploads/2016/11/Laetiporus.pdf",
+      "locator": "pp.1–2, testo comparativo e bibliografia",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-851401027abf288f"
+    },
+    {
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "field": "lookalikes",
+      "url": "https://www.myk.univie.ac.at/wp-content/uploads/2016/11/Albatrellus.pdf",
+      "locator": "pp.1–2, confronto fra le tre specie",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-79f37c3f7752feb6"
+    },
+    {
+      "scientificName": "Scutiger pes-caprae",
+      "field": "lookalikes",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12096695/",
+      "locator": "Taxonomy, Albatrellus pes-caprae, Notes; Mycology16(2):738–776; DOI10.1080/21501203.2024.2386021",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-8bbe73371f8eb993"
+    },
+    {
+      "scientificName": "Ramaria botrytis s.l.",
+      "field": "lookalikes",
+      "url": "https://mycologia-bavarica.de/wp-content/uploads/2023/06/Mycologia-Bavarica-17-Heft.pdf",
+      "locator": "Mycologia Bavarica17:47–64, pp.47–48,60–64; tabella1 p.64 (PDF66)",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-5daf7eebaac79cf8"
+    },
+    {
+      "scientificName": "Sarcosphaera coronaria s.l.",
+      "field": "lookalikes",
+      "url": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+      "locator": "Taxonomy, Differentiation from S. crassa; Discussion, Ecology and morphology; Mycological Progress23:69",
+      "result": "explicit-text-consulted",
+      "sourceId": "EXT-R2-14a2e07e4e53db36"
+    },
+    {
+      "url": "https://www.ambpadova.it/wp-content/uploads/2017/09/notiziario11.pdf",
+      "taxon": "Gymnopus fusipes",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ripresa soltanto la distinzione morfologica; escluso il giudizio alimentare storico dell’articolo, subordinato a S2."
+    },
+    {
+      "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/gymnopus-fusipes.html",
+      "taxon": "Gymnopus fusipes",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Esclusa: contenuto corrente commerciale estraneo alla scheda indicizzata; non adottato il testo memorizzato nel motore."
+    },
+    {
+      "url": "https://sites.google.com/site/scottishfungi/identification/id-keys/russula-pectinatae-and-foetentinae",
+      "status": "consulted-original-download",
+      "consultedAt": "2026-10-26",
+      "sha256": "a5ad889fbf089c626d4800748e244c42e3dca45206e97440296fcef319f6b245",
+      "finding": "File Word97 .doc, non PDF; chiave con Pectinatae, sole note Foetentinae. Sororia esclusa e recondita non ancora descritta. Nessun habitat Pectinatae nascosto nel download."
+    },
+    {
+      "url": "https://www.ameronlus.it/RMR/2023/boll_118/boll_118.pdf",
+      "status": "consulted-original-download",
+      "sha256": "b5e22022313e227f67a4adc56092cbf562966e65025f14ef0117c849d333c0fc",
+      "finding": "Web open supera limite33MB; download originale completo e p.19 PDF20 renderizzata e letta."
+    },
+    {
+      "url": "https://www.dora.lib4ri.ch/wsl/dload/wsl:38812/PDF/Auf_der_Maur-2025-Pleuroto_dorato_e_i_rischi-(published_version).pdf",
+      "taxon": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Letto PDF istituzionale5p, adottati solo confronto e limiti delle pp1–2; nessun giudizio alimentare, fotografia o consiglio di coltivazione trasferito."
+    }
+  ]
+}

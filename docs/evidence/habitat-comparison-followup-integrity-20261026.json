@@ -1,0 +1,314 @@
+{
+  "baseline": "e5a4612f286010f8af26338316d47bbe749d4359",
+  "catalogUnits": 148,
+  "groups": 70,
+  "photoCases": 86,
+  "previousTheoryQuestions": 475,
+  "currentTheoryQuestions": 476,
+  "unchangedQuestionCorrectAnswersPreserved": 455,
+  "expandedHabitatQuestionCount": 20,
+  "expandedHabitatQuestions": [
+    "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+    "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+    "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+    "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+    "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+    "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+    "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+    "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+    "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+    "minimum-card-objective-mycena--01--mycena-sez-purae",
+    "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+    "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+    "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+    "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+    "minimum-card-objective-russula--01--russula-foetentinae",
+    "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+    "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+    "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+    "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+    "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l"
+  ],
+  "allPreviousHabitatStatementsPreserved": true,
+  "allUnrelatedFieldsPreserved": true,
+  "allExistingSourcesPreserved": true,
+  "habitatPresent": 148,
+  "lookalikesPresent": 148,
+  "fieldResearch": {
+    "partial-scope": 40,
+    "external-supported": 120,
+    "internal-supported": 19,
+    "unresolved": 0
+  },
+  "changes": [
+    {
+      "id": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "name": "Agaricus sez. Xanthodermatei",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "name": "Agaricus sez. Sanguinolenti",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "name": "Clitocybe dealbata / Collybia rivulosa",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "name": "Clitopilus prunulus s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "name": "Gymnopus fusipes",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "name": "Entoloma clypeatum s.l.",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "name": "Hygrocybe conica s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "name": "Echinoderma asperum s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "name": "Chlorophyllum rhacodes s.l.",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "name": "Lepista nuda s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "name": "Leucopaxillus giganteus s.l.",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "name": "Lyophyllum specie annerenti",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "name": "Mycena sez. Purae",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "name": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "name": "Tricholoma terreum",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "name": "Tricholoma saponaceum s.l.",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "name": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "name": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "name": "Tricholoma acerbum s.l.",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-russula--01--russula-foetentinae",
+      "name": "Russula Foetentinae",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "name": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "name": "Boletus sez. Luridi",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "name": "Boletus (Neoboletus) erythropus s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "name": "Boletus queletii e specie vicine/intermedie",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "name": "Gyroporus castaneus s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "name": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
+      "name": "Hericium spp.",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "name": "Laetiporus sulphureus s.l.",
+      "changed": [
+        "habitat",
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "name": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "name": "Scutiger pes-caprae",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "name": "Ramaria botrytis s.l.",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "name": "Sarcosphaera coronaria s.l.",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    }
+  ]
+}
