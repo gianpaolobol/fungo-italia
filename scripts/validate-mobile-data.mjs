@@ -87,6 +87,15 @@ const referenceImages=JSON.parse(await readFile('src/data/reference-images.json'
 const {applyStudyProfiles,applyReferenceImages}=await import('./study-profiles.mjs');
 const expected=[...catalog,...groups].filter(r=>!completionIds.has(r.id)).map(t=>{const copy=structuredClone(t);delete copy.studyProfile;delete copy.referenceImages;return copy;});
 applyStudyProfiles(expected,studyProfiles,courseRegistry);
+const {applyToxicologySyndromes}=await import('./toxicology-syndromes.mjs');
+applyToxicologySyndromes(expected,JSON.parse(await readFile('src/data/toxicology-syndromes.json','utf8')));
+const {applyApprovedExternalStudyEvidence}=await import('./approved-external-study-evidence.mjs');
+applyApprovedExternalStudyEvidence(expected,JSON.parse(await readFile('src/data/external-study-evidence-candidates.json','utf8')));
+applyReferenceImages(expected,referenceImages);
+const {applyAdminReferenceImages}=await import('./admin-reference-images.mjs');
+applyAdminReferenceImages(expected,JSON.parse(await readFile('src/data/admin-reference-images.json','utf8')));
+const {applyReviewedMatrix,readReviewedMatrix}=await import('./reviewed-matrix.mjs');
+applyReviewedMatrix(expected,await readReviewedMatrix(),studyProfiles);
 {
  const actual=catalog.find(t=>t.scientificName==='Scutiger pes-caprae');
  const generated=expected.find(t=>t.scientificName==='Scutiger pes-caprae');
@@ -98,15 +107,6 @@ applyStudyProfiles(expected,studyProfiles,courseRegistry);
  generated.studyProfile.sporePrint={label:'Bianca'};
 }
 
-const {applyToxicologySyndromes}=await import('./toxicology-syndromes.mjs');
-applyToxicologySyndromes(expected,JSON.parse(await readFile('src/data/toxicology-syndromes.json','utf8')));
-const {applyApprovedExternalStudyEvidence}=await import('./approved-external-study-evidence.mjs');
-applyApprovedExternalStudyEvidence(expected,JSON.parse(await readFile('src/data/external-study-evidence-candidates.json','utf8')));
-applyReferenceImages(expected,referenceImages);
-const {applyAdminReferenceImages}=await import('./admin-reference-images.mjs');
-applyAdminReferenceImages(expected,JSON.parse(await readFile('src/data/admin-reference-images.json','utf8')));
-const {applyReviewedMatrix,readReviewedMatrix}=await import('./reviewed-matrix.mjs');
-applyReviewedMatrix(expected,await readReviewedMatrix(),studyProfiles);
 for(const t of [...catalog,...groups].filter(r=>!completionIds.has(r.id))){const e=expected.find(row=>row.id===t.id);assert.deepEqual(t.studyProfile,e.studyProfile);assert.deepEqual(t.referenceImages,e.referenceImages);}
 console.log('Pointwise study profiles and authorized reference galleries survive canonical regeneration.');
 
