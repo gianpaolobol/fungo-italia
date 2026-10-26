@@ -1,0 +1,104 @@
+name: Additional native Areas map and territorial filters
+'on':
+  push:
+    branches:
+    - audit/native-areas-fab2b3e-20261026
+    paths:
+    - .github/workflows/paired-native-areas-audit.yml
+  workflow_dispatch: null
+permissions:
+  contents: read
+concurrency:
+  group: additional-native-areas-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  native-areas:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+        - iphone
+        - ipad
+    runs-on: macos-26
+    timeout-minutes: 45
+    env:
+      STOREKIT_RUNTIME_VERSION: '26.2'
+      CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+      PAIRED_SOURCE: fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Select a compatible Apple StoreKit simulator runtime
+      run: bash scripts/prepare-storekit-runtime.sh
+    - name: Prepare the actual app and Apple StoreKit UI test runner
+      run: "export GITHUB_SHA=\"$PAIRED_SOURCE\"\ntest \"$(git rev-parse HEAD)\" = \"$PAIRED_SOURCE\"\nnpm ci\nnpm run prepare:data\n\
+        git diff --exit-code\n\nnpm run typecheck\nnode --test scripts/subscription-policy.test.mjs\nnpx expo prebuild --platform\
+        \ ios --no-install\nruby scripts/add-storekit-ui-tests.rb\ncd ios\npod install\n\ncd ..\npython3 - <<'INNER'\nfrom\
+        \ pathlib import Path\ns=Path('tests/storekit/AnnualPurchaseUITests.swift').read_text()\ns=s.replace('  let productID\
+        \ =','\\n  @MainActor func auditNativeAreas(_ app: XCUIApplication, _ name: String) async throws {\\n    await require(element(app,\
+        \ \"Aree e habitat\"))\\n    let field = element(app, \"Cerca area o habitat\")\\n    await require(field)\\n    await\
+        \ enterAndConfirm(\"Toscana\", into: field)\\n    await require(element(app, \"6 aree corrispondenti\"))\\n    await\
+        \ tap(app, \"Abruzzo\")\\n    await require(element(app, \"Nessuna area corrisponde ai filtri.\"))\\n    await tap(app,\
+        \ \"Tutte\")\\n    await require(element(app, \"6 aree corrispondenti\"))\\n    await tap(app, \"Mappa online\")\\\
+        n    await require(app.webViews.firstMatch)\\n    let attribution = app.webViews.descendants(matching: .any).matching(NSPredicate(format:\
+        \ \"label CONTAINS %@\", \"OpenStreetMap\")).firstMatch\\n    await require(attribution, timeout: 90)\\n    XCTAssertFalse(element(app,\
+        \ \"Cartografia non disponibile: l\u2019elenco resta consultabile.\").exists)\\n    XCTAssertFalse(element(app, \"\
+        Mappa online non disponibile: consulta l\u2019elenco offline.\").exists)\\n    try capture(app, name)\\n    print(\"\
+        NATIVE_AREAS_MAP \" + name + \" source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible\"\
+        )\\n    await tap(app, \"Elenco offline\")\\n    app.terminate(); app.launch()\\n    await tap(app, \"Aree\")\\n \
+        \   await require(app.staticTexts.matching(NSPredicate(format: \"label BEGINSWITH %@\", \"71 macroaree in \")).firstMatch)\\\
+        n  }\\n'+'  let productID =',1)\nmarker='    XCTAssertFalse(element(app, \"Fungo Italia completo\").exists)'\nassert\
+        \ s.count(marker)==2\ns=s.replace(marker,marker+'\\n    try await auditNativeAreas(app, \"extended-free-map\")',1)\n\
+        pos=s.index(marker,s.index('testAnnualPurchaseRestoreAccessRefundAndExpiry'))\ns=s[:pos]+s[pos:].replace(marker,marker+'\\\
+        n    try await auditNativeAreas(app, \"extended-paid-map\")',1)\nPath('ios/AnnualPurchaseUITestsExtended.swift').write_text(s)\n\
+        INNER\nruby -e 'require \"xcodeproj\";p=Xcodeproj::Project.open(Dir[\"ios/*.xcodeproj\"].first);f=p.files.find{|f|f.path==\"\
+        ../tests/storekit/AnnualPurchaseUITests.swift\"};raise \"Missing test driver\" unless f;f.path=\"AnnualPurchaseUITestsExtended.swift\"\
+        ;p.save'\n"
+    - name: Verify free and subscribed native maps, territorial intersection and existing purchase lifecycle
+      run: "export GITHUB_SHA=\"$PAIRED_SOURCE\"\nmkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name\
+        \ '*.xcworkspace' -print -quit)\nxcodebuild -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\n\
+        node -e 'const p=require(\"./store-evidence/test-schemes.json\");if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"\
+        ))throw Error(\"Purchase UI test scheme missing\")'\nxcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\n\
+        runtime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list devicetypes -j > /tmp/purchase-types.json\nfor family in \"\
+        $SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\" node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const\
+        \ pattern=process.env.FAMILY===\"iphone\"?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw\
+        \ Error(\"Screenshot device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available\
+        \ -j > /tmp/purchase-devices.json\n  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"$runtime\" node -e 'const a=require(\"\
+        /tmp/purchase-devices.json\").devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n\
+        \  if test -z \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n \
+        \ xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun simctl status_bar \"$udid\"\
+        \ override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n\
+        \  if ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"\
+        platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -collect-test-diagnostics never -parallel-testing-enabled\
+        \ NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance\
+        \ 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-'\
+        \ CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testAFreeAgaricusDemoWithoutPurchase\
+        \ -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testAnnualPurchaseRestoreAccessRefundAndExpiry test >\
+        \ \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style compact\
+        \ --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\"\
+        \ 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\
+        \n    exit 1\n  fi\n  mkdir -p \"store-evidence/screenshots/$family\"\n  for name in demo-01-studio demo-02-test demo-03-aree\
+        \ extended-free-map extended-paid-map; do\n    source=$(find \"$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application\"\
+        \ -type f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\"\
+        \ \"store-evidence/screenshots/$family/$name.png\"\n  done\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\
+        \n  xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n\
+        \nBUILD_VERSION=1.1.0 node scripts/verify-native-source.mjs purchase-ui-build/Build/Products/Release-iphonesimulator/FungoItalia.app\n"
+    - name: Preserve UI failure screenshots and attachments
+      if: failure()
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult'\
+        \ -print -quit)\n  if test -n \"$result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path\
+        \ store-evidence/attachments || true\n  fi\nfi\n"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: Additional-native-Areas-${{ matrix.family }}
+        path: store-evidence/
+        retention-days: 30
