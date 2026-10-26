@@ -1,0 +1,54 @@
+name: Qualify paired release browser integration
+on:
+  push:
+    branches: [audit/paired-release-integration-20261026]
+    paths: [.github/workflows/paired-release-integration-preflight.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-proof:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 20
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+      PAIRED_SOURCE: ${{ github.sha }}
+      PAIRED_PREFLIGHT_OFFLINE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - name: Require exact qualified browser version
+        run: node -e "if(require('./web/package-lock.json').packages['node_modules/@playwright/test'].version!=='1.56.1')throw Error('Browser runtime mismatch')"
+      - name: Validate source without changing scientific attestations
+        run: |
+          npm ci
+          npm ci --prefix web
+          npm run prepare:data
+          git diff --exit-code
+          npm run typecheck
+          node --test scripts/*.test.mjs tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs
+          npx expo export --platform ios --output-dir /tmp/paired-integration-ios
+      - name: Build and verify both actual shared browser engines
+        run: |
+          node web/build.mjs
+          cd web
+          npm test
+          npx playwright test --browser=chromium
+          node smoke-unified.mjs
+          UNIFIED_BROWSER=webkit node smoke-unified.mjs
+      - name: Verify real public PWA checkpoint and history across an actual network cut
+        run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-integration"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Paired-browser-integration-evidence
+          path: |
+            ${{ runner.temp }}/paired-integration/capture-report.json
+            ${{ runner.temp }}/paired-integration/*-offline-preflight.png
+            web/unified-phone.png
+            web/test-results/
+          if-no-files-found: warn
+          retention-days: 30
