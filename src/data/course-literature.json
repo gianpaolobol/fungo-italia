@@ -2051,6 +2051,103 @@
           "supportedClaim": "Confronti con Rhodocollybia distorta (gambo ritorto/base rigonfia) e R. butyracea (cappello untuoso); entrambe prive di lamelle macchiate."
         }
       ]
+    },
+    {
+      "scientificName": "Hypholoma fasciculare",
+      "additions": {
+        "habitat": [
+          "Specie saprotrofa su ceppaie, tronchi caduti e legno morto, principalmente di latifoglie e anche di conifere; può fruttificare da radici interrate."
+        ],
+        "lookalikes": [
+          "Hypholoma lateritium: cappello in genere più rossastro e lamelle gialle, poi bruno-olivastre.",
+          "Hypholoma capnoides: lamelle grigio pallido, senza la tipica sfumatura verdastra."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-f04588496e299cce",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Saprotrofo su ceppaie, tronchi caduti e legno morto di latifoglie e conifere, anche radici interrate."
+        },
+        {
+          "sourceId": "LIT-ATLAS-f04588496e299cce",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronto con H. lateritium, cappello rossastro e lamelle gialle, e H. capnoides, lamelle grigie senza toni verdi."
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma vernum",
+      "additions": {
+        "habitat": [
+          "Saprotrofo in prati poco concimati e sponde erbose muschiose, anche sotto conifere o betulle e occasionalmente nelle brughiere."
+        ],
+        "lookalikes": [
+          "Altri Entoloma bruni con umbone possono essere molto simili: per separarli in modo attendibile possono essere necessari i caratteri microscopici; non attribuire identificazioni solo dalla forma del cappello."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-435ef3df571fb3a9",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role; introductory note",
+          "supportedClaim": "Saprotrofo su prati poco concimati, sponde erbose muschiose, anche sotto conifere o betulle e nelle brughiere."
+        },
+        {
+          "sourceId": "LIT-ATLAS-435ef3df571fb3a9",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Numerosi Entoloma bruni umbonati richiedono microscopia per separazione affidabile; non asserisce sosia specifici."
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma rhodopolium s.l.",
+      "additions": {
+        "habitat": [
+          "Per Entoloma rhodopolium in senso stretto: saprotrofo, normalmente gregario in boschi di latifoglie; non generalizzare il dato all'intero aggregato s.l."
+        ],
+        "lookalikes": [
+          "Per la specie nominale: Rhodocollybia butyracea può ricordare esemplari giovani prima che le lamelle assumano tonalità rosate; distinguere anche la sporata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-f6834c2f9ad06113",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "E. rhodopolium nominale saprotrofo in gruppi nei boschi di latifoglie; dato non generalizzato all'intero s.l."
+        },
+        {
+          "sourceId": "LIT-ATLAS-f6834c2f9ad06113",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Per E. rhodopolium nominale, confronto con Rhodocollybia butyracea prima che le lamelle diventino rosate."
+        }
+      ]
     }
   ]
 }
