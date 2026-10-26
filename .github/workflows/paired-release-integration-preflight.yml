@@ -17,6 +17,12 @@ jobs:
       PAIRED_PREFLIGHT_OFFLINE: '1'
     steps:
       - uses: actions/checkout@v4
+      - name: Require the actual isolated Git checkout
+        run: |
+          pwd
+          git config --global --add safe.directory "$(pwd -P)"
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git rev-parse --show-toplevel
       - uses: actions/setup-node@v4
         with:
           node-version: 24.3.0
