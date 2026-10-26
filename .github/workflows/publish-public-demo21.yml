@@ -1,0 +1,77 @@
+name: Publish owner-authorized public demo21
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-public-demo21.yml
+      - tools/public-demo21*.mjs
+      - revisione/owner-public-demo21-20261026.json
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  pages: write
+  id-token: write
+concurrency:
+  group: paired-public-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - name: Verify public authorization and unchanged mandatory release guards
+        run: node --test tools/public-demo21*.test.mjs scripts/release-parity.test.mjs scripts/internal-beta-science.test.mjs scripts/consolidated-evidence.test.mjs
+      - name: Download only the original artifact ID and verify full ZIP SHA-256 before extraction
+        run: node tools/public-demo21.mjs artifact
+      - name: Require exact byte parity, current science, native proofs and live owner-only Apple availability
+        run: node tools/public-demo21.mjs promote
+      - name: Install deterministic browser test tools
+        run: |
+          npm ci --prefix web --ignore-scripts
+          cd web
+          npx playwright install --with-deps chromium webkit
+      - name: Capture pre-deployment PWA and existing synthetic progress in both engines
+        run: node tools/public-demo21-browser.mjs capture "$RUNNER_TEMP/public-demo21-browser"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-ios
+      - name: Repeat all source, science and Apple guards immediately before deployment
+        run: node tools/public-demo21.mjs promote
+      - name: Publish the immutable candidate paired with TestFlight21
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Verify every published byte, icon and native receipt
+        run: node tools/public-demo21.mjs published
+      - name: Verify real PWA upgrade, preserved progress, icon and offline mode on Chromium and WebKit
+        run: node tools/public-demo21-browser.mjs upgrade "$RUNNER_TEMP/public-demo21-browser"
+      - name: Stage public verification evidence only
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/public-demo21-evidence"
+          for name in public-demo21-native-proof.json public-demo21-verification.json; do
+            if test -f "$RUNNER_TEMP/$name"; then cp "$RUNNER_TEMP/$name" "$RUNNER_TEMP/public-demo21-evidence/"; fi
+          done
+          if test -f dist-ios/release.json; then cp dist-ios/release.json "$RUNNER_TEMP/public-demo21-evidence/"; fi
+          for name in capture-report.json upgrade-report.json chromium-verified.png webkit-verified.png; do
+            if test -f "$RUNNER_TEMP/public-demo21-browser/$name"; then cp "$RUNNER_TEMP/public-demo21-browser/$name" "$RUNNER_TEMP/public-demo21-evidence/"; fi
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Public-demo21-verification
+          path: ${{ runner.temp }}/public-demo21-evidence/
+          retention-days: 90
+          if-no-files-found: warn

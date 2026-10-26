@@ -2,6 +2,16 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Autorizzazione della demo GitHub pubblica della21 — 26 ottobre 2026
+
+Il titolare ha confermato esplicitamente l'estensione della distribuzione alla demo GitHub pubblica come beta non certificata, mantenendo i controlli tecnici e il blocco App Store. [Autorizzazione distinta](../revisione/owner-public-demo21-20261026.json), SHA-256 canonico `e7460fb4dc1f579e6f7ca849a87a12f260087ed6f467d7503a808bddfa3a3aea`, limitata al candidato dello SHA6dfb92656ec94485d94aecba72543930c2759d17 e TestFlight1.1.0(21). La precedente dichiarazione scientifica privata non è alterata: publicWebAllowed=false su quella ricevuta, zero revisioni indipendenti e App Store bloccato. La nuova autorizzazione riguarda soltanto la distribuzione della demo beta di questo snapshot.
+
+Publisher dedicato `tools/public-demo21.mjs` e workflow `publish-public-demo21.yml`: originale artefatto12677552815, digest ZIP intero `2852c1eed7ca098633e6ebcb1fe45f056f9c341425d88620b42967d0f07114bd` verificato prima dell'estrazione; poi manifest e ogni byte abbinati alla ricevuta nativa,867file scientifici invariati, tutti i test nativi actual-success, IN_BETA_TESTING e audience esclusiva del titolare riletti da Apple. Il codice dell'app e i vecchi gate di rilascio non cambiano; il confronto GitHub consente solo documentazione e strumenti/policy del publisher rispetto al sorgente della21.
+
+Audit live precedente: GitHub Pages era realmente alla19, ma icona pubblica, manifest e apple-touch-icon avevano già lo stesso hash77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9 della21. Il titolare riferisce la vecchia icona della web app sulla Home. Non attribuire alla pubblicazione remota l'aggiornamento già verificato di un'icona salvata sul suo dispositivo; preservare lo storage e richiedere riscontro sul dispositivo.
+
+Predisposizione:52test mirati verdi e revisione tecnica separata. Corretti prima della pubblicazione identificazione immutabile dell'artefatto, rifiuto dei redirect nella verifica pubblica e prova delle note nel vero storage `fungo-italia:pwa:notes:v1`. La prova browser locale verso il dominio pubblico è limitata dall'ambiente di rete; cattura/aggiornamento reali Chromium/WebKit e verifica integrale del sito sono obbligatori nel workflow. **Pubblicazione della demo21 ancora da confermare**: questa sezione registra autorizzazione e implementazione, non una distribuzione avvenuta.
+
 ## Build21 disponibile — avviso rimosso e fascicolo indipendente aggiornato
 
 **1.1.0(21) effettivamente disponibile nel solo gruppo interno del titolare**, Apple `VALID` e `IN_BETA_TESTING` alle19:53:24 UTC del26/10/2026. Sorgente applicativo `6dfb92656ec94485d94aecba72543930c2759d17`; Apple build `973f19b7-d772-4418-9df0-250fcc6c957a`. [Ricevuta finale integrale](evidence/native-banner-20261026/consolidated-testflight.json), [rapporto con log e prove](evidence/native-banner-20261026/README.md). Lettura Apple separata alle19:53:56 conferma gli stessi stati. Questo risultato supera la disponibilità della20 per la correzione richiesta; installare la21 da TestFlight per riceverla.

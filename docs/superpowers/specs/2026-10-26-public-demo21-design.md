@@ -1,0 +1,9 @@
+# Demo GitHub pubblica abbinata alla21
+
+Il titolare ha chiesto di sincronizzare la demo GitHub su iPhone con TestFlight, inclusa l'icona. Alla domanda esplicita «Confermi di estendere l’autorizzazione anche alla demo GitHub pubblica, come beta non certificata, mantenendo tutti i controlli tecnici e il blocco della pubblicazione App Store?» ha risposto «confermo».
+
+Promuovere solo il candidato immutabile dello SHA6dfb92656ec94485d94aecba72543930c2759d17, già abbinato a1.1.0(21), dal run40380720179, artefatto Paired-web-candidate12677552815. La ricevuta Apple effettiva è in docs/evidence/native-banner-20261026/consolidated-testflight.json. Nuova autorizzazione di distribuzione, distinta dall'attestazione scientifica privata precedente; nessuna firma micologica creata. Non alterare i gate della release pubblica certificata o App Store.
+
+Un percorso dedicato tools/public-demo21.mjs accetta soltanto l'autorizzazione fissata da hash e quei source/build/hash web/icon/IPA/scienza. Riusa validateCandidate, i validatori strict, la verifica nativa e l'audience Apple esistenti; richiede tutti i risultati nativi success e IN_BETA_TESTING reale. Promozione e verifica integrale dei byte pubblicati, massimo8richieste parallele. Nessuna ricompilazione o ricostruzione del candidato; controllare il main dell'orchestratore e che i cambiamenti dal sorgente applicativo riguardino solo documentazione/policy del publisher.
+
+Workflow nuovo su main, senza modificare codice dell'app o workflow iOS, scarica l'artefatto originale, verifica scienza e prove remote, pubblica via Pages e verifica sito e PWA su Chromium/WebKit. Conservazione preferiti/note e prova offline obbligatorie. Le icone servite sono già identiche alla21; l'icona precedentemente salvata sulla Home richiede riscontro sul dispositivo, senza cancellazione dei progressi. Reviewer management resta fuori dall'app.
