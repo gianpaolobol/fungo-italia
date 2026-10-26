@@ -1,0 +1,57 @@
+name: Scientific gap delta validation
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/data/supplementary-literature.json'
+      - 'scripts/export-scientific-gap-register.mjs'
+      - '.github/workflows/scientific-gap-delta.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare-gaps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install dependencies
+        run: npm ci
+      - name: Save base catalog
+        run: git show "${{ github.event.pull_request.base.sha || 'origin/main' }}:src/data/catalog.json" > "${{ runner.temp }}/base-catalog.json"
+      - name: Regenerate canonical data
+        run: npm run prepare:data
+      - name: Export current scientific gaps
+        run: node scripts/export-scientific-gap-register.mjs release-evidence
+      - name: Compare before and after
+        env:
+          BASE_CATALOG: ${{ runner.temp }}/base-catalog.json
+        run: |
+          node --input-type=module <<'EOF'
+          import {readFile,writeFile} from 'node:fs/promises';
+          import {buildReleaseReadinessReport} from './scripts/release-readiness.mjs';
+          const read=async p=>JSON.parse(await readFile(p,'utf8'));
+          const before=buildReleaseReadinessReport(await read(process.env.BASE_CATALOG));
+          const after=buildReleaseReadinessReport(await read('src/data/catalog.json'));
+          const gapCount=(report,key)=>report.profileRows.filter(row=>row.gaps.some(g=>g===key||g.startsWith(key+':'))).length;
+          const keys=['missing-habitat','missing-lookalikes','habitat-without-pointwise-evidence','independent-review-not-attested','missing-reference-views'];
+          const delta=Object.fromEntries(keys.map(key=>[key,{before:gapCount(before,key),after:gapCount(after,key),change:gapCount(after,key)-gapCount(before,key)}]));
+          const out={before:before.totals,after:after.totals,gaps:delta,releaseReady:after.releaseReady};
+          await writeFile('release-evidence/gap-delta.json',JSON.stringify(out,null,2)+'\n');
+          console.log(JSON.stringify(out,null,2));
+          if(after.totals.checked!==before.totals.checked)throw new Error('Curriculum cardinality changed');
+          if(after.totals.blocked>before.totals.blocked)throw new Error('Blocked records increased');
+          EOF
+      - name: Upload gap evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gap-delta-${{ github.sha }}
+          path: release-evidence/
+          retention-days: 30
+      - name: Scientific strict readiness (must pass before release)
+        run: node scripts/release-readiness.mjs --strict
