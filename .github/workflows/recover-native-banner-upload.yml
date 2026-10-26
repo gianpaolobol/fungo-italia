@@ -147,6 +147,11 @@ jobs:
           const c=JSON.parse(await readFile('eas.json','utf8')).submit.production.ios,flags=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/altool-flags.json','utf8'));
           const keys=process.env.RUNNER_TEMP+'/private_keys';await mkdir(keys,{recursive:true,mode:0o700});const key=keys+'/AuthKey_'+c.ascApiKeyId+'.p8';await copyFile(c.ascApiKeyPath,key);await chmod(key,0o600);
           const p=spawnSync('xcrun',['altool','--list-providers',flags.key,c.ascApiKeyId,flags.issuer,c.ascApiKeyIssuerId,flags.p8,key],{cwd:process.env.RUNNER_TEMP,env:{...process.env,API_PRIVATE_KEYS_DIR:keys},encoding:'utf8',timeout:120000});
+          if(p.error||p.status!==0){
+           const raw=(p.stdout||'')+'\n'+(p.stderr||'');
+           const diagnostics=raw.split('\n').filter(line=>/error|failed|unable|invalid|jwt|issuer|authenticat|credential/i.test(line)).join('\n').replace(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/g,'[JWT REDACTED]').replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,'[EMAIL REDACTED]');
+           console.error('APPLE_AUTH_DIAGNOSTIC '+JSON.stringify({status:p.status,error:p.error?.message,details:diagnostics.slice(0,12000)}));
+          }
           assert(!p.error&&p.status===0,'Apple uploader authentication unavailable; original delivery untouched');console.log('Actual Apple uploader authentication verified; provider/contact output omitted');
           JS
       - name: Cancel only the exact stale queued EAS submission after all preflights
