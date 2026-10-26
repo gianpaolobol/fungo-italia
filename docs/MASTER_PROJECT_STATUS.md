@@ -6,9 +6,37 @@ Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo
 
 - Main letto all'inizio e ricontrollato prima del consolidamento:`3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c`.
 - **Baseline applicativa P0 (storica):**[`20c42bab7ec7c448072ebe50a9966eadb9ff6c75`](https://github.com/gianpaolobol/fungo-italia/commit/20c42bab7ec7c448072ebe50a9966eadb9ff6c75). Il commit documentale che contiene questo master segue questa baseline; il suo SHA si ricava da `git log -1 --format=%H -- docs/MASTER_PROJECT_STATUS.md`. Il main vivo va sempre riletto da `git ls-remote origin refs/heads/main`: questo documento non può contenere il proprio hash.
-- **Baseline corrente P1:** include i sei completamenti bibliografici del lotto descritto sotto, successivi a2eaa0c7f1a3de69a142b0753a97d4c04d56bc90f. Lo SHA del commit che li pubblica si ricava da `git log -1 --format=%H -- src/data/supplementary-literature.json`; il ref main identifica lo stato remoto corrente.
+- **Baseline P1 precedente (storica):** include i sei completamenti bibliografici del lotto descritto sotto, successivi a2eaa0c7f1a3de69a142b0753a97d4c04d56bc90f. Lo SHA del commit che li pubblica si ricava da `git log -1 --format=%H -- src/data/supplementary-literature.json`; il ref main identifica lo stato remoto corrente.
 - **Produzione bloccata.** Nessun nuovo binario TestFlight o deploy pubblico attribuito a questa baseline. Nessuna conferma sul dispositivo fisico.
 - Questo è il riferimento operativo corrente. I due handoff conservano la cronologia; indicazioni storiche incompatibili con le decisioni sotto sono superate. Ogni agente aggiorna questo documento e collega le prove dello SHA esatto, senza rietichettare risultati precedenti.
+
+## Completamento habitat e confronti — ciclo corrente
+
+Baseline sorgente: [`c89d0a231106f3828b66da8125c73f6015edba50`](https://github.com/gianpaolobol/fungo-italia/commit/c89d0a231106f3828b66da8125c73f6015edba50). Il commit corrente comprende questo registro e i dati generati; ricavare lo SHA da `git log -1 --format=%H -- revisione/habitat-comparison-completion-20261026.json` e confrontare con il main remoto. Non è una nuova distribuzione.
+
+Richiesta del titolare: completare i96 habitat e83 confronti vuoti, prima dalle fonti interne poi da fonti micologiche qualificate. Ricerca su39 PDF del corso e trascrizione MicoLab; verificati i passi adottati, senza dedurre contenuti dalle sole foto o dai grafici di occorrenza. S2: nuovo download ufficiale indisponibile (HTTP503); giudizi alimentari precedenti preservati. I documenti originali privati non sono pubblicati. Le copie paginated dei registri con conteggio precedentemente nullo conservano i vecchi locatori e registrano hash/pagine misurati per le nuove evidenze.
+
+| Campi originariamente mancanti | Interni, copertura sostenuta | Esterni, copertura sostenuta | Evidenza parziale | Senza dato utilizzabile |
+|---|---:|---:|---:|---:|
+|Habitat96 |10 |62 |23 |1 |
+|Confronti83 |9 |49 |21 |4 |
+|Totale179 |19 |111 |44 |5 |
+
+**130 campi con copertura bibliografica dell’unità,44 parziali e5 irrisolti.** La ricerca interna da sola sostiene19 campi completi e16 parziali; l’integrazione esterna rafforza le coperture incomplete e aggiunge i restanti dati. Non attestare179 completamenti né approvazioni indipendenti. I limiti delle coperture parziali sono presenti nel testo dell’app e nel registro; la presenza di un campo non equivale alla completezza scientifica.
+
+Catalogo: **147/148 habitat e144/148 confronti non vuoti**, contro52/148 e65/148. Rimangono vuoti habitat e confronto di Boletus sez. Luridi, confronti di Gymnopus fusipes, Hericium spp. e Scutiger pes-caprae. Ricerche e motivi sono registrati; non trasformare «inconfondibile» in un confronto inventato né estendere una singola specie all’intera sezione. Le44 coperture parziali richiedono completamento tassonomico mirato.
+
+Fonti esterne: pubblicazioni primarie micologiche, materiali istituzionali, AMB e schede editoriali AMINT con autore personale o CLR micologico; un contributo firmato Angelo Miceli con esperienza documentata nella Rivista di Micologia. L’autorità e la base della qualificazione sono conservate per citazione. L’appartenenza associativa o l’esperienza editoriale non attestano un accreditamento formale del sito. Esclusi forum non attribuiti, mirror editoriali non verificati, pagine compromesse e osservazioni non generalizzabili.
+
+Prove operative:
+
+- [Registro dei179 campi, identità S1, fonti puntuali e stato](../revisione/habitat-comparison-completion-20261026.json).
+- [Inventario interno e limiti](../revisione/internal-habitat-source-audit-20261026.json), [controlli delle fonti esterne](../revisione/external-habitat-source-checks-20261026.json).
+- [Preservazione di catalogo ed esami](evidence/habitat-comparison-integrity-20261026.json):148 schede,70 gruppi,86 foto-casi;425 risposte teoriche corrette precedenti preservate,475 quesiti correnti derivati. Nessuna nuova unità, foto, categoria alimentare o attestazione professionale.
+- [Fascicolo aggiornato per il revisore](reviews/habitat-comparisons-20261026/scientific-gap-register.json):148 bloccate,0 pronte. Il gate automatico misura presenza/evidenza, mentre il registro dei179 campi documenta anche i limiti di ambito che il gate non sa giudicare.
+- Verifiche: rigenerazione,240 test Node,TypeScript,build web condivisa e legacy; 65 test WebKit e65 Chromium superati. [Rapporto del ciclo](reviews/habitat-comparisons-20261026/README.md), [esiti verifiche](evidence/habitat-comparison-verification-20261026.json). Gate scientifico e tossicologico rigorosi restano rossi; nessun controllo disabilitato.
+
+Prossima priorità: fascicolo professionale dei44 campi parziali e5 irrisolti, completamento delle2 sporate e1 giudizio senza inferenze; mantenere il blocco production. Successivamente proseguire P2 con matrice programma↔banca teorica e copertura fotografica. StoreKit fisico iPhone/iPad e nuova build TestFlight non verificati da questo ciclo.
 
 ## Decisioni definitive
 
@@ -69,8 +97,8 @@ Branch attivi da coordinare:`feature/theory-exam-preparation-20261026`,`fix/scie
 |---|---|---|
 |Catalogo/gruppi |148+70=218 |218 corrispondenze nel registro S1,con pagine/ranghi/livello; tutte attualmente `minimum`. Non significa copertura integrale degli auspicabili/approfondimenti.|
 |Matrice storica |214 |Quattro completamenti S1 separati,senza dati scientifici inventati.|
-|Habitat presenti |52/148, prima48 |96 mancanti;94 senza evidenza habitat puntuale secondo il gate.|
-|Confronti presenti |65/148, prima63 |83 mancanti; presenza non equivale a validazione scientifica.|
+|Habitat presenti |147/148, prima52 |1 vuoto;23 nuovi campi parziali,vedere registro179.|
+|Confronti presenti |144/148, prima65 |4 vuoti;21 nuovi campi parziali; presenza non equivale a validazione scientifica.|
 |Odore/sporata/giudizi alimentari |148/146/147 su148 |2 sporate e1 giudizio mancanti; non riempire per inferenza.|
 |Triadi catalogo |143/148 |Presenza e metadati minimi; non prova identità o licenza indipendentemente verificata.|
 |Revisione indipendente |0/148 |148 bloccate,0release-ready.|
@@ -91,8 +119,8 @@ Registro chat separato:200 fotografie,150collegate,50solo fonte,229 relazioni a7
 |---|---|---|
 |Riconoscimento |86 casi fotografici su148catalogo (58,1%);86/218 unità totali (39,4%). Sessioni15,autocomplete3lettere,feedback per campo,ripasso errori. |62 schede catalogo senza caso fotografico;70 gruppi senza caso fotografico autonomo. Applicabilità fotografica per rango da definire,senza inventare identità.|
 |Copertura dei casi curricolari |86 foto+132 profili=218/218 |È copertura di casi misti,non100%riconoscimento.|
-|Teoria corrente |425 quesiti nei132 casi integrativi;424 precedenti preservati e1 nuovo quesito habitat nel lotto P1. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
-|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero425 non dimostra100%.|
+|Teoria corrente |475 quesiti nei132 casi integrativi;425 precedenti preservati nel ciclo habitat/confronti. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
+|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero475 non dimostra100%.|
 |Regressioni |Marasmius oreades:identità/commestibilità separate;Amanita rubescens:autocomplete;feedback e ripasso nei test locali |Conferma fisica della nuova build ancora assente.|
 |Percorso e storico |Quattro tab,progressi,ripresa,lacune e sessioni adattive presenti;revisioni compatibili conservate |UI nome facoltativo e riempimento/linee fungo ancora da riconciliare conPR114.|
 

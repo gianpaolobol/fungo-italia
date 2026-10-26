@@ -3,7 +3,11 @@
   "records": [
     {
       "scientificName": "Agaricus sez. Sanguinolenti",
-      "additions": {},
+      "additions": {
+        "habitat": [
+          "La lezione contrappone la più frequente crescita boschiva delle altre specie della sezione agli ambienti praticoli, nei quali è più frequente Agaricus benesii."
+        ]
+      },
       "replacements": {
         "differentiatingCharacter": "Anello supero generalmente consistente, con pagina inferiore fibrillosa o squamosa, talora a ruota dentata; struttura e odore vanno valutati insieme."
       },
@@ -25,6 +29,15 @@
           "page": 10,
           "locator": "p. 10, chiave punto 9; sezione Sanguinolenti",
           "supportedClaim": "Variabilità dell’anello supero, spesso fibrilloso-squamoso nella pagina inferiore; non sempre semplice."
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "habitat"
+          ],
+          "page": 18,
+          "locator": "p. 18; Agaricus benesii",
+          "supportedClaim": "Agaricus benesii appartiene alla sezione Sanguinolenti e, rispetto alle altre specie della sezione, è più frequente in ambienti praticoli anziché boschivi."
         }
       ]
     },
@@ -156,6 +169,9 @@
       "additions": {
         "lookalikes": [
           "Agaricus sez. Xanthodermatei: portamento e ambiente possono sovrapporsi; confrontare odore e ingiallimento basale."
+        ],
+        "habitat": [
+          "Per la specie rappresentativa Agaricus crocodilinus, la lezione segnala una particolare ricorrenza nei prati montani appenninici; questa indicazione non è estesa a tutta la sezione. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
         ]
       },
       "replacements": {},
@@ -168,6 +184,15 @@
           "page": 24,
           "locator": "p. 24",
           "supportedClaim": "Agaricus sez. Xanthodermatei: portamento e ambiente possono sovrapporsi; confrontare odore e ingiallimento basale."
+        },
+        {
+          "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+          "fields": [
+            "habitat"
+          ],
+          "page": 22,
+          "locator": "p. 22; Agaricus crocodilinus",
+          "supportedClaim": "Agaricus crocodilinus, appartenente alla sez. Arvenses, è diffuso da nord a sud Italia e particolarmente ricorrente nei prati montani appenninici. Indicazione limitata a questa specie rappresentativa, non all’intera sezione."
         }
       ]
     },
@@ -346,6 +371,9 @@
       "additions": {
         "lookalikes": [
           "Saproamanita vittadinii, Amanita ovoidea e A. proxima: confrontare attentamente le amanite bianche con resti del velo."
+        ],
+        "habitat": [
+          "Si trova spesso in ambienti antropizzati, secondo la descrizione del docente."
         ]
       },
       "replacements": {},
@@ -358,6 +386,15 @@
           "page": 71,
           "locator": "p. 71",
           "supportedClaim": "Saproamanita vittadinii, Amanita ovoidea e A. proxima: confrontare attentamente le amanite bianche con resti del velo."
+        },
+        {
+          "sourceId": "COURSE-CHAT-TEXT-MICOLAB-20261022",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "03/10/26 10:32:13, Alberto Micologo, commento alla coppia 8af 021026; identificazione definitiva nella soluzione 06/10/26 17:57:33: «8 Amanita pantherina ... e Amanita strobiliformis»; caso AF-021026-08 nel registro immagini.",
+          "supportedClaim": "Il docente descrive la grande Amanita non comune del quesito come spesso presente in ambienti antropizzati; la soluzione identifica quel soggetto come Amanita strobiliformis. Non si aggiungono altre preferenze ecologiche."
         }
       ]
     },
@@ -459,6 +496,9 @@
         "lookalikes": [
           "Entoloma sinuatum e Tricholoma filamentosum: possono condividere l’ambiente; confrontare ogni esemplare.",
           "Tricholoma saponaceum: la crescita cespitosa può essere poco evidente e non deve essere l’unico criterio."
+        ],
+        "habitat": [
+          "Crescita terricola, spesso cespitosa, sia in aree praticole sia nei boschi; non lignicola."
         ]
       },
       "replacements": {},
@@ -480,6 +520,15 @@
           "page": 35,
           "locator": "p. 35",
           "supportedClaim": "Tricholoma saponaceum: la crescita cespitosa può essere poco evidente e non deve essere l’unico criterio."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "habitat"
+          ],
+          "page": 53,
+          "locator": "p. 53; Lyophyllum decastes s.l.",
+          "supportedClaim": "Crescita terricola, spesso cespitosa, sia in aree praticole sia nei boschi; non lignicola."
         }
       ]
     },
@@ -529,6 +578,10 @@
         "lookalikes": [
           "Inocybe grigio-brune: confronto importante, anche in pineta; il cappello grigio non è sufficiente.",
           "Tricholoma pardinum: confronto da eseguire su più caratteri, non soltanto sulla superficie del cappello."
+        ],
+        "habitat": [
+          "Le raccolte indicate dalla fonte come T. terreum s.l. sono segnalate in pineta, anche nelle pinete costiere del Brindisino. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata.",
+          "La fonte segnala la confondibilità con Inocybe bruno-grigie soprattutto in pineta, riferendosi a T. terreum s.l. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
         ]
       },
       "replacements": {},
@@ -550,6 +603,24 @@
           "page": 119,
           "locator": "p. 119",
           "supportedClaim": "Tricholoma pardinum: confronto da eseguire su più caratteri, non soltanto sulla superficie del cappello."
+        },
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "fields": [
+            "habitat"
+          ],
+          "page": 99,
+          "locator": "p. 99; BRINDISI – ANNI 2000-2017",
+          "supportedClaim": "Le raccolte indicate dalla fonte come T. terreum s.l. sono segnalate in pineta, anche nelle pinete costiere del Brindisino."
+        },
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "habitat"
+          ],
+          "page": 62,
+          "locator": "p. 62; Inocybe spp. a cappello bruno o grigio",
+          "supportedClaim": "La fonte segnala la confondibilità con Inocybe bruno-grigie soprattutto in pineta, riferendosi a T. terreum s.l."
         }
       ]
     },
@@ -598,6 +669,9 @@
       "additions": {
         "lookalikes": [
           "Tricholoma sulphureum e Tricholomopsis rutilans: valutare odore e substrato; quest’ultimo cresce su legno."
+        ],
+        "habitat": [
+          "Ectomicorrizico associato a conifere: nell’analisi del complesso europeo, T. equestre e T. flavovirens sono associati a Pinus sylvestris o Abies alba, mentre T. auratum è associato a Pinus pinaster."
         ]
       },
       "replacements": {},
@@ -610,6 +684,16 @@
           "page": 16,
           "locator": "p. 16",
           "supportedClaim": "Tricholoma sulphureum e Tricholomopsis rutilans: valutare odore e substrato; quest’ultimo cresce su legno."
+        },
+        {
+          "sourceId": "COURSE-1_C3c8j8Ln1z4XWaBFlZEpQUh5jCDEJn_",
+          "fields": [
+            "habitat"
+          ],
+          "page": 6,
+          "locator": "Approfondimenti di Micotossicologia_Sitta.pdf; p. 6, riproduzione di Moukha et al. (2013), abstract: A molecular contribution to the assessment of the Tricholoma equestre species complex",
+          "supportedClaim": "Ectomicorrizico associato a conifere: nell’analisi del complesso europeo, T. equestre e T. flavovirens sono associati a Pinus sylvestris o Abies alba, mentre T. auratum è associato a Pinus pinaster.",
+          "scopeNote": "European T. equestre complex as analysed by the cited paper; does not claim exclusive association. Visible reproduced article inspected."
         }
       ]
     },
@@ -752,6 +836,9 @@
       "additions": {
         "lookalikes": [
           "Marasmius oreades: la crescita nel prato o in cerchi non esclude la confusione."
+        ],
+        "habitat": [
+          "Nella fonte denominata Clitocybe dealbata: crescita in prato. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
         ]
       },
       "replacements": {},
@@ -764,6 +851,15 @@
           "page": 59,
           "locator": "p. 59",
           "supportedClaim": "Marasmius oreades: la crescita nel prato o in cerchi non esclude la confusione."
+        },
+        {
+          "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+          "fields": [
+            "habitat"
+          ],
+          "page": 59,
+          "locator": "p. 59; Clitocybe dealbata: confondibilità",
+          "supportedClaim": "Nella fonte denominata Clitocybe dealbata: crescita in prato."
         }
       ]
     },
@@ -812,6 +908,10 @@
       "additions": {
         "lookalikes": [
           "Hapalopilus rutilans: è documentata una confusione; confrontare forma, consistenza e imenoforo."
+        ],
+        "habitat": [
+          "Documentata nei castagneti (boschi di Castanea sativa).",
+          "Lignicola; molto comune su castagno, secondo la descrizione didattica del docente. Il substrato non è indicato come esclusivo."
         ]
       },
       "replacements": {},
@@ -824,6 +924,24 @@
           "page": 99,
           "locator": "p. 99",
           "supportedClaim": "Hapalopilus rutilans: è documentata una confusione; confrontare forma, consistenza e imenoforo."
+        },
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 12,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 12 Foreste: castagneti",
+          "supportedClaim": "Documentata nei castagneti (boschi di Castanea sativa)."
+        },
+        {
+          "sourceId": "COURSE-CHAT-TEXT-MICOLAB-20261022",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "25/09/26 15:15:03–15:58:50, Edoardo Prof; serie di sei fotografie 15:15, descrizione 15:16:09 e conferma nel dialogo come «Lingua di bue» 15:57:37; caso CTX-250926-FISTULINA nel registro immagini del corso.",
+          "supportedClaim": "Il docente descrive la specie come lignicola ed estremamente comune su castagno; il seguito del dialogo conferma Fistulina hepatica/Lingua di bue. Non attesta esclusività del castagno."
         }
       ]
     },
@@ -1047,6 +1165,9 @@
       "additions": {
         "lookalikes": [
           "Polyporus tuberaster: confronto tra polipori squamosi, da completare con substrato e caratteri del carpoforo."
+        ],
+        "habitat": [
+          "Crescita lignicola."
         ]
       },
       "replacements": {},
@@ -1059,6 +1180,15 @@
           "page": null,
           "locator": "Diapositiva «Cerioporus squamosus»",
           "supportedClaim": "Polyporus tuberaster: confronto tra polipori squamosi, da completare con substrato e caratteri del carpoforo."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "habitat"
+          ],
+          "page": 56,
+          "locator": "p. 56; Cerioporus squamosus",
+          "supportedClaim": "Crescita lignicola."
         }
       ]
     },
@@ -1270,7 +1400,11 @@
     },
     {
       "scientificName": "Russula Foetentinae",
-      "additions": {},
+      "additions": {
+        "lookalikes": [
+          "Confronto interno alla serie foetens: R. foetens e R. putida hanno odore di varechina e carne immutabile, mentre R. subfoetens unisce lo stesso tipo di odore a carne ingiallente; R. illota ha componente mandorlata insieme alla varechina, R. grata (= laurocerasi) e R. fragrantissima odore puro di mandorle amare o marzapane. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
       "replacements": {
         "characters": [
           "Cappello giallo-bruno o ocra, frequentemente molto viscido o glutinoso.",
@@ -1290,6 +1424,15 @@
           "characterIndices": [
             2
           ]
+        },
+        {
+          "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR-paginated-20261026",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 50,
+          "locator": "p. 50; Sezione Ingratae – sottosez. Foetentinae, schema serie foetens",
+          "supportedClaim": "Confronto interno alla serie foetens: R. foetens e R. putida hanno odore di varechina e carne immutabile, mentre R. subfoetens unisce lo stesso tipo di odore a carne ingiallente; R. illota ha componente mandorlata insieme alla varechina, R. grata (= laurocerasi) e R. fragrantissima odore puro di mandorle amare o marzapane."
         }
       ]
     },
@@ -1298,6 +1441,9 @@
       "additions": {
         "lookalikes": [
           "Tylopilus felleus: confronto di portamento e imenoforo da approfondire."
+        ],
+        "habitat": [
+          "Il complesso dei porcini (B. edulis, B. aereus, B. reticulatus e B. pinophilus) comprende funghi ectomicorrizici associati ad alberi e arbusti; sul Monte Amiata fruttifica anche nei castagneti."
         ]
       },
       "replacements": {
@@ -1321,6 +1467,34 @@
           "page": 9,
           "locator": "p. 9",
           "supportedClaim": "Tylopilus felleus: confronto di portamento e imenoforo da approfondire."
+        },
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 29,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 29 Porcini: simbiosi mutualistica",
+          "supportedClaim": "I porcini sono funghi ectomicorrizici associati ad alberi e arbusti.",
+          "scopeNote": "Definizione del complesso a p. 28; castagneti a p. 30."
+        },
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 28,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 28 Porcini: complesso di quattro specie",
+          "supportedClaim": "Il complesso dei porcini comprende B. edulis, B. aereus, B. reticulatus e B. pinophilus."
+        },
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 30,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 30 Castagneti del Monte Amiata",
+          "supportedClaim": "Le osservazioni sul Monte Amiata riguardano la fruttificazione dei porcini nei castagneti."
         }
       ]
     },
@@ -2211,6 +2385,480 @@
           "page": null,
           "locator": "Note",
           "supportedClaim": "Cappello asciutto, taglia, carnosità, gambo affusolato e odore distinguono dagli altri Hygrophorus bianchi; nessuna specie sosia specificata."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita verna / Amanita vidua",
+      "additions": {
+        "habitat": [
+          "Per Amanita verna nel senso usato dalla lezione: boschi di latifoglie termofili, con fruttificazione primaverile. La fonte non tratta separatamente Amanita vidua. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ],
+        "lookalikes": [
+          "Agaricus spp. («prataioli»): Amanita verna nel senso della lezione presenta una volva membranosa evidente e lamelle che restano bianche anche a maturità; negli Agaricus le lamelle diventano rosate e poi bruno-nerastre. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "habitat"
+          ],
+          "page": 62,
+          "locator": "p. 62; Amanita verna",
+          "supportedClaim": "Amanita verna è descritta come diffusa nei boschi termofili di latifoglie nella stagione primaverile. La denominazione A. vidua non compare nella fonte; non si attribuisce il dato separatamente a quel taxon."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 62,
+          "locator": "p. 62; Amanita verna",
+          "supportedClaim": "La lezione documenta la confusione di Amanita verna con prataioli Agaricus e precisa la distinzione: evidente volva membranacea e lamelle sempre bianche per A. verna, lamelle rosate poi bruno-nerastre a maturità per Agaricus."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma pardinum",
+      "additions": {
+        "lookalikes": [
+          "Gruppo T. terreum: nello schema T. pardinum e affini hanno portamento robusto, gambo pieno, cuticola feltrata o squamosa e odore farinoso; il gruppo T. terreum è esile, con gambo fistoloso fragile, cuticola soltanto pelosa e odore nullo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 37,
+          "locator": "p. 37; I Tricholoma grigi opachi",
+          "supportedClaim": "Gruppo T. terreum: nello schema T. pardinum e affini hanno portamento robusto, gambo pieno, cuticola feltrata o squamosa e odore farinoso; il gruppo T. terreum è esile, con gambo fistoloso fragile, cuticola soltanto pelosa e odore nullo."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma josserandii",
+      "additions": {
+        "lookalikes": [
+          "T. portentosum: ha fibrillosità più netta e sfumature gialle su gambo e lamelle; T. josserandii ha fibrillosità meno evidente, odore farinoso molto intenso, definito cimicino, e manca delle sfumature gialle."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 47,
+          "locator": "p. 47; I Tricholoma grigi lucenti",
+          "supportedClaim": "T. portentosum: ha fibrillosità più netta e sfumature gialle su gambo e lamelle; T. josserandii ha fibrillosità meno evidente, odore farinoso molto intenso, definito cimicino, e manca delle sfumature gialle."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma portentosum",
+      "additions": {
+        "lookalikes": [
+          "T. josserandii: fibrillosità meno evidente, odore farinoso tanto intenso da essere definito cimicino e assenza di sfumature gialle; nel gruppo T. portentosum la fibrillosità è netta e gambo e lamelle mostrano sfumature gialle.",
+          "Gruppo T. virgatum: la fibrillosità è spesso accompagnata da fibrille rialzate o squamette e l’odore è assente; nel gruppo T. portentosum la fibrillosità è netta, senza quelle decorazioni, e l’odore è farinoso."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 47,
+          "locator": "p. 47; I Tricholoma grigi lucenti",
+          "supportedClaim": "T. josserandii: fibrillosità meno evidente, odore farinoso tanto intenso da essere definito cimicino e assenza di sfumature gialle; nel gruppo T. portentosum la fibrillosità è netta e gambo e lamelle mostrano sfumature gialle."
+        },
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 47,
+          "locator": "p. 47; I Tricholoma grigi lucenti",
+          "supportedClaim": "Gruppo T. virgatum: la fibrillosità è spesso accompagnata da fibrille rialzate o squamette e l’odore è assente; nel gruppo T. portentosum la fibrillosità è netta, senza quelle decorazioni, e l’odore è farinoso."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "additions": {
+        "lookalikes": [
+          "Gruppo T. portentosum: fibrillosità netta, senza fibrille rialzate o squamette, odore farinoso e sfumature gialle su gambo e lamelle; nel gruppo T. virgatum sono frequenti fibrille rialzate o squamettatura e l’odore è assente."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 47,
+          "locator": "p. 47; I Tricholoma grigi lucenti",
+          "supportedClaim": "Gruppo T. portentosum: fibrillosità netta, senza fibrille rialzate o squamette, odore farinoso e sfumature gialle su gambo e lamelle; nel gruppo T. virgatum sono frequenti fibrille rialzate o squamettatura e l’odore è assente."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "additions": {
+        "lookalikes": [
+          "Per la componente T. scalpturatum: il gruppo T. pardinum ha portamento robusto e gambo pieno; il gruppo T. scalpturatum è esile, con gambo fistoloso fragile e carne tendente a ingiallire. Il confronto non è esteso alle altre componenti dell’unità. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 37,
+          "locator": "p. 37; I Tricholoma grigi opachi",
+          "supportedClaim": "Per la componente T. scalpturatum: il gruppo T. pardinum ha portamento robusto e gambo pieno; il gruppo T. scalpturatum è esile, con gambo fistoloso fragile e carne tendente a ingiallire. Il confronto non è esteso alle altre componenti dell’unità."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "additions": {
+        "lookalikes": [
+          "T. imbricatum, T. vaccinum e T. psammopus: hanno cuticola asciutta e opaca, da feltrata a squamettata; il gruppo Albobrunnei ha cuticola liscia, viscida con tempo umido."
+        ],
+        "habitat": [
+          "Per la sola componente T. populinum, inclusa nello schema degli Albobrunnei: crescita sotto pioppo; il dato non è esteso alla sezione intera. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 21,
+          "locator": "p. 21; Tricholoma BRUNI",
+          "supportedClaim": "T. imbricatum, T. vaccinum e T. psammopus: hanno cuticola asciutta e opaca, da feltrata a squamettata; il gruppo Albobrunnei ha cuticola liscia, viscida con tempo umido."
+        },
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "habitat"
+          ],
+          "page": 21,
+          "locator": "p. 21; Tricholoma BRUNI, ramo T. populinum",
+          "supportedClaim": "Per la sola componente T. populinum, inclusa nello schema degli Albobrunnei: crescita sotto pioppo; il dato non è esteso alla sezione intera."
+        }
+      ]
+    },
+    {
+      "scientificName": "Tricholoma acerbum s.l.",
+      "additions": {
+        "lookalikes": [
+          "Gruppo T. caligatum: presenta un velo generale squamoso che resta sul gambo come una calza; il gruppo T. acerbum è descritto con portamento tozzo, cappello carnoso dal margine inizialmente involuto e poi scanalato, e lamelle fittissime."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 22,
+          "locator": "p. 22; Alcune specie facili",
+          "supportedClaim": "Gruppo T. caligatum: presenta un velo generale squamoso che resta sul gambo come una calza; il gruppo T. acerbum è descritto con portamento tozzo, cappello carnoso dal margine inizialmente involuto e poi scanalato, e lamelle fittissime."
+        }
+      ]
+    },
+    {
+      "scientificName": "Russula Compactae Nigricantinae",
+      "additions": {
+        "lookalikes": [
+          "Confronto interno allo schema delle principali Nigricantinae: R. nigricans ha lamelle rade e viraggio intenso al rosso seguito dal nero; R. adusta ha lamelle mediamente fitte e viraggio lieve all’arancio seguito dal nero; R. albonigra f. albonigra ha lamelle mediamente fitte e viraggio solo al nero."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR-paginated-20261026",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 34,
+          "locator": "p. 34; Sezione Compactae (= Nigricantinae), schema pratico",
+          "supportedClaim": "Confronto interno allo schema delle principali Nigricantinae: R. nigricans ha lamelle rade e viraggio intenso al rosso seguito dal nero; R. adusta ha lamelle mediamente fitte e viraggio lieve all’arancio seguito dal nero; R. albonigra f. albonigra ha lamelle mediamente fitte e viraggio solo al nero."
+        }
+      ]
+    },
+    {
+      "scientificName": "Entoloma clypeatum s.l.",
+      "additions": {
+        "lookalikes": [
+          "Calocybe gambosa: E. clypeatum s.l. ha portamento più slanciato, lamelle rosate a maturità, cuticola leggermente viscosa con umidità e odore meno pronunciato. Le due unità possono condividere l’ambiente di crescita."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 22,
+          "locator": "p. 22; Entoloma clypeatum s.l.",
+          "supportedClaim": "Calocybe gambosa: E. clypeatum s.l. ha portamento più slanciato, lamelle rosate a maturità, cuticola leggermente viscosa con umidità e odore meno pronunciato. Le due unità possono condividere l’ambiente di crescita."
+        }
+      ]
+    },
+    {
+      "scientificName": "Pleurotus eryngii s.l.",
+      "additions": {
+        "habitat": [
+          "Per la componente P. eryngii var. ferulae la lezione documenta l’associazione con Ferula communis; questo dato non descrive l’intero complesso P. eryngii s.l. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata.",
+          "In coltivazione, P. eryngii può essere prodotto su paglia. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ],
+        "lookalikes": [
+          "Pleurotus nebrodensis: la lezione lo confronta con P. eryngii s.l. e ne evidenzia il cappello biancastro; in Italia lo riferisce alle montagne siciliane, con fruttificazione primaverile associata a Prangos ferulacea."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "habitat"
+          ],
+          "page": 48,
+          "locator": "p. 48; Genere Pleurotus",
+          "supportedClaim": "Per la componente P. eryngii var. ferulae la lezione documenta l’associazione con Ferula communis; questo dato non descrive l’intero complesso P. eryngii s.l."
+        },
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 52,
+          "locator": "p. 52; Pleurotus nebrodensis",
+          "supportedClaim": "Pleurotus nebrodensis: la lezione lo confronta con P. eryngii s.l. e ne evidenzia il cappello biancastro; in Italia lo riferisce alle montagne siciliane, con fruttificazione primaverile associata a Prangos ferulacea."
+        },
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-1",
+          "fields": [
+            "habitat"
+          ],
+          "page": 10,
+          "locator": "Salerni Elena/Salerni Coltivazione.pdf; p. 10 Preparazione del substrato",
+          "supportedClaim": "In coltivazione, P. eryngii può essere prodotto su paglia.",
+          "scopeNote": "Cultivated-only nominal P. eryngii; wild habitat and s.l. coverage unresolved."
+        }
+      ]
+    },
+    {
+      "scientificName": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "additions": {
+        "habitat": [
+          "Crescita lignicola, con possibilità di fruttificazione anche nella stagione primaverile."
+        ],
+        "lookalikes": [
+          "Per P. cornucopiae, confronto esplicito con Omphalotus olearius: spore ovali, bianche in massa (poi lilla chiaro per ossidazione), contro spore più corte, subsferiche e crema in massa in O. olearius. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm-paginated-20261026",
+          "fields": [
+            "habitat"
+          ],
+          "page": 48,
+          "locator": "p. 48; Genere Pleurotus; P. cornucopiae e P. citrinopileatus",
+          "supportedClaim": "Crescita lignicola, con possibilità di fruttificazione anche nella stagione primaverile."
+        },
+        {
+          "sourceId": "COURSE-1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot-atzeni-entry-1",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": 66,
+          "locator": "Salerni. Microscopia Corso Amiata 12 Maggio 2026.pdf; p. 66 Diagnostica: Pleurotus cornucopiae / Omphalotus olearius",
+          "supportedClaim": "Per P. cornucopiae, confronto esplicito con Omphalotus olearius: spore ovali, bianche in massa (poi lilla chiaro per ossidazione), contro spore più corte, subsferiche e crema in massa in O. olearius.",
+          "scopeNote": "Partial group coverage: P. cornucopiae only; P. citrinopileatus not treated in this comparison."
+        }
+      ]
+    },
+    {
+      "scientificName": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "additions": {
+        "habitat": [
+          "Boschi di conifere: la lezione associa A. citrinus agli abeti e A. subrubescens ai pini, e documenta la raccolta di A. subrubescens insieme ad A. ovinus nei boschi misti di conifere del Trentino. Le associazioni indicate si riferiscono alle singole componenti nominate."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+          "fields": [
+            "habitat"
+          ],
+          "page": 126,
+          "locator": "p. 126; Il caso di Albatrellus subrubescens",
+          "supportedClaim": "Boschi di conifere: la lezione associa A. citrinus agli abeti e A. subrubescens ai pini, e documenta la raccolta di A. subrubescens insieme ad A. ovinus nei boschi misti di conifere del Trentino. Le associazioni indicate si riferiscono alle singole componenti nominate."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus queletii e specie vicine/intermedie",
+      "additions": {
+        "habitat": [
+          "Suillellus queletii è documentato nelle comunità fungine delle leccete (foreste di Quercus ilex e Q. rotundifolia). Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 10,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 10 Foreste: leccete",
+          "supportedClaim": "Suillellus queletii è documentato nelle comunità fungine delle leccete (foreste di Quercus ilex e Q. rotundifolia).",
+          "scopeNote": "Nominal-only: S. queletii; non estendere alle specie vicine/intermedie."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepista flaccida s.l.",
+      "additions": {
+        "habitat": [
+          "Paralepista flaccida è documentata nelle comunità fungine delle leccete (foreste di Quercus ilex e Q. rotundifolia). Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 10,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 10 Foreste: leccete",
+          "supportedClaim": "Paralepista flaccida è documentata nelle comunità fungine delle leccete (foreste di Quercus ilex e Q. rotundifolia).",
+          "scopeNote": "Nominal species only; no blanket claim for every s.l. segregate."
+        }
+      ]
+    },
+    {
+      "scientificName": "Boletus (Neoboletus) erythropus s.l.",
+      "additions": {
+        "habitat": [
+          "Neoboletus erythropus è documentato nei castagneti (boschi di Castanea sativa). Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-2",
+          "fields": [
+            "habitat"
+          ],
+          "page": 12,
+          "locator": "Salerni Elena/Salerni Comunità fungine.pdf; p. 12 Foreste: castagneti",
+          "supportedClaim": "Neoboletus erythropus è documentato nei castagneti (boschi di Castanea sativa).",
+          "scopeNote": "Nominal-only N. erythropus; non estendere a tutte le entità s.l."
+        }
+      ]
+    },
+    {
+      "scientificName": "Auricularia auricula-judae",
+      "additions": {
+        "habitat": [
+          "Cresce aderente al legno, singola o in gruppi sovrapposti."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-1",
+          "fields": [
+            "habitat"
+          ],
+          "page": 8,
+          "locator": "Salerni Elena/Salerni Coltivazione.pdf; p. 8 Auricularia auricula-judae",
+          "supportedClaim": "Cresce aderente al legno, singola o in gruppi sovrapposti."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lentinula edodes",
+      "additions": {
+        "habitat": [
+          "In coltivazione (shiitake), viene utilizzato un substrato di tronchi di legno. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364-salerni-entry-1",
+          "fields": [
+            "habitat"
+          ],
+          "page": 10,
+          "locator": "Salerni Elena/Salerni Coltivazione.pdf; p. 10 Preparazione del substrato",
+          "supportedClaim": "In coltivazione (shiitake), viene utilizzato un substrato di tronchi di legno.",
+          "scopeNote": "Cultivated-only; wild habitat remains unresolved by this source."
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepista nuda s.l.",
+      "additions": {
+        "lookalikes": [
+          "Cortinarius violaceus: confrontare colore della sporata, portamento, presenza o assenza di cortina, cuticola del cappello e odore; aromatico in L. nuda, con componente resinosa in C. violaceus. Confronto riferito a L. nuda nel senso della chat, non verificato per tutte le componenti del gruppo s.l. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-CHAT-TEXT-MICOLAB-20261022",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "01/09/26 23:07:22, Alberto Micologo; intervento didattico nel confronto esplicito L. nuda/C. violaceus, successivo alle ipotesi dei corsisti 22:50–22:52.",
+          "supportedClaim": "Il docente propone esplicitamente per L.nuda e C.violaceus colore della sporata, portamento, presenza/assenza di cortina, cuticola e odore; attribuisce odore aromatico a L.nuda e componente resinosa a C.violaceus. Non si adottano dai corsisti colori specifici della sporata o altri caratteri non ripresi dal docente."
+        }
+      ]
+    },
+    {
+      "scientificName": "Clitopilus prunulus s.l.",
+      "additions": {
+        "lookalikes": [
+          "Entoloma sinuatum: le forme chiare possono essere confuse con esemplari robusti di Clitopilus prunulus. Il docente richiama per E. sinuatum portamento robusto, superficie fibrillosa e lamelle dal colore più carico del rosa; non presenta questi soli caratteri come chiave risolutiva. Confronto riferito a C. prunulus nel senso della fonte, non verificato per tutto il gruppo s.l. Evidenza circoscritta alla componente o al contesto descritto; copertura dell’intera unità non attestata."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "COURSE-CHAT-TEXT-MICOLAB-20261022",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "19/10/26 23:29:51–23:30:57, Nicola Sitta - Referente Corso Micologia; commento esplicito alla soluzione NS6 Entoloma sinuatum dell’esercitazione del 17/10, pubblicata 19/10/26 23:14:09.",
+          "supportedClaim": "Il docente indica esplicitamente la confondibilità delle forme chiare di E.sinuatum con esemplari robusti di C.prunulus, insieme ai caratteri osservati di E.sinuatum. Non viene fornita una chiave completa di separazione."
         }
       ]
     }

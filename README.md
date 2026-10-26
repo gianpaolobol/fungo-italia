@@ -1,4 +1,4 @@
-Stato operativo e rapporto del consolidamento: [MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Baseline corrente con il lotto P1 di sei schede documentate:218 unità, 86 casi fotografici e 132 profili con 425 quesiti. Produzione bloccata da revisione scientifica e suite native da riconfermare; beta19 resta una distribuzione storica distinta.
+Stato operativo e rapporto del consolidamento: [MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Baseline corrente:218 unità,147 habitat e144 confronti presenti su148 schede;130 dei179 campi richiesti con copertura bibliografica,44 parziali e5 irrisolti.86 casi fotografici e132 profili con475 quesiti. Produzione bloccata da revisione scientifica e suite native da riconfermare; beta19 resta una distribuzione storica distinta.
 
 # Fungo Italia
 

@@ -1,0 +1,1340 @@
+{
+  "updatedAt": "2026-10-26",
+  "scope": "Pointwise source checks; mycological qualification is documented per citation, not formal accreditation or independent approval.",
+  "checks": [
+    {
+      "url": "https://www.researchgate.net/publication/295673842_Agaricus_section_Xanthodermatei_in_Iran",
+      "taxon": "Agaricus sez. Xanthodermatei",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato limitato ad A. xanthodermus; nessuna generalizzazione alla sezione. La circoscrizione del 2016 comprendeva anche Hondenses, che non viene trasferita."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/62039-agaricus-bresadolanus-bohus-1969/",
+      "taxon": "Agaricus bresadolanus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://journals.asm.org/doi/10.1128/aem.66.2.728-734.2000",
+      "taxon": "Agaricus sez. Arvenses",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Gamma di ambienti documentata nel campione; circoscrizione della sezione del 2000, non inventario completo attuale o italiano."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15456-agaricus-sylvaticus-schaeff-1774/",
+      "taxon": "Agaricus sez. Sanguinolenti",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto limitato ad A. sylvaticus, non alla sezione intera; nome del comparatore conservato come citato."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16230-agaricus-bisporus-je-lange-imbach-1946/",
+      "taxon": "Agaricus bisporus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9138314/",
+      "taxon": "Amanita verna / Amanita vidua",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Entrambi i taxa trattati separatamente. Testo completo restituito dall’indicizzazione di ricerca; apertura diretta PMC bloccata da verifica browser."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9138314/",
+      "taxon": "Amanita verna / Amanita vidua",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto macroscopico riportato nella diagnosi; non presentato come criterio sufficiente. Testo restituito dalla ricerca; apertura PMC bloccata."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/Amanite/Informazioni%20generali.htm",
+      "taxon": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Habitat mantenuti distinti per i componenti nominati nella scheda aggregata. Tabella storica: non trasferite tassonomia o commestibilità."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/Amanite/Informazioni%20generali.htm",
+      "taxon": "Amanita strobiliformis",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10456051/",
+      "taxon": "Amanita sez. Vaginatae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato di ecologia simbiotica riferito esplicitamente alla sezione; non si trasferisce alla flora italiana l’elenco delle nuove specie cinesi."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s11557-024-01959-z",
+      "taxon": "Cortinarius sottogenere Dermocybe",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Sintesi esplicitamente limitata agli ambienti centroeuropei studiati, non descrizione esclusiva dell’intero sottogenere."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15344-cortinarius-praestans-cordier-gillet-1876/",
+      "taxon": "Cortinarius praestans",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15344-cortinarius-praestans-cordier-gillet-1876/",
+      "taxon": "Cortinarius cumatilis",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dati ecologici di sintesi nel confronto; non formulato come esclusività, poiché raccolte AMINT riportano anche boschi misti."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15344-cortinarius-praestans-cordier-gillet-1876/",
+      "taxon": "Cortinarius cumatilis",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/350810370_Cortinarius_subgenus_Phlegmacium_subsection_Varii_in_Europe",
+      "taxon": "Phlegmacium variiforme",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Circoscrizione ristretta, distinta dalle antiche attribuzioni a quercia che possono includere C. luteocingulatus. Basionimo collegato a P. variiforme in Liimatainen et al.2022."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/350810370_Cortinarius_subgenus_Phlegmacium_subsection_Varii_in_Europe",
+      "taxon": "Phlegmacium variiforme",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15323-cortinarius-caperatus-pers-fr-fr-1838/",
+      "taxon": "Cortinarius caperatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Solo il campo indicato; nessun trasferimento dei giudizi alimentari o della nomenclatura della fonte."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s13225-022-00499-9",
+      "taxon": "Phlegmacium variiforme",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Verificato solo il collegamento nomenclaturale esplicito: basionimo Cortinarius variiformis Malençon; non usato per cambiare tassonomia o per affermazioni ecologiche."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/96539-cortinarius-obsoletus%C2%A0k%C3%BChner-1955/",
+      "taxon": "Phlegmacium variiforme",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Non adottata l’attribuzione di variiformis alla quercia: conflitto con circoscrizione ristretta dello studio primario Varii 2020."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/17104-cortinarius-cumatilis-fr-1838/",
+      "taxon": "Cortinarius cumatilis",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Commento nominativo di Pietro Curti conferma taglia minore di praestans; raccolte documentate anche in boschi misti, quindi nessuna esclusività conifera."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1474",
+      "taxon": "Collybia phyllophila",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1474",
+      "taxon": "Collybia phyllophila",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15436-infundibulicybe-geotropa-bull-fr-harmaja-2003/",
+      "taxon": "Infundibulicybe geotropa",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15436-infundibulicybe-geotropa-bull-fr-harmaja-2003/",
+      "taxon": "Infundibulicybe geotropa",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15081-infundibulicybe-gibba-pers-fr-harmaja-2003/",
+      "taxon": "Paralepistopsis amoenolens",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15081-infundibulicybe-gibba-pers-fr-harmaja-2003/",
+      "taxon": "Lepista flaccida s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto della sola P. flaccida nominale; non prova l’intero perimetro s.l."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Lepista flaccida s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15085-clitopilus-prunulus-scop-fr-quel-1871/",
+      "taxon": "Clitopilus prunulus s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato nominale; non esteso alle altre specie dell’unità s.l."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15085-clitopilus-prunulus-scop-fr-quel-1871/",
+      "taxon": "Clitopilus prunulus s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto nominale, non documentazione di tutte le componenti s.l."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=862",
+      "taxon": "Gymnopus fusipes",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15260-lepista-nuda-bull-fr-cooke-1871/",
+      "taxon": "Lepista nuda s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Scheda nominale; l’ecologia delle altre componenti s.l. resta distinta."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15260-lepista-nuda-bull-fr-cooke-1871/",
+      "taxon": "Lepista nuda s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto nominale; non esteso indiscriminatamente al gruppo s.l."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=889",
+      "taxon": "Leucopaxillus giganteus s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Habitat della sola specie nominale; non esteso a componenti ulteriori s.l."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Leucopaxillus giganteus s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto nominale; non dimostra copertura dell’intera unità s.l."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Leucopaxillus gentianeus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Leucopaxillus gentianeus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24463-lyophyllum-rhopalopodium-cl%C3%A9men%C3%A7on-1982/",
+      "taxon": "Lyophyllum specie annerenti",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Documentata la sola componente L. rhopalopodium, non tutti gli annerenti."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24463-lyophyllum-rhopalopodium-cl%C3%A9men%C3%A7on-1982/",
+      "taxon": "Lyophyllum specie annerenti",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto di due componenti; altre specie annerenti non coperte."
+    },
+    {
+      "url": "https://www.mycotaxon.com/resources/checklists/Angelini-v120-checklist.pdf",
+      "taxon": "Mycena sez. Purae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Osservazioni locali per tre specie; nessuna estensione a tutta la sezione."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=87",
+      "taxon": "Mycena sez. Purae",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto della sola M. pura; non copre tutti i membri della sezione."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/8121-omphalotus-olearius-dc-fr-singer-1948/",
+      "taxon": "Omphalotus olearius",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1426",
+      "taxon": "Tricholoma pardinum",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://publicacions.iec.cat/repository/pdf/00000167/00000056.pdf",
+      "taxon": "Tricholoma filamentosum",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://publicacions.iec.cat/repository/pdf/00000167/00000056.pdf",
+      "taxon": "Tricholoma filamentosum",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/62222-tricholoma-josserandii-bon-1975/",
+      "taxon": "Tricholoma josserandii",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/88019-tricholoma-frondosae-kalamees-shchukin-2001/",
+      "taxon": "Tricholoma equestre",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15443-tricholoma-portentosum-fr-fr-qu%C3%A9l-1873/page/2/",
+      "taxon": "Tricholoma portentosum",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1709",
+      "taxon": "Tricholoma saponaceum s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "L’account non tratta separatamente tutte le specie aggregate nella scheda curricolare s.l."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Tricholoma columbetta",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+      "taxon": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Copertura di quattro componenti nominate; eventuali altri inclusi dall’unità aperta non sono automaticamente coperti."
+    },
+    {
+      "url": "https://repository.naturalis.nl/pub/532265/PERS1999017002013.pdf",
+      "taxon": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ecologie riportate per componenti esplicite, senza estensione alle altre non nominate."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24409-tricholoma-orirubens-qu%C3%A9l-1873/",
+      "taxon": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ecologie riportate per componenti esplicite, senza estensione alle altre non nominate."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24409-tricholoma-orirubens-qu%C3%A9l-1873/",
+      "taxon": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronti per componenti nominate; nessun criterio universale per tutte le altre."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15670-tricholoma-squarrulosum-bres-1892/",
+      "taxon": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ecologie riportate per componenti esplicite, senza estensione alle altre non nominate."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15670-tricholoma-squarrulosum-bres-1892/",
+      "taxon": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronti per componenti nominate; nessun criterio universale per tutte le altre."
+    },
+    {
+      "url": "https://czechmycology.org/_cmo/CM68106.pdf",
+      "taxon": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Tricholoma sejunctum",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.mycotaxon.com/resources/checklists/Angelini-v120-checklist.pdf",
+      "taxon": "Tricholoma sulphureum",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Tricholoma acerbum s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato nominale; non esteso ad altre componenti del complesso."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/286407520_Morphology_and_taxonomy_of_the_European_species_in_Lactarius_sect_Deliciosi_Russulales",
+      "taxon": "Lactarius sez. Deliciosi",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1525",
+      "taxon": "Lactarius porniniae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=1525",
+      "taxon": "Lactarius porniniae",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/283173055_Lactifluus_volemus_in_Europe_Three_species_in_one_-_Revealed_by_a_multilocus_genealogical_approach_Bayesian_species_delimitation_and_morphology",
+      "taxon": "Lactarius volemus s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/283173055_Lactifluus_volemus_in_Europe_Three_species_in_one_-_Revealed_by_a_multilocus_genealogical_approach_Bayesian_species_delimitation_and_morphology",
+      "taxon": "Lactarius volemus s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=2157",
+      "taxon": "Lactarius tesquorum",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15049-russula-foetens-pers-fr-1796/",
+      "taxon": "Russula Foetentinae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Copertura della sola R. foetens; non estesa alla sottosezione intera."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/90119-russula-farinipes-romell-1893/",
+      "taxon": "Russula Foetentinae",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "La fonte dice alcune Foetentinae, senza una trattazione completa della sottosezione."
+    },
+    {
+      "url": "https://biblio.ugent.be/publication/01HE5K03HDY8NGD3ECGP3NGEEA",
+      "taxon": "Russula Compactae Nigricantinae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.mycotaxon.com/resources/checklists/Angelini-v120-checklist.pdf",
+      "taxon": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato di R. delica nominale; non ricopre tutte le Lactarioides."
+    },
+    {
+      "url": "https://agricoltura.regione.campania.it/pubblicazioni/pdf/funghi_campania.pdf",
+      "taxon": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Ambito circoscritto al taxon e al concetto della fonte; revisione indipendente ancora pendente."
+    },
+    {
+      "url": "https://www.ambpesaro.it/portfolio-item/tricholoma-columbetta/",
+      "taxon": "Tricholoma columbetta",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Escluso: il risultato indicizzato contiene contenuti estranei (accessori auto), nessun testo micologico verificabile."
+    },
+    {
+      "url": "https://www2.muse.it/bresadola/map_det.asp?ar=tv&sp=231858",
+      "taxon": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Pagina non recuperabile; preferita revisione tassonomica primaria di Christensen & Noordeloos 1999."
+    },
+    {
+      "url": "https://www.ambpesaro.it/portfolio-item/craterellus-lutescens/",
+      "taxon": "Craterellus lutescens",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.ambpesaro.it/portfolio-item/craterellus-tubaeformis/",
+      "taxon": "Craterellus lutescens",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.ambpesaro.it/portfolio-item/craterellus-tubaeformis/",
+      "taxon": "Craterellus tubaeformis",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.ambpesaro.it/portfolio-item/craterellus-tubaeformis/",
+      "taxon": "Craterellus tubaeformis",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.ambpesaro.it/portfolio-item/craterellus-cinereus/",
+      "taxon": "Craterellus cornucopioides",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15305-gomphus-clavatus-pers-fr-gray-1821/",
+      "taxon": "Gomphus clavatus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15305-gomphus-clavatus-pers-fr-gray-1821/",
+      "taxon": "Gomphus clavatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15035-hydnum-repandum-l-fr-1753/",
+      "taxon": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Specie nominale, non copertura dell’intera unità Hydnum spp."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15035-hydnum-repandum-l-fr-1753/",
+      "taxon": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Specie nominale, non copertura dell’intera unità Hydnum spp."
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/mycological-research/article/abs/sarcodon-imbricatus-and-s-squamosus-two-confused-species/C1CE597DA861DA418ADEAD71979F1DF4",
+      "taxon": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Associazioni riferite alle due componenti nominate; nessuna estensione ad altri segregati."
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/mycological-research/article/abs/sarcodon-imbricatus-and-s-squamosus-two-confused-species/C1CE597DA861DA418ADEAD71979F1DF4",
+      "taxon": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Differenza ecologica documentata; il solo albero vicino non costituisce determinazione."
+    },
+    {
+      "url": "https://ambbresadola.it/funghi_tossici/ramaria-formosa/",
+      "taxon": "Ramaria formosa",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://ambbresadola.it/funghi_tossici/ramaria-formosa/",
+      "taxon": "Ramaria formosa",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15322-ramaria-pallida-schaeff-ricken-1920/",
+      "taxon": "Ramaria pallida",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15322-ramaria-pallida-schaeff-ricken-1920/",
+      "taxon": "Ramaria pallida",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16784-ramaria-botrytis-pers-fr-ricken-1918/",
+      "taxon": "Ramaria botrytis s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Taxon nominale; il confronto resta rappresentativo, non universale del gruppo."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15105-auricularia-auricula-judae-bull-fr-qu%C3%A9l-1886/",
+      "taxon": "Auricularia auricula-judae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15105-auricularia-auricula-judae-bull-fr-qu%C3%A9l-1886/",
+      "taxon": "Auricularia auricula-judae",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24222-sarcosphaera-coronaria-jacq-j-schr%C3%B6t-1893/",
+      "taxon": "Sarcosphaera coronaria s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "La scheda sinonimizza S. crassa; non risolve tutti i taxa del complesso dopo le revisioni recenti."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24222-sarcosphaera-coronaria-jacq-j-schr%C3%B6t-1893/",
+      "taxon": "Sarcosphaera coronaria s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronti storici; non copertura indipendente di ogni componente dell’unità s.l."
+    },
+    {
+      "url": "https://www.alpental.com/psms/ddd/Cantharellales/Hydnum%202018.pdf",
+      "taxon": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Ecologia dichiarata a livello di intero genere; non attribuite preferenze individuali di albero o stagione."
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s11557-024-02006-7",
+      "taxon": "Sarcosphaera coronaria s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Copertura delle due specie europee, non delle linee nordamericane o extraeuropee; possibili rare eccezioni di suolo e ospite."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/14803-rubroboletus-satanas-lenz-kuan-zhao-zhu-l-yang-2014/",
+      "taxon": "Rubroboletus satanas",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Contributo riferito al taxon nominale richiesto; usati solo habitat e confronti documentati."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/14940-rubroboletus%C2%A0pulchrotinctus%C2%A0alessio-kuan-zhao-zhu-l-yang-2014/",
+      "taxon": "Rubroboletus pulchrotinctus",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Contributo riferito al taxon nominale richiesto; usati solo habitat e confronti documentati."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15735-caloboletus-calopus-pers-fr-vizzini-2014/",
+      "taxon": "Caloboletus calopus",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "La pagina attribuisce la scheda ad AMINT e al volume Tutto Funghi; non esplicita un autore individuale o collettivo nominato. Non riportati i confronti che richiedono assaggio."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15526-gyroporus-cyanescens-bull-fr-qu%C3%A9let-1886/",
+      "taxon": "Gyroporus cyanescens",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Contributo riferito al taxon nominale richiesto; usati solo habitat e confronti documentati."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16733-gyroporus-castaneus-bull-fr-qu%C3%A9l-1886/",
+      "taxon": "Gyroporus castaneus s.l.",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Evidenza nominale, non sufficiente per chiudere habitat o confronti dell’intero complesso s.l."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16810-suillellus-queletii-schulzer-vizzini-simonini-gelardi-2014/",
+      "taxon": "Boletus queletii e specie vicine/intermedie",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Confronto e habitat del taxon nominale; assenza di copertura dell’insieme aperto «specie vicine/intermedie»."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/100203-neoboletus-luridiformis-rostk-gelardi-simonini-vizzini-2014/",
+      "taxon": "Boletus (Neoboletus) erythropus s.l.",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Concetto nominale e nomenclatura controversi; non chiude l’unità tradizionale erythropus s.l. Non usata la frase della fonte su S. luridus perché la sua costruzione attribuisce ambiguamente i caratteri ai taxa."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16779-neoboletus-praestigiator/",
+      "taxon": "Boletus (Neoboletus) erythropus s.l.",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Scheda principale di Giovanni Satta e Stefano Rocchi, con responsabilità CLR AMINT; distingue conifere per N. praestigiator e latifoglie per entità chiamate luridiformis/xanthopus, ma nomenclatura e ambito non risolti per tutto s.l."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/8121-omphalotus-olearius-dc-fr-singer-1948/",
+      "taxon": "Hygrophoropsis aurantiaca",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Informazione sul taxon richiesta esplicitamente nel confronto della scheda editoriale di O. olearius; non inferita dall’habitat di quest’ultimo."
+    },
+    {
+      "url": "https://www.micoponte.it/SchedeFunghi/Imleria_badia.html",
+      "taxon": "Imleria badia",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "La scheda non firma un autore individuale; responsabilità del gruppo editore. Esclusa la qualificazione saprotrofica della fonte, non necessaria al dato di habitat e in contrasto con altre descrizioni ecologiche."
+    },
+    {
+      "url": "https://www.micoponte.it/File/Le%20specie%20pi%C3%B9%20comuni%20del%20genere%20Suillus.pdf",
+      "taxon": "Suillus luteus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Contributo riferito al taxon nominale richiesto; usati solo habitat e confronti documentati."
+    },
+    {
+      "url": "https://www.micoponte.it/File/Le%20specie%20pi%C3%B9%20comuni%20del%20genere%20Suillus.pdf",
+      "taxon": "Suillus granulatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Contributo riferito al taxon nominale richiesto; usati solo habitat e confronti documentati."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/9005-tylopilus-felleus%C2%A0bull-fr-p-karst-1881/",
+      "taxon": "Tylopilus felleus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Contributo riferito al taxon nominale richiesto; usati solo habitat e confronti documentati."
+    },
+    {
+      "url": "https://ambbresadola.it/funghi_tossici/boletus-luridus/",
+      "taxon": "Boletus sez. Luridi",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "AMB nazionale; la scheda copre B. luridus nominale, mentre l’unità richiesta comprende anche Rubroboletus, Neoboletus e altri generi. Habitat e confronto non generalizzabili all’intera ex sezione."
+    },
+    {
+      "url": "https://www.isprambiente.gov.it/files2017/pubblicazioni/manuali-linee-guida/MLG_158_2017.pdf",
+      "taxon": "Caloboletus calopus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Risultato indicizzato ISPRA coerente con la scheda AMINT, ma apertura PDF via ricerca fallita per dimensione: non impiegato come evidenza primaria."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24137-grifola-frondosa-dicks-fr-sf-gray-1821/",
+      "taxon": "Grifola frondosa",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24137-grifola-frondosa-dicks-fr-sf-gray-1821/",
+      "taxon": "Grifola frondosa",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24137-grifola-frondosa-dicks-fr-sf-gray-1821/",
+      "taxon": "Polyporus umbellatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/24137-grifola-frondosa-dicks-fr-sf-gray-1821/",
+      "taxon": "Meripilus giganteus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://botany.pl/images/Books/Wojewoda_2003_Checklist_of_Polish_larger_Basidiomycetes.pdf",
+      "taxon": "Polyporus umbellatus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato ecologico della monografia polacca; testo specifico consultato nell’estratto indicizzato p. 546; apertura integrale PDF in timeout."
+    },
+    {
+      "url": "https://www.isprambiente.gov.it/files/biodiversita/LB3210408ITC_002.pdf",
+      "taxon": "Meripilus giganteus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://enciclopedia.funghiitaliani.it/termine.php?show=4007",
+      "taxon": "Hapalopilus rutilans",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": ""
+    },
+    {
+      "url": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+      "taxon": "Albatrellopsis confluens",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Fonte sotto il sinonimo Albatrellus confluens."
+    },
+    {
+      "url": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+      "taxon": "Albatrellopsis confluens",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto con A. ovinus nominale; fonte usa Albatrellus confluens."
+    },
+    {
+      "url": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+      "taxon": "Scutiger pes-caprae",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Fonte sotto il sinonimo Albatrellus pes-caprae."
+    },
+    {
+      "url": "https://www.micoponte.it/File/MicoPonte%205%20-%202011%20(sito%20web).pdf",
+      "taxon": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto documentato per A. subrubescens soltanto; non generalizzato all’intero complesso."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15345-laetiporus-sulphureus-bull-fr-murrill-1920/",
+      "taxon": "Laetiporus sulphureus s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "La fonte segnala un complesso europeo non revisionato e specie americane separate; dato riferito al concetto europeo della scheda, non a ogni segregato."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15345-laetiporus-sulphureus-bull-fr-murrill-1920/",
+      "taxon": "Laetiporus sulphureus s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Limite di concetto europeo della fonte; confronto non verificato per tutti i segregati del complesso mondiale."
+    },
+    {
+      "url": "https://www.dannyhaelewaters.com/wp-content/uploads/2021/01/Jumbam-et-al.-2019-A-new-and-unusual-species-of-Hericium-from-the-Dja-Biosphere-Reserve-Cameroon.pdf",
+      "taxon": "Hericium spp.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Affermazione esplicita a livello di genere; non attribuisce lo stesso ospite arboreo a tutte le specie."
+    },
+    {
+      "url": "https://www.isprambiente.gov.it/files/biodiversita/LB3210408ITC_002.pdf",
+      "taxon": "Meripilus giganteus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Scartata la formulazione generale conifere/Fagus; mantenuta soltanto la raccolta su Fagus descritta nelle pagine110–111."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16802-cyclocybe-cylindracea-dc-vizzini-angelini-2014/",
+      "taxon": "Cyclocybe cylindracea",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16800-entoloma-hirtipes-schumach-mm-moser-1978/",
+      "taxon": "Entoloma hirtipes",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/16800-entoloma-hirtipes-schumach-mm-moser-1978/",
+      "taxon": "Entoloma hirtipes",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/18070-entoloma-clypeatum-l-fr-p-kumm-1871/",
+      "taxon": "Entoloma clypeatum s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Parziale: specie nominale; non chiude l’habitat dell’intero aggregato s.l."
+    },
+    {
+      "url": "https://www.ambpadova.it/wp-content/uploads/2017/09/notiziario-2016-1-completo.pdf",
+      "taxon": "Entoloma saundersii",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15299-hygrocybe-conica-schaeff-fr-p-kumm-1871/",
+      "taxon": "Hygrocybe conica s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Parziale: la scheda tratta H. conica e alcune ex varietà, non delimita tutte le componenti dell’unità s.l."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15299-hygrocybe-conica-schaeff-fr-p-kumm-1871/",
+      "taxon": "Hygrocybe conica s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Parziale: confronto riferito a H. conica nel senso della scheda, senza chiusura per tutti i segregati s.l."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/32964-hygrocybe-punicea-fr-fr-kummer-1871/",
+      "taxon": "Hygrocybe punicea",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15461-hygrophorus-marzuolus-fr-fr-bres-1893/",
+      "taxon": "Hygrophorus marzuolus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://ambbresadola.it/funghi_tossici/hypholoma-lateritium/",
+      "taxon": "Hypholoma lateritium",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.kew.org/about-us/press-media/top-10-fungi-fungarium",
+      "taxon": "Lentinula edodes",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8687056/",
+      "taxon": "Lentinula edodes",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+      "taxon": "Lepiota subincarnata",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ausl.bologna.it/servt/dipt/dsp/uo/ian/ia/funghi/atlante-funghi-velenosi/atlante-funghi-velenosi-web.pdf",
+      "taxon": "Lepiota elaiophylla",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15255-lepiota-cristata-bolton-fr-p-kumm-1871/",
+      "taxon": "Lepiota cristata",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/15255-lepiota-cristata-bolton-fr-p-kumm-1871/",
+      "taxon": "Lepiota cristata",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ameronlus.it/ojs/index.php/rmr/article/download/383/367/53",
+      "taxon": "Chlorophyllum molybdites",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ameronlus.it/ojs/index.php/rmr/article/download/383/367/53",
+      "taxon": "Chlorophyllum molybdites",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ameronlus.it/ojs/index.php/rmr/article/download/383/367/53",
+      "taxon": "Chlorophyllum rhacodes s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/20010-chlorophyllum-rhacodes%C2%A0vittad-vellinga-2002/",
+      "taxon": "Chlorophyllum rhacodes s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Parziale: habitat della sola specie nominale, non di C. brunneum e C. olivieri."
+    },
+    {
+      "url": "https://www.parcoforestecasentinesi.it/sites/default/files/images/cartella_ricerca/libro%20atlante%20funghi.pdf",
+      "taxon": "Echinoderma asperum s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Parziale: fonte riferita al taxon nominale, non all’intero concetto s.l."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/27704-lepiota-echinacea-je-lange-1940/",
+      "taxon": "Echinoderma asperum s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Parziale: confronto riferito alla specie nominale, senza copertura di eventuali altre componenti s.l."
+    },
+    {
+      "url": "https://ambbresadola.it/wp-content/uploads/2023/10/PdM41_completo_digitale.pdf",
+      "taxon": "Leucoagaricus leucothites s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/micologia/img/Trino2011_LE.pdf",
+      "taxon": "Leucoagaricus leucothites s.l.",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Parziale: scheda di L. leucothites nominale; altre componenti s.l. non confrontate."
+    },
+    {
+      "url": "https://www.zobodat.at/pdf/OestZPilz_18_0077-0110.pdf",
+      "taxon": "Panaeolus cyanescens",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.zobodat.at/pdf/OestZPilz_18_0077-0110.pdf",
+      "taxon": "Panaeolus cyanescens",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25209640/",
+      "taxon": "Pleurotus eryngii s.l.",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://natura.provincia.cuneo.it/funghi/commestibili/pleurotus-ostreatus/",
+      "taxon": "Pleurotus ostreatus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.micoponte.it/SchedeFunghi/Stropharia_rugosoannulata.html",
+      "taxon": "Stropharia rugosoannulata",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.micoponte.it/SchedeFunghi/Stropharia_rugosoannulata.html",
+      "taxon": "Stropharia rugosoannulata",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/8963-volvopluteus-gloiocephalus-dc-fr-vizzini-contu-justo-2011/",
+      "taxon": "Volvopluteus gloiocephalus",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/8963-volvopluteus-gloiocephalus-dc-fr-vizzini-contu-justo-2011/",
+      "taxon": "Volvopluteus gloiocephalus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ammbiol.com/fileadmin/user_upload/08ANTONIN_AmmSB97_2.pdf",
+      "taxon": "Volvariella volvacea",
+      "fields": [
+        "habitat"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.ammbiol.com/fileadmin/user_upload/08ANTONIN_AmmSB97_2.pdf",
+      "taxon": "Volvariella volvacea",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Dato riferito al taxon e al senso adottato dalla fonte. Nessuna attestazione di accreditamento formale."
+    },
+    {
+      "url": "https://www.adset.it/587-pleurotus-ostreatus-jacq-fr-p-kumm-1871/",
+      "taxon": "Pleurotus ostreatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto presente, ma autorevolezza micologica della sede non verificata in questa ricerca; non importato."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25209640/",
+      "taxon": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Fonte su complesso eryngii, non copertura del confronto per entrambe le specie della coppia."
+    },
+    {
+      "url": "https://data.rbg.vic.gov.au/dev/fungikeys/funkey/key/Funkey%20-%20Key%20to%20the%20Agarics%20of%20Australia/Media/Html/Fact%20Sheets/Panaeolus_cyanescens.htm",
+      "taxon": "Panaeolus cyanescens",
+      "fields": [
+        "habitat",
+        "lookalikes"
+      ],
+      "limitations": "Estratto indicizzato reperito, apertura404; usato invece studio tassonomico2009."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/18070-entoloma-clypeatum-l-fr-p-kumm-1871/",
+      "taxon": "Entoloma saundersii",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Confronto riferito a E. saundersii e E. clypeatum nominali; nessuna estrapolazione a tutto il complesso clypeatum."
+    },
+    {
+      "url": "https://micologiamessinese.altervista.org/Miceli/pleurotus_ostreatus.htm",
+      "taxon": "Pleurotus ostreatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Consultato integralmente il testo pubblico; ripresi solo i confronti nominati e i caratteri macroscopici. Nessuna fotografia, coltivazione, proprietà medicinali o indicazione alimentare trasferita."
+    },
+    {
+      "url": "https://www.adset.it/587-pleurotus-ostreatus-jacq-fr-p-kumm-1871/",
+      "taxon": "Pleurotus ostreatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "Seconda pubblicazione dello stesso articolo firmato, datata 29 marzo 2019; conferma autore e sezione Specie simili, non fonte indipendente."
+    },
+    {
+      "url": "https://www.funghiitaliani.it/topic/14924-pleurotus-ostreatus-jacquin-fr-kummer-1871/",
+      "taxon": "Pleurotus ostreatus",
+      "fields": [
+        "lookalikes"
+      ],
+      "limitations": "La scheda AMINT consultata non contiene un confronto con comparatore nominato; non trasferita la formulazione assoluta di inconfondibilità."
+    }
+  ]
+}

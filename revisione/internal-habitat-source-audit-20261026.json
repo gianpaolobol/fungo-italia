@@ -1,0 +1,740 @@
+{
+  "updatedAt": "2026-10-26",
+  "scope": "39 PDF scoped searches and page verification of selected claims; originals not redistributed. Official S2 download HTTP503; S2 food decisions unchanged.",
+  "documents": [
+    {
+      "sourceId": "COURSE-103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "driveFileId": "103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF",
+      "title": "Sitta - genere Tricholoma schematico 2026.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-09-09",
+      "pageCount": 54,
+      "url": "https://drive.google.com/file/d/103_uawaCvB0bi-OXQ7Bhqal0NGi9u5gF/view",
+      "mimeType": "application/pdf",
+      "bytes": 4516873,
+      "folderId": "1cGCpoeqHek8aRH8V_5-vWKt_60qF7ypx",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Confronti fra Tricholoma e generi simili, variabilità del portamento. Selezionati confronti macroscopici; escluso l’assaggio.",
+      "localKey": "tricholoma",
+      "actualPageCount": 54,
+      "sha256": "9d1e5689afaf10f7c03d64330f62cf84f3e36462a0e97084f94591c125baa7ef"
+    },
+    {
+      "sourceId": "COURSE-1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "driveFileId": "1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR",
+      "title": "Marco Floriani - Il genere Russula (Toscana-Basilicata 2025-2026).pdf",
+      "authors": [
+        "Marco Floriani"
+      ],
+      "documentDate": null,
+      "pageCount": null,
+      "url": "https://drive.google.com/file/d/1plcW4xb-Mc-jhKeGWhUV0LHA5t9cFFaR/view",
+      "mimeType": "application/pdf",
+      "bytes": 14307310,
+      "folderId": "1cGCpoeqHek8aRH8V_5-vWKt_60qF7ypx",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Sistematica pratica e variabilità di Russula. Corretta la generalizzazione dell’odore delle Foetentinae; gli assaggi e reagenti non sono parte del percorso di campo.",
+      "localKey": "russula",
+      "actualPageCount": 118,
+      "sha256": "5b483eb3904c4cfe4e4710e1864948ec8fd5e92f61a1805587c9fca91fe36e03"
+    },
+    {
+      "sourceId": "COURSE-1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",
+      "driveFileId": "1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH",
+      "title": "Cortinarius 2026 - Baselga di Piné 09-26.pdf",
+      "authors": [],
+      "documentDate": "2026-09",
+      "pageCount": 41,
+      "url": "https://drive.google.com/file/d/1ok-z5Wsxf0CwQ7gCy7Ne4YqK1NpmLeqH/view",
+      "mimeType": "application/pdf",
+      "bytes": 5992000,
+      "folderId": "1cGCpoeqHek8aRH8V_5-vWKt_60qF7ypx",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "unresolved",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Habitat del gruppo Orellani e confronti Dermocybe/Leprocybe. Classificazioni 2022 e 2024 non applicate automaticamente alle unità del documento fondante.",
+      "localKey": "cortinarius",
+      "actualPageCount": 41,
+      "sha256": "d8abd93122b907548633f5b381b8d5a1f0c5c3260dcf36f709675ad00971bbb0"
+    },
+    {
+      "sourceId": "COURSE-16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "driveFileId": "16vujJslbkEcwApknc-b5iOwyOIjCtd7c",
+      "title": "Boletacee Lagonegro.pdf",
+      "authors": [
+        "Davide Palumbo"
+      ],
+      "documentDate": "2025-10",
+      "pageCount": null,
+      "url": "https://drive.google.com/file/d/16vujJslbkEcwApknc-b5iOwyOIjCtd7c/view",
+      "mimeType": "application/pdf",
+      "bytes": 15554598,
+      "folderId": "1nzOmEgIzbv3u5fnR9Qxoz7TtAbIKw0va",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Approccio ispettivo alle Boletales: viraggi, forme xantoidi e conifere. Il documento dichiara un’impostazione pratica, non una revisione scientifica.",
+      "localKey": "boletacee",
+      "actualPageCount": 120,
+      "sha256": "7f9b952b0c871783be0bbf6dcc5cee369dd285b7db204d9520ccf1063ccb6335"
+    },
+    {
+      "sourceId": "COURSE-1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "driveFileId": "1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT",
+      "title": "Inquadramento schematico Agaricus ES.pdf",
+      "authors": [
+        "Edoardo Suriano"
+      ],
+      "documentDate": "2025-10-16",
+      "pageCount": 32,
+      "url": "https://drive.google.com/file/d/1cK7djdD5tRVpnK46zrsA0ltWl2Hzb_eT/view",
+      "mimeType": "application/pdf",
+      "bytes": 7320782,
+      "folderId": "1nzOmEgIzbv3u5fnR9Qxoz7TtAbIKw0va",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Habitat, anello e viraggi Agaricus. Correzioni Sanguinolenti e bresadolanus confrontate con due pubblicazioni esterne.",
+      "localKey": "agaricus",
+      "actualPageCount": 32,
+      "sha256": "23093615667bebd029674c4be32883dbfbcc66da977bc821d690431e3ce5e245"
+    },
+    {
+      "sourceId": "COURSE-1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "driveFileId": "1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR",
+      "title": "Sitta - Genere Amanita 30.9.2025.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2025-09-30",
+      "pageCount": 74,
+      "url": "https://drive.google.com/file/d/1i3nWqaWstqnxAzMrGhWM52gOkIj0BxTR/view",
+      "mimeType": "application/pdf",
+      "bytes": 3137348,
+      "folderId": "1zBnAOpI0-wAEhfQuuIhvxcjiwqQzAsuw",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Variabilità del velo in Amanita, ovoli e confronti. Esclusa formulazione arancio delle lamelle di caesarea; tassonomia tradizionale non sostituisce nomenclatura attuale.",
+      "localKey": "amanita",
+      "actualPageCount": 74,
+      "sha256": "181fe8b9169eca358c4998127e08cc3b37f34c91efe07d79c4140f681d9cf6fe"
+    },
+    {
+      "sourceId": "COURSE-1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "driveFileId": "1_dhoC5hs6I5tG_bAI145535dXMtXEa_V",
+      "title": "Sitta - Tricholomataceae 3.10.25.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2025-10-03",
+      "pageCount": 100,
+      "url": "https://drive.google.com/file/d/1_dhoC5hs6I5tG_bAI145535dXMtXEa_V/view",
+      "mimeType": "application/pdf",
+      "bytes": 4354710,
+      "folderId": "1zBnAOpI0-wAEhfQuuIhvxcjiwqQzAsuw",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Morfogruppi tradizionali delle Tricholomataceae; habitat e confronti di connata e decastes, senza proporre una revisione nomenclaturale.",
+      "localKey": "tricholomataceae",
+      "actualPageCount": 100,
+      "sha256": "42e6fa97bced543178e5f0353eb62b16a71f7c2696be661600895c4ce58d2de0"
+    },
+    {
+      "sourceId": "COURSE-1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "driveFileId": "1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm",
+      "title": "PRIMAVERILI (2).pdf",
+      "authors": [
+        "Edoardo Suriano"
+      ],
+      "documentDate": "2026-05-11",
+      "pageCount": null,
+      "url": "https://drive.google.com/file/d/1598gJqWSZ_Ylop0wmmm1tKfhlLttlrIm/view",
+      "mimeType": "application/pdf",
+      "bytes": 22266300,
+      "folderId": "1Jgx8HharJi5XJryChNlOTru51NBYwo7H",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Habitat e confronti dei funghi primaverili. Escluse generalizzazioni di commestibilità, identificazioni dalla sola fotografia e ricette.",
+      "localKey": "primaverili",
+      "actualPageCount": 80,
+      "sha256": "66b969911e1153c4f2feeeeffe0465040612723fb6f5bb6765ff645ce4117749"
+    },
+    {
+      "sourceId": "COURSE-1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "driveFileId": "1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg",
+      "title": "1a Boletales.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-26",
+      "pageCount": 111,
+      "url": "https://drive.google.com/file/d/1EBj4gmGMput3jVfRJCrsP9GAzE5r7Kzg/view",
+      "mimeType": "application/pdf",
+      "bytes": 4784113,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Caratteri e variabilità delle Boletales; integrazioni circoscritte delle schede di genere. Nessuna approvazione alimentare.",
+      "localKey": "boletales",
+      "actualPageCount": 111,
+      "sha256": "7c4bfa22f90f6b489161f81796976204b645f743a9c0a58a336215b5afa1e1f2"
+    },
+    {
+      "sourceId": "COURSE-1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "driveFileId": "1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn",
+      "title": "1b Boletus sez. Boletus.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-26",
+      "pageCount": 79,
+      "url": "https://drive.google.com/file/d/1D3Ov6ZIDXEHOozSqJzx_uXQYiFJ-qsTn/view",
+      "mimeType": "application/pdf",
+      "bytes": 4528804,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Gruppo edulis: imenoforo, patina giovanile, reticolo, confronti con Tylopilus; ecologia didattica non convertita in previsione di raccolta.",
+      "localKey": "boletus",
+      "actualPageCount": 79,
+      "sha256": "286c2c71615a2c82a60b276502f4e1ff76b5fc5f6ab9fa785e93d449cb4e1691"
+    },
+    {
+      "sourceId": "COURSE-1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+      "driveFileId": "1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK",
+      "title": "Sitta micotossicologia Amiata 1.10.25.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2025-10-01",
+      "pageCount": 100,
+      "url": "https://drive.google.com/file/d/1gIqusMIlu44WM8IQFf23kNIhIv4HsVaK/view",
+      "mimeType": "application/pdf",
+      "bytes": 5184691,
+      "folderId": "1zBnAOpI0-wAEhfQuuIhvxcjiwqQzAsuw",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Casistica delle confusioni: trasferiti confronti documentati con pagine puntuali, senza trasformare un caso in diagnosi universale.",
+      "localKey": "tossicologia1",
+      "actualPageCount": 100,
+      "sha256": "9b6772e80bd47a6814124c34f107c70e88e043147e14fabf77ffa60c8f3055c2"
+    },
+    {
+      "sourceId": "COURSE-1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "driveFileId": "1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6",
+      "title": "Sitta micotossicologia Amiata 2.10.25.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2025-10-02",
+      "pageCount": 150,
+      "url": "https://drive.google.com/file/d/1TknM1ntP2i72lvN4j3T9drOyoUxKwFE6/view",
+      "mimeType": "application/pdf",
+      "bytes": 6581950,
+      "folderId": "1zBnAOpI0-wAEhfQuuIhvxcjiwqQzAsuw",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Confronti tossicologici e criteri della Guida. Confronto Clitopilus/Clitocybe presentato come ipotesi, non importato come casistica provata.",
+      "localKey": "tossicologia2",
+      "actualPageCount": 150,
+      "sha256": "996ff24acc7219aa7ab5bed73087705ada419b51195b66c094e7d2777c300eb1"
+    },
+    {
+      "sourceId": "COURSE-1C8Y5s0g6472XRWIgUO9iVqfAhloHmhx8",
+      "driveFileId": "1C8Y5s0g6472XRWIgUO9iVqfAhloHmhx8",
+      "title": "7 funghi secchi trattazione specie.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-28",
+      "pageCount": 121,
+      "url": "https://drive.google.com/file/d/1C8Y5s0g6472XRWIgUO9iVqfAhloHmhx8/view",
+      "mimeType": "application/pdf",
+      "bytes": 6500664,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Micologia ispettiva del secco: essiccazione modifica colore e morfologia; non trasferire automaticamente il profilo fresco al prodotto trasformato.",
+      "localKey": "secchi",
+      "actualPageCount": 121,
+      "sha256": "0c620d6dc8ccfd03efe29212c919e683db3a976dea31b149c161867e605700e8"
+    },
+    {
+      "archiveKey": "salerni",
+      "archivePath": "Salerni Elena/Salerni Clima.pdf",
+      "parentSourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "driveFileId": "1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "url": "https://drive.google.com/file/d/1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364/view",
+      "actualPageCount": 40,
+      "sha256": "194886bc8d3b6035af938caaf09d8edf2da99734833a21d0af6842215b2eaa95"
+    },
+    {
+      "archiveKey": "salerni",
+      "archivePath": "Salerni Elena/Salerni Coltivazione.pdf",
+      "parentSourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "driveFileId": "1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "url": "https://drive.google.com/file/d/1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364/view",
+      "actualPageCount": 48,
+      "sha256": "910307164339d9febcb5f0dd596cd53beb15ff8d45d5333c8ac8a1f4fe9a61ab"
+    },
+    {
+      "archiveKey": "salerni",
+      "archivePath": "Salerni Elena/Salerni Comunità fungine.pdf",
+      "parentSourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "driveFileId": "1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "url": "https://drive.google.com/file/d/1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364/view",
+      "actualPageCount": 37,
+      "sha256": "7c81cac7c995c0935655200a42d03b6253094b6d1ab61d6adee71dfdf55097dc"
+    },
+    {
+      "archiveKey": "salerni",
+      "archivePath": "Salerni Elena/Salerni Trofismo 1.pdf",
+      "parentSourceId": "COURSE-1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "driveFileId": "1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364",
+      "url": "https://drive.google.com/file/d/1Y2tr4xaia5PbNt_HCFWDRfVncz5e6364/view",
+      "actualPageCount": 60,
+      "sha256": "d84ad41dc3c027e47579e65a0f9d350188702957f5f3b73d112fec43e8c1bb44"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "3 IL CAPPELLO.pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 70,
+      "sha256": "2014ba92a2323df53a06598c8596a46884eabdc015b79e3996f88dc307c65d81"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "4 L_IMENOFORO DEF.pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 125,
+      "sha256": "c10866506b7243440a3818c838907c02174cd0bd80c2949fa9ff71d172ef7452"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "CARNE [modalitÃ  compatibilitÃ ].pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 45,
+      "sha256": "eecbba32d011265eccec76dd54c0e9b7ca4aabfb7f1eb832866f1dfdafadddc8"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "FORME 13 [modalitÃ  compatibilitÃ ].pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 51,
+      "sha256": "9d844cb19d01376f0e8e3c723c64e2f7a711e8b4082d88193839b5b83f88b80f"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "MODI DI CRESCITA 13 [modalitÃ  compatibilitÃ ].pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 20,
+      "sha256": "7feaeae34094c78b603cdcd844bb60aa18769804b2f6908ded2895c6b1fb142d"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "LA MORFOLOGIA NEI FUNGHI HA UN’IMPORTANZA VITALE.pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 14,
+      "sha256": "ccef9b6379178fe41127fd13a58ef9e9c8ba1e49ee5995817fff3c1f351a6561"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "VELI PAT MODIFICA 2013 [modalitÃ  compatibilitÃ ].pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 89,
+      "sha256": "b034988f1d290a6f2ad612a96f505bb830badc7e6ed4e734dd78717951d8e505"
+    },
+    {
+      "archiveKey": "morimando",
+      "archivePath": "IL GAMBO PAT MODIFICA 2013 [modalitÃ  compatibilitÃ ].pdf",
+      "parentSourceId": "COURSE-1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "driveFileId": "1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM",
+      "url": "https://drive.google.com/file/d/1to-hjdAyzE8JB1KeFxn7BpLnd6QLTaUM/view",
+      "actualPageCount": 63,
+      "sha256": "7ad9b28d2cd4810ceba2d07b7c72653c18557226a4dcf6bb8646cdba8e53d44f"
+    },
+    {
+      "archiveKey": "atzeni",
+      "archivePath": "Atzeni lezione microscopia 2026_compressed.pdf",
+      "parentSourceId": "COURSE-1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "driveFileId": "1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "url": "https://drive.google.com/file/d/1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot/view",
+      "actualPageCount": 161,
+      "sha256": "2ef577cbfca830c9dab8246858f7a3da2493f8cef83f65ca19646f67093ff5a5"
+    },
+    {
+      "archiveKey": "atzeni",
+      "archivePath": "Salerni. Microscopia Corso Amiata 12 Maggio 2026.pdf",
+      "parentSourceId": "COURSE-1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "driveFileId": "1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "url": "https://drive.google.com/file/d/1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot/view",
+      "actualPageCount": 82,
+      "sha256": "52e7696398a8d05167b6607c6d4471381f7ac808fea195ccf005a9fb098aff87"
+    },
+    {
+      "archiveKey": "atzeni",
+      "archivePath": "Verzolla - PRONTUARIO DEL MICOLOGO IN PS.pdf",
+      "parentSourceId": "COURSE-1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "driveFileId": "1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "url": "https://drive.google.com/file/d/1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot/view",
+      "actualPageCount": 2,
+      "sha256": "7e834381bee0af75dd5f8d2bf169e58aae9b93002d6f9c89a4fe464f53ffcd79"
+    },
+    {
+      "archiveKey": "atzeni",
+      "archivePath": "Verzolla PRESENTAZIONE Abbadia 13.5.26.pdf",
+      "parentSourceId": "COURSE-1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "driveFileId": "1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot",
+      "url": "https://drive.google.com/file/d/1j_9dqN4wIXYAlFvaHRb19QKlhfXnq_ot/view",
+      "actualPageCount": 155,
+      "sha256": "9b4c849ddf1a70ccf243aa0db99436a5f88bfeecbcd08f05ab42c1dd4baea8eb"
+    },
+    {
+      "sourceId": "COURSE-1r5oVwZOFfgE-aPQMLscc86ikgcqIRM2Z",
+      "driveFileId": "1r5oVwZOFfgE-aPQMLscc86ikgcqIRM2Z",
+      "title": "Perini Botanica forestale.pdf",
+      "authors": [
+        "Claudia Perini"
+      ],
+      "documentDate": "2025-09-10",
+      "pageCount": null,
+      "url": "https://drive.google.com/file/d/1r5oVwZOFfgE-aPQMLscc86ikgcqIRM2Z/view",
+      "mimeType": "application/pdf",
+      "bytes": 10364597,
+      "folderId": "1nkfjAJ1pET4H4nsHu53Fj1as4SmGJd8q",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Riconoscimento delle piante ospiti e ambienti forestali; nessuna previsione di produttività attribuita alle macroaree.",
+      "actualPageCount": 53,
+      "sha256": "51b8f9a19d713ab122e219f59504bd61503b2a60f43515d4869a30f3a16346a5"
+    },
+    {
+      "sourceId": "COURSE-1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2",
+      "driveFileId": "1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2",
+      "title": "Perini Classificazione bis.pdf",
+      "authors": [
+        "Claudia Perini"
+      ],
+      "documentDate": null,
+      "pageCount": 21,
+      "url": "https://drive.google.com/file/d/1d41z1q_6-i1Rr9AqL8E85IUV7EJBsbo2/view",
+      "mimeType": "application/pdf",
+      "bytes": 3903475,
+      "folderId": "1nkfjAJ1pET4H4nsHu53Fj1as4SmGJd8q",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Confusioni ovoidea/proxima e aggiornamenti tassonomici. Nuove sinonimie e distinzione Sarcosphaera richiedono verifica dei lavori primari.",
+      "actualPageCount": 21,
+      "sha256": "d32bcd17c2bc28bc96d1ca5b3ec50cd98865a3f25bded0ccfbac1a22d26448d9"
+    },
+    {
+      "sourceId": "COURSE-1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+      "driveFileId": "1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr",
+      "title": "Perini classificazione.pdf",
+      "authors": [
+        "Claudia Perini"
+      ],
+      "documentDate": null,
+      "pageCount": 87,
+      "url": "https://drive.google.com/file/d/1-lW1hrEK2ll8fItkPHfJi-oRzugXYlxr/view",
+      "mimeType": "application/pdf",
+      "bytes": 7624674,
+      "folderId": "1nkfjAJ1pET4H4nsHu53Fj1as4SmGJd8q",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Osservazione, sporata, imenoforo, cortina e rottura della carne. Esclusi assaggi di specie mortali e ricette con reagenti concentrati.",
+      "actualPageCount": 87,
+      "sha256": "0bdfb3c8548df78a6feda0fb1bb0dd58201b0c604e62892292346e6a0197d36d"
+    },
+    {
+      "sourceId": "COURSE-1jvCVUMnJkY96qEeTEJO1X_CdsJmPgKOy",
+      "driveFileId": "1jvCVUMnJkY96qEeTEJO1X_CdsJmPgKOy",
+      "title": "Perini Micologia generale.pdf",
+      "authors": [
+        "Claudia Perini"
+      ],
+      "documentDate": null,
+      "pageCount": 35,
+      "url": "https://drive.google.com/file/d/1jvCVUMnJkY96qEeTEJO1X_CdsJmPgKOy/view",
+      "mimeType": "application/pdf",
+      "bytes": 6275257,
+      "folderId": "1nkfjAJ1pET4H4nsHu53Fj1as4SmGJd8q",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Ife, micelio, nutrizione e trofismo. Nessuna generalizzazione non verificata delle reti micorriziche.",
+      "actualPageCount": 35,
+      "sha256": "e3a7a20d5de2f30cf712ede8b12fea8db4dca116ff4bcefd5ca80b5a2401d0bc"
+    },
+    {
+      "sourceId": "COURSE-1_C3c8j8Ln1z4XWaBFlZEpQUh5jCDEJn_",
+      "driveFileId": "1_C3c8j8Ln1z4XWaBFlZEpQUh5jCDEJn_",
+      "title": "Approfondimenti di Micotossicologia_Sitta.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-09-09",
+      "pageCount": 65,
+      "url": "https://drive.google.com/file/d/1_C3c8j8Ln1z4XWaBFlZEpQUh5jCDEJn_/view",
+      "mimeType": "application/pdf",
+      "bytes": 3966438,
+      "folderId": "1cGCpoeqHek8aRH8V_5-vWKt_60qF7ypx",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Aggiornamenti tossicologici: attribuzioni di tossine non dimostrate e differenze tra evidenza clinica e analitica. Nessuna indicazione alimentare o terapia trasferita.",
+      "actualPageCount": 65,
+      "sha256": "0ce8d1aa8965d14335ce739a04e874dce88e7e2e208e97304440ad3b77976b2c"
+    },
+    {
+      "sourceId": "COURSE-1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "driveFileId": "1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb",
+      "title": "Missanelli definitivo.pdf",
+      "authors": [
+        "Andrea Missanelli"
+      ],
+      "documentDate": null,
+      "pageCount": null,
+      "url": "https://drive.google.com/file/d/1S0Lekyl6cvhDuO54_tVa2i1dwaCTHSFb/view",
+      "mimeType": "application/pdf",
+      "bytes": 27687897,
+      "folderId": "1zBnAOpI0-wAEhfQuuIhvxcjiwqQzAsuw",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Sindromi tossicologiche e ruoli clinici. Esclusi protocolli, dosaggi e formulazioni che presentano Gyromitra come sicura dopo cottura.",
+      "actualPageCount": 103,
+      "sha256": "87261eb7201537ec64844a6c7cf349252366087e3c95ce0de71a3b57d562dd29"
+    },
+    {
+      "sourceId": "COURSE-10j5hQmDz6cwWM_ScXXOicO8rcT48ew0H",
+      "driveFileId": "10j5hQmDz6cwWM_ScXXOicO8rcT48ew0H",
+      "title": "10 funghi congelati.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-30",
+      "pageCount": 138,
+      "url": "https://drive.google.com/file/d/10j5hQmDz6cwWM_ScXXOicO8rcT48ew0H/view",
+      "mimeType": "application/pdf",
+      "bytes": 6362534,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Controllo di prodotti congelati laminati o cubettati e casi di sostituzione. Nessuna ricetta, soglia o certificazione alimentare automatica.",
+      "actualPageCount": 138,
+      "sha256": "06d195a19236166eb0e9adf816a6291c2cfb9f60ddd60d3a261167d42b88e587"
+    },
+    {
+      "sourceId": "COURSE-1Uaki1jRZNJ9OEST4oV6wQzPdtlvh6PhW",
+      "driveFileId": "1Uaki1jRZNJ9OEST4oV6wQzPdtlvh6PhW",
+      "title": "11 funghi salamoia.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-30",
+      "pageCount": 82,
+      "url": "https://drive.google.com/file/d/1Uaki1jRZNJ9OEST4oV6wQzPdtlvh6PhW/view",
+      "mimeType": "application/pdf",
+      "bytes": 4181168,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Controllo della merce conservata, casi documentati e residui di substrato; informazioni professionali separate dai caratteri del fresco.",
+      "actualPageCount": 82,
+      "sha256": "eec866e685890546a0f1bd08766e0895a621afcfce26b3132a32bd39cc783f5f"
+    },
+    {
+      "sourceId": "COURSE-1jdArVlp0Zxjn5iVA8_A_o4vrnX9KdimN",
+      "driveFileId": "1jdArVlp0Zxjn5iVA8_A_o4vrnX9KdimN",
+      "title": "8 specie estranee nei porcini secchi.pdf",
+      "authors": [
+        "Nicola Sitta"
+      ],
+      "documentDate": "2026-01-29",
+      "pageCount": 91,
+      "url": "https://drive.google.com/file/d/1jdArVlp0Zxjn5iVA8_A_o4vrnX9KdimN/view",
+      "mimeType": "application/pdf",
+      "bytes": 5356460,
+      "folderId": "1fVuFKqYDdRYKOCus3hme2L9aBpqVQc6A",
+      "access": "read-through-gian-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Contenuti didattici e riferimenti puntuali; non revisione indipendente globale.",
+      "analysisSummary": "Specie estranee nei prodotti commerciali; episodi di contaminazione non registrati come somiglianze naturali.",
+      "actualPageCount": 91,
+      "sha256": "0c4f6b7ef0c505b794a26c2a13d2575d93c2e877ae26bb96dab633c12d4673a8"
+    },
+    {
+      "sourceId": "COURSE-1kVCuJN1J2r2R4U6ZFgFxp0HmPxK_q4Kq",
+      "driveFileId": "1kVCuJN1J2r2R4U6ZFgFxp0HmPxK_q4Kq",
+      "title": "Monteleone Domenico _Lezione 11_09_2025.pdf",
+      "authors": [
+        "Domenico Monteleone"
+      ],
+      "documentDate": "2025-09-11",
+      "pageCount": 110,
+      "url": "https://drive.google.com/file/d/1kVCuJN1J2r2R4U6ZFgFxp0HmPxK_q4Kq/view",
+      "mimeType": "application/pdf",
+      "bytes": 4707322,
+      "folderId": "17FCf3XU2m9id_0uFjwblrkjEqSk6pKxp",
+      "access": "read-through-owner-connector",
+      "analysisStatus": "extracted-text-reviewed",
+      "authorVerification": "cover",
+      "rights": {
+        "redistribution": "not-established",
+        "originalPublished": false
+      },
+      "verificationScope": "Provenienza e contenuto circoscritto; non certificazione indipendente di ogni affermazione.",
+      "analysisSummary": "Controllo micologico degli esemplari presentati e preparazione della raccolta. Normativa illustrata nel 2025, non attestata automaticamente come vigente nel 2026.",
+      "actualPageCount": 110,
+      "sha256": "f2760b1398f7aa552fdaa8d9b122b82e3ff1c006d103eb6632b8a31ab6e1e923"
+    }
+  ],
+  "rejectedClaims": [
+    "Hypholoma lateritium and Auricularia occurrence graph on Salerni Comunità p34: insufficient direct habitat evidence.",
+    "Hydnum extracted hidden text absent from visible Perini page36: excluded."
+  ]
+}

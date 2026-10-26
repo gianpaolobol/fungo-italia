@@ -1,0 +1,49 @@
+{
+  "baseline": "c89d0a231106f3828b66da8125c73f6015edba50",
+  "updatedAt": "2026-10-26",
+  "scope": "working tree publication candidate; same staged source tree, not a distributed iOS build",
+  "checks": {
+    "prepareData": {
+      "exitCode": 0
+    },
+    "nodeTests": {
+      "exitCode": 0,
+      "passed": 240
+    },
+    "typecheck": {
+      "exitCode": 0
+    },
+    "webBuild": {
+      "exitCode": 0
+    },
+    "webkit": {
+      "exitCode": 0,
+      "passed": 65
+    },
+    "chromium": {
+      "exitCode": 0,
+      "passed": 65
+    },
+    "strictScientific": {
+      "exitCode": 1,
+      "blocked": 148,
+      "ready": 0
+    },
+    "strictToxicology": {
+      "exitCode": 1,
+      "releaseBlocked": true
+    },
+    "unifiedOfflineSmoke": {
+      "exitCode": 0,
+      "tabs": [
+        "Percorso",
+        "Studio",
+        "Esame",
+        "Aree"
+      ],
+      "offline": true
+    }
+  },
+  "review": "Targeted independent agent integration review; no professional mycological approval. Two scope contradictions corrected.",
+  "distribution": "No EAS or Apple distribution performed."
+}
