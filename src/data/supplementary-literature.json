@@ -565,6 +565,190 @@
           "reviewStatus": "source-consulted-pending-independent-review"
         }
       ]
+    },
+    {
+      "scientificName": "Entoloma sinuatum",
+      "commonNames": [],
+      "habitat": [
+        "Boschi di latifoglie; osservato dalla primavera all'autunno, su suoli argillosi o calcarei (Provincia di Cuneo, scheda Entoloma sinuatum)."
+      ],
+      "lookalikes": [
+        "Clitocybe nebularis: confronto riportato dalla Provincia di Cuneo; le lamelle cambiano colore con la maturazione e il solo aspetto generale non consente identificazione sicura.",
+        "Lyophyllum decastes: confronto segnalato dalla Provincia di Cuneo; non determinare dalla sola somiglianza del cappello."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-ENTOLOMA-SINUATUM-CUNEO-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "Provincia di Cuneo — Natura e prodotti tipici: Entoloma sinuatum",
+          "url": "https://natura.provincia.cuneo.it/funghi/funghi-velenosi-e-non-commestibili/entoloma-sinuatum/",
+          "location": "Sezioni Habitat e Osservazioni della scheda Entoloma sinuatum",
+          "supportedClaim": "Habitat boschi di latifoglie e confronti con Clitocybe nebularis e Lyophyllum decastes; non si usa per modificare la classificazione alimentare fondata su S2.",
+          "notes": "Fonte istituzionale verificata il 2026-10-26. Integrazione bibliografica, revisione micologica indipendente non attestata. I sosia sono confronti interni alla scheda, non nuove unità curricolari.",
+          "reviewStatus": "source-consulted-pending-independent-review",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ]
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "commonNames": [],
+      "habitat": [
+        "Nei boschi di latifoglie o misti, spesso ai margini; segnalata anche in ambienti montani."
+      ],
+      "lookalikes": [
+        "Amanita citrina var. alba: confronto didattico fra amanite bianche; non basarsi sui soli resti del velo.",
+        "Agaricus sylvicola: confronto con lamelle che in Agaricus cambiano da rosa a brune, mentre in Amanita virosa restano bianche."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-AMANITA-VIROSA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Amanita virosa",
+          "url": "https://www.first-nature.com/fungi/amanita-virosa.php",
+          "location": "Habitat & Ecological role; Similar species",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Cortinarius rubellus: specie anch'essa associata a orellanina; per il confronto del gambo, in C. orellanus manca il marcato disegno giallastro a pelle di serpente descritto per C. rubellus."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-CORTINARIUS-ORELLANUS-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Cortinarius orellanus",
+          "url": "https://www.first-nature.com/fungi/cortinarius-orellanus.php",
+          "location": "Toxicity; Identification guide — Stem",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "commonNames": [],
+      "habitat": [
+        "Per il taxon nominale Galerina marginata: specie saprotrofa su ceppaie, tronchi morti e rami caduti soprattutto di conifere, occasionalmente di latifoglie; dato non generalizzabile a tutto il gruppo."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-GALERINA-MARGINATA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Galerina marginata group",
+          "url": "https://www.first-nature.com/fungi/galerina-marginata.php",
+          "location": "Habitat & Ecological role",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Morchella esculenta: confronto con cappello profondamente alveolato e cavità interna unica, a differenza dell'aspetto cerebriforme di Gyromitra esculenta.",
+        "Helvella crispa: confronto con cappello a sella pallido e gambo percorso da coste e cavità longitudinali."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-GYROMITRA-ESCULENTA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Gyromitra esculenta",
+          "url": "https://www.first-nature.com/fungi/gyromitra-esculenta.php",
+          "location": "Similar species",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "commonNames": [],
+      "habitat": [
+        "Boschi di latifoglie e di conifere, da fine estate all'autunno."
+      ],
+      "lookalikes": [
+        "Amanita pantherina: per il confronto, A. rubescens arrossa nelle parti lesionate, mentre A. pantherina presenta carne immutabile; considerare anche volva, anello e margine pileico."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-OCT26-AMANITA-RUBESCENS",
+          "reviewScope": "supplementary-literature",
+          "title": "Gruppo Micologico Ancona — Amanita rubescens",
+          "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/amanita-rubescens.html",
+          "location": "Habitat; Note; descrizione di carne, gambo e cappello",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia e confronto morfologico circoscritti alla scheda nominale; non modifica commestibilità S2.",
+          "notes": "Revisione bibliografica, non attestazione micologica indipendente; confronto non diventa obiettivo autonomo.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-RUBESCENS-BRESADOLA-MUSE",
+          "reviewScope": "supplementary-literature",
+          "title": "Gruppo Micologico Bresadola — Galleria Amanita rubescens",
+          "url": "https://www2.muse.it/bresadola/galleria_sp.asp?sp=172799",
+          "location": "Testo descrittivo a cura di Marco Floriani, confronto con Amanita pantherina",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto tra arrossamento, volva, verruche e A. pantherina",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "commonNames": [],
+      "habitat": [
+        "Luoghi erbosi e concimati, parchi, margini stradali e pascoli, dalla primavera all'autunno."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-OCT26-COPRINUS-COMATUS",
+          "reviewScope": "supplementary-literature",
+          "title": "I funghi della Campania — Scheda 46 Coprinus comatus",
+          "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda046.pdf",
+          "location": "Scheda 46, HABITAT",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia e confronto morfologico circoscritti alla scheda nominale; non modifica commestibilità S2.",
+          "notes": "Revisione bibliografica, non attestazione micologica indipendente; confronto non diventa obiettivo autonomo.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
     }
   ]
 }
