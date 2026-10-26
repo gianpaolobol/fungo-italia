@@ -1,0 +1,1821 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/release-readiness.mjs",
+  "checked": 148,
+  "blocked": 148,
+  "ready": 0,
+  "counts": {
+    "independent-review-not-attested": 148,
+    "missing-habitat": 0,
+    "missing-lookalikes": 0,
+    "habitat-without-pointwise-evidence": 0,
+    "missing-odor": 0,
+    "odor-without-pointwise-evidence": 0,
+    "missing-spore-print": 1,
+    "spore-print-without-pointwise-evidence": 0,
+    "missing-edibility": 1,
+    "edibility-without-pointwise-evidence": 0,
+    "missing-sources": 0,
+    "missing-reference-views": 5
+  },
+  "unmatchedCurriculum": 0,
+  "items": [
+    {
+      "id": "minimum-card-objective-agaricus--01--agaricus-sez-xanthodermatei",
+      "name": "Agaricus sez. Xanthodermatei",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--02--agaricus-bresadolanus",
+      "name": "Agaricus bresadolanus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--03--agaricus-sez-arvenses",
+      "name": "Agaricus sez. Arvenses",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--04--agaricus-sez-sanguinolenti",
+      "name": "Agaricus sez. Sanguinolenti",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--05--agaricus-campestris",
+      "name": "Agaricus campestris",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--06--agaricus-bitorquis",
+      "name": "Agaricus bitorquis",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agaricus--07--agaricus-bisporus",
+      "name": "Agaricus bisporus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-agrocybe-cyclocybe--01--cyclocybe-cylindracea",
+      "name": "Cyclocybe cylindracea",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--01--amanita-phalloides",
+      "name": "Amanita phalloides",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--02--amanita-verna-inclusa-a-vidua",
+      "name": "Amanita verna / Amanita vidua",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--03--amanita-virosa",
+      "name": "Amanita virosa",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--04--amanita-proxima",
+      "name": "Amanita proxima",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--05--amanita-ovoidea",
+      "name": "Amanita ovoidea",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "name": "Amanita pantherina",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--07--amanita-muscaria",
+      "name": "Amanita muscaria",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--08--amanita-caesarea",
+      "name": "Amanita caesarea",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--09--amanita-gemmata",
+      "name": "Amanita gemmata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--10--amanita-citrina",
+      "name": "Amanita citrina",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--11--amanita-porphyria",
+      "name": "Amanita porphyria",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--12--amanita-excelsa-s-l-incl-a-spissa-a-franchetii",
+      "name": "Amanita excelsa s.l. (incl. A. spissa, A. franchetii)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--13--amanita-strobiliformis",
+      "name": "Amanita strobiliformis",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--14--amanita-vittadinii",
+      "name": "Saproamanita vittadinii",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--15--amanita-rubescens",
+      "name": "Amanita rubescens",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-amanita--16--amanita-sez-vaginatae",
+      "name": "Amanita sez. Vaginatae",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 4,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-calocybe--01--calocybe-gambosa",
+      "name": "Calocybe gambosa",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---01--clitocybe-cerussata-c-phyllophila",
+      "name": "Collybia phyllophila",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---02--clitocybe-dealbata-c-rivulosa",
+      "name": "Clitocybe dealbata / Collybia rivulosa",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---03--clitocybe-nebularis",
+      "name": "Clitocybe nebularis",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---04--clitocybe-geotropa",
+      "name": "Infundibulicybe geotropa",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---05--clitocybe-amoenolens",
+      "name": "Paralepistopsis amoenolens",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitocybe-s-l-inclusi-ampulloclitocybe-atractosporocybe-bonomyces-clitopaxillus-harmajaea---06--clitocybe-gibba-s-l",
+      "name": "Clitocybe gibba s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-clitopilus--01--clitopilus-prunulus-s-l",
+      "name": "Clitopilus prunulus s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 5,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--01--collybia-maculata",
+      "name": "Rhodocollybia maculata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--02--collybia-fusipes",
+      "name": "Gymnopus fusipes",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-collybioidi-e-marasmioidi-collybia-s-l-inclusi-dendrocollybia-gymnopus-rhodocollybia-piu-s--03--marasmius-oreades",
+      "name": "Marasmius oreades",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--01--coprinus-atramentarius-s-l",
+      "name": "Coprinus atramentarius s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-coprinus-s-l-inclusi-coprinellus-coprinopsis-narcissea-parasola-ephemerocybe--02--coprinus-comatus",
+      "name": "Coprinus comatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "name": "Cortinarius orellanus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--02--cortinarius-orellanoides-c-rubellus-c-speciosissimus",
+      "name": "Cortinarius rubellus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--03--cortinarius-sottogenere-dermocybe",
+      "name": "Cortinarius sottogenere Dermocybe",
+      "rank": "subgenus",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--04--cortinarius-praestans",
+      "name": "Cortinarius praestans",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--05--cortinarius-cumatilis",
+      "name": "Cortinarius cumatilis",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--06--cortinarius-variiformis",
+      "name": "Phlegmacium variiforme",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "missing-reference-views:lateral,top,underside",
+        "independent-review-not-attested"
+      ],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--07--cortinarius-caperatus-rozites-caperatus",
+      "name": "Cortinarius caperatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 6,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--01--entoloma-sinuatum",
+      "name": "Entoloma sinuatum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--02--entoloma-rhodopolium-s-l",
+      "name": "Entoloma rhodopolium s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--03--entoloma-hirtipes",
+      "name": "Entoloma hirtipes",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--04--entoloma-vernum",
+      "name": "Entoloma vernum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--05--entoloma-clypeatum-s-l",
+      "name": "Entoloma clypeatum s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-entoloma--06--entoloma-saundersii",
+      "name": "Entoloma saundersii",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "missing-reference-views:lateral,top,underside",
+        "independent-review-not-attested"
+      ],
+      "missingViews": [
+        "lateral",
+        "top",
+        "underside"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-flammulina--01--flammulina-velutipes-s-l",
+      "name": "Flammulina velutipes s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-galerina--01--galerina-marginata-group",
+      "name": "Galerina marginata group",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 7,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--01--hygrocybe-conica-s-l",
+      "name": "Hygrocybe conica s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hygrocybe-inclusi-gliophorus-gloioxanthomyces-neohygrocybe-porpolomopsis--02--hygrocybe-punicea",
+      "name": "Hygrocybe punicea",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--01--hygrophorus-marzuolus",
+      "name": "Hygrophorus marzuolus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--02--hygrophorus-russula",
+      "name": "Hygrophorus russula",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophorus-cuphophyllus--03--hygrophorus-penarioides",
+      "name": "Hygrophorus penarioides",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--01--hypholoma-fasciculare",
+      "name": "Hypholoma fasciculare",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hypholoma--02--hypholoma-lateritium",
+      "name": "Hypholoma lateritium",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 8,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lentinula--01--lentinula-edodes",
+      "name": "Lentinula edodes",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--01--lepiota-subincarnata-l-josserandii",
+      "name": "Lepiota subincarnata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "name": "Lepiota brunneoincarnata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--03--lepiota-cristata",
+      "name": "Lepiota cristata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--04--lepiota-elaiophylla",
+      "name": "Lepiota elaiophylla",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "missing-edibility",
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--05--chlorophyllum-molybdites",
+      "name": "Chlorophyllum molybdites",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--06--echinoderma-asperum-s-l",
+      "name": "Echinoderma asperum s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--07--leucoagaricus-leucothites-s-l",
+      "name": "Leucoagaricus leucothites s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--08--chlorophyllum-rhacodes-s-l",
+      "name": "Chlorophyllum rhacodes s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--09--macrolepiota-procera-s-l",
+      "name": "Macrolepiota procera s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepista--01--lepista-nuda-s-l",
+      "name": "Lepista nuda s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lepista--02--lepista-flaccida-s-l",
+      "name": "Lepista flaccida s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 9,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--01--leucopaxillus-giganteus-s-l",
+      "name": "Leucopaxillus giganteus s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 10,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-leucopaxillus-inclusi-aspropaxillus-pseudoclitopilus-pogonoloma-p-p--02--leucopaxillus-gentianeus",
+      "name": "Leucopaxillus gentianeus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 10,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--01--lyophyllum-decastes-s-l",
+      "name": "Lyophyllum decastes s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 10,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--02--lyophyllum-specie-annerenti",
+      "name": "Lyophyllum specie annerenti",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 10,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lyophyllum-inclusi-leucocybe-p-p-myochromella-sagaranella-sphagnurus-tephrocybe--03--lyophyllum-connatum",
+      "name": "Leucocybe connata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 10,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-mycena--01--mycena-sez-purae",
+      "name": "Mycena sez. Purae",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 10,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-omphalotus--01--omphalotus-olearius",
+      "name": "Omphalotus olearius",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 11,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-panaeolus-inclusi-copelandia-panaeolina--01--panaeolus-cyanescens",
+      "name": "Panaeolus cyanescens",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 11,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-pholiota-kuehneromyces-inclusi-flammula-hemipholiota-pyrrhulomyces--01--kuehneromyces-mutabilis",
+      "name": "Kuehneromyces mutabilis",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 11,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--01--pleurotus-eryngii-s-l",
+      "name": "Pleurotus eryngii s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 11,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--02--pleurotus-ostreatus",
+      "name": "Pleurotus ostreatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 11,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-pleurotus-inclusi-altri-generi-pleurotoidi-sebbene-anche-distanti-da-pleurotus-a-livello-d--03--pleurotus-cornucopiae-incluso-p-citrinopileatus",
+      "name": "Pleurotus cornucopiae / Pleurotus citrinopileatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 11,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-stropharia-s-l-inclusi-hemistropharia-leratiomyces-protostropharia--01--stropharia-rugosoannulata",
+      "name": "Stropharia rugosoannulata",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--01--tricholoma-pardinum",
+      "name": "Tricholoma pardinum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--02--tricholoma-filamentosum",
+      "name": "Tricholoma filamentosum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--03--tricholoma-josserandii",
+      "name": "Tricholoma josserandii",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--04--tricholoma-equestre",
+      "name": "Tricholoma equestre",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--05--tricholoma-portentosum",
+      "name": "Tricholoma portentosum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--06--tricholoma-terreum",
+      "name": "Tricholoma terreum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--07--tricholoma-saponaceum-s-l",
+      "name": "Tricholoma saponaceum s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--08--tricholoma-columbetta",
+      "name": "Tricholoma columbetta",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--09--tricholoma-album-s-l-incl-t-stiparophyllum-t-lascivum-e-altri",
+      "name": "Tricholoma album s.l. (incl. T. stiparophyllum, T. lascivum e altri)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--10--tricholoma-gruppo-t-terreum-t-scalpturatum-t-orirubens-t-squarrulosum-e-altre",
+      "name": "Tricholoma gruppo T. terreum (T. scalpturatum, T. orirubens, T. squarrulosum e altre)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--11--tricholoma-gruppo-virgati-t-virgatum-t-sciodes-t-bresadolanum",
+      "name": "Tricholoma gruppo Virgati (T. virgatum, T. sciodes, T. bresadolanum)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--12--tricholoma-sejunctum",
+      "name": "Tricholoma sejunctum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--13--tricholoma-sulphureum",
+      "name": "Tricholoma sulphureum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--14--tricholoma-sez-genuina-gruppo-albobrunnei",
+      "name": "Tricholoma sez. Genuina (= gruppo Albobrunnei)",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tricholoma--15--tricholoma-acerbum-s-l",
+      "name": "Tricholoma acerbum s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 12,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-volvariella-volvopluteus--01--volvopluteus-gloiocephalus",
+      "name": "Volvopluteus gloiocephalus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 13,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-volvariella-volvopluteus--02--volvariella-volvacea",
+      "name": "Volvariella volvacea",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 13,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--01--lactarius-sez-deliciosi",
+      "name": "Lactarius sez. Deliciosi",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 13,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--02--lactarius-porniniae",
+      "name": "Lactarius porniniae",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 13,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--03--lactarius-volemus-s-l",
+      "name": "Lactarius volemus s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 13,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-lactarius-incluso-lactifluus--04--lactarius-tesquorum",
+      "name": "Lactarius tesquorum",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 13,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-russula--01--russula-foetentinae",
+      "name": "Russula Foetentinae",
+      "rank": "subsection",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 14,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-russula--02--russula-compactae-nigricantinae",
+      "name": "Russula Compactae Nigricantinae",
+      "rank": "subsection",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 14,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-russula--03--russula-compactae-lactarioides-gruppo-r-delica",
+      "name": "Russula Compactae Lactarioides (= gruppo R. delica)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 14,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-s-str--01--boletus-edulis-s-l",
+      "name": "Boletus edulis s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 14,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---01--boletus-sez-luridi",
+      "name": "Boletus sez. Luridi",
+      "rank": "section",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---02--boletus-rubroboletus-satanas",
+      "name": "Rubroboletus satanas",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---03--boletus-pulchrotinctus",
+      "name": "Rubroboletus pulchrotinctus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---04--boletus-neoboletus-erythropus-s-l",
+      "name": "Boletus (Neoboletus) erythropus s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---05--boletus-suillellus-luridus",
+      "name": "Suillellus luridus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-boletus-ex-sez-luridi-inclusi-cupreoboletus-exsudoporus-imperator-neoboletus-rubroboletus---06--boletus-queletii-e-specie-vicine-intermedie",
+      "name": "Boletus queletii e specie vicine/intermedie",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-caloboletus--01--caloboletus-radicans",
+      "name": "Caloboletus radicans",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-caloboletus--02--caloboletus-calopus",
+      "name": "Caloboletus calopus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 15,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--01--gyroporus-cyanescens",
+      "name": "Gyroporus cyanescens",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 16,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-gyroporus--02--gyroporus-castaneus-s-l",
+      "name": "Gyroporus castaneus s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 16,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hygrophoropsis--01--hygrophoropsis-aurantiaca",
+      "name": "Hygrophoropsis aurantiaca",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 16,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-imleria--01--imleria-badia",
+      "name": "Imleria badia",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 16,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-suillus-incluso-boletinus--01--suillus-luteus",
+      "name": "Suillus luteus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 17,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-suillus-incluso-boletinus--02--suillus-granulatus",
+      "name": "Suillus granulatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 17,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-tylopilus--01--tylopilus-felleus",
+      "name": "Tylopilus felleus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 17,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-cantharellus--01--cantharellus-cibarius-complex",
+      "name": "Cantharellus cibarius complex",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 17,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-craterellus--01--craterellus-lutescens",
+      "name": "Craterellus lutescens",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-craterellus--02--craterellus-tubaeformis",
+      "name": "Craterellus tubaeformis",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-craterellus--03--craterellus-cornucopioides",
+      "name": "Craterellus cornucopioides",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-gomphus--01--gomphus-clavatus",
+      "name": "Gomphus clavatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--01--hydnum-spp-h-repandum-s-l-incl-gruppo-h-rufescens",
+      "name": "Hydnum spp. / H. repandum s.l. (incl. gruppo H. rufescens)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--02--hericium-spp",
+      "name": "Hericium spp.",
+      "rank": "genus",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-hydnaceae-s-l--03--sarcodon-imbricatus-s-l-incl-s-squamosus",
+      "name": "Sarcodon imbricatus s.l. (incl. S. squamosus)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--01--hapalopilus-rutilans",
+      "name": "Hapalopilus rutilans",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--02--laetiporus-sulphureus-s-l",
+      "name": "Laetiporus sulphureus s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--03--albatrellus-confluens",
+      "name": "Albatrellopsis confluens",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--04--albatrellus-ovinus-s-l-incl-a-subrubescens-a-citrinus",
+      "name": "Albatrellus ovinus s.l. (incl. A. subrubescens, A. citrinus)",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--05--scutiger-pes-caprae",
+      "name": "Scutiger pes-caprae",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--06--fistulina-hepatica",
+      "name": "Fistulina hepatica",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--07--grifola-frondosa",
+      "name": "Grifola frondosa",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--08--polyporus-umbellatus",
+      "name": "Polyporus umbellatus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--09--meripilus-giganteus",
+      "name": "Meripilus giganteus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-polyporaceae-s-l--10--polyporus-squamosus",
+      "name": "Cerioporus squamosus",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 18,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-ramaria--01--ramaria-formosa",
+      "name": "Ramaria formosa",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 19,
+      "curriculumMatched": true,
+      "gaps": [
+        "missing-reference-views:underside",
+        "independent-review-not-attested"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-ramaria--02--ramaria-pallida",
+      "name": "Ramaria pallida",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 19,
+      "curriculumMatched": true,
+      "gaps": [
+        "missing-spore-print",
+        "missing-reference-views:underside",
+        "independent-review-not-attested"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-ramaria--03--ramaria-botrytis-s-l",
+      "name": "Ramaria botrytis s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 19,
+      "curriculumMatched": true,
+      "gaps": [
+        "missing-reference-views:underside",
+        "independent-review-not-attested"
+      ],
+      "missingViews": [
+        "underside"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-auricularia--01--auricularia-auricula-judae",
+      "name": "Auricularia auricula-judae",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 20,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "name": "Gyromitra esculenta",
+      "rank": "species",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 21,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    },
+    {
+      "id": "minimum-card-objective-sarcosphaera--01--sarcosphaera-coronaria-s-l",
+      "name": "Sarcosphaera coronaria s.l.",
+      "rank": "speciesGroup",
+      "curriculumLevel": "minimum",
+      "curriculumPage": 21,
+      "curriculumMatched": true,
+      "gaps": [
+        "independent-review-not-attested"
+      ],
+      "missingViews": []
+    }
+  ]
+}

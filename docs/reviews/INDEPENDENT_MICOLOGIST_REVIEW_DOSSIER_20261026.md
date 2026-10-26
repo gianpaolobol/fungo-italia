@@ -1,5 +1,7 @@
 # Fascicolo per attestazione micologica indipendente — 26 ottobre 2026
 
+**Aggiornamento:** usare il [fascicolo corrente congelato](independent-review-20261026-current/README.md), preparato sullo SHA6dfb92656ec94485d94aecba72543930c2759d17, con inventario218 unità e dati scientifici identici alla beta20. Non inviato, non attestato. Il testo seguente è il precedente fascicolo storico: i suoi conteggi/SHA e la sporata di Scutiger non descrivono lo stato corrente.
+
 Stato: **NON ATTESTATO — NON UTILIZZABILE COME CERTIFICAZIONE**.
 
 Baseline esaminabile: `c36c90488787be7f2205b2b578695549ea1293f3`. Ogni attestazione successiva deve citare il proprio SHA effettivamente esaminato, non questa baseline se il catalogo viene modificato.

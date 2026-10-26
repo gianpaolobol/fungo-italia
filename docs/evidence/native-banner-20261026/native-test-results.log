@@ -1,0 +1,37 @@
+Source: 6dfb92656ec94485d94aecba72543930c2759d17
+Only timestamped actual result lines; full logs in linked GitHub workflows.
+
+StoreKit nativo
+2026-10-26T18:47:22.9748240Z ℹ tests 3
+2026-10-26T18:47:22.9749880Z ℹ pass 3
+2026-10-26T18:47:22.9750140Z ℹ fail 0
+2026-10-26T18:47:22.9750760Z ℹ skipped 0
+2026-10-26T19:01:04.7082410Z Test Case '-[AnnualStoreKitTests.AnnualStoreKitTests testVerifiedPurchaseRefundAndExpiry]' passed (5.558 seconds).
+2026-10-26T19:01:04.7195900Z ** TEST SUCCEEDED **
+
+UI iPhone
+2026-10-26T18:46:57.2194690Z ℹ tests 3
+2026-10-26T18:46:57.2196590Z ℹ pass 3
+2026-10-26T18:46:57.2197090Z ℹ fail 0
+2026-10-26T18:46:57.2197570Z ℹ skipped 0
+2026-10-26T19:04:07.5376140Z Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAFreeAgaricusDemoWithoutPurchase]' passed (55.411 seconds).
+2026-10-26T19:04:07.5379340Z Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAnnualPurchaseRestoreAccessRefundAndExpiry]' passed (223.517 seconds).
+2026-10-26T19:04:07.5388590Z Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testEntitlementStartupProbe]' skipped (0.276 seconds).
+2026-10-26T19:04:07.5396050Z ** TEST SUCCEEDED **
+
+UI iPad
+2026-10-26T18:47:30.2186520Z ℹ tests 3
+2026-10-26T18:47:30.2210730Z ℹ pass 3
+2026-10-26T18:47:30.2211590Z ℹ fail 0
+2026-10-26T18:47:30.2212190Z ℹ skipped 0
+2026-10-26T19:10:31.7110350Z Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAFreeAgaricusDemoWithoutPurchase]' passed (99.695 seconds).
+2026-10-26T19:10:31.7115570Z Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAnnualPurchaseRestoreAccessRefundAndExpiry]' passed (178.694 seconds).
+2026-10-26T19:10:31.7118880Z Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testEntitlementStartupProbe]' skipped (1.309 seconds).
+2026-10-26T19:10:31.7129000Z ** TEST SUCCEEDED **
+
+Source
+2026-10-26T18:47:01.2404982Z ℹ tests 273
+2026-10-26T18:47:01.2405388Z ℹ pass 273
+2026-10-26T18:47:01.2405595Z ℹ fail 0
+2026-10-26T18:47:01.2406005Z ℹ skipped 0
+

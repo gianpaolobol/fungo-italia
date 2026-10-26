@@ -1,0 +1,10 @@
+No errors uploading archive at '/Users/runner/work/_temp/fungo-consolidated.ipa'.
+
+Running altool at path '/Applications/Xcode_26.6.app/Contents/SharedFrameworks/ContentDelivery.framework/Resources/altool'...
+
+2026-10-26 19:50:17.292  INFO: [ContentDelivery.Uploader.95F0507C0] 
+==========================================
+UPLOAD SUCCEEDED with no errors
+Delivery UUID: 973f19b7-d772-4418-9df0-250fcc6c957a
+Transferred 219676773 bytes in 2.936 seconds (74.8MB/s, 598.518Mbps)
+==========================================

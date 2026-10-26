@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "status": "PREPARED_NOT_SENT_NOT_ATTESTED",
+  "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+  "scientificContentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+  "scientificFileCount": 867,
+  "scientificManifestPath": "revisione/owner-internal-beta-review-20261026.json#files",
+  "reviewer": null,
+  "decision": null,
+  "signatureEvidence": null,
+  "delivery": "ADMIN_ONLY_PRIVATE_CHANNEL_NOT_SENT",
+  "appStoreReady": false,
+  "independentReviewComplete": false,
+  "previousVerifiedTestFlight": {
+    "sourceCommit": "b844fb2cb53b497d5301ad86e737e03886c55a69",
+    "version": "1.1.0",
+    "buildNumber": "20"
+  },
+  "files": [
+    {
+      "path": "src/data/catalog.json",
+      "sha256": "8dbc32f22b2642dc5f2f64524343a8d96e901a552c4a1d844b3cd5aaa9f7ad3e",
+      "bytes": 1322197
+    },
+    {
+      "path": "src/data/groups.json",
+      "sha256": "67eea6802bbcec5abe3ab1d786a39d461d93624c6cdeb3de987b2d2c5844d480",
+      "bytes": 526818
+    },
+    {
+      "path": "src/data/curriculum-scope.json",
+      "sha256": "b83aacbf4192872d9819927f772be4fd501b4806b46a100faf112c9ab66c4151",
+      "bytes": 135300
+    },
+    {
+      "path": "src/data/toxicology-syndromes.json",
+      "sha256": "edb3a6da76851c6c6de3b087c79ddcf06fb0534a649c7f12bf4e8c4218986359",
+      "bytes": 48734
+    },
+    {
+      "path": "src/data/supplementary-literature.json",
+      "sha256": "98b8981d9b3299838a5039ba0fb717460c25f5d027b60066d401d8fe2e741f82",
+      "bytes": 337372
+    },
+    {
+      "path": "revisione/partial-scope-verification-queue-20261026.json",
+      "sha256": "49a3c093831be0824218933f29334852e09e59d6219db5662bd907a87494e57f",
+      "bytes": 41112
+    },
+    {
+      "path": "revisione/owner-internal-beta-review-20261026.json",
+      "sha256": "f11bf1184d4f9e4ea2443a6cba37c17b1a779187cfb32e65431f6523d5926949",
+      "bytes": 202217
+    }
+  ],
+  "responseRowCount": 2398,
+  "responseFields": [
+    "curriculum",
+    "taxonomy",
+    "characters3plus1",
+    "habitat",
+    "lookalikes",
+    "odor",
+    "sporePrint",
+    "edibility-S2",
+    "toxicology",
+    "photographs-identification",
+    "photographs-rights"
+  ],
+  "scope": {
+    "catalogUnits": 148,
+    "teachingGroups": 70,
+    "totalUnits": 218,
+    "strictCatalogRegisterScope": 148
+  },
+  "criticalReviewPolicy": "Retain existing independent reviewer requirements: two different reviewers for critical packets; never infer approval from owner beta declaration.",
+  "verifiedTestFlight": {
+    "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+    "version": "1.1.0",
+    "buildNumber": "21",
+    "appleBuildId": "973f19b7-d772-4418-9df0-250fcc6c957a",
+    "internalBuildState": "IN_BETA_TESTING",
+    "betaStateVerifiedAt": "2026-10-26T19:53:24.481Z",
+    "receiptPath": "docs/evidence/native-banner-20261026/consolidated-testflight.json"
+  }
+}

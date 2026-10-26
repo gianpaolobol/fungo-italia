@@ -1,0 +1,112 @@
+{
+  "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+  "scriptTests": {
+    "total": 273,
+    "pass": 273,
+    "fail": 0,
+    "skip": 0
+  },
+  "typecheck": "PASS",
+  "generation": "PASS_NO_DRIFT",
+  "uiRegression": "Native release card absent in all states/details; web controls retained",
+  "independentTechnicalReview": "No blocking findings",
+  "scientificReview": {
+    "status": "OWNER_BETA_ONLY",
+    "independentReviewComplete": false,
+    "contentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+    "files": 867
+  },
+  "checks": [
+    {
+      "id": 40380720195,
+      "name": "Atlas regeneration and scientific gate",
+      "path": ".github/workflows/atlas-validation.yml",
+      "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+      "event": "push",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40380720195"
+    },
+    {
+      "id": 40380720157,
+      "name": "Validate shared web candidate",
+      "path": ".github/workflows/ios-pwa.yml",
+      "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+      "event": "push",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40380720157"
+    },
+    {
+      "id": 40380720323,
+      "name": "Verify native StoreKit subscriptions",
+      "path": ".github/workflows/subscription-storekit-tests.yml",
+      "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+      "event": "push",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40380720323"
+    },
+    {
+      "id": 40380720277,
+      "name": "Verify StoreKit purchase interface",
+      "path": ".github/workflows/subscription-storekit-ui.yml",
+      "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+      "event": "push",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40380720277"
+    },
+    {
+      "id": 40380720294,
+      "name": "Verify free Agaricus demo interface",
+      "path": ".github/workflows/agaricus-demo-ui.yml",
+      "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+      "event": "push",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40380720294"
+    },
+    {
+      "id": 40380720325,
+      "name": "Expo Android and iOS",
+      "path": ".github/workflows/pipeline.yml",
+      "sourceCommit": "6dfb92656ec94485d94aecba72543930c2759d17",
+      "event": "push",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40380720325"
+    }
+  ],
+  "distributionConfirmed": true,
+  "version": "1.1.0",
+  "buildNumber": "21",
+  "appleBuildId": "973f19b7-d772-4418-9df0-250fcc6c957a",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ],
+  "betaStateVerifiedAt": "2026-10-26T19:53:24.481Z",
+  "ipaSha256": "05164da1bfc4210b1b9aa691ce542b570409619fb89eb97123a2b3ce12199c3c",
+  "producerRunId": "40380720179",
+  "recoveryRunId": "40389796201",
+  "orchestratorCommit": "ca3f0e75eb629c568fda7238b0b4a0503116ba36",
+  "recoveryDryRunChecks": {
+    "total": 10,
+    "pass": 10,
+    "scope": "EAS identity, terminal cancellation, 180-second wait; no remote mutation in dry run"
+  },
+  "separateAppleReadback": {
+    "checkedAt": "2026-10-26T19:53:56Z",
+    "appleBuildId": "973f19b7-d772-4418-9df0-250fcc6c957a",
+    "processingState": "VALID",
+    "internalBuildState": "IN_BETA_TESTING"
+  }
+}
