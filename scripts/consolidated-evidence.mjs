@@ -8,6 +8,8 @@ export function candidateReceipt({sha,native,ui,demo}) {
  if(!/^[a-f0-9]{40}$/.test(sha))throw Error('Invalid source commit');
  const evidence={native:exactEvidence(native,sha,'.github/workflows/subscription-storekit-tests.yml'),ui:exactEvidence(ui,sha,'.github/workflows/subscription-storekit-ui.yml'),demo:exactEvidence(demo,sha,'.github/workflows/agaricus-demo-ui.yml')};
  if(!evidence.demo.verified)throw Error('Free demo must pass before beta upload');
+ if(!evidence.native.verified)throw Error('Native StoreKit tests must pass before beta upload');
+ if(!evidence.ui.verified)throw Error('StoreKit purchase UI tests must pass on iPhone and iPad before beta upload');
  return {appId:'6821140326',bundleId:'it.fungoitalia.app',productId:'it.fungoitalia.premium.annual',version:'1.1.0',sourceCommit:sha,testFlightOnly:true,diagnosticOnly:true,appStoreReady:false,nativeStorekitVerified:evidence.native.verified,storekitUIVerified:evidence.ui.verified,evidence,createdAt:new Date().toISOString()};
 }
 async function main(){

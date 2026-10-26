@@ -1,0 +1,18 @@
+{
+  "baseline": "a706f3654b1c544b63332d1c2f1c537e8fe1b4d8",
+  "change": "Require successful exact-source native StoreKit, purchase UI iPhone/iPad and free demo workflows before signing/upload",
+  "red": {
+    "failed": 4,
+    "cause": "native and UI failure/timed_out previously authorized a diagnostic receipt"
+  },
+  "green": {
+    "dedicatedTests": 23,
+    "suitePassed": 262,
+    "suiteFailed": 0,
+    "suiteSkipped": 0,
+    "typecheck": "PASS"
+  },
+  "scientificGate": "unchanged; failing, independent review not attested",
+  "newBuildNumber": null,
+  "testflightAvailable": false
+}

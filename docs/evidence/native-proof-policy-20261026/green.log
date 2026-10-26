@@ -1,0 +1,31 @@
+✔ successful native, purchase UI and demo proofs authorize only an internal diagnostic receipt (2.621735ms)
+✔ native failure cannot authorize signing or TestFlight (0.281394ms)
+✔ native timed_out cannot authorize signing or TestFlight (0.09957ms)
+✔ native cancelled cannot authorize signing or TestFlight (0.088664ms)
+✔ native skipped cannot authorize signing or TestFlight (0.136656ms)
+✔ native neutral cannot authorize signing or TestFlight (0.128164ms)
+✔ native action_required cannot authorize signing or TestFlight (0.089165ms)
+✔ native null cannot authorize signing or TestFlight (0.068173ms)
+✔ ui failure cannot authorize signing or TestFlight (0.093461ms)
+✔ ui timed_out cannot authorize signing or TestFlight (0.188495ms)
+✔ ui cancelled cannot authorize signing or TestFlight (0.128014ms)
+✔ ui skipped cannot authorize signing or TestFlight (0.078498ms)
+✔ ui neutral cannot authorize signing or TestFlight (0.080982ms)
+✔ ui action_required cannot authorize signing or TestFlight (0.103065ms)
+✔ ui null cannot authorize signing or TestFlight (0.088474ms)
+✔ demo failure cannot authorize signing or TestFlight (0.864444ms)
+✔ demo timed_out cannot authorize signing or TestFlight (0.074283ms)
+✔ demo cancelled cannot authorize signing or TestFlight (0.071317ms)
+✔ demo skipped cannot authorize signing or TestFlight (0.097648ms)
+✔ demo neutral cannot authorize signing or TestFlight (0.047191ms)
+✔ demo action_required cannot authorize signing or TestFlight (0.036595ms)
+✔ demo null cannot authorize signing or TestFlight (0.06623ms)
+✔ every mandatory proof rejects stale source, missing, running and non-main executions (0.3778ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 104.145795

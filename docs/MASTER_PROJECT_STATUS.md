@@ -2,6 +2,12 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Controllo obbligatorio StoreKit prima della firma — 26 ottobre 2026
+
+Baseline `a706f3654b1c544b63332d1c2f1c537e8fe1b4d8`. Il produttore della ricevuta diagnostica accettava risultati `failure`/`timed_out` per StoreKit nativo e UI acquisti, conservandoli come false, e richiedeva successo soltanto alla demo. Corretto per rispettare il mandato attuale: **tutti e tre i workflow devono riuscire sullo SHA esatto** prima della ricevuta utilizzata per firmare/caricare. Il risultato del workflow UI include entrambe le famiglie iPhone/iPad; un fallimento di una famiglia blocca l’intero workflow. Le ricevute storiche non sono riscritte e restano diagnostiche.
+
+Regressione: quattro test rossi prima della correzione (native/UI failure e timeout), poi23 test dedicati verdi e262 test totali verdi,0skip; TypeScript verde. [Prove](evidence/native-proof-policy-20261026/verification.json). Nessun acquisto, rimborso, ripristino o scadenza disattivato. Gate scientifico e tossicologico invariati e bloccanti. Gestione delle revisioni ancora esclusiva dell’amministratore; nessuna attestazione indipendente o nuova distribuzione ricavata da questi test.
+
 ## Verifica TestFlight del titolare — integrazione corrente
 
 Baseline esaminata: `e81708bd50db8284143eef88c92c310de3b4dc00`. Il commit di questa sezione corregge due test obsoleti sulla sporata di Scutiger e sincronizza catalogo/provenance con le fonti già presenti su main. La revisione storica del 9 ottobre resta immutata. La fonte MicoPonte p.27 resta bibliografia con revisione indipendente pendente; il nuovo test verifica che il gate continui a bloccare la scheda. Mutazione senza fonte: test fallisce; ripristino: passa.

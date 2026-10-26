@@ -1,0 +1,105 @@
+✔ successful native, purchase UI and demo proofs authorize only an internal diagnostic receipt (1.509847ms)
+✖ native failure cannot authorize signing or TestFlight (0.671703ms)
+✖ native timed_out cannot authorize signing or TestFlight (0.133031ms)
+✔ native cancelled cannot authorize signing or TestFlight (0.09919ms)
+✔ native skipped cannot authorize signing or TestFlight (0.090647ms)
+✔ native neutral cannot authorize signing or TestFlight (0.10583ms)
+✔ native action_required cannot authorize signing or TestFlight (0.124628ms)
+✔ native null cannot authorize signing or TestFlight (0.073681ms)
+✖ ui failure cannot authorize signing or TestFlight (0.156396ms)
+✖ ui timed_out cannot authorize signing or TestFlight (0.231299ms)
+✔ ui cancelled cannot authorize signing or TestFlight (0.116155ms)
+✔ ui skipped cannot authorize signing or TestFlight (0.217558ms)
+✔ ui neutral cannot authorize signing or TestFlight (0.133251ms)
+✔ ui action_required cannot authorize signing or TestFlight (0.124147ms)
+✔ ui null cannot authorize signing or TestFlight (0.07275ms)
+✔ demo failure cannot authorize signing or TestFlight (0.098299ms)
+✔ demo timed_out cannot authorize signing or TestFlight (0.161965ms)
+✔ demo cancelled cannot authorize signing or TestFlight (0.143797ms)
+✔ demo skipped cannot authorize signing or TestFlight (0.091538ms)
+✔ demo neutral cannot authorize signing or TestFlight (0.118419ms)
+✔ demo action_required cannot authorize signing or TestFlight (0.14569ms)
+✔ demo null cannot authorize signing or TestFlight (0.066ms)
+✔ every mandatory proof rejects stale source, missing, running and non-main executions (0.314123ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 19
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.78346
+
+✖ failing tests:
+
+test at scripts/consolidated-evidence.test.mjs:12:2
+✖ native failure cannot authorize signing or TestFlight (0.671703ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/consolidated-evidence.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at scripts/consolidated-evidence.test.mjs:12:2
+✖ native timed_out cannot authorize signing or TestFlight (0.133031ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/consolidated-evidence.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at scripts/consolidated-evidence.test.mjs:12:2
+✖ ui failure cannot authorize signing or TestFlight (0.156396ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/consolidated-evidence.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at scripts/consolidated-evidence.test.mjs:12:2
+✖ ui timed_out cannot authorize signing or TestFlight (0.231299ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspace/scratch/acbecc795d15/fungo-italia/scripts/consolidated-evidence.test.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
