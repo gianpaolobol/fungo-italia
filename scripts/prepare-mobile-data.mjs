@@ -49,6 +49,17 @@ applyCourseLiterature([...catalog,...teachingGroups],courseLiterature,courseRegi
 const studyProfiles=JSON.parse(await readFile(join(output,'study-profiles.json'),'utf8'));
 const referenceImages=JSON.parse(await readFile(join(output,'reference-images.json'),'utf8'));
 applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
+// A mass spore-print description must be explicit, source-linked and limited to
+// the exact S1 taxon. Do not infer mass colour from microscopic spore colour.
+{
+ const taxon=catalog.find(t=>t.scientificName==='Scutiger pes-caprae');
+ const evidence=supplements.get('Scutiger pes-caprae')?.sources.find(s=>s.sourceId==='MICOPONTE-MATTEUCCI-2011-P27-SPOREPRINT');
+ if(!taxon||!evidence||!evidence.fields?.includes('sporePrint')||!evidence.supportedClaim?.includes('bianche in massa')||taxon.studyProfile?.sporePrint)throw Error('Scutiger mass spore-print evidence missing, conflicting or already assigned');
+ taxon.studyProfile??={};
+ taxon.studyProfile.sporePrint={label:'Bianca'};
+ if(!taxon.sources.some(s=>s.sourceId===evidence.sourceId))throw Error('Scutiger spore-print provenance not attached to atlas');
+}
+
 applyToxicologySyndromes([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'toxicology-syndromes.json'),'utf8')));
 applyApprovedExternalStudyEvidence([...catalog,...teachingGroups],JSON.parse(await readFile(join('src/data','external-study-evidence-candidates.json'),'utf8')));
 applyReferenceImages([...catalog,...teachingGroups],referenceImages);
