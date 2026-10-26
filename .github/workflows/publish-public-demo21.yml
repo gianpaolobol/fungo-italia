@@ -31,6 +31,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.3.0
+      - name: Refuse stale public demo when application source has advanced
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          current=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          test "$current" = "$GITHUB_SHA" || { echo "::error::Main advanced; cannot publish stale demo"; exit 1; }
+          app_changed=$(gh api "repos/$GITHUB_REPOSITORY/compare/6dfb92656ec94485d94aecba72543930c2759d17...$current" --jq '[.files[] | select(.filename=="App.tsx" or .filename=="app.json" or (.filename | startswith("components/")) or (.filename | startswith("src/data/")) or (.filename | startswith("hooks/")) or (.filename | startswith("lib/")))] | length')
+          test "$app_changed" = "0" || { echo "::error::Public demo21 is pinned to an older application source; a new same-source paired TestFlight/web release is required"; exit 1; }
       - name: Verify public authorization and unchanged mandatory release guards
         run: node --test tools/public-demo21*.test.mjs scripts/release-parity.test.mjs scripts/internal-beta-science.test.mjs scripts/consolidated-evidence.test.mjs
       - name: Download only the original artifact ID and verify full ZIP SHA-256 before extraction
