@@ -1,6 +1,6 @@
 # Fungo Italia — build 22 interna e candidato web abbinato
 
-**Consegna TestFlight riuscita; allineamento pubblico ancora incompleto.** Il nuovo candidato pubblico richiede l'autorizzazione distinta prevista dall'handoff esecutivo. La precedente autorizzazione della21 non è riutilizzata.
+**Consegna TestFlight riuscita; allineamento pubblico ancora incompleto.** Il titolare ha approvato esplicitamente il preciso candidato pubblico della22 rispondendo «Confermo» il27 ottobre2026 (Europe/Rome, precisione giorno). La dichiarazione distinta vincola sorgente, IPA, artefatto web e ricevuta Apple; digest canonico `0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21`. La precedente autorizzazione della21 non è riutilizzata. Pubblicazione e verifiche effettive ancora da completare.
 
 | Campo | Evidenza effettiva |
 |---|---|
@@ -66,6 +66,6 @@ Schermate originali: [iPhone gratuito](iphone-map-free-v1.png), [iPad acquistato
 
 ## Revisione scientifica e lavoro residuo
 
-Revisione indipendente **pendente**,0/148 schede indipendentemente attestate. Il collaudo interno del titolare non è certificazione. La dichiarazione scientifica resta `publicWebAllowed=false`, `appStoreReady=false`; la nuova distribuzione pubblica richiede il consenso distinto sul candidato concreto, attualmente [pendente](../../../revisione/public-demo-authorizations/fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03.json).
+Revisione indipendente **pendente**,0/148 schede indipendentemente attestate. Il collaudo interno del titolare non è certificazione. La dichiarazione scientifica resta `publicWebAllowed=false`, `appStoreReady=false`; la nuova distribuzione pubblica richiede il consenso distinto sul candidato concreto, ora [approvato per questa demo beta](../../../revisione/public-demo-authorizations/fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03.json).
 
-Restano: acquisire l'approvazione pubblica distinta e avviare il publisher manuale. Dopo il consenso devono riuscire ancora rilettura Apple, verifica ZIP/manifest, archivio integrale precedente, deploy Pages, confronto di tutti i byte serviti, attivazione reale del worker in Chromium/WebKit, conservazione di note/preferiti/sessione/storico e riavvio offline. Nessuna installazione Safari Home Screen fisica o rollback realmente eseguito è attestata da questo rapporto. Procedura di rollback abbinato e non distruttivo nel [runbook](../../PAIRED-RELEASE-RUNBOOK.md).
+Resta avviare il publisher manuale già autorizzato. Devono riuscire ancora rilettura Apple, verifica ZIP/manifest, archivio integrale precedente, deploy Pages, confronto di tutti i byte serviti, attivazione reale del worker in Chromium/WebKit, conservazione di note/preferiti/sessione/storico e riavvio offline. Nessuna installazione Safari Home Screen fisica o rollback realmente eseguito è attestata da questo rapporto. Procedura di rollback abbinato e non distruttivo nel [runbook](../../PAIRED-RELEASE-RUNBOOK.md).

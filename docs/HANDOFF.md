@@ -8,7 +8,7 @@ Tutti i controlli obbligatori sono riusciti sullo SHA della22, inclusi StoreKit,
 
 L'audit supplementare40418678224 è riuscito su entrambi i dispositivi, gratuito e acquistato, sul medesimo sorgente: ricerca/filtri, mappe OSM reali e sorgente incorporato verificati. Nessun Riprova necessario nei quattro casi V2; il recupero non è dichiarato provato. Prima prova iPad gratuito fallita, cronologia negativa conservata e causa non isolata, affidabilità assoluta del primo caricamento non presunta.
 
-Presentare al titolare il candidato pubblico concreto della22, ora tecnicamente qualificato per il collaudo interno. La nuova autorizzazione è pendente e richiede la conferma distinta prevista dall'handoff, senza riutilizzare owner-public-demo21. Dopo approvazione usare promote-paired-demo.yml e richiedere rilettura Apple, integrità ZIP/ogni byte, archivio precedente, Pages e upgrade reale Chromium/WebKit con dati conservati. Nessun nuovo source applicativo prima di una nuova build abbinata. Revisioni indipendenti e App Store restano bloccati; nessuna estensione TestFlight.
+Il titolare ha risposto «Confermo» alla richiesta sul candidato concreto della22 il27 ottobre2026 (Europe/Rome, precisione giorno). Autorizzazione distinta approvata, digest0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21, senza riutilizzare owner-public-demo21. Usare promote-paired-demo.yml e richiedere rilettura Apple, integrità ZIP/ogni byte, archivio precedente, Pages e upgrade reale Chromium/WebKit con dati conservati. Nessun nuovo source applicativo prima di una nuova build abbinata. Revisioni indipendenti e App Store restano bloccati; nessuna estensione TestFlight.
 
 ## Archivio degli handoff precedenti
 

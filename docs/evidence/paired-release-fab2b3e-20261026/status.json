@@ -14,7 +14,7 @@
     "zipSha256": "e9fe54209ae0bb913fdf5a51462c607e00e35a4078160e50c33f28f7d6109f64"
   },
   "newAppleDelivery": "VALID + IN_BETA_TESTING; owner group only",
-  "newPublicDelivery": "pending distinct snapshot approval, fresh Apple revalidation at promotion, Pages deployment and actual public PWA upgrade",
+  "newPublicDelivery": "authorized; deployment, fresh Apple revalidation and actual public PWA upgrade pending",
   "candidate": {
     "artifactId": 12695390804,
     "zipSha256": "ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d",
@@ -122,7 +122,7 @@
     "zipSha256": "e62ba096fa781e1f01bd29d535a14e528b26b326d41fc9d642bdeb8bcad95488"
   },
   "ordinaryWebPromotion": "skipped; independent readiness remains false; not bypassed",
-  "publicAuthorization": "pending; no actual new owner approval or date invented",
+  "publicAuthorization": "approved by actual owner reply Confermo on2026-10-27 Europe/Rome; exact candidate22 only; no independent certification/AppStore/externalTestFlight authority",
   "publicReadback": {
     "observedAt": "2026-10-26T23:26:31.414296+00:00",
     "url": "https://gianpaolobol.github.io/fungo-italia/",
