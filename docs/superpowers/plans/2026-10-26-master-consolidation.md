@@ -17,7 +17,7 @@
 - [x] Preserve PR119's exact beta19 receipt after comparison with the original job log; do not extend that evidence to the current source.
 - [x] Run data regeneration twice for deterministic equality, Node tests, native TypeScript, web build, Chromium/WebKit and strict science/toxicology reports. Record failures explicitly.
 - [x] Create MASTER_PROJECT_STATUS.md and machine-readable branch/PR/CI evidence; link AGENTS, CLAUDE, README and both handoffs to it. Keep historical statements dated and subordinate to current decisions.
-- [ ] Review the complete change, recheck remote main, commit and fast-forward with expected-head protection. Reconcile any concurrent changes before retrying.
+- [x] Review the complete change, recheck remote main, commit and fast-forward with expected-head protection. Reconcile any concurrent changes before retrying.
 
 ## Review focus
 
@@ -35,3 +35,5 @@ Ruling: recover selected files from PR119/123 instead of whole branches; newer m
 Ruling: generated output is stale for thirteen existing units; regenerate rather than roll back source evidence. Fixed421 assertion reproduced RED424!=421; cardinality alone is not coverage.
 
 Verification:235/235 Node,65/65 WebKit,65/65 Chromium,TypeScript,shared web build and offline smoke PASS. Strict science/toxicology both exit1. Separate review finding on malformed price dates/IDs:two tests RED→GREEN,21/21 pricing tests. All421 prior correct answers compared by case/question identity and preserved;three new habitat questions.
+
+Task complete:main fast-forwarded to bebcfeb with expected-head protection, remote tree matched local validated tree. Post-push Apple read-only audit40305653691 SUCCESS resolves standard schedule19.99 effective2026-10-21 versus preserved9.99; no prices changed. Follow-up documentation records CI pending and scientific failure without converting them to passes.

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+  "checkedAt": "2026-10-26T10:13:11.279Z",
+  "workflowRun": 40305653691,
+  "job": 121513984848,
+  "evidenceUrl": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653691",
+  "app": {
+    "id": "6821140326",
+    "bundleId": "it.fungoitalia.app"
+  },
+  "versions": [
+    {
+      "version": "1.0",
+      "state": "REJECTED",
+      "buildId": "abed149c-5df8-4291-b752-c080548f8fa6"
+    }
+  ],
+  "latestBuild": {
+    "id": "5e5211e9-8eef-48d7-8ce7-6677b210b574",
+    "version": "19",
+    "processingState": "VALID",
+    "expired": false,
+    "uploadedDate": "2026-10-24T12:12:34-07:00",
+    "usesNonExemptEncryption": false,
+    "preReleaseVersion": "1.1.0"
+  },
+  "italyAvailability": {
+    "available": true,
+    "releaseDate": null,
+    "preOrderEnabled": false,
+    "preOrderPublishDate": null,
+    "contentStatuses": [
+      "TRADER_STATUS_VERIFICATION_FAILED",
+      "CANNOT_SELL",
+      "AVAILABLE_FOR_SALE_UNRELEASED_APP"
+    ]
+  },
+  "subscriptions": [
+    {
+      "productId": "it.fungoitalia.premium.annual",
+      "state": "READY_TO_SUBMIT",
+      "subscriptionPeriod": "ONE_YEAR",
+      "italyPrice": "19.99",
+      "italyPricing": {
+        "territory": "ITA",
+        "currency": "EUR",
+        "asOf": "2026-10-26T10:13:11.279Z",
+        "effectiveDate": "2026-10-26",
+        "timeZone": "Europe/Rome",
+        "interpretation": "configured-schedule-only",
+        "subscriberPriceStatus": "not-determinable-from-price-schedule",
+        "complete": true,
+        "pages": 2,
+        "configuredPrices": 350,
+        "status": "schedule-resolved",
+        "current": {
+          "id": "eyJhIjoiNjgyMzUwMjk5NyIsImMiOiJJVCIsImQiOjIwNzQ3LCJwIjoiMCJ9",
+          "pricePointId": "eyJzIjoiNjgyMzUwMjk5NyIsInQiOiJJVEEiLCJwIjoiMTAxNzcifQ",
+          "startDate": "2026-10-21",
+          "preserved": false,
+          "planType": "UPFRONT",
+          "customerPrice": "19.99",
+          "valid": true
+        },
+        "scheduled": [],
+        "preserved": [
+          {
+            "id": "eyJhIjoiNjgyMzUwMjk5NyIsImMiOiJJVCIsImQiOjAsInAiOiIwIn0",
+            "pricePointId": "eyJzIjoiNjgyMzUwMjk5NyIsInQiOiJJVEEiLCJwIjoiMTAxMjcifQ",
+            "startDate": null,
+            "preserved": true,
+            "planType": "UPFRONT",
+            "customerPrice": "9.99",
+            "valid": true
+          }
+        ],
+        "historical": [],
+        "plans": [
+          {
+            "planType": "UPFRONT",
+            "current": {
+              "id": "eyJhIjoiNjgyMzUwMjk5NyIsImMiOiJJVCIsImQiOjIwNzQ3LCJwIjoiMCJ9",
+              "pricePointId": "eyJzIjoiNjgyMzUwMjk5NyIsInQiOiJJVEEiLCJwIjoiMTAxNzcifQ",
+              "startDate": "2026-10-21",
+              "preserved": false,
+              "planType": "UPFRONT",
+              "customerPrice": "19.99",
+              "valid": true
+            },
+            "scheduled": [],
+            "preserved": [
+              {
+                "id": "eyJhIjoiNjgyMzUwMjk5NyIsImMiOiJJVCIsImQiOjAsInAiOiIwIn0",
+                "pricePointId": "eyJzIjoiNjgyMzUwMjk5NyIsInQiOiJJVEEiLCJwIjoiMTAxMjcifQ",
+                "startDate": null,
+                "preserved": true,
+                "planType": "UPFRONT",
+                "customerPrice": "9.99",
+                "valid": true
+              }
+            ],
+            "historical": [],
+            "records": [
+              {
+                "id": "eyJhIjoiNjgyMzUwMjk5NyIsImMiOiJJVCIsImQiOjAsInAiOiIwIn0",
+                "pricePointId": "eyJzIjoiNjgyMzUwMjk5NyIsInQiOiJJVEEiLCJwIjoiMTAxMjcifQ",
+                "startDate": null,
+                "preserved": true,
+                "planType": "UPFRONT",
+                "customerPrice": "9.99",
+                "valid": true
+              },
+              {
+                "id": "eyJhIjoiNjgyMzUwMjk5NyIsImMiOiJJVCIsImQiOjIwNzQ3LCJwIjoiMCJ9",
+                "pricePointId": "eyJzIjoiNjgyMzUwMjk5NyIsInQiOiJJVEEiLCJwIjoiMTAxNzcifQ",
+                "startDate": "2026-10-21",
+                "preserved": false,
+                "planType": "UPFRONT",
+                "customerPrice": "19.99",
+                "valid": true
+              }
+            ]
+          }
+        ],
+        "issues": []
+      },
+      "metadataStates": [
+        "READY_FOR_REVIEW"
+      ]
+    }
+  ],
+  "privacyQuestionnaireAccess": {
+    "ok": false,
+    "status": 404,
+    "codes": [
+      "PATH_ERROR"
+    ],
+    "entries": null
+  },
+  "interpretation": "Read-only API result. Configured standard schedule EUR19.99, preserved EUR9.99. Does not establish an individual subscriber charge or commercial availability. No changes to account/prices."
+}

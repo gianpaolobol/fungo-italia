@@ -1,0 +1,186 @@
+{
+  "sourceCommit": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+  "snapshot": "2026-10-26 after first consolidation push; pending is not success",
+  "runs": [
+    {
+      "id": 40305798364,
+      "name": "Stage native screenshot evidence",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305798364",
+      "event": "workflow_run"
+    },
+    {
+      "id": 40305798553,
+      "name": "Inspect StoreKit purchase failure",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "skipped",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305798553",
+      "event": "workflow_run"
+    },
+    {
+      "id": 40305751100,
+      "name": "Paired web and diagnostic TestFlight",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "pending",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751100",
+      "event": "push"
+    },
+    {
+      "id": 40305751093,
+      "name": "Expo Android and iOS",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751093",
+      "event": "push"
+    },
+    {
+      "id": 40305751076,
+      "name": "Atlas genus search regression",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751076",
+      "event": "push"
+    },
+    {
+      "id": 40305751003,
+      "name": "App Store Connect status",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751003",
+      "event": "push"
+    },
+    {
+      "id": 40305750953,
+      "name": "Scientific gap evidence",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305750953",
+      "event": "push"
+    },
+    {
+      "id": 40305751048,
+      "name": "Verify native StoreKit subscriptions",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751048",
+      "event": "push"
+    },
+    {
+      "id": 40305751057,
+      "name": "Verify free Agaricus demo interface",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751057",
+      "event": "push"
+    },
+    {
+      "id": 40305751066,
+      "name": "Verify StoreKit purchase interface",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751066",
+      "event": "push"
+    },
+    {
+      "id": 40305751102,
+      "name": "Validate shared web candidate",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305751102",
+      "event": "push"
+    },
+    {
+      "id": 40305653679,
+      "name": "Paired web and diagnostic TestFlight",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "in_progress",
+      "conclusion": null,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653679",
+      "event": "push"
+    },
+    {
+      "id": 40305653708,
+      "name": "Atlas genus search regression",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653708",
+      "event": "push"
+    },
+    {
+      "id": 40305653691,
+      "name": "App Store Connect status",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653691",
+      "event": "push"
+    },
+    {
+      "id": 40305653482,
+      "name": "Scientific gap evidence",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653482",
+      "event": "push"
+    },
+    {
+      "id": 40305653561,
+      "name": "Expo Android and iOS",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653561",
+      "event": "push"
+    },
+    {
+      "id": 40305653637,
+      "name": "Verify native StoreKit subscriptions",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653637",
+      "event": "push"
+    },
+    {
+      "id": 40305653569,
+      "name": "Verify StoreKit purchase interface",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653569",
+      "event": "push"
+    },
+    {
+      "id": 40305653567,
+      "name": "Verify free Agaricus demo interface",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653567",
+      "event": "push"
+    },
+    {
+      "id": 40305653524,
+      "name": "Validate shared web candidate",
+      "sha": "bebcfeb7ad286ae24a4283cc39770b73ead8576c",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653524",
+      "event": "push"
+    }
+  ]
+}

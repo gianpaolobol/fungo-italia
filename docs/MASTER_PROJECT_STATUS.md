@@ -122,9 +122,21 @@ Registro chat separato:200 fotografie,150collegate,50solo fonte,229 relazioni a7
 
 Ultima distribuzione storica verificata:[run40122020361](https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020361),sorgente279d50e842a95c6a7d8e3499806b3fd5c42996e7,versione 1.1.0(19),AppleVALID e gruppo interno;web promosso e smoke riuscito. [Ricevuta esatta](evidence/ios-build19-20261024.json):`diagnosticOnly=true`,`appStoreReady=false`. Non contiene il recupero successivo o le correzioni ricerca e non qualifica questa baseline.
 
-Ultimo audit Apple disponibile dagli handoff:[40244865480](https://github.com/gianpaolobol/fungo-italia/actions/runs/40244865480),26ottobre:sorgentee158000,AppStore1.0REJECTED associata alla9;annualeREADY_TO_SUBMIT,metadatiREADY_FOR_REVIEW. È riscontro datato,non nuova lettura del portale in questo ciclo. Privacy tecnica da verificare nell'interfaccia Apple;probeAPI404non prova assenza/completezza.
+Ultimo audit Apple disponibile dagli handoff:[40244865480](https://github.com/gianpaolobol/fungo-italia/actions/runs/40244865480),26 ottobre:sorgentee158000,AppStore 1.0 REJECTED associata alla9;annualeREADY_TO_SUBMIT,metadatiREADY_FOR_REVIEW. È riscontro datato,non nuova lettura del portale in questo ciclo. Privacy tecnica da verificare nell'interfaccia Apple;probeAPI404non prova assenza/completezza.
 
-Prezzo:il vecchio9,99€derivava dal primoITA della prima pagina. Il nuovo audit legge calendario completo,preservati,piani e transizioni,fallisce chiuso su dati ambigui e non determina il prezzo di un singolo abbonato. Nessun nuovo prezzo attivo attestato qui. Un push del nuovo script attiva il workflow di lettura autorizzato;il risultato va letto e registrato prima di modificare metadati o affermare una tariffa Apple effettiva.
+Prezzo: il vecchio rapporto di 9,99 € selezionava il primo record ITA della prima pagina. La nuova lettura autorizzata è riportata sotto e riconcilia la differenza senza modificare prezzi. Il calendario non determina il prezzo di un singolo abbonato né prova disponibilità commerciale.
+
+## Riscontri dopo il push del consolidamento
+
+Main aggiornato in fast-forward con controllo dello SHA atteso: `bebcfeb7ad286ae24a4283cc39770b73ead8576c`, preceduto dal commit applicativo `20c42bab7ec7c448072ebe50a9966eadb9ff6c75`. Albero remoto confrontato con quello locale verificato: identico. Questo aggiornamento successivo aggiunge soltanto documentazione dei riscontri; lo SHA vivo resta ricavabile dal ref main e lo SHA dell'ultima revisione del master dal comando riportato in apertura.
+
+**Nuovo audit Apple del 26 ottobre, ore 11:13 CET:** [run40305653691](https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653691), job121513984848, SUCCESS sullo SHA bebcfeb. [Estratto strutturato](evidence/apple-status-readback-20261026.json). Nessuna scrittura sull'account.
+
+- Letti tutti i 350 prezzi configurati in 2 pagine, senza anomalie segnalate. Calendario italiano risolto: **19,99 €**, standard non preservato UPFRONT con decorrenza **21 ottobre 2026**. Il 9,99 € è un record **preservato**, con decorrenza baseline null. Non prova l'esistenza di clienti a quel prezzo o la tariffa del singolo rinnovo.
+- Annuale ancora READY_TO_SUBMIT; metadati READY_FOR_REVIEW. Ultima build 1.1.0(19), VALID, non scaduta; App Store 1.0 REJECTED collegata alla build 9. Nessuna nuova distribuzione conseguente a questo audit.
+- Disponibilità Italia: `TRADER_STATUS_VERIFICATION_FAILED`, `CANNOT_SELL`, `AVAILABLE_FOR_SALE_UNRELEASED_APP`. La presenza del territorio e del calendario non equivale a vendita abilitata. Verifica trader/DSA e App Review restano blocchi concreti. Il probe privacy rimane 404 PATH_ERROR, quindi non certifica il questionario.
+
+CI post-push: ricerca/TypeScript [40305653708](https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653708) SUCCESS; export lacune [40305653482](https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653482) produce l'artefatto e FAIL al solo gate scientifico, come atteso. Risultati e rilanci osservati sono in [snapshot CI](evidence/master-post-push-ci-20261026.json). Sono comparsi ulteriori run sul medesimo SHA: non annullati dall'agente. Le suite native/web e pipeline abbinate ancora pendenti/in corso non sono PASS, e i run sostituiti/cancellati non sono prove utilizzabili. Nessuna build o pubblicazione attribuita ai run pendenti.
 
 ## Roadmap eseguibile e blocchi
 
