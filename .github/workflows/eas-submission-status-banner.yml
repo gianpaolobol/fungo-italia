@@ -1,0 +1,42 @@
+name: Inspect EAS native banner submission status
+on:
+  push:
+    branches: [audit/eas-status-native-banner-20261026]
+    paths: [.github/workflows/eas-submission-status-banner.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Read current EAS submissions without creating or cancelling any submission
+        run: |
+          node --input-type=module <<'JS'
+          import {writeFile} from 'node:fs/promises';
+          const token=process.env.EXPO_TOKEN;
+          if(!token)throw Error('Configured Expo credential unavailable');
+          const project='b65af584-739f-4ef0-8fe5-6c0ba692c088';
+          const query='query OwnerSubmissionStatus($appId:String!){app{byId(appId:$appId){id fullName slug ownerAccount{name} submissions(filter:{platform:IOS},offset:0,limit:10){id status createdAt completedAt iosConfig{ascAppIdentifier} error{errorCode} logFiles}}}}';
+          const response=await fetch('https://api.expo.dev/graphql',{method:'POST',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({query,variables:{appId:project}}),signal:AbortSignal.timeout(45000)});
+          if(!response.ok)throw Error('EAS status HTTP '+response.status);
+          const data=await response.json();
+          if(data.errors?.length)throw Error('EAS status query rejected: '+data.errors.map(e=>String(e.message).replaceAll(token,'[REDACTED]')).join('; '));
+          const app=data.data?.app?.byId;
+          if(app?.id!==project||app.ownerAccount?.name!=='gianpaolobol')throw Error('Unexpected project owner; refuse broader access');
+          const report={checkedAt:new Date().toISOString(),readOnly:true,contextSource:'6dfb92656ec94485d94aecba72543930c2759d17',projectId:project,fullName:app.fullName,submissions:app.submissions.map(s=>({id:s.id,status:s.status,createdAt:s.createdAt,completedAt:s.completedAt,ascAppIdentifier:s.iosConfig?.ascAppIdentifier??null,errorCode:s.error?.errorCode??null,logFileCount:s.logFiles?.length??0,url:'https://expo.dev/accounts/gianpaolobol/projects/'+encodeURIComponent(app.slug)+'/submissions/'+encodeURIComponent(s.id)}))};
+          await writeFile('/tmp/eas-submission-status.json',JSON.stringify(report,null,2)+'\n');
+          console.log('EAS_SUBMISSION_READBACK '+JSON.stringify(report));
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: EAS-submission-read-only-status
+          path: /tmp/eas-submission-status.json
+          if-no-files-found: error
+          retention-days: 30
