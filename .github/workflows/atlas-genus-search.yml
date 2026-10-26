@@ -1,0 +1,31 @@
+name: Atlas genus search regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'components/Studio.tsx'
+      - 'lib/atlas-search.mjs'
+      - 'lib/atlas-search.d.mts'
+      - 'lib/atlas-search.test.mjs'
+      - 'lib/curriculum-levels.mjs'
+      - 'src/data/catalog.json'
+      - 'src/data/groups.json'
+      - '.github/workflows/atlas-genus-search.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  search-and-types:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Verify minimum-objective genus discovery
+        run: node lib/atlas-search.test.mjs
+      - name: Typecheck native app
+        run: npm run typecheck
