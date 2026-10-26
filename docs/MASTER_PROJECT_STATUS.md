@@ -2,6 +2,16 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## TestFlight interno disponibile — 26 ottobre 2026, 18:32 UTC
+
+**1.1.0 (20) effettivamente disponibile: `IN_BETA_TESTING`.** Sorgente applicativo `b844fb2cb53b497d5301ad86e737e03886c55a69`, Apple build `d1127faf-fbb5-4d34-819e-cfb2ebfb4d11`, unico gruppo interno `f642807c-e4b2-43d4-a32a-d9fd087fdfe3` con il solo account holder. Nessun tester individuale, invito esterno o rilascio App Store. [Ricevuta Apple completa](evidence/testflight20-20261026/consolidated-testflight.json), [rapporto e link](evidence/testflight20-20261026/README.md). Questa conferma supera gli stati di attesa della build nelle sezioni sottostanti, conservate come cronologia.
+
+Tutti i workflow obbligatori sullo stesso SHA sono riusciti: StoreKit nativo, UI acquisti e demo su iPhone/iPad, atlas/source con rigenerazione deterministica e gate del titolare. La revisione indipendente resta pendente e `appStoreReady=false`. Gli esiti strict e le lacune scientifiche sono conservati nella ricevuta; non diventano certificazioni.
+
+L'IPA firmato è stato prodotto da EAS local con profilo `consolidated-beta` derivato da production, SHA-256 `b9870cf8658ebc3154356232e6941340c762561f51de9ba109f2ac3a7c988b7e`. EAS Submit ha concluso alle18:28:16 UTC. Il client GitHub aveva perso il DNS Expo alle18:20:47 dopo49minuti di attesa: per questo il produttore iniziale40357011280 resta correttamente failure. Il recupero40378621868 non ha ricaricato il binario: ha verificato ricevuta firmata, SHA, gate originali, scienza invariata e submission FINISHED, poi eseguito gli stessi helper Apple per assegnazione esclusiva e disponibilità reale. Recupero interamente success; lettura Apple separata alle18:33:01 conferma VALID e IN_BETA_TESTING. Nessun gate disattivato.
+
+Restano diagnostiche Expo Doctor preesistenti da non confondere con gli esiti delle suite obbligatorie: euristica app.json/app.config.js (la configurazione dinamica importa effettivamente app.json) e raccomandazioni di allineamento versioni SDK/dipendenze. Sono state emesse dal build, non nascoste né rinominate PASS; compilazione, firma e prove native effettive sono riuscite. Nessun aggiornamento di dipendenze è introdotto nel binario già verificato.
+
 ## Revisione dichiarata dal titolare per TestFlight interno — 26 ottobre 2026
 
 Il titolare ha dichiarato: «per ora attesto io come revisione e mi riservo di inviare ad altri revisori successivamente». Questa è l’autorizzazione corrente per il solo gruppo interno del titolare. **Non è revisione indipendente, firma professionale o certificazione micologica.** La dichiarazione effettiva, il suo perimetro, gli867 file esaminabili e gli hash sono nel [registro del titolare](../revisione/owner-internal-beta-review-20261026.json). Nessun campo delle schede è stato promosso a revisione indipendente.

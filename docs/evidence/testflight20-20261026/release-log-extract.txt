@@ -1,0 +1,60 @@
+2026-10-26T17:21:54.9382660Z - Consolidated-source-proof (ID: 12668104738, Size: 13682, Expected Digest: sha256:5992ae5835da345fa73914b7a05a275bcd69f6a2f3359430ed1d77b0a8b30afc)
+2026-10-26T17:21:55.1493210Z SHA256 digest of downloaded artifact is 5992ae5835da345fa73914b7a05a275bcd69f6a2f3359430ed1d77b0a8b30afc
+2026-10-26T17:22:31.9633110Z ✔ Incremented buildNumber from 19 to 20.
+2026-10-26T17:23:44.0155690Z [RUN_EXPO_DOCTOR] Running "expo doctor"
+2026-10-26T17:23:45.8832880Z [RUN_EXPO_DOCTOR] Running 20 checks on your project...
+2026-10-26T17:23:49.3010530Z [RUN_EXPO_DOCTOR] 18/20 checks passed. 2 checks failed. Possible issues detected:
+2026-10-26T17:23:49.3053060Z [RUN_EXPO_DOCTOR] 2 checks failed, indicating possible issues with the project.
+2026-10-26T17:23:49.3054990Z [RUN_EXPO_DOCTOR] Use the --verbose flag to see more details about passed checks.
+2026-10-26T17:23:49.3062700Z [RUN_EXPO_DOCTOR] ✖ Check Expo config for common issues
+2026-10-26T17:23:49.3066710Z [RUN_EXPO_DOCTOR] You have an app.json file in your project, but your app.config.js is not using the values from it.
+2026-10-26T17:23:49.3069570Z [RUN_EXPO_DOCTOR] Advice:
+2026-10-26T17:23:49.3072670Z [RUN_EXPO_DOCTOR] Remove the static app.json, or use its values in your dynamic app.config.js. Learn more: https://docs.expo.dev/workflow/configuration
+2026-10-26T17:23:49.3075640Z [RUN_EXPO_DOCTOR] 
+2026-10-26T17:23:49.3085060Z [RUN_EXPO_DOCTOR] ✖ Check that packages match versions required by installed Expo SDK
+2026-10-26T17:23:49.3086900Z [RUN_EXPO_DOCTOR] 
+2026-10-26T17:23:49.3093560Z [RUN_EXPO_DOCTOR] ❗ Major version mismatches
+2026-10-26T17:23:49.3094680Z [RUN_EXPO_DOCTOR] package                         expected  found    
+2026-10-26T17:23:49.3095550Z [RUN_EXPO_DOCTOR] typescript                      ~6.0.3    5.9.3    
+2026-10-26T17:23:49.3096160Z [RUN_EXPO_DOCTOR] 
+2026-10-26T17:23:49.3099360Z [RUN_EXPO_DOCTOR] ⚠️ Minor version mismatches
+2026-10-26T17:23:49.3103950Z [RUN_EXPO_DOCTOR] package                         expected  found    
+2026-10-26T17:23:49.3108370Z [RUN_EXPO_DOCTOR] react-native-safe-area-context  ~5.10.1   5.9.1    
+2026-10-26T17:23:49.3109960Z [RUN_EXPO_DOCTOR] @types/react                    ~19.3.0   19.2.14  
+2026-10-26T17:23:49.3110900Z [RUN_EXPO_DOCTOR] 
+2026-10-26T17:23:49.3112110Z [RUN_EXPO_DOCTOR] 🔧 Patch version mismatches
+2026-10-26T17:23:49.3113340Z [RUN_EXPO_DOCTOR] package                         expected  found    
+2026-10-26T17:23:49.3114640Z [RUN_EXPO_DOCTOR] expo                            ~58.0.19  58.0.2   
+2026-10-26T17:23:49.3115990Z [RUN_EXPO_DOCTOR] expo-media-library              ~58.0.12  58.0.7   
+2026-10-26T17:23:49.3118350Z [RUN_EXPO_DOCTOR] expo-status-bar                 ~58.0.4   58.0.3   
+2026-10-26T17:23:49.3119210Z [RUN_EXPO_DOCTOR] expo-updates                    ~58.0.18  58.0.13  
+2026-10-26T17:23:49.3119540Z [RUN_EXPO_DOCTOR] 
+2026-10-26T17:23:49.3119820Z [RUN_EXPO_DOCTOR] Changelogs:
+2026-10-26T17:23:49.3122570Z [RUN_EXPO_DOCTOR] - expo-media-library → https://github.com/expo/expo/blob/sdk-58/packages/expo-media-library/CHANGELOG.md
+2026-10-26T17:23:49.3123570Z [RUN_EXPO_DOCTOR] - expo-status-bar → https://github.com/expo/expo/blob/sdk-58/packages/expo-status-bar/CHANGELOG.md
+2026-10-26T17:23:49.3124670Z [RUN_EXPO_DOCTOR] - expo-updates → https://github.com/expo/expo/blob/sdk-58/packages/expo-updates/CHANGELOG.md
+2026-10-26T17:23:49.3125290Z [RUN_EXPO_DOCTOR] 
+2026-10-26T17:23:49.3125620Z [RUN_EXPO_DOCTOR] 7 packages out of date.
+2026-10-26T17:23:49.3125940Z [RUN_EXPO_DOCTOR] Advice:
+2026-10-26T17:23:49.3126580Z [RUN_EXPO_DOCTOR] Use 'npx expo install --check' to review and upgrade your dependencies.
+2026-10-26T17:23:49.3128170Z [RUN_EXPO_DOCTOR] To ignore specific packages, add them to "expo.install.exclude" in package.json. Learn more: https://expo.fyi/dependency-validation
+2026-10-26T17:23:49.3199480Z [RUN_EXPO_DOCTOR] Command "expo doctor" failed.
+2026-10-26T17:25:34.0284370Z [POST_INSTALL_HOOK]       "sha256": "0d4afdb2c1694a3ebca3f9c391f16814fb73fc66e66051ef423d3efc1f377858"
+2026-10-26T17:25:34.0405430Z [POST_INSTALL_HOOK]       "sha256": "41b382001e6f20511abaf1eb10c8cf2bf6eebb702f6f582f71e383229d0c64c7"
+2026-10-26T17:25:34.0408290Z [POST_INSTALL_HOOK]       "sha256": "f9191d550b9c15e5fe692f99bb539910df520d565670bdcf0135bfd0cc5fa647"
+2026-10-26T17:25:34.0414630Z [POST_INSTALL_HOOK]       "sha256": "da56c3052ffb08213813b4ae2567215f928c26641164f9f22460c186be9f0fba"
+2026-10-26T17:25:34.0422600Z [POST_INSTALL_HOOK]       "sha256": "864100706e1399b42c5b5f598320d85cbed2031276b9249bab6aee63fe75588d"
+2026-10-26T17:25:34.0428700Z [POST_INSTALL_HOOK]       "sha256": "18f254464ed78857c7acc2285f88191cb89a0a715408b73b1d41214f1ec06a19"
+2026-10-26T17:31:08.4607350Z Build successful
+2026-10-26T17:31:15.5994820Z Object.assign(r,{buildNumber:process.env.BUILD_NUMBER,producerRunId:process.env.GITHUB_RUN_ID,ipaSha256:createHash('sha256').update(fs.readFileSync(process.env.RUNNER_TEMP+'/fungo-consolidated.ipa')).digest('hex')});
+2026-10-26T17:31:32.3929960Z ✔ Scheduled iOS submission
+2026-10-26T17:31:32.3939860Z Submission details: https://expo.dev/accounts/gianpaolobol/projects/fungo-italia-/submissions/f02f940d-07e5-476f-8f83-6ccabb959041
+2026-10-26T18:20:47.5875980Z request to https://api.expo.dev/graphql failed, reason: getaddrinfo ENOTFOUND api.expo.dev
+2026-10-26T18:20:49.3240880Z SHA256 digest of uploaded artifact zip is eeeb8ae071fbe74d8c79480a2875b9e1f2eeb984b4fc433f815e1c822b18d36d
+2026-10-26T18:20:49.3241540Z Finalizing artifact upload
+2026-10-26T18:20:49.7622800Z Artifact Consolidated-TestFlight-evidence has been successfully uploaded! Final size is 26982 bytes. Artifact ID is 12674744300
+2026-10-26T18:20:56.0868150Z SHA256 digest of uploaded artifact zip is a0aa894ad82af7056c2744a73ec4103bb79e9199be815c4d0085fcf8e6f605f4
+2026-10-26T18:20:56.0868820Z Finalizing artifact upload
+2026-10-26T18:20:56.5383760Z Artifact Consolidated-signed-IPA has been successfully uploaded! Final size is 219501202 bytes. Artifact ID is 12674659320
+2026-10-26T18:20:59.4895140Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-10-26T18:32:54.1454944Z ACTUAL_OWNER_TESTFLIGHT {"sourceCommit":"b844fb2cb53b497d5301ad86e737e03886c55a69","version":"1.1.0","buildNumber":"20","appleBuildId":"d1127faf-fbb5-4d34-819e-cfb2ebfb4d11","internalBuildState":"IN_BETA_TESTING","internalGroupIds":["f642807c-e4b2-43d4-a32a-d9fd087fdfe3"],"betaStateVerifiedAt":"2026-10-26T18:32:54.095Z"}
