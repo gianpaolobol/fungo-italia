@@ -2,6 +2,12 @@
 
 Leggere [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md): baseline consolidata, rapporto completo del primo ciclo, inventario di 12 PR/186 branch, 235 test Node e stato reale dei blocchi. Recuperati catalogo di 13 schede, exporter curricolare PR123, patch audit prezzi e ricevuta storica beta19 PR119. Nessun merge integrale delle PR, nuova build o release attestata.
 
+## Allineamento Web / TestFlight — aggiornamento operativo
+
+La correzione Aree è nel codice condiviso e verificata nei test nativi del sorgente intermedio cc2a34d. PR126 consolida pubblicazione abbinata con autorizzazione distinta per candidato, integrità originale web/IPA/Apple, rollback non distruttivo e aggiornamento PWA con preservazione dei dati. Main resta fermo durante la qualificazione finale. Il controllo offline reale WebKit ha scoperto un rigetto non gestito di `reg.update()`; corretto nel bootstrap generato e provato RED→GREEN, senza filtrare errori browser.299 test Node, TypeScript e rigenerazione deterministica locali superati. Audit container40413648238 in corso: nessuna nuova consegna attestata da questi risultati.
+
+Ultime consegne documentate: TestFlight1.1.0(21), sorgente6dfb92656ec94485d94aecba72543930c2759d17; web1.1.0(19), sorgente279d50e842a95c6a7d8e3499806b3fd5c42996e7. Il nuovo abbinamento non è completato. La revisione indipendente resta pendente;Lo snapshot scientifico invariato contiene867 file. Nuova demo pubblica: occorre l'approvazione distinta prevista dal successivo handoff, dopo disponibilità della nuova ricevuta concreta. La precedente autorizzazione21 non viene riutilizzata.
+
 ## Archivio degli handoff precedenti
 
 Le sezioni seguenti conservano gli stati alle rispettive date e SHA, inclusa la consegna locale della patch prima del recupero. Non sono lo stato corrente. Le istruzioni incompatibili con il master sono superate.

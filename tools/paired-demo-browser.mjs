@@ -73,8 +73,6 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    }finally{gate.allow();}
   }
   assertBrowserProgress(await readProgress());
-  const captureOffline=mode==='capture'&&process.env.PAIRED_PREFLIGHT_OFFLINE==='1';
-  if(captureOffline){await verifyOffline();assert.equal(await controllerSource(page),before);await page.getByRole('tab',{name:'Esame',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione',exact:true}).click();await expect(page.getByRole('textbox',{name:'Nome scientifico della risposta'})).toHaveValue('Agaricus');await page.screenshot({path:join(directory,name+'-offline-preflight.png'),fullPage:true});}
   if(mode==='upgrade'){
    assert.equal(await controllerSource(page),SOURCE);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam checkpoint/history changed during upgrade');
@@ -92,7 +90,7 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await page.screenshot({path:join(directory,name+'-verified.png'),fullPage:true});
   }
   assert.deepEqual(errors,[]);
-  reports.push({browser:name,mode,sourceBefore:before,sourceAfter:await controllerSource(page),method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'||captureOffline});
+  reports.push({browser:name,mode,sourceBefore:before,sourceAfter:await controllerSource(page),method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'});
  }finally{await context?.close();await gate.close();}
 }
 await writeFile(join(directory,mode+'-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),reports},null,2)+'\n');

@@ -33,7 +33,7 @@ Execution: inline, autonomous, as explicitly requested. Fresh clone on fix/paire
 - [ ] Prepare generalized publisher with a pinned, explicit authorization for the exact immutable release.
 - [ ] Verify original artifact ZIP, every file, native receipt, live Apple state and audience.
 - [ ] Prepare real Chromium/WebKit PWA capture/upgrade with storage preservation.
-- [ ] Bind the already-confirmed public non-certified beta scope to the exact qualified candidate; ask again only for an actually changed scope.
+- [ ] Prepare the exact qualified public candidate, then obtain the distinct explicit approval required by this executive handoff.
 - [ ] After authorization deploy, verify served bytes and PWA; retain previous receipt/artifact for verified rollback.
 
 ## Ledger
@@ -44,5 +44,7 @@ Execution: inline, autonomous, as explicitly requested. Fresh clone on fix/paire
 - Preserved parallel main cc9730e attribution correction; its source CI reproduced initScript storage access inside isolated map, fixed via top-level-only seed with real browser RED→GREEN regression.
 - Generic publisher prepared with explicit per-snapshot approval, successful producer/native/Apple readbacks, end-of-proof main guard, full previous web archive and real exam/PWA state checks. No approved public declaration exists.
 
-- Active-session owner response «confermo» confirms public non-certified beta synchronization with technical controls and App Store block retained. Exact-snapshot declaration remains pending the qualified Apple receipt; no signature or independent certification inferred.
+- The historical «confermo» supported demo21. The later executive handoff requires distinct approval for the new public snapshot; complete authorized technical/internal work first. No new approval record, signature or independent certification inferred.
 - Browser upgrade now also requires aligned release text and absence of the obsolete TestFlight mismatch card in both engines; final live execution pending.
+
+- Real WebKit origin shutdown uncovered a production bootstrap unhandled automatic update rejection. Actual generated-runtime VM regression RED1/GREEN3; fixed reg.update rejection only, no browser error filtering. All299 Node tests and TypeScript pass locally. New container preflight40413648238 pending; main remains cc2 until final execution proof.

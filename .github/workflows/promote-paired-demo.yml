@@ -1,15 +1,4 @@
 name: Promote explicitly authorized paired public demo
-true:
-  workflow_dispatch:
-    inputs:
-      source_commit:
-        description: Exact application SHA already available on owner-only TestFlight
-        required: true
-        type: string
-      authorization_sha256:
-        description: Canonical SHA-256 of the distinct approved public demo declaration
-        required: true
-        type: string
 permissions:
   contents: read
   actions: read
@@ -118,3 +107,14 @@ jobs:
         path: ${{ runner.temp }}/paired-demo-evidence
         retention-days: 90
         if-no-files-found: warn
+'on':
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Exact application SHA already available on owner-only TestFlight
+        required: true
+        type: string
+      authorization_sha256:
+        description: Canonical SHA-256 of the distinct approved public demo declaration
+        required: true
+        type: string
