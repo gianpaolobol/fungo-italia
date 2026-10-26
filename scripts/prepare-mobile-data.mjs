@@ -49,6 +49,13 @@ applyCourseLiterature([...catalog,...teachingGroups],courseLiterature,courseRegi
 const studyProfiles=JSON.parse(await readFile(join(output,'study-profiles.json'),'utf8'));
 const referenceImages=JSON.parse(await readFile(join(output,'reference-images.json'),'utf8'));
 applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
+applyToxicologySyndromes([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'toxicology-syndromes.json'),'utf8')));
+applyApprovedExternalStudyEvidence([...catalog,...teachingGroups],JSON.parse(await readFile(join('src/data','external-study-evidence-candidates.json'),'utf8')));
+applyReferenceImages([...catalog,...teachingGroups],referenceImages);
+const adminImages=JSON.parse(await readFile(join(output,'admin-reference-images.json'),'utf8'));
+applyAdminReferenceImages([...catalog,...teachingGroups],adminImages);
+applyCommercialization([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'commercialization.json'),'utf8')));
+applyReviewedMatrix([...catalog,...teachingGroups],await readReviewedMatrix(),studyProfiles);
 // A mass spore-print description must be explicit, source-linked and limited to
 // the exact S1 taxon. Do not infer mass colour from microscopic spore colour.
 {
@@ -60,13 +67,6 @@ applyStudyProfiles([...catalog,...teachingGroups],studyProfiles,courseRegistry);
  if(!taxon.sources.some(s=>s.sourceId===evidence.sourceId))throw Error('Scutiger spore-print provenance not attached to atlas');
 }
 
-applyToxicologySyndromes([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'toxicology-syndromes.json'),'utf8')));
-applyApprovedExternalStudyEvidence([...catalog,...teachingGroups],JSON.parse(await readFile(join('src/data','external-study-evidence-candidates.json'),'utf8')));
-applyReferenceImages([...catalog,...teachingGroups],referenceImages);
-const adminImages=JSON.parse(await readFile(join(output,'admin-reference-images.json'),'utf8'));
-applyAdminReferenceImages([...catalog,...teachingGroups],adminImages);
-applyCommercialization([...catalog,...teachingGroups],JSON.parse(await readFile(join(output,'commercialization.json'),'utf8')));
-applyReviewedMatrix([...catalog,...teachingGroups],await readReviewedMatrix(),studyProfiles);
 const curriculumScope=JSON.parse(await readFile(join(output,'curriculum-scope.json'),'utf8'));
 const curriculumObjectives=JSON.parse(await readFile('legacy/web/data/taxonomic-objectives.json','utf8'));
 // The historical review covers the original 214 records only. Completion groups
