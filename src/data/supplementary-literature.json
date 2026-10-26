@@ -707,11 +707,22 @@
           "url": "https://www.gruppomicologicoancona.it/micologia/ritrovamenti-e-schede/schede-descrittive/amanita-rubescens.html",
           "location": "Habitat; Note; descrizione di carne, gambo e cappello",
           "fields": [
-            "habitat",
-            "lookalikes"
+            "habitat"
           ],
           "supportedClaim": "Ecologia e confronto morfologico circoscritti alla scheda nominale; non modifica commestibilità S2.",
           "notes": "Revisione bibliografica, non attestazione micologica indipendente; confronto non diventa obiettivo autonomo.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-RUBESCENS-BRESADOLA-MUSE",
+          "reviewScope": "supplementary-literature",
+          "title": "Gruppo Micologico Bresadola — Galleria Amanita rubescens",
+          "url": "https://www2.muse.it/bresadola/galleria_sp.asp?sp=172799",
+          "location": "Testo descrittivo a cura di Marco Floriani, confronto con Amanita pantherina",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto tra arrossamento, volva, verruche e A. pantherina",
           "reviewStatus": "source-consulted-pending-independent-review"
         }
       ]
@@ -722,19 +733,16 @@
       "habitat": [
         "Luoghi erbosi e concimati, parchi, margini stradali e pascoli, dalla primavera all'autunno."
       ],
-      "lookalikes": [
-        "Coprinopsis atramentaria (Coprinus atramentarius nelle fonti): confronto didattico con un fungo che presenta cappello più liscio e grigio; non basarsi sulla sola somiglianza del cappello."
-      ],
+      "lookalikes": [],
       "sources": [
         {
           "sourceId": "SUPPLEMENT-OCT26-COPRINUS-COMATUS",
           "reviewScope": "supplementary-literature",
           "title": "I funghi della Campania — Scheda 46 Coprinus comatus",
           "url": "https://www.cmcalore.it/funghi/moduloweb/Schede%20Funghi/Scheda046.pdf",
-          "location": "Scheda 46, HABITAT e morfologia",
+          "location": "Scheda 46, HABITAT",
           "fields": [
-            "habitat",
-            "lookalikes"
+            "habitat"
           ],
           "supportedClaim": "Ecologia e confronto morfologico circoscritti alla scheda nominale; non modifica commestibilità S2.",
           "notes": "Revisione bibliografica, non attestazione micologica indipendente; confronto non diventa obiettivo autonomo.",
