@@ -3,6 +3,9 @@ import {Platform,Pressable,StyleSheet,Text,View} from 'react-native';
 import useReleaseAlignment from '../hooks/useReleaseAlignment';
 import {prepareWebUpdate} from '../lib/release-alignment.mjs';
 export default function ReleaseStatus({details=false}:{details?:boolean}){
+ return Platform.OS==='web'?<WebReleaseStatus details={details}/>:null;
+}
+function WebReleaseStatus({details}:{details:boolean}){
  const {status,localVersion,release,refresh}=useReleaseAlignment();
  const [updating,setUpdating]=useState(false),[message,setMessage]=useState('');
  if(!details&&status!=='update-available')return null;
@@ -21,7 +24,7 @@ export default function ReleaseStatus({details=false}:{details?:boolean}){
   <Text style={s.body}>{copy}</Text>
   {status==='update-available'&&<>
    {release&&<Text style={s.body}>Versione TestFlight {release.version} ({release.buildNumber})</Text>}
-   {Platform.OS==='web'?<><Text style={s.body}>Termina l’esercizio prima di aggiornare: la pagina verrà ricaricata.</Text><Pressable accessibilityRole="button" accessibilityState={{disabled:updating}} disabled={updating} onPress={()=>void update()} style={s.button}><Text style={s.buttonText}>{updating?'Preparazione aggiornamento…':'Aggiorna anteprima'}</Text></Pressable></>:<Text style={s.body}>Apri TestFlight, seleziona Fungo Italia e verifica se puoi aggiornare l’app.</Text>}
+   <Text style={s.body}>Termina l’esercizio prima di aggiornare: la pagina verrà ricaricata.</Text><Pressable accessibilityRole="button" accessibilityState={{disabled:updating}} disabled={updating} onPress={()=>void update()} style={s.button}><Text style={s.buttonText}>{updating?'Preparazione aggiornamento…':'Aggiorna anteprima'}</Text></Pressable>
   </>}
   {details&&status!=='checking'&&<Pressable accessibilityRole="button" onPress={()=>void refresh()} style={s.button}><Text style={s.buttonText}>Verifica versione</Text></Pressable>}
   {!!message&&<Text accessibilityRole="alert" style={s.body}>{message}</Text>}

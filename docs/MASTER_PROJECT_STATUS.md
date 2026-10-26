@@ -2,6 +2,12 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## Avviso obsoleto TestFlight — correzione richiesta dal titolare
+
+Lo screenshot segnala la build19 nell'app nativa20. Causa: il componente confrontava lo SHA locale con release.json del web pubblico, rimasto legittimamente alla19 perché la beta interna non autorizza promozione web. La disuguaglianza non prova l'esistenza di una build più recente. Il componente ora monta il controllo e il riquadro soltanto sul web; su iOS/Android non compare, nemmeno nel dettaglio abbonamento, e non effettua quel controllo remoto. Nessun gate tecnico, StoreKit o scientifico è modificato.
+
+Regressione di rendering reale React: rosso prima della modifica (controllo remoto nativo eseguito), poi verde per iOS/Android in tutti gli stati e con/senza dettagli; azioni e dettagli web conservati. La nuova disponibilità della correzione richiede compilazione e verifica TestFlight del nuovo SHA: la ricevuta20 sottostante resta relativa al sorgente precedente.
+
 ## TestFlight interno disponibile — 26 ottobre 2026, 18:32 UTC
 
 **1.1.0 (20) effettivamente disponibile: `IN_BETA_TESTING`.** Sorgente applicativo `b844fb2cb53b497d5301ad86e737e03886c55a69`, Apple build `d1127faf-fbb5-4d34-819e-cfb2ebfb4d11`, unico gruppo interno `f642807c-e4b2-43d4-a32a-d9fd087fdfe3` con il solo account holder. Nessun tester individuale, invito esterno o rilascio App Store. [Ricevuta Apple completa](evidence/testflight20-20261026/consolidated-testflight.json), [rapporto e link](evidence/testflight20-20261026/README.md). Questa conferma supera gli stati di attesa della build nelle sezioni sottostanti, conservate come cronologia.
