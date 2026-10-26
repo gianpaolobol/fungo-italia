@@ -592,6 +592,103 @@
           ]
         }
       ]
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "commonNames": [],
+      "habitat": [
+        "Nei boschi di latifoglie o misti, spesso ai margini; segnalata anche in ambienti montani."
+      ],
+      "lookalikes": [
+        "Amanita citrina var. alba: confronto didattico fra amanite bianche; non basarsi sui soli resti del velo.",
+        "Agaricus sylvicola: confronto con lamelle che in Agaricus cambiano da rosa a brune, mentre in Amanita virosa restano bianche."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-AMANITA-VIROSA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Amanita virosa",
+          "url": "https://www.first-nature.com/fungi/amanita-virosa.php",
+          "location": "Habitat & Ecological role; Similar species",
+          "fields": [
+            "habitat",
+            "lookalikes"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Cortinarius rubellus: confronto tra specie orellaniche tossiche; la determinazione non va fatta dalla sola colorazione del cappello."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-CORTINARIUS-ORELLANUS-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Cortinarius orellanus",
+          "url": "https://www.first-nature.com/fungi/cortinarius-orellanus.php",
+          "location": "Identification; Similar species",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "commonNames": [],
+      "habitat": [
+        "Per il taxon nominale Galerina marginata: specie saprotrofa su ceppaie, tronchi morti e rami caduti soprattutto di conifere, occasionalmente di latifoglie; dato non generalizzabile a tutto il gruppo."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-GALERINA-MARGINATA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Galerina marginata group",
+          "url": "https://www.first-nature.com/fungi/galerina-marginata.php",
+          "location": "Habitat & Ecological role",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Morchella esculenta: confronto con cappello profondamente alveolato e cavità interna unica, a differenza dell'aspetto cerebriforme di Gyromitra esculenta.",
+        "Helvella crispa: confronto con cappello a sella pallido e gambo percorso da coste e cavità longitudinali."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIRST-NATURE-GYROMITRA-ESCULENTA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Gyromitra esculenta",
+          "url": "https://www.first-nature.com/fungi/gyromitra-esculenta.php",
+          "location": "Similar species",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Evidenza bibliografica circoscritta ai campi habitat e/o confronti diagnostici indicati; non valida commestibilità né attribuisce nuova unità didattica.",
+          "notes": "Fonte esterna verificata il 2026-10-26; la guida S2 resta prevalente per commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
     }
   ]
 }
