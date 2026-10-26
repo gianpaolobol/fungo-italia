@@ -3717,9 +3717,39 @@
       "Gambo biancastro-grigiastro con anello sottile e bulboso alla base.",
       "Volva aderente sul bulbo, non ampia e sacciforme."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Amanita pantherina: residui del velo sul cappello bianchi invece che grigio-violacei.",
+      "Amanita rubescens: la carne tende ad arrossare al taglio o alla lacerazione.",
+      "Amanita excelsa: spore maggiori, lamelle più fitte e anello più robusto."
+    ],
+    "habitat": [
+      "Specie micorrizica soprattutto con conifere, più raramente con latifoglie, su suoli acidi; segnalata anche nelle brughiere."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-df28c90d08f6d84d",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — amanita-porphyria.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/amanita-porphyria.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Micorrizica principalmente con conifere, più raramente latifoglie su suoli acidi; segnalazioni in brughiere.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-df28c90d08f6d84d",
+        "reviewScope": "course-material",
+        "title": "mail.first-nature.com — amanita-porphyria.php",
+        "authors": [],
+        "url": "https://mail.first-nature.com/fungi/amanita-porphyria.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronti con A. pantherina (velo bianco), A. rubescens (carne arrossante), A. excelsa (spore maggiori, lamelle fitte, anello robusto).",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-df28c90d08f6d84d",
         "reviewScope": "course-material",
@@ -4990,12 +5020,27 @@
       "Lamelle bianco-crema fitte, adnate o brevemente decorrenti e separabili dalla carne.",
       "Gambo robusto con base clavata e abbondante micelio bianco."
     ],
-    "lookalikes": [],
+    "lookalikes": [
+      "Lepista nuda: lamelle con tonalità lilla pallido, diversamente dalle lamelle biancastre o crema di Clitocybe nebularis.",
+      "Entoloma sinuatum: lamelle giallastre a maturità e sporata rosata, a differenza della sporata biancastra-crema di Clitocybe nebularis; specie tossica."
+    ],
     "habitat": [
       "Non documentato",
       "ISPRA 188/2019, p.22: gruppi nella stagione tarda, boschi di conifere e latifoglie."
     ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-2d88aa9bd7a9071c",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — clitocybe-nebularis.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/clitocybe-nebularis.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronti descritti con Lepista nuda (lamelle lilla pallido) ed Entoloma sinuatum (lamelle giallastre e spore rosate), quest'ultima tossica.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-2d88aa9bd7a9071c",
         "reviewScope": "course-material",
@@ -5446,9 +5491,37 @@
       "Lamelle bianche strette e nettamente decorrenti.",
       "Gambo pallido, snello e fibroso."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Per Clitocybe gibba in senso stretto: Lepista flaccida presenta cappello più grande e bruno-rossastro, lamelle che virano al fulvo e spore più piccole, arrotondate e finemente verrucose; confronto non generalizzabile a tutte le entità s.l."
+    ],
+    "habitat": [
+      "Per Clitocybe gibba in senso stretto: saprotrofa nella lettiera sotto siepi, nei boschi di latifoglie e nelle brughiere; dato di specie rappresentativa, non automaticamente valido per tutto il gruppo s.l."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-320461b445bd0aac",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — clitocybe-gibba.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/clitocybe-gibba.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Per C. gibba s.str., saprotrofa in lettiera sotto siepi, latifoglie e brughiere; non estendere senza verifica all'intero s.l.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-320461b445bd0aac",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — clitocybe-gibba.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/clitocybe-gibba.php",
+        "location": "Similar species",
+        "supportedClaim": "Per C. gibba s.str., confronto con Lepista flaccida; limitato alla specie rappresentativa e non generalizzato al gruppo s.l.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-320461b445bd0aac",
         "reviewScope": "course-material",
@@ -5663,9 +5736,38 @@
       "Lamelle molto fitte, chiare, anch'esse macchiantesi di ruggine.",
       "Gambo tenace bianco, longitudinalmente striato e spesso radicante."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Rhodocollybia distorta: cappello asciutto rossastro, base del gambo rigonfia e ritorta; lamelle prive delle tipiche macchie rossastre.",
+      "Rhodocollybia butyracea: cappello generalmente più scuro e molto untuoso, con lamelle senza macchie rossastre."
+    ],
+    "habitat": [
+      "Saprotrofa nella lettiera di aghi, su suolo ricco di lignina o legno interrato molto decomposto, prevalentemente sotto conifere e occasionalmente in boschi di latifoglie."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-e5e308c3375a81af",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — rhodocollybia-maculata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/rhodocollybia-maculata.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Saprotrofa su aghi, suolo ricco di lignina e legno interrato decomposto, soprattutto sotto conifere.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-e5e308c3375a81af",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — rhodocollybia-maculata.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/rhodocollybia-maculata.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronti con Rhodocollybia distorta (gambo ritorto/base rigonfia) e R. butyracea (cappello untuoso); entrambe prive di lamelle macchiate.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-e5e308c3375a81af",
         "reviewScope": "course-material",
@@ -6060,9 +6162,37 @@
       "Lamelle fittissime da pallide a rosate/grigie, poi nere e deliquescenti.",
       "Crescita in gruppi o cespi da legno interrato e radici."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Per la specie nominale: Coprinellus micaceus è generalmente più piccolo e rossiccio, con frammenti del velo simili a granuli scintillanti sul cappello giovane."
+    ],
+    "habitat": [
+      "Per Coprinopsis atramentaria (= Coprinus atramentarius) in senso stretto: saprotrofa su ceppaie o legno interrato di latifoglie, anche in parchi e ai margini di sentieri; non estendere automaticamente all'intero complesso s.l."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-b48cdd65baca5163",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — coprinopsis-atramentaria.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/coprinopsis-atramentaria.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Coprinopsis atramentaria s.str.: saprotrofa, su ceppaie, legno interrato di latifoglie, presso sentieri e parchi; portata limitata alla specie nominale.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-b48cdd65baca5163",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — coprinopsis-atramentaria.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/coprinopsis-atramentaria.php",
+        "location": "Similar species",
+        "supportedClaim": "C. atramentaria s.str. confrontata con Coprinellus micaceus, più piccolo, più rossiccio e con residui di velo micacei sul cappello giovane.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-b48cdd65baca5163",
         "reviewScope": "course-material",
@@ -6191,9 +6321,37 @@
       "Lamelle libere da bianche a rosa e infine nere, con deliquescenza.",
       "Gambo lungo, bianco e cavo con piccolo anello mobile o fugace."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Coprinopsis picacea: negli esemplari giovani presenta squame bianche piccole che contrastano con il cappello bruno scuro mentre si espande."
+    ],
+    "habitat": [
+      "Saprotrofo su prati, margini erbosi delle strade, bordi di sentieri e radure boschive; può crescere in gruppi o file."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-82e0a9de626fd212",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — coprinus-comatus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/coprinus-comatus.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Saprobic on lawns, grass verges, path edges and open woodland; sometimes in groups or long rows.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-82e0a9de626fd212",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — coprinus-comatus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/coprinus-comatus.php",
+        "location": "Similar species",
+        "supportedClaim": "Young Coprinopsis picacea may resemble Coprinus comatus; white scales against dark brown cap at maturity.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-82e0a9de626fd212",
         "reviewScope": "course-material",
@@ -7136,8 +7294,22 @@
       "Gambo con vero anello membranoso ben sviluppato, spesso doppio o striato."
     ],
     "lookalikes": [],
-    "habitat": [],
+    "habitat": [
+      "Specie ectomicorrizica associata a conifere, faggi e alcune Ericaceae (erica, brugo, mirtillo)."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-dbc167797895e0a0",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — cortinarius-caperatus.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/cortinarius-caperatus.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Ectomicorrizica con conifere, faggio e alcune Ericaceae.",
+        "fields": [
+          "habitat"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-dbc167797895e0a0",
         "reviewScope": "course-material",
@@ -7547,9 +7719,37 @@
       "Lamelle chiare che maturando diventano rosa.",
       "Gambo bianco relativamente fragile, spesso con tomento bianco alla base."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Per la specie nominale: Rhodocollybia butyracea può ricordare esemplari giovani prima che le lamelle assumano tonalità rosate; distinguere anche la sporata."
+    ],
+    "habitat": [
+      "Per Entoloma rhodopolium in senso stretto: saprotrofo, normalmente gregario in boschi di latifoglie; non generalizzare il dato all'intero aggregato s.l."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f6834c2f9ad06113",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — entoloma-rhodopolium.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/entoloma-rhodopolium.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "E. rhodopolium nominale saprotrofo in gruppi nei boschi di latifoglie; dato non generalizzato all'intero s.l.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-f6834c2f9ad06113",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — entoloma-rhodopolium.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/entoloma-rhodopolium.php",
+        "location": "Similar species",
+        "supportedClaim": "Per E. rhodopolium nominale, confronto con Rhodocollybia butyracea prima che le lamelle diventino rosate.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-f6834c2f9ad06113",
         "reviewScope": "course-material",
@@ -7869,9 +8069,37 @@
       "Lamelle inizialmente pallide o grigiastre, poi rosa-grigiastre.",
       "Gambo lungo e sottile, brunastro e fibrilloso-striato longitudinalmente, con micelio bianco alla base."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Altri Entoloma bruni con umbone possono essere molto simili: per separarli in modo attendibile possono essere necessari i caratteri microscopici; non attribuire identificazioni solo dalla forma del cappello."
+    ],
+    "habitat": [
+      "Saprotrofo in prati poco concimati e sponde erbose muschiose, anche sotto conifere o betulle e occasionalmente nelle brughiere."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-435ef3df571fb3a9",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — entoloma-vernum.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/entoloma-vernum.php",
+        "location": "Habitat & Ecological role; introductory note",
+        "supportedClaim": "Saprotrofo su prati poco concimati, sponde erbose muschiose, anche sotto conifere o betulle e nelle brughiere.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-435ef3df571fb3a9",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — entoloma-vernum.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/entoloma-vernum.php",
+        "location": "Similar species",
+        "supportedClaim": "Numerosi Entoloma bruni umbonati richiedono microscopia per separazione affidabile; non asserisce sosia specifici.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-435ef3df571fb3a9",
         "reviewScope": "course-material",
@@ -8168,11 +8396,25 @@
       "Lamelle bianco-crema relativamente chiare.",
       "Gambo tenace senza anello, progressivamente bruno scuro fino a nero e vellutato nella parte inferiore."
     ],
-    "lookalikes": [],
+    "lookalikes": [
+      "Per Flammulina velutipes nominale: Kuehneromyces mutabilis può avere cappello simile, ma presenta lamelle più scure e sporata bruna; confronto riferito alla specie nominale, non automaticamente all'intero complesso s.l."
+    ],
     "habitat": [
       "ISPRA 158/2017, p. 118: F. velutipes nominale: legno di latifoglie, raramente conifere; periodo indicato settembre–marzo. Non generalizzare a tutte le specie del gruppo."
     ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-b424e3043a9faf02",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — flammulina-velutipes.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/flammulina-velutipes.php",
+        "location": "Similar species",
+        "supportedClaim": "Nella specie nominale Flammulina velutipes il confronto con Kuehneromyces mutabilis distingue lamelle più scure e sporata marrone di quest'ultimo; non generalizzare al complesso s.l.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-b424e3043a9faf02",
         "reviewScope": "course-material",
@@ -8936,9 +9178,38 @@
       "Lamelle relativamente fitte per un Hygrophorus, bianche poi macchiate di rosso-vinoso.",
       "Gambo pieno e robusto, bianco con striature o macchie vinose."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Hygrophorus erubescens: specie simile più associata a conifere, con lamelle più spaziate e ingiallimento più evidente.",
+      "Hygrophorus purpurascens: specie simile con velo parziale negli esemplari giovani."
+    ],
+    "habitat": [
+      "Micorrizico con querce e altre latifoglie; fruttifica isolato o gregario, talora in archi o cerchi, soprattutto tra fine estate e autunno."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-1f1ff482941e6501",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — hygrophorus_russula.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/hygrophorus_russula.html",
+        "location": "Ecology",
+        "supportedClaim": "Mycorrhizal with oaks and other hardwoods, scattered or gregarious, sometimes rings/arcs, late summer and fall.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-1f1ff482941e6501",
+        "reviewScope": "course-material",
+        "title": "www.mushroomexpert.com — hygrophorus_russula.html",
+        "authors": [],
+        "url": "https://www.mushroomexpert.com/hygrophorus_russula.html",
+        "location": "Introduction, comparison paragraph before Description",
+        "supportedClaim": "H. erubescens has more distant gills and pronounced yellow bruising; H. purpurascens has a partial veil when young.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-1f1ff482941e6501",
         "reviewScope": "course-material",
@@ -9068,9 +9339,37 @@
       "Cappello convesso con ampio umbone e margine inizialmente involuto.",
       "Gambo grosso, bianco e nettamente attenuato verso la base, con apice finemente fioccoso."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Rispetto ad altri Hygrophorus bianchi, combinazione di taglia robusta, cappello presto asciutto, gambo affusolato e odore di latte bollito; la fonte non identifica singole specie sosia."
+    ],
+    "habitat": [
+      "Segnalato in bosco di latifoglie; raccolta documentata a Parchiule (PU), 17 ottobre 2009."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-28a4137b4cfe1173",
+        "reviewScope": "course-material",
+        "title": "www.ambpesaro.it — ",
+        "authors": [],
+        "url": "https://www.ambpesaro.it/portfolio-item/hygrophorus-penarioides/",
+        "location": "Habitat; Luogo e data di raccolta",
+        "supportedClaim": "Habitat latifoglia; Parchiule (PU), 17-10-2009.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-28a4137b4cfe1173",
+        "reviewScope": "course-material",
+        "title": "www.ambpesaro.it — ",
+        "authors": [],
+        "url": "https://www.ambpesaro.it/portfolio-item/hygrophorus-penarioides/",
+        "location": "Note",
+        "supportedClaim": "Cappello asciutto, taglia, carnosità, gambo affusolato e odore distinguono dagli altri Hygrophorus bianchi; nessuna specie sosia specificata.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-28a4137b4cfe1173",
         "reviewScope": "course-material",
@@ -9157,9 +9456,38 @@
       "Cappello giallo-zolfo con centro più aranciato o brunastro.",
       "Lamelle gialle nel giovane, poi tipicamente giallo-verdi/olivastre e infine scure."
     ],
-    "lookalikes": [],
-    "habitat": [],
+    "lookalikes": [
+      "Hypholoma lateritium: cappello in genere più rossastro e lamelle gialle, poi bruno-olivastre.",
+      "Hypholoma capnoides: lamelle grigio pallido, senza la tipica sfumatura verdastra."
+    ],
+    "habitat": [
+      "Specie saprotrofa su ceppaie, tronchi caduti e legno morto, principalmente di latifoglie e anche di conifere; può fruttificare da radici interrate."
+    ],
     "sources": [
+      {
+        "sourceId": "LIT-ATLAS-f04588496e299cce",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hypholoma-fasciculare.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hypholoma-fasciculare.php",
+        "location": "Habitat & Ecological role",
+        "supportedClaim": "Saprotrofo su ceppaie, tronchi caduti e legno morto di latifoglie e conifere, anche radici interrate.",
+        "fields": [
+          "habitat"
+        ]
+      },
+      {
+        "sourceId": "LIT-ATLAS-f04588496e299cce",
+        "reviewScope": "course-material",
+        "title": "www.first-nature.com — hypholoma-fasciculare.php",
+        "authors": [],
+        "url": "https://www.first-nature.com/fungi/hypholoma-fasciculare.php",
+        "location": "Similar species",
+        "supportedClaim": "Confronto con H. lateritium, cappello rossastro e lamelle gialle, e H. capnoides, lamelle grigie senza toni verdi.",
+        "fields": [
+          "lookalikes"
+        ]
+      },
       {
         "sourceId": "LIT-ATLAS-f04588496e299cce",
         "reviewScope": "course-material",

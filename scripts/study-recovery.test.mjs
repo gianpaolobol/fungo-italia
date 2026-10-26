@@ -9,9 +9,9 @@ const read=name=>JSON.parse(readFileSync((process.env.FUNGO_RECOVERED_DATA||new 
 const catalog=read('catalog'),groups=read('groups');
 const photos=JSON.parse(readFileSync(new URL('../src/data/exam-bank.json',import.meta.url)));
 const theory=buildCurriculumBank(catalog,groups,photos),bank=[...photos,...theory];
-test('recovered curriculum has 218 cases and 421 canonical theory questions',()=>{
+test('recovered curriculum retains all 218 cases and its canonical theory baseline',()=>{
  assert.equal(bank.length,218);assert.equal(photos.length,86);assert.equal(theory.length,132);
- const questions=theory.flatMap(c=>c.questions);assert.equal(questions.length,421);
+ const questions=theory.flatMap(c=>c.questions);assert.ok(questions.length>=421,'Do not discard recovered canonical questions when sources are enriched');assert.deepEqual(new Set(bank.map(c=>c.id)),new Set([...catalog,...groups].map(c=>c.id)));
  for(const [id,count] of [['edibility',61],['preparation',8],['syndrome',12]])assert.equal(questions.filter(q=>q.id===id).length,count);
  assert.equal(questions.filter(q=>q.id==='curriculumObjective').length,4);
  assert.ok(theory.every(c=>c.category===''));
