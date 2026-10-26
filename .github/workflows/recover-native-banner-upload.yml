@@ -1,0 +1,195 @@
+name: Recover queued native banner TestFlight upload
+on:
+  push:
+    branches: [audit/recover-native-banner-upload-20261026]
+    paths: [.github/workflows/recover-native-banner-upload.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+concurrency:
+  group: recover-native-banner-owner-upload
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: macos-26
+    timeout-minutes: 55
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+      APPLICATION_SOURCE: 6dfb92656ec94485d94aecba72543930c2759d17
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 6dfb92656ec94485d94aecba72543930c2759d17
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - uses: actions/download-artifact@v4
+        with:
+          name: Consolidated-source-proof
+          run-id: 40380720179
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/preflight-source
+      - name: Install temporary recovery guards and probe Apple uploader before cancellation
+        run: |
+          cat > "$RUNNER_TEMP/owner-recovery.mjs" <<'JS'
+          import assert from 'node:assert/strict';
+          import {readFile,writeFile,appendFile} from 'node:fs/promises';
+          import {spawnSync,execFileSync} from 'node:child_process';
+          import {createHash} from 'node:crypto';
+          import {pathToFileURL} from 'node:url';
+          const root=process.cwd(),source=process.env.APPLICATION_SOURCE,run=40380720179,job=121789031798;
+          const submissionId='24c5a181-4984-4d4e-8807-cc9b1b21340f';
+          const load=name=>import(pathToFileURL(root+'/scripts/'+name));
+          export async function gh(path,method='GET'){
+           const r=await fetch('https://api.github.com/repos/'+process.env.GITHUB_REPOSITORY+path,{method,headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'},signal:AbortSignal.timeout(45000)});
+           assert(r.ok,'GitHub recovery HTTP '+r.status);return r.status===202||r.status===204?{}:r.json();
+          }
+          export async function guard(receipt,signed=false){
+           assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),source);
+           assert.equal((await gh('/git/ref/heads/main')).object.sha,source,'Main changed; refuse stale upload');
+           for(const [k,v]of Object.entries({sourceCommit:source,appId:'6821140326',bundleId:'it.fungoitalia.app',version:'1.1.0',testFlightOnly:true,diagnosticOnly:true,appStoreReady:false,nativeStorekitVerified:true,storekitUIVerified:true}))assert.equal(receipt[k],v,'Unexpected receipt '+k);
+           const {verifyOwnerBetaScience,assertOwnerScienceReceipt}=await load('internal-beta-science.mjs');
+           const science=await verifyOwnerBetaScience(source);assertOwnerScienceReceipt(receipt,science);assert.deepEqual(receipt.scientificReview,science);
+           await writeFile(process.env.RUNNER_TEMP+'/internal-beta-science.json',JSON.stringify(science,null,2)+'\n');
+           const runs=await Promise.all([40380720323,40380720277,40380720294].map(id=>gh('/actions/runs/'+id)));
+           const {candidateReceipt}=await load('consolidated-evidence.mjs');assert.deepEqual(receipt.evidence,candidateReceipt({sha:source,native:runs[0],ui:runs[1],demo:runs[2]}).evidence);
+           const original=await gh('/actions/runs/'+run);assert.equal(original.head_sha,source);assert.equal(original.head_branch,'main');assert.equal(original.event,'push');assert.equal(original.path,'.github/workflows/consolidated-testflight.yml');
+           const build=await gh('/actions/jobs/'+job);assert.equal(build.run_id,run);
+           for(const name of ['Build isolated beta channel with remote build increment','Record signed binary provenance','Verify source inside the signed native app before upload','Revalidate owner review immediately before upload','Preflight existing beta audience before any upload','Prepare authorized Apple submit key'])assert.equal(build.steps.find(s=>s.name===name)?.conclusion,'success','Missing original signing proof: '+name);
+           if(signed){assert.equal(receipt.producerRunId,String(run));assert(/^[1-9]\d*$/.test(receipt.buildNumber)&&Number(receipt.buildNumber)>20);assert(/^[a-f0-9]{64}$/.test(receipt.ipaSha256));assert.equal(createHash('sha256').update(await readFile(process.env.RUNNER_TEMP+'/fungo-consolidated.ipa')).digest('hex'),receipt.ipaSha256);}
+           return build;
+          }
+          async function graph(query,variables){
+           const r=await fetch('https://api.expo.dev/graphql',{method:'POST',headers:{Authorization:'Bearer '+process.env.EXPO_TOKEN,'Content-Type':'application/json'},body:JSON.stringify({query,variables}),signal:AbortSignal.timeout(45000)});
+           assert(r.ok,'EAS recovery HTTP '+r.status);const j=await r.json();assert(!j.errors?.length&&j.data,'EAS recovery operation rejected');return j.data;
+          }
+          export async function status(){
+           const d=await graph('query($appId:String!){app{byId(appId:$appId){id ownerAccount{name} submissions(filter:{platform:IOS},offset:0,limit:10){id status createdAt completedAt iosConfig{ascAppIdentifier} error{errorCode} logFiles}}}}',{appId:'b65af584-739f-4ef0-8fe5-6c0ba692c088'});
+           const app=d.app.byId;assert.equal(app.id,'b65af584-739f-4ef0-8fe5-6c0ba692c088');assert.equal(app.ownerAccount?.name,'gianpaolobol');const s=app.submissions.find(s=>s.id===submissionId);assert(s,'Exact submission missing');assert.equal(s.iosConfig?.ascAppIdentifier,'6821140326');assert.equal(s.createdAt,'2026-10-26T19:25:10.256Z');assert(!s.error||s.status==='CANCELED','Original EAS technical error needs investigation');return s;
+          }
+          export async function cancelQueued(){
+           const receipt=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/preflight-source/consolidated-build.json','utf8'));
+           await guard(receipt);
+           const {createAppleApi}=await load('app-store-connect.mjs');const {preflightAudience}=await load('consolidated-beta-audience.mjs');await preflightAudience(await createAppleApi());
+           let current;
+           for(let i=0;i<20;i++){
+            current=await status();
+            if(['IN_PROGRESS','FINISHED'].includes(current.status)){await appendFile(process.env.GITHUB_OUTPUT,'recover=false\n');console.log('Original submission advanced; no cancellation or duplicate upload');return;}
+            if(current.status==='CANCELED')break;
+            assert.equal(current.status,'IN_QUEUE','Unexpected submission state');
+            if(Date.now()-Date.parse(current.createdAt)>=600000)break;
+            await new Promise(done=>setTimeout(done,45000));
+           }
+           await guard(receipt);
+           current=await status();
+           if(['IN_PROGRESS','FINISHED'].includes(current.status)){await appendFile(process.env.GITHUB_OUTPUT,'recover=false\n');console.log('Original submission advanced; leave it running');return;}
+           if(current.status==='IN_QUEUE'){
+            assert(Date.now()-Date.parse(current.createdAt)>=600000,'Queue too recent to cancel');assert.equal(current.logFiles?.length,0,'Submission has worker logs; do not cancel active delivery');
+            const result=await graph('mutation($submissionId:ID!){submission{cancelSubmission(submissionId:$submissionId){id status}}}',{submissionId});assert.equal(result.submission.cancelSubmission.id,submissionId);
+           }else assert.equal(current.status,'CANCELED');
+           for(let i=0;i<12;i++){current=await status();if(current.status==='CANCELED')break;await new Promise(done=>setTimeout(done,10000));}
+           assert.equal(current.status,'CANCELED','Cancellation not confirmed: no direct upload allowed');
+           const proof={sourceCommit:source,originalRunId:run,originalSubmissionId:submissionId,state:current.status,verifiedAt:new Date().toISOString()};
+           await writeFile(process.env.RUNNER_TEMP+'/eas-cancellation.json',JSON.stringify(proof,null,2)+'\n');console.log('EAS_CANCELLATION_CONFIRMED '+JSON.stringify(proof));
+           await appendFile(process.env.GITHUB_OUTPUT,'recover=true\n');
+          }
+          export async function waitArtifacts(){
+           assert.equal((await status()).status,'CANCELED');
+           const waitingSince=Date.now();let oldClientInterrupted=false;
+           for(let i=0;i<36;i++){
+            const a=(await gh('/actions/runs/'+run+'/artifacts?per_page=100')).artifacts;
+            if(['Consolidated-TestFlight-evidence','Consolidated-signed-IPA'].every(name=>a.some(x=>x.name===name&&!x.expired)))return;
+            // Only after EAS cancellation has been read back may we interrupt the old client.
+            if(!oldClientInterrupted&&Date.now()-waitingSince>=180000){const r=await gh('/actions/runs/'+run);if(r.status!=='completed')await gh('/actions/runs/'+run+'/cancel','POST');oldClientInterrupted=true;}
+            await new Promise(done=>setTimeout(done,15000));
+           }
+           throw Error('Original signed artifacts not preserved; refuse upload');
+          }
+          export async function verifySigned(){
+           const receipt=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/consolidated-build.json','utf8'));await guard(receipt,true);
+           const directory=process.env.RUNNER_TEMP+'/recovered-native/Payload';
+           const {verifyNativeSource}=await load('verify-native-source.mjs');await verifyNativeSource(directory,source,receipt.version);
+           const fs=await import('node:fs/promises'),path=await import('node:path');const apps=(await fs.readdir(directory)).filter(n=>n.endsWith('.app'));assert.equal(apps.length,1);const plist=path.join(directory,apps[0],'Info.plist');
+           for(const [field,expected]of [['CFBundleVersion',receipt.buildNumber],['CFBundleShortVersionString',receipt.version],['CFBundleIdentifier',receipt.bundleId]])assert.equal(execFileSync('/usr/libexec/PlistBuddy',['-c','Print :'+field,plist],{encoding:'utf8'}).trim(),expected);
+           receipt.uploadRecovery={uploaderRunId:process.env.GITHUB_RUN_ID,orchestratorCommit:process.env.GITHUB_SHA,originalSubmissionId:submissionId,originalSubmissionState:'CANCELED',method:'Apple altool; same EAS-signed IPA'};
+           await writeFile(process.env.RUNNER_TEMP+'/consolidated-build.json',JSON.stringify(receipt,null,2)+'\n');
+          }
+          export async function upload(){
+           assert.equal((await status()).status,'CANCELED');
+           const receipt=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/consolidated-build.json','utf8'));await guard(receipt,true);
+           const {createAppleApi}=await load('app-store-connect.mjs'),{preflightAudience}=await load('consolidated-beta-audience.mjs');const api=await createAppleApi();await preflightAudience(api);
+           const builds=await api('/v1/builds?filter[app]=6821140326&filter[version]='+receipt.buildNumber+'&include=preReleaseVersion&limit=10');assert(builds.ok,'Apple lookup unavailable before upload');
+           const existing=builds.data.find(b=>builds.included?.some(v=>v.type==='preReleaseVersions'&&v.id===b.relationships.preReleaseVersion?.data?.id&&v.attributes.version===receipt.version));
+           if(existing){assert(!['FAILED','INVALID'].includes(existing.attributes.processingState),'Apple rejected this build');console.log('Exact build number already received by Apple; no second upload');return;}
+           const config=JSON.parse(await readFile('eas.json','utf8')).submit.production.ios;
+           const keys=process.env.RUNNER_TEMP+'/private_keys';await fsMkdir(keys);const target=keys+'/AuthKey_'+config.ascApiKeyId+'.p8';await (await import('node:fs/promises')).copyFile(config.ascApiKeyPath,target);await (await import('node:fs/promises')).chmod(target,0o600);
+           const flags=JSON.parse(await readFile(process.env.RUNNER_TEMP+'/altool-flags.json','utf8'));
+           const result=spawnSync('xcrun',['altool','--upload-app','--type','ios','--file',process.env.RUNNER_TEMP+'/fungo-consolidated.ipa',flags.key,config.ascApiKeyId,flags.issuer,config.ascApiKeyIssuerId],{cwd:process.env.RUNNER_TEMP,env:{...process.env,API_PRIVATE_KEYS_DIR:keys},encoding:'utf8',timeout:20*60000,maxBuffer:10*1024*1024});
+           await writeFile(process.env.RUNNER_TEMP+'/apple-upload.log',(result.stdout||'')+'\n'+(result.stderr||''));console.log(result.stdout||'');console.log(result.stderr||'');assert(!result.error&&result.status===0,'Apple uploader failed; inspect retained log');
+          }
+          async function fsMkdir(path){await (await import('node:fs/promises')).mkdir(path,{recursive:true,mode:0o700});}
+          JS
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {writeFile} from 'node:fs/promises';
+          const p=spawnSync('xcrun',['altool','--help'],{encoding:'utf8',timeout:60000});assert(!p.error&&p.status===0,'Apple uploader unavailable before cancellation');const text=(p.stdout||'')+(p.stderr||'');
+          const flags={key:text.includes('--apiKey')?'--apiKey':text.includes('--api-key')?'--api-key':null,issuer:text.includes('--apiIssuer')?'--apiIssuer':text.includes('--api-issuer')?'--api-issuer':null};
+          assert(flags.key&&flags.issuer&&text.includes('--upload-app')&&text.includes('--file')&&text.includes('--type'),'Supported uploader API-key flags unavailable; leave original delivery untouched');await writeFile(process.env.RUNNER_TEMP+'/altool-flags.json',JSON.stringify(flags));console.log('Apple command and API-key support verified before cancellation');
+          JS
+      - name: Cancel only the exact stale queued EAS submission after all preflights
+        id: queue
+        run: node --input-type=module -e "const r=await import('file://'+process.env.RUNNER_TEMP+'/owner-recovery.mjs');await r.cancelQueued();"
+      - name: Wait for preservation of original signed IPA and receipts
+        if: steps.queue.outputs.recover == 'true'
+        run: node --input-type=module -e "const r=await import('file://'+process.env.RUNNER_TEMP+'/owner-recovery.mjs');await r.waitArtifacts();"
+      - uses: actions/download-artifact@v4
+        if: steps.queue.outputs.recover == 'true'
+        with:
+          name: Consolidated-TestFlight-evidence
+          run-id: 40380720179
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}
+      - uses: actions/download-artifact@v4
+        if: steps.queue.outputs.recover == 'true'
+        with:
+          name: Consolidated-signed-IPA
+          run-id: 40380720179
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}
+      - name: Verify the exact original signed bytes, plist and embedded source
+        if: steps.queue.outputs.recover == 'true'
+        run: |
+          unzip -q "$RUNNER_TEMP/fungo-consolidated.ipa" -d "$RUNNER_TEMP/recovered-native"
+          node --input-type=module -e "const r=await import('file://'+process.env.RUNNER_TEMP+'/owner-recovery.mjs');await r.verifySigned();"
+      - name: Prepare existing authorized Apple credentials only in the temporary runner
+        if: steps.queue.outputs.recover == 'true'
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      - name: Upload the same EAS-signed IPA directly to Apple after confirmed cancellation
+        if: steps.queue.outputs.recover == 'true'
+        run: node --input-type=module -e "const r=await import('file://'+process.env.RUNNER_TEMP+'/owner-recovery.mjs');await r.upload();"
+      - name: Confirm Apple processing and the existing owner-only audience
+        if: steps.queue.outputs.recover == 'true'
+        run: node scripts/verify-consolidated-testflight.mjs
+      - name: Require actual internal TestFlight availability
+        if: steps.queue.outputs.recover == 'true'
+        run: node scripts/release-parity.mjs beta-state
+      - name: Remove private keys
+        if: always()
+        run: node --input-type=module -e "import {rm} from 'node:fs/promises';for(const p of ['/fungo-asc-submit.p8','/private_keys'])await rm(process.env.RUNNER_TEMP+p,{force:true,recursive:true});"
+      - name: Stage only receipts and upload log
+        if: always()
+        run: |
+          mkdir -p "$RUNNER_TEMP/recovery-evidence"
+          for name in consolidated-build.json internal-beta-science.json eas-cancellation.json apple-upload.log; do
+            if test -f "$RUNNER_TEMP/$name"; then cp "$RUNNER_TEMP/$name" "$RUNNER_TEMP/recovery-evidence/"; fi
+          done
+          if test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json "$RUNNER_TEMP/recovery-evidence/"; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Native-banner-TestFlight-recovery-proof
+          path: ${{ runner.temp }}/recovery-evidence/
+          if-no-files-found: warn
+          retention-days: 90
