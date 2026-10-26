@@ -49,15 +49,27 @@ jobs:
         \ tap(app, \"Abruzzo\")\\n    await require(element(app, \"Nessuna area corrisponde ai filtri.\"))\\n    await tap(app,\
         \ \"Tutte\")\\n    await require(element(app, \"6 aree corrispondenti\"))\\n    await tap(app, \"Mappa online\")\\\
         n    await require(app.webViews.firstMatch)\\n    let attribution = app.webViews.descendants(matching: .any).matching(NSPredicate(format:\
-        \ \"label CONTAINS %@\", \"OpenStreetMap\")).firstMatch\\n    await require(attribution, timeout: 90)\\n    XCTAssertFalse(element(app,\
-        \ \"Cartografia non disponibile: l\u2019elenco resta consultabile.\").exists)\\n    XCTAssertFalse(element(app, \"\
-        Mappa online non disponibile: consulta l\u2019elenco offline.\").exists)\\n    try capture(app, name)\\n    print(\"\
-        NATIVE_AREAS_MAP \" + name + \" source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible\"\
-        )\\n    await tap(app, \"Elenco offline\")\\n    app.terminate(); app.launch()\\n    await tap(app, \"Aree\")\\n \
-        \   await require(app.staticTexts.matching(NSPredicate(format: \"label BEGINSWITH %@\", \"71 macroaree in \")).firstMatch)\\\
-        n  }\\n'+'  let productID =',1)\nmarker='    XCTAssertFalse(element(app, \"Fungo Italia completo\").exists)'\nassert\
-        \ s.count(marker)==2\ns=s.replace(marker,marker+'\\n    try await auditNativeAreas(app, \"extended-free-map\")',1)\n\
-        pos=s.index(marker,s.index('testAnnualPurchaseRestoreAccessRefundAndExpiry'))\ns=s[:pos]+s[pos:].replace(marker,marker+'\\\
+        \ \"label CONTAINS %@\", \"OpenStreetMap\")).firstMatch\\n    let mapErrors = [\"Cartografia non disponibile: l\u2019\
+        elenco resta consultabile.\", \"Mappa online non disponibile: consulta l\u2019elenco offline.\", \"Mappa online non\
+        \ disponibile.\", \"Caricamento cartografico troppo lungo: consulta l\u2019elenco offline o riprova.\"]\\n    var\
+        \ usedRetry = false\\n    let firstLoaded = await waitFor(attribution, timeout: 20)\\n    if !firstLoaded || mapErrors.contains(where:\
+        \ { element(app, $0).exists }) {\\n      let retry = element(app, \"Riprova mappa\")\\n      let hasRetry = await\
+        \ waitFor(retry, timeout: 20)\\n      guard hasRetry && mapErrors.contains(where: { element(app, $0).exists }) &&\
+        \ element(app, \"6 aree corrispondenti\").exists && !element(app, \"Fungo Italia completo\").exists else {\\n    \
+        \    try capture(app, name + \"-invalid-fallback\")\\n        XCTFail(\"Map failure must preserve offline list, filters\
+        \ and the actual retry control\")\\n        throw NSError(domain: \"NativeAreasAudit\", code: 1)\\n      }\\n    \
+        \  try capture(app, name + \"-initial-fallback\")\\n      print(\"NATIVE_AREAS_INITIAL_FAILURE \" + name + \" retained\
+        \ six areas and no paywall; one explicit UI retry follows\")\\n      await tap(app, \"Riprova mappa\")\\n      usedRetry\
+        \ = true\\n    }\\n    let finalLoaded = await waitFor(attribution, timeout: 90)\\n    guard finalLoaded && !mapErrors.contains(where:\
+        \ { element(app, $0).exists }) else {\\n      try capture(app, name + \"-failed-after-bounded-recovery\")\\n     \
+        \ XCTFail(\"Actual OSM attribution and error-free map required after at most one explicit UI retry\")\\n      throw\
+        \ NSError(domain: \"NativeAreasAudit\", code: 2)\\n    }\\n    try capture(app, name)\\n    print(\"NATIVE_AREAS_MAP\
+        \ \" + name + \" source=fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 Toscana=6 AbruzzoIntersection=0 OSMWebView=visible\
+        \ explicitRetry=\" + String(usedRetry))\\n    await tap(app, \"Elenco offline\")\\n    app.terminate(); app.launch()\\\
+        n    await tap(app, \"Aree\")\\n    await require(app.staticTexts.matching(NSPredicate(format: \"label BEGINSWITH\
+        \ %@\", \"71 macroaree in \")).firstMatch)\\n  }\\n'+'  let productID =',1)\nmarker='    XCTAssertFalse(element(app,\
+        \ \"Fungo Italia completo\").exists)'\nassert s.count(marker)==2\ns=s.replace(marker,marker+'\\n    try await auditNativeAreas(app,\
+        \ \"extended-free-map\")',1)\npos=s.index(marker,s.index('testAnnualPurchaseRestoreAccessRefundAndExpiry'))\ns=s[:pos]+s[pos:].replace(marker,marker+'\\\
         n    try await auditNativeAreas(app, \"extended-paid-map\")',1)\nPath('ios/AnnualPurchaseUITestsExtended.swift').write_text(s)\n\
         INNER\nruby -e 'require \"xcodeproj\";p=Xcodeproj::Project.open(Dir[\"ios/*.xcodeproj\"].first);f=p.files.find{|f|f.path==\"\
         ../tests/storekit/AnnualPurchaseUITests.swift\"};raise \"Missing test driver\" unless f;f.path=\"AnnualPurchaseUITestsExtended.swift\"\
@@ -90,7 +102,8 @@ jobs:
         \ -type f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\"\
         \ \"store-evidence/screenshots/$family/$name.png\"\n  done\n  grep -E 'Test Case|Executed|TEST SUCCEEDED' \"store-evidence/purchase-ui-$family.log\"\
         \n  xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n\
-        \nBUILD_VERSION=1.1.0 node scripts/verify-native-source.mjs purchase-ui-build/Build/Products/Release-iphonesimulator/FungoItalia.app\n"
+        \nfind \"$HOME/Library/Developer/CoreSimulator/Devices\" -type f -path \"*/Documents/store-captures/extended-*-initial-fallback.png\"\
+        \ -exec cp {} store-evidence/ \\;\nBUILD_VERSION=1.1.0 node scripts/verify-native-source.mjs purchase-ui-build/Build/Products/Release-iphonesimulator/FungoItalia.app\n"
     - name: Preserve UI failure screenshots and attachments
       if: failure()
       run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult'\
