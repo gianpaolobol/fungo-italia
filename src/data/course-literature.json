@@ -1675,6 +1675,39 @@
           "supportedClaim": "Confronto con Suillellus luridus, Rubroboletus satanas e Caloboletus calopus secondo colore del cappello, dei pori e reticolo sul gambo."
         }
       ]
+    },
+    {
+      "scientificName": "Amanita rubescens",
+      "additions": {
+        "habitat": [
+          "Micorrizica con latifoglie e conifere; frequente anche nei boschi di conifere su terreni acidi e poveri."
+        ],
+        "lookalikes": [
+          "Amanita pantherina: carne non arrossante alle lesioni; il solo colore del cappello non è diagnostico.",
+          "Amanita excelsa s.l.: specie simili, ma la carne non assume il caratteristico arrossamento di Amanita rubescens."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-3d6106937e6d51a0",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Micorrizica con latifoglie e conifere; presente anche su terreni acidi poveri nei boschi di conifere."
+        },
+        {
+          "sourceId": "LIT-ATLAS-3d6106937e6d51a0",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronto con Amanita pantherina e Amanita excelsa: differenza dell'arrossamento della carne dopo lesione."
+        }
+      ]
     }
   ]
 }
