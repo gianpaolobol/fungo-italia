@@ -39,3 +39,7 @@ For a functional rollback, create a new main commit that selectively reverts the
 ## Current limits
 
 A distinct new public candidate approval is still pending under the executive handoff; the earlier build21 confirmation is historical. No physical iPhone Home Screen icon/state has been inspected by these browser tests. Real native/iPhone/iPad, PWA upgrade and rollback execution must be reported from their actual artifacts; this runbook and passing policy tests do not establish that delivery occurred.
+
+## Qualified internal candidate —26 October2026
+
+Applicationfab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 is actually available as1.1.0(22) in owner-only TestFlight, AppleVALID/IN_BETA_TESTING at23:18:33UTC. Original producer40414345353 succeeded; webcandidate12695390804 is the matching original artifact. [Actual receipts, integrity and remaining checks](evidence/paired-release-fab2b3e-20261026/README.md). The exact new public declaration is pending; this runbook is not approval. Additional native map recovery audit40418678224 remains running. No public delivery or remote upgrade is yet claimed.

@@ -1,11 +1,67 @@
-# Paired release — technical checkpoint
+# Fungo Italia — build 22 interna e candidato web abbinato
 
-Application source: `fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03`.
+**Consegna TestFlight riuscita; allineamento pubblico ancora incompleto.** Il nuovo candidato pubblico richiede l'autorizzazione distinta prevista dall'handoff esecutivo. La precedente autorizzazione della21 non è riutilizzata.
 
-All mandatory source, native StoreKit, purchase UI and free-demo checks passed on this exact main SHA. Source includes 299 Node tests, TypeScript, deterministic catalog, iOS export, web build, 65 WebKit and65 Chromium cases, and both shared-app/offline smokes. No scientific data or review fields changed. Independent readiness remains false; pinned owner review permits only the internal beta.
+| Campo | Evidenza effettiva |
+|---|---|
+| Sorgente applicativo | `fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03` |
+| Versione iOS | **1.1.0 (22)** |
+| Apple | `VALID`, `IN_BETA_TESTING`, verificati alle23:18:33 UTC del26/10/2026 |
+| Apple build ID | `8e7fcdbb-75e9-4765-a50d-f1867910ded7` |
+| Destinatari | Solo gruppo interno titolare `f642807c-e4b2-43d4-a32a-d9fd087fdfe3`; nessuna estensione esterna |
+| Produttore | [40414345353](https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345353), `source` e `beta` success |
+| TestFlight | [App Store Connect](https://appstoreconnect.apple.com/apps/6821140326/testflight/ios) |
+| Web effettivamente letto | [GitHub Pages](https://gianpaolobol.github.io/fungo-italia/), ancora1.1.0(19), SHA `279d50e842a95c6a7d8e3499806b3fd5c42996e7` |
+| Nuovo web | Artefatto originale già prodotto sullo SHA della22; pubblicazione, confronto byte serviti e upgrade remoto ancora pendenti |
+| Pubblicazione ordinaria | Job web correttamente saltati: readiness indipendente falsa; nessun gate disabilitato |
 
-The original source receipt is retained byte-for-byte as source-proof.json, ZIP artifact12695513286, SHA-256782dbb9f9d8a8a2c9344433140ce4645d2c39d1e013b8e12fa0374fb7ccf0ef8; original JSON SHA-256fffaff068c4095d1f1f54dabeea5b4e1df9811fa9e6943b9f64ad1417ac497f1. status.json links the original immutable web candidate and actual proof runs. UI suites each passed both required functional tests; their existing opt-in entitlement startup diagnostic is explicitly skipped by design, and is not claimed as tested.
+## Verifiche sul sorgente della22
 
-[Producer40414345353](https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345353) is building/signing the new internal beta. No new IPA, Apple availability, public deployment or public upgrade is yet attested by this checkpoint. Additional same-application-source iPhone/iPad map/filter audit40415217045 remains running. The prior available builds remain historical21 on TestFlight and19 on web until new receipts prove otherwise.
+| Controllo | Esito e prova |
+|---|---|
+| Rigenerazione deterministica | PASS, nessun drift del catalogo |
+| Integrità scientifica/tossicologica | Snapshot867 file invariato; zero errori tossicologici strutturali. Strict indipendenti restano bloccanti, non dichiarati superati |
+| Node |299 PASS,0 fallimenti,0 skip |
+| TypeScript / export iOS | PASS |
+| Build web e manifest | PASS,1652 file; candidato validato dal produttore |
+| Chromium |65 PASS + smoke condiviso, Aree71, ricerca/regione/habitat, tessere OSM decodificate, quattro schede e riavvio offline |
+| WebKit |65 PASS + stesso smoke; vera interruzione dell'origine, nuovo documento servito dal worker e dati conservati, nessun errore JS |
+| iPhone / iPad demo | Entrambi PASS, [40414345397](https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345397) |
+| Acquisti e ripristino iPhone / iPad | Entrambi PASS, [40414345724](https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345724): due casi funzionali obbligatori per dispositivo, inclusi rimborso/scadenza |
+| StoreKit nativo | PASS,1 caso,0 fallimenti, [40414345899](https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345899) |
+| Android | Build e smoke PASS, [40414345712](https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345712); pubblicazione/OTA non usati come prova iOS |
+| Firma e provenienza IPA | PASS: codesign strict, teamBX9MDXAHKG, bundleit.fungoitalia.app, versione/sorgente pulito incorporati nell'app, hash IPA conservato |
+| Consegna Apple | Upload altool dell'IPA EAS originale riuscito, nessuna submission EAS avviata; processing e beta effettiva verificati tramite Apple |
+| Upgrade PWA pubblica / dati locali | Cattura reale precedente riuscita nei due motori; upgrade della22 e confronto dati dopo deploy ancora da eseguire |
 
-Main must remain frozen through upload and actual Apple verification. This checkpoint branch does not advance main. A distinct explicit authorization for the new concrete public candidate remains required by the executive handoff; old21 consent is not reused. No App Store or external TestFlight distribution.
+Il test `testEntitlementStartupProbe` delle suite UI è un diagnostico preesistente opt-in:1 XCTSkip per dispositivo, dichiarato esplicitamente. Non è conteggiato fra le verifiche funzionali superate; nessun controllo obbligatorio è stato disattivato per ottenere il risultato.
+
+La correzione PWA gestisce il rigetto della verifica automatica `reg.update()` in assenza di rete, mantenendo controller e cache. Regressione sul runtime effettivamente generato: prima1 fallimento/2 pass, dopo3 pass. Nessun errore browser filtrato. La scheda Aree usa il codice condiviso gratuito; controlli StoreKit e altre funzioni premium restano invariati. Foto personali/caricamento/analisi restano inaccessibili dall'app. Feedback identificazione e commestibilità separati e perimetro curricolare preservati.
+
+## Integrità
+
+| Oggetto | SHA-256 |
+|---|---|
+| IPA firmato originale | `d8ebaf003d190d47925f458c3dfde5743a72e885597ed615c3b5d9bbc746db67` |
+| Contenuto web | `5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d` |
+| Icona originale | `77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9` |
+| ZIP originale web12695390804 | `ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d` |
+| ZIP ricevuta Apple12697750330 | `6c02b49f8c203f140591e795fb17ca1ea64fd72b07222745218a7eeac3f6797a` |
+| ZIP IPA12697435922 | `e62ba096fa781e1f01bd29d535a14e528b26b326d41fc9d642bdeb8bcad95488` |
+| Manifest scientifico867 file | `79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499` |
+
+Ricevute originali conservate senza riscrittura: [sorgente](source-proof.json), [Apple finale](consolidated-testflight.json), [firma](native-signature.txt). [Registro completo](status.json) con identità/digest degli artefatti e osservazione del sito.
+
+## Audit nativo supplementare mappa e filtri
+
+[Prima esecuzione40415217045](https://github.com/gianpaolobol/fungo-italia/actions/runs/40415217045): iPad fallisce al primo caricamento mappa gratuito, WebView vuota con messaggio di cartografia non disponibile, pulsante Riprova e sei aree conservate. Il percorso acquistato passa e la schermata mostra tessere OSM reali. Su iPhone entrambi i casi XCTest passano e le mappe sono visibili; il job viene cancellato nella chiusura dell'audit già fallito e non è usato come prova canonica. Il fallimento non è nascosto né attribuito con certezza alla rete.
+
+La [seconda esecuzione40418678224](https://github.com/gianpaolobol/fungo-italia/actions/runs/40418678224) è ancora in corso: registra l'eventuale errore iniziale, richiede elenco/filtri e assenza di paywall, usa il controllo reale Riprova al massimo una volta, poi richiede OSM e assenza di errori. Un fallimento finale interrompe il test prima di qualsiasi messaggio di successo. Cambia solo il test generato; checkout e sorgente incorporato dell'app restano fissati allo SHA della22. Le schermate finali devono essere ispezionate per verificare le tessere effettivamente disegnate. Un recupero non dimostra affidabilità del primo caricamento.
+
+Schermate originali: [iPhone gratuito](iphone-map-free-v1.png), [iPad acquistato](ipad-map-paid-v1.png), [iPad fallimento iniziale](ipad-map-initial-failure-v1.png), [chiusura audit precedente](audit-v1-cancelled.jpg). Hash nel registro; nessuna immagine ricostruita o modificata.
+
+## Revisione scientifica e lavoro residuo
+
+Revisione indipendente **pendente**,0/148 schede indipendentemente attestate. Il collaudo interno del titolare non è certificazione. La dichiarazione scientifica resta `publicWebAllowed=false`, `appStoreReady=false`; la nuova distribuzione pubblica richiede il consenso distinto sul candidato concreto, attualmente [pendente](../../../revisione/public-demo-authorizations/fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03.json).
+
+Restano: completare l'audit supplementare, acquisire l'approvazione pubblica distinta e avviare il publisher manuale. Dopo il consenso devono riuscire ancora rilettura Apple, verifica ZIP/manifest, archivio integrale precedente, deploy Pages, confronto di tutti i byte serviti, attivazione reale del worker in Chromium/WebKit, conservazione di note/preferiti/sessione/storico e riavvio offline. Nessuna installazione Safari Home Screen fisica o rollback realmente eseguito è attestata da questo rapporto. Procedura di rollback abbinato e non distruttivo nel [runbook](../../PAIRED-RELEASE-RUNBOOK.md).

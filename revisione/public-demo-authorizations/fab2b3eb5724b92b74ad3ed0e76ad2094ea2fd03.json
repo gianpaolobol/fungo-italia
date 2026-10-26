@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "type": "owner-distribution-authorization",
+  "scope": "public-demo-beta",
+  "status": "pending",
+  "owner": {
+    "name": "Gian Paolo Franceschini",
+    "role": "owner"
+  },
+  "confirmation": "",
+  "approvedAt": null,
+  "publicURL": "https://gianpaolobol.github.io/fungo-italia/",
+  "certified": false,
+  "independentReviewComplete": false,
+  "appStoreReady": false,
+  "externalTestFlightAllowed": false,
+  "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+  "version": "1.1.0",
+  "buildNumber": "22",
+  "webContentHash": "5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "ipaSha256": "d8ebaf003d190d47925f458c3dfde5743a72e885597ed615c3b5d9bbc746db67",
+  "appleBuildId": "8e7fcdbb-75e9-4765-a50d-f1867910ded7",
+  "candidateProducerRunId": 40414345353,
+  "candidateArtifactId": 12695390804,
+  "candidateArtifactSha256": "ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d",
+  "scientificContentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+  "scientificFileCount": 867,
+  "ownerReviewDeclarationSha256": "d649ab6720c043097f021d791b0703102675c55cff2888b93c37b784214225f5",
+  "nativeProofRunIds": {
+    "native": 40414345899,
+    "ui": 40414345724,
+    "demo": 40414345397
+  }
+}

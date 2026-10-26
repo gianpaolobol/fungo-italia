@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+  "version": "1.1.0",
+  "buildNumber": "19",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "webContentHash": "eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+  "appleBuildId": "5e5211e9-8eef-48d7-8ce7-6677b210b574",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "betaDetailId": "5e5211e9-8eef-48d7-8ce7-6677b210b574",
+  "betaStateVerifiedAt": "2026-10-24T19:14:30.080Z",
+  "diagnosticOnly": true,
+  "testFlightOnly": true,
+  "ipaSha256": "4c30bb90c6a4b79e05465ce01adeed4ff0629ae69cf57b2d505c2b913cfb4f5d",
+  "producerRunId": "40122020361",
+  "nativeStorekitVerified": true,
+  "storekitUIVerified": true,
+  "appStoreReady": false,
+  "evidence": {
+    "native": {
+      "id": 40122020378,
+      "path": ".github/workflows/subscription-storekit-tests.yml",
+      "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020378"
+    },
+    "ui": {
+      "id": 40122020360,
+      "path": ".github/workflows/subscription-storekit-ui.yml",
+      "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020360"
+    },
+    "demo": {
+      "id": 40122020376,
+      "path": ".github/workflows/agaricus-demo-ui.yml",
+      "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40122020376"
+    }
+  },
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
-  "mainFrozen": true,
+  "mainFrozen": false,
   "producerRun": 40414345353,
   "nativeRun": 40414345899,
   "purchaseUiRun": 40414345724,
@@ -13,7 +13,7 @@
     "artifact": 12694881098,
     "zipSha256": "e9fe54209ae0bb913fdf5a51462c607e00e35a4078160e50c33f28f7d6109f64"
   },
-  "newAppleDelivery": "pending",
+  "newAppleDelivery": "VALID + IN_BETA_TESTING; owner group only",
   "newPublicDelivery": "pending distinct snapshot approval and actual Apple proof",
   "candidate": {
     "artifactId": 12695390804,
@@ -24,11 +24,25 @@
     "webContentHash": "5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d"
   },
   "additionalNativeAreasAudit": {
-    "runId": 40415217045,
-    "orchestrator": "acdb810c520e0fcd77b1ce77e4ac1779c2529dd9",
+    "initialRun": 40415217045,
+    "initialOrchestrator": "acdb810c520e0fcd77b1ce77e4ac1779c2529dd9",
+    "initialIpadJob": 121895716628,
+    "initialIpadResult": "free first map failed; paid test passed and decoded OSM screenshot visually confirmed",
+    "initialIphoneJob": 121895716301,
+    "initialIphoneResult": "both XCTest functional cases passed and decoded maps visually confirmed; job cancelled during workflow closeout, not used as canonical proof",
+    "initialIpadArtifact": {
+      "id": 12696164281,
+      "zipSha256": "dfd52351d8aacfeef1cc7a5d966c659f94901d60bb24fe60c272e56079e6f89a"
+    },
+    "initialIphoneArtifact": {
+      "id": 12696286752,
+      "zipSha256": "67bb847d2805535fad896906fc05ea85cd7ae5d8a8aefc2f7b2a9ccadc4d45a4"
+    },
+    "recoveryRun": 40418678224,
+    "recoveryOrchestrator": "e154aa39a23b57f2fd1cdef2e319ca441eb23798",
     "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
     "status": "in_progress",
-    "scope": "Generated test harness only; no main/app edits, signing or upload. Free/paid search, region intersection, native OSM screenshots, source embed."
+    "scope": "Only generated test driver changes; clean application pinned to fab. Preserve initial map failure and six areas/no paywall; at most one actual Riprova mappa; strict final OSM/no-alerts; visual tile inspection required. No root cause presumed."
   },
   "sourceStatus": "success",
   "sourceJob": 121892755693,
@@ -57,5 +71,54 @@
     "originalFileSha256": "fffaff068c4095d1f1f54dabeea5b4e1df9811fa9e6943b9f64ad1417ac497f1"
   },
   "betaJob": 121901317007,
-  "betaStatus": "Building isolated beta channel with remote build increment"
+  "betaStatus": "success",
+  "mainFrozenNote": "Application source remains fab; after completed Apple delivery, only documentation/pending authorization may advance main.",
+  "producerConclusion": "success",
+  "nativeIdentity": {
+    "version": "1.1.0",
+    "buildNumber": "22",
+    "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+    "ipaSha256": "d8ebaf003d190d47925f458c3dfde5743a72e885597ed615c3b5d9bbc746db67",
+    "appleBuildId": "8e7fcdbb-75e9-4765-a50d-f1867910ded7",
+    "processingState": "VALID",
+    "internalBuildState": "IN_BETA_TESTING",
+    "internalGroupIds": [
+      "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+    ],
+    "betaDetailId": "8e7fcdbb-75e9-4765-a50d-f1867910ded7",
+    "betaStateVerifiedAt": "2026-10-26T23:18:33.116Z",
+    "uploadTransport": {
+      "method": "Apple altool --upload-package; original EAS-signed IPA",
+      "uploaderRunId": "40414345353",
+      "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "ipaSha256": "d8ebaf003d190d47925f458c3dfde5743a72e885597ed615c3b5d9bbc746db67",
+      "uploadedAt": "2026-10-26T23:15:05.268Z",
+      "easSubmissionStarted": false
+    }
+  },
+  "betaEvidenceArtifact": {
+    "id": 12697750330,
+    "zipSha256": "6c02b49f8c203f140591e795fb17ca1ea64fd72b07222745218a7eeac3f6797a",
+    "receiptSha256": "85a9e842e1e1caa72d43def61806478a8c064811e2034098e0fffa625f0decef"
+  },
+  "signedIpaArtifact": {
+    "id": 12697435922,
+    "zipSha256": "e62ba096fa781e1f01bd29d535a14e528b26b326d41fc9d642bdeb8bcad95488"
+  },
+  "ordinaryWebPromotion": "skipped; independent readiness remains false; not bypassed",
+  "publicAuthorization": "pending; no actual new owner approval or date invented",
+  "publicReadback": {
+    "observedAt": "2026-10-26T23:26:31.414296+00:00",
+    "url": "https://gianpaolobol.github.io/fungo-italia/",
+    "sourceCommit": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+    "version": "1.1.0",
+    "buildNumber": "19",
+    "alignedWith22": false
+  },
+  "screenshots": {
+    "iphone-map-free-v1.png": "f29c471307c8417cc555b4ae226d3568e27c8bb6b5f0ce9a9cc7495a345cef38",
+    "ipad-map-paid-v1.png": "79cb23f2fbfab1173ffd0d3a81c26f31c38ec2be56af8fb9b6221822b72f2c67",
+    "ipad-map-initial-failure-v1.png": "6bc40f2d7e74a0b9dc66cdb400bff590ffc7f84f0803ac2b90efa5b2677f2d86",
+    "audit-v1-cancelled.jpg": "b4eb8e4e457701e28de44df6be5e2ab7958399569f72472e64d7af8503ee91e7"
+  }
 }

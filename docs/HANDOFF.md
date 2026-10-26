@@ -1,12 +1,14 @@
 # Punto di ingresso corrente
 
-Leggere [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md): baseline consolidata, rapporto completo del primo ciclo, inventario di 12 PR/186 branch, 235 test Node e stato reale dei blocchi. Recuperati catalogo di 13 schede, exporter curricolare PR123, patch audit prezzi e ricevuta storica beta19 PR119. Nessun merge integrale delle PR, nuova build o release attestata.
+Leggere [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md) e il [rapporto della22](evidence/paired-release-fab2b3e-20261026/README.md). TestFlight1.1.0(22) è disponibile nel solo gruppo interno, AppleVALID/IN_BETA_TESTING alle23:18:33 UTC del26/10/2026. Sorgente applicativo `fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03`, produttore40414345353 riuscito. Web ancora sulla19: allineamento pubblico **non completato**.
 
-## Allineamento Web / TestFlight — aggiornamento operativo
+## Ripresa operativa
 
-La correzione Aree è nel codice condiviso e verificata nei test nativi del sorgente intermedio cc2a34d. PR126 consolida pubblicazione abbinata con autorizzazione distinta per candidato, integrità originale web/IPA/Apple, rollback non distruttivo e aggiornamento PWA con preservazione dei dati. Main resta fermo durante la qualificazione finale. Il controllo offline reale WebKit ha scoperto un rigetto non gestito di `reg.update()`; corretto nel bootstrap generato e provato RED→GREEN, senza filtrare errori browser.299 test Node, TypeScript e rigenerazione deterministica locali superati. Audit container40413648238 in corso: nessuna nuova consegna attestata da questi risultati.
+Tutti i controlli obbligatori sono riusciti sullo SHA della22, inclusi StoreKit, acquisti/ripristino e demo su iPhone/iPad,299 Node, TypeScript, rigenerazione e browser reali. IPA e candidato web condividono provenienza e hash registrati nelle ricevute originali. Corretto anche il rigetto automatico `reg.update()` offline, con regressione RED→GREEN e nessun errore browser filtrato.
 
-Ultime consegne documentate: TestFlight1.1.0(21), sorgente6dfb92656ec94485d94aecba72543930c2759d17; web1.1.0(19), sorgente279d50e842a95c6a7d8e3499806b3fd5c42996e7. Il nuovo abbinamento non è completato. La revisione indipendente resta pendente;Lo snapshot scientifico invariato contiene867 file. Nuova demo pubblica: occorre l'approvazione distinta prevista dal successivo handoff, dopo disponibilità della nuova ricevuta concreta. La precedente autorizzazione21 non viene riutilizzata.
+L'audit supplementare40418678224 è in corso sul medesimo sorgente: verifica mappa e filtri con/senza acquisto e recupero tramite un solo Riprova. Prima prova iPad gratuito fallita, prove/mappe acquistato e iPhone positive; cronologia negativa conservata, affidabilità del primo caricamento non presunta.
+
+Completare questo audit, poi presentare al titolare il candidato pubblico concreto della22. La nuova autorizzazione è pendente e richiede la conferma distinta prevista dall'handoff, senza riutilizzare owner-public-demo21. Dopo approvazione usare promote-paired-demo.yml e richiedere rilettura Apple, integrità ZIP/ogni byte, archivio precedente, Pages e upgrade reale Chromium/WebKit con dati conservati. Nessun nuovo source applicativo prima di una nuova build abbinata. Revisioni indipendenti e App Store restano bloccati; nessuna estensione TestFlight.
 
 ## Archivio degli handoff precedenti
 

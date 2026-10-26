@@ -27,8 +27,8 @@
   "technicalReview": "Separate read-only reviewer; no remaining blockers after final changes",
   "publicAuthorization": "Distinct new exact-snapshot approval required by later executive handoff; historical build21 confirmation is insufficient. No new approved declaration exists.",
   "independentScientificReview": "pending; no source review fields changed",
-  "newAppleDelivery": "not yet verified",
-  "newWebDelivery": "not yet published",
+  "newAppleDelivery": "Verified1.1.0(22), VALID+IN_BETA_TESTING owner-only, sourcefab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03, producer40414345353",
+  "newWebDelivery": "Not yet published; distinct concrete public authorization pending",
   "remoteCapturePreflight": {
     "runId": 40405025571,
     "conclusion": "success",
@@ -60,7 +60,8 @@
     },
     "browserAuditRunId": 40413648238,
     "browserAuditSource": "0ceeb493bbc43a64a0345a2a979e08d3253de968",
-    "browserAuditStatus": "in_progress; not delivery proof",
+    "browserAuditStatus": "success",
     "review": "Read-only review found no material blocker; actual browser audit pending"
-  }
+  },
+  "currentReleaseReport": "../paired-release-fab2b3e-20261026/README.md"
 }

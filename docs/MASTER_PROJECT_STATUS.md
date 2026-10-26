@@ -2,6 +2,18 @@
 
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
+## TestFlight22 disponibile; web corrispondente ancora da autorizzare
+
+**1.1.0 (22) disponibile nel solo gruppo interno del titolare.** Apple `VALID` e `IN_BETA_TESTING` alle23:18:33 UTC del26 ottobre. Sorgente applicativo `fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03`; produttore40414345353 interamente riuscito per source/beta. Tutti i controlli obbligatori sullo SHA sono passati:299 Node, TypeScript, rigenerazione, export iOS,65 WebKit,65 Chromium, smoke condivisi/offline, StoreKit nativo, acquisti e demo iPhone/iPad. [Rapporto, ricevuta Apple originale, hash e limiti](evidence/paired-release-fab2b3e-20261026/README.md).
+
+Il sito effettivamente letto serve ancora1.1.0(19), SHA279d50e842a95c6a7d8e3499806b3fd5c42996e7. Il web candidato della22 è già prodotto dallo stesso sorgente dell'IPA. La promozione ordinaria resta correttamente bloccata dalla readiness indipendente falsa. La nuova dichiarazione pubblica è **pendente**, senza conferma/data inventate e senza riusare il consenso della21. Pubblicazione e upgrade remoto non ancora eseguiti.
+
+Audit aggiuntivo Aree/mappa: primo caricamento iPad gratuito fallito, lista/filtri conservati; percorso acquistato e schermate OSM iPhone positivi. Seconda prova40418678224 in corso con un solo Riprova reale e prova rigorosa finale, stesso sorgente applicativo. Nessuna affidabilità del primo caricamento o causa di rete presunta. Questo limite non viene nascosto dal successo della consegna TestFlight.
+
+Snapshot scientifico invariato:867 file, manifest79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499. Zero revisioni indipendenti attestate e nessuna certificazione/App Store. Per pubblicare restano obbligatori consenso distinto, controlli effettivi Apple/artefatti/Pages/PWA e conservazione dati.
+
+Le sezioni seguenti conservano la cronologia ai rispettivi SHA; non sostituiscono lo stato corrente sopra.
+
 ## Publisher abbinato con consenso per singolo candidato — predisposizione
 
 Sorgente applicativa corrente letta: `cc2a34d004485f1c834d1b9ecb523ef318517c55`; comprende il guard del fixture browser top-level introdotto in parallelo. Preservato senza sovrascritture. La regressione locale isolata riproduce lo stesso SecurityError prima del guard e passa dopo; nessun permesso sandbox allentato.
