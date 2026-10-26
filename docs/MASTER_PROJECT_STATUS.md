@@ -5,7 +5,8 @@ Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo
 ## Identità della baseline
 
 - Main letto all'inizio e ricontrollato prima del consolidamento:`3e87d95bc7c840e8b93b6eb2a0028f6ea551fd6c`.
-- **Baseline applicativa consolidata e verificata:**[`20c42bab7ec7c448072ebe50a9966eadb9ff6c75`](https://github.com/gianpaolobol/fungo-italia/commit/20c42bab7ec7c448072ebe50a9966eadb9ff6c75). Il commit documentale che contiene questo master segue questa baseline; il suo SHA si ricava da `git log -1 --format=%H -- docs/MASTER_PROJECT_STATUS.md`. Il main vivo va sempre riletto da `git ls-remote origin refs/heads/main`: questo documento non può contenere il proprio hash.
+- **Baseline applicativa P0 (storica):**[`20c42bab7ec7c448072ebe50a9966eadb9ff6c75`](https://github.com/gianpaolobol/fungo-italia/commit/20c42bab7ec7c448072ebe50a9966eadb9ff6c75). Il commit documentale che contiene questo master segue questa baseline; il suo SHA si ricava da `git log -1 --format=%H -- docs/MASTER_PROJECT_STATUS.md`. Il main vivo va sempre riletto da `git ls-remote origin refs/heads/main`: questo documento non può contenere il proprio hash.
+- **Baseline corrente P1:** include i sei completamenti bibliografici del lotto descritto sotto, successivi a2eaa0c7f1a3de69a142b0753a97d4c04d56bc90f. Lo SHA del commit che li pubblica si ricava da `git log -1 --format=%H -- src/data/supplementary-literature.json`; il ref main identifica lo stato remoto corrente.
 - **Produzione bloccata.** Nessun nuovo binario TestFlight o deploy pubblico attribuito a questa baseline. Nessuna conferma sul dispositivo fisico.
 - Questo è il riferimento operativo corrente. I due handoff conservano la cronologia; indicazioni storiche incompatibili con le decisioni sotto sono superate. Ogni agente aggiorna questo documento e collega le prove dello SHA esatto, senza rietichettare risultati precedenti.
 
@@ -47,7 +48,7 @@ Nessuna PR è stata unita integralmente o chiusa in questo ciclo. Le integrazion
 
 | PR | Stato/disposizione verificata |
 |---|---|
-|[123](https://github.com/gianpaolobol/fungo-italia/pull/123) |Bozza. Exporter recuperato. Fonti concorrenti duplicate escluse; confronti C.orellanus/G.esculenta e habitat nominale G.marginata da riverificare prima del recupero.|
+|[123](https://github.com/gianpaolobol/fungo-italia/pull/123) |Bozza. Exporter recuperato. Fonti concorrenti duplicate escluse; confronti C.orellanus/G.esculenta e habitat nominale G.marginata verificati e recuperati nel lotto P1. La PR resta aperta per il restante contenuto non integrato.|
 |[120](https://github.com/gianpaolobol/fungo-italia/pull/120) |Bozza.15 file nuovi di audit/riconciliazione, nessuna implementazione del doppio esame. Checker riconoscimento volutamente fallisce; eligibility preliminare non verifica da sola viste/diritti. Conservata sul branch.|
 |[119](https://github.com/gianpaolobol/fungo-italia/pull/119) |Ricevuta recuperata. Restanti sostituzioni documentali obsolete rispetto al recupero successivo:non importate.|
 |[117](https://github.com/gianpaolobol/fungo-italia/pull/117) |Bozza storica. Main ha già blocco foto e gate scientifico nella pipeline abbinata; ripristinare l'intero documento potrebbe reintrodurre indicazioni obsolete di accessibilità Foto.|
@@ -68,15 +69,15 @@ Branch attivi da coordinare:`feature/theory-exam-preparation-20261026`,`fix/scie
 |---|---|---|
 |Catalogo/gruppi |148+70=218 |218 corrispondenze nel registro S1,con pagine/ranghi/livello; tutte attualmente `minimum`. Non significa copertura integrale degli auspicabili/approfondimenti.|
 |Matrice storica |214 |Quattro completamenti S1 separati,senza dati scientifici inventati.|
-|Habitat presenti |48/148,prima37 |100mancanti;97senza evidenza habitat puntuale secondo il gate.|
-|Confronti presenti |63/148,prima51 |85mancanti; presenza non equivale a validazione scientifica.|
+|Habitat presenti |52/148, prima48 |96 mancanti;94 senza evidenza habitat puntuale secondo il gate.|
+|Confronti presenti |65/148, prima63 |83 mancanti; presenza non equivale a validazione scientifica.|
 |Odore/sporata/giudizi alimentari |148/146/147 su148 |2 sporate e1 giudizio mancanti; non riempire per inferenza.|
 |Triadi catalogo |143/148 |Presenza e metadati minimi; non prova identità o licenza indipendentemente verificata.|
 |Revisione indipendente |0/148 |148 bloccate,0release-ready.|
 
 Il gate predefinito e l'exporter controllano **148 schede di catalogo**, non tutti218 record. Una lettura aggiuntiva `includeGroups:true` conserva218bloccati,206 triadi,214 odori,212 sporate e147 giudizi. Non attribuire una categoria alimentare unica ai gruppi eterogenei per rendere verde una metrica.
 
-Fascicolo operativo aggiornato:[CSV per 148 schede](reviews/master-20261026/scientific-gap-register.csv),[JSON con pagina/livello/rango/blocchi](reviews/master-20261026/scientific-gap-register.json),[protocollo revisore](INDEPENDENT-MYCOLOGY-REVIEW-PROTOCOL.md). Il fascicolo è una preparazione documentale,senza firma o certificazione indipendente. Seguono i blocchi [121](https://github.com/gianpaolobol/fungo-italia/issues/121) e[124](https://github.com/gianpaolobol/fungo-italia/issues/124).
+Fascicolo operativo aggiornato:[CSV per 148 schede](reviews/p1-fields-20261026/scientific-gap-register.csv),[JSON con pagina/livello/rango/blocchi](reviews/p1-fields-20261026/scientific-gap-register.json),[protocollo revisore](INDEPENDENT-MYCOLOGY-REVIEW-PROTOCOL.md). Il fascicolo è una preparazione documentale,senza firma o certificazione indipendente. Seguono i blocchi [121](https://github.com/gianpaolobol/fungo-italia/issues/121) e[124](https://github.com/gianpaolobol/fungo-italia/issues/124).
 
 ## Fotografie e riconoscimento
 
@@ -89,13 +90,13 @@ Registro chat separato:200 fotografie,150collegate,50solo fonte,229 relazioni a7
 | Requisito | Implementazione verificata | Aperto |
 |---|---|---|
 |Riconoscimento |86 casi fotografici su148catalogo (58,1%);86/218 unità totali (39,4%). Sessioni15,autocomplete3lettere,feedback per campo,ripasso errori. |62 schede catalogo senza caso fotografico;70 gruppi senza caso fotografico autonomo. Applicabilità fotografica per rango da definire,senza inventare identità.|
-|Copertura dei casi curricolari |86 foto+132profili=218/218 |È copertura di casi misti,non100%riconoscimento.|
-|Teoria corrente |424 quesiti nei132 casi integrativi;421precedenti preservati,3 habitat nuovi con fonti. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
-|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero424non dimostra100%.|
+|Copertura dei casi curricolari |86 foto+132 profili=218/218 |È copertura di casi misti,non100%riconoscimento.|
+|Teoria corrente |425 quesiti nei132 casi integrativi;424 precedenti preservati e1 nuovo quesito habitat nel lotto P1. |Non è ancora la modalità teorica distinta richiesta.96 quesiti hanno `sourceIds:[]`; campo canonico/hash non sostituiscono evidenza puntuale.|
+|Normativa e programma |Registri/fonti e profili presenti |Matrice programma↔quesiti normativa,ruolo micologo,commercio,sindromi/GI e sicurezza da completare. Il numero425 non dimostra100%.|
 |Regressioni |Marasmius oreades:identità/commestibilità separate;Amanita rubescens:autocomplete;feedback e ripasso nei test locali |Conferma fisica della nuova build ancora assente.|
 |Percorso e storico |Quattro tab,progressi,ripresa,lacune e sessioni adattive presenti;revisioni compatibili conservate |UI nome facoltativo e riempimento/linee fungo ancora da riconciliare conPR114.|
 
-## Test del ciclo
+## Test del primo ciclo P0 (storico)
 
 | Controllo | Esito |
 |---|---|
@@ -138,10 +139,20 @@ Main aggiornato in fast-forward con controllo dello SHA atteso: `bebcfeb7ad286ae
 
 CI post-push: ricerca/TypeScript [40305653708](https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653708) SUCCESS; export lacune [40305653482](https://github.com/gianpaolobol/fungo-italia/actions/runs/40305653482) produce l'artefatto e FAIL al solo gate scientifico, come atteso. Risultati e rilanci osservati sono in [snapshot CI](evidence/master-post-push-ci-20261026.json). Sono comparsi ulteriori run sul medesimo SHA: non annullati dall'agente. Le suite native/web e pipeline abbinate ancora pendenti/in corso non sono PASS, e i run sostituiti/cancellati non sono prove utilizzabili. Nessuna build o pubblicazione attribuita ai run pendenti.
 
+## Lotto P1 — sei schede completate nei campi documentati
+
+Consultate direttamente sei pagine First Nature già pertinenti al registro bibliografico. Recuperati i confronti di Cortinarius orellanus e Gyromitra esculenta, l'habitat nominale di Galerina marginata e gli habitat di Amanita pantherina, Amanita gemmata e Lepiota brunneoincarnata. Ogni fonte conserva campo, sezione, URL, data e revisione indipendente pendente. Nessuna importazione di immagini o testo medico/alimentare.
+
+[Dossier e riferimenti puntuali](reviews/p1-fields-20261026/README.md), [confronto di integrità](evidence/scientific-priority-fields-integrity-20261026.json). Il dato nominale di Galerina non si estende al gruppo; l'incertezza tassonomica delle segnalazioni di A.gemmata sotto latifoglie resta visibile. Revisione tecnica/bibliografica separata conclusa senza rilievi materiali; non è attestazione micologica professionale.
+
+Habitat 52/148, confronti 65/148; quattro habitat e due confronti precedentemente assenti ora documentati. Il registro mantiene148 schede bloccate e0 revisioni indipendenti; i gate scientifico e tossicologico strict restano entrambi exit1. Conservati tutti gli ID/ranghi, S1, S2, foto e fonti precedenti; tutti i 424 precedenti quesiti conservano la risposta corretta, con un nuovo quesito habitat per 425 totali. I casi fotografici restano86: non cambia la copertura di riconoscimento.
+
+Verifiche del lotto:237/237 test Node, TypeScript, generazione deterministica e whitespace superati. Build web condivisa e legacy,65/65 test WebKit,65/65 Chromium e smoke unificato/offline superati. Nessun nuovo binario, disponibilità TestFlight o App Store ready attestato. Le verifiche native del precedente SHA restano evidenze separate dal contenuto di questo lotto.
+
 ## Roadmap eseguibile e blocchi
 
 1. **P0 consegnato in questo ciclo:**inventario,recuperi selettivi,catalogo sincronizzato,regressioni,master e dossier;PR/branch incompleti preservati. Rileggere sempre main/PR prima di riprendere per evitare sovrascritture concorrenti.
-2. **P1 prossimo:**lavorare sul CSV delle148 schede,completare100 habitat/85 confronti e le evidenze mancanti;riverificare le3proposte scientifiche residuePR123 con le fonti originali;triadi/diritti e revisore qualificato restano blocchi reali.
+2. **P1 in corso:** sei completamenti consegnati; continuare dal nuovo CSV per96 habitat/83 confronti mancanti e94 evidenze habitat assenti. Le tre proposte residuePR123 sono state rilette e recuperate. Triadi/diritti e revisore qualificato restano blocchi reali.
 3. **P2:**separare i due esami senza perdere storico,creare matrice programma↔quesiti,risolvere96 provenienze vuote e62 casi fotografici mancanti quando le prove lo consentono.
 4. **P3:**recupero miratoPR114,nome e fungo continuo;confermare ricerca su nuovo iPhone/TestFlight e paritàweb.
 5. **P4:**correzione runner demo con scroll,prove completeiPhone/iPad e audit prezzi aggiornato;non usare iPASSstorici per nuovoSHA.

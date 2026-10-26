@@ -449,7 +449,9 @@
     {
       "scientificName": "Amanita pantherina",
       "commonNames": [],
-      "habitat": [],
+      "habitat": [
+        "Ectomicorrizica soprattutto con latifoglie, frequentemente sotto querce e faggi; la fonte segnala anche associazione con Helianthemum nummularium."
+      ],
       "lookalikes": [
         "Macrolepiota procera: confronto segnalato nella tabella dei sosia."
       ],
@@ -462,6 +464,20 @@
           "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
           "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
           "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        },
+        {
+          "sourceId": "SUPPLEMENT-FIELD-AMANITA-PANTHERINA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Amanita pantherina",
+          "url": "https://www.first-nature.com/fungi/amanita-pantherina.php",
+          "location": "Identification guide — Habitat & Ecological role",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia ectomicorrizica prevalentemente con latifoglie, in particolare querce e faggi, e associazione segnalata con Helianthemum nummularium.",
+          "consultedAt": "2026-10-26",
+          "notes": "Consultazione bibliografica puntuale. Non valida altri campi, immagini, commestibilità o revisione micologica indipendente; S2 resta prevalente per i giudizi alimentari.",
           "reviewStatus": "source-consulted-pending-independent-review"
         }
       ]
@@ -562,6 +578,127 @@
           "location": "Ministero della Salute / IZSLER, pagina stampata 48 (pagina PDF 48), Tabella 2.",
           "supportedClaim": "Confronto didattico segnalato nella fonte; non è una diagnosi differenziale completa.",
           "notes": "Questo riferimento riguarda soltanto lookalikes. Non valida i tre caratteri di campo né la commestibilità. Revisione micologica indipendente non attestata.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius orellanus",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Cortinarius rubellus: per il confronto del gambo, in C. orellanus manca il marcato disegno giallastro a pelle di serpente descritto per C. rubellus."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIELD-CORTINARIUS-ORELLANUS-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Cortinarius orellanus",
+          "url": "https://www.first-nature.com/fungi/cortinarius-orellanus.php",
+          "location": "Identification guide — Stem",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronto del disegno superficiale del gambo tra C. orellanus e C. rubellus; nessuna valutazione alimentare o nuova attribuzione tossicologica.",
+          "consultedAt": "2026-10-26",
+          "notes": "Consultazione bibliografica puntuale. Non valida altri campi, immagini, commestibilità o revisione micologica indipendente; S2 resta prevalente per i giudizi alimentari.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Galerina marginata group",
+      "commonNames": [],
+      "habitat": [
+        "Per il taxon nominale Galerina marginata: saprotrofa su ceppaie, tronchi morti e rami caduti di conifere e talvolta latifoglie; dato non generalizzabile a tutto il gruppo."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIELD-GALERINA-MARGINATA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Galerina marginata",
+          "url": "https://www.first-nature.com/fungi/galerina-marginata.php",
+          "location": "Identification guide — Habitat & Ecological role",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia lignicola saprotrofa del taxon nominale Galerina marginata, senza estensione a tutte le entità del gruppo didattico.",
+          "consultedAt": "2026-10-26",
+          "notes": "Consultazione bibliografica puntuale. Non valida altri campi, immagini, commestibilità o revisione micologica indipendente; S2 resta prevalente per i giudizi alimentari.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Gyromitra esculenta",
+      "commonNames": [],
+      "habitat": [],
+      "lookalikes": [
+        "Morchella esculenta: cappello profondamente alveolato e cavità interna unica, in confronto al cappello cerebriforme e alle camere irregolari di Gyromitra esculenta.",
+        "Helvella crispa: cappello contorto a sella bianco-crema e gambo con cavità longitudinali, in confronto alla forma cerebriforme di Gyromitra esculenta."
+      ],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIELD-GYROMITRA-ESCULENTA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Gyromitra esculenta",
+          "url": "https://www.first-nature.com/fungi/gyromitra-esculenta.php",
+          "location": "Identification guide — Description; Similar species",
+          "fields": [
+            "lookalikes"
+          ],
+          "supportedClaim": "Confronti morfologici con Morchella esculenta e Helvella crispa; la fonte descrive cavità longitudinali, senza estendere il confronto alla commestibilità.",
+          "consultedAt": "2026-10-26",
+          "notes": "Consultazione bibliografica puntuale. Non valida altri campi, immagini, commestibilità o revisione micologica indipendente; S2 resta prevalente per i giudizi alimentari.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita gemmata",
+      "commonNames": [],
+      "habitat": [
+        "Micorrizica soprattutto con conifere, in particolare pini; frequente su terreno sabbioso nelle pinete costiere su dune stabilizzate. Le segnalazioni sotto sole latifoglie sono considerate tassonomicamente dubbie dalla fonte."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIELD-AMANITA-GEMMATA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Amanita gemmata",
+          "url": "https://www.first-nature.com/fungi/amanita-gemmata.php",
+          "location": "Identification guide — Habitat & Ecological role",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Associazione prevalente con pini e suoli sabbiosi; conservata l'incertezza della fonte sull'identità delle segnalazioni sotto sole latifoglie.",
+          "consultedAt": "2026-10-26",
+          "notes": "Consultazione bibliografica puntuale. Non valida altri campi, immagini, commestibilità o revisione micologica indipendente; S2 resta prevalente per i giudizi alimentari.",
+          "reviewStatus": "source-consulted-pending-independent-review"
+        }
+      ]
+    },
+    {
+      "scientificName": "Lepiota brunneoincarnata",
+      "commonNames": [],
+      "habitat": [
+        "Saprotrofa, di solito in piccoli gruppi nei boschi di latifoglie e misti; segnalata occasionalmente anche nelle praterie delle dune sabbiose."
+      ],
+      "lookalikes": [],
+      "sources": [
+        {
+          "sourceId": "SUPPLEMENT-FIELD-LEPIOTA-BRUNNEOINCARNATA-20261026",
+          "reviewScope": "supplementary-literature",
+          "title": "First Nature — Lepiota brunneoincarnata",
+          "url": "https://www.first-nature.com/fungi/lepiota-brunneoincarnata.php",
+          "location": "Identification guide — Habitat & Ecological role",
+          "fields": [
+            "habitat"
+          ],
+          "supportedClaim": "Ecologia saprotrofa in boschi di latifoglie e misti, con segnalazioni occasionali nei prati dunali; nessuna generalizzazione al genere Lepiota.",
+          "consultedAt": "2026-10-26",
+          "notes": "Consultazione bibliografica puntuale. Non valida altri campi, immagini, commestibilità o revisione micologica indipendente; S2 resta prevalente per i giudizi alimentari.",
           "reviewStatus": "source-consulted-pending-independent-review"
         }
       ]

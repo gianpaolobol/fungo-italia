@@ -1,0 +1,66 @@
+{
+  "baseline": "2eaa0c7f1a3de69a142b0753a97d4c04d56bc90f",
+  "changes": [
+    {
+      "id": "minimum-card-objective-amanita--06--amanita-pantherina",
+      "name": "Amanita pantherina",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-amanita--09--amanita-gemmata",
+      "name": "Amanita gemmata",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-cortinarius--01--cortinarius-orellanus",
+      "name": "Cortinarius orellanus",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-galerina--01--galerina-marginata-group",
+      "name": "Galerina marginata group",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-lepiotoidi-lepiota-inclusi-chamaemyces-cystolepiota-pulverolepiota-echinoderma-leucoagaric--02--lepiota-brunneoincarnata",
+      "name": "Lepiota brunneoincarnata",
+      "changed": [
+        "habitat",
+        "sources"
+      ]
+    },
+    {
+      "id": "minimum-card-objective-gyromitra-incluso-discina--01--gyromitra-esculenta",
+      "name": "Gyromitra esculenta",
+      "changed": [
+        "lookalikes",
+        "sources"
+      ]
+    }
+  ],
+  "catalogUnits": 148,
+  "groups": 70,
+  "photoCases": 86,
+  "previousTheoryQuestions": 424,
+  "currentTheoryQuestions": 425,
+  "allPreviousCorrectAnswersPreserved": true,
+  "allUnrelatedFieldsPreserved": true,
+  "allExistingSourcesPreserved": true,
+  "changedTrackedFiles": [
+    "src/data/catalog.json",
+    "src/data/provenance.json",
+    "src/data/supplementary-literature.json"
+  ]
+}
