@@ -134,7 +134,7 @@ jobs:
           JS
           node --input-type=module <<'JS'
           import assert from 'node:assert/strict';import {spawnSync} from 'node:child_process';import {writeFile} from 'node:fs/promises';
-          const p=spawnSync('xcrun',['altool','--help'],{encoding:'utf8',timeout:60000});assert(!p.error&&p.status===0,'Apple uploader unavailable before cancellation');const text=(p.stdout||'')+(p.stderr||'');
+          const p=spawnSync('xcrun',['altool','--help'],{encoding:'utf8',timeout:60000});assert(!p.error&&p.status===0,'Apple uploader unavailable before cancellation');const text=(p.stdout||'')+(p.stderr||'');console.log('ALTOOL_RUNTIME_HELP\n'+text);
           const flags={key:text.includes('--apiKey')?'--apiKey':text.includes('--api-key')?'--api-key':null,issuer:text.includes('--apiIssuer')?'--apiIssuer':text.includes('--api-issuer')?'--api-issuer':null};
           assert(flags.key&&flags.issuer&&text.includes('--upload-app')&&text.includes('--file')&&text.includes('--type'),'Supported uploader API-key flags unavailable; leave original delivery untouched');await writeFile(process.env.RUNNER_TEMP+'/altool-flags.json',JSON.stringify(flags));console.log('Apple command and API-key support verified before cancellation');
           JS
