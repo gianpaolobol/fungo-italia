@@ -1,5 +1,7 @@
 name: Scientific gap delta validation
 on:
+  push:
+    branches: [fix/science-gap-curriculum-triage-20261026]
   pull_request:
     branches: [main]
     paths:
@@ -25,6 +27,17 @@ jobs:
         run: git show "${{ github.event.pull_request.base.sha || 'origin/main' }}:src/data/catalog.json" > "${{ runner.temp }}/base-catalog.json"
       - name: Regenerate canonical data
         run: npm run prepare:data
+      - name: Verify source integration into regenerated catalog
+        run: |
+          node --input-type=module <<'EOF'
+          import {readFile} from 'node:fs/promises';
+          const catalog=JSON.parse(await readFile('src/data/catalog.json','utf8'));
+          for(const name of ['Entoloma sinuatum','Amanita virosa','Cortinarius orellanus','Galerina marginata group','Gyromitra esculenta']) {
+            const row=catalog.find(x=>x.scientificName===name);
+            if(!row)throw new Error('Missing authorized curriculum unit: '+name);
+            if(!row.sources?.some(x=>String(x.sourceId).startsWith('SUPPLEMENT-')&&x.fields?.some(f=>['habitat','lookalikes'].includes(f))))throw new Error('Supplementary evidence not propagated: '+name);
+          }
+          EOF
       - name: Export current scientific gaps
         run: node scripts/export-scientific-gap-register.mjs release-evidence
       - name: Compare before and after
