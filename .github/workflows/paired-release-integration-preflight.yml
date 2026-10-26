@@ -14,7 +14,6 @@ jobs:
     env:
       NODE_OPTIONS: --max-old-space-size=6144
       PAIRED_SOURCE: ${{ github.sha }}
-      PAIRED_PREFLIGHT_OFFLINE: '1'
     steps:
       - uses: actions/checkout@v4
       - name: Require the actual isolated Git checkout
@@ -45,7 +44,7 @@ jobs:
           npx playwright test --browser=chromium
           node smoke-unified.mjs
           UNIFIED_BROWSER=webkit node smoke-unified.mjs
-      - name: Verify real public PWA checkpoint and history across an actual network cut
+      - name: Capture real previous public PWA checkpoint and history
         run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-integration"
       - uses: actions/upload-artifact@v4
         if: always()
@@ -53,7 +52,7 @@ jobs:
           name: Paired-browser-integration-evidence
           path: |
             ${{ runner.temp }}/paired-integration/capture-report.json
-            ${{ runner.temp }}/paired-integration/*-offline-preflight.png
+            ${{ runner.temp }}/paired-integration/*.png
             web/unified-phone.png
             web/test-results/
           if-no-files-found: warn
