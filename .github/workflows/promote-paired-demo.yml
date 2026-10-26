@@ -22,6 +22,7 @@ jobs:
   promote:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 45
     environment:
       name: github-pages
@@ -38,6 +39,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.3.0
+      - name: Verify pinned browser runtime and archive tools
+        run: |
+          node -e "const p=require('./web/package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.56.1')throw Error('Browser image and lockfile differ')"
+          if ! command -v unzip >/dev/null || ! command -v zipinfo >/dev/null; then
+            apt-get update -qq
+            apt-get install -y --no-install-recommends unzip
+          fi
+          unzip -v
+          zipinfo -h
       - name: Resolve only the exact separately approved candidate
         id: approved
         run: |
@@ -61,11 +71,9 @@ jobs:
         run: node tools/paired-demo.mjs artifact
       - name: Require exact bytes, current native proofs, scientific snapshot and live owner-only Apple availability
         run: node tools/paired-demo.mjs promote
-      - name: Install both browser engines for actual PWA upgrade
+      - name: Install locked tests for the preinstalled browser engines
         run: |
           npm ci --prefix web --ignore-scripts
-          cd web
-          npx playwright install --with-deps chromium webkit
       - name: Capture actual previous public PWA and private synthetic progress
         run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-demo-browser"
       - name: Preserve previous public bytes and native receipt before any deployment
