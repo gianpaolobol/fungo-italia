@@ -1,0 +1,68 @@
+{
+  "state": "implementation locally verified; new-source native and Apple execution pending",
+  "baseline": "cc2a34d004485f1c834d1b9ecb523ef318517c55",
+  "sourceAttempts": [
+    {
+      "runId": 40403907609,
+      "jobId": 121856606730,
+      "attempt": 1,
+      "conclusion": "cancelled",
+      "phase": "Playwright apt dependency download"
+    },
+    {
+      "runId": 40403907609,
+      "jobId": 121863713907,
+      "attempt": 2,
+      "conclusion": "cancelled",
+      "phase": "Playwright apt dependency download"
+    },
+    {
+      "runId": 40403907609,
+      "jobId": 121874989819,
+      "attempt": 3,
+      "conclusion": "failure",
+      "phase": "WebKit offline reload after65+65browser tests andChromium unified smoke passed"
+    }
+  ],
+  "androidRegression": {
+    "jobId": 121863189639,
+    "error": "UI text unavailable: Fungo Italia completo in Areas",
+    "correction": "assert free71Areas, Amiata habitat and locked premium exam"
+  },
+  "node": {
+    "tests": 299,
+    "passed": 299,
+    "failed": 0,
+    "skipped": 0
+  },
+  "transportTests": {
+    "red": "module absent before implementation",
+    "green": 5,
+    "guards": [
+      "exact signed bytes/source/producer",
+      "all native proofs",
+      "owner science scope",
+      "Apple app/team/credential identity",
+      "argument boundaries",
+      "redacted diagnostics"
+    ]
+  },
+  "typescript": "passed",
+  "deterministicData": "passed; no scientific generated diff",
+  "workflowSyntax": "YAML, bash and actual Node version guard passed",
+  "runtimePreflight": {
+    "runId": 40408806282,
+    "conclusion": "success",
+    "image": "mcr.microsoft.com/playwright:v1.56.1-noble",
+    "scope": "real Chromium/WebKit previous-PWA capture, archive tools; no new delivery"
+  },
+  "uploadMethod": "Apple altool --upload-package of EAS production-derived signedIPA; no EAS Submit queue",
+  "newNativeProofs": "pending",
+  "newAppleAvailability": "pending",
+  "independentMycologicalReview": false,
+  "appStoreReady": false,
+  "offlineRegression": {
+    "hypothesis": "wait for DOM readiness during real offline reload; keep offline flag, new page, UI and storage assertions",
+    "containerDiagnostic": "pending; no success claimed"
+  }
+}

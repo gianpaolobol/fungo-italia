@@ -56,7 +56,7 @@ try{
  await expect.poll(()=>page.evaluate(()=>localStorage.getItem('parity-preserve-existing-notes'))).toBe('kept');
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  const icon=await page.locator('link[rel="apple-touch-icon"]').getAttribute('href');expect(icon).toMatch(/icon-[a-f0-9]{16}\.png$/);
- if(!process.env.UNIFIED_BASE_URL){await context.setOffline(true);await page.reload();await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree']);await page.getByTestId('subscription-access').click();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toBeVisible();await expect.poll(()=>page.evaluate(()=>localStorage.getItem('parity-preserve-existing-notes'))).toBe('kept');await context.setOffline(false);}
+ if(!process.env.UNIFIED_BASE_URL){await context.setOffline(true);await page.reload({waitUntil:'domcontentloaded'});await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree']);await page.getByTestId('subscription-access').click();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toBeVisible();await expect.poll(()=>page.evaluate(()=>localStorage.getItem('parity-preserve-existing-notes'))).toBe('kept');await context.setOffline(false);}
  expect(errors).toEqual([]);
  await page.screenshot({path:fileURLToPath(new URL('./unified-phone.png',import.meta.url)),fullPage:true});
  console.log(JSON.stringify({unifiedSmoke:'passed',browser:engine,url:base,tabs:['Percorso','Studio','Esame','Aree'],offline:!process.env.UNIFIED_BASE_URL}));

@@ -1,0 +1,81 @@
+name: Qualify final source runtime without signing or deployment
+on:
+  push:
+    branches: [audit/qualified-ci-runtime-20261026]
+    paths: [.github/workflows/qualify-ci-runtime.yml, web/smoke-unified.mjs, tools/ci-offline-probe.mjs]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  unified:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 25
+    env:
+      NODE_OPTIONS: --max-old-space-size=6144
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - run: npm ci
+      - run: npm ci --prefix web --ignore-scripts
+      - name: Verify all source tests and deterministic generated data in the pinned image
+        run: |
+          npm run prepare:data
+          git diff --exit-code
+          npm run typecheck
+          python3 -m py_compile scripts/android-smoke.py
+          node --test scripts/*.test.mjs tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs
+          npx expo export --platform ios --output-dir /tmp/runtime-ios-export
+      - uses: actions/download-artifact@v4
+        with:
+          name: Fungo-Italia-iPhone-PWA
+          run-id: 40403908026
+          github-token: ${{ github.token }}
+          path: dist-ios
+      - name: Verify exact diagnostic application source and every downloaded file
+        run: |
+          node --input-type=module -e "import {validateCandidate} from './scripts/release-parity.mjs';await validateCandidate({dir:'dist-ios',expectedSha:'cc2a34d004485f1c834d1b9ecb523ef318517c55',iconPath:'assets/icon.png'});"
+      - name: Require both unified browser smokes with real offline reload
+        run: |
+          node web/smoke-unified.mjs
+          cp web/unified-phone.png "$RUNNER_TEMP/unified-chromium.png"
+          UNIFIED_BROWSER=webkit node web/smoke-unified.mjs
+          cp web/unified-phone.png "$RUNNER_TEMP/unified-webkit.png"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Final-runtime-unified-browser-diagnostic
+          path: ${{ runner.temp }}/unified-*.png
+          if-no-files-found: warn
+  public-offline:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    timeout-minutes: 20
+    env:
+      PAIRED_SOURCE: cc2a34d004485f1c834d1b9ecb523ef318517c55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.3.0
+      - uses: actions/download-artifact@v4
+        with:
+          name: Fungo-Italia-iPhone-PWA
+          run-id: 40403908026
+          github-token: ${{ github.token }}
+          path: dist-ios
+      - run: npm ci --prefix web --ignore-scripts
+      - name: Create real previous PWA exam checkpoint and history in both engines
+        run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/offline-profiles"
+      - name: Test persistent PWA offline reload and preserved exam checkpoint without deployment
+        run: node tools/ci-offline-probe.mjs "$RUNNER_TEMP/offline-profiles"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Final-runtime-public-offline-diagnostic
+          path: |
+            ${{ runner.temp }}/offline-profiles/capture-report.json
+            ${{ runner.temp }}/offline-profiles/offline-probe.json
+          if-no-files-found: error

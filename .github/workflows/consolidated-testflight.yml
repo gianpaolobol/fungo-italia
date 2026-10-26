@@ -10,6 +10,7 @@ jobs:
     outputs:
       independent_ready: ${{ steps.science.outputs.independent_ready }}
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.56.1-noble
     timeout-minutes: 110
     env:
       NODE_OPTIONS: --max-old-space-size=6144
@@ -29,7 +30,7 @@ jobs:
 
         npm run typecheck
 
-        node --test scripts/*.test.mjs
+        node --test scripts/*.test.mjs tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs
 
         npx expo export --platform ios --output-dir /tmp/consolidated-export
 
@@ -45,7 +46,7 @@ jobs:
     - name: Verify legacy workflows in both engines and unified smartphone app
       run: 'cd web
 
-        npx playwright install --with-deps chromium webkit
+        node -e "const p=require(''./package-lock.json'').packages[''node_modules/@playwright/test''];if(p.version!==''1.56.1'')throw Error(''Browser image and lockfile differ'')"
 
         npm test
 
@@ -189,14 +190,14 @@ jobs:
     - name: Prepare authorized Apple submit key
       run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
     - name: Upload diagnostic binary to TestFlight only
-      run: npx eas-cli@24.8.0 submit --platform ios --profile production --path "$RUNNER_TEMP/fungo-consolidated.ipa" --non-interactive --wait
+      run: node scripts/upload-owner-testflight.mjs
     - name: Confirm Apple processing and confirmed owner group
       run: node scripts/verify-consolidated-testflight.mjs
     - name: Confirm actual Apple internal beta availability
       run: node scripts/release-parity.mjs beta-state
     - name: Remove temporary submit key
       if: always()
-      run: node --input-type=module -e "import {rm} from 'node:fs/promises';await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});"
+      run: node --input-type=module -e "import {rm} from 'node:fs/promises';for(const suffix of ['/fungo-asc-submit.p8','/private_keys'])await rm(process.env.RUNNER_TEMP+suffix,{force:true,recursive:true});"
     - name: Stage exact native receipts
       if: always()
       run: 'mkdir -p "$RUNNER_TEMP/paired-beta-evidence"
@@ -204,6 +205,8 @@ jobs:
         if test -f "$RUNNER_TEMP/consolidated-build.json"; then cp "$RUNNER_TEMP/consolidated-build.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
 
         if test -f "$RUNNER_TEMP/internal-beta-science.json"; then cp "$RUNNER_TEMP/internal-beta-science.json" "$RUNNER_TEMP/paired-beta-evidence/"; fi
+
+        if test -f "$RUNNER_TEMP/apple-upload.log"; then cp "$RUNNER_TEMP/apple-upload.log" "$RUNNER_TEMP/paired-beta-evidence/"; fi
 
         if test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json "$RUNNER_TEMP/paired-beta-evidence/"; fi
 
