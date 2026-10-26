@@ -1741,6 +1741,92 @@
           "supportedClaim": "Comparison with Calocybe gambosa (white gills, mealy odour, spring fruiting) and Clitocybe nebularis (gill colour and odour)."
         }
       ]
+    },
+    {
+      "scientificName": "Amanita virosa",
+      "additions": {
+        "habitat": [
+          "Ai margini di boschi di latifoglie o misti, più frequente in ambienti montani."
+        ],
+        "lookalikes": [
+          "Amanita citrina var. alba: residui del velo sul cappello più persistenti e odore di patata cruda; questi caratteri non autorizzano il consumo.",
+          "Agaricus sylvicola: lamelle inizialmente rosate e poi brune, mentre Amanita virosa conserva lamelle bianche."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-426c9e8aa0a57396",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Ai margini di boschi di latifoglie o misti, più diffusa a quota elevata."
+        },
+        {
+          "sourceId": "LIT-ATLAS-426c9e8aa0a57396",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronto con Amanita citrina var. alba e Agaricus sylvicola, in particolare lamelle bianche contro rosate-brune."
+        }
+      ]
+    },
+    {
+      "scientificName": "Amanita citrina",
+      "additions": {
+        "habitat": [
+          "Ectomicorrizica con latifoglie e conifere, spesso sotto faggio nei boschi misti su suoli neutri o alcalini."
+        ],
+        "lookalikes": [
+          "Amanita virosa: cappello con residui velari meno persistenti e odore diverso; specie mortale.",
+          "Amanita phalloides: residui velari sul cappello generalmente assenti e odore dolciastro negli esemplari maturi; specie mortale."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-9940578ef661b588",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Ectomicorrizica con latifoglie e conifere, più spesso faggio in boschi misti neutri o alcalini."
+        },
+        {
+          "sourceId": "LIT-ATLAS-9940578ef661b588",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Confronto con Amanita virosa e Amanita phalloides, entrambe mortali, per residui velari ed odore."
+        }
+      ]
+    },
+    {
+      "scientificName": "Cortinarius praestans",
+      "additions": {
+        "habitat": [
+          "Ectomicorrizico soprattutto con latifoglie, più raramente con conifere, in aree con substrato calcareo."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-427e024f1be59bd5",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Ectomicorrizico con latifoglie, meno frequentemente conifere, in aree gessose o calcaree."
+        }
+      ]
     }
   ]
 }
