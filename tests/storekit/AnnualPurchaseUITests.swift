@@ -31,6 +31,15 @@ final class AnnualPurchaseUITests: XCTestCase {
       item = element(app, label)
     }
     await require(item, timeout: 60, file: file, line: line)
+    // The free exam puts this navigation button below the visible viewport.
+    // Reveal it with real user scrolling; never force a coordinate tap or bypass hittability.
+    if label == "Torna al menu del test" && item.exists && !item.isHittable {
+      for attempt in 1...8 {
+        app.swipeUp()
+        print("EXAM_MENU_SCROLL attempt=\(attempt) hittable=\(item.isHittable)")
+        if item.isHittable { break }
+      }
+    }
     let hittable = await readyToTap(item)
     guard hittable else {
       print("REQUIRED_CONTROL_NOT_HITTABLE " + item.description)
