@@ -1913,6 +1913,38 @@
           "supportedClaim": "Per C. gibba s.str., confronto con Lepista flaccida; limitato alla specie rappresentativa e non generalizzato al gruppo s.l."
         }
       ]
+    },
+    {
+      "scientificName": "Coprinus comatus",
+      "additions": {
+        "habitat": [
+          "Saprotrofo su prati, margini erbosi delle strade, bordi di sentieri e radure boschive; può crescere in gruppi o file."
+        ],
+        "lookalikes": [
+          "Coprinopsis picacea: negli esemplari giovani presenta squame bianche piccole che contrastano con il cappello bruno scuro mentre si espande."
+        ]
+      },
+      "replacements": {},
+      "evidence": [
+        {
+          "sourceId": "LIT-ATLAS-82e0a9de626fd212",
+          "fields": [
+            "habitat"
+          ],
+          "page": null,
+          "locator": "Habitat & Ecological role",
+          "supportedClaim": "Saprobic on lawns, grass verges, path edges and open woodland; sometimes in groups or long rows."
+        },
+        {
+          "sourceId": "LIT-ATLAS-82e0a9de626fd212",
+          "fields": [
+            "lookalikes"
+          ],
+          "page": null,
+          "locator": "Similar species",
+          "supportedClaim": "Young Coprinopsis picacea may resemble Coprinus comatus; white scales against dark brown cap at maturity."
+        }
+      ]
     }
   ]
 }
