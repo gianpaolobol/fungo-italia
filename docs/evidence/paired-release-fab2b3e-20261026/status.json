@@ -14,7 +14,7 @@
     "zipSha256": "e9fe54209ae0bb913fdf5a51462c607e00e35a4078160e50c33f28f7d6109f64"
   },
   "newAppleDelivery": "VALID + IN_BETA_TESTING; owner group only",
-  "newPublicDelivery": "authorized; deployment, fresh Apple revalidation and actual public PWA upgrade pending",
+  "newPublicDelivery": "deployed22; all1652served files verified; first PWA upgrade failed; recovery QA pending",
   "candidate": {
     "artifactId": 12695390804,
     "zipSha256": "ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d",
@@ -140,5 +140,18 @@
     "iphone-map-paid-v2.png": "4c503ecea1c4a802a4e95c3bed7c2c4df1a2276a6b9148a24b93dfd22dcd19b3",
     "ipad-map-free-v2.png": "4f62bac0e52c4d0d7abcce1ef97c677a1ac33c5f4bc05eb7d180fd9765388a3b",
     "ipad-map-paid-v2.png": "4f62bac0e52c4d0d7abcce1ef97c677a1ac33c5f4bc05eb7d180fd9765388a3b"
+  },
+  "publicFirstRun": {
+    "id": 40423289727,
+    "conclusion": "failure",
+    "deploymentSucceeded": true,
+    "allServedFilesVerified": 1652,
+    "verifiedAt": "2026-10-27T00:01:28.723Z",
+    "failure": "new worker with old document app script; original profiles unavailable",
+    "previousArchive": {
+      "id": 12699061819,
+      "zipSha256": "fff1345d68646fef7ec0c08b0a72819a748a18486ef509cd694f497bc09feb7f"
+    },
+    "recoveryScope": "archived loopback migration plus separate live public verification; not original profile continuity"
   }
 }

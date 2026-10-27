@@ -1,5 +1,14 @@
 # Fungo Italia — stato master operativo
 
+## Aggiornamento pubblico22 — 27 ottobre2026
+
+Il consenso distinto «Confermo» è registrato con digest0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21. Il run40423289727 ha distribuito effettivamente1.1.0(22) da fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 e verificato tutti1652file dal dominio alle00:01:28.723Z. Apple è stata riletta VALID/IN_BETA_TESTING, gruppo esclusivo del titolare. Nessun ampliamento o certificazione indipendente.
+
+Il run resta FAILURE: nel controllo upgrade il worker nuovo controllava ancora un documento con JavaScript19. Il verificatore attendeva il worker, non necessariamente il ricaricamento effettivo. Correzione limitata a QA/workflow; applicazione firmata e autorizzazione immutate. I profili originali non erano stati archiviati e non se ne dichiara recuperata la continuità. Si conservano errore e archivio completo19 (artifact12699061819, ZIPfff1345d68646fef7ec0c08b0a72819a748a18486ef509cd694f497bc09feb7f).
+
+Recupero previsto: replay esplicitamente etichettato degli stessi byte19→22 su unico origin loopback, più verifica distinta del vero dominio22 in Chromium/WebKit con dati/esame/offline. Modalità verification_only evita ridistribuzioni o downgrade. Profili chiusi e diagnostica negativa saranno ora conservati. Prove finali ancora pendenti: non dichiarare l'incarico concluso.
+
+
 Aggiornamento:26 ottobre 2026. Responsabile:ChatGPT Work, coordinatore del primo ciclo di consolidamento autorizzato dal titolare.
 
 ## TestFlight22 disponibile; web corrispondente ancora da autorizzare

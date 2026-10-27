@@ -13,7 +13,17 @@ const SOURCE=process.env.PAIRED_SOURCE;
 assert(/^[a-f0-9]{40}$/.test(SOURCE||''),'Exact paired source required');
 const build=JSON.parse(await readFile('dist-ios/build.json','utf8'));assert.equal(build.sourceCommit,SOURCE);
 const prior=mode==='upgrade'?JSON.parse(await readFile(join(directory,'capture-report.json'),'utf8')):null;
-const base='https://gianpaolobol.github.io/fungo-italia/';
+const base=process.env.PAIRED_BROWSER_BASE_URL||'https://gianpaolobol.github.io/fungo-italia/';
+const replayControl=process.env.PAIRED_REPLAY_CONTROL;
+const replay=base!=='https://gianpaolobol.github.io/fungo-italia/';
+if(replay){const u=new URL(base),c=new URL(replayControl);assert(u.protocol==='http:'&&u.hostname==='127.0.0.1'&&u.pathname==='/fungo-italia/'&&c.protocol==='http:'&&c.hostname==='127.0.0.1','Replay must stay on private loopback origins');}else assert(!replayControl,'Public verification cannot use replay control');
+const expectedHtml=await readFile('dist-ios/index.html','utf8'),expectedScript=expectedHtml.match(/<script src="([^" ]*\/_expo\/static\/js\/web\/index-[^" ]+)"/)?.[1];assert(expectedScript,'Verified app script missing');
+const scriptOf=page=>page.locator('script[src*="/_expo/static/js/web/index-"]').getAttribute('src');
+async function approvedWorkerReady(page){return page.evaluate(async source=>{
+ const reg=await navigator.serviceWorker.getRegistration();const worker=reg?.waiting??navigator.serviceWorker.controller;if(!worker)return false;
+ return new Promise(resolve=>{const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(false);},1500);channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data?.sourceCommit===source);};worker.postMessage({type:'SOURCE_ID'},[channel.port2]);});
+},SOURCE);}
+
 const favorite=progressFixture.favorite;
 const probe='public-demo21-preserve-notes';
 await mkdir(directory,{recursive:true});
@@ -24,18 +34,19 @@ async function controllerSource(page){return page.evaluate(async()=>{
 const reports=[];
 for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
  const gate=await createNetworkGate();
- let context;
+ let context,page;const errors=[];
  try{
- context=await browser.launchPersistentContext(join(directory,name),{proxy:{server:gate.url},headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
+ context=await browser.launchPersistentContext(join(directory,name),{proxy:{server:gate.url,bypass:'127.0.0.1,localhost'},headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
   if(mode==='capture')await context.addInitScript(({favorite,probe,notes})=>{
    if(window.top!==window)return;
    if(!localStorage.getItem(probe)){const state=JSON.stringify({version:1,favoriteIds:[favorite],resumeId:favorite});localStorage.setItem('fungo-italia:study:v1',state);localStorage.setItem('fungo-italia:pwa:study:v1',state);localStorage.setItem('fungo-italia:pwa:notes:v1',JSON.stringify(notes));localStorage.setItem(probe,'keep-existing-notes');}
   },{favorite,probe,notes:progressFixture.notes});
-  const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+  page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base,{waitUntil:'domcontentloaded',timeout:60000});await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
   await expect.poll(()=>controllerSource(page),{timeout:120000}).not.toBeNull();
+  const scriptBefore=await scriptOf(page);
   const before=await controllerSource(page);assert(/^[a-f0-9]{40}$/.test(before||''),'Live worker source unavailable');
-  if(mode==='upgrade')assert([SOURCE,prior.reports.find(r=>r.browser===name)?.sourceAfter].includes(before),'Worker differs from captured source');
+  if(mode==='upgrade'){const captured=prior.reports.find(r=>r.browser===name);assert([SOURCE,captured?.sourceAfter].includes(before),'Worker differs from captured source');assert([expectedScript,captured?.documentScript].includes(scriptBefore),'Document differs from captured or verified app');}
   if(mode==='capture'){
    await page.getByRole('tab',{name:'Esame',exact:true}).click();
    await page.getByRole('button',{name:'Inizia 4 casi',exact:true}).click();
@@ -52,33 +63,37 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
   assert(examSnapshot&&JSON.parse(examSnapshot).exam.history.length>0,'Real exam checkpoint and history required');
   if(mode==='upgrade')assert.equal(examSnapshot,prior.reports.find(r=>r.browser===name)?.examSnapshot,'Exam storage changed before upgrade');
   let method='already-current';
-  if(mode==='upgrade'&&before!==SOURCE){
+  if(mode==='upgrade'&&scriptBefore!==expectedScript){
    await page.getByTestId('subscription-access').click();
    const refresh=page.getByRole('button',{name:'Verifica versione',exact:true});if(await refresh.count())await refresh.click();
    await expect(page.getByRole('button',{name:'Aggiorna anteprima',exact:true}).first()).toBeVisible({timeout:90000});
-   await page.waitForFunction(async()=>!!(await navigator.serviceWorker.getRegistration())?.waiting,undefined,{timeout:120000});
-   await page.getByRole('button',{name:'Aggiorna anteprima',exact:true}).first().click();method='manual-update';
+   await expect.poll(()=>approvedWorkerReady(page),{timeout:120000}).toBe(true);
+   await page.evaluate(()=>{window.__pairedPreviousDocument=true;});
+   await Promise.all([page.waitForNavigation({waitUntil:'domcontentloaded',timeout:120000}),page.getByRole('button',{name:'Aggiorna anteprima',exact:true}).first().click()]);method='manual-update';
+   assert.equal(await page.evaluate(()=>window.__pairedPreviousDocument),undefined,'Update must replace the actual document');
+   await expect.poll(()=>scriptOf(page),{timeout:60000}).toBe(expectedScript);
+
    await expect.poll(()=>controllerSource(page),{timeout:120000}).toBe(SOURCE);
    await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
   }
+  if(mode==='upgrade')await expect.poll(()=>controllerSource(page),{timeout:120000}).toBe(SOURCE);
   const readProgress=()=>page.evaluate(probe=>({note:localStorage.getItem(probe),study:JSON.parse(localStorage.getItem('fungo-italia:study:v1')||'null'),notes:JSON.parse(localStorage.getItem('fungo-italia:pwa:notes:v1')||'null')}),probe);
   async function verifyOffline(){
-   await page.evaluate(()=>{window.__preOfflineDocument=true;});gate.block();
+   await page.evaluate(()=>{window.__preOfflineDocument=true;});if(replay){const r=await fetch(replayControl+'/stop');assert(r.ok,'Replay origin cut failed');}gate.block();
    try{
-    const probe=await context.browser().newContext({proxy:{server:gate.url}});try{await expect((await probe.newPage()).goto(base,{timeout:15000})).rejects.toThrow();}finally{await probe.close();}
+    const probe=await context.browser().newContext({proxy:{server:gate.url,bypass:'127.0.0.1,localhost'}});try{await expect((await probe.newPage()).goto(base,{timeout:15000})).rejects.toThrow();}finally{await probe.close();}
     const response=await page.reload({waitUntil:'domcontentloaded'});assert.equal(response.status(),200);assert(response.fromServiceWorker(),'Offline document must come from actual installed worker');
     assert.equal(await page.evaluate(()=>window.__preOfflineDocument),undefined,'Offline navigation must create a new document');
     await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:30000});
     assertBrowserProgress(await readProgress());assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam state changed offline');
-   }finally{gate.allow();}
+   }finally{gate.allow();if(replay){const r=await fetch(replayControl+'/start');assert(r.ok,'Replay origin restart failed');}}
   }
   assertBrowserProgress(await readProgress());
   if(mode==='upgrade'){
    assert.equal(await controllerSource(page),SOURCE);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam checkpoint/history changed during upgrade');
    await page.getByRole('tab',{name:'Esame',exact:true}).click();await page.getByRole('button',{name:'Riprendi sessione',exact:true}).click();await expect(page.getByRole('textbox',{name:'Nome scientifico della risposta'})).toHaveValue('Agaricus');
-   const html=await readFile('dist-ios/index.html','utf8'),expected=html.match(/<script src="([^"]*\/_expo\/static\/js\/web\/index-[^"]+)"/)?.[1];assert(expected,'Verified app script missing');
-   assert.equal(await page.locator('script[src*="/_expo/static/js/web/index-"]').getAttribute('src'),expected,'Running page still contains previous app code');
+   assert.equal(await scriptOf(page),expectedScript,'Running page still contains previous app code');
    const icon=await page.locator('link[rel="apple-touch-icon"]').getAttribute('href');assert.equal(icon,'/fungo-italia/icon-'+build.iconSha256.slice(0,16)+'.png');
    const response=await page.request.get(new URL(icon,base).href);assert(response.ok());assert.equal(createHash('sha256').update(await response.body()).digest('hex'),build.iconSha256);
    await page.getByTestId('subscription-access').click();
@@ -90,8 +105,11 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await page.screenshot({path:join(directory,name+'-verified.png'),fullPage:true});
   }
   assert.deepEqual(errors,[]);
-  reports.push({browser:name,mode,sourceBefore:before,sourceAfter:await controllerSource(page),method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'});
+  reports.push({browser:name,mode,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method==='manual-update',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'});
+ }catch(error){
+  if(page){await page.screenshot({path:join(directory,name+'-'+mode+'-failure.png'),fullPage:true}).catch(()=>{});await writeFile(join(directory,name+'-'+mode+'-failure.json'),JSON.stringify({scope:replay?'archived-loopback-migration':'live-public-origin',error:error.message,controller:await controllerSource(page),documentScript:await scriptOf(page).catch(()=>null),pageErrors:errors,reports},null,2)+'\n');}
+  throw error;
  }finally{await context?.close();await gate.close();}
 }
-await writeFile(join(directory,mode+'-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),reports},null,2)+'\n');
+await writeFile(join(directory,mode+'-report.json'),JSON.stringify({checkedAt:new Date().toISOString(),status:'complete',scope:replay?'archived-loopback-migration':'live-public-origin',reports},null,2)+'\n');
 console.log('PAIRED_DEMO_BROWSER '+JSON.stringify(reports));

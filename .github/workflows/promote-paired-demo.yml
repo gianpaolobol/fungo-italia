@@ -21,6 +21,8 @@ jobs:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       PAIRED_SOURCE: ${{ inputs.source_commit }}
       PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 }}
+      PAIRED_REPLAY_ARTIFACT_ID: ${{ inputs.previous_archive_id }}
+      PAIRED_REPLAY_ARTIFACT_SHA256: ${{ inputs.previous_archive_sha256 }}
     steps:
     - uses: actions/checkout@v4
       with:
@@ -37,12 +39,18 @@ jobs:
       with:
         node-version: 24.3.0
     - name: Verify pinned browser runtime and archive tools
-      run: "node -e \"const p=require('./web/package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.56.1')throw Error('Browser image and lockfile differ')\"\nif ! command -v unzip >/dev/null || ! command -v zipinfo >/dev/null; then\n  apt-get update -qq\n  apt-get install -y --no-install-recommends unzip\nfi\nunzip -v\nzipinfo -h\n"
+      run: "node -e \"const p=require('./web/package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.56.1')throw\
+        \ Error('Browser image and lockfile differ')\"\nif ! command -v unzip >/dev/null || ! command -v zipinfo\
+        \ >/dev/null; then\n  apt-get update -qq\n  apt-get install -y --no-install-recommends unzip\nfi\nunzip\
+        \ -v\nzipinfo -h\n"
     - name: Resolve only the exact separately approved candidate
       id: approved
       run: 'node --input-type=module <<''JS''
 
-        import assert from ''node:assert/strict'';import {readFile,appendFile} from ''node:fs/promises'';import {authorizationDigest} from ''./tools/paired-demo-policy.mjs'';
+        import assert from ''node:assert/strict'';import {readFile,appendFile} from ''node:fs/promises'';import
+        {authorizationDigest} from ''./tools/paired-demo-policy.mjs'';
+
+        assert(Boolean(process.env.PAIRED_REPLAY_ARTIFACT_ID)===Boolean(process.env.PAIRED_REPLAY_ARTIFACT_SHA256),''Replay ID and SHA-256 must be supplied together'');
 
         const source=process.env.PAIRED_SOURCE;assert(/^[a-f0-9]{40}$/.test(source||''''));
 
@@ -64,7 +72,8 @@ jobs:
         github-token: ${{ github.token }}
         path: ${{ runner.temp }}/paired-beta-evidence
     - name: Validate policy and all mandatory release guards
-      run: node --test tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs scripts/release-parity.test.mjs scripts/internal-beta-science.test.mjs scripts/consolidated-evidence.test.mjs
+      run: node --test tools/paired-demo*.test.mjs tools/public-demo21*.test.mjs scripts/release-parity.test.mjs
+        scripts/internal-beta-science.test.mjs scripts/consolidated-evidence.test.mjs
     - name: Download original candidate by artifact ID and verify full ZIP before extraction
       run: node tools/paired-demo.mjs artifact
     - name: Require exact bytes, current native proofs, scientific snapshot and live owner-only Apple availability
@@ -75,8 +84,17 @@ jobs:
         '
     - name: Capture actual previous public PWA and private synthetic progress
       run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-demo-browser"
+    - name: Archive closed synthetic browser profiles before any deployment
+      run: tar -C "$RUNNER_TEMP/paired-demo-browser" -czf "$RUNNER_TEMP/paired-browser-profiles-before.tar.gz" .
+    - uses: actions/upload-artifact@v4
+      with:
+        name: Paired-browser-profiles-before
+        path: ${{ runner.temp }}/paired-browser-profiles-before.tar.gz
+        retention-days: 90
+        if-no-files-found: error
     - name: Preserve previous public bytes and native receipt before any deployment
       run: node tools/paired-demo-snapshot.mjs "$RUNNER_TEMP/paired-previous-web"
+      if: ${{ !inputs.verification_only }}
     - uses: actions/upload-artifact@v4
       with:
         name: Paired-previous-web-rollback-snapshot
@@ -84,22 +102,38 @@ jobs:
         include-hidden-files: true
         retention-days: 90
         if-no-files-found: error
+      if: ${{ !inputs.verification_only }}
     - uses: actions/configure-pages@v5
+      if: ${{ !inputs.verification_only }}
     - uses: actions/upload-pages-artifact@v3
       with:
         path: dist-ios
+      if: ${{ !inputs.verification_only }}
     - name: Repeat live Apple and exact-source guards immediately before deployment
       run: node tools/paired-demo.mjs promote
+      if: ${{ !inputs.verification_only }}
     - name: Deploy original bytes paired with confirmed owner-only TestFlight
       id: deployment
       uses: actions/deploy-pages@v4
+      if: ${{ !inputs.verification_only }}
     - name: Verify every actually served file against immutable native and web receipts
       run: node tools/paired-demo.mjs published
+    - name: Replay unchanged archived previous-public bytes to approved candidate on private loopback
+      if: ${{ inputs.previous_archive_id != '' }}
+      run: node tools/paired-demo-replay.mjs "$RUNNER_TEMP/paired-replay-browser"
     - name: Verify real Chromium and WebKit PWA upgrade and preserved local data
       run: node tools/paired-demo-browser.mjs upgrade "$RUNNER_TEMP/paired-demo-browser"
     - name: Preserve exact public receipts and browser evidence
       if: always()
-      run: "mkdir -p \"$RUNNER_TEMP/paired-demo-evidence\"\nfor file in paired-demo-native-proof.json paired-demo-verification.json paired-previous-web-proof.json; do\n  if test -f \"$RUNNER_TEMP/$file\"; then cp \"$RUNNER_TEMP/$file\" \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\ndone\nif test -f dist-ios/release.json; then cp dist-ios/release.json \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\nfor file in capture-report.json upgrade-report.json chromium-verified.png webkit-verified.png; do\n  if test -f \"$RUNNER_TEMP/paired-demo-browser/$file\"; then cp \"$RUNNER_TEMP/paired-demo-browser/$file\" \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\ndone\n"
+      run: "mkdir -p \"$RUNNER_TEMP/paired-demo-evidence\"\nfor file in paired-demo-native-proof.json paired-demo-verification.json\
+        \ paired-previous-web-proof.json; do\n  if test -f \"$RUNNER_TEMP/$file\"; then cp \"$RUNNER_TEMP/$file\"\
+        \ \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\ndone\nif test -f dist-ios/release.json; then cp dist-ios/release.json\
+        \ \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\nfor file in capture-report.json upgrade-report.json chromium-verified.png\
+        \ webkit-verified.png; do\n  if test -f \"$RUNNER_TEMP/paired-demo-browser/$file\"; then cp \"$RUNNER_TEMP/paired-demo-browser/$file\"\
+        \ \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\ndone\n\nfor directory in paired-demo-browser paired-replay-browser;\
+        \ do\n  if test -d \"$RUNNER_TEMP/$directory\"; then\n    mkdir -p \"$RUNNER_TEMP/paired-demo-evidence/$directory\"\
+        \n    find \"$RUNNER_TEMP/$directory\" -maxdepth 1 -type f \\( -name \"*.json\" -o -name \"*.png\" \\) -exec\
+        \ cp {} \"$RUNNER_TEMP/paired-demo-evidence/$directory/\" \\;\n  fi\ndone\n"
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -117,4 +151,17 @@ jobs:
       authorization_sha256:
         description: Canonical SHA-256 of the distinct approved public demo declaration
         required: true
+        type: string
+      verification_only:
+        description: Verify an already deployed approved pair without deploying or downgrading any bytes
+        required: false
+        type: boolean
+        default: false
+      previous_archive_id:
+        description: Optional original archived previous-public artifact for explicitly labelled migration replay
+        required: false
+        type: string
+      previous_archive_sha256:
+        description: Full SHA-256 of the optional original previous-public archive ZIP
+        required: false
         type: string

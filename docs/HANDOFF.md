@@ -1,5 +1,14 @@
 # Punto di ingresso corrente
 
+## Aggiornamento pubblico22 — 27 ottobre2026
+
+Il consenso distinto «Confermo» è registrato con digest0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21. Il run40423289727 ha distribuito effettivamente1.1.0(22) da fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 e verificato tutti1652file dal dominio alle00:01:28.723Z. Apple è stata riletta VALID/IN_BETA_TESTING, gruppo esclusivo del titolare. Nessun ampliamento o certificazione indipendente.
+
+Il run resta FAILURE: nel controllo upgrade il worker nuovo controllava ancora un documento con JavaScript19. Il verificatore attendeva il worker, non necessariamente il ricaricamento effettivo. Correzione limitata a QA/workflow; applicazione firmata e autorizzazione immutate. I profili originali non erano stati archiviati e non se ne dichiara recuperata la continuità. Si conservano errore e archivio completo19 (artifact12699061819, ZIPfff1345d68646fef7ec0c08b0a72819a748a18486ef509cd694f497bc09feb7f).
+
+Recupero previsto: replay esplicitamente etichettato degli stessi byte19→22 su unico origin loopback, più verifica distinta del vero dominio22 in Chromium/WebKit con dati/esame/offline. Modalità verification_only evita ridistribuzioni o downgrade. Profili chiusi e diagnostica negativa saranno ora conservati. Prove finali ancora pendenti: non dichiarare l'incarico concluso.
+
+
 Leggere [MASTER_PROJECT_STATUS.md](MASTER_PROJECT_STATUS.md) e il [rapporto della22](evidence/paired-release-fab2b3e-20261026/README.md). TestFlight1.1.0(22) è disponibile nel solo gruppo interno, AppleVALID/IN_BETA_TESTING alle23:18:33 UTC del26/10/2026. Sorgente applicativo `fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03`, produttore40414345353 riuscito. Web ancora sulla19: allineamento pubblico **non completato**.
 
 ## Ripresa operativa
