@@ -7,12 +7,13 @@ export type PurchaseResult={status:'purchased'|'pending'|'cancelled';entitlement
 type SubscriptionListener={remove():void};
 type NativeAPI={
  product():Promise<AnnualProduct>;currentEntitlement():Promise<Entitlement>;purchase():Promise<PurchaseResult>;restore():Promise<Entitlement>;
+ isConfigured?():boolean;
  addListener(event:'entitlementChanged',listener:(value:Entitlement)=>void):SubscriptionListener;
 };
 const native=requireOptionalNativeModule<NativeAPI>('FungoSubscription');
-export const subscriptionAvailable=native!==null;
+export const subscriptionAvailable=native!==null&&native.isConfigured?.()!==false;
 function module():NativeAPI{
- if(!native)throw new Error('Gli abbonamenti richiedono la versione iOS di Fungo Italia installata da App Store o TestFlight.');
+ if(!native||!subscriptionAvailable)throw new Error('Gli abbonamenti richiedono l’app installata dallo Store e il servizio di verifica configurato.');
  return native;
 }
 const checked=checkedAccess;

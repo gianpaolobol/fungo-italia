@@ -1,0 +1,23 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+group = 'it.fungoitalia.subscription'
+version = '1.0.0'
+def endpoint = System.getenv('FUNGO_PLAY_VERIFIER_URL') ?: ''
+if (endpoint && !(endpoint ==~ /https:\/\/[A-Za-z0-9.-]+(?::[0-9]+)?(?:\/[A-Za-z0-9_\/-]*)?/)) {
+  throw new GradleException('FUNGO_PLAY_VERIFIER_URL must be an HTTPS URL without credentials, query or fragment')
+}
+android {
+  namespace 'it.fungoitalia.subscription'
+  buildFeatures { buildConfig true }
+  defaultConfig {
+    versionCode 1
+    versionName '1.0.0'
+    buildConfigField 'String', 'VERIFIER_URL', '"' + endpoint.replaceAll('/+$','') + '"'
+  }
+}
+dependencies {
+  implementation 'com.android.billingclient:billing:8.3.0'
+  testImplementation 'junit:junit:4.13.2'
+}

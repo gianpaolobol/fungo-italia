@@ -1,0 +1,26 @@
+# Android Play Billing — preparazione test interno
+
+## Stato e confini
+Scheda Play creata nel profilo `studio micologia`, package `it.fungoitalia.app`, app ID Play `4973468964713536197`. Identità, dispositivo e telefono verificati nella sessione. Profilo commerciante inviato dal titolare, conto beneficiario ancora in attesa di verifica al controllo del 27 ottobre. Nessuna vendita o nuova release pubblicata.
+
+Il modulo Expo implementa Google Play Billing 8.3.0 su Android; Swift StoreKit resta identico. Prodotto `it.fungoitalia.premium.annual`, base plan `annual`, rinnovo P1Y senza trial. Configurare Italia 19,99 EUR dopo il primo caricamento; il prezzo visibile viene da Play, non da un numero locale. Demo Agaricus e dati locali preservati. Gli abbonamenti non sono trasferiti fra Apple e Google in questo lotto.
+
+## Verificatore
+`server/play-billing/server.mjs` ascolta solo loopback su porta 8792. Richiede Node24 e un file service-account segreto tramite `GOOGLE_APPLICATION_CREDENTIALS`; non copiare il file nel repository/app. Collegare all'app Play solo i permessi di lettura/gestione acquisti necessari tramite il portale Google. La creazione delle credenziali e i nuovi permessi richiedono conferma specifica del titolare. Il servizio non è ancora distribuito.
+
+Mettere davanti un reverse proxy HTTPS con rate limit globale e per IP, limite corpo16KiB e timeout. Il servizio richiede inoltre `FUNGO_PLAY_CANARY_TOKEN`: token segreto di un acquisto license-test sul medesimo prodotto/piano, già acknowledged dopo una reale prova Google. `/health` deve rileggere tale acquisto da Play, verificare `testPurchase`, piano/prodotto e acknowledgment; OAuth da solo non basta. Ruotare il canary prima che Google smetta di renderlo interrogabile (dopo la scadenza il token ha disponibilità limitata). L’assenza o il fallimento blocca nuovi acquisti, senza fallback. La prima qualificazione richiede un harness di pagamento license-test controllato e distinto dalla build pubblicabile; non è ancora stata eseguita.
+
+Endpoint `/health` e POST `/verify` (purchaseToken e nonce). Nessun token, corpo Google o URL contenente token nei log. Un token è un segreto bearer: il client nativo lo prende da queryPurchases di Play e non espone un metodo JS per passare token arbitrari. Nessun account Fungo Italia introdotto; un futuro accesso multipiattaforma richiede autenticazione e binding token-account persistente, da progettare separatamente.
+
+Il server usa subscriptionsv2.get, piano/prodotto fissi, stati ACTIVE/CANCELED/IN_GRACE_PERIOD con scadenza futura, acknowledgment e rilettura dopo ack. Ogni avvio/foreground/restore ricontrolla Play e Google; errori, pending, revoche/hold/pausa/scadenza non danno premium. Nessun premium offline Android memorizzato: senza rete resta la demo; lo storico non viene cancellato. Niente promesse di revoca istantanea mentre l'app resta in foreground: ulteriori controlli periodici/RTDN sono una fase successiva.
+
+Per la build acquistabile impostare `FUNGO_PLAY_VERIFIER_URL=https://host/percorso` nel profilo EAS. Senza endpoint il modulo è presente ma gli acquisti sono disabilitati: questo è il bootstrap per rendere disponibile il modulo Billing a Play. Non usare un endpoint di prova come produzione. Verificare prima permessi reali del service account e lifecycle in license testing.
+
+## Build e caricamento
+Il workflow `Android Play Billing candidate` sul branch dedicato esegue Node/TypeScript, policy annuale Java, autolinking e compilazione APK/AAB diagnostici. Quei file sono firmati con il debug keystore Expo e NON vanno caricati su Play.
+
+Il secondo job prova EAS usando esclusivamente credenziali Android già esistenti (`--freeze-credentials`), profilo `android-play-bootstrap`. Non esegue submit, OTA, iOS o pubblicazione. Se manca il keystore Android, il job deve fallire; creare/registrare una chiave di caricamento stabile tramite percorso EAS/Play autorizzato, mai trasformare il debug keystore in firma production.
+
+Prima di caricare il vero AAB verificare sorgente/versionCode, firma, SHA256 e manifest Billing. Primo caricamento manuale nel canale interno, solo titolare, senza rollout pubblico. Creare poi prodotto/piano annuale Italia19,99, distribuire il verificatore autorizzato, nuova build con endpoint e test Google: acquisto, cancellazione UI, pending, restore/reinstallazione, rinnovo/disdetta, scadenza, rimborso/revoca, cambio account, assenza rete e prodotto non disponibile.
+
+Privacy Android da aggiornare prima dell'abilitazione degli acquisti: trasmissione token al verificatore e Google, finalità verifica, conservazione/log e contatto del titolare. Nessun invio foto al verificatore. La verifica tecnica non certifica i contenuti scientifici; non alterare gate o ricevute esistenti.

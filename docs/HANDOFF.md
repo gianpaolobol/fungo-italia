@@ -1,3 +1,15 @@
+## Android Google Play — candidato locale, non distribuito — 27 ottobre 2026
+
+Mandato acquisito nella sessione: Google Play con demo Agaricus e annuale EUR19,99. Account Play e scheda Fungo Italia creati; package it.fungoitalia.app, app4973468964713536197. Il titolare ha inviato il profilo commerciante personalmente. Conto beneficiario in attesa di verifica nell’ultima lettura; nessuna modifica bancaria da agente.
+
+Ramo locale `feat/android-play-billing-20261027`, baseline `83fe69483c344905765ed75ed456aad4c1b72918`. Implementati modulo Android Billing8.3.0, servizio Node di verifica Google, copy per piattaforma e pipeline separata senza submit/OTA/iOS. Nessuna scienza/dato curricolare/Swift modificata. Acquisti Android disabilitati senza endpoint e prova license-test qualificata. Nessun flag premium locale o certificazione inventata.
+
+Prove locali:324 test Node PASS0fail0skip; TypeScript PASS;10 casi Java (offerte/date) PASS; expo prebuild Android PASS; autolinking Android Billing PASS; prepare:data senza drift. Revisione separata: un difetto importante readiness OAuth corretto con test RED→GREEN; ora serve lettura Play di un acquisto test acknowledged. Corrette anche normalizzazione ISO per API24 e opzione --json autolinking.
+
+Compilazione Kotlin/APK/AAB NON verificata: Gradle non scaricabile nel runtime (`Network is unreachable` su services.gradle.org). Push bloccato dal controllo automatico di autorizzazione: richiesta conferma specifica per invio codice al repository GitHub e avvio CI/build remota. Nessun push/PR/CI/EAS o upload Play eseguito in questa sessione. Il codice resta nei commit locali; dopo consenso push ramo dedicato e PR, leggere i job e correggere ogni errore nativo prima di qualunque dichiarazione di build valida. Il workflow tenta EAS solo con firma Android preesistente (--freeze-credentials); un keystore mancante è un blocco reale, non autorizza firma debug production.
+
+Ulteriori blocchi: backend HTTPS/credenziali Google/canary non distribuiti o creati; primo AAB firmato da caricare nel canale interno titolare; poi prodotto/piano annual/Italia19,99; lifecycle license testing, privacy Android e produzione restano aperti. [Runbook](ANDROID-PLAY-BILLING.md).
+
 <!-- IOS_STUDY_24_CURRENT -->
 ## Allineamento tecnico WEB/PWA e TestFlight24 verificato —27 ottobre2026
 

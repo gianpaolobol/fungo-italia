@@ -1,0 +1,78 @@
+name: Android Play Billing candidate
+on:
+  push:
+    branches: [feat/android-play-billing-20261027]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: android-play-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - run: npm ci
+      - name: Verify data and shared subscription regressions
+        run: |
+          npm run prepare:data
+          git diff --exit-code -- src/data
+          npm run typecheck
+          node --test scripts/*.test.mjs lib/*.test.mjs
+          mkdir -p /tmp/annual-policy
+          javac -d /tmp/annual-policy modules/fungo-subscription/android/src/main/java/it/fungoitalia/subscription/AnnualOfferPolicy.java modules/fungo-subscription/android/src/main/java/it/fungoitalia/subscription/PlayDates.java tests/play-billing/AnnualOfferPolicyTest.java
+          java -cp /tmp/annual-policy AnnualOfferPolicyTest
+      - name: Generate Android and verify autolinking
+        run: |
+          npx expo prebuild --platform android --no-install
+          npx expo-modules-autolinking resolve --platform android --json > /tmp/android-autolinking.json
+          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('/tmp/android-autolinking.json')); if(!JSON.stringify(x).includes('FungoSubscriptionModule'))throw Error('Android billing module not linked')"
+        env:
+          CI: '1'
+          FUNGO_PLAY_VERIFIER_URL: ''
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Compile diagnostic APK and AAB with Billing
+        working-directory: android
+        run: ./gradlew :app:assembleRelease :app:bundleRelease --no-daemon --max-workers=2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Android-Play-Billing-diagnostic-NOT-FOR-PLAY
+          path: |
+            android/app/build/outputs/apk/release/*.apk
+            android/app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
+          retention-days: 14
+  signed-bootstrap:
+    needs: qualify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Queue private signed Android bootstrap with existing EAS credentials only
+        run: |
+          test -n "$EXPO_TOKEN" || { echo '::error::Existing Expo authentication unavailable'; exit 1; }
+          mkdir -p artifacts/android-play
+          npx eas-cli@24.8.0 build --platform android --profile android-play-bootstrap --non-interactive --freeze-credentials --no-wait --json > artifacts/android-play/eas-build.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-Play-signed-build-request
+          path: artifacts/android-play/
+          retention-days: 14
