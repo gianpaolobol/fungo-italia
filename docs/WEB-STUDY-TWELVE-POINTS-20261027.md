@@ -1,5 +1,16 @@
 # Dodici interventi web — 27 ottobre 2026
 
+## Web dei dodici punti pubblicata e verificata — 27 ottobre 2026
+
+Sito effettivo: https://gianpaolobol.github.io/fungo-italia/ . Sorgente pubblicato `a227c1f20d3e8f5d731c7b61f73babc1cee4635c`, content hash `7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d`. Run40500252557 SUCCESS (secondo tentativo dei soli job fermati): qualifica314Node0fail0skip e TypeScript; componenti Chromium/WebKit; deploy Pages; verifica tutti1655file inclusi3metadati alle12:13:18.533Z; upgrade reale dominio alle12:13:26.693Z. Il primo tentativo bloccato dalla regola Pages solo-main resta FAILURE storico. Il titolare ha confermato specificamente l’aggiunta del solo ramo `feat/web-study-twelve-points-20261027`; regola salvata, main e altre protezioni mantenuti.
+
+Profili originali pubblici23 acquisiti prima del deploy, conservati e ripristinati in job separato: Chromium/WebKit PASS, vecchio worker/documento/storage verificati offline prima di consentire rete, attivazione nuova cache senza reload forzato, normale reload apre nuovo JS, note/preferiti/sessione/storico/bozza invariati byte per byte. Nuovo documento offline dal worker e sonda indipendente realmente disconnessa PASS. Prove pubbliche artifact12733890727 ZIP scaricato/verificato SHA256d19abcdcc74bc0a086b99bb966dc376e63ba49aa35ce15685a1f58b03ad4ff8b. Rapporti in `docs/evidence/web-only-release-20261027/`. Qualifica artifact12731694930 ZIP verificato bd9d8e8a982d7206cff69357d9adb982f0454682f1acacccb7a72f5cd3be0bfc. Schermate pubbliche Chromium/WebKit ispezionate; browser cloud conferma saluto senza richiesta nome, salvadanaio e stato versione web in attesa iPhone dopo normale reload.
+
+Tutti12 implementati nel sorgente pubblicato. Web ordinaria conserva demo Agaricus e vincoli StoreKit: percorso completo e banca821 collaudati nel harness separato non pubblicato, senza attribuire entitlement. Conteggi218 schede minime,42+34 moduli S1, nessun taxon aggiunto. Algoritmo errori/ripassi/nuove e intervalli1/3/7/14/30giorni, due prime risposte autonome perfette in sessioni distinte; dettagli nel rapporto12punti. Approvazione del titolare non indipendente vincolata agli hash; independentReleaseReady=false, certified=false, AppStorefalse restano reali.
+
+NESSUN merge main: baseline740c3773569aba5ba212066c111918e45d8ec613 invariata. Nessuna nuova iPhone/OTA/TestFlight/AppStore avviata. PR128 resta aperta senza merge per evitare trigger nativi. Lotto web consegnato; AUTOMAZIONE DISATTIVATA e attesa della successiva conferma esplicita del titolare sulla web prima di ogni aggiornamento iOS. I checkpoint sotto descrivono la cronologia e non sostituiscono questo esito.
+
+
 Stato: implementazione nel ramo `feat/web-study-twelve-points-20261027`, PR128. Nessun merge main, deploy, OTA, build o invio iPhone per questo lotto. Non è una consegna pubblicata. La baseline pubblica/TestFlight resta23.
 
 ## Perimetro e risultati
