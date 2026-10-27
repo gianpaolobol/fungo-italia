@@ -8,9 +8,9 @@
   "nativeRun": 40503822541,
   "purchaseUIRun": 40503822569,
   "demoRun": 40503822843,
-  "mainMustNotMoveUntilReceipt": true,
-  "publishedWebSource": "a227c1f20d3e8f5d731c7b61f73babc1cee4635c",
-  "state": "TestFlight24-available-public-pair-pending",
+  "mainMustNotMoveUntilReceipt": false,
+  "publishedWebSource": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+  "state": "TestFlight24-and-web-published-original-profile-upgrade-not-verified",
   "scientificGapWorkflow": {
     "run": 40503822619,
     "conclusion": "failure",
@@ -94,5 +94,33 @@
     "publicEvidenceZipSha256": "d5494f181d15add3689507c6be60773920b847ffc29b5d10e74669ad1d001e59",
     "deployPerformed": false,
     "followup": "diagnostic-only error adds path/status/url before a new qualified attempt; no integrity check or application change"
+  },
+  "publicPairDeploy": {
+    "run": 40516389667,
+    "deployment": "success",
+    "servedFiles": "1652 payload plus metadata verified",
+    "source": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+    "upgrade": "failure Chromium worker new739, document old82da; zero pageErrors; first negative preserved",
+    "profileArtifactId": 12739667356,
+    "profileZipSha256": "e7cff7a0133764ec0daa8400d19b13f9114bdc8cdcefb1244f4a86dbc109f4d3",
+    "publicEvidenceArtifactId": 12740625356,
+    "publicEvidenceZipSha256": "e2b6e369dfca798ce95f9c23a1968a2d28855095eb4004cd0718803ebdc76df2"
+  },
+  "recovery": {
+    "run": 40517527324,
+    "mode": "verification_only with exact original profiles, no deploy or native upload",
+    "firstFailure": "Apple audience preflight API timed out after45s before profile restore; mandatory guard preserved",
+    "action": "specific failed job122234940609 rerun successfully requested through GitHub connector; attempt2",
+    "rerunWholeFailedWorkflow": "403 workflow cannot be retried; no action occurred",
+    "attempt2": "GitHub Actions Startup failure before jobs: An unexpected error has occurred; request D3EC:1EC9D4:3B1924:55B187:6AE0B121",
+    "attempt3": "UI temporarily showed Latest #3 queued; after reload actual API and UI both report run_attempt2 startup_failure, no attempt3 resource; no successful recovery claimed",
+    "latestVerified": "completed/startup_failure, updated2026-10-27T14:21:24Z; no jobs; request FF87:3B4397:1AB44A:2606F0:6AE0B2A5",
+    "blocked": true,
+    "noMoreImmediateRetries": true
+  },
+  "cloudBrowser": {
+    "normalUpdateButton": "success",
+    "visibleVersionStatus": "Questa versione corrisponde alla versione TestFlight verificata.",
+    "ciPwaProofStillPending": true
   }
 }

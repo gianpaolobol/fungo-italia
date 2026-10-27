@@ -1,0 +1,52 @@
+{
+  "scope": "live-public-origin",
+  "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js\"\nReceived: \"/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js\"\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+  "controller": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+  "documentScript": "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js",
+  "pageErrors": [],
+  "cacheObservations": {
+    "afterNavigation": [
+      {
+        "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+        "entries": 47,
+        "shellListed": true,
+        "shellReadable": true,
+        "shellStatus": 200,
+        "appScripts": [
+          "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+        ]
+      },
+      {
+        "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+        "entries": 0,
+        "shellListed": false,
+        "shellReadable": false,
+        "shellStatus": null,
+        "appScripts": []
+      }
+    ]
+  },
+  "cacheAtFailure": [
+    {
+      "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+      "entries": 47,
+      "shellListed": true,
+      "shellReadable": true,
+      "shellStatus": 200,
+      "appScripts": [
+        "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+      ]
+    },
+    {
+      "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+      "entries": 41,
+      "shellListed": true,
+      "shellReadable": true,
+      "shellStatus": 200,
+      "appScripts": [
+        "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+      ]
+    }
+  ],
+  "reports": []
+}
