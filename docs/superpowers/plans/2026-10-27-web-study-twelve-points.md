@@ -20,3 +20,10 @@ Nessuna revisione scientifica indipendente inventata. Nessun dato storico elimin
 - Banca teorica:476 quesiti originali effettivamente recuperati e invariati (il precedente riferimento a425 era inesatto) + teoria dei casi fotografici +18 fondamenti con riferimenti Ministero/GU/Nikon, più moduli S1. Storico separato, bozze salvate, nessuna fotografia nel teorico.
 - Esecuzione inline autorizzata. Nessun merge main: attiverebbe build native che il titolare ha sospeso. PR web-only non tocca i trigger dei workflow StoreKit.
 - Download browser locale fallito per ZIP troncati: non dichiarato PASS. Predisposto CI con immagine Playwright1.62 per i collaudi reali; nessun test saltato.
+
+## Prosecuzione27/10: rimozione dei blocchi tecnici prima della revisione
+
+- Preparare fascicolo amministrativo dei18 quesiti con fonte/soluzione e campi decisionali vuoti. Nessun invio ai revisori, nessuna firma o approvazione attribuita.
+- Collaudare la prima migrazione web-only: la vecchia23 non riconosce schema2 e quindi non offre il pulsante di aggiornamento. Il candidato web-only attiva il worker soltanto dopo cache atomica completa; nessuna ricarica forzata del documento, nessuna scrittura nei dati utente, cache precedente conservata. Il successivo ricaricamento ordinario usa la nuova shell.
+- Red/green sul ciclo installazione del worker, inclusa indisponibilità rete. Replay originale23→candidato in Chromium/WebKit con sessione/storico/bozza creati dalla vera UI, note/preferiti, documento ancora aperto durante attivazione, reload ordinario e nuovo documento offline con sonda indipendente. Nessuna ricevuta scientifica o Apple simulata come reale: metadata503 nel solo replay, candidato non pubblicato.
+- Conservare negativi e prove CI; qualificare esattamente il checkout. Pubblicazione pubblica e upgrade dei profili reali restano bloccati finché la revisione richiesta non è disponibile.

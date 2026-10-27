@@ -7,6 +7,8 @@ on:
       - 'lib/**'
       - 'tests/study/**'
       - 'web/study-review.mjs'
+      - 'web/*web-only*.mjs'
+      - 'web/web-only-upgrade.mjs'
       - 'web/study-release-preflight.mjs'
       - 'web/build-study-fixture.mjs'
       - 'src/data/theory-foundations.json'
@@ -14,6 +16,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 jobs:
   web-only:
     runs-on: ubuntu-latest
@@ -35,7 +38,20 @@ jobs:
           npm run typecheck
           node --test scripts/*.test.mjs lib/*.test.mjs
       - name: Build actual web application
-        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/build.mjs
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/build-web-only.mjs
+      - name: Download original paired23 archive for isolated PWA migration
+        uses: actions/download-artifact@v4
+        with:
+          name: Paired-web-candidate
+          run-id: 40437151113
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/web-old23
+      - name: Verify first web-only upgrade in Chromium and WebKit without deploying
+        env:
+          WEB_OLD_DIR: ${{ runner.temp }}/web-old23
+        run: |
+          node web/web-only-upgrade.mjs
+          STUDY_BROWSER=webkit node web/web-only-upgrade.mjs
       - name: Record actual scientific and web-only publication blockers
         run: GITHUB_SHA="$(git rev-parse HEAD)" node web/study-release-preflight.mjs
       - name: Build unpublished component review fixture
