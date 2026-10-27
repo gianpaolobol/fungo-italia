@@ -2,6 +2,8 @@
 
 ## Qualifica finale del sorgente4fa38b85 — pubblicazione bloccata
 
+Il controllo ripetuto è ora sospeso sul blocco di revisione umana, per evitare altri tentativi identici. Non equivale a consegna web: nessun nuovo sito è stato pubblicato. L'autorizzazione tecnica/pubblicazione web resta acquisita e la conferma iOS successiva resta obbligatoria.
+
 Run40475233230,40475233231 e40475233242: **tutti SUCCESS**. TypeScript,300Node0fail0skip e Chromium/WebKit riusciti. Corretto il precedente stamp del merge virtuale PR; nuovo export e preflight riferiti realmente a4fa38b85d5c51d4f387258528f25a1917a70001e. Scaricato l'archivio candidato originale12720466768, verificato ZIP SHA2565fbc5b0c7aff386ee0da66bb220319d46233d943a6f56e1b7b36bfd27a54fa86 e ognuno dei1652file tramite validateCandidate. Contenthashdee3c91ee9edcb9a98b83e33ff7854837ae8e7ba28e87b8a792e991474e3eaa4. ZIP prove12720013890 verificato35a9e1b9e46c8fe60e65b7254d53d5340f96839f18054debda2ed3580c8da961; preflight riletto con SHA reale e pubblicazione=false. [Registro e risultati browser](evidence/web-study-20261027/verification.json). Pacchetto componenti per revisione non pubblicato12720221961; non attribuisce acquisti.
 
 Il preflight resta negativo: strict1/1 e18 fondamenti non indipendentemente revisionati. Nessun sito nuovo, binario iPhone o OTA. Main740c377 e dominio pubblico23/5c9eaa03 ricontrollati, invariati. Nessuna prova di upgrade PWA del nuovo candidato dichiarata. Le sezioni seguenti conservano gli stati precedenti e i negativi reali.
