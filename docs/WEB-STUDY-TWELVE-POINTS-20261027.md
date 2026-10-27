@@ -15,7 +15,7 @@ Stato: implementazione nel ramo `feat/web-study-twelve-points-20261027`, PR128. 
 | 7 | Fungo verde pieno con moneta e fessura | Nessun puntino bianco; nessuna modifica ai diritti di abbonamento. |
 | 8 | Esiti per scheda e ripasso solo delle errate; due prime risposte autonome perfette in sessioni diverse | Un errore successivo azzera la sequenza di apprendimento; ripassi nella stessa sessione non contano come seconda prova. |
 | 9 | Algoritmo descritto sotto | Copertura, apprendimento scheda e indice di preparazione restano misure distinte. |
-| 10 | Esame teorico separato,742 quesiti a scelta chiusa; fotografico15 casi con foto | PR120 è audit/riconciliazione, non la nuova UI. Recuperati476 quesiti reali;18 fondamenti e76 moduli documentati completano la banca con teoria dei casi fotografici. Nuovo contenuto non attestato scientificamente. |
+| 10 | Esame teorico separato,821 quesiti a scelta chiusa; fotografico15 casi con foto | PR120 è audit/riconciliazione, non la nuova UI. Recuperati476 quesiti reali;18 fondamenti e76 moduli documentati completano la banca con teoria dei casi fotografici e79 quesiti sulle indicazioni commerciali già presenti nelle schede. Nuovo contenuto non attestato scientificamente. |
 | 11 | Pallini da colori documentati, anche chiari, composti o variabili | Testo originale e contorno conservati. Nessun colore inventato per dato assente/indeterminato. |
 | 12 | Radio selezionato nero su opzione mortale | Categoria mortale resta rossa; stato aria-checked esplicito, collaudato in Chromium e WebKit, anche non selezionato e cambio opzione. |
 
@@ -27,7 +27,7 @@ Appresa significa almeno due prime risposte completamente corrette senza suggeri
 
 Questo modello è preferibile alla ripetizione dell'intera prova: concentra il lavoro sulle lacune conservando novità e richiamo delle corrette. Il conteggio delle schede apprese va letto separatamente dall'indice di preparazione, che include copertura, decadimento e simulazioni. Le percentuali non attestano abilitazione o idoneità al consumo.
 
-La teoria usa archivio/versione separati e selezione casuale adattiva: almeno un quesito per argomento nei test misti, poi priorità a errori, quesiti nuovi e corretti. Le opzioni sono mescolate stabilmente per sessione mantenendo ID e soluzioni. Le risposte teoriche alimentano soltanto le relative competenze; mai un riconoscimento fotografico non svolto. I742 quesiti comprendono395 micologia,253 tossicologia,4 legislazione,6 figura professionale,3 commercio,5 microscopia e76 obiettivi curricolari. Sono una banca didattica iniziale, non una simulazione di distribuzione ministeriale dei quesiti.
+La teoria usa archivio/versione separati e selezione casuale adattiva: almeno un quesito per argomento nei test misti, poi priorità a errori, quesiti nuovi e corretti. Le opzioni sono mescolate stabilmente per sessione mantenendo ID e soluzioni. Le risposte teoriche alimentano soltanto le relative competenze; mai un riconoscimento fotografico non svolto. I821 quesiti comprendono395 micologia,253 tossicologia,4 legislazione,6 figura professionale,82 commercio,5 microscopia e76 obiettivi curricolari. Sono una banca didattica iniziale, non una simulazione di distribuzione ministeriale dei quesiti.
 
 ## Dati e distribuzione
 
@@ -41,7 +41,7 @@ Il controllo reale `node scripts/internal-beta-science.mjs` rifiuta la banca agg
 
 ## Prove
 
-Locali: TypeScript PASS;299 test Node PASS,0fail,0skip. Download browser locale fallito (ZIP troncato), non dichiarato positivo. Il workflow `web-study-review.yml` costruisce il vero export web e un fixture separato non distribuibile, poi esegue Chromium/WebKit; i primi negativi rimangono nelle esecuzioni Actions. Run40473274095 SUCCESS su d8d750665409fe5e4c5042fc7a5a5f8a0e250d10: Chromium e WebKit PASS,22 file di prove, ZIP artifact12719453380 verificato SHA256 b5557904fb63f3a822fca0426ba1a3226d0330952d636d3c6cb788447acd90b5. Schermate realmente ispezionate: livelli, tre viste, grafico, saluto, zoom, radio selezionato/cambio opzione, ripasso di un solo errore, teoria. È un harness dei componenti, non una verifica di acquisti né pubblicazione. La qualifica tecnica non è una revisione scientifica.
+Locali: TypeScript PASS;300 test Node PASS,0fail,0skip. Download browser locale fallito (ZIP troncato), non dichiarato positivo. Il workflow `web-study-review.yml` costruisce il vero export web e un fixture separato non distribuibile, poi esegue Chromium/WebKit; i primi negativi rimangono nelle esecuzioni Actions. Run40473274095 SUCCESS su d8d750665409fe5e4c5042fc7a5a5f8a0e250d10: Chromium e WebKit PASS,22 file di prove, ZIP artifact12719453380 verificato SHA256 b5557904fb63f3a822fca0426ba1a3226d0330952d636d3c6cb788447acd90b5. Schermate realmente ispezionate: livelli, tre viste, grafico, saluto, zoom, radio selezionato/cambio opzione, ripasso di un solo errore, teoria. La prima qualifica precede i79 quesiti commerciali e il contratto web-only aggiunti nel seguito. È un harness dei componenti, non una verifica di acquisti né pubblicazione. La qualifica tecnica non è una revisione scientifica.
 
 ## Preparazione web-only successiva alla prima qualifica
 
