@@ -115,4 +115,18 @@ jobs:
     - web/**
     - assets/**
     - .github/workflows/ios-pwa.yml
+  pull_request:
+    branches:
+    - main
+    paths:
+    - App.tsx
+    - app.*
+    - package*.json
+    - components/**
+    - hooks/**
+    - lib/**
+    - src/data/**
+    - web/**
+    - assets/**
+    - .github/workflows/ios-pwa.yml
   workflow_dispatch: null
