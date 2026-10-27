@@ -17,6 +17,6 @@ Nessuna revisione scientifica indipendente inventata. Nessun dato storico elimin
 
 ## Secondo lotto
 - Livelli: mantenute218 unità minime; moduli aggiuntivi esatti dalle colonne S1, vincolati a un genitore già ammesso; conteggi distinguono schede e moduli.
-- Banca teorica:425 quesiti originali invariati + teoria dei casi fotografici +18 fondamenti con riferimenti Ministero/GU/Nikon, più moduli S1. Storico separato, bozze salvate, nessuna fotografia nel teorico.
+- Banca teorica:476 quesiti originali effettivamente recuperati e invariati (il precedente riferimento a425 era inesatto) + teoria dei casi fotografici +18 fondamenti con riferimenti Ministero/GU/Nikon, più moduli S1. Storico separato, bozze salvate, nessuna fotografia nel teorico.
 - Esecuzione inline autorizzata. Nessun merge main: attiverebbe build native che il titolare ha sospeso. PR web-only non tocca i trigger dei workflow StoreKit.
 - Download browser locale fallito per ZIP troncati: non dichiarato PASS. Predisposto CI con immagine Playwright1.62 per i collaudi reali; nessun test saltato.

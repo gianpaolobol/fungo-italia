@@ -7,6 +7,7 @@ on:
       - 'lib/**'
       - 'tests/study/**'
       - 'web/study-review.mjs'
+      - 'web/study-release-preflight.mjs'
       - 'web/build-study-fixture.mjs'
       - 'src/data/theory-foundations.json'
       - '.github/workflows/web-study-review.yml'
@@ -35,6 +36,8 @@ jobs:
           node --test scripts/*.test.mjs lib/*.test.mjs
       - name: Build actual web application
         run: node web/build.mjs
+      - name: Record actual scientific and web-only publication blockers
+        run: node web/study-release-preflight.mjs
       - name: Build unpublished component review fixture
         run: node web/build-study-fixture.mjs
       - name: Review actual study components in Chromium and WebKit
@@ -53,3 +56,8 @@ jobs:
           name: web-study-candidate
           path: dist-ios/
           retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unpublished-owner-component-review
+          path: dist-owner-review/
+          retention-days: 7

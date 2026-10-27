@@ -41,3 +41,10 @@ test('release hashes must be scalar strings and inconsistent same-source version
  for(const key of ['sourceCommit','iconSha256','webContentHash','appleBuildId'])assert.equal(validateRelease({...report,[key]:[report[key]]}),null);
  assert.equal(compareRelease({...local,version:'1.0.0'},report).status,'unknown');
 });
+
+test('a web-only receipt never asserts new TestFlight alignment',()=>{
+ const web={schemaVersion:2,distribution:'web-only',sourceCommit:local.sourceCommit,version:local.version,iconSha256:report.iconSha256,webContentHash:report.webContentHash,iosUpdatePendingOwnerConfirmation:true,independentReleaseReady:true,appStoreReady:false};
+ assert.equal(compareRelease(local,web).status,'web-current');
+ assert.equal(compareRelease({...local,sourceCommit:'d'.repeat(40)},web).status,'update-available');
+ for(const patch of [{iosUpdatePendingOwnerConfirmation:false},{independentReleaseReady:false},{appleBuildId:report.appleBuildId},{buildNumber:'24'},{appStoreReady:true}])assert.equal(validateRelease({...web,...patch}),null);
+});
