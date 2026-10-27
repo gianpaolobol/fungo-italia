@@ -1,0 +1,44 @@
+{
+  "scope": "live-public-origin",
+  "error": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"/fungo-italia/_expo/static/js/web/index-28146ede337edd63fb55585a63559b25.js\"\nReceived: \"/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js\"\n\nCall Log:\n- Timeout 60000ms exceeded while waiting on the predicate",
+  "controller": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "documentScript": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+  "pageErrors": [],
+  "cacheObservations": {
+    "afterNavigation": [
+      {
+        "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+        "entries": 44,
+        "shellListed": true,
+        "shellReadable": true,
+        "shellStatus": 200,
+        "appScripts": [
+          "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+        ]
+      }
+    ]
+  },
+  "cacheAtFailure": [
+    {
+      "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+      "entries": 44,
+      "shellListed": true,
+      "shellReadable": true,
+      "shellStatus": 200,
+      "appScripts": [
+        "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+      ]
+    },
+    {
+      "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84",
+      "entries": 41,
+      "shellListed": true,
+      "shellReadable": true,
+      "shellStatus": 200,
+      "appScripts": [
+        "/fungo-italia/_expo/static/js/web/index-28146ede337edd63fb55585a63559b25.js"
+      ]
+    }
+  ],
+  "reports": []
+}

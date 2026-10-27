@@ -1,0 +1,47 @@
+{
+  "scope": "actual public source and origin; visual geography inspection required",
+  "regionCount": 6,
+  "searchCount": 1,
+  "habitat": true,
+  "markers": 1,
+  "viewportSettled": true,
+  "failures": [],
+  "tiles": [
+    {
+      "url": "https://tile.openstreetmap.org/9/272/187.png",
+      "status": 200,
+      "sha256": "16c54ae2c026ce95671d5d8d51c2272efbc1df694006eb3ca0088bfe9818b13f",
+      "bytes": 46283
+    },
+    {
+      "url": "https://tile.openstreetmap.org/9/271/187.png",
+      "status": 200,
+      "sha256": "f509083f19cab5643608be37316380462c0f219c8abdc7353f45661357d942da",
+      "bytes": 42857
+    },
+    {
+      "url": "https://tile.openstreetmap.org/9/272/188.png",
+      "status": 200,
+      "sha256": "7901bcd81c5d8a04b5043611e5de2e0fbbbd3100528fe89478fa0f30e46c62f8",
+      "bytes": 36980
+    },
+    {
+      "url": "https://tile.openstreetmap.org/9/273/187.png",
+      "status": 200,
+      "sha256": "2fbbb21684aa102a9d8e19c69911b6a8155ae14f1ff043c50f09470c8596851d",
+      "bytes": 41614
+    },
+    {
+      "url": "https://tile.openstreetmap.org/9/273/188.png",
+      "status": 200,
+      "sha256": "974680f6f195bb72a0ea4d7876a9b3b673e31da00321dbb9770ecb1fcb5e14b4",
+      "bytes": 44035
+    },
+    {
+      "url": "https://tile.openstreetmap.org/9/271/188.png",
+      "status": 200,
+      "sha256": "f83328aed51ff5f98092bcce074c858a214c1c1490951f76c25d1ddd99d99450",
+      "bytes": 25854
+    }
+  ]
+}

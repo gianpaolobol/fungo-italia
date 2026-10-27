@@ -1,0 +1,35 @@
+{
+  "runtime": "1.62.0",
+  "executable": "/ms-playwright/webkit-2336/pw_run.sh",
+  "scope": "private engine regression; no Fungo app or public origin involved",
+  "baseline": false,
+  "browserVersion": "26.5",
+  "immediate": {
+    "keys": [
+      "private-regression-fixture"
+    ],
+    "listed": [
+      "http://127.0.0.1:40901/meta"
+    ],
+    "body": "immutable-private-fixture"
+  },
+  "afterReload": {
+    "keys": [
+      "private-regression-fixture"
+    ],
+    "listed": [
+      "http://127.0.0.1:40901/meta"
+    ],
+    "body": "immutable-private-fixture"
+  },
+  "afterReopen": {
+    "keys": [
+      "private-regression-fixture"
+    ],
+    "listed": [
+      "http://127.0.0.1:40901/meta"
+    ],
+    "body": "immutable-private-fixture"
+  },
+  "persistenceVerified": true
+}

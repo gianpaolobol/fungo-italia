@@ -1,5 +1,14 @@
 # Fungo Italia — stato master operativo
 
+## Allineamento23 effettivamente verificato —27 ottobre2026
+
+Web pubblico e TestFlight interno **1.1.0(23)** corrispondono al sorgente applicativo `5c9eaa03b678b6c97429975af61834fb919e2156`. Consenso pubblico distinto «Procedi», digest `9961d2fd16b12a778e1500a6d30679aa2b4c0f421e3b152add1b54547a0679c7`, registrato nel commit5f70001. Deploy40465563726 effettivo,1652file verificati; primo controllo PWA FAILURE conservato. Recupero **40466560358 SUCCESS**, verificati tutti1652file dal dominio alle07:23:14.530Z e Apple solo titolare alle07:22:43.471Z. Nessuna nuova distribuzione nel recupero.
+
+I **profili originali pubblici22 prima del deploy** sono stati ripresi dall’artifact12716616989 con ZIP verificato. In Chromium151/WebKit26.5 entrambi: sorgente22→23, nuovo documento/JS/worker, aggiornamento manuale normale, note/preferiti/sessione/storico conservati, nuovo documento offline dal vero worker e sonda indipendente disconnessa PASS. Nessun ricaricamento supplementare necessario nel recupero; il primo negativo resta reale, non rinominatoPASS. Due mappe del vero dominio23 ispezionate: cartografia reale/Amiata, sei tessereHTTP200 per motore, zero errori, habitat/filtri/71macroaree e nessun paywall.
+
+[Rapporto finale e ricevute](evidence/paired-release-5c9eaa0-20261027/README.md). Dataset867file invariato, zero revisioni indipendenti, gate strict1/1 preservati; demo pubblica non certificata, nessun App Store definitivo o ampliamento TestFlight. Le prove iPhone/iPad sono simulatori iOS26.2, non dispositivi fisici. I paragrafi successivi mantengono la cronologia ai rispettivi istanti e non sostituiscono questo stato finale.
+
+
 ## Demo pubblica23 autorizzata — 27 ottobre2026
 
 Il titolare ha risposto «Procedi» alla richiesta specifica per la demo web non certificata1.1.0(23), sorgente `5c9eaa03b678b6c97429975af61834fb919e2156`. Consenso distinto registrato in `revisione/public-demo-authorizations/5c9eaa03b678b6c97429975af61834fb919e2156.json`, digest `9961d2fd16b12a778e1500a6d30679aa2b4c0f421e3b152add1b54547a0679c7`. Policy originale e corrispondenza con la ricevuta Apple23 verificate. Pubblicazione e prove PWA ancora pendenti: non attestare l'allineamento prima dei riscontri reali. Nessuna revisione indipendente, pubblicazione App Store o ampliamento TestFlight autorizzati.

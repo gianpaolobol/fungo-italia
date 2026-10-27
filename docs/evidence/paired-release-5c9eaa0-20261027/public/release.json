@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "version": "1.1.0",
+  "buildNumber": "23",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "webContentHash": "9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84",
+  "appleBuildId": "2f00918f-55b1-47f5-96f0-d6b9e2757e96",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "betaDetailId": "2f00918f-55b1-47f5-96f0-d6b9e2757e96",
+  "betaStateVerifiedAt": "2026-10-27T03:05:35.349Z",
+  "diagnosticOnly": true,
+  "testFlightOnly": true,
+  "ipaSha256": "141d0a676b9eb3ba64ce6c6ee3b06474378180ea58ea0d6d09b274710b5e1481",
+  "producerRunId": "40437151113",
+  "nativeStorekitVerified": true,
+  "storekitUIVerified": true,
+  "appStoreReady": false,
+  "evidence": {
+    "native": {
+      "id": 40437151124,
+      "path": ".github/workflows/subscription-storekit-tests.yml",
+      "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151124"
+    },
+    "ui": {
+      "id": 40437151127,
+      "path": ".github/workflows/subscription-storekit-ui.yml",
+      "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151127"
+    },
+    "demo": {
+      "id": 40437151271,
+      "path": ".github/workflows/agaricus-demo-ui.yml",
+      "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "verified": true,
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151271"
+    }
+  },
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ],
+  "webDistribution": {
+    "scope": "public-demo-beta",
+    "certified": false,
+    "independentReviewComplete": false,
+    "appStoreReady": false,
+    "authorizationSha256": "9961d2fd16b12a778e1500a6d30679aa2b4c0f421e3b152add1b54547a0679c7",
+    "authorizedSource": "5c9eaa03b678b6c97429975af61834fb919e2156",
+    "pairedTestFlightBuild": "23",
+    "authorizedOn": "2026-10-27"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "runId": 40466560358,
+  "artifact": {
+    "id": 12716119255,
+    "name": "Paired-public-demo-verification",
+    "size_in_bytes": 1258875,
+    "url": "https://api.github.com/repos/gianpaolobol/fungo-italia/actions/artifacts/12716119255",
+    "archive_download_url": "https://api.github.com/repos/gianpaolobol/fungo-italia/actions/artifacts/12716119255/zip",
+    "expired": false,
+    "created_at": "2026-10-27T07:23:27Z",
+    "expires_at": "2027-01-25T07:20:45Z",
+    "updated_at": "2026-10-27T07:23:27Z",
+    "digest": "sha256:c8a5b3c7bfe359479d32276fa2fed7706c9237c265c8265342e70e8679716def",
+    "workflow_run": {
+      "id": 40466560358,
+      "repository_id": 1372967137,
+      "head_repository_id": 1372967137,
+      "head_branch": "main",
+      "head_sha": "e5a6f062a61d066acaa9ccb4b5f39da388d77bb4"
+    }
+  },
+  "text": [
+    {
+      "path": "paired-demo-native-proof.json",
+      "bytes": 403,
+      "sha256": "bc50497fd63eff1ff508f4d852b884edb9457b54120d7407f128530d1e460361"
+    },
+    {
+      "path": "paired-demo-verification.json",
+      "bytes": 456,
+      "sha256": "3b2d58fef9825a02e75faa38ff52f813fc82dcd8a1673e5e6454211404db5d7d"
+    },
+    {
+      "path": "release.json",
+      "bytes": 2224,
+      "sha256": "a5623f1e1c4616759e299c328793affeffa7dee0b55f8462b1c61e8b6db2e799"
+    },
+    {
+      "path": "capture-report.json",
+      "bytes": 10716,
+      "sha256": "f0604ec0126edcced19b3ac8d1d6242f760f2b46011a387df359559e1aa039a9"
+    },
+    {
+      "path": "upgrade-report.json",
+      "bytes": 21262,
+      "sha256": "3bcfcf66839d908835de0ef0c9763b903cc15522874d7ea0f84fe3730d3dea2b"
+    },
+    {
+      "path": "paired-cache-corrected.json",
+      "bytes": 777,
+      "sha256": "35eea356848e43a86106e1ebab6ccf2e333be997e8b247bbe8935fbb5028a213"
+    },
+    {
+      "path": "qa-browser-package-lock.json",
+      "bytes": 2088,
+      "sha256": "290b56520b1cc75b3a33e1c6ca1c3f1b235d166f8df0ea22ff2d8193c7d3e395"
+    },
+    {
+      "path": "paired-demo-browser/profile-recovery-provenance.json",
+      "bytes": 359,
+      "sha256": "5ef2bcf8cc25f221b79f241346f6b26fb2f42747909beb4b5501279ebcd9ba95"
+    },
+    {
+      "path": "paired-demo-browser/chromium-actual-public-map.json",
+      "bytes": 1424,
+      "sha256": "c10139c98bc314d9873c23bdde179cde5fd76d3875fe22e1c6a752ed208d89c4"
+    },
+    {
+      "path": "paired-demo-browser/webkit-actual-public-map.json",
+      "bytes": 1424,
+      "sha256": "bfc9b828c8b99e3123a98082e477621bb82ec64a2f55851fe1e2454ddd83aff3"
+    }
+  ],
+  "png": [
+    {
+      "name": "chromium-actual-public-map.png",
+      "bytes": 401163,
+      "sha256": "30e37a675bdcbea2525f6544e79371ea87594b7f359e59013b8f91c38b88a962"
+    },
+    {
+      "name": "webkit-actual-public-map.png",
+      "bytes": 260998,
+      "sha256": "31939f0c03deddc52feb00e9a43fdcad0f18adc040440ca7eb3dab6737cbdbc6"
+    },
+    {
+      "name": "chromium-verified.png",
+      "bytes": 141191,
+      "sha256": "7ea9a4e4ce1b04087e456b99c6e9c4b67e36ea13a2ebbe21c7170c8636049d29"
+    },
+    {
+      "name": "webkit-verified.png",
+      "bytes": 168087,
+      "sha256": "b4aa429b312d93bd802057ef770f8cc3bd21f073e1db94d88e50d082d6a80587"
+    }
+  ],
+  "visualInspection": "Both original map PNGs inspected: actual geography, no403"
+}

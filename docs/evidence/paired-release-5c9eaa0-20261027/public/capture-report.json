@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-10-27T07:12:13.195Z",
+  "status": "complete",
+  "scope": "live-public-origin",
+  "reports": [
+    {
+      "browser": "chromium",
+      "mapProof": null,
+      "browserRuntime": "1.62.0",
+      "browserVersion": "151.0.7922.34",
+      "executable": "/ms-playwright/chromium-1234/chrome-linux64/chrome",
+      "mode": "capture",
+      "cacheObservations": {
+        "afterNavigation": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+            "entries": 41,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+            ]
+          }
+        ],
+        "beforeClose": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+            ]
+          }
+        ]
+      },
+      "origin": "https://gianpaolobol.github.io",
+      "scope": "live-public-origin",
+      "sourceBefore": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "capturedSource": null,
+      "sourceAfter": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+      "documentScript": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+      "documentReplaced": false,
+      "method": "already-current",
+      "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T07:12:11.148Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvqcl9xt-mpj9zzochv8\",\"startedAt\":\"2026-10-27T07:12:11.153Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\"],\"queue\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\"],\"pending\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T07:12:11.249Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T07:12:11.249Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvqcl9xt-mpj9zzochv8\",\"startedAt\":\"2026-10-27T07:12:11.153Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":1,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":1,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":0,\"toxicologyCorrect\":0,\"danger\":0,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"name\":\"Agaricus campestris\",\"nameError\":true,\"categoryError\":false,\"detailErrors\":[],\"danger\":false}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T07:12:11.249Z\",\"round\":0}]}]}}",
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": false,
+      "offlineScope": "actual public application origin and same-origin release metadata disconnected"
+    },
+    {
+      "browser": "webkit",
+      "mapProof": null,
+      "browserRuntime": "1.62.0",
+      "browserVersion": "26.5",
+      "executable": "/ms-playwright/webkit-2336/pw_run.sh",
+      "mode": "capture",
+      "cacheObservations": {
+        "afterNavigation": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+            "entries": 41,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+            ]
+          }
+        ],
+        "beforeClose": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+            "entries": 45,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+            ]
+          }
+        ]
+      },
+      "origin": "https://gianpaolobol.github.io",
+      "scope": "live-public-origin",
+      "sourceBefore": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "capturedSource": null,
+      "sourceAfter": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+      "documentScript": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+      "documentReplaced": false,
+      "method": "already-current",
+      "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T07:12:12.701Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvqclb52-1a8046ajafw\",\"startedAt\":\"2026-10-27T07:12:12.710Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"queue\":[\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"pending\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T07:12:12.897Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T07:12:12.897Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvqclb52-1a8046ajafw\",\"startedAt\":\"2026-10-27T07:12:12.710Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":0,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":0,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":1,\"toxicologyCorrect\":0,\"danger\":1,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"name\":\"Agaricus bresadolanus\",\"nameError\":true,\"categoryError\":true,\"detailErrors\":[\"Sindrome — secondo la scheda dell’atlante\",\"Latenza — secondo la scheda dell’atlante\",\"Manifestazioni e gravità — secondo la scheda dell’atlante\"],\"danger\":true}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T07:12:12.897Z\",\"round\":0}]}]}}",
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": false,
+      "offlineScope": "actual public application origin and same-origin release metadata disconnected"
+    }
+  ]
+}
