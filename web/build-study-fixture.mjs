@@ -1,0 +1,3 @@
+import {readFile,writeFile,rm} from 'node:fs/promises';import {execFileSync} from 'node:child_process';
+const original=await readFile(new URL('../index.js',import.meta.url));
+try{await writeFile(new URL('../index.js',import.meta.url),"import {registerRootComponent} from 'expo';import App from './tests/study/ReviewApp';registerRootComponent(App);\n");await rm(new URL('../dist-study-review',import.meta.url),{force:true,recursive:true});execFileSync('npx',['expo','export','--platform','web','--output-dir','dist-study-review'],{stdio:'inherit',env:{...process.env,CI:'1'}});}finally{await writeFile(new URL('../index.js',import.meta.url),original);}

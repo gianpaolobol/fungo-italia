@@ -1,0 +1,53 @@
+name: Review twelve-point web study update
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'components/**'
+      - 'lib/**'
+      - 'tests/study/**'
+      - 'web/study-review.mjs'
+      - 'web/build-study-fixture.mjs'
+      - 'src/data/theory-foundations.json'
+      - '.github/workflows/web-study-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  web-only:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - run: npm ci --prefix web
+      - name: Node and TypeScript regression checks
+        run: |
+          npm run typecheck
+          node --test scripts/*.test.mjs lib/*.test.mjs
+      - name: Build actual web application
+        run: node web/build.mjs
+      - name: Build unpublished component review fixture
+        run: node web/build-study-fixture.mjs
+      - name: Review actual study components in Chromium and WebKit
+        run: |
+          node web/study-review.mjs
+          STUDY_BROWSER=webkit node web/study-review.mjs
+          git diff --exit-code -- index.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: web-study-review-evidence
+          path: docs/evidence/web-study-20261027/
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-study-candidate
+          path: dist-ios/
+          retention-days: 30

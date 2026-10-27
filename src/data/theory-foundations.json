@@ -1,0 +1,524 @@
+[
+  {
+    "id": "law-dpr",
+    "topic": "legislation",
+    "title": "Quale norma disciplina la commercializzazione nazionale dei funghi epigei freschi e conservati?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "D.P.R. 376/1995"
+      },
+      {
+        "id": "1",
+        "label": "Una graduatoria delle specie più raccolte"
+      },
+      {
+        "id": "2",
+        "label": "Il solo regolamento del mercato rionale"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "location": "Art. 4 e titolo del regolamento",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "law-list",
+    "topic": "legislation",
+    "title": "Quale allegato richiama l’art. 4 del D.P.R. 376/1995 per le specie fresche?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Allegato I"
+      },
+      {
+        "id": "1",
+        "label": "Qualsiasi elenco fotografico"
+      },
+      {
+        "id": "2",
+        "label": "L’elenco dei funghi secchi senza distinzione"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "location": "Art. 4, comma 1",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "law-local",
+    "topic": "legislation",
+    "title": "Le integrazioni regionali all’elenco nazionale riguardano quale ambito?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Commercializzazione locale delle specie riconosciute idonee"
+      },
+      {
+        "id": "1",
+        "label": "Automatica autorizzazione in ogni Stato"
+      },
+      {
+        "id": "2",
+        "label": "Tutte le specie del genere indicato"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "location": "Art. 4, comma 2",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "law-import",
+    "topic": "legislation",
+    "title": "Quale requisito richiama l’art. 4 per altre specie fresche provenienti da altri Paesi?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Riconoscimento di commestibilità da parte dell’autorità competente del Paese di origine e verifiche a sondaggio territoriali"
+      },
+      {
+        "id": "1",
+        "label": "La sola fotografia del lotto"
+      },
+      {
+        "id": "2",
+        "label": "L’assenza di un nome comune italiano"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.codiceRedazionale=095G0410&art.dataPubblicazioneGazzetta=1995-09-11&art.flagTipoArticolo=0&art.idArticolo=4&art.idGruppo=0&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.progressivo=0&art.versione=1",
+      "location": "Art. 4, comma 3",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "professional-rule",
+    "topic": "profession",
+    "title": "Quale decreto stabilisce criteri e modalità per l’attestato di micologo?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "D.M. 29 novembre 1996, n. 686"
+      },
+      {
+        "id": "1",
+        "label": "D.P.R. 380/2001"
+      },
+      {
+        "id": "2",
+        "label": "La sola legge sulla raccolta amatoriale"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/registro-nazionale-micologi/",
+      "location": "Attestato e relativo decreto",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "professional-issuer",
+    "topic": "profession",
+    "title": "Chi rilascia l’attestato di micologo descritto dal Ministero?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Regioni e Province autonome, dopo corso ed esame previsti"
+      },
+      {
+        "id": "1",
+        "label": "Qualsiasi associazione dopo un’uscita"
+      },
+      {
+        "id": "2",
+        "label": "Il gestore di una app dopo un quiz"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/registro-nazionale-micologi/",
+      "location": "Rilascio attestato",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "professional-register",
+    "topic": "profession",
+    "title": "Chi cura il registro nazionale dei micologi?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Ministero della Salute"
+      },
+      {
+        "id": "1",
+        "label": "Ogni negozio alimentare"
+      },
+      {
+        "id": "2",
+        "label": "La singola piattaforma di studio"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/registro-nazionale-micologi/",
+      "location": "Registro nazionale",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "professional-setting",
+    "topic": "profession",
+    "title": "Il micologo può operare in quale contesto descritto dal Ministero?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Strutture pubbliche e controllo nella filiera privata"
+      },
+      {
+        "id": "1",
+        "label": "Soltanto raccolta ricreativa"
+      },
+      {
+        "id": "2",
+        "label": "Esclusivamente vendita di microscopi"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/registro-nazionale-micologi/",
+      "location": "Riconoscimento e controllo funghi freschi e conservati",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "office-asl",
+    "topic": "profession",
+    "title": "Dove sono istituiti gli Ispettorati micologici?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Dipartimenti di Prevenzione delle ASL"
+      },
+      {
+        "id": "1",
+        "label": "Presso ogni rivendita di cestini"
+      },
+      {
+        "id": "2",
+        "label": "Soltanto nei musei"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/ispettorati-micologici/",
+      "location": "Organizzazione degli Ispettorati",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "office-hospital",
+    "topic": "profession",
+    "title": "Quale attività rientra tra quelle degli Ispettorati micologici?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Consulenza ai reparti ospedalieri in sospetta intossicazione"
+      },
+      {
+        "id": "1",
+        "label": "Prescrivere terapie attraverso fotografie in una app"
+      },
+      {
+        "id": "2",
+        "label": "Autorizzare ogni fungo sulla base del nome comune"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/ispettorati-micologici/",
+      "location": "Attività degli Ispettorati",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "commerce-check",
+    "topic": "commerce",
+    "title": "Per i funghi freschi spontanei in vendita quale controllo è indicato dal Ministero?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Controllo sanitario e certificazione dell’Ispettorato micologico competente"
+      },
+      {
+        "id": "1",
+        "label": "Solo dichiarazione del raccoglitore"
+      },
+      {
+        "id": "2",
+        "label": "Nessun controllo se il fungo è noto al venditore"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/commercializzazione-dei-funghi/",
+      "location": "Funghi freschi",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "commerce-vendor",
+    "topic": "commerce",
+    "title": "La sola conoscenza personale del raccoglitore sostituisce i requisiti per vendere funghi freschi spontanei?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "No, restano autorizzazione e idoneità previste e controllo del prodotto"
+      },
+      {
+        "id": "1",
+        "label": "Sì, in ogni situazione"
+      },
+      {
+        "id": "2",
+        "label": "Sì, purché il lotto sia piccolo"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/commercializzazione-dei-funghi/",
+      "location": "Funghi freschi: esercente e prodotto",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "commerce-food",
+    "topic": "commerce",
+    "title": "Una classificazione didattica commestibile dimostra da sola che una specie sia commercializzabile?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "No, la commercializzazione richiede i presupposti normativi specifici"
+      },
+      {
+        "id": "1",
+        "label": "Sì, i due giudizi coincidono sempre"
+      },
+      {
+        "id": "2",
+        "label": "Sì, se la specie appare in un atlante"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/commercializzazione-dei-funghi/",
+      "location": "Distinzione elenco positivo e condizioni di vendita",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "micro-reference",
+    "topic": "microscopy",
+    "title": "Quale riferimento si usa per calibrare il reticolo oculare?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Un micrometro di riferimento sul tavolino"
+      },
+      {
+        "id": "1",
+        "label": "La misura stimata del fungo"
+      },
+      {
+        "id": "2",
+        "label": "La sola dimensione del monitor"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.microscopyu.com/tutorials/reticlecalibration",
+      "location": "Calibrazione con stage micrometer",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "micro-combination",
+    "topic": "microscopy",
+    "title": "La calibrazione del reticolo vale per quale configurazione?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "La specifica combinazione di obiettivo e oculare verificata"
+      },
+      {
+        "id": "1",
+        "label": "Qualsiasi obiettivo senza controllo"
+      },
+      {
+        "id": "2",
+        "label": "Qualsiasi microscopio con lo stesso colore"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.microscopyu.com/tutorials/reticlecalibration",
+      "location": "Specific objective/eyepiece combination",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "micro-align",
+    "topic": "microscopy",
+    "title": "Come si confrontano le scale per calibrare un reticolo?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Si allineano parallelamente e si confrontano due coincidenze note"
+      },
+      {
+        "id": "1",
+        "label": "Si sovrappongono senza mettere a fuoco"
+      },
+      {
+        "id": "2",
+        "label": "Si usa il diametro del campo come valore universale"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.microscopyu.com/tutorials/reticlecalibration",
+      "location": "Allineamento delle scale",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "micro-value",
+    "topic": "microscopy",
+    "title": "Come si ricava il valore di una divisione del reticolo?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "Lunghezza nota del riferimento divisa per le divisioni corrispondenti"
+      },
+      {
+        "id": "1",
+        "label": "Divisioni sommate alla lunghezza del vetrino"
+      },
+      {
+        "id": "2",
+        "label": "Numero di pixel senza un riferimento"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.microscopyu.com/tutorials/reticlecalibration",
+      "location": "Calibration constant",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  },
+  {
+    "id": "micro-record",
+    "topic": "microscopy",
+    "title": "Che cosa va conservato dopo la calibrazione?",
+    "multiple": false,
+    "options": [
+      {
+        "id": "0",
+        "label": "I valori per ciascuna combinazione ottica verificata"
+      },
+      {
+        "id": "1",
+        "label": "Soltanto il nome della specie"
+      },
+      {
+        "id": "2",
+        "label": "Un unico valore per tutti gli strumenti"
+      }
+    ],
+    "correct": [
+      "0"
+    ],
+    "provenance": {
+      "sourceUrl": "https://www.microscopyu.com/tutorials/reticlecalibration",
+      "location": "Registrazione delle calibrazioni",
+      "checkedAt": "2026-10-27",
+      "reviewStatus": "source-mapped-not-independently-reviewed"
+    }
+  }
+]

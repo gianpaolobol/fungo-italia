@@ -1,3 +1,5 @@
+import objectives from './legacy/web/data/taxonomic-objectives.json';
+import {buildObjectiveModules} from './lib/curriculum-levels.mjs';
 import React,{useEffect,useRef,useState} from 'react';
 import {ActivityIndicator,Image,Linking,Platform,Pressable,StyleSheet,Text,View} from 'react-native';
 import {SafeAreaProvider,SafeAreaView} from 'react-native-safe-area-context';
@@ -7,7 +9,7 @@ import StudyDashboard from './components/StudyDashboard';
 import useStudy from './hooks/useStudy';
 import Studio,{StudyTaxon} from './components/Studio';
 import Areas,{Area} from './components/Areas';
-import PhotoExam from './components/PhotoExam';
+import ExamHub from './components/ExamHub';
 import SubscriptionGate from './components/SubscriptionGate';
 import ReleaseStatus from './components/ReleaseStatus';
 import MushroomAccess from './components/MushroomAccess';
@@ -17,7 +19,8 @@ import areas from './src/data/areas.json';
 import groups from './src/data/groups.json';
 import {readStudyPreferences,STUDY_PREFERENCES_KEY} from './lib/study-preferences.mjs';
 import {agaricusOnly} from './lib/demo-policy.mjs';
-const allTaxa=[...catalog,...groups] as unknown as StudyTaxon[];
+const baseTaxa=[...catalog,...groups];
+const allTaxa=[...baseTaxa,...buildObjectiveModules(baseTaxa,objectives)] as unknown as StudyTaxon[];
 type State={version:1;favoriteIds:string[];resumeId:string|null};
 const key=STUDY_PREFERENCES_KEY;
 const tabs=['Dashboard','Studio','Esame','Aree'] as const;
@@ -41,7 +44,7 @@ export default function App(){
 <View style={[s.body,tab!=='Dashboard'&&s.hidden]} accessibilityElementsHidden={tab!=='Dashboard'} importantForAccessibility={tab!=='Dashboard'?'no-hide-descendants':'auto'}>{tab==='Dashboard'&&<StudyDashboard study={study} complete={fullAccess} onStudy={()=>{void study.startStudy().then(ok=>{if(ok)setTab('Studio');});}} onTraining={()=>setTab('Esame')} onAccess={()=>setTab('Abbonamento')}/>}</View>
 <View style={[s.body,tab!=='Studio'&&s.hidden]} accessibilityElementsHidden={tab!=='Studio'} importantForAccessibility={tab!=='Studio'?'no-hide-descendants':'auto'}>{!fullAccess&&<Pressable accessibilityRole="button" onPress={()=>setTab('Abbonamento')} style={s.preview}><Text style={s.label}>Demo gratuita · Agaricus</Text><Text style={s.small}>Tutte le schede Agaricus e il test dedicato. Abbonati per il percorso completo.</Text></Pressable>}<Studio key={fullAccess?'full':'preview'} taxa={shownTaxa} favoriteIds={state.favoriteIds.filter(id=>shownIds.has(id))} onFavoriteIdsChange={favoriteIds=>setState(previous=>({...previous,favoriteIds:[...previous.favoriteIds.filter(id=>!shownIds.has(id)),...favoriteIds]}))} resumeId={state.resumeId&&shownIds.has(state.resumeId)?state.resumeId:null} onResumeChange={resumeId=>update({resumeId})}/></View>
 <View style={[s.body,tab!=='Aree'&&s.hidden]} accessibilityElementsHidden={tab!=='Aree'} importantForAccessibility={tab!=='Aree'?'no-hide-descendants':'auto'}>{<Areas areas={areas as unknown as Area[]}/> }</View>
-<View style={[s.body,tab!=='Esame'&&s.hidden]} accessibilityElementsHidden={tab!=='Esame'} importantForAccessibility={tab!=='Esame'?'no-hide-descendants':'auto'}><PhotoExam key={fullAccess?'full':'agaricus'} demo={!fullAccess} adaptiveIds={fullAccess?study.nextTraining.taxonIds:undefined}/></View>
+<View style={[s.body,tab!=='Esame'&&s.hidden]} accessibilityElementsHidden={tab!=='Esame'} importantForAccessibility={tab!=='Esame'?'no-hide-descendants':'auto'}><ExamHub key={fullAccess?'full':'agaricus'} demo={!fullAccess} adaptiveIds={fullAccess?study.nextTraining.taxonIds:undefined}/></View>
 <View style={[s.body,tab!=='Abbonamento'&&s.hidden]} accessibilityElementsHidden={tab!=='Abbonamento'} importantForAccessibility={tab!=='Abbonamento'?'no-hide-descendants':'auto'}>{tab==='Abbonamento'?gate:null}</View>
 </>}</View><View accessibilityRole="tablist" style={s.tabs}>{tabs.map(name=><Pressable key={name} testID={'tab-'+name.toLowerCase()} accessibilityRole="tab" accessibilityState={{selected:tab===name}} onPress={()=>setTab(name)} style={[s.tab,tab===name&&s.active]}><Text style={tab===name?s.selected:s.label}>{name==='Dashboard'?'Percorso':name}</Text></Pressable>)}</View></SafeAreaView></SafeAreaProvider>;
 }

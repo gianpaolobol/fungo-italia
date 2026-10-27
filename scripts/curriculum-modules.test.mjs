@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {buildObjectiveModules,curriculumItemsForLevel} from '../lib/curriculum-levels.mjs';
+const read=f=>JSON.parse(readFileSync(new URL('../'+f,import.meta.url)));
+const taxa=[...read('src/data/catalog.json'),...read('src/data/groups.json')],objectives=read('legacy/web/data/taxonomic-objectives.json');
+test('progressive curricula add documented learning modules without reclassifying the 218 base taxa',()=>{const modules=buildObjectiveModules(taxa,objectives),all=[...taxa,...modules];assert.equal(curriculumItemsForLevel(all,'minimum').length,218);assert(curriculumItemsForLevel(all,'desirable').length>218);assert(curriculumItemsForLevel(all,'deep').length>curriculumItemsForLevel(all,'desirable').length);assert.equal(new Set(all.map(t=>t.id)).size,all.length);for(const m of modules){assert(m.learningModule);const o=objectives.find(o=>o.id===m.curriculum.objectiveId);assert.equal(m.curriculumObjective,o.objectives[m.curriculum.level]);assert.equal(m.curriculum.sourcePage,o.sources.minimumObjectives.page);assert(taxa.some(t=>t.id===m.parentTaxonId));assert.deepEqual(m.referenceImages,[]);}});
+test('an objective without an admitted parent cannot silently add a genus or species',()=>{assert.deepEqual(buildObjectiveModules([],objectives),[]);});
