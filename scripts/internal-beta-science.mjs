@@ -61,6 +61,10 @@ export async function verifyOwnerBetaScience(sourceCommit){
   const files=await snapshotScientificContent();strict=runStrictScienceReports();
   // Observation time is not part of the scientific-content identity.
   delete strict.readiness.report.checkedAt;
+  if(files.some(f=>f.path==='src/data/theory-foundations.json')){
+   const {verifyConfirmedStudyBeta}=await import('./study-beta-science.mjs');
+   return await verifyConfirmedStudyBeta({files,strictChecks:strict,sourceCommit});
+  }
   return {...ownerBetaDecision({attestation,files,readiness:strict.readiness.report,toxicology:strict.toxicology.report,sourceCommit}),strictChecks:strict};
  }catch(error){
   error.scienceReport={schemaVersion:1,sourceCommit,betaAllowed:false,appStoreReady:false,independentReleaseReady:false,strictChecks:strict??null,error:error.message};
@@ -69,7 +73,9 @@ export async function verifyOwnerBetaScience(sourceCommit){
 }
 export function assertOwnerScienceReceipt(receipt,report){
  requireThat(report?.betaAllowed===true&&report.approvalScope==='owner-internal-testflight'&&report.sourceCommit===receipt?.sourceCommit&&report.ownerGroupId===ownerGroup&&report.appStoreReady===false&&report.independentReleaseReady===false&&report.publicWebAllowed===false&&report.ownerReview?.independentReviewComplete===false,'Invalid or cross-source owner beta science proof');
- requireThat(report.ownerReview.declarationSha256===expectedDeclarationDigest,'Unpinned owner receipt');
+ const pinned=report.ownerReview.declarationSha256;
+ const study=pinned==='32037af4686796d56070f6257f0afa446437f145212c3f77827c6e9562a4c1b1'&&report.ownerReview.contentDigest==='85efde0ea64d6f3896637d3e1002c3c2586effbcef918f6fa375d1e8d0cae8df'&&report.ownerReview.fileCount===868&&report.ownerReview.publishedWebSource==='a227c1f20d3e8f5d731c7b61f73babc1cee4635c';
+ requireThat(pinned===expectedDeclarationDigest||study,'Unpinned owner receipt');
  requireThat(receipt.testFlightOnly===true&&receipt.diagnosticOnly===true&&receipt.appStoreReady===false,'Owner science cannot widen release scope');
 }
 async function main(){
@@ -94,4 +100,4 @@ async function main(){
   throw error;
  }
 }
-if(process.argv[1]&&pathToFileURL(resolve(process.argv[1])).href===import.meta.url)await main();
+if(process.argv[1]&&pathToFileURL(resolve(process.argv[1])).href===import.meta.url)main().catch(error=>{console.error(error);process.exitCode=1;});

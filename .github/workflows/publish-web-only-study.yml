@@ -1,0 +1,169 @@
+name: Publish owner-approved web study beta only
+on:
+  push:
+    branches: [feat/web-study-twelve-points-20261027]
+    paths:
+      - '.github/workflows/publish-web-only-study.yml'
+      - 'revisione/web-only-publication-request.json'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: paired-public-pages
+  cancel-in-progress: false
+jobs:
+  qualify-and-capture:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: git config --global --add safe.directory "$(pwd -P)"
+      - name: Inspect actual Pages environment restrictions without changing settings
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const {data} = await github.request('GET /repos/{owner}/{repo}/environments/github-pages', context.repo);
+              core.info(JSON.stringify({deployment_branch_policy:data.deployment_branch_policy, protection_types:data.protection_rules?.map(r=>r.type)}));
+              const list = await github.request('GET /repos/{owner}/{repo}/environments/github-pages/deployment-branch-policies', context.repo);
+              core.info(JSON.stringify({allowed_branches:list.data.branch_policies?.map(p=>p.name)}));
+            } catch (error) { core.info('Environment read unavailable: '+error.status); }
+      - run: npm ci
+      - run: npm ci --prefix web
+      - name: Require real exact owner review and successful technical checks
+        run: |
+          node --input-type=module -e "import {verifyOwnerWeb} from './tools/web-only-policy.mjs'; await verifyOwnerWeb();"
+          npm run typecheck
+          node --test scripts/*.test.mjs lib/*.test.mjs tools/paired-demo-network.test.mjs
+      - name: Build and seal the actual web-only candidate
+        run: |
+          node web/build-web-only.mjs
+          node tools/web-only-publish.mjs seal
+      - name: Retrieve immutable original23 for migration qualification
+        uses: actions/download-artifact@v4
+        with:
+          name: Paired-web-candidate
+          run-id: 40437151113
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/web-old23
+      - name: Verify original archive migration without a deployment
+        env:
+          WEB_OLD_DIR: ${{ runner.temp }}/web-old23
+        run: |
+          node web/web-only-upgrade.mjs
+          STUDY_BROWSER=webkit node web/web-only-upgrade.mjs
+      - name: Review all full study components without granting entitlement
+        run: |
+          node web/build-study-fixture.mjs
+          node web/study-review.mjs
+          STUDY_BROWSER=webkit node web/study-review.mjs
+          git diff --exit-code -- index.js
+      - name: Capture original actual-public PWA profiles before deployment
+        env:
+          WEB_PROFILE_DIR: ${{ runner.temp }}/web-profiles
+        run: |
+          node tools/web-only-live.mjs capture
+          tar --exclude=SingletonLock --exclude=SingletonSocket -czf docs/evidence/web-only-release-20261027/predeploy-profiles.tgz -C "$WEB_PROFILE_DIR" .
+      - name: Archive every previous public byte
+        run: node tools/paired-demo-snapshot.mjs "${{ runner.temp }}/previous-web"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Web-only-previous-web
+          path: ${{ runner.temp }}/previous-web/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Web-only-predeployment-evidence
+          path: docs/evidence/web-only-release-20261027/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Web-only-sealed-candidate
+          path: dist-ios/
+          retention-days: 90
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Web-only-qualification-evidence
+          path: |
+            docs/evidence/web-only-release-20261027/
+            docs/evidence/web-study-20261027/
+          retention-days: 90
+  deploy-web-only:
+    needs: qualify-and-capture
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      actions: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/download-artifact@v4
+        with:
+          name: Web-only-sealed-candidate
+          path: dist-ios/
+      - uses: actions/download-artifact@v4
+        with:
+          name: Web-only-predeployment-evidence
+          path: docs/evidence/web-only-release-20261027/
+      - name: Revalidate source, approval and live public state immediately before deploy
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node tools/web-only-publish.mjs guard
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-ios/
+      - name: Publish only the web artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+  verify-public-and-upgrade:
+    needs: deploy-web-only
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: git config --global --add safe.directory "$(pwd -P)"
+      - run: npm ci
+      - run: npm ci --prefix web
+      - uses: actions/download-artifact@v4
+        with:
+          name: Web-only-sealed-candidate
+          path: dist-ios/
+      - uses: actions/download-artifact@v4
+        with:
+          name: Web-only-predeployment-evidence
+          path: docs/evidence/web-only-release-20261027/
+      - name: Restore the actual predeployment profiles
+        env:
+          WEB_PROFILE_DIR: ${{ runner.temp }}/web-profiles
+        run: |
+          mkdir -p "$WEB_PROFILE_DIR"
+          tar -xzf docs/evidence/web-only-release-20261027/predeploy-profiles.tgz -C "$WEB_PROFILE_DIR"
+      - name: Verify every served byte and metadata
+        run: node tools/web-only-publish.mjs verify
+      - name: Verify actual-public PWA upgrade, stored data and fresh offline document
+        env:
+          WEB_PROFILE_DIR: ${{ runner.temp }}/web-profiles
+        run: node tools/web-only-live.mjs upgrade
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Web-only-public-verification
+          path: docs/evidence/web-only-release-20261027/
+          retention-days: 90

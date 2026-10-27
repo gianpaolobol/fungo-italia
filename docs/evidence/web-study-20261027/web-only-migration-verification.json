@@ -1,0 +1,68 @@
+{
+  "sourceCommit": "a286107e307e2c95d58ddabee1b89c27efadeaea",
+  "workflowRunId": 40495489553,
+  "workflowConclusion": "success",
+  "typeScript": "PASS",
+  "node": {
+    "pass": 302,
+    "fail": 0,
+    "skip": 0
+  },
+  "componentBrowsers": [
+    "Chromium",
+    "WebKit"
+  ],
+  "pwaMigrationScope": "original23 archive to unpublished candidate on loopback; no live public continuity claim",
+  "original23": {
+    "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+    "artifactId": 12704747838,
+    "producerRun": 40437151113,
+    "zipSha256": "771bcc10691c1fef99b04231cc5f25e90297fa81663e3ecab37ffe787684a5e9"
+  },
+  "candidate": {
+    "artifactId": 12729823709,
+    "zipDigestFromGitHub": "9c5b755bbfdecfbd99ad143cc49a2c28db8e14b90c8a576ae7c453e208213cc5",
+    "sourceCommit": "a286107e307e2c95d58ddabee1b89c27efadeaea",
+    "webContentHash": "2bdc3129c9a43ed1996165e7a9eb4d0233f440e3df023e2fd4b733a1fbe9f5e3",
+    "manifestFilesVerifiedInCI": 1652,
+    "builder": "web/build-web-only.mjs"
+  },
+  "evidence": {
+    "artifactId": 12729729081,
+    "downloadedZipSha256": "6bf379d8a46cb75b20778ce436c4869f61a523da16e82c5a4f2cd1048aa65659"
+  },
+  "reviewPacket": {
+    "path": "revisione/theory-foundations-review-20261027.json",
+    "questions": 18,
+    "sourceSha256": "053533e302d11ed94f1bb799212359f1cf74f255b458b7f14ff6ca28a6c95e9d",
+    "approvals": 0,
+    "messagesSent": 0
+  },
+  "releasePreflight": {
+    "independentReleaseReady": false,
+    "strictReadinessExit": 1,
+    "strictToxicologyExit": 1,
+    "unresolvedFoundations": 18,
+    "livePublicUpgradeVerified": false,
+    "published": false,
+    "nativeBuildCreated": false,
+    "otaSent": false
+  },
+  "priorNegative": {
+    "runId": 40494964086,
+    "artifactId": 12730192847,
+    "reason": "Four WebKit access-control diagnostics from deliberately blocked release transport failed the original zero-pageerror guard; final run logs five expected diagnostics after also testing the unavailable-version UI. Zero unexpected exceptions required."
+  },
+  "mainUnchanged": "740c3773569aba5ba212066c111918e45d8ec613",
+  "publicSourceReadback": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "otherWorkflows": {
+    "scientificGenerator": {
+      "id": 40495489380,
+      "conclusion": "success"
+    },
+    "sharedWeb": {
+      "id": 40495489435,
+      "conclusion": "success"
+    }
+  }
+}

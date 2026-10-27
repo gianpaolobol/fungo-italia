@@ -1,3 +1,17 @@
+## Conferma web acquisita: allineamento iPhone autorizzato — 27 ottobre 2026
+
+Il titolare ha risposto «Confermo» alla consegna della web pubblicata e verificata (a227c1f/run40500252557), soddisfacendo il vincolo di conferma successiva. Procedere al solo gruppo TestFlight interno del titolare tramite pipeline nativa esistente, conservando vincoli scientifici, acquisti, dati e documenti fondanti. Nessuna pubblicazione App Store o platea esterna. La distinta `revisione/owner-ios-study-confirmation-20261027.json` è la conferma reale odierna, non una revisione indipendente e non modifica l’attestazione26/10 o la web-only precedente.
+
+Snapshot868file85efde0ea64d6f3896637d3e1002c3c2586effbcef918f6fa375d1e8d0cae8df, titolare conferma esattamente i dodici interventi già approvati sulla web. `scripts/study-beta-science.mjs` riconcilia la policy web pinning e la nuova conferma interna; strict1/1, independentReleaseReady=false e appStoreReady=false preservati. Contenuto scientifico, gruppo, scope o ricevute diversi restano bloccanti. Nessuna nuova build disponibile ancora attestata: prima servono gate nativi/StoreKit/UI/demo, firma/IPA e Apple/audience live sul nuovo sorgente. Automazione resta disattivata; lavoro manuale unico.
+
+Prove locali:340Node PASS0fail0skip, TypeScript PASS, prepare:data senza drift dei dati scientifici. Revisione del delta di rilascio in corso. Le sezioni precedenti/successive che attendono conferma iOS sono cronologia superata dal presente consenso.
+
+## Autorizzazione specifica web del titolare —27 ottobre2026
+
+Il titolare ha risposto «approvo» al fascicolo dei18 nuovi fondamenti e alla prosecuzione della pubblicazione PRIMA SOLO WEB del lotto12. Registrare tale decisione come revisione del titolare, non indipendente, senza firma o qualifica professionale inventata. La distinta `revisione/owner-web-study-approval-20261027.json` vincola lo snapshot868file, la domanda/soluzione dei18 e la sola beta web non certificata. Il precedente atlante867file deve rimanere identico allo snapshot già attestato. Questa istruzione specifica attua il consenso attuale del titolare; non estende la vecchia attestazione26/10 o la ricevuta Apple23 al nuovo sorgente.
+
+`tools/web-only-policy.mjs` applica soltanto questa autorizzazione, conserva gli esiti strict negativi e blocca variazioni di contenuto, lacune o errori strutturali. `independentReleaseReady=false`, `certified=false` e `appStoreReady=false` restano obbligatori. Nessun iPhone/OTA/TestFlight/AppStore prima della successiva conferma esplicita del titolare sulla web effettivamente pubblicata. Publisher separato dal ramo main che attiva workflow nativi. Le regole generali seguenti restano valide fuori da questa precisa beta web.
+
 ## Riferimento operativo unico — 26 ottobre 2026
 
 Leggere prima [docs/MASTER_PROJECT_STATUS.md](docs/MASTER_PROJECT_STATUS.md). Contiene baseline applicativa, decisioni attuali, recuperi selettivi, PR, test e blocchi. Aggiornarlo dopo ogni intervento. Gli handoff precedenti sono cronologia: non ripristinare istruzioni superate. Il completamento P0 non autorizza release pubbliche con gate scientifici o Apple falliti. Per la sola beta interna del titolare vale la decisione esplicita sotto; tutti i gate tecnici Apple restano obbligatori.

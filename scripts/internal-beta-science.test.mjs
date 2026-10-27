@@ -58,7 +58,7 @@ test('failed CLI revalidation overwrites stale success with strict diagnostics a
   const report=JSON.parse(await readFile(join(dir,'internal-beta-science.json'),'utf8'));
   assert.equal(report.betaAllowed,false);assert.equal(report.appStoreReady,false);
   assert.equal(report.strictChecks.readiness.report.totals.checked,70);
-  assert.match(report.error,/snapshot/);
+  assert.match(report.error,/snapshot|Reviewed scientific content changed/);
  }finally{await rm(dir,{recursive:true,force:true});}
 });
 test('receipt mismatch preserves a fresh failed report instead of prior successful proof',async()=>{
@@ -68,7 +68,14 @@ test('receipt mismatch preserves a fresh failed report instead of prior successf
  const {verifyOwnerBetaScience}=await import('./internal-beta-science.mjs');
  const dir=await mkdtemp(join(tmpdir(),'fungo-owner-receipt-fail-'));
  try{
-  const science=await verifyOwnerBetaScience(sourceCommit);
+  let science;
+  try{science=await verifyOwnerBetaScience(sourceCommit);}catch(error){
+   assert.match(error.message,/Reviewed scientific content changed/);
+   await writeFile(join(dir,'internal-beta-science.json'),JSON.stringify({betaAllowed:true}));
+   await writeFile(join(dir,'consolidated-build.json'),JSON.stringify({sourceCommit,testFlightOnly:true,diagnosticOnly:true,appStoreReady:false,scientificReview:{betaAllowed:true}}));
+   const rejected=spawnSync(process.execPath,['scripts/internal-beta-science.mjs','--verify-receipt'],{encoding:'utf8',env:{...process.env,GITHUB_SHA:sourceCommit,RUNNER_TEMP:dir,GITHUB_OUTPUT:''}});
+   assert.equal(rejected.status,1);const report=JSON.parse(await readFile(join(dir,'internal-beta-science.json'),'utf8'));assert.equal(report.betaAllowed,false);assert.equal(report.appStoreReady,false);assert.equal(report.strictChecks.readiness.exitCode,1);assert.match(report.error,/Reviewed scientific content changed/);return;
+  }
   await writeFile(join(dir,'internal-beta-science.json'),JSON.stringify(science));
   const receipt={sourceCommit,testFlightOnly:true,diagnosticOnly:true,appStoreReady:false,scientificReview:science};
   await writeFile(join(dir,'consolidated-build.json'),JSON.stringify(receipt));

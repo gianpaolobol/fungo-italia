@@ -41,3 +41,16 @@ test('release hashes must be scalar strings and inconsistent same-source version
  for(const key of ['sourceCommit','iconSha256','webContentHash','appleBuildId'])assert.equal(validateRelease({...report,[key]:[report[key]]}),null);
  assert.equal(compareRelease({...local,version:'1.0.0'},report).status,'unknown');
 });
+
+test('a web-only receipt never asserts new TestFlight alignment',()=>{
+ const web={schemaVersion:2,distribution:'web-only',sourceCommit:local.sourceCommit,version:local.version,iconSha256:report.iconSha256,webContentHash:report.webContentHash,iosUpdatePendingOwnerConfirmation:true,independentReleaseReady:true,appStoreReady:false};
+ assert.equal(compareRelease(local,web).status,'web-current');
+ assert.equal(compareRelease({...local,sourceCommit:'d'.repeat(40)},web).status,'update-available');
+ for(const patch of [{iosUpdatePendingOwnerConfirmation:false},{independentReleaseReady:false},{appleBuildId:report.appleBuildId},{buildNumber:'24'},{appStoreReady:true}])assert.equal(validateRelease({...web,...patch}),null);
+});
+
+test('explicitly owner-approved web beta remains unpaired and never claims independent review',()=>{
+ const web={schemaVersion:2,distribution:'web-only',sourceCommit:local.sourceCommit,version:local.version,iconSha256:report.iconSha256,webContentHash:report.webContentHash,iosUpdatePendingOwnerConfirmation:true,independentReleaseReady:false,appStoreReady:false,certified:false,webDistribution:{scope:'owner-approved-public-web-beta',reviewType:'owner-review',certified:false,independentReviewComplete:false,authorizationSha256:'2f0a6d04f66f72da2ab812be2075045507853da1d861037458f69b041180790c',scientificContentDigest:'85efde0ea64d6f3896637d3e1002c3c2586effbcef918f6fa375d1e8d0cae8df',approvedOn:'2026-10-27'}};
+ assert.equal(compareRelease(local,web).status,'web-current');
+ for(const patch of [{independentReleaseReady:true},{certified:true},{appStoreReady:true},{appleBuildId:report.appleBuildId},{webDistribution:{...web.webDistribution,authorizationSha256:'f'.repeat(64)}},{webDistribution:{...web.webDistribution,independentReviewComplete:true}}])assert.equal(validateRelease({...web,...patch}),null);
+});

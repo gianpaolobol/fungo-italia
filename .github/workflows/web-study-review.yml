@@ -1,0 +1,79 @@
+name: Review twelve-point web study update
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'components/**'
+      - 'lib/**'
+      - 'tests/study/**'
+      - 'web/study-review.mjs'
+      - 'web/*web-only*.mjs'
+      - 'web/web-only-upgrade.mjs'
+      - 'web/study-release-preflight.mjs'
+      - 'web/build-study-fixture.mjs'
+      - 'src/data/theory-foundations.json'
+      - '.github/workflows/web-study-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  web-only:
+    runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Trust only the actual isolated checkout
+        run: git config --global --add safe.directory "$(pwd -P)"
+      - run: npm ci
+      - run: npm ci --prefix web
+      - name: Node and TypeScript regression checks
+        run: |
+          npm run typecheck
+          node --test scripts/*.test.mjs lib/*.test.mjs
+      - name: Build actual web application
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/build-web-only.mjs
+      - name: Download original paired23 archive for isolated PWA migration
+        uses: actions/download-artifact@v4
+        with:
+          name: Paired-web-candidate
+          run-id: 40437151113
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/web-old23
+      - name: Verify first web-only upgrade in Chromium and WebKit without deploying
+        env:
+          WEB_OLD_DIR: ${{ runner.temp }}/web-old23
+        run: |
+          node web/web-only-upgrade.mjs
+          STUDY_BROWSER=webkit node web/web-only-upgrade.mjs
+      - name: Record actual scientific and web-only publication blockers
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/study-release-preflight.mjs
+      - name: Build unpublished component review fixture
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/build-study-fixture.mjs
+      - name: Review actual study components in Chromium and WebKit
+        run: |
+          node web/study-review.mjs
+          STUDY_BROWSER=webkit node web/study-review.mjs
+          git diff --exit-code -- index.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: web-study-review-evidence
+          path: docs/evidence/web-study-20261027/
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-study-candidate
+          path: dist-ios/
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unpublished-owner-component-review
+          path: dist-owner-review/
+          retention-days: 7

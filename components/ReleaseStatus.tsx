@@ -18,12 +18,12 @@ function WebReleaseStatus({details}:{details:boolean}){
    window.location.reload();
   }catch{setMessage('Aggiornamento non completato. Verifica la connessione e riprova.');setUpdating(false);}
  }
- const copy=status==='checking'?'Verifica della versione in corso…':status==='aligned'?'Questa versione corrisponde alla versione TestFlight verificata.':status==='unknown'?'Non è possibile verificare la versione adesso. Riprova quando sei online.':'È disponibile una versione diversa, verificata su TestFlight.';
+ const copy=status==='web-current'?'Versione web aggiornata. L’aggiornamento iPhone attende la conferma del titolare.':status==='checking'?'Verifica della versione in corso…':status==='aligned'?'Questa versione corrisponde alla versione TestFlight verificata.':status==='unknown'?'Non è possibile verificare la versione adesso. Riprova quando sei online.':release?.schemaVersion===2?'È disponibile un aggiornamento della sola versione web.':'È disponibile una versione diversa, verificata su TestFlight.';
  return <View style={s.card} accessibilityLiveRegion="polite">
   {details&&<Text style={s.version}>Versione {localVersion}</Text>}
   <Text style={s.body}>{copy}</Text>
   {status==='update-available'&&<>
-   {release&&<Text style={s.body}>Versione TestFlight {release.version} ({release.buildNumber})</Text>}
+   {release&&<Text style={s.body}>{release.schemaVersion===2?'Versione web '+release.version:'Versione TestFlight '+release.version+' ('+release.buildNumber+')'}</Text>}
    <Text style={s.body}>Termina l’esercizio prima di aggiornare: la pagina verrà ricaricata.</Text><Pressable accessibilityRole="button" accessibilityState={{disabled:updating}} disabled={updating} onPress={()=>void update()} style={s.button}><Text style={s.buttonText}>{updating?'Preparazione aggiornamento…':'Aggiorna anteprima'}</Text></Pressable>
   </>}
   {details&&status!=='checking'&&<Pressable accessibilityRole="button" onPress={()=>void refresh()} style={s.button}><Text style={s.buttonText}>Verifica versione</Text></Pressable>}
