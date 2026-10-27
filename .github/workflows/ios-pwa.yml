@@ -48,9 +48,6 @@ jobs:
         node web/build.mjs
 
         '
-    - name: Verify iPhone workflows at 320 points
-      working-directory: web
-      run: npm test
     - name: Verify shared Areas and actual map identification in both engines
       working-directory: web
       run: 'node smoke-unified.mjs
@@ -58,6 +55,9 @@ jobs:
         UNIFIED_BROWSER=webkit node smoke-unified.mjs
 
         '
+    - name: Verify iPhone workflows at 320 points
+      working-directory: web
+      run: npm test
     - uses: actions/upload-artifact@v4
       if: always()
       with:

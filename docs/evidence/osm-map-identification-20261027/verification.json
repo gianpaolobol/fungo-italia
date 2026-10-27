@@ -36,6 +36,9 @@
     "manualSharedRun": 40432298473,
     "manualSharedStatus": "running at checkpoint",
     "correction": "Chromium fixture uses modern CDP real global request/serviceworker offline and native navigator state, asserts nativefalse before/afterreload and uncached fetchoutsideSW rejects; original SW/newdocument/maptext assertions retained; qualification pending",
-    "primaryProtocol": "https://chromedevtools.github.io/devtools-protocol/tot/Network/"
+    "primaryProtocol": "https://chromedevtools.github.io/devtools-protocol/tot/Network/",
+    "modernOfflineNegativeRun": 40432591767,
+    "modernOfflineObservation": "native navigatorfalse before SWreload, true afterward; independent network probe not reached. No application failure or persistent transport inferred.",
+    "nextFixture": "Require uncached fetchfailure afterreload BEFORE restoring only nativeconnectivitysignal; retain original offline UI expectations. Shared-map stage moved ahead of legacy suite for independent diagnosis, all stages remain mandatory."
   }
 }

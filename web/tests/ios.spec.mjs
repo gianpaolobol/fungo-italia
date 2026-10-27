@@ -117,9 +117,14 @@ test('Chromium: true offline flag and new document restore the installed catalog
  await cdp.send('Network.overrideNetworkState',conditions);
  expect(await page.evaluate(()=>navigator.onLine)).toBe(false);
  const response=await page.reload();expect(response.status()).toBe(200);expect(response.fromServiceWorker()).toBe(true);
- expect(await page.evaluate(()=>navigator.onLine)).toBe(false);
+ console.log('CHROMIUM_OFFLINE_NATIVE_AFTER_SW_RELOAD',await page.evaluate(()=>navigator.onLine));
  // A fresh URL outside the worker scope must fail, independently of cached app success.
- expect(await page.evaluate(async()=>{try{await fetch('/__offline_probe__?nonce='+crypto.randomUUID(),{cache:'no-store'});return false;}catch{return true;}})).toBe(true);expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');await page.getByRole('button',{name:/^Apri Amanita/}).first().click();await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();await page.getByRole('button',{name:'Torna',exact:true}).click();await page.getByRole('button',{name:'Aree',exact:true}).click();await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await page.getByRole('button',{name:'Mappa',exact:true}).click();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);await expect(page.locator('#map-status')).toContainText('Senza rete');}finally{await browser.close();}
+ expect(await page.evaluate(async()=>{try{await fetch('/__offline_probe__?nonce='+crypto.randomUUID(),{cache:'no-store'});return false;}catch{return true;}})).toBe(true);
+ // Current Chromium resets its native connectivity signal for the SW-created document.
+ // Transport must already be blocked above; restore only that signal for offline UI assertions.
+ await cdp.send('Network.overrideNetworkState',conditions);
+ expect(await page.evaluate(()=>navigator.onLine)).toBe(false);
+ expect(await page.evaluate(()=>window.__oldDocument)).toBeUndefined();await expect(page.locator('#catalog-count')).toContainText('148 schede');await page.getByRole('searchbox',{name:'Cerca nome scientifico, comune o sinonimo'}).fill('Amanita');await page.getByRole('button',{name:/^Apri Amanita/}).first().click();await expect(page.getByRole('heading',{name:'Caratteri di studio'})).toBeVisible();await page.getByRole('button',{name:'Torna',exact:true}).click();await page.getByRole('button',{name:'Aree',exact:true}).click();await page.getByRole('button',{name:'Monte Amiata',exact:true}).click();await page.getByRole('button',{name:'Mappa',exact:true}).click();await expect(page.locator('.leaflet-interactive')).toHaveCount(1);await expect(page.locator('#map-status')).toContainText('Senza rete');}finally{await browser.close();}
 });
 
 test('restricted search expands the catalog without losing its query',async({page})=>{
