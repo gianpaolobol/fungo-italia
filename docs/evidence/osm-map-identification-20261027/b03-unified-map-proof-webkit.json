@@ -1,0 +1,50 @@
+{
+  "browser": "webkit",
+  "scope": "actual OSM responses; visual geographic inspection still required",
+  "viewportSettled": true,
+  "failures": [],
+  "tiles": [
+    {
+      "url": "https://tile.openstreetmap.org/4/8/5.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "d12e2af483742a2e1d00b6b67888a53dc9082e85d8896f4f77498d5b96efbfd2",
+      "bytes": 25583
+    },
+    {
+      "url": "https://tile.openstreetmap.org/4/7/6.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "c2585490e8a6fa224be0a53811d17a0684ae0d72e5510e62b7d07c19163b3079",
+      "bytes": 12263
+    },
+    {
+      "url": "https://tile.openstreetmap.org/4/9/5.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "55b36b3cd5461f7788506ad40463c50bfa542aaf5f2611500204d226f4d1731a",
+      "bytes": 22167
+    },
+    {
+      "url": "https://tile.openstreetmap.org/4/8/6.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "cecfe4923ff96878cb9347ca5e6f90cac0b04e77d79607c69ab3d31e6ed6411c",
+      "bytes": 17430
+    },
+    {
+      "url": "https://tile.openstreetmap.org/4/9/6.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "641e086edd15dc103159d3c13f02cffc7ad0daa82d8849bdbc968341b14e54be",
+      "bytes": 22241
+    },
+    {
+      "url": "https://tile.openstreetmap.org/4/7/5.png",
+      "status": 200,
+      "contentType": "image/png",
+      "sha256": "19a792b4904935a2992388ff21c72aebc15f801f54ff6fa3d4b1ffaeddf02d19",
+      "bytes": 9924
+    }
+  ]
+}

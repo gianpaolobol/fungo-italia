@@ -1,5 +1,5 @@
 {
-  "status": "implemented and locally checked; qualified browser/native/Apple release still pending",
+  "status": "branchbrowserqualifiedb03; nativepermanentdriveraddition requires exact finalCI/native/Apple qualification",
   "baselineApplicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
   "currentPublicAndTestFlight": "1.1.0(22), remain unchanged until distinct new qualified pair approval",
   "sourceReason": "actual cloud map403 policy raster; opaque iframe missing browserReferer in independent local receiver24combinations; exact403 cause not asserted",
@@ -39,6 +39,16 @@
     "primaryProtocol": "https://chromedevtools.github.io/devtools-protocol/tot/Network/",
     "modernOfflineNegativeRun": 40432591767,
     "modernOfflineObservation": "native navigatorfalse before SWreload, true afterward; independent network probe not reached. No application failure or persistent transport inferred.",
-    "nextFixture": "Require uncached fetchfailure afterreload BEFORE restoring only nativeconnectivitysignal; retain original offline UI expectations. Shared-map stage moved ahead of legacy suite for independent diagnosis, all stages remain mandatory."
-  }
+    "nextFixture": "Require uncached fetchfailure afterreload BEFORE restoring only nativeconnectivitysignal; retain original offline UI expectations. Shared-map stage moved ahead of legacy suite for independent diagnosis, all stages remain mandatory.",
+    "qualifiedSource": "b03b92a322af56d21fc52f2d88aed6f060e0a715",
+    "qualifiedSharedRun": 40433109564,
+    "qualifiedScientificRun": 40433109768,
+    "qualifiedResult": "bothworkflowSUCCESS;65legacyPASS, sharedChromium151/WebKit26.5PASS, privateactualReferer4requests/engine, actualOSMsettledtiles/status/noerrorsPASS",
+    "mapArtifact": {
+      "id": 12702742910,
+      "sha256": "1f35719beb2301748647322c7e2b8220816057d206664cd17944f4402ec0fa12",
+      "visualInspection": "Both originalPNG show geographic Italy/sea/countrylabels and71greenmarkers; no403policy raster. LocalCIorigin only; actualpublicorigin newsource stillpending."
+    }
+  },
+  "nativePermanentTests": "PreviouslyqualifiedV2 free/paidOSM/filterintersection/relaunch helper adopted into normal purchaseUIworkflow; final and initialfallbackscreens preserved; exactnewsource native qualification stillpending"
 }

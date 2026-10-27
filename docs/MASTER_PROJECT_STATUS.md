@@ -1,5 +1,12 @@
 # Fungo Italia — stato master operativo
 
+## Qualifica cartografica del ramo e controlli nativi permanenti —27 ottobre2026
+
+Sul sorgente b03b92a322af56d21fc52f2d88aed6f060e0a715 entrambi i workflow40433109564/40433109768 sono SUCCESS:65testlegacy, Chromium151/WebKit26.5 condivisi, quattro richieste private per motore con Referer effettivo, mappa OSM completa senza errori. Entrambe le PNG originali ispezionate mostrano cartografia geografica e71punti, nessun raster403. Artifact12702742910 SHA2561f35719beb2301748647322c7e2b8220816057d206664cd17944f4402ec0fa12. È una prova sul candidato locale CI, non del nuovo sito pubblico. Il fixtureoffline verifica prima il blocco trasporto dopo il nuovo documento, poi ripristina solo il segnale nativo che Chromium resetta: tutte le aspettative originarie conservate.
+
+Integrato nel driver acquisti il controllo nativo Aree V2 già collaudato, ora obbligatorio a ogni release su iPhone/iPad gratuito/acquistato, con filtri/regione/mappa/relaunch e schermate finali/negativi iniziali conservati. Nessun controllo StoreKit o dato scientifico modificato. Nuovo sorgente finale deve superare CI e prove native complete, ricevere IPA/firma/Apple reali e consenso pubblico distinto.22rimane effettivamente pubblicata; nessuna attestazione anticipata.
+
+
 ## Correzione mappa in PR127 — checkpoint27 ottobre2026
 
 Coppia22effettiva invariata. Branchfix/areas-map-identification-1b7ee81, sorgente1b7ee8173699f7f2e40ab95a9826aacd0532daeb:305Node0fail0skip, TypeScript, rigenerazione senza drift e build1652file superati. PRscientifica40431761963: generator/provenance success,64browserpass+1fallimento Chromiumoffline (mappa espone fallbackonline). Negativo conservato artifact12701769466; nessun test saltato o atteso allentato. Fixture aggiornato al protocollo CDP moderno con bloccoeffettivo richieste/SW e stato nativooffline, più nuova richiesta non in cache obbligatoriamente fallita. Qualifica del cambiamento ancora pendente. Workflowcondiviso40432298473 avviato su1b7ee81, esito browser non ancora acquisito. Non integrare prima di prove/revisione; IPA/StoreKit/UI/demo/Apple e consenso pubblico distinti obbligatori per il nuovo sorgente. [Registro](evidence/osm-map-identification-20261027/verification.json).

@@ -1,0 +1,15 @@
+{
+  "browser": "webkit",
+  "browserVersion": "26.5",
+  "browserGeneratedReferer": true,
+  "sourceOrigin": "http://127.0.0.1:43317",
+  "actualReferers": [
+    "http://127.0.0.1:43317/"
+  ],
+  "tileRequests": 4,
+  "decodedPrivateFixture": true,
+  "selection": true,
+  "cleanup": true,
+  "lateMountAborted": true,
+  "remoteOsmAvailability": false
+}

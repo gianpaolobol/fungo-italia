@@ -1,0 +1,15 @@
+{
+  "browser": "chromium",
+  "browserVersion": "151.0.7922.34",
+  "browserGeneratedReferer": true,
+  "sourceOrigin": "http://127.0.0.1:36503",
+  "actualReferers": [
+    "http://127.0.0.1:36503/"
+  ],
+  "tileRequests": 4,
+  "decodedPrivateFixture": true,
+  "selection": true,
+  "cleanup": true,
+  "lateMountAborted": true,
+  "remoteOsmAvailability": false
+}

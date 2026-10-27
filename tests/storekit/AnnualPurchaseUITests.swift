@@ -2,6 +2,49 @@ import XCTest
 import StoreKitTest
 
 final class AnnualPurchaseUITests: XCTestCase {
+
+  @MainActor func auditNativeAreas(_ app: XCUIApplication, _ name: String) async throws {
+    await require(element(app, "Aree e habitat"))
+    let field = element(app, "Cerca area o habitat")
+    await require(field)
+    await enterAndConfirm("Toscana", into: field)
+    await require(element(app, "6 aree corrispondenti"))
+    await tap(app, "Abruzzo")
+    await require(element(app, "Nessuna area corrisponde ai filtri."))
+    await tap(app, "Tutte")
+    await require(element(app, "6 aree corrispondenti"))
+    await tap(app, "Mappa online")
+    await require(app.webViews.firstMatch)
+    let attribution = app.webViews.descendants(matching: .any).matching(NSPredicate(format: "label CONTAINS %@", "OpenStreetMap")).firstMatch
+    let mapErrors = ["Cartografia non disponibile: l’elenco resta consultabile.", "Mappa online non disponibile: consulta l’elenco offline.", "Mappa online non disponibile.", "Caricamento cartografico troppo lungo: consulta l’elenco offline o riprova."]
+    var usedRetry = false
+    let firstLoaded = await waitFor(attribution, timeout: 20)
+    if !firstLoaded || mapErrors.contains(where: { element(app, $0).exists }) {
+      let retry = element(app, "Riprova mappa")
+      let hasRetry = await waitFor(retry, timeout: 20)
+      guard hasRetry && mapErrors.contains(where: { element(app, $0).exists }) && element(app, "6 aree corrispondenti").exists && !element(app, "Fungo Italia completo").exists else {
+        try capture(app, name + "-invalid-fallback")
+        XCTFail("Map failure must preserve offline list, filters and the actual retry control")
+        throw NSError(domain: "NativeAreasAudit", code: 1)
+      }
+      try capture(app, name + "-initial-fallback")
+      print("NATIVE_AREAS_INITIAL_FAILURE " + name + " retained six areas and no paywall; one explicit UI retry follows")
+      await tap(app, "Riprova mappa")
+      usedRetry = true
+    }
+    let finalLoaded = await waitFor(attribution, timeout: 90)
+    guard finalLoaded && !mapErrors.contains(where: { element(app, $0).exists }) else {
+      try capture(app, name + "-failed-after-bounded-recovery")
+      XCTFail("Actual OSM attribution and error-free map required after at most one explicit UI retry")
+      throw NSError(domain: "NativeAreasAudit", code: 2)
+    }
+    try capture(app, name)
+    print("NATIVE_AREAS_MAP " + name + " Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=" + String(usedRetry))
+    await tap(app, "Elenco offline")
+    app.terminate(); app.launch()
+    await tap(app, "Aree")
+    await require(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "71 macroaree in ")).firstMatch)
+  }
   let productID = "it.fungoitalia.premium.annual"
   func element(_ app: XCUIApplication, _ label: String) -> XCUIElement {
     app.descendants(matching: .any).matching(NSPredicate(format: "label == %@", label)).firstMatch
@@ -157,6 +200,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await require(element(app, "Aree e habitat"))
     await require(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "71 macroaree in ")).firstMatch)
     XCTAssertFalse(element(app, "Fungo Italia completo").exists)
+    try await auditNativeAreas(app, "extended-free-map")
     await tap(app, "Monte Amiata")
     await require(element(app, "1 area corrispondente"))
     await tap(app, "Consulta Monte Amiata")
@@ -235,6 +279,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     await require(element(app, "Aree e habitat"))
     await require(app.staticTexts.matching(NSPredicate(format: "label BEGINSWITH %@", "71 macroaree in ")).firstMatch)
     XCTAssertFalse(element(app, "Fungo Italia completo").exists)
+    try await auditNativeAreas(app, "extended-paid-map")
     try capture(app, "02-aree")
     await tap(app, "Esame")
     await require(element(app, "Inizia 15 casi"))
