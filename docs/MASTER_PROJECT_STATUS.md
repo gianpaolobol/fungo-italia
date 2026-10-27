@@ -1,5 +1,14 @@
 # Fungo Italia — stato master operativo
 
+## Approvazione del titolare acquisita — pubblicazione soltanto web in preparazione
+
+Il titolare ha risposto «approvo» al fascicolo18 e alla prosecuzione soloWEB. Registrata in `revisione/owner-web-study-approval-20261027.json`, digest2f0a6d04f66f72da2ab812be2075045507853da1d861037458f69b041180790c, snapshot scientifico868file85efde0ea64d6f3896637d3e1002c3c2586effbcef918f6fa375d1e8d0cae8df. I18 quesiti sono approved-by-owner nel fascicolo; nome/ruolo titolare, nessuna firma o revisione indipendente attribuita. I867file precedenti devono essere identici al vecchio snapshot. Questa è una distinta autorizzazione beta pubblica solo web, non una modifica della vecchia attestazione o una certificazione.
+
+Policy separata `tools/web-only-policy.mjs`: consente publicBetaAllowed=true per questi esatti byte, conserva independentReleaseReady=false, strict1/1, AppStorefalse, nativeBuildAllowed=false e iOSpendingtrue. Testpositivi/negativi verificano contenuti cambiati, scope ampliato, errori tossicologici e nuove lacune come bloccanti. TypeScript e310Node locali PASS0fail0skip. Il sorgente di pubblicazione deve ancora completare la propria pipeline.
+
+Publisher su feature branch, senza merge main e senza Apple/EAS. Qualifica/cattura, deploy Pages e verifica successiva sono job distinti: un eventuale retry della verifica riutilizza i profili reali originali predeploy senza ricompilare o distribuire iPhone. La web normale conserva demo e diritti StoreKit. Nessun sito nuovo ancora attestato; presentare URL solo dopo byte pubblici, vero upgrade PWA e dati/offline verificati. La conferma iOS successiva resta obbligatoria. Le sezioni precedenti di blocco umano sono storia superata da questa approvazione del titolare, non da una revisione indipendente.
+
+
 ## Prima migrazione web-only collaudata e fascicolo18 pronto —27 ottobre2026
 
 Proseguito il ramoPR128 senza merge main o distribuzioni. Nuovo sorgente applicativo qualificato `a286107e307e2c95d58ddabee1b89c27efadeaea`. Run40495489553 SUCCESS; anche40495489380 e40495489435 SUCCESS: TypeScript,302Node0fail0skip, test componenti e replay PWA in Chromium/WebKit. Il replay parte dall’archivio originale23/5c9eaa03 del produttore40437151113 (artifact12704747838), non da una copia ricostruita. Attivazione soltanto dopo cache atomica completa, esercizio non ricaricato automaticamente, nuovo documento tramite normale reload, note/preferiti/sessione/storico/bozza conservati byte per byte; nuovo documento offline dal worker e sonda indipendente realmente disconnessa PASS. Verificati in CI tutti1652file prima e dopo preparazione web-only. Questo è un replay loopback, NON l’upgrade dei profili sul dominio pubblico.

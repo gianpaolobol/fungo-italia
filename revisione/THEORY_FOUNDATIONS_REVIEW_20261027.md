@@ -1,3 +1,5 @@
+> Aggiornamento27/10/2026: il titolare ha risposto «approvo». I18 quesiti sono approvati dal titolare per la beta solo web; esiti registrati nel JSON con ruolo owner. Revisione indipendente e firma restano assenti. La sezione originaria seguente conserva il fascicolo presentato prima dell’approvazione e i campi vuoti non sono un verbale firmato.
+
 # Revisione dei18 nuovi fondamenti teorici
 
 Pacchetto amministrativo riservato alla gestione della revisione. Nessun invio effettuato. Le decisioni sono tutte vuote: il controllo delle fonti non è una revisione indipendente.

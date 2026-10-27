@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "packetId": "FI-THEORY-FOUNDATIONS-20261027",
-  "status": "awaiting-human-review",
+  "status": "owner-approved-independent-review-pending",
   "scientificApprovalGranted": false,
   "sourceFile": "src/data/theory-foundations.json",
   "sourceSha256": "053533e302d11ed94f1bb799212359f1cf74f255b458b7f14ff6ca28a6c95e9d",
@@ -74,10 +74,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Titolo e art.4 coerenti con il riferimento proposto."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -115,10 +115,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Il comma1 richiama espressamente allegatoI; non usare le note storiche come elenco vigente."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -156,10 +156,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Comma2: integrazioni limitate all’ambito locale; conservare il limite territoriale."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -197,10 +197,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Comma3: requisito del Paese d’origine e verifiche a sondaggio territoriali."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -238,10 +238,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Decreto686/1996 identificato dalla pagina ministeriale e GU15/01/1997."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -279,10 +279,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Regioni/Province autonome, formazione ed esame; non introdurre equivalenze con iscrizioni professionali diverse."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -320,10 +320,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Ministero per registro nazionale; distinti i registri regionali."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -361,10 +361,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Pagina ministeriale distingue strutture pubbliche e controllo nella filiera privata."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -402,10 +402,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Collocazione nei Dipartimenti di Prevenzione delle ASL documentata."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -443,10 +443,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Consulenza ospedaliera in sospetta intossicazione documentata; non implica trattamento medico da parte del micologo."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -484,10 +484,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Coerente con pagina ministeriale e DPRart.3. Revisore: mantenere ambito dei freschi spontanei e modalità regionali."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -525,10 +525,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Coerente con pagina ministeriale. Revisore: verificare terminologia autorizzazione/SCIA e disciplina territoriale attuale."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -566,10 +566,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "La lista positiva e i requisiti di vendita sono distinti dal giudizio alimentare didattico."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -607,10 +607,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Confronto con micrometro sul tavolino documentato."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -648,10 +648,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Valida per combinazione ottica verificata; controllare anche lunghezza tubo/correzioni."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -689,10 +689,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Scale parallele e due coincidenze documentate."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -730,10 +730,10 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Lunghezza campione divisa per divisioni coincidenti, con unità coerenti."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     },
     {
@@ -771,11 +771,17 @@
         "assessment": "source-consistent-pending-qualified-review",
         "note": "Registrare valori per ogni configurazione verificata."
       },
-      "reviewDecision": null,
-      "reviewerName": null,
-      "reviewerQualification": null,
-      "reviewedOn": null,
+      "reviewDecision": "approved-by-owner",
+      "reviewerName": "Gian Paolo Franceschini",
+      "reviewerQualification": "Titolare; revisione non indipendente",
+      "reviewedOn": "2026-10-27",
       "signedEvidence": null
     }
-  ]
+  ],
+  "ownerApprovalGranted": true,
+  "ownerApprovalEvidence": {
+    "quote": "approvo",
+    "on": "2026-10-27",
+    "independent": false
+  }
 }
