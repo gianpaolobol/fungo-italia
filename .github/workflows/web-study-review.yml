@@ -35,11 +35,11 @@ jobs:
           npm run typecheck
           node --test scripts/*.test.mjs lib/*.test.mjs
       - name: Build actual web application
-        run: node web/build.mjs
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/build.mjs
       - name: Record actual scientific and web-only publication blockers
-        run: node web/study-release-preflight.mjs
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/study-release-preflight.mjs
       - name: Build unpublished component review fixture
-        run: node web/build-study-fixture.mjs
+        run: GITHUB_SHA="$(git rev-parse HEAD)" node web/build-study-fixture.mjs
       - name: Review actual study components in Chromium and WebKit
         run: |
           node web/study-review.mjs

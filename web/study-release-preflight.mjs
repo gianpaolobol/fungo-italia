@@ -4,7 +4,7 @@ import {writeFile,mkdir,readFile} from 'node:fs/promises';
 import {execFileSync} from 'node:child_process';
 import {runStrictScienceReports,snapshotScientificContent,manifestDigest} from '../scripts/internal-beta-science.mjs';
 const sourceCommit=process.env.GITHUB_SHA||execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
-if(!/^[a-f0-9]{40}$/.test(sourceCommit))throw Error('Exact source required');
+if(!/^[a-f0-9]{40}$/.test(sourceCommit)||sourceCommit!==execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim())throw Error('Exact checked-out source required; PR merge SHA is not the candidate');
 const strictChecks=runStrictScienceReports(),files=await snapshotScientificContent();
 const foundations=JSON.parse(await readFile('src/data/theory-foundations.json','utf8'));
 const unresolvedFoundations=foundations.filter(q=>q.provenance?.reviewStatus!=='independently-reviewed'||!q.provenance?.independentReviewEvidence).map(q=>q.id);
