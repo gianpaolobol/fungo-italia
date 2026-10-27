@@ -185,5 +185,22 @@
     "checks": "64/65; no deployment or browser steps reached",
     "correction": "fresh-client agent:false and nonpooled local upstream; explicit network cutoff preserved",
     "verification": "all65 tests pass under actual pinnedNode24.3.0 after correction"
+  },
+  "publicRecovery3": {
+    "run": 40427216711,
+    "job": 121935867102,
+    "conclusion": "failure",
+    "checks": {
+      "node": 65,
+      "everyServedFile": 1652,
+      "liveChromiumOffline": "PASS; notes/favorites/exam/history and newSWdocument preserved",
+      "liveWebKitOffline": "FAIL503 actual worker fallback; sourcefab controller but unreadable/missing shell"
+    },
+    "artifact": 12699619843,
+    "zipSha256": "81583edac865609fb744896ef6eef6e0865e3715f956f8e05b43217d2eccd93e",
+    "profileArtifact": 12700152640,
+    "profileZipSha256": "859de0203eebbc5aee043995d43541642b0060903a059de596a2df9e82608ff6",
+    "upstreamLead": "https://github.com/microsoft/playwright/pull/41701; oldWebKit2215 predates CacheStorage persistence fix2328; not yet confirmed by private reproduction",
+    "nextCheck": "isolated pinned QA1.62.0 and actual private original/new persistence comparison; no app/cache repair or skipped checks"
   }
 }

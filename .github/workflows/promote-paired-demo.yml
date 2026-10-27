@@ -11,7 +11,7 @@ jobs:
   promote:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
     timeout-minutes: 45
     environment:
       name: github-pages
@@ -23,6 +23,7 @@ jobs:
       PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 }}
       PAIRED_REPLAY_ARTIFACT_ID: ${{ inputs.previous_archive_id }}
       PAIRED_REPLAY_ARTIFACT_SHA256: ${{ inputs.previous_archive_sha256 }}
+      PAIRED_BROWSER_ROOT: ${{ runner.temp }}/paired-browser-runtime
     steps:
     - uses: actions/checkout@v4
       with:
@@ -40,9 +41,9 @@ jobs:
         node-version: 24.3.0
     - name: Verify pinned browser runtime and archive tools
       run: "node -e \"const p=require('./web/package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.56.1')throw\
-        \ Error('Browser image and lockfile differ')\"\nif ! command -v unzip >/dev/null || ! command -v zipinfo\
-        \ >/dev/null; then\n  apt-get update -qq\n  apt-get install -y --no-install-recommends unzip\nfi\nunzip\
-        \ -v\nzipinfo -h\n"
+        \ Error('Original application browser lock changed')\"\nif ! command -v unzip >/dev/null || ! command -v\
+        \ zipinfo >/dev/null; then\n  apt-get update -qq\n  apt-get install -y --no-install-recommends unzip\nfi\n\
+        unzip -v\nzipinfo -h\n"
     - name: Resolve only the exact separately approved candidate
       id: approved
       run: 'node --input-type=module <<''JS''
@@ -81,6 +82,23 @@ jobs:
       run: node tools/paired-demo.mjs promote
     - name: Install locked tests for the preinstalled browser engines
       run: 'npm ci --prefix web --ignore-scripts
+
+        node tools/paired-demo-browser-runtime.mjs "$PAIRED_BROWSER_ROOT"
+
+        npm ci --prefix "$PAIRED_BROWSER_ROOT" --ignore-scripts
+
+        node -e ''const p=require(process.env.PAIRED_BROWSER_ROOT+"/node_modules/@playwright/test/package.json");if(p.version!=="1.62.0")throw
+        Error("QA browser runtime mismatch")''
+
+        '
+    - name: Compare actual private WebKit cache persistence in original and corrected runtimes
+      run: 'PLAYWRIGHT_BROWSERS_PATH="$RUNNER_TEMP/paired-old-browser" node web/node_modules/playwright/cli.js install
+        webkit
+
+        PLAYWRIGHT_BROWSERS_PATH="$RUNNER_TEMP/paired-old-browser" PAIRED_CACHE_BASELINE=1 node tools/paired-demo-cache-probe.mjs
+        "$RUNNER_TEMP/paired-cache-original.json"
+
+        node tools/paired-demo-cache-probe.mjs "$RUNNER_TEMP/paired-cache-corrected.json"
 
         '
     - name: Capture actual previous public PWA and private synthetic progress
@@ -134,7 +152,11 @@ jobs:
         \ \"$RUNNER_TEMP/paired-demo-evidence/\"; fi\ndone\n\nfor directory in paired-demo-browser paired-replay-browser;\
         \ do\n  if test -d \"$RUNNER_TEMP/$directory\"; then\n    mkdir -p \"$RUNNER_TEMP/paired-demo-evidence/$directory\"\
         \n    find \"$RUNNER_TEMP/$directory\" -maxdepth 1 -type f \\( -name \"*.json\" -o -name \"*.png\" \\) -exec\
-        \ cp {} \"$RUNNER_TEMP/paired-demo-evidence/$directory/\" \\;\n  fi\ndone\n"
+        \ cp {} \"$RUNNER_TEMP/paired-demo-evidence/$directory/\" \\;\n  fi\ndone\n\nfor file in paired-cache-original.json\
+        \ paired-cache-corrected.json; do\n  if test -f \"$RUNNER_TEMP/$file\"; then cp \"$RUNNER_TEMP/$file\" \"\
+        $RUNNER_TEMP/paired-demo-evidence/\"; fi\ndone\nif test -f \"$PAIRED_BROWSER_ROOT/package-lock.json\"; then\
+        \ cp \"$PAIRED_BROWSER_ROOT/package-lock.json\" \"$RUNNER_TEMP/paired-demo-evidence/qa-browser-package-lock.json\"\
+        ; fi\n"
     - uses: actions/upload-artifact@v4
       if: always()
       with:

@@ -1,12 +1,14 @@
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
-import {join} from 'node:path';
+import {join,resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import {createNetworkGate} from './paired-demo-network.mjs';
 import {demoStudyKey} from '../lib/study-store.mjs';
 import {assertBrowserProgress,progressFixture} from './public-demo21-progress.mjs';
-const {chromium,webkit,expect}=createRequire(new URL('../web/package.json',import.meta.url))('@playwright/test');
+const runtimeRoot=process.env.PAIRED_BROWSER_ROOT;if(runtimeRoot)assert(process.env.RUNNER_TEMP?.startsWith('/')&&resolve(runtimeRoot)===join(process.env.RUNNER_TEMP,'paired-browser-runtime'),'Unexpected QA runtime path');
+const runtimeRequire=createRequire(runtimeRoot?join(runtimeRoot,'package.json'):new URL('../web/package.json',import.meta.url));const runtimeVersion=runtimeRequire('@playwright/test/package.json').version;if(runtimeRoot)assert.equal(runtimeVersion,'1.62.0');
+const {chromium,webkit,expect}=runtimeRequire('@playwright/test');
 const [mode,directory]=process.argv.slice(2);
 assert(['capture','upgrade'].includes(mode)&&directory,'Usage: paired-demo-browser.mjs capture|upgrade profile-directory');
 const SOURCE=process.env.PAIRED_SOURCE;
@@ -31,10 +33,11 @@ async function controllerSource(page){return page.evaluate(async()=>{
  const worker=navigator.serviceWorker?.controller;if(!worker)return null;
  return new Promise(resolve=>{const channel=new MessageChannel(),timer=setTimeout(()=>{channel.port1.close();resolve(null);},1500);channel.port1.onmessage=e=>{clearTimeout(timer);channel.port1.close();resolve(e.data?.sourceCommit||null);};worker.postMessage({type:'SOURCE_ID'},[channel.port2]);});
 }).catch(()=>null);}
+async function cacheSummary(page){return page.evaluate(async()=>{const rows=[];for(const name of await caches.keys()){if(!name.startsWith('fungo-'))continue;const cache=await caches.open(name),requests=await cache.keys(),shell=await cache.match(new URL('/fungo-italia/index.html',location.href).href);rows.push({name,entries:requests.length,shellListed:requests.some(r=>new URL(r.url).pathname==='/fungo-italia/index.html'),shellReadable:!!shell,shellStatus:shell?.status??null,appScripts:requests.filter(r=>r.url.includes('/_expo/static/js/web/index-')).map(r=>new URL(r.url).pathname)});}return rows;}).catch(()=>null);}
 const reports=[];
 for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
  const gate=await createNetworkGate({localOrigin:replay?new URL(base).origin:undefined});
- let context,page;const errors=[];
+ let context,page;const errors=[],cacheObservations={};
  try{
  context=await browser.launchPersistentContext(join(directory,name),{proxy:{server:gate.url,bypass:'127.0.0.1,localhost'},headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
   if(mode==='capture')await context.addInitScript(({favorite,probe,notes})=>{
@@ -45,7 +48,7 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
   const navigation=await page.goto(base,{waitUntil:'domcontentloaded',timeout:60000});assert(navigation?.ok(),'Application navigation HTTP '+navigation?.status());await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
   await expect.poll(()=>controllerSource(page),{timeout:120000}).not.toBeNull();
   const scriptBefore=await scriptOf(page);
-  const before=await controllerSource(page);assert(/^[a-f0-9]{40}$/.test(before||''),'Live worker source unavailable');
+  cacheObservations.afterNavigation=await cacheSummary(page);const before=await controllerSource(page);assert(/^[a-f0-9]{40}$/.test(before||''),'Live worker source unavailable');
   if(mode==='upgrade'){const captured=prior.reports.find(r=>r.browser===name);assert([SOURCE,captured?.sourceAfter].includes(before),'Worker differs from captured source');assert([expectedScript,captured?.documentScript].includes(scriptBefore),'Document differs from captured or verified app');}
   if(mode==='capture'){
    await page.getByRole('tab',{name:'Esame',exact:true}).click();
@@ -79,13 +82,13 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
   if(mode==='upgrade')await expect.poll(()=>controllerSource(page),{timeout:120000}).toBe(SOURCE);
   const readProgress=()=>page.evaluate(probe=>({note:localStorage.getItem(probe),study:JSON.parse(localStorage.getItem('fungo-italia:study:v1')||'null'),notes:JSON.parse(localStorage.getItem('fungo-italia:pwa:notes:v1')||'null')}),probe);
   async function verifyOffline(){
-   await page.evaluate(()=>{window.__preOfflineDocument=true;});if(replay){const r=await fetch(replayControl+'/stop');assert(r.ok,'Replay origin cut failed');}gate.block();
+   cacheObservations.beforeCut=await cacheSummary(page);await page.evaluate(()=>{window.__preOfflineDocument=true;});if(replay){const r=await fetch(replayControl+'/stop');assert(r.ok,'Replay origin cut failed');}gate.block();
    try{
-    const probe=await context.browser().newContext({proxy:{server:gate.url,bypass:'127.0.0.1,localhost'}});try{await expect((await probe.newPage()).goto(base,{timeout:15000})).rejects.toThrow();}finally{await probe.close();}
+    const probeBrowser=await browser.launch({headless:true,proxy:{server:gate.url,bypass:'127.0.0.1,localhost'}});try{const probe=await probeBrowser.newContext();await expect((await probe.newPage()).goto(base,{timeout:15000})).rejects.toThrow();}finally{await probeBrowser.close();}cacheObservations.afterIndependentProbe=await cacheSummary(page);
     const response=await page.reload({waitUntil:'domcontentloaded'});assert.equal(response.status(),200);assert(response.fromServiceWorker(),'Offline document must come from actual installed worker');
     assert.equal(await page.evaluate(()=>window.__preOfflineDocument),undefined,'Offline navigation must create a new document');
     await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:30000});
-    assertBrowserProgress(await readProgress());assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam state changed offline');
+    cacheObservations.afterOfflineReload=await cacheSummary(page);assertBrowserProgress(await readProgress());assert.equal(await page.evaluate(key=>localStorage.getItem(key),demoStudyKey),examSnapshot,'Exam state changed offline');
    }finally{gate.allow();if(replay){const r=await fetch(replayControl+'/start');assert(r.ok,'Replay origin restart failed');}}
   }
   assertBrowserProgress(await readProgress());
@@ -105,9 +108,9 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await page.screenshot({path:join(directory,name+'-verified.png'),fullPage:true});
   }
   assert.deepEqual(errors,[]);
-  reports.push({browser:name,mode,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method==='manual-update',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'});
+  cacheObservations.beforeClose=await cacheSummary(page);reports.push({browser:name,browserRuntime:runtimeVersion,browserVersion:context.browser().version(),executable:browser.executablePath(),mode,cacheObservations,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method==='manual-update',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade'});
  }catch(error){
-  if(page){await page.screenshot({path:join(directory,name+'-'+mode+'-failure.png'),fullPage:true}).catch(()=>{});await writeFile(join(directory,name+'-'+mode+'-failure.json'),JSON.stringify({scope:replay?'archived-loopback-migration':'live-public-origin',error:error.message,controller:await controllerSource(page),documentScript:await scriptOf(page).catch(()=>null),pageErrors:errors,reports},null,2)+'\n');}
+  if(page){await page.screenshot({path:join(directory,name+'-'+mode+'-failure.png'),fullPage:true}).catch(()=>{});await writeFile(join(directory,name+'-'+mode+'-failure.json'),JSON.stringify({scope:replay?'archived-loopback-migration':'live-public-origin',error:error.message,controller:await controllerSource(page),documentScript:await scriptOf(page).catch(()=>null),pageErrors:errors,cacheObservations,cacheAtFailure:await cacheSummary(page),reports},null,2)+'\n');}
   throw error;
  }finally{await context?.close();await gate.close();}
 }
