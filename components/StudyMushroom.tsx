@@ -6,8 +6,8 @@ export default function StudyMushroom({stage,score}:{stage:number;score:number|n
  const fill=mushroomFill(score);
  return <View accessible accessibilityRole="progressbar" accessibilityLabel="Avanzamento dello studio" accessibilityValue={score===null?{text:'Da valutare'}:{min:0,max:100,now:fill.percent,text:fill.percent+' per cento'}} style={s.garden}>
   <View style={s.picture}><View style={s.halo}/>
-  <View style={s.stem}><View style={[s.fill,{height:`${fill.stem}%`}]}/><View style={s.stemLine}/></View>
-  <View style={s.cap}><View style={[s.fill,{height:`${fill.cap}%`}]}/><View style={s.capLine}/></View>
+  <View style={s.stem}><View style={[s.fill,{height:`${fill.stem}%`}]}/></View>
+  <View style={s.cap}><View style={[s.fill,{height:`${fill.cap}%`}]}/></View>
   <View style={s.value}><Text adjustsFontSizeToFit minimumFontScale={0.7} numberOfLines={1} style={s.percent}>{score===null?'—':Math.round(fill.percent)+'%'}</Text></View>
   <View style={s.soil}/></View><Text style={s.stage}>{score===null?'Il tuo percorso inizia qui':labels[Math.max(0,Math.min(4,stage))]}</Text>
  </View>;

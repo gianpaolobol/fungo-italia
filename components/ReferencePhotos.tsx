@@ -9,7 +9,7 @@ const referenceLabel=(photo:ReferenceImage|undefined|null,fallback:string)=>phot
 export default function ReferencePhotos({taxon}:{taxon:{scientificName:string;referenceImages?:ReferenceImage[];courseImages?:ReferenceImage[]}}){
  const [selected,setSelected]=useState<ReferenceImage|null>(null),[zoom,setZoom]=useState(1),[width,setWidth]=useState(320);
  const photos=taxon.referenceImages||[],coursePhotos=taxon.courseImages||[],subjects=[...new Set((taxon.referenceImages||[]).map(p=>p.subjectTaxon).filter(Boolean))];
- if(!photos.length&&!coursePhotos.length)return <Text style={styles.pending}>Immagini di riferimento non ancora disponibili.</Text>;
+ if(!photos.length)return <Text style={styles.pending}>Immagini di riferimento non ancora disponibili.</Text>;
  const asset=selected?referenceImageAssets[selected.src]:undefined;
  const dimensions=asset?Image.resolveAssetSource(asset):null;
  const imageWidth=Math.max(240,width-24)*zoom,imageHeight=dimensions?.height&&dimensions.width?imageWidth*dimensions.height/dimensions.width:imageWidth;
@@ -21,7 +21,7 @@ export default function ReferencePhotos({taxon}:{taxon:{scientificName:string;re
    const caption=referenceLabel(photo,label);
    return <View key={view} style={styles.cell}>{photo&&source?<Pressable accessibilityRole="button" accessibilityLabel={'Ingrandisci vista '+caption.toLowerCase()+' di '+(photo.subjectTaxon||taxon.scientificName)} onPress={()=>{setSelected(photo);setZoom(1);}} style={styles.thumbnail}><Image source={source} accessibilityLabel={photo.alt} style={styles.image} resizeMode="cover"/></Pressable>:<View style={styles.thumbnail}><Text style={styles.pending}>Vista non disponibile</Text></View>}<Text style={styles.caption}>{caption}</Text>{subjects.length>1&&photo?.subjectTaxon&&photo.subjectTaxon!==taxon.scientificName&&<Text style={styles.subject}>{photo.subjectTaxon}</Text>}</View>;
   })}</View>
-  {!!coursePhotos.length&&<View style={styles.courseGallery}><Text style={styles.title}>Fotografie delle esercitazioni del corso</Text><ScrollView horizontal>{coursePhotos.map(photo=><Pressable key={photo.src} accessibilityRole="button" accessibilityLabel={'Apri fotografia del corso: '+photo.subjectTaxon} onPress={()=>{setSelected(photo);setZoom(1);}} style={styles.courseCell}><Image source={referenceImageAssets[photo.src]} accessibilityLabel={photo.alt} resizeMode="contain" style={styles.courseImage}/><Text style={styles.subject}>{photo.subjectTaxon}</Text></Pressable>)}</ScrollView></View>}
+
   <Modal visible={!!selected} animationType="fade" onRequestClose={close}>
    <SafeAreaProvider><SafeAreaView style={styles.viewer} onLayout={event=>setWidth(event.nativeEvent.layout.width)}>
     <View style={styles.controls}><Pressable accessibilityRole="button" onPress={close} style={styles.button}><Text>Chiudi immagine</Text></Pressable><Text style={styles.title}>{selected?.subjectTaxon||taxon.scientificName}{selected?' · '+referenceLabel(selected,views.find(([view])=>view===selected.view)?.[1]||'Esercitazione del corso'):''}</Text></View>

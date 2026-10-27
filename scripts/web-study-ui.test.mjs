@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {sporeColors} from '../lib/spore-colors.mjs';
+test('renders known single colors and keeps pale colors visible',()=>{assert.deepEqual(sporeColors({label:'Bianca.'}),['#f7f5ed']);assert.deepEqual(sporeColors({label:'Bruno-oliva.'}),['#6e7040']);assert.deepEqual(sporeColors({label:'Nera.'}),['#222222']);});
+test('variable colors retain both colors, absent or uncertain data are not guessed',()=>{assert.deepEqual(sporeColors({label:'Bianca o crema pallido.'}),['#f7f5ed','#eee0b5']);assert.deepEqual(sporeColors({label:'Non documentata'}),[]);assert.deepEqual(sporeColors({label:'Molto chiara'}),[]);});
+test('external specimen qualifiers do not recolor a white spore print from later prose',()=>{assert.deepEqual(sporeColors({label:'Bianca in una specie; esempio di fungo bruno.'}),['#f7f5ed']);assert.deepEqual(sporeColors({label:'Esempi documentati: A — Bianca.; B — Rosa. Non estendere al gruppo.'}),['#f7f5ed','#d9a4a7']);});

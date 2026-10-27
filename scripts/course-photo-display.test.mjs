@@ -16,20 +16,20 @@ function component(file,{states=[],assets={},modules={}}={}){
  return props=>{cursor=0;return output.exports.default(props);};
 }
 const photo={src:'course.jpg',view:'collection',alt:'Esercitazione del corso: Agaricus crocodilinus',credit:'Determinazione docente · messaggio 786',subjectTaxon:'Agaricus crocodilinus',relationship:'genus-example',identificationEligible:false};
-test('course-only gallery remains separate from the three reference views and opens attribution',()=>{
- const render=component('ReferencePhotos.tsx',{assets:{'course.jpg':1}}),props={taxon:{scientificName:'Agaricus',courseImages:[photo]}};
- let tree=render(props);
- assert(text(tree).includes('Fotografie delle esercitazioni del corso'));
- assert.equal(nodes(tree).filter(n=>n.props.accessibilityLabel?.startsWith('Ingrandisci vista ')).length,0);
- assert.equal(nodes(tree).filter(n=>n.type==='Text'&&text(n)==='Vista non disponibile').length,3);
- const open=nodes(tree).find(n=>n.props.accessibilityLabel==='Apri fotografia del corso: '+photo.subjectTaxon);assert(open);open.props.onPress();
- tree=render(props);
- assert(text(tree).includes(photo.credit));assert(text(tree).includes('Esercitazione del corso'));
- assert.equal(nodes(tree).find(n=>n.type==='Modal').props.visible,true);
+test('study cards keep course evidence out of the three reference slots',()=>{
+ const render=component('ReferencePhotos.tsx',{assets:{'course.jpg':1,'side.jpg':2}});
+ const empty=render({taxon:{scientificName:'Agaricus',courseImages:[photo]}});
+ assert(text(empty).includes('Immagini di riferimento non ancora disponibili.'));
+ assert(!text(empty).includes('Fotografie delle esercitazioni del corso'));
+ const tree=render({taxon:{scientificName:'Agaricus',referenceImages:[{src:'side.jpg',view:'lateral',alt:'Fianco',credit:'Fonte'}],courseImages:[photo]}});
+ assert.equal(nodes(tree).filter(n=>n.props.accessibilityLabel?.startsWith('Ingrandisci vista ')).length,1);
+ assert.equal(nodes(tree).filter(n=>n.type==='Text'&&text(n)==='Vista non disponibile').length,2);
+ assert(!nodes(tree).some(n=>n.props.accessibilityLabel?.startsWith('Apri fotografia del corso:')));
 });
+
 function exam(current,feedback=null){
  const session={queue:[current.id],phase:'initial',first:[],round:0,mode:'training',feedback,draft:{name:'',category:'',choices:{}}};
- return component('PhotoExam.tsx',{states:[session,[],false,true,false,'',{name:'',category:'',choices:{},assisted:false},null],assets:{'triad.jpg':1,'course.jpg':2},modules:{'../lib/studyRuntime':{},'../lib/study-store.mjs':{createStudyExamWriter:()=>({})},'../lib/study-exam.mjs':{},'../lib/studyBank':{studyBank:[current],photoBank:[current],demoBank:[]},'../src/data/catalog.json':[],'../web/public/exam-core':{detailQuestions:()=>[],suggestNames:()=>[],foodLabels:{toxic:'Tossico'},foodColors:{toxic:'#fff'}}}})({});
+ return component('PhotoExam.tsx',{states:[session,[],false,true,false,'',{name:'',category:'',choices:{},assisted:false},null],assets:{'triad.jpg':1,'course.jpg':2},modules:{'../lib/session-selection.mjs':{selectPhotoSession:()=>[],cardLearning:()=>({})},'../lib/studyRuntime':{},'../lib/study-store.mjs':{createStudyExamWriter:()=>({})},'../lib/study-exam.mjs':{},'../lib/studyBank':{studyBank:[current],photoBank:[current],demoBank:[]},'../src/data/catalog.json':[],'../web/public/exam-core':{detailQuestions:()=>[],suggestNames:()=>[],foodLabels:{toxic:'Tossico'},foodColors:{toxic:'#fff'}}}})({});
 }
 const current={id:'case',name:'Agaricus test',category:'toxic',acceptedNames:['Agaricus test'],photos:[{src:'triad.jpg'}],coursePhotos:[{...photo,relationship:'species-match',identificationEligible:true}],questionKind:'photo'};
 test('photo exam shows course collections without revealing identification or attribution before correction',()=>{
