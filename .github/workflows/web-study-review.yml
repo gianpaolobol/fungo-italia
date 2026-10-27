@@ -25,6 +25,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Trust only the actual isolated checkout
+        run: git config --global --add safe.directory "$(pwd -P)"
       - run: npm ci
       - run: npm ci --prefix web
       - name: Node and TypeScript regression checks
