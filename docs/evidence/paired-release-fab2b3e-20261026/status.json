@@ -209,5 +209,36 @@
     "fixed": "derive runtime path from RUNNER_TEMP inside install step and persist through GITHUB_ENV",
     "validator": "official actionlint1.7.12, releaseZIPsha2568aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8",
     "validation": "oldexpressionRED; correctedwholepublisherworkflowPASS"
+  },
+  "publicRuntimeComparison": {
+    "run": 40428573597,
+    "job": 121940402018,
+    "conclusion": "failure only isolated replay metadata CORS",
+    "artifact": 12701400378,
+    "zipSha256": "d3bd7a8dd38ca1a36cbb1ad4eaf5fbe1bc3e3293699795f8d5268e0103038a4a",
+    "originalRuntime": {
+      "playwright": "1.56.1",
+      "webkitRevision": 2215,
+      "version": "26.0",
+      "privateCacheImmediateReloadReopen": [
+        null,
+        null,
+        null
+      ]
+    },
+    "correctedRuntime": {
+      "playwright": "1.62.0",
+      "webkitRevision": 2336,
+      "version": "26.5",
+      "privateCacheImmediateReloadReopen": [
+        "immutable-private-fixture",
+        "immutable-private-fixture",
+        "immutable-private-fixture"
+      ]
+    },
+    "actualPublicBrowserResult": "both Chromium151 and WebKit26.5 PASS; actual-source DOM/icon/Areas71/notes/favorites/exam/history plus full-public-origin disconnection and fresh SW-served document",
+    "actualPublicVerifiedAt": "2026-10-27T00:48:42.008Z",
+    "replayFailure": "WebKit access control pageerror for absolute publicGHrelease.json while forcing independent metadata offline from loopback; all actual migration/data/SW assertions reached",
+    "replayCorrection": "actual loopback origin remains stopped + proxy local sockets cut; independent public metadata stays reachable, accurately labelled origin-only; full public mode still cuts origin+same-origin metadata; no errors filtered"
   }
 }
