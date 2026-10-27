@@ -10,7 +10,7 @@
   "demoRun": 40503822843,
   "mainMustNotMoveUntilReceipt": false,
   "publishedWebSource": "7398825ea3b834d3b003aac3fd2d93232f791a54",
-  "state": "TestFlight24-and-web-published-original-profile-upgrade-not-verified",
+  "state": "TestFlight24-and-web-published-original-profile-upgrade-verified",
   "scientificGapWorkflow": {
     "run": 40503822619,
     "conclusion": "failure",
@@ -114,8 +114,8 @@
     "rerunWholeFailedWorkflow": "403 workflow cannot be retried; no action occurred",
     "attempt2": "GitHub Actions Startup failure before jobs: An unexpected error has occurred; request D3EC:1EC9D4:3B1924:55B187:6AE0B121",
     "attempt3": "UI temporarily showed Latest #3 queued; after reload actual API and UI both report run_attempt2 startup_failure, no attempt3 resource; no successful recovery claimed",
-    "latestVerified": "completed/startup_failure, updated2026-10-27T19:48:37Z; no jobs or artifacts",
-    "blocked": true,
+    "latestVerified": "40576277750 SUCCESS, original live-public profiles upgraded and data/offline verified2026-10-27T20:16:38.369Z",
+    "blocked": false,
     "noMoreImmediateRetries": true,
     "ownerManualRerun": {
       "receivedAt": "2026-10-27T19:45:18Z",
@@ -127,11 +127,35 @@
       "testsExecuted": false,
       "deployPerformed": false,
       "appleUploadPerformed": false
+    },
+    "finalRecovery": {
+      "run": 40576277750,
+      "orchestrator": "eccf7966ee0ce9be54fb374033ee76b9dc0d9e6a",
+      "pr": 129,
+      "conclusion": "success",
+      "artifactId": 12767414065,
+      "zipSha256": "f7813b4c4e0c7c9790d22e1e05034d303a8ee9947810237ea711d93c4eb74083",
+      "originalProfilesRestored": true,
+      "browsers": [
+        "chromium",
+        "webkit"
+      ],
+      "upgradeMethod": "manual-update",
+      "explicitRecoveryReload": false,
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": true,
+      "syntheticDataNotOwnerDevice": true,
+      "screenshotsInspected": 4,
+      "deployPerformed": false,
+      "appleUploadPerformed": false
     }
   },
   "cloudBrowser": {
     "normalUpdateButton": "success",
     "visibleVersionStatus": "Questa versione corrisponde alla versione TestFlight verificata.",
-    "ciPwaProofStillPending": true
+    "ciPwaProofStillPending": false
   }
 }

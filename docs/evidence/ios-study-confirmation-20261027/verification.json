@@ -30,8 +30,10 @@
   "otaSent": false,
   "publicPairPublished": true,
   "publicPairRun": 40516389667,
-  "originalProfilePwaUpgradeVerified": false,
-  "originalProfileDataAndOfflineVerified": false,
-  "recoveryRun": 40517527324,
-  "recoveryStatus": "startup_failure before jobs; original Apple timeout and Chromium upgrade negative retained"
+  "originalProfilePwaUpgradeVerified": true,
+  "originalProfileDataAndOfflineVerified": true,
+  "recoveryRun": 40576277750,
+  "recoveryStatus": "success; Chromium and WebKit, original profiles, manual-update without forced reload",
+  "syntheticDataNotOwnerPhysicalDevice": true,
+  "scientificIndependentReviewStillPending": true
 }

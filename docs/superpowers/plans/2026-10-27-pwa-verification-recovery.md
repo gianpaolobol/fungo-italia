@@ -21,5 +21,7 @@ Nessun cambio applicativo, scientifico, Apple, diritti o ricevute. Nessun deploy
 - [x] Test locale fallisce sul trigger push assente.
 - [x] Modificare solo promote-paired-demo.yml: trigger mirato, default solo push, tutte le pubblicazioni richiedono workflow_dispatch.
 - [x] Parsing YAML e test condizioni/profili/guard.
-- [ ] PR/revisione, integrazione e nuova esecuzione reale.
-- [ ] Ispezionare prove finali o descrivere il blocco concreto.
+- [x] PR/revisione, integrazione e nuova esecuzione reale.
+- [x] Ispezionare prove finali o descrivere il blocco concreto.
+
+Esito: PR129 integrata, run40576277750 SUCCESS, artifact12767414065 ZIPf7813b4c4e0c7c9790d22e1e05034d303a8ee9947810237ea711d93c4eb74083 verificato, rapporti e4screenshot ispezionati. Nessuna pubblicazione o nuovo binario.

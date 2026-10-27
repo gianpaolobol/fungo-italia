@@ -1,0 +1,369 @@
+{
+  "checkedAt": "2026-10-27T20:16:38.369Z",
+  "status": "complete",
+  "scope": "live-public-origin",
+  "reports": [
+    {
+      "browser": "chromium",
+      "mapProof": {
+        "scope": "actual public source and origin; visual geography inspection required",
+        "regionCount": 6,
+        "searchCount": 1,
+        "habitat": true,
+        "markers": 1,
+        "viewportSettled": true,
+        "failures": [],
+        "tiles": [
+          {
+            "url": "https://tile.openstreetmap.org/9/271/188.png",
+            "status": 200,
+            "sha256": "3040d95debc34b9ad2142c7e75d1946efc0640de97b037392dfded0aa57cf472",
+            "bytes": 25855
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/272/188.png",
+            "status": 200,
+            "sha256": "7901bcd81c5d8a04b5043611e5de2e0fbbbd3100528fe89478fa0f30e46c62f8",
+            "bytes": 36980
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/271/187.png",
+            "status": 200,
+            "sha256": "f509083f19cab5643608be37316380462c0f219c8abdc7353f45661357d942da",
+            "bytes": 42857
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/273/188.png",
+            "status": 200,
+            "sha256": "974680f6f195bb72a0ea4d7876a9b3b673e31da00321dbb9770ecb1fcb5e14b4",
+            "bytes": 44035
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/272/187.png",
+            "status": 200,
+            "sha256": "16c54ae2c026ce95671d5d8d51c2272efbc1df694006eb3ca0088bfe9818b13f",
+            "bytes": 46283
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/273/187.png",
+            "status": 200,
+            "sha256": "264a3b017c702365edce452e860fbd48617c592f6da423cfa6fdc471bb7cf506",
+            "bytes": 41615
+          }
+        ]
+      },
+      "browserRuntime": "1.62.0",
+      "browserVersion": "151.0.7922.34",
+      "executable": "/ms-playwright/chromium-1234/chrome-linux64/chrome",
+      "mode": "upgrade",
+      "cacheObservations": {
+        "afterNavigation": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 47,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 0,
+            "shellListed": false,
+            "shellReadable": false,
+            "shellStatus": null,
+            "appScripts": []
+          }
+        ],
+        "beforeCut": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 47,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ],
+        "afterIndependentProbe": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 47,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ],
+        "afterOfflineReload": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 47,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ],
+        "beforeClose": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 47,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ]
+      },
+      "origin": "https://gianpaolobol.github.io",
+      "scope": "live-public-origin",
+      "sourceBefore": "a227c1f20d3e8f5d731c7b61f73babc1cee4635c",
+      "capturedSource": "a227c1f20d3e8f5d731c7b61f73babc1cee4635c",
+      "sourceAfter": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+      "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js",
+      "documentScript": "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js",
+      "documentReplaced": true,
+      "explicitRecoveryReload": false,
+      "method": "manual-update",
+      "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T13:58:29.087Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvqr3s2z-mzbg5tfukll\",\"startedAt\":\"2026-10-27T13:58:29.099Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\"],\"queue\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\"],\"pending\":[\"minimum-card-objective-agaricus--06--agaricus-bitorquis\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"caseName\":\"Agaricus bitorquis\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T13:58:29.236Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"caseName\":\"Agaricus bitorquis\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T13:58:29.236Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvqr3s2z-mzbg5tfukll\",\"startedAt\":\"2026-10-27T13:58:29.099Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":1,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":1,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":0,\"toxicologyCorrect\":0,\"danger\":0,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"name\":\"Agaricus bitorquis\",\"nameError\":true,\"categoryError\":false,\"detailErrors\":[],\"danger\":false}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"caseName\":\"Agaricus bitorquis\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T13:58:29.236Z\",\"round\":0}]}]}}",
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": true,
+      "offlineScope": "actual public application origin and same-origin release metadata disconnected"
+    },
+    {
+      "browser": "webkit",
+      "mapProof": {
+        "scope": "actual public source and origin; visual geography inspection required",
+        "regionCount": 6,
+        "searchCount": 1,
+        "habitat": true,
+        "markers": 1,
+        "viewportSettled": true,
+        "failures": [],
+        "tiles": [
+          {
+            "url": "https://tile.openstreetmap.org/9/271/188.png",
+            "status": 200,
+            "sha256": "3040d95debc34b9ad2142c7e75d1946efc0640de97b037392dfded0aa57cf472",
+            "bytes": 25855
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/272/187.png",
+            "status": 200,
+            "sha256": "16c54ae2c026ce95671d5d8d51c2272efbc1df694006eb3ca0088bfe9818b13f",
+            "bytes": 46283
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/273/187.png",
+            "status": 200,
+            "sha256": "264a3b017c702365edce452e860fbd48617c592f6da423cfa6fdc471bb7cf506",
+            "bytes": 41615
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/271/187.png",
+            "status": 200,
+            "sha256": "f509083f19cab5643608be37316380462c0f219c8abdc7353f45661357d942da",
+            "bytes": 42857
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/272/188.png",
+            "status": 200,
+            "sha256": "c2fd804e163b9c300a15bee8c4fdd7390dc59e19eb482e4c5dde6fe2037dd1b8",
+            "bytes": 36971
+          },
+          {
+            "url": "https://tile.openstreetmap.org/9/273/188.png",
+            "status": 200,
+            "sha256": "974680f6f195bb72a0ea4d7876a9b3b673e31da00321dbb9770ecb1fcb5e14b4",
+            "bytes": 44035
+          }
+        ]
+      },
+      "browserRuntime": "1.62.0",
+      "browserVersion": "26.5",
+      "executable": "/ms-playwright/webkit-2336/pw_run.sh",
+      "mode": "upgrade",
+      "cacheObservations": {
+        "afterNavigation": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 48,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 0,
+            "shellListed": false,
+            "shellReadable": false,
+            "shellStatus": null,
+            "appScripts": []
+          }
+        ],
+        "beforeCut": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 48,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ],
+        "afterIndependentProbe": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 48,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ],
+        "afterOfflineReload": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 48,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ],
+        "beforeClose": [
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:7228c5f4aaeaeaba2d2bb4397c57024b4cf343b3b57116a9d3d8fdeba229e09d",
+            "entries": 48,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js"
+            ]
+          },
+          {
+            "name": "fungo-italia-pwa:https://gianpaolobol.github.io/fungo-italia/:f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+            "entries": 44,
+            "shellListed": true,
+            "shellReadable": true,
+            "shellStatus": 200,
+            "appScripts": [
+              "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js"
+            ]
+          }
+        ]
+      },
+      "origin": "https://gianpaolobol.github.io",
+      "scope": "live-public-origin",
+      "sourceBefore": "a227c1f20d3e8f5d731c7b61f73babc1cee4635c",
+      "capturedSource": "a227c1f20d3e8f5d731c7b61f73babc1cee4635c",
+      "sourceAfter": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+      "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-82da3bcbf3d597a9a983a6f97dea8cd7.js",
+      "documentScript": "/fungo-italia/_expo/static/js/web/index-cb3cb986aed8f29d5d2136d7dec9d459.js",
+      "documentReplaced": true,
+      "explicitRecoveryReload": false,
+      "method": "manual-update",
+      "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T13:58:31.198Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvqr3tpq-a7egcwhmpz8\",\"startedAt\":\"2026-10-27T13:58:31.214Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\"],\"queue\":[\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\"],\"pending\":[\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T13:58:31.586Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T13:58:31.586Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvqr3tpq-a7egcwhmpz8\",\"startedAt\":\"2026-10-27T13:58:31.214Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":1,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":1,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":0,\"toxicologyCorrect\":0,\"danger\":0,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"name\":\"Agaricus campestris\",\"nameError\":true,\"categoryError\":false,\"detailErrors\":[],\"danger\":false}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--05--agaricus-campestris\",\"caseName\":\"Agaricus campestris\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":true,\"detail\":true,\"danger\":false,\"details\":[],\"passed\":false},\"at\":\"2026-10-27T13:58:31.586Z\",\"round\":0}]}]}}",
+      "examCheckpointPreserved": true,
+      "examHistoryPreserved": true,
+      "notesPreserved": true,
+      "favoritesPreserved": true,
+      "offlineVerified": true,
+      "offlineScope": "actual public application origin and same-origin release metadata disconnected"
+    }
+  ]
+}
