@@ -1,0 +1,16 @@
+# Allineamento nativo del lotto12
+
+<!-- IOS_STUDY_24_CURRENT -->
+## TestFlight24 disponibile; abbinamento web in preparazione —27 ottobre2026
+
+Conferma successiva web «Confermo» acquisita; PR128 integrata nel sorgente `7398825ea3b834d3b003aac3fd2d93232f791a54`. **Apple1.1.0(24) VALID/IN_BETA_TESTING solo titolare**, confermata alle13:42:14.048Z, buildbb0237ca-066e-4253-8a23-c7383d3935f1. Run40503822651 source/beta SUCCESS: tutti i gate nativi/StoreKit/UI/demo sullo stesso sorgente. Fonte scientifica868 identica a quella approvata sulla web, consenso interno distinto32…c1b1, independentReleaseReady=false/AppStorefalse. Nessuna revisione indipendente o platea esterna attribuita; nessun OTA.
+
+La prima demo iPad40503822843/job122187935233 ha fallito per mappa vuota dopo il solo retry UI ammesso; artifact12735920955 SHA2569bc046098da7435293f410490e02d2bc8bd7c220542f758abe13a157318c1f32 scaricato/verificato e negativo conservato. Ripetizione del solo job sullo stesso codice122199101916 SUCCESS: mappa OSM visibile, explicitRetry=false, artifact12736626933 SHA256d4ebd44784de3588afee18b2f66439cdc0216f0a449df8f42c992c11e05deb83. Causa di rete precisa non dimostrata; nessun test indebolito o cambio di codice. Source del produttore rilanciato dopo il negativo, secondo tentativo SUCCESS. Il gate generale Scientific gap evidence40503822619 rimane FAILURE per lacune/revisione indipendente: non rinominatoPASS.
+
+Locali340Node0fail0skip/TypeScript e prepare:data senza drift; tre workflow del ramo40503342986/40503343038/40503343103 SUCCESS prima del merge. Revisione tecnica del delta37 test senza blocchi. UI acquisti iPhone/iPad: due test eseguiti positivi per dispositivo, una sonda diagnostica opt-in saltata intenzionalmente; non contata come prova. Quattro mappe gratuite/acquistate ispezionate su iPhone/iPad: cartografia OSM effettiva, filtri e nessun paywall. Schermata iPhone conferma triade, sporata bianca e salvadanaio. Simulatori, non dispositivi fisici.
+
+Ricevute e provenienza in `docs/evidence/ios-study-confirmation-20261027/`. Artifact nativo12739150495 ZIP SHA2564c1346f33a1c9c1331231e851822cb9abfb002a0cc3ca3559c1c347b83933ae1 verificato. IPA SHA2563fc424d4623ced26eba6ab6bbb5d7009503fa975437ef0c96832f7e1b6486469; fonte incorporata/firma/team verificati nel produttore. ZIP IPA originale12737869408 SHA256f608fd0d30cfcdf3427a585f798b1fdeaea385ff17afe9b2bf26fc3cad1b58bd scaricato/verificato; IPA originale, bundle/versione/numero e sorgente Expo incorporato verificati anche localmente. Web candidata originale12735917887 ZIP041798d6890406d1e16e24a1ada2e21ed9a0cd7bf52969cf0a85c5ced3021308, contenthashf753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f. Consenso distinto pubblico non certificato predisposto per abbinare questa ricevuta alla demo gia autorizzata; pubblicazione e upgrade del nuovo candidato non ancora attestati. Il sito resta realmente a227c1f fino alla promozione verificata. Automazione disattivata.
+
+Audit Apple aggiuntivo read-only non avviato: auto-review ha rifiutato il nuovo dispatch con credenziali; nessun aggiramento. La pipeline gia autorizzata ha completato la verifica Apple effettiva. Nessun blocco residuo da quel controllo aggiuntivo.
+<!-- /IOS_STUDY_24_CURRENT -->
+

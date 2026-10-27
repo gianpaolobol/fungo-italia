@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "type": "owner-distribution-authorization",
+  "scope": "public-demo-beta",
+  "status": "approved",
+  "owner": {
+    "name": "Gian Paolo Franceschini",
+    "role": "owner"
+  },
+  "confirmation": "Confermo",
+  "confirmationContext": "Conferma successiva del titolare alla web pubblicata e verificata del lotto12 e mandato di allineamento iPhone, con pubblicazione WEB gia espressamente autorizzata. Questa promozione abbina la stessa applicazione alla nuova ricevuta TestFlight reale senza nuove funzioni, revisione indipendente o ampliamento audience.",
+  "approvedAt": "2026-10-27",
+  "publicURL": "https://gianpaolobol.github.io/fungo-italia/",
+  "certified": false,
+  "independentReviewComplete": false,
+  "appStoreReady": false,
+  "externalTestFlightAllowed": false,
+  "sourceCommit": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+  "version": "1.1.0",
+  "buildNumber": "24",
+  "webContentHash": "f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "ipaSha256": "3fc424d4623ced26eba6ab6bbb5d7009503fa975437ef0c96832f7e1b6486469",
+  "appleBuildId": "bb0237ca-066e-4253-8a23-c7383d3935f1",
+  "candidateProducerRunId": 40503822651,
+  "candidateArtifactId": 12735917887,
+  "candidateArtifactSha256": "041798d6890406d1e16e24a1ada2e21ed9a0cd7bf52969cf0a85c5ced3021308",
+  "nativeProofRunIds": {
+    "native": 40503822541,
+    "ui": 40503822569,
+    "demo": 40503822843
+  },
+  "scientificContentDigest": "85efde0ea64d6f3896637d3e1002c3c2586effbcef918f6fa375d1e8d0cae8df",
+  "scientificFileCount": 868,
+  "ownerReviewDeclarationSha256": "32037af4686796d56070f6257f0afa446437f145212c3f77827c6e9562a4c1b1"
+}

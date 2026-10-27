@@ -1,0 +1,84 @@
+{
+  "sourceCommit": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+  "pr": 128,
+  "merged": true,
+  "ownerConfirmation": "Confermo",
+  "scope": "owner-internal-testflight",
+  "sourceRun": 40503822651,
+  "nativeRun": 40503822541,
+  "purchaseUIRun": 40503822569,
+  "demoRun": 40503822843,
+  "mainMustNotMoveUntilReceipt": true,
+  "publishedWebSource": "a227c1f20d3e8f5d731c7b61f73babc1cee4635c",
+  "state": "TestFlight24-available-public-pair-pending",
+  "scientificGapWorkflow": {
+    "run": 40503822619,
+    "conclusion": "failure",
+    "reason": "strict independent scientific readiness remains negative; preserved, owner-only beta uses separately pinned decision"
+  },
+  "testFlightAvailable": true,
+  "nativeRunConclusion": "success",
+  "purchaseUIRunConclusion": "success",
+  "demoFirstAttempt": {
+    "run": 40503822843,
+    "iphone": "success",
+    "ipad": "failure",
+    "failure": "Actual OSM attribution and error-free map required after at most one explicit UI retry",
+    "artifactId": 12735920955,
+    "zipSha256": "9bc046098da7435293f410490e02d2bc8bd7c220542f758abe13a157318c1f32",
+    "visual": "blank map, offline list and retry preserved",
+    "hypothesis": "external Leaflet/map initialization unavailable on this host; other three same-source native map audits passed; exact network cause not proven",
+    "action": "rerun only failed iPad job122187935233, no assertions or code changed"
+  },
+  "demoRetryJob": 122199101916,
+  "sourceFirstAttempt": "failure because mandatory demo iPad failed; no signing/upload",
+  "sourceRetry": "source job122199598421 SUCCESS",
+  "nativeUIObserved": {
+    "iphoneArtifactId": 12734588740,
+    "zipSha256": "83bf546a34fa5040f012202f906356ccba2e27cb5cf74e66cbbd148a52071d83",
+    "sourceChecked": true,
+    "screenshotsInspected": [
+      "01-studio: three views and white spore swatch",
+      "03-esame: new piggy mushroom, paywall after expiry",
+      "extended-free-map: actual OSM",
+      "extended-paid-map: actual OSM"
+    ],
+    "testsPassed": 2,
+    "diagnosticOptInSkipped": 1
+  },
+  "demoRetry": {
+    "run": 40503822843,
+    "job": 122199101916,
+    "conclusion": "success",
+    "explicitMapRetryUsed": false,
+    "artifactId": 12736626933,
+    "zipSha256": "d4ebd44784de3588afee18b2f66439cdc0216f0a449df8f42c992c11e05deb83",
+    "previousFailurePreserved": true,
+    "rootNetworkCause": "not proven; same-source repeat passed without code or assertion changes"
+  },
+  "betaJob": 122207750779,
+  "buildNumberObserved": "24",
+  "buildAvailable": true,
+  "candidateArtifact": {
+    "id": 12735917887,
+    "zipSha256": "041798d6890406d1e16e24a1ada2e21ed9a0cd7bf52969cf0a85c5ced3021308",
+    "sourceCommit": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+    "webContentHash": "f753fe457d55a1d86823a9ed99c551f21b082af6d7bfe7d21b2c5b5cd293e98f"
+  },
+  "ipadPurchaseUI": {
+    "artifactId": 12734339862,
+    "zipSha256": "bc32473de6004da569d901ab23a605332d173cce414c64a2acee55eb9a8b9e8d",
+    "mapsFreeAndPaidVisuallyInspected": true,
+    "passed": 2,
+    "diagnosticOptInSkipped": 1
+  },
+  "additionalReadOnlyAudit": {
+    "dispatched": false,
+    "autoReview": "denied additional workflow dispatch; no workaround or retry attempted",
+    "safeAlternative": "existing authorized release pipeline performs actual Apple verification"
+  },
+  "nativeProducer": "success",
+  "appleBuildId": "bb0237ca-066e-4253-8a23-c7383d3935f1",
+  "betaStateVerifiedAt": "2026-10-27T13:42:14.048Z",
+  "publicAuthorizationSha256": "4d5d7b2bbefb219719cefb7989381c6fb47ee7822eee1af3e5300203728fafaf"
+}

@@ -1,0 +1,32 @@
+{
+  "sourceCommit": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+  "version": "1.1.0",
+  "buildNumber": "24",
+  "ownerConfirmation": "Confermo",
+  "nativeProducerRun": 40503822651,
+  "nativeProducerConclusion": "success",
+  "nativeSignatureVerifiedInCI": true,
+  "teamIdentifier": "BX9MDXAHKG",
+  "localVerification": {
+    "artifactZipSha256": "f608fd0d30cfcdf3427a585f798b1fdeaea385ff17afe9b2bf26fc3cad1b58bd",
+    "ipaSha256": "3fc424d4623ced26eba6ab6bbb5d7009503fa975437ef0c96832f7e1b6486469",
+    "bundleId": "it.fungoitalia.app",
+    "version": "1.1.0",
+    "buildNumber": "24",
+    "embeddedCleanSourceMatched": true
+  },
+  "appleReceiptArtifact": {
+    "id": 12739150495,
+    "zipSha256": "4c1346f33a1c9c1331231e851822cb9abfb002a0cc3ca3559c1c347b83933ae1"
+  },
+  "appleBuildId": "bb0237ca-066e-4253-8a23-c7383d3935f1",
+  "processingState": "VALID",
+  "internalBuildState": "IN_BETA_TESTING",
+  "confirmedAt": "2026-10-27T13:42:14.048Z",
+  "audience": "owner-internal-testflight-only",
+  "nativeScreenshots": "simulators, not physical devices",
+  "independentReviewComplete": false,
+  "appStoreReady": false,
+  "otaSent": false,
+  "publicPairPublished": false
+}
