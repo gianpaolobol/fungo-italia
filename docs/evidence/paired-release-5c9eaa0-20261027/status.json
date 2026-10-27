@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-27T02:33:59.827Z",
+  "status": "PARTIAL — validated source and original web artifact; new native main push qualification in progress; no new signed IPA or Apple receipt claimed",
+  "applicationSource": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "version": "1.1.0",
+  "buildNumber": null,
+  "testFlightNewBuild": null,
+  "currentPublishedPair": {
+    "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+    "version": "1.1.0",
+    "buildNumber": "22",
+    "lastAppleRead": "2026-10-27T00:56:09.178Z",
+    "lastPublicPwaProofRun": 40429334273
+  },
+  "producerRun": 40437151113,
+  "producerSourceJob": 121968451805,
+  "webCandidate": {
+    "artifactId": 12704747838,
+    "bytes": 433835390,
+    "archiveSha256": "771bcc10691c1fef99b04231cc5f25e90297fa81663e3ecab37ffe787684a5e9",
+    "build": {
+      "schemaVersion": 1,
+      "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "version": "1.1.0",
+      "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+      "webContentHash": "9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84"
+    },
+    "buildMetadataSha256": "9bb74c323a2c2913d26b6c5fa639aa15257a81de121754fb3f2f64eab6717f45",
+    "manifestSha256": "ce0d32b984dd01acb36a7bafbbb144d283e2ed0a5d9fa92260671352fe3a731f",
+    "payloadFiles": 1652,
+    "zipEntries": 1654,
+    "originalArchiveDigestVerified": true,
+    "extractedCandidateParityVerified": true,
+    "embeddedSourceOccurrences": 1,
+    "sourceBoundInActualCompiledBundle": true,
+    "published": false
+  },
+  "science": {
+    "artifactId": 12704279394,
+    "archiveSha256": "8905aa14f534720630cf3a11b0025736f77393a89f2af9b7792f358bb46ba493",
+    "scientificFiles": 867,
+    "contentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+    "ownerDeclarationDigest": "d649ab6720c043097f021d791b0703102675c55cff2888b93c37b784214225f5",
+    "ownerOnlyInternalBetaAllowed": true,
+    "independentReleaseReady": false,
+    "appStoreReady": false,
+    "newPublicDemoAllowed": false,
+    "structuralToxicologyErrors": 0,
+    "strictExitCodes": [
+      1,
+      1
+    ]
+  },
+  "localQualification": {
+    "node": {
+      "pass": 305,
+      "fail": 0,
+      "skip": 0
+    },
+    "typescript": "PASS sequential after generation",
+    "deterministicData": "PASS no drift",
+    "referenceImageFiles": 630,
+    "assets": "PASS",
+    "mobileData": "PASS",
+    "iosExport": "PASS",
+    "originalMainWebCandidate": "PASS all manifest bytes/source/icon"
+  },
+  "prQualification": {
+    "pr": 127,
+    "head": "5c9eaa03b678b6c97429975af61834fb919e2156",
+    "syntheticMerge": "540d302cb65d4bcb8a190d238e6f043a6574e340",
+    "identicalTree": "acfe1801adbc2211789c1f960daa277275de921a",
+    "allFiveWorkflows": "SUCCESS",
+    "nativeFunctionalPassPerFamily": 2,
+    "preexistingOptInDiagnosticSkipPerFamily": 1,
+    "nativeMapVisuals": "all4 inspected; geographic six Toscana markers; explicitRetryfalseall4; recovery not exercised",
+    "syntheticMergeProofIsNotFinalPushReceipt": true,
+    "scientificAttempt1": "slow moving APT install cancelled before browser tests; negative retained",
+    "scientificAttempt2": "same source65PASS"
+  },
+  "mainPushRuns": [
+    {
+      "id": 40437151271,
+      "name": "Verify free Agaricus demo interface",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 40437151127,
+      "name": "Verify StoreKit purchase interface",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 40437151257,
+      "name": "Diagnose StoreKit entitlement startup",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40437151090,
+      "name": "Expo Android and iOS",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40437151124,
+      "name": "Verify native StoreKit subscriptions",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40437151113,
+      "name": "Paired web and diagnostic TestFlight",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 40437151142,
+      "name": "Atlas regeneration and scientific gate",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 40437151162,
+      "name": "Validate shared web candidate",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "approvalScope": "Prior public22 consent is limited to fab2b3e/22. A distinct concrete new public approval is required after fresh signed IPA and owner-only Apple VALID/IN_BETA_TESTING.",
+  "next": "Finish exact main native/UI/demo source gates, sign new IPA, validate embedded source/signature, upload and read Apple owner-only availability, then prepare a distinct public candidate approval. Keep main frozen until producer completes."
+}

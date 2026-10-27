@@ -1,0 +1,11 @@
+# Nuovo candidato abbinato — checkpoint del27 ottobre2026
+
+Sorgente applicativo `5c9eaa03b678b6c97429975af61834fb919e2156`, integrato tramite PR127 mantenendo lo SHA verificato. **Lavoro parziale:** nuovo IPA e disponibilità Apple non ancora attestati; il consenso pubblico della22 non si estende a questo sorgente.
+
+Il produttore40437151113 ha già caricato l’artefatto web originale12704747838, ZIP SHA256 `771bcc10691c1fef99b04231cc5f25e90297fa81663e3ecab37ffe787684a5e9`. Download completo verificato,1652file applicativi e due metadati. Il manifest originale e tutti i byte estratti sono verificati; lo SHA sorgente compare nel vero bundle compilato. Content hash `9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84`. Non ricostruire un pacchetto diverso per promuoverlo: riusare quello originale dopo i controlli Apple e il consenso distinto.
+
+La prova scientifica originale dello stesso produttore è conservata integralmente:867file, digest `79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499`, zero errori strutturali tossicologici. Entrambi i controlli strict restano exit1; zero revisioni indipendenti, nessuna certificazione/App Store. La dichiarazione del titolare autorizza soltanto il suo TestFlight interno.
+
+Tutti i cinque workflow della PR sono riusciti, comprese quattro mappe native geografiche gratuite/acquistate iPhone/iPad e Chromium/WebKit. La PR è stata compilata dal merge sintetico540d302... con albero identico al ramo: sono prove preliminari, non ricevute di rilascio main. Il primo download APT anormalmente lento è stato cancellato senza eseguire test e il solo job ripetuto sullo stesso sorgente;65test poi riusciti. La sonda diagnostica opt-in saltata nei normali test UI è preesistente e non viene spacciata per test eseguito. I controlli dedicati su main sono separati.
+
+[Stato puntuale e prossimi passi](status.json), [metadati originali web](web-build.json), [manifest originale web](web-file-manifest.json), [prova scientifica originale](internal-beta-science.json). Main deve restare congelato durante qualificazione, firma e upload. Non riutilizzare ricevute o consenso pubblico22. Lo stato attuale non è una dichiarazione di pubblicazione.
