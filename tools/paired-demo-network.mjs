@@ -9,7 +9,7 @@ export async function createNetworkGate({host='gianpaolobol.github.io',port=443,
   let target;try{target=new URL(req.url);}catch{res.writeHead(403);res.end();return;}
   if(!localOrigin||target.origin!==localOrigin||!target.pathname.startsWith('/fungo-italia/')||target.username||target.password||!['GET','HEAD'].includes(req.method)){res.writeHead(403);res.end();return;}
   if(!enabled){res.writeHead(503);res.end();return;}
-  const upstream=http.request(target,{method:req.method,headers:{...req.headers,host:target.host}},response=>{res.writeHead(response.statusCode,response.headers);response.pipe(res);});
+  const upstream=http.request(target,{method:req.method,agent:false,headers:{...req.headers,host:target.host}},response=>{res.writeHead(response.statusCode,response.headers);response.pipe(res);});
   upstream.on('socket',track);upstream.on('error',()=>{if(!res.headersSent)res.writeHead(502);res.end();});req.on('aborted',()=>upstream.destroy());res.on('close',()=>upstream.destroy());upstream.end();
  });
  server.on('connection',track);

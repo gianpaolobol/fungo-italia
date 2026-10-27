@@ -20,7 +20,7 @@ test('network gate cuts real connections, rejects fresh access and restores the 
 test('replay gate forwards only the exact private origin and application path and cuts real HTTP access',async()=>{
  const {default:http}=await import('node:http');const server=http.createServer((_q,r)=>r.end('actual-private-bytes'));await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
  const origin='http://127.0.0.1:'+server.address().port,gate=await createNetworkGate({localOrigin:origin});
- const request=target=>new Promise((ok,bad)=>{http.get(gate.url,{path:target},r=>{let body='';r.on('data',b=>body+=b);r.on('end',()=>ok({status:r.statusCode,body}));}).on('error',bad);});
+ const request=target=>new Promise((ok,bad)=>{http.get(gate.url,{path:target,agent:false},r=>{let body='';r.on('data',b=>body+=b);r.on('end',()=>ok({status:r.statusCode,body}));}).on('error',bad);});
  try{assert.deepEqual(await request(origin+'/fungo-italia/'),{status:200,body:'actual-private-bytes'});assert.equal((await request(origin+'/outside')).status,403);assert.equal((await request('http://localhost:'+server.address().port+'/fungo-italia/')).status,403);assert.equal((await request('http://example.com/fungo-italia/')).status,403);gate.block();assert.equal((await request(origin+'/fungo-italia/')).status,503);gate.allow();assert.equal((await request(origin+'/fungo-italia/')).status,200);}finally{await gate.close();server.closeAllConnections();await new Promise(ok=>server.close(ok));}
  await assert.rejects(createNetworkGate({localOrigin:'http://example.com'}));
 });

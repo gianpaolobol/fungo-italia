@@ -176,5 +176,14 @@
     "map": "FAIL: actual raster images display403 Access blocked tile policy notice",
     "cause": "not proven; independent local Chromium echo confirms sandboxopaqueiframe sends noReferer; no bypass attempted",
     "mapScreenshotSha256": "c95098a0c4842870fd6a8ea2033defb40aa05ee5ca5dc271768896999d6d7cae"
+  },
+  "publicRecovery2": {
+    "run": 40426755455,
+    "job": 121934328518,
+    "conclusion": "failure",
+    "failure": "new proxy unit reused a keepalive socket intentionally destroyed at network cutoff; fresh-request test ECONNRESET under pinnedNode24.3.0",
+    "checks": "64/65; no deployment or browser steps reached",
+    "correction": "fresh-client agent:false and nonpooled local upstream; explicit network cutoff preserved",
+    "verification": "all65 tests pass under actual pinnedNode24.3.0 after correction"
   }
 }
