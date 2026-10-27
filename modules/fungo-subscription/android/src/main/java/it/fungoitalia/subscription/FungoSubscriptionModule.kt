@@ -29,10 +29,10 @@ class FungoSubscriptionModule : Module() {
     Name("FungoSubscription")
     Events("entitlementChanged")
     Function("isConfigured") { BuildConfig.VERIFIER_URL.isNotEmpty() }
-    AsyncFunction("product") Coroutine { product() }
-    AsyncFunction("currentEntitlement") Coroutine { entitlement() }
-    AsyncFunction("purchase") Coroutine { purchase() }
-    AsyncFunction("restore") Coroutine { entitlement().also { emit(it) } }
+    AsyncFunction("product") Coroutine { () -> product() }
+    AsyncFunction("currentEntitlement") Coroutine { () -> entitlement() }
+    AsyncFunction("purchase") Coroutine { () -> purchase() }
+    AsyncFunction("restore") Coroutine { () -> entitlement().also { emit(it) } }
     OnActivityEntersForeground {
       if (BuildConfig.VERIFIER_URL.isNotEmpty()) scope.launch {
         epoch++; emit(inactive())

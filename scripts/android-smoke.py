@@ -103,6 +103,11 @@ def main():
     wait_text('Ciao')
     tap('Abbonamento')
     wait_text('Fungo Italia completo')
+    if os.environ.get('FUNGO_PLAY_BOOTSTRAP_SMOKE')=='1':
+        purchase_screen=wait_text('Gli acquisti Google Play sono in preparazione.')
+        screen_text=text_of(purchase_screen)
+        assert 'account Apple' not in screen_text, 'Android bootstrap must not show Apple payment instructions'
+        assert 'Abbonati ·' not in screen_text, 'An unconfigured verifier must not expose checkout'
     launch()
     tap('Studio')
     wait_text('1 preferito')
