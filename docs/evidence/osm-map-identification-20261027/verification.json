@@ -11,10 +11,10 @@
   },
   "local": {
     "nativeRenderer": "RED undefined appidentity thenGREEN actual appname/version/contact, originalplatformUAretained",
-    "node": "last full available draft305PASS0fail0skip; exact final viewport/proxy additions require fresh CI; focused routing/native tests passed",
-    "typescript": "last draftPASS; exact final tree CI still required",
+    "node": "Exact1b7ee8173699f7f2e40ab95a9826aacd0532daeb:305PASS0fail0skip",
+    "typescript": "Exact1b7ee81PASS",
     "deterministicData": "PASS withoutdata/science changes",
-    "webBuild": "last local development draftPASS; exact final tree CI required, oldlocalSHA is NOTrelease provenance",
+    "webBuild": "Exactclean1b7ee81PASS1652files, contentd63ad399a22d9262e039380ec1574f7797478c50f96a948a3b183254858b62e3",
     "privateChromium": "actual1.56.1/Chromium141 receiver8requests allrealpage-originReferer +decodedfixture/selection/cleanup/abortPASS; updatedruntime requiresCI",
     "localWebKit": "NOTRUN: requiredsystemlibrariesmissing; realCIbothengines mandatory",
     "localChromium162": "NOTRUN: officialCDN returnedinvalid/truncatedZIP; no TLSvalidationdisabled or browsersilentlysubstituted; qualifiedofficial1.62image alreadyusedsuccessfullyfor22 QA"
@@ -25,5 +25,17 @@
     "appStoreReady": false
   },
   "next": "qualifybranchsharedweb inbothengines, independenttechnicalreview, integratecleannewsource, fullmainStoreKit/UI/demo/source/native-map tests, newIPAandowner-onlyAppleVALID/IN_BETA_TESTING, thennewexplicitpublicsnapshotapproval; neverreuse22",
-  "workspaceRecovery": "original transient workspace and linkedGitmetadata disappeared; source files preserved in/tmp, saving explicit patch to GitHub before reconstructing a fresh independent checkout"
+  "workspaceRecovery": "original transient workspace and linkedGitmetadata disappeared; source files preserved in/tmp, saving explicit patch to GitHub before reconstructing a fresh independent checkout",
+  "branchCi": {
+    "initialRun": 40431761963,
+    "generator": "success",
+    "technicalProvenance": "success",
+    "browser": "64passed,1failed: Chromium offline emulation still exposes online map fallback",
+    "negativeArtifact": 12701769466,
+    "artifactSha256": "a7a578de5b4b68ef7bcc1ddd2121e1de7e0f8b19cc2f7b71535c31a9223ffa3a",
+    "manualSharedRun": 40432298473,
+    "manualSharedStatus": "running at checkpoint",
+    "correction": "Chromium fixture uses modern CDP real global request/serviceworker offline and native navigator state, asserts nativefalse before/afterreload and uncached fetchoutsideSW rejects; original SW/newdocument/maptext assertions retained; qualification pending",
+    "primaryProtocol": "https://chromedevtools.github.io/devtools-protocol/tot/Network/"
+  }
 }

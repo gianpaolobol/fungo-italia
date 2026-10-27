@@ -1,5 +1,10 @@
 # Punto di ingresso corrente
 
+## Correzione mappa in PR127 — checkpoint27 ottobre2026
+
+Coppia22effettiva invariata. Branchfix/areas-map-identification-1b7ee81, sorgente1b7ee8173699f7f2e40ab95a9826aacd0532daeb:305Node0fail0skip, TypeScript, rigenerazione senza drift e build1652file superati. PRscientifica40431761963: generator/provenance success,64browserpass+1fallimento Chromiumoffline (mappa espone fallbackonline). Negativo conservato artifact12701769466; nessun test saltato o atteso allentato. Fixture aggiornato al protocollo CDP moderno con bloccoeffettivo richieste/SW e stato nativooffline, più nuova richiesta non in cache obbligatoriamente fallita. Qualifica del cambiamento ancora pendente. Workflowcondiviso40432298473 avviato su1b7ee81, esito browser non ancora acquisito. Non integrare prima di prove/revisione; IPA/StoreKit/UI/demo/Apple e consenso pubblico distinti obbligatori per il nuovo sorgente. [Registro](evidence/osm-map-identification-20261027/verification.json).
+
+
 ## Coppia22 verificata; correzione cartografica ancora aperta —27 ottobre2026
 
 Web pubblico e TestFlight interno1.1.0(22) corrispondono a fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03. Apple riletta VALID/IN_BETA_TESTING solo titolare00:56:09.178Z;1652file dal dominio verificati. Run finale40429334273 SUCCESS: vero dominio/offline/dati in Chromium151 e WebKit26.5, più replay etichettato19→22 degli archivi originali con aggiornamento manuale/nuovo documento e dati conservati. Non si inventa recupero dei profili del primo deploy. [Rapporto e ricevute](evidence/paired-release-fab2b3e-20261026/README.md).
