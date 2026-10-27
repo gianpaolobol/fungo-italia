@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "requestedBy": "owner-authorized-session",
+  "scope": "verification-only-existing-pair",
+  "sourceCommit": "7398825ea3b834d3b003aac3fd2d93232f791a54",
+  "authorizationSha256": "4d5d7b2bbefb219719cefb7989381c6fb47ee7822eee1af3e5300203728fafaf",
+  "profilesArtifactId": 12739667356,
+  "profilesArchiveSha256": "e7cff7a0133764ec0daa8400d19b13f9114bdc8cdcefb1244f4a86dbc109f4d3",
+  "reason": "Repeated rerun startup failures before job creation; trigger a fresh verification-only execution, preserving all release guards",
+  "deployAllowed": false,
+  "nativeUploadAllowed": false
+}
