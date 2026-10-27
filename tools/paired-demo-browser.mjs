@@ -36,15 +36,15 @@ async function controllerSource(page){return page.evaluate(async()=>{
 async function cacheSummary(page){return page.evaluate(async()=>{const rows=[];for(const name of await caches.keys()){if(!name.startsWith('fungo-'))continue;const cache=await caches.open(name),requests=await cache.keys(),shell=await cache.match(new URL('/fungo-italia/index.html',location.href).href);rows.push({name,entries:requests.length,shellListed:requests.some(r=>new URL(r.url).pathname==='/fungo-italia/index.html'),shellReadable:!!shell,shellStatus:shell?.status??null,appScripts:requests.filter(r=>r.url.includes('/_expo/static/js/web/index-')).map(r=>new URL(r.url).pathname)});}return rows;}).catch(()=>null);}
 const reports=[];
 for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
- const gate=await createNetworkGate({localOrigin:replay?new URL(base).origin:undefined});
- let context,page;const errors=[],cacheObservations={};
+ const gate=await createNetworkGate({localOrigin:replay?new URL(base).origin:undefined,allowMapTiles:true});
+ let context,page;const errors=[],cacheObservations={},mapResponses=[],mapFailures=[];let mapProof=null;
  try{
  context=await browser.launchPersistentContext(join(directory,name),{proxy:{server:gate.url,bypass:'127.0.0.1,localhost'},headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
   if(mode==='capture')await context.addInitScript(({favorite,probe,notes})=>{
    if(window.top!==window)return;
    if(!localStorage.getItem(probe)){const state=JSON.stringify({version:1,favoriteIds:[favorite],resumeId:favorite});localStorage.setItem('fungo-italia:study:v1',state);localStorage.setItem('fungo-italia:pwa:study:v1',state);localStorage.setItem('fungo-italia:pwa:notes:v1',JSON.stringify(notes));localStorage.setItem(probe,'keep-existing-notes');}
   },{favorite,probe,notes:progressFixture.notes});
-  page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+  page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('response',response=>{if(new URL(response.url()).hostname==='tile.openstreetmap.org')mapResponses.push(response);});page.on('requestfailed',request=>{if(new URL(request.url()).hostname==='tile.openstreetmap.org')mapFailures.push({url:request.url(),failure:request.failure()?.errorText});});
   const navigation=await page.goto(base,{waitUntil:'domcontentloaded',timeout:60000});assert(navigation?.ok(),'Application navigation HTTP '+navigation?.status());await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
   await expect.poll(()=>controllerSource(page),{timeout:120000}).not.toBeNull();
   const scriptBefore=await scriptOf(page);
@@ -104,11 +104,23 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await expect(page.getByText('È disponibile una versione diversa, verificata su TestFlight.',{exact:true})).toHaveCount(0);
    await page.getByRole('tab',{name:'Studio',exact:true}).click();await expect(page.getByText('Demo gratuita · Agaricus',{exact:true})).toBeVisible();await expect(page.getByText(/1 preferito/)).toBeVisible();
    await page.getByRole('tab',{name:'Aree',exact:true}).click();await expect(page.getByText('Aree e habitat',{exact:true})).toBeVisible();await expect(page.getByText(/^71 macroaree in /)).toBeVisible();await expect(page.getByRole('heading',{name:'Fungo Italia completo'})).toHaveCount(0);
+   if(!replay){
+    await page.getByRole('button',{name:'Toscana',exact:true}).click();await expect(page.getByText('6 aree corrispondenti',{exact:true})).toBeVisible();
+    await page.getByRole('textbox',{name:'Cerca area o habitat'}).fill('Amiata');await expect(page.getByText('1 area corrispondente',{exact:true})).toBeVisible();
+    await page.getByRole('button',{name:'Consulta Monte Amiata',exact:true}).click();await expect(page.getByText('Faggeta · Castagneto · Querceto',{exact:true}).last()).toBeVisible();await page.getByRole('button',{name:'Chiudi dettaglio',exact:true}).click();
+    await page.getByRole('button',{name:'Mappa online',exact:true}).click();const map=page.getByRole('region',{name:'Mappa delle aree',exact:true});await expect(map).toBeVisible();
+    await expect.poll(()=>mapResponses.length,{timeout:30000}).toBeGreaterThan(0);assert(mapResponses.every(response=>response.ok()),'OSM rejected an actual public map tile');
+    await expect(map).toHaveAttribute('aria-busy','false',{timeout:30000});await expect.poll(()=>map.locator('img.leaflet-tile').evaluateAll(images=>images.length>0&&images.every(img=>img.complete&&img.naturalWidth>0&&img.classList.contains('leaflet-tile-loaded'))),{timeout:30000}).toBe(true);await expect(map.locator('.leaflet-interactive')).toHaveCount(1);await expect(map.locator('.leaflet-control-attribution')).toContainText('© OpenStreetMap contributors');await expect(page.getByRole('alert')).toHaveCount(0);await expect(page.getByRole('button',{name:'Riprova mappa',exact:true})).toHaveCount(0);
+    const tiles=[];for(const response of mapResponses){const bytes=await response.body();tiles.push({url:response.url(),status:response.status(),sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length});}
+    mapProof={scope:'actual public source and origin; visual geography inspection required',regionCount:6,searchCount:1,habitat:true,markers:1,viewportSettled:true,failures:mapFailures,tiles};await writeFile(join(directory,name+'-actual-public-map.json'),JSON.stringify(mapProof,null,2)+'\n');await page.screenshot({path:join(directory,name+'-actual-public-map.png'),fullPage:true});
+    assert(mapResponses.every(response=>response.ok()),'Late OSM response failed');assert.deepEqual(mapFailures,[]);await expect(map).toHaveAttribute('aria-busy','false');await expect(page.getByRole('alert')).toHaveCount(0);await expect(page.getByRole('button',{name:'Riprova mappa',exact:true})).toHaveCount(0);
+    await page.getByRole('button',{name:'Elenco offline',exact:true}).click();
+   }
    await verifyOffline();
    await page.screenshot({path:join(directory,name+'-verified.png'),fullPage:true});
   }
   assert.deepEqual(errors,[]);
-  cacheObservations.beforeClose=await cacheSummary(page);reports.push({browser:name,browserRuntime:runtimeVersion,browserVersion:context.browser().version(),executable:browser.executablePath(),mode,cacheObservations,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method==='manual-update',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade',offlineScope:replay?'application loopback origin stopped; independent public release metadata remains reachable':'actual public application origin and same-origin release metadata disconnected'});
+  cacheObservations.beforeClose=await cacheSummary(page);reports.push({browser:name,mapProof,browserRuntime:runtimeVersion,browserVersion:context.browser().version(),executable:browser.executablePath(),mode,cacheObservations,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method==='manual-update',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade',offlineScope:replay?'application loopback origin stopped; independent public release metadata remains reachable':'actual public application origin and same-origin release metadata disconnected'});
  }catch(error){
   if(page){await page.screenshot({path:join(directory,name+'-'+mode+'-failure.png'),fullPage:true}).catch(()=>{});await writeFile(join(directory,name+'-'+mode+'-failure.json'),JSON.stringify({scope:replay?'archived-loopback-migration':'live-public-origin',error:error.message,controller:await controllerSource(page),documentScript:await scriptOf(page).catch(()=>null),pageErrors:errors,cacheObservations,cacheAtFailure:await cacheSummary(page),reports},null,2)+'\n');}
   throw error;

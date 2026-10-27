@@ -1,10 +1,15 @@
 import React,{useEffect,useRef} from 'react';
-import type {WebViewProps} from 'react-native-webview';
-// Isolated document; only messages from this frame reach the native-compatible bridge.
-export function WebView({source,onMessage,onError}:WebViewProps){
- const frame=useRef<HTMLIFrameElement>(null);
- useEffect(()=>{const receive=(event:MessageEvent)=>{if(event.source!==frame.current?.contentWindow||typeof event.data!=='string')return;onMessage?.({nativeEvent:{data:event.data}} as never);};window.addEventListener('message',receive);return()=>window.removeEventListener('message',receive);},[onMessage]);
- const html=source&&'html'in source?source.html:'';
- const bridge='<script>window.ReactNativeWebView={postMessage:function(data){parent.postMessage(data,"*")}};<'+ '/script>';
- return <iframe ref={frame} title="Mappa delle aree" sandbox="allow-scripts" srcDoc={bridge+html} onError={()=>onError?.({} as never)} style={{width:'100%',height:'100%',border:0}}/>;
+import {mountWebAreaMap} from '../lib/area-map-web.mjs';
+import type {AreaMapProps} from './AreaMap.types';
+export function WebView({areas,onMessage,onError}:AreaMapProps){
+ const element=useRef<HTMLDivElement>(null),callbacks=useRef({onMessage,onError});callbacks.current={onMessage,onError};
+ useEffect(()=>{
+  const abort=new AbortController();let closed=false,dispose:(()=>void)|undefined;
+  if(!element.current)return;
+  void mountWebAreaMap(element.current,areas,message=>{if(!closed)callbacks.current.onMessage?.({nativeEvent:{data:JSON.stringify(message)}} as never);},{signal:abort.signal})
+   .then(cleanup=>{if(closed)cleanup();else dispose=cleanup;})
+   .catch(()=>{if(!closed)callbacks.current.onError?.({} as never);});
+  return()=>{closed=true;abort.abort();dispose?.();};
+ },[areas]);
+ return <div ref={element} role="region" aria-label="Mappa delle aree" style={{width:'100%',height:'100%',isolation:'isolate'}}/>;
 }

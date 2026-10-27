@@ -1,7 +1,10 @@
 import http from 'node:http';import net from 'node:net';
 import assert from 'node:assert/strict';
+export function tunnelDestination(target,{host='gianpaolobol.github.io',port=443,allowMapTiles=false}={}){if(target===host+':'+port)return {host,port};if(allowMapTiles===true&&target==='tile.openstreetmap.org:443')return {host:'tile.openstreetmap.org',port:443};return null;}
+export function isAllowedTunnelTarget(target,options){return tunnelDestination(target,options)!==null;}
 // Test-only TCP link gate: HTTPS remains end-to-end, with normal certificate validation.
-export async function createNetworkGate({host='gianpaolobol.github.io',port=443,localOrigin}={}){
+export async function createNetworkGate({host='gianpaolobol.github.io',port=443,localOrigin,allowMapTiles=false}={}){
+ assert.equal(typeof allowMapTiles,'boolean');
  if(localOrigin){const u=new URL(localOrigin);assert(u.protocol==='http:'&&u.hostname==='127.0.0.1'&&u.port&&u.pathname==='/'&&!u.username&&!u.password&&!u.search&&!u.hash&&u.origin===localOrigin,'Only exact private replay origin permitted');}
  let enabled=true,localEnabled=true;const sockets=new Set(),localSockets=new Set();
  const track=s=>{sockets.add(s);s.on('close',()=>sockets.delete(s));s.on('error',()=>s.destroy());return s;};
@@ -15,9 +18,10 @@ export async function createNetworkGate({host='gianpaolobol.github.io',port=443,
  });
  server.on('connection',track);
  server.on('connect',(req,client,head)=>{
-  if(req.url!==host+':'+port){client.end('HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n');return;}
+  const destination=tunnelDestination(req.url,{host,port,allowMapTiles});
+  if(!destination){client.end('HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n');return;}
   if(!enabled){client.end('HTTP/1.1 503 Network Disabled\r\nConnection: close\r\n\r\n');return;}
-  const upstream=track(net.connect(port,host));
+  const upstream=track(net.connect(destination.port,destination.host));
   client.on('close',()=>upstream.destroy());upstream.on('close',()=>client.destroy());
   upstream.once('connect',()=>{if(!enabled){client.destroy();upstream.destroy();return;}client.write('HTTP/1.1 200 Connection Established\r\n\r\n');if(head.length)upstream.write(head);upstream.pipe(client);client.pipe(upstream);});
  });

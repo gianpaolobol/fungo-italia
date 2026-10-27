@@ -39,7 +39,7 @@ jobs:
       with:
         node-version: 24.3.0
     - name: Verify pinned browser runtime and archive tools
-      run: "node -e \"const p=require('./web/package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.56.1')throw\
+      run: "node -e \"const p=require('./web/package-lock.json').packages['node_modules/@playwright/test'];if(p.version!=='1.62.0')throw\
         \ Error('Original application browser lock changed')\"\nif ! command -v unzip >/dev/null || ! command -v\
         \ zipinfo >/dev/null; then\n  apt-get update -qq\n  apt-get install -y --no-install-recommends unzip\nfi\n\
         unzip -v\nzipinfo -h\n"
@@ -96,14 +96,8 @@ jobs:
         Error("QA browser runtime mismatch")''
 
         '
-    - name: Compare actual private WebKit cache persistence in original and corrected runtimes
-      run: 'PLAYWRIGHT_BROWSERS_PATH="$RUNNER_TEMP/paired-old-browser" node web/node_modules/playwright/cli.js install
-        webkit
-
-        PLAYWRIGHT_BROWSERS_PATH="$RUNNER_TEMP/paired-old-browser" PAIRED_CACHE_BASELINE=1 node tools/paired-demo-cache-probe.mjs
-        "$RUNNER_TEMP/paired-cache-original.json"
-
-        node tools/paired-demo-cache-probe.mjs "$RUNNER_TEMP/paired-cache-corrected.json"
+    - name: Require actual persistent WebKit cached responses after reload and process reopen
+      run: 'node tools/paired-demo-cache-probe.mjs "$RUNNER_TEMP/paired-cache-corrected.json"
 
         '
     - name: Capture actual previous public PWA and private synthetic progress

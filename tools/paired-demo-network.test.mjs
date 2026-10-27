@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import net from 'node:net';
-import {createNetworkGate} from './paired-demo-network.mjs';
+import {createNetworkGate,isAllowedTunnelTarget,tunnelDestination} from './paired-demo-network.mjs';
 async function tunnel(url,target){
  const proxy=new URL(url),socket=net.connect(Number(proxy.port),proxy.hostname);await new Promise((ok,bad)=>{socket.once('connect',ok);socket.once('error',bad);});
  const response=new Promise((ok,bad)=>{socket.once('data',b=>ok(b.toString()));socket.once('error',bad);});socket.write('CONNECT '+target+' HTTP/1.1\r\nHost: '+target+'\r\n\r\n');return {socket,response:await response};
@@ -29,4 +29,8 @@ test('isolated replay cuts only its real application origin while independent me
  const{default:http}=await import('node:http');const app=http.createServer((_q,r)=>r.end('private-app')),metadata=net.createServer(s=>s.pipe(s));await Promise.all([new Promise(ok=>app.listen(0,'127.0.0.1',ok)),new Promise(ok=>metadata.listen(0,'127.0.0.1',ok))]);const origin='http://127.0.0.1:'+app.address().port,port=metadata.address().port,gate=await createNetworkGate({localOrigin:origin,host:'127.0.0.1',port});
  const status=()=>new Promise((ok,bad)=>http.get(gate.url,{path:origin+'/fungo-italia/',agent:false},r=>{r.resume();r.on('end',()=>ok(r.statusCode));}).on('error',bad));
  try{assert.equal(await status(),200);gate.blockLocal();assert.equal(await status(),503);const live=await tunnel(gate.url,'127.0.0.1:'+port);assert.match(live.response,/200 Connection Established/);const echo=new Promise(ok=>live.socket.once('data',b=>ok(b.toString())));live.socket.write('independent-metadata');assert.equal(await echo,'independent-metadata');live.socket.destroy();gate.allow();assert.equal(await status(),200);}finally{await gate.close();app.closeAllConnections();await Promise.all([new Promise(ok=>app.close(ok)),new Promise(ok=>metadata.close(ok))]);}
+});
+
+test('public map tunnel permits only the explicit OSM HTTPS authority, retaining the original origin restriction',()=>{
+ assert.deepEqual(tunnelDestination('tile.openstreetmap.org:443',{allowMapTiles:true}),{host:'tile.openstreetmap.org',port:443});assert.deepEqual(tunnelDestination('127.0.0.1:12345',{host:'127.0.0.1',port:12345}),{host:'127.0.0.1',port:12345});assert.equal(tunnelDestination('example.com:443',{allowMapTiles:true}),null);assert(isAllowedTunnelTarget('gianpaolobol.github.io:443'));assert(!isAllowedTunnelTarget('tile.openstreetmap.org:443'));assert(isAllowedTunnelTarget('tile.openstreetmap.org:443',{allowMapTiles:true}));for(const target of ['tile.openstreetmap.org:80','tile.openstreetmap.org:443/path','tile.openstreetmap.org.evil.example:443','user@tile.openstreetmap.org:443','example.com:443','TILE.OPENSTREETMAP.ORG:443'])assert(!isAllowedTunnelTarget(target,{allowMapTiles:true}));assert(!isAllowedTunnelTarget('tile.openstreetmap.org:443',{allowMapTiles:'true'}));
 });

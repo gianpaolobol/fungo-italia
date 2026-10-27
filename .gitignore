@@ -16,3 +16,7 @@ artifacts/
 /web/test-results/
 
 __pycache__/
+
+/web/unified-map-*.png
+/web/unified-map-proof-*.json
+/web/map-identification-proof-*.json

@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync}from'node:fs';import ts from'typescript';import React from'react';import{renderToStaticMarkup}from'react-dom/server';import*as jsx from'react/jsx-runtime';
+test('native map identifies this real application without replacing the platform user agent',()=>{
+ const captured=[],native=props=>{captured.push(props);return null;};const imports={react:React,'react/jsx-runtime':jsx,'react-native-webview':{WebView:native},'../app.json':JSON.parse(readFileSync(new URL('../app.json',import.meta.url),'utf8'))};
+ const source=ts.transpileModule(readFileSync(new URL('../components/AreaMap.tsx',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,esModuleInterop:true}}).outputText,out={exports:{}};
+ new Function('require','module','exports',source)(name=>{assert(name in imports,'Unexpected import '+name);return imports[name];},out,out.exports);
+ const html='<html>native map fixture</html>';renderToStaticMarkup(React.createElement(out.exports.WebView,{areas:[],source:{html},originWhitelist:['*']}));assert.equal(captured.length,1);const props=captured[0];assert.equal(props.applicationNameForUserAgent,'FungoItalia/1.1.0 (+https://gianpaolobol.github.io/fungo-italia/)');assert.equal(props.userAgent,undefined,'Retain truthful platform UA');assert.deepEqual(props.source,{html});assert(!Object.hasOwn(props,'areas'),'Web-only data must not reach native view manager');
+});

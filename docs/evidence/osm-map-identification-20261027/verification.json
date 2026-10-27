@@ -1,0 +1,29 @@
+{
+  "status": "implemented and locally checked; qualified browser/native/Apple release still pending",
+  "baselineApplicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+  "currentPublicAndTestFlight": "1.1.0(22), remain unchanged until distinct new qualified pair approval",
+  "sourceReason": "actual cloud map403 policy raster; opaque iframe missing browserReferer in independent local receiver24combinations; exact403 cause not asserted",
+  "implementation": {
+    "web": "existing sameoriginLeaflet1.9.4 with exactSRI, actualDOM/textContentlabels, no remoteJS or iframepermissionrelaxation, abortlateinitialization",
+    "native": "actual appversion/name/contact applicationNameForUserAgent appended by existingnativeWebView; no fake browserUA",
+    "copy": "free areas/habitats clarified; StoreKit controlcode untouched",
+    "qa": "pinned1.62.0 module/image, actual private header regression in bothsmokes, actual tileHTTPsuccess/noalerts +SHA/screens required on source and actualpublicorigin; visual geography inspection required"
+  },
+  "local": {
+    "nativeRenderer": "RED undefined appidentity thenGREEN actual appname/version/contact, originalplatformUAretained",
+    "node": "last full available draft305PASS0fail0skip; exact final viewport/proxy additions require fresh CI; focused routing/native tests passed",
+    "typescript": "last draftPASS; exact final tree CI still required",
+    "deterministicData": "PASS withoutdata/science changes",
+    "webBuild": "last local development draftPASS; exact final tree CI required, oldlocalSHA is NOTrelease provenance",
+    "privateChromium": "actual1.56.1/Chromium141 receiver8requests allrealpage-originReferer +decodedfixture/selection/cleanup/abortPASS; updatedruntime requiresCI",
+    "localWebKit": "NOTRUN: requiredsystemlibrariesmissing; realCIbothengines mandatory",
+    "localChromium162": "NOTRUN: officialCDN returnedinvalid/truncatedZIP; no TLSvalidationdisabled or browsersilentlysubstituted; qualifiedofficial1.62image alreadyusedsuccessfullyfor22 QA"
+  },
+  "science": {
+    "changedFiles": 0,
+    "independentReviewComplete": false,
+    "appStoreReady": false
+  },
+  "next": "qualifybranchsharedweb inbothengines, independenttechnicalreview, integratecleannewsource, fullmainStoreKit/UI/demo/source/native-map tests, newIPAandowner-onlyAppleVALID/IN_BETA_TESTING, thennewexplicitpublicsnapshotapproval; neverreuse22",
+  "workspaceRecovery": "original transient workspace and linkedGitmetadata disappeared; source files preserved in/tmp, saving explicit patch to GitHub before reconstructing a fresh independent checkout"
+}

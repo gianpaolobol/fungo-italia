@@ -43,7 +43,8 @@ jobs:
 
         '
     - name: Require browser image matching the exact lockfile
-      run: node -e "if(require('./web/package-lock.json').packages['node_modules/@playwright/test'].version!=='1.56.1')throw Error('Browser image/lockfile mismatch')"
+      run: node -e "if(require('./web/package-lock.json').packages['node_modules/@playwright/test'].version!=='1.62.0')throw
+        Error('Browser image/lockfile mismatch')"
     - name: Install deterministic browser dependencies
       run: npm ci --prefix web
     - name: Build one immutable web candidate from shared application
@@ -94,7 +95,8 @@ jobs:
 
         const build=JSON.parse(await readFile(''dist-ios/build.json'',''utf8''));
 
-        if(receipt.sourceCommit!==build.sourceCommit||receipt.version!==build.version)throw Error(''Native/web source identity differs'');
+        if(receipt.sourceCommit!==build.sourceCommit||receipt.version!==build.version)throw Error(''Native/web source
+        identity differs'');
 
         Object.assign(receipt,{iconSha256:build.iconSha256,webContentHash:build.webContentHash});
 
@@ -109,7 +111,19 @@ jobs:
         path: ${{ runner.temp }}/consolidated-build.json
         if-no-files-found: error
         retention-days: 30
-    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    - name: Preserve actual map responses and private identification regression evidence
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Shared-map-browser-evidence
+        path: 'web/unified-map-*.png
+
+          web/unified-map-proof-*.json
+
+          web/map-identification-proof-*.json'
+        retention-days: 90
+        if-no-files-found: warn
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
   beta:
     runs-on: macos-26
     timeout-minutes: 100
@@ -154,7 +168,8 @@ jobs:
 
         '
     - name: Build isolated beta channel with remote build increment
-      run: npx eas-cli@24.8.0 build --platform ios --profile consolidated-beta --local --non-interactive --output "$RUNNER_TEMP/fungo-consolidated.ipa"
+      run: npx eas-cli@24.8.0 build --platform ios --profile consolidated-beta --local --non-interactive --output
+        "$RUNNER_TEMP/fungo-consolidated.ipa"
     - name: Record signed binary provenance
       run: 'unzip -q "$RUNNER_TEMP/fungo-consolidated.ipa" -d "$RUNNER_TEMP/consolidated-binary"
 
@@ -170,7 +185,8 @@ jobs:
 
         const file=process.env.RUNNER_TEMP+''/consolidated-build.json'',r=JSON.parse(fs.readFileSync(file));
 
-        if(r.version!==process.env.BUILD_VERSION||r.sourceCommit!==process.env.GITHUB_SHA)throw Error(''Binary/source identity mismatch'');
+        if(r.version!==process.env.BUILD_VERSION||r.sourceCommit!==process.env.GITHUB_SHA)throw Error(''Binary/source
+        identity mismatch'');
 
         Object.assign(r,{buildNumber:process.env.BUILD_NUMBER,producerRunId:process.env.GITHUB_RUN_ID,ipaSha256:createHash(''sha256'').update(fs.readFileSync(process.env.RUNNER_TEMP+''/fungo-consolidated.ipa'')).digest(''hex'')});
 
@@ -209,7 +225,8 @@ jobs:
     - name: Preflight existing beta audience before any upload
       run: node scripts/consolidated-beta-audience.mjs
     - name: Prepare authorized Apple submit key
-      run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await
+        prepareSubmitCredentials();"
     - name: Upload diagnostic binary to TestFlight only
       run: node scripts/upload-consolidated-apple.mjs
     - name: Confirm Apple processing and confirmed owner group
@@ -218,10 +235,17 @@ jobs:
       run: node scripts/release-parity.mjs beta-state
     - name: Remove temporary submit key
       if: always()
-      run: node --input-type=module -e "import {rm} from 'node:fs/promises';for(const p of ['/fungo-asc-submit.p8','/private_keys'])await rm(process.env.RUNNER_TEMP+p,{force:true,recursive:true});"
+      run: node --input-type=module -e "import {rm} from 'node:fs/promises';for(const p of ['/fungo-asc-submit.p8','/private_keys'])await
+        rm(process.env.RUNNER_TEMP+p,{force:true,recursive:true});"
     - name: Stage exact native receipts
       if: always()
-      run: "mkdir -p \"$RUNNER_TEMP/paired-beta-evidence\"\nif test -f \"$RUNNER_TEMP/consolidated-build.json\"; then cp \"$RUNNER_TEMP/consolidated-build.json\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\nif test -f \"$RUNNER_TEMP/internal-beta-science.json\"; then cp \"$RUNNER_TEMP/internal-beta-science.json\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\nif test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\n\nfor file in apple-upload.log native-signature.txt; do\n  if test -f \"$RUNNER_TEMP/$file\"; then cp \"$RUNNER_TEMP/$file\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\ndone\n"
+      run: "mkdir -p \"$RUNNER_TEMP/paired-beta-evidence\"\nif test -f \"$RUNNER_TEMP/consolidated-build.json\"\
+        ; then cp \"$RUNNER_TEMP/consolidated-build.json\" \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\nif test -f\
+        \ \"$RUNNER_TEMP/internal-beta-science.json\"; then cp \"$RUNNER_TEMP/internal-beta-science.json\" \"$RUNNER_TEMP/paired-beta-evidence/\"\
+        ; fi\nif test -f store-evidence/consolidated-testflight.json; then cp store-evidence/consolidated-testflight.json\
+        \ \"$RUNNER_TEMP/paired-beta-evidence/\"; fi\n\nfor file in apple-upload.log native-signature.txt; do\n\
+        \  if test -f \"$RUNNER_TEMP/$file\"; then cp \"$RUNNER_TEMP/$file\" \"$RUNNER_TEMP/paired-beta-evidence/\"\
+        ; fi\ndone\n"
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -290,9 +314,11 @@ jobs:
     - name: Reject stale candidate immediately before public promotion
       run: 'node --input-type=module <<''JS''
 
-        const r=await fetch(''https://api.github.com/repos/''+process.env.GITHUB_REPOSITORY+''/git/ref/heads/main'',{headers:{Authorization:''Bearer ''+process.env.GH_TOKEN,Accept:''application/vnd.github+json''}});
+        const r=await fetch(''https://api.github.com/repos/''+process.env.GITHUB_REPOSITORY+''/git/ref/heads/main'',{headers:{Authorization:''Bearer
+        ''+process.env.GH_TOKEN,Accept:''application/vnd.github+json''}});
 
-        if(!r.ok||(await r.json()).object.sha!==process.env.GITHUB_SHA)throw Error(''Main advanced; fresh paired release required'');
+        if(!r.ok||(await r.json()).object.sha!==process.env.GITHUB_SHA)throw Error(''Main advanced; fresh paired
+        release required'');
 
         JS
 
@@ -300,7 +326,7 @@ jobs:
     - name: Promote the original paired candidate
       id: deployment
       uses: actions/deploy-pages@v4
-    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
   published-smoke:
     needs:
     - source
@@ -332,7 +358,8 @@ jobs:
         name: Consolidated-TestFlight-evidence
         path: ${{ runner.temp }}/paired-beta-evidence
     - name: Verify uncached deployed release, icon, manifest and every asset against native receipt
-      run: node scripts/release-parity.mjs published dist-ios "$RUNNER_TEMP/paired-beta-evidence/consolidated-testflight.json" "${{ needs.promote-public-web.outputs.page_url }}"
+      run: node scripts/release-parity.mjs published dist-ios "$RUNNER_TEMP/paired-beta-evidence/consolidated-testflight.json"
+        "${{ needs.promote-public-web.outputs.page_url }}"
     - name: Verify published smartphone application
       run: 'npm ci --prefix web
 
@@ -343,7 +370,7 @@ jobs:
         UNIFIED_BASE_URL="${{ needs.promote-public-web.outputs.page_url }}" UNIFIED_BROWSER=webkit node smoke-unified.mjs
 
         '
-    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
 'on':
   push:
     branches:

@@ -9,7 +9,7 @@ jobs:
     permissions:
       contents: read
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.56.1-noble
+    container: mcr.microsoft.com/playwright:v1.62.0-noble
     timeout-minutes: 15
     steps:
     - uses: actions/checkout@v4
@@ -30,7 +30,8 @@ jobs:
 
         node --check web/public/admin-photo-core.js
 
-        node --test scripts/study-profiles.test.mjs scripts/commercialization.test.mjs scripts/admin-reference-images.test.mjs scripts/admin-photo-core.test.mjs
+        node --test scripts/study-profiles.test.mjs scripts/commercialization.test.mjs scripts/admin-reference-images.test.mjs
+        scripts/admin-photo-core.test.mjs
 
         node --check web/public/importa-foto.js
 
@@ -50,6 +51,13 @@ jobs:
     - name: Verify iPhone workflows at 320 points
       working-directory: web
       run: npm test
+    - name: Verify shared Areas and actual map identification in both engines
+      working-directory: web
+      run: 'node smoke-unified.mjs
+
+        UNIFIED_BROWSER=webkit node smoke-unified.mjs
+
+        '
     - uses: actions/upload-artifact@v4
       if: always()
       with:
@@ -66,6 +74,18 @@ jobs:
         path: dist-ios/
         if-no-files-found: error
         retention-days: 30
+    - name: Preserve actual map responses and private identification regression evidence
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Shared-map-browser-evidence
+        path: 'web/unified-map-*.png
+
+          web/unified-map-proof-*.json
+
+          web/map-identification-proof-*.json'
+        retention-days: 90
+        if-no-files-found: warn
   native-source-check:
     runs-on: ubuntu-latest
     timeout-minutes: 15

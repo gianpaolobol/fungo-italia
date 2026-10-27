@@ -1,5 +1,7 @@
 import {chromium,webkit,expect} from '@playwright/test';
-import {readFile} from 'node:fs/promises';
+import {verifyMapIdentification} from './map-identification-smoke.mjs';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 const base=process.env.UNIFIED_BASE_URL||'http://127.0.0.1:4173/fungo-italia/';
@@ -9,8 +11,10 @@ const engine=process.env.UNIFIED_BROWSER||'chromium';
 if(!['chromium','webkit'].includes(engine))throw Error('Unknown browser');
 const browser=await ({chromium,webkit})[engine].launch();
 try{
+ await verifyMapIdentification(browser,expect);
  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,deviceScaleFactor:2});
- const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await context.newPage(),errors=[],tileResponses=[],tileFailures=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',response=>{if(new URL(response.url()).hostname==='tile.openstreetmap.org')tileResponses.push(response);});
+ page.on('requestfailed',request=>{if(new URL(request.url()).hostname==='tile.openstreetmap.org')tileFailures.push({url:request.url(),failure:request.failure()?.errorText});});
  // Existing tool data survives the shared-app launch and navigation.
  const catalog=JSON.parse(await readFile(new URL('../src/data/catalog.json',import.meta.url),'utf8'));const agaricus=catalog.find(t=>t.scientificName.startsWith('Agaricus '));
  await page.addInitScript(id=>{if(window!==window.top)return;if(!localStorage.getItem('fungo-italia:study:v1'))localStorage.setItem('fungo-italia:pwa:study:v1',JSON.stringify({version:1,favoriteIds:[id],resumeId:id}))},agaricus.id);
@@ -43,13 +47,16 @@ try{
  await page.getByRole('button',{name:'Tutte',exact:true}).click();
  await expect(page.getByText('71 aree corrispondenti',{exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Mappa online',exact:true}).click();
- await expect(page.locator('iframe[title="Mappa delle aree"]')).toBeVisible();
- const frame=page.frameLocator('iframe[title="Mappa delle aree"]');
- await expect(frame.locator('#map')).toBeVisible();
- // Require the real OSM layer (not a simulated map or an iframe placeholder).
+ const frame=page.getByRole('region',{name:'Mappa delle aree',exact:true});
+ await expect(frame).toBeVisible();
+ // Require the real OSM layer (not a simulated map or a container placeholder).
  await expect(frame.locator('img.leaflet-tile').first()).toBeVisible({timeout:30000});
- await expect.poll(()=>frame.locator('img.leaflet-tile').first().evaluate(img=>img.complete&&img.naturalWidth>0),{timeout:30000}).toBe(true);
+ await expect(frame).toHaveAttribute('aria-busy','false',{timeout:30000});await expect.poll(()=>frame.locator('img.leaflet-tile').evaluateAll(images=>images.length>0&&images.every(img=>img.complete&&img.naturalWidth>0&&img.classList.contains('leaflet-tile-loaded'))),{timeout:30000}).toBe(true);
  await expect(frame.locator('.leaflet-control-attribution')).toContainText('© OpenStreetMap contributors');
+ await expect.poll(()=>tileResponses.length,{timeout:30000}).toBeGreaterThan(0);expect(tileResponses.every(response=>response.ok())).toBe(true);await expect(page.getByRole('alert')).toHaveCount(0);await expect(page.getByRole('button',{name:'Riprova mappa',exact:true})).toHaveCount(0);
+ const mapProof=[];for(const response of tileResponses){const bytes=await response.body();mapProof.push({url:response.url(),status:response.status(),contentType:response.headers()['content-type'],sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length});}
+ await page.screenshot({path:fileURLToPath(new URL('./unified-map-'+engine+'.png',import.meta.url)),fullPage:true});await writeFile(new URL('./unified-map-proof-'+engine+'.json',import.meta.url),JSON.stringify({browser:engine,scope:'actual OSM responses; visual geographic inspection still required',viewportSettled:true,failures:tileFailures,tiles:mapProof},null,2)+'\n');
+ expect(tileResponses.every(response=>response.ok())).toBe(true);expect(tileFailures).toEqual([]);await expect(frame).toHaveAttribute('aria-busy','false');await expect(page.getByRole('alert')).toHaveCount(0);await expect(page.getByRole('button',{name:'Riprova mappa',exact:true})).toHaveCount(0);
  await page.getByRole('button',{name:'Elenco offline',exact:true}).click();
  await page.getByRole('tab',{name:'Percorso',exact:true}).click();
  await page.waitForFunction(()=>navigator.serviceWorker?.controller!==null);
