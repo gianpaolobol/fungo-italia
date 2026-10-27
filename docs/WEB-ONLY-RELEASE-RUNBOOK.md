@@ -12,3 +12,7 @@ Stato: procedura preparata, nessuna pubblicazione eseguita. Il controllo positiv
 8. Dopo il deploy verificare tutti i file serviti, nuovo documento/JS/worker, dati e bozze dei profili originali, offline con trasporto realmente interrotto e sonda indipendente. Conservare eventuali negativi. Solo dopo questi riscontri presentare URL e risultato al titolare, mantenendo fermo iPhone fino alla sua conferma.
 
 Il codice di caricamento/analisi nuove foto resta non accessibile agli utenti come stabilito nelle istruzioni precedenti. Nessun acquisto o entitlement viene attribuito dal collaudo.
+
+## Isolamento dei metadati nel replay
+
+Il primo replay84e9676 ha superato passaggio/dati/offline, ma lo screenshot WebKit ha mostrato la ricevuta23 del dominio reale: l’intercettazione Playwright con risposta503 non garantiva isolamento in quel motore. L'indicazione503 nel primo rapporto non è quindi una prova valida del trasporto bloccato. La prova successiva usa il gate TCP già verificato del progetto, ammettendo soltanto l’origin loopback e negando HTTPS esterno. Un fetch effettivo alla ricevuta deve fallire prima di iniziare. Questa correzione riguarda il collaudo, non elimina o modifica ricevute pubbliche.
