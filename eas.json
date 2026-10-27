@@ -52,7 +52,7 @@
       "channel": "android-play-bootstrap",
       "env": {
         "EXPO_PROJECT_ID": "b65af584-739f-4ef0-8fe5-6c0ba692c088",
-        "FUNGO_PLAY_VERIFIER_URL": ""
+        "FUNGO_PLAY_BOOTSTRAP": "1"
       },
       "android": {
         "buildType": "app-bundle"

@@ -1,3 +1,13 @@
+## Android Google Play — PR130 e qualifica nativa — 27 ottobre 2026
+
+Autorizzazione specifica del titolare acquisita per push del ramo, PR e Actions/EAS; il precedente blocco del primo invio è superato. [PR130](https://github.com/gianpaolobol/fungo-italia/pull/130) in bozza, ramo `feat/android-play-billing-20261027`, nessun merge main, submit Play, pubblicazione, iOS o OTA.
+
+Sorgente `0f8c93d448b0c50377544b8e2aff0124c2d78998`, [run40596628834](https://github.com/gianpaolobol/fungo-italia/actions/runs/40596628834): qualifica e smoke Android SUCCESS. 324Node0fail0skip, TypeScript,10Java, dati senza drift, autolinking, compilazione Kotlin e APK/AAB reali PASS. Emulatore Android35: avvio offline, demo Agaricus, preferito conservato alla riapertura, aree/habitat gratuiti e test4casi accessibili; esame premium e checkout senza verificatore restano bloccati. Archivio prove12777367932 scaricato, SHA256 `92814991f77b6456a3d1fcef77ce5683587fd84a9cf44370a7e08d12a09ce545` verificato, due screenshot ispezionati. Artefatto diagnostico12777407044 firmato debug: NON PER PLAY.
+
+Job EAS122519643518 FAILURE prima della richiesta build: `eas.json ... FUNGO_PLAY_VERIFIER_URL is not allowed to be empty`. Non è una prova di keystore mancante. Correzione: flag non vuoto `FUNGO_PLAY_BOOTSTRAP=1`, che forza endpoint vuoto nel modulo anche se l'ambiente EAS contenesse un URL. Nuova qualifica completa e firma ancora da verificare sul sorgente corretto; credenziali solo preesistenti con --freeze-credentials.
+
+Restano backend HTTPS, credenziali/permessi Google e canary reale license-test, AAB con firma stabile, primo caricamento interno, prodotto/piano annuale Italia EUR19,99, prove lifecycle e privacy Android. Nessun abbonamento Play attivo o vendita dichiarati. I risultati nativi precedenti valgono solo per lo SHA citato. [Runbook](ANDROID-PLAY-BILLING.md). Le sezioni Android locali sotto conservano la cronologia precedente.
+
 ## Android Google Play — candidato locale, non distribuito — 27 ottobre 2026
 
 Mandato acquisito nella sessione: Google Play con demo Agaricus e annuale EUR19,99. Account Play e scheda Fungo Italia creati; package it.fungoitalia.app, app4973468964713536197. Il titolare ha inviato il profilo commerciante personalmente. Conto beneficiario in attesa di verifica nell’ultima lettura; nessuna modifica bancaria da agente.
