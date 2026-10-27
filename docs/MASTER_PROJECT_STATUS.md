@@ -1,5 +1,25 @@
 # Fungo Italia — stato master operativo
 
+## Qualifica finale del sorgente4fa38b85 — pubblicazione bloccata
+
+Run40475233230,40475233231 e40475233242: **tutti SUCCESS**. TypeScript,300Node0fail0skip e Chromium/WebKit riusciti. Corretto il precedente stamp del merge virtuale PR; nuovo export e preflight riferiti realmente a4fa38b85d5c51d4f387258528f25a1917a70001e. Scaricato l'archivio candidato originale12720466768, verificato ZIP SHA2565fbc5b0c7aff386ee0da66bb220319d46233d943a6f56e1b7b36bfd27a54fa86 e ognuno dei1652file tramite validateCandidate. Contenthashdee3c91ee9edcb9a98b83e33ff7854837ae8e7ba28e87b8a792e991474e3eaa4. ZIP prove12720013890 verificato35a9e1b9e46c8fe60e65b7254d53d5340f96839f18054debda2ed3580c8da961; preflight riletto con SHA reale e pubblicazione=false. [Registro e risultati browser](evidence/web-study-20261027/verification.json). Pacchetto componenti per revisione non pubblicato12720221961; non attribuisce acquisti.
+
+Il preflight resta negativo: strict1/1 e18 fondamenti non indipendentemente revisionati. Nessun sito nuovo, binario iPhone o OTA. Main740c377 e dominio pubblico23/5c9eaa03 ricontrollati, invariati. Nessuna prova di upgrade PWA del nuovo candidato dichiarata. Le sezioni seguenti conservano gli stati precedenti e i negativi reali.
+
+
+## Dodici interventi web — PR128 in qualifica, non pubblicati
+
+L'allineamento23 sotto è concluso: NON riavviare la ricognizione o duplicare il lotto. Ramo unico `feat/web-study-twelve-points-20261027`, [PR128](https://github.com/gianpaolobol/fungo-italia/pull/128). Nuovo sorgente applicativo remoto `2847fca7b620ac4307f6e7795e6284d757b0d872`; locale equivalente9ac8a6c nel checkout `/workspace/scratch/f461e5b757d6/fungo-web-update`. Nessun merge main, distribuzione web o aggiornamento iPhone/OTA eseguito per questo lotto.
+
+Implementati i12 punti. Fonte S1:218 schede minime più42 moduli auspicabili e34 di approfondimento, nessuna specie aggiunta o riclassificata. Banca separata821 quesiti teorici:476 realmente recuperati dalla banca preesistente (425 era un riferimento inesatto), teoria dei casi fotografici,18 fondamenti,76 moduli e79 indicazioni commerciali già documentate nelle schede, con ambito nazionale/regionale/divieti conservato. PR120 è audit, non nuova UI. [Rapporto completo, algoritmo, dati e limiti](WEB-STUDY-TWELVE-POINTS-20261027.md).
+
+Locali: TypeScript PASS;300Node PASS,0fail0skip. Prima qualifica d8d7506/run40473274095 SUCCESS, Chromium/WebKit e22 screenshot/prove effettivamente acquisiti; ZIP12719453380 verificato, SHA256b5557904fb63f3a822fca0426ba1a3226d0330952d636d3c6cb788447acd90b5. Schermate livelli/triade/linea/zoom/radio selezionato e cambio/ripasso singolo/teoria ispezionate. Integrazione successiva146bca8/run40474330473 SUCCESS e shared-web40474330318 SUCCESS. La qualifica finale2847fca7 con i79 quesiti commerciali resta da acquisire: non attribuirle i risultati dei sorgenti precedenti.
+
+**Blocco pubblico reale:** il nuovo file scientifico `src/data/theory-foundations.json` invalida la dichiarazione26/10: `internal-beta-science` rifiuta `Reviewed scientific content changed`; strict readiness/toxicology1/1,18 fondamenti non indipendentemente revisionati. Non alterata la dichiarazione, nessun PASS scientifico inventato. Preflight CI registra digest/report negativi con published=false e nativeBuildAllowed=false. Il consenso generico sviluppo/pubblicazione è già acquisito; manca una revisione reale del nuovo contenuto prevista dai documenti fondanti, non una nuova autorizzazione generica “Procedi”.
+
+Il web ordinario conserva i diritti/demo Agaricus. Il harness completo per revisione dei componenti non conferisce entitlement o acquisti; pacchetto separato autenticato GitHub, mai da distribuire come app. Predisposto contratto ricevuta web-only schema2 e messaggi distinti che non affermano allineamento della nuova web con Apple23. Nessuna ricevuta di pubblicazione generata; il publisher corrente abbinato non va invocato né il ramo applicativo integrato in main, perché attiverebbe compilazioni native vietate dal titolare. Upgrade PWA del nuovo candidato e pubblicazione web non ancora verificati. Il seguito deve usare un publisher web-only qualificato senza aggirare revisione, storage, entitlement o prove di upgrade. Automazione da disattivare soltanto alla consegna web effettiva in attesa di conferma iOS; nessun aggiornamento ripetitivo sul medesimo blocco.
+
+
 ## Allineamento23 effettivamente verificato —27 ottobre2026
 
 Web pubblico e TestFlight interno **1.1.0(23)** corrispondono al sorgente applicativo `5c9eaa03b678b6c97429975af61834fb919e2156`. Consenso pubblico distinto «Procedi», digest `9961d2fd16b12a778e1500a6d30679aa2b4c0f421e3b152add1b54547a0679c7`, registrato nel commit5f70001. Deploy40465563726 effettivo,1652file verificati; primo controllo PWA FAILURE conservato. Recupero **40466560358 SUCCESS**, verificati tutti1652file dal dominio alle07:23:14.530Z e Apple solo titolare alle07:22:43.471Z. Nessuna nuova distribuzione nel recupero.

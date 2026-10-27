@@ -1,0 +1,20 @@
+{
+  "engine": "chromium",
+  "status": "PASS",
+  "scope": "actual production components in unpublished full-access harness; not entitlement verification",
+  "checks": [
+    "greeting",
+    "three-level-counts",
+    "triad-only",
+    "line-rise-and-fall",
+    "photo-zoom",
+    "deadly-radio",
+    "single-error-retry",
+    "photo-history-reload",
+    "theory-separation",
+    "theory-draft-reload",
+    "storage-isolation",
+    "no-page-errors",
+    "390px-no-overflow"
+  ]
+}
