@@ -74,6 +74,15 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await page.evaluate(()=>{window.__pairedPreviousDocument=true;});
    await Promise.all([page.waitForNavigation({waitUntil:'domcontentloaded',timeout:120000}),page.getByRole('button',{name:'Aggiorna anteprima',exact:true}).first().click()]);method='manual-update';
    assert.equal(await page.evaluate(()=>window.__pairedPreviousDocument),undefined,'Update must replace the actual document');
+   await expect.poll(()=>controllerSource(page),{timeout:120000}).toBe(SOURCE);
+   if(process.env.PAIRED_PROFILE_ARTIFACT_ID&&!replay&&await scriptOf(page)!==expectedScript){
+    // Explicit recovery action, not evidence that the first update click succeeded.
+    // Original predeployment profiles and the first negative remain archived.
+    await page.evaluate(()=>{window.__pairedBeforeRecoveryReload=true;});
+    await page.reload({waitUntil:'domcontentloaded',timeout:120000});
+    assert.equal(await page.evaluate(()=>window.__pairedBeforeRecoveryReload),undefined,'Recovery reload must replace the document');
+    method='manual-update-then-explicit-browser-reload';
+   }
    await expect.poll(()=>scriptOf(page),{timeout:60000}).toBe(expectedScript);
 
    await expect.poll(()=>controllerSource(page),{timeout:120000}).toBe(SOURCE);
@@ -120,7 +129,7 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    await page.screenshot({path:join(directory,name+'-verified.png'),fullPage:true});
   }
   assert.deepEqual(errors,[]);
-  cacheObservations.beforeClose=await cacheSummary(page);reports.push({browser:name,mapProof,browserRuntime:runtimeVersion,browserVersion:context.browser().version(),executable:browser.executablePath(),mode,cacheObservations,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method==='manual-update',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade',offlineScope:replay?'application loopback origin stopped; independent public release metadata remains reachable':'actual public application origin and same-origin release metadata disconnected'});
+  cacheObservations.beforeClose=await cacheSummary(page);reports.push({browser:name,mapProof,browserRuntime:runtimeVersion,browserVersion:context.browser().version(),executable:browser.executablePath(),mode,cacheObservations,origin:new URL(base).origin,scope:replay?'archived-loopback-migration':'live-public-origin',sourceBefore:before,capturedSource:prior?.reports.find(r=>r.browser===name)?.sourceAfter??null,sourceAfter:await controllerSource(page),documentScriptBefore:scriptBefore,documentScript:await scriptOf(page),documentReplaced:method.startsWith('manual-update'),explicitRecoveryReload:method==='manual-update-then-explicit-browser-reload',method,examSnapshot,examCheckpointPreserved:true,examHistoryPreserved:true,notesPreserved:true,favoritesPreserved:true,offlineVerified:mode==='upgrade',offlineScope:replay?'application loopback origin stopped; independent public release metadata remains reachable':'actual public application origin and same-origin release metadata disconnected'});
  }catch(error){
   if(page){await page.screenshot({path:join(directory,name+'-'+mode+'-failure.png'),fullPage:true}).catch(()=>{});await writeFile(join(directory,name+'-'+mode+'-failure.json'),JSON.stringify({scope:replay?'archived-loopback-migration':'live-public-origin',error:error.message,controller:await controllerSource(page),documentScript:await scriptOf(page).catch(()=>null),pageErrors:errors,cacheObservations,cacheAtFailure:await cacheSummary(page),reports},null,2)+'\n');}
   throw error;

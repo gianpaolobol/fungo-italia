@@ -19,6 +19,8 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      PAIRED_PROFILE_ARTIFACT_ID: ${{ inputs.profiles_artifact_id }}
+      PAIRED_PROFILE_ARTIFACT_SHA256: ${{ inputs.profiles_archive_sha256 }}
       PAIRED_SOURCE: ${{ inputs.source_commit }}
       PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 }}
       PAIRED_REPLAY_ARTIFACT_ID: ${{ inputs.previous_archive_id }}
@@ -52,6 +54,9 @@ jobs:
 
         assert(Boolean(process.env.PAIRED_REPLAY_ARTIFACT_ID)===Boolean(process.env.PAIRED_REPLAY_ARTIFACT_SHA256),''Replay
         ID and SHA-256 must be supplied together'');
+
+        assert(Boolean(process.env.PAIRED_PROFILE_ARTIFACT_ID)===Boolean(process.env.PAIRED_PROFILE_ARTIFACT_SHA256),''Profile ID and digest must be supplied together'');
+        assert(!process.env.PAIRED_PROFILE_ARTIFACT_ID||''${{ inputs.verification_only }}''===''true'',''Original profile recovery is verification-only'');
 
         const source=process.env.PAIRED_SOURCE;assert(/^[a-f0-9]{40}$/.test(source||''''));
 
@@ -100,7 +105,11 @@ jobs:
       run: 'node tools/paired-demo-cache-probe.mjs "$RUNNER_TEMP/paired-cache-corrected.json"
 
         '
+    - name: Restore original predeployment public browser profiles
+      if: ${{ inputs.profiles_artifact_id != '' }}
+      run: node tools/paired-demo-profile-recovery.mjs "$RUNNER_TEMP/paired-demo-browser"
     - name: Capture actual previous public PWA and private synthetic progress
+      if: ${{ inputs.profiles_artifact_id == '' }}
       run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-demo-browser"
     - name: Archive closed synthetic browser profiles before any deployment
       run: tar -C "$RUNNER_TEMP/paired-demo-browser" -czf "$RUNNER_TEMP/paired-browser-profiles-before.tar.gz" .
@@ -185,5 +194,14 @@ jobs:
         type: string
       previous_archive_sha256:
         description: Full SHA-256 of the optional original previous-public archive ZIP
+        required: false
+        type: string
+
+      profiles_artifact_id:
+        description: Original predeployment browser profile artifact ID, verification-only recovery
+        required: false
+        type: string
+      profiles_archive_sha256:
+        description: Full SHA-256 of original browser profile ZIP, verification-only recovery
         required: false
         type: string
