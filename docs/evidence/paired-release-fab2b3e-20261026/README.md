@@ -1,5 +1,23 @@
 # Fungo Italia — build 22 interna e candidato web abbinato
 
+## Stato verificato — 27 ottobre2026
+
+**Web e TestFlight22 distribuiti dallo stesso sorgente applicativo fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03. Incarico complessivo parziale per cartografia pubblica.**
+
+- TestFlight1.1.0(22), Apple VALID/IN_BETA_TESTING, solo gruppo interno del titolare. Rilettura reale00:56:09.178Z.
+- GitHub Pages pubblicato dal candidato originale nel run40423289727;1652file verificati nuovamente dal dominio. Quel primo run resta FAILURE al collaudo upgrade.
+- Recupero40429334273/job121942912090 SUCCESS, solo verifica e nessuna nuova distribuzione: stesso IPA/candidato/consenso. Chromium151 e WebKit26.5 verificano sorgente, JS effettivo, icona, Aree71, note/preferiti/sessione/storico e vera interruzione dell'intero dominio pubblico con nuovo documento servito dal worker.
+- Replay dei byte originali19→22 su unico origin privato: entrambi i browser eseguono Aggiorna anteprima, cambiano realmente documento/JS/worker, conservano integralmente gli stati, poi funzionano con origin applicativo arrestato. Metadati pubblici indipendenti rimangono raggiungibili. **Non equivale alla continuità dei profili del primo deploy, che sono persi.**
+- Il vecchio runtime1.56.1/2215 riproduce nel fixture privato risposte CacheStorage null; il corretto1.62.0/2336 conserva il corpo dopo ricarica/riapertura. Nessun cache.put o riparazione artificiale applicato alla PWA. Fallimenti e ricevute precedenti conservati.
+- Controllo manuale pubblico:71macroaree/20regioni, Toscana6, ricerca Amiata1, habitat e4schede PASS, nessun Abbonamento involontario. **Cartografia FAIL nel browser cloud: immagini OSM403 Access blocked/policy.** Causa esatta del403 non attestata; il test locale dell'iframe opaco rileva assenza di Referer. Nessun aggiramento, rotazione identità, cambio endpoint o allentamento sandbox. Correzione applicativa in branch separato, richiede nuova IPA e nuovo consenso sul candidato, non riusa22.
+
+[Blocco cartografico effettivo](public-20261027/cloud-osm-policy-block.jpg), [PWA WebKit dopo interruzione reale del dominio](public-20261027/public-webkit-offline.png), [ricevute e confronto runtime](public-20261027/), [stato machine-readable e limiti](status.json), [run finale](https://github.com/gianpaolobol/fungo-italia/actions/runs/40429334273). Artifact12701019062 ZIP8e3a9dc4974cd88f81dbf285baee17749942f47fd94f9cb8aaddc7ca41c376ca; archivio19 originale12699061819 ZIPfff1345d68646fef7ec0c08b0a72819a748a18486ef509cd694f497bc09feb7f. Storico e rollback non distruttivo preservati; nessun rollback reale o Home Screen Safari fisico attestato.
+
+Dataset867file invariato, manifest79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499. Zero revisioni indipendenti; nessuna certificazione o pubblicazione App Store, nessun tester esterno.
+
+Le sezioni sottostanti sono checkpoint storici e non sostituiscono questo stato corrente.
+
+
 ## Aggiornamento pubblico22 — 27 ottobre2026
 
 Il consenso distinto «Confermo» è registrato con digest0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21. Il run40423289727 ha distribuito effettivamente1.1.0(22) da fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 e verificato tutti1652file dal dominio alle00:01:28.723Z. Apple è stata riletta VALID/IN_BETA_TESTING, gruppo esclusivo del titolare. Nessun ampliamento o certificazione indipendente.

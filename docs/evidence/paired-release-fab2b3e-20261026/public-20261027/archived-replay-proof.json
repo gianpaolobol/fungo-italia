@@ -1,0 +1,391 @@
+{
+  "scope": "archived-loopback-migration; NOT original live-public profile continuity",
+  "artifactId": 12699061819,
+  "artifactZipSha256": "fff1345d68646fef7ec0c08b0a72819a748a18486ef509cd694f497bc09feb7f",
+  "originalRunId": 40423289727,
+  "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+  "sourceAfter": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+  "origin": "http://127.0.0.1:39577/fungo-italia/",
+  "bytesUnchanged": true,
+  "capture": {
+    "checkedAt": "2026-10-27T00:57:00.863Z",
+    "status": "complete",
+    "scope": "archived-loopback-migration",
+    "reports": [
+      {
+        "browser": "chromium",
+        "browserRuntime": "1.62.0",
+        "browserVersion": "151.0.7922.34",
+        "executable": "/ms-playwright/chromium-1234/chrome-linux64/chrome",
+        "mode": "capture",
+        "cacheObservations": {
+          "afterNavigation": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 41,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            }
+          ],
+          "beforeClose": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            }
+          ]
+        },
+        "origin": "http://127.0.0.1:39577",
+        "scope": "archived-loopback-migration",
+        "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "capturedSource": null,
+        "sourceAfter": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js",
+        "documentScript": "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js",
+        "documentReplaced": false,
+        "method": "already-current",
+        "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T00:56:58.601Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvpz6r5b-ja5id1x9pro\",\"startedAt\":\"2026-10-27T00:56:58.607Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"queue\":[\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"pending\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:56:58.751Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:56:58.751Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvpz6r5b-ja5id1x9pro\",\"startedAt\":\"2026-10-27T00:56:58.607Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":0,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":0,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":1,\"toxicologyCorrect\":0,\"danger\":1,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"name\":\"Agaricus bresadolanus\",\"nameError\":true,\"categoryError\":true,\"detailErrors\":[\"Sindrome — secondo la scheda dell’atlante\",\"Latenza — secondo la scheda dell’atlante\",\"Manifestazioni e gravità — secondo la scheda dell’atlante\"],\"danger\":true}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:56:58.751Z\",\"round\":0}]}]}}",
+        "examCheckpointPreserved": true,
+        "examHistoryPreserved": true,
+        "notesPreserved": true,
+        "favoritesPreserved": true,
+        "offlineVerified": false,
+        "offlineScope": "application loopback origin stopped; independent public release metadata remains reachable"
+      },
+      {
+        "browser": "webkit",
+        "browserRuntime": "1.62.0",
+        "browserVersion": "26.5",
+        "executable": "/ms-playwright/webkit-2336/pw_run.sh",
+        "mode": "capture",
+        "cacheObservations": {
+          "afterNavigation": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 41,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            }
+          ],
+          "beforeClose": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            }
+          ]
+        },
+        "origin": "http://127.0.0.1:39577",
+        "scope": "archived-loopback-migration",
+        "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "capturedSource": null,
+        "sourceAfter": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js",
+        "documentScript": "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js",
+        "documentReplaced": false,
+        "method": "already-current",
+        "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T00:57:00.325Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvpz6sha-dl2540njij9\",\"startedAt\":\"2026-10-27T00:57:00.334Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"queue\":[\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"pending\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:57:00.520Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:57:00.520Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvpz6sha-dl2540njij9\",\"startedAt\":\"2026-10-27T00:57:00.334Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":0,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":0,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":1,\"toxicologyCorrect\":0,\"danger\":1,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"name\":\"Agaricus bresadolanus\",\"nameError\":true,\"categoryError\":true,\"detailErrors\":[\"Sindrome — secondo la scheda dell’atlante\",\"Latenza — secondo la scheda dell’atlante\",\"Manifestazioni e gravità — secondo la scheda dell’atlante\"],\"danger\":true}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:57:00.520Z\",\"round\":0}]}]}}",
+        "examCheckpointPreserved": true,
+        "examHistoryPreserved": true,
+        "notesPreserved": true,
+        "favoritesPreserved": true,
+        "offlineVerified": false,
+        "offlineScope": "application loopback origin stopped; independent public release metadata remains reachable"
+      }
+    ]
+  },
+  "upgrade": {
+    "checkedAt": "2026-10-27T00:57:07.853Z",
+    "status": "complete",
+    "scope": "archived-loopback-migration",
+    "reports": [
+      {
+        "browser": "chromium",
+        "browserRuntime": "1.62.0",
+        "browserVersion": "151.0.7922.34",
+        "executable": "/ms-playwright/chromium-1234/chrome-linux64/chrome",
+        "mode": "upgrade",
+        "cacheObservations": {
+          "afterNavigation": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 0,
+              "shellListed": false,
+              "shellReadable": false,
+              "shellStatus": null,
+              "appScripts": []
+            }
+          ],
+          "beforeCut": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "afterIndependentProbe": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "afterOfflineReload": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "beforeClose": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ]
+        },
+        "origin": "http://127.0.0.1:39577",
+        "scope": "archived-loopback-migration",
+        "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "capturedSource": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "sourceAfter": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+        "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js",
+        "documentScript": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+        "documentReplaced": true,
+        "method": "manual-update",
+        "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T00:56:58.601Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvpz6r5b-ja5id1x9pro\",\"startedAt\":\"2026-10-27T00:56:58.607Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"queue\":[\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"pending\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:56:58.751Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:56:58.751Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvpz6r5b-ja5id1x9pro\",\"startedAt\":\"2026-10-27T00:56:58.607Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":0,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":0,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":1,\"toxicologyCorrect\":0,\"danger\":1,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"name\":\"Agaricus bresadolanus\",\"nameError\":true,\"categoryError\":true,\"detailErrors\":[\"Sindrome — secondo la scheda dell’atlante\",\"Latenza — secondo la scheda dell’atlante\",\"Manifestazioni e gravità — secondo la scheda dell’atlante\"],\"danger\":true}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:56:58.751Z\",\"round\":0}]}]}}",
+        "examCheckpointPreserved": true,
+        "examHistoryPreserved": true,
+        "notesPreserved": true,
+        "favoritesPreserved": true,
+        "offlineVerified": true,
+        "offlineScope": "application loopback origin stopped; independent public release metadata remains reachable"
+      },
+      {
+        "browser": "webkit",
+        "browserRuntime": "1.62.0",
+        "browserVersion": "26.5",
+        "executable": "/ms-playwright/webkit-2336/pw_run.sh",
+        "mode": "upgrade",
+        "cacheObservations": {
+          "afterNavigation": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 41,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "beforeCut": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "afterIndependentProbe": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "afterOfflineReload": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ],
+          "beforeClose": [
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:eba091f1dc6042936d06d6dc9548f7e1202e797ee0a2385cf391707903351527",
+              "entries": 47,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js"
+              ]
+            },
+            {
+              "name": "fungo-italia-pwa:http://127.0.0.1:39577/fungo-italia/:5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+              "entries": 44,
+              "shellListed": true,
+              "shellReadable": true,
+              "shellStatus": 200,
+              "appScripts": [
+                "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js"
+              ]
+            }
+          ]
+        },
+        "origin": "http://127.0.0.1:39577",
+        "scope": "archived-loopback-migration",
+        "sourceBefore": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "capturedSource": "279d50e842a95c6a7d8e3499806b3fd5c42996e7",
+        "sourceAfter": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+        "documentScriptBefore": "/fungo-italia/_expo/static/js/web/index-89b10506dd87598991fc8924f681b47f.js",
+        "documentScript": "/fungo-italia/_expo/static/js/web/index-2aa13d6b11e3f3a31c4b6c9098dc9f1b.js",
+        "documentReplaced": true,
+        "method": "manual-update",
+        "examSnapshot": "{\"schemaVersion\":1,\"profile\":{\"name\":\"\",\"startedAt\":\"2026-10-27T00:57:00.325Z\"},\"exam\":{\"session\":{\"version\":2,\"id\":\"mvpz6sha-dl2540njij9\",\"startedAt\":\"2026-10-27T00:57:00.334Z\",\"signature\":\"2967074515\",\"ids\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"queue\":[\"minimum-card-objective-agaricus--06--agaricus-bitorquis\",\"minimum-card-objective-agaricus--07--agaricus-bisporus\",\"minimum-card-objective-agaricus--05--agaricus-campestris\"],\"pending\":[\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\"],\"phase\":\"initial\",\"round\":0,\"first\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:57:00.520Z\",\"round\":0}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:57:00.520Z\",\"round\":0}],\"feedback\":null,\"draft\":{\"name\":\"Agaricus\",\"category\":\"\",\"choices\":{},\"assisted\":false},\"completedAt\":null,\"mode\":\"training\"},\"history\":[{\"mode\":\"training\",\"id\":\"mvpz6sha-dl2540njij9\",\"startedAt\":\"2026-10-27T00:57:00.334Z\",\"completedAt\":null,\"signature\":\"2967074515\",\"total\":1,\"correct\":0,\"names\":0,\"namesTotal\":1,\"categories\":0,\"categoriesTotal\":1,\"theoryTotal\":0,\"theoryCorrect\":0,\"details\":0,\"preparationTotal\":0,\"preparationCorrect\":0,\"toxicologyTotal\":1,\"toxicologyCorrect\":0,\"danger\":1,\"assisted\":0,\"retries\":0,\"errors\":[{\"id\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"name\":\"Agaricus bresadolanus\",\"nameError\":true,\"categoryError\":true,\"detailErrors\":[\"Sindrome — secondo la scheda dell’atlante\",\"Latenza — secondo la scheda dell’atlante\",\"Manifestazioni e gravità — secondo la scheda dell’atlante\"],\"danger\":true}],\"attempts\":[{\"caseId\":\"minimum-card-objective-agaricus--02--agaricus-bresadolanus\",\"caseName\":\"Agaricus bresadolanus\",\"answer\":{\"name\":\"Agaricus\",\"category\":\"free\",\"choices\":{},\"assisted\":false},\"grade\":{\"name\":false,\"category\":false,\"detail\":false,\"danger\":true,\"details\":[{\"id\":\"label\",\"title\":\"Sindrome — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"latency\",\"title\":\"Latenza — secondo la scheda dell’atlante\",\"correct\":false},{\"id\":\"severity\",\"title\":\"Manifestazioni e gravità — secondo la scheda dell’atlante\",\"correct\":false}],\"passed\":false},\"at\":\"2026-10-27T00:57:00.520Z\",\"round\":0}]}]}}",
+        "examCheckpointPreserved": true,
+        "examHistoryPreserved": true,
+        "notesPreserved": true,
+        "favoritesPreserved": true,
+        "offlineVerified": true,
+        "offlineScope": "application loopback origin stopped; independent public release metadata remains reachable"
+      }
+    ]
+  },
+  "verifiedAt": "2026-10-27T00:57:07.874Z"
+}

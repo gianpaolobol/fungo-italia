@@ -14,7 +14,7 @@
     "zipSha256": "e9fe54209ae0bb913fdf5a51462c607e00e35a4078160e50c33f28f7d6109f64"
   },
   "newAppleDelivery": "VALID + IN_BETA_TESTING; owner group only",
-  "newPublicDelivery": "deployed22; all1652served files verified; first PWA upgrade failed; recovery QA pending",
+  "newPublicDelivery": "1.1.0(22) actually deployed from fab; original1652files match; real Chromium/WebKit current public offline/data and labelled archived19\u219222 migration PASS; cloud map403 remains open",
   "candidate": {
     "artifactId": 12695390804,
     "zipSha256": "ebc6f5cc4d40c87849a51fbc2c7d3bb299c6988d58a55eb1438506f351c6714d",
@@ -240,5 +240,24 @@
     "actualPublicVerifiedAt": "2026-10-27T00:48:42.008Z",
     "replayFailure": "WebKit access control pageerror for absolute publicGHrelease.json while forcing independent metadata offline from loopback; all actual migration/data/SW assertions reached",
     "replayCorrection": "actual loopback origin remains stopped + proxy local sockets cut; independent public metadata stays reachable, accurately labelled origin-only; full public mode still cuts origin+same-origin metadata; no errors filtered"
+  },
+  "publicFinalVerification": {
+    "run": 40429334273,
+    "job": 121942912090,
+    "orchestrator": "ed14333f8e35d3199663e55b769da383358cac30",
+    "conclusion": "success",
+    "mode": "verification_only, no redeploy/downgrade",
+    "artifact": 12701019062,
+    "zipSha256": "8e3a9dc4974cd88f81dbf285baee17749942f47fd94f9cb8aaddc7ca41c376ca",
+    "profileArtifact": 12701148239,
+    "profileZipSha256": "0692cc062df019d578f46c15103d7bc9d0c4e3f0a82f877d968cf28ad1138924",
+    "actualPublicOrigin": "https://gianpaolobol.github.io/fungo-italia/",
+    "applicationSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+    "allServedFiles": 1652,
+    "actualAppleRecheck": "2026-10-27T00:56:09.178Z owner-only IN_BETA_TESTING",
+    "publicBrowser": "Chromium151 + WebKit26.5; expectedJS/icon/worker, Areas71, raw exam/history/notes/favorites, real full-public-origin offline new SWdocument PASS",
+    "archivedReplay": "unchanged actual19\u219222 bytes; both manual-update/document replacement/source and raw storage preservation; actual loopback app-origin outage PASS, external release metadata reachable; NOT original lost publicprofile continuity",
+    "replayVerifiedAt": "2026-10-27T00:57:07.874Z",
+    "overallExecutiveTask": "PARTIAL: public cloud OSM403 requires app identification fix and new qualified pair; no scientific independent approval"
   }
 }

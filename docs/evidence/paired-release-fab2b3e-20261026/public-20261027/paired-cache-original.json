@@ -1,0 +1,29 @@
+{
+  "runtime": "1.56.1",
+  "executable": "/__w/_temp/paired-old-browser/webkit-2215/pw_run.sh",
+  "scope": "private engine regression; no Fungo app or public origin involved",
+  "baseline": true,
+  "browserVersion": "26.0",
+  "immediate": {
+    "keys": [
+      "private-regression-fixture"
+    ],
+    "listed": [],
+    "body": null
+  },
+  "afterReload": {
+    "keys": [
+      "private-regression-fixture"
+    ],
+    "listed": [],
+    "body": null
+  },
+  "afterReopen": {
+    "keys": [
+      "private-regression-fixture"
+    ],
+    "listed": [],
+    "body": null
+  },
+  "persistenceVerified": false
+}

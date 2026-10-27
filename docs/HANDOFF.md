@@ -1,5 +1,14 @@
 # Punto di ingresso corrente
 
+## Coppia22 verificata; correzione cartografica ancora aperta —27 ottobre2026
+
+Web pubblico e TestFlight interno1.1.0(22) corrispondono a fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03. Apple riletta VALID/IN_BETA_TESTING solo titolare00:56:09.178Z;1652file dal dominio verificati. Run finale40429334273 SUCCESS: vero dominio/offline/dati in Chromium151 e WebKit26.5, più replay etichettato19→22 degli archivi originali con aggiornamento manuale/nuovo documento e dati conservati. Non si inventa recupero dei profili del primo deploy. [Rapporto e ricevute](evidence/paired-release-fab2b3e-20261026/README.md).
+
+**Incarico ancora parziale:** nel browser cloud le tessere OSM mostrano403/policy; lista71, filtri/ricerca/habitat e navigazione funzionano. Configurazione opaca web omette Referer nel test locale; causa esatta del403 non dimostrata. Correzione separata con Leaflet già locale e identificazione nativa reale, nessuna modifica scientifica/StoreKit/dati utente. Non promuovere quel nuovo sorgente con consenso22: nuova qualifica e nuova dichiarazione pubblica distinta necessarie.22resta pubblicata e allineata fino a nuova coppia autorizzata. Indipendente/App Store ancora bloccati.
+
+Le sezioni seguenti mantengono la cronologia, con i precedenti stati pendenti/negativi ai rispettivi istanti.
+
+
 ## Aggiornamento pubblico22 — 27 ottobre2026
 
 Il consenso distinto «Confermo» è registrato con digest0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21. Il run40423289727 ha distribuito effettivamente1.1.0(22) da fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03 e verificato tutti1652file dal dominio alle00:01:28.723Z. Apple è stata riletta VALID/IN_BETA_TESTING, gruppo esclusivo del titolare. Nessun ampliamento o certificazione indipendente.
