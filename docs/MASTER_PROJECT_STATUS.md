@@ -1,5 +1,10 @@
 # Fungo Italia — stato master operativo
 
+## Demo pubblica23 autorizzata — 27 ottobre2026
+
+Il titolare ha risposto «Procedi» alla richiesta specifica per la demo web non certificata1.1.0(23), sorgente `5c9eaa03b678b6c97429975af61834fb919e2156`. Consenso distinto registrato in `revisione/public-demo-authorizations/5c9eaa03b678b6c97429975af61834fb919e2156.json`, digest `9961d2fd16b12a778e1500a6d30679aa2b4c0f421e3b152add1b54547a0679c7`. Policy originale e corrispondenza con la ricevuta Apple23 verificate. Pubblicazione e prove PWA ancora pendenti: non attestare l'allineamento prima dei riscontri reali. Nessuna revisione indipendente, pubblicazione App Store o ampliamento TestFlight autorizzati.
+
+
 ## TestFlight23 disponibile; demo web23 in attesa di consenso — 27 ottobre2026
 
 **1.1.0 (23) disponibile nel solo gruppo interno del titolare.** Apple `VALID` / `IN_BETA_TESTING` alle `2026-10-27T03:05:35.349Z`. Sorgente applicativo `5c9eaa03b678b6c97429975af61834fb919e2156`, produttore `40437151113` SUCCESS. Tutti gli otto workflow main sono SUCCESS;305Node,65WebKit+65Chromium, typecheck/dati/asset/export, StoreKit, demo e acquisti iPhone/iPad superati. Quattro mappe native gratuite/acquistate e due browser del produttore ispezionate: cartografia reale, nessun403; nessun Riprova necessario. La sonda opt-in saltata nelle suite UI normali è stata eseguita separatamente nei due job diagnostici dedicati, entrambi riusciti.

@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "type": "owner-distribution-authorization",
   "scope": "public-demo-beta",
-  "status": "pending",
+  "status": "approved",
   "owner": {
     "name": "Gian Paolo Franceschini",
     "role": "owner"
   },
-  "confirmation": "",
-  "approvedAt": null,
+  "confirmation": "Procedi",
+  "approvedAt": "2026-10-27",
   "publicURL": "https://gianpaolobol.github.io/fungo-italia/",
   "certified": false,
   "independentReviewComplete": false,
@@ -34,6 +34,7 @@
   },
   "approvalDateTimezone": "Europe/Rome",
   "approvalDatePrecision": "day",
-  "confirmationContext": "In attesa della distinta conferma del titolare per pubblicare la demo beta non certificata1.1.0(23), sorgente5c9eaa03b678b6c97429975af61834fb919e2156. La precedente risposta Confermo autorizzava esclusivamente fab2b3e/build22 e non viene estesa a questo candidato. Nessuna pubblicazione App Store o ampliamento TestFlight.",
-  "preparedAt": "2026-10-27T03:22:51.644Z"
+  "confirmationContext": "Il titolare ha risposto «Procedi» alla richiesta esplicita di autorizzare la pubblicazione web della demo23 non certificata, sorgente5c9eaa03b678b6c97429975af61834fb919e2156, già disponibile come TestFlight1.1.0(23). Consenso distinto dal precedente consenso22, limitato a questa demo pubblica. Nessuna certificazione, pubblicazione App Store o ampliamento TestFlight.",
+  "preparedAt": "2026-10-27T03:22:51.644Z",
+  "recordedAt": "2026-10-27T07:09:00.151Z"
 }
