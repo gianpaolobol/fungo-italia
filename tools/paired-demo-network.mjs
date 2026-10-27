@@ -1,9 +1,17 @@
 import http from 'node:http';import net from 'node:net';
+import assert from 'node:assert/strict';
 // Test-only TCP link gate: HTTPS remains end-to-end, with normal certificate validation.
-export async function createNetworkGate({host='gianpaolobol.github.io',port=443}={}){
+export async function createNetworkGate({host='gianpaolobol.github.io',port=443,localOrigin}={}){
+ if(localOrigin){const u=new URL(localOrigin);assert(u.protocol==='http:'&&u.hostname==='127.0.0.1'&&u.port&&u.pathname==='/'&&!u.username&&!u.password&&!u.search&&!u.hash&&u.origin===localOrigin,'Only exact private replay origin permitted');}
  let enabled=true;const sockets=new Set();
  const track=s=>{sockets.add(s);s.on('close',()=>sockets.delete(s));s.on('error',()=>s.destroy());return s;};
- const server=http.createServer((_req,res)=>{res.writeHead(403);res.end();});
+ const server=http.createServer((req,res)=>{
+  let target;try{target=new URL(req.url);}catch{res.writeHead(403);res.end();return;}
+  if(!localOrigin||target.origin!==localOrigin||!target.pathname.startsWith('/fungo-italia/')||target.username||target.password||!['GET','HEAD'].includes(req.method)){res.writeHead(403);res.end();return;}
+  if(!enabled){res.writeHead(503);res.end();return;}
+  const upstream=http.request(target,{method:req.method,headers:{...req.headers,host:target.host}},response=>{res.writeHead(response.statusCode,response.headers);response.pipe(res);});
+  upstream.on('socket',track);upstream.on('error',()=>{if(!res.headersSent)res.writeHead(502);res.end();});req.on('aborted',()=>upstream.destroy());res.on('close',()=>upstream.destroy());upstream.end();
+ });
  server.on('connection',track);
  server.on('connect',(req,client,head)=>{
   if(req.url!==host+':'+port){client.end('HTTP/1.1 403 Forbidden\r\nConnection: close\r\n\r\n');return;}

@@ -33,7 +33,7 @@ async function controllerSource(page){return page.evaluate(async()=>{
 }).catch(()=>null);}
 const reports=[];
 for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
- const gate=await createNetworkGate();
+ const gate=await createNetworkGate({localOrigin:replay?new URL(base).origin:undefined});
  let context,page;const errors=[];
  try{
  context=await browser.launchPersistentContext(join(directory,name),{proxy:{server:gate.url,bypass:'127.0.0.1,localhost'},headless:true,viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true,serviceWorkers:'allow'});
@@ -42,7 +42,7 @@ for(const[name,browser]of [['chromium',chromium],['webkit',webkit]]){
    if(!localStorage.getItem(probe)){const state=JSON.stringify({version:1,favoriteIds:[favorite],resumeId:favorite});localStorage.setItem('fungo-italia:study:v1',state);localStorage.setItem('fungo-italia:pwa:study:v1',state);localStorage.setItem('fungo-italia:pwa:notes:v1',JSON.stringify(notes));localStorage.setItem(probe,'keep-existing-notes');}
   },{favorite,probe,notes:progressFixture.notes});
   page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(base,{waitUntil:'domcontentloaded',timeout:60000});await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
+  const navigation=await page.goto(base,{waitUntil:'domcontentloaded',timeout:60000});assert(navigation?.ok(),'Application navigation HTTP '+navigation?.status());await expect(page.getByRole('tab')).toHaveText(['Percorso','Studio','Esame','Aree'],{timeout:60000});
   await expect.poll(()=>controllerSource(page),{timeout:120000}).not.toBeNull();
   const scriptBefore=await scriptOf(page);
   const before=await controllerSource(page);assert(/^[a-f0-9]{40}$/.test(before||''),'Live worker source unavailable');

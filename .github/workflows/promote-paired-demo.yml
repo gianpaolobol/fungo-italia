@@ -50,7 +50,8 @@ jobs:
         import assert from ''node:assert/strict'';import {readFile,appendFile} from ''node:fs/promises'';import
         {authorizationDigest} from ''./tools/paired-demo-policy.mjs'';
 
-        assert(Boolean(process.env.PAIRED_REPLAY_ARTIFACT_ID)===Boolean(process.env.PAIRED_REPLAY_ARTIFACT_SHA256),''Replay ID and SHA-256 must be supplied together'');
+        assert(Boolean(process.env.PAIRED_REPLAY_ARTIFACT_ID)===Boolean(process.env.PAIRED_REPLAY_ARTIFACT_SHA256),''Replay
+        ID and SHA-256 must be supplied together'');
 
         const source=process.env.PAIRED_SOURCE;assert(/^[a-f0-9]{40}$/.test(source||''''));
 
@@ -118,11 +119,11 @@ jobs:
       if: ${{ !inputs.verification_only }}
     - name: Verify every actually served file against immutable native and web receipts
       run: node tools/paired-demo.mjs published
+    - name: Verify real Chromium and WebKit PWA upgrade and preserved local data
+      run: node tools/paired-demo-browser.mjs upgrade "$RUNNER_TEMP/paired-demo-browser"
     - name: Replay unchanged archived previous-public bytes to approved candidate on private loopback
       if: ${{ inputs.previous_archive_id != '' }}
       run: node tools/paired-demo-replay.mjs "$RUNNER_TEMP/paired-replay-browser"
-    - name: Verify real Chromium and WebKit PWA upgrade and preserved local data
-      run: node tools/paired-demo-browser.mjs upgrade "$RUNNER_TEMP/paired-demo-browser"
     - name: Preserve exact public receipts and browser evidence
       if: always()
       run: "mkdir -p \"$RUNNER_TEMP/paired-demo-evidence\"\nfor file in paired-demo-native-proof.json paired-demo-verification.json\

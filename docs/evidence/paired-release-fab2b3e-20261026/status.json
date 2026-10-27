@@ -153,5 +153,28 @@
       "zipSha256": "fff1345d68646fef7ec0c08b0a72819a748a18486ef509cd694f497bc09feb7f"
     },
     "recoveryScope": "archived loopback migration plus separate live public verification; not original profile continuity"
+  },
+  "publicRecovery1": {
+    "run": 40425802198,
+    "job": 121931132186,
+    "conclusion": "failure",
+    "allServedFilesVerified": 1652,
+    "failure": "private replay first navigation reached proxy403; capture profiles persistent bypass ignored",
+    "artifact": 12699479065,
+    "zipSha256": "6feebd00e6e1825741978cdd4c7b8979351ccb81670455615c475b32d8a75dee",
+    "actualPublicOffline": "not reached in this run",
+    "localRegression": "persistent Chromium old19 navigation403 reproduced; exact private-origin forwarding preserves restrictions and actual200/tabs after fix"
+  },
+  "livePublicAreasCloud": {
+    "tabs": true,
+    "areas": 71,
+    "regions": 20,
+    "Toscana": 6,
+    "searchAmiata": 1,
+    "habitat": true,
+    "noInvoluntaryPaywall": true,
+    "map": "FAIL: actual raster images display403 Access blocked tile policy notice",
+    "cause": "not proven; independent local Chromium echo confirms sandboxopaqueiframe sends noReferer; no bypass attempted",
+    "mapScreenshotSha256": "c95098a0c4842870fd6a8ea2033defb40aa05ee5ca5dc271768896999d6d7cae"
   }
 }
