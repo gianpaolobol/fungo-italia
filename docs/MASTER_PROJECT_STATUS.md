@@ -1,5 +1,14 @@
 # Fungo Italia — stato master operativo
 
+## TestFlight23 disponibile; demo web23 in attesa di consenso — 27 ottobre2026
+
+**1.1.0 (23) disponibile nel solo gruppo interno del titolare.** Apple `VALID` / `IN_BETA_TESTING` alle `2026-10-27T03:05:35.349Z`. Sorgente applicativo `5c9eaa03b678b6c97429975af61834fb919e2156`, produttore `40437151113` SUCCESS. Tutti gli otto workflow main sono SUCCESS;305Node,65WebKit+65Chromium, typecheck/dati/asset/export, StoreKit, demo e acquisti iPhone/iPad superati. Quattro mappe native gratuite/acquistate e due browser del produttore ispezionate: cartografia reale, nessun403; nessun Riprova necessario. La sonda opt-in saltata nelle suite UI normali è stata eseguita separatamente nei due job diagnostici dedicati, entrambi riusciti.
+
+IPA originale scaricato e verificato: SHA256 `141d0a676b9eb3ba64ce6c6ee3b06474378180ea58ea0d6d09b274710b5e1481`, bundle/versione/numero corretti, sorgente5c9/dirtyfalse incorporato e nuova identificazione dell’app presente nel vero bytecode. Firma verificata in CI, teamBX9MDXAHKG. Web candidato originale `12704747838`, contenthash `9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84`,1652file+2metadati verificati integralmente. Il manifest867scientifico resta `79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499`, zero revisioni indipendenti, nessuna certificazione/App Store.
+
+**Incarico parziale:** lettura HTTPS effettiva del dominio conferma ancora1.1.0(22)/`fab2b3e...`. Nuova23 non pubblicata sul web: autorizzazione distinta preparata **pending**, nessuna conferma inventata o estensione del consenso22. Dopo il consenso occorrono Apple/audience live, archivio22, Pages stessi byte e vero upgrade PWA22→23 con dati conservati in Chromium/WebKit. [Rapporto e prove](evidence/paired-release-5c9eaa0-20261027/README.md). Nessun ampliamento TestFlight o pubblicazione App Store consentiti.
+
+
 ## Qualifica cartografica del ramo e controlli nativi permanenti —27 ottobre2026
 
 Sul sorgente b03b92a322af56d21fc52f2d88aed6f060e0a715 entrambi i workflow40433109564/40433109768 sono SUCCESS:65testlegacy, Chromium151/WebKit26.5 condivisi, quattro richieste private per motore con Referer effettivo, mappa OSM completa senza errori. Entrambe le PNG originali ispezionate mostrano cartografia geografica e71punti, nessun raster403. Artifact12702742910 SHA2561f35719beb2301748647322c7e2b8220816057d206664cd17944f4402ec0fa12. È una prova sul candidato locale CI, non del nuovo sito pubblico. Il fixtureoffline verifica prima il blocco trasporto dopo il nuovo documento, poi ripristina solo il segnale nativo che Chromium resetta: tutte le aspettative originarie conservate.

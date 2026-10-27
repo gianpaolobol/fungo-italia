@@ -1,0 +1,27 @@
+Executable=/Users/runner/work/_temp/consolidated-binary/Payload/FungoItalia.app/FungoItalia
+Identifier=it.fungoitalia.app
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=9174 flags=0x0(none) hashes=276+7 location=embedded
+VersionPlatform=2
+VersionMin=1049600
+VersionSDK=1705216
+Hash type=sha256 size=32
+CandidateCDHash sha256=13f8685065eb5349be10074d82509dd50dbca1e7
+CandidateCDHashFull sha256=13f8685065eb5349be10074d82509dd50dbca1e7353280c5cb9c5109f9755099
+Hash choices=sha256
+CMSDigest=13f8685065eb5349be10074d82509dd50dbca1e7353280c5cb9c5109f9755099
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=3473408
+Executable Segment flags=0x1
+Page size=16384
+CDHash=13f8685065eb5349be10074d82509dd50dbca1e7
+Signature size=4802
+Authority=Apple Distribution: GianPaolo Franceschini (BX9MDXAHKG)
+Authority=Apple Worldwide Developer Relations Certification Authority
+Authority=Apple Root CA
+Signed Time=Oct 27, 2026 at 2:58:49 AM
+Info.plist entries=42
+TeamIdentifier=BX9MDXAHKG
+Sealed Resources version=2 rules=10 files=907
+Internal requirements count=1 size=192

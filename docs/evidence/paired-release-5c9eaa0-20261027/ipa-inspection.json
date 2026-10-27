@@ -1,0 +1,19 @@
+{
+  "originalIpaSha256": "141d0a676b9eb3ba64ce6c6ee3b06474378180ea58ea0d6d09b274710b5e1481",
+  "artifactZipSha256": "37ce3ef42fbce9a4d50541c63b393f178afba35d543d1d8ef337028dea8ed84c",
+  "ipaBytes": 219677893,
+  "bundleId": "it.fungoitalia.app",
+  "version": "1.1.0",
+  "buildNumber": "23",
+  "embeddedRelease": {
+    "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+    "version": "1.1.0",
+    "dirty": false
+  },
+  "compiledBundlePath": "Payload/FungoItalia.app/main.jsbundle",
+  "compiledBundleSha256": "d9adc132b038b6b00d76a2ce700f7fba10b22f644806df8701d6abe40ca53e43",
+  "compiledBundleBytes": 2833241,
+  "honestApplicationUaPrefixFound": true,
+  "nativeUaPropFound": true,
+  "signatureVerification": "Actual Mac CI codesign --verify --deep --strict and TeamIdentifier BX9MDXAHKG; downloaded IPA hash matches that exact receipt"
+}

@@ -1,0 +1,100 @@
+{
+  "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "files": [
+    {
+      "path": "consolidated-build.json",
+      "bytes": 222915,
+      "sha256": "f1ebc5f6187507beda8894355977e349aefd9dc1e15f296385b6ed023a7dbcc9"
+    },
+    {
+      "path": "consolidated-testflight.json",
+      "bytes": 223364,
+      "sha256": "018fdd18326ac15ae70f78f17760db2a92841ff370bebd7f7fe584008717a886"
+    },
+    {
+      "path": "source-consolidated-build.json",
+      "bytes": 222410,
+      "sha256": "c191375b45a59169a9c2f35c2141e7b1ad09de599dda39d9ecb5c3fc4cceaa3c"
+    },
+    {
+      "path": "ipa-inspection.json",
+      "bytes": 846,
+      "sha256": "c01f2de634a1fd70a41852718bb2a874c9cd31fc5f069e750c081f21ba95cc3f"
+    },
+    {
+      "path": "native-signature.txt",
+      "bytes": 1098,
+      "sha256": "d9a18202ed2e24d5a432e57aa81dcce02dac45405fbce9d4741b0666ee03c3d5"
+    },
+    {
+      "path": "current-public-build.json",
+      "bytes": 280,
+      "sha256": "0466c398db3bca026ee5219d0eb2459c8862ce3e6a1fcc8e90b74e41071c6631"
+    },
+    {
+      "path": "current-public-release.json",
+      "bytes": 2224,
+      "sha256": "14c7b786841b48cd3c3c189ff107e8d9b6b43655c7248c95524df35efea035c4"
+    },
+    {
+      "path": "native-ui-summary.log",
+      "bytes": 2085,
+      "sha256": "41a12988fbca20435e591a605e1b24a604268448fcf82b5034a991ec1d8ce229"
+    },
+    {
+      "path": "runtime-selection.log",
+      "bytes": 115,
+      "sha256": "6fa5ad522cfb8f9d5ef0b9477c9eb840e776b0f3296c1e2f85ff7fb159582071"
+    },
+    {
+      "path": "browser/map-identification-proof-chromium.json",
+      "bytes": 357,
+      "sha256": "65baefd9104cf1a62f6bfd4dcfb55b5a772d2c17f0d28a374b624bcf1713a7df"
+    },
+    {
+      "path": "browser/map-identification-proof-webkit.json",
+      "bytes": 346,
+      "sha256": "4a4282ada227fc1a643f8e05ada26459b14ba5b6c8cebddd7ec82dd0277ff61e"
+    },
+    {
+      "path": "browser/unified-map-chromium.png",
+      "bytes": 329225,
+      "sha256": "2501af50bbc3bbbba9dfc71c745e4d9026490f61c65875a0a03e8d2ec3a3021a"
+    },
+    {
+      "path": "browser/unified-map-proof-chromium.json",
+      "bytes": 1549,
+      "sha256": "d65b5f76299884629a3a99735f09a0c8ba9d2aecefa6269e12796779a9ec0d31"
+    },
+    {
+      "path": "browser/unified-map-proof-webkit.json",
+      "bytes": 1547,
+      "sha256": "204d6e03249cb424bbfd82015fec1dd9972edb79c291d24e6b1542edd9c625be"
+    },
+    {
+      "path": "browser/unified-map-webkit.png",
+      "bytes": 269479,
+      "sha256": "b25b2a3a245b89f2b7acda96b4a489b682e086efa1bd13d976c99bfdb4624e7a"
+    },
+    {
+      "path": "native/iphone-free-map.png",
+      "bytes": 839265,
+      "sha256": "d67f3a0b8b7c9a63d73d608006e95d2f04c6e4c65f8288b4e84e88e5a90741cb"
+    },
+    {
+      "path": "native/iphone-paid-map.png",
+      "bytes": 839265,
+      "sha256": "d67f3a0b8b7c9a63d73d608006e95d2f04c6e4c65f8288b4e84e88e5a90741cb"
+    },
+    {
+      "path": "native/ipad-free-map.png",
+      "bytes": 1238439,
+      "sha256": "97a2553c1d39e0be01307bbe60a874a30e5668c5079b2d18b826aca84b49e080"
+    },
+    {
+      "path": "native/ipad-paid-map.png",
+      "bytes": 1238439,
+      "sha256": "97a2553c1d39e0be01307bbe60a874a30e5668c5079b2d18b826aca84b49e080"
+    }
+  ]
+}

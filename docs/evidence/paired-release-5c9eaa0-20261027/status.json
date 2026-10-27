@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-10-27T03:22:52.040Z",
+  "status": "PARTIAL — TestFlight23 available and exact source validated; public23 demo authorization pending, current served web22",
+  "applicationSource": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "version": "1.1.0",
+  "buildNumber": "23",
+  "testFlightNewBuild": {
+    "version": "1.1.0",
+    "buildNumber": "23",
+    "appleBuildId": "2f00918f-55b1-47f5-96f0-d6b9e2757e96",
+    "processingState": "VALID",
+    "internalBuildState": "IN_BETA_TESTING",
+    "verifiedAt": "2026-10-27T03:05:35.349Z",
+    "internalGroupIds": [
+      "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+    ],
+    "ipaSha256": "141d0a676b9eb3ba64ce6c6ee3b06474378180ea58ea0d6d09b274710b5e1481",
+    "producerRunId": 40437151113
+  },
+  "producerRun": 40437151113,
+  "producerSourceJob": 121968451805,
+  "webCandidate": {
+    "artifactId": 12704747838,
+    "bytes": 433835390,
+    "archiveSha256": "771bcc10691c1fef99b04231cc5f25e90297fa81663e3ecab37ffe787684a5e9",
+    "build": {
+      "schemaVersion": 1,
+      "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "version": "1.1.0",
+      "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+      "webContentHash": "9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84"
+    },
+    "buildMetadataSha256": "9bb74c323a2c2913d26b6c5fa639aa15257a81de121754fb3f2f64eab6717f45",
+    "manifestSha256": "ce0d32b984dd01acb36a7bafbbb144d283e2ed0a5d9fa92260671352fe3a731f",
+    "payloadFiles": 1652,
+    "zipEntries": 1654,
+    "originalArchiveDigestVerified": true,
+    "extractedCandidateParityVerified": true,
+    "embeddedSourceOccurrences": 1,
+    "sourceBoundInActualCompiledBundle": true,
+    "published": false
+  },
+  "science": {
+    "artifactId": 12704279394,
+    "archiveSha256": "8905aa14f534720630cf3a11b0025736f77393a89f2af9b7792f358bb46ba493",
+    "scientificFiles": 867,
+    "contentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+    "ownerDeclarationDigest": "d649ab6720c043097f021d791b0703102675c55cff2888b93c37b784214225f5",
+    "ownerOnlyInternalBetaAllowed": true,
+    "independentReleaseReady": false,
+    "appStoreReady": false,
+    "newPublicDemoAllowed": false,
+    "structuralToxicologyErrors": 0,
+    "strictExitCodes": [
+      1,
+      1
+    ]
+  },
+  "localQualification": {
+    "node": {
+      "pass": 305,
+      "fail": 0,
+      "skip": 0
+    },
+    "typescript": "PASS sequential after generation",
+    "deterministicData": "PASS no drift",
+    "referenceImageFiles": 630,
+    "assets": "PASS",
+    "mobileData": "PASS",
+    "iosExport": "PASS",
+    "originalMainWebCandidate": "PASS all manifest bytes/source/icon"
+  },
+  "prQualification": {
+    "pr": 127,
+    "head": "5c9eaa03b678b6c97429975af61834fb919e2156",
+    "syntheticMerge": "540d302cb65d4bcb8a190d238e6f043a6574e340",
+    "identicalTree": "acfe1801adbc2211789c1f960daa277275de921a",
+    "allFiveWorkflows": "SUCCESS",
+    "nativeFunctionalPassPerFamily": 2,
+    "preexistingOptInDiagnosticSkipPerFamily": 1,
+    "nativeMapVisuals": "all4 inspected; geographic six Toscana markers; explicitRetryfalseall4; recovery not exercised",
+    "syntheticMergeProofIsNotFinalPushReceipt": true,
+    "scientificAttempt1": "slow moving APT install cancelled before browser tests; negative retained",
+    "scientificAttempt2": "same source65PASS"
+  },
+  "mainPushRuns": [
+    {
+      "id": 40437151127,
+      "name": "Verify StoreKit purchase interface",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151127"
+    },
+    {
+      "id": 40437151271,
+      "name": "Verify free Agaricus demo interface",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151271"
+    },
+    {
+      "id": 40437151142,
+      "name": "Atlas regeneration and scientific gate",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151142"
+    },
+    {
+      "id": 40437151162,
+      "name": "Validate shared web candidate",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151162"
+    },
+    {
+      "id": 40437151257,
+      "name": "Diagnose StoreKit entitlement startup",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151257"
+    },
+    {
+      "id": 40437151090,
+      "name": "Expo Android and iOS",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151090"
+    },
+    {
+      "id": 40437151124,
+      "name": "Verify native StoreKit subscriptions",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151124"
+    },
+    {
+      "id": 40437151113,
+      "name": "Paired web and diagnostic TestFlight",
+      "event": "push",
+      "headSha": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "conclusion": "success",
+      "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40437151113"
+    }
+  ],
+  "approvalScope": "Prior public22 consent is limited to fab2b3e/22. A distinct concrete new public approval is required after fresh signed IPA and owner-only Apple VALID/IN_BETA_TESTING.",
+  "next": "Obtain the distinct concrete public23 approval, record actual confirmation/date and authorization digest, use original artifact12704747838, re-read Apple and audience, archive current22, deploy and verify all served bytes and real PWA/new document/data/offline in both engines. Do not publish App Store or broaden TestFlight.",
+  "originalArtifacts": [
+    {
+      "id": 12707345692,
+      "name": "Consolidated-TestFlight-evidence",
+      "bytes": 42476,
+      "sha256": "0ee25c32a8d05c3c4f0a7c127e66e2753200a23eebe46456bde15c67b7061292",
+      "expiresAt": "2026-11-26T03:05:36Z"
+    },
+    {
+      "id": 12706338271,
+      "name": "Consolidated-signed-IPA",
+      "bytes": 219499581,
+      "sha256": "37ce3ef42fbce9a4d50541c63b393f178afba35d543d1d8ef337028dea8ed84c",
+      "expiresAt": "2026-11-03T03:05:37Z"
+    },
+    {
+      "id": 12705533310,
+      "name": "Shared-map-browser-evidence",
+      "bytes": 587966,
+      "sha256": "831653a539f4b5ab2ad9bd07975d19c7852bb82c6a07fd12085c99273fa80f48",
+      "expiresAt": "2027-01-25T02:13:11Z"
+    },
+    {
+      "id": 12705283536,
+      "name": "Consolidated-source-proof",
+      "bytes": 13682,
+      "sha256": "9c4f5fc598d8532df5f5e11b7b1902eee71e06e1ef2f48ba3433a52e52c3af6a",
+      "expiresAt": "2026-11-26T02:47:18Z"
+    },
+    {
+      "id": 12704747838,
+      "name": "Paired-web-candidate",
+      "bytes": 433835390,
+      "sha256": "771bcc10691c1fef99b04231cc5f25e90297fa81663e3ecab37ffe787684a5e9",
+      "expiresAt": "2026-11-26T02:17:12Z"
+    },
+    {
+      "id": 12704279394,
+      "name": "Internal-beta-scientific-proof",
+      "bytes": 13225,
+      "sha256": "8905aa14f534720630cf3a11b0025736f77393a89f2af9b7792f358bb46ba493",
+      "expiresAt": "2026-11-26T02:17:27Z"
+    }
+  ],
+  "signedIpaInspection": {
+    "originalIpaSha256": "141d0a676b9eb3ba64ce6c6ee3b06474378180ea58ea0d6d09b274710b5e1481",
+    "artifactZipSha256": "37ce3ef42fbce9a4d50541c63b393f178afba35d543d1d8ef337028dea8ed84c",
+    "ipaBytes": 219677893,
+    "bundleId": "it.fungoitalia.app",
+    "version": "1.1.0",
+    "buildNumber": "23",
+    "embeddedRelease": {
+      "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+      "version": "1.1.0",
+      "dirty": false
+    },
+    "compiledBundlePath": "Payload/FungoItalia.app/main.jsbundle",
+    "compiledBundleSha256": "d9adc132b038b6b00d76a2ce700f7fba10b22f644806df8701d6abe40ca53e43",
+    "compiledBundleBytes": 2833241,
+    "honestApplicationUaPrefixFound": true,
+    "nativeUaPropFound": true,
+    "signatureVerification": "Actual Mac CI codesign --verify --deep --strict and TeamIdentifier BX9MDXAHKG; downloaded IPA hash matches that exact receipt"
+  },
+  "mainNativeUi": {
+    "workflow": 40437151127,
+    "artifactId": 12705099465,
+    "artifactSha256": "3f52c55ec373eb00892aff77b05d812b730f67bfc5526dd608d1ca60d45c5226",
+    "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+    "functionalPassPerFamily": 2,
+    "failures": 0,
+    "preexistingOptInDiagnosticSkipPerFamily": 1,
+    "dedicatedStartupDiagnostic": {
+      "run": 40437151257,
+      "baseline": "1PASS0fail",
+      "withoutUpdates": "1PASS0fail",
+      "scope": "observational diagnostic, not a substitute for purchase release verification"
+    },
+    "mapVisuals": "all4 original main PNG inspected: geographic map/six Toscana markers, no403; explicitRetryfalseall4; recovery not exercised",
+    "devices": "iPhone16ProMax/iPadPro13M4 simulator iOS26.2, Xcode26.6"
+  },
+  "currentPublicObservation": {
+    "method": "Direct HTTPS GET of real served build.json/release.json; original responses saved with this report",
+    "build": {
+      "schemaVersion": 1,
+      "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "version": "1.1.0",
+      "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+      "webContentHash": "5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d"
+    },
+    "release": {
+      "schemaVersion": 1,
+      "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+      "version": "1.1.0",
+      "buildNumber": "22",
+      "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+      "webContentHash": "5ca1768e06f9ad824259ae764a5488928c1fa66644c778f50a1bd6adaa578e1d",
+      "appleBuildId": "8e7fcdbb-75e9-4765-a50d-f1867910ded7",
+      "processingState": "VALID",
+      "internalBuildState": "IN_BETA_TESTING",
+      "betaDetailId": "8e7fcdbb-75e9-4765-a50d-f1867910ded7",
+      "betaStateVerifiedAt": "2026-10-26T23:18:33.116Z",
+      "diagnosticOnly": true,
+      "testFlightOnly": true,
+      "ipaSha256": "d8ebaf003d190d47925f458c3dfde5743a72e885597ed615c3b5d9bbc746db67",
+      "producerRunId": "40414345353",
+      "nativeStorekitVerified": true,
+      "storekitUIVerified": true,
+      "appStoreReady": false,
+      "evidence": {
+        "native": {
+          "id": 40414345899,
+          "path": ".github/workflows/subscription-storekit-tests.yml",
+          "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+          "conclusion": "success",
+          "verified": true,
+          "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345899"
+        },
+        "ui": {
+          "id": 40414345724,
+          "path": ".github/workflows/subscription-storekit-ui.yml",
+          "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+          "conclusion": "success",
+          "verified": true,
+          "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345724"
+        },
+        "demo": {
+          "id": 40414345397,
+          "path": ".github/workflows/agaricus-demo-ui.yml",
+          "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+          "conclusion": "success",
+          "verified": true,
+          "url": "https://github.com/gianpaolobol/fungo-italia/actions/runs/40414345397"
+        }
+      },
+      "internalGroupIds": [
+        "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+      ],
+      "webDistribution": {
+        "scope": "public-demo-beta",
+        "certified": false,
+        "independentReviewComplete": false,
+        "appStoreReady": false,
+        "authorizationSha256": "0bfd121683127fac212c77af09f7dde3a5f5754e613eb89ffca35770f8d44b21",
+        "authorizedSource": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+        "pairedTestFlightBuild": "22",
+        "authorizedOn": "2026-10-27"
+      }
+    },
+    "newSource23Published": false
+  },
+  "publicAuthorization": {
+    "path": "revisione/public-demo-authorizations/5c9eaa03b678b6c97429975af61834fb919e2156.json",
+    "status": "pending",
+    "confirmationReceived": false,
+    "old22ConsentNotReused": true,
+    "actualPendingRecordRejectedByPolicy": true,
+    "actualApproved22RecordRejectedFor23": true
+  },
+  "remainingRequired": {
+    "publicApproval": "pending distinct explicit owner confirmation for this exact source/build/artifact",
+    "pagesDeployment": "not run for23",
+    "realServedBytes": "new23 not yet verified",
+    "realPwaUpgradeWebKitAndChromium": "22→23 not yet executed on public origin",
+    "userDataPreservationDuringNewPublicUpgrade": "pending actual new23 public upgrade; no storage schema changes"
+  },
+  "previousVerifiedPairedRelease": {
+    "sourceCommit": "fab2b3eb5724b92b74ad3ed0e76ad2094ea2fd03",
+    "version": "1.1.0",
+    "buildNumber": "22",
+    "lastAppleRead": "2026-10-27T00:56:09.178Z",
+    "lastPublicPwaProofRun": 40429334273
+  }
+}

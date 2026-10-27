@@ -1,0 +1,21 @@
+SOURCE 5c9eaa03b678b6c97429975af61834fb919e2156; iphone; original full log SHA256 8b869372d949e147b17bb3feb277098ee3788e408fa671d3b85694d7d89029ca
+NATIVE_AREAS_MAP extended-free-map Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false
+Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAFreeAgaricusDemoWithoutPurchase]' passed (115.429 seconds).
+NATIVE_AREAS_MAP extended-paid-map Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false
+Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAnnualPurchaseRestoreAccessRefundAndExpiry]' passed (158.816 seconds).
+Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testEntitlementStartupProbe]' skipped (0.152 seconds).
+	 Executed 3 tests, with 1 test skipped and 0 failures (0 unexpected) in 274.398 (274.403) seconds
+	 Executed 3 tests, with 1 test skipped and 0 failures (0 unexpected) in 274.398 (274.404) seconds
+	 Executed 3 tests, with 1 test skipped and 0 failures (0 unexpected) in 274.398 (274.409) seconds
+** TEST SUCCEEDED **
+
+SOURCE 5c9eaa03b678b6c97429975af61834fb919e2156; ipad; original full log SHA256 cdb6afb1c21f7784d334772d5be1ed9be0fb57419e051e1107c4b7d56ed184a9
+NATIVE_AREAS_MAP extended-free-map Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false
+Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAFreeAgaricusDemoWithoutPurchase]' passed (150.561 seconds).
+NATIVE_AREAS_MAP extended-paid-map Toscana=6 AbruzzoIntersection=0 OSMWebView=visible explicitRetry=false
+Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testAnnualPurchaseRestoreAccessRefundAndExpiry]' passed (206.798 seconds).
+Test Case '-[AnnualPurchaseUITests.AnnualPurchaseUITests testEntitlementStartupProbe]' skipped (0.327 seconds).
+	 Executed 3 tests, with 1 test skipped and 0 failures (0 unexpected) in 357.686 (357.692) seconds
+	 Executed 3 tests, with 1 test skipped and 0 failures (0 unexpected) in 357.686 (357.693) seconds
+	 Executed 3 tests, with 1 test skipped and 0 failures (0 unexpected) in 357.686 (357.695) seconds
+** TEST SUCCEEDED **

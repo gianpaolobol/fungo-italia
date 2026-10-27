@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "type": "owner-distribution-authorization",
+  "scope": "public-demo-beta",
+  "status": "pending",
+  "owner": {
+    "name": "Gian Paolo Franceschini",
+    "role": "owner"
+  },
+  "confirmation": "",
+  "approvedAt": null,
+  "publicURL": "https://gianpaolobol.github.io/fungo-italia/",
+  "certified": false,
+  "independentReviewComplete": false,
+  "appStoreReady": false,
+  "externalTestFlightAllowed": false,
+  "sourceCommit": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "version": "1.1.0",
+  "buildNumber": "23",
+  "webContentHash": "9d5d3d39048a44addaee7fdb95a948e276392d42151bdf9377827709162e1e84",
+  "iconSha256": "77274660b0a1a450d19c4c4d895ac49274663696e8cb6d40ffef6488131e35f9",
+  "ipaSha256": "141d0a676b9eb3ba64ce6c6ee3b06474378180ea58ea0d6d09b274710b5e1481",
+  "appleBuildId": "2f00918f-55b1-47f5-96f0-d6b9e2757e96",
+  "candidateProducerRunId": 40437151113,
+  "candidateArtifactId": 12704747838,
+  "candidateArtifactSha256": "771bcc10691c1fef99b04231cc5f25e90297fa81663e3ecab37ffe787684a5e9",
+  "scientificContentDigest": "79d2514801e544dbdcfecbe140ff6aab909e5e1da51b0d4d2e49cf4a56553499",
+  "scientificFileCount": 867,
+  "ownerReviewDeclarationSha256": "d649ab6720c043097f021d791b0703102675c55cff2888b93c37b784214225f5",
+  "nativeProofRunIds": {
+    "native": 40437151124,
+    "ui": 40437151127,
+    "demo": 40437151271
+  },
+  "approvalDateTimezone": "Europe/Rome",
+  "approvalDatePrecision": "day",
+  "confirmationContext": "In attesa della distinta conferma del titolare per pubblicare la demo beta non certificata1.1.0(23), sorgente5c9eaa03b678b6c97429975af61834fb919e2156. La precedente risposta Confermo autorizzava esclusivamente fab2b3e/build22 e non viene estesa a questo candidato. Nessuna pubblicazione App Store o ampliamento TestFlight.",
+  "preparedAt": "2026-10-27T03:22:51.644Z"
+}
