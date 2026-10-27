@@ -19,10 +19,11 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-      PAIRED_PROFILE_ARTIFACT_ID: ${{ inputs.profiles_artifact_id }}
-      PAIRED_PROFILE_ARTIFACT_SHA256: ${{ inputs.profiles_archive_sha256 }}
-      PAIRED_SOURCE: ${{ inputs.source_commit }}
-      PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 }}
+      PAIRED_VERIFICATION_ONLY: ${{ github.event_name == 'push' || inputs.verification_only }}
+      PAIRED_PROFILE_ARTIFACT_ID: ${{ inputs.profiles_artifact_id || (github.event_name == 'push' && '12739667356') || '' }}
+      PAIRED_PROFILE_ARTIFACT_SHA256: ${{ inputs.profiles_archive_sha256 || (github.event_name == 'push' && 'e7cff7a0133764ec0daa8400d19b13f9114bdc8cdcefb1244f4a86dbc109f4d3') || '' }}
+      PAIRED_SOURCE: ${{ inputs.source_commit || (github.event_name == 'push' && '7398825ea3b834d3b003aac3fd2d93232f791a54') || '' }}
+      PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 || (github.event_name == 'push' && '4d5d7b2bbefb219719cefb7989381c6fb47ee7822eee1af3e5300203728fafaf') || '' }}
       PAIRED_REPLAY_ARTIFACT_ID: ${{ inputs.previous_archive_id }}
       PAIRED_REPLAY_ARTIFACT_SHA256: ${{ inputs.previous_archive_sha256 }}
     steps:
@@ -56,7 +57,7 @@ jobs:
         ID and SHA-256 must be supplied together'');
 
         assert(Boolean(process.env.PAIRED_PROFILE_ARTIFACT_ID)===Boolean(process.env.PAIRED_PROFILE_ARTIFACT_SHA256),''Profile ID and digest must be supplied together'');
-        assert(!process.env.PAIRED_PROFILE_ARTIFACT_ID||''${{ inputs.verification_only }}''===''true'',''Original profile recovery is verification-only'');
+        assert(!process.env.PAIRED_PROFILE_ARTIFACT_ID||process.env.PAIRED_VERIFICATION_ONLY===''true'',''Original profile recovery is verification-only'');
 
         const source=process.env.PAIRED_SOURCE;assert(/^[a-f0-9]{40}$/.test(source||''''));
 
@@ -106,10 +107,10 @@ jobs:
 
         '
     - name: Restore original predeployment public browser profiles
-      if: ${{ inputs.profiles_artifact_id != '' }}
+      if: ${{ env.PAIRED_PROFILE_ARTIFACT_ID != '' }}
       run: node tools/paired-demo-profile-recovery.mjs "$RUNNER_TEMP/paired-demo-browser"
     - name: Capture actual previous public PWA and private synthetic progress
-      if: ${{ inputs.profiles_artifact_id == '' }}
+      if: ${{ env.PAIRED_PROFILE_ARTIFACT_ID == '' }}
       run: node tools/paired-demo-browser.mjs capture "$RUNNER_TEMP/paired-demo-browser"
     - name: Archive closed synthetic browser profiles before any deployment
       run: tar -C "$RUNNER_TEMP/paired-demo-browser" -czf "$RUNNER_TEMP/paired-browser-profiles-before.tar.gz" .
@@ -121,7 +122,7 @@ jobs:
         if-no-files-found: error
     - name: Preserve previous public bytes and native receipt before any deployment
       run: node tools/paired-demo-snapshot.mjs "$RUNNER_TEMP/paired-previous-web"
-      if: ${{ !inputs.verification_only }}
+      if: ${{ github.event_name == 'workflow_dispatch' && !inputs.verification_only }}
     - uses: actions/upload-artifact@v4
       with:
         name: Paired-previous-web-rollback-snapshot
@@ -129,20 +130,20 @@ jobs:
         include-hidden-files: true
         retention-days: 90
         if-no-files-found: error
-      if: ${{ !inputs.verification_only }}
+      if: ${{ github.event_name == 'workflow_dispatch' && !inputs.verification_only }}
     - uses: actions/configure-pages@v5
-      if: ${{ !inputs.verification_only }}
+      if: ${{ github.event_name == 'workflow_dispatch' && !inputs.verification_only }}
     - uses: actions/upload-pages-artifact@v3
       with:
         path: dist-ios
-      if: ${{ !inputs.verification_only }}
+      if: ${{ github.event_name == 'workflow_dispatch' && !inputs.verification_only }}
     - name: Repeat live Apple and exact-source guards immediately before deployment
       run: node tools/paired-demo.mjs promote
-      if: ${{ !inputs.verification_only }}
+      if: ${{ github.event_name == 'workflow_dispatch' && !inputs.verification_only }}
     - name: Deploy original bytes paired with confirmed owner-only TestFlight
       id: deployment
       uses: actions/deploy-pages@v4
-      if: ${{ !inputs.verification_only }}
+      if: ${{ github.event_name == 'workflow_dispatch' && !inputs.verification_only }}
     - name: Verify every actually served file against immutable native and web receipts
       run: node tools/paired-demo.mjs published
     - name: Verify real Chromium and WebKit PWA upgrade and preserved local data
@@ -173,6 +174,10 @@ jobs:
         retention-days: 90
         if-no-files-found: warn
 'on':
+  push:
+    branches: [main]
+    paths:
+    - docs/evidence/ios-study-confirmation-20261027/verification-request.json
   workflow_dispatch:
     inputs:
       source_commit:
