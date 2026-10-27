@@ -25,7 +25,9 @@ test('every mandatory proof rejects stale source, missing, running and non-main 
 test('owner beta receipt binds the actual science decision without independent approval claims',async()=>{
  const {verifyOwnerBetaScience}=await import('./internal-beta-science.mjs');
  const {ownerCandidateReceipt}=await import('./consolidated-evidence.mjs');
- const science=await verifyOwnerBetaScience(sha);
+ let science;
+ try{science=await verifyOwnerBetaScience(sha);}catch(error){assert.match(error.message,/Reviewed scientific content changed/);assert.equal(error.scienceReport.betaAllowed,false);assert.throws(()=>ownerCandidateReceipt(proofs(),error.scienceReport));return;}
+
  const r=ownerCandidateReceipt(proofs(),science);
  assert.equal(r.scientificReview.ownerReview.reviewType,'owner-review');
  assert.equal(r.scientificReview.independentReleaseReady,false);

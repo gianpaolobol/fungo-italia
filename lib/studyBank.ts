@@ -17,3 +17,13 @@ export const compatibleDemoRevisions=['3491070309'];
 export const studyUnits=examUnits(studyBank,[...catalog,...groups]);
 
 export const studyBankCoverage={minimum:{total:[...catalog,...groups].filter(t=>t.curriculum?.level==='minimum').length,photo:photoBank.length,theory:studyBank.filter(c=>c.questionKind==='profile'&&c.scope==='minimum').length},extended:{total:[...catalog,...groups].filter(t=>t.curriculum?.level!=='minimum').length,theory:studyBank.filter(c=>c.scope==='extended').length}};
+
+import foundations from '../src/data/theory-foundations.json';
+import objectives from '../legacy/web/data/taxonomic-objectives.json';
+import {buildTheoryBank} from './theory-bank.mjs';
+import {buildObjectiveModules} from './curriculum-levels.mjs';
+import {addTheoryUnits} from './theory-progress.mjs';
+export const theoryBank=buildTheoryBank(catalog,groups,photoBank,foundations,buildObjectiveModules([...catalog,...groups],objectives));
+export const theoryRevision=bankSignature(theoryBank);
+export const photoIds=new Set(photoBank.map(c=>c.id));
+export const combinedStudyUnits=addTheoryUnits(studyUnits,theoryBank,photoIds);
