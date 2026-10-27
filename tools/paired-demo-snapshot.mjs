@@ -6,7 +6,7 @@ const hash=b=>createHash('sha256').update(b).digest('hex');
 export async function capturePreviousWeb({dir,fetcher=fetch}){
  await mkdir(dir,{recursive:true});assert.equal((await readdir(dir)).length,0,'Previous snapshot directory must be empty');
  const safe=p=>typeof p==='string'&&p&&!/[\\:%?#\x00-\x1f]/.test(p)&&p.split('/').every(s=>s&&s!=='.'&&s!=='..');
- async function get(path){assert(safe(path),'Unsafe previous manifest path');const url=new URL(path,publicURL);url.searchParams.set('previousSnapshot',String(Date.now()));const r=await fetcher(url,{cache:'no-store',redirect:'error',signal:AbortSignal.timeout(45000)});assert(r.ok&&r.redirected===false&&r.url===url.href,'Previous public response unavailable or redirected');return Buffer.from(await r.arrayBuffer());}
+ async function get(path){assert(safe(path),'Unsafe previous manifest path');const url=new URL(path,publicURL);url.searchParams.set('previousSnapshot',String(Date.now()));const r=await fetcher(url,{cache:'no-store',redirect:'error',signal:AbortSignal.timeout(45000)});assert(r.ok&&r.redirected===false&&r.url===url.href,'Previous public response unavailable or redirected: '+path+' HTTP '+String(r.status??'unknown')+' redirected='+String(r.redirected)+' received='+String(r.url));return Buffer.from(await r.arrayBuffer());}
  const metadata=await Promise.all(['build.json','file-manifest.json','release.json'].map(async p=>[p,await get(p)]));
  const map=Object.fromEntries(metadata),build=JSON.parse(map['build.json']),manifest=JSON.parse(map['file-manifest.json']),receipt=JSON.parse(map['release.json']);
  assert(/^[a-f0-9]{40}$/.test(build.sourceCommit??'')&&Array.isArray(manifest.files)&&manifest.files.length>0,'Previous manifest unavailable');

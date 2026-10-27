@@ -80,5 +80,19 @@
   "nativeProducer": "success",
   "appleBuildId": "bb0237ca-066e-4253-8a23-c7383d3935f1",
   "betaStateVerifiedAt": "2026-10-27T13:42:14.048Z",
-  "publicAuthorizationSha256": "4d5d7b2bbefb219719cefb7989381c6fb47ee7822eee1af3e5300203728fafaf"
+  "publicAuthorizationSha256": "4d5d7b2bbefb219719cefb7989381c6fb47ee7822eee1af3e5300203728fafaf",
+  "publicPairFirstAttempt": {
+    "run": 40515326196,
+    "job": 122227688472,
+    "status": "failure-before-deploy",
+    "failure": "Previous public response unavailable or redirected while archiving an asset; original message omitted path/status",
+    "capturePassed": true,
+    "appleAndSourceLiveGuardsPassed": true,
+    "profilesArtifactId": 12738837038,
+    "profilesZipSha256": "d167b5a5b1d78dca7b931e83631f5e9cee75f7aa6012d8378baa0bac5d1782eb",
+    "publicEvidenceArtifactId": 12738847038,
+    "publicEvidenceZipSha256": "d5494f181d15add3689507c6be60773920b847ffc29b5d10e74669ad1d001e59",
+    "deployPerformed": false,
+    "followup": "diagnostic-only error adds path/status/url before a new qualified attempt; no integrity check or application change"
+  }
 }
