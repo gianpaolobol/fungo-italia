@@ -106,6 +106,15 @@ jobs:
       - name: Queue private signed Android bootstrap with existing EAS credentials only
         run: |
           test -n "$EXPO_TOKEN" || { echo '::error::Existing Expo authentication unavailable'; exit 1; }
+          git diff --exit-code
+          node --input-type=module <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const source=process.env.GITHUB_SHA;
+          if(!/^[a-f0-9]{40}$/.test(source))throw Error('Exact qualified source required');
+          const config=JSON.parse(readFileSync('eas.json','utf8'));
+          config.build['android-play-bootstrap'].env={...config.build['android-play-bootstrap'].env,GITHUB_SHA:source,FUNGO_VERIFIED_SOURCE:source};
+          writeFileSync('eas.json',JSON.stringify(config,null,2)+'\n');
+          JS
           mkdir -p artifacts/android-play
           npx eas-cli@24.8.0 build --platform android --profile android-play-bootstrap --non-interactive --freeze-credentials --no-wait --json > artifacts/android-play/eas-build.json
       - uses: actions/upload-artifact@v4

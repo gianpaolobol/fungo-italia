@@ -1,3 +1,11 @@
+## Android — qualifica1364695 riuscita, discrepanza EAS individuata
+
+Sorgente `13646955ac0e9cf558a9c14b97335c71adbbc0bc`, run40598518408: qualify e smoke SUCCESS, tutti324Node/10Java/TypeScript e compilazione nativa PASS. Nuova prova Android35 PASS. Archivio12778231333 SHA256`d9f64e2f1b2a01108bf4e273d4545b479eedaa1d8448177e40eb00b5212d516e` scaricato/verificato, screenshot ispezionati. Tre CI condivise40598523421/40598523652/40598523555 SUCCESS.
+
+Richiesta EAS accettata: build `44331370-7552-4dc2-aff9-818075c5abfc`,1.1.0(2), sorgente1364695. Il job GitHub firmato SUCCESS significa solo accodamento; build EAS effettiva FAILURE prima di Gradle: fingerprint locale f21760dd489c9f3e1a2b8abb93727fa6367a9317 diverso dal remoto3af021b780398f8da511e126b1eddca9a0d136b0. Diff: extra.release.dirty false→true; aggiunta cartellaAndroid con hashnull, che il hasher Expo esclude. Correzione della causa: stessa procedura già usata nella pipeline iOS, checkout pulito e inserimento di GITHUB_SHA/FUNGO_VERIFIED_SOURCE nel solo profilo bootstrap isolato prima della richiesta. Il controllo rifiuta sorgenti discordanti; nessun gate o fingerprint disattivato.
+
+Il log EAS ha inoltre registrato **Created keystore**, benché la CLI fosse invocata con --freeze-credentials: non attestare che siano state usate esclusivamente chiavi preesistenti o che il flag impedisca la creazione iniziale. Chiave gestita da Expo, nessun segreto scaricato o pubblicato. Creati canale/branch EAS android-play-bootstrap; nessun OTA inviato. Nuova firma/AAB ancora da verificare sul workflow corretto, nessun file caricato su Play.
+
 ## Android Google Play — PR130 e qualifica nativa — 27 ottobre 2026
 
 Autorizzazione specifica del titolare acquisita per push del ramo, PR e Actions/EAS; il precedente blocco del primo invio è superato. [PR130](https://github.com/gianpaolobol/fungo-italia/pull/130) in bozza, ramo `feat/android-play-billing-20261027`, nessun merge main, submit Play, pubblicazione, iOS o OTA.
