@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "original23 archive to unpublished web-only candidate on a loopback origin; NOT live public upgrade",
+  "engine": "chromium",
+  "sourceBefore": "5c9eaa03b678b6c97429975af61834fb919e2156",
+  "sourceAfter": "a286107e307e2c95d58ddabee1b89c27efadeaea",
+  "releaseMetadata": "external HTTPS transport denied by proxy; no receipt or approval supplied",
+  "normalReload": true,
+  "noForcedDocumentReload": true,
+  "notesFavoritesSessionHistoryAndDraftPreserved": true,
+  "offlineFreshDocument": true,
+  "independentDisconnectedProbe": true,
+  "releaseUnavailableUiVerified": true,
+  "expectedTransportDiagnostics": [],
+  "unexpectedPageErrors": [],
+  "pageErrors": []
+}

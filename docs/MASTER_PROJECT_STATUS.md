@@ -1,5 +1,16 @@
 # Fungo Italia — stato master operativo
 
+## Prima migrazione web-only collaudata e fascicolo18 pronto —27 ottobre2026
+
+Proseguito il ramoPR128 senza merge main o distribuzioni. Nuovo sorgente applicativo qualificato `a286107e307e2c95d58ddabee1b89c27efadeaea`. Run40495489553 SUCCESS; anche40495489380 e40495489435 SUCCESS: TypeScript,302Node0fail0skip, test componenti e replay PWA in Chromium/WebKit. Il replay parte dall’archivio originale23/5c9eaa03 del produttore40437151113 (artifact12704747838), non da una copia ricostruita. Attivazione soltanto dopo cache atomica completa, esercizio non ricaricato automaticamente, nuovo documento tramite normale reload, note/preferiti/sessione/storico/bozza conservati byte per byte; nuovo documento offline dal worker e sonda indipendente realmente disconnessa PASS. Verificati in CI tutti1652file prima e dopo preparazione web-only. Questo è un replay loopback, NON l’upgrade dei profili sul dominio pubblico.
+
+ZIP prove12729729081 scaricato e verificato SHA2566bf379d8a46cb75b20778ce436c4869f61a523da16e82c5a4f2cd1048aa65659. [Rapporti e provenienza](evidence/web-study-20261027/web-only-migration-verification.json). Conservato il negativo40494964086: WebKit segnala access-control per la ricevuta HTTPS deliberatamente negata. Nel replay finale sono registrate cinque diagnostiche attese per il solo URL bloccato e zero errori inattesi; verificata anche UI di versione non verificabile. Il normale test dei componenti conserva zero pageerror senza eccezioni. Nessuna ricevuta Apple o scientifica simulata come reale.
+
+[Fascicolo amministrativo dei18 quesiti](../revisione/THEORY_FOUNDATIONS_REVIEW_20261027.md) e JSON con domanda/opzioni/soluzione/fonti e decisioni tutte vuote. Fonti primarie ricontrollate: GU/Nikon in lettura diretta; pagine Ministero da contenuto indicizzato ufficiale, apertura diretta protetta da Gcore. Segnalata al revisore anche la terminologia dei procedimenti commerciali/limiti regionali. Sorgente dei18 invariato, SHA256053533e302d11ed94f1bb799212359f1cf74f255b458b7f14ff6ca28a6c95e9d. Nessun invio ai revisori: competenza del titolare.
+
+Il preflight rimane realmente negativo (strict1/1,18 fondamenti senza revisione indipendente). Il fascicolo non approva da solo il restante atlante. [Procedura solo web](WEB-ONLY-RELEASE-RUNBOOK.md), builder distinto e prove predisposti; pubblicazione e upgrade dei profili live restano da eseguire dopo la revisione richiesta. Main740c377 e dominio23/5c9eaa03 ricontrollati invariati. Nessun iPhone/TestFlight/AppStore/OTA di questo lotto. L’automazione resta sospesa sul blocco umano; nessun nuovo controllo ripetitivo creato. Le sezioni seguenti conservano i checkpoint precedenti, superati da questo stato per la parte PWA.
+
+
 ## Qualifica finale del sorgente4fa38b85 — pubblicazione bloccata
 
 Il controllo ripetuto è ora sospeso sul blocco di revisione umana, per evitare altri tentativi identici. Non equivale a consegna web: nessun nuovo sito è stato pubblicato. L'autorizzazione tecnica/pubblicazione web resta acquisita e la conferma iOS successiva resta obbligatoria.
