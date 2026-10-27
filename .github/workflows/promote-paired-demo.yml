@@ -23,7 +23,6 @@ jobs:
       PUBLIC_AUTHORIZATION_SHA256: ${{ inputs.authorization_sha256 }}
       PAIRED_REPLAY_ARTIFACT_ID: ${{ inputs.previous_archive_id }}
       PAIRED_REPLAY_ARTIFACT_SHA256: ${{ inputs.previous_archive_sha256 }}
-      PAIRED_BROWSER_ROOT: ${{ runner.temp }}/paired-browser-runtime
     steps:
     - uses: actions/checkout@v4
       with:
@@ -81,7 +80,13 @@ jobs:
     - name: Require exact bytes, current native proofs, scientific snapshot and live owner-only Apple availability
       run: node tools/paired-demo.mjs promote
     - name: Install locked tests for the preinstalled browser engines
-      run: 'npm ci --prefix web --ignore-scripts
+      run: 'PAIRED_BROWSER_ROOT="$RUNNER_TEMP/paired-browser-runtime"
+
+        export PAIRED_BROWSER_ROOT
+
+        echo "PAIRED_BROWSER_ROOT=$PAIRED_BROWSER_ROOT" >> "$GITHUB_ENV"
+
+        npm ci --prefix web --ignore-scripts
 
         node tools/paired-demo-browser-runtime.mjs "$PAIRED_BROWSER_ROOT"
 

@@ -202,5 +202,12 @@
     "profileZipSha256": "859de0203eebbc5aee043995d43541642b0060903a059de596a2df9e82608ff6",
     "upstreamLead": "https://github.com/microsoft/playwright/pull/41701; oldWebKit2215 predates CacheStorage persistence fix2328; not yet confirmed by private reproduction",
     "nextCheck": "isolated pinned QA1.62.0 and actual private original/new persistence comparison; no app/cache repair or skipped checks"
+  },
+  "qaRuntimeWorkflowValidation": {
+    "orchestrator": "8ff1555efde4a86959d4aee3cc288250251eb3d6",
+    "result": "invalid job.env runner.temp expression; no deployment attempted",
+    "fixed": "derive runtime path from RUNNER_TEMP inside install step and persist through GITHUB_ENV",
+    "validator": "official actionlint1.7.12, releaseZIPsha2568aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8",
+    "validation": "oldexpressionRED; correctedwholepublisherworkflowPASS"
   }
 }
