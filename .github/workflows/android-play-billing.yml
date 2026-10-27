@@ -47,7 +47,9 @@ jobs:
           cache-read-only: false
       - name: Compile diagnostic APK and AAB with Billing
         working-directory: android
-        run: ./gradlew :fungo-subscription:compileReleaseKotlin :app:assembleRelease :app:bundleRelease -PreactNativeArchitectures=arm64-v8a,x86_64 --no-daemon --max-workers=2
+        run: |
+          ./gradlew :fungo-subscription:compileReleaseKotlin --no-daemon --max-workers=2
+          ./gradlew :app:assembleRelease :app:bundleRelease -PreactNativeArchitectures=arm64-v8a,x86_64 --no-daemon --max-workers=2
       - uses: actions/upload-artifact@v4
         with:
           name: Android-Play-Billing-diagnostic-NOT-FOR-PLAY
