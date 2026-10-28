@@ -1,3 +1,9 @@
+## Android beta — prova nativa parziale e correzione del percorso di test —28 ottobre2026
+
+Candidato app immutato2e0cb647, qualifica40680183722 SUCCESS. Run completo40692864204: riscatto reale e beta attiva sul dispositivo PASS; demo offline e recupero bozza fotografica online PASS. Fallimento nello script: ricerca di Torna al menu del test limitata a7scorrimenti, insufficiente per una domanda lunga. Screenshot/XML confermano scheda Esame teorico fissa e visibile; passaggio diretto senza cambiare app. Teoria/cold-start e revoca ancora NON provati; firma SKIPPED. Artefatto12818024048 SHA2566c5cd2d4da84d931095320fe2d5fe65a7660a2d105224f3306feab622ee1e6de verificato e immagine ispezionata.
+
+Workflow esterno conserva APK e sorgente app2e0 identici, permette solo script di collaudo vincolato aSHA256 e documentazione. GitHub/admin accessibili nel profilo TinyFish dopo intervento reale del titolare; segreto tecnico aggiornato, ora consumato dal test. Occorre nuovo invito tecnico prima del prossimo avvio, scadenza originale26/01/2027 conservata. Nessuna revoca eseguita, nessun accesso reale di Cyrus creato. Play resta1.1.0(3)demo, nessuna nuova email, nessun iOS/web/OTA/main.
+
 # Ripresa del collaudo sul candidato Android immutato
 
 Questo ramo preparatorio non avvia la nuova pipeline. Il trigger è soltanto il ramo distinto `feat/android-beta-proof-ready-20261028`, da creare dopo la verifica della conferma GitHub e del codice tecnico già autorizzato.

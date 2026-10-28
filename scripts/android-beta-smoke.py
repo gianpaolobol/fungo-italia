@@ -55,7 +55,9 @@ def main():
     wait_text('Beta completa · scadenza',45)
     tap('Esame');wait_text('Esame e ripasso');tap('Riprendi sessione');wait_text('BetaDraft2026')
     print('PASS: offline foreground falls back to demo; reconnect restores saved photo draft',flush=True)
-    tap('Torna al menu del test');tap('Esame teorico');wait_text('Inizia test teorico');tap('Inizia test teorico')
+    # The exam-kind tabs stay visible above even long photo questionnaires.
+    # Avoid searching for the photo menu button below an unbounded question.
+    tap('Esame teorico');wait_text('Inizia test teorico');tap('Inizia test teorico')
     wait_text('Invia risposta teorica')
     # One real draft option; its selected label must return after a cold start.
     root=dump();options=[label for n in root.iter() for label in [n.attrib.get('text',''),n.attrib.get('content-desc','')] if label.startswith('○ ')]
