@@ -1,3 +1,7 @@
+## Seconda prova nativa40694685991 —28 ottobre2026
+
+Riscatto monouso nativo PASS; fallimento al ritorno online prima del percorso teorico, nessuna revoca. Lo script attendeva45secondi ma il controller inattivo ritenta dopo60secondi e la richiesta ha timeout10secondi: possibile gara con il ripristino rete Android. Attesa condizionale90secondi per includere il retry previsto, senza cambiare client/APK/entitlement; aggiunta dumpsys connectivity solo in caso di errore. Non attestare ancora causa rete certa o superamento del test. Firma SKIPPED, beta completa non pubblicata.
+
 ## Android beta — prova nativa parziale e correzione del percorso di test —28 ottobre2026
 
 Candidato app immutato2e0cb647, qualifica40680183722 SUCCESS. Run completo40692864204: riscatto reale e beta attiva sul dispositivo PASS; demo offline e recupero bozza fotografica online PASS. Fallimento nello script: ricerca di Torna al menu del test limitata a7scorrimenti, insufficiente per una domanda lunga. Screenshot/XML confermano scheda Esame teorico fissa e visibile; passaggio diretto senza cambiare app. Teoria/cold-start e revoca ancora NON provati; firma SKIPPED. Artefatto12818024048 SHA2566c5cd2d4da84d931095320fe2d5fe65a7660a2d105224f3306feab622ee1e6de verificato e immagine ispezionata.

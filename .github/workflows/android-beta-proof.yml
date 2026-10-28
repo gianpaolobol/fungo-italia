@@ -44,7 +44,7 @@ jobs:
         run: |
           test -n "$FUNGO_BETA_SMOKE_INVITE" || { echo '::error::Authorized synthetic invitation required'; exit 1; }
           git diff --exit-code "$APP_SOURCE_SHA" HEAD -- . ':!.github/workflows/android-beta-proof.yml' ':!docs/ANDROID-BETA-PROOF-READY.md' ':!scripts/android-beta-smoke.py' ':!docs/MASTER_PROJECT_STATUS.md' ':!docs/HANDOFF.md'
-          echo 'a85a8db733939c553708c622f3b55535a9073ae578da6a815ca2436bf67494f7  scripts/android-beta-smoke.py' | sha256sum --check
+          echo '3b1e1a979abce006801ad1fc6855202d524935baec5e6159907ccc46f833d54e  scripts/android-beta-smoke.py' | sha256sum --check
           mkdir -p artifacts/android
           cp artifacts/diagnostic/apk/release/app-release.apk artifacts/android/app-release.apk
           python3 - <<'PY'

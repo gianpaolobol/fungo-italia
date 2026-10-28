@@ -52,7 +52,9 @@ def main():
     wait_text('Test Agaricus gratuito',30)
     assert 'Inizia 15 casi' not in text_of(dump())
     adb('shell','svc','wifi','enable');adb('shell','svc','data','enable');foreground()
-    wait_text('Beta completa · scadenza',45)
+    # The first foreground check can race Android network restoration. An
+    # inactive session retries after 60s, with a 10s request timeout.
+    wait_text('Beta completa · scadenza',90)
     tap('Esame');wait_text('Esame e ripasso');tap('Riprendi sessione');wait_text('BetaDraft2026')
     print('PASS: offline foreground falls back to demo; reconnect restores saved photo draft',flush=True)
     # The exam-kind tabs stay visible above even long photo questionnaires.
@@ -100,6 +102,7 @@ if __name__=='__main__':
             with open(os.path.join(out,'failure-ui.xml'),'w') as file:
                 file.write(ET.tostring(root,encoding='unicode'))
             print('NATIVE_FAILURE_UI: '+text_of(root),flush=True)
+            print('NATIVE_NETWORK_STATE: '+adb('shell','dumpsys','connectivity'),flush=True)
             if safe:
                 with open(os.path.join(out,'failure.png'),'wb') as file:
                     file.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
