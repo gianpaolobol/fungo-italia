@@ -35,3 +35,11 @@ Profilo EAS `android-managed-beta`, canale isolato; stesso package `it.fungoital
 Workflow `android-managed-beta.yml`: push del solo ramo dedicato qualifica e compila diagnostici; non invia a Play, iOS, web o OTA. La richiesta firmata è esclusivamente manuale con `build_store=true`, dopo che `/health` del servizio reale è raggiungibile senza bypass e `ready=true`. Il verde del job EAS prova solo l'accodamento: verificare EAS, AAB firmato e disponibilità Play separatamente.
 
 Prima di consegnare: prova beta completa/revoca/scadenza/offline, preservazione bozza e storico nei veri componenti, e prova Android emulatore/dispositivo. Le fixture Node non sostituiscono queste prove. Gate scientifici e snapshot invariati; nessuna revisione indipendente attribuita.
+
+## Checkpoint servizio privato e accesso amministratore
+
+Servizio privato pubblicato correttamente: versione Sites1, sorgente815a798972d83ac5a61e0fad7d9e696a2a4cd6c6, deployment appgdep_6ae1473d611081918de8bdfb38a5178f. Il servizio non è stato aperto ai telefoni; BETA_ADMIN_USER_ID non impostato, nessun diritto beta reale creato.
+
+Il browser ha raggiunto il gate ChatGPT del nuovo Site e quindi auth.openai.com/log-in. La richiesta sicura browserAuth per la scelta del metodo è scaduta senza esito; anche la verifica immediata su una nuova scheda del target è andata in timeout. Stato login sconosciuto: non assumere autenticazione riuscita o fallita, non leggere credenziali, non ripetere tentativi automaticamente. Occorre riprendere l'accesso del titolare quando il browser è disponibile, leggere il vero user ID di questo Site da /whoami e configurare l'amministratore. Nessun invio di nuovo codice a Cyrus prima del servizio operativo e della nuova build.
+
+La PR131 è in bozza sul ramo Android precedente, senza merge. Il wrapper di lettura Actions restituisce solo run pull-request e non attesta il risultato dei run push: non chiamare verde una qualifica remota non letta. Questo aggiornamento documentale produce una nuova esecuzione push del workflow Android dedicato; la firma store resta disabilitata su push.
