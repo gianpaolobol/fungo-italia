@@ -1,3 +1,9 @@
+## Android beta — bug SecureStore corretto, nuova qualifica diagnostica —28 ottobre2026
+
+PR131, servizio amministrativo reale verificato e segreto tecnico specificamente autorizzato/creato. Run40653512152: qualifica nativa e smoke demo Android35 SUCCESS; prova beta completa FAILURE, firma SKIPPED. Invito accettato dal server ma credenziale rifiutata dal client: la chiave SecureStore conteneva caratteri non ammessi. Riproduzione con hook montato e vera validazione Expo RED→GREEN dopo chiave valida;361Node0fail0skip, TypeScript e sintassi Python PASS. Serve nuova compilazione e prova nativa del sorgente corretto.
+
+Rotazione del solo codice tecnico: GitHub ha richiesto Confirm access, richiesta sicura e successiva verifica su nuova scheda entrambe in timeout. Esito autenticazione/salvataggio sconosciuto. L'autorizzazione resta acquisita; non aggirare la conferma di sicurezza e non richiedere permessi generici già concessi. Il codice corretto viene salvato e qualificato senza marker di firma. Google Play conserva1.1.0(3) demo; nessuna nuova email completa a Cyrus. Nessuna distribuzione iOS/web/OTA. Dettagli e prove in docs/ANDROID-MANAGED-BETA.md.
+
 ## Android beta gestita — servizio operativo, nuova build ancora pendente —28 ottobre2026
 
 Ramo dedicato PR131. Autenticazione reale del titolare completata e ruolo admin associato all'identità Sites. Dopo autorizzazione esplicita, servizio raggiungibile dai telefoni: pannello/API admin anonimi403, identity spoof rimosso, invito sintetico riscattabile una volta,90giorni esatti e revoca live della sessione verificati. Nessuna email di nuova beta a Cyrus.

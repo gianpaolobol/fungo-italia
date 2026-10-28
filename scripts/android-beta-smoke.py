@@ -3,7 +3,7 @@
 The invite comes from an encrypted Actions secret, never a source constant.
 The operator revokes that synthetic grant after READY_FOR_ADMIN_REVOCATION.
 """
-import importlib.util,json,os,re,subprocess,time
+import importlib.util,json,os,re,subprocess,time,xml.etree.ElementTree as ET
 spec=importlib.util.spec_from_file_location('android_smoke',os.path.join(os.path.dirname(__file__),'android-smoke.py'))
 smoke=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(smoke)
@@ -39,7 +39,9 @@ def main():
         raise AssertionError('Could not enter synthetic invitation') from None
     adb('shell','input','keyevent','KEYCODE_BACK')
     tap('Attiva invito beta')
-    wait_text('Beta completa attiva',45)
+    # The footer shrinks after activation and its confirmation may scroll above
+    # the viewport. The fixed application banner is the effective access state.
+    wait_text('Beta completa · scadenza',45)
     print('PASS: real invitation redeemed and native beta active',flush=True)
     tap('Esame');wait_text('Esame e ripasso');tap('Inizia 15 casi')
     wait_text('Nome scientifico della risposta')
@@ -83,6 +85,26 @@ def main():
 if __name__=='__main__':
     try:
         main()
+    except Exception:
+        # Capture the actual failure state, redacting the synthetic bearer code.
+        # Never photograph a screen if accessibility still exposes that code.
+        try:
+            root=dump();code=os.environ.get('FUNGO_BETA_SMOKE_INVITE','');safe=True
+            for node in root.iter():
+                for key,value in list(node.attrib.items()):
+                    if code and code in value:
+                        node.attrib[key]=value.replace(code,'[redacted]');safe=False
+            os.makedirs(out,exist_ok=True)
+            with open(os.path.join(out,'failure-ui.xml'),'w') as file:
+                file.write(ET.tostring(root,encoding='unicode'))
+            print('NATIVE_FAILURE_UI: '+text_of(root),flush=True)
+            if safe:
+                with open(os.path.join(out,'failure.png'),'wb') as file:
+                    file.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
+            print(adb('logcat','-d','-s','ReactNativeJS:E','AndroidRuntime:E').replace(code,'[redacted]') if code else 'No diagnostic code configured',flush=True)
+        except Exception:
+            print('Native failure diagnostics unavailable',flush=True)
+        raise
     finally:
         # An invitation input is secureTextEntry, but avoid dumping any screen
         # before successful activation clears that field.

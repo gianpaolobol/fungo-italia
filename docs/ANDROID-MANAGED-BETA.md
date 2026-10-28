@@ -1,6 +1,20 @@
 # Beta Android completa — stato e procedura
 
 
+## Checkpoint corrente — correzione SecureStore, conferma GitHub senza esito
+
+Il titolare ha autorizzato il segreto cifrato FUNGO_BETA_SMOKE_INVITE; GitHub ha confermato la creazione. Run40653512152 sul sorgentef4fcc8ed9c1d0fbc7a2450b574c8065a9804ce24: qualifica nativa,360test/TypeScript e smoke demo Android35 SUCCESS. Prova beta completa FAILURE durante l'attivazione nell'app; firma SKIPPED. Il server ha riscattato l'invito tecnico, ma la credenziale non è stata salvata dal client.
+
+Causa riprodotta con la vera implementazione JavaScript di expo-secure-store installata: la chiave contenente due punti è rifiutata dalla sua validazione prima di raggiungere il keystore. Nuovo test con hook realmente montato e validazione Expo reale RED (0 chiamate native)→GREEN con chiave fungo-italia.beta.v1. Non serve migrare: una chiave non valida non ha mai potuto salvare credenziali. Suite361test0fail0skip, TypeScript e sintassi Python PASS locali. Dati scientifici invariati. La correzione richiede una nuova compilazione; nessun riuso del vecchio APK come se contenesse la modifica.
+
+Il test Android controlla il banner fisso dell'accesso e raccoglie schermata/XML/errori nativi con redazione del codice sintetico in caso di errore. L'ipotesi iniziale di una conferma scorsa fuori schermo non è stata spacciata per causa accertata. Il progetto di un harness esterno sul vecchio APK è stato abbandonato prima di qualsiasi push perché il difetto era applicativo.
+
+Reinvitata soltanto la stessa utenza tecnica, invalidando la sessione precedente e conservando attivazione/scadenza originali. La rotazione dello stesso segreto autorizzato ha richiesto GitHub Confirm access (GitHub Mobile o password). La richiesta sicura browserAuth è andata in timeout; anche la verifica immediata in una nuova scheda GitHub è andata in timeout. Esito sconosciuto: non assumere aggiornamento riuscito o fallito. Nessun aggiramento, nessuna lettura di credenziali, nessun nuovo consenso generico da chiedere: l'autorizzazione del titolare rimane valida, manca la conferma di sicurezza/verifica del servizio.
+
+Si salva la correzione e si richiede la sola qualifica diagnostica del nuovo sorgente; prova beta completa e firma rimangono bloccate finché la sessione GitHub e il codice tecnico non sono verificati. Non aggiungere il marker di firma prima di tale verifica. Il lungo timeout ha causato la pulizia dell'ambiente temporaneo: repository recuperato dal ramo remoto e correzione/test ripristinati e nuovamente verificati.
+
+Google Play resta1.1.0(3), demo Agaricus. Nessuna nuova AAB store, nessun nuovo invito completo o email a Cyrus, nessuna pubblicazione iOS/web/OTA. Il servizio amministrativo separato è stato aperto dopo autorizzazione; prove HTTPS/D1 e vincoli90giorni/revoca sono documentati sotto. Restano prove native sul sorgente corretto, firma stabile e distribuzione interna.
+
 ## Consenso specifico acquisito — avvio prova nativa e firma condizionata
 
 Il titolare ha autorizzato esplicitamente il salvataggio del solo codice sintetico FUNGO_BETA_SMOKE_INVITE nei segreti cifrati del repository, utilizzabile dai workflow/collaboratori. Il modulo GitHub ha confermato Repository secret added. Il codice concede solo la beta dell'utenza tecnica e sarà invalidato dalla revoca al termine della prova; nessun ruolo amministrativo. Il precedente rifiuto automatico è superato da questo consenso specifico, non da un aggiramento.

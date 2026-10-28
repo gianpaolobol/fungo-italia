@@ -3,7 +3,7 @@ import {AppState,Platform} from 'react-native';
 import Constants from 'expo-constants';
 import * as SecureStore from 'expo-secure-store';
 import {createBetaController} from '../lib/beta-controller.mjs';
-const key='fungo-italia:beta:v1';
+const key='fungo-italia.beta.v1';
 function configuredEndpoint(){
  if(Platform.OS!=='android')return null;
  const value=Constants.expoConfig?.extra?.betaServiceUrl;
