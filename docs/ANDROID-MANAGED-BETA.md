@@ -4,7 +4,7 @@
 
 Implementati e verificati localmente servizio concessioni/API, pannello proprietario, controller Android con SecureStore e integrazione dell'accesso completo. 358 test Node passati e TypeScript passato, dati rigenerati senza drift. Revisione separata: corretti tre difetti importanti con riproduzione RED→GREEN (date nel pannello e due condizioni di ciclo vita). Il pannello è stato provato attraverso il suo vero JavaScript servito con un adattatore DOM di test, non su un telefono.
 
-Non sono ancora verificati: login amministratore sul servizio pubblicato, confine di autenticazione hosted, concorrenza/backup del vero D1, accessibilità API dai telefoni, nuova compilazione nativa, installazione Play e revoca su dispositivo. La nuova beta completa non è ancora distribuita. Google Play conserva la build1.1.0(3), demo Agaricus.
+Login amministratore sul servizio pubblicato verificato nel checkpoint finale sotto. Non sono ancora verificati: confine di autenticazione hosted, concorrenza/backup del vero D1, accessibilità API dai telefoni, nuova compilazione nativa, installazione Play e revoca su dispositivo. La nuova beta completa non è ancora distribuita. Google Play conserva la build1.1.0(3), demo Agaricus.
 
 ## Contratto funzionale
 
@@ -43,3 +43,12 @@ Servizio privato pubblicato correttamente: versione Sites1, sorgente815a798972d8
 Il browser ha raggiunto il gate ChatGPT del nuovo Site e quindi auth.openai.com/log-in. La richiesta sicura browserAuth per la scelta del metodo è scaduta senza esito; anche la verifica immediata su una nuova scheda del target è andata in timeout. Stato login sconosciuto: non assumere autenticazione riuscita o fallita, non leggere credenziali, non ripetere tentativi automaticamente. Occorre riprendere l'accesso del titolare quando il browser è disponibile, leggere il vero user ID di questo Site da /whoami e configurare l'amministratore. Nessun invio di nuovo codice a Cyrus prima del servizio operativo e della nuova build.
 
 La PR131 è in bozza sul ramo Android precedente, senza merge. Il wrapper di lettura Actions restituisce solo run pull-request e non attesta il risultato dei run push: non chiamare verde una qualifica remota non letta. Questo aggiornamento documentale produce una nuova esecuzione push del workflow Android dedicato; la firma store resta disabilitata su push.
+
+
+## Accesso amministratore riuscito — 28 ottobre 2026, 08:25 italiane
+
+Il titolare ha scelto Google attraverso browserAuth e il browser ha raggiunto /whoami con identità reale del nuovo Site. Identità associata a BETA_ADMIN_USER_ID come segreto runtime; nessun valore privato nel repository. Deployment appgdep_6ae1a360e6d48191971e14817ab09e76 SUCCEEDED, versione1 invariata, env revision1. Accesso effettivo a /admin e lettura D1 riusciti.
+
+Prova browser sul servizio reale: creato un solo invito tecnico example.invalid, modificata scadenza al26/01/2027 e revocato. Dopo ricaricamento la tabella restituisce Revocata e la scadenza persistente. Nessuna email inviata dal pannello; nessun nuovo invito reale a Cyrus. Questa prova non dimostra ancora il riscatto concorrente, la revoca su telefono o il confine anonimo su audience pubblica.
+
+Il servizio rimane owner-private. Occorre consenso esplicito al cambio audience per rendere le API raggiungibili dai telefoni senza login ChatGPT; il codice mantiene il pannello limitato all'identità del titolare e richiede credenziali personali per redeem/check. Non inserire bypass Sites nel client. Restano controlli reali del confine pubblico, qualifica nativa e nuova build interna. La lettura combined status del commit8fb23974 non restituisce statuses e non prova l'esito Actions.
