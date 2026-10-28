@@ -1,3 +1,9 @@
+## Navigazione del collaudo resa indipendente dalla lunghezza delle domande —28 ottobre2026
+
+Run40697310064: beta nativa attivata PASS; test fermo cercando Nome scientifico della risposta, visibile nello screenshot finale dopo ultimo swipe. Nessun segnale di revoca, firma SKIPPED. Tre prove mostrano fragilità del navigatore UI, non app qualificata diversa. Correzione sistematica del solo script: ricerca condizionale entro120secondi, swipe all'interno del vero ScrollView sotto le schede fisse, inversione a fine contenuto per controlli sopra l'offset. Cinque regressioni Python: vecchio helper4FAIL/1PASS, nuovo5PASS; incluse domanda oltre7schermate, gesti confinati e controllo assente ancora bloccante. Workflow esegue questi test e vincola hash di script e test. APK/app2e0 immutati; conferma nativa completa ancora pendente.
+
+Segreto tecnico aggiornato con successo nel run TinyFish92c1d7eb, poi consumato da40697310064. Prima di riavviare serve invito tecnico nuovo e salvataggio confermato. Accessi GitHub/admin funzionanti: nessun consenso o nuovo login genericamente mancante. Play resta demo1.1.0(3), nessun invito completo a Cyrus, nessun main/iOS/web/OTA.
+
 ## Seconda prova nativa40694685991 —28 ottobre2026
 
 Riscatto monouso nativo PASS; fallimento al ritorno online prima del percorso teorico, nessuna revoca. Lo script attendeva45secondi ma il controller inattivo ritenta dopo60secondi e la richiesta ha timeout10secondi: possibile gara con il ripristino rete Android. Attesa condizionale90secondi per includere il retry previsto, senza cambiare client/APK/entitlement; aggiunta dumpsys connectivity solo in caso di errore. Non attestare ancora causa rete certa o superamento del test. Firma SKIPPED, beta completa non pubblicata.

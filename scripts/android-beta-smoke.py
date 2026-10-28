@@ -10,6 +10,59 @@ spec.loader.exec_module(smoke)
 adb,dump,tap,wait_text,text_of=smoke.adb,smoke.dump,smoke.tap,smoke.wait_text,smoke.text_of
 out='artifacts/beta-smoke'
 
+def _bounds(node):
+    v=list(map(int,re.findall(r'\d+',node.attrib.get('bounds',''))))
+    return v if len(v)==4 and v[2]>v[0] and v[3]>v[1] else None
+
+def _find(predicate,seconds,scroll=True):
+    # Search real viewport geometry, independent of the random case's length.
+    until=time.monotonic()+seconds
+    previous=None;direction=1;reversed_once=False;at_end=False
+    while time.monotonic()<until:
+        try:
+            root=dump()
+            found=predicate(root)
+            if found is not None:return root,found
+            panes=[(n,_bounds(n)) for n in root.iter() if n.attrib.get('scrollable')=='true']
+            panes=[(n,b) for n,b in panes if b]
+            if scroll and panes:
+                pane,b=max(panes,key=lambda pair:(pair[1][2]-pair[1][0])*(pair[1][3]-pair[1][1]))
+                signature=ET.tostring(pane,encoding='unicode')
+                if signature==previous:
+                    if not reversed_once:direction=-1;reversed_once=True
+                    else:at_end=True
+                previous=signature
+                if not at_end:
+                    x=(b[0]+b[2])//2;pad=max(8,(b[3]-b[1])//10)
+                    low,high=b[1]+pad,b[3]-pad
+                    start,end=(high,low) if direction==1 else (low,high)
+                    adb('shell','input','swipe',str(x),str(start),str(x),str(end),'300')
+        except (subprocess.CalledProcessError,ET.ParseError):pass
+        time.sleep(.5)
+    raise AssertionError('Native UI search timed out')
+
+def wait_text(value,seconds=120):
+    try:
+        return _find(lambda root:root if value in text_of(root) else None,seconds,
+                     scroll=not value.startswith('Beta completa'))[0]
+    except AssertionError:
+        raise AssertionError('UI text unavailable: '+value) from None
+
+def tap(label,prefix=False):
+    def match(root):
+        matches=[]
+        for node in root.iter():
+            labels=[node.attrib.get('text',''),node.attrib.get('content-desc','')]
+            if any(v.startswith(label) if prefix else v==label for v in labels):
+                b=_bounds(node)
+                if b and node.attrib.get('enabled','true')=='true':matches.append((node,b))
+        if matches:return max(matches,key=lambda pair:pair[0].attrib.get('clickable')=='true')[1]
+        return None
+    try:_,b=_find(match,120)
+    except AssertionError:raise AssertionError('Control unavailable: '+label) from None
+    adb('shell','input','tap',str((b[0]+b[2])//2),str((b[1]+b[3])//2))
+    time.sleep(1)
+
 def snapshot(name):
     os.makedirs(out,exist_ok=True)
     with open(os.path.join(out,name+'.png'),'wb') as file:
