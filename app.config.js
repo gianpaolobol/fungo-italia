@@ -7,7 +7,10 @@ module.exports=()=>{
  const verified=process.env.FUNGO_VERIFIED_SOURCE;
  if(verified&&verified!==sourceCommit)throw new Error('Verified build source differs from current source');
  const dirty=verified===sourceCommit?false:!!git('status','--porcelain','--untracked-files=no');
- const stamped={...config,extra:{...config.extra,release:{sourceCommit,version:config.version,dirty}}};
+ const betaUrl=process.env.FUNGO_BETA_SERVICE_URL;
+ let betaServiceUrl;
+ if(betaUrl){const u=new URL(betaUrl);if(u.protocol!=='https:'||u.username||u.password||u.search||u.hash||u.pathname!=='/')throw Error('Invalid HTTPS beta service root');betaServiceUrl=u.href;}
+ const stamped={...config,plugins:betaServiceUrl?[...(config.plugins||[]),'expo-secure-store']:config.plugins,extra:{...config.extra,...(betaServiceUrl?{betaServiceUrl}:{}),release:{sourceCommit,version:config.version,dirty}}};
  const projectId=process.env.EXPO_PROJECT_ID;
  if(!projectId)return stamped;
  if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(projectId))throw new Error('EXPO_PROJECT_ID non valido');

@@ -1,0 +1,133 @@
+name: Android managed beta candidate
+on:
+  push:
+    branches: [feat/android-managed-beta-20261028]
+  workflow_dispatch:
+    inputs:
+      build_store:
+        description: Build signed AAB only after real beta service is ready
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: android-managed-beta-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  qualify:
+    env:
+      FUNGO_PLAY_BOOTSTRAP: '1'
+      FUNGO_BETA_SERVICE_URL: 'https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+      - run: npm ci
+      - name: Verify data and shared subscription regressions
+        run: |
+          npm run prepare:data
+          git diff --exit-code -- src/data
+          npm run typecheck
+          node --test scripts/*.test.mjs lib/*.test.mjs server/beta/*.test.mjs
+          mkdir -p /tmp/annual-policy
+          javac -d /tmp/annual-policy modules/fungo-subscription/android/src/main/java/it/fungoitalia/subscription/AnnualOfferPolicy.java modules/fungo-subscription/android/src/main/java/it/fungoitalia/subscription/PlayDates.java tests/play-billing/AnnualOfferPolicyTest.java
+          java -cp /tmp/annual-policy AnnualOfferPolicyTest
+      - name: Generate Android and verify autolinking
+        run: |
+          npx expo prebuild --platform android --no-install
+          npx expo-modules-autolinking resolve --platform android --json > /tmp/android-autolinking.json
+          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('/tmp/android-autolinking.json')); if(!JSON.stringify(x).includes('FungoSubscriptionModule'))throw Error('Android billing module not linked')"
+        env:
+          CI: '1'
+          FUNGO_PLAY_VERIFIER_URL: ''
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+      - name: Compile diagnostic APK and AAB with Billing
+        working-directory: android
+        run: |
+          ./gradlew :fungo-subscription:compileReleaseKotlin --no-daemon --max-workers=2
+          ./gradlew :app:assembleRelease :app:bundleRelease -PreactNativeArchitectures=arm64-v8a,x86_64 --no-daemon --max-workers=2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Android-Play-Billing-diagnostic-NOT-FOR-PLAY
+          path: |
+            android/app/build/outputs/apk/release/*.apk
+            android/app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
+          retention-days: 14
+  smoke:
+    needs: qualify
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Android-Play-Billing-diagnostic-NOT-FOR-PLAY
+          path: artifacts/diagnostic
+      - name: Stage the diagnostic APK for the existing offline smoke test
+        run: |
+          mkdir -p artifacts/android
+          cp artifacts/diagnostic/apk/release/app-release.apk artifacts/android/app-release.apk
+          sudo chmod 666 /dev/kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disable-animations: true
+          script: FUNGO_PLAY_BOOTSTRAP_SMOKE=1 python3 scripts/android-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-Play-Billing-bootstrap-smoke-evidence
+          path: artifacts/smoke/
+          if-no-files-found: error
+          retention-days: 14
+  signed-bootstrap:
+    if: github.event_name == 'workflow_dispatch' && inputs.build_store
+    needs: [qualify, smoke]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Queue private signed Android bootstrap with existing EAS credentials only
+        run: |
+          test -n "$EXPO_TOKEN" || { echo '::error::Existing Expo authentication unavailable'; exit 1; }
+          curl --fail --silent --show-error "https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/health" | node -e "let s='';process.stdin.on('data',x=>s+=x).on('end',()=>{if(JSON.parse(s).ready!==true)process.exit(1)})"
+          git diff --exit-code
+          node --input-type=module <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const source=process.env.GITHUB_SHA;
+          if(!/^[a-f0-9]{40}$/.test(source))throw Error('Exact qualified source required');
+          const config=JSON.parse(readFileSync('eas.json','utf8'));
+          config.build['android-managed-beta'].env={...config.build['android-managed-beta'].env,GITHUB_SHA:source,FUNGO_VERIFIED_SOURCE:source};
+          writeFileSync('eas.json',JSON.stringify(config,null,2)+'\n');
+          JS
+          mkdir -p artifacts/android-play
+          npx eas-cli@24.8.0 build --platform android --profile android-managed-beta --non-interactive --freeze-credentials --no-wait --json > artifacts/android-play/eas-build.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-Play-signed-build-request
+          path: artifacts/android-play/
+          retention-days: 14
