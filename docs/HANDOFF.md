@@ -1,3 +1,17 @@
+## Android beta — bug SecureStore corretto, nuova qualifica diagnostica —28 ottobre2026
+
+PR131, servizio amministrativo reale verificato e segreto tecnico specificamente autorizzato/creato. Run40653512152: qualifica nativa e smoke demo Android35 SUCCESS; prova beta completa FAILURE, firma SKIPPED. Invito accettato dal server ma credenziale rifiutata dal client: la chiave SecureStore conteneva caratteri non ammessi. Riproduzione con hook montato e vera validazione Expo RED→GREEN dopo chiave valida;361Node0fail0skip, TypeScript e sintassi Python PASS. Serve nuova compilazione e prova nativa del sorgente corretto.
+
+Rotazione del solo codice tecnico: GitHub ha richiesto Confirm access, richiesta sicura e successiva verifica su nuova scheda entrambe in timeout. Esito autenticazione/salvataggio sconosciuto. L'autorizzazione resta acquisita; non aggirare la conferma di sicurezza e non richiedere permessi generici già concessi. Il codice corretto viene salvato e qualificato senza marker di firma. Google Play conserva1.1.0(3) demo; nessuna nuova email completa a Cyrus. Nessuna distribuzione iOS/web/OTA. Dettagli e prove in docs/ANDROID-MANAGED-BETA.md.
+
+## Android beta gestita — servizio operativo, nuova build ancora pendente —28 ottobre2026
+
+Ramo dedicato PR131. Autenticazione reale del titolare completata e ruolo admin associato all'identità Sites. Dopo autorizzazione esplicita, servizio raggiungibile dai telefoni: pannello/API admin anonimi403, identity spoof rimosso, invito sintetico riscattabile una volta,90giorni esatti e revoca live della sessione verificati. Nessuna email di nuova beta a Cyrus.
+
+Riprodotta e corretta una lettura prematura della bozza teorica durante completo→demo→completo con salvataggio pendente. Componenti realmente montati con React: foto/teoria conservano bozze e storico.360Node0fail0skip e TypeScript PASS locali, scienza invariata. Nuova qualifica nativa sul sorgente finale ancora da leggere; prova completa Android predisposta ma richiede consenso specifico al solo segreto tecnico FUNGO_BETA_SMOKE_INVITE su GitHub. Il controllo automatico ne ha rifiutato il salvataggio senza tale consenso; nessun aggiramento. Dettagli, esiti reali e limiti in docs/ANDROID-MANAGED-BETA.md.
+
+Google Play conserva1.1.0(3) demo. Nessuna nuova build completa distribuita, nessun merge main/iOS/web/OTA. Le sezioni storiche successive non sostituiscono questo checkpoint.
+
 ## Android — qualifica1364695 riuscita, discrepanza EAS individuata
 
 Sorgente `13646955ac0e9cf558a9c14b97335c71adbbc0bc`, run40598518408: qualify e smoke SUCCESS, tutti324Node/10Java/TypeScript e compilazione nativa PASS. Nuova prova Android35 PASS. Archivio12778231333 SHA256`d9f64e2f1b2a01108bf4e273d4545b479eedaa1d8448177e40eb00b5212d516e` scaricato/verificato, screenshot ispezionati. Tre CI condivise40598523421/40598523652/40598523555 SUCCESS.

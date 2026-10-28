@@ -124,16 +124,17 @@ def main():
     assert 'Inizia 15 casi' not in text_of(exam), 'Premium exam must remain inaccessible without verified billing'
     print('PASS: free four-case Agaricus test and Areas/habitats are accessible; premium exam remains gated.')
     print('PASS: Percorso cold start offline, Agaricus search/detail and favorites persist after restart.')
-try:
-    main()
-finally:
-    os.makedirs('artifacts/smoke',exist_ok=True)
+if __name__=='__main__':
     try:
-        print('Final native UI:',text_of(dump()))
-        print(adb('logcat','-d','-s','ReactNativeJS:E','AndroidRuntime:E'))
-        with open('artifacts/smoke/android-final.png','wb') as f:
-            f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
-        with open('artifacts/smoke/final-ui.xml','w') as f:
-            f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
-    except Exception as error:
-        with open('artifacts/smoke/capture-error.txt','w') as f: f.write(str(error))
+        main()
+    finally:
+        os.makedirs('artifacts/smoke',exist_ok=True)
+        try:
+            print('Final native UI:',text_of(dump()))
+            print(adb('logcat','-d','-s','ReactNativeJS:E','AndroidRuntime:E'))
+            with open('artifacts/smoke/android-final.png','wb') as f:
+                f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))
+            with open('artifacts/smoke/final-ui.xml','w') as f:
+                f.write(adb('shell','cat','/sdcard/fungo-ui.xml'))
+        except Exception as error:
+            with open('artifacts/smoke/capture-error.txt','w') as f: f.write(str(error))
