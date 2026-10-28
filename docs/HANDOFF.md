@@ -1,3 +1,41 @@
+## Android — pacchetto firmato verificato, ripresa del28 ottobre2026
+
+EAS cfe551bc-33ed-4dc0-b599-6ea03a20f500 SUCCESS, applicazione1.1.0(3) dal sorgente025ba72314925f2b531b85422c6e30bd82e74c04. Verificato nuovamente il vero AAB: SHA256177aed1326260a6524c4bc4b4ce598c08d9959c992adf693415f86361d871f5c,2054 entry payload con firma valida dallo stesso certificato non debug SHA256b5b8bd7e2e5cad794fb4eef6e1e56782d04577872eca6d333880a0392ffed17a. Manifest package it.fungoitalia.app/versione1.1.0/code3/min24/target36/BILLING/debuggable=false; app.config incorporato con sourceCommit esatto e dirty=false; canale android-play-bootstrap isolato. Nessun nuovo build, submit, merge main, rilascio pubblico, iOS o OTA in questa ripresa.
+
+Checkpoint precedente fa786c80c0ba497a33a2d9245888cc49ccf960f1 in ANDROID-PLAY-BILLING.md registra bundle3 già accettato nella bozza interna release1: non ripetere upload. La sessione Google è ora scaduta e richiede nuovo accesso; stato Play da rileggere dal vivo prima di altre mutazioni. La lista di test non risulta creata e il prodotto non risulta registrato nel checkpoint. Il precedente controllo automatico aveva rifiutato lista account-level e ID permanente monetizzato: non aggirare tali rifiuti. Cercato un consenso successivo, ma il contesto personale non è disponibile; nessuna autorizzazione ulteriore inventata. Preparare richiesta specifica con lista del solo titolare e annuale it.fungoitalia.premium.annual/piano annual/P1Y/Italia19,99EUR/senza trial e sola distribuzione interna.
+
+Verifica tecnica distinta da approvazione scientifica e disponibilità al pubblico. Backend, service account/permessi Google, canary license-test, lifecycle e privacy rimangono da completare. [Prova binario](evidence/android-play-20261028/aab-verification.json). Il codice compilato resta025ba72; eventuali commit di sole prove/documentazione non sono nuovi binari qualificati.
+
+## Android — qualifica1364695 riuscita, discrepanza EAS individuata
+
+Sorgente `13646955ac0e9cf558a9c14b97335c71adbbc0bc`, run40598518408: qualify e smoke SUCCESS, tutti324Node/10Java/TypeScript e compilazione nativa PASS. Nuova prova Android35 PASS. Archivio12778231333 SHA256`d9f64e2f1b2a01108bf4e273d4545b479eedaa1d8448177e40eb00b5212d516e` scaricato/verificato, screenshot ispezionati. Tre CI condivise40598523421/40598523652/40598523555 SUCCESS.
+
+Richiesta EAS accettata: build `44331370-7552-4dc2-aff9-818075c5abfc`,1.1.0(2), sorgente1364695. Il job GitHub firmato SUCCESS significa solo accodamento; build EAS effettiva FAILURE prima di Gradle: fingerprint locale f21760dd489c9f3e1a2b8abb93727fa6367a9317 diverso dal remoto3af021b780398f8da511e126b1eddca9a0d136b0. Diff: extra.release.dirty false→true; aggiunta cartellaAndroid con hashnull, che il hasher Expo esclude. Correzione della causa: stessa procedura già usata nella pipeline iOS, checkout pulito e inserimento di GITHUB_SHA/FUNGO_VERIFIED_SOURCE nel solo profilo bootstrap isolato prima della richiesta. Il controllo rifiuta sorgenti discordanti; nessun gate o fingerprint disattivato.
+
+Il log EAS ha inoltre registrato **Created keystore**, benché la CLI fosse invocata con --freeze-credentials: non attestare che siano state usate esclusivamente chiavi preesistenti o che il flag impedisca la creazione iniziale. Chiave gestita da Expo, nessun segreto scaricato o pubblicato. Creati canale/branch EAS android-play-bootstrap; nessun OTA inviato. Nuova firma/AAB ancora da verificare sul workflow corretto, nessun file caricato su Play.
+
+## Android Google Play — PR130 e qualifica nativa — 27 ottobre 2026
+
+Autorizzazione specifica del titolare acquisita per push del ramo, PR e Actions/EAS; il precedente blocco del primo invio è superato. [PR130](https://github.com/gianpaolobol/fungo-italia/pull/130) in bozza, ramo `feat/android-play-billing-20261027`, nessun merge main, submit Play, pubblicazione, iOS o OTA.
+
+Sorgente `0f8c93d448b0c50377544b8e2aff0124c2d78998`, [run40596628834](https://github.com/gianpaolobol/fungo-italia/actions/runs/40596628834): qualifica e smoke Android SUCCESS. 324Node0fail0skip, TypeScript,10Java, dati senza drift, autolinking, compilazione Kotlin e APK/AAB reali PASS. Emulatore Android35: avvio offline, demo Agaricus, preferito conservato alla riapertura, aree/habitat gratuiti e test4casi accessibili; esame premium e checkout senza verificatore restano bloccati. Archivio prove12777367932 scaricato, SHA256 `92814991f77b6456a3d1fcef77ce5683587fd84a9cf44370a7e08d12a09ce545` verificato, due screenshot ispezionati. Artefatto diagnostico12777407044 firmato debug: NON PER PLAY.
+
+Job EAS122519643518 FAILURE prima della richiesta build: `eas.json ... FUNGO_PLAY_VERIFIER_URL is not allowed to be empty`. Non è una prova di keystore mancante. Correzione: flag non vuoto `FUNGO_PLAY_BOOTSTRAP=1`, che forza endpoint vuoto nel modulo anche se l'ambiente EAS contenesse un URL. Nuova qualifica completa e firma ancora da verificare sul sorgente corretto; credenziali solo preesistenti con --freeze-credentials.
+
+Restano backend HTTPS, credenziali/permessi Google e canary reale license-test, AAB con firma stabile, primo caricamento interno, prodotto/piano annuale Italia EUR19,99, prove lifecycle e privacy Android. Nessun abbonamento Play attivo o vendita dichiarati. I risultati nativi precedenti valgono solo per lo SHA citato. [Runbook](ANDROID-PLAY-BILLING.md). Le sezioni Android locali sotto conservano la cronologia precedente.
+
+## Android Google Play — candidato locale, non distribuito — 27 ottobre 2026
+
+Mandato acquisito nella sessione: Google Play con demo Agaricus e annuale EUR19,99. Account Play e scheda Fungo Italia creati; package it.fungoitalia.app, app4973468964713536197. Il titolare ha inviato il profilo commerciante personalmente. Conto beneficiario in attesa di verifica nell’ultima lettura; nessuna modifica bancaria da agente.
+
+Ramo locale `feat/android-play-billing-20261027`, baseline `83fe69483c344905765ed75ed456aad4c1b72918`. Implementati modulo Android Billing8.3.0, servizio Node di verifica Google, copy per piattaforma e pipeline separata senza submit/OTA/iOS. Nessuna scienza/dato curricolare/Swift modificata. Acquisti Android disabilitati senza endpoint e prova license-test qualificata. Nessun flag premium locale o certificazione inventata.
+
+Prove locali:324 test Node PASS0fail0skip; TypeScript PASS;10 casi Java (offerte/date) PASS; expo prebuild Android PASS; autolinking Android Billing PASS; prepare:data senza drift. Revisione separata: un difetto importante readiness OAuth corretto con test RED→GREEN; ora serve lettura Play di un acquisto test acknowledged. Corrette anche normalizzazione ISO per API24 e opzione --json autolinking.
+
+Compilazione Kotlin/APK/AAB NON verificata: Gradle non scaricabile nel runtime (`Network is unreachable` su services.gradle.org). Push bloccato dal controllo automatico di autorizzazione: richiesta conferma specifica per invio codice al repository GitHub e avvio CI/build remota. Nessun push/PR/CI/EAS o upload Play eseguito in questa sessione. Il codice resta nei commit locali; dopo consenso push ramo dedicato e PR, leggere i job e correggere ogni errore nativo prima di qualunque dichiarazione di build valida. Il workflow tenta EAS solo con firma Android preesistente (--freeze-credentials); un keystore mancante è un blocco reale, non autorizza firma debug production.
+
+Ulteriori blocchi: backend HTTPS/credenziali Google/canary non distribuiti o creati; primo AAB firmato da caricare nel canale interno titolare; poi prodotto/piano annual/Italia19,99; lifecycle license testing, privacy Android e produzione restano aperti. [Runbook](ANDROID-PLAY-BILLING.md).
+
 <!-- IOS_STUDY_24_CURRENT -->
 ## Allineamento tecnico WEB/PWA e TestFlight24 verificato —27 ottobre2026
 

@@ -1,9 +1,10 @@
 import {useCallback,useEffect,useRef,useState} from 'react';
-import {AppState} from 'react-native';
+import {AppState,Platform} from 'react-native';
 import {getAnnualProduct,currentEntitlement,purchaseAnnual,restoreAnnual,observeEntitlement,subscriptionAvailable} from '../modules/fungo-subscription';
 import {expiryDelay} from '../lib/subscriptionPolicy';
 import type {SubscriptionProduct} from '../components/SubscriptionGate';
 type Entitlement={active:boolean;expiresAt:string|null};
+const account=Platform?.OS==='android'?'Google Play':'Apple';
 const inactive:Entitlement={active:false,expiresAt:null};
 async function timely<T>(promise:Promise<T>):Promise<T>{let timer:ReturnType<typeof setTimeout>|undefined;try{return await Promise.race([promise,new Promise<T>((_,reject)=>{timer=setTimeout(()=>reject(new Error('Store timeout')),20000);})]);}finally{if(timer)clearTimeout(timer);}}
 function verified(value:Entitlement):Entitlement{
@@ -74,14 +75,14 @@ export default function useSubscription(){
    if(!mounted.current)return;
    // Read current StoreKit state again: an earlier purchase response must not undo a later revocation event.
    const access=await refresh();
-   if(mounted.current&&access&&!access.active&&result.status==='pending')setError('Acquisto in attesa di approvazione Apple. L’accesso si attiverà dopo la conferma.');
-  }catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError('Acquisto non completato. Verifica il tuo account Apple e riprova.');}}
+   if(mounted.current&&access&&!access.active&&result.status==='pending')setError(`Acquisto in attesa di approvazione ${account}. L’accesso si attiverà dopo la conferma.`);
+  }catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError(`Acquisto non completato. Verifica il tuo account ${account} e riprova.`);}}
   finally{locked.current=false;if(mounted.current)setBusy(false);}
  },[refresh,markReady]);
  const restore=useCallback(async()=>{
   if(!subscriptionAvailable||locked.current)return;
   locked.current=true;++generation.current;setBusy(true);setError('');
-  try{await restoreAnnual();if(mounted.current){const state=await refresh();if(state&&!state.active)setError('Nessun abbonamento attivo trovato per questo account Apple.');}}
+  try{await restoreAnnual();if(mounted.current){const state=await refresh();if(state&&!state.active)setError(`Nessun abbonamento attivo trovato per questo account ${account}.`);}}
   catch{if(mounted.current){markReady(false);setEntitlement(inactive);setError('Ripristino non riuscito. Verifica la connessione e riprova.');}}
   finally{locked.current=false;if(mounted.current)setBusy(false);}
  },[refresh,markReady]);

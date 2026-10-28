@@ -1,1 +1,1 @@
-{"platforms":["apple"],"apple":{"modules":["FungoSubscriptionModule"]}}
+{"platforms":["apple","android"],"apple":{"modules":["FungoSubscriptionModule"]},"android":{"modules":["it.fungoitalia.subscription.FungoSubscriptionModule"]}}
