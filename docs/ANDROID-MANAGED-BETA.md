@@ -1,5 +1,12 @@
 # Beta Android completa — stato e procedura
 
+
+## Consenso specifico acquisito — avvio prova nativa e firma condizionata
+
+Il titolare ha autorizzato esplicitamente il salvataggio del solo codice sintetico FUNGO_BETA_SMOKE_INVITE nei segreti cifrati del repository, utilizzabile dai workflow/collaboratori. Il modulo GitHub ha confermato Repository secret added. Il codice concede solo la beta dell'utenza tecnica e sarà invalidato dalla revoca al termine della prova; nessun ruolo amministrativo. Il precedente rifiuto automatico è superato da questo consenso specifico, non da un aggiramento.
+
+Preflight nuovamente eseguito:360test0fail0skip e TypeScript PASS. Richiesta esecuzione del percorso Android completo sul nuovo SHA: qualify, smoke demo e beta-smoke con revoca amministrativa coordinata; la firma EAS può iniziare solo dopo il successo di tutti questi job e della health pubblica. Nessun caricamento Play o disponibilità della nuova beta ancora attestati.
+
 ## Aggiornamento corrente — servizio accessibile e prove live
 
 Il titolare ha autorizzato esplicitamente l'apertura del servizio ai telefoni. Audience Sites public, revisione accessi2; pannello e API amministrative restano autorizzati solo per la sua identità autenticata. Health anonima ready=true, whoami anonimo userId=null, pannello/admin.js/API admin anonimi403, intestazione di identità arbitraria rimossa dal dispatch, origine browser estranea403: prove HTTPS reali riuscite. Nessun bypass Sites inserito nell'app.
