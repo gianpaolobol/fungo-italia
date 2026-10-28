@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-28",
+  "sourceCommit": "025ba72314925f2b531b85422c6e30bd82e74c04",
+  "easBuild": "cfe551bc-33ed-4dc0-b599-6ea03a20f500",
+  "easResult": "succeeded",
+  "ciRun": 40600782716,
+  "aab": {
+    "sha256": "177aed1326260a6524c4bc4b4ce598c08d9959c992adf693415f86361d871f5c",
+    "sizeBytes": 260817083,
+    "package": "it.fungoitalia.app",
+    "versionName": "1.1.0",
+    "versionCode": 3,
+    "minSdk": 24,
+    "targetSdk": 36,
+    "billingPermission": true,
+    "debuggable": false,
+    "embeddedSourceDirty": false,
+    "channel": "android-play-bootstrap"
+  },
+  "signature": {
+    "verifiedPayloadEntries": 2054,
+    "method": "Java JarFile verification: read every payload entry, require a single identical signer, reject Android Debug subject",
+    "certificateSha256": "b5b8bd7e2e5cad794fb4eef6e1e56782d04577872eca6d333880a0392ffed17a"
+  },
+  "play": {
+    "latestReportedCheckpoint": "fa786c80c0ba497a33a2d9245888cc49ccf960f1",
+    "reportedUploadAccepted": true,
+    "internalDraftRelease": 1,
+    "liveRecheck": "blocked by expired Google sign-in",
+    "rollout": false,
+    "subscriptionCreated": false,
+    "testListCreated": false,
+    "approvalReviewBlocks": [
+      "account-level owner test list",
+      "permanent monetized subscription product ID"
+    ]
+  },
+  "publicRelease": false,
+  "backendDeployed": false
+}

@@ -1,3 +1,11 @@
+## Android — pacchetto firmato verificato, ripresa del28 ottobre2026
+
+EAS cfe551bc-33ed-4dc0-b599-6ea03a20f500 SUCCESS, applicazione1.1.0(3) dal sorgente025ba72314925f2b531b85422c6e30bd82e74c04. Verificato nuovamente il vero AAB: SHA256177aed1326260a6524c4bc4b4ce598c08d9959c992adf693415f86361d871f5c,2054 entry payload con firma valida dallo stesso certificato non debug SHA256b5b8bd7e2e5cad794fb4eef6e1e56782d04577872eca6d333880a0392ffed17a. Manifest package it.fungoitalia.app/versione1.1.0/code3/min24/target36/BILLING/debuggable=false; app.config incorporato con sourceCommit esatto e dirty=false; canale android-play-bootstrap isolato. Nessun nuovo build, submit, merge main, rilascio pubblico, iOS o OTA in questa ripresa.
+
+Checkpoint precedente fa786c80c0ba497a33a2d9245888cc49ccf960f1 in ANDROID-PLAY-BILLING.md registra bundle3 già accettato nella bozza interna release1: non ripetere upload. La sessione Google è ora scaduta e richiede nuovo accesso; stato Play da rileggere dal vivo prima di altre mutazioni. La lista di test non risulta creata e il prodotto non risulta registrato nel checkpoint. Il precedente controllo automatico aveva rifiutato lista account-level e ID permanente monetizzato: non aggirare tali rifiuti. Cercato un consenso successivo, ma il contesto personale non è disponibile; nessuna autorizzazione ulteriore inventata. Preparare richiesta specifica con lista del solo titolare e annuale it.fungoitalia.premium.annual/piano annual/P1Y/Italia19,99EUR/senza trial e sola distribuzione interna.
+
+Verifica tecnica distinta da approvazione scientifica e disponibilità al pubblico. Backend, service account/permessi Google, canary license-test, lifecycle e privacy rimangono da completare. [Prova binario](evidence/android-play-20261028/aab-verification.json). Il codice compilato resta025ba72; eventuali commit di sole prove/documentazione non sono nuovi binari qualificati.
+
 ## Android — qualifica1364695 riuscita, discrepanza EAS individuata
 
 Sorgente `13646955ac0e9cf558a9c14b97335c71adbbc0bc`, run40598518408: qualify e smoke SUCCESS, tutti324Node/10Java/TypeScript e compilazione nativa PASS. Nuova prova Android35 PASS. Archivio12778231333 SHA256`d9f64e2f1b2a01108bf4e273d4545b479eedaa1d8448177e40eb00b5212d516e` scaricato/verificato, screenshot ispezionati. Tre CI condivise40598523421/40598523652/40598523555 SUCCESS.
