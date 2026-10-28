@@ -1,3 +1,7 @@
+## Diagnostica del ritorno online —28 ottobre2026
+
+Run40700232760tentativo1: attivazione, demo offline/recupero bozza online, teoria cold-start PASS. Marker13:56:23Z, revoca non osservata entro14:00:27Z; pannello revocato effettivamente dopo finestra, firma SKIPPED. Browser CUA originale ora operativo, getJsDialog().accept funzionante; lista va ricaricata dopo riscatto per evitare409versione. Tentativo2 stesso sorgente: attivazione PASS, recupero online fallito anche90secondi; rete CELLULAR VALIDATED nei dati, causa precisa non provata. Non rilanciare alla cieca: aggiunta diagnostica UI dell'errore beta in Abbonamento dopo il fallimento originale, conservando fallimento e screenshot. Nessuna modifica app/APK2e0. Beta completa ancora non pubblicata.
+
 ## Controllo formato invito prima dell'emulatore —28 ottobre2026
 
 Run40699257946: guard app/APK e5regressioni navigatore PASS; test nativo rifiuta invito mancante/malformato prima dell'installazione, nessun riscatto o revoca, firma SKIPPED. La conferma browser del salvataggio non bastava a provare formato corretto. Aggiunto controllo43caratteri URLsafe prima dell'avvio emulatore, senza mostrare codice; ricalibrare il salvataggio verificando valore reale della textarea. Nessuna modifica app/APK2e0.

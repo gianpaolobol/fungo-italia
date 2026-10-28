@@ -50,7 +50,7 @@ jobs:
           print('Synthetic invitation format verified without revealing value')
           PYCODE
           git diff --exit-code "$APP_SOURCE_SHA" HEAD -- . ':!.github/workflows/android-beta-proof.yml' ':!docs/ANDROID-BETA-PROOF-READY.md' ':!scripts/android-beta-smoke.py' ':!scripts/android-beta-ui.test.py' ':!docs/MASTER_PROJECT_STATUS.md' ':!docs/HANDOFF.md'
-          echo 'e7cee5fb735b808fd9037c5da8985bea357be4758f47c628f2b6d4de94deacd1  scripts/android-beta-smoke.py' | sha256sum --check
+          echo '7ac2d8a3ffe25917db9600c8c523e35bda90ae292e2122294c5c58dc22ce3a48  scripts/android-beta-smoke.py' | sha256sum --check
           echo '30bbe24e8d4b8c89d7dc187e46c8d681348850657ea07e6ef4b3b54a2f9e15bd  scripts/android-beta-ui.test.py' | sha256sum --check
           python3 scripts/android-beta-ui.test.py
           mkdir -p artifacts/android

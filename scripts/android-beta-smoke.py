@@ -107,7 +107,16 @@ def main():
     adb('shell','svc','wifi','enable');adb('shell','svc','data','enable');foreground()
     # The first foreground check can race Android network restoration. An
     # inactive session retries after 60s, with a 10s request timeout.
-    wait_text('Beta completa · scadenza',90)
+    try:
+        wait_text('Beta completa · scadenza',90)
+    except AssertionError:
+        # Preserve the failure and inspect the client-owned error in its UI.
+        snapshot('reconnect-failure')
+        tap('Abbonamento');wait_text('Beta per collaudatori invitati')
+        wait_text('Verifica beta')
+        print('RECONNECT_BETA_DIAGNOSTIC: '+text_of(dump()),flush=True)
+        snapshot('reconnect-beta-diagnostic')
+        raise
     tap('Esame');wait_text('Esame e ripasso');tap('Riprendi sessione');wait_text('BetaDraft2026')
     print('PASS: offline foreground falls back to demo; reconnect restores saved photo draft',flush=True)
     # The exam-kind tabs stay visible above even long photo questionnaires.
