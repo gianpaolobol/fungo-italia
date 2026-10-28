@@ -1,3 +1,15 @@
+## Checkpoint verificato — 28 ottobre 2026
+
+EAS `cfe551bc-33ed-4dc0-b599-6ea03a20f500` SUCCESS, sorgente incorporato `025ba72314925f2b531b85422c6e30bd82e74c04`, dirty=false. Bundle reale package it.fungoitalia.app, versione1.1.0/code3, minSDK24/targetSDK36, permesso com.android.vending.BILLING presente. SHA256 AAB `177aed1326260a6524c4bc4b4ce598c08d9959c992adf693415f86361d871f5c`. Certificato caricamento SHA256 `B5:B8:BD:7E:2E:5C:AD:79:4F:B4:EE:F6:E1:E5:67:82:D0:45:77:87:2E:CA:6D:33:38:80:A0:39:2F:FE:D1:7A`, non Android Debug. Verificati2054 digest SHA256 del manifest JAR e firma CMS (openssl CMS Verification successful). GitHub run40600782716 qualify/smoke/signed-bootstrap riconfermati SUCCESS; il job di firma prova l'accodamento, EAS e binario sono stati verificati separatamente.
+
+Dopo consenso esplicito del titolare «Autorizzo» al caricamento dell'AAB1.1.0(3) su questo account/app/test interno, file caricato e accettato da Play. Review release1 sul canale4700709243566842351 mostra bundle3(1.1.0),219MB installazione e un solo avviso: nessun tester specificato. Nessuna pubblicazione effettuata; non dichiarare disponibile/installabile.
+
+Lista proposta «Titolare Fungo Italia», unico indirizzo gianpaolo.franceschini@gmail.com, risolto dall'identità Google del titolare. Conferma «Crea» ancora pendente: auto-review ha rifiutato la creazione perché Google conserva la lista a livello dell'intero account sviluppatore, riutilizzabile per tutte le app. Non aggirare il rifiuto; chiedere consenso specifico per tale lista e poi assegnarla esclusivamente a questo canale. Nessun invito a terzi.
+
+Pagina Abbonamenti ora sbloccata dal bundle. Modale preparata: ID it.fungoitalia.premium.annual, nome «Fungo Italia Completo annuale». Non creato: auto-review richiede consenso specifico alla registrazione irreversibile dell'ID e all'offerta monetizzata. Richiedere insieme consenso per prodotto, piano annual/rinnovoP1Y/ItaliaEUR19,99 senza trial e sola distribuzione interna al titolare. Nessun abbonamento attivo, vendita, backend distribuito o nuova credenziale Google.
+
+Produzione ancora inaccessibile: Play richiede test chiuso con almeno12tester iscritti per14giorni consecutivi;0tester attuali. Permessi backend/service account/canary/privacy e lifecycle restano come sotto. Nessun merge main, iOS, web o OTA in questa ripresa. I successivi consensi vanno registrati come decisioni reali, senza attribuire certificazione scientifica.
+
 # Android Play Billing — preparazione test interno
 
 ## Stato e confini
