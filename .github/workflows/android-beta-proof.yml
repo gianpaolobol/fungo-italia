@@ -43,6 +43,12 @@ jobs:
           FUNGO_BETA_SMOKE_INVITE: ${{ secrets.FUNGO_BETA_SMOKE_INVITE }}
         run: |
           test -n "$FUNGO_BETA_SMOKE_INVITE" || { echo '::error::Authorized synthetic invitation required'; exit 1; }
+          python3 - <<'PYCODE'
+          import os,re
+          value=os.environ.get('FUNGO_BETA_SMOKE_INVITE','')
+          assert re.fullmatch('[A-Za-z0-9_-]{43}',value), f'Synthetic invitation format invalid (length={len(value)}); no native test started'
+          print('Synthetic invitation format verified without revealing value')
+          PYCODE
           git diff --exit-code "$APP_SOURCE_SHA" HEAD -- . ':!.github/workflows/android-beta-proof.yml' ':!docs/ANDROID-BETA-PROOF-READY.md' ':!scripts/android-beta-smoke.py' ':!scripts/android-beta-ui.test.py' ':!docs/MASTER_PROJECT_STATUS.md' ':!docs/HANDOFF.md'
           echo 'e7cee5fb735b808fd9037c5da8985bea357be4758f47c628f2b6d4de94deacd1  scripts/android-beta-smoke.py' | sha256sum --check
           echo '30bbe24e8d4b8c89d7dc187e46c8d681348850657ea07e6ef4b3b54a2f9e15bd  scripts/android-beta-ui.test.py' | sha256sum --check

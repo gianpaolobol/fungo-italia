@@ -1,3 +1,7 @@
+## Controllo formato invito prima dell'emulatore —28 ottobre2026
+
+Run40699257946: guard app/APK e5regressioni navigatore PASS; test nativo rifiuta invito mancante/malformato prima dell'installazione, nessun riscatto o revoca, firma SKIPPED. La conferma browser del salvataggio non bastava a provare formato corretto. Aggiunto controllo43caratteri URLsafe prima dell'avvio emulatore, senza mostrare codice; ricalibrare il salvataggio verificando valore reale della textarea. Nessuna modifica app/APK2e0.
+
 ## Navigazione del collaudo resa indipendente dalla lunghezza delle domande —28 ottobre2026
 
 Run40697310064: beta nativa attivata PASS; test fermo cercando Nome scientifico della risposta, visibile nello screenshot finale dopo ultimo swipe. Nessun segnale di revoca, firma SKIPPED. Tre prove mostrano fragilità del navigatore UI, non app qualificata diversa. Correzione sistematica del solo script: ricerca condizionale entro120secondi, swipe all'interno del vero ScrollView sotto le schede fisse, inversione a fine contenuto per controlli sopra l'offset. Cinque regressioni Python: vecchio helper4FAIL/1PASS, nuovo5PASS; incluse domanda oltre7schermate, gesti confinati e controllo assente ancora bloccante. Workflow esegue questi test e vincola hash di script e test. APK/app2e0 immutati; conferma nativa completa ancora pendente.
