@@ -1,0 +1,112 @@
+name: Complete proof of the pinned Android beta candidate
+on:
+  push:
+    branches: [feat/android-beta-proof-ready-20261028]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: android-beta-proof-qualified-2e0cb647
+  cancel-in-progress: false
+env:
+  APP_SOURCE_SHA: 2e0cb6479e589bcab83d1b60d1ae636a6c8c5c64
+  QUALIFIED_RUN: '40680183722'
+jobs:
+  beta-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Require native qualification and demo proof on the exact app source
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run_id=Number(process.env.QUALIFIED_RUN);
+            const {data:run}=await github.rest.actions.getWorkflowRun({...context.repo,run_id});
+            if(run.head_sha!==process.env.APP_SOURCE_SHA)throw Error('Different native source');
+            const {data:jobs}=await github.rest.actions.listJobsForWorkflowRun({...context.repo,run_id});
+            for(const name of ['qualify','smoke'])if(!jobs.jobs.some(j=>j.name===name&&j.conclusion==='success'))throw Error('Required native proof missing: '+name);
+            const {data:artifacts}=await github.rest.actions.listWorkflowRunArtifacts({...context.repo,run_id});
+            const a=artifacts.artifacts.find(a=>a.name==='Android-Play-Billing-diagnostic-NOT-FOR-PLAY');
+            if(!a||a.expired||a.id!==12812827277||a.digest!=='sha256:d6f935021cfc944628e80a5a9dab80868f9c4ce15fdb345081d5dfe1d5ef2104')throw Error('Qualified binary identity differs');
+            core.info('External workflow '+context.sha+'; unchanged native app source '+process.env.APP_SOURCE_SHA);
+      - uses: actions/download-artifact@v4
+        with:
+          name: Android-Play-Billing-diagnostic-NOT-FOR-PLAY
+          run-id: ${{ env.QUALIFIED_RUN }}
+          github-token: ${{ github.token }}
+          path: artifacts/diagnostic
+      - name: Require unchanged app and test sources, and verify the embedded receipt
+        env:
+          FUNGO_BETA_SMOKE_INVITE: ${{ secrets.FUNGO_BETA_SMOKE_INVITE }}
+        run: |
+          test -n "$FUNGO_BETA_SMOKE_INVITE" || { echo '::error::Authorized synthetic invitation required'; exit 1; }
+          git diff --exit-code "$APP_SOURCE_SHA" HEAD -- . ':!.github/workflows/android-beta-proof.yml' ':!docs/ANDROID-BETA-PROOF-READY.md'
+          mkdir -p artifacts/android
+          cp artifacts/diagnostic/apk/release/app-release.apk artifacts/android/app-release.apk
+          python3 - <<'PY'
+          import json,os,zipfile
+          with zipfile.ZipFile('artifacts/android/app-release.apk') as z:
+              c=json.loads(z.read('assets/app.config'))
+          assert c['extra']['release']['sourceCommit']==os.environ['APP_SOURCE_SHA']
+          assert c['extra']['release']['dirty'] is False
+          assert c['extra']['betaServiceUrl']=='https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/'
+          print('APK receipt matches the exact qualified source and live service')
+          PY
+          sudo chmod 666 /dev/kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        env:
+          FUNGO_BETA_SMOKE_INVITE: ${{ secrets.FUNGO_BETA_SMOKE_INVITE }}
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disable-animations: true
+          script: python3 -u scripts/android-beta-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-managed-beta-native-evidence
+          path: artifacts/beta-smoke/
+          if-no-files-found: warn
+          retention-days: 14
+  signed-qualified-app:
+    needs: beta-proof
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.APP_SOURCE_SHA }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm ci
+      - name: Request signed build of exactly the natively tested source
+        run: |
+          test "$(git rev-parse HEAD)" = "$APP_SOURCE_SHA"
+          test -n "$EXPO_TOKEN" || { echo '::error::Existing Expo authentication unavailable'; exit 1; }
+          curl --fail --silent --show-error 'https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/health' | node -e "let s='';process.stdin.on('data',x=>s+=x).on('end',()=>{if(JSON.parse(s).ready!==true)process.exit(1)})"
+          git diff --exit-code
+          node --input-type=module <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const source=process.env.APP_SOURCE_SHA;
+          if(!/^[a-f0-9]{40}$/.test(source))throw Error('Exact qualified source required');
+          const c=JSON.parse(readFileSync('eas.json','utf8'));
+          c.build['android-managed-beta'].env={...c.build['android-managed-beta'].env,GITHUB_SHA:source,FUNGO_VERIFIED_SOURCE:source};
+          writeFileSync('eas.json',JSON.stringify(c,null,2)+'\n');
+          JS
+          mkdir -p artifacts/android-play
+          GITHUB_SHA="$APP_SOURCE_SHA" npx eas-cli@24.8.0 build --platform android --profile android-managed-beta --non-interactive --freeze-credentials --no-wait --json > artifacts/android-play/eas-build.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-Play-signed-build-request
+          path: artifacts/android-play/
+          retention-days: 14
