@@ -96,9 +96,45 @@ jobs:
           path: artifacts/smoke/
           if-no-files-found: error
           retention-days: 14
+  beta-smoke:
+    if: (github.event_name == 'workflow_dispatch' && inputs.build_store) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[sign managed android]'))
+    needs: qualify
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Android-Play-Billing-diagnostic-NOT-FOR-PLAY
+          path: artifacts/diagnostic
+      - name: Prepare diagnostic APK and require synthetic invitation
+        env:
+          FUNGO_BETA_SMOKE_INVITE: ${{ secrets.FUNGO_BETA_SMOKE_INVITE }}
+        run: |
+          test -n "$FUNGO_BETA_SMOKE_INVITE" || { echo '::error::Authorized synthetic beta invitation secret is required'; exit 1; }
+          mkdir -p artifacts/android
+          cp artifacts/diagnostic/apk/release/app-release.apk artifacts/android/app-release.apk
+          sudo chmod 666 /dev/kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        env:
+          FUNGO_BETA_SMOKE_INVITE: ${{ secrets.FUNGO_BETA_SMOKE_INVITE }}
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disable-animations: true
+          script: python3 -u scripts/android-beta-smoke.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-managed-beta-native-evidence
+          path: artifacts/beta-smoke/
+          if-no-files-found: warn
+          retention-days: 14
   signed-bootstrap:
-    if: github.event_name == 'workflow_dispatch' && inputs.build_store
-    needs: [qualify, smoke]
+    if: (github.event_name == 'workflow_dispatch' && inputs.build_store) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[sign managed android]'))
+    needs: [qualify, smoke, beta-smoke]
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:

@@ -1,6 +1,22 @@
 # Beta Android completa — stato e procedura
 
-## Stato reale del 28 ottobre 2026
+## Aggiornamento corrente — servizio accessibile e prove live
+
+Il titolare ha autorizzato esplicitamente l'apertura del servizio ai telefoni. Audience Sites public, revisione accessi2; pannello e API amministrative restano autorizzati solo per la sua identità autenticata. Health anonima ready=true, whoami anonimo userId=null, pannello/admin.js/API admin anonimi403, intestazione di identità arbitraria rimossa dal dispatch, origine browser estranea403: prove HTTPS reali riuscite. Nessun bypass Sites inserito nell'app.
+
+Prova sul vero D1: due riscatti simultanei di un invito sintetico producono un solo successo; scadenza esattamente90×24ore; controllo sessione attivo senza email/token nella risposta. Revoca dal pannello della sessione attiva e successiva check: active=false e maxAgeSeconds=0. Email tecniche example.invalid, nessun messaggio inviato. Backup/ripristino del D1 reale non provato tramite le API disponibili.
+
+Aggiunti test con React realmente montato e componenti di produzione: esame fotografico e teorico, scrittura locale trattenuta durante completo→demo→completo, conservazione bozza e storico. Il test teorico ha riprodotto la lettura prematura della bozza (RED), corretta con coda condivisa di scritture/letture in theoryRuntime (GREEN). Suite completa360test0fail0skip e TypeScript passati localmente; dati scientifici invariati. react-test-renderer è una sola dipendenza di sviluppo e non è importato dall'app.
+
+Corretto anche il test UI amministrativo che attendeva cinque turni dell'event loop: ora attende l'azione realmente renderizzata, verificata con rete ritardata. I due run documentali precedenti restano FAILURE storici; non attribuire loro il risultato verde del run iniziale40611495555.
+
+Predisposta prova Android35 su APK diagnostico, servizio reale e invito tecnico monouso: attivazione, esame completo, foreground offline/demo, recupero bozza online, teoria dopo cold start e revoca dal pannello. Non ancora eseguita. Richiede un codice sintetico in FUNGO_BETA_SMOKE_INVITE nei segreti cifrati GitHub del solo repository. Il salvataggio è stato bloccato dall'approvazione automatica: manca consenso specifico a quella destinazione e accesso da workflow/collaboratori. Nessuna alternativa indiretta o token in sorgente/log. Occorre consenso esplicito del titolare prima di ritentare.
+
+Il ramo non contiene questo codice. Il job beta-smoke viene richiesto solo con input build_store o messaggio di commit esplicito [sign managed android]; la firma dipende da qualify, smoke e beta-smoke riusciti sul medesimo SHA e da health pubblica ready=true. Questa condizione push permette l'avvio dal ramo dedicato senza portare il workflow su main. Push ordinari non firmano né distribuiscono.
+
+Nessuna nuova AAB completa ancora firmata, caricata o consegnata a Cyrus; Google Play rimane alla demo1.1.0(3). Nessuna modifica/distribuzione iOS, web o OTA.
+
+## Stato precedente del 28 ottobre 2026
 
 Implementati e verificati localmente servizio concessioni/API, pannello proprietario, controller Android con SecureStore e integrazione dell'accesso completo. 358 test Node passati e TypeScript passato, dati rigenerati senza drift. Revisione separata: corretti tre difetti importanti con riproduzione RED→GREEN (date nel pannello e due condizioni di ciclo vita). Il pannello è stato provato attraverso il suo vero JavaScript servito con un adattatore DOM di test, non su un telefono.
 
