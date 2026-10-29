@@ -85,7 +85,7 @@ jobs:
     branches:
     - main
     - feat/managed-beta-build-20261029
-    - fix/beta-invitation-only-20261029
+    - fix/beta-invitation-proof-20261029
     paths:
     - App.tsx
     - index.js
