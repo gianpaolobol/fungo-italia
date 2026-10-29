@@ -62,3 +62,23 @@ test('mounted theory exam awaits pending draft before rehydration after beta int
  await act(async()=>view.update(mount(h,false)));await press(view,'Esame teorico');await act(async()=>h.release());await press(view,'Riprendi test teorico');
  const selected=view.root.findAll(n=>n.type==='Pressable'&&['radio','checkbox'].includes(n.props.accessibilityRole)&&n.props.accessibilityState?.checked);assert.equal(selected.length,1,'pending choice restored on remount');const after=JSON.parse(h.values.get(theoryKey));assert.deepEqual(after.history,before.history);assert.notDeepEqual(after.session.draft.choices,{});
 });
+
+test('demo theory button explains full access and opens the access screen without showing questions',async t=>{
+ const h=harness();let view,requests=0;
+ await act(async()=>{view=create(React.createElement(h.ExamHub,{demo:true,onAccess:()=>requests++}));});
+ t.after(async()=>{await act(async()=>view.unmount());});
+ assert.ok(text(view.root).includes('Esame teorico'));
+ const button=view.root.findAll(n=>n.type==='Pressable'&&text(n).startsWith('Esame teorico'))[0];
+ assert.ok(button);assert.equal(!!button.props.disabled,false,'theory action should explain access instead of silently ignoring taps');
+ await act(async()=>button.props.onPress());assert.equal(requests,1);
+ assert.ok(text(view.root).includes('Richiede accesso completo'));
+ assert.equal(view.root.findAll(n=>n.type==='Text'&&text(n)==='Scegli l’argomento').length,0);
+});
+
+test('verified full access opens theory and starts a real session',async t=>{
+ const h=harness();let view;
+ await act(async()=>{view=create(mount(h,false));});t.after(async()=>{await act(async()=>view.unmount());});
+ await press(view,'Esame teorico');await press(view,'Inizia test teorico');
+ assert.ok(text(view.root).includes('Invia risposta teorica'));
+ assert.equal(JSON.parse(h.values.get(theoryKey)).session.ids.length,15);
+});

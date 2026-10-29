@@ -6,6 +6,7 @@ import ts from 'typescript';
 import React from 'react';
 import {create,act} from 'react-test-renderer';
 import * as controller from '../lib/beta-controller.mjs';
+import * as policy from '../lib/beta-access.mjs';
 globalThis.IS_REACT_ACT_ENVIRONMENT=true;
 const require=createRequire(import.meta.url);
 function compile(file,modules){
@@ -20,7 +21,7 @@ test('mounted Android hook uses keys accepted by the installed SecureStore imple
  await assert.rejects(secure.getItemAsync('invalid:legacy'),/Invalid key/);
  const url='https://beta.example.test/',originalFetch=globalThis.fetch;
  globalThis.fetch=async request=>new Response(JSON.stringify(request.endsWith('/beta/logout')?{ok:true}:{active:true,grantId:'synthetic-device',serverNow:new Date().toISOString(),expiresAt:new Date(Date.now()+90*86400000).toISOString(),maxAgeSeconds:60,sessionToken:'s'.repeat(43)}),{headers:{'Content-Type':'application/json'}});
- const useBeta=compile(new URL('../hooks/useBetaAccess.ts',import.meta.url),{react:React,'react-native':{Platform:{OS:'android'},AppState:{addEventListener:()=>({remove(){}})}},'expo-constants':{expoConfig:{extra:{betaServiceUrl:url}}},'expo-secure-store':secure,'../lib/beta-controller.mjs':controller}).default;
+ const useBeta=compile(new URL('../hooks/useBetaAccess.ts',import.meta.url),{react:React,'react-native':{Platform:{OS:'android'},AppState:{addEventListener:()=>({remove(){}})}},'expo-constants':{expoConfig:{extra:{betaServiceUrl:url}}},'expo-secure-store':secure,'../lib/beta-controller.mjs':controller,'../lib/beta-access.mjs':policy}).default;
  let latest,view;function Fixture(){latest=useBeta();return null;}
  t.after(async()=>{if(view)await act(async()=>view.unmount());globalThis.fetch=originalFetch;});
  await act(async()=>{view=create(React.createElement(Fixture));});
