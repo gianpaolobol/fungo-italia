@@ -1,0 +1,139 @@
+{
+  "sourceCommit": "f16ddf79390d725a090f914c2b4d80757f5d2798",
+  "privateBuildRunId": 40967909521,
+  "privateBuildConclusion": "success",
+  "binaries": [
+    {
+      "verified": true,
+      "platform": "ios",
+      "version": "1.1.0",
+      "buildNumber": "27",
+      "easBuildId": "f69e3903-068b-4455-9e9c-c45c16ea68a9",
+      "sourceCommit": "f16ddf79390d725a090f914c2b4d80757f5d2798",
+      "sha256": "ba09c17d245575f7887acffbb92955ce794238b7380ec1dbd61a88cceb75ae2d",
+      "betaServiceUrl": "https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/",
+      "betaIOS": true,
+      "verifiedAt": "2026-10-29T22:50:43.233716+00:00",
+      "storeUploaded": false,
+      "scope": "Private compiled candidate; native workflow results must be checked separately"
+    },
+    {
+      "verified": true,
+      "platform": "android",
+      "version": "1.1.0",
+      "buildNumber": "8",
+      "easBuildId": "04c2f705-2c81-41c4-9a5d-9866d04687aa",
+      "sourceCommit": "f16ddf79390d725a090f914c2b4d80757f5d2798",
+      "sha256": "5ac7299aa8f357f0dd7895459523c20bbf28f9a501cb65ea15fbbd20d12fc6c5",
+      "betaServiceUrl": "https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/",
+      "betaIOS": null,
+      "verifiedAt": "2026-10-29T22:56:14.410823+00:00",
+      "storeUploaded": false,
+      "scope": "Private compiled candidate; native workflow results must be checked separately",
+      "uploadCertificateSha256": "B5:B8:BD:7E:2E:5C:AD:79:4F:B4:EE:F6:E1:E5:67:82:D0:45:77:87:2E:CA:6D:33:38:80:A0:39:2F:FE:D1:7A",
+      "sameCertificateAsPreviousPrivateBuild": true
+    }
+  ],
+  "nativeChecks": [
+    {
+      "runId": 40967909470,
+      "jobs": [
+        {
+          "id": 123776992146,
+          "name": "verify",
+          "status": "queued",
+          "conclusion": null
+        }
+      ]
+    },
+    {
+      "runId": 40967909459,
+      "jobs": [
+        {
+          "id": 123776992134,
+          "name": "verify-ipad",
+          "status": "queued",
+          "conclusion": null
+        },
+        {
+          "id": 123776992523,
+          "name": "verify-iphone",
+          "status": "queued",
+          "conclusion": null
+        }
+      ]
+    },
+    {
+      "runId": 40967909488,
+      "jobs": [
+        {
+          "id": 123776992341,
+          "name": "verify-ipad",
+          "status": "queued",
+          "conclusion": null
+        },
+        {
+          "id": 123776992727,
+          "name": "verify-iphone",
+          "status": "queued",
+          "conclusion": null
+        }
+      ]
+    },
+    {
+      "runId": 40967909609,
+      "jobs": [
+        {
+          "id": 123776992155,
+          "name": "qualify",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 123781296553,
+          "name": "smoke",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "id": 123781299527,
+          "name": "beta-smoke",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ],
+  "localTests": {
+    "passed": 378,
+    "failed": 0,
+    "skipped": 0,
+    "typecheck": "passed"
+  },
+  "scientificScope": {
+    "diagnosticOnly": true,
+    "appStoreReady": false,
+    "independentReleaseReady": false,
+    "unchanged": true
+  },
+  "storeUploaded": false,
+  "supersededPrivateCandidates": {
+    "sourceCommit": "a321b5fbf6b733599152a377a0cb2ceba073a476",
+    "iosBuild": "26",
+    "androidBuild": "7",
+    "reason": "Native UI test compiler compatibility errors, corrected in subsequent source; neither candidate uploaded",
+    "failedRunId": 40965810768,
+    "failedJobId": 123769893324
+  },
+  "workflowCleanup": {
+    "requestedCancel": [
+      40965815227
+    ],
+    "additionalCancelBlockedByAutoReview": [
+      40965814971,
+      40965815089,
+      40965810669
+    ],
+    "reason": "No sufficiently specific authorization to cancel those runs; no bypass attempted"
+  }
+}
