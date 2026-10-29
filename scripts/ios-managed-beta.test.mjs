@@ -17,7 +17,7 @@ test('iOS managed configuration grants access only with an explicitly configured
  assert.deepEqual(policy.resolveAccess('ios',false,true,true),{full:true,kind:'beta'});
  assert.deepEqual(policy.resolveAccess('ios',false,true,false),{full:false,kind:'demo'});
  assert.deepEqual(policy.resolveAccess('ios',false,false,true),{full:false,kind:'demo'});
- assert.deepEqual(policy.resolveAccess('ios',true,false,true),{full:true,kind:'subscription'});
+ assert.deepEqual(policy.resolveAccess('ios',true,false,true),{full:false,kind:'demo'});
  assert.deepEqual(policy.resolveAccess('web',false,true,true),{full:false,kind:'demo'});
 });
 test('iOS endpoint is opt-in and rejects credentials, query strings and unsupported platforms',()=>{

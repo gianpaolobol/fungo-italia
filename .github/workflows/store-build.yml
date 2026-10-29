@@ -1,5 +1,7 @@
 name: Private managed beta builds
 on:
+  push:
+    branches: [fix/beta-invitation-only-20261029]
   workflow_dispatch:
     inputs:
       platform:
@@ -40,7 +42,7 @@ jobs:
           retention-days: 30
   build:
     needs: qualify
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push'
     strategy:
       fail-fast: false
       matrix:
@@ -53,15 +55,15 @@ jobs:
       BUILD_PLATFORM: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
-        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+        if: github.event_name == 'push' || inputs.platform == 'all' || inputs.platform == matrix.platform
       - uses: actions/setup-node@v4
-        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+        if: github.event_name == 'push' || inputs.platform == 'all' || inputs.platform == matrix.platform
         with:
           node-version: '24.3.0'
       - run: npm ci
-        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+        if: github.event_name == 'push' || inputs.platform == 'all' || inputs.platform == matrix.platform
       - name: Build private signed candidate with existing credentials
-        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+        if: github.event_name == 'push' || inputs.platform == 'all' || inputs.platform == matrix.platform
         run: |
           test -n "$EXPO_TOKEN" || { echo '::error::Existing Expo authentication unavailable'; exit 1; }
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
@@ -79,7 +81,7 @@ jobs:
           mkdir -p artifacts/private-build
           npx eas-cli@24.8.0 build --platform "$BUILD_PLATFORM" --profile "$BUILD_PLATFORM-managed-beta" --non-interactive --freeze-credentials --wait --json > "artifacts/private-build/eas-$BUILD_PLATFORM.json"
       - uses: actions/upload-artifact@v4
-        if: always() && (inputs.platform == 'all' || inputs.platform == matrix.platform)
+        if: always() && (github.event_name == 'push' || inputs.platform == 'all' || inputs.platform == matrix.platform)
         with:
           name: Private-managed-beta-${{ matrix.platform }}
           path: artifacts/private-build/

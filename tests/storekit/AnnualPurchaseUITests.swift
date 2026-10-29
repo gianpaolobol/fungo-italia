@@ -210,6 +210,47 @@ final class AnnualPurchaseUITests: XCTestCase {
     try capture(app, "demo-03-aree")
     print("AGARICUS_DEMO_UI Free profiles, four-case test and Areas/habitats available without purchase")
   }
+  @MainActor func testManagedBetaRequiresInvitationWithExistingPurchase() async throws {
+    continueAfterFailure = false
+    let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
+    let session = try SKTestSession(contentsOf: url)
+    session.resetToDefaultState(); session.disableDialogs = true; session.timeRate = .realTime
+    session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
+    guard session.storefront == "ITA" else { XCTFail("Local StoreKit fixture required"); return }
+    let purchase = try await session.buyProduct(identifier: productID, options: [])
+    XCTAssertEqual(purchase.productIdentifier, productID)
+    let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
+    defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
+    for launch in 1...2 {
+      let notification = "it.fungoitalia.test.entitlement." + UUID().uuidString
+      let verified = XCTDarwinNotificationExpectation(notificationName: notification)
+      app.launchEnvironment["FUNGO_STOREKIT_VERIFIED_NOTIFICATION"] = notification
+      app.launch()
+      let received = await XCTWaiter.fulfillment(of: [verified], timeout: 120)
+      guard received == .completed else {
+        diagnose(app, session)
+        XCTFail("App must finish its actual verified active entitlement lookup before testing invitation restrictions")
+        return
+      }
+      print("INVITATION_ONLY_ENTITLEMENT_CONFIRMED launch=" + String(launch))
+      await tap(app, "Esame")
+      await require(element(app, "Inizia 4 casi"))
+      XCTAssertFalse(element(app, "Inizia 15 casi").exists, "Existing annual transaction cannot unlock the managed beta")
+      await tap(app, "Abbonamento")
+      await require(element(app, "Accesso completo su invito"))
+      let field = app.descendants(matching: .any).matching(identifier: "beta-invite-code").firstMatch
+      await require(field)
+      let activate = app.descendants(matching: .any).matching(identifier: "beta-redeem").firstMatch
+      await require(activate)
+      XCTAssertFalse(activate.isEnabled, "An empty invitation code must never activate full access")
+      XCTAssertFalse(element(app, "Abbonamento attivo").exists)
+      XCTAssertFalse(element(app, "Ripristina acquisti").exists)
+      XCTAssertFalse(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "Abbonati · ")).firstMatch.exists)
+      try capture(app, "invitation-only-" + String(launch))
+      app.terminate()
+    }
+    print("INVITATION_ONLY_UI Existing annual purchase blocked on two cold launches; empty code disabled; no purchase or restore bypass")
+  }
   @MainActor func testAnnualPurchaseRestoreAccessRefundAndExpiry() async throws {
     continueAfterFailure = false
     let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
