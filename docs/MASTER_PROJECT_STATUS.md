@@ -1,3 +1,21 @@
+## Ripresa operativa iOS27 — 30 ottobre 2026
+
+Android8 è pubblicata nel test interno (ricevuta e schermata nella sezione seguente). Sul sorgente applicativo f16ddf79390d725a090f914c2b4d80757f5d2798 il gate StoreKit nativo40967909470/job123776992146 è SUCCESS e la demo iPad40967909598/job123776992223 è SUCCESS. UI acquisti e altre prove ancora pendenti.
+
+Il gate specifico dell’invito iPad40967909459/job123776992134 ha compilato ma è FAILURE: errore «unknown» in4.430s prima del primo avvio dell’app, durante la preparazione della fixture. Non è attestazione di bypass o errore applicativo. PR143/operazione d799c70f151a48fe33b6783014cf5566d1491f30 avvia diagnosi a fasi e verifica l’ipotesi minima di avviare l’app prima dell’acquisto locale; conserva productID reale, due avvii a freddo con entitlement verificato, codice vuoto disabilitato e assenza di bypass. Run40973299341 avviato, attualmente in coda; nessun successo ancora attestato.
+
+Checkout app immutato f16 e runner distinto nel progetto generato, fixture canonica preservata e hash/fonti separati. Nessuna nuova IPA/EAS, nessun invio iOS27 a TestFlight/OTA/AppStore e nessuna approvazione scientifica nuova. La distribuzione iOS27 resta bloccata dagli esiti nativi pendenti; non dichiararla disponibile.
+
+## Android8 pubblicata nel test interno — 30 ottobre 2026
+
+Google Play Console conferma release `Beta su invito - codice personale (8)`, versione1.1.0 codice8, stato «Disponibile per i tester interni». Pubblicazione effettuata nel canale interno esistente, senza cambiare tester o inviare nuove email. AAB verificato sul sorgente f16ddf79390d725a090f914c2b4d80757f5d2798; checksum5ac7299aa8f357f0dd7895459523c20bbf28f9a501cb65ea15fbbd20d12fc6c5 e certificato di upload già confrontato. Nessuna distribuzione di produzione o pubblicazione AppStore.
+
+Corretto il solo smoke che cercava il vecchio titolo commerciale: PR141, operazione e24ed196c4667d66d89c5639d3c41cd051d21487, run40971467191/job123788987483 SUCCESS. Riutilizza l’esatto APK diagnostico f16 già compilato, con ID/dimensione/SHA256 dell’archivio verificati prima dell’estrazione. La ricevuta distingue sorgente applicativo e sorgente della verifica. Passati offline, ricerca/dettaglio Agaricus, preferiti dopo riavvio, Aree gratuite, esame limitato, codice presente, attivazione vuota disabilitata, assenza di acquisto/ripristino alternativo. Il precedente run40967909609 resta FAILURE; non viene rinominato PASS. Non è nuova prova di riscatto/revoca nativa contro server reale (beta-smoke sintetico originale resta saltato).
+
+Google ha accettato bundle8; anteprima senza riduzione dei dispositivi supportati e pubblicazione confermata nel riepilogo del canale. La disponibilità sui telefoni può richiedere propagazione. Ricevuta `docs/release-receipts/android8-play-internal-20261030.json`; schermata `docs/evidence/android8-play-20261030/published.jpg`.
+
+I test iOS27 sul sorgente f16 sono ancora in corso/in coda: demo iPad già SUCCESS, gate invito iPad e StoreKit nativo in esecuzione, altre prove pendenti. iOS27 non inviata a TestFlight; iOS25 resta l’ultima build caricata. Nessuna attestazione indipendente scientifica aggiunta e nessun main merge.
+
 ## Candidati compilati e verificati — 29 ottobre 2026: iOS27 / Android8
 
 Richiesta del titolare eseguita per la compilazione delle nuove build con accesso completo esclusivamente da codice personale dell’invito. Sorgente definitivo `f16ddf79390d725a090f914c2b4d80757f5d2798` (PR138 + correzione runner nella PR139). Workflow privato40967909521 concluso SUCCESS per qualifica e compilazione iOS/Android.
