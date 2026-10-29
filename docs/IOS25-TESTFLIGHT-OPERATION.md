@@ -9,3 +9,5 @@ Audit iniziale40958642676: nessun invio EAS recente e nessuna build25 su Apple. 
 La firma della compilazione è attestata da EAS. La procedura confronta i byte IPA già verificati con SHA256a4bcc701bd2d0dafff0ed0d175a7792cf0696326090075e7f103a3a31de053dc e controlla sorgente, versione25, bundleID e configurazione beta incorporati. L’effettiva verifica crittografica Apple è attestata solo dopo processingState VALID. Nessuna disponibilità TestFlight è affermata prima della conferma Apple e dell’assegnazione al solo gruppo interno f642807c-e4b2-43d4-a32a-d9fd087fdfe3.
 
 Verifiche della procedura: tre test negativi/positivi RED→GREEN; sintassi Node, YAML e tutti i blocchi shell PASS; revisione tecnica indipendente senza rilievi bloccanti. Corretta la distinzione fra checksum atteso nel preflight e verifica realmente avvenuta dei byte.
+
+Primo tentativo40959815079 fermato prima dell’upload: guardia evento compilazione errata (workflow_dispatch reale contro push atteso). Correzione verificata RED→GREEN: compilazione manuale accettata soltanto per il run fissato, prove native/UI ancora push; tre test PASS. Nessun invio EAS/Apple eseguito dal tentativo fallito.

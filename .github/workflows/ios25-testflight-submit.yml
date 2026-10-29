@@ -1,7 +1,7 @@
 name: Deliver existing iOS25 to owner TestFlight
 on:
   push:
-    branches: [feat/ios25-testflight-20261029]
+    branches: [fix/ios25-submit-proof-event-20261029]
 permissions:
   contents: read
   actions: read
