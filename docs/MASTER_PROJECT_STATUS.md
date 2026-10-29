@@ -1,3 +1,18 @@
+## Candidati compilati e verificati — 29 ottobre 2026: iOS27 / Android8
+
+Richiesta del titolare eseguita per la compilazione delle nuove build con accesso completo esclusivamente da codice personale dell’invito. Sorgente definitivo `f16ddf79390d725a090f914c2b4d80757f5d2798` (PR138 + correzione runner nella PR139). Workflow privato40967909521 concluso SUCCESS per qualifica e compilazione iOS/Android.
+
+- iOS1.1.0(27), EAS `f69e3903-068b-4455-9e9c-c45c16ea68a9`: IPA scaricata e verificata (bundle/versione/build/sorgente pulito/endpoint/betaIOS), SHA256 `ba09c17d245575f7887acffbb92955ce794238b7380ec1dbd61a88cceb75ae2d`.
+- Android1.1.0(8), EAS `04c2f705-2c81-41c4-9a5d-9866d04687aa`: AAB scaricato e verificato (sorgente pulito/endpoint/configurazione), SHA256 `5ac7299aa8f357f0dd7895459523c20bbf28f9a501cb65ea15fbbd20d12fc6c5`; certificato di upload identico al precedente candidato verificato.
+
+378 test Node PASS0fail0skip, TypeScript PASS e qualifica remota SUCCESS. Le prove native Apple aggiornate sono ancora in coda; la qualifica diagnostica Android è riuscita, smoke da controllare e beta-smoke sintetico saltato. Non sono prove native riuscite. Nessun nuovo invio a TestFlight/GooglePlay, nessun OTA, merge main, pubblicazione AppStore o certificazione scientifica. Restano iOS25 nel gruppo interno del titolare e Android5 su Play.
+
+I precedenti candidati privati iOS26/Android7 erano compilati e verificati su a321, ma il nuovo test UI non compilava (API da iOS17 e proprietà Transaction.productID). La PR139 corregge il solo runner e produce nuovamente binari/prove sullo stesso SHA aggiornato; non rinomina il precedente fallimento. Nel test ogni avvio deve attendere l’entitlement Apple reale prima di verificare il blocco senza invito. Il modulo Apple mantiene il solo segnale diagnostico osservativo nel simulatore, escluso dai dispositivi.
+
+Una cancellazione di controllo duplicato richiesta dall’interfaccia GitHub (40965815227) è stata accettata. L’auto-review ha rifiutato l’ulteriore cancellazione di tre run perché non coperta da autorizzazione sufficientemente specifica: nessun aggiramento, gli altri run possono terminare. Questo non blocca le compilazioni private.
+
+Ricevuta: `docs/release-receipts/managed-invitation-builds-20261029.json`. Conferma visiva: `docs/evidence/invitation-builds-20261029/eas-builds.jpg`. L’anomalia Aree iPhone della25, la distribuzione esterna e la sincronizzazione email→Play restano distinte e aperte.
+
 ## Beta solo con codice personale — 29 ottobre 2026
 
 Su richiesta esplicita del titolare dopo la prova della iOS25, candidato `fix/beta-invitation-only-20261029` sopra il sorgente effettivo c524b695d51c5e21eb488c564089c0206dd5caad. La25 effettivamente consegnata è1.1.0(25), Apple VALID/IN_BETA_TESTING nel solo gruppo interno del titolare; ricevuta nella PR137. Non viene modificata retroattivamente.
