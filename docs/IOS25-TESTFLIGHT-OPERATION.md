@@ -1,0 +1,11 @@
+# Invio della build iOS25 esistente — 29 ottobre2026
+
+Richiesta del titolare: «per iOS pubblica la25 su TestFlight», seguita da «Procedi» dopo la comunicazione del controllo separato iPhone fallito e dei timeout del browser. Invio del solo binario1.1.0(25), EAS5e4a1bf3-cb88-44af-a642-f9982532e619, sorgentec524b695d51c5e21eb488c564089c0206dd5caad. Nessuna ricompilazione, merge main, OTA, App Store Review o platea esterna.
+
+Ruling operativo: la medesima prova testAFreeAgaricusDemoWithoutPurchase è passata nella suite completa UI40943327845 sia iPhone sia iPad sullo stesso SHA, insieme ad acquisto/ripristino/rimborso/scadenza. Il run StoreKit40943327350 è positivo. Il controllo demo separato40943327699 rimane NEGATIVO: prima mappa online non disponibile, poi controllo Aree assente dopo riavvio. Non è dichiarato corretto né superato. La prosecuzione specifica del titolare viene applicata al solo collaudo diagnostico interno già autorizzato, con questa limitazione conservata nella ricevuta; non cambia approvazioni scientifiche o gate della pipeline ordinaria main/web.
+
+Audit iniziale40958642676: nessun invio EAS recente e nessuna build25 su Apple. Il comando browser EAS è andato in timeout e non ha registrato un invio. Procedura alternativa con credenziali EAS/Apple preesistenti: metadati EAS esatti, prove native e casi UI effettivamente passati, hash/receipt dell’IPA, distinta scientifica immutata, platea owner-only e doppio controllo anti-duplicazione. Le chiavi sono mascherate, temporanee e rimosse; non vengono incluse negli artefatti.
+
+La firma della compilazione è attestata da EAS. La procedura confronta i byte IPA già verificati con SHA256a4bcc701bd2d0dafff0ed0d175a7792cf0696326090075e7f103a3a31de053dc e controlla sorgente, versione25, bundleID e configurazione beta incorporati. L’effettiva verifica crittografica Apple è attestata solo dopo processingState VALID. Nessuna disponibilità TestFlight è affermata prima della conferma Apple e dell’assegnazione al solo gruppo interno f642807c-e4b2-43d4-a32a-d9fd087fdfe3.
+
+Verifiche della procedura: tre test negativi/positivi RED→GREEN; sintassi Node, YAML e tutti i blocchi shell PASS; revisione tecnica indipendente senza rilievi bloccanti. Corretta la distinzione fra checksum atteso nel preflight e verifica realmente avvenuta dei byte.

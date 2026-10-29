@@ -1,0 +1,89 @@
+name: Deliver existing iOS25 to owner TestFlight
+on:
+  push:
+    branches: [feat/ios25-testflight-20261029]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: submit-ios-testflight
+  cancel-in-progress: false
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c524b695d51c5e21eb488c564089c0206dd5caad
+          path: app
+      - uses: actions/checkout@v4
+        with:
+          path: operation
+          sparse-checkout: |
+            scripts/ios25-operation
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+      - run: npm ci
+        working-directory: app
+      - name: Verify negative cases for exact binary and source checks
+        run: node --test operation/scripts/ios25-operation/ios25-guard.test.mjs
+      - name: Recheck exact existing build and duplicate delivery protection
+        working-directory: app
+        run: |
+          npx eas-cli@24.8.0 build:view 5e4a1bf3-cb88-44af-a642-f9982532e619 --json > "$RUNNER_TEMP/ios25-eas-build.json"
+          node ../operation/scripts/ios25-operation/ios25-preflight.mjs
+      - name: Verify the original IPA bytes and embedded source before upload
+        working-directory: app
+        run: |
+          curl --fail --location --silent --show-error --max-time 180 'https://expo.dev/artifacts/eas/PSl29YFS8T7kMuN3XFVFzqjJWcyNvAduLijjYANfQ24.ipa' --output "$RUNNER_TEMP/ios25.ipa"
+          python3 - <<'PY'
+          import hashlib,json,os,plistlib,zipfile,datetime
+          p=os.environ['RUNNER_TEMP']+'/ios25.ipa'
+          with open(p,'rb') as f: assert hashlib.file_digest(f,'sha256').hexdigest()=='a4bcc701bd2d0dafff0ed0d175a7792cf0696326090075e7f103a3a31de053dc'
+          with zipfile.ZipFile(p) as z:
+           paths=[n for n in z.namelist() if n.endswith('/EXConstants.bundle/app.config')]
+           assert len(paths)==1
+           c=json.loads(z.read(paths[0])); assert c['extra']['release']=={'sourceCommit':'c524b695d51c5e21eb488c564089c0206dd5caad','version':'1.1.0','dirty':False}
+           assert c['extra']['betaIOS'] is True
+           assert c['extra']['betaServiceUrl']=='https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/'
+           paths=[n for n in z.namelist() if n.startswith('Payload/') and n.count('/')==2 and n.endswith('/Info.plist')]
+           assert len(paths)==1
+           info=plistlib.loads(z.read(paths[0]));assert info['CFBundleIdentifier']=='it.fungoitalia.app' and info['CFBundleVersion']=='25' and info['CFBundleShortVersionString']=='1.1.0'
+          proof={'verified':True,'sourceCommit':'c524b695d51c5e21eb488c564089c0206dd5caad','buildNumber':'25','sha256':'a4bcc701bd2d0dafff0ed0d175a7792cf0696326090075e7f103a3a31de053dc','verifiedAt':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+          with open(os.environ['RUNNER_TEMP']+'/ios25-binary-proof.json','w') as f: json.dump(proof,f)
+          print('Original signed IPA25 bytes, beta configuration and exact source verified')
+          PY
+      - name: Prepare existing authorized Apple key temporarily
+        working-directory: app
+        run: node --input-type=module -e "import {prepareSubmitCredentials} from './scripts/app-store-connect.mjs';await prepareSubmitCredentials();"
+      - name: Upload only the existing iOS25 build to Apple
+        working-directory: app
+        run: |
+          node ../operation/scripts/ios25-operation/ios25-preflight.mjs --before-upload
+          npx eas-cli@24.8.0 submit --platform ios --profile production --id 5e4a1bf3-cb88-44af-a642-f9982532e619 --non-interactive --wait
+      - name: Confirm Apple processing and the pre-existing owner-only TestFlight group
+        working-directory: app
+        run: node scripts/verify-consolidated-testflight.mjs
+      - name: Remove temporary key material
+        if: always()
+        run: |
+          node --input-type=module <<'JS'
+          import {rm} from 'node:fs/promises';
+          await rm(process.env.RUNNER_TEMP+'/fungo-asc-submit.p8',{force:true});
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: iOS25-TestFlight-owner-delivery-proof
+          path: |
+            ${{ runner.temp }}/consolidated-build.json
+            ${{ runner.temp }}/ios25-binary-proof.json
+            app/store-evidence/consolidated-testflight.json
+          if-no-files-found: warn
+          retention-days: 30
