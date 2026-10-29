@@ -1,3 +1,7 @@
+## iOS25 disponibile nel TestFlight interno — 29 ottobre 2026
+
+Apple conferma iOS1.1.0(25) VALID e IN_BETA_TESTING, buildID `1ce58bd7-0065-40f5-b7a1-3ec88df48be2`, sorgente `c524b695d51c5e21eb488c564089c0206dd5caad`. Invio40960080895 e verifica effettiva40960584066 SUCCESS. Gruppo esclusivo interno del titolare `f642807c-e4b2-43d4-a32a-d9fd087fdfe3`; nessuna assegnazione individuale o distribuzione esterna, main/web/Android invariati. Beta iOS gestita90giorni su invito configurata nel binario. Nessuna pubblicazione App Store o nuova approvazione scientifica. Il controllo demo separato fallito rimane anomalia aperta; la stessa prova è passata nella suite UI completa su iPhone/iPad. [Consegna e ricevuta](IOS25-TESTFLIGHT-DELIVERED.md).
+
 ## Nuove build realmente compilate — 29 ottobre 2026
 
 iOS1.1.0(25) compilata su EAS e IPA verificata: sorgente `c524b695d51c5e21eb488c564089c0206dd5caad`, beta iOS configurata e canale dedicato. Android1.1.0(6) compilata e AAB verificato sullo stesso sorgente. Native Android qualifica/smoke, StoreKit e UI acquisti iPhone/iPad PASS sullo stesso SHA. Il controllo demo separato ha fallito la mappa online su iPhone; la stessa prova è passata nella UI acquisti e una sola ripetizione del job separato è in corso. Nessun upload TestFlight/Play né consegna ai tester. [Ricevute, prove e limiti](MANAGED-BETA-BUILDS-2026-10-29.md).
