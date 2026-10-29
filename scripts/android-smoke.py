@@ -76,7 +76,7 @@ def main():
     launch()
     tap('Studio')
     wait_text('Studio e atlante')
-    wait_text('Demo gratuita · Agaricus')
+    assert 'Demo gratuita · Agaricus' not in text_of(dump()), 'Native study must not expose a free-demo button'
     tap('Cerca nome scientifico, comune o sinonimo')
     adb('shell','input','text','Agaricus')
     adb('shell','input','keyevent','KEYCODE_BACK')
@@ -102,7 +102,8 @@ def main():
     tap('Percorso')
     wait_text('Ciao')
     tap('Abbonamento')
-    wait_text('Fungo Italia completo')
+    access=wait_text('Fungo Italia completo')
+    assert 'Continua con l’anteprima gratuita' not in text_of(access), 'Native access must not expose a free-preview button'
     if os.environ.get('FUNGO_PLAY_BOOTSTRAP_SMOKE')=='1':
         purchase_screen=wait_text('Gli acquisti Google Play sono in preparazione.')
         screen_text=text_of(purchase_screen)
@@ -111,7 +112,7 @@ def main():
     launch()
     tap('Studio')
     wait_text('1 preferito')
-    wait_text('Demo gratuita · Agaricus')
+    assert 'Demo gratuita · Agaricus' not in text_of(dump()), 'Native study must not expose a free-demo button'
     os.makedirs('artifacts/smoke',exist_ok=True)
     with open('artifacts/smoke/android-offline.png','wb') as f:
         f.write(subprocess.check_output(['adb','exec-out','screencap','-p']))

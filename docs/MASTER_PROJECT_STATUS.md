@@ -1,3 +1,7 @@
+## Nuove build private — 29 ottobre 2026
+
+Il titolare ha chiesto di procedere con la nuova build. Preparato il ramo `feat/managed-beta-build-20261029`, sopra il sorgente candidato PR132. Il workflow `store-build.yml` su questo solo ramo compila i profili isolati `ios-managed-beta` e `android-managed-beta`, verifica sorgente/dati/test/dichiarazione scientifica e riusa le credenziali EAS esistenti. Non esegue submit, OTA o pubblicazione. Le tre verifiche native iOS e quella Android partono sullo stesso ramo; i test UI verificano ora l’assenza dei pulsanti rimossi. Nessuna nuova build o disponibilità ai tester ancora attestata: consultare gli esiti effettivi prima della consegna.
+
 ## Task del titolare — 29 ottobre 2026: beta iOS e sincronizzazione Play
 
 Candidato `feat/ios-managed-beta-20261029` derivato da PR131 Android, senza merge né distribuzione. iOS opt-in con endpoint remoto, concessione90giorni verificata, revoca e SecureStore; StoreKit indipendente e production/web invariati. Il pulsante teoria in demo spiega il requisito e apre l’accesso; completo apre la teoria. Asset invito multipiattaforma preparati nel repository, non pubblicati sul Site.

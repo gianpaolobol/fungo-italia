@@ -1,38 +1,87 @@
-name: Store production build
+name: Private managed beta builds
 on:
   workflow_dispatch:
     inputs:
       platform:
-        description: Platform to build
+        description: Platform to build privately; no store upload
         required: true
         type: choice
         options: [android, ios, all]
 permissions:
   contents: read
+concurrency:
+  group: private-managed-beta-build-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  build:
+  qualify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    env:
-      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-      EXPO_PROJECT_ID: ${{ vars.EXPO_PROJECT_ID }}
-      STORE_PLATFORM: ${{ inputs.platform || 'ios' }}
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '24.3.0'
       - run: npm ci
-      - name: Validate production source
+      - name: Verify exact source and unchanged reviewed content
         run: |
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           npm run prepare:data
+          git diff --exit-code
           npm run typecheck
-          npm run validate:release
-          node scripts/audit-toxicology-release.mjs --strict
-          node --test scripts/*.test.mjs
-      - name: Queue signed store build and App Store submit
+          node --test scripts/*.test.mjs lib/*.test.mjs server/beta/*.test.mjs
+          node scripts/internal-beta-science.mjs > "$RUNNER_TEMP/private-build-science.log"
+          curl --fail --silent --show-error 'https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/health' | node -e "let s='';process.stdin.on('data',x=>s+=x).on('end',()=>{if(JSON.parse(s).ready!==true)process.exit(1)})"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Private-managed-beta-source-proof
+          path: ${{ runner.temp }}/internal-beta-science.json
+          if-no-files-found: error
+          retention-days: 30
+  build:
+    needs: qualify
+    if: github.event_name == 'workflow_dispatch'
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ios, android]
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EXPO_PROJECT_ID: b65af584-739f-4ef0-8fe5-6c0ba692c088
+      BUILD_PLATFORM: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v4
+        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+      - uses: actions/setup-node@v4
+        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+        with:
+          node-version: '24.3.0'
+      - run: npm ci
+        if: inputs.platform == 'all' || inputs.platform == matrix.platform
+      - name: Build private signed candidate with existing credentials
+        if: inputs.platform == 'all' || inputs.platform == matrix.platform
         run: |
-          test -n "$EXPO_TOKEN"
-          test -n "$EXPO_PROJECT_ID"
-          echo "Queueing App Store build with Studio Micologia logo for $GITHUB_SHA"
-          npx eas-cli@24.8.0 build --platform "$STORE_PLATFORM" --profile production --auto-submit --non-interactive --no-wait
+          test -n "$EXPO_TOKEN" || { echo '::error::Existing Expo authentication unavailable'; exit 1; }
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          git diff --exit-code
+          node --input-type=module <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const source=process.env.GITHUB_SHA,platform=process.env.BUILD_PLATFORM;
+          if(!/^[a-f0-9]{40}$/.test(source)||!['ios','android'].includes(platform))throw Error('Exact source and platform required');
+          const config=JSON.parse(readFileSync('eas.json','utf8'));
+          const profile=platform+'-managed-beta';
+          if(!config.build[profile])throw Error('Isolated beta profile missing');
+          config.build[profile].env={...config.build[profile].env,GITHUB_SHA:source,FUNGO_VERIFIED_SOURCE:source};
+          writeFileSync('eas.json',JSON.stringify(config,null,2)+'\n');
+          JS
+          mkdir -p artifacts/private-build
+          npx eas-cli@24.8.0 build --platform "$BUILD_PLATFORM" --profile "$BUILD_PLATFORM-managed-beta" --non-interactive --freeze-credentials --wait --json > "artifacts/private-build/eas-$BUILD_PLATFORM.json"
+      - uses: actions/upload-artifact@v4
+        if: always() && (inputs.platform == 'all' || inputs.platform == matrix.platform)
+        with:
+          name: Private-managed-beta-${{ matrix.platform }}
+          path: artifacts/private-build/
+          if-no-files-found: warn
+          retention-days: 14
