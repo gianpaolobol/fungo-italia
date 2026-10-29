@@ -1,3 +1,13 @@
+## Beta solo con codice personale — 29 ottobre 2026
+
+Su richiesta esplicita del titolare dopo la prova della iOS25, candidato `fix/beta-invitation-only-20261029` sopra il sorgente effettivo c524b695d51c5e21eb488c564089c0206dd5caad. La25 effettivamente consegnata è1.1.0(25), Apple VALID/IN_BETA_TESTING nel solo gruppo interno del titolare; ricevuta nella PR137. Non viene modificata retroattivamente.
+
+Le build beta gestite ora ignorano l’entitlement StoreKit/Play ai fini dello sblocco: serve una concessione beta attiva verificata dal server, ottenuta con codice personale. Il link nativo apre il modulo senza riscattare il codice; credenziali già attivate sono riverificate al riavvio. Revoca, scadenza o mancata verifica chiudono il completo anche con abbonamento ancora attivo. Schermata beta senza acquisto/ripristino, con link legali. La normale configurazione commerciale resta distinta.
+
+Prove locali prima della nuova qualifica nativa:378Node PASS0fail0skip, TypeScript PASS, prepare:data senza drift scientifico, gate interno del titolare PASS con limiti indipendenti invariati. RED osservato per bypass da abbonamento e riscatto automatico del link, poi GREEN. La nuova prova UI iPhone/iPad predispone un vero acquisto StoreKit locale prima dell’avvio e pretende che l’app resti limitata su due avvii e rifiuti il codice vuoto. Non è ancora una prova nativa superata né un nuovo binario distribuito.
+
+La qualifica nativa acquisti ordinaria usa il profilo commerciale e conserva la prova di acquisto/ripristino/rimborso/scadenza; una nuova qualifica separata usa la configurazione beta reale. Nessuna modifica della revisione scientifica, nessun App Store/public/OTA. Android Play live resta5; la6 precedente è privata. Anomalia Aree iPhone della25 ancora aperta. Sincronizzazione email→Play e platea esterna TestFlight non risolte da questa modifica.
+
 ## Nuove build private — 29 ottobre 2026
 
 Il titolare ha chiesto di procedere con la nuova build. Preparato il ramo `feat/managed-beta-build-20261029`, sopra il sorgente candidato PR132. Il workflow `store-build.yml` su questo solo ramo compila i profili isolati `ios-managed-beta` e `android-managed-beta`, verifica sorgente/dati/test/dichiarazione scientifica e riusa le credenziali EAS esistenti. Non esegue submit, OTA o pubblicazione. Le tre verifiche native iOS e quella Android partono sullo stesso ramo; i test UI verificano ora l’assenza dei pulsanti rimossi. Nessuna nuova build o disponibilità ai tester ancora attestata: consultare gli esiti effettivi prima della consegna.

@@ -3,7 +3,7 @@ import {ActivityIndicator,Linking,Platform,Pressable,ScrollView,StyleSheet,Text,
 export type SubscriptionProduct={id:string;localizedPrice:string;subscriptionPeriod:{unit:string;value:number}};
 export type SubscriptionGateProps={
  product:SubscriptionProduct|null;active:boolean;checking:boolean;busy:boolean;purchaseReady:boolean;
- footer?:React.ReactNode;accessActive?:boolean;supported:boolean;expiresAt:string|null;error:string;privacyUrl:string;
+ footer?:React.ReactNode;accessActive?:boolean;invitationOnly?:boolean;supported:boolean;expiresAt:string|null;error:string;privacyUrl:string;
  onPurchase:()=>Promise<void>;onRestore:()=>Promise<void>;onRetry:()=>Promise<void>;onPreview:()=>void;
 };
 import {subscriptionStore} from '../lib/subscriptionStore';
@@ -16,6 +16,7 @@ export default function SubscriptionGate(p:SubscriptionGateProps){
  async function run(fn:()=>Promise<void>){console.info('STOREKIT_UI gate press received',JSON.stringify({locked:lock.current,busy:p.busy,checking:p.checking,purchaseReady:p.purchaseReady,active:p.active}));if(lock.current||p.busy){console.info('STOREKIT_UI gate blocked');return;}lock.current=true;setRunning(true);setMessage('');try{await fn();}catch{setMessage('Operazione non completata. Riprova.');}finally{lock.current=false;setRunning(false);}}
  async function open(url:string){try{await Linking.openURL(url);}catch{setMessage('Collegamento non aperto. Verifica la connessione.');}}
  const button=(label:string,fn:()=>void,primary=false,off=false)=><Pressable accessibilityRole="button" accessibilityState={{disabled:off}} disabled={off} onPress={fn} style={[primary?s.primary:s.secondary,off&&s.disabled]}><Text style={primary?s.primaryText:s.secondaryText}>{label}</Text></Pressable>;
+ if(p.invitationOnly)return <ScrollView contentContainerStyle={s.page}><Text accessibilityRole="header" style={s.title}>Accesso completo su invito</Text>{p.accessActive&&button('Apri l’atlante',p.onPreview)}{p.footer}<View style={s.links}><Pressable accessibilityRole="link" style={s.link} onPress={()=>void open(p.privacyUrl)}><Text style={s.linkText}>Privacy</Text></Pressable><Pressable accessibilityRole="link" style={s.link} onPress={()=>void open(terms)}><Text style={s.linkText}>Condizioni d’uso</Text></Pressable></View></ScrollView>;
  return <ScrollView contentContainerStyle={s.page}>
   <Text accessibilityRole="header" style={s.title}>Fungo Italia completo</Text>
   <Text style={s.body}>L’atlante completo e gli esercizi per il tuo studio micologico. Include gli aggiornamenti pubblicati durante l’abbonamento.</Text>

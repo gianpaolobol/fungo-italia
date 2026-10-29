@@ -1,6 +1,7 @@
 import ExpoModulesCore
 import StoreKit
 import OSLog
+import CoreFoundation
 import UIKit
 
 public final class FungoSubscriptionModule: Module {
@@ -82,6 +83,14 @@ public final class FungoSubscriptionModule: Module {
     let state = await Self.verifiedEntitlement()
     let active = state["active"] as? Bool ?? false
     logger.notice("Current entitlement lookup returned active=\(active, privacy: .public)")
+    #if targetEnvironment(simulator)
+    // Observation only: the native UI regression waits for an actual verified
+    // annual entitlement. No synthetic access and no effect in device builds.
+    if active, let name = ProcessInfo.processInfo.environment["FUNGO_STOREKIT_VERIFIED_NOTIFICATION"],
+       name.hasPrefix("it.fungoitalia.test.entitlement."), name.count < 128 {
+      CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(), CFNotificationName(rawValue: name as CFString), nil, nil, true)
+    }
+    #endif
     return state
   }
   @MainActor public static func verifiedEntitlement() async -> [String: Any] {

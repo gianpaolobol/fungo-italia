@@ -1,7 +1,7 @@
 name: Android managed beta candidate
 on:
   push:
-    branches: [feat/android-managed-beta-20261028, feat/managed-beta-build-20261029]
+    branches: [feat/android-managed-beta-20261028, feat/managed-beta-build-20261029, fix/beta-invitation-only-20261029]
   workflow_dispatch:
     inputs:
       build_store:
