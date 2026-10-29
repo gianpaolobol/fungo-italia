@@ -1,0 +1,58 @@
+name: Confirm actual iOS25 TestFlight availability
+on:
+  push:
+    branches: [audit/ios25-testflight-availability-20261029]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  confirm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: c524b695d51c5e21eb488c564089c0206dd5caad
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.3.0'
+      - name: Confirm Apple actual beta state without submitting again
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {writeFile,mkdir} from 'node:fs/promises';
+          import {createAppleApi} from './scripts/app-store-connect.mjs';
+          import {confirmBetaState} from './scripts/release-parity.mjs';
+          const SOURCE='c524b695d51c5e21eb488c564089c0206dd5caad',GROUP='f642807c-e4b2-43d4-a32a-d9fd087fdfe3';
+          let run;
+          for(let i=0;i<60;i++){
+           const response=await fetch('https://api.github.com/repos/gianpaolobol/fungo-italia/actions/runs/40960080895',{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'},signal:AbortSignal.timeout(45000)});
+           assert(response.ok);run=await response.json();assert.equal(run.head_sha,'724f6e0d39edb89a7c8c439c749ac3a6d81d0f98');
+           if(run.status==='completed')break;
+           console.log('Waiting for original iOS25 upload confirmation');await new Promise(r=>setTimeout(r,20000));
+          }
+          assert(run.status==='completed'&&run.conclusion==='success','Original delivery must succeed before availability is claimed');
+          let api=await createAppleApi(),receipt;
+          for(let i=0;i<45;i++){
+           if(i===25)api=await createAppleApi();
+           const r=await api('/v1/builds?filter[app]=6821140326&filter[version]=25&include=preReleaseVersion&limit=10');assert(r.ok&&!r.links?.next);
+           const rows=r.data.filter(b=>r.included?.some(v=>v.id===b.relationships.preReleaseVersion?.data?.id&&v.attributes.version==='1.1.0'));
+           assert.equal(rows.length,1,'Exactly one iOS1.1.0(25) required');const b=rows[0];assert.equal(b.attributes.processingState,'VALID');assert.equal(b.attributes.expired,false);
+           try{receipt=await confirmBetaState({sourceCommit:SOURCE,version:'1.1.0',buildNumber:'25',appleBuildId:b.id,processingState:'VALID',easBuildId:'5e4a1bf3-cb88-44af-a642-f9982532e619',ipaSha256:'a4bcc701bd2d0dafff0ed0d175a7792cf0696326090075e7f103a3a31de053dc',diagnosticOnly:true,testFlightOnly:true,appStoreReady:false,producerRunId:40960080895,standaloneDemoFailureOpen:true},api);break;}catch(error){if(i===44)throw error;console.log('Waiting for actual internal TestFlight availability');await new Promise(r=>setTimeout(r,20000));}
+          }
+          assert(receipt?.internalBuildState==='IN_BETA_TESTING');
+          const groups=await api('/v1/builds/'+receipt.appleBuildId+'?include=betaGroups'),individual=await api('/v1/builds/'+receipt.appleBuildId+'/individualTesters?limit=200');
+          const linkage=groups.data?.relationships?.betaGroups;assert(groups.ok&&Array.isArray(linkage?.data)&&!linkage.links?.next);assert(linkage.data.length===1&&linkage.data[0].id===GROUP);assert(individual.ok&&!individual.links?.next&&individual.data?.length===0);
+          receipt.internalGroupIds=[GROUP];receipt.verifiedAt=new Date().toISOString();
+          await mkdir('store-evidence',{recursive:true});await writeFile('store-evidence/ios25-actual-testflight.json',JSON.stringify(receipt,null,2)+'\n');console.log('IOS25_ACTUAL_TESTFLIGHT_CONFIRMED '+JSON.stringify(receipt));
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: iOS25-actual-TestFlight-availability
+          path: store-evidence/ios25-actual-testflight.json
+          if-no-files-found: warn
+          retention-days: 30
