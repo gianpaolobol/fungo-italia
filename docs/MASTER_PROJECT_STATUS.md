@@ -1,3 +1,7 @@
+## Nuove build realmente compilate — 29 ottobre 2026
+
+iOS1.1.0(25) compilata su EAS e IPA verificata: sorgente `c524b695d51c5e21eb488c564089c0206dd5caad`, beta iOS configurata e canale dedicato. Android1.1.0(6) compilata e AAB verificato sullo stesso sorgente. Native Android qualifica/smoke, StoreKit e UI acquisti iPhone/iPad PASS sullo stesso SHA. Il controllo demo separato ha fallito la mappa online su iPhone; la stessa prova è passata nella UI acquisti e una sola ripetizione del job separato è in corso. Nessun upload TestFlight/Play né consegna ai tester. [Ricevute, prove e limiti](MANAGED-BETA-BUILDS-2026-10-29.md).
+
 ## Nuove build private — 29 ottobre 2026
 
 Il titolare ha chiesto di procedere con la nuova build. Preparato il ramo `feat/managed-beta-build-20261029`, sopra il sorgente candidato PR132. Il workflow `store-build.yml` su questo solo ramo compila i profili isolati `ios-managed-beta` e `android-managed-beta`, verifica sorgente/dati/test/dichiarazione scientifica e riusa le credenziali EAS esistenti. Non esegue submit, OTA o pubblicazione. Le tre verifiche native iOS e quella Android partono sullo stesso ramo; i test UI verificano ora l’assenza dei pulsanti rimossi. Nessuna nuova build o disponibilità ai tester ancora attestata: consultare gli esiti effettivi prima della consegna.

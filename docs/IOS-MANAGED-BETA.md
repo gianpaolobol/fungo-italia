@@ -1,6 +1,8 @@
 # iOS — beta completa su invito, 90 giorni
 
-## Stato del 29 ottobre 2026
+Aggiornamento: iOS25 e Android6 realmente compilate e configurazione incorporata verificata sullo SHA c524b69. Nessuna consegna ai tester ancora attestata; ricontrollo demo iPhone in corso dopo errore mappa online. [Esiti delle build](MANAGED-BETA-BUILDS-2026-10-29.md).
+
+## Stato precedente alla compilazione del 29 ottobre 2026
 
 Implementazione candidata sul ramo `feat/ios-managed-beta-20261029`, derivato da Android PR131 (`2e0cb64`). Nessun merge main, build firmata, upload TestFlight, distribuzione esterna, App Store o OTA. Il portale ospitato non è stato ripubblicato: gli asset aggiornati in questo ramo sono soltanto sorgenti candidati.
 
