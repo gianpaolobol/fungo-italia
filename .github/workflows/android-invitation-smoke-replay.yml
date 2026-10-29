@@ -1,0 +1,102 @@
+name: Verify invitation-only Android smoke on pinned candidate
+on:
+  push:
+    branches: [fix/android-invitation-smoke-20261030]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: android-invitation-smoke-replay
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: f16ddf79390d725a090f914c2b4d80757f5d2798
+          path: app
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: operation
+          sparse-checkout: scripts/android-invitation-operation
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Pin app source and original compiled diagnostic artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(git -C app rev-parse HEAD)" = f16ddf79390d725a090f914c2b4d80757f5d2798
+          git -C app diff --exit-code
+          mkdir -p artifacts/smoke
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {writeFileSync} from 'node:fs';
+          const source='f16ddf79390d725a090f914c2b4d80757f5d2798';
+          async function get(path){const r=await fetch('https://api.github.com/repos/gianpaolobol/fungo-italia'+path,{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'}});assert(r.ok,'Original source evidence unavailable');return r.json();}
+          const run=await get('/actions/runs/40967909609');assert.equal(run.head_sha,source);
+          const job=await get('/actions/jobs/123776992155');assert.equal(job.run_id,40967909609);assert.equal(job.name,'qualify');assert.equal(job.conclusion,'success');
+          const artifact=await get('/actions/artifacts/12939671014');assert.equal(artifact.name,'Android-Play-Billing-diagnostic-NOT-FOR-PLAY');assert.equal(artifact.expired,false);assert.equal(artifact.workflow_run.id,40967909609);assert.equal(artifact.workflow_run.head_sha,source);
+          writeFileSync('artifacts/smoke/source-proof.json',JSON.stringify({sourceCommit:source,verificationCommit:process.env.GITHUB_SHA,originalRunId:run.id,originalRunConclusion:run.conclusion,compiledJobId:job.id,artifactId:artifact.id,artifactDigest:artifact.digest,artifactByteSize:artifact.size_in_bytes,diagnosticOnly:true,storeUploaded:false},null,2)+'\n');
+          JS
+      - name: Download pinned archive and require exact SHA256
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {readFileSync,createWriteStream,createReadStream,statSync,writeFileSync} from 'node:fs';
+          import {Readable} from 'node:stream';
+          import {pipeline} from 'node:stream/promises';
+          import {createHash} from 'node:crypto';
+          const receipt=JSON.parse(readFileSync('artifacts/smoke/source-proof.json'));
+          assert.match(receipt.artifactDigest,/^sha256:[a-f0-9]{64}$/);
+          const archive=process.env.RUNNER_TEMP+'/original-diagnostic.zip';
+          const r=await fetch('https://api.github.com/repos/gianpaolobol/fungo-italia/actions/artifacts/12939671014/zip',{headers:{Authorization:'Bearer '+process.env.GH_TOKEN,Accept:'application/vnd.github+json'}});
+          assert(r.ok&&r.body,'Exact diagnostic archive unavailable');
+          await pipeline(Readable.fromWeb(r.body),createWriteStream(archive));
+          assert.equal(statSync(archive).size,receipt.artifactByteSize);
+          const hash=createHash('sha256');for await(const chunk of createReadStream(archive))hash.update(chunk);
+          const digest='sha256:'+hash.digest('hex');assert.equal(digest,receipt.artifactDigest,'Original archive digest differs');
+          receipt.archiveDigestVerified=true;writeFileSync('artifacts/smoke/source-proof.json',JSON.stringify(receipt,null,2)+'\n');
+          JS
+          python3 - <<'PYEXTRACT'
+          import os,zipfile,pathlib
+          with zipfile.ZipFile(os.environ['RUNNER_TEMP']+'/original-diagnostic.zip') as z:
+            data=z.read('apk/release/app-release.apk')
+            assert len(data)>1000000
+            pathlib.Path('artifacts/android').mkdir(parents=True,exist_ok=True)
+            pathlib.Path('artifacts/android/app-release.apk').write_bytes(data)
+          PYEXTRACT
+      - name: Verify the test harness
+        run: python3 -m unittest discover -s operation/scripts/android-invitation-operation -p 'test_*.py'
+      - name: Stage exact existing APK
+        run: |
+          mkdir -p artifacts/android
+          sha256sum artifacts/android/app-release.apk > artifacts/smoke/apk-sha256.txt
+          sudo chmod 666 /dev/kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          target: google_apis
+          profile: pixel_6
+          disable-animations: true
+          script: FUNGO_MANAGED_BETA_SMOKE=1 python3 operation/scripts/android-invitation-operation/android-smoke.py
+      - name: Seal actual smoke outcome
+        if: success()
+        run: |
+          node --input-type=module <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const p='artifacts/smoke/source-proof.json';const receipt=JSON.parse(readFileSync(p));receipt.smokeVerified=true;receipt.checkedAt=new Date().toISOString();writeFileSync(p,JSON.stringify(receipt,null,2)+'\n');
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Android-invitation-only-smoke-evidence
+          path: artifacts/smoke/
+          if-no-files-found: error
+          retention-days: 30
