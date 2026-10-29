@@ -66,6 +66,18 @@
         "FUNGO_PLAY_BOOTSTRAP": "1",
         "FUNGO_BETA_SERVICE_URL": "https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/"
       }
+    },
+    "ios-managed-beta": {
+      "extends": "production",
+      "channel": "ios-managed-beta",
+      "env": {
+        "EXPO_PROJECT_ID": "b65af584-739f-4ef0-8fe5-6c0ba692c088",
+        "FUNGO_IOS_MANAGED_BETA": "1",
+        "FUNGO_BETA_SERVICE_URL": "https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/"
+      },
+      "ios": {
+        "image": "latest"
+      }
     }
   },
   "submit": {

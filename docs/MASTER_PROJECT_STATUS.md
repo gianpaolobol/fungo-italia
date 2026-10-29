@@ -1,3 +1,13 @@
+## Task del titolare — 29 ottobre 2026: beta iOS e sincronizzazione Play
+
+Candidato `feat/ios-managed-beta-20261029` derivato da PR131 Android, senza merge né distribuzione. iOS opt-in con endpoint remoto, concessione90giorni verificata, revoca e SecureStore; StoreKit indipendente e production/web invariati. Il pulsante teoria in demo spiega il requisito e apre l’accesso; completo apre la teoria. Asset invito multipiattaforma preparati nel repository, non pubblicati sul Site.
+
+Verifiche locali: baseline361Node PASS; candidato373Node PASS0fail0skip, TypeScript PASS, export bundle iOS/Android/web PASS. Hook montato contro vero server di test/SQLite e componenti esame reali; nessuna prova su dispositivo Apple. Nessuna nuova IPA, ricevuta Apple, TestFlight, AppStore, OTA o approvazione scientifica attestata. [Contratto e limiti](IOS-MANAGED-BETA.md).
+
+Android: la sincronizzazione email→autorizzazione Play è ancora bloccata dall’assenza di identità Google gestita/dominio verificato. Il titolare ha chiesto di rimandare stampa3dbologna.com. Non dichiarare questo task risolto con la sola email automatica o con l’iscrizione autonoma al gruppo, esclusa dal requisito.
+
+Richiesta aggiuntiva: nessun pulsante demo gratuita nelle app iOS/Android. Rimossi i due inviti alla demo da Studio e Accesso; «Apri l’atlante» disponibile con beta o abbonamento verificato. Cinque nuovi test montati PASS. La modifica non è ancora distribuita.
+
 ## Android beta — bug SecureStore corretto, nuova qualifica diagnostica —28 ottobre2026
 
 PR131, servizio amministrativo reale verificato e segreto tecnico specificamente autorizzato/creato. Run40653512152: qualifica nativa e smoke demo Android35 SUCCESS; prova beta completa FAILURE, firma SKIPPED. Invito accettato dal server ma credenziale rifiutata dal client: la chiave SecureStore conteneva caratteri non ammessi. Riproduzione con hook montato e vera validazione Expo RED→GREEN dopo chiave valida;361Node0fail0skip, TypeScript e sintassi Python PASS. Serve nuova compilazione e prova nativa del sorgente corretto.

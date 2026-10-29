@@ -3,7 +3,7 @@ import {ActivityIndicator,Linking,Platform,Pressable,ScrollView,StyleSheet,Text,
 export type SubscriptionProduct={id:string;localizedPrice:string;subscriptionPeriod:{unit:string;value:number}};
 export type SubscriptionGateProps={
  product:SubscriptionProduct|null;active:boolean;checking:boolean;busy:boolean;purchaseReady:boolean;
- footer?:React.ReactNode;supported:boolean;expiresAt:string|null;error:string;privacyUrl:string;
+ footer?:React.ReactNode;accessActive?:boolean;supported:boolean;expiresAt:string|null;error:string;privacyUrl:string;
  onPurchase:()=>Promise<void>;onRestore:()=>Promise<void>;onRetry:()=>Promise<void>;onPreview:()=>void;
 };
 import {subscriptionStore} from '../lib/subscriptionStore';
@@ -24,7 +24,7 @@ export default function SubscriptionGate(p:SubscriptionGateProps){
   {p.checking&&<View style={s.loading}><ActivityIndicator/><Text style={s.body}>Verifica dell’abbonamento…</Text></View>}
   {p.active?<><Text style={s.body}>Abbonamento attivo</Text>{p.expiresAt&&<Text style={s.small}>Accesso verificato fino al {new Date(p.expiresAt).toLocaleDateString('it-IT')}.</Text>}</>:p.supported?<><Text style={s.price}>{available?p.product!.localizedPrice+' / anno':'Prezzo non disponibile'}</Text><Text style={s.small}>Abbonamento annuale con rinnovo automatico. Nessun periodo di prova.</Text>{button(available?'Abbonati · '+p.product!.localizedPrice+' / anno':'Abbonamento non disponibile',()=>void run(p.onPurchase),true,disabled||!available||!p.purchaseReady)}<Text style={s.small}>{store.payment}</Text></>:Platform.OS==='android'?<><Text style={s.body}>Gli acquisti Google Play sono in preparazione. Puoi già usare la demo gratuita Agaricus.</Text></>:<><Text style={s.price}>19,99 € / anno</Text><Text style={s.body}>Attiva l’abbonamento nell’app per iPhone o iPad. Il prezzo aggiornato e il pagamento sono confermati da Apple nell’app installata.</Text>{button('Apri l’app installata',()=>void open('fungoitalia://abbonamento'),true)}<Text style={s.small}>Su Safari ed Expo Go puoi usare la demo Agaricus e il test dedicato. L’acquisto e il ripristino richiedono l’app installata da TestFlight o App Store.</Text></>}
   {p.supported&&button('Ripristina acquisti',()=>void run(p.onRestore),false,disabled)}
-  {button(p.active?'Apri l’atlante':'Continua con l’anteprima gratuita',p.onPreview)}
+  {(p.active||p.accessActive||Platform.OS==='web')&&button(p.active||p.accessActive?'Apri l’atlante':'Continua con l’anteprima gratuita',p.onPreview)}
   {!p.active&&<Text style={s.small}>Demo gratuita: tutte le schede Agaricus e test fotografico Agaricus ripetibile. Le aree e gli habitat sono consultabili gratuitamente. Un solo abbonamento annuale sblocca tutte le schede e tutti i test. Alla scadenza restano demo e storico locale.</Text>}
   {!!(message||p.error)&&<Text accessibilityRole="alert" style={s.error}>{message||p.error}</Text>}
   {p.supported&&button('Aggiorna stato e prezzo',()=>void run(p.onRetry),false,disabled)}

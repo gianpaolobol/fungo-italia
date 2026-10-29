@@ -3,11 +3,10 @@ import {AppState,Platform} from 'react-native';
 import Constants from 'expo-constants';
 import * as SecureStore from 'expo-secure-store';
 import {createBetaController} from '../lib/beta-controller.mjs';
+import {betaEndpoint} from '../lib/beta-access.mjs';
 const key='fungo-italia.beta.v1';
 function configuredEndpoint(){
- if(Platform.OS!=='android')return null;
- const value=Constants.expoConfig?.extra?.betaServiceUrl;
- try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password&&!u.search&&!u.hash&&u.pathname==='/'?u.origin:null;}catch{return null;}
+ return betaEndpoint(Platform.OS,Constants.expoConfig?.extra);
 }
 export default function useBetaAccess(){
  const [,render]=useReducer(n=>n+1,0);
