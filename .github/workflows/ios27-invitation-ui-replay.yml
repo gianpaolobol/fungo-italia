@@ -1,0 +1,137 @@
+name: Verify iOS27 invitation fixture on pinned app source
+'on':
+  push:
+    branches:
+    - fix/ios27-invitation-fixture-20261030
+permissions:
+  contents: read
+concurrency:
+  group: ios27-invitation-fixture
+  cancel-in-progress: false
+jobs:
+  verify:
+    name: verify-${{ matrix.family }}
+    strategy:
+      fail-fast: false
+      matrix:
+        family:
+        - iphone
+        - ipad
+    runs-on: macos-26
+    timeout-minutes: 45
+    env:
+      STOREKIT_RUNTIME_VERSION: '26.2'
+      FUNGO_IOS_MANAGED_BETA: '1'
+      FUNGO_BETA_SERVICE_URL: https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/
+      CI: '1'
+      SCREENSHOT_FAMILY: ${{ matrix.family }}
+      DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer
+      NODE_OPTIONS: --max-old-space-size=6144
+      GITHUB_SHA: f16ddf79390d725a090f914c2b4d80757f5d2798
+      VERIFICATION_COMMIT: ${{ github.sha }}
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: f16ddf79390d725a090f914c2b4d80757f5d2798
+        path: app
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.sha }}
+        path: operation
+        sparse-checkout: scripts/ios27-invitation-ui-operation
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '24'
+    - name: Select a compatible Apple StoreKit simulator runtime
+      run: bash scripts/prepare-storekit-runtime.sh
+    - name: Prepare the actual app and Apple StoreKit UI test runner
+      run: 'test "$(git rev-parse HEAD)" = f16ddf79390d725a090f914c2b4d80757f5d2798
+
+        git diff --exit-code
+
+        npm ci
+
+        npm run prepare:data
+
+        npm run typecheck
+
+        node --test scripts/subscription-policy.test.mjs
+
+        npx expo prebuild --platform ios --no-install
+
+        mkdir -p ios/OperationTests
+
+        cp ../operation/scripts/ios27-invitation-ui-operation/AnnualPurchaseUITests.swift ios/OperationTests/AnnualPurchaseUITests.swift
+
+        ruby ../operation/scripts/ios27-invitation-ui-operation/prepare-runner.rb
+
+        cd ios
+
+        pod install
+
+
+        cd ..
+
+        git diff --exit-code
+
+        '
+    - name: Observe verified annual purchase then reject access without invitation
+      run: "mkdir -p store-evidence/screenshots\nworkspace=$(find ios -maxdepth 1 -name '*.xcworkspace' -print -quit)\nxcodebuild\
+        \ -list -json -workspace \"$workspace\" > store-evidence/test-schemes.json\nnode -e 'const p=require(\"./store-evidence/test-schemes.json\"\
+        );if(!p.workspace.schemes.includes(\"FungoItaliaPurchaseUI\"))throw Error(\"Purchase UI test scheme missing\")'\n\
+        xcrun simctl list runtimes -j > /tmp/purchase-runtimes.json\nruntime=\"$STOREKIT_TEST_RUNTIME\"\nxcrun simctl list\
+        \ devicetypes -j > /tmp/purchase-types.json\nfor family in \"$SCREENSHOT_FAMILY\"; do\n  type=$(FAMILY=\"$family\"\
+        \ node -e 'const a=require(\"/tmp/purchase-types.json\").devicetypes;const pattern=process.env.FAMILY===\"iphone\"\
+        ?/^iPhone 16 Pro Max$/:/^iPad Pro 13-inch.*M4/;const d=a.find(d=>pattern.test(d.name));if(!d)throw Error(\"Screenshot\
+        \ device unavailable\");process.stdout.write(d.identifier)')\n  xcrun simctl list devices available -j > /tmp/purchase-devices.json\n\
+        \  udid=$(DEVICE_TYPE=\"$type\" DEVICE_RUNTIME=\"$runtime\" node -e 'const a=require(\"/tmp/purchase-devices.json\"\
+        ).devices[process.env.DEVICE_RUNTIME]||[];const d=a.find(d=>d.isAvailable&&d.deviceTypeIdentifier===process.env.DEVICE_TYPE);if(d)process.stdout.write(d.udid)')\n\
+        \  if test -z \"$udid\"; then udid=$(xcrun simctl create \"FungoPurchase-$family\" \"$type\" \"$runtime\"); fi\n \
+        \ xcrun simctl boot \"$udid\" || true\n  xcrun simctl bootstatus \"$udid\" -b\n  xcrun simctl status_bar \"$udid\"\
+        \ override --time 9:41 --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100\n\
+        \  if ! xcodebuild -workspace \"$workspace\" -scheme FungoItaliaPurchaseUI -configuration Release -destination \"\
+        platform=iOS Simulator,id=$udid\" -derivedDataPath purchase-ui-build -collect-test-diagnostics never -parallel-testing-enabled\
+        \ NO -test-timeouts-enabled YES -default-test-execution-time-allowance 600 -maximum-test-execution-time-allowance\
+        \ 600 ARCHS=\"$(uname -m)\" ONLY_ACTIVE_ARCH=YES CODE_SIGNING_ALLOWED=YES CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='-'\
+        \ CODE_SIGN_STYLE=Manual DEVELOPMENT_TEAM='' PROVISIONING_PROFILE_SPECIFIER='' -jobs 3 -only-testing:AnnualPurchaseUITests/AnnualPurchaseUITests/testManagedBetaRequiresInvitationWithExistingPurchase\
+        \ test > \"store-evidence/purchase-ui-$family.log\" 2>&1; then\n    xcrun simctl spawn \"$udid\" log show --style\
+        \ compact --last 10m --predicate 'subsystem == \"it.fungoitalia.subscription\"' > \"store-evidence/storekit-native-$family.log\"\
+        \ 2>&1 || true\n    cat \"store-evidence/storekit-native-$family.log\"\n    tail -n 180 \"store-evidence/purchase-ui-$family.log\"\
+        \n    exit 1\n  fi\n  mkdir -p \"store-evidence/screenshots/$family\"\n  for name in invitation-only-1 invitation-only-2;\
+        \ do\n    source=$(find \"$HOME/Library/Developer/CoreSimulator/Devices/$udid/data/Containers/Data/Application\" -type\
+        \ f -path \"*/Documents/store-captures/$name.png\" -print -quit)\n    test -n \"$source\"\n    cp \"$source\" \"store-evidence/screenshots/$family/$name.png\"\
+        \n  done\n  grep -E 'Test Case|Executed|TEST SUCCEEDED|INVITATION_' \"store-evidence/purchase-ui-$family.log\"\n \
+        \ xcrun simctl shutdown \"$udid\"\ndone\nprintf '%s\\n' \"$GITHUB_SHA\" > store-evidence/screenshots/source-commit.txt\n"
+    - name: Preserve UI failure screenshots and attachments
+      if: failure()
+      run: "if test -d purchase-ui-build/Logs/Test; then\n  result=$(find purchase-ui-build/Logs/Test -maxdepth 1 -name '*.xcresult'\
+        \ -print -quit)\n  if test -n \"$result\"; then\n    xcrun xcresulttool export attachments --path \"$result\" --output-path\
+        \ store-evidence/attachments || true\n  fi\nfi\n"
+    - name: Record exact app source and separate fixture runner
+      if: always()
+      run: 'mkdir -p store-evidence
+
+        node --input-type=module <<''JS''
+
+        import {readFileSync,writeFileSync} from ''node:fs'';import {createHash} from ''node:crypto'';import {execFileSync}
+        from ''node:child_process'';
+
+        const source=execFileSync(''git'',[''rev-parse'',''HEAD''],{encoding:''utf8''}).trim();if(source!==''f16ddf79390d725a090f914c2b4d80757f5d2798'')throw
+        Error(''Wrong app source'');
+
+        const hash=p=>createHash(''sha256'').update(readFileSync(p)).digest(''hex'');
+
+        writeFileSync(''store-evidence/app-and-fixture-source.json'',JSON.stringify({sourceCommit:source,verificationCommit:process.env.VERIFICATION_COMMIT,runnerSha256:hash(''ios/OperationTests/AnnualPurchaseUITests.swift''),canonicalStorekitFixtureSha256:hash(''tests/storekit/Annual.storekit''),family:process.env.SCREENSHOT_FAMILY,diagnosticOnly:true,storeUploaded:false},null,2)+''\n'');
+
+        JS
+
+        '
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: iOS27-invitation-fixture-${{ matrix.family }}
+        path: app/store-evidence/
+        retention-days: 30
+    defaults:
+      run:
+        working-directory: app
