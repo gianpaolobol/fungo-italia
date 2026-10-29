@@ -10,6 +10,7 @@ name: Verify free Agaricus demo interface
   push:
     branches:
     - main
+    - feat/managed-beta-build-20261029
     paths:
     - App.tsx
     - index.js
@@ -50,6 +51,8 @@ jobs:
     timeout-minutes: 45
     env:
       STOREKIT_RUNTIME_VERSION: '26.2'
+      FUNGO_IOS_MANAGED_BETA: '1'
+      FUNGO_BETA_SERVICE_URL: 'https://fungo-italia-accessi.gianpaolo-franceschi.chatgpt.site/'
       CI: '1'
       SCREENSHOT_FAMILY: ${{ matrix.family }}
       DEVELOPER_DIR: /Applications/Xcode_26.6.app/Contents/Developer

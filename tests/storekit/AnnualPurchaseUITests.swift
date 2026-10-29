@@ -184,7 +184,8 @@ final class AnnualPurchaseUITests: XCTestCase {
     defer { app.terminate() }
     await require(element(app, "Ciao"))
     await tap(app, "Studio")
-    await require(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "Demo gratuita · Agaricus")).firstMatch)
+    await require(element(app, "Studio e atlante"))
+    XCTAssertFalse(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "Demo gratuita · Agaricus")).firstMatch.exists)
     await tap(app, "Apri Agaricus sez. Xanthodermatei")
     try capture(app, "demo-01-studio")
     await tap(app, "Torna alle schede")
