@@ -1,0 +1,21 @@
+{
+  "sourceCommit": "c524b695d51c5e21eb488c564089c0206dd5caad",
+  "version": "1.1.0",
+  "buildNumber": "25",
+  "appleBuildId": "1ce58bd7-0065-40f5-b7a1-3ec88df48be2",
+  "processingState": "VALID",
+  "easBuildId": "5e4a1bf3-cb88-44af-a642-f9982532e619",
+  "ipaSha256": "a4bcc701bd2d0dafff0ed0d175a7792cf0696326090075e7f103a3a31de053dc",
+  "diagnosticOnly": true,
+  "testFlightOnly": true,
+  "appStoreReady": false,
+  "producerRunId": 40960080895,
+  "standaloneDemoFailureOpen": true,
+  "internalBuildState": "IN_BETA_TESTING",
+  "betaDetailId": "1ce58bd7-0065-40f5-b7a1-3ec88df48be2",
+  "betaStateVerifiedAt": "2026-10-29T21:48:51.051Z",
+  "internalGroupIds": [
+    "f642807c-e4b2-43d4-a32a-d9fd087fdfe3"
+  ],
+  "verifiedAt": "2026-10-29T21:48:51.436Z"
+}
