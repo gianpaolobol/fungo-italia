@@ -1,7 +1,7 @@
 name: Private managed beta builds
 on:
   push:
-    branches: [fix/beta-invitation-only-20261029]
+    branches: [fix/beta-invitation-proof-20261029]
   workflow_dispatch:
     inputs:
       platform:

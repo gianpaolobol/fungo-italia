@@ -1,5 +1,6 @@
 import XCTest
 import StoreKitTest
+import StoreKit
 
 final class AnnualPurchaseUITests: XCTestCase {
 
@@ -211,6 +212,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     print("AGARICUS_DEMO_UI Free profiles, four-case test and Areas/habitats available without purchase")
   }
   @MainActor func testManagedBetaRequiresInvitationWithExistingPurchase() async throws {
+    guard #available(iOS 17.0, *) else { XCTFail("Managed beta regression requires the configured iOS 17+ test runtime"); return }
     continueAfterFailure = false
     let url = try XCTUnwrap(Bundle(for: Self.self).url(forResource: "Annual", withExtension: "storekit"))
     let session = try SKTestSession(contentsOf: url)
@@ -218,7 +220,7 @@ final class AnnualPurchaseUITests: XCTestCase {
     session.locale = Locale(identifier: "it_IT"); session.storefront = "ITA"; session.clearTransactions()
     guard session.storefront == "ITA" else { XCTFail("Local StoreKit fixture required"); return }
     let purchase = try await session.buyProduct(identifier: productID, options: [])
-    XCTAssertEqual(purchase.productIdentifier, productID)
+    XCTAssertEqual(purchase.productID, productID)
     let app = XCUIApplication(bundleIdentifier: "it.fungoitalia.app")
     defer { app.terminate(); session.clearTransactions(); session.resetToDefaultState() }
     for launch in 1...2 {
