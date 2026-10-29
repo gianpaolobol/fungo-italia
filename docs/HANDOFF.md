@@ -1,3 +1,11 @@
+## Ripresa operativa iOS27 — 30 ottobre 2026
+
+Android8 è pubblicata nel test interno (ricevuta e schermata nella sezione seguente). Sul sorgente applicativo f16ddf79390d725a090f914c2b4d80757f5d2798 il gate StoreKit nativo40967909470/job123776992146 è SUCCESS e la demo iPad40967909598/job123776992223 è SUCCESS. UI acquisti e altre prove ancora pendenti.
+
+Il gate specifico dell’invito iPad40967909459/job123776992134 ha compilato ma è FAILURE: errore «unknown» in4.430s prima del primo avvio dell’app, durante la preparazione della fixture. Non è attestazione di bypass o errore applicativo. PR143/operazione d799c70f151a48fe33b6783014cf5566d1491f30 avvia diagnosi a fasi e verifica l’ipotesi minima di avviare l’app prima dell’acquisto locale; conserva productID reale, due avvii a freddo con entitlement verificato, codice vuoto disabilitato e assenza di bypass. Run40973299341 avviato, attualmente in coda; nessun successo ancora attestato.
+
+Checkout app immutato f16 e runner distinto nel progetto generato, fixture canonica preservata e hash/fonti separati. Nessuna nuova IPA/EAS, nessun invio iOS27 a TestFlight/OTA/AppStore e nessuna approvazione scientifica nuova. La distribuzione iOS27 resta bloccata dagli esiti nativi pendenti; non dichiararla disponibile.
+
 ## Android8 pubblicata nel test interno — 30 ottobre 2026
 
 Google Play Console conferma release `Beta su invito - codice personale (8)`, versione1.1.0 codice8, stato «Disponibile per i tester interni». Pubblicazione effettuata nel canale interno esistente, senza cambiare tester o inviare nuove email. AAB verificato sul sorgente f16ddf79390d725a090f914c2b4d80757f5d2798; checksum5ac7299aa8f357f0dd7895459523c20bbf28f9a501cb65ea15fbbd20d12fc6c5 e certificato di upload già confrontato. Nessuna distribuzione di produzione o pubblicazione AppStore.
