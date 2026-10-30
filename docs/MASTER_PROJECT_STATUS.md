@@ -1,3 +1,11 @@
+## Valutazione pre-implementazione area corsi — 30 ottobre 2026
+
+Su richiesta del titolare analizzato il progetto rispetto al codice app f16 e ai metadati del portale esistente. Aggiornato il [progetto corsi](superpowers/specs/2026-10-30-courses-groups-materials-design.md) con riscontri, rischi e proposta semplificata: biblioteca PDF dinamica per gruppi, destinatari definiti per i test, runner dedicato e dati corso separati dallo storico locale. Rivisti revoche e URL firmati, lettore PDF da qualificare, correzione per genere/specie e ambito del primo pilot. Il sorgente backend del portale non è stato ottenuto: riuso non dimostrato, inventario necessario. Revisione distinta senza questioni bloccanti dopo uniformazione documentale. Solo analisi/documentazione; nessuna implementazione, invio reale o distribuzione. Documento completo ancora da approvare prima di codice; nessun cambiamento allo stato delle build.
+
+## Progetto area corsi, gruppi, test e PDF — 30 ottobre 2026
+
+Il titolare ha confermato area docente nell'app e pannello dedicato per computer/tablet, sincronizzati, e ha aggiunto PDF di studio assegnabili agli stessi gruppi usati per i test. Progetto in [courses-groups-materials-design.md](superpowers/specs/2026-10-30-courses-groups-materials-design.md), con account email verificata, accessi riservati e biblioteca dei corsi. Documento controllato per pianificabilità; progetto completo da approvare prima del piano e del codice. Nessuna implementazione, invio reale, modifica scientifica o distribuzione effettuata da questo ramo. Le ricevute beta restano nei rami di rilascio dedicati; questa sezione non ne aggiorna lo stato.
+
 <!-- IOS_STUDY_24_CURRENT -->
 ## Allineamento tecnico WEB/PWA e TestFlight24 verificato —27 ottobre2026
 
