@@ -1,3 +1,7 @@
+## Progetto area corsi, gruppi, test e PDF — 30 ottobre 2026
+
+Il titolare ha confermato area docente nell'app e pannello dedicato per computer/tablet, sincronizzati, e ha aggiunto PDF di studio assegnabili agli stessi gruppi usati per i test. Progetto in [courses-groups-materials-design.md](superpowers/specs/2026-10-30-courses-groups-materials-design.md), con account email verificata, accessi riservati e biblioteca dei corsi. Documento controllato per pianificabilità; progetto completo da approvare prima del piano e del codice. Nessuna implementazione, invio reale, modifica scientifica o distribuzione effettuata da questo ramo. Le ricevute beta restano nei rami di rilascio dedicati; questa sezione non ne aggiorna lo stato.
+
 <!-- IOS_STUDY_24_CURRENT -->
 ## Allineamento tecnico WEB/PWA e TestFlight24 verificato —27 ottobre2026
 
