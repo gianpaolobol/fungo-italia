@@ -5,3 +5,5 @@ set -euo pipefail
 psql "$PILOT_TEST_DATABASE_URL" -X -v ON_ERROR_STOP=1 -f pilot/database/fixture.sql
 psql "$PILOT_TEST_DATABASE_URL" -X -v ON_ERROR_STOP=1 -f pilot/database/001-foundation.sql
 psql "$PILOT_TEST_DATABASE_URL" -X -v ON_ERROR_STOP=1 -f pilot/database/foundation.test.sql
+psql "$PILOT_TEST_DATABASE_URL" -X -v ON_ERROR_STOP=1 -f pilot/database/002-invitations.sql
+psql "$PILOT_TEST_DATABASE_URL" -X -v ON_ERROR_STOP=1 -f pilot/database/invitations.test.sql
