@@ -30,6 +30,10 @@ select (:'batch'::jsonb->0->>'id') as iid \gset
 select pg_temp.check_it((select count(*)=1 from pilot.invitations),'one invitation only');
 select pilot.invite_students(:'cid',array[:'gid']::uuid[],array['student@example.test']);
 select pg_temp.check_it((select count(*)=1 from pilot.invitations),'repeated publish does not duplicate');
+select pilot.invite_students(:'cid',array[:'gid2']::uuid[],array['student@example.test']);
+reset role;
+select pg_temp.check_it((select count(*)=2 from pilot.invitation_groups where invitation_id=:'iid'),'pending reinvite adds requested group');
+set local role authenticated;
 select pg_temp.expect_error(format('select pilot.request_invite_notice(%L)',:'iid'),'notice_cooldown');
 select pg_temp.expect_error(format('select pilot.invite_students(%L,array[%L]::uuid[],array[%L])',:'cid',:'gid','invalid'),'invalid_email');
 select pilot.invite_students(:'cid',array[:'gid2']::uuid[],array['pending@example.test']) as pending \gset
@@ -60,7 +64,7 @@ select pg_temp.check_it(jsonb_array_length(pilot.my_invitations())=1,'verified s
 select pilot.accept_invitation(:'iid') as mid \gset
 select pg_temp.check_it(pilot.accept_invitation(:'iid')=:'mid'::uuid,'accept replay is idempotent');
 select pg_temp.check_it((select count(*)=1 from pilot.memberships),'exactly one enrollment');
-select pg_temp.check_it((select count(*)=1 from pilot.groups),'student sees assigned group only');
+select pg_temp.check_it((select count(*)=2 from pilot.groups),'student sees both explicitly assigned groups');
 select pg_temp.check_it(not has_table_privilege(current_user,'pilot.invitations','INSERT'),'no direct self enrollment');
 reset role;
 
@@ -92,8 +96,16 @@ select pilot.claim_invite_notices(10) as jobs \gset
 select pg_temp.check_it(jsonb_array_length(:'jobs'::jsonb)=1,'only pending valid invitation needs an email');
 select (:'jobs'::jsonb->0->>'id') as job_id,(:'jobs'::jsonb->0->>'claim_id') as claim_id \gset
 select pg_temp.check_it(pilot.finish_invite_notice(:'job_id','99999999-9999-9999-9999-999999999999',true)=false,'wrong claim cannot finish');
+select pg_temp.check_it(pilot.authorize_invite_notice(:'job_id',:'claim_id'),'valid claim can authorize one send');
+select pg_temp.check_it(not pilot.authorize_invite_notice(:'job_id',:'claim_id'),'send authorization is single-use');
 select pg_temp.check_it(pilot.finish_invite_notice(:'job_id',:'claim_id',true),'matching claim records provider acceptance');
 select pg_temp.check_it(pilot.claim_invite_notices(10)='[]'::jsonb,'claimed jobs never auto-retried');
+reset role;
+-- A delayed queue item may have been created long before its actual attempt.
+update pilot.invite_outbox set created_at=now()-interval '1 hour' where id=:'job_id';
+select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000011',true);
+set local role authenticated;
+select pg_temp.expect_error(format('select pilot.request_invite_notice(%L)',:'unverified_iid'),'notice_cooldown');
 reset role;
 
 -- Expired invites never grant membership; disabled teacher also blocks acceptance.
