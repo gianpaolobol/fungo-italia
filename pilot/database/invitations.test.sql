@@ -89,6 +89,16 @@ set local role authenticated;
 select pilot.accept_invitation(:'iid2') as mid2 \gset
 select pg_temp.check_it(:'mid2'<>:'mid','rejoin creates fresh membership UUID');
 reset role;
+select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000011',true);
+set local role authenticated;
+select pilot.invite_students(:'cid',array[:'gid']::uuid[],array['student@example.test']);
+reset role;
+select pg_temp.check_it((select count(*)=2 from pilot.group_memberships where membership_id=:'mid2' and revoked_at is null),'accepted reinvite adds new group without a new enrollment');
+update auth.users set email='changed@example.test' where id='00000000-0000-0000-0000-000000000013';
+set local role authenticated;
+select pg_temp.expect_error(format('select pilot.invite_students(%L,array[%L]::uuid[],array[%L])',:'cid',:'gid','student@example.test'),'invitation_identity_changed');
+reset role;
+update auth.users set email='student@example.test' where id='00000000-0000-0000-0000-000000000013';
 
 -- Service-only outbox: no student/teacher access, bounded claim, no auto retry.
 set local role service_role;
@@ -106,6 +116,21 @@ update pilot.invite_outbox set created_at=now()-interval '1 hour' where id=:'job
 select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000011',true);
 set local role authenticated;
 select pg_temp.expect_error(format('select pilot.request_invite_notice(%L)',:'unverified_iid'),'notice_cooldown');
+reset role;
+-- Revocation after claim but before dispatch cancels the job authorization.
+set local role authenticated;
+select pilot.invite_students(:'cid',array[:'gid']::uuid[],array['revoked@example.test']) as revoked_batch \gset
+select (:'revoked_batch'::jsonb->0->>'id') as revoked_iid \gset
+reset role;
+set local role service_role;
+select pilot.claim_invite_notices(10) as revoked_jobs \gset
+select (:'revoked_jobs'::jsonb->0->>'id') as revoked_job,(:'revoked_jobs'::jsonb->0->>'claim_id') as revoked_claim \gset
+reset role;
+set local role authenticated;
+select pilot.revoke_invitation(:'revoked_iid');
+reset role;
+set local role service_role;
+select pg_temp.check_it(not pilot.authorize_invite_notice(:'revoked_job',:'revoked_claim'),'revocation after claim blocks send');
 reset role;
 
 -- Expired invites never grant membership; disabled teacher also blocks acceptance.
@@ -125,7 +150,7 @@ reset role;
 -- One notice already claimed above. Fifty-nine uncertain attempts exhaust the
 -- quota; even new pending invitations must wait for the next UTC day.
 insert into pilot.invite_outbox(invitation_id,claimed_at,claim_id,state)
- select :'unverified_iid'::uuid,now(),gen_random_uuid(),'failed_unknown' from generate_series(1,59);
+ select :'unverified_iid'::uuid,now(),gen_random_uuid(),'failed_unknown' from generate_series(1,58);
 set local role service_role;
 select pg_temp.check_it(pilot.claim_invite_notices(10)='[]'::jsonb,'daily 60-claim budget blocks further emails');
 reset role;

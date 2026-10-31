@@ -38,8 +38,13 @@ export async function runInvitationBatch(env,fetcher=fetch){
   const jobs=await rpc(env,config.database,'claim_invite_notices',{batch_limit:10},fetcher,'outbox_claim_failed');
   if(!Array.isArray(jobs)||jobs.length>10||jobs.some(j=>!j||!UUID.test(j.id)||!UUID.test(j.claim_id)||!UUID.test(j.invitation_id)||
     typeof j.email!=='string'||j.email.length>254||!EMAIL.test(j.email)||typeof j.title!=='string'||!j.title.trim()||j.title.length>160))throw Error('invalid_outbox_batch');
-  const result={claimed:jobs.length,accepted:0,uncertain:0};
+  const result={claimed:jobs.length,accepted:0,uncertain:0,cancelled:0};
   for(const job of jobs){
+    const authorized=await rpc(env,config.database,'authorize_invite_notice',{
+      job_id:job.id,claim_id:job.claim_id
+    },fetcher,'outbox_authorization_failed');
+    if(authorized===false){result.cancelled++;continue;}
+    if(authorized!==true)throw Error('outbox_authorization_failed');
     const accepted=await send(env,config.entry,job,fetcher);
     const recorded=await rpc(env,config.database,'finish_invite_notice',{
       job_id:job.id,claim_id:job.claim_id,accepted

@@ -19,7 +19,7 @@ create table pilot.invitation_groups (
 create table pilot.invite_outbox (
  id uuid primary key default gen_random_uuid(),invitation_id uuid not null references pilot.invitations(id),
  created_at timestamptz not null default now(),claimed_at timestamptz,claim_id uuid,
- state text not null default 'pending' check(state in ('pending','claimed','accepted','failed_unknown','cancelled')),
+ state text not null default 'pending' check(state in ('pending','claimed','sending','accepted','failed_unknown','cancelled')),
  finished_at timestamptz
 );
 create unique index one_pending_invitation_notice on pilot.invite_outbox(invitation_id) where state='pending';
@@ -90,9 +90,21 @@ begin
   select * into inv from pilot.invitations i where i.course_id=invite_students.course_id and i.email=mail and i.revoked_at is null;
   if not found then
    insert into pilot.invitations(course_id,email) values(invite_students.course_id,mail) returning * into inv;
-   insert into pilot.invitation_groups(invitation_id,course_id,group_id)
-     select inv.id,invite_students.course_id,x from (select distinct unnest(group_ids) x) g;
    insert into pilot.invite_outbox(invitation_id) values(inv.id);
+  end if;
+  if inv.accepted_at is not null and not exists(
+    select 1 from pilot.memberships m join auth.users u on u.id=m.user_id
+    where m.id=inv.membership_id and m.revoked_at is null and m.user_id=inv.accepted_user_id
+      and u.email_confirmed_at is not null and lower(btrim(u.email))=mail)
+  then raise exception 'invitation_identity_changed'; end if;
+  -- An explicit repeat adds groups; it never removes previous groups, creates a
+  -- second invitation/email or revives prior test assignments.
+  insert into pilot.invitation_groups(invitation_id,course_id,group_id)
+    select inv.id,invite_students.course_id,x from (select distinct unnest(group_ids) x) g on conflict do nothing;
+  if inv.accepted_at is not null then
+   insert into pilot.group_memberships(course_id,group_id,membership_id)
+     select invite_students.course_id,x,inv.membership_id from (select distinct unnest(group_ids) x) g
+     where not exists(select 1 from pilot.group_memberships gm where gm.group_id=x and gm.membership_id=inv.membership_id and gm.revoked_at is null);
   end if;
   result=result||jsonb_build_array(jsonb_build_object('id',inv.id,'email',inv.email,'accepted',inv.accepted_at is not null));
  end loop;
@@ -152,7 +164,7 @@ begin
  if cid is null or not pilot_private.owns_course(cid) then raise exception 'invitation_unavailable'; end if;
  perform pilot_private.lock_teacher_course(cid);
  update pilot.invitations set revoked_at=coalesce(revoked_at,now()) where id=invitation_id;
- update pilot.invite_outbox set state='cancelled' where invitation_id=revoke_invitation.invitation_id and state='pending';
+ update pilot.invite_outbox set state='cancelled' where invitation_id=revoke_invitation.invitation_id and state in ('pending','claimed');
  -- Revoking an invitation alone does not undo an already accepted enrollment.
  -- The UI must use revoke_membership for removing an enrolled student.
 end $$;
@@ -166,7 +178,7 @@ begin
  update pilot.memberships set revoked_at=coalesce(revoked_at,now()) where id=membership_id;
  update pilot.group_memberships set revoked_at=coalesce(revoked_at,now()) where group_memberships.membership_id=revoke_membership.membership_id;
  update pilot.invitations set revoked_at=coalesce(revoked_at,now()) where invitations.membership_id=revoke_membership.membership_id;
- update pilot.invite_outbox o set state='cancelled' where o.state='pending' and exists(
+ update pilot.invite_outbox o set state='cancelled' where o.state in ('pending','claimed') and exists(
   select 1 from pilot.invitations i where i.id=o.invitation_id and i.membership_id=revoke_membership.membership_id);
 end $$;
 create function pilot.request_invite_notice(invitation_id uuid) returns uuid
@@ -179,7 +191,7 @@ begin
  select * into inv from pilot.invitations i where i.id=invitation_id for update;
  if inv.revoked_at is not null or inv.accepted_at is not null or inv.expires_at<=now() then raise exception 'invitation_unavailable'; end if;
  if exists(select 1 from pilot.invite_outbox o where o.invitation_id=inv.id and
-   (o.state='pending' or o.created_at>now()-interval '10 minutes')) then raise exception 'notice_cooldown'; end if;
+   (o.state in ('pending','claimed','sending') or greatest(o.created_at,o.claimed_at,o.finished_at)>now()-interval '10 minutes')) then raise exception 'notice_cooldown'; end if;
  insert into pilot.invite_outbox(invitation_id) values(inv.id) returning id into result;
  return result;
 end $$;
@@ -204,13 +216,31 @@ begin
  end loop;
  return result;
 end $$;
+create function pilot.authorize_invite_notice(job_id uuid,claim_id uuid) returns boolean
+language plpgsql security definer set search_path='' as $$
+declare cid uuid; job pilot.invite_outbox;
+begin
+ select i.course_id into cid from pilot.invite_outbox o join pilot.invitations i on i.id=o.invitation_id where o.id=job_id;
+ if cid is null then return false; end if;
+ -- Same lock order as revoke/accept: course first, then outbox. Recheck each
+ -- item immediately before its provider request, not only when claiming a batch.
+ perform 1 from pilot.courses where id=cid for update;
+ select * into job from pilot.invite_outbox o where o.id=job_id for update;
+ if job.claim_id is distinct from authorize_invite_notice.claim_id or job.state<>'claimed' then return false; end if;
+ if not exists(select 1 from pilot.invitations i join pilot.courses c on c.id=i.course_id
+    join pilot.teachers t on t.user_id=c.teacher_id where i.id=job.invitation_id and
+    i.revoked_at is null and i.accepted_at is null and i.expires_at>now() and c.closed_at is null and t.revoked_at is null)
+ then update pilot.invite_outbox set state='cancelled',finished_at=now() where id=job_id;return false; end if;
+ update pilot.invite_outbox set state='sending' where id=job_id;
+ return true;
+end $$;
 create function pilot.finish_invite_notice(job_id uuid,claim_id uuid,accepted boolean) returns boolean
 language plpgsql security definer set search_path='' as $$
 declare changed integer;
 begin
  if accepted is null then raise exception 'notice_result_required'; end if;
  update pilot.invite_outbox o set state=case when accepted then 'accepted' else 'failed_unknown' end,finished_at=now()
-   where o.id=job_id and o.claim_id=finish_invite_notice.claim_id and o.state='claimed';
+   where o.id=job_id and o.claim_id=finish_invite_notice.claim_id and o.state='sending';
  get diagnostics changed=row_count;return changed=1;
 end $$;
 
@@ -219,5 +249,5 @@ revoke execute on all functions in schema pilot from public,anon,authenticated;
 revoke execute on all functions in schema pilot_private from public,anon;
 grant execute on function pilot.create_course(text),pilot.create_group(uuid,text),pilot.invite_students(uuid,uuid[],text[]),
  pilot.my_invitations(),pilot.accept_invitation(uuid),pilot.revoke_invitation(uuid),pilot.revoke_membership(uuid),pilot.request_invite_notice(uuid) to authenticated;
-grant execute on function pilot.claim_invite_notices(integer),pilot.finish_invite_notice(uuid,uuid,boolean) to service_role;
+grant execute on function pilot.claim_invite_notices(integer),pilot.authorize_invite_notice(uuid,uuid),pilot.finish_invite_notice(uuid,uuid,boolean) to service_role;
 commit;

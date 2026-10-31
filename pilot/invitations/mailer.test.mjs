@@ -8,6 +8,7 @@ function setup(){
   const f=async(url,options)=>{
     calls.push({url,options});
     if(url.endsWith('/rpc/claim_invite_notices'))return Response.json([job]);
+    if(url.endsWith('/rpc/authorize_invite_notice'))return Response.json(true);
     if(url.endsWith('/rpc/finish_invite_notice'))return finishFail?new Response('internal-secret',{status:503}):Response.json(true);
     assert.equal(url,'https://api.brevo.com/v3/smtp/email');
     return mailFail?new Response('provider-secret',{status:503}):Response.json({messageId:'provider-receipt'},{status:201});
@@ -15,17 +16,17 @@ function setup(){
   return {env,calls,f,setMailFail(v){mailFail=v;},setFinishFail(v){finishFail=v;}};
 }
 test('mailer claims at most ten jobs and records provider acceptance without claiming delivery',async()=>{
-  const h=setup();assert.deepEqual(await runInvitationBatch(h.env,h.f),{claimed:1,accepted:1,uncertain:0});
+  const h=setup();assert.deepEqual(await runInvitationBatch(h.env,h.f),{claimed:1,accepted:1,uncertain:0,cancelled:0});
   assert.deepEqual(JSON.parse(h.calls[0].options.body),{batch_limit:10});
   assert.equal(h.calls[0].options.headers['Content-Profile'],'pilot');
-  const message=JSON.parse(h.calls[1].options.body);
+  const message=JSON.parse(h.calls[2].options.body);
   assert.equal(message.to[0].email,job.email);assert.match(message.textContent,/stessa email/i);
   assert.equal(message.textContent.includes('private-service-role'),false);
-  assert.deepEqual(JSON.parse(h.calls[2].options.body),{job_id:job.id,claim_id:job.claim_id,accepted:true});
+  assert.deepEqual(JSON.parse(h.calls[3].options.body),{job_id:job.id,claim_id:job.claim_id,accepted:true});
 });
 test('email rejection/ambiguous timeout is finished as uncertain and never retried within batch',async()=>{
   const h=setup();h.setMailFail(true);
-  assert.deepEqual(await runInvitationBatch(h.env,h.f),{claimed:1,accepted:0,uncertain:1});
+  assert.deepEqual(await runInvitationBatch(h.env,h.f),{claimed:1,accepted:0,uncertain:1,cancelled:0});
   assert.equal(h.calls.filter(c=>c.url.includes('brevo')).length,1);
   assert.equal(JSON.parse(h.calls.at(-1).options.body).accepted,false);
 });
@@ -47,4 +48,14 @@ test('malformed or oversized DB claim result fails closed before sending',async(
 test('HTTP has no dispatch endpoint',async()=>{
   const h=setup();assert.equal((await invitationWorker.fetch(new Request('https://mailer.test/run',{method:'POST'}),h.env)).status,404);
   assert.equal(h.calls.length,0);
+});
+test('revoked invitation between claim and send is rechecked and never emailed',async()=>{
+  const h=setup();let sends=0;
+  const f=async(url,options)=>{
+    if(url.endsWith('/rpc/authorize_invite_notice'))return Response.json(false);
+    if(url.includes('brevo'))sends++;
+    return h.f(url,options);
+  };
+  const result=await runInvitationBatch(h.env,f);
+  assert.equal(sends,0);assert.equal(result.cancelled,1);assert.equal(result.accepted,0);
 });
