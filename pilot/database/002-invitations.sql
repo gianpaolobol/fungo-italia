@@ -140,7 +140,7 @@ begin
   select cid,ig.group_id,mid from pilot.invitation_groups ig where ig.invitation_id=inv.id
   and not exists(select 1 from pilot.group_memberships gm where gm.group_id=ig.group_id and gm.membership_id=mid and gm.revoked_at is null);
  update pilot.invitations set accepted_at=now(),accepted_user_id=auth.uid(),membership_id=mid where id=inv.id;
- update pilot.invite_outbox set state='cancelled' where invitation_id=inv.id and state='pending';
+ update pilot.invite_outbox o set state='cancelled' where o.invitation_id=inv.id and o.state='pending';
  return mid;
 end $$;
 

@@ -48,3 +48,26 @@ test('account change while response body is arriving discards old private metada
   completeBody([{id:'private-a',title:'A private title'}]);
   await assert.rejects(pending,/session_changed/);
 });
+test('v1 course/group/invitation mutations use typed RPC payloads and private schema',async()=>{
+  const cid='10000000-0000-0000-0000-000000000001',gid='20000000-0000-0000-0000-000000000001',iid='30000000-0000-0000-0000-000000000001';
+  const calls=[];
+  const client=createCourseClient({endpoint,publicKey:'anon',getSession:async()=>a,fetcher:async(url,options)=>{
+    const name=url.split('/').at(-1);calls.push({name,options});
+    return Response.json(name==='invite_students'?[{id:iid,email:'student@example.test',accepted:false}]:name==='my_invitations'?[]:name.startsWith('revoke_')?null:cid);
+  }});
+  assert.equal(await client.createCourse('Corso'),cid);
+  await client.createGroup(cid,'Gruppo A');
+  assert.deepEqual(await client.inviteStudents(cid,[gid],['student@example.test']),[{id:iid,email:'student@example.test',accepted:false}]);
+  assert.deepEqual(await client.listInvitations(),[]);
+  await client.acceptInvitation(iid);await client.revokeInvitation(iid);await client.revokeMembership(iid);await client.resendInvitation(iid);
+  assert.equal(calls.length,8);
+  for(const c of calls){assert.equal(c.options.method,'POST');assert.equal(c.options.headers['Content-Profile'],'pilot');}
+  assert.deepEqual(JSON.parse(calls[2].options.body),{course_id:cid,group_ids:[gid],emails:['student@example.test']});
+});
+test('invalid RPC IDs and oversized batches do not reach server',async()=>{
+  let calls=0;const c=createCourseClient({endpoint,publicKey:'anon',getSession:async()=>a,fetcher:async()=>{calls++;return Response.json(null);}});
+  await assert.rejects(c.acceptInvitation('bad'),/invalid_id/);
+  await assert.rejects(c.inviteStudents('10000000-0000-0000-0000-000000000001',[],['a@example.test']),/invalid_groups/);
+  await assert.rejects(c.inviteStudents('10000000-0000-0000-0000-000000000001',['20000000-0000-0000-0000-000000000001'],Array(31).fill('a@example.test')),/invalid_emails/);
+  assert.equal(calls,0);
+});
