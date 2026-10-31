@@ -103,5 +103,23 @@ select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000015'
 set local role authenticated;
 select pg_temp.expect_error(format('select pilot.accept_invitation(%L)',:'unverified_iid'),'invitation_unavailable');
 reset role;
+
+select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000011',true);
+set local role authenticated;
+select pilot.invite_students(:'cid',array[:'gid']::uuid[],(select array_agg('quota'||n||'@example.test') from generate_series(1,29) n));
+select pg_temp.expect_error(format('select pilot.invite_students(%L,array[%L]::uuid[],array[%L])',:'cid',:'gid','overflow@example.test'),'pilot_student_quota');
+select pg_temp.check_it((select count(*)=0 from pilot.invitations where email='overflow@example.test'),'over-cap batch rolls back invitation');
+reset role;
+-- One notice already claimed above. Fifty-nine uncertain attempts exhaust the
+-- quota; even new pending invitations must wait for the next UTC day.
+insert into pilot.invite_outbox(invitation_id,claimed_at,claim_id,state)
+ select :'unverified_iid'::uuid,now(),gen_random_uuid(),'failed_unknown' from generate_series(1,59);
+set local role service_role;
+select pg_temp.check_it(pilot.claim_invite_notices(10)='[]'::jsonb,'daily 60-claim budget blocks further emails');
+reset role;
+update pilot.teachers set revoked_at=now() where user_id='00000000-0000-0000-0000-000000000011';
+set local role authenticated;
+select pg_temp.expect_error(format('select pilot.create_group(%L,%L)',:'cid','After role revocation'),'course_unavailable');
+reset role;
 rollback;
 \echo 'PASS: verified-email invitations, management isolation, idempotence and bounded outbox'
