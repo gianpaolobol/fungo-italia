@@ -50,6 +50,7 @@ export async function runScheduled(env,now,fetcher=fetch) {
   if(previous?.lastRunAt>=now){
     const health=statusOf(previous,now);
     if(!health.healthy)throw Error(health.code);
+    if(previous.delivery&&previous.delivery.status!=='accepted')throw Error('notice_delivery_unconfirmed');
     return health;
   }
   const probe=env.MODE==='watchdog'?await probeWatchdog(env,fetcher):await probeDatabase({

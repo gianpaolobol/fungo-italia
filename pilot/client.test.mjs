@@ -38,3 +38,13 @@ test('materials query requires a UUID course and returns only public metadata co
   assert.equal(seen.searchParams.get('course_id'),'eq.10000000-0000-0000-0000-000000000001');
   assert.equal(seen.searchParams.get('select').includes('object_key'),false);
 });
+test('account change while response body is arriving discards old private metadata',async()=>{
+  let session={...a},completeBody;
+  const client=createCourseClient({endpoint,publicKey:'anon',getSession:async()=>session,
+    fetcher:async()=>({ok:true,json:()=>new Promise(resolve=>{completeBody=resolve;})})});
+  const pending=client.listCourses();await new Promise(resolve=>setImmediate(resolve));
+  // Mutating the session object also cannot change the captured request identity.
+  session.accountId='student-b';session.sessionId='session-b';
+  completeBody([{id:'private-a',title:'A private title'}]);
+  await assert.rejects(pending,/session_changed/);
+});

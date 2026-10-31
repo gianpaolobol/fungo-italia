@@ -83,3 +83,10 @@ test('public HTTP cannot trigger probes, emails or reveal environment',async()=>
   assert.equal((await monitorWorker.fetch(new Request('https://monitor.test/run',{method:'POST'}),h.env)).status,404);
   assert.equal(h.calls.length,0);
 });
+test('duplicate scheduled event cannot hide previously failed weekly notice',async()=>{
+  const h=setup();await runScheduled(h.env,start,h.fetcher);h.setMailError(true);
+  const weekly=start+7*86400000;
+  await assert.rejects(runScheduled(h.env,weekly,h.fetcher),/notice_delivery_unconfirmed/);
+  await assert.rejects(runScheduled(h.env,weekly,h.fetcher),/notice_delivery_unconfirmed/);
+  assert.equal(h.calls.filter(c=>c.url.includes('brevo')).length,1);
+});
