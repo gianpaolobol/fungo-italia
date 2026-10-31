@@ -89,7 +89,7 @@ reset role;
 -- Service-only outbox: no student/teacher access, bounded claim, no auto retry.
 set local role service_role;
 select pilot.claim_invite_notices(10) as jobs \gset
-select pg_temp.check_it(jsonb_array_length(:'jobs'::jsonb)=2,'only valid pending and current accepted invitation notices claimed');
+select pg_temp.check_it(jsonb_array_length(:'jobs'::jsonb)=1,'only pending valid invitation needs an email');
 select (:'jobs'::jsonb->0->>'id') as job_id,(:'jobs'::jsonb->0->>'claim_id') as claim_id \gset
 select pg_temp.check_it(pilot.finish_invite_notice(:'job_id','99999999-9999-9999-9999-999999999999',true)=false,'wrong claim cannot finish');
 select pg_temp.check_it(pilot.finish_invite_notice(:'job_id',:'claim_id',true),'matching claim records provider acceptance');
