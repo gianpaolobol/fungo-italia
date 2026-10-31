@@ -164,7 +164,7 @@ begin
  if cid is null or not pilot_private.owns_course(cid) then raise exception 'invitation_unavailable'; end if;
  perform pilot_private.lock_teacher_course(cid);
  update pilot.invitations set revoked_at=coalesce(revoked_at,now()) where id=invitation_id;
- update pilot.invite_outbox set state='cancelled' where invitation_id=revoke_invitation.invitation_id and state in ('pending','claimed');
+ update pilot.invite_outbox o set state='cancelled' where o.invitation_id=revoke_invitation.invitation_id and o.state in ('pending','claimed');
  -- Revoking an invitation alone does not undo an already accepted enrollment.
  -- The UI must use revoke_membership for removing an enrolled student.
 end $$;
