@@ -1,3 +1,13 @@
+## Pilota docenti-studenti gratuito: implementazione isolata — 31 ottobre 2026
+
+Il titolare ha approvato il pilota con vincolo spazio/email gratuiti e richiesto un ramo dedicato e compatibilità con le prossime correzioni dell'app. Ramo `feat/teacher-student-pilot-free-20261031`, base `83fe6948`: primo incremento con monitor esterno, schema RLS corsi/materiali, client v1 e gate di qualifica. Task sospensione P0 **aperto**, issue #145; non chiudere senza deployment, avvisi ricevuti, recupero e almeno otto giorni di prove reali. Nessun servizio o invio reale attivato.
+
+26 test Node locali PASS dopo due correzioni della revisione indipendente; SQL PostgreSQL reale PASS nella run41223810495. Queste prove NON attestano pilot completo o nuova build disponibile. Mancano ancora inviti, upload/scanner/consegna privata PDF, UI app/pannello, runner/correzione remoti e push. Nessun aggiornamento di beta iOS/Android, web, StoreKit, contenuti scientifici, ricevute o vecchi workflow. Acquisire lo SHA dell'app corretta e integrare selettivamente il contratto v1 prima della futura unione; non ripristinare file app dalla vecchia base.
+
+Dettagli: [pilot/README.md](../pilot/README.md), [piano](superpowers/plans/2026-10-31-free-pilot-foundation.md), [evidenze](evidence/teacher-pilot-foundation-20261031.md). Le sezioni di release sottostanti restano cronologia, non esiti di questo pilota.
+
+---
+
 <!-- IOS_STUDY_24_CURRENT -->
 ## Allineamento tecnico WEB/PWA e TestFlight24 verificato —27 ottobre2026
 
@@ -402,3 +412,4 @@ Correzione del solo controllo CI dei destinatari: il GET `/v1/builds/{id}/betaGr
 - Data: 2026-10-21; agente: ChatGPT; branch: `docs/handoff`.
 - Fatto: revisione documentale dei tre file di coordinamento; lettura di configurazione, entrypoint, componenti, generatori e dataset; nessuna modifica al codice.
 - Test eseguiti: **nessuno**. Stato PR e SHA: fare riferimento alla PR GitHub.
+

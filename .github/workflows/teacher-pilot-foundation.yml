@@ -1,0 +1,37 @@
+name: Teacher pilot foundation (no deployment)
+on:
+  push:
+    branches: [feat/teacher-student-pilot-free-20261031]
+    paths: ['pilot/**', '.github/workflows/teacher-pilot-foundation.yml']
+  pull_request:
+    paths: ['pilot/**', '.github/workflows/teacher-pilot-foundation.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: teacher-pilot-foundation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_PASSWORD: pilot-disposable-test-only
+          POSTGRES_DB: pilot_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Monitor, state machine and qualification regressions
+        run: node --test $(find pilot -name '*.test.mjs' -print)
+      - name: Private course/material authorization on real PostgreSQL
+        env:
+          PILOT_TEST_DATABASE_URL: postgres://postgres:pilot-disposable-test-only@localhost:5432/pilot_test
+        run: bash pilot/verify-postgres.sh

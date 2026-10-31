@@ -1,0 +1,27 @@
+# Template only. No active cron, account ID or credential committed.
+# Copy privately, bind a dedicated FREE KV namespace, set secrets, then enable.
+name = "fungo-courses-monitor-beta"
+main = "worker.mjs"
+compatibility_date = "2026-10-31"
+workers_dev = true
+
+[vars]
+ENABLED = "false"
+MODE = "database"
+NOTICES_ENABLED = "false"
+
+[triggers]
+crons = []
+# After qualification setup: ["17 */6 * * *"] (UTC).
+# Deploy watchdog separately, MODE="watchdog", cron at minute 47, separate KV.
+# Watchdog watches private /status, not Supabase; monitor health still needs an
+# independently operated checker/manual dashboard to detect BOTH schedulers down.
+
+# [[kv_namespaces]]
+# binding = "STATE"
+# id = "REPLACE_WITH_DEDICATED_FREE_NAMESPACE_ID"
+
+# Secrets (never EXPO_PUBLIC): STATUS_TOKEN (random >=32 chars), SUPABASE_URL,
+# SUPABASE_ANON_KEY, BREVO_API_KEY, MAIL_FROM, MAIL_TO.
+# Watchdog additionally: WATCH_URL (monitor workers.dev/status), WATCH_TOKEN.
+# Never place service-role, project signing or B2 credentials in this Worker.

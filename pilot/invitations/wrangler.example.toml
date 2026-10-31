@@ -1,0 +1,19 @@
+# Template ONLY: no deployment, real recipient, secret or active cron.
+name = "fungo-courses-invitations-beta"
+main = "mailer.mjs"
+compatibility_date = "2026-10-31"
+workers_dev = false
+
+[vars]
+ENABLED = "false"
+
+[triggers]
+crons = []
+# After dedicated free-service/account/UI qualification: ["23,38,53,8 * * * *"]
+# Maximum 10 claims/run and 60 claims/UTC day enforced atomically in PostgreSQL.
+# Remaining Brevo Free daily quota is reserved for OTP and monitoring, subject
+# to provider's shared limits. No paid overage or automatic retry is configured.
+
+# Private secrets: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY (legacy JWT service
+# role of dedicated PILOT project only), BREVO_API_KEY, MAIL_FROM, APP_ENTRY_URL.
+# This key MUST NOT enter mobile/web bundle or the continuity monitor Worker.
