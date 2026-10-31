@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "environment": "pilot-only",
+  "billingLimitEur": 0,
+  "noAutomaticUpgrade": true,
+  "freeQuotaVerified": false,
+  "independentWatchdog": false,
+  "dedicatedDatabase": false,
+  "realDatabaseRead": false,
+  "receivedOutageAlert": false,
+  "receivedRecoveryAlert": false,
+  "weeklySummaryReceived": false,
+  "restoreTestPassed": false,
+  "privateFileAccessTestPassed": false,
+  "startedAt": null,
+  "checkedAt": null,
+  "reference": "",
+  "observations": []
+}

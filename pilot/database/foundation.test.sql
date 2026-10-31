@@ -31,7 +31,7 @@ insert into pilot.material_shares(course_id,material_id,group_id) values
 
 set local role anon;
 select pg_temp.check_it((select count(*)=1 from pilot_health.sentinel),'probe can read exactly one row');
-select pg_temp.check_it(not has_table_privilege(current_user,'pilot.materials','SELECT'),'probe has no material privilege');
+select pg_temp.check_it(not has_schema_privilege(current_user,'pilot','USAGE'),'probe cannot enter course schema');
 select pg_temp.check_it(not has_table_privilege(current_user,'pilot_health.sentinel','UPDATE'),'probe cannot fake success by modifying row');
 reset role;
 
